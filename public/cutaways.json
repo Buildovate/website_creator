@@ -1,0 +1,219 @@
+{
+  "roofing": {
+    "image": "/assets/cutaway-roofing.webp",
+    "width": 1536,
+    "height": 1024,
+    "hotspots": [
+      {
+        "x": 32,
+        "y": 28,
+        "label": "Shingle surface",
+        "description": "The outer shingle layer forms the roof’s visible weather-shedding surface."
+      },
+      {
+        "x": 48,
+        "y": 35,
+        "label": "Roof sheathing",
+        "description": "Sheathing creates a continuous deck beneath the roof covering."
+      },
+      {
+        "x": 66,
+        "y": 31,
+        "label": "Roof framing",
+        "description": "Timber framing gives the roof its shape and structural support."
+      },
+      {
+        "x": 21,
+        "y": 51,
+        "label": "Gutter system",
+        "description": "Gutters collect roof runoff and direct it toward downspouts."
+      }
+    ]
+  },
+  "patios": {
+    "image": "/assets/cutaway-patios.webp",
+    "width": 1536,
+    "height": 1024,
+    "hotspots": [
+      {
+        "x": 51,
+        "y": 12,
+        "label": "Adjustable louvers",
+        "description": "Rotating roof louvers control sunlight and overhead coverage."
+      },
+      {
+        "x": 66,
+        "y": 22,
+        "label": "Integrated gutter",
+        "description": "The perimeter channel collects water from the pergola roof."
+      },
+      {
+        "x": 62,
+        "y": 44,
+        "label": "Drainage post",
+        "description": "A concealed passage carries collected roof water through the post."
+      },
+      {
+        "x": 61,
+        "y": 83,
+        "label": "Concrete footing",
+        "description": "The below-ground footing anchors the pergola’s support column."
+      }
+    ]
+  },
+  "plumbing": {
+    "image": "/assets/cutaway-plumbing.webp",
+    "width": 1536,
+    "height": 1024,
+    "hotspots": [
+      {
+        "x": 56,
+        "y": 47,
+        "label": "Water heater",
+        "description": "The storage heater holds heated water for household use."
+      },
+      {
+        "x": 53,
+        "y": 32,
+        "label": "Water supply",
+        "description": "Separate hot and cold supply lines distribute water to fixtures."
+      },
+      {
+        "x": 72,
+        "y": 73,
+        "label": "Drain network",
+        "description": "Larger drain pipes carry used water away from household fixtures."
+      },
+      {
+        "x": 66,
+        "y": 48,
+        "label": "Bathroom fixtures",
+        "description": "Fixtures are the visible points where occupants use the plumbing system."
+      }
+    ]
+  },
+  "hvac": {
+    "image": "/assets/cutaway-hvac.webp",
+    "width": 1536,
+    "height": 1024,
+    "hotspots": [
+      {
+        "x": 10,
+        "y": 49,
+        "label": "Outdoor heat pump",
+        "description": "The outdoor unit exchanges heat with the surrounding air."
+      },
+      {
+        "x": 39,
+        "y": 25,
+        "label": "Air handler",
+        "description": "The indoor air handler moves conditioned air through the home."
+      },
+      {
+        "x": 56,
+        "y": 19,
+        "label": "Duct network",
+        "description": "Ducts distribute air between the central equipment and rooms."
+      },
+      {
+        "x": 81,
+        "y": 41,
+        "label": "Room register",
+        "description": "Registers connect room air to the duct system."
+      }
+    ]
+  },
+  "electrical": {
+    "image": "/assets/cutaway-electrical.webp",
+    "width": 1536,
+    "height": 1024,
+    "hotspots": [
+      {
+        "x": 55,
+        "y": 64,
+        "label": "Breaker panel",
+        "description": "The panel distributes electricity across individual protected circuits."
+      },
+      {
+        "x": 48,
+        "y": 20,
+        "label": "Branch circuits",
+        "description": "Wiring carries electricity from the panel to outlets and fixtures."
+      },
+      {
+        "x": 26,
+        "y": 31,
+        "label": "Lighting",
+        "description": "Light fixtures turn electrical power into useful illumination."
+      },
+      {
+        "x": 88,
+        "y": 61,
+        "label": "EV charger",
+        "description": "The exterior charging unit supplies power to an electric vehicle."
+      }
+    ]
+  },
+  "landscaping": {
+    "image": "/assets/cutaway-landscaping.webp",
+    "width": 1536,
+    "height": 1024,
+    "hotspots": [
+      {
+        "x": 43,
+        "y": 42,
+        "label": "Irrigation",
+        "description": "Irrigation brings water to planted areas through a controlled distribution system."
+      },
+      {
+        "x": 61,
+        "y": 56,
+        "label": "Root zone",
+        "description": "The soil beneath the lawn supports roots and holds moisture."
+      },
+      {
+        "x": 38,
+        "y": 66,
+        "label": "Subsurface drainage",
+        "description": "A gravel bed and perforated pipe provide a path for excess ground water."
+      },
+      {
+        "x": 83,
+        "y": 42,
+        "label": "Hardscape",
+        "description": "Stone paving creates durable walking and gathering surfaces."
+      }
+    ]
+  },
+  "contractors": {
+    "image": "/assets/cutaway-contractors.webp",
+    "width": 1536,
+    "height": 1024,
+    "hotspots": [
+      {
+        "x": 36,
+        "y": 47,
+        "label": "Wall framing",
+        "description": "Timber studs form the supporting framework behind finished walls."
+      },
+      {
+        "x": 36,
+        "y": 35,
+        "label": "Insulation",
+        "description": "Insulation within wall cavities slows heat transfer through the enclosure."
+      },
+      {
+        "x": 55,
+        "y": 74,
+        "label": "Foundation",
+        "description": "The concrete foundation supports the house and transfers its loads to the ground."
+      },
+      {
+        "x": 59,
+        "y": 40,
+        "label": "Interior finishes",
+        "description": "Flooring and finished walls define the surfaces people see and use."
+      }
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "reviewed": "2026-09-16",
+  "recipes": [
+    {
+      "title": "Cinematic opening",
+      "prompt": "Compose a full-height photographic opening with oversized, short typography, a restrained location badge, one clear inquiry action, and a still, readable mobile layout.",
+      "query": "?font=display"
+    },
+    {
+      "title": "Editorial contrast",
+      "prompt": "Use expressive serif headlines against quiet interface typography, generous white space and a split photographic composition. Preserve clear contact paths.",
+      "query": "?font=editorial&rhythm=airy"
+    },
+    {
+      "title": "Modern precision",
+      "prompt": "Use geometric typography, a disciplined grid and compact sections to make technical services feel precise and approachable.",
+      "query": "?font=modern&rhythm=compact"
+    },
+    {
+      "title": "Tactile service gallery",
+      "prompt": "Build eight consistent image-led service cards with framed edges, purposeful crops, short descriptions and service-specific inquiry links.",
+      "query": "?cards=framed#services"
+    },
+    {
+      "title": "Soft architectural cards",
+      "prompt": "Pair rounded photographic cards with restrained shadows and generous spacing. Never use generic images unrelated to the service.",
+      "query": "?cards=soft#services"
+    },
+    {
+      "title": "Interactive cutaway",
+      "prompt": "Place a high-quality conceptual system cutaway under accessible SVG highlights and numbered controls. Selecting a component highlights its location and explanation. Keep the base image still and preserve its aspect ratio.",
+      "query": "?#inside"
+    },
+    {
+      "title": "Scroll chapters",
+      "prompt": "Reveal sections gently as they enter view without hijacking scrolling. Retain all content when motion is reduced or JavaScript is unavailable.",
+      "query": "?reveal=true#process"
+    },
+    {
+      "title": "Image drift",
+      "prompt": "Apply subtle desktop image movement while preserving the visual focal point. Disable drift for reduced motion and small displays.",
+      "query": "?parallax=true"
+    },
+    {
+      "title": "Local motion ribbon",
+      "prompt": "Use the supplied service area in a slow repeat ribbon with a visible pause control. Do not invent cities or imply work completed there.",
+      "query": "?marquee=true#services"
+    },
+    {
+      "title": "Choose your service",
+      "prompt": "Turn service selection into a useful interaction: update the selected state and prepare the inquiry service. Keep all services discoverable.",
+      "query": "?servicePicker=true#services"
+    },
+    {
+      "title": "Process storytelling",
+      "prompt": "Make the work process scannable with numbered expandable chapters and short explanations. Keyboard and touch must work naturally.",
+      "query": "?process=true#process"
+    },
+    {
+      "title": "Conversion without clutter",
+      "prompt": "Keep a compact mobile inquiry dock and accessible contact form. Use clear submission states and never simulate successful delivery.",
+      "query": "?stickyNav=true#contact"
+    },
+    {
+      "title": "Architectural framing",
+      "prompt": "Shape the hero photograph with an arched frame and generous spacing. Keep the subject legible across screen sizes.",
+      "query": "?heroFrame=arch&rhythm=airy"
+    },
+    {
+      "title": "Editorial offset",
+      "prompt": "Offset the hero image inside a strong grid and use expressive serif typography for a distinctive editorial silhouette.",
+      "query": "?heroFrame=offset&font=editorial"
+    },
+    {
+      "title": "Mask reveals",
+      "prompt": "Use a restrained clipped reveal as sections enter the viewport. Preserve readable content when animation is reduced or unavailable.",
+      "query": "?entrance=mask#services"
+    },
+    {
+      "title": "Quiet focus",
+      "prompt": "Use soft fade and scale entrances to introduce sections without hijacking the scroll.",
+      "query": "?entrance=soft#inside"
+    },
+    {
+      "title": "Progress and chapters",
+      "prompt": "Add a slender page-progress line and desktop chapter navigation. Keep content unobstructed and remove links to disabled sections.",
+      "query": "?readingProgress=true&chapterRail=true"
+    },
+    {
+      "title": "Conversation breaks",
+      "prompt": "Add short contact invitations at decision points after services and before the form. Every action should reach the same working inquiry destination.",
+      "query": "?ctaBands=true#services"
+    },
+    {
+      "title": "Project discovery",
+      "prompt": "Show published projects in a synchronized map and card list with location and service filters. Demo projects must be clearly identified and isolated from actual business claims.",
+      "query": "?projectMap=true#projects"
+    },
+    {
+      "title": "Planning questions",
+      "prompt": "Offer a few concise planning questions before the form to help visitors explain their needs. Do not invent business guarantees or operating policies.",
+      "query": "?planning=true#planning"
+    },
+    {
+      "title": "Architectural transformation film",
+      "prompt": "Create one spatially coherent story: existing space, conceptual AR scan and exposed system, then a finished-space reveal. Keep the building footprint consistent. Use generated motion footage with sound design, a cinematic image poster and chapter controls. Mark it as a visualization, never actual customer work.",
+      "query": "?#trade-film"
+    },
+    {
+      "title": "Interactive system tour",
+      "prompt": "Use a high-quality 3D cutaway base image with precisely positioned SVG highlights, dashed locator guides and a user-controlled scan tour. Numbered controls expose component descriptions. Stop when offscreen and respect reduced motion.",
+      "query": "?#inside"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Creator: cinematic scroll-story prompt",
+      "url": "https://github.com/Barty-Bart/gpt-6-astra-10k-websites/blob/main/prompts/01-desktop-build.md"
+    },
+    {
+      "title": "Codrops: SVG scroll-mask transitions",
+      "url": "https://tympanus.net/codrops/2026/03/11/svg-mask-transitions-on-scroll-with-gsap-and-scrolltrigger/"
+    },
+    {
+      "title": "Google review display policies",
+      "url": "https://developers.google.com/maps/documentation/places/web-service/policies"
+    }
+  ]
+}

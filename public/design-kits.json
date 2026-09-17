@@ -1,0 +1,149 @@
+{
+  "roofing": {
+    "id": "roofing",
+    "trade": "Roofing",
+    "name": "RIDGELINE",
+    "headline": "Roofs built.\nStandards raised.",
+    "color": "#c78353",
+    "tone": "carbon",
+    "layout": "immersive",
+    "image": "/assets/finished-roof.jpg",
+    "direction": "Bold rooflines, copper accents, architectural typography and project evidence.",
+    "prompt": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    },
+    "videoPoster": "/assets/films/roofing-poster.webp"
+  },
+  "patios": {
+    "id": "patios",
+    "trade": "Patios",
+    "name": "OPEN AIR",
+    "headline": "Outside is\nthe new inside.",
+    "color": "#b5ca7c",
+    "tone": "olive",
+    "layout": "editorial",
+    "image": "/assets/kit-patios.webp",
+    "direction": "A luxury outdoor-living story with generous photography, elegant type and sunlit space.",
+    "prompt": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: A luxury outdoor-living story with generous photography, elegant type and sunlit space. Hero headline direction: Outside is the new inside. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    },
+    "videoPoster": "/assets/films/patios-poster.webp"
+  },
+  "plumbing": {
+    "id": "plumbing",
+    "trade": "Plumbing",
+    "name": "FLOW STATE",
+    "headline": "A better flow.\nA better day.",
+    "color": "#51b7e9",
+    "tone": "blue",
+    "layout": "studio",
+    "image": "/assets/kit-plumbing.webp",
+    "direction": "Precise utility meets a calm editorial layout, with direct problem selection and clear next steps.",
+    "prompt": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Precise utility meets a calm editorial layout, with direct problem selection and clear next steps. Hero headline direction: A better flow. A better day. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    },
+    "videoPoster": "/assets/films/plumbing-poster.webp"
+  },
+  "hvac": {
+    "id": "hvac",
+    "trade": "HVAC",
+    "name": "ATMOSPHERE",
+    "headline": "Comfort,\nby design.",
+    "color": "#8dc7b1",
+    "tone": "teal",
+    "layout": "immersive",
+    "image": "/assets/kit-hvac.webp",
+    "direction": "Calm climate-focused storytelling, oversized type and refined technical detail.",
+    "prompt": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Calm climate-focused storytelling, oversized type and refined technical detail. Hero headline direction: Comfort, by design. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    },
+    "videoPoster": "/assets/films/hvac-poster.webp"
+  },
+  "electrical": {
+    "id": "electrical",
+    "trade": "Electrical",
+    "name": "CURRENT",
+    "headline": "Power your\nnext chapter.",
+    "color": "#dadc6a",
+    "tone": "graphite",
+    "layout": "studio",
+    "image": "/assets/kit-electrical.webp",
+    "direction": "High contrast, sharp grids and a bright electric accent with restrained motion.",
+    "prompt": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: High contrast, sharp grids and a bright electric accent with restrained motion. Hero headline direction: Power your next chapter. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    },
+    "videoPoster": "/assets/films/electrical-poster.webp"
+  },
+  "landscaping": {
+    "id": "landscaping",
+    "trade": "Landscaping",
+    "name": "FIELDWORK",
+    "headline": "Room\nto grow.",
+    "color": "#b1c993",
+    "tone": "forest",
+    "layout": "editorial",
+    "image": "/assets/kit-landscaping.webp",
+    "direction": "A nature-led editorial experience with tactile garden photography and spacious compositions.",
+    "prompt": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: A nature-led editorial experience with tactile garden photography and spacious compositions. Hero headline direction: Room to grow. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    },
+    "videoPoster": "/assets/films/landscaping-poster.webp"
+  },
+  "general-contractors": {
+    "id": "general-contractors",
+    "trade": "General Contractors",
+    "name": "FORM & FOUNDATION",
+    "headline": "Better spaces.\nBuilt together.",
+    "color": "#d69571",
+    "tone": "clay",
+    "layout": "editorial",
+    "image": "/assets/kit-general-contractors.webp",
+    "direction": "An architectural portfolio with oversized project photography and a clear construction story.",
+    "prompt": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: An architectural portfolio with oversized project photography and a clear construction story. Hero headline direction: Better spaces. Built together. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    },
+    "videoPoster": "/assets/films/general-contractors-poster.webp"
+  }
+}
