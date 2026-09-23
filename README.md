@@ -6,7 +6,7 @@ The existing platform now renders Robles Roofing with the original cinematic sit
 
 Node 22.13+ is needed for the local SQLite test adapter. Run `npm ci`, `npm run build`, then `npm run dev -- --host 0.0.0.0 --port 4173`. `node tests/platform.mjs` runs server tests; `node tests/presentation.mjs` checks rendered template integration.
 
-The AWS runtime has two local paths, both described in `docs/ENVIRONMENTS.md`. The quick path is in-process (`DATABASE_DRIVER=pglite`, `BUCKET_DRIVER=memory`, `npm run aws:start`). The Docker path (`npm run docker:up`) runs Postgres 16, MinIO, and the app on port 8080. Put `OPENAI_API_KEY` in gitignored `aws/env/docker.env`, not in the example file.
+The AWS runtime has two local paths, both described in `docs/ENVIRONMENTS.md`. The quick path is in-process (`DATABASE_DRIVER=pglite`, `BUCKET_DRIVER=memory`, `npm run aws:start`). The Docker path (`npm run docker:up`) runs Postgres 16, MinIO, and the app on port 8080. Put `OPENAI_API_KEY` in gitignored `aws/env/docker.env`, not in the example file. For a client machine, have Codex read `setup.md` and accept the install prompts.
 
 Production uses the Cloudflare Worker in `dist/server/index.js`, D1 binding `DB`, R2 binding `BUCKET`, and the schema migrations in `drizzle`. Sites owns the deployment bindings. Keep `.openai/hosting.json` attached to this existing Site; do not reuse its project ID for a new installation.
 
