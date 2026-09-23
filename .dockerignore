@@ -1,6 +1,7 @@
 node_modules
 .git
 .env
+aws/env/docker.env
 dist
 tests
 .github

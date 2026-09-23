@@ -7,9 +7,9 @@ import { loadDrizzleStatements, orderMigrationStatements } from '../src/aws/ddl.
 import { createD1Adapter } from '../src/aws/d1.js';
 import { applyMigrations } from '../src/aws/migrate.js';
 import { createPgliteExecutor } from '../src/aws/pglite.js';
-import { createMemoryBucket, createS3Bucket, createAssets } from '../src/aws/s3.js';
+import { createMemoryBucket, createS3Bucket, createAssets, createS3Client, s3ClientConfig } from '../src/aws/s3.js';
 import { applyAuth, authConfig, clearAuthCache, OPENAI_API_ORIGIN } from '../src/aws/auth.js';
-import { assertRuntimeConfig } from '../src/aws/env.js';
+import { assertRuntimeConfig, loadEnv } from '../src/aws/env.js';
 import { createHandler, createRuntime, listen, rewriteSitesChrome } from '../src/aws/server.js';
 
 const now = '2026-09-22T12:00:00.000Z';
@@ -72,6 +72,66 @@ assert.ok(assertRuntimeConfig({
   APP_ENV: 'production', NODE_ENV: 'production', AWS_REGION: 'us-west-1', AUTH_MODE: 'dev-header',
   DATABASE_URL: 'postgresql://localhost/website_creator', S3_BUCKET: 'buildovate-website-creator-production',
 }).some(error => error.includes('dev-header')));
+assert.deepEqual(assertRuntimeConfig({
+  APP_ENV: 'local', NODE_ENV: 'development', AUTH_MODE: 'dev-header', AWS_REGION: 'us-west-1',
+  DATABASE_DRIVER: 'pglite', BUCKET_DRIVER: 'memory',
+}), []);
+const dockerLocal = loadEnv({
+  APP_ENV: 'local', NODE_ENV: 'development', AUTH_MODE: 'dev-header', AWS_REGION: 'us-west-1',
+  DATABASE_URL: 'postgresql://website_creator:website_creator@postgres:5432/website_creator',
+  S3_BUCKET: 'website-creator-local', S3_ENDPOINT: 'http://minio:9000', S3_FORCE_PATH_STYLE: '1',
+  S3_ACCESS_KEY_ID: 'minioadmin', S3_SECRET_ACCESS_KEY: 'minioadmin', MIGRATE_ON_BOOT: '1', PORT: '8080',
+});
+assert.equal(dockerLocal.S3_ENDPOINT, 'http://minio:9000');
+assert.deepEqual(assertRuntimeConfig(dockerLocal), []);
+assert.ok(assertRuntimeConfig({
+  APP_ENV: 'preview', NODE_ENV: 'production', AWS_REGION: 'us-west-1', AUTH_MODE: 'alb-oidc',
+  DATABASE_URL: 'postgresql://localhost/website_creator', S3_BUCKET: 'buildovate-website-creator-preview',
+  S3_ENDPOINT: 'http://minio:9000',
+}).some(error => error.includes('S3_ENDPOINT')));
+assert.ok(assertRuntimeConfig({
+  APP_ENV: 'production', NODE_ENV: 'production', AWS_REGION: 'us-west-1', AUTH_MODE: 'alb-oidc',
+  DATABASE_URL: 'postgresql://localhost/website_creator', S3_BUCKET: 'buildovate-website-creator-production',
+  S3_ACCESS_KEY_ID: 'minioadmin', S3_SECRET_ACCESS_KEY: 'minioadmin',
+}).some(error => error.includes('S3_ACCESS_KEY_ID')));
+assert.ok(assertRuntimeConfig({
+  APP_ENV: 'local', NODE_ENV: 'development', DATABASE_URL: 'postgresql://localhost/website_creator',
+  S3_ACCESS_KEY_ID: 'only-one',
+}).some(error => error.includes('must both be set')));
+
+assert.deepEqual(s3ClientConfig({ AWS_REGION: 'us-west-1' }), { region: 'us-west-1' });
+const minioConfig = s3ClientConfig({
+  AWS_REGION: 'us-west-1', S3_ENDPOINT: 'http://minio:9000',
+  S3_ACCESS_KEY_ID: 'minioadmin', S3_SECRET_ACCESS_KEY: 'minioadmin',
+});
+assert.equal(minioConfig.endpoint, 'http://minio:9000');
+assert.equal(minioConfig.forcePathStyle, true);
+assert.equal(minioConfig.requestChecksumCalculation, 'WHEN_REQUIRED');
+assert.equal(minioConfig.responseChecksumValidation, 'WHEN_REQUIRED');
+assert.deepEqual(minioConfig.credentials, { accessKeyId: 'minioadmin', secretAccessKey: 'minioadmin' });
+assert.equal(s3ClientConfig({ AWS_REGION: 'us-west-1', S3_ENDPOINT: 'http://minio:9000', S3_FORCE_PATH_STYLE: '0' }).forcePathStyle, false);
+assert.equal(s3ClientConfig({ AWS_REGION: 'us-west-1', S3_ENDPOINT: ' http://minio:9000 ' }).endpoint, 'http://minio:9000');
+assert.throws(() => s3ClientConfig({ AWS_REGION: 'us-west-1', S3_ACCESS_KEY_ID: 'only-one' }), /must both be set/);
+
+const minioClient = await createS3Client({
+  AWS_REGION: 'us-west-1', S3_ENDPOINT: 'http://minio:9000', S3_FORCE_PATH_STYLE: '1',
+  S3_ACCESS_KEY_ID: 'local-key', S3_SECRET_ACCESS_KEY: 'local-secret',
+});
+assert.equal(await minioClient.config.region(), 'us-west-1');
+assert.equal(minioClient.config.forcePathStyle, true);
+assert.equal(await minioClient.config.requestChecksumCalculation(), 'WHEN_REQUIRED');
+assert.equal(await minioClient.config.responseChecksumValidation(), 'WHEN_REQUIRED');
+const minioEndpoint = await minioClient.config.endpoint();
+assert.equal(minioEndpoint.protocol, 'http:');
+assert.equal(minioEndpoint.hostname, 'minio');
+assert.equal(String(minioEndpoint.port), '9000');
+const minioCreds = await minioClient.config.credentials();
+assert.equal(minioCreds.accessKeyId, 'local-key');
+assert.equal(minioCreds.secretAccessKey, 'local-secret');
+const awsClient = await createS3Client({ AWS_REGION: 'us-west-1' });
+assert.equal(await awsClient.config.region(), 'us-west-1');
+assert.equal(awsClient.config.forcePathStyle, false);
+assert.equal(await awsClient.config.requestChecksumCalculation(), 'WHEN_SUPPORTED');
 
 const executor = await createPgliteExecutor();
 const migrated = await applyMigrations((sql, params) => executor.query(sql, params));
@@ -344,4 +404,4 @@ assert.equal(egress.status, 401);
 await egress.body?.cancel();
 
 await executor.close();
-console.log('PASS: SQL translation, Postgres migrations, D1 adapter, S3 shim, ALB/Cognito/dev auth, /healthz, static assets, OpenAI egress.');
+console.log('PASS: SQL translation, Postgres migrations, D1 adapter, S3 shim, MinIO client config, ALB/Cognito/dev auth, /healthz, static assets, OpenAI egress.');

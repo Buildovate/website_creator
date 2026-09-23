@@ -59,7 +59,7 @@ The query adapter (`src/aws/d1.js`) keeps the Worker SQL unchanged:
 
 Preview may set `MIGRATE_ON_BOOT=1`. Production should run `npm run aws:migrate` as a release step with `MIGRATE_ON_BOOT=0`, then shift traffic. Use a Postgres role that can create tables. Take a snapshot before the first production migration. There is no online data copy from D1 in this change; preview and production start empty unless you load a dump separately.
 
-Local development can set `DATABASE_DRIVER=pglite` (devDependency, in-process Postgres). That driver is refused when `APP_ENV` is `preview` or `production`, and when `NODE_ENV=production`.
+Local development has two paths, both `APP_ENV=local`. The quick path sets `DATABASE_DRIVER=pglite` (devDependency, in-process Postgres) and `BUCKET_DRIVER=memory`. The Docker Compose path uses Postgres 16 and MinIO (`docker compose up --build`). `pglite` is refused when `APP_ENV` is `preview` or `production`, and when `NODE_ENV=production`. Commands, ports, and where to put `OPENAI_API_KEY` are in `docs/ENVIRONMENTS.md`.
 
 RDS notes:
 
@@ -71,7 +71,9 @@ RDS notes:
 
 ## Object storage
 
-`src/aws/s3.js` implements the R2 methods the Worker calls: `get`, `put`, `head`, `delete`. `put` accepts strings, byte arrays, and the body returned by `get` (backup copies). The AWS SDK default credential chain is used, so an instance role is enough. Do not put access keys in the environment templates.
+`src/aws/s3.js` implements the R2 methods the Worker calls: `get`, `put`, `head`, `delete`. `put` accepts strings, byte arrays, and the body returned by `get` (backup copies). The AWS SDK default credential chain is used, so an instance role is enough on Elastic Beanstalk. Do not put access keys in `aws/env/preview.env.example` or `aws/env/production.env.example`.
+
+The Docker Compose stack points the same client at MinIO. `S3_ENDPOINT`, `S3_FORCE_PATH_STYLE`, `S3_ACCESS_KEY_ID`, and `S3_SECRET_ACCESS_KEY` are loaded from the environment and refused unless `APP_ENV=local`. With an endpoint set, the client uses path-style URLs and calculates checksums only when the operation requires them, which is what this MinIO release accepts. Unset, the client stays region-only, which is the preview and production shape. LocalStack is not used.
 
 Preview instance role, bucket only:
 
@@ -114,7 +116,7 @@ This mode is the right one if there is no ALB authenticate action in front of th
 
 ### `dev-header` (local only)
 
-`x-buildovate-user-id` and `x-buildovate-user-email` are accepted when `NODE_ENV` is not `production`. Preview and production refuse this mode unless `AUTH_ALLOW_DEV_HEADERS=1` is set on purpose. Do not set that flag on a shared environment. `aws/env/local.env.example` shows the local combination (`DATABASE_DRIVER=pglite`, `BUCKET_DRIVER=memory`).
+`x-buildovate-user-id` and `x-buildovate-user-email` are accepted when `NODE_ENV` is not `production`. Preview and production refuse this mode unless `AUTH_ALLOW_DEV_HEADERS=1` is set on purpose. Do not set that flag on a shared environment. `aws/env/local.env.example` shows the quick in-process combination (`DATABASE_DRIVER=pglite`, `BUCKET_DRIVER=memory`). `aws/env/docker.env.example` shows the Compose combination (`APP_ENV=local`, `AUTH_MODE=dev-header`, Postgres, MinIO). Copy it to gitignored `aws/env/docker.env` before adding `OPENAI_API_KEY`.
 
 ### `disabled`
 
@@ -149,7 +151,7 @@ The Worker, D1 migrations, and `.openai/hosting.json` are unchanged so the curre
 
 ## Tests and gaps
 
-`npm run test:aws` covers SQL translation, applying the real Drizzle files to Postgres (in-process), D1 `batch` rollback, `json_extract` / `json_set` / `INSERT OR IGNORE`, the S3 command shim against the preview bucket name, memory-bucket backup copies, static file serving, spoofed Sites headers, ALB ES256 and Cognito RS256 verification, `/healthz` success and database failure, owner setup, tenant create, storage health, and a live HTTPS call to `https://api.openai.com/v1/models` (expect 401 without a real key).
+`npm run test:aws` covers SQL translation, applying the real Drizzle files to Postgres (in-process), D1 `batch` rollback, `json_extract` / `json_set` / `INSERT OR IGNORE`, the S3 command shim against the preview bucket name, the local MinIO client settings (endpoint, path style, static keys, checksum mode) and the refusal of those settings outside `APP_ENV=local`, memory-bucket backup copies, static file serving, spoofed Sites headers, ALB ES256 and Cognito RS256 verification, `/healthz` success and database failure, owner setup, tenant create, storage health, and a live HTTPS call to `https://api.openai.com/v1/models` (expect 401 without a real key).
 
 Not covered here, and still required before calling an environment live:
 
