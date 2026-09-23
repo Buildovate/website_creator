@@ -1,0 +1,22 @@
+# Optional edit loop. Source mounts replace a full image rebuild.
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+#   npm run docker:dev
+#
+# The default `docker compose up --build` does not use this file. It builds
+# the Elastic Beanstalk Dockerfile instead.
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    user: "0:0"
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./drizzle:/app/drizzle
+      - ./aws:/app/aws
+      - ./build.mjs:/app/build.mjs
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+    command: ["sh", "-c", "npm run build && exec node src/aws/server.js"]

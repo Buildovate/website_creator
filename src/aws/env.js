@@ -52,6 +52,10 @@ export function loadEnv(source = process.env) {
     PGSSL_REJECT_UNAUTHORIZED: source.PGSSL_REJECT_UNAUTHORIZED || '',
     PG_POOL_MAX: source.PG_POOL_MAX || '',
     S3_BUCKET: source.S3_BUCKET || '',
+    S3_ENDPOINT: source.S3_ENDPOINT || '',
+    S3_FORCE_PATH_STYLE: source.S3_FORCE_PATH_STYLE || '',
+    S3_ACCESS_KEY_ID: source.S3_ACCESS_KEY_ID || '',
+    S3_SECRET_ACCESS_KEY: source.S3_SECRET_ACCESS_KEY || '',
     BUCKET_DRIVER: source.BUCKET_DRIVER || '',
     MIGRATE_ON_BOOT: source.MIGRATE_ON_BOOT || '',
     ASSETS_ROOT: source.ASSETS_ROOT || '',
@@ -75,6 +79,13 @@ export function assertRuntimeConfig(env) {
     if (env.APP_ENV !== 'local') errors.push('DATABASE_DRIVER=pglite is local only');
   } else if (!env.DATABASE_URL) errors.push('DATABASE_URL is required');
   if (env.BUCKET_DRIVER !== 'memory' && !env.S3_BUCKET && env.APP_ENV !== 'local') errors.push('S3_BUCKET is required');
+  if (env.APP_ENV !== 'local') {
+    if (env.S3_ENDPOINT) errors.push('S3_ENDPOINT is only allowed when APP_ENV=local');
+    if (env.S3_ACCESS_KEY_ID || env.S3_SECRET_ACCESS_KEY) errors.push('S3_ACCESS_KEY_ID and S3_SECRET_ACCESS_KEY are only allowed when APP_ENV=local');
+  }
+  if ((env.S3_ACCESS_KEY_ID && !env.S3_SECRET_ACCESS_KEY) || (!env.S3_ACCESS_KEY_ID && env.S3_SECRET_ACCESS_KEY)) {
+    errors.push('S3_ACCESS_KEY_ID and S3_SECRET_ACCESS_KEY must both be set');
+  }
   if (env.AUTH_MODE && !['alb-oidc', 'cognito', 'dev-header', 'disabled'].includes(env.AUTH_MODE)) errors.push(`Unsupported AUTH_MODE ${env.AUTH_MODE}`);
   if (env.AUTH_MODE === 'dev-header' && env.NODE_ENV === 'production' && env.AUTH_ALLOW_DEV_HEADERS !== '1') {
     errors.push('AUTH_MODE=dev-header is refused when NODE_ENV=production unless AUTH_ALLOW_DEV_HEADERS=1 is set deliberately');

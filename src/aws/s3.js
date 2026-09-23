@@ -112,9 +112,32 @@ export function createS3Bucket({ bucket, region, client }) {
   };
 }
 
+// Real AWS keeps the SDK defaults (region + instance-role credential chain).
+// A custom endpoint is the local MinIO path: path-style URLs, static keys, and
+// checksums only when the operation requires them. Recent @aws-sdk/client-s3
+// releases add flexible checksum headers by default, which MinIO rejects.
+export function s3ClientConfig(env) {
+  const config = { region: env.AWS_REGION || 'us-west-1' };
+  const endpoint = String(env.S3_ENDPOINT || '').trim();
+  if (endpoint) {
+    config.endpoint = endpoint;
+    const pathStyle = String(env.S3_FORCE_PATH_STYLE || '1').trim().toLowerCase();
+    config.forcePathStyle = pathStyle !== '0' && pathStyle !== 'false';
+    config.requestChecksumCalculation = 'WHEN_REQUIRED';
+    config.responseChecksumValidation = 'WHEN_REQUIRED';
+  }
+  const accessKeyId = String(env.S3_ACCESS_KEY_ID || '').trim();
+  const secretAccessKey = String(env.S3_SECRET_ACCESS_KEY || '').trim();
+  if (accessKeyId || secretAccessKey) {
+    if (!accessKeyId || !secretAccessKey) throw new Error('S3_ACCESS_KEY_ID and S3_SECRET_ACCESS_KEY must both be set');
+    config.credentials = { accessKeyId, secretAccessKey };
+  }
+  return config;
+}
+
 export async function createS3Client(env) {
   const { S3Client } = await import('@aws-sdk/client-s3');
-  return new S3Client({ region: env.AWS_REGION || 'us-west-1' });
+  return new S3Client(s3ClientConfig(env));
 }
 
 export function createAssets(root) {

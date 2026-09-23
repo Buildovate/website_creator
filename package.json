@@ -9,7 +9,10 @@
     "dev": "vite",
     "aws:migrate": "node src/aws/migrate.js",
     "aws:start": "node src/aws/server.js",
-    "test:aws": "node tests/aws-adapter.mjs"
+    "test:aws": "node tests/aws-adapter.mjs",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down",
+    "docker:dev": "docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build"
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.8",
