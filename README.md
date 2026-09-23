@@ -1,5 +1,7 @@
 # Buildovate contractor websites
 
+Knowledge for this repo is split into four layers so each fact has one home: root `CLAUDE.md` (conventions), `docs/modules/` (domain), `.claude/agents/` (Claude Code roles), and `.claude/skills/` (procedures). Read [docs/KNOWLEDGE_ARCHITECTURE.md](docs/KNOWLEDGE_ARCHITECTURE.md) before adding a second copy of a rule. `setup.md` and `OPERATIONS.md` stay the local-setup and product-boundary sources; module docs point at them.
+
 The existing platform now renders Robles Roofing with the original cinematic site design. Open `/s/robles-roofing` on the deployed platform. The original separate Robles preview is not modified.
 
 ## Running the source
