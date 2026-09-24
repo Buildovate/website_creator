@@ -279,3 +279,10 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Shared service pages load review styles and preserve readable contrast. Source cards remain still; missing excerpts still hide service review sections. No-key, outage and no-JavaScript source-link fallbacks, independent provider aggregates, attribution and policy links are retained.
 - [Desktop/mobile screenshots, long-quote and service captures, browser measurements and tests](docs/build-evidence/010A/README.md). Build passes; 10 focused tests pass. The complete first card fits before the mobile sticky action bar. Fixtures are clearly labeled fictional; no live provider connection is claimed. K03/K04/K22 remain open in NEEDS-KEYS.md.
 - Commit locator: `fix: put source review cards in the first screen (#010A)`. Remaining requested work: #027A backlog-only additions; then stop. #011 not started.
+
+### #027A follow-up additions — Queued only (2026-09-24)
+
+- Added a shorter “Check the source” strip, permitted platform marks (K22; text/source-link fallback otherwise), confirmed star rating/review count, and compact 2×2 mobile layout to #027A. Existing selection, evidence and source-link rules remain requirements.
+- Added site-wide removal of “Concept imagery · your project will be individual” and similar image captions, retaining only the required AI label beneath before/after. Existing duplicate header-name and hero +20px-up requests remain queued.
+- Documentation diff checked; no #027A product code built. Commit locator: `docs: queue compact source strip and caption cleanup (#027A)`.
+- **Stopped as requested.** #011 was not started. #004F-v2 failed its approved resolution retry and is logged under Waiting on Joe; delivery replacement and browser recapture remain pending. #010A passes with desktop/mobile evidence. Three requested steps are recorded in separate commits. No push, deployment, paid generation or external messages.
