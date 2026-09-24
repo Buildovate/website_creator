@@ -2,8 +2,6 @@
 
 ## Waiting on Joe
 
-**#004H — two-attempt Performance stop:** Authorize a further optimization/evidence pass before resuming. Mobile attempt 1: Performance 79 / Accessibility 96 / CLS 0.008136. Attempt 2: bold-industrial 78 / 100 / 0.008136; clean-modern 83 / 100 / 0.008136. Performance 85 is unmet. Work stopped per Joe’s instruction; final state screenshots, reduced-motion captures, both recordings and conversion/browser acceptance remain incomplete. [Options, actual reports and evidence](docs/build-evidence/004H/README.md). #004I is queued only.
-
 **K23 — reviewed policy content:** Please supply the reviewed jurisdiction/trade policy, reviewer/date/reference and required business license facts before activating a real policy. #011 implements and tests the framework with fictional fixtures; businesses without a supplied policy remain **Needs review**. The #011 framework and #012 footer are complete in this fallback mode. #004F-v2 is cleared.
 
 Audit: 2026-09-24. Scope: the current local `C:/Users/joe/website_creator` working tree, including pre-existing uncommitted work. Branch at audit: `feature/local-environment-setup`; HEAD `f9f4ec6`. This is not a staging/production audit. All five packs are received; their existence does not implement their requirements.
@@ -340,3 +338,10 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Matching responsive final stills, bottom-anchored portrait, actions above the house, unchanged headline position and desktop foreground layering. Reduced motion downloads no sequence.
 - [Final 1440×900 and 390×844 start/mid/end, reduced-motion, both recordings, browser results and byte table](docs/build-evidence/004G-v3/README.md). Build and focused regressions pass. No source-media gate remains for this ticket.
 - Commit locator: fix: scrub v3 Roofing flights with canvas frames (#004G-v3). Next authorized work: #004H-finish; #004I stays queued, not built. No push or deployment.
+
+### #004H-finish — Done (2026-09-24)
+
+- Optimized/preloaded 720w phone and 1440w desktop hero stills; inline first-screen styles; remaining CSS, motion JS and v3 frames gated after hero paint. Actual reports confirm the optimized still is LCP and no render-blocking resources.
+- Three Lighthouse attempts used. Final bold: 100 Performance / 100 Accessibility / 0.0095 CLS / 1.205s LCP. Clean: 97 / 96 / 0.0095 / 1.205s. Targets pass; no fourth audit. Subsequent below-fold stylesheet-order correction is documented separately and verified in the final browser suite.
+- [Final 12-profile state/reduced-motion matrix, desktop/mobile recordings, touch notes, request chains and 43/43 regression outputs](docs/build-evidence/004H/README.md). Attributed H1 and bundled service-style assertions corrected. Final visual inspection uses the compact component typography, not the earlier captures.
+- Commit locator: fix: finish Roofing phone performance and motion evidence (#004H-finish). #004I remains queued, not built; #013 and #027A are untouched. Both authorized steps complete. No push or deployment.

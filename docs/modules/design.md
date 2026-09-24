@@ -145,3 +145,7 @@ The roof-repair journey now imports LayerExplode, RevealCompare and KineticText 
 ## #004G-v3 — current service hero
 
 Supersedes the video-seeking and top-anchored framing notes above: the supplied v3 clips are WebP canvas sequences (60 landscape / 40 portrait frames). Two low-priority workers load after the first paint; eight decoded bitmaps bound memory. The final frame shares the responsive still URL. Mobile is bottom anchored with the actions above the house and unchanged headline; desktop retains the foreground mask. Reduced motion makes no sequence requests. [Evidence](../build-evidence/004G-v3/README.md).
+
+## #004H-finish — phone loading and final motion acceptance
+
+The Roofing motion homepage uses responsive AVIF/WebP finished stills and media-specific high-priority preloads. scripts/build-roofing-critical.mjs derives initial CSS from the complete source bundles. src/roofing-performance.js gates remaining styles/scripts on the hero LCP with a bounded fallback; full styles append after initial CSS. The worker avoids inferring a real shared header from selector text embedded in that CSS. The v3 service hero uses the same loading gate. Full component state/reduced-motion matrix, both recordings, touch/keyboard QA, full regressions and phone reports now pass the ticket gates. [Final evidence and measured limits](../build-evidence/004H/README.md). #004I remains queued only.

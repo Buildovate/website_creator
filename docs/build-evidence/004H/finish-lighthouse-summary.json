@@ -1,0 +1,35 @@
+[
+  {
+    "attempt": 1,
+    "name": "bold",
+    "url": "http://127.0.0.1:8104/s/motion-bold-industrial-a",
+    "performance": 99,
+    "accessibility": 100,
+    "cls": 0.06190390287685123,
+    "lcpMs": 1506.3087149263038,
+    "tbtMs": 108,
+    "version": "13.5.0"
+  },
+  {
+    "attempt": 2,
+    "name": "bold-final",
+    "url": "http://127.0.0.1:8104/s/motion-bold-industrial-a",
+    "performance": 100,
+    "accessibility": 100,
+    "cls": 0.009518248055071028,
+    "lcpMs": 1205.3744961849072,
+    "tbtMs": 15.843624046226864,
+    "version": "13.5.0"
+  },
+  {
+    "attempt": 3,
+    "name": "clean-final",
+    "url": "http://127.0.0.1:8104/s/motion-clean-modern-a",
+    "performance": 97,
+    "accessibility": 96,
+    "cls": 0.009518248055071028,
+    "lcpMs": 1204.76108863783,
+    "tbtMs": 199.5,
+    "version": "13.5.0"
+  }
+]

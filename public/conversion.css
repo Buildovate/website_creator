@@ -68,3 +68,6 @@
 @media(max-width:760px){.cx-brand{gap:8px}.cx-brand .site-brand-name{font-size:12px;max-width:145px}.cx-projects .public-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.cx-projects .portfolio-toolbar{flex-wrap:wrap}.cx-projects .portfolio-search{width:100%}}
 
 .conversion-site .reviews-section[data-review-slug]{padding:64px 4vw}.conversion-site .reviews-section[data-review-slug]>h2{font-family:TradeDisplay,system-ui,sans-serif;letter-spacing:-.025em;font-weight:700}.conversion-site .review-provider-notes .provider-reviews{background:transparent;border-radius:0}@media(max-width:600px){.conversion-site .reviews-section[data-review-slug]{padding:38px 6vw}.conversion-site .reviews-section[data-review-slug]>h2{font-size:36px}}
+
+/* Reserve the measured default header before enhancement. */
+.conversion-site{--cx-header-height:97px}@media(max-width:760px){.conversion-site{--cx-header-height:84px}}

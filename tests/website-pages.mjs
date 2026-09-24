@@ -217,7 +217,7 @@ await test('#004 service detail: published snapshot, preview membership, media a
   response=await request(url,'GET',undefined,null);
   assert.equal(response.status,200);
   const html=await response.text();
-  for(const part of ['Repair your roof &lt;safely&gt;', 'Test-only service scope.', 'Inspect the concern', 'Asphalt shingles', 'What happens first?', '/media/'+photo.id, 'name="service" value="Roof repair" readonly', 'data-preview="false"', '/trade-page.css']) assert.ok(html.includes(part),part);
+  for(const part of ['Repair your roof &lt;safely&gt;', 'Test-only service scope.', 'Inspect the concern', 'Asphalt shingles', 'What happens first?', '/media/'+photo.id, 'name="service" value="Roof repair" readonly', 'data-preview="false"', '/roofing-service.css']) assert.ok(html.includes(part),part);
   assert.ok(!html.includes('FINANCE_QUESTION'));
   assert.match(response.headers.get('cache-control'),/no-store/);
   assert.match(response.headers.get('x-robots-tag'),/noindex/);

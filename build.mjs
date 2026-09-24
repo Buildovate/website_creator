@@ -1,3 +1,4 @@
+import {buildRoofingCritical} from './scripts/build-roofing-critical.mjs';
 import {assertTemplateAssets} from './scripts/check-template-assets.mjs';
 assertTemplateAssets();
 import {buildClient} from './scripts/build-client.mjs';
@@ -10,6 +11,7 @@ await build({entryPoints:['src/auth/index.ts'],outfile:'dist/auth/index.js',bund
 await build({entryPoints:['src/client/auth/bridge.ts'],outfile:'dist/client/auth-bridge.js',bundle:true,format:'iife',globalName:'BuildovateAuth',platform:'browser',target:'es2022'});
 await build({entryPoints:['src/client/auth/login.ts'],outfile:'dist/client/auth-login.js',bundle:true,format:'iife',platform:'browser',target:'es2022'});
 await buildClient();
+await buildRoofingCritical();
 await build({entryPoints:['src/excel-reader.js'],outfile:'dist/client/excel-reader.js',bundle:true,format:'iife',globalName:'ExcelReader',platform:'browser',target:'es2022'});
 // HTML templates must be rendered by the Worker, never served ahead of it as assets.
 await build({entryPoints:['src/worker.js'],outfile:'dist/server/index.js',bundle:true,format:'esm',platform:'browser',target:'es2022',loader:{'.html':'text'},external:['cloudflare:workers']});

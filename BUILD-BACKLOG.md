@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. Stopped after #004H’s two-attempt Performance failure; #004H is Partial / Waiting on Joe. #004I is queued only, not built. The ordinary next numbered backlog ticket remains #013; neither #004I implementation nor #013 is authorized by this request.
+Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish is Done with passing performance gates and complete final evidence. #004I is queued only, not built. The ordinary next numbered backlog ticket remains #013; neither #004I implementation nor #013 is authorized by this request.
 
 ## Session contract
 
@@ -118,10 +118,10 @@ Tickets #001–#041.
 
 ### #004H — Motion kit v2, part 1 (Roofing)
 
-- State: **Partial — Waiting on Joe after two failed Performance attempts**. [Evidence/options](docs/build-evidence/004H/README.md). Estimate: 8h (<=1 day).
-- LayerExplode (seven authored SVG layers, A/B/C), RevealCompare (slider/lens/three-state toggle), KineticText (hero lines + scroll words), both Roofing styles, existing #004E scheduler, lazy interactions and static reduced-motion paths implemented. Original cutaway remains reachable. No second scroll library.
-- Gates: <=60 KB gzip added motion, mobile Performance >=85 / Accessibility >=95 / CLS <=0.05, complete 1440×900 and 390×844 state/reduced-motion screenshots and scroll recordings. Code budget passes; latest bold 78/100/0.008136 and clean 83/100/0.008136 miss Performance. Final visual/recording and regression/browser acceptance remains unfinished. Stop honored; no third attempt.
-- No external keys required. No push, deployment, generation, paid service or messages.
+- State: **Done via #004H-finish**. [Final evidence](docs/build-evidence/004H/README.md).
+- LayerExplode, RevealCompare A/B/C and KineticText verified at 1440×900 and 390×844 in both styles, including rest/mid/finished/reduced-motion, touch/keyboard checks and both recordings.
+- Final phone audits: bold 100 Performance / 100 Accessibility / 0.0095 CLS; clean 97 / 96 / 0.0095. Three attempts used. All 43 regression commands pass. Motion/style code remains under 60KB gzip.
+- No push or deployment. #004I below remains queued only.
 
 ### #004I — Motion kit v2, part 2 (queued only)
 
