@@ -1,0 +1,35 @@
+PASS configuration safety, locked values and calculator math
+PASS tenant roles, draft/publication isolation, shared footers, feature gates and promotion unlock/expiry
+PASS 84 trade/layout legal-preview links and their access controls
+✔ tests\constitution.mjs (373.2311ms)
+PASS conversion references: 3 journeys × 3 layouts, draft isolation, claim approval/escaping, inquiry persistence, preview auth, anchor integrity, one H1, effects, and legacy CTA corrections.
+PASS service checklist: custom names, descriptions, deduplication, selection limits, full service rendering and draft isolation.
+PASS Roofing #002: repair/replacement copy matches selected services, direct call/inquiry paths, both inquiry intents persisted, one preserved hero film, repair-only/static fallback and published isolation. Local fixture only.
+✔ tests\conversion-references.mjs (421.9221ms)
+PASS premium service: generated hero, four image cards/steps, editable escaped headline, draft/publish isolation, sourced/confirmed/empty trust fields, no invented reviews, paired-photo privacy and brand contrast.
+PASS premium interactions: scroll reveal enhancement, visible reduced-motion fallback, comparison input and accessible value.
+✔ tests\premium-service.mjs (337.1471ms)
+✔ typed records round-trip; IDs/slugs survive edits and reordering (2.9228ms)
+✔ malformed records, duplicate URLs, broken city links and limits are rejected (3.0912ms)
+✔ media uses bounded photo IDs and alt text, never arbitrary URLs (1.1643ms)
+▶ real tenant API: draft/published isolation, ownership and permissions
+  ✔ editor saves all four page types without changing public snapshot (3.0976ms)
+  ✔ render validates page data and has no save/publish side effects (8.5528ms)
+  ✔ foreign/missing media are rejected at save/create without side effects (25.7914ms)
+  ✔ malformed contracts return HTTP 400; access/origin/concurrency stay enforced (11.871ms)
+  ✔ old editors omit the field safely; owner publishes a frozen snapshot (16.1125ms)
+  ✔ publish rechecks ownership even if a stored draft is stale or forged (5.345ms)
+  ✔ explicit deletion remains draft until publish; backups retain page records (15.6307ms)
+✔ real tenant API: draft/published isolation, ownership and permissions (106.8561ms)
+✔ #004 service detail: published snapshot, preview membership, media and inquiry (34.0625ms)
+✔ #004 shared browser handler preserves service context and suppresses preview sends (77.455ms)
+✔ #005 selected service grids: eight offerings, stable links, draft isolation and safe fallbacks (47.3574ms)
+✔ #006 FAQ: published snapshots, feature gating, schema, escaping and route access (30.909ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 659.218

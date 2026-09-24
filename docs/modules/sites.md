@@ -102,3 +102,10 @@ GET /sales-preview/:slug/services/:service requires tenant access and a tenant w
 ## #004D — service budget and inquiry context
 
 ServicePage.typicalPriceRange is an optional {min,max} dollar range (0 < min < max <= 1,000,000). Its midpoint initializes the service comparison. Without a range or migrated legacy amount, payment estimates wait for a visitor-entered cost. The same inquiry handler records selected plan ID/name, approximate monthly payment, project amount, down payment and APR/term alongside financing interest. Values are visitor preferences, not an approved offer. Existing draft/publish isolation and consent rules remain unchanged.
+
+
+## Roofing FAQ route — ticket #006
+
+GET /s/:slug/faq (optional trailing slash) renders only an enabled Roofing FAQ record. It uses the published snapshot unless authenticated ?preview=1 requests the draft. Other methods return 405; missing/disabled/unpublished/non-Roofing pages return 404. Header/footer/service links follow the same enabled-record rule and preserve preview context. No tenant is automatically seeded or published.
+
+Questions are grouped by saved category (blank becomes Roofing questions). Financing/promotions dependencies follow the corresponding platform enabled flags; hidden questions are also excluded from FAQPage JSON-LD and empty groups. All saved text is escaped, including script delimiters in JSON-LD. Related service links use visibleServicePages. FAQ media records grant no public photo access; the hero reuses the generated Roofing still. Native disclosures work without JavaScript; the shared trade-page script enhances the menu/header. Existing tenant page-data APIs are unchanged; the dedicated editor and other trades remain later work. [Evidence](../build-evidence/006/README.md).

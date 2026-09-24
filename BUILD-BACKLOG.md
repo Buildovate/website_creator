@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#005, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#006** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#006, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#007** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -118,7 +118,7 @@ Tickets #001–#041.
 
 ### #006 — Add the Roofing FAQ route
 
-- State: **Not started** · Estimate: **4h** (≤1 day).
+- State: **Done** · Evidence: [006](docs/build-evidence/006/README.md) · Estimate: **4h** (≤1 day).
 - Pack section: [`L`](docs/product/01-CORE-SITE-A-N.md) §L.
 - Files to touch: `src/website-pages.js` **(new)**; `src/site-polish.js`; `tests/website-pages.mjs` **(new)**.
 - Done when: FAQ page/navigation work from published data; optional financing/promo answers disappear with their features; no answer invents guarantees or pricing.
@@ -301,6 +301,7 @@ Tickets #001–#041.
 - External keys/accounts: None for reusing existing generated imagery. This ticket does not authorize replacement films or generation spend.
 - Added after #004C acceptance (queued only): warmer, more confident copy with less legal-sounding hedging; prominently surface response time/emergency service only when supplied by the contractor profile. Fix “How it works” step number/icon alignment (01–04). Use consistent section numbering or remove it. Remove footer line “Labeled illustrative and stock imagery does not depict completed work by this business.” Keep the small AI-example label under the before/after slider.
 - Financing polish (queued 2026-09-24; do not implement in #004E): add a compact comparison chart with one bar per plan and monthly/total-cost views so low-monthly versus least-total tradeoffs are visual; move financing onto the dark premium band with lime accents; format budget with commas (e.g. $6,000).
+- Homepage polish (queued 2026-09-24; do not build in #006): give every service tile its own unique image, with no duplicates (installation and replacement currently share one); use the service-page display font for homepage section headings; on mobile use two compact service columns or a horizontal swipe row instead of one full-screen card per service; remove the empty band under the homepage header. Verify desktop/mobile and image uniqueness when #027A is executed.
 - Scope note: Logged only; #027A remains before #028 and is not implemented by #004D or #004E.
 
 ### #028 — Approve the Roofing homeowner reference

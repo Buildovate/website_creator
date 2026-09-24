@@ -322,3 +322,60 @@ await test('#005 selected service grids: eight offerings, stable links, draft is
   assert.equal((await request(home+'/services/offering-0','GET',undefined,null)).status,404);
  }
 });
+
+await test('#006 FAQ: published snapshots, feature gating, schema, escaping and route access', async () => {
+ const websitePages=records();websitePages.pages[1].enabled=true;
+ websitePages.pages[1].questions=[
+  {id:'scope',category:'Services',question:'Repair or replace?',answer:'Discuss the condition and scope before deciding.'},
+  {id:'unsafe',category:'<script>category</script>',question:'What about <img src=x onerror=alert(1)>?',answer:'Literal </script><script>alert(1)</script> & details.'},
+  {id:'finance',category:'Payment',question:'Finance question?',answer:'Finance-only answer.',requires:'financing'},
+  {id:'promo',category:'Payment',question:'Promotion question?',answer:'Promotion-only answer.',requires:'promotions'}
+ ];
+ let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'faq-ticket-six',settings:{name:'Local FAQ fixture',phone:'8055550123',area:'Ventura',journey:'roof-repair',services:[{name:'Roof repair'}],websitePages,platform:{financing:{enabled:false},promotions:{enabled:false}}}});
+ const path='/tenants/'+tenant.id,home='/s/'+tenant.slug,url=home+'/faq';
+ const get=async(suffix='',user=null)=>{const r=await request(url+suffix,'GET',undefined,user);assert.equal(r.status,200);return r.text();};
+ assert.equal((await request(url,'GET',undefined,null)).status,404);
+ assert.equal((await request(url+'?preview=1','GET',undefined,null)).status,401);
+ assert.equal((await request(url+'?preview=1','GET',undefined,{id:'outsider',email:'outsider@example.test'})).status,404);
+ assert.match(await get('?preview=1',admin),/Private draft preview/);
+ await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
+ const html=await get();
+ const schema=h=>JSON.parse(h.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+ assert.equal(schema(html).mainEntity.length,2);
+ assert.equal(schema(html).mainEntity[1].acceptedAnswer.text,websitePages.pages[1].questions[1].answer);
+ assert.ok(html.includes('&lt;img src=x onerror=alert(1)&gt;'));
+ assert.ok(!html.includes('<script>alert(1)</script>'));
+ assert.ok(!html.includes('Finance-only')&&!html.includes('Promotion-only'));
+ assert.ok(!html.includes(home+'/financing')&&!html.includes(home+'/promotions'));
+ assert.ok(html.includes(home+'/services/roof-repair'));
+ assert.equal(await get('/'),html);
+ for(const route of [home,home+'/services/roof-repair'])assert.ok((await (await request(route,'GET',undefined,null)).text()).includes('href="'+url+'"'));
+ assert.equal((await request(url,'POST',{},null)).status,405);
+ assert.equal((await request(home+'/faq/unknown','GET',undefined,null)).status,404);
+ let draft=structuredClone(tenant.settings);draft.platform.financing={enabled:true,lenders:[{id:'sfc',enabled:true,confirmed:true,applicationUrl:'https://merchant.example.test/sfc'}]};draft.platform.promotions.enabled=true;draft.websitePages.pages[1].title='Draft FAQ title';
+ tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
+ assert.equal(await get(),html);
+ const preview=await get('?preview=1',admin);assert.equal(schema(preview).mainEntity.length,4);assert.ok(preview.includes('/financing?preview=1'));assert.ok(preview.includes('/services/roof-repair?preview=1'));
+ assert.ok((await (await request(home+'?preview=1','GET',undefined,admin)).text()).includes(url+'?preview=1'));
+ await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
+ assert.equal(schema(await get()).mainEntity.length,4);
+ // Each dependency can be switched independently; empty groups disappear too.
+ for(const [financing,promotions,count] of [[true,false,3],[false,true,3],[false,false,2]]) {
+  draft=structuredClone(tenant.settings);draft.platform.financing.enabled=financing;draft.platform.promotions.enabled=promotions;
+  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
+  const h=await get('?preview=1',admin);assert.equal(schema(h).mainEntity.length,count);assert.equal(h.includes('Finance-only'),financing);assert.equal(h.includes('Promotion-only'),promotions);assert.equal(h.includes('>Payment</h2>'),financing||promotions);
+ }
+ draft=structuredClone(tenant.settings);draft.websitePages.pages[1].questions=[];
+ tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
+ assert.match(await get('?preview=1',admin),/What would you like to know/);
+ draft=structuredClone(tenant.settings);draft.websitePages.pages[1].enabled=false;
+ tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
+ assert.equal((await request(url+'?preview=1','GET',undefined,admin)).status,404);
+ assert.equal((await request(url,'GET',undefined,null)).status,200);
+ await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
+ assert.equal((await request(url,'GET',undefined,null)).status,404);
+ assert.ok(!(await (await request(home,'GET',undefined,null)).text()).includes('href="'+url+'"'));
+ draft=structuredClone(tenant.settings);draft.trade='HVAC';draft.journey='standard';draft.websitePages.pages[1].enabled=true;
+ tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
+ assert.equal((await request(url+'?preview=1','GET',undefined,admin)).status,404);
+});

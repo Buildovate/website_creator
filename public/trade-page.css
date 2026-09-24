@@ -191,3 +191,6 @@
 .trade-page .tp-plan-choose{color:#fff}
 
 .tp-plan-payment strong[data-large-payment=true]{font-size:32px;letter-spacing:-1px}
+
+/* #006: FAQ-only layout; homepage polish remains queued in #027A. */
+.tp-faq-page .tp-hero{min-height:490px}.tp-faq-page h1{font-size:clamp(52px,6vw,88px);max-width:850px}.tp-faq-page .tp-faq-group:nth-child(even){background:#e8ece4}.tp-faq-page #answers{scroll-margin-top:90px}.tp-faq-page .tp-faq{grid-template-columns:.7fr 1.3fr;gap:64px}.tp-faq-page .tp-faq p{white-space:pre-line;overflow-wrap:anywhere}.tp-faq-page .tp-faq summary{min-height:44px;align-items:center;overflow-wrap:anywhere}.tp-faq-page .tp-faq-next{border-top:1px solid var(--tp-line)}.tp-faq-page .tp-faq-next a{padding:12px 0}.tp-faq-page h1,.tp-faq-page h2{overflow-wrap:anywhere}@media(max-width:760px){.tp-faq-page .tp-hero{min-height:480px}.tp-faq-page .tp-faq{grid-template-columns:1fr;gap:12px}.tp-faq-page .tp-section{padding:48px 0}}
