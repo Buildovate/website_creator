@@ -1,0 +1,63 @@
+{
+  "views": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "count": 60,
+      "end": {
+        "diffs": 700571,
+        "mean": 0.15024112654320987,
+        "max": 2,
+        "still": "http://127.0.0.1:8097/assets/trade-motion/v3/desktop-still.webp",
+        "width": 1440,
+        "height": 810
+      },
+      "sequenceRequests": 59,
+      "passed": true
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "count": 40,
+      "end": {
+        "diffs": 330597,
+        "mean": 0.08972140842013888,
+        "max": 2,
+        "still": "http://127.0.0.1:8097/assets/trade-motion/v3/mobile-still.webp",
+        "width": 720,
+        "height": 1280
+      },
+      "sequenceRequests": 39,
+      "passed": true
+    }
+  ],
+  "recordings": [
+    {
+      "name": "desktop",
+      "frames": 784,
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "mobile",
+      "frames": 783,
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "reduced": [
+    {
+      "name": "desktop",
+      "sequenceRequests": 0,
+      "still": "http://127.0.0.1:8097/assets/trade-motion/v3/desktop-still.webp"
+    },
+    {
+      "name": "mobile",
+      "sequenceRequests": 0,
+      "still": "http://127.0.0.1:8097/assets/trade-motion/v3/mobile-still.webp"
+    }
+  ],
+  "errors": []
+}

@@ -141,3 +141,7 @@ The controller removes the video poster so the decoded opening frame is visible.
 ## #004H — partial Roofing homepage motion v2
 
 The roof-repair journey now imports LayerExplode, RevealCompare and KineticText through src/trade-motion.js. public/trade-motion.js exposes its event-driven scheduler for the lazily imported v2 interactions. Saved cleanDesign fields motionLayout (A/B/C), motionStyle (bold-industrial/clean-modern), and motionAnatomy (layers/legacy) choose the presentation. Existing cutaway remains reachable. Source token/component options and actual measurements are in [004H evidence](../build-evidence/004H/README.md). This ticket is **Partial**, stopped after two mobile Performance failures; complete browser/recording evidence and conversion regression acceptance remain open. #004I is backlog-only.
+
+## #004G-v3 — current service hero
+
+Supersedes the video-seeking and top-anchored framing notes above: the supplied v3 clips are WebP canvas sequences (60 landscape / 40 portrait frames). Two low-priority workers load after the first paint; eight decoded bitmaps bound memory. The final frame shares the responsive still URL. Mobile is bottom anchored with the actions above the house and unchanged headline; desktop retains the foreground mask. Reduced motion makes no sequence requests. [Evidence](../build-evidence/004G-v3/README.md).

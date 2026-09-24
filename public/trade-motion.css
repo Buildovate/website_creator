@@ -77,3 +77,11 @@
 
 /* Use the measured header offset on the body as well as the document root. */
 :root{--tp-header-height:82px}.trade-page{--tp-header-height:inherit}
+
+/* #004G-v3: the full portrait composition meets the bottom of the hero. */
+.tm-media canvas{display:block;object-fit:cover;object-position:center}
+@media(max-width:700px){
+ .tm-media,.tm-poster,.tm-landing{top:auto;bottom:0;height:min(100%,177.777778vw)}
+ .tm-media canvas,.tm-poster,.tm-landing{object-fit:contain;object-position:center bottom}
+}
+@media(max-width:700px){.tm-caption{bottom:clamp(170px,46vw,240px)}}

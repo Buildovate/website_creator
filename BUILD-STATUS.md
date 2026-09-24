@@ -4,8 +4,6 @@
 
 **#004H — two-attempt Performance stop:** Authorize a further optimization/evidence pass before resuming. Mobile attempt 1: Performance 79 / Accessibility 96 / CLS 0.008136. Attempt 2: bold-industrial 78 / 100 / 0.008136; clean-modern 83 / 100 / 0.008136. Performance 85 is unmet. Work stopped per Joe’s instruction; final state screenshots, reduced-motion captures, both recordings and conversion/browser acceptance remain incomplete. [Options, actual reports and evidence](docs/build-evidence/004H/README.md). #004I is queued only.
 
-**#004G — portrait footage decision:** Please supply a 9:16 clip containing the full house/roof and an opening sky approach, or approve the complete 16:9 film fitted on mobile. The approved 9:16 source already cuts off the side wings and begins near the house; CSS cannot recover those missing pixels or earlier flight. #004G is **Partial**: the complete available portrait frame, mobile readability/list, smooth seek and stable handover are implemented and tested. [Source/evidence](docs/build-evidence/004G/README.md). No replacement generation was commissioned.
-
 **K23 — reviewed policy content:** Please supply the reviewed jurisdiction/trade policy, reviewer/date/reference and required business license facts before activating a real policy. #011 implements and tests the framework with fictional fixtures; businesses without a supplied policy remain **Needs review**. The #011 framework and #012 footer are complete in this fallback mode. #004F-v2 is cleared.
 
 Audit: 2026-09-24. Scope: the current local `C:/Users/joe/website_creator` working tree, including pre-existing uncommitted work. Branch at audit: `feature/local-environment-setup`; HEAD `f9f4ec6`. This is not a staging/production audit. All five packs are received; their existence does not implement their requirements.
@@ -335,3 +333,10 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Build passes. Renderer/options/budget checks pass. Combined regressions: **11 passed / 1 failed** (literal bare-H1 test no longer matches the attributed H1; remaining conversion assertions did not run). Browser capture halted at a case-sensitive headline test; correction is not rerun. Final browser/reduced-motion/recording matrix remains pending. Read-only current mobile/desktop anatomy inspection shows no overflow.
 - [README, reports, available screenshots and executed output](docs/build-evidence/004H/README.md). Conservative whole-changed-source count: **28693 bytes gzip**, below 61440. This is not a total-page transfer budget.
 - Waiting on Joe: authorization to resume the failed Performance gate and finish evidence/tests. #004I StickyStack/StatsMask queued, not implemented; #013 and #027A untouched. Commit locator: feat: add partial Roofing motion kit and record performance stop (#004H). No push, deploy, paid services, generation or messages.
+
+### #004G-v3 — Done (2026-09-24)
+
+- Supplied v3 clips now drive progressive canvas sequences: 60 desktop / 40 mobile frames, 4,263,644 / 1,451,286 bytes, below 4,500,000 / 2,500,000 ceilings. Desktop near-static tail occupies only four slots.
+- Matching responsive final stills, bottom-anchored portrait, actions above the house, unchanged headline position and desktop foreground layering. Reduced motion downloads no sequence.
+- [Final 1440×900 and 390×844 start/mid/end, reduced-motion, both recordings, browser results and byte table](docs/build-evidence/004G-v3/README.md). Build and focused regressions pass. No source-media gate remains for this ticket.
+- Commit locator: fix: scrub v3 Roofing flights with canvas frames (#004G-v3). Next authorized work: #004H-finish; #004I stays queued, not built. No push or deployment.

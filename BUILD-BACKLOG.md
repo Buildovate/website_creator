@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G follow-up: Partial, implemented polish committed; portrait source decision is Waiting on Joe.** #027A additions are queued only and #027A remains Not started. Stopped after #004H’s two-attempt Performance failure; #004H is Partial / Waiting on Joe. #004I is queued only, not built. The ordinary next numbered backlog ticket remains #013; neither #004I implementation nor #013 is authorized by this request.
+Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. Stopped after #004H’s two-attempt Performance failure; #004H is Partial / Waiting on Joe. #004I is queued only, not built. The ordinary next numbered backlog ticket remains #013; neither #004I implementation nor #013 is authorized by this request.
 
 ## Session contract
 
@@ -112,10 +112,9 @@ Tickets #001–#041.
 
 ### #004G — Hero polish on desktop and mobile
 
-- State: **Partial — implementation verified; portrait source decision pending**. [Evidence](docs/build-evidence/004G/README.md).
-- Implemented: top-anchored natural 9:16 frame, dark mobile headline backing, accessible four-link roof list, decoded-time 0.3-second handover, consistent header offset and eased single-flight seeking. Six-frame GOP and existing delivery budgets pass unchanged.
-- Outstanding: the approved portrait source omits the outer house/roof edges and sky approach. Supply a new approved 9:16 source, or approve using the complete 16:9 film fitted on mobile; do not silently substitute or generate footage. Logged in BUILD-STATUS and NEEDS-ASSETS.
-- Before/after desktop/mobile screenshots and scroll recordings are saved; no push, deploy, generation or messages.
+- State: **Done via #004G-v3**. [Final evidence](docs/build-evidence/004G-v3/README.md).
+- Supplied v3 clips use 60/40 canvas frames under the whole-sequence byte ceilings; static desktop tail compressed to four slots. Matching portrait/landscape final stills, bottom-anchored mobile frame, headline preserved, desktop house mask and reduced-motion zero sequence downloads verified.
+- Desktop/mobile screenshots and recordings pass. No push or deployment.
 
 ### #004H — Motion kit v2, part 1 (Roofing)
 

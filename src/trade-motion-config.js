@@ -1,8 +1,8 @@
 // Reviewed creative configuration. Future trade pages opt in explicitly.
 export const tradeMotion = {
  roofing: {
-  label:'Roof', poster:'/assets/trade-motion/roofing-house-still.webp', photo:true,
-  media:{desktop:'/assets/trade-motion/roofing-drone-dive-16x9.mp4',desktopWebm:'/assets/trade-motion/roofing-drone-dive-16x9.webm',mobile:'/assets/trade-motion/roofing-drone-dive-9x16.mp4',mobileWebm:'/assets/trade-motion/roofing-drone-dive-9x16.webm',sequence:[],foreground:'/assets/trade-motion/roofing-house-cutout.webp',maskSequence:[],blendSeconds:.3},
+  label:'Roof', poster:'/assets/trade-motion/v3/desktop-still.webp', mobilePoster:'/assets/trade-motion/v3/mobile-still.webp', photo:true,
+  media:{sequences:{desktop:{base:'/assets/trade-motion/v3/desktop/',count:60,width:1440,height:810},mobile:{base:'/assets/trade-motion/v3/mobile/',count:40,width:720,height:1280}},foreground:'/assets/trade-motion/roofing-house-cutout.webp'},
   // Normalized scroll time and shared camera transform. Anchors live in scene space.
   camera:[{t:0,x:0,y:380,scale:.62},{t:.22,x:-25,y:240,scale:.8},{t:.5,x:-60,y:80,scale:1},{t:.76,x:-110,y:-55,scale:1.28},{t:1,x:0,y:0,scale:1}],
   mobileChapters:['Above the neighborhood','Toward the roof','At the roofline','Your home in view','A closer look at home'],
