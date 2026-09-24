@@ -1,0 +1,89 @@
+{
+  "firstPaint": {
+    "src": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/000.webp",
+    "landingOpacity": "0",
+    "poster": {
+      "x": 0,
+      "y": 82,
+      "width": 390,
+      "height": 762,
+      "top": 82,
+      "right": 390,
+      "bottom": 844,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 82,
+      "width": 390,
+      "height": 762,
+      "top": 82,
+      "right": 390,
+      "bottom": 844,
+      "left": 0
+    },
+    "headline": {
+      "x": 23.40625,
+      "y": 154,
+      "width": 343.1875,
+      "height": 88.375,
+      "top": 154,
+      "right": 366.59375,
+      "bottom": 242.375,
+      "left": 23.40625
+    }
+  },
+  "delayedFrame": {
+    "shown": 4,
+    "readyThrough": 4,
+    "loaded": 31
+  },
+  "noJS": [
+    {
+      "name": "desktop",
+      "passed": true
+    },
+    {
+      "name": "mobile",
+      "passed": true
+    }
+  ],
+  "timestamps": [
+    {
+      "requestedSeconds": 0,
+      "elapsedMs": 3.2999999970197678,
+      "frame": 0
+    },
+    {
+      "requestedSeconds": 0.5,
+      "elapsedMs": 516.2999999970198,
+      "frame": 4
+    },
+    {
+      "requestedSeconds": 1,
+      "elapsedMs": 1022.2000000029802,
+      "frame": 8
+    },
+    {
+      "requestedSeconds": 1.5,
+      "elapsedMs": 1516.7999999970198,
+      "frame": 12
+    },
+    {
+      "requestedSeconds": 5,
+      "elapsedMs": 5019.29999999702,
+      "frame": 39
+    }
+  ],
+  "framing": {
+    "viewport": 844,
+    "renderedMediaHeight": 771,
+    "houseSourceTop": 1007,
+    "houseSourceBottom": 1230,
+    "cropTop": 768,
+    "cropHeight": 512,
+    "houseHeightPx": 335.806640625,
+    "viewportFraction": 0.3978751666172986,
+    "headlineTransform": "none"
+  }
+}

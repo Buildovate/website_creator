@@ -85,3 +85,8 @@
  .tm-media canvas,.tm-poster,.tm-landing{object-fit:contain;object-position:center bottom}
 }
 @media(max-width:700px){.tm-caption{bottom:clamp(170px,46vw,240px)}}
+
+/* #004G-v4: one opaque, identically fitted flight plane from first paint. */
+.tm-has-media .tm-poster{visibility:hidden}
+@media(max-width:700px){.tm-media,.tm-poster,.tm-landing{inset:0;height:100%;width:100%}.tm-media canvas,.tm-poster,.tm-landing{object-fit:cover;object-position:center bottom}}
+@media(max-width:700px){.tm-caption{top:180px;bottom:auto}.tm-caption .tp-intro{font-size:11px;line-height:1.4;padding:8px 10px}.tm-caption .tm-controls{margin-top:8px;gap:8px}.tm-caption:before{inset:-10px -8vw -10px;background:linear-gradient(transparent,#061f27b3 25%,#061f27b3 85%,transparent)}}

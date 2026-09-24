@@ -345,3 +345,11 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Three Lighthouse attempts used. Final bold: 100 Performance / 100 Accessibility / 0.0095 CLS / 1.205s LCP. Clean: 97 / 96 / 0.0095 / 1.205s. Targets pass; no fourth audit. Subsequent below-fold stylesheet-order correction is documented separately and verified in the final browser suite.
 - [Final 12-profile state/reduced-motion matrix, desktop/mobile recordings, touch notes, request chains and 43/43 regression outputs](docs/build-evidence/004H/README.md). Attributed H1 and bundled service-style assertions corrected. Final visual inspection uses the compact component typography, not the earlier captures.
 - Commit locator: fix: finish Roofing phone performance and motion evidence (#004H-finish). #004I remains queued, not built; #013 and #027A are untouched. Both authorized steps complete. No push or deployment.
+
+
+### #004G-v4 — Done (2026-09-24)
+
+- Corrected portrait opening/house crop, first-paint media planes and bidirectional contiguous-frame playback. Mobile house height 39.8% of 390×844 viewport; headline unchanged; matching-still handoff retained.
+- Clean sticky-panel contrast fixed. Six final mobile Lighthouse audits (three per style) pass Performance >=85, Accessibility >=95 and CLS <=0.05; all contrast checks pass.
+- [Final evidence, six reports, first-paint/timed screenshots, down/up/down recordings, delayed-frame/fallback checks and 43/43 regression commands](docs/build-evidence/004G-v4/README.md). Motion/render/style source budget 31136 gzip bytes / 61440.
+- Commit locator: fix: correct Roofing flight framing and two-way scrub (#004G-v4). #004I remains queued, not built. No push or deployment.

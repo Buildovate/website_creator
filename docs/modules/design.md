@@ -149,3 +149,8 @@ Supersedes the video-seeking and top-anchored framing notes above: the supplied 
 ## #004H-finish — phone loading and final motion acceptance
 
 The Roofing motion homepage uses responsive AVIF/WebP finished stills and media-specific high-priority preloads. scripts/build-roofing-critical.mjs derives initial CSS from the complete source bundles. src/roofing-performance.js gates remaining styles/scripts on the hero LCP with a bounded fallback; full styles append after initial CSS. The worker avoids inferring a real shared header from selector text embedded in that CSS. The v3 service hero uses the same loading gate. Full component state/reduced-motion matrix, both recordings, touch/keyboard QA, full regressions and phone reports now pass the ticket gates. [Final evidence and measured limits](../build-evidence/004H/README.md). #004I remains queued only.
+
+
+## #004G-v4 — current service-flight framing and playback
+
+The portrait uses a tracked central crop (40 WebP frames in public/assets/trade-motion/v4) with the exact final frame as its still. The preloaded static opening is identical to frame 0; reduced motion and no JS show the final still. All media planes share the same fit. The controller loads consecutively and traverses adjacent frames within the contiguous loaded prefix in either direction. Headline placement and desktop final foreground layering are preserved. Clean motion-layer sticky panels have an explicit token surface for contrast. [Six final phone audits and complete QA](../build-evidence/004G-v4/README.md).

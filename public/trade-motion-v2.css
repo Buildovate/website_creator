@@ -13,3 +13,6 @@
 
 /* Keep the existing Project Map kicker readable on the Roofing paper surface. */
 .cx-roof-repair #projects .kicker{color:#38594d}
+
+/* Sticky content owns its surface even when it overlaps the preceding section. */
+.mk-layer-stage{background:var(--mk-surface)}

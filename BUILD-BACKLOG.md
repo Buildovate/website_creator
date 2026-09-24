@@ -116,6 +116,12 @@ Tickets #001–#041.
 - Supplied v3 clips use 60/40 canvas frames under the whole-sequence byte ceilings; static desktop tail compressed to four slots. Matching portrait/landscape final stills, bottom-anchored mobile frame, headline preserved, desktop house mask and reduced-motion zero sequence downloads verified.
 - Desktop/mobile screenshots and recordings pass. No push or deployment.
 
+### #004G-v4 — Drone hero framing and two-way scrub
+
+- State: **Done**. [Final evidence](docs/build-evidence/004G-v4/README.md).
+- Cropped tracked portrait, opening-frame first paint, adjacent loaded-frame playback both directions, unchanged headline and seamless handoff.
+- Six mobile Lighthouse audits pass all gates; clean contrast fixed. Full regression, touch/keyboard, reduced-motion and no-JS evidence pass. Local commit only; #004I remains queued.
+
 ### #004H — Motion kit v2, part 1 (Roofing)
 
 - State: **Done via #004H-finish**. [Final evidence](docs/build-evidence/004H/README.md).
