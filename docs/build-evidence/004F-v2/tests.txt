@@ -1,0 +1,13 @@
+PASS media byte-range seeking, suffix/open ranges, invalid ranges, full responses and HEAD
+✔ tests\media-ranges.mjs (107.7694ms)
+PASS premium service: generated hero, four image cards/steps, editable escaped headline, draft/publish isolation, sourced/confirmed/empty trust fields, no invented reviews, paired-photo privacy and brand contrast.
+PASS premium interactions: scroll reveal enhancement, visible reduced-motion fallback, comparison input and accessible value.
+✔ tests\premium-service.mjs (214.8154ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 234.8495

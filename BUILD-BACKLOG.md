@@ -108,6 +108,8 @@ Tickets #001–#041.
 - Evidence: start/middle/end desktop/mobile screenshots, new scroll recording, media probes and browser checks. Update NEEDS-ASSETS and BUILD-STATUS, commit, stop. No push.
 - External keys/accounts: none for supplied media; built-in imagegen performs requested alpha extraction.
 
+#004F-v2 mini-fix: **Blocked** after two WebM encoding budget fixes; existing delivery unchanged. [Evidence](docs/build-evidence/004F-v2/README.md); question in BUILD-STATUS. Overnight queue continues at #008.
+
 ### #005 — Connect the selected-service grid to detail pages
 
 - State: **Done** · Evidence: [005](docs/build-evidence/005/README.md) · Estimate: **4h** (≤1 day).

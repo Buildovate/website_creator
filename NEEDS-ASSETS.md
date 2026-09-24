@@ -124,3 +124,8 @@ No speed, warranty or service duration is inferred from these clip lengths. Proc
 | roofing-drone-dive-9x16.webm | VP9 | 720×1280 | 1,423,329 | 5.042 s / 121 |
 
 Each desktop format is below 4,000,000 bytes; each mobile format below 2,000,000 bytes. MP4 uses fast-start metadata; WebM is the tested alternate source. Source metadata, decoded final frames, encoding recipe, cutout prompt and browser evidence: [004F](docs/build-evidence/004F/README.md).
+
+## #004F-v2 regenerated media — pending delivery
+
+Regenerated approved inputs are 7.542s/181 desktop frames and 5.042s/121 mobile frames. H.264 fits, but WebM delivery budgets failed after two fixes; no delivery replaced. See [blocked evidence](docs/build-evidence/004F-v2/README.md) and Waiting on Joe. Original #004F table above describes the still-active delivery.
+

@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## Waiting on Joe
+
+- **#004F-v2:** WebM delivery budgets still fail after two honest encoding fixes (desktop 4,225,862 bytes vs <4,000,000; previous mobile 2,307,579 vs <2,000,000). May a follow-up lower WebM resolution, lengthen the six-frame GOP, or revise the budget? Existing delivery remains intact. [Failure evidence](docs/build-evidence/004F-v2/README.md). Browser recapture is pending; skipped to #008 per the overnight rule.
+
 Audit: 2026-09-24. Scope: the current local `C:/Users/joe/website_creator` working tree, including pre-existing uncommitted work. Branch at audit: `feature/local-environment-setup`; HEAD `f9f4ec6`. This is not a staging/production audit. All five packs are received; their existence does not implement their requirements.
 
 **Done** means the entire section’s applicable behavior runs, has evidence, and has no missing required integration. **Partial** means a relevant portion actually runs, with the remainder stated. **Not started** means only plans or reusable foundations exist for that feature. “Unsure” appears wherever the evidence cannot resolve a claim. No section is marked Done solely because constants, a mock, an environment-variable check, a creative brief or a provider link exists.
@@ -232,3 +236,9 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 
 - Queued caption removal (keep the before/after AI label), no duplicated business name beside a logo containing it, and a roughly 20px higher hero headline. No rendered behavior changed. Verified the #027A text and diff. Next: #004F-v2, then #008, #009 and #010; stop after #010. User's explicit queue overrides the ordinary one-ticket session rule.
 - Commit locator: docs: queue Roofing caption and header polish (#027A).
+
+### #004F-v2 — Blocked (2026-09-24)
+
+- Reran the requested encoder against approved regenerated clips. Input probes confirm 7.542s/181 and 5.042s/121 frames. Dynamic frame-count capture fixes the old hardcoded 193-frame assumption.
+- Two WebM budget fix attempts failed; [actual outputs/source frames](docs/build-evidence/004F-v2/README.md). No delivery replacement, final blend sign-off or refreshed scroll recordings claimed. Existing media is untouched. Build and two media/service regression tests pass.
+- #027A hero +20px upward request was queued in item 0. Commit locator: chore: record regenerated Roofing media encoding blocker (#004F-v2). Continue #008, #009, #010.
