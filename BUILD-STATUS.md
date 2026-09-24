@@ -2,7 +2,7 @@
 
 ## Waiting on Joe
 
-- **#004F-v2:** WebM delivery budgets still fail after two honest encoding fixes (desktop 4,225,862 bytes vs <4,000,000; previous mobile 2,307,579 vs <2,000,000). May a follow-up lower WebM resolution, lengthen the six-frame GOP, or revise the budget? Existing delivery remains intact. [Failure evidence](docs/build-evidence/004F-v2/README.md). Browser recapture is pending; skipped to #008 per the overnight rule.
+- **#004F-v2:** Approved resolution retry failed: 1600×900 desktop WebM is 4,385,462 bytes (must be <4,000,000), with the six-frame GOP preserved. Stopped before mobile encoding, delivery replacement or browser recapture. Which further encoding constraint may change? The specified 1600×900 / 900×1600 sizes are larger than the prior attempted WebM sizes (1440×810 / 720×1280). [Actual output and probes](docs/build-evidence/004F-v2/README.md). Existing delivery remains intact.
 
 Audit: 2026-09-24. Scope: the current local `C:/Users/joe/website_creator` working tree, including pre-existing uncommitted work. Branch at audit: `feature/local-environment-setup`; HEAD `f9f4ec6`. This is not a staging/production audit. All five packs are received; their existence does not implement their requirements.
 
@@ -265,3 +265,10 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Draft project edits, private/unpublished projects, post-publication uploads, draft logo/review settings and cross-tenant logo selection remain private. Unpublishing revokes story/map/media access. Browser harness now inspects the correct 303 login redirect instead of following it to a 200 login page; direct API denial is 401.
 - No live provider validation, inquiry submission, paid generation, customer messages, push or deployment. Missing real customer proof assets are in NEEDS-ASSETS; K03/K04/K22 remain open. P stays Partial. Commit locator: fix: verify Roofing proof placement and map return (#010).
 - **Stopped after #010 as requested.** #011 is not started. #004F-v2 remains blocked after two encoding fixes; Waiting on Joe contains the question and evidence. Queue item 0 and #008–#010 each have separate commits.
+
+### #004F-v2 approved resolution follow-up — Blocked (2026-09-24)
+
+- Retried the previous two-pass encoder at exactly the authorized WebM dimensions (1600×900 desktop; 900×1600 mobile configured). H.264 stays at full input resolution (1920×1080 / 1080×1920); the six-frame GOP and byte budgets remain unchanged.
+- Desktop H.264 passed at 3,045,346 bytes. Desktop WebM failed at 4,385,462 bytes. Stopped on that gate; mobile was not encoded. No further quality/GOP/bitrate changes attempted.
+- [Encoding output, actual probes and reproducible script](docs/build-evidence/004F-v2/README.md). Delivery hashes unchanged; browser screenshots, recordings and final blend sign-off remain pending.
+- Commit locator: `chore: record approved WebM resolution retry (#004F-v2)`. Continue only the separately requested #010A and #027A queue update; #011 remains not started.
