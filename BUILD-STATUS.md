@@ -180,3 +180,10 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Added a dark gradient behind hero paragraph/actions and enlarged mobile X-ray to near full width with the control directly beneath. NEEDS-ASSETS marks Roofing clips supplied and records final encodes.
 - [Desktop/mobile start-middle-end screenshots, both scroll recordings, final frames, cutout provenance and test evidence](docs/build-evidence/004F/README.md). Build, TypeScript and seven relevant suites pass (nine commands). Desktop/mobile browser checks include actual MP4 and WebM playback/seeking, no overflow and no observed page errors.
 - Commit locator: `feat: wire supplied Roofing cinematic media (#004F)`. No push or deployment. #027A unchanged and queued. Next ticket **#005**, not started. Stop.
+
+
+### Planning update — #028A–#028F queued (2026-09-24)
+
+- Inserted six Not started tickets after the Roofing acceptance ticket #028 and before the second-trade rollout #029: configurable design styles, section layout variants, a manifest-backed uniqueness generator, a curated media fallback library, per-generation review packets and an automatic approval-blocking QA gate.
+- The sequence keeps Roofing as the proving ground before HVAC and later trades. #028C depends on #023, #028A and #028B; #028F depends on #028E and gates custom per-contractor video from #028D.
+- No implementation, generation, screenshots, provider calls, push or deployment occurred in this planning-only update. Current next executable ticket remains **#005**.

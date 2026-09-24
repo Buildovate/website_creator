@@ -311,6 +311,50 @@ Tickets #001–#041.
 - Done when: #027A is complete; home/service/FAQ/About/city/promo/finance/footer/form paths pass local route and asset checks; show desktop/mobile screenshots, no overflow and a saved inquiry. Explicit stubs and outstanding external gates are listed; #024–#027 may pass in clearly labeled stub mode when K02 is unavailable. Missing films do not block this Roofing acceptance gate; no deployment.
 - External keys/accounts: None.
 
+### #028A — Design styles
+
+- State: **Not started** · Estimate: **8h** (≤1 day).
+- Scope: Create four or five complete visual systems per trade. Each system defines its type pairing, palette, corner radius, spacing rhythm and light or dark surface treatment, and every choice remains configurable per contractor.
+- Done when: The Roofing site renders correctly in every style, preserving content, permissions, responsive behavior and accessibility.
+- External keys/accounts: None.
+
+### #028B — Section layout variants
+
+- State: **Not started** · Estimate: **8h** (≤1 day).
+- Scope: Add at least three layout variants each for hero, services, process, financing, reviews and final CTA. Every variant uses the same trade configuration and factual contractor data.
+- Done when: Every section variant passes the existing tests and reduced-motion checks, with no broken responsive layout or content loss.
+- External keys/accounts: None.
+
+### #028C — Uniqueness generator
+
+- State: **Not started** · Estimate: **8h** (≤1 day).
+- Dependency: #023 generation manifest, #028A design styles and #028B section variants.
+- Scope: Given contractor inputs and a seed, select a visual style and section variants, generate copy only from the contractor's facts, and save the selected choices in the #023 generation manifest.
+- Done when: Three fictional Roofing contractors with different inputs produce homepages that do not look like one template; show the three results side by side and preserve deterministic output for the same inputs and seed.
+- External keys/accounts: K01 only if application copy generation is enabled; otherwise use the ticket's honest missing-access behavior.
+
+### #028D — Media library fallback
+
+- State: **Not started** · Estimate: **8h** (≤1 day).
+- Scope: For each trade, curate about ten approved hero clips that can be recolored to the contractor's palette, plus per-contractor AI stills. Record provenance, approval and fallback behavior for every asset.
+- Done when: The approved fallback library works through trade configuration without inventing contractor work or proof. Custom per-contractor video remains disabled until #028F passes.
+- External keys/accounts: K01 for application-generated stills and K02 for new video production when required; approved existing assets need no new key.
+
+### #028E — Review packet
+
+- State: **Not started** · Estimate: **8h** (≤1 day).
+- Scope: Every generated site produces a review-packet folder containing desktop and mobile screenshots of every page, video frames at 0%, 25%, 50%, 75% and 100%, checklist results against `docs/product/CONVERSION-PLAYBOOK.md`, and a list of every legal or financing claim.
+- Done when: The packet is complete and reproducible, and nothing publishes without a recorded approval tied to that generated version.
+- External keys/accounts: None.
+
+### #028F — Automatic QA gate
+
+- State: **Not started** · Estimate: **8h** (≤1 day).
+- Dependency: #028E review packet.
+- Scope: Automate checks for layout overflow, broken images, video consistency (the house must not change between frames), missing disclosures, placeholder text and unverified reviews. Route borderline results to human or AI review.
+- Done when: Definite failures block approval, borderline results cannot pass without a recorded review decision, and passing evidence is attached to the generated version. Custom per-contractor video remains off until this gate passes.
+- External keys/accounts: K01 only if AI review is used; deterministic checks and human review require none.
+
 ### #029 — Apply the approved page system to HVAC
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
