@@ -10,6 +10,7 @@ const records = () => ({version: 1, pages: [
   {id: 'company-about', kind: 'about', title: 'Meet the team', story: 'Test-only company story.', whyUs: ['Explain the scope before work.'], titleLocked: true},
   {id: 'city-oxnard', kind: 'city', title: 'Roofing in Oxnard', city: 'Oxnard', content: 'Test-only city-specific copy.', servicePageIds: ['roof-repair']},
 ]});
+
 const asset = photoId => ({photoId, alt: 'Test-only roof illustration', caption: 'Local test asset'});
 const withMedia = photoId => {
   const data = records();
@@ -272,4 +273,52 @@ await test('#004 shared browser handler preserves service context and suppresses
   form.dataset.preview='true';sent=null;
   await form.onsubmit({preventDefault(){}});
   assert.equal(sent,null);
+});
+
+await test('#005 selected service grids: eight offerings, stable links, draft isolation and safe fallbacks', async () => {
+ const names = JSON.parse(readFileSync('public/trade-library.json', 'utf8')).Roofing;
+ const services = names.map(name => ({name}));
+ const websitePages = {version:1, pages:names.map((name,i) => ({id:`grid-${i}`, kind:'service', serviceName:name, title:name, slug:`offering-${i}`, enabled:true}))};
+ for (const journey of ['standard', 'roof-repair']) {
+  let {tenant} = await api('/tenants','POST',{designKit:'roofing',slug:`service-grid-${journey}`,settings:{name:'Local Roofing grid',phone:'8055550123',area:'Ventura',journey,services,websitePages}});
+  const path='/tenants/'+tenant.id, home='/s/'+tenant.slug;
+  const get = async (suffix='', user=null) => {
+   const response=await request(home+suffix,'GET',undefined,user);
+   assert.equal(response.status,200);return response.text();
+  };
+  const grid = html => html.match(/<section[^>]*id="services"[\s\S]*?<\/section>/)[0];
+  await api(path+'/publish','POST',{version:tenant.version,approved:true});
+  tenant=(await api(path)).tenant;
+  const published=grid(await get());
+  assert.equal((published.match(/<article/g)||[]).length,8);
+  for (let i=0;i<8;i++) {
+   assert.ok(published.includes(`href="${home}/services/offering-${i}"`));
+   assert.equal((await request(home+`/services/offering-${i}`,'GET',undefined,null)).status,200);
+  }
+  assert.ok(!published.includes('data-service-link'), 'Detail navigation does not select the inquiry instead');
+  const draft=structuredClone(tenant.settings);
+  draft.services=services.slice(1).reverse();
+  draft.websitePages.pages.reverse();
+  draft.websitePages.pages.find(p=>p.serviceName===names[2]).enabled=false;
+  draft.websitePages.pages=draft.websitePages.pages.filter(p=>p.serviceName!==names[3]);
+  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
+  assert.equal(grid(await get()),published,'Draft edits cannot change public tiles or links');
+  const preview=grid(await get('?preview=1',admin));
+  assert.equal((preview.match(/<article/g)||[]).length,7);
+  assert.ok(!preview.includes(`<h3>${names[0]}</h3>`));
+  assert.ok(preview.indexOf(`<h3>${names[7]}</h3>`)<preview.indexOf(`<h3>${names[1]}</h3>`));
+  assert.ok(preview.includes(`href="${home}/services/offering-7?preview=1"`));
+  for(const i of [2,3]) {
+   assert.ok(!preview.includes(`/services/offering-${i}`));
+   assert.ok(preview.includes(`data-service-link="${names[i]}"`));
+  }
+  assert.equal((await request(home+'/services/offering-7?preview=1','GET',undefined,null)).status,401);
+  assert.equal((await request(home+'/services/offering-0?preview=1','GET',undefined,admin)).status,404);
+  assert.equal((await request(home+'/services/offering-0','GET',undefined,null)).status,200);
+  await api(path+'/publish','POST',{version:tenant.version,approved:true});
+  const updated=grid(await get());
+  assert.ok(!updated.includes('/services/offering-0'));
+  assert.ok(updated.includes(`href="${home}/services/offering-7"`));
+  assert.equal((await request(home+'/services/offering-0','GET',undefined,null)).status,404);
+ }
 });

@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#004, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#005** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#005, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#006** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -110,7 +110,7 @@ Tickets #001–#041.
 
 ### #005 — Connect the selected-service grid to detail pages
 
-- State: **Not started** · Estimate: **4h** (≤1 day).
+- State: **Done** · Evidence: [005](docs/build-evidence/005/README.md) · Estimate: **4h** (≤1 day).
 - Pack section: [`H`](docs/product/01-CORE-SITE-A-N.md) §H.
 - Files to touch: `src/showcase.js`; `src/conversion-page.js`; `src/website-pages.js` **(new)**; `tests/website-pages.mjs` **(new)**.
 - Done when: Only contractor-selected services get tiles and links; all eight Roofing services can be selected; removing/reordering a draft service does not break the published site.

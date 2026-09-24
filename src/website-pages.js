@@ -9,6 +9,16 @@ import {reviewSection} from './reviews.js';
 export function visibleServicePages(s) {
   return (s.websitePages?.pages || []).filter(p => p.kind === 'service' && p.enabled && (s.services || []).some(service => service.name === p.serviceName));
 }
+
+// Use the same snapshot and visibility rules as the destination route. Library
+// samples have no tenant service routes, so retain their contextual inquiry.
+export function serviceGridLink(s, name, {base = '', preview = false, sample = false} = {}, arrow = '↗') {
+ const page = s.trade === 'Roofing' && !sample && /^\/s\/[^/?]+$/.test(base)
+  && visibleServicePages(s).find(p => p.serviceName === name);
+ return page
+  ? `<a href="${e(base)}/services/${e(page.slug)}${preview ? '?preview=1' : ''}">Explore ${e(name.toLowerCase())} ${arrow}</a>`
+  : `<a href="#contact" data-service-link="${e(name)}">Ask about ${e(name.toLowerCase())} ${arrow}</a>`;
+}
 // Only rendered service slots grant public media access; thumbnail/other page
 // kinds remain private until their own renderers are implemented.
 export function publicServicePhoto(s, photo) {
