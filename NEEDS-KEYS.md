@@ -50,3 +50,8 @@ Every external-dependent ticket must expose an honest missing-access state. Plan
 ## Readiness gate
 
 For each live provider ticket, record only non-secret evidence: authorized environment/account alias, verified capability, scopes needed, test date/result, and owner approval reference. Missing access → labeled stub + live ticket remains open. Provider rejection/unsupported API → explicit unsupported/manual mode, never a fake Connected label. **#001 completed without external keys. No external key is required to begin #002.**
+
+## #009 delivered fallback — 2026-09-24
+
+K03/K04 live capability remains unverified. The new trust strip uses approved profile links and optional owner-confirmed evidence; it makes no feed requests and never claims Connected. Existing review adapters remain separate. K22 permitted marks are missing; readable text names are implemented and tested. No new key required for this fallback; #047 and live validation remain open.
+

@@ -126,3 +126,7 @@ Supersedes the Roofing placeholder portion of #004E: public/assets/trade-motion 
 ## #007A — About trust design
 
 Roofing About uses src/about-page.js, public/about-trust.css/js with the shared trade-page components. Directly under the hero, confirmed stats use static accessible facts with visual numeric count-up; reduced motion and no-JS retain final values, and license IDs never animate. Three icon-led cards use confirmed proof or neutral request guidance. Owned portraits are allowed in this About hero by Joe's explicit override; the missing-photo treatment is a labeled native SVG Roofing truck. Recent projects reuse published gallery photos, with no fabricated project placeholders. The concise story keeps at most 60 words. [Evidence](../build-evidence/007A/README.md).
+
+## Roofing network strip — #009
+
+src/trust.js renders only approved selected Roofing networks through publicTrustSelections. public/trust.css/js provide the dark proof band, <=5 static row or >5 native carousel, arrows/dots/keyboard and no-autoplay reduced-motion/no-JS fallback. Network names are the K22 text fallback; no brand marks or affiliations are inferred. Owner-entered ratings require current evidence and display owner-confirmed/date attribution. Zero entries omits the section. Both homepage renderers support five selected placements; the service renderer supports service-hero. Public reads remain published snapshots. Existing review feeds are independent; no provider calls are added. [Evidence](../build-evidence/009/README.md).

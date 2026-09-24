@@ -249,3 +249,10 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Selected ratings/credentials fail publication without current confirmed evidence; state-license claims also require confirmed license number/state. Public selection logic rechecks expiry at read time. No live verification or legacy auto-confirmation.
 - [Desktop/mobile screenshots and output](docs/build-evidence/008/README.md): build, TypeScript, five contract/API/constitution/reference-proof tests and browser checks pass. Saved contract does not introduce public markup yet; private draft notes stay private.
 - Local fictional fixtures; no keys/provider calls or marks required. P stays Partial: renderer #009, controls #047 and actual provider validation remain. Commit locator: feat: model trust selections and evidence (#008). Continue #009.
+
+### #009 — Done in source-link/text fallback mode (2026-09-24)
+
+- Roofing selected trust profiles render as a premium static row or accessible native carousel. Both homepages support selected hero/services/reviews/form/footer positions; service detail supports below-hero proof. No random selections or inferred affiliations. Empty, expired and unapproved selections hide.
+- Text network names are the K22 fallback. Optional ratings use current owner-confirmed evidence and show that attribution/date; credentials get no stars. The component makes no provider request. Existing Google/Yelp excerpt adapters remain separate and unverified live (K03/K04).
+- [Desktop/mobile screenshots and test output](docs/build-evidence/009/README.md): build, types, 26 tests and desktop/mobile/no-JS browser checks pass. Arrows/dots/native swipe/keyboard/reduced-motion, source links, private draft boundaries and no overflow/errors verified.
+- P remains Partial: #047 controls, permitted network marks, actual live-account validation, optional other-page placements and trade rollout remain open. No generation, messages, push or deployment. Commit locator: feat: render selected Roofing trust profiles (#009). Continue #010, then stop.

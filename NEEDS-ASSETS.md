@@ -129,3 +129,8 @@ Each desktop format is below 4,000,000 bytes; each mobile format below 2,000,000
 
 Regenerated approved inputs are 7.542s/181 desktop frames and 5.042s/121 mobile frames. H.264 fits, but WebM delivery budgets failed after two fixes; no delivery replaced. See [blocked evidence](docs/build-evidence/004F-v2/README.md) and Waiting on Joe. Original #004F table above describes the still-active delivery.
 
+
+## #009 trust network marks
+
+Permitted network logo/seal files and usage permission (K22) have not been supplied. The Roofing strip ships accessible text names as the approved fallback. No remote logo download, synthetic logo, or membership inference. Custom badge upload/editor remains #047.
+

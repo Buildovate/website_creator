@@ -48,3 +48,40 @@ test('actual API: draft/snapshot separation, old-client preservation, validation
  await api(path+'/publish','POST',{version:tenant.version,approved:true});assert.equal((await api(path)).tenant.published.trust.networks.length,0);
  assert.ok(!(await (await request('/s/robles-roofing','GET',undefined,null)).text()).includes('PRIVATE_EVIDENCE_NOTE'));
 });
+
+test('#009 strip renders only approved selections with source links, no assumed marks or ratings',async()=>{
+ const {renderTrustStrip}=await import('../src/trust.js');const s={trade:'Roofing',trust:selected()};
+ const html=renderTrustStrip(s);assert.match(html,/4\.7/);assert.match(html,/34 reviews/);assert.match(html,/Owner-confirmed/);assert.ok(!html.includes('PRIVATE_EVIDENCE_NOTE'));assert.ok(!html.includes('<img'));assert.match(html,/rel="noopener noreferrer"/);
+ assert.equal(renderTrustStrip({...s,trade:'Plumbing'}),'');assert.equal(renderTrustStrip(s,{placement:'footer'}),'');
+ for(const trust of [{},selected([]),selected([{...google,approved:false}]),selected([{...google,enabled:false}]),selected([{...google,expiresAt:'2000-01-01'}])])assert.equal(renderTrustStrip({...s,trust}),'');
+ const neutral=renderTrustStrip({...s,trust:selected([{id:'google',enabled:true,approved:true,profileUrl:google.profileUrl}])});assert.match(neutral,/View profile/);assert.ok(!neutral.includes('trust-rating'));assert.ok(!neutral.includes('★'));
+ const custom=renderTrustStrip({...s,trust:selected([{id:'custom',enabled:true,approved:true,profileUrl:'https://chamber.example.test/',label:'<script>bad</script>'}])});assert.ok(!custom.includes('<script>bad'));assert.match(custom,/&lt;script&gt;/);
+ const many=TRUST_NETWORKS.filter(n=>n.domains.length).slice(0,6).map(n=>({id:n.id,enabled:true,approved:true,profileUrl:'https://'+n.domains[0]+'/qa'}));
+ assert.match(renderTrustStrip({...s,trust:selected(many)}),/data-trust-mode="carousel"/);assert.match(renderTrustStrip({...s,trust:selected(many.slice(0,3))}),/data-trust-mode="row"/);
+ assert.ok(!renderTrustStrip({...s,trust:{...selected(),showRatings:false}}).includes('trust-rating'));
+});
+test('#009 public/preview rendering preserves selected network snapshot and source privacy',async()=>{
+ const row=await env.DB.prepare('SELECT id FROM tenants WHERE slug=?').bind('robles-roofing').first(),path='/tenants/'+row.id;let {tenant}=await api(path);
+ ({tenant}=await api(path,'PUT',{version:tenant.version,settings:{...tenant.settings,designKit:'roofing',template:'cinematic',journey:'roof-repair',trust:selected()}}));
+ let page=await (await request('/s/robles-roofing','GET',undefined,null)).text();assert.ok(!page.includes('data-trust-strip'));
+ const preview=await (await request('/s/robles-roofing?preview=1')).text();assert.match(preview,/data-trust-network="google"/);assert.ok(!preview.includes('PRIVATE_EVIDENCE_NOTE'));
+ assert.equal((await request('/s/robles-roofing?preview=1','GET',undefined,null)).status,401);
+ await api(path+'/publish','POST',{version:tenant.version,approved:true});({tenant}=await api(path));
+ page=await (await request('/s/robles-roofing','GET',undefined,null)).text();assert.match(page,/data-trust-network="google"/);assert.ok(!page.includes('PRIVATE_EVIDENCE_NOTE'));
+ ({tenant}=await api(path,'PUT',{version:tenant.version,settings:{...tenant.settings,trust:selected([])}}));
+ assert.match(await (await request('/s/robles-roofing','GET',undefined,null)).text(),/data-trust-network="google"/);
+ await api(path+'/publish','POST',{version:tenant.version,approved:true});assert.ok(!(await (await request('/s/robles-roofing','GET',undefined,null)).text()).includes('data-trust-strip'));
+});
+
+
+test('#009 selected placement hooks work on both Roofing homepages and the service page',async()=>{
+ const row=await env.DB.prepare('SELECT id FROM tenants WHERE slug=?').bind('robles-roofing').first(),path='/tenants/'+row.id;let {tenant}=await api(path);
+ const trust={...selected(),placements:['below-hero','above-reviews','services','forms','footer','service-hero']};
+ for(const journey of ['standard','roof-repair']){
+  ({tenant}=await api(path,'PUT',{version:tenant.version,settings:{...tenant.settings,journey,trust,websitePages:{version:1,pages:[{id:'trust-repair',kind:'service',title:'Roof repair',slug:'roof-repair',serviceName:'Roof repair',enabled:true}]}}}));
+  await api(path+'/publish','POST',{version:tenant.version,approved:true});({tenant}=await api(path));
+  const html=await (await request('/s/robles-roofing','GET',undefined,null)).text();assert.equal((html.match(/data-trust-strip /g)||[]).length,5);assert.equal((html.match(/src="\/trust.js/g)||[]).length,1);
+  for(const placement of trust.placements.filter(x=>x!=='service-hero'))assert.ok(html.includes('id="trust-'+placement+'-heading"'));
+ }
+ const service=await (await request('/s/robles-roofing/services/roof-repair','GET',undefined,null)).text();assert.equal((service.match(/data-trust-strip /g)||[]).length,1);assert.match(service,/trust-service-hero-heading/);
+});

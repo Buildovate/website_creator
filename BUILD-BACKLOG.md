@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#008, #007A, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#009** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#009, #007A, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#010** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -152,7 +152,7 @@ Tickets #001–#041.
 
 ### #009 — Render the Roofing trust strip
 
-- State: **Not started** · Estimate: **5h** (≤1 day).
+- State: **Done** · Evidence: [009](docs/build-evidence/009/README.md) · Estimate: **5h** (≤1 day).
 - Pack section: [`P`](docs/product/02-CREATIVE-TRUST-O-T.md) §P.
 - Files to touch: `src/trust.js` **(new)**; `src/conversion-page.js`; `public/trust.css` **(new)**; `tests/trust.mjs` **(new)**.
 - Done when: Only approved selected networks render, with accessible names, licensed/approved marks or text fallback; no invented stars; missing feed shows source link/Not connected.
