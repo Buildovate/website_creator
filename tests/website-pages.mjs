@@ -158,9 +158,9 @@ await test('real tenant API: draft/published isolation, ownership and permission
     assert.deepEqual(tenant.settings.websitePages, savedPages);
     await api(path + '/publish', 'POST', {version: tenant.version, approved: true}, owner);
     await reload(); assert.deepEqual(tenant.published.websitePages, savedPages);
-    // This data-only ticket does not make unpublished page routes or their media public.
-    assert.equal((await request('/media/' + photo.id, 'GET', undefined, null)).status, 401);
-    assert.equal((await request('/s/' + tenant.slug + '/services/roof-repair', 'GET', undefined, null)).status, 404);
+    // #004 renders enabled selected service pages and grants their rendered media.
+    assert.equal((await request('/media/' + photo.id, 'GET', undefined, null)).status, 200);
+    assert.equal((await request('/s/' + tenant.slug + '/services/roof-repair', 'GET', undefined, null)).status, 200);
     const draft = structuredClone(savedPages); draft.pages.reverse(); draft.pages.find(p => p.id === 'roof-repair').title = 'DRAFT_ONLY_TITLE';
     ({tenant} = await api(path, 'PUT', {version: tenant.version, settings: {...tenant.settings, websitePages: draft}}, editor));
     assert.deepEqual(tenant.published.websitePages, savedPages);
@@ -191,4 +191,85 @@ await test('real tenant API: draft/published isolation, ownership and permission
     const duplicate = await api(path + '/duplicate', 'POST', {slug: 'page-contract-copy', name: 'Local test copy'});
     assert.equal((await api('/tenants/' + duplicate.id)).tenant.settings.websitePages, undefined, 'Layout duplication must not copy page facts or media');
   });
+});
+
+await test('#004 service detail: published snapshot, preview membership, media and inquiry', async () => {
+  let tenant = (await api('/tenants', 'POST', {preset: 'robles', slug: 'service-detail-test'})).tenant;
+  const path = '/tenants/' + tenant.id, url = '/s/' + tenant.slug + '/services/roof-repair';
+  const photo = await api(path + '/photos', 'POST', new Uint8Array(readFileSync('public/assets/roofing.jpg')));
+  const privatePhoto = await api(path + '/photos', 'POST', new Uint8Array(readFileSync('public/assets/roofing.jpg')));
+  const pages = records(); pages.pages[0].slug='roof-repair'; pages.pages[0].title = 'Repair your roof <safely>';
+  pages.pages[0].intro = 'Discuss the leak and the next steps.';
+  pages.pages[0].media = {hero: asset(photo.id), thumbnail: asset(privatePhoto.id)};
+  pages.pages[0].questions.push({id:'finance', question:'FINANCE_QUESTION', answer:'Ask about options.', requires:'financing'});
+  tenant = (await api(path, 'PUT', {version:tenant.version, settings:{...tenant.settings, services:[{name:'Roof repair',description:'Repairs'}], websitePages:pages}})).tenant;
+  assert.equal((await request(url, 'GET', undefined, null)).status, 404);
+  assert.equal((await request(url+'?preview=1', 'GET', undefined, null)).status, 401);
+  assert.equal((await request(url+'?preview=1', 'GET', undefined, {id:'outsider',email:'out@example.test'})).status, 404);
+  const member = {id:'service-viewer',email:'service-viewer@example.test'};
+  await env.DB.prepare('INSERT INTO members (id,tenant_id,user_id,email,role,active,created_at) VALUES (?,?,?,?,?,1,?)').bind(crypto.randomUUID(),tenant.id,member.id,member.email,'viewer',new Date().toISOString()).run();
+  let response = await request(url+'?preview=1','GET',undefined,member);
+  assert.equal(response.status,200);
+  assert.match(await response.text(), /data-preview="true"/);
+  await api(path+'/publish','POST',{version:tenant.version,approved:true});
+  tenant = (await api(path)).tenant;
+  response=await request(url,'GET',undefined,null);
+  assert.equal(response.status,200);
+  const html=await response.text();
+  for(const part of ['Repair your roof &lt;safely&gt;', 'Test-only service scope.', 'Inspect the concern', 'Asphalt shingles', 'What happens first?', '/media/'+photo.id, 'name="service" value="Roof repair" readonly', 'data-preview="false"', '/website-pages.css']) assert.ok(html.includes(part),part);
+  assert.ok(!html.includes('FINANCE_QUESTION'));
+  assert.match(response.headers.get('cache-control'),/no-store/);
+  assert.match(response.headers.get('x-robots-tag'),/noindex/);
+  assert.equal((await request('/media/'+photo.id,'GET',undefined,null)).status,200);
+  assert.equal((await request('/media/'+privatePhoto.id,'GET',undefined,null)).status,401);
+  assert.equal((await request(url+'/','GET',undefined,null)).status,200);
+  assert.equal((await request(url+'-missing','GET',undefined,null)).status,404);
+  assert.equal((await request(url,'POST',{},null)).status,405);
+  const edited=structuredClone(tenant.settings);
+  edited.websitePages.pages[0].title='DRAFT ONLY';
+  edited.websitePages.pages[0].media.hero=asset(privatePhoto.id);
+  tenant=(await api(path,'PUT',{version:tenant.version,settings:edited})).tenant;
+  assert.ok(!(await (await request(url,'GET',undefined,null)).text()).includes('DRAFT ONLY'));
+  assert.ok((await (await request(url+'?preview=1','GET',undefined,member)).text()).includes('DRAFT ONLY'));
+  assert.equal((await request('/media/'+privatePhoto.id,'GET',undefined,null)).status,401);
+  const lead={name:'Local test homeowner',phone:'8055550198',consent:true,message:'Roof repair · Project city: Oxnard · Preferred timing: Within a month · Test-only leak concern'};
+  response=await request('/api/public/'+tenant.slug+'/inquiries','POST',lead,null);
+  assert.equal(response.status,200);
+  const inquiry=await env.DB.prepare('SELECT message FROM inquiries WHERE tenant_id=? AND phone=?').bind(tenant.id,lead.phone).first();
+  assert.equal(inquiry.message,lead.message);
+  assert.equal((await request('/api/public/'+tenant.slug+'/inquiries','POST',{...lead,consent:false},null)).status,400);
+  assert.equal((await request('/api/public/'+tenant.slug+'/inquiries','POST',lead,null,'https://elsewhere.test')).status,403);
+  const disabled=structuredClone(tenant.settings);disabled.websitePages.pages[0].enabled=false;
+  tenant=(await api(path,'PUT',{version:tenant.version,settings:disabled})).tenant;
+  assert.equal((await request(url+'?preview=1','GET',undefined,member)).status,404);
+  assert.equal((await request(url,'GET',undefined,null)).status,200);
+  await api(path+'/publish','POST',{version:tenant.version,approved:true});
+  tenant=(await api(path)).tenant;
+  assert.equal((await request(url,'GET',undefined,null)).status,404);
+  assert.equal((await request('/media/'+photo.id,'GET',undefined,null)).status,401);
+  const unselected=structuredClone(tenant.settings);unselected.websitePages.pages[0].enabled=true;unselected.services=[{name:'Roof replacement',description:'Replacement'}];
+  tenant=(await api(path,'PUT',{version:tenant.version,settings:unselected})).tenant;
+  await api(path+'/publish','POST',{version:tenant.version,approved:true});
+  assert.equal((await request(url,'GET',undefined,null)).status,404);
+  assert.equal((await request('/media/'+privatePhoto.id,'GET',undefined,null)).status,401);
+});
+
+
+await test('#004 shared browser handler preserves service context and suppresses preview sends', async () => {
+  const {transformSync} = await import('esbuild');
+  const {runInNewContext} = await import('node:vm');
+  const code=transformSync(readFileSync('src/client/site/inquiries.ts','utf8'),{loader:'ts',format:'cjs'}).code;
+  let sent,reset=false;
+  const button={disabled:false},status={textContent:''};
+  const form={dataset:{slug:'service-detail-test',project:'',preview:'false'},elements:{namedItem:()=>({checked:true})},querySelector:s=>s==='button'?button:status,reset:()=>{reset=true}};
+  const module={exports:{}};
+  runInNewContext(code,{module,document:{querySelectorAll:()=>[form]},FormData:class{*[Symbol.iterator](){yield* Object.entries({service:'Roof repair',projectCity:'Oxnard',timeframe:'Within a month',message:'Leak concern',name:'Local test',phone:'8055550197'});}},fetch:async(url,options)=>{sent={url,data:JSON.parse(options.body)};return {ok:true,json:async()=>({ok:true})}}});
+  module.exports.mountInquiries();
+  await form.onsubmit({preventDefault(){}});
+  assert.equal(sent.url,'/api/public/service-detail-test/inquiries');
+  assert.equal(sent.data.message,'Roof repair · Project city: Oxnard · Preferred timing: Within a month · Leak concern');
+  assert.equal(sent.data.consent,true);assert.equal(reset,true);assert.equal(button.disabled,false);
+  form.dataset.preview='true';sent=null;
+  await form.onsubmit({preventDefault(){}});
+  assert.equal(sent,null);
 });

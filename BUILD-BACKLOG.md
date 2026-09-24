@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#003**. Next ticket: **#004 — Render a Roofing service-detail page**. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#004**. Next ticket: **#005 — Connect the selected-service grid to detail pages**. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -53,11 +53,13 @@ Tickets #001–#041.
 
 ### #004 — Render a Roofing service-detail page
 
-- State: **Not started** · Estimate: **6h** (≤1 day).
+- State: **Done** (2026-09-24) · Estimate: **6h** (≤1 day).
 - Pack section: [`H`](docs/product/01-CORE-SITE-A-N.md) §H.
 - Files to touch: `src/website-pages.js` **(new)**; `src/worker.js`; `public/website-pages.css` **(new)**; `tests/website-pages.mjs` **(new)**.
 - Done when: One selected roofing service renders headline, scope, art, FAQ and contextual inquiry on its own URL; unknown/unpublished service returns 404 and private preview requires membership.
 - External keys/accounts: None.
+
+- Evidence: [#004 executed tests](docs/build-evidence/004/README.md): 13/13 page contract, access, media and inquiry tests; fresh server bundle and reference-proof, conversion/Roofing, constitution regressions pass. Local fixture only. Grid linking remains #005.
 
 ### #005 — Connect the selected-service grid to detail pages
 
