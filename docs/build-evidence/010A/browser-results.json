@@ -1,0 +1,72 @@
+{
+  "fixture": "Fictional QA reviews via mocked Google/Yelp responses; no live account validation",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "headingFont": "TradeDisplay, system-ui, sans-serif",
+      "subtitleGap": 18,
+      "headerBottom": 98.296875,
+      "usableBottom": 1000,
+      "cards": [
+        {
+          "top": 412.9375,
+          "bottom": 698.828125,
+          "stars": true,
+          "quote": "QA sample: the repair scope was explained before work began.",
+          "author": "Alex · fictional reviewer",
+          "source": "https://www.google.com/maps?cid=1234"
+        },
+        {
+          "top": 412.9375,
+          "bottom": 698.828125,
+          "stars": true,
+          "quote": "QA sample: clear steps from the first conversation.",
+          "author": "Sam · fictional reviewer",
+          "source": "https://www.yelp.com/biz/ridgeline-qa"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "headingFont": "TradeDisplay, system-ui, sans-serif",
+      "subtitleGap": 16,
+      "headerBottom": 83.796875,
+      "usableBottom": 769.703125,
+      "cards": [
+        {
+          "top": 303.671875,
+          "bottom": 550.96875,
+          "stars": true,
+          "quote": "QA sample: the repair scope was explained before work began.",
+          "author": "Alex · fictional reviewer",
+          "source": "https://www.google.com/maps?cid=1234"
+        },
+        {
+          "top": 566.96875,
+          "bottom": 797.765625,
+          "stars": true,
+          "quote": "QA sample: clear steps from the first conversation.",
+          "author": "Sam · fictional reviewer",
+          "source": "https://www.yelp.com/biz/ridgeline-qa"
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "checks": [
+    "normal and reduced motion",
+    "first-screen complete source card at both viewports",
+    "360px mobile long-quote first-screen check",
+    "shared service-page contrast and empty hiding",
+    "no API keys: links only",
+    "API failure: links only",
+    "no JavaScript: source links preserved",
+    "provider aggregates unchanged by filtering",
+    "privacy/terms/source attribution retained"
+  ]
+}

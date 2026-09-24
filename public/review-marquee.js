@@ -1,6 +1,6 @@
 (()=>{'use strict';
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
- function init(root=document){root.querySelectorAll('.review-grid,.sample-review-track').forEach(track=>{
+ function init(root=document){root.querySelectorAll('.review-grid:not(.source-review-grid),.sample-review-track').forEach(track=>{
   if(track.dataset.loopReady||track.children.length<2)return;track.dataset.loopReady='true';
   const cards=[...track.children],viewport=document.createElement('div');viewport.className='review-loop';viewport.setAttribute('role','region');viewport.setAttribute('aria-label','Customer reviews');viewport.tabIndex=0;track.before(viewport);viewport.append(track);
   track.classList.add('review-loop-track');cards.forEach(c=>c.classList.add('review-loop-card'));

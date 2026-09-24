@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#010, #007A, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#011** (Not started). Overnight queue stopped after #010; #004F-v2 remains blocked. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#010, #010A, #007A, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#011** (Not started). Overnight queue stopped after #010; #004F-v2 remains blocked. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -165,6 +165,12 @@ Tickets #001–#041.
 - Files to touch: `src/project-map.js`; `src/conversion-page.js`; `tests/reference-proof.mjs`.
 - Done when: Desktop/mobile screenshots show real approved project records, logo, source attribution and useful empty states; private data stays private; mocked results are labeled in test evidence.
 - External keys/accounts: None.
+
+### #010A — Put source review cards in the first screen
+
+- State: **Done** · Evidence: [010A](docs/build-evidence/010A/README.md). User-requested follow-up to #010.
+- Removed the large house photo from connected reviews; display-font heading and spaced subtitle lead directly to stars, short source quote, reviewer name and original link. Provider details follow the cards.
+- Desktop/mobile first-screen evidence, long-quote and service-layout checks pass. Existing source aggregates, attribution, policy links, no-key/source-link fallbacks and service empty hiding remain intact. Mocked fixtures do not establish live provider capability (K03/K04/K22 remain open).
 
 ### #011 — Add publication rules for required legal facts
 

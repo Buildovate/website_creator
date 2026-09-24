@@ -1,0 +1,27 @@
+PASS conversion references: 3 journeys × 3 layouts, draft isolation, claim approval/escaping, inquiry persistence, preview auth, anchor integrity, one H1, effects, and legacy CTA corrections.
+PASS service checklist: custom names, descriptions, deduplication, selection limits, full service rendering and draft isolation.
+PASS Roofing #002: repair/replacement copy matches selected services, direct call/inquiry paths, both inquiry intents persisted, one preserved hero film, repair-only/static fallback and published isolation. Local fixture only.
+✔ tests\conversion-references.mjs (335.12ms)
+PASS premium service: generated hero, four image cards/steps, editable escaped headline, draft/publish isolation, sourced/confirmed/empty trust fields, no invented reviews, paired-photo privacy and brand contrast.
+PASS premium interactions: scroll reveal enhancement, visible reduced-motion fallback, comparison input and accessible value.
+✔ tests\premium-service.mjs (291.5642ms)
+PASS reference proof: published project map, unpublished isolation, owner visibility, logo privacy/publish, connected review placement, no-key fallback and mocked provider attribution/filtering.
+PASS #010: project snapshot vs draft edits, post-publication private photos, draft logo/review privacy, cross-tenant logo rejection, actual story-to-map anchor, empty map/logo/review states and immediate project/media revocation. All provider results above are mocked.
+✔ tests\reference-proof.mjs (226.6151ms)
+PASS #004C: authenticated draft-only samples, publish/query isolation, no hidden promo codes, sample unlock auth/origin/answer, configured finance terms/disclosure and math, no lender exits, service/date promotion filters, real unlock validation and empty-review suppression.
+PASS #004C browser transport: sample quiz preserves session CSRF and feeds the same preview inquiry.
+✔ tests\service-playbook.mjs (336.8996ms)
+✔ network contract: bounded HTTPS fields, supported networks, stable order and explicit clear (2.4973ms)
+✔ publication and render-time evidence gates: approval, freshness, counts and license support (1.0013ms)
+✔ actual API: draft/snapshot separation, old-client preservation, validation, publish recheck and permissions (37.0435ms)
+✔ #009 strip renders only approved selections with source links, no assumed marks or ratings (51.1321ms)
+✔ #009 public/preview rendering preserves selected network snapshot and source privacy (25.4488ms)
+✔ #009 selected placement hooks work on both Roofing homepages and the service page (19.3112ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 404.7968

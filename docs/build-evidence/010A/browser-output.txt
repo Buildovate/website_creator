@@ -1,0 +1,3 @@
+PASS desktop: full first card visible (bottom 699 < 1000), stars/quote/name/source, display font, subtitle spacing, source aggregate and policies, refresh, reduced motion, no-key links, no invented reviews, no overflow/errors
+PASS mobile: full first card visible (bottom 551 < 770), stars/quote/name/source, display font, subtitle spacing, source aggregate and policies, refresh, reduced motion, no-key links, no invented reviews, no overflow/errors
+PASS API outage and no-JavaScript source-link fallbacks
