@@ -134,3 +134,7 @@ Regenerated approved inputs are 7.542s/181 desktop frames and 5.042s/121 mobile 
 
 Permitted network logo/seal files and usage permission (K22) have not been supplied. The Roofing strip ships accessible text names as the approved fallback. No remote logo download, synthetic logo, or membership inference. Custom badge upload/editor remains #047.
 
+
+## #010 customer proof assets
+
+No real contractor-approved completed-project photo set, customer proof records or business logo was supplied for this QA session. Evidence uses the existing Ridgeline demo logo and repository test photographs in actual API-approved local records, with fictional project content. Replace these disposable fixtures with owner-permissioned real assets for a customer rollout; never promote QA photos/reviews into a live site. This does not block local privacy/placement verification.

@@ -1,0 +1,53 @@
+{
+  "projects": [
+    {
+      "id": "f4b19482-1661-4853-8f7c-f0c4c9862fe1",
+      "title": "Chimney flashing repair · QA",
+      "city": "Ventura",
+      "service": "Roof repair",
+      "material": "Asphalt shingles",
+      "concern": "Leak",
+      "property": "Residential",
+      "completedAt": "2026-09-01",
+      "lat": 34.2746,
+      "lng": -119.229,
+      "problem": "Fictional concern for local project QA.",
+      "work": "Fictional documented roofing work for QA.",
+      "outcome": "Fictional outcome for approved-record QA.",
+      "approved": true,
+      "beforeId": "6264e73f-8469-4405-b8ec-a3a417f7ac8f",
+      "afterId": "2a746adf-965d-41da-984e-8f28d739c361"
+    },
+    {
+      "id": "a90f9e43-d35f-426b-85dd-caa98b00158f",
+      "title": "Shingle roof replacement · QA",
+      "city": "Oxnard",
+      "service": "Roof replacement",
+      "material": "Asphalt shingles",
+      "concern": "Leak",
+      "property": "Residential",
+      "completedAt": "2026-09-01",
+      "lat": 34.1975,
+      "lng": -119.1771,
+      "problem": "Fictional concern for local project QA.",
+      "work": "Fictional documented roofing work for QA.",
+      "outcome": "Fictional outcome for approved-record QA.",
+      "approved": true,
+      "beforeId": "526319c8-cbd3-4778-ae53-36e02a97c68b",
+      "afterId": "18f0469b-10b0-450e-89db-b3696f185f48"
+    }
+  ],
+  "privatePhotoIds": [
+    "fe7d4870-8d26-451a-8c79-ac58c3bd66cd",
+    "ae527b0d-7c40-4be2-b9e9-eedbb2373a08",
+    "e83c67fe-9417-41eb-a810-1d090d297352"
+  ],
+  "draftLogos": [
+    "d812c3d4-7c5b-469f-a2a8-9ad9cf5a0051"
+  ],
+  "slugs": [
+    "proof-full",
+    "proof-fallback",
+    "proof-empty"
+  ]
+}

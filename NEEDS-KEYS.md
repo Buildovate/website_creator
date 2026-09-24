@@ -54,4 +54,3 @@ For each live provider ticket, record only non-secret evidence: authorized envir
 ## #009 delivered fallback — 2026-09-24
 
 K03/K04 live capability remains unverified. The new trust strip uses approved profile links and optional owner-confirmed evidence; it makes no feed requests and never claims Connected. Existing review adapters remain separate. K22 permitted marks are missing; readable text names are implemented and tested. No new key required for this fallback; #047 and live validation remain open.
-

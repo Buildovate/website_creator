@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#009, #007A, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#010** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#010, #007A, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#011** (Not started). Overnight queue stopped after #010; #004F-v2 remains blocked. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -160,7 +160,7 @@ Tickets #001–#041.
 
 ### #010 — Verify Roofing map, logo and review placement
 
-- State: **Not started** · Estimate: **3h** (≤1 day).
+- State: **Done** · Evidence: [010](docs/build-evidence/010/README.md) · Estimate: **3h** (≤1 day).
 - Pack section: [`P`](docs/product/02-CREATIVE-TRUST-O-T.md) §P; [`Q`](docs/product/02-CREATIVE-TRUST-O-T.md) §Q.
 - Files to touch: `src/project-map.js`; `src/conversion-page.js`; `tests/reference-proof.mjs`.
 - Done when: Desktop/mobile screenshots show real approved project records, logo, source attribution and useful empty states; private data stays private; mocked results are labeled in test evidence.

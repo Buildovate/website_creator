@@ -31,3 +31,21 @@ try{const response=await request('/api/public/'+tenant.slug+'/reviews','GET',und
 const hidden=await (await request(base+'?preview=1')).text();assert.ok(!hidden.includes('id="job-map"'));assert.ok(!hidden.includes('href="#projects"'));
 assert.ok((await (await request(base,'GET',undefined,null)).text()).includes('id="job-map"'),'Draft visibility changes do not alter public projects');
 console.log('PASS reference proof: published project map, unpublished isolation, owner visibility, logo privacy/publish, connected review placement, no-key fallback and mocked provider attribution/filtering.');
+
+// #010 strengthens snapshot and media privacy around the actual project records.
+const proofProjects=(await api('/tenants/'+tenant.id)).projects;
+const publicProject=proofProjects.find(p=>p.published),projectPath='/tenants/'+tenant.id+'/projects/'+publicProject.id;
+const latePhoto=await api('/tenants/'+tenant.id+'/photos?projectId='+publicProject.id+'&stage=during&caption=PRIVATE_LATE_PHOTO','POST',new Uint8Array(readFileSync('public/assets/roofing.jpg')));
+await api(projectPath,'PUT',{version:publicProject.version,data:{...publicProject.data,title:'PRIVATE_PUBLISHED_PROJECT_EDIT'}});
+const unchanged=await (await request(base,'GET',undefined,null)).text();assert.ok(!unchanged.includes('PRIVATE_PUBLISHED_PROJECT_EDIT'));assert.ok(!unchanged.includes(latePhoto.id));assert.equal((await request('/media/'+latePhoto.id,'GET',undefined,null)).status,401);
+const story=await (await request(base+'/projects/'+publicProject.id,'GET',undefined,null)).text();assert.ok(!story.includes('PRIVATE_LATE_PHOTO'));assert.match(story,new RegExp('href="'+base+'#projects"'),'Kit project story returns to the actual homepage map anchor');
+const draftLogo=await api('/tenants/'+tenant.id+'/photos','POST',new Uint8Array(readFileSync('public/assets/roofing.jpg')));
+({tenant}=await api('/tenants/'+tenant.id,'PUT',{version:tenant.version,settings:{...tenant.settings,logoId:draftLogo.id,reviews:{...reviews,googleUrl:'https://www.google.com/maps?cid=999999',confirmed:false}}}));
+const unchangedBrand=await (await request(base,'GET',undefined,null)).text();assert.ok(unchangedBrand.includes('/media/'+logoId));assert.ok(!unchangedBrand.includes('/media/'+draftLogo.id));assert.ok(!unchangedBrand.includes('cid=999999'));assert.equal((await request('/media/'+draftLogo.id,'GET',undefined,null)).status,401);
+const draftReviewResponse=await request('/api/public/'+tenant.slug+'/reviews?preview=1','GET',undefined,null);assert.equal(draftReviewResponse.status,401);
+const blank=(await api('/tenants','POST',{slug:'proof-empty',designKit:'roofing',settings:{name:'Proof empty QA',journey:'roof-repair',phone:'8055550123',area:'Ventura',showDemoProjects:false,showOwner:false,services:[{name:'Roof repair'}]}})).tenant;
+await api('/tenants/'+blank.id+'/publish','POST',{version:blank.version,approved:true});const empty=await (await request('/s/proof-empty','GET',undefined,null)).text();
+assert.match(empty,/data-empty-project-map/);assert.ok(!empty.includes('id="job-map"'));assert.ok(!empty.includes('id="project-data"'));assert.ok(!empty.includes('id="customer-reviews"'));assert.match(empty,/site-brand-mark/);assert.match(empty,/Discuss my roof/);
+assert.equal((await request('/api/tenants/'+blank.id,'PUT',{version:2,settings:{...blank.settings,logoId}},admin)).status,400,'Another tenant cannot select the published logo');
+await api(projectPath+'/unpublish','POST',{});const removed=await (await request(base,'GET',undefined,null)).text();assert.ok(!removed.includes(publicProject.id));assert.equal((await request(base+'/projects/'+publicProject.id,'GET',undefined,null)).status,404);assert.equal((await request('/media/'+publicProject.published.afterId,'GET',undefined,null)).status,401);
+console.log('PASS #010: project snapshot vs draft edits, post-publication private photos, draft logo/review privacy, cross-tenant logo rejection, actual story-to-map anchor, empty map/logo/review states and immediate project/media revocation. All provider results above are mocked.');
