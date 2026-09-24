@@ -103,3 +103,7 @@ Mobile QA also corrected the legacy showcase rule that hid all but the last navi
 ## Ticket #002 — Roofing journey acceptance
 
 Roofing reference copy uses repair/replacement language only when both services are selected (`roofingJourneyCopy` in `src/platform/conversion.ts`); repair-only sites retain repair-specific language. The existing hero, sticky header and service-selection transport remain unchanged. `tests/fixtures/roofing-journey.mjs` and `scripts/preview-roofing-journey.mjs` supply a disposable local acceptance fixture on port 8096. See [ticket #002 evidence](../build-evidence/002/README.md) for desktop/mobile screenshots, browser inquiry and tests. This is local working-tree evidence, not a deployment.
+
+## Ticket #004B — shared premium trade pages
+
+See [the design standard](../TRADE_DESIGN_SYSTEM.md). Roofing service detail now uses the shared tp-* components, generated hero/sign/comparison assets, responsive brand tokens and reduced-motion-aware reveal. Future trade detail renderers must reuse this system with their own images and copy. [Evidence](../build-evidence/004B/README.md).

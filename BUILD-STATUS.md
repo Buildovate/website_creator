@@ -133,3 +133,11 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - A clean clone of that exact commit with freshly installed locked dependencies passed the build, TypeScript and all 34 executable test files (36/36 commands); Git status remained clean. ffprobe is required for video decoding; the optional local GeoIP database is not needed for the test suite.
 - [#004 evidence](docs/build-evidence/004/README.md) now includes desktop (1440×1000) and mobile (390×844) screenshots, mobile inquiry context, the reusable fictional fixture and complete clean-checkout test outputs. No page redesign, real customer inquiry or deployment.
 - The prior #001–#004 uncommitted-foundation limitation is resolved. Remaining untracked planning/audit documents are not runtime dependencies. **Next ticket remains #005; not started.**
+
+### #004B — Done (2026-09-24)
+
+- Roofing service detail redesigned with a generated cinematic hero, editable headline, confirmed profile trust strip, four image cards, four-step revealed timeline, generated/uploaded comparison, source reviews, FAQ and dark final CTA. Empty trust fields stay hidden; no claims are invented.
+- Shared standard established in docs/TRADE_DESIGN_SYSTEM.md and public/trade-page.css/js for future trade detail pages, with brand contrast, responsive typography and reduced motion. Questionnaire edits remain draft-only until normal publication.
+- [Full-page desktop/mobile screenshots and executed outputs](docs/build-evidence/004B/README.md). Build, TypeScript and all 35 tests pass (37/37 commands). Generated images are committed with prompt provenance; the local fictional fixture uses no real contractor photos or reviews.
+- Comparison media permissions rechecked: only the complete rendered published pair grants service-page access. Generated hero replaces the old hero-photo grant. Existing tenant, selected-service, preview and inquiry boundaries remain covered.
+- Section H stays Partial; future trade rollout/editor work and #027A remain separate. Commit locator: feat: establish premium trade-page design standard (#004B). No push/deployment. **Next ticket #005, not started. Stop.**

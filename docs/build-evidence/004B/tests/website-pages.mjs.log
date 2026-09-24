@@ -1,0 +1,22 @@
+✔ typed records round-trip; IDs/slugs survive edits and reordering (4.0541ms)
+✔ malformed records, duplicate URLs, broken city links and limits are rejected (1.7314ms)
+✔ media uses bounded photo IDs and alt text, never arbitrary URLs (0.4569ms)
+▶ real tenant API: draft/published isolation, ownership and permissions
+  ✔ editor saves all four page types without changing public snapshot (2.6488ms)
+  ✔ render validates page data and has no save/publish side effects (10.3359ms)
+  ✔ foreign/missing media are rejected at save/create without side effects (10.5953ms)
+  ✔ malformed contracts return HTTP 400; access/origin/concurrency stay enforced (5.1463ms)
+  ✔ old editors omit the field safely; owner publishes a frozen snapshot (10.6798ms)
+  ✔ publish rechecks ownership even if a stored draft is stale or forged (2.8575ms)
+  ✔ explicit deletion remains draft until publish; backups retain page records (9.8723ms)
+✔ real tenant API: draft/published isolation, ownership and permissions (61.7397ms)
+✔ #004 service detail: published snapshot, preview membership, media and inquiry (33.4919ms)
+✔ #004 shared browser handler preserves service context and suppresses preview sends (63.1111ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 169.1275

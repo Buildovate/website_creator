@@ -200,7 +200,7 @@ await test('#004 service detail: published snapshot, preview membership, media a
   const privatePhoto = await api(path + '/photos', 'POST', new Uint8Array(readFileSync('public/assets/roofing.jpg')));
   const pages = records(); pages.pages[0].slug='roof-repair'; pages.pages[0].title = 'Repair your roof <safely>';
   pages.pages[0].intro = 'Discuss the leak and the next steps.';
-  pages.pages[0].media = {hero: asset(photo.id), thumbnail: asset(privatePhoto.id)};
+  pages.pages[0].media = {bannerOne: asset(photo.id), bannerTwo: asset(photo.id), thumbnail: asset(privatePhoto.id)};
   pages.pages[0].questions.push({id:'finance', question:'FINANCE_QUESTION', answer:'Ask about options.', requires:'financing'});
   tenant = (await api(path, 'PUT', {version:tenant.version, settings:{...tenant.settings, services:[{name:'Roof repair',description:'Repairs'}], websitePages:pages}})).tenant;
   assert.equal((await request(url, 'GET', undefined, null)).status, 404);
@@ -216,7 +216,7 @@ await test('#004 service detail: published snapshot, preview membership, media a
   response=await request(url,'GET',undefined,null);
   assert.equal(response.status,200);
   const html=await response.text();
-  for(const part of ['Repair your roof &lt;safely&gt;', 'Test-only service scope.', 'Inspect the concern', 'Asphalt shingles', 'What happens first?', '/media/'+photo.id, 'name="service" value="Roof repair" readonly', 'data-preview="false"', '/website-pages.css']) assert.ok(html.includes(part),part);
+  for(const part of ['Repair your roof &lt;safely&gt;', 'Test-only service scope.', 'Inspect the concern', 'Asphalt shingles', 'What happens first?', '/media/'+photo.id, 'name="service" value="Roof repair" readonly', 'data-preview="false"', '/trade-page.css']) assert.ok(html.includes(part),part);
   assert.ok(!html.includes('FINANCE_QUESTION'));
   assert.match(response.headers.get('cache-control'),/no-store/);
   assert.match(response.headers.get('x-robots-tag'),/noindex/);

@@ -8,7 +8,7 @@ interface PageBase {
   media: { hero: PageMedia | null; bannerOne: PageMedia | null; bannerTwo: PageMedia | null; thumbnail: PageMedia | null };
 }
 export interface ServicePage extends PageBase {
-  kind: 'service'; serviceName: string; scope: string; process: string[]; materials: string[]; questions: PageQuestion[];
+  kind: 'service'; headline: string; serviceName: string; scope: string; process: string[]; materials: string[]; questions: PageQuestion[];
 }
 export interface FAQPage extends PageBase { kind: 'faq'; questions: PageQuestion[] }
 export interface AboutPage extends PageBase {
@@ -118,7 +118,7 @@ export function normalizeWebsitePages(value: unknown, previous?: unknown): Websi
       seoTitle: text(v.seoTitle, 'SEO title', PAGE_LIMITS.seoTitle), seoDescription: text(v.seoDescription, 'SEO description', PAGE_LIMITS.seoDescription),
       media: {hero: media(assets.hero), bannerOne: media(assets.bannerOne), bannerTwo: media(assets.bannerTwo), thumbnail: media(assets.thumbnail)},
     };
-    if (kind === 'service') return {...base, kind, serviceName: text(v.serviceName, 'Service name', 100, true), scope: text(v.scope, 'Service scope', PAGE_LIMITS.content), process: strings(v.process, 'Process steps', 8, 600), materials: strings(v.materials, 'Materials', 12, 300), questions: questions(v.questions)};
+    if (kind === 'service') return {...base, kind, headline: text(v.headline, 'Service headline', 120), serviceName: text(v.serviceName, 'Service name', 100, true), scope: text(v.scope, 'Service scope', PAGE_LIMITS.content), process: strings(v.process, 'Process steps', 8, 600), materials: strings(v.materials, 'Materials', 12, 300), questions: questions(v.questions)};
     if (kind === 'faq') return {...base, kind, questions: questions(v.questions)};
     if (kind === 'about') {
       const portraitMode = choice(v.portraitMode, ['ai_logo_shirt', 'uploaded_photo', 'hidden'] as const, 'portrait mode', 'hidden');

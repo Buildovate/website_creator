@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#004**. Next ticket: **#005 — Connect the selected-service grid to detail pages**. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#004 and #004B**. Next ticket: **#005** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -60,6 +60,14 @@ Tickets #001–#041.
 - External keys/accounts: None.
 
 - Evidence: [#004 executed tests](docs/build-evidence/004/README.md): 13/13 page contract, access, media and inquiry tests; fresh server bundle and reference-proof, conversion/Roofing, constitution regressions pass. Local fixture only. Grid linking remains #005.
+
+### #004B — Premium design standard
+
+- State: **Done** · Evidence: [004B](docs/build-evidence/004B/README.md) · Estimate: **8h** (≤1 day). User-requested insertion before #005.
+- Scope: Roofing service detail and reusable premium trade-page tokens/components; generated cinematic hero, editable headline, truthful profile trust strip, four generated warning-sign cards, four-step revealed timeline, accessible generated/uploaded before-after comparison, real-source reviews, FAQ and final CTA. Reduced motion and brand contrast required.
+- Files: service renderer, shared trade-page styles/script, profile/page contracts and Questionnaire controls, generated assets, tests and docs/build-evidence/004B.
+- Done when: draft/publish and privacy tests pass, all eight design requirements work, full-page desktop/mobile captures are saved and changes committed.
+- External dependencies: built-in image generation for committed assets; no runtime generation integration or live reviews claimed.
 
 ### #005 — Connect the selected-service grid to detail pages
 

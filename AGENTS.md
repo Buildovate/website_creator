@@ -18,3 +18,5 @@ Standing design direction: Roofing first; preserve the 14 trade kits (including 
 Homeowner pages never expose rep/CRM sales language. Paid generation, external messages, social posts and ad spend require their specified approval and actual capabilities. AI presenters must not fabricate customer endorsements. Pricing follows the specifically referenced catalog rows, including Pack 4 corrections; preserve existing facts and permissions during regeneration.
 
 Read the authoritative current/next ticket state in BUILD-BACKLOG and BUILD-STATUS. The initial Step 1 audit did not execute a feature ticket; keep those ledgers current after each ticket.
+
+Premium trade-page standard: all new trade detail pages must reuse [docs/TRADE_DESIGN_SYSTEM.md](docs/TRADE_DESIGN_SYSTEM.md), public/trade-page.css and public/trade-page.js; use trade-specific generated media and truthful contractor data. #004B establishes this standard without starting later trade rollouts.
