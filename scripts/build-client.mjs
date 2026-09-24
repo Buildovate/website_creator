@@ -6,6 +6,7 @@ export const clientEntries={
   'app':'src/client/workspace/index.ts',
   'site':'src/client/site/index.ts',
   'conversion':'src/client/site/conversion.ts',
+  'finance-comparison':'src/client/site/finance-comparison.ts',
   'constitution':'src/client/site/constitution.ts',
   'neighborhood':'src/client/site/neighborhood.ts',
   ...Object.fromEntries(['cinematic','cinematic-controls','showcase','cutaway','trade-components'].map(name=>[name,'src/client/site/'+name+'.js'])),

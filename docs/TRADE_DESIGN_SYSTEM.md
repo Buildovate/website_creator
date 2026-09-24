@@ -20,3 +20,8 @@ Apply [CONVERSION-PLAYBOOK section 6](product/CONVERSION-PLAYBOOK.md) to each ne
 Skip reviews when there are no confirmed excerpts; an empty public proof band is not acceptable. Sales samples belong only to the authenticated /sales-preview/:slug/services/:service route for unpublished tenants, with persistent and per-section sample labels. Never persist sample claims or expose the mode on a published tenant.
 
 Service financing requires confirmed configured partner terms and footer.financingDisclosure. APR/term are fixed to those terms; no off-page CTA. Active promotions must match the service tag; one quiz unlock feeds the same inquiry, preserving server date/answer checks.
+
+
+## #004D — shared payment-plan comparison
+
+Reuse src/service-financing.js, src/client/site/finance-comparison.ts and the tp-plan-* components for service financing. Wide screens show cards in a row; narrow screens use native horizontal swipe/snap without document overflow. Keep payment numbers large and tabular, selected cards lime-tinted, APR/term/down payment adjacent, totals and the contractor disclosure visible. The same inquiry receives the selection. Animate only number text and chart width, respect reduced motion, and reserve badge/card space to avoid changing card height during recalculation. More programs remain accessible by horizontal scrolling.

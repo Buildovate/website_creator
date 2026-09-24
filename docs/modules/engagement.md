@@ -93,3 +93,10 @@ The public lender showcase is removed. Native `details` directly below the estim
 ## #004C — optional service conversion sections
 
 Service reviews opt into hiding the entire wrapper until confirmed provider excerpts exist; failure/zero excerpts keeps it hidden. Other review consumers retain their existing behavior. platform.financing.serviceTerms contains the selected lenderId, amount, downPayment, apr, months and confirmation; footer.financingDisclosure is required for the service-page section. No provider connection is implied. Promotion serviceNames tags and graphic selection feed active service cards; the existing unlock validates an optional serviceName. The authenticated /api/sales-preview/:slug/promotion-unlock is draft-only, origin/CSRF protected and returns an explicitly non-redeemable sample code. [Evidence](../build-evidence/004C/README.md).
+
+
+## #004D — service financing program comparison
+
+Service pages now use platform.financing.programs: up to 24 unique IDs with name, lenderId, APR, whole-month term, enabled/confirmed flags and deferredInterest. Only enabled/confirmed programs whose configured lender is enabled/confirmed and whose footer financingDisclosure is nonempty render. Each program retains its partner identity without external links. Legacy serviceTerms migrates when programs is omitted; an explicit [] hides, even if legacy terms exist. An older normalized snapshot remains readable.
+
+src/platform/financing-plans.ts shares calculation, cent-based badge ties and prefill with the browser bundle. Total cost includes down payment plus unrounded scheduled loan payments; currency display rounds to cents. Deferred-interest conditions stay in the contractor disclosure, and excluded conditional charges are explained on the card. No live provider integration or approval is implied. [004D evidence](../build-evidence/004D/README.md).

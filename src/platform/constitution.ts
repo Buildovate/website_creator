@@ -13,6 +13,7 @@ export type CompanyField = keyof typeof COMPANY_FIELDS;
 export type Visibility = Record<CompanyField,boolean>;
 export interface Location {id:string;name:string;address:string;phone:string;email:string;hours:string;license:string;bonded:boolean;insured:boolean;visible:Visibility}
 export interface Lender {id:keyof typeof LENDERS;enabled:boolean;applicationUrl:string;confirmed:boolean}
+export interface FinancingProgram {id:string;name:string;lenderId:string;apr:number;months:number;enabled:boolean;confirmed:boolean;deferredInterest:boolean}
 export interface ServiceFinanceTerms {lenderId:string;amount:number;downPayment:number;apr:number;months:number;confirmed:boolean}
 export interface Promotion {serviceNames:string[];graphic:string;id:string;enabled:boolean;title:string;description:string;reward:string;terms:string;startsAt:string;endsAt:string;question:string;choices:string[];answer:number;code:string}
 export interface PlatformSettings {
@@ -20,7 +21,7 @@ export interface PlatformSettings {
   neighborhood:{enabled:boolean;country:string;region:string;proofs:{city:string;url:string;confirmed:boolean}[]};
   questionnaire:{story:string;priorities:string;factsConfirmed:boolean};
   footer:{financingDisclosure:string;visible:Visibility;bonded:boolean;insured:boolean;locations:Location[];socials:Record<keyof typeof SOCIALS,{enabled:boolean;url:string}>};
-  financing:{enabled:boolean;lenders:Lender[];serviceTerms:ServiceFinanceTerms|null};
+  financing:{enabled:boolean;lenders:Lender[];serviceTerms:ServiceFinanceTerms|null;programs:FinancingProgram[]};
   promotions:{enabled:boolean;offers:Promotion[]};
 }
 const obj=(v:unknown):Record<string,unknown>=>v!==null&&typeof v==='object'&&!Array.isArray(v)?v as Record<string,unknown>:{};
@@ -57,6 +58,15 @@ export function normalizePlatform(value:unknown):PlatformSettings {
     check(term.amount!==''&&term.apr!==''&&term.months!==''&&term.apr!=null,'Enter the approved example amount, APR and term.');
     financingEstimate(serviceTerms.amount,serviceTerms.downPayment,serviceTerms.apr,serviceTerms.months);
   }
+  // Old single-program settings migrate once. An explicit empty list means hide.
+  const rawPrograms=fin.programs===undefined&&serviceTerms?[{...serviceTerms,id:'legacy-service',name:'Payment plan',enabled:true}]:fin.programs;
+  const programs=list(rawPrograms,24,'Financing programs').map((item,i)=>{
+    const p=obj(item);check(p.apr!==''&&p.apr!=null&&p.months!==''&&p.months!=null,'Each program needs its approved APR and term.');
+    const out:FinancingProgram={id:id(p.id,'program-'+(i+1)),name:str(p.name,80),lenderId:str(p.lenderId,30),apr:Number(p.apr),months:Number(p.months),enabled:p.enabled!==false,confirmed:p.confirmed===true,deferredInterest:p.deferredInterest===true};
+    check(out.name&&Object.hasOwn(LENDERS,out.lenderId),'Name each financing program and choose its configured partner.');
+    financingEstimate(1000,0,out.apr,out.months);return out;
+  });
+  check(new Set(programs.map(p=>p.id)).size===programs.length,'Each financing program needs a unique identifier.');
   const offers=list(prom.offers,12,'Promotions').map((item,i)=>{const p=obj(item),choices=list(p.choices,4,'Quiz choices').map(x=>str(x,160)),enabled=p.enabled===true;
     const out:Promotion={serviceNames:list(p.serviceNames,24,'Promotion services').map(x=>str(x,160)).filter(Boolean),graphic:p.graphic==='roof-repair'?'roof-repair':'',id:id(p.id,'offer-'+(i+1)),enabled,title:str(p.title,100),description:str(p.description,600),reward:str(p.reward,150),terms:str(p.terms,2000),startsAt:str(p.startsAt,40),endsAt:str(p.endsAt,40),question:str(p.question,200),choices,answer:Number(p.answer??0),code:str(p.code,60)};
     check(Number.isInteger(out.answer)&&out.answer>=0&&out.answer<Math.max(choices.length,1),'Choose a valid quiz answer.');
@@ -67,7 +77,7 @@ export function normalizePlatform(value:unknown):PlatformSettings {
     if(out.startsAt)out.startsAt=new Date(start).toISOString();if(out.endsAt)out.endsAt=new Date(end).toISOString();return out;
   });
   check(new Set(offers.map(p=>p.id)).size===offers.length,'Each promotion needs a unique identifier.');
-  return {version:1,neighborhood,questionnaire:{story:str(q.story,2500),priorities:str(q.priorities,1500),factsConfirmed:q.factsConfirmed===true},footer:{financingDisclosure:str(f.financingDisclosure,3000),visible:visibility(f.visible),bonded:f.bonded===true,insured:f.insured===true,locations,socials},financing:{enabled:fin.enabled===true,lenders,serviceTerms},promotions:{enabled:prom.enabled===true,offers}};
+  return {version:1,neighborhood,questionnaire:{story:str(q.story,2500),priorities:str(q.priorities,1500),factsConfirmed:q.factsConfirmed===true},footer:{financingDisclosure:str(f.financingDisclosure,3000),visible:visibility(f.visible),bonded:f.bonded===true,insured:f.insured===true,locations,socials},financing:{enabled:fin.enabled===true,lenders,serviceTerms,programs},promotions:{enabled:prom.enabled===true,offers}};
 }
 export function activeOffers(platform:PlatformSettings,time=Date.now()) {return platform.promotions.enabled?platform.promotions.offers.filter(p=>p.enabled&&Date.parse(p.startsAt)<=time&&Date.parse(p.endsAt)>time):[];}
 export const FINANCING_DISCLOSURE='All financing and loan terms are subject to change based on approved credit. Estimate only; partner underwriting applies. Rates, terms and eligibility vary. This is not a loan offer or approval.';

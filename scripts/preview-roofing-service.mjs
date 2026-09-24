@@ -9,7 +9,7 @@ await api('/setup','POST',{});
 const fixture=structuredClone(roofingFixture);fixture.slug='roofing-service-demo';
 fixture.settings.websitePages={version:1,pages:[{
  id:'roof-repair',kind:'service',slug:'roof-repair',serviceName:'Roof repair',enabled:true,
- title:'Roof repair',headline:"Roof repair. A clear plan for a dry home.",
+ typicalPriceRange:{min:3000,max:9000},title:'Roof repair',headline:"Roof repair. A clear plan for a dry home.",
  intro:'For homeowners in Ventura and Oxnard: tell us where the leak appears. Discuss the cause, repair options and scope before deciding what happens next.',
  scope:'Start with visible damage and when the leak appears. Discuss the inspection needed to understand the cause.',
  process:['Share the concern and your project location.','Discuss the roof condition and the next inspection step.','Review the proposed repair scope, materials and price before deciding.','Agree the repair and timing, then review the finished work.'],

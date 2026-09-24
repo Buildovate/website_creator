@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#004, #004B and #004C**. Next ticket: **#005** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#004, #004B, #004C and #004D**. Next ticket: **#004E** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -74,6 +74,23 @@ Tickets #001–#041.
 - State: **Done** · Evidence: [004C](docs/build-evidence/004C/README.md) · Estimate: **8h**. User-requested insertion before #005.
 - Scope: section 6 checklist, truthful optional reviews, isolated sales samples, value CTAs, hierarchy/icons, configured financing calculator/disclosure and service-tagged promotion unlock into one inquiry.
 - Evidence: docs/build-evidence/004C; full desktop/mobile sales-preview screenshots and tested public/sample boundaries. No provider connection, push or deployment implied.
+
+### #004D — Financing calculator redesign (service page)
+
+- State: **Done** · Evidence: [004D](docs/build-evidence/004D/README.md) · Estimate: **8h** (≤1 day). User-requested insertion before #005.
+- Scope: contractor-configured program comparison, service-range project slider/input, down payment choices, computed badges, principal/interest chart, same-inquiry plan prefill, reduced-motion count-up and labeled four-program sales preview. Required APR/term/down payment, deferred-interest labels and saved lender disclosure.
+- Done when: payment math, badges, empty hiding and prefill tests pass; desktop/mobile screenshots, evidence, BUILD-STATUS update and local commit. No lender integration or redirect.
+- External keys/accounts: None; saved confirmed terms only (K05–K07 remain unconnected).
+
+### #004E — Visual storytelling pass (service page)
+
+- State: **Not started — next session** · Estimate: **8h** (≤1 day; split before implementation if needed). Queued only during #004D.
+- Goal: make the text-heavy page self-explanatory through visual storytelling and award-level motion matching the hero scroll effect.
+- Warning signs: small custom animated illustrations (drip through ceiling stain, lifting shingle, granules in gutter), play once on entry; one line of card text.
+- Roof anatomy: house cross-section separates into shingles, underlayment, decking, flashing and gutters on scroll; hover/tap hotspots explain “what fails here” and “what the repair fixes.”
+- How it works: scroll-drawn progress line lights each step; illustration and time chip per step. Repair vs replace meter driven by roof age/damage level. Count-up trust numbers. Slow continuous review marquee. Subtle rain on dark final CTA.
+- Rules: approximately 40 words maximum per section body; each section leads with a visual; one custom illustration style matching the hero, no clip-art mix. Respect reduced motion; 60fps mobile, lazy loading, no layout shift, high Lighthouse performance. Anatomy, timeline and meter must be reusable trade-config-driven components.
+- Evidence required: desktop/mobile screenshots and a short scroll-effects screen recording. Do not implement during #004D.
 
 ### #005 — Connect the selected-service grid to detail pages
 
@@ -266,7 +283,8 @@ Tickets #001–#041.
 - Files to touch: `src/conversion-page.js`; `src/platform/conversion.ts`; `src/scroll-story.js`; `src/hero-timelapse.js`; `public/scroll-story.js`; `src/client/workspace/questionnaire.ts`; the existing Roofing imagery/sequence configuration located during this ticket; `tests/conversion-references.mjs`; `tests/scroll-story.mjs`; `docs/build-evidence/027A/` **(new)**.
 - Done when: (1) Keep the designed/generated hero imagery; do not replace it with real contractor photos. The finished roof is shown first and trusses remain story step 1. Verify forward/reverse scrolling and reduced-motion fallback. (2) Remove the “illustrative concept” note everywhere it appears in rendered site content; search source/variants and check the Roofing page family. (3) Add one additional direct headline option selectable in the contractor backoffice; show that the selection saves as draft and appears after publish. (4) Keep current CTA labels exactly unchanged. Show desktop/mobile screenshots and test output before #028.
 - External keys/accounts: None for reusing existing generated imagery. This ticket does not authorize replacement films or generation spend.
-- Scope note: Logged during #003 only; none of this polish is implemented by #003.
+- Added after #004C acceptance (queued only): warmer, more confident copy with less legal-sounding hedging; prominently surface response time/emergency service only when supplied by the contractor profile. Fix “How it works” step number/icon alignment (01–04). Use consistent section numbering or remove it. Remove footer line “Labeled illustrative and stock imagery does not depict completed work by this business.” Keep the small AI-example label under the before/after slider.
+- Scope note: Logged only; #027A remains before #028 and is not implemented by #004D.
 
 ### #028 — Approve the Roofing homeowner reference
 

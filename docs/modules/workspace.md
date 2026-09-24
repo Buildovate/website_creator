@@ -87,3 +87,8 @@ Questionnaire service controls (local): trade-library checkboxes plus existing c
 ## #004C — service conversion controls
 
 Questionnaire now edits service finance terms and required footer disclosure, promotion service tags/AI graphic selection, and links to authenticated unpublished sales preview. Saving remains draft-only. The existing inquiry transport includes financing interest and an unlocked code in its message while retaining consent and preview suppression.
+
+
+## #004D — Questionnaire financing controls
+
+The service fieldsets edit typical project-cost minimum/maximum. Financing supports adding/removing up to 24 named programs with APR, term, configured partner, enabled/confirmation and deferred-interest fields. Saving remains draft-only; programs do not establish merchant enrollment or retrieve rates. Empty lists hide service-page financing. Footer-legal disclosure remains required for rendering. [Evidence](../build-evidence/004D/README.md).

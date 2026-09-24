@@ -150,3 +150,14 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Active service-tagged promotions render banner/card and reuse the server-checked one-question unlock. Code stays absent until success, then feeds the same inquiry. Expired/unmatched offers hide; preview sample unlock is protected by membership, origin and session CSRF.
 - Full build, TypeScript and all 36 test files passed (38/38 commands); final affected tests and TypeScript rerun after browser CSRF correction pass. Public omission and sample interactions verified in browser; no overflow at desktop/mobile.
 - K03–K07 live provider state unchanged/unverified or not connected; sample mode is not a live integration. Section H remains Partial. Commit locator: feat: apply Roofing conversion playbook (#004C). No push/deploy. **Next #005, not started. Stop.**
+
+
+### #004D — Done (2026-09-24): service-page financing comparison
+
+- #004C accepted by Joe. #004D replaces its single-program service calculator with all enabled, confirmed contractor-configured programs. Each card carries monthly payment, APR, term, down payment, total cost and any deferred-interest label. Badges derive from the current calculated payments/totals; zero APR derives the No interest badge. Ties share badges.
+- Shared amortization, live project slider/input, None/10%/20% down payments, principal/interest chart and reduced-motion-aware count-up. A saved service typical price range defaults the budget to its midpoint; missing ranges require visitor input (legacy examples retain their saved cost). Choose this plan prefills the existing inquiry with the plan, monthly estimate, project amount, down payment and terms. No lender redirect.
+- Questionnaire edits program lists and service price ranges. Legacy single-program settings migrate; explicit empty lists hide. Missing confirmation, configured partner or footer disclosure also hides. Four visibly labeled sales-preview programs use 9.99%/132, 7.99%/73, 5.99%/58 and 0%/18; existing draft-only sample boundaries remain enforced.
+- Evidence: [004D README, desktop/mobile screenshots and test logs](docs/build-evidence/004D/README.md). Full build, TypeScript and all 37 executable test files passed (39 commands); focused final checks repeated after the visual refinements. Browser verified four desktop cards, mobile swipe/no document overflow, live down-payment math and same-form prefill. No console warnings/errors observed.
+- Connection mode: local, isolated fixtures and manually configured terms. K05–K07 remain not connected; no live offers, approvals, prequalification, provider calls, push or deployment. Whole section B remains Partial.
+- Queued only: #004E immediately after #004D; #027A copy/alignment/numbering/footer-label additions remain before #028. No #004E or #027A implementation performed.
+- Commit locator: `feat: compare configured service financing plans (#004D)`. Next ticket: **#004E**, not started. Stop here.

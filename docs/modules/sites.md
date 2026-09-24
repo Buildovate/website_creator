@@ -97,3 +97,8 @@ Supersedes #004 service-image behavior: the hero is always generated; only a com
 ## #004C — sales-preview boundary
 
 GET /sales-preview/:slug/services/:service requires tenant access and a tenant with neither published status nor snapshot. Samples are renderer-only, inquiries disabled. Published /s routes ignore sample query parameters. Questionnaire provides the preview link. See [004C evidence](../build-evidence/004C/README.md).
+
+
+## #004D — service budget and inquiry context
+
+ServicePage.typicalPriceRange is an optional {min,max} dollar range (0 < min < max <= 1,000,000). Its midpoint initializes the service comparison. Without a range or migrated legacy amount, payment estimates wait for a visitor-entered cost. The same inquiry handler records selected plan ID/name, approximate monthly payment, project amount, down payment and APR/term alongside financing interest. Values are visitor preferences, not an approved offer. Existing draft/publish isolation and consent rules remain unchanged.
