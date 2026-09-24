@@ -63,3 +63,7 @@ Roofing map demos: three labeled scenarios when no real projects exist and `show
 
 ## Sources
 `DESIGN_RESEARCH.md`, `OPERATIONS.md`, `README.md`, `docs/chat-pricing-release.md`, `public/design-kits.json`, `public/design-recipes.json`, `public/trade-films.json`, `public/pricing-films.json`, `public/trade-library.json`, `public/cutaways.json`, `src/design-kits.js`, `src/design-variant.js`, `src/cinematic.js`, `src/showcase.js`, `src/saved-designs.js`, `src/worker.js`, `src/pricing.js`.
+
+## Ticket #002 — Roofing journey acceptance
+
+Roofing reference copy uses repair/replacement language only when both services are selected (`roofingJourneyCopy` in `src/platform/conversion.ts`); repair-only sites retain repair-specific language. The existing hero, sticky header and service-selection transport remain unchanged. `tests/fixtures/roofing-journey.mjs` and `scripts/preview-roofing-journey.mjs` supply a disposable local acceptance fixture on port 8096. See [ticket #002 evidence](../build-evidence/002/README.md) for desktop/mobile screenshots, browser inquiry and tests. This is local working-tree evidence, not a deployment.

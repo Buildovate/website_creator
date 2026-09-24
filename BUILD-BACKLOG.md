@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001**. Next ticket: **#002 — Lock the Roofing homeowner journey**. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#002**. Next ticket: **#003 — Add draft/published page data contracts**. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -35,11 +35,12 @@ Tickets #001–#041.
 
 ### #002 — Lock the Roofing homeowner journey
 
-- State: **Not started** · Estimate: **4h** (≤1 day).
+- State: **Done** · Estimate: **4h** (≤1 day).
 - Pack section: [`F`](docs/product/01-CORE-SITE-A-N.md) §F; [`G`](docs/product/01-CORE-SITE-A-N.md) §G.
-- Files to touch: `src/conversion-page.js`; `src/platform/conversion.ts`; `tests/conversion-references.mjs`.
+- Files to touch: `src/conversion-page.js`; `src/platform/conversion.ts`; `tests/conversion-references.mjs`; `tests/fixtures/roofing-journey.mjs`; `scripts/preview-roofing-journey.mjs`; `docs/build-evidence/002/`; `docs/modules/design.md` (ticket note only).
 - Done when: One Roofing fixture has clear repair/replacement intent, immediate inquiry/call actions, selected services, sticky header and the existing scroll hero; show desktop/mobile screenshots.
 - External keys/accounts: None.
+- Evidence (2026-09-24): conversion/Roofing regression exit 0; scroll controller 8/8; client typecheck exit 0. Desktop/mobile screenshots and a successful local browser inquiry are saved in [ticket #002 evidence](docs/build-evidence/002/README.md). Repair/replacement copy is conditional on selected services; hero motion and sticky navigation are preserved.
 
 ### #003 — Add draft/published page data contracts
 
