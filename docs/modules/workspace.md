@@ -92,3 +92,7 @@ Questionnaire now edits service finance terms and required footer disclosure, pr
 ## #004D — Questionnaire financing controls
 
 The service fieldsets edit typical project-cost minimum/maximum. Financing supports adding/removing up to 24 named programs with APR, term, configured partner, enabled/confirmation and deferred-interest fields. Saving remains draft-only; programs do not establish merchant enrollment or retrieve rates. Empty lists hide service-page financing. Footer-legal disclosure remains required for rendering. [Evidence](../build-evidence/004D/README.md).
+
+## Questionnaire legal review — #011
+
+The legal policy panel shows Needs review, Required facts missing or Reviewed policy on file. Business jurisdiction and license state save to the draft; review metadata is read-only. Existing tenant PUT enforces administrator-only policy changes, and publication checks the attached policy. No actual jurisdiction policy is seeded. [Evidence](../build-evidence/011/README.md).

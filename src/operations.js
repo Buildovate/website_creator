@@ -3,6 +3,7 @@ export async function snapshot(env,user,tenant,reason){must(env.BUCKET,'Backup s
 export async function backupContent(env,tenantId,id){const b=await one(env,'SELECT * FROM backups WHERE id=? AND tenant_id=?',id,tenantId);must(b,'Backup not found.',404);const file=await env.BUCKET.get(b.object_key);must(file,'Backup file unavailable.',503);const raw=await file.text();must(await hash(raw)===b.checksum,'Backup integrity check failed.',503);const data=JSON.parse(raw);must(data.tenantId===tenantId&&data.format===1,'Backup format mismatch.');return {data,raw,backup:b}}
 export async function restore(env,user,tenant,id,version){
  const {data}=await backupContent(env,tenant.id,id);
+ const current=JSON.parse(tenant.settings);data.settings.platform={...data.settings.platform,legal:{...data.settings.platform?.legal,policy:current.platform?.legal?.policy||null}};
  must(tenant.version===version,'Website changed. Reload before restoring.',409);
  for(const photo of data.photos)must(await env.BUCKET.head(photo.object_key),'A backed-up photo is unavailable. Restore stopped.',503);
  await snapshot(env,user,tenant,'Before restore');

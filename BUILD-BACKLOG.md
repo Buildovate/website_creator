@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#010, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS). Current authorized queue: #027A backlog-only additions, then **#011**, then **#012**. Stop after #012. #027A remains Not started.
+Completed: **#001–#010, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS). Current authorized queue: **#012** (#027A additions queued and #011 framework complete). Stop after #012. #027A remains Not started.
 
 ## Session contract
 
@@ -174,11 +174,12 @@ Tickets #001–#041.
 
 ### #011 — Add publication rules for required legal facts
 
-- State: **Not started** · Estimate: **5h** (≤1 day).
+- State: **Done — Needs review fallback; K23 content pending** · Estimate: **5h** (≤1 day).
 - Pack section: [`E`](docs/product/01-CORE-SITE-A-N.md) §E; [`S`](docs/product/02-CREATIVE-TRUST-O-T.md) §S.
 - Files to touch: `src/platform/legal-policy.ts` **(new)**; `src/platform/constitution.ts`; `tests/legal-policy.mjs` **(new)**.
 - Done when: A reviewed policy can require a license disclosure and suppress unsupported optional claims; missing policy remains Needs review, never presented as legal compliance.
 - External keys/accounts: K23 (reviewed policy content; not an API key).
+- Executed evidence: [#011](docs/build-evidence/011/README.md); publication/permissions/expiry/restore tests and desktop/mobile Questionnaire screenshots. Footer placement is #012.
 
 ### #012 — Finish footer empty states and policy placement
 

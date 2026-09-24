@@ -1,0 +1,1898 @@
+{
+  "none": {
+    "tenant": {
+      "id": "4f090ba9-2d47-482b-85c4-20acc0547157",
+      "slug": "legal-none",
+      "name": "Ridgeline · Policy QA",
+      "settings": {
+        "trust": {
+          "version": 1,
+          "enabled": false,
+          "layout": "auto",
+          "placements": [
+            "below-hero"
+          ],
+          "showRatings": false,
+          "networks": []
+        },
+        "businessTrust": {
+          "years": null,
+          "licenseNumber": "",
+          "licenseState": "",
+          "insured": null,
+          "crewSize": null,
+          "warrantyYears": null,
+          "certifications": [],
+          "googleRating": null,
+          "googleReviewCount": null,
+          "googleUrl": "",
+          "jobsCompleted": null,
+          "confirmed": {
+            "years": false,
+            "license": false,
+            "insured": false,
+            "crewSize": false,
+            "warranty": false,
+            "certifications": false,
+            "google": false,
+            "jobsCompleted": false
+          }
+        },
+        "websitePages": {
+          "version": 1,
+          "pages": []
+        },
+        "name": "Ridgeline · Policy QA",
+        "trade": "Roofing",
+        "owner": "",
+        "phone": "(805) 555-0123",
+        "email": "",
+        "address": "",
+        "hours": "",
+        "license": "",
+        "experience": "",
+        "area": "Ventura & Oxnard",
+        "hero": "Roofs built. Standards raised.",
+        "intro": "Tell us what you have in mind. Explore the services below and start a conversation about your property.",
+        "color": "#b8dc65",
+        "template": "cinematic",
+        "seoTitle": "",
+        "seoDescription": "",
+        "ctaLabel": "",
+        "marqueeText": "",
+        "showOwner": true,
+        "showProjects": true,
+        "showOwnerPhoto": true,
+        "showDemoProjects": false,
+        "logoId": null,
+        "ownerPhotoId": null,
+        "heroPhotoId": null,
+        "savedDesignId": "",
+        "generationId": "",
+        "ownerStatement": "",
+        "journey": "roof-repair",
+        "conversionBrief": {
+          "audience": "",
+          "problem": "",
+          "traffic": "mixed",
+          "headline": "",
+          "intro": "",
+          "difference": "",
+          "nextStep": "",
+          "confirmed": false
+        },
+        "design": {
+          "serviceLayout": "grid",
+          "ownerLayout": "portrait",
+          "sectionOrder": "craft",
+          "storyIntensity": "bold",
+          "storyTreatment": "crossfade",
+          "bannerArt": "panorama",
+          "headlineMotion": "sweep",
+          "font": "display",
+          "cards": "classic",
+          "rhythm": "balanced",
+          "heroFrame": "standard",
+          "entrance": "rise",
+          "palette": "brand"
+        },
+        "scrollStory": {
+          "detailEnabled": true,
+          "detailIntro": "",
+          "heroCaptions": [
+            "Your vision.",
+            "Taking shape.",
+            "Brought to life."
+          ],
+          "detailCaptions": [
+            "Imagine it.",
+            "Plan the details.",
+            "Bring it to life."
+          ],
+          "mode": "build",
+          "enabled": true,
+          "tradePack": "",
+          "video": false,
+          "wipe": true,
+          "reviewFilmstrip": true,
+          "sampleReviews": true,
+          "posterId": "",
+          "beforeId": "",
+          "afterId": "",
+          "pairApproved": false,
+          "primaryLabel": "Request an estimate",
+          "secondaryLabel": "Explore our expertise",
+          "primaryTarget": "pricing",
+          "chapters": [
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            }
+          ],
+          "proof": [],
+          "sampleQuote": "They explained the options clearly. Every detail felt considered.",
+          "sampleName": "Alex R.",
+          "sampleRating": 5
+        },
+        "reviews": {
+          "googleUrl": "",
+          "yelpUrl": "",
+          "privacyUrl": "",
+          "termsUrl": "",
+          "googlePlaceId": "",
+          "yelpBusinessId": "",
+          "minimum": 4,
+          "confirmed": false
+        },
+        "pricing": {
+          "enabled": true,
+          "showFilm": true,
+          "headline": "A clear scope.\nA price that makes sense.",
+          "intro": "Start with what matters to you. We’ll discuss the work, explore your options, and prepare an estimate for your property.",
+          "approved": false,
+          "packages": [
+            {
+              "title": "Repair & protect",
+              "description": "Address a specific concern and understand the work it needs.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": false,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            },
+            {
+              "title": "Replace & renew",
+              "description": "Explore options for a meaningful improvement to your property.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": true,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            },
+            {
+              "title": "A complete new roof",
+              "description": "Bring a larger vision into focus with a clearly defined scope.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": false,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            }
+          ],
+          "faq": [
+            {
+              "question": "What affects the price?",
+              "answer": "The size, condition, access, materials, and agreed scope all matter. Share your priorities so the estimate can account for your property."
+            },
+            {
+              "question": "Can we explore different options?",
+              "answer": "Tell us your goals and budget. Ask which approaches fit the project and what is included in each option."
+            },
+            {
+              "question": "When do I commit?",
+              "answer": "Requesting an estimate starts a conversation. Review the scope, pricing and proposed terms before deciding to move forward."
+            }
+          ]
+        },
+        "designKit": "roofing",
+        "creativeBrief": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+        "effects": {
+          "reveal": true,
+          "parallax": true,
+          "marquee": true,
+          "servicePicker": true,
+          "process": true,
+          "stickyNav": true,
+          "cutaway": true,
+          "serviceImages": true,
+          "commercial": true,
+          "ctaBands": true,
+          "projectMap": true,
+          "readingProgress": true,
+          "spotlight": true,
+          "chapterRail": true,
+          "planning": true,
+          "titleMotion": true,
+          "scrollStory": true
+        },
+        "sections": [],
+        "claimsReviewed": false,
+        "serviceProfile": {
+          "years": "",
+          "warranty": "",
+          "rating": "",
+          "ratingSource": "",
+          "confirmed": false
+        },
+        "serviceAreas": [],
+        "platform": {
+          "version": 1,
+          "legal": {
+            "jurisdiction": "",
+            "licenseState": "",
+            "policy": null
+          },
+          "neighborhood": {
+            "enabled": false,
+            "country": "",
+            "region": "",
+            "proofs": []
+          },
+          "questionnaire": {
+            "story": "",
+            "priorities": "",
+            "factsConfirmed": false
+          },
+          "footer": {
+            "financingDisclosure": "",
+            "visible": {
+              "name": true,
+              "address": true,
+              "phone": true,
+              "email": true,
+              "hours": true,
+              "license": true,
+              "bonded": true,
+              "insured": true
+            },
+            "bonded": true,
+            "insured": true,
+            "locations": [],
+            "socials": {
+              "facebook": {
+                "enabled": false,
+                "url": ""
+              },
+              "instagram": {
+                "enabled": false,
+                "url": ""
+              },
+              "youtube": {
+                "enabled": false,
+                "url": ""
+              },
+              "linkedin": {
+                "enabled": false,
+                "url": ""
+              },
+              "tiktok": {
+                "enabled": false,
+                "url": ""
+              },
+              "nextdoor": {
+                "enabled": false,
+                "url": ""
+              }
+            }
+          },
+          "financing": {
+            "enabled": false,
+            "lenders": [
+              {
+                "id": "sfc",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              },
+              {
+                "id": "wisetack",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              },
+              {
+                "id": "sunbit",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              }
+            ],
+            "serviceTerms": null,
+            "programs": []
+          },
+          "promotions": {
+            "enabled": false,
+            "offers": []
+          }
+        },
+        "services": [
+          {
+            "name": "Roof repair",
+            "description": ""
+          },
+          {
+            "name": "Roof replacement",
+            "description": ""
+          },
+          {
+            "name": "Roof maintenance",
+            "description": ""
+          },
+          {
+            "name": "Gutters",
+            "description": ""
+          }
+        ]
+      },
+      "published": {
+        "trust": {
+          "version": 1,
+          "enabled": false,
+          "layout": "auto",
+          "placements": [
+            "below-hero"
+          ],
+          "showRatings": false,
+          "networks": []
+        },
+        "businessTrust": {
+          "years": null,
+          "licenseNumber": "",
+          "licenseState": "",
+          "insured": null,
+          "crewSize": null,
+          "warrantyYears": null,
+          "certifications": [],
+          "googleRating": null,
+          "googleReviewCount": null,
+          "googleUrl": "",
+          "jobsCompleted": null,
+          "confirmed": {
+            "years": false,
+            "license": false,
+            "insured": false,
+            "crewSize": false,
+            "warranty": false,
+            "certifications": false,
+            "google": false,
+            "jobsCompleted": false
+          }
+        },
+        "websitePages": {
+          "version": 1,
+          "pages": []
+        },
+        "name": "Ridgeline · Policy QA",
+        "trade": "Roofing",
+        "owner": "",
+        "phone": "(805) 555-0123",
+        "email": "",
+        "address": "",
+        "hours": "",
+        "license": "",
+        "experience": "",
+        "area": "Ventura & Oxnard",
+        "hero": "Roofs built. Standards raised.",
+        "intro": "Tell us what you have in mind. Explore the services below and start a conversation about your property.",
+        "color": "#b8dc65",
+        "template": "cinematic",
+        "seoTitle": "",
+        "seoDescription": "",
+        "ctaLabel": "",
+        "marqueeText": "",
+        "showOwner": true,
+        "showProjects": true,
+        "showOwnerPhoto": true,
+        "showDemoProjects": false,
+        "logoId": null,
+        "ownerPhotoId": null,
+        "heroPhotoId": null,
+        "savedDesignId": "",
+        "generationId": "",
+        "ownerStatement": "",
+        "journey": "roof-repair",
+        "conversionBrief": {
+          "audience": "",
+          "problem": "",
+          "traffic": "mixed",
+          "headline": "",
+          "intro": "",
+          "difference": "",
+          "nextStep": "",
+          "confirmed": false
+        },
+        "design": {
+          "serviceLayout": "grid",
+          "ownerLayout": "portrait",
+          "sectionOrder": "craft",
+          "storyIntensity": "bold",
+          "storyTreatment": "crossfade",
+          "bannerArt": "panorama",
+          "headlineMotion": "sweep",
+          "font": "display",
+          "cards": "classic",
+          "rhythm": "balanced",
+          "heroFrame": "standard",
+          "entrance": "rise",
+          "palette": "brand"
+        },
+        "scrollStory": {
+          "detailEnabled": true,
+          "detailIntro": "",
+          "heroCaptions": [
+            "Your vision.",
+            "Taking shape.",
+            "Brought to life."
+          ],
+          "detailCaptions": [
+            "Imagine it.",
+            "Plan the details.",
+            "Bring it to life."
+          ],
+          "mode": "build",
+          "enabled": true,
+          "tradePack": "",
+          "video": false,
+          "wipe": true,
+          "reviewFilmstrip": true,
+          "sampleReviews": true,
+          "posterId": "",
+          "beforeId": "",
+          "afterId": "",
+          "pairApproved": false,
+          "primaryLabel": "Request an estimate",
+          "secondaryLabel": "Explore our expertise",
+          "primaryTarget": "pricing",
+          "chapters": [
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            }
+          ],
+          "proof": [],
+          "sampleQuote": "They explained the options clearly. Every detail felt considered.",
+          "sampleName": "Alex R.",
+          "sampleRating": 5
+        },
+        "reviews": {
+          "googleUrl": "",
+          "yelpUrl": "",
+          "privacyUrl": "",
+          "termsUrl": "",
+          "googlePlaceId": "",
+          "yelpBusinessId": "",
+          "minimum": 4,
+          "confirmed": false
+        },
+        "pricing": {
+          "enabled": true,
+          "showFilm": true,
+          "headline": "A clear scope.\nA price that makes sense.",
+          "intro": "Start with what matters to you. We’ll discuss the work, explore your options, and prepare an estimate for your property.",
+          "approved": false,
+          "packages": [
+            {
+              "title": "Repair & protect",
+              "description": "Address a specific concern and understand the work it needs.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": false,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            },
+            {
+              "title": "Replace & renew",
+              "description": "Explore options for a meaningful improvement to your property.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": true,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            },
+            {
+              "title": "A complete new roof",
+              "description": "Bring a larger vision into focus with a clearly defined scope.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": false,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            }
+          ],
+          "faq": [
+            {
+              "question": "What affects the price?",
+              "answer": "The size, condition, access, materials, and agreed scope all matter. Share your priorities so the estimate can account for your property."
+            },
+            {
+              "question": "Can we explore different options?",
+              "answer": "Tell us your goals and budget. Ask which approaches fit the project and what is included in each option."
+            },
+            {
+              "question": "When do I commit?",
+              "answer": "Requesting an estimate starts a conversation. Review the scope, pricing and proposed terms before deciding to move forward."
+            }
+          ]
+        },
+        "designKit": "roofing",
+        "creativeBrief": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+        "effects": {
+          "reveal": true,
+          "parallax": true,
+          "marquee": true,
+          "servicePicker": true,
+          "process": true,
+          "stickyNav": true,
+          "cutaway": true,
+          "serviceImages": true,
+          "commercial": true,
+          "ctaBands": true,
+          "projectMap": true,
+          "readingProgress": true,
+          "spotlight": true,
+          "chapterRail": true,
+          "planning": true,
+          "titleMotion": true,
+          "scrollStory": true
+        },
+        "sections": [],
+        "claimsReviewed": false,
+        "serviceProfile": {
+          "years": "",
+          "warranty": "",
+          "rating": "",
+          "ratingSource": "",
+          "confirmed": false
+        },
+        "serviceAreas": [],
+        "platform": {
+          "version": 1,
+          "legal": {
+            "jurisdiction": "",
+            "licenseState": "",
+            "policy": null
+          },
+          "neighborhood": {
+            "enabled": false,
+            "country": "",
+            "region": "",
+            "proofs": []
+          },
+          "questionnaire": {
+            "story": "",
+            "priorities": "",
+            "factsConfirmed": false
+          },
+          "footer": {
+            "financingDisclosure": "",
+            "visible": {
+              "name": true,
+              "address": true,
+              "phone": true,
+              "email": true,
+              "hours": true,
+              "license": true,
+              "bonded": true,
+              "insured": true
+            },
+            "bonded": true,
+            "insured": true,
+            "locations": [],
+            "socials": {
+              "facebook": {
+                "enabled": false,
+                "url": ""
+              },
+              "instagram": {
+                "enabled": false,
+                "url": ""
+              },
+              "youtube": {
+                "enabled": false,
+                "url": ""
+              },
+              "linkedin": {
+                "enabled": false,
+                "url": ""
+              },
+              "tiktok": {
+                "enabled": false,
+                "url": ""
+              },
+              "nextdoor": {
+                "enabled": false,
+                "url": ""
+              }
+            }
+          },
+          "financing": {
+            "enabled": false,
+            "lenders": [
+              {
+                "id": "sfc",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              },
+              {
+                "id": "wisetack",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              },
+              {
+                "id": "sunbit",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              }
+            ],
+            "serviceTerms": null,
+            "programs": []
+          },
+          "promotions": {
+            "enabled": false,
+            "offers": []
+          }
+        },
+        "services": [
+          {
+            "name": "Roof repair",
+            "description": ""
+          },
+          {
+            "name": "Roof replacement",
+            "description": ""
+          },
+          {
+            "name": "Roof maintenance",
+            "description": ""
+          },
+          {
+            "name": "Gutters",
+            "description": ""
+          }
+        ]
+      },
+      "version": 2,
+      "status": "published",
+      "created_at": "2026-09-24T19:40:11.245Z",
+      "updated_at": "2026-09-24T19:40:11.264Z"
+    },
+    "publication": {
+      "status": 200,
+      "body": {
+        "ok": true,
+        "url": "/s/legal-none"
+      }
+    }
+  },
+  "missing": {
+    "tenant": {
+      "id": "62fbadce-23e1-4801-86d8-d65ca0d30338",
+      "slug": "legal-missing",
+      "name": "Ridgeline · Policy QA",
+      "settings": {
+        "trust": {
+          "version": 1,
+          "enabled": false,
+          "layout": "auto",
+          "placements": [
+            "below-hero"
+          ],
+          "showRatings": false,
+          "networks": []
+        },
+        "businessTrust": {
+          "years": null,
+          "licenseNumber": "",
+          "licenseState": "",
+          "insured": null,
+          "crewSize": null,
+          "warrantyYears": null,
+          "certifications": [],
+          "googleRating": null,
+          "googleReviewCount": null,
+          "googleUrl": "",
+          "jobsCompleted": null,
+          "confirmed": {
+            "years": false,
+            "license": false,
+            "insured": false,
+            "crewSize": false,
+            "warranty": false,
+            "certifications": false,
+            "google": false,
+            "jobsCompleted": false
+          }
+        },
+        "websitePages": {
+          "version": 1,
+          "pages": []
+        },
+        "name": "Ridgeline · Policy QA",
+        "trade": "Roofing",
+        "owner": "",
+        "phone": "(805) 555-0123",
+        "email": "",
+        "address": "",
+        "hours": "",
+        "license": "",
+        "experience": "",
+        "area": "Ventura & Oxnard",
+        "hero": "Roofs built. Standards raised.",
+        "intro": "Tell us what you have in mind. Explore the services below and start a conversation about your property.",
+        "color": "#b8dc65",
+        "template": "cinematic",
+        "seoTitle": "",
+        "seoDescription": "",
+        "ctaLabel": "",
+        "marqueeText": "",
+        "showOwner": true,
+        "showProjects": true,
+        "showOwnerPhoto": true,
+        "showDemoProjects": false,
+        "logoId": null,
+        "ownerPhotoId": null,
+        "heroPhotoId": null,
+        "savedDesignId": "",
+        "generationId": "",
+        "ownerStatement": "",
+        "journey": "roof-repair",
+        "conversionBrief": {
+          "audience": "",
+          "problem": "",
+          "traffic": "mixed",
+          "headline": "",
+          "intro": "",
+          "difference": "",
+          "nextStep": "",
+          "confirmed": false
+        },
+        "design": {
+          "serviceLayout": "grid",
+          "ownerLayout": "portrait",
+          "sectionOrder": "craft",
+          "storyIntensity": "bold",
+          "storyTreatment": "crossfade",
+          "bannerArt": "panorama",
+          "headlineMotion": "sweep",
+          "font": "display",
+          "cards": "classic",
+          "rhythm": "balanced",
+          "heroFrame": "standard",
+          "entrance": "rise",
+          "palette": "brand"
+        },
+        "scrollStory": {
+          "detailEnabled": true,
+          "detailIntro": "",
+          "heroCaptions": [
+            "Your vision.",
+            "Taking shape.",
+            "Brought to life."
+          ],
+          "detailCaptions": [
+            "Imagine it.",
+            "Plan the details.",
+            "Bring it to life."
+          ],
+          "mode": "build",
+          "enabled": true,
+          "tradePack": "",
+          "video": false,
+          "wipe": true,
+          "reviewFilmstrip": true,
+          "sampleReviews": true,
+          "posterId": "",
+          "beforeId": "",
+          "afterId": "",
+          "pairApproved": false,
+          "primaryLabel": "Request an estimate",
+          "secondaryLabel": "Explore our expertise",
+          "primaryTarget": "pricing",
+          "chapters": [
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            }
+          ],
+          "proof": [],
+          "sampleQuote": "They explained the options clearly. Every detail felt considered.",
+          "sampleName": "Alex R.",
+          "sampleRating": 5
+        },
+        "reviews": {
+          "googleUrl": "",
+          "yelpUrl": "",
+          "privacyUrl": "",
+          "termsUrl": "",
+          "googlePlaceId": "",
+          "yelpBusinessId": "",
+          "minimum": 4,
+          "confirmed": false
+        },
+        "pricing": {
+          "enabled": true,
+          "showFilm": true,
+          "headline": "A clear scope.\nA price that makes sense.",
+          "intro": "Start with what matters to you. We’ll discuss the work, explore your options, and prepare an estimate for your property.",
+          "approved": false,
+          "packages": [
+            {
+              "title": "Repair & protect",
+              "description": "Address a specific concern and understand the work it needs.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": false,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            },
+            {
+              "title": "Replace & renew",
+              "description": "Explore options for a meaningful improvement to your property.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": true,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            },
+            {
+              "title": "A complete new roof",
+              "description": "Bring a larger vision into focus with a clearly defined scope.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": false,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            }
+          ],
+          "faq": [
+            {
+              "question": "What affects the price?",
+              "answer": "The size, condition, access, materials, and agreed scope all matter. Share your priorities so the estimate can account for your property."
+            },
+            {
+              "question": "Can we explore different options?",
+              "answer": "Tell us your goals and budget. Ask which approaches fit the project and what is included in each option."
+            },
+            {
+              "question": "When do I commit?",
+              "answer": "Requesting an estimate starts a conversation. Review the scope, pricing and proposed terms before deciding to move forward."
+            }
+          ]
+        },
+        "designKit": "roofing",
+        "creativeBrief": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+        "effects": {
+          "reveal": true,
+          "parallax": true,
+          "marquee": true,
+          "servicePicker": true,
+          "process": true,
+          "stickyNav": true,
+          "cutaway": true,
+          "serviceImages": true,
+          "commercial": true,
+          "ctaBands": true,
+          "projectMap": true,
+          "readingProgress": true,
+          "spotlight": true,
+          "chapterRail": true,
+          "planning": true,
+          "titleMotion": true,
+          "scrollStory": true
+        },
+        "sections": [],
+        "claimsReviewed": false,
+        "serviceProfile": {
+          "years": "",
+          "warranty": "",
+          "rating": "",
+          "ratingSource": "",
+          "confirmed": false
+        },
+        "serviceAreas": [],
+        "platform": {
+          "version": 1,
+          "legal": {
+            "jurisdiction": "QA-only jurisdiction",
+            "licenseState": "ZZ",
+            "policy": {
+              "id": "QA-FICTIONAL-POLICY",
+              "revision": "1",
+              "status": "reviewed",
+              "jurisdiction": "QA-only jurisdiction",
+              "trade": "Roofing",
+              "reviewedBy": "Fictional QA reviewer",
+              "reviewedAt": "2026-01-01T00:00:00.000Z",
+              "expiresAt": "2099-01-01T00:00:00.000Z",
+              "referenceUrl": "https://example.test/qa-policy",
+              "requireLicense": true,
+              "footerDisclosure": "QA disclosure fixture — not approved legal language.",
+              "allowBonded": false,
+              "allowInsured": true
+            }
+          },
+          "neighborhood": {
+            "enabled": false,
+            "country": "",
+            "region": "",
+            "proofs": []
+          },
+          "questionnaire": {
+            "story": "",
+            "priorities": "",
+            "factsConfirmed": false
+          },
+          "footer": {
+            "financingDisclosure": "",
+            "visible": {
+              "name": true,
+              "address": true,
+              "phone": true,
+              "email": true,
+              "hours": true,
+              "license": true,
+              "bonded": true,
+              "insured": true
+            },
+            "bonded": true,
+            "insured": true,
+            "locations": [],
+            "socials": {
+              "facebook": {
+                "enabled": false,
+                "url": ""
+              },
+              "instagram": {
+                "enabled": false,
+                "url": ""
+              },
+              "youtube": {
+                "enabled": false,
+                "url": ""
+              },
+              "linkedin": {
+                "enabled": false,
+                "url": ""
+              },
+              "tiktok": {
+                "enabled": false,
+                "url": ""
+              },
+              "nextdoor": {
+                "enabled": false,
+                "url": ""
+              }
+            }
+          },
+          "financing": {
+            "enabled": false,
+            "lenders": [
+              {
+                "id": "sfc",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              },
+              {
+                "id": "wisetack",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              },
+              {
+                "id": "sunbit",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              }
+            ],
+            "serviceTerms": null,
+            "programs": []
+          },
+          "promotions": {
+            "enabled": false,
+            "offers": []
+          }
+        },
+        "services": [
+          {
+            "name": "Roof repair",
+            "description": ""
+          },
+          {
+            "name": "Roof replacement",
+            "description": ""
+          },
+          {
+            "name": "Roof maintenance",
+            "description": ""
+          },
+          {
+            "name": "Gutters",
+            "description": ""
+          }
+        ]
+      },
+      "published": null,
+      "version": 1,
+      "status": "draft",
+      "created_at": "2026-09-24T19:40:11.278Z",
+      "updated_at": "2026-09-24T19:40:11.278Z"
+    },
+    "publication": {
+      "status": 400,
+      "body": {
+        "error": "The reviewed policy requires a license number and license state before publication."
+      }
+    }
+  },
+  "reviewed": {
+    "tenant": {
+      "id": "82af1cf5-cd1c-4ed1-980f-f014fa254f70",
+      "slug": "legal-reviewed",
+      "name": "Ridgeline · Policy QA",
+      "settings": {
+        "trust": {
+          "version": 1,
+          "enabled": false,
+          "layout": "auto",
+          "placements": [
+            "below-hero"
+          ],
+          "showRatings": false,
+          "networks": []
+        },
+        "businessTrust": {
+          "years": null,
+          "licenseNumber": "",
+          "licenseState": "",
+          "insured": null,
+          "crewSize": null,
+          "warrantyYears": null,
+          "certifications": [],
+          "googleRating": null,
+          "googleReviewCount": null,
+          "googleUrl": "",
+          "jobsCompleted": null,
+          "confirmed": {
+            "years": false,
+            "license": false,
+            "insured": false,
+            "crewSize": false,
+            "warranty": false,
+            "certifications": false,
+            "google": false,
+            "jobsCompleted": false
+          }
+        },
+        "websitePages": {
+          "version": 1,
+          "pages": []
+        },
+        "name": "Ridgeline · Policy QA",
+        "trade": "Roofing",
+        "owner": "",
+        "phone": "(805) 555-0123",
+        "email": "",
+        "address": "",
+        "hours": "",
+        "license": "QA-LICENSE-001",
+        "experience": "",
+        "area": "Ventura & Oxnard",
+        "hero": "Roofs built. Standards raised.",
+        "intro": "Tell us what you have in mind. Explore the services below and start a conversation about your property.",
+        "color": "#b8dc65",
+        "template": "cinematic",
+        "seoTitle": "",
+        "seoDescription": "",
+        "ctaLabel": "",
+        "marqueeText": "",
+        "showOwner": true,
+        "showProjects": true,
+        "showOwnerPhoto": true,
+        "showDemoProjects": false,
+        "logoId": null,
+        "ownerPhotoId": null,
+        "heroPhotoId": null,
+        "savedDesignId": "",
+        "generationId": "",
+        "ownerStatement": "",
+        "journey": "roof-repair",
+        "conversionBrief": {
+          "audience": "",
+          "problem": "",
+          "traffic": "mixed",
+          "headline": "",
+          "intro": "",
+          "difference": "",
+          "nextStep": "",
+          "confirmed": false
+        },
+        "design": {
+          "serviceLayout": "grid",
+          "ownerLayout": "portrait",
+          "sectionOrder": "craft",
+          "storyIntensity": "bold",
+          "storyTreatment": "crossfade",
+          "bannerArt": "panorama",
+          "headlineMotion": "sweep",
+          "font": "display",
+          "cards": "classic",
+          "rhythm": "balanced",
+          "heroFrame": "standard",
+          "entrance": "rise",
+          "palette": "brand"
+        },
+        "scrollStory": {
+          "detailEnabled": true,
+          "detailIntro": "",
+          "heroCaptions": [
+            "Your vision.",
+            "Taking shape.",
+            "Brought to life."
+          ],
+          "detailCaptions": [
+            "Imagine it.",
+            "Plan the details.",
+            "Bring it to life."
+          ],
+          "mode": "build",
+          "enabled": true,
+          "tradePack": "",
+          "video": false,
+          "wipe": true,
+          "reviewFilmstrip": true,
+          "sampleReviews": true,
+          "posterId": "",
+          "beforeId": "",
+          "afterId": "",
+          "pairApproved": false,
+          "primaryLabel": "Request an estimate",
+          "secondaryLabel": "Explore our expertise",
+          "primaryTarget": "pricing",
+          "chapters": [
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            }
+          ],
+          "proof": [],
+          "sampleQuote": "They explained the options clearly. Every detail felt considered.",
+          "sampleName": "Alex R.",
+          "sampleRating": 5
+        },
+        "reviews": {
+          "googleUrl": "",
+          "yelpUrl": "",
+          "privacyUrl": "",
+          "termsUrl": "",
+          "googlePlaceId": "",
+          "yelpBusinessId": "",
+          "minimum": 4,
+          "confirmed": false
+        },
+        "pricing": {
+          "enabled": true,
+          "showFilm": true,
+          "headline": "A clear scope.\nA price that makes sense.",
+          "intro": "Start with what matters to you. We’ll discuss the work, explore your options, and prepare an estimate for your property.",
+          "approved": false,
+          "packages": [
+            {
+              "title": "Repair & protect",
+              "description": "Address a specific concern and understand the work it needs.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": false,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            },
+            {
+              "title": "Replace & renew",
+              "description": "Explore options for a meaningful improvement to your property.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": true,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            },
+            {
+              "title": "A complete new roof",
+              "description": "Bring a larger vision into focus with a clearly defined scope.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": false,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            }
+          ],
+          "faq": [
+            {
+              "question": "What affects the price?",
+              "answer": "The size, condition, access, materials, and agreed scope all matter. Share your priorities so the estimate can account for your property."
+            },
+            {
+              "question": "Can we explore different options?",
+              "answer": "Tell us your goals and budget. Ask which approaches fit the project and what is included in each option."
+            },
+            {
+              "question": "When do I commit?",
+              "answer": "Requesting an estimate starts a conversation. Review the scope, pricing and proposed terms before deciding to move forward."
+            }
+          ]
+        },
+        "designKit": "roofing",
+        "creativeBrief": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+        "effects": {
+          "reveal": true,
+          "parallax": true,
+          "marquee": true,
+          "servicePicker": true,
+          "process": true,
+          "stickyNav": true,
+          "cutaway": true,
+          "serviceImages": true,
+          "commercial": true,
+          "ctaBands": true,
+          "projectMap": true,
+          "readingProgress": true,
+          "spotlight": true,
+          "chapterRail": true,
+          "planning": true,
+          "titleMotion": true,
+          "scrollStory": true
+        },
+        "sections": [],
+        "claimsReviewed": false,
+        "serviceProfile": {
+          "years": "",
+          "warranty": "",
+          "rating": "",
+          "ratingSource": "",
+          "confirmed": false
+        },
+        "serviceAreas": [],
+        "platform": {
+          "version": 1,
+          "legal": {
+            "jurisdiction": "QA-only jurisdiction",
+            "licenseState": "ZZ",
+            "policy": {
+              "id": "QA-FICTIONAL-POLICY",
+              "revision": "1",
+              "status": "reviewed",
+              "jurisdiction": "QA-only jurisdiction",
+              "trade": "Roofing",
+              "reviewedBy": "Fictional QA reviewer",
+              "reviewedAt": "2026-01-01T00:00:00.000Z",
+              "expiresAt": "2099-01-01T00:00:00.000Z",
+              "referenceUrl": "https://example.test/qa-policy",
+              "requireLicense": true,
+              "footerDisclosure": "QA disclosure fixture — not approved legal language.",
+              "allowBonded": false,
+              "allowInsured": true
+            }
+          },
+          "neighborhood": {
+            "enabled": false,
+            "country": "",
+            "region": "",
+            "proofs": []
+          },
+          "questionnaire": {
+            "story": "",
+            "priorities": "",
+            "factsConfirmed": false
+          },
+          "footer": {
+            "financingDisclosure": "",
+            "visible": {
+              "name": true,
+              "address": true,
+              "phone": true,
+              "email": true,
+              "hours": true,
+              "license": true,
+              "bonded": true,
+              "insured": true
+            },
+            "bonded": true,
+            "insured": true,
+            "locations": [],
+            "socials": {
+              "facebook": {
+                "enabled": false,
+                "url": ""
+              },
+              "instagram": {
+                "enabled": false,
+                "url": ""
+              },
+              "youtube": {
+                "enabled": false,
+                "url": ""
+              },
+              "linkedin": {
+                "enabled": false,
+                "url": ""
+              },
+              "tiktok": {
+                "enabled": false,
+                "url": ""
+              },
+              "nextdoor": {
+                "enabled": false,
+                "url": ""
+              }
+            }
+          },
+          "financing": {
+            "enabled": false,
+            "lenders": [
+              {
+                "id": "sfc",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              },
+              {
+                "id": "wisetack",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              },
+              {
+                "id": "sunbit",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              }
+            ],
+            "serviceTerms": null,
+            "programs": []
+          },
+          "promotions": {
+            "enabled": false,
+            "offers": []
+          }
+        },
+        "services": [
+          {
+            "name": "Roof repair",
+            "description": ""
+          },
+          {
+            "name": "Roof replacement",
+            "description": ""
+          },
+          {
+            "name": "Roof maintenance",
+            "description": ""
+          },
+          {
+            "name": "Gutters",
+            "description": ""
+          }
+        ]
+      },
+      "published": {
+        "trust": {
+          "version": 1,
+          "enabled": false,
+          "layout": "auto",
+          "placements": [
+            "below-hero"
+          ],
+          "showRatings": false,
+          "networks": []
+        },
+        "businessTrust": {
+          "years": null,
+          "licenseNumber": "",
+          "licenseState": "",
+          "insured": null,
+          "crewSize": null,
+          "warrantyYears": null,
+          "certifications": [],
+          "googleRating": null,
+          "googleReviewCount": null,
+          "googleUrl": "",
+          "jobsCompleted": null,
+          "confirmed": {
+            "years": false,
+            "license": false,
+            "insured": false,
+            "crewSize": false,
+            "warranty": false,
+            "certifications": false,
+            "google": false,
+            "jobsCompleted": false
+          }
+        },
+        "websitePages": {
+          "version": 1,
+          "pages": []
+        },
+        "name": "Ridgeline · Policy QA",
+        "trade": "Roofing",
+        "owner": "",
+        "phone": "(805) 555-0123",
+        "email": "",
+        "address": "",
+        "hours": "",
+        "license": "QA-LICENSE-001",
+        "experience": "",
+        "area": "Ventura & Oxnard",
+        "hero": "Roofs built. Standards raised.",
+        "intro": "Tell us what you have in mind. Explore the services below and start a conversation about your property.",
+        "color": "#b8dc65",
+        "template": "cinematic",
+        "seoTitle": "",
+        "seoDescription": "",
+        "ctaLabel": "",
+        "marqueeText": "",
+        "showOwner": true,
+        "showProjects": true,
+        "showOwnerPhoto": true,
+        "showDemoProjects": false,
+        "logoId": null,
+        "ownerPhotoId": null,
+        "heroPhotoId": null,
+        "savedDesignId": "",
+        "generationId": "",
+        "ownerStatement": "",
+        "journey": "roof-repair",
+        "conversionBrief": {
+          "audience": "",
+          "problem": "",
+          "traffic": "mixed",
+          "headline": "",
+          "intro": "",
+          "difference": "",
+          "nextStep": "",
+          "confirmed": false
+        },
+        "design": {
+          "serviceLayout": "grid",
+          "ownerLayout": "portrait",
+          "sectionOrder": "craft",
+          "storyIntensity": "bold",
+          "storyTreatment": "crossfade",
+          "bannerArt": "panorama",
+          "headlineMotion": "sweep",
+          "font": "display",
+          "cards": "classic",
+          "rhythm": "balanced",
+          "heroFrame": "standard",
+          "entrance": "rise",
+          "palette": "brand"
+        },
+        "scrollStory": {
+          "detailEnabled": true,
+          "detailIntro": "",
+          "heroCaptions": [
+            "Your vision.",
+            "Taking shape.",
+            "Brought to life."
+          ],
+          "detailCaptions": [
+            "Imagine it.",
+            "Plan the details.",
+            "Bring it to life."
+          ],
+          "mode": "build",
+          "enabled": true,
+          "tradePack": "",
+          "video": false,
+          "wipe": true,
+          "reviewFilmstrip": true,
+          "sampleReviews": true,
+          "posterId": "",
+          "beforeId": "",
+          "afterId": "",
+          "pairApproved": false,
+          "primaryLabel": "Request an estimate",
+          "secondaryLabel": "Explore our expertise",
+          "primaryTarget": "pricing",
+          "chapters": [
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            },
+            {
+              "headline": "",
+              "body": "",
+              "mediaId": ""
+            }
+          ],
+          "proof": [],
+          "sampleQuote": "They explained the options clearly. Every detail felt considered.",
+          "sampleName": "Alex R.",
+          "sampleRating": 5
+        },
+        "reviews": {
+          "googleUrl": "",
+          "yelpUrl": "",
+          "privacyUrl": "",
+          "termsUrl": "",
+          "googlePlaceId": "",
+          "yelpBusinessId": "",
+          "minimum": 4,
+          "confirmed": false
+        },
+        "pricing": {
+          "enabled": true,
+          "showFilm": true,
+          "headline": "A clear scope.\nA price that makes sense.",
+          "intro": "Start with what matters to you. We’ll discuss the work, explore your options, and prepare an estimate for your property.",
+          "approved": false,
+          "packages": [
+            {
+              "title": "Repair & protect",
+              "description": "Address a specific concern and understand the work it needs.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": false,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            },
+            {
+              "title": "Replace & renew",
+              "description": "Explore options for a meaningful improvement to your property.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": true,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            },
+            {
+              "title": "A complete new roof",
+              "description": "Bring a larger vision into focus with a clearly defined scope.",
+              "price": "",
+              "note": "Tailored to your property",
+              "featured": false,
+              "includes": [
+                "Discuss your goals",
+                "Review the proposed scope",
+                "Receive a project-specific estimate"
+              ]
+            }
+          ],
+          "faq": [
+            {
+              "question": "What affects the price?",
+              "answer": "The size, condition, access, materials, and agreed scope all matter. Share your priorities so the estimate can account for your property."
+            },
+            {
+              "question": "Can we explore different options?",
+              "answer": "Tell us your goals and budget. Ask which approaches fit the project and what is included in each option."
+            },
+            {
+              "question": "When do I commit?",
+              "answer": "Requesting an estimate starts a conversation. Review the scope, pricing and proposed terms before deciding to move forward."
+            }
+          ]
+        },
+        "designKit": "roofing",
+        "creativeBrief": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+        "effects": {
+          "reveal": true,
+          "parallax": true,
+          "marquee": true,
+          "servicePicker": true,
+          "process": true,
+          "stickyNav": true,
+          "cutaway": true,
+          "serviceImages": true,
+          "commercial": true,
+          "ctaBands": true,
+          "projectMap": true,
+          "readingProgress": true,
+          "spotlight": true,
+          "chapterRail": true,
+          "planning": true,
+          "titleMotion": true,
+          "scrollStory": true
+        },
+        "sections": [],
+        "claimsReviewed": false,
+        "serviceProfile": {
+          "years": "",
+          "warranty": "",
+          "rating": "",
+          "ratingSource": "",
+          "confirmed": false
+        },
+        "serviceAreas": [],
+        "platform": {
+          "version": 1,
+          "legal": {
+            "jurisdiction": "QA-only jurisdiction",
+            "licenseState": "ZZ",
+            "policy": {
+              "id": "QA-FICTIONAL-POLICY",
+              "revision": "1",
+              "status": "reviewed",
+              "jurisdiction": "QA-only jurisdiction",
+              "trade": "Roofing",
+              "reviewedBy": "Fictional QA reviewer",
+              "reviewedAt": "2026-01-01T00:00:00.000Z",
+              "expiresAt": "2099-01-01T00:00:00.000Z",
+              "referenceUrl": "https://example.test/qa-policy",
+              "requireLicense": true,
+              "footerDisclosure": "QA disclosure fixture — not approved legal language.",
+              "allowBonded": false,
+              "allowInsured": true
+            }
+          },
+          "neighborhood": {
+            "enabled": false,
+            "country": "",
+            "region": "",
+            "proofs": []
+          },
+          "questionnaire": {
+            "story": "",
+            "priorities": "",
+            "factsConfirmed": false
+          },
+          "footer": {
+            "financingDisclosure": "",
+            "visible": {
+              "name": true,
+              "address": true,
+              "phone": true,
+              "email": true,
+              "hours": true,
+              "license": true,
+              "bonded": true,
+              "insured": true
+            },
+            "bonded": true,
+            "insured": true,
+            "locations": [],
+            "socials": {
+              "facebook": {
+                "enabled": false,
+                "url": ""
+              },
+              "instagram": {
+                "enabled": false,
+                "url": ""
+              },
+              "youtube": {
+                "enabled": false,
+                "url": ""
+              },
+              "linkedin": {
+                "enabled": false,
+                "url": ""
+              },
+              "tiktok": {
+                "enabled": false,
+                "url": ""
+              },
+              "nextdoor": {
+                "enabled": false,
+                "url": ""
+              }
+            }
+          },
+          "financing": {
+            "enabled": false,
+            "lenders": [
+              {
+                "id": "sfc",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              },
+              {
+                "id": "wisetack",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              },
+              {
+                "id": "sunbit",
+                "enabled": false,
+                "applicationUrl": "",
+                "confirmed": false
+              }
+            ],
+            "serviceTerms": null,
+            "programs": []
+          },
+          "promotions": {
+            "enabled": false,
+            "offers": []
+          }
+        },
+        "services": [
+          {
+            "name": "Roof repair",
+            "description": ""
+          },
+          {
+            "name": "Roof replacement",
+            "description": ""
+          },
+          {
+            "name": "Roof maintenance",
+            "description": ""
+          },
+          {
+            "name": "Gutters",
+            "description": ""
+          }
+        ]
+      },
+      "version": 2,
+      "status": "published",
+      "created_at": "2026-09-24T19:40:11.290Z",
+      "updated_at": "2026-09-24T19:40:11.301Z"
+    },
+    "publication": {
+      "status": 200,
+      "body": {
+        "ok": true,
+        "url": "/s/legal-reviewed"
+      }
+    }
+  }
+}

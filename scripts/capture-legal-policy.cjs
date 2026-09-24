@@ -1,0 +1,18 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),{buildSync}=require('esbuild'),assert=require('node:assert/strict'),fs=require('node:fs');
+(async()=>{const out='docs/build-evidence/011',base='http://127.0.0.1:8105',fixture=JSON.parse(fs.readFileSync(out+'/local-fixture.json')),browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH});
+ const bundle=buildSync({entryPoints:['src/client/workspace/questionnaire.ts'],bundle:true,write:false,format:'iife',globalName:'QuestionnaireQA',platform:'browser'}).outputFiles[0].text;
+ for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844]]){
+  const page=await browser.newPage({viewport:{width,height}}),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.route('**/*',r=>new URL(r.request().url()).origin===base?r.continue():r.abort());
+  for(const [mode,label] of [['none','Needs review'],['missing','Required facts missing'],['reviewed','Reviewed policy on file']]){
+   await page.goto(base+'/s/legal-none');await page.setContent('<link rel="stylesheet" href="/app.css"><link rel="stylesheet" href="/flow.css"><main id="qa" style="max-width:1100px;margin:24px auto;padding:0 16px"></main>');await page.addScriptTag({content:bundle});
+   await page.evaluate(tenant=>{window.qaTenant=tenant;window.saved=0;QuestionnaireQA.mountQuestionnaire(document.querySelector('#qa'),{settings:tenant.settings,slug:tenant.slug,photos:[],write:true,dirty:()=>{},save:async settings=>{const r=await fetch('/api/tenants/'+window.qaTenant.id,{method:'PUT',headers:{'content-type':'application/json','X-CSRF-Token':window.csrf},body:JSON.stringify({version:window.qaTenant.version,settings})});if(!r.ok)throw Error(await r.text());window.qaTenant=(await r.json()).tenant;window.saved++;}});document.querySelector('#q-legal-policy').insertAdjacentHTML('afterbegin','<p><strong>LOCAL QA FIXTURE · NOT LEGAL APPROVAL</strong></p>');},fixture[mode].tenant);
+   await page.locator('#q-legal-policy').evaluate(e=>e.scrollIntoView({block:'start'}));await page.waitForTimeout(100);assert.match(await page.locator('#q-legal-policy h3').textContent(),new RegExp(label));assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:`${out}/${name}-${mode}.png`});
+   if(mode==='reviewed'&&name==='desktop'){
+    await page.evaluate(async()=>{await fetch('/auth/local-session',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({userId:'legal-qa',email:'legal-qa@example.test'})});window.csrf=(await(await fetch('/api/session')).json()).csrfToken;});
+    await page.locator('[name="legal-license-state"]').fill('YY');await page.locator('[type="submit"]').click();await page.waitForFunction(()=>window.saved===1);assert.equal(await page.evaluate(()=>window.qaTenant.settings.platform.legal.licenseState),'YY');assert.equal(await page.evaluate(()=>window.qaTenant.published.platform.legal.licenseState),'ZZ');assert.equal(await page.evaluate(()=>window.qaTenant.settings.platform.legal.policy.id),'QA-FICTIONAL-POLICY');
+   }
+  }
+  assert.deepEqual(errors,[]);console.log('PASS '+name+': actual Questionnaire Needs review / missing facts / reviewed fixture states, accessible fields, no overflow or page errors');await page.close();
+ }
+ assert.equal(fixture.missing.publication.status,400);assert.equal(fixture.none.publication.status,200);assert.equal(fixture.reviewed.publication.status,200);console.log('PASS actual publish gates and Questionnaire API draft-only save preserve the review record');await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

@@ -52,7 +52,7 @@ tenant=(await api('/tenants/'+tenant.id)).tenant;
 for(const path of [root,root+'/pricing',root+'/blog',root+'/financing',root+'/promotions']){
  const response=await request(path,'GET',undefined,null);assert.equal(response.status,200,path);const html=await response.text();const footer=html.match(/<footer[\s\S]*?<\/footer>/)?.[0];assert.ok(footer,path+' shared footer');
  for(const hidden of ['Hidden primary address','Hidden primary hours','HIDDEN-LICENSE','8055550123','qa@example.test','facebook.com','Location test address'])assert.ok(!footer.includes(hidden),path+' hides '+hidden);
- assert.match(footer,/instagram.com\/example/);assert.match(footer,/QA Ventura/);assert.match(footer,/8055550999/);assert.match(footer,/Bonded/);assert.doesNotMatch(footer,/Insured/);
+ assert.match(footer,/instagram.com\/example/);assert.match(footer,/QA Ventura/);assert.match(footer,/8055550999/);assert.doesNotMatch(footer,/>Bonded</,'Missing reviewed policy withholds optional bonding claims');assert.doesNotMatch(footer,/Insured/);
  assert.doesNotMatch(html,/QA-NOT-PUBLIC-IN-HTML/);assert.doesNotMatch(html,/50\/50|Sales Rep|15-minute|Price Book/);
 }
 const financeHtml=await (await request(root+'/financing','GET',undefined,null)).text();assert.match(financeHtml,/Service Finance Company/);assert.match(financeHtml,/Wisetack/);assert.doesNotMatch(financeHtml,/>Sunbit</);assert.match(financeHtml,/partner underwriting/);assert.match(financeHtml,/data-financing-calculator/);

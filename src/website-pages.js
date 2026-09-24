@@ -1,3 +1,4 @@
+import {publicLegalSettings} from './platform/legal-policy.ts';
 import {renderTrustStrip,trustAssets} from './trust.js';
 import {renderTrustAbout} from './about-page.js';
 import {motionHero,anatomySection,warningArt} from './trade-motion.js';
@@ -73,7 +74,7 @@ export function accentTokens(color) {
 export function renderServicePage(s, page, {slug, preview = false, salesPreview = false, photos = []}) {
  salesPreview=preview&&salesPreview;
  const base='/s/'+slug,suffix=preview?'?preview=1':'',home=base+suffix;
- const known=new Set(photos.map(p=>p.id)),platform=normalizePlatform(s.platform),profile=s.serviceProfile||{};
+ s=publicLegalSettings(s);const known=new Set(photos.map(p=>p.id)),platform=normalizePlatform(s.platform),profile=s.serviceProfile||{};
  const finance=serviceFinance(platform,salesPreview),offers=serviceOffers(platform,page,salesPreview);
  const colors=accentTokens(s.color),digits=String(s.phone||'').replace(/\D/g,'');
  const call=digits?'tel:+'+(digits.length===10?'1':'')+digits:'';
@@ -140,4 +141,4 @@ export function renderFAQPage(s,page,{slug,preview=false,photos=[]}) {
 }
 
 
-export function renderAboutPage(s,page,options){return renderTrustAbout(s,page,options,accentTokens(s.color));}
+export function renderAboutPage(s,page,options){return renderTrustAbout(publicLegalSettings(s),page,options,accentTokens(s.color));}

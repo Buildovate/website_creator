@@ -1,3 +1,4 @@
+import {normalizeLegal,type LegalSettings} from './legal-policy.ts';
 // Pack 0 contracts shared by server and browser. No provider secrets belong here.
 export const CONSTITUTION = Object.freeze({version:1, salesCommission:0.5, videoPackage:'Higgsfield Ultra', upsellDiscount:0.10, upsellWindowSeconds:900, maxServiceCities:5, requireOwnerAdApproval:true});
 export const PRICE_BOOK = Object.freeze([
@@ -17,6 +18,7 @@ export interface FinancingProgram {id:string;name:string;lenderId:string;apr:num
 export interface ServiceFinanceTerms {lenderId:string;amount:number;downPayment:number;apr:number;months:number;confirmed:boolean}
 export interface Promotion {serviceNames:string[];graphic:string;id:string;enabled:boolean;title:string;description:string;reward:string;terms:string;startsAt:string;endsAt:string;question:string;choices:string[];answer:number;code:string}
 export interface PlatformSettings {
+  legal:LegalSettings;
   version:1;
   neighborhood:{enabled:boolean;country:string;region:string;proofs:{city:string;url:string;confirmed:boolean}[]};
   questionnaire:{story:string;priorities:string;factsConfirmed:boolean};
@@ -77,7 +79,7 @@ export function normalizePlatform(value:unknown):PlatformSettings {
     if(out.startsAt)out.startsAt=new Date(start).toISOString();if(out.endsAt)out.endsAt=new Date(end).toISOString();return out;
   });
   check(new Set(offers.map(p=>p.id)).size===offers.length,'Each promotion needs a unique identifier.');
-  return {version:1,neighborhood,questionnaire:{story:str(q.story,2500),priorities:str(q.priorities,1500),factsConfirmed:q.factsConfirmed===true},footer:{financingDisclosure:str(f.financingDisclosure,3000),visible:visibility(f.visible),bonded:f.bonded===true,insured:f.insured===true,locations,socials},financing:{enabled:fin.enabled===true,lenders,serviceTerms,programs},promotions:{enabled:prom.enabled===true,offers}};
+  return {version:1,legal:normalizeLegal(v.legal),neighborhood,questionnaire:{story:str(q.story,2500),priorities:str(q.priorities,1500),factsConfirmed:q.factsConfirmed===true},footer:{financingDisclosure:str(f.financingDisclosure,3000),visible:visibility(f.visible),bonded:f.bonded===true,insured:f.insured===true,locations,socials},financing:{enabled:fin.enabled===true,lenders,serviceTerms,programs},promotions:{enabled:prom.enabled===true,offers}};
 }
 export function activeOffers(platform:PlatformSettings,time=Date.now()) {return platform.promotions.enabled?platform.promotions.offers.filter(p=>p.enabled&&Date.parse(p.startsAt)<=time&&Date.parse(p.endsAt)>time):[];}
 export const FINANCING_DISCLOSURE='All financing and loan terms are subject to change based on approved credit. Estimate only; partner underwriting applies. Rates, terms and eligibility vary. This is not a loan offer or approval.';

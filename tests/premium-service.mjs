@@ -1,3 +1,4 @@
+import {legalFixture} from './fixtures/legal-policy.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
@@ -26,7 +27,7 @@ assert.ok(html.includes('--tp-accent:#ffea00;--tp-accent-ink:#000000'));
 assert.ok(html.includes('aria-label="Compare before and after roof images"'));
 assert.ok(!html.includes('data-review-slug'));
 const photo=await api(path+'/photos','POST',new Uint8Array(readFileSync('public/assets/roofing.jpg')));
-await save({...t.settings,serviceProfile:{years:'12',warranty:'Written workmanship warranty',rating:'4.8',ratingSource:'https://example.test/reviews',confirmed:true},platform:{...t.settings.platform,footer:{...t.settings.platform.footer,insured:true}},websitePages:{...t.settings.websitePages,pages:t.settings.websitePages.pages.map(p=>({...p,headline:'CUSTOM DRAFT <headline>',media:{...p.media,hero:{photoId:photo.id,alt:'Private hero',caption:''}}}))}});
+await save({...t.settings,serviceProfile:{years:'12',warranty:'Written workmanship warranty',rating:'4.8',ratingSource:'https://example.test/reviews',confirmed:true},platform:{...t.settings.platform,legal:legalFixture,footer:{...t.settings.platform.footer,insured:true}},websitePages:{...t.settings.websitePages,pages:t.settings.websitePages.pages.map(p=>({...p,headline:'CUSTOM DRAFT <headline>',media:{...p.media,hero:{photoId:photo.id,alt:'Private hero',caption:''}}}))}});
 html=await (await req(url,'GET',undefined,null)).text();assert.ok(!html.includes('CUSTOM DRAFT'));assert.ok(!html.includes('class="tp-trust"'));
 html=await (await req(url+'?preview=1')).text();assert.ok(html.includes('CUSTOM DRAFT &lt;headline&gt;'));assert.ok(html.includes('Licensed & insured'));assert.ok(html.includes('12 years'));assert.ok(html.includes('4.8 / 5'));assert.ok(html.includes('Written workmanship warranty'));
 await publish();
