@@ -126,3 +126,10 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Commit locator: `feat: render Roofing service detail pages (#004)`. Commit isolates this ticket from pre-existing uncommitted foundations/assets; tests certify the current working tree, not a clean-checkout release.
 - Roofing polish #027A is confirmed logged before #028 and remains Not started.
 - **Next ticket: #005.** Stop; no other ticket executed.
+
+### Baseline verification and #004 visual evidence — 2026-09-24
+
+- Separate commit `218229b` (`baseline foundations`) commits the runtime/client/auth/build/migration/test/assets needed by #001–#004. No push.
+- A clean clone of that exact commit with freshly installed locked dependencies passed the build, TypeScript and all 34 executable test files (36/36 commands); Git status remained clean. ffprobe is required for video decoding; the optional local GeoIP database is not needed for the test suite.
+- [#004 evidence](docs/build-evidence/004/README.md) now includes desktop (1440×1000) and mobile (390×844) screenshots, mobile inquiry context, the reusable fictional fixture and complete clean-checkout test outputs. No page redesign, real customer inquiry or deployment.
+- The prior #001–#004 uncommitted-foundation limitation is resolved. Remaining untracked planning/audit documents are not runtime dependencies. **Next ticket remains #005; not started.**
