@@ -170,3 +170,13 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - [Desktop/mobile screenshots, actual scroll recording, browser assertions and test logs](docs/build-evidence/004E/README.md). Build, TypeScript and six affected regression suites pass (eight commands). Browser verified reverse scrolling, roof/disclosure links, X-ray, meter, pause, reduced motion, mobile layout, failed media, configured video seeking and sequence frames. Recording decoded successfully. Lighthouse/physical-device 60fps not certified; production media remains a later asset gate.
 - #027A updated only: plan comparison chart, dark/lime financing band and comma-formatted budget remain queued. No financing implementation changes in #004E. Section H/G and other broad pack rows stay Partial. K02 remains unverified; no asset-generation spend, push, deployment or customer messages.
 - Commit locator: `feat: add trade cinematic motion kit (#004E)`. Next ticket: **#005**, not started. Stop.
+
+
+### #004F — Done (2026-09-24): supplied Roofing media
+
+- Inspected both input files with full-frame decoding: desktop 1920×1080, 8.042 s, 193 frames; mobile 1080×1920, 5.042 s, 121 frames. Both end on the supplied house; mobile is a tighter crop. Source final-frame screenshots and probes are saved.
+- Wired H.264 MP4 plus VP9 WebM: desktop 3.131/3.131 MB, mobile 1.251/1.423 MB. Frame counts retained; no audio, short GOP, MP4 fast-start. Both orientations now scrub through the real clips with scroll. WebM alternate, error-to-poster fallback, reverse seek, frozen pause and reduced-motion no-film behavior were exercised.
+- Replaced the SVG polygon with an imagegen alpha cutout of the house/chimney/trees. CSS uses its alpha over original poster pixels; final camera blends into this registered still for the headline depth effect. No guessed tracking over flight; roof callouts return only at landing.
+- Added a dark gradient behind hero paragraph/actions and enlarged mobile X-ray to near full width with the control directly beneath. NEEDS-ASSETS marks Roofing clips supplied and records final encodes.
+- [Desktop/mobile start-middle-end screenshots, both scroll recordings, final frames, cutout provenance and test evidence](docs/build-evidence/004F/README.md). Build, TypeScript and seven relevant suites pass (nine commands). Desktop/mobile browser checks include actual MP4 and WebM playback/seeking, no overflow and no observed page errors.
+- Commit locator: `feat: wire supplied Roofing cinematic media (#004F)`. No push or deployment. #027A unchanged and queued. Next ticket **#005**, not started. Stop.

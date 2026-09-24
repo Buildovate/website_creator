@@ -30,3 +30,6 @@ Reuse src/service-financing.js, src/client/site/finance-comparison.ts and the tp
 ## #004E — cinematic kit
 
 Service pages reuse src/trade-motion.js, src/trade-motion-config.js and public/trade-motion.css/js. Configure camera keyframes, media, synchronized mask sequences, hero/anatomy anchors, layers, flow path, meter weights and process phase chips per trade. Roofing is the only active adoption. HVAC/plumbing system renderers are reusable examples, not launched pages. Missing films use the supplied still/placeholder camera; reduced motion uses a still and no video. Preserve native keyboard/touch disclosures, pause controls and truthful meter language. No fabricated reviews or counters. See NEEDS-ASSETS.md for production handoff and docs/build-evidence/004E for local verification/performance limits.
+
+
+#004F Roofing media update: use both H.264 and WebM variants with one coalesced scroll seek on desktop/mobile, and a static fallback that makes no video request under reduced motion. Alpha cutouts must align with the landing still; do not fake full-flight tracking when only a still mask exists. Keep hero text readable over every camera frame and make anatomy fill the mobile width with controls directly below.

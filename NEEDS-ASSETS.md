@@ -1,18 +1,19 @@
-# Motion kit asset handoff — #004E
+# Motion kit asset handoff — updated by #004F
 
-Production renders pending. No generation commissioned. The supplied Roofing 3840×2160 PNG still is used through an optimized 1920×1080 WebP. Its camera sequence and CSS/SVG roofline cutout are placeholders; the anatomy/wireframe is hand-authored SVG, not a rendered drone flight or customer project. Existing generated comparison images remain labeled. Other trades are handoff specifications only; their pages are not rolled out.
+Roofing footage is supplied and wired. The supplied 3840×2160 still remains the poster/reduced-motion fallback through its 1920×1080 derivative. A real alpha house/chimney/tree cutout now replaces the temporary SVG polygon. Anatomy remains an educational SVG; other trades remain handoff specifications and are not rolled out.
 
-Expected input folder: `docs/build-evidence/assets/<trade>/`; reviewed public copies belong in `public/assets/trade-motion/`. Set paths in `src/trade-motion-config.js`. Supplied Roofing files at implementation: roofing-house-still.png (3840×2160, one frame); both MP4s missing. The polygon foreground mask is a temporary approximate roofline, not an alpha-matted production cutout.
+Inputs: `docs/build-evidence/assets/<trade>/`. Reviewed web files: `public/assets/trade-motion/`. Both Roofing clips scrub with scroll, including mobile (supersedes #004E’s short-loop placeholder). The original full frame counts are retained. No audio. Keyframes every six frames support seeking. A final 8% scroll segment blends from the decoded end frame into the original still and its registered alpha mask. Moving-camera tracking is not supplied: callouts appear only at the landed poster, never at guessed points over moving footage.
 
-For every trade, desktop camera beats are sky → clouds → neighborhood → trade detail → house front. 24 fps, 8 seconds, 192 frames; keyframe every frame for precise MP4 seeking, H.264, no audio. Mobile: 3-second seamless low-motion loop, 24 fps, 72 frames, H.264, no audio, target <2 MB. Desktop target <8 MB. Posters must match the final camera. Transparency must be premultiplied consistently; foreground masks and tracking coordinates must match the exact crop/camera at every frame.
+For other trades, the existing table records requested targets: desktop 8 s/192 frames, mobile 3 s/72 frames. Roofing actual supplied media overrides those targets below. Continuous foreground mask sequences are optional for a future depth effect throughout the entire flight; the current requested depth effect is at landing.
 
 | Trade | Filename | Length | Resolution | Frames | State |
 |---|---|---|---|---|---|
-| Roofing | roofing-house-still.png | — | 1920×1080 | 1 | Supplied |
-| Roofing | roofing-drone-dive-16x9.mp4 | 8 s | 1920×1080 | 192 | Pending |
-| Roofing | roofing-drone-dive-9x16.mp4 | 3 s | 720×1280 | 72 | Pending |
-| Roofing | roofing-foreground-{0001..0192}.webp | 8 s | 1920×1080 RGBA | 192 | Pending |
-| Roofing | roofing-frame-{0001..0192}.webp | 8 s | 1920×1080 | 192 | Pending |
+| Roofing | roofing-house-still.png | — | 3840×2160 | 1 | Supplied; poster wired |
+| Roofing | roofing-drone-dive-16x9.mp4 | 8.042 s | 1920×1080 | 193 | Supplied; web encodes wired |
+| Roofing | roofing-drone-dive-9x16.mp4 | 5.042 s | 1080×1920 | 121 | Supplied; web encodes wired |
+| Roofing | roofing-house-cutout.webp | — | 1920×1080 RGBA | 1 | Created from supplied still; landing mask wired |
+| Roofing | roofing-foreground-{0001..0193}.webp | 8.042 s | 1920×1080 RGBA | 193 | Optional future full-flight masks |
+| Roofing | roofing-frame-{0001..0193}.webp | 8.042 s | 1920×1080 | 193 | Alternative only; video is supplied |
 | Roofing | roofing-wireframe.svg | — | 1100×760 viewBox | 1 | Pending |
 | Roofing | roofing-flow-path.svg | — | 1100×760 viewBox | 1 | Pending |
 | Patios | patios-house-still.png | — | 1920×1080 | 1 | Pending |
@@ -107,8 +108,19 @@ For every trade, desktop camera beats are sky → clouds → neighborhood → tr
 | Solar | solar-wireframe.svg | — | 1100×760 viewBox | 1 | Pending |
 | Solar | solar-flow-path.svg | — | 1100×760 viewBox | 1 | Pending |
 
-The WebP frame sequence is an alternative to the desktop MP4, not a second required download. Foreground frames are separate transparent cutouts for depth masking; supply a synchronized frame for every desktop frame. `trade-tracking.json` must contain normalized (0–1) x/y coordinates at each of the 192 timestamps for every label, plus visibility/occlusion ranges. Roofing: Flashing, Underlayment, Valley, Ridge vent. The current placeholder shares one transform for art and anchors, so tracking is exact within its illustrated scene. Real footage must supply tracking before callouts are shown.
+The WebP frame sequence is an alternative to the desktop MP4, not a second required download. Foreground frames are separate transparent cutouts for depth masking; supply a synchronized frame for every desktop frame. `trade-tracking.json` must contain normalized (0–1) x/y coordinates at each of the 192 timestamps for every label, plus visibility/occlusion ranges. Roofing: Flashing, Underlayment, Valley, Ridge vent. Roofing currently uses registered still-image anchors after landing. Full-flight anchors require supplied tracking before they can be shown over moving footage.
 
 Roofing anatomy requires shingles/underlayment/decking/flashing/gutter outlines, trusses and a water path. HVAC uses ductwork and airflow; plumbing uses supply/drain/vent pipe runs. Remaining trades need reviewed trade-specific layers, flow/failure path and anchor labels with their rollout. SVG exports must preserve separate named layer groups and contain no scripts or external references.
 
 No speed, warranty or service duration is inferred from these clip lengths. Process chips describe phases, not promised appointment times. The repair/replace meter is an educational conversation aid, not a diagnosis or quote.
+
+## Roofing web delivery — #004F
+
+| File | Codec | Resolution | Bytes | Duration / frames |
+|---|---|---|---|---|
+| roofing-drone-dive-16x9.mp4 | H.264 | 1920×1080 | 3,131,422 | 8.042 s / 193 |
+| roofing-drone-dive-16x9.webm | VP9 | 1440×810 | 3,130,579 | 8.042 s / 193 |
+| roofing-drone-dive-9x16.mp4 | H.264 | 720×1280 | 1,251,310 | 5.042 s / 121 |
+| roofing-drone-dive-9x16.webm | VP9 | 720×1280 | 1,423,329 | 5.042 s / 121 |
+
+Each desktop format is below 4,000,000 bytes; each mobile format below 2,000,000 bytes. MP4 uses fast-start metadata; WebM is the tested alternate source. Source metadata, decoded final frames, encoding recipe, cutout prompt and browser evidence: [004F](docs/build-evidence/004F/README.md).

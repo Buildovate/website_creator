@@ -1,0 +1,13 @@
+const {spawnSync,spawn}=require('node:child_process'),fs=require('node:fs'),path=require('node:path');
+const root=process.env.REPO_ROOT||process.cwd(),out=__dirname;
+const ffmpeg=process.env.FFMPEG||'ffmpeg',ffprobe=process.env.FFPROBE||'ffprobe';
+function run(args){const r=spawnSync(ffmpeg,['-y','-hide_banner','-loglevel','error',...args],{encoding:'utf8'});if(r.status!==0)throw Error(r.stderr);}
+function probe(file){const r=spawnSync(ffprobe,['-v','error','-select_streams','v:0','-count_frames','-show_entries','stream=codec_name,pix_fmt,width,height,r_frame_rate,nb_read_frames,duration:format=duration,size','-of','json',file],{encoding:'utf8'});if(r.status!==0)throw Error(r.stderr);return JSON.parse(r.stdout);}
+const jobs=[],report={inputs:{},outputs:{}};
+for(const [aspect,frames,width,rate] of [['16x9',193,1920,3200],['9x16',121,720,2100]]){
+ const src=path.join(root,'docs/build-evidence/assets/roofing',`roofing-drone-dive-${aspect}.mp4`);report.inputs[aspect]=probe(src);
+ for(const [label,n] of [['start',0],['middle',Math.floor((frames-1)/2)],['end',frames-1]])run(['-i',src,'-vf',`select=eq(n\\,${n}),scale=${aspect==='16x9'?960:540}:-2`,'-frames:v','1',path.join(out,`source-${aspect}-${label}.png`)]);
+ for(const format of ['mp4','webm']){const dest=path.join(out,`roofing-drone-dive-${aspect}.${format}`);const common=['-i',src,'-map','0:v:0','-an','-vf',`scale=${format==='webm'&&aspect==='16x9'?1440:width}:-2`,'-r','24','-pix_fmt','yuv420p','-g','6'];const encode=format==='mp4'?['-c:v','libx264','-preset','slow','-crf','24','-maxrate',rate+'k','-bufsize',rate+'k','-keyint_min','6','-sc_threshold','0','-movflags','+faststart']:['-c:v','libvpx-vp9','-b:v',(aspect==='16x9'?1800:rate-400)+'k',...(aspect==='16x9'?['-maxrate','2300k','-bufsize','4600k']:[]),'-crf',aspect==='16x9'?'36':'32','-row-mt','1','-cpu-used','4'];jobs.push({aspect,format,dest,args:[...common,...encode,dest]});}
+}
+fs.writeFileSync(path.join(out,'source-probe.json'),JSON.stringify(report.inputs,null,2));
+(async()=>{await Promise.all(jobs.map(job=>new Promise((resolve,reject)=>{const p=spawn(ffmpeg,['-y','-hide_banner','-loglevel','error',...job.args]);let err='';p.stderr.on('data',b=>err+=b);p.on('close',code=>{if(code!==0)return reject(Error(err));const info=probe(job.dest);const bytes=fs.statSync(job.dest).size;if(bytes>=(job.aspect==='16x9'?4000000:2000000))return reject(Error('Budget exceeded: '+job.dest+' '+bytes));report.outputs[path.basename(job.dest)]=info;console.log(path.basename(job.dest)+': '+bytes+' bytes');resolve();})})));fs.writeFileSync(path.join(out,'media-probe.json'),JSON.stringify(report,null,2));})().catch(e=>{console.error(e);process.exitCode=1});

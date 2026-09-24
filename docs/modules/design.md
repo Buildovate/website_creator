@@ -116,3 +116,8 @@ Roofing detail reuses #004B with larger hero/type, benefit-led inclusion cards, 
 ## #004E — trade cinematic service-page kit
 
 Shared renderer/config: src/trade-motion.js and src/trade-motion-config.js; progressive controller/styles: public/trade-motion.js/css. Only Roofing service detail is wired. Existing homepage films are unchanged. Supplied Roofing still is optimized to public/assets/trade-motion/roofing-house-still.webp; drone files remain missing. Configured desktop video seeks with scroll or uses an image sequence; mobile selects its short loop; reduced motion unloads film and presents the still. Config holds synchronized mask frames and tracked anchors for future real footage; without tracking, real-footage labels hide. SVG placeholders share camera transforms with their anchors. Anatomy wireframe supports roof, ductwork and pipe kinds. See [asset handoff](../../NEEDS-ASSETS.md) and [004E evidence](../build-evidence/004E/README.md).
+
+
+## #004F — supplied Roofing flight media
+
+Supersedes the Roofing placeholder portion of #004E: public/assets/trade-motion holds H.264/VP9 desktop and portrait encodes plus a real alpha cutout. Both viewport modes use scroll seeking; no mobile autoplay loop. Controller tries H.264 then WebM, coalesces seeks to the latest scroll position and unloads film for reduced motion. At landing it blends into the original poster; CSS uses the cutout alpha over original image pixels so the headline sits behind the house. Flight tracking is not supplied, so callouts show only on the final registered still. Hero copy has a dark gradient. Mobile anatomy uses a tight viewBox and an in-flow X-ray control. [004F evidence](../build-evidence/004F/README.md).

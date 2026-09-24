@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#004, #004B, #004C, #004D and #004E (placeholder mode)**. Next ticket: **#005** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#004, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#005** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -84,7 +84,7 @@ Tickets #001–#041.
 
 ### #004E — Visual storytelling pass (service page)
 
-- State: **Done — placeholder mode** · Evidence: [004E](docs/build-evidence/004E/README.md) · Estimate: **8h** (≤1 day). #004D accepted. Supplied Roofing still used; drone clips/cutouts remain pending in NEEDS-ASSETS.md. Production-media approval is not claimed.
+- State: **Done — placeholder mode** · Evidence: [004E](docs/build-evidence/004E/README.md) · Estimate: **8h** (≤1 day). #004D accepted. Supplied Roofing still used; its pending drone/cutout handoff is now resolved by #004F. #004E evidence remains the historical placeholder state.
 - Goal: make the text-heavy page self-explanatory through visual storytelling and award-level motion matching the hero scroll effect.
 - Warning signs: small custom animated illustrations (drip through ceiling stain, lifting shingle, granules in gutter), play once on entry; one line of card text.
 - Roof anatomy: house cross-section separates into shingles, underlayment, decking, flashing and gutters on scroll; hover/tap hotspots explain “what fails here” and “what the repair fixes.”
@@ -99,6 +99,14 @@ Tickets #001–#041.
 - Asset handoff deliverable: add NEEDS-ASSETS.md listing every motion-kit clip, sequence, foreground cutout, wireframe/leak-path asset and fallback expected per trade, with exact filename, length, resolution and frame count (mark still assets as one frame with no duration), so renders can be produced to spec. Include desktop hero, mobile short loop, reduced-motion poster and any synchronized masks/tracking requirements. Clearly distinguish placeholders from supplied production renders; implementation does not commission or generate production assets.
 - Scope gate: one implementation day for the shared controller, vector placeholder sequence and service-page effects; production rendering is not part of this ticket. Expected Roofing input files: `docs/build-evidence/assets/roofing/roofing-house-still.png`, `roofing-drone-dive-16x9.mp4`, `roofing-drone-dive-9x16.mp4`. Use supplied files when present, placeholders otherwise.
 - Evidence required: desktop/mobile screenshots and a short screen recording showing the scroll effects and cinematic motion kit. Build now; verify reduced motion, mobile, reverse scrolling and failed-media fallback.
+
+### #004F — Wire supplied Roofing cinematic media
+
+- State: **Done** · Evidence: [004F](docs/build-evidence/004F/README.md) · Estimate: **6h** (≤1 day). Supplied-media continuation of #004E only.
+- Inspect source duration/resolution/final frames; encode H.264 MP4 + WebM under 4 MB desktop and 2 MB mobile; connect scroll-scrubbed hero slots.
+- Replace polygon with real alpha cutout, preserve still/reduced-motion fallback, protect copy readability and enlarge mobile X-ray.
+- Evidence: start/middle/end desktop/mobile screenshots, new scroll recording, media probes and browser checks. Update NEEDS-ASSETS and BUILD-STATUS, commit, stop. No push.
+- External keys/accounts: none for supplied media; built-in imagegen performs requested alpha extraction.
 
 ### #005 — Connect the selected-service grid to detail pages
 
