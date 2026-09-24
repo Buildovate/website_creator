@@ -2,9 +2,10 @@
 export const tradeMotion = {
  roofing: {
   label:'Roof', poster:'/assets/trade-motion/roofing-house-still.webp', photo:true,
-  media:{desktop:'/assets/trade-motion/roofing-drone-dive-16x9.mp4',desktopWebm:'/assets/trade-motion/roofing-drone-dive-16x9.webm',mobile:'/assets/trade-motion/roofing-drone-dive-9x16.mp4',mobileWebm:'/assets/trade-motion/roofing-drone-dive-9x16.webm',sequence:[],foreground:'/assets/trade-motion/roofing-house-cutout.webp',maskSequence:[],landingStart:.92},
+  media:{desktop:'/assets/trade-motion/roofing-drone-dive-16x9.mp4',desktopWebm:'/assets/trade-motion/roofing-drone-dive-16x9.webm',mobile:'/assets/trade-motion/roofing-drone-dive-9x16.mp4',mobileWebm:'/assets/trade-motion/roofing-drone-dive-9x16.webm',sequence:[],foreground:'/assets/trade-motion/roofing-house-cutout.webp',maskSequence:[],blendSeconds:.3},
   // Normalized scroll time and shared camera transform. Anchors live in scene space.
   camera:[{t:0,x:0,y:380,scale:.62},{t:.22,x:-25,y:240,scale:.8},{t:.5,x:-60,y:80,scale:1},{t:.76,x:-110,y:-55,scale:1.28},{t:1,x:0,y:0,scale:1}],
+  mobileChapters:['Above the neighborhood','Toward the roof','At the roofline','Your home in view','A closer look at home'],
   chapters:['Open sky','Through the clouds','Your neighborhood','At the roofline','A closer look at home'],
   points:[
    {id:'flashing',anatomy:{x:718,y:360},label:'Flashing',x:730,y:398,failure:'Gaps at roof joints can let water in.',repair:'Seal the joint with compatible flashing.'},

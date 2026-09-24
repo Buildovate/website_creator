@@ -130,3 +130,9 @@ Roofing About uses src/about-page.js, public/about-trust.css/js with the shared 
 ## Roofing network strip — #009
 
 src/trust.js renders only approved selected Roofing networks through publicTrustSelections. public/trust.css/js provide the dark proof band, <=5 static row or >5 native carousel, arrows/dots/keyboard and no-autoplay reduced-motion/no-JS fallback. Network names are the K22 text fallback; no brand marks or affiliations are inferred. Owner-entered ratings require current evidence and display owner-confirmed/date attribution. Zero entries omits the section. Both homepage renderers support five selected placements; the service renderer supports service-hero. Public reads remain published snapshots. Existing review feeds are independent; no provider calls are added. [Evidence](../build-evidence/009/README.md).
+
+## #004G — hero framing, seeking and handover
+
+The premium Roofing service hero uses full-frame portrait contain/top framing on phones. Copy remains above the mask inside a fixed dark backing; four mobile links below the hero open and focus anatomy details. Desktop retains registered still callouts. Mobile chapter labels describe the supplied near-house approach; the portrait source lacks the desktop sky opening/full house, tracked in NEEDS-ASSETS.
+
+The controller removes the video poster so the decoded opening frame is visible. Scroll sets a target; exponential easing and a 0.18-second maximum step produce intermediate seeks with only one pending decode. The last 0.3 decoded seconds blend into the existing still with a smooth curve and real-time fade guard. The stage inherits the measured header offset, preventing a final-position shift. Pause/offscreen/visibility/reduced-motion guards and H.264/WebM/still fallbacks remain. Six-frame delivery GOP unchanged. [Before/after evidence](../build-evidence/004G/README.md).

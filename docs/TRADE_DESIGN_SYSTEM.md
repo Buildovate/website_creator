@@ -38,3 +38,7 @@ Service pages reuse src/trade-motion.js, src/trade-motion-config.js and public/t
 ## #007A — About-page trust exception
 
 Joe explicitly requested uploaded owner/crew photography in the Roofing About hero. Use an owned uploaded portrait or visible owner photo there; otherwise use the designed Roofing truck illustration. This exception is About-only. Trust data is optional and individually confirmed; never fill missing stats. Use the shared trade components plus about-trust.css/js for the stat band, three proof cards, <=60-word story and approved published project tiles. Reduced motion keeps final numbers; empty projects hide the entire work section.
+
+## #004G — mobile hero and handover
+
+Preserve the natural portrait source with contain/top framing; do not crop it again to fill the phone. Keep the mobile headline within its dark backing and above any foreground mask. When roof anchors cannot fit, use the four keyboard-accessible links immediately below the hero. Ease single-flight seeks and blend the final 0.3 decoded seconds into the registered still. Use the measured header offset throughout. Missing image content must remain an asset gap, not a claim that CSS restored it.

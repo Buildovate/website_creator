@@ -2,6 +2,8 @@
 
 ## Waiting on Joe
 
+**#004G — portrait footage decision:** Please supply a 9:16 clip containing the full house/roof and an opening sky approach, or approve the complete 16:9 film fitted on mobile. The approved 9:16 source already cuts off the side wings and begins near the house; CSS cannot recover those missing pixels or earlier flight. #004G is **Partial**: the complete available portrait frame, mobile readability/list, smooth seek and stable handover are implemented and tested. [Source/evidence](docs/build-evidence/004G/README.md). No replacement generation was commissioned.
+
 **K23 — reviewed policy content:** Please supply the reviewed jurisdiction/trade policy, reviewer/date/reference and required business license facts before activating a real policy. #011 implements and tests the framework with fictional fixtures; businesses without a supplied policy remain **Needs review**. The #011 framework and #012 footer are complete in this fallback mode. #004F-v2 is cleared.
 
 Audit: 2026-09-24. Scope: the current local `C:/Users/joe/website_creator` working tree, including pre-existing uncommitted work. Branch at audit: `feature/local-environment-setup`; HEAD `f9f4ec6`. This is not a staging/production audit. All five packs are received; their existence does not implement their requirements.
@@ -313,3 +315,12 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - [Desktop/mobile screenshots for single, hidden, required and multiple locations, with test output](docs/build-evidence/012/README.md). Build and 22 tests pass, including 84 trade/layout legal-preview routes. Browser checks pass at 1440×1000 and 390×844; a mobile column specificity issue found during visual review was fixed and recaptured.
 - K23 remains Needs review; all reviewed policy/financing examples are fictional local fixtures. No new key or asset is required by #012. Commit locator: `fix: collapse empty footer regions and place required facts (#012)`.
 - **Stopped after #012 as requested.** #004F-v2 delivery, #027A queue-only additions, #011 and #012 are separate commits. #013 has not started. No push, deploy, paid generation or external messages.
+
+### #004G — Partial: hero polish implemented; portrait source gap (2026-09-24)
+
+- Mobile video now contains the entire natural 9:16 source frame and anchors at the top. The headline stays inside a stronger dark gradient; the foreground mask cannot obscure mobile text. Four tappable roof links below the hero open and focus their anatomy details. The source lacks a full-house sky approach, so item 1 is not marked complete; see Waiting on Joe / NEEDS-ASSETS.
+- Removed the video poster that concealed the initial flight frame. Both orientations ease toward the scroll target, allow one pending seek and cap a single seek step at 0.18 seconds. Handover uses the final 0.3 decoded seconds with a smooth fade and a real-time fade guard; header measurement now reaches the stage consistently, removing a 9px mobile shift.
+- [Before/after desktop/mobile screenshots, both final scroll recordings and executed output](docs/build-evidence/004G/README.md). Browser checks pass, including keyboard focus, forward/reverse motion, continuous handover, pause, reduced motion, fallback and no overflow. Build, 2 service/media regressions and 4-file GOP/budget validation pass. Original files and approved budgets are unchanged.
+- QA found one roof-link focus failure and one visual header-offset shift; each was fixed on its first corrective attempt and rechecked. No test remains failing. Source limitations are not represented as a successful full-house mobile implementation.
+- Queued only under #027A: format per-location footer phones as `(805) 555-0111`, retaining the existing dialable link. No footer rendering change in #004G.
+- Commit locator: `fix: polish Roofing hero framing and scroll handover (#004G)`. Stopped; no push, deploy, paid generation or messages. #013 and #027A implementation remain untouched.

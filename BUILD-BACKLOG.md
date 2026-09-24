@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **Stopped after #012 as authorized.** #027A additions are queued only and #027A remains Not started. Next backlog ticket is #013; it is not authorized by this queue.
+Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G follow-up: Partial, implemented polish committed; portrait source decision is Waiting on Joe.** #027A additions are queued only and #027A remains Not started. Stopped after #004G. Next numbered backlog ticket is #013; it is not authorized by this request.
 
 ## Session contract
 
@@ -109,6 +109,13 @@ Tickets #001–#041.
 - External keys/accounts: none for supplied media; built-in imagegen performs requested alpha extraction.
 
 #004F-v2 mini-fix: **Done** after the approved revised WebM budgets. Full-resolution H.264 and lower-resolution two-pass WebM delivery replaced; six-frame GOP, desktop/mobile blend, screenshots and both scroll recordings verified. [Evidence](docs/build-evidence/004F-v2/README.md).
+
+### #004G — Hero polish on desktop and mobile
+
+- State: **Partial — implementation verified; portrait source decision pending**. [Evidence](docs/build-evidence/004G/README.md).
+- Implemented: top-anchored natural 9:16 frame, dark mobile headline backing, accessible four-link roof list, decoded-time 0.3-second handover, consistent header offset and eased single-flight seeking. Six-frame GOP and existing delivery budgets pass unchanged.
+- Outstanding: the approved portrait source omits the outer house/roof edges and sky approach. Supply a new approved 9:16 source, or approve using the complete 16:9 film fitted on mobile; do not silently substitute or generate footage. Logged in BUILD-STATUS and NEEDS-ASSETS.
+- Before/after desktop/mobile screenshots and scroll recordings are saved; no push, deploy, generation or messages.
 
 ### #005 — Connect the selected-service grid to detail pages
 
@@ -320,6 +327,7 @@ Tickets #001–#041.
 - Added after #004C acceptance (queued only): warmer, more confident copy with less legal-sounding hedging; prominently surface response time/emergency service only when supplied by the contractor profile. Fix “How it works” step number/icon alignment (01–04). Use consistent section numbering or remove it. Remove footer line “Labeled illustrative and stock imagery does not depict completed work by this business.” Keep the small AI-example label under the before/after slider. Queue clarification from #007A: remove this footer disclaimer site-wide, including the wording variant “Labeled illustrations and stock imagery does not depict completed work by this business”; do not implement this removal in #007A.
 - Queued only (2026-09-24 overnight queue): remove image captions such as “Designed truck illustration · not a crew photograph” throughout the Roofing page family; retain only the AI-example label beneath the before/after comparison. When an uploaded logo already contains the business name, omit the duplicate text name in the header. Raise the hero headline about 20px. These changes belong to #027A; do not implement them in #004F-v2 or #008–#010.
 - Queued only after #010A (2026-09-24): make the “Check the source” strip shorter, with permitted platform logos only where mark rights are established (K22); otherwise retain the readable platform-name/source-link fallback. Show a star rating and review count only when confirmed under the existing #008–#010 source/evidence rules. Use a compact 2×2 layout on mobile; preserve accessible source links, selected networks, missing-data hiding and truthful attribution. Save desktop/mobile evidence when #027A is built.
+- Queued only in #004G: format per-location footer phone displays as `(805) 555-0111` while preserving the normalized `tel:` destination. Do not implement during #004G.
 - Queued only in the #004F-v2 / #011–#012 follow-up: condense Google and Yelp details below the review cards into one compact rating badge per source (permitted logo or readable source-name fallback, confirmed provider rating, review count and source link). Preserve required source attribution/policy links and missing-data fallbacks. Remove the public “Refresh reviews” button; retain refresh controls in the backoffice only. Do not implement these changes during #011 or #012.
 - Caption scope clarification, queued only: remove “Concept imagery · your project will be individual” and similar concept/illustration image captions across the site and rendered variants. Keep only the required AI-example label immediately beneath the before/after comparison. This adds to the already queued truck/footer caption removals; it is not implemented in #010A or this backlog update.
 - Financing polish (queued 2026-09-24; do not implement in #004E): add a compact comparison chart with one bar per plan and monthly/total-cost views so low-monthly versus least-total tradeoffs are visual; move financing onto the dark premium band with lime accents; format budget with commas (e.g. $6,000).

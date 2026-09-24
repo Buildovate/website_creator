@@ -52,3 +52,28 @@
 
 .tm-copy h1{font-size:clamp(58px,7.25vw,104px);max-width:1080px;transform:translateY(calc(var(--landing-opacity)*26px))}@media(max-width:700px){.tm-copy h1{font-size:50px;max-width:350px;transform:translateY(calc(var(--landing-opacity)*16px))}.tm-diagram svg{aspect-ratio:675/510}.tm-layer text{display:none}}
 @media(max-width:700px){.tm-copy h1{transform:translateY(calc(var(--camera-progress)*90px))}}
+
+/* #004G: preserve the portrait source frame and keep readable copy above it. */
+.tm-media{visibility:hidden}.tm-has-media .tm-media{visibility:visible}
+.tm-mobile-roof-links{display:none}
+@media(max-width:700px){
+ .tm-stage,.tm-paused .tm-stage{min-height:0;height:calc(100svh - var(--tp-header-height))}
+ .tm-media{height:min(100%,177.777778vw);bottom:auto}
+ .tm-media video{object-fit:contain;object-position:center top}
+ .tm-poster,.tm-landing,.tm-production-mask{height:min(100%,177.777778vw);bottom:auto;object-position:center top}
+ .tm-production-mask{background-position:center top;mask-position:center top;-webkit-mask-position:center top}
+ .tm-copy{z-index:5;padding-top:18px}
+ .tm-copy h1{font-size:clamp(36px,11vw,46px);line-height:1.03;transform:none;max-width:360px;text-shadow:0 2px 14px #0008}
+ .tm-copy:before{inset:-18px -7vw -36px;background:linear-gradient(180deg,#061f27f5 0%,#061f27e8 65%,#061f27b8 85%,transparent 100%)}
+ .tm-copy .tp-breadcrumbs{margin-bottom:12px}.tm-copy .tp-eyebrow{margin:10px 0}
+ .tm-production-mask{display:none}
+ .tm-caption{bottom:14px}.tm-caption .tp-intro{font-size:12px;padding:10px 12px}
+ .tm-mobile-roof-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;background:#102f2b;padding:20px 6%;color:#edf4e3}
+ .tm-mobile-roof-links p{grid-column:1/-1;font:600 12px/1.5 Barlow,Arial,sans-serif;letter-spacing:1px;margin:0 0 2px;text-transform:uppercase}
+ .tm-mobile-roof-links a{display:flex;align-items:center;justify-content:space-between;min-height:44px;border:1px solid #9bb18d;padding:10px 12px;font-size:13px;color:inherit;text-decoration:none}
+ .tm-mobile-roof-links a:focus-visible{outline:3px solid #c5e98c;outline-offset:2px}
+ .tm-reduced .tm-stage{min-height:680px}
+}
+
+/* Use the measured header offset on the body as well as the document root. */
+:root{--tp-header-height:82px}.trade-page{--tp-header-height:inherit}

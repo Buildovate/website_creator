@@ -138,3 +138,9 @@ Permitted network logo/seal files and usage permission (K22) have not been suppl
 ## #010 customer proof assets
 
 No real contractor-approved completed-project photo set, customer proof records or business logo was supplied for this QA session. Evidence uses the existing Ridgeline demo logo and repository test photographs in actual API-approved local records, with fictional project content. Replace these disposable fixtures with owner-permissioned real assets for a customer rollout; never promote QA photos/reviews into a live site. This does not block local privacy/placement verification.
+
+## #004G — portrait framing / opening flight gap
+
+The approved `roofing-drone-dive-9x16.mp4` already contains a cropped view of the house and starts above the neighborhood close to the house. It does not contain the full side wings/outer roof edges or the opening sky approach in the 16:9 version. [Portrait source contact sheet](docs/build-evidence/004G/portrait-source-contact-sheet.png) / [desktop source](docs/build-evidence/004G/desktop-source-contact-sheet.png), sampled from the actual delivery clips.
+
+#004G preserves every available portrait pixel with contain/top framing. Completing the requested full-house sky dive requires a newly supplied approved portrait source or Joe's approval to fit the complete landscape film on mobile. Existing approved delivery remains in place; no generation or substitute asset was commissioned. This is a new framing requirement, not a failure of #004F-v2's encoding budget gate.

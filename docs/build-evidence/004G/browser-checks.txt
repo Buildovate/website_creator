@@ -1,0 +1,3 @@
+PASS desktop: framing, labels, eased forward/reverse seeks, 0.3s blend, pause, reduced motion and no overflow
+PASS mobile: framing, labels, eased forward/reverse seeks, 0.3s blend, pause, reduced motion and no overflow
+PASS reduced-motion network, WebM fallback and still fallback
