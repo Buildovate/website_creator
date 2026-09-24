@@ -2,7 +2,7 @@
 
 ## Waiting on Joe
 
-- **#004F-v2:** Approved resolution retry failed: 1600×900 desktop WebM is 4,385,462 bytes (must be <4,000,000), with the six-frame GOP preserved. Stopped before mobile encoding, delivery replacement or browser recapture. Which further encoding constraint may change? The specified 1600×900 / 900×1600 sizes are larger than the prior attempted WebM sizes (1440×810 / 720×1280). [Actual output and probes](docs/build-evidence/004F-v2/README.md). Existing delivery remains intact.
+None for the current queue. #004F-v2 was cleared after the approved revised-budget delivery and browser QA passed.
 
 Audit: 2026-09-24. Scope: the current local `C:/Users/joe/website_creator` working tree, including pre-existing uncommitted work. Branch at audit: `feature/local-environment-setup`; HEAD `f9f4ec6`. This is not a staging/production audit. All five packs are received; their existence does not implement their requirements.
 
@@ -286,3 +286,9 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Added site-wide removal of “Concept imagery · your project will be individual” and similar image captions, retaining only the required AI label beneath before/after. Existing duplicate header-name and hero +20px-up requests remain queued.
 - Documentation diff checked; no #027A product code built. Commit locator: `docs: queue compact source strip and caption cleanup (#027A)`.
 - **Stopped as requested.** #011 was not started. #004F-v2 failed its approved resolution retry and is logged under Waiting on Joe; delivery replacement and browser recapture remain pending. #010A passes with desktop/mobile evidence. Three requested steps are recorded in separate commits. No push, deployment, paid generation or external messages.
+
+### #004F-v2 — Done (2026-09-24): revised budgets and refreshed delivery
+
+- Two-pass WebM is 1440×810 / 720×1280 at 4,225,862 / 1,072,050 bytes, under the approved 4,500,000 / 2,500,000 limits. H.264 stays full resolution at 3,043,291 / 1,358,304 bytes, under unchanged 4,000,000 / 2,000,000 limits. All four preserve the full frame counts and six-frame GOP. Updated the encoder budget gate and replaced delivery files.
+- [Desktop/mobile start/middle/end screenshots, blend evidence, both scroll recordings and test output](docs/build-evidence/004F-v2/README.md). Browser QA passes; visual inspection confirms the end frame fades into the aligned house still. Build and 3 media/service regressions pass.
+- Cleared this ticket from Waiting on Joe. Commit locator: `fix: deliver refreshed Roofing films within revised budgets (#004F-v2)`. Next: #027A backlog-only review badge/refresh additions, then #011 and #012; stop after #012.

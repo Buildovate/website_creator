@@ -9,7 +9,7 @@ For other trades, the existing table records requested targets: desktop 8 s/192 
 | Trade | Filename | Length | Resolution | Frames | State |
 |---|---|---|---|---|---|
 | Roofing | roofing-house-still.png | — | 3840×2160 | 1 | Supplied; poster wired |
-| Roofing | roofing-drone-dive-16x9.mp4 | 8.042 s | 1920×1080 | 193 | Supplied; web encodes wired |
+| Roofing | roofing-drone-dive-16x9.mp4 | 7.542 s | 1920×1080 | 181 | Supplied; web encodes wired |
 | Roofing | roofing-drone-dive-9x16.mp4 | 5.042 s | 1080×1920 | 121 | Supplied; web encodes wired |
 | Roofing | roofing-house-cutout.webp | — | 1920×1080 RGBA | 1 | Created from supplied still; landing mask wired |
 | Roofing | roofing-foreground-{0001..0193}.webp | 8.042 s | 1920×1080 RGBA | 193 | Optional future full-flight masks |
@@ -114,7 +114,7 @@ Roofing anatomy requires shingles/underlayment/decking/flashing/gutter outlines,
 
 No speed, warranty or service duration is inferred from these clip lengths. Process chips describe phases, not promised appointment times. The repair/replace meter is an educational conversation aid, not a diagnosis or quote.
 
-## Roofing web delivery — #004F
+## Roofing web delivery — original #004F (superseded by #004F-v2 below)
 
 | File | Codec | Resolution | Bytes | Duration / frames |
 |---|---|---|---|---|
@@ -125,9 +125,9 @@ No speed, warranty or service duration is inferred from these clip lengths. Proc
 
 Each desktop format is below 4,000,000 bytes; each mobile format below 2,000,000 bytes. MP4 uses fast-start metadata; WebM is the tested alternate source. Source metadata, decoded final frames, encoding recipe, cutout prompt and browser evidence: [004F](docs/build-evidence/004F/README.md).
 
-## #004F-v2 regenerated media — pending delivery
+## #004F-v2 regenerated media — delivered
 
-Regenerated approved inputs are 7.542s/181 desktop frames and 5.042s/121 mobile frames. H.264 fits, but WebM delivery budgets failed after two fixes; no delivery replaced. See [blocked evidence](docs/build-evidence/004F-v2/README.md) and Waiting on Joe. Original #004F table above describes the still-active delivery.
+Approved regenerated inputs are now wired: 7.542s/181 desktop frames and 5.042s/121 mobile frames. H.264 is full resolution (1920×1080 / 1080×1920), WebM two-pass is 1440×810 / 720×1280. Six-frame GOP and full frame counts retained. Revised WebM budgets are <4,500,000 / <2,500,000 bytes; H.264 limits remain <4,000,000 / <2,000,000. All pass; browser screenshots, blend registration and both scroll recordings are in [004F-v2 evidence](docs/build-evidence/004F-v2/README.md). No asset/approval remains missing for this refresh.
 
 
 ## #009 trust network marks

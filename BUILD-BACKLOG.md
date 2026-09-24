@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#010, #010A, #007A, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next numbered ticket: **#011** (Not started; not authorized in this follow-up). Requested follow-up stopped after the approved #004F-v2 retry (still blocked), completed #010A and #027A backlog-only additions. #027A remains Not started. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#010, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS). Current authorized queue: #027A backlog-only additions, then **#011**, then **#012**. Stop after #012. #027A remains Not started.
 
 ## Session contract
 
@@ -108,7 +108,7 @@ Tickets #001–#041.
 - Evidence: start/middle/end desktop/mobile screenshots, new scroll recording, media probes and browser checks. Update NEEDS-ASSETS and BUILD-STATUS, commit, stop. No push.
 - External keys/accounts: none for supplied media; built-in imagegen performs requested alpha extraction.
 
-#004F-v2 mini-fix: **Blocked** after two WebM encoding budget fixes; existing delivery unchanged. [Evidence](docs/build-evidence/004F-v2/README.md); question in BUILD-STATUS. Overnight queue continues at #008.
+#004F-v2 mini-fix: **Done** after the approved revised WebM budgets. Full-resolution H.264 and lower-resolution two-pass WebM delivery replaced; six-frame GOP, desktop/mobile blend, screenshots and both scroll recordings verified. [Evidence](docs/build-evidence/004F-v2/README.md).
 
 ### #005 — Connect the selected-service grid to detail pages
 

@@ -1,34 +1,34 @@
-# #004F-v2 — Approved resolution follow-up blocked
+# #004F-v2 — Refreshed delivery accepted locally
 
-Approved incoming source probes confirm desktop 7.542 s / 181 frames at 1920×1080 and mobile 5.042 s / 121 frames at 1080×1920. The encoder now derives screenshot frame positions from decoded input counts and accepts EVIDENCE_DIR. No delivery files were replaced because the complete four-format set did not pass the existing byte-budget gate.
+Completed 2026-09-24 after Joe approved two-pass WebM at 1440×810 desktop / 720×1280 mobile and revised WebM byte limits. Full-resolution H.264 retains its existing limits. The six-frame GOP is unchanged. All four files replaced the public delivery, retaining every source frame and no audio.
 
-## Executed output
+| File | Resolution | Bytes | Budget | Duration / frames | Result |
+|---|---|---:|---:|---|---|
+| roofing-drone-dive-16x9.mp4 | 1920×1080 | 3,043,291 | <4,000,000 | 7.542000s / 181 | Pass |
+| roofing-drone-dive-16x9.webm | 1440×810 | 4,225,862 | <4,500,000 | 7.542000s / 181 | Pass |
+| roofing-drone-dive-9x16.mp4 | 1080×1920 | 1,358,304 | <2,000,000 | 5.042000s / 121 | Pass |
+| roofing-drone-dive-9x16.webm | 720×1280 | 1,072,050 | <2,500,000 | 5.042000s / 121 | Pass |
 
-- Initial encoder: H.264 desktop 3,035,227 bytes, mobile 1,362,098 bytes; mobile WebM 2,999,329 bytes (FAIL <2,000,000).
-- Fix attempt 1, tighter one-pass VP9 bitrate/quality: desktop WebM 4,894,216 bytes; mobile WebM 2,307,579 bytes (FAIL).
-- Fix attempt 2, two-pass VP9 bitrate and full quantizer range: desktop H.264 3,046,759 bytes; desktop WebM 4,225,862 bytes (FAIL <4,000,000). Stopped before replacing production media or making further attempts, per Joe's instruction.
-- [Attempted encoder](attempted-encoder.cjs) records the second fix. [Input probes](source-probe.json) are actual ffprobe output. Incoming originals remain untracked; oversized candidate encodes were discarded.
-- [Build](build.txt) passed, 276 referenced assets / 14 kits. [Regression output](tests.txt): premium-service and media-ranges passed (2/2). These test the unchanged app, not acceptance of refreshed media.
+[Encoder output](revised-budget-output.txt) · [Input/output probes](media-probe.json) · [Delivery validation](delivery-validation.json) · [Validation output](delivery-validation.txt). The gate in [encode-media.cjs](../004F/encode-media.cjs) now distinguishes WebM and H.264 budgets. Run it from the repo root with EVIDENCE_DIR pointing here and FFMPEG/FFPROBE paths configured. [validate-delivery.cjs](validate-delivery.cjs) checks the committed delivery’s dimensions, frame counts, GOP, no audio and budgets.
 
-## Visual evidence and incomplete checks
+## Desktop and mobile browser evidence
 
-[Desktop source start](source-16x9-start.png) / [middle](source-16x9-middle.png) / [end](source-16x9-end.png).
-[Mobile source start](source-9x16-start.png) / [middle](source-9x16-middle.png) / [end](source-9x16-end.png).
+| View | Start | Middle | End | Scroll recording |
+|---|---|---|---|---|
+| Desktop 1440×1000 | [Screenshot](desktop-start.png) | [Screenshot](desktop-middle.png) | [Screenshot](desktop-end.png) | [Recording](desktop-scroll.webm) |
+| Mobile 390×844 | [Screenshot](mobile-start.png) | [Screenshot](mobile-middle.png) | [Screenshot](mobile-end.png) | [Recording](mobile-scroll.webm) |
 
-The decoded desktop end frame visually matches the supplied house still; portrait framing is tighter. Final browser blend verification, refreshed desktop/mobile UI screenshots and both scroll recordings are **not completed** because the encoding gate failed after two fixes. The prepared [browser script](browser-qa.cjs) was not executed. Existing accepted delivery and #004F evidence remain intact.
+| Blend | Start at 92% scroll | Middle at 96% | Finished |
+|---|---|---|---|
+| Desktop | [Screenshot](desktop-blend-start.png) | [Screenshot](desktop-blend-middle.png) | [Screenshot](desktop-blend-end.png) |
+| Mobile | [Screenshot](mobile-blend-start.png) | [Screenshot](mobile-blend-middle.png) | [Screenshot](mobile-blend-end.png) |
 
-The original attempt stopped here. The authorized resolution follow-up below supersedes its pending question.
+Visual inspection confirms the decoded end pose blends into the supplied house still with the roofline aligned on both layouts. The last 8% crossfade retains the registered still/cutout; annotations wait for the landed still. The finite video budgets visibly soften the video compared with the sharp still. No new imagery or mask was generated. [Desktop X-ray](desktop-xray.png) · [Mobile X-ray](mobile-xray.png).
 
-## Approved resolution follow-up — 2026-09-24
+## Executed checks
 
-Joe authorized WebM at 1600×900 desktop and 900×1600 mobile, six-frame GOP, H.264 at full input resolution, and unchanged byte budgets. The [reproducible retry](approved-resolution-encoder.cjs) retains the preceding two-pass bitrate/quality settings and uses those exact dimensions. These requested dimensions are larger than the previous attempted 1440×810 / 720×1280 WebMs. No additional tuning was attempted.
+- [browser-qa.cjs](browser-qa.cjs): **pass**. [Output](browser-output.txt), [results](browser-results.json). Both source formats decode/seek; start/middle/end, forward/reverse seeking, pause, exact blend opacity/mask registration, initial/live reduced motion, poster fallback, X-ray, no overflow or page errors. Recordings contain 758 desktop and 760 mobile viewport frames.
+- [Build output](build.txt): pass, 276 referenced assets / 14 trade kits.
+- [Regression output](tests.txt): **3 passed, 0 failed** (premium-service, media-ranges, scroll-media; all 24 existing scroll films decode with fast-start metadata). The initial scroll-media invocation lacked ffprobe on PATH; the corrected invocation uses the installed ffprobe and passes.
 
-| Deliverable | Resolution | Bytes | Budget | Result |
-|---|---|---:|---:|---|
-| Desktop H.264 | 1920×1080 | 3,045,346 | <4,000,000 | Pass |
-| Desktop WebM | 1600×900 | 4,385,462 | <4,000,000 | **Fail** |
-| Mobile H.264 / WebM | 1080×1920 / 900×1600 configured | — | <2,000,000 | Not run: stopped at desktop failure |
-
-[Executed test output](approved-resolution-output.txt) · [ffprobe metadata and keyframe positions](approved-resolution-probe.json). Both encoded desktop variants retain all 181 frames and a maximum six-frame keyframe interval. Candidate binaries were discarded after recording the failure. Existing delivery files were not changed.
-
-**Waiting on Joe:** which further encoding constraint may change? Browser QA, refreshed desktop/mobile screenshots, both scroll recordings and end-frame blend acceptance remain pending because the delivery gate failed. Earlier source screenshots above are source evidence only, not updated browser evidence. No push, deploy, generation, or external messages.
+Previous failures are superseded: the earlier two-pass desktop WebM was 4,225,862 bytes against the former <4,000,000 limit. The subsequent 1600×900 attempt was 4,385,462 bytes and stopped. [Earlier approved-resolution output](approved-resolution-output.txt), [probe](approved-resolution-probe.json), [previous encoder](attempted-encoder.cjs). No further decision is pending for this ticket. Source originals remain in the incoming, untracked asset directory. No push, deployment, paid generation or external messages.
