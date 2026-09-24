@@ -3,7 +3,7 @@ import {tradeMotion} from './trade-motion-config.js';
 import {sampleBadge,serviceIcon,serviceFinance,financeSection,serviceOffers,promoBanner,promoSection,sampleTrust,sampleServiceReviews} from './service-conversion.js';
 import {e, one, all, must, access} from './core.js';
 import {normalizePlatform} from './platform/constitution.ts';
-import {websiteBrand, websiteFooter, faqLink} from './site-polish.js';
+import {websiteBrand, websiteFooter, faqLink, aboutLink} from './site-polish.js';
 import {reviewSection} from './reviews.js';
 
 export function visibleServicePages(s) {
@@ -25,11 +25,16 @@ export function publicServicePhoto(s, photo) {
   return s.trade === 'Roofing' && visibleServicePages(s).some(p => p.media?.bannerOne && p.media?.bannerTwo &&
     ['bannerOne', 'bannerTwo'].some(slot => p.media?.[slot]?.photoId === photo.id));
 }
+// Only the explicitly selected uploaded About portrait is published by this grant.
+export function publicAboutPhoto(s,photo) {
+ return s.trade==='Roofing' && (s.websitePages?.pages||[]).some(p=>p.kind==='about'&&p.enabled&&p.portraitMode==='uploaded_photo'&&p.portrait?.photoId===photo.id);
+}
 export async function websitePage(req, env, url) {
   const salesPreview=url.pathname.startsWith('/sales-preview/');
   const match = url.pathname.replace(/^\/sales-preview\//,'/s/').match(/^\/s\/([^/]+)\/services\/([a-z][a-z0-9-]*)\/?$/);
   const faqMatch = !salesPreview && url.pathname.match(/^\/s\/([^/]+)\/faq\/?$/);
-  const route = match || faqMatch;
+  const aboutMatch = !salesPreview && url.pathname.match(/^\/s\/([^/]+)\/about\/?$/);
+  const route = match || faqMatch || aboutMatch;
   if (!route) return null;
   must(req.method === 'GET', 'Method not allowed.', 405);
   const tenant = await one(env, 'SELECT * FROM tenants WHERE slug=?', route[1]);
@@ -39,6 +44,12 @@ export async function websitePage(req, env, url) {
   if (preview) await access(req, env, tenant.id);
   else must(tenant.status === 'published' && tenant.published, 'Website not published.', 404);
   const s = JSON.parse(preview ? tenant.settings : tenant.published);
+  if (aboutMatch) {
+    const page=(s.websitePages?.pages||[]).find(p=>p.kind==='about'&&p.enabled);
+    must(s.trade==='Roofing'&&page,'About page not available.',404);
+    const photos=await all(env,'SELECT id FROM photos WHERE tenant_id=?',tenant.id);
+    return renderAboutPage(s,page,{slug:tenant.slug,preview,photos});
+  }
   if (faqMatch) {
     const faq = (s.websitePages?.pages || []).find(p => p.kind === 'faq' && p.enabled);
     must(s.trade === 'Roofing' && faq, 'FAQ not available.', 404);
@@ -67,7 +78,7 @@ export function renderServicePage(s, page, {slug, preview = false, salesPreview 
  const callButton=call?'<a class="tp-button tp-button--outline" href="'+call+'">Call '+e(s.phone)+'</a>':'';
  const headline=page.headline || (page.serviceName.toLowerCase()==='roof repair'&&page.title.toLowerCase()==='roof repair'?"Roof repair. A clear plan for a dry home.":page.title);
  const questions=(page.questions||[]).filter(q=>!q.requires||q.requires==='none'||(q.requires==='financing'?!!serviceFinance(platform,salesPreview):serviceOffers(platform,page,salesPreview).length>0));
- const nav=faqLink(s,base,preview)+'<a href="#how-it-works">Our process</a><a href="#questions">FAQs</a><a href="#contact">Contact ↗</a>';
+ const nav=aboutLink(s,base,preview)+faqLink(s,base,preview)+'<a href="#how-it-works">Our process</a><a href="#questions">FAQs</a><a href="#contact">Contact ↗</a>';
  const trust=[];
  if(profile.confirmed){
   if(profile.rating&&profile.ratingSource)trust.push('<a href="'+e(profile.ratingSource)+'" target="_blank" rel="noopener"><strong>★ '+e(profile.rating)+' / 5</strong><small>View rating source</small></a>');
@@ -112,7 +123,7 @@ export function renderFAQPage(s,page,{slug,preview=false,photos=[]}) {
  const groups=new Map();
  for(const q of questions){const category=q.category||'Roofing questions';if(!groups.has(category))groups.set(category,[]);groups.get(category).push(q);}
  const services=visibleServicePages(s),known=new Set(photos.map(p=>p.id));
- const nav='<a href="'+e(home)+'#services">Services</a><a href="'+e(base)+'/faq'+suffix+'" aria-current="page">Roofing FAQ</a><a href="'+e(home)+'#contact">Contact ↗</a>';
+ const nav=aboutLink(s,base,preview)+'<a href="'+e(home)+'#services">Services</a><a href="'+e(base)+'/faq'+suffix+'" aria-current="page">Roofing FAQ</a><a href="'+e(home)+'#contact">Contact ↗</a>';
  const action='<a class="tp-button" href="'+e(home)+'#contact">Get my roofing plan ↗</a>';
  const schema=JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:questions.map(q=>({'@type':'Question',name:q.question,acceptedAnswer:{'@type':'Answer',text:q.answer}}))}).replace(/</g,'\\u003c');
  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>${e(page.seoTitle||page.title)} | ${e(s.name)}</title><meta name="description" content="${e(page.seoDescription||page.intro)}"><link rel="stylesheet" href="/site-polish.css"><link rel="stylesheet" href="/trade-page.css?v=006"><script defer src="/trade-page.js?v=004D2"></script><script type="application/ld+json">${schema}</script></head><body class="trade-page tp-faq-page" style="--tp-accent:${colors.accent};--tp-accent-ink:${colors.ink}"><a class="tp-skip" href="#answers">Skip to roofing answers</a>
@@ -122,4 +133,27 @@ export function renderFAQPage(s,page,{slug,preview=false,photos=[]}) {
  <div id="answers">${groups.size?[...groups].map(([category,items],i)=>'<section class="tp-section tp-faq-group" aria-labelledby="faq-group-'+i+'"><div class="tp-shell tp-faq"><div><p class="tp-eyebrow">YOUR QUESTIONS, EXPLAINED</p><h2 id="faq-group-'+i+'">'+e(category)+'</h2><p><a href="'+e(home)+'#contact">Talk through your roof concern ↗</a></p></div><div>'+items.map(q=>'<details id="question-'+e(q.id)+'"><summary>'+e(q.question)+'</summary><p>'+e(q.answer)+'</p></details>').join('')+'</div></div></section>').join(''):'<section class="tp-section"><div class="tp-shell"><h2>What would you like to know?</h2><p>Bring your roofing question to the conversation.</p>'+action+'</div></section>'}</div>
  ${services.length||platform.financing.enabled||platform.promotions.enabled?'<section class="tp-section tp-faq-next"><div class="tp-shell"><p class="tp-eyebrow">TAKE A CLOSER LOOK</p><h2>Explore your next step.</h2><nav class="tp-actions" aria-label="Related roofing pages">'+services.map(p=>'<a href="'+e(base)+'/services/'+e(p.slug)+suffix+'">'+e(p.title)+' ↗</a>').join('')+(platform.financing.enabled?'<a href="'+e(base)+'/financing'+suffix+'">Financing ↗</a>':'')+(platform.promotions.enabled?'<a href="'+e(base)+'/promotions'+suffix+'">Promotions ↗</a>':'')+'</nav></div></section>':''}
  <section class="tp-final"><div class="tp-shell"><p class="tp-eyebrow">LET’S TALK ABOUT YOUR ROOF</p><h2>Turn your questions<br>into a clearer plan.</h2><p>Share what you’ve noticed and discuss the scope, price and timing for your home.</p><div class="tp-actions">${action}</div></div></section></main>${websiteFooter(s,base,preview)}</body></html>`;
+}
+
+
+export function renderAboutPage(s,page,{slug,preview=false,photos=[]}) {
+ const base='/s/'+slug,suffix=preview?'?preview=1':'',home=base+suffix;
+ const p=normalizePlatform(s.platform),confirmed=p.questionnaire.factsConfirmed,known=new Set(photos.map(photo=>photo.id)),colors=accentTokens(s.color);
+ const brand={...s,logoId:known.has(s.logoId)?s.logoId:null};
+ const title=confirmed?page.title:'The people behind your roofing plan.';
+ const intro=confirmed&&page.intro?page.intro:'Get to know '+s.name+' and talk through the next step for your roof.';
+ const story=confirmed?(page.story||p.questionnaire.story):'',points=confirmed?(page.whyUs||[]):[];
+ const portrait=page.portraitMode==='uploaded_photo'&&known.has(page.portrait?.photoId)?page.portrait:null;
+ const services=visibleServicePages(s),digits=String(s.phone||'').replace(/\D/g,''),call=digits?'tel:+'+(digits.length===10?'1':'')+digits:'';
+ const action='<a class="tp-button" href="'+e(home)+'#contact">Talk about my roof ↗</a>';
+ const nav='<a href="'+e(home)+'#services">Services</a>'+faqLink(s,base,preview)+'<a href="'+e(base)+'/about'+suffix+'" aria-current="page">About</a><a href="'+e(home)+'#contact">Contact ↗</a>';
+ const credentials=[];
+ if(s.serviceProfile?.confirmed){if(s.license&&p.footer.visible.license)credentials.push('License '+s.license);if(p.footer.insured&&p.footer.visible.insured)credentials.push('Insured');if(s.serviceProfile.years)credentials.push(s.serviceProfile.years+' years in business');}
+ return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>${e(confirmed&&(page.seoTitle||page.title)||title)} | ${e(s.name)}</title><meta name="description" content="${e(confirmed&&page.seoDescription||intro)}"><link rel="stylesheet" href="/site-polish.css"><link rel="stylesheet" href="/trade-page.css?v=007"><script defer src="/trade-page.js?v=004D2"></script></head><body class="trade-page tp-about-page" style="--tp-accent:${colors.accent};--tp-accent-ink:${colors.ink}"><a class="tp-skip" href="#about-story">Skip to our story</a><header class="tp-header"><div class="tp-shell tp-header-inner"><a class="tp-brand" href="${e(home)}">${websiteBrand(brand)}</a><nav aria-label="Main navigation">${nav}</nav><details class="tp-menu"><summary>Menu</summary><nav aria-label="Mobile navigation">${nav}</nav></details></div></header>${preview?'<div class="tp-preview">Private draft preview · Requests are disabled'+(!confirmed?' · Confirm business facts in the Questionnaire to display custom About copy.':'')+'</div>':''}
+ <main><section class="tp-about-hero"><div class="tp-shell tp-about-split"><div><p class="tp-eyebrow">${e(s.name)} / ROOFING</p><h1>${e(title)}</h1><p class="tp-intro">${e(intro)}</p><div class="tp-actions">${action}${call?'<a class="tp-button tp-button--outline" href="'+call+'">Call '+e(s.phone)+'</a>':''}</div></div><figure class="tp-about-roof"><img src="/assets/trade-motion/roofing-house-still.webp" alt="Designed Roofing home exterior" width="1920" height="1080"><figcaption>Roofing design study</figcaption></figure></div></section>
+ ${credentials.length?'<aside class="tp-trust" aria-label="Contractor-confirmed credentials"><div class="tp-shell">'+credentials.map(x=>'<span>'+e(x)+'</span>').join('')+'</div></aside>':''}
+ <section class="tp-section" id="about-story"><div class="tp-shell tp-about-split"><figure class="tp-about-portrait">${portrait?'<img data-about-portrait src="/media/'+e(portrait.photoId)+'" alt="'+e(portrait.alt||'Contractor-supplied photograph')+'" width="800" height="900"><figcaption>'+e(portrait.caption||'Photograph supplied by the business.')+'</figcaption>':'<div class="tp-about-designed" role="img" aria-label="Designed roofline graphic; not a team portrait"><svg viewBox="0 0 500 320" fill="none" aria-hidden="true"><path d="M30 190 250 40l220 150M85 155v125h330V155M205 280v-85h90v85" stroke="currentColor" stroke-width="5"/><path d="m100 135 150 103 150-103M30 215h440M30 240h440" stroke="currentColor" stroke-width="1" opacity=".35"/></svg><div class="tp-about-brand">'+websiteBrand(brand)+'</div></div><figcaption>Designed brand artwork · not a team portrait</figcaption>'}</figure><div class="tp-about-story"><p class="tp-eyebrow">OUR STORY</p><h2>${story?'A closer look at '+e(s.name)+'.':'Start with a conversation.'}</h2>${story?story.split(/\n\s*\n/).filter(Boolean).map(text=>'<p>'+e(text)+'</p>').join(''):'<p>Have a question about the business or your roof? Get in touch to discuss your project and the details that matter to you.</p>'}${confirmed&&s.owner?'<p class="tp-about-owner">'+e(s.owner)+' · '+e(s.name)+'</p>':''}</div></div></section>
+ ${points.length?'<section class="tp-section tp-about-values"><div class="tp-shell"><p class="tp-eyebrow">WHAT MATTERS IN YOUR PROJECT</p><h2>Why choose '+e(s.name)+'?</h2><ul class="tp-about-points">'+points.map(text=>'<li><span aria-hidden="true">↗</span><p>'+e(text)+'</p></li>').join('')+'</ul></div></section>':''}
+ ${services.length?'<section class="tp-section"><div class="tp-shell"><p class="tp-eyebrow">YOUR ROOF, YOUR NEXT STEP</p><h2>Explore the work.</h2><nav class="tp-actions tp-about-links" aria-label="Roofing services">'+services.map(service=>'<a href="'+e(base)+'/services/'+e(service.slug)+suffix+'">'+e(service.title)+' ↗</a>').join('')+'</nav>'+(confirmed&&s.area?'<p>Service area: '+e(s.area)+'</p>':'')+'</div></section>':''}
+ <section class="tp-final"><div class="tp-shell"><p class="tp-eyebrow">LET’S TALK ABOUT YOUR HOME</p><h2>A roofing plan<br>starts with your questions.</h2><p>Share what you’ve noticed. Discuss scope, price and timing before deciding.</p><div class="tp-actions">${action}</div></div></section></main>${websiteFooter(s,base,preview)}</body></html>`;
 }

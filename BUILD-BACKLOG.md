@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#006, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#007** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#007, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#008** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -126,7 +126,7 @@ Tickets #001–#041.
 
 ### #007 — Add the Roofing About route
 
-- State: **Not started** · Estimate: **4h** (≤1 day).
+- State: **Done** · Evidence: [007](docs/build-evidence/007/README.md) · Estimate: **4h** (≤1 day).
 - Pack section: [`Q`](docs/product/02-CREATIVE-TRUST-O-T.md) §Q.
 - Files to touch: `src/website-pages.js` **(new)**; `src/site-polish.js`; `public/website-pages.css` **(new)**; `tests/website-pages.mjs` **(new)**.
 - Done when: About page uses owner-confirmed story and owned images; logo displays; absent portrait has an honest designed fallback; no generated employee is implied.
@@ -302,6 +302,12 @@ Tickets #001–#041.
 - Added after #004C acceptance (queued only): warmer, more confident copy with less legal-sounding hedging; prominently surface response time/emergency service only when supplied by the contractor profile. Fix “How it works” step number/icon alignment (01–04). Use consistent section numbering or remove it. Remove footer line “Labeled illustrative and stock imagery does not depict completed work by this business.” Keep the small AI-example label under the before/after slider.
 - Financing polish (queued 2026-09-24; do not implement in #004E): add a compact comparison chart with one bar per plan and monthly/total-cost views so low-monthly versus least-total tradeoffs are visual; move financing onto the dark premium band with lime accents; format budget with commas (e.g. $6,000).
 - Homepage polish (queued 2026-09-24; do not build in #006): give every service tile its own unique image, with no duplicates (installation and replacement currently share one); use the service-page display font for homepage section headings; on mobile use two compact service columns or a horizontal swipe row instead of one full-screen card per service; remove the empty band under the homepage header. Verify desktop/mobile and image uniqueness when #027A is executed.
+- Queued only after #006; do not implement in #007:
+
+Roofing FAQ default answers. Rewrite every default Roofing FAQ answer to be concrete and helpful instead of evasive. Each answer is 40–70 words, written in plain homeowner language to CONVERSION-PLAYBOOK.md tone. Answers should give typical warning signs, rough timelines (for example "most repairs take a day; a full replacement usually takes 2–4 days depending on size and weather"), what drives the price (roof size, pitch, material, layers to remove, decking damage, permits), and when repair versus replacement usually makes sense (for example "repair usually makes sense when damage is limited to one area and the roof is under about 15 years old; replacement is worth discussing when leaks appear in several places or shingles are curling across the roof"). Never state prices, guarantees, warranties or insurance outcomes. End each answer with a soft next step where it fits ("Describe what you're seeing and we'll tell you which applies."). Done when no answer uses empty phrases like "it depends on the condition" without then explaining what it depends on.
+
+FAQ group eyebrows. Replace the repeated "Your questions, explained" label with a unique eyebrow per group, drawn from the trade config: Services becomes "Repair or replace", Planning & price becomes "Cost and timing", and the other groups get short, specific labels in the same style. Done when no two groups share an eyebrow.
+
 - Scope note: Logged only; #027A remains before #028 and is not implemented by #004D or #004E.
 
 ### #028 — Approve the Roofing homeowner reference

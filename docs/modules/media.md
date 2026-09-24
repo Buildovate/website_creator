@@ -63,3 +63,8 @@ Upload key shape: `photos/{tenantId}/{id}.jpg`. Backup media: `backups/{tenantId
 ## Pack 3 creative and distribution specification — local documentation, 2026-09-23
 
 [Pack 3 U–AA](../product/PACK3_UPSELLS_MEDIA_CRM_SPEC.md) proposes promo-art jobs, video ingest and consent, owner-approved social publishing, content calendars and permission-aware CRM photo import. This is future behavior, not an extension of the current JPEG endpoint. [Trade briefs](../product/PACK3_CREATIVE_BRIEFS.md) contain 36 image directions and 24 clearly labeled AI service-explainer scripts; AI presenters never substitute for genuine customer proof. [Calendars](../product/PACK3_CONTENT_CALENDARS.md) and [private education videos](../product/PACK3_SALES_CRM_VIDEO_BRIEFS.md) are production briefs only. No assets were generated, accounts connected, posts sent or website/CRM code changed.
+
+
+## About portrait publication — ticket #007
+
+The /media/:photoId handler additionally permits the photo explicitly referenced by an enabled published Roofing About record with portraitMode=uploaded_photo (publicAboutPhoto in src/website-pages.js). It checks against the snapshot of the photo's own tenant; rendering also checks ownership. Disabled/unpublished/hidden/AI-mode and draft-only references grant no public access. About hero/banner/thumbnail slots grant no access. A portrait may be an owned project photo, but does not publish its parent project or sibling photos. Existing independent logo/project/media grants remain unchanged. [Executed coverage](../build-evidence/007/README.md).
