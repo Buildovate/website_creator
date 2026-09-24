@@ -1,0 +1,94 @@
+# BUILD STATUS
+
+Audit: 2026-09-24. Scope: the current local `C:/Users/joe/website_creator` working tree, including pre-existing uncommitted work. Branch at audit: `feature/local-environment-setup`; HEAD `f9f4ec6`. This is not a staging/production audit. All five packs are received; their existence does not implement their requirements.
+
+**Done** means the entire section’s applicable behavior runs, has evidence, and has no missing required integration. **Partial** means a relevant portion actually runs, with the remainder stated. **Not started** means only plans or reusable foundations exist for that feature. “Unsure” appears wherever the evidence cannot resolve a claim. No section is marked Done solely because constants, a mock, an environment-variable check, a creative brief or a provider link exists.
+
+No feature code was changed during the initial Step 1 audit. Ticket #001 changes and fresh evidence are recorded below. Tests use isolated local fixtures and mocked external services. Their passes do not prove a production connection. No private environment files, credentials or external account configuration were inspected.
+
+Whole-section totals: **0 Done / 17 Partial / 15 Not started**. A whole-section score is not a count of working individual features.
+
+| Section | Status | Files / implementation location | What runs / evidence | Missing or unsure |
+|---|---|---|---|---|
+| A. Promotions page | Partial | `src/constitution-pages.js`; `src/client/site/constitution.ts`; `public/constitution.css` | Published page, inquiry form, date-filtered offers and quiz unlock run (E1). | Roofing-specific display polish, contextual strips, full unlock menu and distinct page films. |
+| B. Financing page / calculator | Partial | `src/constitution-pages.js`; `src/platform/constitution.ts`; `src/client/site/constitution.ts` | Amortization, editable comparisons and Get Financing Options disclosure for 1–3 confirmed links run (E1/E2). | Live offers/prequalification and provider status handling. Joe says no lenders are connected. Link selection is not offer retrieval. |
+| C. Financing / social setup and permissions | Partial | `src/platform/constitution.ts`; `src/client/workspace/questionnaire.ts`; `src/api.js` | Page switches, confirmed application URLs and social switches save as draft (E1). | Provider onboarding/connection states, enabled-but-zero-live state, calculator defaults and field-level Office restrictions. |
+| D. Four distinct financing/promotion films | Not started | `src/constitution-pages.js`; `public/trade-build-films.json`; `src/client/site/constitution.ts` | Reusable homepage-film scrub controller exists; this is supporting code only. | Four dedicated clips (ambient + scrub on each page), approval, separate slots and fallbacks. Existing reused homepage footage does not satisfy D. |
+| E. Footer and legal audit | Partial | `src/site-polish.js`; `src/social-icons.js`; `src/platform/constitution.ts` | Shared footer, generic legal routes, visibility controls and financing disclosure run (E1). | Required-license policy, bonding-claim restrictions, complete jurisdiction/provider copy, missing social identities and public empty-state audit. Legal suitability is unsure; not verified by tests. |
+| F. CTA psychology / burst / pricing placement | Partial | `src/conversion-page.js`; `src/design-personality.js`; `src/client/site/conversion.ts` | Intent-specific CTA copy, service preselection and reference journeys run (E3). | Approved trade burst library, controlled one-per-site randomized pricing placement and full page-family coverage. |
+| G. Mid-page trade story | Partial | `src/scroll-story.js`; `src/craft-story.js`; `src/hero-timelapse.js`; `src/conversion-page.js` | Existing trade scroll scenes, films and reference cutaways render; prior motion evidence retained. | New per-trade mid-page compositions tied to approved regeneration manifests, distinct from the homepage hero. |
+| H. Individual service landing pages | Not started | `src/worker.js`; `src/showcase.js`; `src/conversion-page.js`; `public/trade-library.json` | Service grids/selection exist (E2/E3); no first-class service-detail route found. | Stable service URLs, page data, service content/art, contextual forms, links and publish gating. Generic workspace pages are not this system. |
+| I. Unique ebook capture / email delivery | Not started | `src/workspace.js`; `src/platform/constitution.ts` | No ebook renderer/capture/delivery implementation found. | Per-generation title/cover/PDF, consent, capture, delivery worker and failure/retry UI. |
+| J. Unique creative regeneration | Partial | `src/design-variant.js`; `src/design-personality.js`; `src/saved-designs.js`; `src/client/workspace/legacy-workspace.js` | Layout/recipe composer and saved designs exist; assets and facts are preserved. | Generation manifest, new per-customer artwork/content, job lifecycle, locked choices and approved activation. Recipe variation is not AI regeneration. |
+| K. Sales Rep product | Partial | `src/crm.js`; `src/control.js`; `src/workspace.js`; `src/client/workspace/legacy-workspace.js` | Staff/operator roles and manual own-commission access run (E5). | Dedicated Sales Rep permissions, 50/50 sales-goals calculator, verified progress/streaks and explainer. Manual commission rows are not a verified payout ledger. |
+| L. General trade FAQ page | Partial | `src/conversion-page.js`; `src/platform/conversion.ts`; `src/worker.js` | Inline FAQ content exists in three conversion references (E3). | First-class FAQ route, trade data, backoffice editing, consistent financing/off-state answers and all-trade coverage. |
+| M. Questionnaire / backoffice consolidation | Partial | `src/client/workspace/questionnaire.ts`; `src/client/workspace/service-selection.ts`; `src/platform/constitution.ts` | Business facts, selected services, logo selection, hero and options switches work (E1/E3). | New page fields, media/brand intake, integration status, structured locations/hours and safe consolidation of duplicate editing screens. |
+| N. Five city landing pages | Partial | `src/site-polish.js`; `src/client/workspace/questionnaire.ts`; `src/neighborhood.js` | City inputs/footer list and city-aware banners exist. | Five owned, unique city page routes, truthful location content, form context and stable footer links; city names do not establish offices. |
+| O. Service thumbnail effect library | Not started | `src/design-variant.js`; `src/client/site/showcase.js`; `public/showcase.css` | Generic layout/card/reveal variants exist, not the specified service-effect picker. | Approved effect library including accessible 3D flip, picker, reduced motion, locks and regeneration assignment. |
+| P. Trust strip / source reviews | Partial | `src/reviews.js`; `public/reviews.js`; `src/conversion-page.js`; `tests/engagement-providers.mjs`; `tests/review-lookup.mjs` | Google/Yelp source links, no-key fallback and mocked review rendering pass E4. #001 restores profile-form lookup while preserving explicit business searches; E7/E8 pass. | Multi-network licensed logo strip, owner selections, proof/expiry rules and live account validation remain. #001 resolves the response mismatch; section P remains Partial. |
+| Q. About page / logo-on-uniform portrait | Partial | `src/conversion-page.js`; `src/showcase.js`; `src/site-polish.js`; `src/client/workspace/questionnaire.ts` | Owner/story inputs, owner section and uploaded logo display exist (E4/E6). | First-class About route, unique approved copy/portrait job and truthful labeling of generated people. |
+| R. Vertical trade Shorts | Not started | `public/trade-build-films.json`; `public/trade-craft-films.json` | Existing landscape trade films are supporting assets, not the required vertical Shorts. | Approved 12–15 second 9:16 deliverables, captions/phone/end card and all 14 trades including Windows/Doors and Solar. |
+| S. Company fields / multiple locations | Partial | `src/platform/constitution.ts`; `src/client/workspace/questionnaire.ts`; `src/site-polish.js` | Eight field toggles, extra locations and published visibility pass E1. | Full S still incomplete: structured hours, primary/reorder/archive model, total-ten migration, empty-card suppression and proof/license policy. Earlier core-controls Done wording was too broad. |
+| T. Earned promotion tasks | Partial | `src/platform/constitution.ts`; `src/constitution-pages.js`; `src/client/site/constitution.ts` | Same-origin quiz validation, code reveal and expiry run (E1). | Other task types, persisted completion/redemption evidence, abuse limits and honest pending/manual verification for unsupported social actions. |
+| U. AI promotion artwork | Not started | `src/client/workspace/questionnaire.ts`; `src/constitution-pages.js` | Promo editor currently saves text/quiz fields. No app image job found. | Generate-on-save job, brand input, approval/regenerate/version controls, storage and retries. Images created in chat are not an in-app integration. |
+| V. Real UGC module / paid AI video packs | Not started | `src/api.js`; `src/aws/s3.js`; `src/workspace.js` | JPEG upload and static film playback are supporting code only. | Video upload/transcode, rights, variable slots, moderated samples, entitlements and AI explainer ordering. No fabricated customer testimonials. |
+| W. Price Book / 15-minute close offer | Partial | `src/platform/constitution.ts`; `src/workspace.js`; `src/client/workspace/legacy-workspace.js` | Four catalog constants; manual proposal/invoice amount, hosted link and acceptance locking run (E6). | Versioned shared SKU line items, full catalog, settlement/entitlements, server-timed add-on-only 10% offer and immutable expiry. No automatic payments claimed. |
+| X. Distribution / project media | Partial | `src/api.js`; `src/project-map.js`; `src/workspace.js`; `src/engagement.js` | Approved project photos/map and scoped records work (E4/E6). | Social/GBP OAuth, channel adapters, captions, durable approved publish queue, retries and real delivery receipts. Footer profile links do not connect accounts. |
+| Y. Monthly content calendar | Not started | `src/workspace.js`; `src/control.js` | Calendar appointments and held follow-ups are unrelated scaffolding. | Content month model, generated captions/creatives, review, scheduling, channel delivery and plan entitlements. |
+| Z. Upsell education videos | Not started | `src/client/workspace/legacy-workspace.js` | Commercial storyboard text exists; no complete Z media pack found. | Approved contractor-only hero/micro clips and placement on sales, invoice and backoffice surfaces. |
+| AA. Remote Website ↔ Contractor CRM sync | Not started | `src/crm.js`; `src/workspace.js`; `src/project-map.js` | Local captureContact writes this app’s workspace records (E3/E6). | Remote contract/auth, lead delivery, photo import, rights, dedupe, retries and explainer. Separate CRM remains untouched. |
+| AB. Seasonal recommendations | Not started | `src/platform/constitution.ts`; `src/workspace.js` | Manually dated promotions are reusable foundations only. | Seasonal rules/reminders, recommendations, brand creatives/Shorts, approval, plan quota/renewal and promotion lifecycle. |
+| AC. Eight creative products | Not started | `src/neighborhood.js`; `src/project-map.js`; `src/workspace.js` | City personalization/project storage exist; neither is proof of the eight AC features. | Weather homepage, storm companion, job binder, past-customer referrals, Spanish switch, crew QR, HOA packet and factual competitor comparison. |
+| AD. GA4 / Growth dashboard | Not started | `src/control.js`; `src/workspace.js` | Connection UI explicitly says analytics not connected; manual health/visibility records exist. | Verified GA authorization, consent-aware measurement, reporting, no-data dashboard, qualified-lead attribution and approved Growth tasks. |
+| AE. Paid ads from approved media | Not started | `src/control.js`; `src/workspace.js` | No campaign delivery adapter found. | Account connections, creative drafts, exact-budget approval, publication, spend reporting and stop controls. No spend authorization inferred. |
+| AF. Contractor email marketing | Not started | `src/workspace.js`; `src/control.js`; `src/crm.js` | Follow-up drafts explicitly held; RESEND_API_KEY flag is not a delivery worker. | SendGrid per-contractor subuser/domain setup (no SES or Resend delivery), permissioned lists, templates/graphics, suppression/unsubscribe, approved sends, webhooks and honest reporting. Current sender/account access unsure. |
+
+## Evidence: initial audit and ticket #001
+
+| ID | Existing command | Result | What it establishes |
+|---|---|---|---|
+| E1 | `node tests/constitution.mjs` | PASS | Settings/calculator; roles and publication; quiz expiry; 84 legal-preview links. |
+| E2 | `node tests/trades-financing.mjs` | PASS | New trade render/assets and 1/2/3 finance links; no live lenders tested. |
+| E3 | `node tests/conversion-references.mjs` | PASS | Three reference journeys, service selection, inquiry persistence and draft boundaries. |
+| E4 | `node tests/reference-proof.mjs` | PASS | Project/logo privacy, no-key review fallback and mocked provider attribution. |
+| E5 | `node tests/sales-ops.mjs` | PASS | Manual commission math, own-record access and optimistic writes. |
+| E6 | `node tests/workspace.mjs` | PASS | Roles, pages/forms, plan gates, proposal locking, uploads and backups. |
+| E7 | `node tests/engagement-providers.mjs` | PASS (#001) | Previously failed at result.google[0]. Existing test now passes unchanged: profile matching, rating/filter integrity, provider excerpts and draft access. |
+| E8 | `node tests/review-lookup.mjs` | PASS (#001) | Both lookup request/response contracts, no-key fallback, provider failure, auth/origin, invalid URLs, no save/publish side effects and shared rate limit. |
+
+Step 1: E1–E6 exited 0; E7 failed with `TypeError: Cannot read properties of undefined (reading '0')`. Ticket #001: a fresh server bundle plus E4, E7 and E8 all exited 0. Other suites were not rerun for this scoped repair. The defect affected the actual profile-matching UI as well as its test; it was not a stale-test-only failure. Historical browser/build evidence in `docs/product/IMPLEMENTATION_ROADMAP.md` is not a new live-provider test.
+
+## Boundaries and future updates
+
+- Roofing must be the first completed homeowner reference (#001–#028); perfect it before #029+ trade rollouts. Preserve all 14 templates/media. If K02 is missing, #024–#027 use tested labeled film stubs; finish #028 with external gates listed. Films do not block the selling site.
+- Financing follows the latest user direction: calculator → **Get Financing Options →** → enabled providers. No public lender showcase; no pretend live rates. Joe confirmed no lender connections on 2026-09-24.
+- Existing local copy, motion, selected services, sticky navigation, logo, review sources and Project Map are preservation requirements.
+- A key-dependent stub can satisfy a ticket explicitly scoped as a stub, but never upgrades the corresponding live integration/whole section to Done. Record it as Partial or Not started here and keep the live ticket open.
+- At each ticket close, update the relevant rows and append evidence below: ticket number, commands/results or screenshot path, remaining gap, connection mode and commit. Do not fabricate an executed check or infer a production release from local tests.
+- Implement only in `C:/Users/joe/website_creator`. No edits to Buildovate/buildovate or CRM backend/frontend/backoffice, and no push/staging deployment from tickets. #156–#158 alone cover documented sandbox CRM adapters. Required CRM-code changes trigger a stop/report and separate branch/PR for Louie.
+- SendGrid only with per-contractor subusers, no SES/Resend delivery or cold email; consent and suppression precede any send.
+- The repo already has substantial dirty work. Ticket commits must preserve unrelated earlier work; stage only the ticket changes, never `git add -A`.
+
+## Ticket evidence log
+
+### #001 — Done (2026-09-24)
+
+- Cause: the server returned `{provider, results}` for profile-form submissions while the running backoffice `bindReviewSection` and existing test expected `{google, yelpBusinessId, status}`. The older profile validation/no-key behavior had also been lost.
+- Fix: preserve the profile-form contract, URL validation, parsed Yelp identity and honest setup fallback; keep the explicit Google/Yelp business-search contract through shared provider-search code. Lookup cannot save/confirm/publish profiles.
+- Scope: `src/reviews.js` lookup implementation, new `tests/review-lookup.mjs`, the lookup contract line in `docs/modules/engagement.md`, plus the four build-control documents. Existing `public/engagement-ui.js` and `tests/engagement-providers.mjs` are unchanged. No CRM repo, push, deployment, customer message or live provider request.
+- Verification: rebuilt `dist/server/index.js` with esbuild from `src/worker.js`; build exited 0. All three commands below exited 0 on the local working tree:
+
+```text
+node tests/review-lookup.mjs
+PASS review lookup: profile-form compatibility, Google/Yelp business search, missing-key fallback, invalid profile/origin/auth rejection, empty matches, upstream failure, draft/publish isolation and shared hourly limit. All external responses mocked; no live connections or messages.
+
+node tests/engagement-providers.mjs
+PASS mocked providers: SMS verification, alert addressing, signed inbound replies, webhook replay deduplication, changed-phone re-verification, Google match/filter/aggregate integrity, Yelp excerpts and private draft access. No real messages or provider requests sent.
+
+node tests/reference-proof.mjs
+PASS reference proof: published project map, unpublished isolation, owner visibility, logo privacy/publish, connected review placement, no-key fallback and mocked provider attribution/filtering.
+```
+
+- Remaining: section P stays Partial. Trust-strip delivery and actual provider access are separate tickets. Mocked test responses are not connected live accounts.
+- Commit locator: `fix: restore review lookup compatibility (#001)`; use `git log -1 --format=%h --grep='restore review lookup compatibility'` for its hash. Only the lookup portion of previously modified source/module files is included; prior unrelated work remains uncommitted. Build-control files created in Step 1 are included with these requested corrections.
+- **Next ticket: #002 — Lock the Roofing homeowner journey.** No work on #002 was started.

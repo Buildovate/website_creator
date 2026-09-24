@@ -7,4 +7,39 @@ if(c.googleUrl){if(!env.GOOGLE_PLACES_API_KEY||!c.googlePlaceId||!c.privacyUrl||
 if(c.yelpUrl){if(!env.YELP_API_KEY||!c.yelpBusinessId)result.providers.push({provider:'Yelp',url:c.yelpUrl,status:'Live Yelp ratings need a Yelp API connection and business ID.'});else{try{const r=await fetch('https://api.yelp.com/v3/businesses/'+encodeURIComponent(c.yelpBusinessId),{headers:{authorization:'Bearer '+env.YELP_API_KEY},signal:AbortSignal.timeout(10000)});if(!r.ok)throw Error();const d=await r.json();result.providers.push({provider:'Yelp',name:d.name,rating:d.rating,count:d.review_count,url:safeUrl(d.url)||c.yelpUrl,reviews:await yelpExcerpts(env,c.yelpBusinessId)})}catch{result.providers.push({provider:'Yelp',url:c.yelpUrl,status:'Yelp ratings are temporarily unavailable. Read them at the source.'})}}}return result}
 
 async function yelpExcerpts(env,id){try{const r=await fetch('https://api.yelp.com/v3/businesses/'+encodeURIComponent(id)+'/reviews',{headers:{authorization:'Bearer '+env.YELP_API_KEY},signal:AbortSignal.timeout(10000)});if(!r.ok)return [];const d=await r.json();return (d.reviews||[]).slice(0,3).map(x=>({rating:x.rating,text:text(x.text,2000),author:text(x.user?.name,150),authorUrl:safeUrl(x.user?.profile_url),avatar:safeUrl(x.user?.image_url),url:safeUrl(x.url),date:text(x.time_created,50)}))}catch{return []}}
-export async function reviewLookup(req,env,url){const match=url.pathname.match(/^\/api\/engagement\/([^/]+)\/review-lookup$/);if(!match)return null;must(req.method==='POST'&&req.headers.get('origin')===url.origin,'Invalid request origin.',403);const {tenant}=await access(req,env,match[1],'write');const s=JSON.parse(tenant.settings),v=await body(req),c=cleanReviews(v),result={google:[],yelpBusinessId:c.yelpBusinessId,status:[]};if(c.googleUrl){if(!env.GOOGLE_PLACES_API_KEY){result.status.push('Google profile saved. Connect Google Places in platform Settings to find the matching business and load reviews.')}else{const recent=await one(env,"SELECT COUNT(*) AS n FROM audit WHERE tenant_id=? AND action='reviews.lookup' AND created_at>?",tenant.id,new Date(Date.now()-3600000).toISOString());must(recent.n<10,'Please wait before searching for the business again.',429);await run(env,'INSERT INTO audit(id,tenant_id,actor,action,detail,created_at) VALUES(?,?,?,?,?,?)',uid(),tenant.id,'owner','reviews.lookup','Match business profile',now());const r=await fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'X-Goog-Api-Key':env.GOOGLE_PLACES_API_KEY,'X-Goog-FieldMask':'places.id,places.displayName,places.formattedAddress,places.googleMapsUri','content-type':'application/json'},body:JSON.stringify({textQuery:s.name+' '+(s.address||s.area),pageSize:5}),signal:AbortSignal.timeout(10000)});must(r.ok,'Google could not find the profile. Check the connection or enter a Place ID manually.',502);const d=await r.json();result.google=(d.places||[]).map(p=>({id:p.id,name:p.displayName?.text,address:p.formattedAddress,url:safeUrl(p.googleMapsUri)}));if(!result.google.length)result.status.push('No Google match found. Check the business name/address or enter a Place ID.') }}if(c.yelpUrl)result.status.push(c.yelpBusinessId?(env.YELP_API_KEY?'Yelp business identified. Save your settings to load the provider rating and available excerpts.':'Yelp business identified. Connect Yelp in platform Settings to display live ratings and available excerpts.'):'Use a Yelp business profile link containing /biz/.');return result}
+export async function reviewLookup(req,env,url){
+ const match=url.pathname.match(/^\/api\/engagement\/([^/]+)\/review-lookup$/);if(!match)return null;
+ must(req.method==='POST'&&req.headers.get('origin')===url.origin,'Invalid request origin.',403);
+ const {tenant}=await access(req,env,match[1],'write'),v=await body(req);
+ // Explicit business searches use {provider, results}; the profile form still
+ // consumes {google, yelpBusinessId, status}. Preserve both request contracts.
+ if('provider' in v||'name' in v||'location' in v)return searchReviewBusiness(env,tenant,v);
+ const c=cleanReviews(v),result={google:[],yelpBusinessId:c.yelpBusinessId,status:[]};
+ if(c.googleUrl){
+  if(!env.GOOGLE_PLACES_API_KEY)result.status.push('Google profile entered. Connect Google Places in platform Settings to find the matching business and load reviews.');
+  else{
+   result.google=(await searchReviewBusiness(env,tenant,{provider:'google'})).results;
+   if(!result.google.length)result.status.push('No Google match found. Check the business name/address or enter a Place ID.');
+  }
+ }
+ if(c.yelpUrl)result.status.push(c.yelpBusinessId?(env.YELP_API_KEY?'Yelp business identified. Save your settings to load the provider rating and available excerpts.':'Yelp business identified. Connect Yelp in platform Settings to display live ratings and available excerpts.'):'Use a Yelp business profile link containing /biz/.');
+ return result;
+}
+
+async function searchReviewBusiness(env,tenant,v){
+ const s=JSON.parse(tenant.settings),name=text(v.name||s.name,250),location=text(v.location||s.address||s.area,250),provider=v.provider==='yelp'?'yelp':'google';
+ must(name.length>1&&location,'Enter the business name and city.');
+ const recent=await one(env,"SELECT COUNT(*) AS n FROM audit WHERE tenant_id=? AND action='reviews.lookup' AND created_at>?",tenant.id,new Date(Date.now()-3600000).toISOString());
+ must(recent.n<20,'Hourly business search limit reached.',429);
+ await run(env,'INSERT INTO audit(id,tenant_id,actor,action,detail,created_at) VALUES(?,?,?,?,?,?)',uid(),tenant.id,'owner','reviews.lookup',provider,now());
+ if(provider==='google'){
+  must(env.GOOGLE_PLACES_API_KEY,'Google business search needs a Google Places API key in platform Settings. You can add a profile in Advanced connection details meanwhile.',409);
+  const r=await fetch('https://places.googleapis.com/v1/places:searchText',{method:'POST',headers:{'X-Goog-Api-Key':env.GOOGLE_PLACES_API_KEY,'X-Goog-FieldMask':'places.id,places.displayName,places.formattedAddress,places.googleMapsUri','content-type':'application/json'},body:JSON.stringify({textQuery:name+' '+location,pageSize:5}),signal:AbortSignal.timeout(10000)});
+  must(r.ok,'Google search is unavailable. Check the Places API connection.',502);
+  const d=await r.json();return {provider,results:(d.places||[]).map(p=>({id:p.id,name:p.displayName?.text,address:p.formattedAddress,url:safeUrl(p.googleMapsUri)}))};
+ }
+ must(env.YELP_API_KEY,'Yelp business search needs a Yelp API key in platform Settings. You can add a profile in Advanced connection details meanwhile.',409);
+ const r=await fetch('https://api.yelp.com/v3/businesses/search?'+new URLSearchParams({term:name,location,limit:'5'}),{headers:{authorization:'Bearer '+env.YELP_API_KEY},signal:AbortSignal.timeout(10000)});
+ must(r.ok,'Yelp search is unavailable. Check the API connection.',502);
+ const d=await r.json();return {provider,results:(d.businesses||[]).map(p=>({id:p.id,name:p.name,address:(p.location?.display_address||[]).join(', '),url:safeUrl(p.url)}))};
+}
