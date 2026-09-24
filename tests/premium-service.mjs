@@ -16,7 +16,7 @@ async function publish(){await api(path+'/publish','POST',{approved:true,version
 await save({...t.settings,websitePages:{version:1,pages:[{id:'repair',kind:'service',slug:'roof-repair',title:'Roof repair',serviceName:'Roof repair',enabled:true,questions:[{question:'Is this a booking?',answer:'No, availability is confirmed separately.'}]}]},serviceProfile:{},reviews:{},color:'#ffea00'});
 await publish();
 let html=await (await req(url,'GET',undefined,null)).text();
-assert.match(html,/Roof leak\? Let&#39;s get it fixed\./);
+assert.match(html,/Roof repair. A clear plan for a dry home./);
 assert.ok(!html.includes('class="tp-trust"'));
 assert.ok(!html.includes('Service illustration'));
 assert.equal((html.match(/class="tp-sign" /g)||[]).length,4);

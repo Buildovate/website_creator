@@ -9,9 +9,9 @@ await api('/setup','POST',{});
 const fixture=structuredClone(roofingFixture);fixture.slug='roofing-service-demo';
 fixture.settings.websitePages={version:1,pages:[{
  id:'roof-repair',kind:'service',slug:'roof-repair',serviceName:'Roof repair',enabled:true,
- title:'Roof repair',headline:"Roof leak? Let's get it fixed.",
- intro:'Water stains, damaged shingles or a leak after a storm? Tell us what you’ve noticed. Start with a conversation about the concern and the repair options.',
- scope:'Discuss the affected area, visible damage and when the problem started. The proposed repair scope should explain what will be addressed, the materials involved and any further inspection needed before work is agreed.',
+ title:'Roof repair',headline:"Roof repair. A clear plan for a dry home.",
+ intro:'For homeowners in Ventura and Oxnard: tell us where the leak appears. Discuss the cause, repair options and scope before deciding what happens next.',
+ scope:'Start with visible damage and when the leak appears. Discuss the inspection needed to understand the cause.',
  process:['Share the concern and your project location.','Discuss the roof condition and the next inspection step.','Review the proposed repair scope, materials and price before deciding.','Agree the repair and timing, then review the finished work.'],
  materials:['Shingle and flashing repair options, where suitable for the existing roof.','Material compatibility and any limitations discussed with the proposed scope.'],
  questions:[
@@ -22,6 +22,8 @@ fixture.settings.websitePages={version:1,pages:[{
 }]};
 const {tenant}=await api('/tenants','POST',fixture);
 await api('/tenants/'+tenant.id+'/publish','POST',{version:tenant.version,approved:true});
+const prospect=structuredClone(fixture);prospect.slug='roofing-service-prospect';await api('/tenants','POST',prospect);
 const server=await listen(runtime,port);
 for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>server.close(()=>runtime.close()));
+console.log('Sales preview (sign in locally as roofing-qa@example.test): '+base+'/sales-preview/roofing-service-prospect/services/roof-repair');
 console.log('Local screenshot fixture: '+base+'/s/'+fixture.slug+'/services/roof-repair');

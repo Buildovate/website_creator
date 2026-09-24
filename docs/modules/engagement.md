@@ -89,3 +89,7 @@ The financing page includes four editable APR/term comparisons against one enter
 ## Calculator-first financing — local, 2026-09-24
 
 The public lender showcase is removed. Native `details` directly below the estimate uses “Get Financing Options →” and exposes only enabled, confirmed merchant application URLs. Names/domains appear only within that step, with no lender logos or marketing cards. Draft previews suppress application anchors. This is link selection, not a real-time multi-lender offer adapter or shared prequalification. No calculator data is transmitted. Existing validation still requires one enabled lender to enable the page. See `docs/product/IMPLEMENTATION_ROADMAP.md`; tests in `tests/trades-financing.mjs` cover all one/two/three counts and publish boundaries.
+
+## #004C — optional service conversion sections
+
+Service reviews opt into hiding the entire wrapper until confirmed provider excerpts exist; failure/zero excerpts keeps it hidden. Other review consumers retain their existing behavior. platform.financing.serviceTerms contains the selected lenderId, amount, downPayment, apr, months and confirmation; footer.financingDisclosure is required for the service-page section. No provider connection is implied. Promotion serviceNames tags and graphic selection feed active service cards; the existing unlock validates an optional serviceName. The authenticated /api/sales-preview/:slug/promotion-unlock is draft-only, origin/CSRF protected and returns an explicitly non-redeemable sample code. [Evidence](../build-evidence/004C/README.md).

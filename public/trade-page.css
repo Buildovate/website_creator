@@ -114,3 +114,34 @@
  .tp-final{padding:58px 0}.trade-page .studio-footer-grid{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){.trade-page *{scroll-behavior:auto!important;transition:none!important;animation:none!important}.tp-pending{opacity:1;transform:none}.tp-sign:hover img,.tp-button:hover{transform:none}}
+/* #004C: shared playbook components. */
+.trade-page [hidden]{display:none!important}
+.tp-icon{width:42px;height:42px;flex:none;color:var(--tp-ink)}
+.tp-click-trigger{font-size:12px!important;max-width:480px;color:#e4e9e0}
+.tp-included{background:#ebece4}
+.tp-inclusions{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.tp-inclusions article{padding:18px 0}.tp-inclusions h3{font-family:TradeDisplay;font-size:36px;max-width:270px;margin:22px 0}
+.tp-inclusions ul{padding-left:18px;font-size:15px;color:var(--tp-muted)}.tp-inclusions li+li{margin-top:10px}
+.tp-process{background:var(--tp-paper)}
+.tp-step-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}.tp-step-top b{font-size:56px;margin:0;color:#54704e}
+.tp-timeline h3{font-family:TradeDisplay;font-size:32px;max-width:240px}.tp-timeline li{border:0;padding:0;position:relative}
+.tp-timeline li:not(:last-child):after{content:'→';position:absolute;right:-21px;top:19px;color:#6b816e}
+.tp-sample-badge{display:inline-block;padding:7px 12px;border:1px solid currentColor;border-radius:3px;font:700 11px/1.4 system-ui;letter-spacing:.035em;max-width:100%}
+.tp-sales-notice{position:sticky;top:var(--tp-header-height);z-index:25;background:#fff0bd;color:#3a2b03;text-align:center;padding:10px 20px;font:650 12px/1.5 system-ui}
+.tp-trust .tp-sample-badge{align-self:center}.tp-trust .tp-shell{align-items:center}
+.tp-promo-banner{background:#193d32;color:#fff;padding:15px 0;font-size:14px}.tp-promo-banner .tp-shell{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.tp-promo-banner a{font-weight:750}
+.tp-finance{background:#e3e9dc}.tp-finance-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0;list-style:none;margin:40px 0}
+.tp-finance-steps li{background:#f5f5ef;padding:25px;display:grid;grid-template-columns:1fr auto;gap:15px}.tp-finance-steps h3{font:700 29px/1.1 TradeDisplay;grid-column:1/-1;max-width:220px}.tp-finance-steps span{font:700 32px TradeDisplay;color:#536a50}
+.tp-finance-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px}.tp-finance-grid>div{padding:16px 0}.tp-finance-grid form{background:white;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tp-finance-grid label{font-size:12px;font-weight:700}.tp-finance-grid input{width:100%;font:16px system-ui;padding:12px;border:1px solid #869982;margin-top:8px}
+.tp-finance-grid form>div,.tp-finance-grid form>p,.tp-finance-grid form>a,.tp-finance-grid form>small{grid-column:1/-1}
+.tp-calculate{border:0;background:none;text-decoration:underline;text-align:left;padding:8px 0;color:var(--tp-ink);font-weight:700;cursor:pointer;min-height:44px}
+.tp-payment{background:#eef2e8;padding:25px}.tp-payment>span{font-size:11px;letter-spacing:.12em}.tp-payment strong{display:block;font:700 68px/1.1 TradeDisplay;letter-spacing:-.04em}.tp-payment small{font:500 20px system-ui}.tp-payment p{font-size:12px}
+.tp-legal{font-size:12px;line-height:1.6}.tp-finance-note{border-left:3px solid #54704e;padding-left:15px;font-size:14px}
+.tp-sample-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:35px}.tp-sample-reviews article{padding:28px;background:#ffffff09;border:1px solid #ffffff25}.tp-sample-reviews article>span{color:#d2e29a;letter-spacing:4px}.tp-sample-reviews blockquote{font-size:19px;margin:20px 0 30px}.tp-sample-reviews strong,.tp-sample-reviews small{display:block}.tp-sample-reviews small{font-size:11px;margin-top:6px}
+.tp-promos{background:#edeadf}.tp-promo-card{display:grid;grid-template-columns:1fr 1fr;margin-top:35px;background:white}.tp-promo-card>img{width:100%;height:100%;object-fit:cover}.tp-promo-card>div{padding:36px}.tp-promo-card h3{font:700 44px/1.05 TradeDisplay;margin:24px 0 10px}.tp-promo-card fieldset{border:0;padding:0;margin:20px 0}.tp-promo-card legend{font-weight:700;font-size:15px;margin-bottom:12px}.tp-promo-card label{display:flex;align-items:center;gap:10px;min-height:44px;padding:8px 0;font-size:14px}.tp-promo-card [data-promo-status]{font-size:13px}.tp-promo-card details{margin-top:22px}.tp-promo-card summary{cursor:pointer;min-height:44px}
+@media(min-width:761px){.tp-hero{min-height:830px}.trade-page h1{font-size:clamp(82px,8.1vw,128px);max-width:1030px}.tp-hero-copy{padding:68px 0}.tp-hero .tp-intro{font-size:20px;max-width:590px}}
+@media(max-width:760px){.tp-inclusions,.tp-finance-grid,.tp-sample-reviews,.tp-promo-card{grid-template-columns:1fr;gap:20px}.tp-inclusions h3{font-size:32px}.tp-inclusions article{border-bottom:1px solid var(--tp-line);padding-bottom:25px}.tp-timeline h3{font-size:27px}.tp-timeline li:after{display:none}.tp-icon{width:34px;height:34px}.tp-step-top b{font-size:40px}.tp-finance-steps{grid-template-columns:1fr;gap:12px}.tp-finance-steps li{grid-template-columns:40px 1fr 24px;align-items:center;padding:20px}.tp-finance-steps li h3{grid-column:2;grid-row:1;font-size:25px}.tp-finance-steps li span{grid-column:3;grid-row:1;font-size:24px}.tp-finance-grid form{padding:22px}.tp-payment strong{font-size:56px}.tp-promo-card>img{height:260px}.tp-promo-card>div{padding:25px}.tp-promo-card h3{font-size:38px}.tp-sales-notice{font-size:10px;padding:8px 15px}.tp-trust .tp-shell{display:grid;grid-template-columns:1fr 1fr;gap:22px}.tp-trust .tp-sample-badge{grid-column:1/-1}.tp-trust strong{font-size:16px}.tp-promo-banner .tp-shell{gap:10px}.tp-click-trigger{font-size:11px!important}.tp-sample-reviews blockquote{font-size:18px}.tp-finance-grid .tp-button{font-size:13px;padding:15px 10px}}
+
+
+.tp-form>.tp-sample-badge{grid-column:1/-1;justify-self:start}.trade-page main section[id]{scroll-margin-top:150px}

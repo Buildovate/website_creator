@@ -263,11 +263,11 @@ await test('#004 shared browser handler preserves service context and suppresses
   const button={disabled:false},status={textContent:''};
   const form={dataset:{slug:'service-detail-test',project:'',preview:'false'},elements:{namedItem:()=>({checked:true})},querySelector:s=>s==='button'?button:status,reset:()=>{reset=true}};
   const module={exports:{}};
-  runInNewContext(code,{module,document:{querySelectorAll:()=>[form]},FormData:class{*[Symbol.iterator](){yield* Object.entries({service:'Roof repair',projectCity:'Oxnard',timeframe:'Within a month',message:'Leak concern',name:'Local test',phone:'8055550197'});}},fetch:async(url,options)=>{sent={url,data:JSON.parse(options.body)};return {ok:true,json:async()=>({ok:true})}}});
+  runInNewContext(code,{module,document:{querySelectorAll:()=>[form]},FormData:class{*[Symbol.iterator](){yield* Object.entries({service:'Roof repair',projectCity:'Oxnard',timeframe:'Within a month',message:'Leak concern',financingInterest:'on',promotionCode:'TEST-OFFER',name:'Local test',phone:'8055550197'});}},fetch:async(url,options)=>{sent={url,data:JSON.parse(options.body)};return {ok:true,json:async()=>({ok:true})}}});
   module.exports.mountInquiries();
   await form.onsubmit({preventDefault(){}});
   assert.equal(sent.url,'/api/public/service-detail-test/inquiries');
-  assert.equal(sent.data.message,'Roof repair · Project city: Oxnard · Preferred timing: Within a month · Leak concern');
+  assert.equal(sent.data.message,'Roof repair · Project city: Oxnard · Preferred timing: Within a month · Interested in financing · Unlocked promotion: TEST-OFFER · Leak concern');
   assert.equal(sent.data.consent,true);assert.equal(reset,true);assert.equal(button.disabled,false);
   form.dataset.preview='true';sent=null;
   await form.onsubmit({preventDefault(){}});

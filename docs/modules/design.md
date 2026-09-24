@@ -107,3 +107,7 @@ Roofing reference copy uses repair/replacement language only when both services 
 ## Ticket #004B — shared premium trade pages
 
 See [the design standard](../TRADE_DESIGN_SYSTEM.md). Roofing service detail now uses the shared tp-* components, generated hero/sign/comparison assets, responsive brand tokens and reduced-motion-aware reveal. Future trade detail renderers must reuse this system with their own images and copy. [Evidence](../build-evidence/004B/README.md).
+
+## #004C — playbook refinement
+
+Roofing detail reuses #004B with larger hero/type, benefit-led inclusion cards, process icons and optional financing/promotion components. The [24-item checklist and screenshots](../build-evidence/004C/README.md) are the acceptance reference for future detail-page work.

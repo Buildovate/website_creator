@@ -83,3 +83,7 @@ Questionnaire service controls (local): trade-library checkboxes plus existing c
 ## Pack 4 growth and marketing specification — documentation only, 2026-09-23
 
 [Pack 4 AB–AF](../product/PACK4_GROWTH_ADS_EMAIL_SPEC.md) and its [catalog delta](../product/PACK4_CATALOG_DELTA.md) specify seasonal drops, eight creative products, analytics/Growth, approved paid advertising and contractor email. All five files are received; [index](../product/SPECIFICATION_INDEX.md) links their implementation boundaries. No new runtime surfaces or external connections are implemented by these documents. A GA measurement ID is not reporting authorization; existing local contact capture is not remote CRM sync; current form contact consent does not grant marketing consent. Read the per-channel approval/suppression/budget rules before implementing a delivery worker.
+
+## #004C — service conversion controls
+
+Questionnaire now edits service finance terms and required footer disclosure, promotion service tags/AI graphic selection, and links to authenticated unpublished sales preview. Saving remains draft-only. The existing inquiry transport includes financing interest and an unlocked code in its message while retaining consent and preview suppression.

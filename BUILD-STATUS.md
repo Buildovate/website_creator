@@ -141,3 +141,12 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - [Full-page desktop/mobile screenshots and executed outputs](docs/build-evidence/004B/README.md). Build, TypeScript and all 35 tests pass (37/37 commands). Generated images are committed with prompt provenance; the local fictional fixture uses no real contractor photos or reviews.
 - Comparison media permissions rechecked: only the complete rendered published pair grants service-page access. Generated hero replaces the old hero-photo grant. Existing tenant, selected-service, preview and inquiry boundaries remain covered.
 - Section H stays Partial; future trade rollout/editor work and #027A remain separate. Commit locator: feat: establish premium trade-page design standard (#004B). No push/deployment. **Next ticket #005, not started. Stop.**
+
+### #004C — Done (2026-09-24)
+
+- Applied CONVERSION-PLAYBOOK section 6: [24 PASS / 0 FAIL, full sales-preview desktop/mobile screenshots and tests](docs/build-evidence/004C/README.md). Value-led first-person CTAs, taller desktop hero/larger headline, icon-led inclusions/process and no public empty review band.
+- Authenticated unpublished-prospect sales preview has a persistent sample notice, sample trust, exactly three fictional reviews, financing and a generated promo graphic. Samples stay outside settings; public/query-string routes cannot enable them, and published sites cannot open/redeem sample mode.
+- Real financing requires a confirmed configured partner, confirmed bounded terms and saved footer-legal disclosure. Visual three-step flow/calculator and form note hide when unconfigured. CTA preselects interest in the existing inquiry; no lender exits or invented offers.
+- Active service-tagged promotions render banner/card and reuse the server-checked one-question unlock. Code stays absent until success, then feeds the same inquiry. Expired/unmatched offers hide; preview sample unlock is protected by membership, origin and session CSRF.
+- Full build, TypeScript and all 36 test files passed (38/38 commands); final affected tests and TypeScript rerun after browser CSRF correction pass. Public omission and sample interactions verified in browser; no overflow at desktop/mobile.
+- K03–K07 live provider state unchanged/unverified or not connected; sample mode is not a live integration. Section H remains Partial. Commit locator: feat: apply Roofing conversion playbook (#004C). No push/deploy. **Next #005, not started. Stop.**

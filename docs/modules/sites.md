@@ -93,3 +93,7 @@ Published enabled selected service records explicitly publish their owned hero/b
 ## Ticket #004B — premium service rendering and editing
 
 Supersedes #004 service-image behavior: the hero is always generated; only a complete tenant-owned bannerOne/bannerTwo comparison pair can grant public service-page photo access. Unpaired references and hero references stay private under this grant. Questionnaire now edits service headlines, comparison selection and confirmed serviceProfile facts; draft/publish boundaries are unchanged. See [design standard](../TRADE_DESIGN_SYSTEM.md) and [executed evidence](../build-evidence/004B/README.md).
+
+## #004C — sales-preview boundary
+
+GET /sales-preview/:slug/services/:service requires tenant access and a tenant with neither published status nor snapshot. Samples are renderer-only, inquiries disabled. Published /s routes ignore sample query parameters. Questionnaire provides the preview link. See [004C evidence](../build-evidence/004C/README.md).
