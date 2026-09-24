@@ -33,3 +33,8 @@ Service pages reuse src/trade-motion.js, src/trade-motion-config.js and public/t
 
 
 #004F Roofing media update: use both H.264 and WebM variants with one coalesced scroll seek on desktop/mobile, and a static fallback that makes no video request under reduced motion. Alpha cutouts must align with the landing still; do not fake full-flight tracking when only a still mask exists. Keep hero text readable over every camera frame and make anatomy fill the mobile width with controls directly below.
+
+
+## #007A — About-page trust exception
+
+Joe explicitly requested uploaded owner/crew photography in the Roofing About hero. Use an owned uploaded portrait or visible owner photo there; otherwise use the designed Roofing truck illustration. This exception is About-only. Trust data is optional and individually confirmed; never fill missing stats. Use the shared trade components plus about-trust.css/js for the stat band, three proof cards, <=60-word story and approved published project tiles. Reduced motion keeps final numbers; empty projects hide the entire work section.

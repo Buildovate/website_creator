@@ -1,0 +1,3 @@
+PASS desktop: 5 confirmed stats, final count-up and reduced-motion values, 3 proof cards, <=60 story words, <=2 name mentions, 3 published project links, map chip, no-data omission, owned hero, mobile menu, no overflow/page errors
+PASS mobile: 5 confirmed stats, final count-up and reduced-motion values, 3 proof cards, <=60 story words, <=2 name mentions, 3 published project links, map chip, no-data omission, owned hero, mobile menu, no overflow/page errors
+PASS real Questionnaire mount + API saves: edited values clear individual confirmation, draft save preserves published facts, explicit reconfirmation persists, insurance No clears confirmation.

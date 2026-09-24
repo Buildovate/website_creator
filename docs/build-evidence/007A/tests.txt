@@ -1,0 +1,42 @@
+PASS: client session transport, CSRF, identity changes, expired-save preservation, Sites compatibility, escaping, public inquiry success/failure and bundle syntax.
+PASS: disconnected-session messages and workspace startup retry.
+✔ tests\client-modules.mjs (287.8005ms)
+PASS configuration safety, locked values and calculator math
+PASS tenant roles, draft/publication isolation, shared footers, feature gates and promotion unlock/expiry
+PASS 84 trade/layout legal-preview links and their access controls
+✔ tests\constitution.mjs (364.4599ms)
+PASS conversion references: 3 journeys × 3 layouts, draft isolation, claim approval/escaping, inquiry persistence, preview auth, anchor integrity, one H1, effects, and legacy CTA corrections.
+PASS service checklist: custom names, descriptions, deduplication, selection limits, full service rendering and draft isolation.
+PASS Roofing #002: repair/replacement copy matches selected services, direct call/inquiry paths, both inquiry intents persisted, one preserved hero film, repair-only/static fallback and published isolation. Local fixture only.
+✔ tests\conversion-references.mjs (391.4ms)
+PASS premium service: generated hero, four image cards/steps, editable escaped headline, draft/publish isolation, sourced/confirmed/empty trust fields, no invented reviews, paired-photo privacy and brand contrast.
+PASS premium interactions: scroll reveal enhancement, visible reduced-motion fallback, comparison input and accessible value.
+✔ tests\premium-service.mjs (337.7633ms)
+PASS reference proof: published project map, unpublished isolation, owner visibility, logo privacy/publish, connected review placement, no-key fallback and mocked provider attribution/filtering.
+✔ tests\reference-proof.mjs (259.0777ms)
+✔ typed records round-trip; IDs/slugs survive edits and reordering (6.0789ms)
+✔ malformed records, duplicate URLs, broken city links and limits are rejected (2.9022ms)
+✔ media uses bounded photo IDs and alt text, never arbitrary URLs (1.1661ms)
+▶ real tenant API: draft/published isolation, ownership and permissions
+  ✔ editor saves all four page types without changing public snapshot (5.2298ms)
+  ✔ render validates page data and has no save/publish side effects (11.6313ms)
+  ✔ foreign/missing media are rejected at save/create without side effects (21.6762ms)
+  ✔ malformed contracts return HTTP 400; access/origin/concurrency stay enforced (4.9609ms)
+  ✔ old editors omit the field safely; owner publishes a frozen snapshot (11.4255ms)
+  ✔ publish rechecks ownership even if a stored draft is stale or forged (3.1438ms)
+  ✔ explicit deletion remains draft until publish; backups retain page records (10.2582ms)
+✔ real tenant API: draft/published isolation, ownership and permissions (86.0901ms)
+✔ #004 service detail: published snapshot, preview membership, media and inquiry (31.2373ms)
+✔ #004 shared browser handler preserves service context and suppresses preview sends (95.7633ms)
+✔ #005 selected service grids: eight offerings, stable links, draft isolation and safe fallbacks (59.0274ms)
+✔ #006 FAQ: published snapshots, feature gating, schema, escaping and route access (25.7458ms)
+✔ #007 About route: confirmed copy, publication, owned portrait/logo and safe fallback (41.0001ms)
+✔ #007A confirmed trust facts, concise story, owner hero and published project tiles (51.5384ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 807.0052

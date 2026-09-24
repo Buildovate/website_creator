@@ -401,7 +401,7 @@ await test('#007 About route: confirmed copy, publication, owned portrait/logo a
  assert.equal((await request('/media/'+photo.id,'GET',undefined,null)).status,401);
  await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
  const published=await get();assert.equal(await get('/'),published);
- for(const part of ['Roofing with &lt;care&gt;','Owner-confirmed story &lt;script&gt;alert(1)&lt;/script&gt;','Explain the &lt;scope&gt;','/media/'+photo.id,'/media/'+logo.id,'/services/roof-repair'])assert.ok(published.includes(part),part);
+ for(const part of ['Roofing with &lt;care&gt;','Owner-confirmed story &lt;script&gt;alert(1)&lt;/script&gt;','/media/'+photo.id,'/media/'+logo.id])assert.ok(published.includes(part),part);
  assert.ok(!published.includes('<script>alert(1)</script>'));
  assert.equal((await request('/media/'+photo.id,'GET',undefined,null)).status,200);
  assert.equal((await request('/media/'+privatePhoto.id,'GET',undefined,null)).status,401);
@@ -418,13 +418,13 @@ await test('#007 About route: confirmed copy, publication, owned portrait/logo a
  draft=structuredClone(tenant.settings);draft.websitePages.pages[2].portraitMode='ai_logo_shirt';
  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
  await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
- assert.ok((await get()).includes('Designed brand artwork · not a team portrait'));
+ assert.ok((await get()).includes('Designed truck illustration · not a crew photograph'));
  assert.ok(!(await get()).includes('data-about-portrait'));
  assert.equal((await request('/media/'+photo.id,'GET',undefined,null)).status,401);
  assert.equal((await request('/media/'+privatePhoto.id,'GET',undefined,null)).status,401);
  draft=structuredClone(tenant.settings);draft.platform.questionnaire.factsConfirmed=false;draft.websitePages.pages[2].portraitMode='hidden';draft.websitePages.pages[2].portrait=null;
  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
- const unconfirmed=await get('?preview=1',admin);assert.ok(!unconfirmed.includes('DRAFT_ONLY_STORY'));assert.ok(!unconfirmed.includes('Explain the &lt;scope&gt;'));assert.ok(!unconfirmed.includes('Roofing with &lt;care&gt;'));assert.match(unconfirmed,/Start with a conversation/);
+ const unconfirmed=await get('?preview=1',admin);assert.ok(!unconfirmed.includes('DRAFT_ONLY_STORY'));assert.ok(!unconfirmed.includes('Explain the &lt;scope&gt;'));assert.ok(!unconfirmed.includes('Roofing with &lt;care&gt;'));assert.match(unconfirmed,/Good work starts/);
  draft=structuredClone(tenant.settings);draft.websitePages.pages[2].enabled=false;
  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
  assert.equal((await request(url+'?preview=1','GET',undefined,admin)).status,404);
@@ -435,4 +435,42 @@ await test('#007 About route: confirmed copy, publication, owned portrait/logo a
  draft=structuredClone(tenant.settings);draft.websitePages.pages[2].enabled=true;draft.trade='HVAC';draft.journey='standard';
  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
  assert.equal((await request(url+'?preview=1','GET',undefined,admin)).status,404);
+});
+
+await test('#007A confirmed trust facts, concise story, owner hero and published project tiles',async()=>{
+ const {cleanBusinessTrust,TRUST_GROUPS}=await import('../src/platform/business-trust.ts');
+ const facts={years:18,licenseNumber:'123456',licenseState:'CA',insured:true,crewSize:8,warrantyYears:10,certifications:['Manufacturer training confirmed'],googleRating:4.9,googleReviewCount:212,googleUrl:'https://www.google.com/maps?cid=123',jobsCompleted:1250,confirmed:Object.fromEntries(TRUST_GROUPS.map(k=>[k,true]))};
+ assert.deepEqual(cleanBusinessTrust(undefined,cleanBusinessTrust(facts)),cleanBusinessTrust(facts));
+ for(const invalid of [{years:-1},{crewSize:2.5},{googleRating:5.1},{googleRating:4.95},{insured:'yes'},{googleUrl:'https://evil.test'},{licenseState:'CAL'}])assert.throws(()=>cleanBusinessTrust(invalid));
+ assert.equal(cleanBusinessTrust({googleRating:4.9,confirmed:{google:true}}).confirmed.google,false);
+ const websitePages=records();Object.assign(websitePages.pages[2],{enabled:true,title:'A team you can know.',story:'Local Trust Fixture listens. '+('We discuss your roofing questions before agreeing on the scope. '.repeat(12))});
+ let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'trust-seven-a',settings:{name:'Local Trust Fixture',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}],websitePages,businessTrust:facts,platform:{questionnaire:{factsConfirmed:true}}}});
+ const path='/tenants/'+tenant.id,url='/s/'+tenant.slug+'/about';
+ const get=async(preview=false)=>{const r=await request(url+(preview?'?preview=1':''),'GET',undefined,preview?admin:null);assert.equal(r.status,200);return r.text();};
+ const invalid=await request('/api'+path,'PUT',{version:tenant.version,settings:{...tenant.settings,businessTrust:{years:-1}}});assert.equal(invalid.status,400);
+ await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
+ let html=await get();assert.equal((html.match(/class="ta-stat"/g)||[]).length,5);assert.ok(html.indexOf('class="ta-stats"')>html.indexOf('class="ta-hero"')&&html.indexOf('class="ta-stats"')<html.indexOf('class="tp-section ta-proof"'));
+ for(const text of ['18 years','CA Lic. #123456','4.9 from 212 reviews','10-year','1,250','Manufacturer training confirmed','8 people'])assert.ok(html.includes(text),text);
+ assert.ok(!html.includes('roofing-house-still'));assert.ok(html.includes('Designed truck illustration'));assert.ok(!html.includes('id="about-work"'));
+ const story=html.match(/data-about-story>(.*?)<\/p>/s)[1];assert.ok(story.split(/\s+/).length<=60);assert.ok(!story.includes(tenant.settings.name));
+ const cards=html.match(/<div class="ta-cards">(.*?)<\/div>/s)[1];assert.equal((cards.match(/<article>/g)||[]).length,3);for(const [,claim] of cards.matchAll(/<h3>(.*?)<\/h3>/g))assert.ok(claim.split(/\s+/).length>=3&&claim.split(/\s+/).length<=5);
+ let draft=structuredClone(tenant.settings);draft.businessTrust.confirmed={};tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
+ assert.ok(!(await get(true)).includes('class="ta-stats"'));assert.ok(!(await get(true)).includes('Manufacturer training confirmed'));assert.ok((await get()).includes('18 years'));
+ draft=structuredClone(tenant.settings);draft.businessTrust.confirmed={years:true};tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;assert.equal(((await get(true)).match(/class="ta-stat"/g)||[]).length,1);
+ // Old editors preserve trust facts when omitted; explicit empty object clears them.
+ draft=structuredClone(tenant.settings);delete draft.businessTrust;tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;assert.equal(tenant.settings.businessTrust.years,18);
+ draft=structuredClone(tenant.settings);draft.businessTrust={insured:false,confirmed:{insured:true}};tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;assert.match(await get(true),/not currently insured/);
+ const owner=await api(path+'/photos','POST',new Uint8Array(readFileSync('public/assets/roofing.jpg')));
+ draft=structuredClone(tenant.settings);draft.ownerPhotoId=owner.id;tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;assert.match(await get(true),/data-about-portrait/);
+ assert.equal((await request('/media/'+owner.id,'GET',undefined,null)).status,401);
+ await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;assert.match(await get(),/data-about-portrait/);
+ const data={title:'Published roof project',lat:34.2746,lng:-119.229,city:'Ventura',service:'Roof repair',completedAt:'2026-09-01',problem:'Test-only project problem description.',work:'Test-only project work description.',outcome:'Test-only project outcome description.',approved:true};
+ const {id}=await api(path+'/projects','POST',data);
+ const before=await api(path+'/photos?projectId='+id+'&stage=before','POST',new Uint8Array(readFileSync('public/assets/roofing.jpg')));
+ const after=await api(path+'/photos?projectId='+id+'&stage=after','POST',new Uint8Array(readFileSync('public/assets/finished-roof.jpg')));
+ await api(path+'/projects/'+id,'PUT',{version:1,data:{...data,beforeId:before.id,afterId:after.id}});
+ assert.ok(!(await get(true)).includes('Published roof project'));
+ await api(path+'/projects/'+id+'/publish','POST',{version:2});html=await get();assert.match(html,/id="about-work"/);assert.ok(html.includes('/media/'+after.id));assert.match(html,/ta-map-chip/);
+ await api(path+'/projects/'+id,'PUT',{version:3,data:{...data,title:'PRIVATE PROJECT EDIT',beforeId:before.id,afterId:after.id}});assert.ok(!(await get()).includes('PRIVATE PROJECT EDIT'));
+ await api(path+'/projects/'+id+'/unpublish','POST',{});assert.ok(!(await get()).includes('id="about-work"'));
 });

@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#007, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#008** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#007, #007A, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#008** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -131,6 +131,14 @@ Tickets #001–#041.
 - Files to touch: `src/website-pages.js` **(new)**; `src/site-polish.js`; `public/website-pages.css` **(new)**; `tests/website-pages.mjs` **(new)**.
 - Done when: About page uses owner-confirmed story and owned images; logo displays; absent portrait has an honest designed fallback; no generated employee is implied.
 - External keys/accounts: None.
+
+### #007A — Redesign Roofing About for trust
+
+- State: **Done** · Evidence: [007A](docs/build-evidence/007A/README.md) · User-requested insertion after #007, scope one day.
+- Add optional individually confirmed business trust facts and Questionnaire inputs; 3–5 available trust stats directly under hero with accessible count-up (never fill missing facts).
+- Use owned owner/crew photo in hero or designed trade truck/crew illustration; three icon-led claim/proof cards; up to 60 story words and at most two business-name mentions.
+- Recent published project tiles and service-area map chip; hide work section when no projects qualify. Preserve preview, ownership and publication boundaries.
+- Evidence: desktop/mobile screenshots and tests in docs/build-evidence/007A/README.md. Commit and stop; no push. External keys: none.
 
 ### #008 — Model trust selections and evidence
 
@@ -299,7 +307,7 @@ Tickets #001–#041.
 - Files to touch: `src/conversion-page.js`; `src/platform/conversion.ts`; `src/scroll-story.js`; `src/hero-timelapse.js`; `public/scroll-story.js`; `src/client/workspace/questionnaire.ts`; the existing Roofing imagery/sequence configuration located during this ticket; `tests/conversion-references.mjs`; `tests/scroll-story.mjs`; `docs/build-evidence/027A/` **(new)**.
 - Done when: (1) Keep the designed/generated hero imagery; do not replace it with real contractor photos. The finished roof is shown first and trusses remain story step 1. Verify forward/reverse scrolling and reduced-motion fallback. (2) Remove the “illustrative concept” note everywhere it appears in rendered site content; search source/variants and check the Roofing page family. (3) Add one additional direct headline option selectable in the contractor backoffice; show that the selection saves as draft and appears after publish. (4) Keep current CTA labels exactly unchanged. Show desktop/mobile screenshots and test output before #028.
 - External keys/accounts: None for reusing existing generated imagery. This ticket does not authorize replacement films or generation spend.
-- Added after #004C acceptance (queued only): warmer, more confident copy with less legal-sounding hedging; prominently surface response time/emergency service only when supplied by the contractor profile. Fix “How it works” step number/icon alignment (01–04). Use consistent section numbering or remove it. Remove footer line “Labeled illustrative and stock imagery does not depict completed work by this business.” Keep the small AI-example label under the before/after slider.
+- Added after #004C acceptance (queued only): warmer, more confident copy with less legal-sounding hedging; prominently surface response time/emergency service only when supplied by the contractor profile. Fix “How it works” step number/icon alignment (01–04). Use consistent section numbering or remove it. Remove footer line “Labeled illustrative and stock imagery does not depict completed work by this business.” Keep the small AI-example label under the before/after slider. Queue clarification from #007A: remove this footer disclaimer site-wide, including the wording variant “Labeled illustrations and stock imagery does not depict completed work by this business”; do not implement this removal in #007A.
 - Financing polish (queued 2026-09-24; do not implement in #004E): add a compact comparison chart with one bar per plan and monthly/total-cost views so low-monthly versus least-total tradeoffs are visual; move financing onto the dark premium band with lime accents; format budget with commas (e.g. $6,000).
 - Homepage polish (queued 2026-09-24; do not build in #006): give every service tile its own unique image, with no duplicates (installation and replacement currently share one); use the service-page display font for homepage section headings; on mobile use two compact service columns or a horizontal swipe row instead of one full-screen card per service; remove the empty band under the homepage header. Verify desktop/mobile and image uniqueness when #027A is executed.
 - Queued only after #006; do not implement in #007:

@@ -121,3 +121,8 @@ Shared renderer/config: src/trade-motion.js and src/trade-motion-config.js; prog
 ## #004F — supplied Roofing flight media
 
 Supersedes the Roofing placeholder portion of #004E: public/assets/trade-motion holds H.264/VP9 desktop and portrait encodes plus a real alpha cutout. Both viewport modes use scroll seeking; no mobile autoplay loop. Controller tries H.264 then WebM, coalesces seeks to the latest scroll position and unloads film for reduced motion. At landing it blends into the original poster; CSS uses the cutout alpha over original image pixels so the headline sits behind the house. Flight tracking is not supplied, so callouts show only on the final registered still. Hero copy has a dark gradient. Mobile anatomy uses a tight viewBox and an in-flow X-ray control. [004F evidence](../build-evidence/004F/README.md).
+
+
+## #007A — About trust design
+
+Roofing About uses src/about-page.js, public/about-trust.css/js with the shared trade-page components. Directly under the hero, confirmed stats use static accessible facts with visual numeric count-up; reduced motion and no-JS retain final values, and license IDs never animate. Three icon-led cards use confirmed proof or neutral request guidance. Owned portraits are allowed in this About hero by Joe's explicit override; the missing-photo treatment is a labeled native SVG Roofing truck. Recent projects reuse published gallery photos, with no fabricated project placeholders. The concise story keeps at most 60 words. [Evidence](../build-evidence/007A/README.md).
