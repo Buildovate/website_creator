@@ -1,0 +1,40 @@
+PASS configuration safety, locked values and calculator math
+PASS tenant roles, draft/publication isolation, shared footers, feature gates and promotion unlock/expiry
+PASS 84 trade/layout legal-preview links and their access controls
+✔ tests\constitution.mjs (298.3766ms)
+PASS hidden primary/additional locations, required license independent of toggles, legal routes and private draft links
+✔ #012 hidden contact regions collapse; required facts, legal links and publication boundaries persist (48.5515ms)
+PASS two visible locations, hidden empty third location, permitted optional facts, escaped policy, custom links and financing on/off
+✔ #012 multiple locations, optional facts, custom links, financing details and safe disclosure text (18.409ms)
+PASS policy normalization, missing Needs review, review scope/dates, required facts, current allowed attested claims and render-time expiry
+PASS actual API: missing-policy warning, required-fact publish block, snapshot isolation, admin-only review edits, old-client preservation, allowed/withheld claims, scope recheck and restore preserves withdrawn review
+✔ tests\legal-policy.mjs (271.1507ms)
+PASS premium service: generated hero, four image cards/steps, editable escaped headline, draft/publish isolation, sourced/confirmed/empty trust fields, no invented reviews, paired-photo privacy and brand contrast.
+PASS premium interactions: scroll reveal enhancement, visible reduced-motion fallback, comparison input and accessible value.
+✔ tests\premium-service.mjs (279.3699ms)
+✔ typed records round-trip; IDs/slugs survive edits and reordering (3.2389ms)
+✔ malformed records, duplicate URLs, broken city links and limits are rejected (2.3049ms)
+✔ media uses bounded photo IDs and alt text, never arbitrary URLs (0.5576ms)
+▶ real tenant API: draft/published isolation, ownership and permissions
+  ✔ editor saves all four page types without changing public snapshot (2.8325ms)
+  ✔ render validates page data and has no save/publish side effects (11.2426ms)
+  ✔ foreign/missing media are rejected at save/create without side effects (16.6332ms)
+  ✔ malformed contracts return HTTP 400; access/origin/concurrency stay enforced (6.927ms)
+  ✔ old editors omit the field safely; owner publishes a frozen snapshot (15.0119ms)
+  ✔ publish rechecks ownership even if a stored draft is stale or forged (4.0924ms)
+  ✔ explicit deletion remains draft until publish; backups retain page records (14.4734ms)
+✔ real tenant API: draft/published isolation, ownership and permissions (85.4441ms)
+✔ #004 service detail: published snapshot, preview membership, media and inquiry (36.4689ms)
+✔ #004 shared browser handler preserves service context and suppresses preview sends (77.8041ms)
+✔ #005 selected service grids: eight offerings, stable links, draft isolation and safe fallbacks (45.4691ms)
+✔ #006 FAQ: published snapshots, feature gating, schema, escaping and route access (25.7629ms)
+✔ #007 About route: confirmed copy, publication, owned portrait/logo and safe fallback (35.5369ms)
+✔ #007A confirmed trust facts, concise story, owner hero and published project tiles (60.5217ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 696.0586

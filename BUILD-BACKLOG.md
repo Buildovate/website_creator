@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#010, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS). Current authorized queue: **#012** (#027A additions queued and #011 framework complete). Stop after #012. #027A remains Not started.
+Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **Stopped after #012 as authorized.** #027A additions are queued only and #027A remains Not started. Next backlog ticket is #013; it is not authorized by this queue.
 
 ## Session contract
 
@@ -183,10 +183,11 @@ Tickets #001–#041.
 
 ### #012 — Finish footer empty states and policy placement
 
-- State: **Not started** · Estimate: **4h** (≤1 day).
+- State: **Done** · Estimate: **4h** (≤1 day).
 - Pack section: [`E`](docs/product/01-CORE-SITE-A-N.md) §E; [`S`](docs/product/02-CREATIVE-TRUST-O-T.md) §S.
 - Files to touch: `src/site-polish.js`; `public/site-polish.css`; `tests/constitution.mjs`.
 - Done when: All-hidden locations leave no headings/spacers; required policy fields remain visible; multiple-location layouts and legal links work at desktop/mobile widths.
+- Executed evidence: [#012](docs/build-evidence/012/README.md), 22 tests and desktop/mobile screenshots for four footer states. Real K23 content remains pending; no policy approval is implied.
 - External keys/accounts: None.
 
 ### #013 — Complete footer social identities
