@@ -292,3 +292,9 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Two-pass WebM is 1440×810 / 720×1280 at 4,225,862 / 1,072,050 bytes, under the approved 4,500,000 / 2,500,000 limits. H.264 stays full resolution at 3,043,291 / 1,358,304 bytes, under unchanged 4,000,000 / 2,000,000 limits. All four preserve the full frame counts and six-frame GOP. Updated the encoder budget gate and replaced delivery files.
 - [Desktop/mobile start/middle/end screenshots, blend evidence, both scroll recordings and test output](docs/build-evidence/004F-v2/README.md). Browser QA passes; visual inspection confirms the end frame fades into the aligned house still. Build and 3 media/service regressions pass.
 - Cleared this ticket from Waiting on Joe. Commit locator: `fix: deliver refreshed Roofing films within revised budgets (#004F-v2)`. Next: #027A backlog-only review badge/refresh additions, then #011 and #012; stop after #012.
+
+### #027A review-detail follow-up — Queued only (2026-09-24)
+
+- Added one compact rating badge per Google/Yelp source beneath the cards: permitted mark or text fallback, confirmed rating/count and source link. Preserve attribution, policy links and source-data fallbacks.
+- Queued removal of the public Refresh reviews button; keep refresh in the backoffice only. No rendered changes made in this step.
+- Documentation diff checked. Commit locator: `docs: queue compact review badges and private refresh (#027A)`. Continue #011, then #012, then stop.
