@@ -35,10 +35,17 @@ const PASSTHROUGH = [
 export function loadEnv(source = process.env) {
   const env = {
     APP_ENV: source.APP_ENV || 'local',
+    WORKSPACE_OWNER_EMAIL: source.WORKSPACE_OWNER_EMAIL || '',
     NODE_ENV: source.NODE_ENV || 'development',
     AWS_REGION: source.AWS_REGION || REGION,
     PORT: source.PORT || '8080',
+    LISTEN_HOST: source.LISTEN_HOST || (source.APP_ENV && source.APP_ENV !== 'local' ? '0.0.0.0' : '127.0.0.1'),
     AUTH_MODE: source.AUTH_MODE || '',
+    AUTH_SESSION_TTL_SECONDS: source.AUTH_SESSION_TTL_SECONDS || '3600',
+    APP_ORIGIN: source.APP_ORIGIN || '',
+    AUTH_ALB_SIGNER: source.AUTH_ALB_SIGNER || '',
+    AUTH_ALB_COOKIE_NAME: source.AUTH_ALB_COOKIE_NAME || 'AWSELBAuthSessionCookie',
+    AUTH_OIDC_CLIENT_ID: source.AUTH_OIDC_CLIENT_ID || '',
     AUTH_ALLOW_DEV_HEADERS: source.AUTH_ALLOW_DEV_HEADERS || '',
     AUTH_OIDC_ISSUER: source.AUTH_OIDC_ISSUER || '',
     COGNITO_USER_POOL_ID: source.COGNITO_USER_POOL_ID || '',
@@ -59,6 +66,8 @@ export function loadEnv(source = process.env) {
     BUCKET_DRIVER: source.BUCKET_DRIVER || '',
     MIGRATE_ON_BOOT: source.MIGRATE_ON_BOOT || '',
     ASSETS_ROOT: source.ASSETS_ROOT || '',
+    GEOIP_DB_PATH: source.GEOIP_DB_PATH || '',
+    GEOIP_TRUSTED_PROXIES: source.GEOIP_TRUSTED_PROXIES || '',
   };
   for (const key of PASSTHROUGH) if (source[key]) env[key] = source[key];
   return env;
@@ -90,5 +99,21 @@ export function assertRuntimeConfig(env) {
   if (env.AUTH_MODE === 'dev-header' && env.NODE_ENV === 'production' && env.AUTH_ALLOW_DEV_HEADERS !== '1') {
     errors.push('AUTH_MODE=dev-header is refused when NODE_ENV=production unless AUTH_ALLOW_DEV_HEADERS=1 is set deliberately');
   }
+  const mode = env.AUTH_MODE || (env.NODE_ENV === 'production' ? 'alb-oidc' : 'dev-header');
+  if (mode === 'dev-header' && env.APP_ENV !== 'local') errors.push('AUTH_MODE=dev-header is local only');
+  const ttl = Number(env.AUTH_SESSION_TTL_SECONDS || 3600);
+  if (!Number.isInteger(ttl) || ttl < 60 || ttl > 86400) errors.push('AUTH_SESSION_TTL_SECONDS must be 60–86400');
+  if (env.APP_ENV !== 'local' && mode !== 'disabled' && !env.APP_ORIGIN) errors.push('APP_ORIGIN is required for shared authentication');
+  if (env.APP_ORIGIN) {
+    try {
+      const url = new URL(env.APP_ORIGIN);
+      if (!['http:','https:'].includes(url.protocol) || url.username || url.password || url.pathname !== '/' || url.search || url.hash) errors.push('APP_ORIGIN must be an origin without credentials, path, query or fragment');
+      if (env.APP_ENV !== 'local' && url.protocol !== 'https:') errors.push('Shared APP_ORIGIN requires HTTPS');
+      if (env.APP_ENV === 'local' && !['localhost','127.0.0.1','[::1]'].includes(url.hostname)) errors.push('Local APP_ORIGIN must use loopback');
+    } catch { errors.push('APP_ORIGIN must be a valid origin'); }
+  }
+  if (mode === 'alb-oidc' && !/^[A-Za-z][A-Za-z0-9_]{0,63}$/.test(env.AUTH_ALB_COOKIE_NAME || 'AWSELBAuthSessionCookie')) errors.push('Invalid AUTH_ALB_COOKIE_NAME');
+  if (mode === 'cognito' && (!env.COGNITO_USER_POOL_ID || !env.COGNITO_CLIENT_ID)) errors.push('Cognito requires COGNITO_USER_POOL_ID and COGNITO_CLIENT_ID');
+  if (mode === 'alb-oidc' && (!env.AUTH_ALB_SIGNER || !env.AUTH_OIDC_ISSUER || !env.AUTH_OIDC_CLIENT_ID)) errors.push('ALB requires AUTH_ALB_SIGNER, AUTH_OIDC_ISSUER and AUTH_OIDC_CLIENT_ID');
   return errors;
 }

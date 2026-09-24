@@ -38,7 +38,7 @@ Blog: migration `0003` adds starter drafts. Public blog requires the site publis
 
 ## Browser
 - **Pages**: `/` dashboard (`src/views.js`). Draft preview `/preview/:slug` (1280 / 768 / 390 CSS pixels in the editor notes, `README.md`). Public pages and forms under `/s/:slug/`. `/proposal/:token`. `/team-join` for staff invites.
-- **Scripts / data**: `public/app.js`, `public/control-ui.js`, `public/crm-enhancements.js`, `public/workspace-public.js`, `public/blog.js`, `public/excel-reader.js` (loaded by the dashboard).
+- **Scripts / data**: `src/client/workspace/legacy-workspace.js`, `public/control-ui.js`, `public/crm-enhancements.js`, `public/workspace-public.js`, `public/blog.js`, `public/excel-reader.js` (loaded by the dashboard).
 - **Calls**: `/api/workspace/…`, `/api/team`, `/api/control/…`, `/api/session`.
 
 Contractor entry points named in `README.md`: Launch Pad, Owner photo, Design templates, Pages, Forms & submissions, Search visibility, Plan & add-ons, Follow-ups, Domains.
@@ -63,3 +63,23 @@ Contractor entry points named in `README.md`: Launch Pad, Owner photo, Design te
 
 ## Sources
 `src/workspace.js`, `src/crm-next.js`, `src/crm.js`, `src/control.js`, `src/blog.js`, `src/builder.js`, `src/zoom.js`, `src/views.js`, `db/schema.ts`, `README.md`, `OPERATIONS.md`, `CRM-RELEASE.md`, `DESIGN_RESEARCH.md`.
+
+
+## Questionnaire tab — local, 2026-09-23/24
+
+The Pack 0 increment adds `settings.platform` (schema in `src/platform/constitution.ts`), a Questionnaire draft editor, published Financing/Promotions pages, a public same-origin quiz-unlock endpoint, and shared footer/location/social settings. New pages default off; public reads use published snapshots; owner publication and existing tenant roles remain unchanged. This work is local and not deployed. Exact behavior, limitations and the full A–AE checklist: [Pack 0 implementation](../product/PACK0_IMPLEMENTATION.md).
+
+
+Customer-intent references (local): `settings.journey` and `settings.conversionBrief` are normalized on the server. Journey selection is available at creation and in the Questionnaire; briefs and reference-specific confirmed messaging live in the Questionnaire. Save remains draft-only. See [design](design.md#customer-intent-reference-experiences) and [standing design principles](../product/CONVERSION_DESIGN_PRINCIPLES.md).
+
+Questionnaire service controls (local): trade-library checkboxes plus existing custom services edit the same `settings.services` list as the Services tab. Existing selected descriptions and order survive. Save updates the draft only; the existing role and publication rules apply. `service-selection.ts` deduplicates choices and enforces one to 24 selections. The hero checkbox keeps `effects.scrollStory` and `scrollStory.enabled` consistent. Custom additions, description edits and ordering remain in Services.
+
+
+## Pack 3 commercial and CRM specification — local documentation, 2026-09-23
+
+[Pack 3 U–AA](../product/PACK3_UPSELLS_MEDIA_CRM_SPEC.md) records the proposed versioned Price Book, invoice lines, verified-payment entitlements, 900-second close offer, media/content backoffice and remote CRM adapter. [Catalog details](../product/PACK3_PRICE_BOOK.md) preserve all 45 supplied SKUs plus explicit billing variants and proposed CRM setup. Existing payment records do not implement this ledger or prove payment settlement. `src/crm.js` local contact capture is not a connection to the separate Contractor CRM. No runtime/CRM/deployment change was made in that documentation increment. Pack 4 is now received; see the subsequent specification note below.
+
+
+## Pack 4 growth and marketing specification — documentation only, 2026-09-23
+
+[Pack 4 AB–AF](../product/PACK4_GROWTH_ADS_EMAIL_SPEC.md) and its [catalog delta](../product/PACK4_CATALOG_DELTA.md) specify seasonal drops, eight creative products, analytics/Growth, approved paid advertising and contractor email. All five files are received; [index](../product/SPECIFICATION_INDEX.md) links their implementation boundaries. No new runtime surfaces or external connections are implemented by these documents. A GA measurement ID is not reporting authorization; existing local contact capture is not remote CRM sync; current form contact consent does not grant marketing consent. Read the per-channel approval/suppression/budget rules before implementing a delivery worker.

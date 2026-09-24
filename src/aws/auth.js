@@ -18,6 +18,11 @@ export function authMode(env) {
 export function authConfig(env, fetchImpl = globalThis.fetch) {
   return {
     mode: authMode(env),
+    appEnv: env.APP_ENV || 'local',
+    sessionTtl: Number(env.AUTH_SESSION_TTL_SECONDS || 3600),
+    albSigner: env.AUTH_ALB_SIGNER || '',
+    albCookieName: env.AUTH_ALB_COOKIE_NAME || 'AWSELBAuthSessionCookie',
+    oidcClientId: env.AUTH_OIDC_CLIENT_ID || '',
     nodeEnv: env.NODE_ENV || 'development',
     allowDevHeaders: env.AUTH_ALLOW_DEV_HEADERS === '1',
     region: env.AWS_REGION || 'us-west-1',
@@ -71,8 +76,8 @@ function decodePart(part) {
 
 function timingOk(payload) {
   const now = Date.now();
-  if (payload.nbf && payload.nbf * 1000 - SKEW_MS > now) return false;
-  if (!payload.exp || payload.exp * 1000 + SKEW_MS < now) return false;
+  if (payload.nbf !== undefined && (!Number.isFinite(Number(payload.nbf)) || Number(payload.nbf) * 1000 - SKEW_MS > now)) return false;
+  if (!Number.isFinite(Number(payload.exp)) || Number(payload.exp) <= 0 || Number(payload.exp) * 1000 + SKEW_MS < now) return false;
   return true;
 }
 
@@ -86,6 +91,7 @@ async function cached(keyId, loader) {
   const hit = keyCache.get(keyId);
   if (hit && hit.until > Date.now()) return hit.value;
   const value = await loader();
+  if (keyCache.size >= 128) keyCache.delete(keyCache.keys().next().value);
   keyCache.set(keyId, { value, until: Date.now() + 60 * 60 * 1000 });
   return value;
 }
@@ -94,7 +100,7 @@ export function clearAuthCache() {
   keyCache.clear();
 }
 
-async function verifiedClaims(token, { algAllowed, keyFor, issuer }) {
+async function verifiedClaims(token, { algAllowed, keyFor, issuer, alb }) {
   if (typeof token !== 'string' || token.length < 20 || token.length > 16000) return null;
   const parts = token.split('.');
   if (parts.length !== 3 || parts.some(part => !part)) return null;
@@ -107,44 +113,48 @@ async function verifiedClaims(token, { algAllowed, keyFor, issuer }) {
     return null;
   }
   if (!header || header.alg === 'none' || !algAllowed.includes(header.alg) || !header.kid) return null;
-  if (!payload || typeof payload !== 'object' || !timingOk(payload)) return null;
-  if (issuer && payload.iss !== issuer) return null;
+  if (!payload || typeof payload !== 'object' || Array.isArray(payload)) return null;
+  const timing = alb ? header : payload;
+  if (!timingOk(timing)) return null;
+  if (issuer && timing.iss !== issuer) return null;
+  if (alb && (header.signer !== alb.signer || header.client !== alb.client)) return null;
   let key;
   try {
     key = await keyFor(header.kid);
   } catch (error) {
-    console.warn('Auth key lookup failed', error.message || error);
+    console.warn('Auth key lookup failed');
     return null;
   }
   const signature = Buffer.from(parts[2], 'base64url');
-  const ok = verifySignature(header.alg, `${parts[0]}.${parts[1]}`, signature, key);
-  if (!ok) return null;
+  try { if (!verifySignature(header.alg, `${parts[0]}.${parts[1]}`, signature, key)) return null; }
+  catch { return null; }
   return payload;
 }
 
 async function albUser(headers, config) {
   const token = headers.get('x-amzn-oidc-data');
-  if (!token) return null;
+  if (!token || !config.albSigner || !config.issuer || !config.oidcClientId) return null;
   const payload = await verifiedClaims(token, {
+    alb: { signer: config.albSigner, client: config.oidcClientId },
     algAllowed: ['ES256'],
     issuer: config.issuer,
     async keyFor(kid) {
       if (!/^[A-Za-z0-9_-]{1,128}$/.test(kid)) throw new Error('Unexpected ALB key id');
       const pem = await cached(`alb:${config.region}:${kid}`, async () => {
-        const response = await config.fetch(`https://public-keys.auth.elb.${config.region}.amazonaws.com/${kid}`);
+        const response = await config.fetch(`https://public-keys.auth.elb.${config.region}.amazonaws.com/${kid}`, {signal:AbortSignal.timeout(5000)});
         if (!response.ok) throw new Error(`ALB public key HTTP ${response.status}`);
         return response.text();
       });
       return createPublicKey(pem);
     },
   });
-  if (!payload) return null;
-  return identity(payload.sub, payload.email, payload.username || payload['cognito:username']);
+  if (!payload || ![true,'true'].includes(payload.email_verified)) return null;
+  return identity(payload.sub, payload.email);
 }
 
 async function cognitoUser(headers, config) {
-  if (!config.userPoolId) {
-    console.warn('AUTH_MODE=cognito requires COGNITO_USER_POOL_ID');
+  if (!config.userPoolId || !config.clientId || !/^[a-z]{2}-[a-z]+-\d_[A-Za-z0-9]+$/.test(config.userPoolId)) {
+    console.warn('Cognito configuration is incomplete');
     return null;
   }
   const header = headers.get('authorization') || '';
@@ -155,22 +165,33 @@ async function cognitoUser(headers, config) {
     algAllowed: ['RS256'],
     issuer,
     async keyFor(kid) {
-      const jwks = await cached(`cognito:${issuer}`, async () => {
-        const response = await config.fetch(`${issuer}/.well-known/jwks.json`);
-        if (!response.ok) throw new Error(`Cognito JWKS HTTP ${response.status}`);
+      if (typeof kid !== 'string' || kid.length > 200) throw new Error('Invalid key id');
+      const cacheKey = `cognito:${issuer}`;
+      const loader = async () => {
+        const response = await config.fetch(`${issuer}/.well-known/jwks.json`, {signal:AbortSignal.timeout(5000)});
+        if (!response.ok) throw new Error('JWKS unavailable');
         return response.json();
-      });
-      const jwk = jwks.keys?.find(key => key.kid === kid);
+      };
+      let jwks = await cached(cacheKey, loader);
+      let jwk = jwks.keys?.find(key => key.kid === kid && key.kty === 'RSA' && (!key.use || key.use === 'sig') && (!key.alg || key.alg === 'RS256'));
+      const refreshKey = cacheKey + ':refresh';
+      if (!jwk && (!keyCache.get(refreshKey) || keyCache.get(refreshKey).until < Date.now())) {
+        keyCache.set(refreshKey,{value:null,until:Date.now()+30_000});
+        keyCache.delete(cacheKey);
+        jwks = await cached(cacheKey,loader);
+        jwk = jwks.keys?.find(key => key.kid === kid && key.kty === 'RSA' && (!key.use || key.use === 'sig') && (!key.alg || key.alg === 'RS256'));
+      }
       if (!jwk) throw new Error('Cognito signing key not found');
       return createPublicKey({ key: jwk, format: 'jwk' });
     },
   });
-  if (!payload || payload.token_use !== 'id') return null;
-  if (config.clientId && payload.aud !== config.clientId) return null;
-  return identity(payload.sub, payload.email, payload['cognito:username']);
+  if (!payload || payload.token_use !== 'id' || payload.email_verified !== true) return null;
+  if (payload.aud !== config.clientId) return null;
+  return identity(payload.sub, payload.email);
 }
 
 function devUser(headers, config) {
+  if (config.appEnv !== 'local') return null;
   if (config.nodeEnv === 'production' && !config.allowDevHeaders) return null;
   const id = headers.get('x-buildovate-user-id');
   if (!id) return null;
@@ -187,15 +208,16 @@ export async function resolveUser(headers, config) {
   throw error;
 }
 
-export async function applyAuth(request, config) {
+export async function applyAuth(request, config, resolvedUser = undefined) {
   const headers = new Headers(request.headers);
   headers.delete(ID_HEADER);
   headers.delete(EMAIL_HEADER);
-  const user = await resolveUser(headers, config);
+  const user = resolvedUser === undefined ? await resolveUser(headers, config) : resolvedUser;
+  for (const key of [...headers.keys()]) if (key.startsWith('oai-authenticated-user-') || key.startsWith('x-buildovate-')) headers.delete(key);
   headers.delete('x-amzn-oidc-data');
   headers.delete('x-amzn-oidc-identity');
   headers.delete('x-amzn-oidc-accesstoken');
-  if (config.mode === 'cognito') headers.delete('authorization');
+  headers.delete('authorization');
   if (user) {
     headers.set(ID_HEADER, user.id);
     headers.set(EMAIL_HEADER, user.email);

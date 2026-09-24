@@ -75,3 +75,8 @@ Passthrough provider names loaded by `src/aws/env.js` when set: `OPENAI_API_KEY`
 
 ## Sources
 `docs/ENVIRONMENTS.md`, `docs/AWS_MIGRATION.md`, `setup.md`, `src/aws/env.js`, `src/aws/server.js`, `src/aws/migrate.js`, `docker-compose.yml`, `docker-compose.dev.yml`, `Dockerfile`, `Dockerfile.dev`, `Procfile`, `.ebextensions/healthcheck.config`, `aws/env/*.example`, `.github/workflows/ci.yml`, `.openai/hosting.json`, `package.json`.
+
+
+## Website experience redesign — local, 2026-09-24
+
+AWS city personalization uses `src/aws/geoip.js`, `mmdb-lib` and a local DB-IP City Lite database. New configuration: `GEOIP_DB_PATH` (optional path) and `GEOIP_TRUSTED_PROXIES` (explicit IP/CIDR allowlist, empty by default). `npm run geoip:update -- YYYY-MM` installs the gitignored MMDB under `aws/geoip`; clean image builds must include the data. No external visitor-IP lookup is performed. `src/aws/s3.js` now supports HEAD and single byte ranges for reliable video scrubbing. This work is not deployed. See [experience implementation and validation](../product/EXPERIENCE_REDESIGN.md).

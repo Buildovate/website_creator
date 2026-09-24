@@ -14,13 +14,13 @@ Chooses how a contractor site looks: trade kits, layout compositions, cinematic 
 - **Auth**: library previews are staff, or a member of the `tenant` query param. Applying a kit to a draft uses tenant `write`.
 
 ### Kits
-`public/design-kits.json` kits: `roofing` (RIDGELINE), `patios` (OPEN AIR), `plumbing` (FLOW STATE), `hvac` (ATMOSPHERE), `electrical` (CURRENT), `landscaping` (FIELDWORK), `general-contractors` (FORM & FOUNDATION). Same seven trades as `public/trade-library.json`. Each kit has `trade`, `layout` (`immersive` | `editorial` | `studio`), `color`, `headline`, `direction`, `prompt`, `recipes`, and `videoPoster`.
+`public/design-kits.json` kits: `roofing` (RIDGELINE), `patios` (OPEN AIR), `plumbing` (FLOW STATE), `hvac` (ATMOSPHERE), `electrical` (CURRENT), `landscaping` (FIELDWORK), `general-contractors` (FORM & FOUNDATION). Also `flooring`, `painting`, `fencing`, `garage-doors`, and `pest-control`: twelve trades matching `public/trade-library.json`. Each kit has `trade`, `layout` (`immersive` | `editorial` | `studio`), `color`, `headline`, `direction`, `prompt`, `recipes`, and `videoPoster`.
 
 `kitDefaults` maps layout to template: immersive → `cinematic`, editorial → `editorial`, studio → `blueprint`.
 
-`effectKeys` in `src/design-kits.js`: `reveal`, `parallax`, `marquee`, `servicePicker`, `process`, `stickyNav`, `cutaway`, `serviceImages`, `commercial`, `ctaBands`, `projectMap`, `readingProgress`, `spotlight`, `chapterRail`, `planning`. A missing flag defaults to on (`!== false`).
+`effectKeys` in `src/design-kits.js`: `reveal`, `parallax`, `marquee`, `servicePicker`, `process`, `stickyNav`, `cutaway`, `serviceImages`, `commercial`, `ctaBands`, `projectMap`, `readingProgress`, `spotlight`, `chapterRail`, `planning`, `titleMotion`, `scrollStory`. A missing flag defaults to on (`!== false`).
 
-`cleanDesign` (`src/design-variant.js`) allows only:
+`cleanDesign` (`src/design-variant.js`) supports the six visual fields below plus `serviceLayout`, `ownerLayout`, `sectionOrder`, `storyIntensity`, `storyTreatment`, `bannerArt`, and `headlineMotion` (thirteen total):
 
 | Field | Values (first is default) |
 |---|---|
@@ -42,7 +42,7 @@ Roofing map demos: three labeled scenarios when no real projects exist and `show
 
 ## Browser
 - **Pages**: design preview routes above; kit sections rendered inside `/s/:slug` by `src/showcase.js` / `src/views.js`.
-- **Scripts / data**: `public/design-kits.json`, `public/design-recipes.json`, `public/trade-films.json`, `public/pricing-films.json`, `public/trade-library.json`, `public/cutaways.json`, `public/service-art.json`, `public/service-copy.json`, `public/cinematic.js`, `public/cinematic-controls.js`, `public/cutaway.js`, `public/showcase.js`, `public/trade-components.js`, and the matching CSS files.
+- **Scripts / data**: `public/design-kits.json`, `public/design-recipes.json`, `public/trade-films.json`, `public/pricing-films.json`, `public/trade-library.json`, `public/cutaways.json`, `public/service-art.json`, `public/service-copy.json`, `src/client/site/cinematic.js`, `src/client/site/cinematic-controls.js`, `src/client/site/cutaway.js`, `src/client/site/showcase.js`, `src/client/site/trade-components.js`, and the matching CSS files.
 - **Calls**: `/api/design-library` from the admin composer. Preview routes are HTML.
 
 ## Business rules
@@ -63,6 +63,42 @@ Roofing map demos: three labeled scenarios when no real projects exist and `show
 
 ## Sources
 `DESIGN_RESEARCH.md`, `OPERATIONS.md`, `README.md`, `docs/chat-pricing-release.md`, `public/design-kits.json`, `public/design-recipes.json`, `public/trade-films.json`, `public/pricing-films.json`, `public/trade-library.json`, `public/cutaways.json`, `src/design-kits.js`, `src/design-variant.js`, `src/cinematic.js`, `src/showcase.js`, `src/saved-designs.js`, `src/worker.js`, `src/pricing.js`.
+
+
+## Shared footer and navigation — local, 2026-09-23/24
+
+The Pack 0 increment adds `settings.platform` (schema in `src/platform/constitution.ts`), a Questionnaire draft editor, published Financing/Promotions pages, a public same-origin quiz-unlock endpoint, and shared footer/location/social settings. New pages default off; public reads use published snapshots; owner publication and existing tenant roles remain unchanged. This work is local and not deployed. Exact behavior, limitations and the full A–AE checklist: [Pack 0 implementation](../product/PACK0_IMPLEMENTATION.md).
+
+
+## Website experience redesign — local, 2026-09-24
+
+Financing and Promotions now have custom illustrated heroes, stronger CTAs, benefit/process sections, ticket-style rewards, a visual calculator and trade-specific scroll-scrubbed films. Footer social profiles use local accessible SVGs. Reduced motion and pause controls are supported. This work is not deployed. See [experience implementation and validation](../product/EXPERIENCE_REDESIGN.md).
+
+
+## Customer-intent reference experiences
+
+Read [standing conversion design principles](../product/CONVERSION_DESIGN_PRINCIPLES.md) for all subsequent public design work. Three opt-in `settings.journey` values (`roof-repair`, `hvac-replacement`, `patio-design`) select `src/conversion-page.js` through the shared showcase renderer; `standard` preserves the existing renderer. The journey must match the website trade. `settings.conversionBrief` stores planning audience/problem/source and optional public headline/introduction/differentiator/next-step copy. Public custom copy only renders when confirmed. See `src/platform/conversion.ts`.
+
+Previews use the existing authenticated `/design-preview/:kit/:layout?journey=...` route. The trade library links to them; creation and Questionnaire include journey selectors. Visual composition updates preserve journey/brief; reference rendering currently honors font, cards, reveal, cutaway, projectMap and hero scrollStory. It does not claim every legacy visual dimension changes a reference. Saved style favorites still store visual styles, not customer briefs or journeys.
+
+References use one main inquiry form, real configured services, contextual selection, project city/timing, request-appropriate CTAs, FAQs, real review-profile links only after confirmation, and optional existing portfolio content. All three references use the existing full-film scrub controller in the hero while preserving their customer-intent copy. The sticky header is measured for film and anchor offsets. The animation can be disabled in the Questionnaire; reduced motion and media errors use a static scene. Educational cutaways remain below the services. Forms use the shared same-origin, consent-protected inquiry transport. Public settings still come from published snapshots. Missing owner sections no longer get About links. The generic pricing CTA now reads Request an estimate; unsupported Free estimate copy was removed.
+
+Local verification: `npm run build`, `npm run typecheck:client`, `npm run test:conversion`, and existing design/scroll/constitution/client suites. Disposable local preview: `node .data/conversion-preview.mjs`, port 8094, three slugs matching the journey IDs. This is not a staging or production release.
+
+
+Reference refinement (updated for Pack 2): enabled empty portfolios show the honest Project Map empty state; authenticated library previews show labeled sample projects, configured chat remains inline beside the inquiry, and reference section order is not rearranged by legacy section settings. Services must match the selected journey. The common film controller ignores an empty deferred-source error until a source has actually been assigned; real media errors still show the finished static scene. The regression suite covers this below-fold case.
+
+
+## Pack 2 creative and proof direction
+
+Pack 2 (O-T) is specified in [the creative/trust specification](../product/PACK2_CREATIVE_TRUST_SPEC.md), with twelve-trade About/Shorts prompts in its companion. These are not completed runtime integrations. [Local refinements](../product/PACK2_LOCAL_REFINEMENTS.md) records the implemented map/branding/review/calculator work. `websiteBrand` in `src/site-polish.js` prefers the uploaded logo, otherwise a house mark; reference headers validate available photo ownership. `src/project-map.js` provides an honest zero-project section; actual published portfolio data retains the existing map and filters. `src/showcase.js` now supplies labeled sample portfolios to reference previews. Shared header branding stays inline and responsive. The existing hero, selected services and contact form are preserved.
+
+## Windows/Doors and Solar — local, 2026-09-24
+
+The library now has 14 kits: `windows-doors` / `Windows/Doors` / Daylight, and `solar` / `Solar` / Sunward add eight selectable services each. Each has one generated concept hero and eight SVG service illustrations; their optional `kit.art.banner/detail` references avoid nonexistent hardcoded trade-art paths. `kit.intro` supplies trade-specific first-screen copy. They use the existing five-chapter image scroll story until suitable trade-specific films exist; original 12-trade videos remain untouched. Home/pricing/blog and all three layouts are covered. See `docs/product/IMPLEMENTATION_ROADMAP.md` and `TRADE_FINANCING_ASSETS.md`.
+
+Mobile QA also corrected the legacy showcase rule that hid all but the last navigation link. Shared navigation now retains all links in a horizontally scrollable sticky row. The updated showcase stylesheet reference is versioned to avoid stale browser caches.
+
 
 ## Ticket #002 — Roofing journey acceptance
 

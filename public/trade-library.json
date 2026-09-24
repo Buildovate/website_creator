@@ -68,5 +68,75 @@
     "New construction",
     "Commercial improvements",
     "Whole-home renovation"
+  ],
+  "Flooring": [
+    "Hardwood flooring",
+    "Luxury vinyl flooring",
+    "Laminate flooring",
+    "Tile flooring",
+    "Floor refinishing",
+    "Floor repair",
+    "Subfloor preparation",
+    "Commercial flooring"
+  ],
+  "Painting": [
+    "Interior painting",
+    "Exterior painting",
+    "Cabinet painting",
+    "Deck and fence staining",
+    "Surface preparation",
+    "Drywall repair",
+    "Decorative finishes",
+    "Commercial painting"
+  ],
+  "Fencing": [
+    "Wood fencing",
+    "Vinyl fencing",
+    "Metal fencing",
+    "Privacy fencing",
+    "Gates",
+    "Fence repair",
+    "Pool fencing",
+    "Commercial fencing"
+  ],
+  "Garage Doors": [
+    "Garage door installation",
+    "Garage door repair",
+    "Spring replacement",
+    "Opener installation",
+    "Opener repair",
+    "Panel replacement",
+    "Weather sealing",
+    "Garage door maintenance"
+  ],
+  "Pest Control": [
+    "Pest inspections",
+    "Ant control",
+    "Rodent control",
+    "Termite inspections",
+    "Cockroach control",
+    "Spider control",
+    "Mosquito control",
+    "Preventive maintenance"
+  ],
+  "Windows/Doors": [
+    "Window replacement",
+    "Window installation",
+    "Energy-efficient windows",
+    "Entry doors",
+    "Patio doors",
+    "Sliding glass doors",
+    "French doors",
+    "Window and door repair"
+  ],
+  "Solar": [
+    "Solar panel installation",
+    "Solar battery storage",
+    "Solar system design",
+    "Solar panel maintenance",
+    "Solar panel cleaning",
+    "Solar inverter replacement",
+    "Solar removal and reinstallation",
+    "Solar system monitoring"
   ]
 }

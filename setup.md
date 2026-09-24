@@ -272,18 +272,13 @@ Say this in plain sentences after the health check passes:
 
 Those passwords are the local Compose defaults in `docker-compose.yml`. They are not preview or production credentials. Inside the Compose network the app uses hostname `postgres` and `http://minio:9000`. Those names do not resolve on the host.
 
-### 10. Local API auth
+### 10. Local sign-in
 
-Local mode is `AUTH_MODE=dev-header` from `aws/env/docker.env.example`. Send these headers on API requests:
+Open http://localhost:8080/login. Enter your email and a stable local user ID. This local development form does not verify email or create administrator rights. The first administrator must still explicitly initialize the workspace using the configured bootstrap owner email; other users need an existing assignment or invitation.
 
-- `x-buildovate-user-id`
-- `x-buildovate-user-email`
+The server creates a one-hour HttpOnly, SameSite=Lax session cookie. Incoming identity headers are ignored by the HTTP runtime, even though the mode retains the name `dev-header`. Mutating private API requests require this cookie, the `csrfToken` from `GET /api/session` in `X-CSRF-Token`, and a matching `Origin`. The browser handles these automatically. Sign out using the workspace button.
 
-```powershell
-curl.exe -fsS http://localhost:8080/api/session -H "x-buildovate-user-id: local-user" -H "x-buildovate-user-email: you@example.com"
-```
-
-`dev-header` is for this machine only. Do not set `AUTH_ALLOW_DEV_HEADERS`. Do not describe these headers as a preview or production login.
+Do not enable local sign-in on shared environments. Compose publishes ports only on loopback. Direct Node runs default to `127.0.0.1`; Compose sets `LISTEN_HOST=0.0.0.0` inside its container only. See `docs/modules/auth.md` for verified shared-provider requirements.
 
 ### 11. Stop and start again
 

@@ -41,7 +41,7 @@ A tenant is one contractor website: draft settings, a published snapshot, member
 
 ## Browser
 - **Pages**: `/s/:slug`, `/s/:slug/projects/:id`, `/preview/:slug` (member), `/` workspace. `GET /robots.txt` is `Disallow: /`. HTML responses send `x-robots-tag: noindex, nofollow`.
-- **Scripts / data**: `public/site.js`, `public/app.js`, `public/site.css`.
+- **Scripts / data**: `src/client/site/index.ts`, `src/client/workspace/legacy-workspace.js`, `public/site.css`.
 - **Calls**: tenant routes above. Editor preview uses `POST .../render`.
 
 ## Business rules
@@ -62,6 +62,19 @@ A tenant is one contractor website: draft settings, a published snapshot, member
 
 ## Sources
 `db/schema.ts`, `src/api.js`, `src/core.js`, `src/worker.js`, `src/builder.js`, `src/views.js`, `src/operations.js`, `OPERATIONS.md`, `README.md`, `public/trade-library.json`.
+
+
+## Questionnaire, financing and promotions — local, 2026-09-23/24
+
+The Pack 0 increment adds `settings.platform` (schema in `src/platform/constitution.ts`), a Questionnaire draft editor, published Financing/Promotions pages, a public same-origin quiz-unlock endpoint, and shared footer/location/social settings. New pages default off; public reads use published snapshots; owner publication and existing tenant roles remain unchanged. This work is local and not deployed. Exact behavior, limitations and the full A–AE checklist: [Pack 0 implementation](../product/PACK0_IMPLEMENTATION.md).
+
+
+## Website experience redesign — local, 2026-09-24
+
+`settings.platform.neighborhood` controls a shared city-aware banner and owner-confirmed city-specific review evidence. Public `GET /api/public/:slug/location` uses the published snapshot; `?preview=1` requires membership. Neutral copy is used without approved evidence. Questionnaire changes remain draft until publication. This work is not deployed. See [experience implementation and validation](../product/EXPERIENCE_REDESIGN.md).
+
+
+Customer-intent references (local): `settings.journey` and `settings.conversionBrief` are normalized on the server. Journey selection is available at creation and in the Questionnaire; briefs and reference-specific confirmed messaging live in the Questionnaire. Save remains draft-only. See [design](design.md#customer-intent-reference-experiences) and [standing design principles](../product/CONVERSION_DESIGN_PRINCIPLES.md).
 
 ## First-class page data contracts — ticket #003
 

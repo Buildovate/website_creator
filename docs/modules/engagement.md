@@ -63,3 +63,29 @@ Reviews: Google and Yelp profile URLs are HTTPS and host-allowlisted in `cleanRe
 
 ## Sources
 `src/engagement.js`, `src/reviews.js`, `src/pricing.js`, `src/worker.js`, `src/zoom.js`, `db/schema.ts`, `docs/chat-pricing-release.md`, `DESIGN_RESEARCH.md`, `CRM-RELEASE.md`, `OPERATIONS.md`, `.env.example`, `src/aws/env.js`.
+
+
+## Pack 0 customer options — local, 2026-09-23/24
+
+The Pack 0 increment adds `settings.platform` (schema in `src/platform/constitution.ts`), a Questionnaire draft editor, published Financing/Promotions pages, a public same-origin quiz-unlock endpoint, and shared footer/location/social settings. New pages default off; public reads use published snapshots; owner publication and existing tenant roles remain unchanged. This work is local and not deployed. Exact behavior, limitations and the full A–AE checklist: [Pack 0 implementation](../product/PACK0_IMPLEMENTATION.md).
+
+
+## Website experience redesign — local, 2026-09-24
+
+The Financing/Promotions redesign preserves existing lender gates, visitor-entered estimate assumptions, real offer dates and server-side quiz validation. New neighborhood review headlines require published, owner-confirmed city evidence and matching geography; neutral local CTAs are the fallback. This work is not deployed. See [experience implementation and validation](../product/EXPERIENCE_REDESIGN.md).
+
+
+## Pack 2 local review and calculator refinements
+
+Conversion references render confirmed Google/Yelp review profiles and use `reviewConnectionPreview` for a neutral authenticated design preview when no profiles exist. Public websites do not receive invented reviews. `public/reviews.js` reports source-link fallback when every provider is unavailable and also loads without IntersectionObserver. Provider adapters, attribution and owner confirmation remain required. Expanded trust-site logos and additional provider feeds are specification work, not live connections.
+
+The financing page includes four editable APR/term comparisons against one entered balance. Example terms load only on explicit action, and remain illustrations, not lender offers. Selecting a row updates the main amortization result; input changes clear stale numbers. The result also shows total including the down payment. See [Pack 2 local verification](../product/PACK2_LOCAL_REFINEMENTS.md); `node tests/reference-proof.mjs` exercises map/logo/review publish boundaries with isolated mocked providers.
+
+
+## Pack 4 proposed email and measurement architecture — documentation only, 2026-09-23
+
+[Email platform specification](../product/PACK4_EMAIL_PLATFORM.md) records the required SendGrid architecture, subject to actual account/subuser/IP capacity validation. Existing `RESEND_API_KEY` flags and held follow-ups are not evidence of working contractor email or permission to migrate the separate CRM. No marketing sender/DNS/account was provisioned. Replies to a contractor inbox cannot appear in CRM without a real reply connector. Each campaign needs owner approval and recipient permission/suppression checks; yearly scheduling creates review tasks. [Analytics/ads specification](../product/PACK4_ANALYTICS_ADS.md) distinguishes accepted inquiries, clicks, confirmed calls and verified revenue; no tags, advertising or spend were activated.
+
+## Calculator-first financing — local, 2026-09-24
+
+The public lender showcase is removed. Native `details` directly below the estimate uses “Get Financing Options →” and exposes only enabled, confirmed merchant application URLs. Names/domains appear only within that step, with no lender logos or marketing cards. Draft previews suppress application anchors. This is link selection, not a real-time multi-lender offer adapter or shared prequalification. No calculator data is transmitted. Existing validation still requires one enabled lender to enable the page. See `docs/product/IMPLEMENTATION_ROADMAP.md`; tests in `tests/trades-financing.mjs` cover all one/two/three counts and publish boundaries.

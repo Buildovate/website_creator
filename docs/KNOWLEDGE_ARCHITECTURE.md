@@ -48,7 +48,7 @@ One doc per domain, shaped by `docs/modules/_TEMPLATE.md`. These are the home fo
 | `auth.md` | `AUTH_MODE`, `src/aws/auth.js`, local dev headers, Cognito/OIDC status | `src/aws/auth.js`, `src/aws/env.js`, env examples, `docs/AWS_MIGRATION.md` |
 | `sites.md` | Tenants, publish, memberships, public site routes | `db/schema.ts`, `src/api.js`, `src/core.js`, `src/worker.js` |
 | `design.md` | Design kits, cinematic layouts, trade films, variants | `DESIGN_RESEARCH.md`, `public/*.json`, `src/design-kits.js`, `src/design-variant.js`, `src/cinematic.js` |
-| `workspace.md` | Builder/workspace UI and workspace-record APIs | `src/workspace.js`, `src/builder.js`, `src/control.js`, `public/app.js` |
+| `workspace.md` | Builder/workspace UI and workspace-record APIs | `src/workspace.js`, `src/builder.js`, `src/control.js`, `src/client/workspace/legacy-workspace.js` |
 | `media.md` | Uploaded JPEG objects, backups, MinIO/S3/R2 | `src/aws/s3.js`, `src/operations.js`, `src/api.js` photo routes |
 | `engagement.md` | Chat, reviews, pricing inquiries, provider connections | `src/engagement.js`, `src/reviews.js`, `src/pricing.js`, `docs/chat-pricing-release.md` |
 

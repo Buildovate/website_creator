@@ -38,12 +38,12 @@ Upload key shape: `photos/{tenantId}/{id}.jpg`. Backup media: `backups/{tenantId
 
 ## Browser
 - **Pages**: images in `/s/:slug` and the editor use `/media/:id`. MinIO console on the local stack is `http://localhost:9001` (`docs/ENVIRONMENTS.md`).
-- **Scripts / data**: upload UI in `public/app.js`. No separate media app.
+- **Scripts / data**: upload UI in `src/client/workspace/legacy-workspace.js`. No separate media app.
 - **Calls**: `POST /api/tenants/:id/photos`, `GET /media/:id`.
 
 ## Business rules
 - Draft and private project photos are not public. Cross-tenant cover and photo-order changes are rejected (`README.md` verification notes).
-- `OPERATIONS.md` says photos are resized to 1600px. The server checks JPEG structure and the 2MB cap. A resize step, if any, is in the browser uploader — confirm in `public/app.js` before claiming the server resizes.
+- `OPERATIONS.md` says photos are resized to 1600px. The server checks JPEG structure and the 2MB cap. A resize step, if any, is in the browser uploader — confirm in `src/client/workspace/legacy-workspace.js` before claiming the server resizes.
 - Backups are in-platform copies. The JSON download does not embed media (`OPERATIONS.md`). There is no scheduled backup job in this repo.
 - Staff profile photos are served only to signed-in staff (`CRM-RELEASE.md`).
 
@@ -58,3 +58,8 @@ Upload key shape: `photos/{tenantId}/{id}.jpg`. Backup media: `backups/{tenantId
 
 ## Sources
 `src/aws/s3.js`, `src/aws/env.js`, `src/core.js`, `src/api.js`, `src/operations.js`, `src/worker.js`, `src/control.js`, `db/schema.ts`, `docker-compose.yml`, `docs/AWS_MIGRATION.md`, `docs/ENVIRONMENTS.md`, `OPERATIONS.md`, `README.md`, `CRM-RELEASE.md`.
+
+
+## Pack 3 creative and distribution specification — local documentation, 2026-09-23
+
+[Pack 3 U–AA](../product/PACK3_UPSELLS_MEDIA_CRM_SPEC.md) proposes promo-art jobs, video ingest and consent, owner-approved social publishing, content calendars and permission-aware CRM photo import. This is future behavior, not an extension of the current JPEG endpoint. [Trade briefs](../product/PACK3_CREATIVE_BRIEFS.md) contain 36 image directions and 24 clearly labeled AI service-explainer scripts; AI presenters never substitute for genuine customer proof. [Calendars](../product/PACK3_CONTENT_CALENDARS.md) and [private education videos](../product/PACK3_SALES_CRM_VIDEO_BRIEFS.md) are production briefs only. No assets were generated, accounts connected, posts sent or website/CRM code changed.

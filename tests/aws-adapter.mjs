@@ -55,6 +55,7 @@ assert.ok(ordered.at(-1).sql.startsWith('INSERT'));
 assert.equal(ordered.some(entry => entry.sql.includes('randomblob') || entry.sql.includes('`')), false);
 
 const previewErrors = assertRuntimeConfig({
+  APP_ORIGIN:'https://preview.example.test', AUTH_ALB_SIGNER:'test-signer', AUTH_OIDC_ISSUER:'https://issuer.example.test', AUTH_OIDC_CLIENT_ID:'test-client',
   APP_ENV: 'preview', NODE_ENV: 'production', AWS_REGION: 'us-west-1', AUTH_MODE: 'alb-oidc',
   DATABASE_URL: 'postgresql://website_creator@localhost/website_creator', S3_BUCKET: 'buildovate-website-creator-preview',
   BUCKET_DRIVER: '', DATABASE_DRIVER: '',
@@ -238,7 +239,7 @@ await s3.delete('health/1');
 assert.equal(await s3.get('health/1'), null);
 assert.equal(await s3.head('health/1'), null);
 
-const assets = createAssets('public');
+const assets = createAssets('dist/client');
 const css = await assets.fetch(new Request('http://localhost/app.css'));
 assert.equal(css.status, 200);
 assert.match(css.headers.get('content-type'), /text\/css/);
@@ -251,8 +252,9 @@ const albFetch = async url => {
   assert.equal(url, 'https://public-keys.auth.elb.us-west-1.amazonaws.com/kid1');
   return new Response(pem);
 };
-const albConfig = { ...authConfig({ AUTH_MODE: 'alb-oidc', AWS_REGION: 'us-west-1', NODE_ENV: 'production' }), fetch: albFetch };
-const albToken = jwt(ec.privateKey, { alg: 'ES256', kid: 'kid1' }, claims({ sub: 'user-1', email: 'Owner@Example.com' }));
+const albHeader = {alg:'ES256',kid:'kid1',signer:'test-signer',iss:'https://issuer.example.test',client:'test-client',exp:Math.floor(Date.now()/1000)+600};
+const albConfig = { ...authConfig({ AUTH_MODE: 'alb-oidc', AWS_REGION: 'us-west-1', NODE_ENV: 'production',AUTH_ALB_SIGNER:albHeader.signer,AUTH_OIDC_ISSUER:albHeader.iss,AUTH_OIDC_CLIENT_ID:albHeader.client }), fetch: albFetch };
+const albToken = jwt(ec.privateKey, albHeader, { sub:'user-1',email:'Owner@Example.com',email_verified:true });
 const albRequest = await applyAuth(new Request('http://localhost/api/session', {
   headers: { 'x-amzn-oidc-data': albToken, 'oai-authenticated-user-id': 'spoof', 'oai-authenticated-user-email': 'spoof@evil.test' },
 }), albConfig);
@@ -260,7 +262,7 @@ assert.equal(albRequest.headers.get('oai-authenticated-user-id'), 'user-1');
 assert.equal(albRequest.headers.get('oai-authenticated-user-email'), 'owner@example.com');
 assert.equal(albRequest.headers.get('x-amzn-oidc-data'), null);
 const expired = await applyAuth(new Request('http://localhost/api/session', {
-  headers: { 'x-amzn-oidc-data': jwt(ec.privateKey, { alg: 'ES256', kid: 'kid1' }, { sub: 'user-1', email: 'owner@example.com', exp: 10 }) },
+  headers: { 'x-amzn-oidc-data': jwt(ec.privateKey, {...albHeader,exp:10}, {sub:'user-1',email:'owner@example.com',email_verified:true}) },
 }), albConfig);
 assert.equal(expired.headers.get('oai-authenticated-user-id'), null);
 const noneAlg = `${b64({ alg: 'none', kid: 'kid1' })}.${b64(claims({ sub: 'user-1', email: 'owner@example.com' }))}.`;
@@ -281,11 +283,11 @@ const cognitoConfig = {
   ...authConfig({ AUTH_MODE: 'cognito', NODE_ENV: 'production', COGNITO_USER_POOL_ID: 'us-west-1_example', COGNITO_CLIENT_ID: 'client', COGNITO_REGION: 'us-west-1' }),
   fetch: cognitoFetch,
 };
-const idToken = jwt(rsa.privateKey, { alg: 'RS256', kid: 'ck1' }, claims({ sub: 'cog-1', email: 'person@example.com', token_use: 'id', aud: 'client', iss: issuer }));
+const idToken = jwt(rsa.privateKey, { alg: 'RS256', kid: 'ck1' }, claims({ sub: 'cog-1', email: 'person@example.com', email_verified:true, token_use: 'id', aud: 'client', iss: issuer }));
 const cognitoRequest = await applyAuth(new Request('http://localhost/api/session', { headers: { authorization: `Bearer ${idToken}` } }), cognitoConfig);
 assert.equal(cognitoRequest.headers.get('oai-authenticated-user-id'), 'cog-1');
 assert.equal(cognitoRequest.headers.get('authorization'), null);
-const wrongAudience = jwt(rsa.privateKey, { alg: 'RS256', kid: 'ck1' }, claims({ sub: 'cog-1', email: 'person@example.com', token_use: 'id', aud: 'other', iss: issuer }));
+const wrongAudience = jwt(rsa.privateKey, { alg: 'RS256', kid: 'ck1' }, claims({ sub: 'cog-1', email: 'person@example.com', email_verified:true, token_use: 'id', aud: 'other', iss: issuer }));
 const audienceRejected = await applyAuth(new Request('http://localhost/api/session', { headers: { authorization: `Bearer ${wrongAudience}` } }), cognitoConfig);
 assert.equal(audienceRejected.headers.get('oai-authenticated-user-id'), null);
 
@@ -328,16 +330,15 @@ try {
   const spoof = await fetch(`${base}/api/session`, { headers: { 'oai-authenticated-user-id': 'admin', 'oai-authenticated-user-email': 'yoelengel18@gmail.com' } });
   assert.equal((await spoof.json()).user, null);
 
-  const ownerHeaders = {
-    origin: base,
-    'content-type': 'application/json',
-    'x-buildovate-user-id': 'owner',
-    'x-buildovate-user-email': 'yoelengel18@gmail.com',
-  };
+  const login = await fetch(base+'/auth/local-session',{method:'POST',headers:{origin:base,'content-type':'application/json'},body:JSON.stringify({userId:'owner',email:'yoelengel18@gmail.com'})});
+  assert.equal(login.status,200);
+  const cookie=login.headers.get('set-cookie').split(';')[0];
+  const beforeSetup=await (await fetch(base+'/api/session',{headers:{cookie}})).json();
+  const ownerHeaders = {origin:base,'content-type':'application/json',cookie,'x-csrf-token':beforeSetup.csrfToken};
   const setup = await fetch(`${base}/api/setup`, { method: 'POST', headers: ownerHeaders, body: '{}' });
   assert.equal(setup.status, 200, await setup.clone().text());
 
-  const session = await fetch(`${base}/api/session`, { headers: { 'x-buildovate-user-id': 'owner', 'x-buildovate-user-email': 'YoelEngel18@gmail.com' } });
+  const session = await fetch(`${base}/api/session`, { headers: {cookie} });
   const sessionBody = await session.json();
   assert.equal(sessionBody.user.email, 'yoelengel18@gmail.com');
   assert.equal(sessionBody.user.admin, true);
@@ -354,11 +355,12 @@ try {
   assert.match(missing, /Sign in required/);
   assert.doesNotMatch(missing, /signin-with-chatgpt|Sign in with ChatGPT/);
 
-  const home = await fetch(`${base}/`);
+  assert.equal((await fetch(base+'/',{redirect:'manual'})).status,303);
+  const home = await fetch(`${base}/`,{headers:{cookie}});
   const homeHtml = await home.text();
   assert.equal(home.status, 200);
   assert.match(homeHtml, /Website management/);
-  assert.match(homeHtml, /Sign in required/);
+  assert.match(homeHtml, /data-auth-signout/);
   assert.doesNotMatch(homeHtml, /signout-with-chatgpt|Sign in with ChatGPT/);
   assert.equal(
     rewriteSitesChrome('<a target="_top" href="/signout-with-chatgpt?return_to=%2F">Sign out</a>', { logoutUrl: 'https://example.com/logout?return=1' }),
@@ -384,14 +386,20 @@ try {
 const down = createServer(createHandler({
   worker: { async fetch() { throw new Error('unused'); } },
   env: { APP_ENV: 'local', AWS_REGION: 'us-west-1' },
-  db: { prepare() { return { async first() { throw new Error('database offline'); } }; } },
-  auth: { mode: 'disabled' },
+  db: { prepare() { return { bind(){return this;}, async first() { throw new Error('database offline'); } }; } },
+  auth: { mode: 'dev-header',appEnv:'local',nodeEnv:'development' },
 }));
 await new Promise(resolve => down.listen(0, '127.0.0.1', resolve));
 try {
   const failed = await fetch(`http://127.0.0.1:${down.address().port}/healthz`);
   assert.equal(failed.status, 503);
   assert.equal((await failed.json()).database.ok, false);
+  const cookie='bv_workspace='+'a'.repeat(43);
+  const page=await fetch(`http://127.0.0.1:${down.address().port}/`,{headers:{cookie}});
+  assert.equal(page.status,503);assert.match(page.headers.get('content-type'),/text\/html/);
+  const pageBody=await page.text();assert.match(pageBody,/temporarily unavailable/);assert.doesNotMatch(pageBody,/database offline/);
+  const apiFailure=await fetch(`http://127.0.0.1:${down.address().port}/api/session`,{headers:{cookie}});
+  assert.equal(apiFailure.status,503);assert.equal((await apiFailure.json()).error,'Service temporarily unavailable.');
 } finally {
   await new Promise(resolve => down.close(resolve));
 }

@@ -68,5 +68,75 @@
     "flat roofs": "/assets/service-flat.webp",
     "roof maintenance": "/assets/service-maintenance.webp",
     "gutters": "/assets/service-gutters.webp"
+  },
+  "Flooring": {
+    "hardwood flooring": "/assets/specialties/flooring-hardwood-flooring.webp",
+    "luxury vinyl flooring": "/assets/specialties/flooring-luxury-vinyl-flooring.webp",
+    "laminate flooring": "/assets/specialties/flooring-laminate-flooring.webp",
+    "tile flooring": "/assets/specialties/flooring-tile-flooring.webp",
+    "floor refinishing": "/assets/specialties/flooring-floor-refinishing.webp",
+    "floor repair": "/assets/specialties/flooring-floor-repair.webp",
+    "subfloor preparation": "/assets/specialties/flooring-subfloor-preparation.webp",
+    "commercial flooring": "/assets/specialties/flooring-commercial-flooring.webp"
+  },
+  "Painting": {
+    "interior painting": "/assets/specialties/painting-interior-painting.webp",
+    "exterior painting": "/assets/specialties/painting-exterior-painting.webp",
+    "cabinet painting": "/assets/specialties/painting-cabinet-painting.webp",
+    "deck and fence staining": "/assets/specialties/painting-deck-and-fence-staining.webp",
+    "surface preparation": "/assets/specialties/painting-surface-preparation.webp",
+    "drywall repair": "/assets/specialties/painting-drywall-repair.webp",
+    "decorative finishes": "/assets/specialties/painting-decorative-finishes.webp",
+    "commercial painting": "/assets/specialties/painting-commercial-painting.webp"
+  },
+  "Fencing": {
+    "wood fencing": "/assets/specialties/fencing-wood-fencing.webp",
+    "vinyl fencing": "/assets/specialties/fencing-vinyl-fencing.webp",
+    "metal fencing": "/assets/specialties/fencing-metal-fencing.webp",
+    "privacy fencing": "/assets/specialties/fencing-privacy-fencing.webp",
+    "gates": "/assets/specialties/fencing-gates.webp",
+    "fence repair": "/assets/specialties/fencing-fence-repair.webp",
+    "pool fencing": "/assets/specialties/fencing-pool-fencing.webp",
+    "commercial fencing": "/assets/specialties/fencing-commercial-fencing.webp"
+  },
+  "Garage Doors": {
+    "garage door installation": "/assets/specialties/garage-doors-garage-door-installation.webp",
+    "garage door repair": "/assets/specialties/garage-doors-garage-door-repair.webp",
+    "spring replacement": "/assets/specialties/garage-doors-spring-replacement.webp",
+    "opener installation": "/assets/specialties/garage-doors-opener-installation.webp",
+    "opener repair": "/assets/specialties/garage-doors-opener-repair.webp",
+    "panel replacement": "/assets/specialties/garage-doors-panel-replacement.webp",
+    "weather sealing": "/assets/specialties/garage-doors-weather-sealing.webp",
+    "garage door maintenance": "/assets/specialties/garage-doors-garage-door-maintenance.webp"
+  },
+  "Pest Control": {
+    "pest inspections": "/assets/specialties/pest-control-pest-inspections.webp",
+    "ant control": "/assets/specialties/pest-control-ant-control.webp",
+    "rodent control": "/assets/specialties/pest-control-rodent-control.webp",
+    "termite inspections": "/assets/specialties/pest-control-termite-inspections.webp",
+    "cockroach control": "/assets/specialties/pest-control-cockroach-control.webp",
+    "spider control": "/assets/specialties/pest-control-spider-control.webp",
+    "mosquito control": "/assets/specialties/pest-control-mosquito-control.webp",
+    "preventive maintenance": "/assets/specialties/pest-control-preventive-maintenance.webp"
+  },
+  "Windows/Doors": {
+    "window replacement": "/assets/specialties/windows-doors-window-replacement.svg",
+    "window installation": "/assets/specialties/windows-doors-window-installation.svg",
+    "energy-efficient windows": "/assets/specialties/windows-doors-energy-efficient-windows.svg",
+    "entry doors": "/assets/specialties/windows-doors-entry-doors.svg",
+    "patio doors": "/assets/specialties/windows-doors-patio-doors.svg",
+    "sliding glass doors": "/assets/specialties/windows-doors-sliding-glass-doors.svg",
+    "french doors": "/assets/specialties/windows-doors-french-doors.svg",
+    "window and door repair": "/assets/specialties/windows-doors-window-and-door-repair.svg"
+  },
+  "Solar": {
+    "solar panel installation": "/assets/specialties/solar-solar-panel-installation.svg",
+    "solar battery storage": "/assets/specialties/solar-solar-battery-storage.svg",
+    "solar system design": "/assets/specialties/solar-solar-system-design.svg",
+    "solar panel maintenance": "/assets/specialties/solar-solar-panel-maintenance.svg",
+    "solar panel cleaning": "/assets/specialties/solar-solar-panel-cleaning.svg",
+    "solar inverter replacement": "/assets/specialties/solar-solar-inverter-replacement.svg",
+    "solar removal and reinstallation": "/assets/specialties/solar-solar-removal-and-reinstallation.svg",
+    "solar system monitoring": "/assets/specialties/solar-solar-system-monitoring.svg"
   }
 }
