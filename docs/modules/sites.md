@@ -62,3 +62,11 @@ A tenant is one contractor website: draft settings, a published snapshot, member
 
 ## Sources
 `db/schema.ts`, `src/api.js`, `src/core.js`, `src/worker.js`, `src/builder.js`, `src/views.js`, `src/operations.js`, `OPERATIONS.md`, `README.md`, `public/trade-library.json`.
+
+## First-class page data contracts — ticket #003
+
+`settings.websitePages` is `{version:1,pages:[...]}` normalized by `src/platform/website-pages.ts`. Its discriminated records are service, FAQ, About and city pages, separate from generic workspace `pages` records. Service/city slugs are generated once (or supplied validly), retained on title edits and immutable for an existing ID; FAQ/About use fixed slugs. Persist returned IDs when editing/reordering. Limits, media slots and type-specific fields are declared in `PAGE_LIMITS` and the exported types. Content is plain text; future HTML renderers must escape it.
+
+The existing tenant PUT, render and create APIs accept these records. Omission preserves a previous collection for older clients; explicit `{version:1,pages:[]}` clears only the draft. New pages default disabled. Publication retains the existing owner/version/approval gate and snapshot copy. `validateWebsitePageMedia` checks every referenced photo against this tenant on input and again before publish. References can point to owned brand or project photos; they never imply project approval or grant public access. Media stores photo IDs, alt text and captions; arbitrary media URLs are rejected.
+
+No dedicated page renderer, page editor, public page-image grant or AI portrait generation is added in #003. Those are separate tickets. Existing snapshots/backups retain the new JSON automatically; restore remains draft-only and layout duplication excludes page content/media. Executed evidence: [#003 tests](../build-evidence/003/README.md).

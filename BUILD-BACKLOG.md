@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#002**. Next ticket: **#003 — Add draft/published page data contracts**. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#003**. Next ticket: **#004 — Render a Roofing service-detail page**. Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -44,11 +44,12 @@ Tickets #001–#041.
 
 ### #003 — Add draft/published page data contracts
 
-- State: **Not started** · Estimate: **6h** (≤1 day).
+- State: **Done** (2026-09-24) · Estimate: **6h** (≤1 day).
 - Pack section: [`H`](docs/product/01-CORE-SITE-A-N.md) §H; [`L`](docs/product/01-CORE-SITE-A-N.md) §L; [`N`](docs/product/01-CORE-SITE-A-N.md) §N; [`Q`](docs/product/02-CREATIVE-TRUST-O-T.md) §Q.
-- Files to touch: `src/platform/website-pages.ts` **(new)**; `src/core.js`; `tests/website-pages.mjs` **(new)**.
+- Files to touch: `src/platform/website-pages.ts` **(new)**; `src/core.js`; `src/api.js` (save/render/create/publish ownership checks); `tests/website-pages.mjs` **(new)**; `docs/modules/sites.md` (contract note); `docs/build-evidence/003/README.md` **(new)**.
 - Done when: Typed service, FAQ, About and city records have stable IDs/slugs, length limits and tenant-owned media references; draft edits do not alter the published snapshot.
 - External keys/accounts: None.
+- Evidence: [#003 executed tests](docs/build-evidence/003/README.md): 11/11 contract/API tests; fresh server bundle, TypeScript, constitution/settings, conversion/Roofing and reference-proof regressions exit 0. Page renderers/editors remain in later tickets; no public page routes added.
 
 ### #004 — Render a Roofing service-detail page
 
@@ -242,12 +243,21 @@ Tickets #001–#041.
 - Done when: One distinct approved Roofing clip and poster are attached to the correct slot; ambient can pause or scroll reaches the full duration; reduced-motion/network failure shows its poster. If K02 is unavailable, a working clearly labeled missing-media stub with an accessible static fallback satisfies this ticket in stub mode; show evidence and retain the live film gate in BUILD-STATUS/NEEDS-KEYS. Continue to #028 without blocking the selling site.
 - External keys/accounts: K02.
 
+### #027A — Polish the Roofing hero story and headline choice
+
+- State: **Not started** · Estimate: **6h** (≤1 day). Inserted before #028; existing ticket numbers and adapter references stay unchanged.
+- Pack section: Core Pack §§F–G (hero/copy), §M (contractor controls), with Joe’s 2026-09-24 correction taking precedence.
+- Files to touch: `src/conversion-page.js`; `src/platform/conversion.ts`; `src/scroll-story.js`; `src/hero-timelapse.js`; `public/scroll-story.js`; `src/client/workspace/questionnaire.ts`; the existing Roofing imagery/sequence configuration located during this ticket; `tests/conversion-references.mjs`; `tests/scroll-story.mjs`; `docs/build-evidence/027A/` **(new)**.
+- Done when: (1) Keep the designed/generated hero imagery; do not replace it with real contractor photos. The finished roof is shown first and trusses remain story step 1. Verify forward/reverse scrolling and reduced-motion fallback. (2) Remove the “illustrative concept” note everywhere it appears in rendered site content; search source/variants and check the Roofing page family. (3) Add one additional direct headline option selectable in the contractor backoffice; show that the selection saves as draft and appears after publish. (4) Keep current CTA labels exactly unchanged. Show desktop/mobile screenshots and test output before #028.
+- External keys/accounts: None for reusing existing generated imagery. This ticket does not authorize replacement films or generation spend.
+- Scope note: Logged during #003 only; none of this polish is implemented by #003.
+
 ### #028 — Approve the Roofing homeowner reference
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
 - Pack section: [`A`](docs/product/01-CORE-SITE-A-N.md) §A; [`B`](docs/product/01-CORE-SITE-A-N.md) §B; [`E`](docs/product/01-CORE-SITE-A-N.md) §E; [`H`](docs/product/01-CORE-SITE-A-N.md) §H; [`L`](docs/product/01-CORE-SITE-A-N.md) §L; [`N`](docs/product/01-CORE-SITE-A-N.md) §N; [`P`](docs/product/02-CREATIVE-TRUST-O-T.md) §P; [`Q`](docs/product/02-CREATIVE-TRUST-O-T.md) §Q.
 - Files to touch: `tests/roofing-acceptance.mjs` **(new)**; `docs/product/ROOFING_ACCEPTANCE.md` **(new)**.
-- Done when: Home/service/FAQ/About/city/promo/finance/footer/form paths pass local route and asset checks; show desktop/mobile screenshots, no overflow and a saved inquiry. Explicit stubs and outstanding external gates are listed; #024–#027 may pass in clearly labeled stub mode when K02 is unavailable. Missing films do not block this Roofing acceptance gate; no deployment.
+- Done when: #027A is complete; home/service/FAQ/About/city/promo/finance/footer/form paths pass local route and asset checks; show desktop/mobile screenshots, no overflow and a saved inquiry. Explicit stubs and outstanding external gates are listed; #024–#027 may pass in clearly labeled stub mode when K02 is unavailable. Missing films do not block this Roofing acceptance gate; no deployment.
 - External keys/accounts: None.
 
 ### #029 — Apply the approved page system to HVAC
