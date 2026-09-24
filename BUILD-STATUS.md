@@ -227,3 +227,8 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - #027A already contained the footer disclaimer removal. Clarified site-wide removal and the wording variant supplied by Joe; the disclaimer is still present in #007A.
 - Connection mode: local fictional fixtures. Trust facts are owner-confirmed manual data, not live Google/license/insurance verification. Dedicated generation, broader trust-library work and other-trade adoption remain open; Q stays Partial. No push, deployment, generation spend or customer messages.
 - Commit locator: `feat: redesign Roofing About around confirmed trust (#007A)`. Next ticket **#008**, not started. Stop.
+
+### Overnight queue item 0 — Done (2026-09-24): #027A additions only
+
+- Queued caption removal (keep the before/after AI label), no duplicated business name beside a logo containing it, and a roughly 20px higher hero headline. No rendered behavior changed. Verified the #027A text and diff. Next: #004F-v2, then #008, #009 and #010; stop after #010. User's explicit queue overrides the ordinary one-ticket session rule.
+- Commit locator: docs: queue Roofing caption and header polish (#027A).
