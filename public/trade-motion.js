@@ -1,5 +1,11 @@
 // Scroll position is a target, not a seek command. Decode one eased seek at a time.
 (()=>{
+ // One event-driven scheduler extends #004E for service films and homepage components.
+ const subscribers=new Set();let scheduled=0;
+ const request=()=>{if(!scheduled)scheduled=requestAnimationFrame(now=>{scheduled=0;subscribers.forEach(draw=>draw(now))})};
+ const clock=window.TradeMotionScroll={request,subscribe(draw){subscribers.add(draw);request();return ()=>subscribers.delete(draw)}};
+ addEventListener('scroll',request,{passive:true});addEventListener('resize',request,{passive:true});
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)request()});
  const root=document.querySelector('[data-motion-kit]');if(!root)return;
  const c=JSON.parse(root.querySelector('[data-motion-config]').textContent),stage=root.querySelector('.tm-stage'),media=root.querySelector('.tm-media');
  const reduce=matchMedia('(prefers-reduced-motion: reduce)'),mobile=matchMedia('(max-width: 700px)');
@@ -54,9 +60,10 @@
   const anatomy=document.querySelector('[data-anatomy]');if(anatomy){const r=anatomy.getBoundingClientRect(),q=reduce.matches||paused?0:clamp((innerHeight-r.top)/(innerHeight+r.height));anatomy.style.setProperty('--anatomy-progress',q);}
   const timeline=document.querySelector('.tp-timeline');if(timeline){const r=timeline.getBoundingClientRect(),q=reduce.matches||paused?1:clamp((innerHeight*.85-r.top)/(r.height+innerHeight*.35));timeline.style.setProperty('--timeline-progress',q);[...timeline.children].forEach((step,i)=>step.classList.toggle('tm-step-active',q>i/4));}
  }
- function schedule(){if(!frame)frame=requestAnimationFrame(draw)}
+ function schedule(){if(!frame){frame=1;clock.request()}}
+ clock.subscribe(draw);
  toggle.addEventListener('click',()=>{paused=!paused;root.classList.toggle('tm-paused',paused);document.body.classList.toggle('tm-motion-paused',paused);toggle.setAttribute('aria-pressed',String(paused));toggle.textContent=paused?'Resume motion':'Pause motion';schedule()});
- reduce.addEventListener('change',setup);mobile.addEventListener('change',setup);addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);
+ reduce.addEventListener('change',setup);mobile.addEventListener('change',setup);
  new IntersectionObserver(([entry])=>{inView=entry.isIntersecting;root.classList.toggle('tm-offscreen',!inView);if(inView)schedule()},{rootMargin:'100px'}).observe(root);
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)schedule()});
  document.querySelectorAll('[data-roof-point],[data-anatomy-point],[data-roof-link]').forEach(a=>a.addEventListener('click',event=>{event.preventDefault();const target=document.querySelector(a.getAttribute('href'));target.open=true;target.scrollIntoView({block:'start',behavior:reduce.matches?'instant':'smooth'});target.querySelector('summary').focus({preventScroll:true});}));

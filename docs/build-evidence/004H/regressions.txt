@@ -1,0 +1,76 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+0 !== 1
+
+    at file:///C:/Users/joe/website_creator/tests/conversion-references.mjs:14:259 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: 1,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+✖ tests\conversion-references.mjs (208.7949ms)
+PASS design kits: 14 trades × 3 real previews; imagery and prompts; authenticated preview access; kit persistence, distinct layouts, effect toggles, saved brief, no blank-specialty creation or invalid kits.
+✔ tests\design-kits.mjs (277.0299ms)
+{
+  "result": "PASS",
+  "profiles": 6,
+  "gzipBytes": 12174,
+  "budgetBytes": 61440,
+  "files": [
+    {
+      "file": "public/trade-motion.js",
+      "gzip": 3875
+    },
+    {
+      "file": "public/trade-motion-v2.js",
+      "gzip": 582
+    },
+    {
+      "file": "public/trade-motion-v2-interactions.js",
+      "gzip": 1917
+    },
+    {
+      "file": "public/trade-motion-v2.css",
+      "gzip": 2661
+    },
+    {
+      "file": "src/trade-motion-v2.js",
+      "gzip": 3139
+    }
+  ]
+}
+PASS all variants/styles, seven captions, semantic text, escaping, reduced-motion fallback and conservative motion-code budget.
+✔ tests\motion-v2.mjs (152.7118ms)
+PASS premium service: generated hero, four image cards/steps, editable escaped headline, draft/publish isolation, sourced/confirmed/empty trust fields, no invented reviews, paired-photo privacy and brand contrast.
+PASS premium interactions: scroll reveal enhancement, visible reduced-motion fallback, comparison input and accessible value.
+✔ tests\premium-service.mjs (264.0878ms)
+✔ each film reaches its actual last frame and returns to its first frame (6.5493ms)
+✔ fast scrolling out of view during a seek still completes the latest target (1.2484ms)
+✔ metadata arriving after the user leaves the scene uses the ending target (0.7993ms)
+✔ detail scene plays the entire film while the finished scene is still visible (0.8226ms)
+✔ pause freezes the scroll target; resume and chapter jumps finish pending seeks (0.9885ms)
+✔ reduced motion and media errors retain a static finished scene (1.3137ms)
+✔ sticky desktop and mobile headers leave both video endings visible (4.2878ms)
+✔ a deferred source error before loading does not disable a below-fold film (0.6401ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 11
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 307.2722
+
+✖ failing tests:
+
+test at tests\conversion-references.mjs:1:1
+✖ tests\conversion-references.mjs (208.7949ms)
+  'test failed'

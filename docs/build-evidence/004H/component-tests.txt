@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "profiles": 6,
+  "gzipBytes": 12091,
+  "budgetBytes": 61440,
+  "files": [
+    {
+      "file": "public/trade-motion.js",
+      "gzip": 3875
+    },
+    {
+      "file": "public/trade-motion-v2.js",
+      "gzip": 582
+    },
+    {
+      "file": "public/trade-motion-v2-interactions.js",
+      "gzip": 1917
+    },
+    {
+      "file": "public/trade-motion-v2.css",
+      "gzip": 2578
+    },
+    {
+      "file": "src/trade-motion-v2.js",
+      "gzip": 3139
+    }
+  ]
+}
+PASS all variants/styles, seven captions, semantic text, escaping, reduced-motion fallback and conservative motion-code budget.

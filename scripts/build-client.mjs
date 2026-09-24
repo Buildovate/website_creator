@@ -25,5 +25,6 @@ export async function buildClient() {
       });
     }}],
   });
+  await build({entryPoints:['src/client/styles/roofing-motion-home.css'],outfile:'dist/client/roofing-motion-home.css',bundle:true,minify:true,external:['/assets/*'],target:'es2022'});
   await build({entryPoints:['src/client/styles/app.css'],outfile:'dist/client/app.css',bundle:true,external:['/assets/*'],target:'es2022'});
 }

@@ -1,0 +1,55 @@
+{
+  "method": "Sum of complete changed production JS/CSS source files, including existing code and build helper, gzip level 6. Upper bound on added code; not the total page transfer size.",
+  "files": [
+    {
+      "file": "public/hero-timelapse.js",
+      "gzipBytes": 2355
+    },
+    {
+      "file": "public/trade-motion.js",
+      "gzipBytes": 3875
+    },
+    {
+      "file": "public/trade-motion-v2.js",
+      "gzipBytes": 582
+    },
+    {
+      "file": "public/trade-motion-v2-interactions.js",
+      "gzipBytes": 1917
+    },
+    {
+      "file": "public/trade-motion-v2.css",
+      "gzipBytes": 2661
+    },
+    {
+      "file": "src/trade-motion.js",
+      "gzipBytes": 2970
+    },
+    {
+      "file": "src/trade-motion-config.js",
+      "gzipBytes": 1496
+    },
+    {
+      "file": "src/trade-motion-v2.js",
+      "gzipBytes": 3139
+    },
+    {
+      "file": "src/conversion-page.js",
+      "gzipBytes": 8131
+    },
+    {
+      "file": "src/design-variant.js",
+      "gzipBytes": 523
+    },
+    {
+      "file": "src/client/styles/roofing-motion-home.css",
+      "gzipBytes": 157
+    },
+    {
+      "file": "scripts/build-client.mjs",
+      "gzipBytes": 887
+    }
+  ],
+  "totalGzipBytes": 28693,
+  "limitBytes": 61440
+}

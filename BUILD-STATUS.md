@@ -2,6 +2,8 @@
 
 ## Waiting on Joe
 
+**#004H — two-attempt Performance stop:** Authorize a further optimization/evidence pass before resuming. Mobile attempt 1: Performance 79 / Accessibility 96 / CLS 0.008136. Attempt 2: bold-industrial 78 / 100 / 0.008136; clean-modern 83 / 100 / 0.008136. Performance 85 is unmet. Work stopped per Joe’s instruction; final state screenshots, reduced-motion captures, both recordings and conversion/browser acceptance remain incomplete. [Options, actual reports and evidence](docs/build-evidence/004H/README.md). #004I is queued only.
+
 **#004G — portrait footage decision:** Please supply a 9:16 clip containing the full house/roof and an opening sky approach, or approve the complete 16:9 film fitted on mobile. The approved 9:16 source already cuts off the side wings and begins near the house; CSS cannot recover those missing pixels or earlier flight. #004G is **Partial**: the complete available portrait frame, mobile readability/list, smooth seek and stable handover are implemented and tested. [Source/evidence](docs/build-evidence/004G/README.md). No replacement generation was commissioned.
 
 **K23 — reviewed policy content:** Please supply the reviewed jurisdiction/trade policy, reviewer/date/reference and required business license facts before activating a real policy. #011 implements and tests the framework with fictional fixtures; businesses without a supplied policy remain **Needs review**. The #011 framework and #012 footer are complete in this fallback mode. #004F-v2 is cleared.
@@ -324,3 +326,12 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - QA found one roof-link focus failure and one visual header-offset shift; each was fixed on its first corrective attempt and rechecked. No test remains failing. Source limitations are not represented as a successful full-house mobile implementation.
 - Queued only under #027A: format per-location footer phones as `(805) 555-0111`, retaining the existing dialable link. No footer rendering change in #004G.
 - Commit locator: `fix: polish Roofing hero framing and scroll handover (#004G)`. Stopped; no push, deploy, paid generation or messages. #013 and #027A implementation remain untouched.
+
+
+### #004H — Partial: components wired; stopped after two Performance failures (2026-09-24)
+
+- Added LayerExplode, RevealCompare and KineticText through the #004E motion entry point and scheduler; A/B/C and bold-industrial/clean-modern are saved design options on the Roofing customer-intent homepage. Existing cutaway stays in a disclosure and legacy setting. Existing images retain AI disclosure; no asset generation or new animation library.
+- Real Lighthouse mobile attempt 2: **bold 78 Performance / 100 Accessibility / 0.008136 CLS; clean 83 / 100 / 0.008136**. Both miss 85 Performance. Attempt 1 was 79 / 96 / 0.008136. Stopped immediately after the second failed performance pass; no third optimization/audit.
+- Build passes. Renderer/options/budget checks pass. Combined regressions: **11 passed / 1 failed** (literal bare-H1 test no longer matches the attributed H1; remaining conversion assertions did not run). Browser capture halted at a case-sensitive headline test; correction is not rerun. Final browser/reduced-motion/recording matrix remains pending. Read-only current mobile/desktop anatomy inspection shows no overflow.
+- [README, reports, available screenshots and executed output](docs/build-evidence/004H/README.md). Conservative whole-changed-source count: **28693 bytes gzip**, below 61440. This is not a total-page transfer budget.
+- Waiting on Joe: authorization to resume the failed Performance gate and finish evidence/tests. #004I StickyStack/StatsMask queued, not implemented; #013 and #027A untouched. Commit locator: feat: add partial Roofing motion kit and record performance stop (#004H). No push, deploy, paid services, generation or messages.

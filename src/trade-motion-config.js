@@ -22,3 +22,9 @@ export const tradeMotion = {
  hvac:{label:'Airflow',wireframe:{kind:'ductwork',path:'M250 480 H500 V330 H760'},layers:['Supply','Return','Filter'],points:[],meter:{ageLabel:'System age',ageMax:25,damageLabel:'Affected rooms',damageLabels:['One','Several','All'],ageWeight:.4,damageWeight:.6}},
  plumbing:{label:'Pipe runs',wireframe:{kind:'pipes',path:'M260 300 V520 H650 V360 H780'},layers:['Supply','Drain','Vent'],points:[],meter:{ageLabel:'Pipe age',ageMax:60,damageLabel:'Affected fixtures',damageLabels:['One','Several','All'],ageWeight:.3,damageWeight:.7}}
 };
+
+// #004H: reusable component token sets. Colors are checked when rendered.
+export const roofingMotionStyles={
+ 'bold-industrial':{name:'bold-industrial',surface:'#142f31',ink:'#f5f5e9',muted:'#c9d4c8',accent:'#daed91',line:'#58706c',radius:2},
+ 'clean-modern':{name:'clean-modern',surface:'#f4f6f2',ink:'#183d3b',muted:'#4b6460',accent:'#285c4d',line:'#b5c6bd',radius:22}
+};

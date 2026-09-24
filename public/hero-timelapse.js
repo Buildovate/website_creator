@@ -30,7 +30,7 @@
    }
    if(!video.seeking&&video.readyState>=2)root.classList.add('film-ready');
   }
-  function load(){if(staticMode()||source.hasAttribute('src'))return;source.src=source.dataset.src;video.preload='auto';video.load();}
+  function load(){if(hero&&root.dataset.lazyUntilScroll==='true'&&scrollY<1)return;if(staticMode()||source.hasAttribute('src'))return;source.src=source.dataset.src;video.preload='auto';video.load();}
   function fail(){if(!source.hasAttribute('src'))return;failed=true;root.classList.remove('film-ready');root.classList.add('static-story');pause.hidden=true;setScene(1);}
   // Coalesce rapid scroll changes while decoding, then always seek the newest
   // target. Native seeking state cannot get stuck like a separate JS flag can.

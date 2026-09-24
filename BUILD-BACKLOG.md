@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G follow-up: Partial, implemented polish committed; portrait source decision is Waiting on Joe.** #027A additions are queued only and #027A remains Not started. Stopped after #004G. Next numbered backlog ticket is #013; it is not authorized by this request.
+Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G follow-up: Partial, implemented polish committed; portrait source decision is Waiting on Joe.** #027A additions are queued only and #027A remains Not started. Stopped after #004H’s two-attempt Performance failure; #004H is Partial / Waiting on Joe. #004I is queued only, not built. The ordinary next numbered backlog ticket remains #013; neither #004I implementation nor #013 is authorized by this request.
 
 ## Session contract
 
@@ -116,6 +116,21 @@ Tickets #001–#041.
 - Implemented: top-anchored natural 9:16 frame, dark mobile headline backing, accessible four-link roof list, decoded-time 0.3-second handover, consistent header offset and eased single-flight seeking. Six-frame GOP and existing delivery budgets pass unchanged.
 - Outstanding: the approved portrait source omits the outer house/roof edges and sky approach. Supply a new approved 9:16 source, or approve using the complete 16:9 film fitted on mobile; do not silently substitute or generate footage. Logged in BUILD-STATUS and NEEDS-ASSETS.
 - Before/after desktop/mobile screenshots and scroll recordings are saved; no push, deploy, generation or messages.
+
+### #004H — Motion kit v2, part 1 (Roofing)
+
+- State: **Partial — Waiting on Joe after two failed Performance attempts**. [Evidence/options](docs/build-evidence/004H/README.md). Estimate: 8h (<=1 day).
+- LayerExplode (seven authored SVG layers, A/B/C), RevealCompare (slider/lens/three-state toggle), KineticText (hero lines + scroll words), both Roofing styles, existing #004E scheduler, lazy interactions and static reduced-motion paths implemented. Original cutaway remains reachable. No second scroll library.
+- Gates: <=60 KB gzip added motion, mobile Performance >=85 / Accessibility >=95 / CLS <=0.05, complete 1440×900 and 390×844 state/reduced-motion screenshots and scroll recordings. Code budget passes; latest bold 78/100/0.008136 and clean 83/100/0.008136 miss Performance. Final visual/recording and regression/browser acceptance remains unfinished. Stop honored; no third attempt.
+- No external keys required. No push, deployment, generation, paid service or messages.
+
+### #004I — Motion kit v2, part 2 (queued only)
+
+- State: **Not started — backlog only; do not build in #004H.**
+- StickyStack: reusable service cards that stack on scroll, with an optional left index; accept A/B/C layout and style tokens and extend the existing motion controller.
+- StatsMask: count-up trust statistics beside a photo cut into a configurable shape. Default gable for Roofing; other trades may pass drop, sun, flame or logo shapes.
+- Statistics must come only from individually confirmed questionnaire facts. Hide each missing/unconfirmed fact; omit the stat block when no confirmed facts exist. Never fabricate counts or trust claims.
+- Retain accessible final text and reduced-motion finished states, lazy heavy assets, current sections and a reachable legacy variant. Reassess the <=1-day scope before any authorized build.
 
 ### #005 — Connect the selected-service grid to detail pages
 
