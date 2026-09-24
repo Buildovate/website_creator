@@ -242,3 +242,10 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Reran the requested encoder against approved regenerated clips. Input probes confirm 7.542s/181 and 5.042s/121 frames. Dynamic frame-count capture fixes the old hardcoded 193-frame assumption.
 - Two WebM budget fix attempts failed; [actual outputs/source frames](docs/build-evidence/004F-v2/README.md). No delivery replacement, final blend sign-off or refreshed scroll recordings claimed. Existing media is untouched. Build and two media/service regression tests pass.
 - #027A hero +20px upward request was queued in item 0. Commit locator: chore: record regenerated Roofing media encoding blocker (#004F-v2). Continue #008, #009, #010.
+
+### #008 — Done (2026-09-24): trust selections and evidence
+
+- Added bounded trust settings with 16 supported networks, selection/order/layout/placements, HTTPS network profiles, explicit approval, optional rating/count/credential and source evidence/check/expiry dates. Older editor omission preserves; explicit clear changes only draft.
+- Selected ratings/credentials fail publication without current confirmed evidence; state-license claims also require confirmed license number/state. Public selection logic rechecks expiry at read time. No live verification or legacy auto-confirmation.
+- [Desktop/mobile screenshots and output](docs/build-evidence/008/README.md): build, TypeScript, five contract/API/constitution/reference-proof tests and browser checks pass. Saved contract does not introduce public markup yet; private draft notes stay private.
+- Local fictional fixtures; no keys/provider calls or marks required. P stays Partial: renderer #009, controls #047 and actual provider validation remain. Commit locator: feat: model trust selections and evidence (#008). Continue #009.

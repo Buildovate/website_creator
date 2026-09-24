@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#007, #007A, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#008** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#008, #007A, #004B, #004C, #004D and #004E (kit), #004F (supplied Roofing media)**. Next ticket: **#009** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -144,7 +144,7 @@ Tickets #001–#041.
 
 ### #008 — Model trust selections and evidence
 
-- State: **Not started** · Estimate: **4h** (≤1 day).
+- State: **Done** · Evidence: [008](docs/build-evidence/008/README.md) · Estimate: **4h** (≤1 day).
 - Pack section: [`P`](docs/product/02-CREATIVE-TRUST-O-T.md) §P.
 - Files to touch: `src/platform/trust.ts` **(new)**; `src/core.js`; `tests/trust.mjs` **(new)**.
 - Done when: Each network has enabled/profile/evidence/expiry fields with HTTPS validation; unverifiable memberships/ratings cannot be published as established facts.
