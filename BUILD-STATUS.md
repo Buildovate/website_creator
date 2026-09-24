@@ -161,3 +161,12 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Connection mode: local, isolated fixtures and manually configured terms. K05–K07 remain not connected; no live offers, approvals, prequalification, provider calls, push or deployment. Whole section B remains Partial.
 - Queued only: #004E immediately after #004D; #027A copy/alignment/numbering/footer-label additions remain before #028. No #004E or #027A implementation performed.
 - Commit locator: `feat: compare configured service financing plans (#004D)`. Next ticket: **#004E**, not started. Stop here.
+
+
+### #004E — Done in authorized placeholder mode (2026-09-24)
+
+- #004D accepted by Joe. Added a reusable cinematic service-page kit: scroll camera, layered headline/roof cutout, tracked roof labels linked to anatomy, X-ray/layer views, warning animations, scroll process, educational repair/replace meter, confirmed-year count-up, pausable existing-review motion and subtle final-CTA rain. Video, image-sequence and synchronized-mask slots are trade-config driven. HVAC ductwork and plumbing paths are renderer/config examples; no later trade rollout.
+- Used the supplied Roofing still (optimized to 296 KB WebP); both requested MP4s were absent. Current camera/cutout are placeholders, not a rendered FPV flight. Mobile uses a light loop; reduced motion shows a still and unloads video. Production render requirements for all 14 trades are in [NEEDS-ASSETS.md](NEEDS-ASSETS.md).
+- [Desktop/mobile screenshots, actual scroll recording, browser assertions and test logs](docs/build-evidence/004E/README.md). Build, TypeScript and six affected regression suites pass (eight commands). Browser verified reverse scrolling, roof/disclosure links, X-ray, meter, pause, reduced motion, mobile layout, failed media, configured video seeking and sequence frames. Recording decoded successfully. Lighthouse/physical-device 60fps not certified; production media remains a later asset gate.
+- #027A updated only: plan comparison chart, dark/lime financing band and comma-formatted budget remain queued. No financing implementation changes in #004E. Section H/G and other broad pack rows stay Partial. K02 remains unverified; no asset-generation spend, push, deployment or customer messages.
+- Commit locator: `feat: add trade cinematic motion kit (#004E)`. Next ticket: **#005**, not started. Stop.

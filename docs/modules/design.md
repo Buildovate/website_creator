@@ -111,3 +111,8 @@ See [the design standard](../TRADE_DESIGN_SYSTEM.md). Roofing service detail now
 ## #004C — playbook refinement
 
 Roofing detail reuses #004B with larger hero/type, benefit-led inclusion cards, process icons and optional financing/promotion components. The [24-item checklist and screenshots](../build-evidence/004C/README.md) are the acceptance reference for future detail-page work.
+
+
+## #004E — trade cinematic service-page kit
+
+Shared renderer/config: src/trade-motion.js and src/trade-motion-config.js; progressive controller/styles: public/trade-motion.js/css. Only Roofing service detail is wired. Existing homepage films are unchanged. Supplied Roofing still is optimized to public/assets/trade-motion/roofing-house-still.webp; drone files remain missing. Configured desktop video seeks with scroll or uses an image sequence; mobile selects its short loop; reduced motion unloads film and presents the still. Config holds synchronized mask frames and tracked anchors for future real footage; without tracking, real-footage labels hide. SVG placeholders share camera transforms with their anchors. Anatomy wireframe supports roof, ductwork and pipe kinds. See [asset handoff](../../NEEDS-ASSETS.md) and [004E evidence](../build-evidence/004E/README.md).

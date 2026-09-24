@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#004, #004B, #004C and #004D**. Next ticket: **#004E** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
+Completed: **#001–#004, #004B, #004C, #004D and #004E (placeholder mode)**. Next ticket: **#005** (Not started). Execute one ticket per session; all later tickets remain Not started. Ticket evidence and remaining gaps live in BUILD-STATUS.md.
 
 ## Session contract
 
@@ -84,13 +84,21 @@ Tickets #001–#041.
 
 ### #004E — Visual storytelling pass (service page)
 
-- State: **Not started — next session** · Estimate: **8h** (≤1 day; split before implementation if needed). Queued only during #004D.
+- State: **Done — placeholder mode** · Evidence: [004E](docs/build-evidence/004E/README.md) · Estimate: **8h** (≤1 day). #004D accepted. Supplied Roofing still used; drone clips/cutouts remain pending in NEEDS-ASSETS.md. Production-media approval is not claimed.
 - Goal: make the text-heavy page self-explanatory through visual storytelling and award-level motion matching the hero scroll effect.
 - Warning signs: small custom animated illustrations (drip through ceiling stain, lifting shingle, granules in gutter), play once on entry; one line of card text.
 - Roof anatomy: house cross-section separates into shingles, underlayment, decking, flashing and gutters on scroll; hover/tap hotspots explain “what fails here” and “what the repair fixes.”
 - How it works: scroll-drawn progress line lights each step; illustration and time chip per step. Repair vs replace meter driven by roof age/damage level. Count-up trust numbers. Slow continuous review marquee. Subtle rain on dark final CTA.
 - Rules: approximately 40 words maximum per section body; each section leads with a visual; one custom illustration style matching the hero, no clip-art mix. Respect reduced motion; 60fps mobile, lazy loading, no layout shift, high Lighthouse performance. Anatomy, timeline and meter must be reusable trade-config-driven components.
-- Evidence required: desktop/mobile screenshots and a short scroll-effects screen recording. Do not implement during #004D.
+- Cinematic motion kit — reusable per-trade components driven by trade configuration:
+  - Hero: scroll-scrubbed FPV drone dive from sky → through clouds → over the neighborhood → onto the roof → settling on the house front. Play a configured image sequence or video set; use a placeholder sequence until real renders are supplied. Mobile uses a lighter short loop; prefers-reduced-motion uses a still poster.
+  - Depth-masked headline: large hero headline behind the house/roofline cutout and in front of the sky, using a layered foreground cutout and parallax. Reusable across trades.
+  - Spatial callouts: Flashing, Underlayment, Valley and Ridge vent labels pinned to roof points and tracking the moving scroll camera; transition into the roof anatomy section. Store anchor/tracking data in trade config.
+  - Anatomy X-ray mode: roof dissolves into a glowing truss/layer wireframe showing the leak path. Trade-config-driven equivalents include HVAC ductwork/airflow and plumbing pipe runs.
+  - Art direction: calm, premium and competent. No glitch text, floating people or gimmicks. Existing reduced-motion, mobile-performance, lazy-loading and layout-stability rules apply to the entire kit.
+- Asset handoff deliverable: add NEEDS-ASSETS.md listing every motion-kit clip, sequence, foreground cutout, wireframe/leak-path asset and fallback expected per trade, with exact filename, length, resolution and frame count (mark still assets as one frame with no duration), so renders can be produced to spec. Include desktop hero, mobile short loop, reduced-motion poster and any synchronized masks/tracking requirements. Clearly distinguish placeholders from supplied production renders; implementation does not commission or generate production assets.
+- Scope gate: one implementation day for the shared controller, vector placeholder sequence and service-page effects; production rendering is not part of this ticket. Expected Roofing input files: `docs/build-evidence/assets/roofing/roofing-house-still.png`, `roofing-drone-dive-16x9.mp4`, `roofing-drone-dive-9x16.mp4`. Use supplied files when present, placeholders otherwise.
+- Evidence required: desktop/mobile screenshots and a short screen recording showing the scroll effects and cinematic motion kit. Build now; verify reduced motion, mobile, reverse scrolling and failed-media fallback.
 
 ### #005 — Connect the selected-service grid to detail pages
 
@@ -284,7 +292,8 @@ Tickets #001–#041.
 - Done when: (1) Keep the designed/generated hero imagery; do not replace it with real contractor photos. The finished roof is shown first and trusses remain story step 1. Verify forward/reverse scrolling and reduced-motion fallback. (2) Remove the “illustrative concept” note everywhere it appears in rendered site content; search source/variants and check the Roofing page family. (3) Add one additional direct headline option selectable in the contractor backoffice; show that the selection saves as draft and appears after publish. (4) Keep current CTA labels exactly unchanged. Show desktop/mobile screenshots and test output before #028.
 - External keys/accounts: None for reusing existing generated imagery. This ticket does not authorize replacement films or generation spend.
 - Added after #004C acceptance (queued only): warmer, more confident copy with less legal-sounding hedging; prominently surface response time/emergency service only when supplied by the contractor profile. Fix “How it works” step number/icon alignment (01–04). Use consistent section numbering or remove it. Remove footer line “Labeled illustrative and stock imagery does not depict completed work by this business.” Keep the small AI-example label under the before/after slider.
-- Scope note: Logged only; #027A remains before #028 and is not implemented by #004D.
+- Financing polish (queued 2026-09-24; do not implement in #004E): add a compact comparison chart with one bar per plan and monthly/total-cost views so low-monthly versus least-total tradeoffs are visual; move financing onto the dark premium band with lime accents; format budget with commas (e.g. $6,000).
+- Scope note: Logged only; #027A remains before #028 and is not implemented by #004D or #004E.
 
 ### #028 — Approve the Roofing homeowner reference
 

@@ -25,3 +25,8 @@ Service financing requires confirmed configured partner terms and footer.financi
 ## #004D — shared payment-plan comparison
 
 Reuse src/service-financing.js, src/client/site/finance-comparison.ts and the tp-plan-* components for service financing. Wide screens show cards in a row; narrow screens use native horizontal swipe/snap without document overflow. Keep payment numbers large and tabular, selected cards lime-tinted, APR/term/down payment adjacent, totals and the contractor disclosure visible. The same inquiry receives the selection. Animate only number text and chart width, respect reduced motion, and reserve badge/card space to avoid changing card height during recalculation. More programs remain accessible by horizontal scrolling.
+
+
+## #004E — cinematic kit
+
+Service pages reuse src/trade-motion.js, src/trade-motion-config.js and public/trade-motion.css/js. Configure camera keyframes, media, synchronized mask sequences, hero/anatomy anchors, layers, flow path, meter weights and process phase chips per trade. Roofing is the only active adoption. HVAC/plumbing system renderers are reusable examples, not launched pages. Missing films use the supplied still/placeholder camera; reduced motion uses a still and no video. Preserve native keyboard/touch disclosures, pause controls and truthful meter language. No fabricated reviews or counters. See NEEDS-ASSETS.md for production handoff and docs/build-evidence/004E for local verification/performance limits.
