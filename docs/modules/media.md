@@ -68,3 +68,8 @@ Upload key shape: `photos/{tenantId}/{id}.jpg`. Backup media: `backups/{tenantId
 ## About portrait publication — ticket #007
 
 The /media/:photoId handler additionally permits the photo explicitly referenced by an enabled published Roofing About record with portraitMode=uploaded_photo (publicAboutPhoto in src/website-pages.js). It checks against the snapshot of the photo's own tenant; rendering also checks ownership. Disabled/unpublished/hidden/AI-mode and draft-only references grant no public access. About hero/banner/thumbnail slots grant no access. A portrait may be an owned project photo, but does not publish its parent project or sibling photos. Existing independent logo/project/media grants remain unchanged. [Executed coverage](../build-evidence/007/README.md).
+
+
+## Platform camera selection — #015A
+
+The workspace mobile helper adds a separate image input with capture=environment beside existing image upload fields. Take a photo transfers the selected FileList to the original input and dispatches its change event; the gallery picker remains available. Object-URL thumbnails are revoked when replaced or removed. Cancellation preserves the previous selection and offers retry/gallery guidance. The existing client decoder/resizer and authenticated JPEG API remain authoritative; this does not add HEIC server support, publish an image automatically, or change media access rules. Browser file injection verifies the upload path only; real iPhone/Safari capture acceptance is recorded separately in [#015A evidence](../build-evidence/015A/README.md).

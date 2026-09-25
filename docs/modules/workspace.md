@@ -96,3 +96,10 @@ The service fieldsets edit typical project-cost minimum/maximum. Financing suppo
 ## Questionnaire legal review — #011
 
 The legal policy panel shows Needs review, Required facts missing or Reviewed policy on file. Business jurisdiction and license state save to the draft; review metadata is read-only. Existing tenant PUT enforces administrator-only policy changes, and publication checks the attached policy. No actual jurisdiction policy is seeded. [Evidence](../build-evidence/011/README.md).
+
+
+## Platform phone layout — #015A
+
+The dashboard entrypoint loads src/client/workspace/mobile.ts and platform-mobile.css. At 700px and below, a labeled Website screen selector activates the existing section handlers, tables become labeled records, forms/dialogs reflow, and a fixed action dock forwards the current save/publish controls. The dock moves into an open dialog's top layer, respects inherited disabled state, and uses visualViewport offsets for the keyboard. The screen selector remains usable for viewers. Desktop contacts/boards wrap within the available workspace. The editor fits its virtual preview width using a bounded transformed iframe.
+
+The shared observer must continue past already initialized camera inputs; returning from that loop strands the action dock in a closed dialog. tests/platform-mobile.mjs checks all inventoried phone/desktop states, real dock geometry, save/reopen, preview/publish isolation and editor/viewer permissions. Physical phone acceptance is tracked separately in [#015A evidence](../build-evidence/015A/README.md). No public website or separate Contractor CRM implementation changed.

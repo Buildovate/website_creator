@@ -408,3 +408,12 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Published page switch controls the homepage strip and links. Authenticated previews retain their context and disabled quizzes; saving a draft does not alter the public snapshot.
 - [Evidence](docs/build-evidence/015/README.md): 8/8 new scenarios, 43/43 regression commands, desktop/mobile browser checks, final screenshots and a no-JS fallback check. No runtime motion or drone hero changes.
 - Section A remains Partial for receipts, the full task menu and separate creative/film work. Commit locator: feat: finish Roofing promotion display states (#015). Local only; no push/deployment. Next numbered ticket #016 remains unstarted.
+
+
+### #015A — Automated acceptance complete; manual phone check pending (2026-09-24)
+
+- Contractor platform navigation, forms, tables, calendars, dialogs and editor previews fit phone and desktop. Controls have 44px targets, inputs use 16px text, and save/publish actions remain in a visible action dock. Camera selection, previews, cancel/retry and the existing upload path are connected; viewer permissions and draft/published boundaries are preserved.
+- [Evidence](docs/build-evidence/015A/README.md): before/after phone screenshots and per-rule audit matrix; 100 phone + 100 desktop screen/state checks with zero layout failures or browser errors; 44/44 full regression commands passed. Public drone hero unchanged.
+- **Real iPhone camera upload — pending manual check for Joe.** Physical capture/gallery, cancellation/permission-denial where offered, retry, saved image and keyboard-open action reachability remain unverified on iPhone/Safari. Joe explicitly authorized committing now with automated evidence and this manual check deferred. Emulated file uploads are not claimed as physical-camera proof.
+- Retained pairing script: docs/build-evidence/015A/phone-fixture.mjs. It serves fictional in-memory data to one paired device and expires after 20 minutes; run instructions are in the evidence README.
+- Commit locator: fix: make the platform usable on phones (#015A). Local only; no push or deployment. Next numbered ticket: #016, not started.
