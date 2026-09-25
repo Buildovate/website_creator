@@ -164,3 +164,8 @@ The roof-repair homepage now uses `StickyStack` for its three reviewed process s
 ## #004I-v2 — bounded process cards and one-time counters
 
 Each StickyStack card pins within its own scroll slot, so the next card enters below the outgoing copy and cannot paint through a heading or paragraph. The mobile card height reserves the shared header, step tabs and bottom action bar; image height is 43%. Keyboard/touch index offsets target the card's actual pin. Reduced motion and no JS use static cards. StatsMask counts numeric visual copies once from first grid entry and keeps final text on re-entry; its photo mask and per-field confirmation gates are unchanged. [Transition evidence and measured gates](../build-evidence/004I-v2/README.md).
+
+
+## #004I-v3 — current process handoffs and trust-safe stats
+
+The stack uses one pinned stage with intact cards fading/scaling in place, including a fade before the last stage releases. A/B/C and both styles share stable active-tab geometry. Mobile images stay 200px high and card copy determines panel height; the duplicate note is removed. Only years/jobs animate, once; rating, review count, warranty and license remain final. Stats photo loading starts near the section and awaits decode before the masked photo can appear; the container has no placeholder fill. Static fallbacks and drone #004G-v4 are preserved. [Failing v2 baseline and final v3 acceptance](../build-evidence/004I-v3/README.md).

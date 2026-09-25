@@ -370,3 +370,11 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - StatsMask numeric copies animate on first grid entry only and retain final values after leaving/re-entering; confirmation/visibility rules, shape options and license ID behavior are unchanged. The headline is “The numbers behind the work.” #004G-v4 drone hero source/controller/media remain unchanged.
 - [#004I-v2 evidence](docs/build-evidence/004I-v2/README.md): desktop/mobile down/up/down recordings; 18 mobile transition/finished screenshots; 12/12 browser profiles with automated pinned-text hit-target and no-replay assertions; no-JS, reduced-motion, touch, keyboard; 43/43 regressions. Six mobile Lighthouse runs: bold Performance 97/100/100, clean 98/100/100; Accessibility 100 throughout, CLS <=0.00953 and contrast all pass. Motion/render/style budget 35,676/61,440 gzip bytes.
 - Commit locator: `fix: keep Roofing stack copy clear and stats count once (#004I-v2)`. No push or deployment. Next numbered ticket: #013.
+
+
+### #004I-v3 — Done (2026-09-24)
+
+- Intact pinned cards fade/scale as a whole before header/tab contact; repeated note removed; no empty shells, shrinking images or leftover image strip. Phone cards have a fixed 200px image and approximately 20px bottom padding. Tab indicators match the active card with stable horizontal positions.
+- Only years/jobs animate, once. Rating/review count and other trust values stay at confirmed final values. Stats photo is preloaded/decoded before reveal with no flat fill; exact requested subline applied. #004G-v4 drone and its loader remain unchanged.
+- [Final evidence](docs/build-evidence/004I-v3/README.md): failing effa190 baseline, 4896 final samples over 12 profiles at >=30.08 Hz; 12 stack/stat and 12 existing-motion browser profiles; all static/touch/keyboard checks; 43/43 regression commands; six passing Lighthouse audits. Motion 36584/61440 gzip bytes.
+- Commit locator: fix: polish Roofing stack handoffs and trust-safe stats (#004I-v3). Local only; no push/deployment. Next numbered ticket #013 remains unstarted.

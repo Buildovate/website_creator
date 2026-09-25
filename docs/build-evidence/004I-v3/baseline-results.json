@@ -1,0 +1,1212 @@
+{
+  "baseline": true,
+  "profiles": [
+    {
+      "name": "desktop-bold-industrial-A",
+      "samples": 408,
+      "sampleHz": 30.083614752768728,
+      "maxSampleGapMs": 33.700000000000045,
+      "failures": [
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 79.828125,
+          "bottom": 161.046875,
+          "edge": 98.296875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 49.828125,
+          "bottom": 131.046875,
+          "edge": 98.296875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 20.828125,
+          "bottom": 102.046875,
+          "edge": 98.296875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Tell us about the leak, visible damage, or other concern.",
+          "top": 94.046875,
+          "bottom": 155.359375,
+          "edge": 98.296875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Tell us about the leak, visible damage, or other concern.",
+          "top": 65.046875,
+          "bottom": 126.359375,
+          "edge": 98.296875
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 14.40625
+        },
+        {
+          "kind": "text-edge",
+          "i": 1,
+          "text": "Discuss",
+          "top": 92.828125,
+          "bottom": 174.046875,
+          "edge": 98.296875
+        },
+        {
+          "kind": "text-edge",
+          "i": 1,
+          "text": "Discuss",
+          "top": 62.828125,
+          "bottom": 144.046875,
+          "edge": 98.296875
+        },
+        {
+          "kind": "text-edge",
+          "i": 1,
+          "text": "Discuss",
+          "top": 33.828125,
+          "bottom": 115.046875,
+          "edge": 98.296875
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 17.296875
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 14.296875
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 16.40625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 13.40625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 17.296875
+        }
+      ],
+      "trustChanges": 152,
+      "passed": false
+    },
+    {
+      "name": "desktop-clean-modern-C",
+      "samples": 408,
+      "sampleHz": 30.083614752768728,
+      "maxSampleGapMs": 33.59999999999991,
+      "failures": [
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 10.34375
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 126.28125,
+          "bottom": 288.71875,
+          "edge": 157.296875
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 91.28125,
+          "bottom": 253.71875,
+          "edge": 98.296875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 91.28125,
+          "bottom": 253.71875,
+          "edge": 157.296875
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 56.28125,
+          "bottom": 218.71875,
+          "edge": 98.296875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 56.28125,
+          "bottom": 218.71875,
+          "edge": 157.296875
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 21.28125,
+          "bottom": 183.71875,
+          "edge": 98.296875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 21.28125,
+          "bottom": 183.71875,
+          "edge": 157.296875
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": -13.71875,
+          "bottom": 148.71875,
+          "edge": 98.296875
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            95,
+            196.828125,
+            301.984375
+          ],
+          "initialTabs": [
+            95,
+            204.828125,
+            301.984375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            95,
+            196.828125,
+            301.984375
+          ],
+          "initialTabs": [
+            95,
+            204.828125,
+            301.984375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            95,
+            196.828125,
+            301.984375
+          ],
+          "initialTabs": [
+            95,
+            204.828125,
+            301.984375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            95,
+            196.828125,
+            301.984375
+          ],
+          "initialTabs": [
+            95,
+            204.828125,
+            301.984375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            95,
+            196.828125,
+            301.984375
+          ],
+          "initialTabs": [
+            95,
+            204.828125,
+            301.984375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            95,
+            196.828125,
+            301.984375
+          ],
+          "initialTabs": [
+            95,
+            204.828125,
+            301.984375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            95,
+            196.828125,
+            301.984375
+          ],
+          "initialTabs": [
+            95,
+            204.828125,
+            301.984375
+          ]
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 16.34375
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            95,
+            196.828125,
+            301.984375
+          ],
+          "initialTabs": [
+            95,
+            204.828125,
+            301.984375
+          ]
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "step-note",
+          "i": 2
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 21.359375
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 18.359375
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 24.359375
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 18.34375
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 13.34375
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 10.34375
+        }
+      ],
+      "trustChanges": 142,
+      "passed": false
+    },
+    {
+      "name": "mobile-bold-industrial-A",
+      "samples": 408,
+      "sampleHz": 30.08339293482669,
+      "maxSampleGapMs": 33.599999999999966,
+      "failures": [
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 113.21875,
+          "bottom": 157.203125,
+          "edge": 136.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 85.21875,
+          "bottom": 129.203125,
+          "edge": 136.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 58.21875,
+          "bottom": 102.203125,
+          "edge": 83.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 58.21875,
+          "bottom": 102.203125,
+          "edge": 136.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Tell us about the leak, visible damage, or other concern.",
+          "top": 114.203125,
+          "bottom": 156.796875,
+          "edge": 136.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Tell us about the leak, visible damage, or other concern.",
+          "top": 87.203125,
+          "bottom": 129.796875,
+          "edge": 136.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Tell us about the leak, visible damage, or other concern.",
+          "top": 60.203125,
+          "bottom": 102.796875,
+          "edge": 83.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Tell us about the leak, visible damage, or other concern.",
+          "top": 60.203125,
+          "bottom": 102.796875,
+          "edge": 136.796875
+        },
+        {
+          "kind": "empty-shell",
+          "i": 0,
+          "visibleHeight": 64.265625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 0,
+          "visibleHeight": 37.265625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 0,
+          "visibleHeight": 10.265625
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            191.359375
+          ],
+          "initialTabs": [
+            19.5,
+            112.875,
+            191.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            191.359375
+          ],
+          "initialTabs": [
+            19.5,
+            112.875,
+            191.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            191.359375
+          ],
+          "initialTabs": [
+            19.5,
+            112.875,
+            191.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            191.359375
+          ],
+          "initialTabs": [
+            19.5,
+            112.875,
+            191.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            191.359375
+          ],
+          "initialTabs": [
+            19.5,
+            112.875,
+            191.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            191.359375
+          ],
+          "initialTabs": [
+            19.5,
+            112.875,
+            191.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            191.359375
+          ],
+          "initialTabs": [
+            19.5,
+            112.875,
+            191.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            191.359375
+          ],
+          "initialTabs": [
+            19.5,
+            112.875,
+            191.359375
+          ]
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 24.25
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 65.65625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 38.65625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 11.65625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 68.046875
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        }
+      ],
+      "trustChanges": 146,
+      "passed": false
+    },
+    {
+      "name": "mobile-clean-modern-C",
+      "samples": 408,
+      "sampleHz": 30.08339293482669,
+      "maxSampleGapMs": 33.899999999999636,
+      "failures": [
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "missing-indicator",
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "active-tab",
+          "expected": 1,
+          "active": 0
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 113.21875,
+          "bottom": 157.203125,
+          "edge": 136.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 85.21875,
+          "bottom": 129.203125,
+          "edge": 136.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 58.21875,
+          "bottom": 102.203125,
+          "edge": 83.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Describe",
+          "top": 58.21875,
+          "bottom": 102.203125,
+          "edge": 136.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Tell us about the leak, visible damage, or other concern.",
+          "top": 114.203125,
+          "bottom": 156.796875,
+          "edge": 136.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Tell us about the leak, visible damage, or other concern.",
+          "top": 87.203125,
+          "bottom": 129.796875,
+          "edge": 136.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Tell us about the leak, visible damage, or other concern.",
+          "top": 60.203125,
+          "bottom": 102.796875,
+          "edge": 83.796875
+        },
+        {
+          "kind": "text-edge",
+          "i": 0,
+          "text": "Tell us about the leak, visible damage, or other concern.",
+          "top": 60.203125,
+          "bottom": 102.796875,
+          "edge": 136.796875
+        },
+        {
+          "kind": "empty-shell",
+          "i": 0,
+          "visibleHeight": 64.265625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 0,
+          "visibleHeight": 37.265625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 0,
+          "visibleHeight": 10.265625
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            188.359375
+          ],
+          "initialTabs": [
+            19.5,
+            109.875,
+            188.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            188.359375
+          ],
+          "initialTabs": [
+            19.5,
+            109.875,
+            188.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            188.359375
+          ],
+          "initialTabs": [
+            19.5,
+            109.875,
+            188.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            188.359375
+          ],
+          "initialTabs": [
+            19.5,
+            109.875,
+            188.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            188.359375
+          ],
+          "initialTabs": [
+            19.5,
+            109.875,
+            188.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            188.359375
+          ],
+          "initialTabs": [
+            19.5,
+            109.875,
+            188.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            188.359375
+          ],
+          "initialTabs": [
+            19.5,
+            109.875,
+            188.359375
+          ]
+        },
+        {
+          "kind": "tab-shift",
+          "xs": [
+            19.5,
+            101.875,
+            188.359375
+          ],
+          "initialTabs": [
+            19.5,
+            109.875,
+            188.359375
+          ]
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 24.25
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 65.65625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 38.65625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 1,
+          "visibleHeight": 11.65625
+        },
+        {
+          "kind": "empty-shell",
+          "i": 2,
+          "visibleHeight": 68.046875
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        },
+        {
+          "kind": "undecoded-photo",
+          "complete": true,
+          "naturalWidth": 1672
+        }
+      ],
+      "trustChanges": 146,
+      "passed": false
+    }
+  ],
+  "errors": []
+}

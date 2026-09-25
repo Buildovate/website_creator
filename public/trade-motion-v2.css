@@ -57,3 +57,26 @@
 
 /* A license identifier is a credential, not a count-up. */
 .mk-stats-ready .mk-stat[data-stat-key=license] strong{clip-path:none}
+
+/* #004I-v3: intact cards share a pinned stage; the entire panel fades. */
+.mk-stack-track{min-width:0}.mk-stack-ready .mk-stack-track{height:calc(var(--stack-height) + var(--stack-travel))}
+.mk-stack-ready .mk-stack-cards{position:sticky;top:var(--stack-pin);height:var(--stack-height)}
+.mk-stack-ready .mk-stack-slot{position:absolute;inset:0;height:auto;margin:0;z-index:1;pointer-events:none}
+.mk-stack-ready .mk-stack-card{position:relative;top:auto;transform-origin:center;will-change:opacity,transform}
+.mk-stack[data-variant] .mk-stack-card{height:min(64svh,590px);min-height:0;box-sizing:border-box}
+.mk-stack-card figure{min-height:0}.mk-stack-card img{height:100%;width:100%}
+.mk-stack-index a,.mk-stack[data-variant=C] .mk-stack-index a{box-sizing:border-box;padding:0 10px;border:0;border-bottom:3px solid transparent}
+.mk-stack-index a[aria-current=step],.mk-stack[data-variant=C] .mk-stack-index a[aria-current=step]{padding:0 10px;border:0;border-bottom:3px solid var(--mk-accent);background:var(--mk-accent);color:var(--mk-surface)}
+.mk-stack-index a[aria-current=step] span{color:inherit}
+.mk-stats-photo{background:transparent}.mk-stats-photo[data-photo-decoded=false]{opacity:0;visibility:hidden}
+.mk-stats-ready .mk-stats-photo img{clip-path:none}
+.mk-stats-ready .mk-stat:not([data-stat-key=years]):not([data-stat-key=jobsCompleted]) strong{clip-path:none}
+@media(max-width:700px){
+ .mk-stack[data-variant] .mk-stack-card{height:auto;display:flex;flex-direction:column}
+ .mk-stack[data-variant] .mk-stack-slot .mk-stack-card figure{height:200px;flex:0 0 200px}
+ .mk-stack[data-variant] .mk-stack-slot .mk-stack-copy{flex:none;padding:20px 23px;justify-content:flex-start}
+ .mk-stack-index,.mk-stack[data-variant=C] .mk-stack-index{width:100%;gap:8px;overflow:visible}
+ .mk-stack-index a,.mk-stack[data-variant=C] .mk-stack-index a{flex:1;min-width:0;justify-content:center;padding:0 6px}
+ .mk-stack-index a[aria-current=step],.mk-stack[data-variant=C] .mk-stack-index a[aria-current=step]{padding:0 6px}
+}
+@media(prefers-reduced-motion:reduce){.mk-stack-ready .mk-stack-track{height:auto}.mk-stack-ready .mk-stack-cards{position:relative;top:auto;height:auto}.mk-stack-ready .mk-stack-slot{position:relative;inset:auto;height:auto;margin-bottom:24px}.mk-stack-card{opacity:1!important;transform:none!important}}

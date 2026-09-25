@@ -4,18 +4,22 @@ export function mountMotionV2(clock) {
  let paused=false;
  const layers=[...document.querySelectorAll('[data-layer-explode]')].map(root=>({root,stage:root.querySelector('.mk-layer-stage'),parts:[...root.querySelectorAll('[data-roof-layer]')],phase:root.querySelector('[data-layer-phase]')}));
  const words=[...document.querySelectorAll('[data-kinetic-text=words]')].map(root=>({root,parts:[...root.querySelectorAll('[data-kinetic-part]')]}));
- const stacks=[...document.querySelectorAll('[data-sticky-stack]')].map(root=>({root,cards:[...root.querySelectorAll('[data-stack-card]')],links:[...root.querySelectorAll('.mk-stack-index a')]}));
+ const stacks=[...document.querySelectorAll('[data-sticky-stack]')].map(root=>({root,track:root.querySelector('.mk-stack-track'),stage:root.querySelector('.mk-stack-cards'),nav:root.querySelector('.mk-stack-index'),cards:[...root.querySelectorAll('[data-stack-card]')],links:[...root.querySelectorAll('.mk-stack-index a')]}));
  const stats=[...document.querySelectorAll('[data-stats-mask]')].map(root=>({root,grid:root.querySelector('.mk-stats-grid'),photo:root.querySelector('.mk-stats-photo'),numbers:[...root.querySelectorAll('[data-stats-number]')],startedAt:null,complete:false,renderedFinal:false}));
- stacks.forEach(({cards,links})=>links.forEach((link,i)=>link.addEventListener('click',event=>{
-  if(reduce.matches)return;
+ // Preload below-fold photos after hero paint; reveal only after decode succeeds.
+ const photoLoader=new IntersectionObserver(entries=>entries.forEach(({target,isIntersecting})=>{
+  if(!isIntersecting)return;photoLoader.unobserve(target);
+  const img=target.querySelector('img'),hint=document.createElement('link');
+  hint.rel='preload';hint.as='image';hint.href=img.currentSrc||img.src;hint.fetchPriority='low';document.head.append(hint);
+  img.loading='eager';img.decode().then(()=>{target.dataset.photoDecoded='true';clock.request()}).catch(()=>{target.dataset.photoError='true'});
+ }),{rootMargin:'1400px'});
+ stats.forEach(({photo})=>photoLoader.observe(photo));
+ stacks.forEach(state=>state.links.forEach((link,i)=>link.addEventListener('click',event=>{
+  if(reduce.matches||paused)return;
   event.preventDefault();
-  const list=cards[0].parentElement,top=list.getBoundingClientRect().top+scrollY;
-  const card=cards[i].querySelector('.mk-stack-card');
-  const pin=parseFloat(getComputedStyle(card).top)||0;
-  scrollTo({top:top+cards[i].offsetTop-pin,behavior:'auto'});
+  scrollTo({top:state.track.getBoundingClientRect().top+scrollY+i*state.step-state.pin,behavior:'instant'});
   history.replaceState(null,'',link.hash);clock.request();
  })));
-
 
  function draw(now){const still=reduce.matches||paused,header=document.querySelector('.cx-header,.tp-header')?.getBoundingClientRect().height||0;
   layers.forEach(({root,stage,parts,phase})=>{const r=root.getBoundingClientRect();if(!still&&(r.top>innerHeight+300||r.bottom< -300))return;
@@ -25,11 +29,24 @@ export function mountMotionV2(clock) {
    phase.textContent=p===0?'Ready to explore':p<.45?'Layers separating':p<.65?'Every layer matters':p<.92?'Coming together':'Finished roof';
    root.dataset.motionProgress=p.toFixed(3);
   });
-  stacks.forEach(({root,cards,links})=>{
+  stacks.forEach(state=>{
+   const {root,track,stage,nav,cards,links}=state;
    root.classList.toggle('mk-stack-ready',!still);
-   const threshold=header+(mobile.matches?62:20);
-   let active=0;cards.forEach((card,i)=>{if(card.getBoundingClientRect().top<=threshold)active=i;});
-   root.dataset.stackActive=String(active);
+   const tabbed=mobile.matches||root.dataset.variant==='C';
+   const pin=header+(tabbed&&nav?nav.offsetHeight:0)+16;
+   const height=Math.max(...cards.map(slot=>slot.querySelector('.mk-stack-card').offsetHeight));
+   const step=Math.max(innerHeight*.85,height+40);
+   state.step=step;state.pin=pin;
+   root.style.setProperty('--stack-height',height+'px');root.style.setProperty('--stack-pin',pin+'px');
+   root.style.setProperty('--stack-travel',((cards.length-1)*step+120)+'px');
+   const rect=track.getBoundingClientRect(),p=Math.max(0,Math.min(cards.length-1,(pin-rect.top)/step));
+   const exit=clamp((rect.bottom-pin-height)/80),active=Math.round(p);
+   cards.forEach((slot,i)=>{const card=slot.querySelector('.mk-stack-card');
+    const alpha=still?1:ease(clamp((.5-Math.abs(p-i))/.2))*exit;
+    card.style.opacity=String(alpha);card.style.transform=still?'none':'scale('+(.975+.025*alpha)+')';
+    card.style.pointerEvents=alpha>.1?'auto':'none';
+   });
+   root.dataset.stackActive=String(active);root.dataset.stackProgress=p.toFixed(4);
    links.forEach((link,i)=>{if(i===active)link.setAttribute('aria-current','step');else link.removeAttribute('aria-current');});
   });
   stats.forEach(state=>{
@@ -45,7 +62,7 @@ export function mountMotionV2(clock) {
    const photoP=still?1:ease((innerHeight*1.2-photo.getBoundingClientRect().top)/Math.max(1,innerHeight*.55));
    root.classList.toggle('mk-stats-ready',!still);
    root.style.setProperty('--mk-reveal',`${((1-p)*100).toFixed(2)}%`);
-   root.style.setProperty('--mk-photo-reveal',`${((1-photoP)*100).toFixed(2)}%`);
+   photo.style.opacity=photo.dataset.photoDecoded==='true'?String(still?1:photoP):'0';
    root.dataset.motionProgress=p.toFixed(3);root.dataset.photoProgress=photoP.toFixed(3);
    if(!state.renderedFinal)numbers.forEach(number=>{const value=Number(number.dataset.statsNumber),decimals=Number(number.dataset.statsDecimals)||0;
     number.textContent=(decimals?Math.round(value*p*10)/10:Math.round(value*p)).toLocaleString('en-US',{minimumFractionDigits:decimals,maximumFractionDigits:decimals});
