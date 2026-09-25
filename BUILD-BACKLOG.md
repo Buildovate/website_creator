@@ -36,7 +36,7 @@ Existing source requirements are narrower: [Pack 1 §M](docs/product/01-CORE-SIT
 
 ## Phase 1 — the homeowner website that sells; Roofing first
 
-Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K showpieces and per-trade signature insertions. Execute #004M–#004R before #004J; #004J and #004K follow in that order.
+Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K showpieces, #004T/#004S/#004U additions and per-trade signature insertions. Execute #004M–#004R before #004J; #004J and #004K follow in that order, then #004T, #004S and #004U. #004S depends on #004T.
 
 ### #001 — Resolve the Roofing review-lookup test mismatch
 
@@ -219,6 +219,27 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - Scope: A time slider from 8 am to 7 pm moves the sun and sweeps a patio-cover shadow across the furniture, with a “Table: in shade / in sun” chip. Solid / Lattice / Louvered chips swap the aluminum cover; Louvered adds Open/Close blades and striped versus solid shade. Optional Rain and N/E/S/W orientation controls. Reuse `ScrubStage`; add `AmbientLayer` shadow mode and `SwatchConfigurator`. Reduced motion offers Morning / Noon / Evening state buttons.
 - Done when: The [TRADE-SIGNATURES.md §0](docs/product/TRADE-SIGNATURES.md) motion, production Lighthouse, no-JS, reduced-motion, touch, keyboard, honesty and evidence gates pass, with 1440×900 and 390×844 captures and scroll recordings in `docs/build-evidence/004K/`. Shade is explicitly illustrative unless calculated from the site's latitude and date; no temperature-drop number, weather-resistance specification, motorized or rain-sensor behavior without a recorded manufacturer or contractor source. No new scroll library or paid media generation; use labeled placeholders and record asset needs. Commit locally; no push or deploy.
 - External keys/accounts: None for illustrative shade mode.
+
+### #004T — Trade work categories (Sol High)
+
+- State: **Not started — backlog only**. Run after #004K. Use the draft category library in [TRADE-CATEGORIES.md](docs/product/TRADE-CATEGORIES.md) for all 16 trades, including Fencing: Vinyl, Aluminum, Wood, Chain-link, Wrought iron and Gates.
+- Scope: In contractor settings, let the contractor check the work categories they offer. Only checked categories may appear anywhere on that contractor's public site. On a jobsite upload, AI may suggest a category tag, but the owner must confirm or change it. Show public project filter chips only when two or more categories have projects. Use the same category list for service pages, inquiry form options, AR (#004Q) and the photo visualizer (#004R).
+- Done when: The category selection is the single source for those surfaces; unselected categories stay hidden, upload suggestions do not publish themselves, and project filters follow the two-category threshold. Apply the standing platform mobile acceptance rule, with phone and desktop evidence and tests.
+
+### #004S — Our Work (Sol High; depends on #004T)
+
+- State: **Not started — backlog only**. Run after #004T.
+- Scope: Build one Our Work page with Map/Grid toggle over the same project records. Give each published project its own SEO page and add a “Recent jobs near you” strip to the homepage. Place map pins at neighborhood level; show an exact address only when that project has an explicit “homeowner approved exact location” flag. Jobsite uploads create draft projects that the owner publishes.
+- Done when: Map, grid, project pages and homepage strip agree on published records; draft jobs are not public, and exact locations require the per-project approval flag. Apply the standing platform mobile acceptance rule, with phone and desktop evidence and tests.
+
+### #004U — Exclusive Media Library add-on (Astra High for generation review; Sol High for platform)
+
+- State: **Not started — backlog only**. Run after #004S. Price is **TBD by Joe**. Start with one test library for the Robles fixture only.
+- Scope: Use connected Higgsfield to generate approximately 30 photos and five videos exclusive to each contractor, matched to that contractor's checked #004T categories. Keep a fingerprint registry that blocks reuse of any item across sites, and log Higgsfield credits per library. Astra High reviews generation; Sol High builds the platform flow.
+- Public placement: AI media may be used by default in the hero, service pages, scroll before/after scenes, ads and a “Styles we build” gallery, with no city, date, client name or address. No visible legal wording appears on contractor sites for this media: no “Illustration” tags, AI disclaimers or fine print. Our Work and the Project Map show only real uploaded jobs; until real jobs exist, Our Work shows “Styles we build”. K23 attorney review covers this presentation before rollout.
+- Controlled exception: Build an opt-in “AI media in Our Work” setting, but hard-disable it behind `AI_OUR_WORK_ENABLED=false`; the contractor UI cannot turn it on until the flag is flipped after legal approval. Once enabled, require contractor sign-off before the setting saves: checkbox acknowledgement and typed name, stored with timestamp, user ID, site ID and clause version. The clause is a placeholder marked **PENDING ATTORNEY REVIEW (K23)**. With no stored sign-off, the setting stays off.
+- Internal controls and terms: Store an internal `isAiGenerated` flag and registry fingerprint for every AI item, never shown publicly, so AI items can be pulled from Our Work instantly. Add a contractor-terms placeholder, marked **PENDING ATTORNEY REVIEW**, stating the contractor is responsible for the accuracy of everything published on their site, including photos they upload or approve, and indemnifies Buildovate.
+- Done when: The Robles test library, category matching, fingerprint uniqueness, credit log, public placement rules, disabled opt-in, sign-off record and immediate removal path have tests and review evidence. Apply the standing platform mobile acceptance rule. Do not enable AI media in Our Work or finalize either legal clause before K23 review.
 
 ### #005 — Connect the selected-service grid to detail pages
 
