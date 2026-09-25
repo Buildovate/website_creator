@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015A — Mobile-friendly platform pass**, immediately after completed #015 and before #016. No ticket is currently marked In progress; #015A and #016 remain Not started. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015B — Platform mobile polish**, the review follow-up to #015A (e2b8418), before #016. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015B and #016 remain Not started. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -277,7 +277,7 @@ Tickets #001–#041.
 ### #015A — Mobile-friendly platform pass
 
 - State: **Automated acceptance complete — manual iPhone check pending for Joe** · Estimate: **6h initial estimate** (≤1 day; apply the session-contract split rule before coding if the audit reveals a larger implementation).
-- Queue: Immediately after #015, which is Done, and before #016. No existing ticket is renumbered. The automated implementation is complete; #016 is next.
+- Queue: Immediately after #015, which is Done, and before #015B and #016. No existing ticket is renumbered. The automated implementation is complete; #015B is next.
 - References: [Standing platform mobile acceptance](#standing-platform-mobile-acceptance); [Pack 1](docs/product/01-CORE-SITE-A-N.md) §M; [Pack 3](docs/product/03-UPSELLS-MEDIA-CRM-U-AA.md) §X2.B; [Pack 4](docs/product/04-GROWTH-ADS-EMAIL-AB-AF.md) §AD3/AE4b; [dashboard wireframes](docs/product/PACK4_ANALYTICS_ADS.md#analytics-dashboard-wireframes). Owning modules: workspace, sites and media.
 - Scope: Inventory **every platform screen built so far**, including contractor questionnaire and subsections, dashboard, inquiry inbox/list/detail, preview and publish controls, settings, photo/media upload and galleries, navigation, dialogs and drawers. Include other existing platform/admin screens in the inventory; do not limit the pass to those named examples or to public-site previews. Audit empty, populated, validation/error and long-content states under the roles that can access them.
 - Files to touch: existing platform shell/views, workspace client modules and their styles as identified by the inventory, including src/views.js, src/client/workspace/ and applicable public/ styles/scripts; existing media upload client; tests/platform-mobile.mjs **(new)**; docs/build-evidence/015A/ **(new)**. No separate Contractor CRM changes, new external integrations or public-site redesign.
@@ -286,6 +286,19 @@ Tickets #001–#041.
 - External keys/accounts: None for local platform work. Device requirement: a phone/browser with camera access for the capture acceptance check; do not substitute emulation for that evidence.
 
 - Accepted exception from Joe: commit #015A now with automated evidence; **Real iPhone camera upload remains a pending manual check for Joe**, not a passed result. Keep the secured pairing script for later use. [Evidence and audit matrix](docs/build-evidence/015A/README.md): 44/44 regression commands and 200 phone/desktop state checks pass.
+
+### #015B — Platform mobile polish
+
+- State: **Not started** · Estimate: **5h** (≤1 day).
+- Queue: Review findings from #015A (`e2b8418`); complete after #015A's automated pass and before #016. Joe's real-iPhone camera check for #015A remains pending separately.
+- Scope — Platform mobile polish:
+  1. Contacts on phones: make trade filter chips one horizontally swipeable row or a dropdown, so the first contacts are visible without scrolling at 390×844.
+  2. Remove the sticky “Publish changes” bar from Contacts, Calendar and any other CRM-style list with nothing to publish. Show it only on screens that change the public website.
+  3. Style the file picker and “Take a photo” buttons with platform button styles instead of browser defaults. On phones, show only one “Upload photographs” action: the sticky one.
+  4. Style “+ Add contact” as a primary button.
+- Done when: All four findings are resolved at 390×844 without losing touch/keyboard access or desktop behavior. Contacts are visible without scrolling past wrapped filters; CRM-style lists have no publish bar; mobile upload has one clearly styled action; Add contact is visually primary.
+- Verification/evidence: Capture affected phone and desktop screens, verify the actions and navigation with touch/keyboard, and run the relevant platform mobile regressions. Store results under `docs/build-evidence/015B/` when implemented.
+- External keys/accounts: None. No separate Contractor CRM changes.
 
 ### #016 — Persist quiz completion evidence
 
