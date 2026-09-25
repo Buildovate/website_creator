@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #013; it is not authorized by this request.
+Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #014; it is not authorized by this request.
 
 ## Session contract
 
@@ -235,11 +235,12 @@ Tickets #001–#041.
 
 ### #013 — Complete footer social identities
 
-- State: **Not started** · Estimate: **3h** (≤1 day).
+- State: **Done** · Estimate: **3h** (≤1 day).
 - Pack section: [`E`](docs/product/01-CORE-SITE-A-N.md) §E.
 - Files to touch: `src/social-icons.js`; `src/platform/constitution.ts`; `src/site-polish.js`; `tests/constitution.mjs`.
 - Done when: Missing required social identities are supported with accessible icons, approved profile URLs and per-network toggles; disabled links disappear.
-- External keys/accounts: K22 only if brand assets need permission.
+- Executed evidence: [#013](docs/build-evidence/013/README.md), 22 focused tests, build/typecheck, and desktop/mobile enabled/disabled browser captures. URLs require a contractor-saved HTTPS value and enabled toggle; public changes require owner publication.
+- External keys/accounts: K22 permitted marks are unverified; generic local icon/text fallback avoids a new asset dependency.
 
 ### #014 — Carry page context into homeowner inquiries
 

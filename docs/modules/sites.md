@@ -145,3 +145,10 @@ Tenant PUT preserves omitted legal settings for older editors and permits only p
 `websiteFooter` renders contact columns only when they contain visible contact content. A location name alone does not create a column. Empty primary/additional regions have no heading, border or reserved gap; configured nav, service areas, social and legal links remain. The primary contact block spans mobile width; additional locations use responsive columns.
 
 The bound reviewed policy's required license number/state and supplied footer disclosure render independently of visibility toggles, with one license line. Missing values are never invented; publication gates come from #011. Existing financing estimate text appears only while financing is enabled, with supplied longer text in a native details disclosure. Optional insurance/bonding still requires the #011 policy and existing attestation. Legal and preview links retain the published/draft access boundary. No real K23 policy is seeded. [Evidence](../build-evidence/012/README.md).
+
+
+## Footer social identities — ticket #013
+
+`SOCIALS` in `src/platform/constitution.ts` is the shared eight-network list: Facebook, Instagram, YouTube, TikTok, Google Business, LinkedIn, X/Twitter and Nextdoor. Questionnaire controls derive from it. Each network defaults disabled with an empty URL; an enabled entry must have a complete HTTPS URL. The footer renders only known, enabled entries with a URL, as labeled keyboard-focusable links opening in a new tab. Disabling a profile hides its link without hiding the other profiles.
+
+Tenant draft/published snapshot rules still apply: an edit appears in authenticated preview, and the public footer changes only after owner publication. No contractor profile is seeded or inferred. The new icons are local SVGs; Google Business uses a generic location symbol because K22 permitted brand marks/profile evidence are unavailable. The social row makes no rating, certification or provider-connection claim. See [#013 evidence](../build-evidence/013/README.md).

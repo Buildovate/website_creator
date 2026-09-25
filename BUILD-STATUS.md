@@ -385,3 +385,11 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Overlapping complete panels keep at least one card 60% opaque; independently timed copy prevents double text and tabs switch at the midpoint. Decide releases intact with tabs/introduction, without the final empty hold. Compact scenes leave approximately 43px phone / 48px desktop below the card; all phone images are 200px and card heights are equal. All v3 polish and #004G-v4 drone behavior are preserved.
 - [Final evidence](docs/build-evidence/004I-v4/README.md): failing 856ec47 baseline, 9756 samples over 12 profiles at >=60.09 Hz; 12 distinct real phone mid-transition captures; fresh desktop/mobile down/up/down recordings; 12 stack/stat and 12 existing-motion browser profiles; 43/43 regression commands; six passing Lighthouse audits. Motion 37282/61440 gzip bytes.
 - Commit locator: fix: keep Roofing stack handoffs continuous (#004I-v4). Local only; no push/deployment. Next numbered ticket #013 remains unstarted.
+
+
+### #013 — Done (2026-09-24)
+
+- Completed all eight Pack E/C footer social identities. Added Google Business and X/Twitter to the shared questionnaire/normalizer and local accessible SVGs. Existing six networks retain their controls. Unknown identities cannot render.
+- A link appears only with its individual enabled switch and saved HTTPS URL; draft edits stay private until owner publication. Disabling either new profile removes it across shared page footers. No real contractor URLs were seeded.
+- [Evidence](docs/build-evidence/013/README.md): desktop/mobile enabled/disabled captures, keyboard and questionnaire-save browser checks, 22 focused regressions, build and typecheck. Fictional fixture URLs only. K22 brand permission remains unverified; the Google Business location icon is generic, and the links make no affiliation or rating claim.
+- Commit locator: `feat: complete footer social identities (#013)`. Local only; no push or deployment. Next numbered ticket: #014.

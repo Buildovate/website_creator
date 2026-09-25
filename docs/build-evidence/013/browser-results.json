@@ -1,0 +1,62 @@
+[
+  {
+    "view": "desktop",
+    "width": 1440,
+    "height": 900,
+    "state": "enabled",
+    "visibleNetworks": 8,
+    "noOverflow": true,
+    "keyboard": true,
+    "files": [
+      "desktop-enabled.png",
+      "desktop-enabled-icons.png"
+    ]
+  },
+  {
+    "view": "desktop",
+    "width": 1440,
+    "height": 900,
+    "state": "disabled",
+    "visibleNetworks": 6,
+    "noOverflow": true,
+    "keyboard": true,
+    "files": [
+      "desktop-disabled.png",
+      "desktop-disabled-icons.png"
+    ]
+  },
+  {
+    "view": "mobile",
+    "width": 390,
+    "height": 844,
+    "state": "enabled",
+    "visibleNetworks": 8,
+    "noOverflow": true,
+    "keyboard": true,
+    "files": [
+      "mobile-enabled.png",
+      "mobile-enabled-icons.png"
+    ]
+  },
+  {
+    "view": "mobile",
+    "width": 390,
+    "height": 844,
+    "state": "disabled",
+    "visibleNetworks": 6,
+    "noOverflow": true,
+    "keyboard": true,
+    "files": [
+      "mobile-disabled.png",
+      "mobile-disabled-icons.png"
+    ]
+  },
+  {
+    "view": "questionnaire",
+    "newControls": 2,
+    "savedNetworks": [
+      "googleBusiness",
+      "xTwitter"
+    ]
+  }
+]

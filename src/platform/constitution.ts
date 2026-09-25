@@ -8,7 +8,7 @@ export const PRICE_BOOK = Object.freeze([
   {id:'ugc-refresh',name:'AI UGC refresh',priceCents:9700},
 ]);
 export const LENDERS = {sfc:'Service Finance Company',wisetack:'Wisetack',sunbit:'Sunbit'} as const;
-export const SOCIALS = {facebook:'Facebook',instagram:'Instagram',youtube:'YouTube',linkedin:'LinkedIn',tiktok:'TikTok',nextdoor:'Nextdoor'} as const;
+export const SOCIALS = {facebook:'Facebook',instagram:'Instagram',youtube:'YouTube',tiktok:'TikTok',googleBusiness:'Google Business',linkedin:'LinkedIn',xTwitter:'X (Twitter)',nextdoor:'Nextdoor'} as const;
 export const COMPANY_FIELDS = {name:'Company name',address:'Address',phone:'Phone',email:'Email',hours:'Hours of operation',license:'License number',bonded:'Bonded',insured:'Insured'} as const;
 export type CompanyField = keyof typeof COMPANY_FIELDS;
 export type Visibility = Record<CompanyField,boolean>;
