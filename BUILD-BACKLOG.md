@@ -18,7 +18,7 @@ Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2 and #004L** (who
 
 12. Every ticket that touches a contractor-facing platform/admin screen must pass the standing platform mobile acceptance rule below at **390×844** and **1440×900 desktop**, with a phone screenshot in its evidence. Public-site mobile checks do not substitute for platform checks.
 
-Scope: Website Design only. Retain the 14 trades, existing good media, scroll hero, sticky header, selected services, uploaded branding, source reviews and approved Project Map. Latest financing direction is calculator → Get Financing Options → configured provider flow; no lender marketing showcase. All external account state is unverified unless NEEDS-KEYS records a confirmed fact.
+Scope: Website Design only. Retain the 14 existing trades, and queue Concrete and Pools as two additional trade families; Remodel is a specialist rollout sharing General Contractors primitives. Preserve existing templates, good media, scroll hero, sticky header, selected services, uploaded branding, source reviews and approved Project Map. Latest financing direction is calculator → Get Financing Options → configured provider flow; no lender marketing showcase. All external account state is unverified unless NEEDS-KEYS records a confirmed fact or Joe explicitly confirms a connection for the selected ticket.
 
 Pricing source for affected tickets: read only the referenced W/AB/AF pricing paragraphs and the named rows in `docs/product/PACK4_CATALOG_DELTA.md`. Do not reread all packs or invent SKU contents. Planning does not provision accounts or authorize any charges.
 
@@ -36,7 +36,7 @@ Existing source requirements are narrower: [Pack 1 §M](docs/product/01-CORE-SIT
 
 ## Phase 1 — the homeowner website that sells; Roofing first
 
-Tickets #001–#041.
+Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K showpieces and per-trade signature insertions. Execute #004M–#004R before #004J; #004J and #004K follow in that order.
 
 ### #001 — Resolve the Roofing review-lookup test mismatch
 
@@ -171,6 +171,54 @@ Tickets #001–#041.
 
 - State: **Done** (2026-09-25). The owner story's dark band now pairs its tilted quote card with a responsive, lazy-loaded owner/operator sample portrait. The sample carries `isSample: true`, an on-photo replacement label, a media-needed readiness check and an approval checklist note. The existing owner upload flow selects the real photo and removes the overlay.
 - Evidence: [desktop and phone captures, upload-state comparison, media credit and full regressions](docs/build-evidence/004L/README.md). Local commit only; no push or deployment. #015E remains the next queued ticket.
+
+### #004M — Scroll Before/After variant (Astra High)
+
+- State: **Queued** · Run before #004J. Preserve existing templates: add an inspiration-based variant to the current before/after section, selected by a deterministic per-site variation seed that can be overridden in settings. If the seed does not yet exist, add it in this ticket. Keep the classic slider as the other variant.
+- Scope: Pin the section while a frame sequence or short video scrubs with scroll progress. Add a thin progress line and 3–5 short step labels that crossfade. Add a site-wide Motion on/off toggle. Use a static before/after pair with captions for reduced motion; lazy-load media, avoid clipping at 390px, and keep mobile Lighthouse Performance ≥90.
+- Media: Generate **Roofing only** with the connected Higgsfield Ultra workflow, using image-to-video from a same-angle “before” still: worn roof → tear-off → underlayment → new roof → rain runoff. Store the media in `assets/transformations/roofing/` with `manifest.json` containing step labels, source, license and `isSample: true`. Show a “Concept project” tag wherever sample media appears. Document the folder contract and Higgsfield export resolution, fps, length and frame-extraction settings in `docs/product/TRANSFORMATION-MEDIA.md`.
+- Gate: Review and approve the Roofing frames before generating **any other trade's** transformation media. Each later trade ticket generates only its own media when that ticket runs. Capture desktop/390px screenshots, scroll in both directions, reduced-motion/no-JS fallback, and automated checks; do not redesign existing templates.
+
+### #004N — Big-number variant (Sol High)
+
+- State: **Queued** · Run before #004J. Add a variant of the existing stats section: one oversized stat over faint oversized background words. Select it with the per-site variation seed, leaving the current presentation available.
+- Facts gate: Use only the contractor's own confirmed data or a visibly cited source. Render no number when neither exists. Add an automatic check that blocks unsourced stats; verify both variants at desktop and 390px, including reduced motion.
+
+### #004O — Outcome chips (Sol High)
+
+- State: **Queued** · Run before #004J. Add an optional overlay to an existing owner, process or project photo. Floating chips such as “Inspection booked,” “Permit approved,” “Warranty registered” and “Financing approved” reveal in a staggered sequence. Label the entire treatment as a **process example**, never a claim about the contractor or a customer.
+- The per-site variation seed chooses whether chips appear and which eligible photo carries them. Keep the underlying photo and copy readable, provide static reduced-motion/no-JS states, and verify phone and desktop layouts.
+
+### #004P — Short headline sets (Sol High)
+
+- State: **Queued** · Run before #004J. Add alternate four-to-six-word, one-idea-per-screen headline options to existing sections. Keep each current headline as one option, and select the option deterministically through the per-site variation seed.
+- Preserve each site's saved content and factual claims; verify desktop, 390px and repeatable output for the same seed. Do not redesign the surrounding templates.
+
+### #004Q — “See it in your yard” AR (Astra High)
+
+- State: **Queued** · Run before #004J. Add an optional section for product trades: Patios first, then pergolas, garage doors, fencing and HVAC units. Use `<model-viewer>` to offer a life-size phone-camera placement through Scene Viewer or WebXR on Android and AR Quick Look (USDZ) on iPhone, with a rotatable 3D view on desktop. Lazy-load it and show a graceful static fallback when AR is unsupported.
+- Start with 2–3 generic patio covers. Put `.glb`, `.usdz` and a manifest with dimensions, colors, source, license and `isSample` in `assets/ar/<trade>/`; document the contract in `docs/product/AR-MODELS.md`. Show “Preview only, actual size and finish vary.” The “Get a quote for this” CTA carries the selected model and color into the inquiry. Verify AR/fallback routing, privacy, desktop and 390px usability.
+
+### #004R — “See it on your home” photo visualizer (Sol High; Astra if review fails)
+
+- State: **Queued** · Run before #004J. Let a homeowner upload a home photo and choose roof color, paint, flooring, landscaping or patio cover. Return an AI image labeled “AI concept preview, not a guarantee of final results.” Require name, phone and address to view it, and create an inquiry linked to the private photo and selected option.
+- Keep uploaded photos private to the contractor; add rate limits and abuse protection. Add the required AI image key to `NEEDS-KEYS.md` when this ticket runs and use an explicit mock mode until the key exists. Verify authorization, retention, inquiry linkage, mobile/desktop layout and failure states; do not imply the preview is a final-result promise.
+
+**Variant direction and media credit gate:** These are additions to sections already in use, not template redesigns. The per-site variation seed creates a different, repeatable mix for each contractor and remains manually overridable. Higgsfield Ultra is connected, but #004M spends generation credits on Roofing only; no other trade transformation media is generated until its own ticket runs after Roofing frame approval.
+
+### #004J — Roofing signature: Storm Pass (Astra High)
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Run after #004R. Signature source: [TRADE-SIGNATURES.md §1](docs/product/TRADE-SIGNATURES.md). This is the one interactive centerpiece directly below the existing drone hero; it does not replace that hero or redesign the Roofing template.
+- Scope: Drag a storm cloud across the house; bounded rain/hail particles reveal roof-zone hail bruises, a lifted tab and a gutter dent. Clear the sky, circle the markers and light a six-item inspection checklist linked to those markers. Build reusable `ScrubStage` (#25: drag/slider/scroll/Play progress, snap points, keyboard, live-region text and reduced-motion state buttons), `AmbientLayer` particles and `HotspotCallouts`. Reuse #004H roof art or the #004F still. Reduced motion offers Before / After the storm / What we check.
+- Done when: The signature meets [TRADE-SIGNATURES.md §0](docs/product/TRADE-SIGNATURES.md) gates: added whole-page motion JS ≤60 KB gzip, lazy loading outside first paint/LCP, mobile production Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, static informative no-JS and reduced-motion states, ≥44px touch track with `touch-action:pan-y` and Play, keyboard slider/live region, and desktop 1440×900 plus phone 390×844 rest/mid/finish/reduced/no-JS screenshots and scroll recordings in `docs/build-evidence/004J/`. “Free” inspection, storm-location, damage, insurance, price and result claims appear only when individually verified; AI result images carry one “AI example” label. Record #020 overlap without merging tickets. No new scroll library or paid media generation; list needed raster in `NEEDS-ASSETS.md` and use a labeled placeholder. Commit locally; no push or deploy.
+- External keys/accounts: None for placeholder implementation; verified weather observations remain with #160/#161.
+
+### #004K — Patio signature: Shade Clock (Astra High)
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Run after #004J; wire it as an option on the existing Patios kit, with full adoption in #030. Signature source: [TRADE-SIGNATURES.md §6](docs/product/TRADE-SIGNATURES.md). Do not redesign the Patio template.
+- Scope: A time slider from 8 am to 7 pm moves the sun and sweeps a patio-cover shadow across the furniture, with a “Table: in shade / in sun” chip. Solid / Lattice / Louvered chips swap the aluminum cover; Louvered adds Open/Close blades and striped versus solid shade. Optional Rain and N/E/S/W orientation controls. Reuse `ScrubStage`; add `AmbientLayer` shadow mode and `SwatchConfigurator`. Reduced motion offers Morning / Noon / Evening state buttons.
+- Done when: The [TRADE-SIGNATURES.md §0](docs/product/TRADE-SIGNATURES.md) motion, production Lighthouse, no-JS, reduced-motion, touch, keyboard, honesty and evidence gates pass, with 1440×900 and 390×844 captures and scroll recordings in `docs/build-evidence/004K/`. Shade is explicitly illustrative unless calculated from the site's latitude and date; no temperature-drop number, weather-resistance specification, motorized or rain-sensor behavior without a recorded manufacturer or contractor source. No new scroll library or paid media generation; use labeled placeholders and record asset needs. Commit locally; no push or deploy.
+- External keys/accounts: None for illustrative shade mode.
 
 ### #005 — Connect the selected-service grid to detail pages
 
@@ -491,8 +539,8 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 ### #028A — Design styles
 
 - State: **Not started** · Estimate: **8h** (≤1 day).
-- Scope: Create four or five complete visual systems per trade. Each system defines its type pairing, palette, corner radius, spacing rhythm and light or dark surface treatment, and every choice remains configurable per contractor.
-- Done when: The Roofing site renders correctly in every style, preserving content, permissions, responsive behavior and accessibility.
+- Scope: Preserve existing templates. Add four or five configurable inspiration-based style variations per trade within the current section system; each variation defines its type pairing, palette, corner radius, spacing rhythm and light or dark surface treatment. The deterministic per-site seed from #004M chooses a variation unless the contractor overrides it.
+- Done when: The Roofing site renders correctly in every existing template and added style variation, preserving content, permissions, responsive behavior and accessibility without a template redesign.
 - External keys/accounts: None.
 
 ### #028B — Section layout variants
@@ -506,7 +554,7 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 
 - State: **Not started** · Estimate: **8h** (≤1 day).
 - Dependency: #023 generation manifest, #028A design styles and #028B section variants.
-- Scope: Given contractor inputs and a seed, select a visual style and section variants, generate copy only from the contractor's facts, and save the selected choices in the #023 generation manifest.
+- Scope: Given contractor inputs and the deterministic, overridable per-site seed introduced in #004M, select style and section variants on existing templates, generate copy only from the contractor's facts, and save the selected choices in the #023 generation manifest.
 - Done when: Three fictional Roofing contractors with different inputs produce homepages that do not look like one template; show the three results side by side and preserve deterministic output for the same inputs and seed.
 - External keys/accounts: K01 only if application copy generation is enabled; otherwise use the ticket's honest missing-access behavior.
 
@@ -532,6 +580,29 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Done when: Definite failures block approval, borderline results cannot pass without a recorded review decision, and passing evidence is attached to the generated version. Custom per-contractor video remains off until this gate passes.
 - External keys/accounts: K01 only if AI review is used; deterministic checks and human review require none.
 
+### Trade rollout and signature map
+
+The 16 trade families retain their existing templates. [TRADE-SIGNATURES.md](docs/product/TRADE-SIGNATURES.md) §0–§16 supplies the primary interaction and shared honesty, access and performance rules. Each signature ticket also owns **one** “Scroll before/after scene (Higgsfield, generated when this ticket runs)” from the table below. Its media goes in `assets/transformations/<trade>/` with step labels, source, license and `isSample: true` in `manifest.json`; sample output is tagged “Concept project.” **No non-Roofing transformation is generated until #004M Roofing frames receive review approval.** Later trades generate their own media only during their own S ticket, never in a shared batch. Existing rollout tickets remain separate from signature work.
+
+| Trade family | Rollout | Signature |
+|---|---|---|
+| Roofing | #001–#028 | #004J Storm Pass; #004M transformation reference |
+| HVAC | #029 | #029S Comfort Map |
+| Patios | #030 | #004K Shade Clock; #030S transformation adoption |
+| Plumbing | #031 | #031S Leak Tracer |
+| Electrical | #032 | #032S Lights On |
+| Landscaping | #033 | #033S Four Seasons Yard |
+| General Contractors / Remodel | #034 and #041C | #034S and #041CS Demo Day |
+| Flooring | #035 | #035S Plank Run |
+| Painting | #036 | #036S Brush Pass |
+| Fencing | #037 | #037S Post by Post |
+| Garage Doors | #038 | #038S Door Lift |
+| Pest Control | #039 | #039S Seal the House |
+| Windows / Doors | #040 | #040S Heat Bounce |
+| Solar | #041 | #041S Sun Path |
+| Concrete | #041A | #041AS The Pour |
+| Pools | #041B | #041BS Fill & Glow |
+
 ### #029 — Apply the approved page system to HVAC
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
@@ -539,6 +610,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Files to touch: `public/site-content/hvac.json` **(new)**; `public/design-kits.json`; `tests/website-pages.mjs` **(new)**.
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
+
+### #029S — HVAC signature: Comfort Map
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #029. Source: [TRADE-SIGNATURES.md §2](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A hot house glows red, then cools to blue room by room; the scene is illustrative unless temperatures come from confirmed measurements. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/hvac/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Comfort Map from §2; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/029S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/hvac/` **(new)**, trade config and focused tests, `docs/build-evidence/029S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
 
 ### #030 — Apply the approved page system to Patios
 
@@ -548,6 +628,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
 
+### #030S — Patios signature: Shade Clock adoption
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #030. Source: [TRADE-SIGNATURES.md §6](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A bare backyard becomes a covered patio as the shade line sweeps across the furniture; #004K remains the early showpiece interaction, so this ticket extends that same signature instead of adding a second centerpiece. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/patios/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Shade Clock adoption from §6; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/030S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/patios/` **(new)**, trade config and focused tests, `docs/build-evidence/030S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
 ### #031 — Apply the approved page system to Plumbing
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
@@ -555,6 +644,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Files to touch: `public/site-content/plumbing.json` **(new)**; `public/design-kits.json`; `tests/website-pages.mjs` **(new)**.
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
+
+### #031S — Plumbing signature: Leak Tracer
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #031. Source: [TRADE-SIGNATURES.md §3](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A ceiling stain reveals the leak behind the wall, then the fitting repair and a dry room. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/plumbing/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Leak Tracer from §3; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/031S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/plumbing/` **(new)**, trade config and focused tests, `docs/build-evidence/031S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
 
 ### #032 — Apply the approved page system to Electrical
 
@@ -564,6 +662,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
 
+### #032S — Electrical signature: Lights On
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #032. Source: [TRADE-SIGNATURES.md §4](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A dark house at dusk gains light room by room; service labels appear only for services the contractor offers. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/electrical/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Lights On from §4; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/032S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/electrical/` **(new)**, trade config and focused tests, `docs/build-evidence/032S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
 ### #033 — Apply the approved page system to Landscaping
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
@@ -571,6 +678,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Files to touch: `public/site-content/landscaping.json` **(new)**; `public/design-kits.json`; `tests/website-pages.mjs` **(new)**.
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
+
+### #033S — Landscaping signature: Four Seasons Yard
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #033. Source: [TRADE-SIGNATURES.md §9](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A dead yard becomes golden-hour curb appeal, without claiming a real completed project. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/landscaping/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Four Seasons Yard from §9; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/033S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/landscaping/` **(new)**, trade config and focused tests, `docs/build-evidence/033S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
 
 ### #034 — Apply the approved page system to General Contractors
 
@@ -580,6 +696,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
 
+### #034S — General Contractors / Remodel signature: Demo Day
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #034. Source: [TRADE-SIGNATURES.md §7](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A gutted room moves through framing to a finished kitchen; this is the General Contractors option, with a Remodel-specialist rollout in #041C. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/general-contractors/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Demo Day from §7; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/034S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/general-contractors/` **(new)**, trade config and focused tests, `docs/build-evidence/034S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
 ### #035 — Apply the approved page system to Flooring
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
@@ -587,6 +712,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Files to touch: `public/site-content/flooring.json` **(new)**; `public/design-kits.json`; `tests/website-pages.mjs` **(new)**.
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
+
+### #035S — Flooring signature: Plank Run
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #035. Source: [TRADE-SIGNATURES.md §14](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): Old carpet peels back to new hardwood or tile, with finish choices limited to contractor-confirmed products. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/flooring/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Plank Run from §14; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/035S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/flooring/` **(new)**, trade config and focused tests, `docs/build-evidence/035S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
 
 ### #036 — Apply the approved page system to Painting
 
@@ -596,6 +730,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
 
+### #036S — Painting signature: Brush Pass
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #036. Source: [TRADE-SIGNATURES.md §8](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A fresh-color line sweeps across a faded exterior; color names match available contractor choices. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/painting/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Brush Pass from §8; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/036S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/painting/` **(new)**, trade config and focused tests, `docs/build-evidence/036S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
 ### #037 — Apply the approved page system to Fencing
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
@@ -603,6 +746,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Files to touch: `public/site-content/fencing.json` **(new)**; `public/design-kits.json`; `tests/website-pages.mjs` **(new)**.
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
+
+### #037S — Fencing signature: Post by Post
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #037. Source: [TRADE-SIGNATURES.md §11](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A leaning fence becomes new boards and the gate closes. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/fencing/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Post by Post from §11; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/037S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/fencing/` **(new)**, trade config and focused tests, `docs/build-evidence/037S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
 
 ### #038 — Apply the approved page system to Garage Doors
 
@@ -612,6 +764,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
 
+### #038S — Garage Doors signature: Door Lift
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #038. Source: [TRADE-SIGNATURES.md §15](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A dented door is replaced and the new door rises open; motor or safety features require a recorded product source. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/garage-doors/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Door Lift from §15; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/038S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/garage-doors/` **(new)**, trade config and focused tests, `docs/build-evidence/038S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
 ### #039 — Apply the approved page system to Pest Control
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
@@ -619,6 +780,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Files to touch: `public/site-content/pest-control.json` **(new)**; `public/design-kits.json`; `tests/website-pages.mjs` **(new)**.
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
+
+### #039S — Pest Control signature: Seal the House
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #039. Source: [TRADE-SIGNATURES.md §16](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A house cutaway shows trouble spots clearing; no chemical, safety, efficacy or pest-free claim is implied. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/pest-control/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Seal the House from §16; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/039S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/pest-control/` **(new)**, trade config and focused tests, `docs/build-evidence/039S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
 
 ### #040 — Apply the approved page system to Windows/Doors
 
@@ -628,6 +798,15 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
 
+### #040S — Windows / Doors signature: Heat Bounce
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #040. Source: [TRADE-SIGNATURES.md §12](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A same-angle old window becomes a fitted new window, then an illustrative heat-flow layer changes; no efficiency figure appears without a recorded manufacturer source. Create this trade's own same-angle image-to-video media only after #004M Roofing frame approval. Store it in `assets/transformations/windows-doors/` with `manifest.json` step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Heat Bounce from §12; approve its final per-site interaction scope before build. Add it to the existing trade template as a variation chosen by the site seed.
+- Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/040S/`. Preserve existing templates; local commit only, no push or deploy.
+- Files: `assets/transformations/windows-doors/` **(new)**, trade config and focused tests, `docs/build-evidence/040S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
 ### #041 — Apply the approved page system to Solar
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
@@ -635,6 +814,69 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Files to touch: `public/site-content/solar.json` **(new)**; `public/design-kits.json`; `tests/website-pages.mjs` **(new)**.
 - Done when: After the Roofing acceptance gate, this one trade has its own reviewed page content/configuration, chosen-service links and honest media/empty states; render every enabled page and show one mobile screenshot. Do not roll out other trades in this ticket.
 - External keys/accounts: None.
+
+### #041S — Solar signature: Sun Path
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #041. Source: [TRADE-SIGNATURES.md §5](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A bare roof gains panels, then the sun path lights the panels; omit production, bill and tax-credit numbers without a dated verified source. Generate same-angle image-to-video media for this trade only after #004M Roofing frame approval. Store it in `assets/transformations/solar/` with a `manifest.json` for step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Sun Path from §5; approve its final per-site interaction scope before build. Add it as a seeded variation of the existing template. Battery behavior appears only if that product is sold.
+- Done when: The scene and signature pass [TRADE-SIGNATURES.md §0](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, confirmed facts only, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/041S/`. Local commit only; no push or deploy.
+- Files: `assets/transformations/solar/` **(new)**, trade config and focused tests, `docs/build-evidence/041S/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
+### #041A — Apply the approved page system to Concrete
+
+- State: **Not started — backlog only** · Estimate: **6h** (≤1 day). Queue after #041 in Phase 1, one trade per ticket.
+- Pack section: [`H`](docs/product/01-CORE-SITE-A-N.md) §H; [`L`](docs/product/01-CORE-SITE-A-N.md) §L; [`N`](docs/product/01-CORE-SITE-A-N.md) §N; [`Q`](docs/product/02-CREATIVE-TRUST-O-T.md) §Q.
+- Scope: Create a Concrete trade rollout, not a redesign of other trades. Preserve existing templates, register a selectable service list and reviewed page content, and use honest missing-media states. List required hero, still and fallback assets in `NEEDS-ASSETS.md`; generation is deferred to the paired signature ticket after the Roofing approval gate.
+- Files to touch: `public/site-content/concrete.json` **(new)**; `public/design-kits.json`; focused website-page tests; `NEEDS-ASSETS.md`.
+- Done when: After #028 and #028A–#028F, this one trade's enabled pages and selected-service links work; facts and media are reviewed, missing claims hide, and desktop 1440×900 plus phone 390×844 screenshots, reduced-motion capture and tests are saved in `docs/build-evidence/041A/`. Existing trades remain working. Local commit only; no push or deploy.
+- External keys/accounts: None.
+
+### #041AS — Concrete signature: The Pour
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #041A. Source: [TRADE-SIGNATURES.md §10](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A cracked driveway moves through forms and pour to a finished stamped surface; finish and slab specifications require confirmed contractor or manufacturer inputs. Generate same-angle image-to-video media for this trade only after #004M Roofing frame approval. Store it in `assets/transformations/concrete/` with a `manifest.json` for step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): The Pour from §10; approve its final per-site interaction scope before build. Add it as a seeded variation of the existing template.
+- Done when: The scene and signature pass [TRADE-SIGNATURES.md §0](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, confirmed facts only, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/041AS/`. Local commit only; no push or deploy.
+- Files: `assets/transformations/concrete/` **(new)**, trade config and focused tests, `docs/build-evidence/041AS/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
+### #041B — Apply the approved page system to Pools
+
+- State: **Not started — backlog only** · Estimate: **6h** (≤1 day). Queue after #041 in Phase 1, one trade per ticket.
+- Pack section: [`H`](docs/product/01-CORE-SITE-A-N.md) §H; [`L`](docs/product/01-CORE-SITE-A-N.md) §L; [`N`](docs/product/01-CORE-SITE-A-N.md) §N; [`Q`](docs/product/02-CREATIVE-TRUST-O-T.md) §Q.
+- Scope: Create a Pools trade rollout, not a redesign of other trades. Preserve existing templates, register a selectable service list and reviewed page content, and use honest missing-media states. List required hero, still and fallback assets in `NEEDS-ASSETS.md`; generation is deferred to the paired signature ticket after the Roofing approval gate.
+- Files to touch: `public/site-content/pools.json` **(new)**; `public/design-kits.json`; focused website-page tests; `NEEDS-ASSETS.md`.
+- Done when: After #028 and #028A–#028F, this one trade's enabled pages and selected-service links work; facts and media are reviewed, missing claims hide, and desktop 1440×900 plus phone 390×844 screenshots, reduced-motion capture and tests are saved in `docs/build-evidence/041B/`. Existing trades remain working. Local commit only; no push or deploy.
+- External keys/accounts: None.
+
+### #041BS — Pools signature: Fill & Glow
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #041B. Source: [TRADE-SIGNATURES.md §13](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): An empty yard becomes a pool; water fills to the tile line and night lights turn on. AI result media stays clearly labeled. Generate same-angle image-to-video media for this trade only after #004M Roofing frame approval. Store it in `assets/transformations/pools/` with a `manifest.json` for step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Fill & Glow from §13; approve its final per-site interaction scope before build. Add it as a seeded variation of the existing template.
+- Done when: The scene and signature pass [TRADE-SIGNATURES.md §0](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, confirmed facts only, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/041BS/`. Local commit only; no push or deploy.
+- Files: `assets/transformations/pools/` **(new)**, trade config and focused tests, `docs/build-evidence/041BS/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
+### #041C — Apply the approved page system to Remodel
+
+- State: **Not started — backlog only** · Estimate: **6h** (≤1 day). Queue after #041 in Phase 1, one trade per ticket.
+- Pack section: [`H`](docs/product/01-CORE-SITE-A-N.md) §H; [`L`](docs/product/01-CORE-SITE-A-N.md) §L; [`N`](docs/product/01-CORE-SITE-A-N.md) §N; [`Q`](docs/product/02-CREATIVE-TRUST-O-T.md) §Q.
+- Scope: Create a Remodel-specialist rollout that can share General Contractors' #034 page primitives and signature component without duplicating its content or attributing work to the wrong business. Preserve existing templates, register a selectable service list and reviewed page content, and use honest missing-media states. List required hero, still and fallback assets in `NEEDS-ASSETS.md`; generation is deferred to the paired signature ticket after the Roofing approval gate.
+- Files to touch: `public/site-content/remodel.json` **(new)**; `public/design-kits.json`; focused website-page tests; `NEEDS-ASSETS.md`.
+- Done when: After #028 and #028A–#028F, this one trade's enabled pages and selected-service links work; facts and media are reviewed, missing claims hide, and desktop 1440×900 plus phone 390×844 screenshots, reduced-motion capture and tests are saved in `docs/build-evidence/041C/`. Existing trades remain working. Local commit only; no push or deploy.
+- External keys/accounts: None.
+
+### #041CS — Remodel signature: Demo Day
+
+- State: **Not started — backlog only** · Estimate: **8h** (≤1 day). Queue beside #041C. Source: [TRADE-SIGNATURES.md §7](docs/product/TRADE-SIGNATURES.md).
+- Scroll before/after scene (Higgsfield, generated when this ticket runs): A gutted room moves through framing to a finished kitchen. Reuse #034S mechanics, but generate dedicated Remodel media only when #041CS runs. Generate same-angle image-to-video media for this trade only after #004M Roofing frame approval. Store it in `assets/transformations/remodel/` with a `manifest.json` for step labels, source, license and `isSample: true`; label it “Concept project.”
+- Signature interaction (spec to be supplied): Demo Day from §7; approve its final per-site interaction scope before build. Add it as a seeded variation of the existing template. The result is a concept until a customer-approved project supplies real media.
+- Done when: The scene and signature pass [TRADE-SIGNATURES.md §0](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, confirmed facts only, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/041CS/`. Local commit only; no push or deploy.
+- Files: `assets/transformations/remodel/` **(new)**, trade config and focused tests, `docs/build-evidence/041CS/` **(new)**.
+- External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
 
 ## Phase 2 — contractor backoffice and one-time upsells
 
