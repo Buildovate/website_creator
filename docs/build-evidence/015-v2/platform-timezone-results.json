@@ -1,0 +1,20 @@
+{
+  "errors": [],
+  "checks": [
+    {
+      "view": "mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "fieldFont": "16px",
+      "fieldHeight": 48.796875,
+      "savedAndReopened": true
+    },
+    {
+      "view": "desktop",
+      "width": 1440,
+      "height": 900,
+      "savedAndReopened": true
+    }
+  ]
+}

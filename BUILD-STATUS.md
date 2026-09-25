@@ -417,3 +417,11 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - **Real iPhone camera upload — pending manual check for Joe.** Physical capture/gallery, cancellation/permission-denial where offered, retry, saved image and keyboard-open action reachability remain unverified on iPhone/Safari. Joe explicitly authorized committing now with automated evidence and this manual check deferred. Emulated file uploads are not claimed as physical-camera proof.
 - Retained pairing script: docs/build-evidence/015A/phone-fixture.mjs. It serves fictional in-memory data to one paired device and expires after 20 minutes; run instructions are in the evidence README.
 - Commit locator: fix: make the platform usable on phones (#015A). Local only; no push or deployment. Next numbered ticket: #016, not started.
+
+
+### #015-v2 — Done (2026-09-25)
+
+- Business time zone is a saved platform setting, defaulting to America/Los_Angeles; older editors preserve it. Visible promotion dates are short dates in that zone, with no UTC label or seconds. The stored instants and start-inclusive/end-exclusive eligibility are unchanged. Date tests cover daylight-saving and local-day rollover plus draft/published isolation.
+- The shared phone header has a native, keyboard/touch-operable menu with every available nav link and tap-to-call. The public `<No guarantee>` token becomes finished neutral copy, and the promotion renderer removes other angle/curly placeholder tokens. No-JS menu/terms fallback remains usable.
+- [Evidence](docs/build-evidence/015-v2/README.md): open-menu and date-format phone screenshots, business-zone questionnaire phone/desktop screenshots, desktop/mobile #015 state checks and 44/44 full regression commands. Fictional fixtures only. #015A real-iPhone camera acceptance remains separately pending.
+- Commit locator: `fix: polish Roofing promotions and phone menu (#015-v2)`. Local only; no push or deployment. Next numbered ticket: #015B.

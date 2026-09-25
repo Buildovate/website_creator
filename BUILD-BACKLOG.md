@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015-v2 — Roofing promotion review fixes**, followed by #015B–#015F before #016. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015-v2, #015B–#015F and #016 remain Not started. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015B — Platform mobile polish**, followed by #015C–#015F before #016. #015-v2 is Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015B–#015F and #016 remain Not started. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -277,7 +277,7 @@ Tickets #001–#041.
 ### #015A — Mobile-friendly platform pass
 
 - State: **Automated acceptance complete — manual iPhone check pending for Joe** · Estimate: **6h initial estimate** (≤1 day; apply the session-contract split rule before coding if the audit reveals a larger implementation).
-- Queue: Immediately after #015, which is Done, and before #015B and #016. No existing ticket is renumbered. The automated implementation is complete; #015-v2 is next, followed by #015B–#015F.
+- Queue: Immediately after #015, which is Done, and before #015B and #016. No existing ticket is renumbered. The automated implementation is complete; #015-v2 is Done and #015B is next, followed by #015C–#015F.
 - References: [Standing platform mobile acceptance](#standing-platform-mobile-acceptance); [Pack 1](docs/product/01-CORE-SITE-A-N.md) §M; [Pack 3](docs/product/03-UPSELLS-MEDIA-CRM-U-AA.md) §X2.B; [Pack 4](docs/product/04-GROWTH-ADS-EMAIL-AB-AF.md) §AD3/AE4b; [dashboard wireframes](docs/product/PACK4_ANALYTICS_ADS.md#analytics-dashboard-wireframes). Owning modules: workspace, sites and media.
 - Scope: Inventory **every platform screen built so far**, including contractor questionnaire and subsections, dashboard, inquiry inbox/list/detail, preview and publish controls, settings, photo/media upload and galleries, navigation, dialogs and drawers. Include other existing platform/admin screens in the inventory; do not limit the pass to those named examples or to public-site previews. Audit empty, populated, validation/error and long-content states under the roles that can access them.
 - Files to touch: existing platform shell/views, workspace client modules and their styles as identified by the inventory, including src/views.js, src/client/workspace/ and applicable public/ styles/scripts; existing media upload client; tests/platform-mobile.mjs **(new)**; docs/build-evidence/015A/ **(new)**. No separate Contractor CRM changes, new external integrations or public-site redesign.
@@ -289,11 +289,12 @@ Tickets #001–#041.
 
 ### #015-v2 — Roofing promotion review fixes
 
-- State: **Not started** · Estimate: **5h** (≤1 day).
+- State: **Done** · Estimate: **5h** (≤1 day).
 - Queue: #015 review follow-up, after #015A's automated pass and before #015B. See [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) for the adjacent platform restoration queue.
 - Scope: Add a business time-zone setting defaulting to `America/Los_Angeles`; display promotion dates in that zone as short dates, with no “UTC” label or seconds. At phone width, replace the header navigation cut off after “PROM” with one menu button containing every navigation link and tap-to-call. Replace the public raw `<No guarantee>` placeholder with finished copy and prevent placeholder tokens from rendering publicly.
 - Done when: Promotion dates use the saved business zone across day and daylight-saving boundaries; the complete phone menu works by touch and keyboard; no public page emits placeholder tokens. Preserve desktop navigation, offer eligibility and draft/published boundaries.
 - Verification/evidence: Add automated date/menu/placeholder regression checks, including a public-render assertion that fails on placeholder tokens. Save 390×844 phone and 1440×900 desktop screenshots, test output and mobile acceptance results under `docs/build-evidence/015-v2/`.
+- Executed evidence: [#015-v2](docs/build-evidence/015-v2/README.md), 44/44 full regression commands; #015 desktop/mobile states and no-JS checks; business-zone save/reopen; phone menu and date captures.
 - External keys/accounts: None. Local commit only; no push or deployment.
 
 ### #015B — Platform mobile polish

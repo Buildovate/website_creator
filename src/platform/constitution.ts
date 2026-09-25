@@ -8,6 +8,7 @@ export const PRICE_BOOK = Object.freeze([
   {id:'ugc-refresh',name:'AI UGC refresh',priceCents:9700},
 ]);
 export const LENDERS = {sfc:'Service Finance Company',wisetack:'Wisetack',sunbit:'Sunbit'} as const;
+export const DEFAULT_BUSINESS_TIME_ZONE='America/Los_Angeles';
 export const SOCIALS = {facebook:'Facebook',instagram:'Instagram',youtube:'YouTube',tiktok:'TikTok',googleBusiness:'Google Business',linkedin:'LinkedIn',xTwitter:'X (Twitter)',nextdoor:'Nextdoor'} as const;
 export const COMPANY_FIELDS = {name:'Company name',address:'Address',phone:'Phone',email:'Email',hours:'Hours of operation',license:'License number',bonded:'Bonded',insured:'Insured'} as const;
 export type CompanyField = keyof typeof COMPANY_FIELDS;
@@ -20,6 +21,7 @@ export interface Promotion {serviceNames:string[];graphic:string;id:string;enabl
 export interface PlatformSettings {
   legal:LegalSettings;
   version:1;
+  timeZone:string;
   neighborhood:{enabled:boolean;country:string;region:string;proofs:{city:string;url:string;confirmed:boolean}[]};
   questionnaire:{story:string;priorities:string;factsConfirmed:boolean};
   footer:{financingDisclosure:string;visible:Visibility;bonded:boolean;insured:boolean;locations:Location[];socials:Record<keyof typeof SOCIALS,{enabled:boolean;url:string}>};
@@ -28,6 +30,7 @@ export interface PlatformSettings {
 }
 const obj=(v:unknown):Record<string,unknown>=>v!==null&&typeof v==='object'&&!Array.isArray(v)?v as Record<string,unknown>:{};
 const str=(v:unknown,max=250)=>typeof v==='string'?v.trim().slice(0,max):'';
+export function businessTimeZone(value:unknown):string {const zone=str(value,100)||DEFAULT_BUSINESS_TIME_ZONE;try {new Intl.DateTimeFormat('en-US',{timeZone:zone});}catch {throw new Error('Enter a valid IANA business time zone.');}return zone;}
 function check(ok:unknown,message:string):asserts ok {if(!ok)throw new Error(message)}
 export function safeHttps(value:unknown):string {
   const raw=str(value,2048);if(!raw)return '';
@@ -79,7 +82,7 @@ export function normalizePlatform(value:unknown):PlatformSettings {
     if(out.startsAt)out.startsAt=new Date(start).toISOString();if(out.endsAt)out.endsAt=new Date(end).toISOString();return out;
   });
   check(new Set(offers.map(p=>p.id)).size===offers.length,'Each promotion needs a unique identifier.');
-  return {version:1,legal:normalizeLegal(v.legal),neighborhood,questionnaire:{story:str(q.story,2500),priorities:str(q.priorities,1500),factsConfirmed:q.factsConfirmed===true},footer:{financingDisclosure:str(f.financingDisclosure,3000),visible:visibility(f.visible),bonded:f.bonded===true,insured:f.insured===true,locations,socials},financing:{enabled:fin.enabled===true,lenders,serviceTerms,programs},promotions:{enabled:prom.enabled===true,offers}};
+  return {version:1,timeZone:businessTimeZone(v.timeZone),legal:normalizeLegal(v.legal),neighborhood,questionnaire:{story:str(q.story,2500),priorities:str(q.priorities,1500),factsConfirmed:q.factsConfirmed===true},footer:{financingDisclosure:str(f.financingDisclosure,3000),visible:visibility(f.visible),bonded:f.bonded===true,insured:f.insured===true,locations,socials},financing:{enabled:fin.enabled===true,lenders,serviceTerms,programs},promotions:{enabled:prom.enabled===true,offers}};
 }
 export function activeOffers(platform:PlatformSettings,time=Date.now()) {return platform.promotions.enabled?platform.promotions.offers.filter(p=>p.enabled&&Date.parse(p.startsAt)<=time&&Date.parse(p.endsAt)>time):[];}
 export const FINANCING_DISCLOSURE='All financing and loan terms are subject to change based on approved credit. Estimate only; partner underwriting applies. Rates, terms and eligibility vary. This is not a loan offer or approval.';

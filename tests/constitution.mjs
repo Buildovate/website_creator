@@ -13,6 +13,9 @@ assert.equal(defaults.footer.bonded,false);assert.equal(defaults.footer.insured,
 assert.equal(Object.values(defaults.footer.socials).filter(x=>x.enabled).length,0);
 assert.deepEqual(Object.keys(defaults.footer.socials),Object.keys(SOCIALS));
 assert.equal(Object.keys(SOCIALS).length,8);
+assert.equal(defaults.timeZone,'America/Los_Angeles');
+assert.equal(normalizePlatform({timeZone:'America/New_York'}).timeZone,'America/New_York');
+assert.throws(()=>normalizePlatform({timeZone:'Mars/Phobos'}),/IANA business time zone/);
 for(const key of Object.keys(SOCIALS)){assert.equal(defaults.footer.socials[key].url,'');assert.match(socialIcon(key),/<svg[^>]+aria-hidden="true"[^>]*>[\s\S]*<(?:path|rect|circle)/);}
 assert.equal(socialIcon('unknown'),'');
 assert.equal(CONSTITUTION.videoPackage,'Higgsfield Ultra');assert.equal(CONSTITUTION.salesCommission,.5);
@@ -123,18 +126,30 @@ for(const [state,offers] of Object.entries(promotionStates)){
  if(state==='none'||state==='disabledOffer'){assert.doesNotMatch(html,/data-promotion-state=/);assert.match(html,/no active promotions/);}
  else {
   for(const offer of offers){const expected=Date.parse(offer.startsAt)>Date.now()?'upcoming':Date.parse(offer.endsAt)<=Date.now()?'expired':'current';assert.ok(html.includes('data-promotion-state="'+expected+'" data-offer-id="'+offer.id+'"'));}
-  assert.match(html,/Eligibility &amp; offer terms/);assert.match(html,/&lt;No guarantee&gt;/);assert.match(html,/All dates and times below are in UTC/);
-  assert.match(html,/Jan 1, 2020, 2:45:00 AM UTC|Dec 2, 2098, 7:15:00 AM UTC/);
+  assert.match(html,/Eligibility &amp; offer terms/);assert.match(html,/Results are not guaranteed/);assert.match(html,/Dates below follow this business’s local time zone/);
+  const visibleDates=[...html.matchAll(/<time datetime="[^"]+">([^<]+)<\/time>/g)].map(m=>m[1]);assert.ok(visibleDates.length>=2);for(const date of visibleDates)assert.match(date,/^[A-Z][a-z]{2} \d{1,2}, \d{4}$/);
+  assert.doesNotMatch(html,/UTC|&lt;[^&]{1,80}&gt;|\{\{[^{}]{1,80}\}\}/i);
  }
- if(state==='upcoming')assert.match(html,/Dec 2, 2098, 7:15:00 AM UTC/);
- if(state==='expired')assert.match(html,/Nov 7, 2021, 8:30:00 AM UTC/);
- if(state==='current')assert.match(html,/Jan 2, 2099, 7:45:00 AM UTC/);
+ if(state==='upcoming')assert.match(html,/>Dec 1, 2098<\/time>/);
+ if(state==='expired')assert.match(html,/>Nov 7, 2021<\/time>/);
+ if(state==='current'){assert.match(html,/>Dec 31, 2019<\/time>/);assert.match(html,/>Jan 1, 2099<\/time>/);}
  if(state==='upcoming'||state==='expired'||state==='disabledOffer')assert.equal((await request('/api/public/'+displayTenant.slug+'/promotion-unlock','POST',{offerId:offers[0].id,answer:0},null)).status,404);
  promotionCases++;console.log('PASS promotion display fixture: '+state);
 }
 const boundary=normalizePlatform({promotions:{enabled:true,offers:[{...promotionFixture,startsAt:'2026-11-01T01:30:00-07:00',endsAt:'2026-11-01T01:30:00-08:00'}]}});
 for(const [time,count] of [['2026-11-01T08:29:59.999Z',0],['2026-11-01T08:30:00Z',1],['2026-11-01T09:29:59.999Z',1],['2026-11-01T09:30:00Z',0]])assert.equal(activeOffers(boundary,Date.parse(time)).length,count,time);
 promotionCases++;console.log('PASS start-inclusive/end-exclusive boundaries across daylight-saving offsets');
+await saveDisplay([{...promotionFixture,id:'dst-date',startsAt:'2026-03-08T07:30:00Z',endsAt:'2026-03-08T08:30:00Z'}]);
+const dstHtml=await(await request(displayRoot+'/promotions','GET',undefined,null)).text();assert.match(dstHtml,/>Mar 7, 2026<\/time>/);assert.match(dstHtml,/>Mar 8, 2026<\/time>/);
+await saveDisplay(promotionStates.current);
+const zoneDraft={...displayTenant.settings,platform:{...displayTenant.settings.platform,timeZone:'America/New_York'}};
+displayTenant=(await api('/tenants/'+displayTenant.id,'PUT',{settings:zoneDraft,version:displayTenant.version})).tenant;
+assert.match(await(await request(displayRoot+'/promotions','GET',undefined,null)).text(),/>Dec 31, 2019<\/time>/,'public dates retain published zone');
+assert.match(await(await request(displayRoot+'/promotions?preview=1')).text(),/>Jan 2, 2099<\/time>/,'preview uses draft zone');
+await api('/tenants/'+displayTenant.id+'/publish','POST',{approved:true,version:displayTenant.version});displayTenant=(await api('/tenants/'+displayTenant.id)).tenant;
+assert.match(await(await request(displayRoot+'/promotions','GET',undefined,null)).text(),/>Jan 2, 2099<\/time>/,'published dates use the saved zone');
+const oldClient={...displayTenant.settings,platform:{...displayTenant.settings.platform}};delete oldClient.platform.timeZone;displayTenant=(await api('/tenants/'+displayTenant.id,'PUT',{settings:oldClient,version:displayTenant.version})).tenant;assert.equal(displayTenant.settings.platform.timeZone,'America/New_York','older editors preserve the setting');
+console.log('PASS short business-zone dates, DST rollover, draft/publication and old-editor preservation');
 await saveDisplay(promotionStates.current);
 const promoPreview=await(await request(displayRoot+'/promotions?preview=1')).text();
 assert.match(promoPreview,/<button class="foundation-button" disabled>Unlock my offer/);assert.doesNotMatch(promoPreview,/QA-015-PRIVATE-CODE/);

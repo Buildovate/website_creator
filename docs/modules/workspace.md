@@ -103,3 +103,8 @@ The legal policy panel shows Needs review, Required facts missing or Reviewed po
 The dashboard entrypoint loads src/client/workspace/mobile.ts and platform-mobile.css. At 700px and below, a labeled Website screen selector activates the existing section handlers, tables become labeled records, forms/dialogs reflow, and a fixed action dock forwards the current save/publish controls. The dock moves into an open dialog's top layer, respects inherited disabled state, and uses visualViewport offsets for the keyboard. The screen selector remains usable for viewers. Desktop contacts/boards wrap within the available workspace. The editor fits its virtual preview width using a bounded transformed iframe.
 
 The shared observer must continue past already initialized camera inputs; returning from that loop strands the action dock in a closed dialog. tests/platform-mobile.mjs checks all inventoried phone/desktop states, real dock geometry, save/reopen, preview/publish isolation and editor/viewer permissions. Physical phone acceptance is tracked separately in [#015A evidence](../build-evidence/015A/README.md). No public website or separate Contractor CRM implementation changed.
+
+
+## Business time zone — #015-v2
+
+The Questionnaire’s Business section saves a validated `settings.platform.timeZone`, defaulting to `America/Los_Angeles`. The public promotion date display reads the published snapshot; draft saves do not alter it. Legacy editors that omit the field retain the previous zone. Offer start/end `datetime-local` inputs remain in the editing device’s local time, which the form labels explicitly. [Platform phone/desktop save evidence](../build-evidence/015-v2/README.md).

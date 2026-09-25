@@ -162,4 +162,11 @@ The public endpoint rejects preview request flags, source URLs and referrers. Th
 
 ## Roofing promotion display states — #015
 
-Promotions pages show enabled current/upcoming/expired groups with explicit UTC start/end times and terms. Only current offers expose quizzes; the existing API rechecks start-inclusive/end-exclusive eligibility on submission. Disabled offers are hidden. The conversion homepage promotion strip follows the page switch and preserves preview context; no-current states use neutral copy. Public reads remain published snapshots, and draft quizzes remain disabled. Dates and states render on each page request; no countdown is added. Receipt persistence and replay/rate-limit extensions remain #016. [Executed evidence](../build-evidence/015/README.md).
+Promotions pages show enabled current/upcoming/expired groups with start/end instants stored in UTC and visible short dates in the published business time zone (default `America/Los_Angeles`). Only current offers expose quizzes; the existing API rechecks start-inclusive/end-exclusive eligibility on submission. Disabled offers are hidden. The conversion homepage promotion strip follows the page switch and preserves preview context; no-current states use neutral copy. Public reads remain published snapshots, and draft quizzes remain disabled. Dates and states render on each page request; no countdown is added. Receipt persistence and replay/rate-limit extensions remain #016. [Executed evidence](../build-evidence/015/README.md).
+
+
+## Roofing promotion review fixes — #015-v2
+
+`settings.platform.timeZone` is a validated IANA business setting in the Questionnaire. Missing values default to `America/Los_Angeles`; an older editor that omits it preserves the prior value. The public Promotions page formats visible start/end dates in the published zone as short dates. The stored ISO instants still decide inclusive starts, exclusive ends and quiz eligibility. Questionnaire `datetime-local` offer inputs continue to use the editing device’s local time, labeled separately from the public display zone.
+
+The shared site header uses a native `<details>` phone menu. It contains the same available links as desktop plus a dialable business phone when supplied; no JavaScript is required to open it. Rendered promotion fields replace the legacy `<No guarantee>` token with neutral final copy and remove other angle/curly placeholder tokens. [Tests and captures](../build-evidence/015-v2/README.md).
