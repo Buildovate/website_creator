@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #016; it remains Not started.
+Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015A — Mobile-friendly platform pass**, immediately after completed #015 and before #016. No ticket is currently marked In progress; #015A and #016 remain Not started. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -16,9 +16,23 @@ Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-sect
 10. Email is **SendGrid only, with per-contractor subusers (K17)**. No SES; `RESEND_API_KEY` is not delivery. No cold email. Consent and suppression checks are required before any send, including queued sends.
 11. Phase 1 priority is the Roofing homeowner selling site (#001–#028). Perfect Roofing before #029+ trade rollouts. If Higgsfield K02 is unavailable, implement clearly labeled film stubs for #024–#027, record their live media gates, and still finish #028. Films must not block the selling site; stub evidence never claims the films exist.
 
+12. Every ticket that touches a contractor-facing platform/admin screen must pass the standing platform mobile acceptance rule below at **390×844** and **1440×900 desktop**, with a phone screenshot in its evidence. Public-site mobile checks do not substitute for platform checks.
+
 Scope: Website Design only. Retain the 14 trades, existing good media, scroll hero, sticky header, selected services, uploaded branding, source reviews and approved Project Map. Latest financing direction is calculator → Get Financing Options → configured provider flow; no lender marketing showcase. All external account state is unverified unless NEEDS-KEYS records a confirmed fact.
 
 Pricing source for affected tickets: read only the referenced W/AB/AF pricing paragraphs and the named rows in `docs/product/PACK4_CATALOG_DELTA.md`. Do not reread all packs or invent SKU contents. Planning does not provision accounts or authorize any charges.
+
+## Standing platform mobile acceptance
+
+Applies to every ticket that adds or changes a signed-in platform screen: questionnaire, dashboard, inquiry inbox, preview/publish, settings, photo/media upload, and any other existing or future platform screen. The contractor must be able to complete the same authorized workflow on a phone as on desktop.
+
+- Verify **390×844 CSS pixels** and **1440×900 desktop**. No horizontal scrolling, clipped content or off-screen actions; navigation, tables, dialogs and drawers must fit or reflow.
+- Every interactive tap target must be at least **44×44 CSS pixels**, including icon buttons, tabs and labeled selection controls. All text must be readable without zoom; form input text must be at least 16px to avoid focus zoom.
+- Keep **save/publish actions sticky and reachable** on screens that provide them, with clear draft/saving/saved/error states. Respect phone safe areas and the on-screen keyboard; sticky controls must not cover fields, validation messages or other actions. Preserve existing role restrictions and publish confirmation.
+- Photo/media upload must support **taking a photo straight from the phone camera**, as well as choosing an existing photo. Verify capture → preview → upload → saved media, plus cancellation, permission denial and retry/error handling. Do not require a desktop transfer. Preserve tenant ownership, validation and existing draft/publication boundaries.
+- Each affected screen needs at least one **real 390×844 phone-viewport screenshot** in the ticket's evidence, plus desktop verification and notes showing its primary workflow was completed. Camera acceptance additionally requires a real phone/browser capture check; an emulated viewport or preselected test file alone is not proof that the camera opens. Record device/browser and outcome. Missing checks remain outstanding, not Passed.
+
+Existing source requirements are narrower: [Pack 1 §M](docs/product/01-CORE-SITE-A-N.md) specifies guided questionnaire intake, save draft and publish validation; [Pack 3 §X2.B](docs/product/03-UPSELLS-MEDIA-CRM-U-AA.md) calls for mobile jobsite-photo uploads; [Pack 4 §AD3/AE4b](docs/product/04-GROWTH-ADS-EMAIL-AB-AF.md) requires owner dashboards to work on phones and be thumb-friendly. The [analytics dashboard wireframes](docs/product/PACK4_ANALYTICS_ADS.md#analytics-dashboard-wireframes) specify one column, 16px padding, 44px+ controls and no horizontal chart scrolling. The [Pack 1 release checklist](docs/product/PACK1_CORE_SITE_SPEC.md) includes mobile browser review, and #011 records desktop/mobile Questionnaire evidence. These requirements and isolated checks do not establish that the entire existing platform passes this rule. This standing rule extends acceptance to all platform screens; it is not a claim of completed implementation.
 
 ## Phase 1 — the homeowner website that sells; Roofing first
 
@@ -259,6 +273,17 @@ Tickets #001–#041.
 - Done when: Current, upcoming, expired and no-offer fixtures show correct content/timezones/terms; homepage strips obey the page switch; no false countdown or free-claim promise.
 - Executed evidence: [#015](docs/build-evidence/015/README.md), eight promotion-state scenarios, 43/43 regression commands, desktop/mobile browser checks and no-JS evidence. Explicit UTC dates, current-only quizzes and published homepage/page-switch behavior verified.
 - External keys/accounts: None.
+
+### #015A — Mobile-friendly platform pass
+
+- State: **Not started — next to execute** · Estimate: **6h initial estimate** (≤1 day; apply the session-contract split rule before coding if the audit reveals a larger implementation).
+- Queue: Immediately after #015, which is Done, and before #016. No existing ticket is renumbered. This is the explicit next-ticket priority, ahead of the ordinary numeric sequence.
+- References: [Standing platform mobile acceptance](#standing-platform-mobile-acceptance); [Pack 1](docs/product/01-CORE-SITE-A-N.md) §M; [Pack 3](docs/product/03-UPSELLS-MEDIA-CRM-U-AA.md) §X2.B; [Pack 4](docs/product/04-GROWTH-ADS-EMAIL-AB-AF.md) §AD3/AE4b; [dashboard wireframes](docs/product/PACK4_ANALYTICS_ADS.md#analytics-dashboard-wireframes). Owning modules: workspace, sites and media.
+- Scope: Inventory **every platform screen built so far**, including contractor questionnaire and subsections, dashboard, inquiry inbox/list/detail, preview and publish controls, settings, photo/media upload and galleries, navigation, dialogs and drawers. Include other existing platform/admin screens in the inventory; do not limit the pass to those named examples or to public-site previews. Audit empty, populated, validation/error and long-content states under the roles that can access them.
+- Files to touch: existing platform shell/views, workspace client modules and their styles as identified by the inventory, including src/views.js, src/client/workspace/ and applicable public/ styles/scripts; existing media upload client; tests/platform-mobile.mjs **(new)**; docs/build-evidence/015A/ **(new)**. No separate Contractor CRM changes, new external integrations or public-site redesign.
+- Done when: Audit every inventoried screen at 390×844 and 1440×900, fix every failure of the standing rule, and complete the primary authorized workflows on a phone: questionnaire edit/save/reopen, dashboard navigation, inquiry read/detail, private preview and explicit publish of a disposable local fixture, settings save/reopen, and camera/gallery upload with saved-media verification. No horizontal scroll; all tap targets ≥44×44px; readable text without zoom; sticky save/publish actions remain reachable with the keyboard open; camera upload works directly from the phone. Preserve desktop behavior, roles, tenant isolation, validation and draft/published boundaries. Audit-only notes or screenshots of public websites do not complete this ticket.
+- Verification/evidence: Save a screen-by-screen audit matrix with fixes and pass/fail results, at least one phone screenshot per screen and representative desktop screenshots, actual workflow results, automated overflow/target-size checks and relevant regression output to docs/build-evidence/015A/README.md. Include real-device camera/browser details and capture/upload evidence, with cancellation/denied permission/retry checks. Do not mark Done while an inventoried screen or camera workflow is unverified. Use local fictional fixtures; no external sends or real customer publication. Update BUILD-STATUS and this ticket only after acceptance; commit locally, no push or deploy.
+- External keys/accounts: None for local platform work. Device requirement: a phone/browser with camera access for the capture acceptance check; do not substitute emulation for that evidence.
 
 ### #016 — Persist quiz completion evidence
 
