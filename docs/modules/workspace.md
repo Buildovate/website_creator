@@ -108,3 +108,7 @@ The shared observer must continue past already initialized camera inputs; return
 ## Business time zone — #015-v2
 
 The Questionnaire’s Business section saves a validated `settings.platform.timeZone`, defaulting to `America/Los_Angeles`. The public promotion date display reads the published snapshot; draft saves do not alter it. Legacy editors that omit the field retain the previous zone. Offer start/end `datetime-local` inputs remain in the editing device’s local time, which the form labels explicitly. [Platform phone/desktop save evidence](../build-evidence/015-v2/README.md).
+
+### #015B platform mobile polish
+
+The shared phone CSS keeps Contacts trade tabs in one scrollable row, while the workspace heading offers Publish changes only in public website editing sections. Photo file inputs and camera buttons use the platform button language; the phone upload submit is represented once in the fixed action dock. The same #015A browser harness verifies these states and its full screen inventory. [Screenshots and test results](../build-evidence/015B/README.md).

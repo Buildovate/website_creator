@@ -425,3 +425,9 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - The shared phone header has a native, keyboard/touch-operable menu with every available nav link and tap-to-call. The public `<No guarantee>` token becomes finished neutral copy, and the promotion renderer removes other angle/curly placeholder tokens. No-JS menu/terms fallback remains usable.
 - [Evidence](docs/build-evidence/015-v2/README.md): open-menu and date-format phone screenshots, business-zone questionnaire phone/desktop screenshots, desktop/mobile #015 state checks and 44/44 full regression commands. Fictional fixtures only. #015A real-iPhone camera acceptance remains separately pending.
 - Commit locator: `fix: polish Roofing promotions and phone menu (#015-v2)`. Local only; no push or deployment. Next numbered ticket: #015B.
+
+### #015B — Done (2026-09-25)
+
+- Contacts trade filters stay in one horizontal row on phones; the first contact is visible when Contacts is framed at 390×844. Keyboard scrolling and the phone touch viewport are covered by the platform browser test.
+- Publish changes appears only on public website editing screens. Contacts, Calendar, and the other operational lists no longer show the publish dock. Photo picking and camera controls use platform buttons; the phone upload dialog exposes one Upload photographs action in the dock. + Add contact is primary in global and contractor Contacts.
+- [Evidence](docs/build-evidence/015B/README.md): phone and desktop captures; 44/44 full regression commands and 101 phone + 101 desktop platform states passed with zero layout failures or browser errors. #015A real-iPhone camera acceptance remains pending separately. Local commit only; no push or deployment. Next ticket: #015C.

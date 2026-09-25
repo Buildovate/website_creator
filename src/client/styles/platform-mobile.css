@@ -12,7 +12,7 @@ input,select,textarea{font-size:16px!important}
  .mobile-screen-picker{display:flex;margin:20px 0}#content>nav.tabs{display:none}
  .form-grid,.brand-photos,.owner-upload,.q-toggles,.q-social-grid,.customize-panel form,.detail-stats,.performance-grid{grid-template-columns:minmax(0,1fr)!important}
  .section-heading,.contact-topline{flex-wrap:wrap}.section-heading>*{min-width:0}.heading-actions{gap:8px}.heading-actions a,.heading-actions button{white-space:normal;min-height:44px}
- .record,.row-actions,.calendar-controls,.smartlists,.lead-stage-track{flex-wrap:wrap;min-width:0;overflow:visible}.smartlists{display:flex}.record>*{max-width:100%;overflow-wrap:anywhere}
+ .record,.row-actions,.calendar-controls,.lead-stage-track{flex-wrap:wrap;min-width:0;overflow:visible}.smartlists{display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;max-width:100%;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scroll-snap-type:x proximity}.smartlists button{flex:0 0 auto;scroll-snap-align:start}.record>*{max-width:100%;overflow-wrap:anywhere}
  .contact-workspace .contacts-toolbar,.contacts-toolbar{display:grid;grid-template-columns:minmax(0,1fr)!important}.contacts-toolbar>*{grid-column:1!important;min-width:0}
  .calendar-grid.calendar-month,.calendar-grid.calendar-week,.calendar-grid.calendar-day{grid-template-columns:minmax(0,1fr)!important;min-width:0!important;overflow:visible}.calendar-day.blank{display:none}.calendar-day[role=button]{min-height:70px}
  .crm-pipeline,.pipeline-board{grid-template-columns:minmax(0,1fr);overflow:visible}.crm-pipeline .pipeline-column{min-width:0}
@@ -32,7 +32,7 @@ input,select,textarea{font-size:16px!important}
 
 .column-editor-row{grid-template-columns:44px minmax(0,1fr) 44px 44px}.column-editor-row input[type=checkbox]{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;max-width:44px!important;max-height:44px!important}
 
-#navigation .nav-group button{min-height:44px!important}#content input,#content select,#content textarea,#dialog input,#dialog select,#dialog textarea{font-size:16px!important}.smartlists{flex-wrap:wrap;overflow:visible}
+#navigation .nav-group button{min-height:44px!important}#content input,#content select,#content textarea,#dialog input,#dialog select,#dialog textarea{font-size:16px!important}
 @media(min-width:701px) and (max-width:1600px){.contact-workspace .table-wrap{overflow:visible}.contact-workspace table,.contact-workspace tbody,.contact-workspace tr,.contact-workspace td{display:block;width:100%;min-width:0!important;max-width:100%!important}.contact-workspace tbody{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.contact-workspace thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.contact-workspace td{padding:10px 16px;overflow-wrap:anywhere}.contact-workspace td:before{content:attr(data-mobile-label);display:block;font-size:13px;font-weight:700;color:#526782}.contact-workspace tr{border:1px solid #dce4ef}}
 
 .preview-viewport{position:relative;width:100%;height:760px;overflow:hidden}.preview-viewport #editor-frame{position:absolute;left:0;top:0;max-width:none;transform-origin:top left;margin:0}
@@ -41,3 +41,8 @@ input,select,textarea{font-size:16px!important}
 @media(min-width:701px){.crm-pipeline{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));overflow:visible}.crm-pipeline .pipeline-column{min-width:0}}
 
 @media(max-width:700px){#navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}#navigation .nav-group{width:100%}#navigation .nav-group button{width:100%;text-align:left;white-space:normal;overflow-wrap:anywhere}#navigation svg{flex-shrink:0}#navigation summary{gap:6px}}
+
+/* Keep upload actions recognizable and leave the submit in the phone dock. */
+#dialog input[type=file]::file-selector-button,#content input[type=file]::file-selector-button{font:inherit;font-weight:650;color:#285abe;background:#edf3ff;border:1px solid #cbd8ef;border-radius:8px;padding:10px 14px;margin-right:12px;cursor:pointer}
+#dialog input[type=file]:focus-visible,#content input[type=file]:focus-visible,.smartlists:focus-visible{outline:3px solid #638ee2;outline-offset:3px}
+@media(max-width:700px){#dialog .photo-upload-submit{display:none}.phone-photo-tools>button{border:1px solid #cbd8ef;border-radius:8px;background:#edf3ff;color:#285abe;font-weight:650}.smartlists{min-height:48px}}
