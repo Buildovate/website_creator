@@ -14,7 +14,7 @@ Whole-section totals: **0 Done / 18 Partial / 14 Not started**. A whole-section 
 
 | Section | Status | Files / implementation location | What runs / evidence | Missing or unsure |
 |---|---|---|---|---|
-| A. Promotions page | Partial | `src/constitution-pages.js`; `src/client/site/constitution.ts`; `public/constitution.css` | Published page, inquiry form, date-filtered offers and quiz unlock run (E1). | Roofing-specific display polish, contextual strips, full unlock menu and distinct page films. |
+| A. Promotions page | Partial | `src/constitution-pages.js`; `src/client/site/constitution.ts`; `public/constitution.css` | Published page, inquiry form and quiz unlock run (E1). #015 adds current/upcoming/expired/no-offer states, explicit UTC dates and a switch-controlled homepage strip. | Completion receipts/replay protections (#016), full unlock menu, creative assets and distinct page films. |
 | B. Financing page / calculator | Partial | `src/constitution-pages.js`; `src/platform/constitution.ts`; `src/client/site/constitution.ts` | Amortization, editable comparisons and Get Financing Options disclosure for 1–3 confirmed links run (E1/E2). | Live offers/prequalification and provider status handling. Joe says no lenders are connected. Link selection is not offer retrieval. |
 | C. Financing / social setup and permissions | Partial | `src/platform/constitution.ts`; `src/client/workspace/questionnaire.ts`; `src/api.js` | Page switches, confirmed application URLs and social switches save as draft (E1). | Provider onboarding/connection states, enabled-but-zero-live state, calculator defaults and field-level Office restrictions. |
 | D. Four distinct financing/promotion films | Not started | `src/constitution-pages.js`; `public/trade-build-films.json`; `src/client/site/constitution.ts` | Reusable homepage-film scrub controller exists; this is supporting code only. | Four dedicated clips (ambient + scrub on each page), approval, separate slots and fallbacks. Existing reused homepage footage does not satisfy D. |
@@ -401,3 +401,10 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Origin, consent, validation, honeypot, tenant/project ownership, rate limits and draft restrictions pass. Preview URLs/referrers reject direct submissions. No marketing enrollment, external CRM sync or outbound delivery added.
 - [Evidence](docs/build-evidence/014/README.md): 30/30 focused tests, 43/43 regression commands and two real browser profiles with saved inquiries and blocked authenticated previews.
 - Commit locator: feat: preserve homeowner inquiry page context (#014). Local only; no push/deployment. Next numbered ticket #015 remains unstarted.
+
+### #015 — Done (2026-09-24)
+
+- Roofing promotions now distinguish current, upcoming, expired and no-offer states. Cards retain dates and terms; only current offers expose a challenge. Explicit UTC output preserves configured offsets, including daylight-saving boundary cases. No countdown or free-claim promise.
+- Published page switch controls the homepage strip and links. Authenticated previews retain their context and disabled quizzes; saving a draft does not alter the public snapshot.
+- [Evidence](docs/build-evidence/015/README.md): 8/8 new scenarios, 43/43 regression commands, desktop/mobile browser checks, final screenshots and a no-JS fallback check. No runtime motion or drone hero changes.
+- Section A remains Partial for receipts, the full task menu and separate creative/film work. Commit locator: feat: finish Roofing promotion display states (#015). Local only; no push/deployment. Next numbered ticket #016 remains unstarted.

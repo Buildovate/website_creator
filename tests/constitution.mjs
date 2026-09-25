@@ -98,3 +98,53 @@ for(const kit of Object.keys(kitData))for(const layout of ['immersive','editoria
 assert.equal((await request('/design-preview/roofing/immersive/legal/privacy','GET',undefined,null)).status,401);
 assert.equal((await request('/design-preview/roofing/immersive/legal/privacy','GET',undefined,outsider)).status,403);
 console.log('PASS '+legalPages+' trade/layout legal-preview links and their access controls');
+
+// #015: public fixtures, exact clock boundaries, offset conversion and switch isolation.
+const {roofingFixture}=await import('./fixtures/roofing-journey.mjs');
+const {promotionFixture,promotionStates}=await import('./fixtures/roofing-promotions.mjs');
+const fixture=structuredClone(roofingFixture);fixture.slug='promotions-display-015';
+let displayTenant=(await api('/tenants','POST',fixture)).tenant;
+const displayRoot='/s/'+displayTenant.slug;
+const saveDisplay=async(offers,enabled=true,publish=true)=>{
+ const settings={...displayTenant.settings,platform:{...displayTenant.settings.platform,promotions:{enabled,offers}}};
+ displayTenant=(await api('/tenants/'+displayTenant.id,'PUT',{settings,version:displayTenant.version})).tenant;
+ if(publish){await api('/tenants/'+displayTenant.id+'/publish','POST',{approved:true,version:displayTenant.version});displayTenant=(await api('/tenants/'+displayTenant.id)).tenant;}
+};
+let promotionCases=0;
+for(const [state,offers] of Object.entries(promotionStates)){
+ await saveDisplay(offers);
+ const html=await(await request(displayRoot+'/promotions','GET',undefined,null)).text();
+ const home=await(await request(displayRoot,'GET',undefined,null)).text();
+ assert.match(home,/data-promotion-strip/);assert.match(home,/View promotions/);
+ assert.doesNotMatch(html,/QA-015-PRIVATE-CODE|data-countdown|claim (?:your |my )?free/i);
+ assert.doesNotMatch(home,/QA-015-PRIVATE-CODE|claim (?:your |my )?free/i);
+ const count=(html.match(/data-promotion-quiz/g)||[]).length;
+ assert.equal(count,state==='current'||state==='mixed'?1:0,state+' only current cards have quizzes');
+ if(state==='none'||state==='disabledOffer'){assert.doesNotMatch(html,/data-promotion-state=/);assert.match(html,/no active promotions/);}
+ else {
+  for(const offer of offers){const expected=Date.parse(offer.startsAt)>Date.now()?'upcoming':Date.parse(offer.endsAt)<=Date.now()?'expired':'current';assert.ok(html.includes('data-promotion-state="'+expected+'" data-offer-id="'+offer.id+'"'));}
+  assert.match(html,/Eligibility &amp; offer terms/);assert.match(html,/&lt;No guarantee&gt;/);assert.match(html,/All dates and times below are in UTC/);
+  assert.match(html,/Jan 1, 2020, 2:45:00 AM UTC|Dec 2, 2098, 7:15:00 AM UTC/);
+ }
+ if(state==='upcoming')assert.match(html,/Dec 2, 2098, 7:15:00 AM UTC/);
+ if(state==='expired')assert.match(html,/Nov 7, 2021, 8:30:00 AM UTC/);
+ if(state==='current')assert.match(html,/Jan 2, 2099, 7:45:00 AM UTC/);
+ if(state==='upcoming'||state==='expired'||state==='disabledOffer')assert.equal((await request('/api/public/'+displayTenant.slug+'/promotion-unlock','POST',{offerId:offers[0].id,answer:0},null)).status,404);
+ promotionCases++;console.log('PASS promotion display fixture: '+state);
+}
+const boundary=normalizePlatform({promotions:{enabled:true,offers:[{...promotionFixture,startsAt:'2026-11-01T01:30:00-07:00',endsAt:'2026-11-01T01:30:00-08:00'}]}});
+for(const [time,count] of [['2026-11-01T08:29:59.999Z',0],['2026-11-01T08:30:00Z',1],['2026-11-01T09:29:59.999Z',1],['2026-11-01T09:30:00Z',0]])assert.equal(activeOffers(boundary,Date.parse(time)).length,count,time);
+promotionCases++;console.log('PASS start-inclusive/end-exclusive boundaries across daylight-saving offsets');
+await saveDisplay(promotionStates.current);
+const promoPreview=await(await request(displayRoot+'/promotions?preview=1')).text();
+assert.match(promoPreview,/<button class="foundation-button" disabled>Unlock my offer/);assert.doesNotMatch(promoPreview,/QA-015-PRIVATE-CODE/);
+assert.ok((await(await request(displayRoot+'?preview=1')).text()).includes('href="'+displayRoot+'/promotions?preview=1"'));
+await saveDisplay(promotionStates.current,false,false);
+assert.match(await(await request(displayRoot,'GET',undefined,null)).text(),/data-promotion-strip/);
+assert.doesNotMatch(await(await request(displayRoot+'?preview=1')).text(),/data-promotion-strip/);
+assert.equal((await request(displayRoot+'/promotions?preview=1')).status,404);
+await api('/tenants/'+displayTenant.id+'/publish','POST',{approved:true,version:displayTenant.version});
+assert.doesNotMatch(await(await request(displayRoot,'GET',undefined,null)).text(),/data-promotion-strip|href="[^" ]*\/promotions(?:[?"#])/);
+assert.equal((await request(displayRoot+'/promotions','GET',undefined,null)).status,404);
+promotionCases++;console.log('PASS draft/publication isolation and homepage/page switch');
+assert.equal(promotionCases,8);console.log('PASS 8 promotion display scenarios');

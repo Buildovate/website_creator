@@ -1,0 +1,66 @@
+{
+  "profiles": [
+    {
+      "view": "desktop",
+      "width": 1440,
+      "height": 900,
+      "timezoneId": "America/Los_Angeles",
+      "states": [
+        {
+          "state": "current",
+          "passed": true
+        },
+        {
+          "state": "upcoming",
+          "passed": true
+        },
+        {
+          "state": "expired",
+          "passed": true
+        },
+        {
+          "state": "none",
+          "passed": true
+        }
+      ],
+      "wrongAnswerRejected": true,
+      "verifiedCodeOnly": true,
+      "keyboardTerms": true,
+      "previewDisabled": true,
+      "pageSwitch": true,
+      "passed": true
+    },
+    {
+      "view": "mobile",
+      "width": 390,
+      "height": 844,
+      "timezoneId": "Asia/Tokyo",
+      "states": [
+        {
+          "state": "current",
+          "passed": true
+        },
+        {
+          "state": "upcoming",
+          "passed": true
+        },
+        {
+          "state": "expired",
+          "passed": true
+        },
+        {
+          "state": "none",
+          "passed": true
+        }
+      ],
+      "wrongAnswerRejected": true,
+      "verifiedCodeOnly": true,
+      "keyboardTerms": true,
+      "previewDisabled": true,
+      "pageSwitch": true,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "noJavaScript": true
+}

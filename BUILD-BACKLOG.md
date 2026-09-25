@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#014, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #015; it is not authorized by this request.
+Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #016; it remains Not started.
 
 ## Session contract
 
@@ -253,10 +253,11 @@ Tickets #001–#041.
 
 ### #015 — Finish Roofing promotion display states
 
-- State: **Not started** · Estimate: **5h** (≤1 day).
+- State: **Done** · Estimate: **5h** (≤1 day).
 - Pack section: [`A`](docs/product/01-CORE-SITE-A-N.md) §A.
 - Files to touch: `src/constitution-pages.js`; `src/conversion-page.js`; `public/constitution.css`; `tests/constitution.mjs`.
 - Done when: Current, upcoming, expired and no-offer fixtures show correct content/timezones/terms; homepage strips obey the page switch; no false countdown or free-claim promise.
+- Executed evidence: [#015](docs/build-evidence/015/README.md), eight promotion-state scenarios, 43/43 regression commands, desktop/mobile browser checks and no-JS evidence. Explicit UTC dates, current-only quizzes and published homepage/page-switch behavior verified.
 - External keys/accounts: None.
 
 ### #016 — Persist quiz completion evidence
