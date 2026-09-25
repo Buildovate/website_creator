@@ -1,0 +1,61 @@
+/* #015C: compact contact handling with the existing platform color system. */
+.contact-workspace{overflow:visible}
+.phone-photo-tools .choose-photo{display:none}
+.contact-bulk-bar{position:sticky;top:0;z-index:12;display:flex;align-items:center;gap:8px;padding:10px 16px;background:#eaf1ff;border-block:1px solid #cbd9f3;box-shadow:0 5px 14px #18345612}
+.contact-bulk-bar[hidden]{display:none}
+.contact-bulk-bar strong{margin-right:auto;white-space:nowrap;color:#1e427e}
+.contact-workspace .selection-cell{width:60px!important;min-width:60px!important;max-width:60px!important;text-align:center}
+.contact-workspace .contact-table-select{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin:0}
+.contact-workspace .selection-cell input{width:20px;height:20px;accent-color:#265bea}
+.contact-workspace .selected-row{background:#f0f5ff}
+.contact-workspace .inline-notes{display:flex;align-items:center;gap:8px;min-width:250px}
+.contact-workspace .inline-notes textarea{min-width:190px;width:100%;min-height:56px;padding:9px;border:1px solid #cbd8ed;border-radius:8px;background:#fff;white-space:pre-wrap;resize:vertical}
+.contact-workspace .inline-notes button{flex:0 0 auto}
+.contact-workspace .note-status{color:#236547;font-size:12px}
+.contact-card-list,#contact-filters-open{display:none}
+.contact-filter-sheet{border:0;border-radius:18px 18px 0 0;padding:20px;width:min(100vw,520px);max-height:82dvh;box-shadow:0 -16px 45px #10233e33;color:#18304e}
+.contact-filter-sheet::backdrop{background:#10233e88}
+.filter-sheet-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.filter-sheet-heading h2{margin:0;font-size:22px}
+.filter-sheet-heading button{font-size:25px;line-height:1}
+.filter-sheet-fields{display:grid;gap:14px;margin:16px 0}
+.filter-sheet-fields label{display:grid;gap:6px}
+.filter-sheet-fields select{width:100%;min-height:44px}
+.filter-list-settings{margin:16px 0;border-top:1px solid #dce5f0;padding-top:14px}
+.filter-list-settings summary{cursor:pointer;font-weight:650}
+.filter-list-settings>div{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.contact-filter-sheet>#filter-done{width:100%;margin-top:10px}
+@media(min-width:701px){
+ .contact-workspace .contact-desktop-table{overflow-x:auto!important}
+ .contact-workspace .contact-desktop-table table.crm-table{display:table!important}
+ .contact-workspace .contact-desktop-table tbody{display:table-row-group!important}
+ .contact-workspace .contact-desktop-table thead{display:table-header-group!important;position:static!important;width:auto!important;height:auto!important;clip-path:none!important}
+ .contact-workspace .contact-desktop-table tr{display:table-row!important}
+ .contact-workspace .contact-desktop-table td{display:table-cell!important;min-width:140px!important;max-width:none!important}
+ .contact-workspace .contact-desktop-table td.selection-cell{min-width:60px!important;max-width:60px!important}
+ .contact-workspace .contact-desktop-table th:nth-child(2),.contact-workspace .contact-desktop-table td:nth-child(2){position:sticky;left:60px;z-index:2;background:#fff;min-width:220px!important;border-right:1px solid #dce5f0}
+ .contact-workspace .contact-desktop-table td:before{display:none!important}
+ .contact-workspace .contacts-toolbar{grid-template-columns:minmax(220px,1fr) 130px 170px 150px auto}
+}
+@media(max-width:700px){
+ .contact-workspace .contact-topline{padding:10px 16px}.contact-workspace .contact-topline>div,.contact-workspace .smartlists,.contact-workspace .desktop-contact-filter,.contact-workspace .contact-desktop-table{display:none!important}
+ .contact-workspace .contacts-toolbar{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:end;gap:10px;padding:10px 14px;background:#fff}
+ .contact-workspace .contacts-toolbar .contact-search{grid-column:1!important;margin:0;min-width:0}
+ .contact-workspace .contacts-toolbar .contact-search input{margin:4px 0 0;width:100%}
+ .contact-workspace #contact-filters-open{display:inline-flex;align-items:center;justify-content:center;grid-column:2!important;min-height:44px!important;margin:0 0 1px;white-space:nowrap}
+ .contact-card-list{display:grid;gap:10px;padding:10px 12px 20px}
+ .contact-card{padding:14px 15px;border:1px solid #d7e2f2;border-radius:13px;background:#fff;box-shadow:0 4px 14px #20324e0a}
+ .contact-card.selected-row{border-color:#6086e8;background:#f5f8ff}
+ .contact-workspace .contact-card-company{min-width:0;max-width:100%;overflow-wrap:anywhere;word-break:break-word;border:0!important;background:transparent!important;padding:0!important;box-shadow:none!important}
+ .contact-card-head{display:flex;align-items:center;gap:8px;min-width:0}.contact-card-company{font-size:16px!important;font-weight:750!important;color:#173b74!important;text-align:left;line-height:1.25}
+ .contact-card-select{display:flex;align-items:center;gap:4px;margin:0;min-width:44px}.contact-card-select span{position:absolute;width:1px;height:1px;clip-path:inset(50%)}
+ .contact-card-select input{width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;margin:0!important}
+ .contact-card-person{margin:4px 0 9px 52px;font-size:14px;color:#4a5e77}
+ .contact-card-meta{display:flex;align-items:center;gap:12px;margin:6px 0 10px 52px;flex-wrap:wrap}.contact-card-meta a{color:#235abe;font-weight:650}.contact-card-meta span{font-size:12px}
+ .contact-card .row-actions{display:flex;gap:6px;margin-left:0;flex-wrap:wrap}.contact-card .row-actions>*{min-height:44px!important}
+ .contact-card-notes{margin:9px 0 0 52px}.contact-card-notes summary{cursor:pointer;color:#285abe;font-weight:650}.contact-card-notes .inline-notes{display:grid;grid-template-columns:minmax(0,1fr) auto;min-width:0;margin-top:8px}.contact-card-notes textarea{min-width:0}.contact-card-notes .note-status{grid-column:1/-1}
+ .contact-bulk-bar{top:0;gap:7px;overflow-x:auto;white-space:nowrap;padding:8px 12px}.contact-bulk-bar strong{font-size:13px}.contact-bulk-bar button{flex:0 0 auto;min-height:44px!important}
+ .contact-filter-sheet{margin:auto 0 0;max-width:100vw;overflow-y:auto}
+ #content input[type=file][data-camera-ready=true],#dialog input[type=file][data-camera-ready=true]{position:absolute;left:0;top:0;width:1px!important;min-width:1px!important;height:1px!important;min-height:1px!important;clip-path:inset(50%);opacity:0;pointer-events:none}
+ .phone-photo-tools .choose-photo{display:inline-flex;border:1px solid #cbd8ef;border-radius:8px;background:#edf3ff;color:#285abe;font-weight:650}
+}

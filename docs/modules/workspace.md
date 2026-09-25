@@ -112,3 +112,7 @@ The Questionnaire’s Business section saves a validated `settings.platform.time
 ### #015B platform mobile polish
 
 The shared phone CSS keeps Contacts trade tabs in one scrollable row, while the workspace heading offers Publish changes only in public website editing sections. Photo file inputs and camera buttons use the platform button language; the phone upload submit is represented once in the fixed action dock. The same #015A browser harness verifies these states and its full screen inventory. [Screenshots and test results](../build-evidence/015B/README.md).
+
+### #015C Contacts restore
+
+Global Sales CRM and contractor Contacts share the scoped `crm-next` bulk endpoint for assign, stage and delete. It validates record versions and reports changed/skipped counts. The scoped inline notes endpoint updates only notes with an optimistic version check. The client adds select-page, a sticky bulk bar, guarded UTF-8 CSV export, call-outcome filtering and editable notes. At phone width, search and a Filters dialog sit above compact contact cards; desktop uses the table and inline controls. [Tests and screenshots](../build-evidence/015C/README.md). The `.data/sites-v11-recovery` reference remains untouched.

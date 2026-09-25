@@ -15,17 +15,19 @@ function sync(){
   input.dataset.cameraReady='true';
   const controls=document.createElement('div');controls.className='phone-photo-tools';
   const camera=document.createElement('input');camera.type='file';camera.accept='image/*';camera.setAttribute('capture','environment');camera.hidden=true;
+  const choose=document.createElement('button');choose.type='button';choose.className='secondary choose-photo';choose.textContent='Choose photographs';choose.disabled=input.disabled;choose.onclick=()=>input.click();
   const take=document.createElement('button');take.type='button';take.className='secondary';take.textContent='Take a photo';take.disabled=input.disabled;take.onclick=()=>camera.click();
   const preview=document.createElement('div');preview.className='phone-photo-preview';preview.setAttribute('aria-live','polite');
   let urls:string[]=[];photoUrls.set(input,urls);
   input.addEventListener('change',()=>{urls.forEach(URL.revokeObjectURL);urls=[];photoUrls.set(input,urls);preview.replaceChildren();for(const file of [...(input.files||[])]){if(!file.type.startsWith('image/'))continue;const img=document.createElement('img');img.alt='Selected photo: '+file.name;img.src=URL.createObjectURL(file);urls.push(img.src);preview.append(img);}const note=document.createElement('p');note.textContent=input.files?.length?'Review your selection, then use the upload or save action.':'No photo selected. You can try again or choose an existing photo.';preview.append(note);});
   camera.addEventListener('change',()=>{if(!camera.files?.length)return;const transfer=new DataTransfer();for(const file of camera.files)transfer.items.add(file);input.files=transfer.files;input.dispatchEvent(new Event('change',{bubbles:true}));camera.value='';});
   camera.addEventListener('cancel',()=>{let note=preview.querySelector('p');if(!note){note=document.createElement('p');preview.append(note)}note.textContent='Camera closed without a new photo. Any previous selection is unchanged. Choose an existing photo or try again.';});
-  controls.append(take,camera,preview);input.closest('label')?.insertAdjacentElement('afterend',controls);
+  controls.append(choose,take,camera,preview);input.closest('label')?.insertAdjacentElement('afterend',controls);
  }
+ for(const input of document.querySelectorAll<HTMLInputElement>('input[data-camera-ready=true]')){if(phone.matches){input.tabIndex=-1;input.setAttribute('aria-hidden','true')}else{input.removeAttribute('tabindex');input.removeAttribute('aria-hidden')}}
  const dialog=document.querySelector<HTMLDialogElement>('dialog[open]');
  const root=dialog||document.querySelector('#content');
- const originals=root?[...root.querySelectorAll<HTMLButtonElement>('button')].filter(b=>!dock.contains(b)&&(b.getClientRects().length||b.classList.contains('photo-upload-submit'))&&(/^(save|upload|publish|create|add appointment)/i.test(b.textContent?.trim()||''))):[];
+ const originals=root?[...root.querySelectorAll<HTMLButtonElement>('button')].filter(b=>!dock.contains(b)&&!b.closest('.inline-notes')&&(b.getClientRects().length||b.classList.contains('photo-upload-submit'))&&(/^(save|upload|publish|create|add appointment)/i.test(b.textContent?.trim()||''))):[];
  // One save action for the active screen, plus its existing publish action.
  const save=originals.find(b=>/^save/i.test(b.textContent?.trim()||''))||originals.find(b=>b.form&&b.type==='submit');
  const publish=originals.find(b=>/^publish/i.test(b.textContent?.trim()||''));

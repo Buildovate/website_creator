@@ -431,3 +431,9 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Contacts trade filters stay in one horizontal row on phones; the first contact is visible when Contacts is framed at 390×844. Keyboard scrolling and the phone touch viewport are covered by the platform browser test.
 - Publish changes appears only on public website editing screens. Contacts, Calendar, and the other operational lists no longer show the publish dock. Photo picking and camera controls use platform buttons; the phone upload dialog exposes one Upload photographs action in the dock. + Add contact is primary in global and contractor Contacts.
 - [Evidence](docs/build-evidence/015B/README.md): phone and desktop captures; 44/44 full regression commands and 101 phone + 101 desktop platform states passed with zero layout failures or browser errors. #015A real-iPhone camera acceptance remains pending separately. Local commit only; no push or deployment. Next ticket: #015C.
+
+### #015C — Done (2026-09-25)
+
+- Restored scoped Contacts bulk assignment, stage changes, CSV export and deletion with per-record versions, changed/skipped counts and audit logging. Deletion preserves related appointment, document and audit records; global pending follow-ups are rebuilt. Call-outcome filtering includes Never called; inline notes save with optimistic versions.
+- Phone Contacts now uses search and one Filters sheet, compact callable cards and a styled photo picker. The first contact is visible at 390×844. Desktop retains its table and inline filters. The #015D backlog now includes the requested Calendar phone follow-up.
+- [Evidence](docs/build-evidence/015C/README.md): 46/46 full regression commands; 101 phone + 101 desktop platform states with zero layout failures/browser errors; phone and desktop captures. The v11 recovery tree was read only. #015A physical iPhone camera acceptance remains pending separately. Local only; no push or deployment. Next ticket: #015D.
