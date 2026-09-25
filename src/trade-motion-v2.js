@@ -65,4 +65,4 @@ export function StatsMask({variant='A',style='bold-industrial',id='roofing-facts
 export function roofingMotionOptions(design={}) {
  return {variant:['A','B','C'].includes(design.motionLayout)?design.motionLayout:'A',style:roofingMotionStyles[design.motionStyle]||roofingMotionStyles['bold-industrial']};
 }
-export const motionV2Assets='<link rel="stylesheet" href="/trade-motion-v2.css?v=004I-v3"><script defer src="/trade-motion.js?v=004H"></script><script defer src="/trade-motion-v2.js?v=004I-v3"></script>';
+export const motionV2Assets='<link rel="stylesheet" href="/trade-motion-v2.css?v=004I-v4"><script defer src="/trade-motion.js?v=004H"></script><script defer src="/trade-motion-v2.js?v=004I-v4"></script>';

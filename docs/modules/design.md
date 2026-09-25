@@ -169,3 +169,8 @@ Each StickyStack card pins within its own scroll slot, so the next card enters b
 ## #004I-v3 — current process handoffs and trust-safe stats
 
 The stack uses one pinned stage with intact cards fading/scaling in place, including a fade before the last stage releases. A/B/C and both styles share stable active-tab geometry. Mobile images stay 200px high and card copy determines panel height; the duplicate note is removed. Only years/jobs animate, once; rating, review count, warranty and license remain final. Stats photo loading starts near the section and awaits decode before the masked photo can appear; the container has no placeholder fill. Static fallbacks and drone #004G-v4 are preserved. [Failing v2 baseline and final v3 acceptance](../build-evidence/004I-v3/README.md).
+
+
+## #004I-v4 — current continuous process handoffs
+
+Supersedes the v3 disjoint fade and final fade-before-release: complete panels overlap with a minimum peak opacity of 0.6; copy/captions use disjoint legibility intervals and the active step switches at the midpoint. The compact pinned scene retains its introduction. Decide releases intact, with tabs/introduction clearing before header contact and stats entering directly below. Phone B specificity is corrected so every image remains 200px; enhanced cards share the measured content height. All v3 trust/decode/fallback behavior and #004G-v4 drone code/media are preserved. [V4 baseline and final acceptance](../build-evidence/004I-v4/README.md).

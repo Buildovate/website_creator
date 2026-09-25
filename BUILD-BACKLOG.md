@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2 and #004I-v3 are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #013; it is not authorized by this request.
+Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #013; it is not authorized by this request.
 
 ## Session contract
 
@@ -148,6 +148,10 @@ Tickets #001–#041.
 - State: **Done**. [Failing baseline, final samples, handoffs, recordings, reports and regressions](docs/build-evidence/004I-v3/README.md).
 - Whole-card fades, tight phone cards, fixed image size, stable accurate tab indicators; no note, text collisions or empty panels. Trust-safe static rating/reviews, one-time years/jobs counters, decoded-photo reveal and corrected subline.
 - Six Lighthouse audits pass all gates; 4896 samples and all browser/regression profiles pass. Motion 36584/61440 gzip bytes. Drone #004G-v4 unchanged. Local commit only; #013 remains next.
+
+### #004I-v4 — StickyStack handoff continuity
+- State: **Done** (2026-09-24). Overlapping panels with non-overlapping legible copy; intact Decide release into stats; compact scene; equal phone cards and fixed images. Every v3 gate and the drone hero remain intact.
+- Evidence: [baseline, sampled checks, distinct phone captures, recordings and all acceptance gates](docs/build-evidence/004I-v4/README.md). Local commit only, no push/deployment. #013 remains next and unstarted.
 
 ### #005 — Connect the selected-service grid to detail pages
 

@@ -33,18 +33,42 @@ export function mountMotionV2(clock) {
    const {root,track,stage,nav,cards,links}=state;
    root.classList.toggle('mk-stack-ready',!still);
    const tabbed=mobile.matches||root.dataset.variant==='C';
-   const pin=header+(tabbed&&nav?nav.offsetHeight:0)+16;
+   const heading=root.querySelector('.mk-stack-heading');
+   // Measure natural content once per width; all three panels share its maximum.
+   if(state.width!==innerWidth){
+    root.style.removeProperty('--stack-card-height');
+    state.height=Math.max(...cards.map(slot=>slot.querySelector('.mk-stack-card').offsetHeight));
+    state.width=innerWidth;root.style.setProperty('--stack-card-height',state.height+'px');
+   }
+   const bottom=mobile.matches?(document.querySelector('.cx-mobile-action')?.getBoundingClientRect().top||innerHeight):innerHeight;
+   const pin=Math.max(header+16+heading.offsetHeight+16+(tabbed&&nav?nav.offsetHeight+16:0),bottom-state.height-48);
    const height=Math.max(...cards.map(slot=>slot.querySelector('.mk-stack-card').offsetHeight));
    const step=Math.max(innerHeight*.85,height+40);
    state.step=step;state.pin=pin;
    root.style.setProperty('--stack-height',height+'px');root.style.setProperty('--stack-pin',pin+'px');
-   root.style.setProperty('--stack-travel',((cards.length-1)*step+120)+'px');
+   root.style.setProperty('--stack-travel',((cards.length-1)*step)+'px');
    const rect=track.getBoundingClientRect(),p=Math.max(0,Math.min(cards.length-1,(pin-rect.top)/step));
-   const exit=clamp((rect.bottom-pin-height)/80),active=Math.round(p);
+   const release=Math.max(0,pin+height-rect.bottom),active=Math.round(p);
+   // The introduction and tabs leave with Decide, never over an empty stage.
+   root.style.setProperty('--stack-heading-top',(header+16)+'px');
+   root.style.setProperty('--stack-nav-top',(tabbed?pin-(nav?.offsetHeight||0)-16:pin)+'px');
+   heading.style.transform=still?'none':'translateY('+(-release)+'px)';
+   heading.style.opacity=String(still?1:clamp(1-release/16));
+   if(nav){nav.style.transform=still?'none':'translateY('+(-release)+'px)';nav.style.opacity=String(still?1:clamp(1-release/24));}
+   root.dataset.stackPinned=String(!still&&rect.top<=pin&&release===0);
    cards.forEach((slot,i)=>{const card=slot.querySelector('.mk-stack-card');
-    const alpha=still?1:ease(clamp((.5-Math.abs(p-i))/.2))*exit;
-    card.style.opacity=String(alpha);card.style.transform=still?'none':'scale('+(.975+.025*alpha)+')';
-    card.style.pointerEvents=alpha>.1?'auto':'none';
+    const distance=Math.abs(p-i),copy=card.querySelector('.mk-stack-copy');
+    // At the shared midpoint both panels are 60% opaque. Text uses a narrower,
+    // non-overlapping interval, so the photographs blend without double copy.
+    let alpha=still?1:clamp((.65-distance)/.25);
+    const text=still?1:clamp((.5-distance)/.12);
+    if(!still&&release>0){
+     const firstText=card.querySelector('h3').getBoundingClientRect().top;
+     alpha*=clamp((firstText-header)/40);
+    }
+    card.style.opacity=String(alpha);card.style.transform='none';copy.style.opacity=String(text);
+    card.querySelector('figcaption').style.opacity=String(text);
+    card.style.pointerEvents=alpha>.1&&i===active?'auto':'none';
    });
    root.dataset.stackActive=String(active);root.dataset.stackProgress=p.toFixed(4);
    links.forEach((link,i)=>{if(i===active)link.setAttribute('aria-current','step');else link.removeAttribute('aria-current');});

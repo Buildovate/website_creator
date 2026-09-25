@@ -1,0 +1,260 @@
+[
+  {
+    "name": "build",
+    "code": 0,
+    "passed": true,
+    "ms": 1179
+  },
+  {
+    "name": "typecheck",
+    "code": 0,
+    "passed": true,
+    "ms": 312
+  },
+  {
+    "name": "auth-session.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 3082
+  },
+  {
+    "name": "aws-adapter.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 3489
+  },
+  {
+    "name": "builder.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 169
+  },
+  {
+    "name": "cinematic-films.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 171
+  },
+  {
+    "name": "client-modules.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 159
+  },
+  {
+    "name": "constitution.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 247
+  },
+  {
+    "name": "control.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 262
+  },
+  {
+    "name": "conversion-references.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 313
+  },
+  {
+    "name": "crm-next.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 187
+  },
+  {
+    "name": "crm.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 202
+  },
+  {
+    "name": "design-kits.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 269
+  },
+  {
+    "name": "engagement-providers.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 165
+  },
+  {
+    "name": "engagement.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 175
+  },
+  {
+    "name": "financing-comparison.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 376
+  },
+  {
+    "name": "footer-policy.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 228
+  },
+  {
+    "name": "legacy-scroll-video.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 79
+  },
+  {
+    "name": "legal-policy.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 213
+  },
+  {
+    "name": "media-ranges.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 115
+  },
+  {
+    "name": "motion-v2.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 137
+  },
+  {
+    "name": "neighborhood.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 260
+  },
+  {
+    "name": "planning-motion.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 107
+  },
+  {
+    "name": "platform.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 173
+  },
+  {
+    "name": "premium-service.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 230
+  },
+  {
+    "name": "presentation.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 224
+  },
+  {
+    "name": "project-experience.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 175
+  },
+  {
+    "name": "reference-proof.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 212
+  },
+  {
+    "name": "review-lookup.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 157
+  },
+  {
+    "name": "sales-ops.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 156
+  },
+  {
+    "name": "saved-designs.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 175
+  },
+  {
+    "name": "scroll-media.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 14115
+  },
+  {
+    "name": "scroll-story.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 216
+  },
+  {
+    "name": "scroll-video-controller.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 94
+  },
+  {
+    "name": "service-playbook.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 281
+  },
+  {
+    "name": "trade-revisions.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 313
+  },
+  {
+    "name": "trade-upgrade.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 248
+  },
+  {
+    "name": "trades-financing.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 210
+  },
+  {
+    "name": "trust.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 338
+  },
+  {
+    "name": "website-pages.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 603
+  },
+  {
+    "name": "workspace-owner.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 2254
+  },
+  {
+    "name": "workspace.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 231
+  },
+  {
+    "name": "zoom.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 186
+  }
+]

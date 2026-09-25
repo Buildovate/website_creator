@@ -1,0 +1,114 @@
+{
+  "baseline": false,
+  "profiles": [
+    {
+      "name": "desktop-bold-industrial-A",
+      "samples": 813,
+      "sampleHz": 60.09402164271776,
+      "maxSampleGapMs": 17,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "desktop-bold-industrial-B",
+      "samples": 813,
+      "sampleHz": 60.09357745271234,
+      "maxSampleGapMs": 16.900000000000546,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "desktop-bold-industrial-C",
+      "samples": 813,
+      "sampleHz": 60.09357745271234,
+      "maxSampleGapMs": 16.900000000000546,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-A",
+      "samples": 813,
+      "sampleHz": 60.09357745271233,
+      "maxSampleGapMs": 17.899999999999636,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-B",
+      "samples": 813,
+      "sampleHz": 60.09357745271234,
+      "maxSampleGapMs": 16.90000000000009,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-C",
+      "samples": 813,
+      "sampleHz": 60.093133269273416,
+      "maxSampleGapMs": 17.40000000000009,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-A",
+      "samples": 813,
+      "sampleHz": 60.094021642717756,
+      "maxSampleGapMs": 17.199999999999818,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-B",
+      "samples": 813,
+      "sampleHz": 60.09402164271776,
+      "maxSampleGapMs": 16.899999999999864,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-C",
+      "samples": 813,
+      "sampleHz": 60.093133269273416,
+      "maxSampleGapMs": 16.90000000000009,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-A",
+      "samples": 813,
+      "sampleHz": 60.093133269273416,
+      "maxSampleGapMs": 16.900000000000546,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-B",
+      "samples": 813,
+      "sampleHz": 60.09357745271234,
+      "maxSampleGapMs": 16.900000000001455,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-C",
+      "samples": 813,
+      "sampleHz": 60.09357745271234,
+      "maxSampleGapMs": 17.30000000000109,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    }
+  ],
+  "errors": []
+}
