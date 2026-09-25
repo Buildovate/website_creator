@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #014; it is not authorized by this request.
+Completed: **#001–#014, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #015; it is not authorized by this request.
 
 ## Session contract
 
@@ -244,10 +244,11 @@ Tickets #001–#041.
 
 ### #014 — Carry page context into homeowner inquiries
 
-- State: **Not started** · Estimate: **5h** (≤1 day).
+- State: **Done** · Estimate: **5h** (≤1 day).
 - Pack section: [`H`](docs/product/01-CORE-SITE-A-N.md) §H; [`N`](docs/product/01-CORE-SITE-A-N.md) §N.
 - Files to touch: `src/client/site/inquiries.ts`; `src/worker.js`; `src/form-fields.js`; `tests/website-pages.mjs` **(new)**.
 - Done when: Service/city/source context reaches the correct tenant inquiry; consent, honeypot, validation, rate limits and draft restrictions remain enforced. No marketing enrollment.
+- Executed evidence: [#014](docs/build-evidence/014/README.md), 30 focused page/inquiry tests, 43/43 full regression commands and actual desktop/mobile submission/preview checks. Context is normalized into the existing inquiry message; no marketing enrollment or delivery.
 - External keys/accounts: None.
 
 ### #015 — Finish Roofing promotion display states

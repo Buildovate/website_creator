@@ -393,3 +393,11 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - A link appears only with its individual enabled switch and saved HTTPS URL; draft edits stay private until owner publication. Disabling either new profile removes it across shared page footers. No real contractor URLs were seeded.
 - [Evidence](docs/build-evidence/013/README.md): desktop/mobile enabled/disabled captures, keyboard and questionnaire-save browser checks, 22 focused regressions, build and typecheck. Fictional fixture URLs only. K22 brand permission remains unverified; the Google Business location icon is generic, and the links make no affiliation or rating claim.
 - Commit locator: `feat: complete footer social identities (#013)`. Local only; no push or deployment. Next numbered ticket: #014.
+
+
+### #014 — Done (2026-09-24)
+
+- Browser inquiries send service/city/source separately from notes; the server formats and bounds context into the existing inquiry message. City-only forms no longer lose context. Source paths are scoped to the tenant with query/fragment removal; service/city/project defaults use published records. Existing financing, timing and promotion details remain intact.
+- Origin, consent, validation, honeypot, tenant/project ownership, rate limits and draft restrictions pass. Preview URLs/referrers reject direct submissions. No marketing enrollment, external CRM sync or outbound delivery added.
+- [Evidence](docs/build-evidence/014/README.md): 30/30 focused tests, 43/43 regression commands and two real browser profiles with saved inquiries and blocked authenticated previews.
+- Commit locator: feat: preserve homeowner inquiry page context (#014). Local only; no push/deployment. Next numbered ticket #015 remains unstarted.

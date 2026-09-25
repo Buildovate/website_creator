@@ -59,7 +59,7 @@ const button={disabled:false},status={textContent:''};
 const form={dataset:{slug:'fixture',preview:'true'},elements:{namedItem:()=>({checked:true})},querySelector:s=>s==='button'?button:status,reset:()=>reset++};
 class FixtureData { *[Symbol.iterator](){yield ['name','Local test'];yield ['service','Repair'];yield ['message','Test request'];} }
 const inquiries=await moduleAt('src/client/site/inquiries.ts',{
-  document:{querySelectorAll:()=>[form]},FormData:FixtureData,
+  document:{querySelectorAll:()=>[form]},FormData:FixtureData,location:{pathname:'/s/fixture',search:''},URLSearchParams,
   fetch:async(url,options)=>{posts++;assert.equal(url,'/api/public/fixture/inquiries');assert.equal(JSON.parse(options.body).consent,true);return Response.json(fail?{error:'Please retry.'}:{ok:true},{status:fail?503:200});},
 });
 inquiries.mountInquiries();

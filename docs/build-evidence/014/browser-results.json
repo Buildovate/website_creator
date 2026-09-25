@@ -1,0 +1,55 @@
+{
+  "profiles": [
+    {
+      "view": "desktop",
+      "width": 1440,
+      "height": 900,
+      "posted": {
+        "service": "Roof repair",
+        "name": "Local QA Homeowner",
+        "phone": "8055550301",
+        "projectCity": "Oxnard",
+        "timeframe": "Within a month",
+        "message": "Local test: inspect a leak above the porch.",
+        "website": "",
+        "consent": true,
+        "projectId": "",
+        "sourcePage": "/s/fictional-inquiry-014/services/roof-repair"
+      },
+      "saved": {
+        "tenantId": "c299af74-4a12-4487-8fc1-8348cd4bce17",
+        "projectId": null,
+        "message": "Service: Roof repair\nProject city: Oxnard\nSource page: /s/fictional-inquiry-014/services/roof-repair\nPreferred timing: Within a month\n\nLocal test: inspect a leak above the porch."
+      },
+      "previewDisabled": true,
+      "previewDirectPostStatus": 403,
+      "passed": true
+    },
+    {
+      "view": "mobile",
+      "width": 390,
+      "height": 844,
+      "posted": {
+        "service": "Roof repair",
+        "name": "Local QA Homeowner",
+        "phone": "8055550302",
+        "projectCity": "Oxnard",
+        "timeframe": "Within a month",
+        "message": "Local test: inspect a leak above the porch.",
+        "website": "",
+        "consent": true,
+        "projectId": "",
+        "sourcePage": "/s/fictional-inquiry-014/services/roof-repair"
+      },
+      "saved": {
+        "tenantId": "c299af74-4a12-4487-8fc1-8348cd4bce17",
+        "projectId": null,
+        "message": "Service: Roof repair\nProject city: Oxnard\nSource page: /s/fictional-inquiry-014/services/roof-repair\nPreferred timing: Within a month\n\nLocal test: inspect a leak above the porch."
+      },
+      "previewDisabled": true,
+      "previewDirectPostStatus": 403,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

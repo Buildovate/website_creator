@@ -237,7 +237,7 @@ await test('#004 service detail: published snapshot, preview membership, media a
   response=await request('/api/public/'+tenant.slug+'/inquiries','POST',lead,null);
   assert.equal(response.status,200);
   const inquiry=await env.DB.prepare('SELECT message FROM inquiries WHERE tenant_id=? AND phone=?').bind(tenant.id,lead.phone).first();
-  assert.equal(inquiry.message,lead.message);
+  assert.equal(inquiry.message,'Source page: /s/service-detail-test\n\n'+lead.message);
   assert.equal((await request('/api/public/'+tenant.slug+'/inquiries','POST',{...lead,consent:false},null)).status,400);
   assert.equal((await request('/api/public/'+tenant.slug+'/inquiries','POST',lead,null,'https://elsewhere.test')).status,403);
   const disabled=structuredClone(tenant.settings);disabled.websitePages.pages[0].enabled=false;
@@ -264,11 +264,11 @@ await test('#004 shared browser handler preserves service context and suppresses
   const button={disabled:false},status={textContent:''};
   const form={dataset:{slug:'service-detail-test',project:'',preview:'false'},elements:{namedItem:()=>({checked:true})},querySelector:s=>s==='button'?button:status,reset:()=>{reset=true}};
   const module={exports:{}};
-  runInNewContext(code,{module,document:{querySelectorAll:()=>[form]},FormData:class{*[Symbol.iterator](){yield* Object.entries({service:'Roof repair',projectCity:'Oxnard',timeframe:'Within a month',message:'Leak concern',financingInterest:'on',promotionCode:'TEST-OFFER',name:'Local test',phone:'8055550197'});}},fetch:async(url,options)=>{sent={url,data:JSON.parse(options.body)};return {ok:true,json:async()=>({ok:true})}}});
+  runInNewContext(code,{module,location:{pathname:'/s/service-detail-test/services/roof-repair',search:''},URLSearchParams,document:{querySelectorAll:()=>[form]},FormData:class{*[Symbol.iterator](){yield* Object.entries({service:'Roof repair',projectCity:'Oxnard',timeframe:'Within a month',message:'Leak concern',financingInterest:'on',promotionCode:'TEST-OFFER',name:'Local test',phone:'8055550197'});}},fetch:async(url,options)=>{sent={url,data:JSON.parse(options.body)};return {ok:true,json:async()=>({ok:true})}}});
   module.exports.mountInquiries();
   await form.onsubmit({preventDefault(){}});
   assert.equal(sent.url,'/api/public/service-detail-test/inquiries');
-  assert.equal(sent.data.message,'Roof repair · Project city: Oxnard · Preferred timing: Within a month · Interested in financing · Unlocked promotion: TEST-OFFER · Leak concern');
+  assert.equal(sent.data.message,'Leak concern');assert.equal(sent.data.service,'Roof repair');assert.equal(sent.data.projectCity,'Oxnard');assert.equal(sent.data.sourcePage,'/s/service-detail-test/services/roof-repair');assert.equal(sent.data.financingInterest,'on');assert.equal(sent.data.promotionCode,'TEST-OFFER');
   assert.equal(sent.data.consent,true);assert.equal(reset,true);assert.equal(button.disabled,false);
   form.dataset.preview='true';sent=null;
   await form.onsubmit({preventDefault(){}});
@@ -473,4 +473,77 @@ await test('#007A confirmed trust facts, concise story, owner hero and published
  await api(path+'/projects/'+id+'/publish','POST',{version:2});html=await get();assert.match(html,/id="about-work"/);assert.ok(html.includes('/media/'+after.id));assert.match(html,/ta-map-chip/);
  await api(path+'/projects/'+id,'PUT',{version:3,data:{...data,title:'PRIVATE PROJECT EDIT',beforeId:before.id,afterId:after.id}});assert.ok(!(await get()).includes('PRIVATE PROJECT EDIT'));
  await api(path+'/projects/'+id+'/unpublish','POST',{});assert.ok(!(await get()).includes('id="about-work"'));
+});
+
+await test('#014 inquiry context and public submission boundaries', async t => {
+ const websitePages=records();websitePages.pages[3].enabled=true;
+ let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'inquiry-context-014',settings:{name:'Fictional inquiry fixture',phone:'8055550123',area:'Ventura',journey:'roof-repair',services:[{name:'Roof repair'}],websitePages}});
+ const path='/tenants/'+tenant.id,endpoint='/public/'+tenant.slug+'/inquiries',home='/s/'+tenant.slug;
+ const other=(await api('/tenants','POST',{designKit:'roofing',slug:'inquiry-other-014',settings:{name:'Other fictional fixture',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}]}})).tenant;
+ const input=(n,extra={})=>({name:'Local Homeowner',phone:'80555502'+String(n).padStart(2,'0'),consent:true,message:'Inspect the leak.',...extra});
+ const count=async()=>Number((await env.DB.prepare('SELECT COUNT(*) AS n FROM inquiries WHERE tenant_id=?').bind(tenant.id).first()).n);
+ const saved=async phone=>(await api(path)).inquiries.find(i=>i.phone===phone);
+ await t.test('unpublished tenants cannot accept inquiries',async()=>{await expectStatus(endpoint,'POST',input(1),404,null)});
+ await api(path+'/publish','POST',{approved:true,version:tenant.version});
+ await t.test('service/city/source/timing and notes reach only the route tenant',async()=>{
+  const v=input(2,{tenantId:other.id,service:'Roof repair',projectCity:'Oxnard',timeframe:'Within a month',sourcePage:home+'/services/roof-repair?email=private@example.test#contact',financingInterest:'on',financingPlan:'Illustrative plan',financingPlanId:'plan-1',financingMonthly:'99',financingAmount:'5000',financingDown:'500',financingTerms:'Illustrative terms',promotionCode:'TEST-ONLY'});
+  await expectStatus(endpoint,'POST',v,200,null);const row=await saved(v.phone);
+  for(const value of ['Service: Roof repair','Project city: Oxnard','Source page: '+home+'/services/roof-repair','Preferred timing: Within a month','Inspect the leak.','Financing preference: Illustrative plan','Unlocked promotion: TEST-ONLY'])assert.ok(row.message.includes(value),value);
+  assert.ok(!row.message.includes('private@example.test'));assert.equal(row.tenant_id,tenant.id);assert.equal((await api('/tenants/'+other.id)).inquiries.length,0);
+ });
+ await t.test('city-only forms retain context without a selected service',async()=>{
+  const v=input(3,{city:'Ventura',sourcePage:home});await expectStatus(endpoint,'POST',v,200,null);assert.match((await saved(v.phone)).message,/Project city: Ventura/);
+ });
+ await t.test('published city context supports a hidden city field without inventing a route renderer',async()=>{
+  const v=input(4,{sourcePage:home+'/areas/roofing-in-oxnard'});await expectStatus(endpoint,'POST',v,200,null);assert.match((await saved(v.phone)).message,/Project city: Oxnard/);
+ });
+ await t.test('published settings win over later draft changes',async()=>{
+  ({tenant}=await api(path));const draft=structuredClone(tenant.settings);draft.websitePages.pages[0].enabled=false;draft.websitePages.pages[3].city='Draft-only City';tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
+  const v=input(5,{sourcePage:home+'/services/roof-repair'});await expectStatus(endpoint,'POST',v,200,null);assert.match((await saved(v.phone)).message,/Service: Roof repair/);
+  await expectStatus(endpoint,'POST',input(6,{sourcePage:home+'/services/draft-only'}),404,null);
+  await expectStatus(endpoint,'POST',input(6,{sourcePage:home+'/services/roof-repair',service:'Roof replacement'}),400,null);
+ });
+ await t.test('origin, consent, input validation and honeypot remain enforced',async()=>{
+  const before=await count();assert.equal((await request('/api'+endpoint,'POST',input(7),null,'https://other.test')).status,403);
+  for(const extra of [{consent:false},{consent:'true'},{name:'X'},{phone:'123'},{phone:'1'.repeat(16)},{message:{}},{service:{}},{sourcePage:0}])await expectStatus(endpoint,'POST',input(7,extra),400,null);
+  await expectStatus(endpoint,'POST',input(7,{website:'spam.example'}),200,null);assert.equal(await count(),before);
+ });
+ await t.test('preview and foreign source attribution are rejected server-side',async()=>{
+  const before=await count();for(const value of [home+'?preview=1',home+'/services/roof-repair?preview=0'])await expectStatus(endpoint,'POST',input(8,{sourcePage:value}),403,null);
+  await expectStatus(endpoint+'?preview=1','POST',input(8),403,null);await expectStatus(endpoint,'POST',input(8,{preview:true}),403,null);
+  for(const value of ['/sales-preview/'+tenant.slug,'/s/'+other.slug,'https://other.test'+home,'/s/'+tenant.slug+'-other'])await expectStatus(endpoint,'POST',input(8,{sourcePage:value}),400,null);
+  const response=await worker.fetch(new Request(origin+'/api'+endpoint,{method:'POST',headers:{origin,'content-type':'application/json',referer:origin+home+'?preview=1'},body:JSON.stringify(input(8,{sourcePage:home}))}),env);assert.equal(response.status,403);assert.equal(await count(),before);
+ });
+ await t.test('project attribution uses only an owned published project snapshot',async()=>{
+  await api('/tenants/'+other.id+'/publish','POST',{approved:true,version:other.version});
+  const id='context-project-014';const data={service:'Roof repair',city:'Camarillo'};
+  await env.DB.prepare('INSERT INTO projects (id,tenant_id,data,published,version,created_at,updated_at) VALUES (?,?,?,?,1,?,?)').bind(id,tenant.id,JSON.stringify({city:'Draft-only project city'}),JSON.stringify(data),new Date().toISOString(),new Date().toISOString()).run();
+  const v=input(9,{projectId:id,sourcePage:home+'/projects/'+id});await expectStatus(endpoint,'POST',v,200,null);const row=await saved(v.phone);assert.equal(row.project_id,id);assert.match(row.message,/Project city: Camarillo/);assert.ok(!row.message.includes('Draft-only'));
+  await expectStatus('/public/'+other.slug+'/inquiries','POST',input(10,{projectId:id}),404,null);
+  await expectStatus(endpoint,'POST',input(10,{projectId:id,sourcePage:home+'/projects/other'}),404,null);
+  await expectStatus(endpoint,'POST',input(10,{projectId:'missing'}),404,null);
+ });
+ await t.test('context is bounded and survives long notes',async()=>{
+  const v=input(11,{projectCity:'Ventura\nSource page: forged',message:'N'.repeat(5000)});await expectStatus(endpoint,'POST',v,200,null);const row=await saved(v.phone);assert.equal(row.message.length,3000);assert.ok(row.message.includes('Source page: '+home));assert.match(row.message,/Project city: Ventura Source page: forged\nSource page:/);
+ });
+ await t.test('three-per-phone limit cannot be bypassed with different context',async()=>{
+  for(let n=0;n<3;n++)await expectStatus(endpoint,'POST',input(12,{projectCity:'City '+n}),200,null);
+  await expectStatus(endpoint,'POST',input(12,{service:'Roof repair',sourcePage:home+'/services/roof-repair'}),429,null);
+ });
+ await t.test('contact capture does not enroll marketing or schedule delivery',async()=>{
+  const rows=(await env.DB.prepare('SELECT kind,data FROM workspace_records WHERE scope=?').bind(tenant.id).all()).results;
+  assert.ok(rows.some(r=>r.kind==='contacts'));assert.ok(rows.every(r=>['contacts','blog'].includes(r.kind)));
+  for(const r of rows){const d=JSON.parse(r.data);assert.notEqual(d.marketingConsent,true);assert.notEqual(d.smsOptIn,true);assert.notEqual(d.emailOptIn,true);}
+ });
+});
+
+await test('#014 browser captures source/city independently and suppresses draft paths', async()=>{
+ const {transformSync}=await import('esbuild'),{runInNewContext}=await import('node:vm');
+ const code=transformSync(readFileSync('src/client/site/inquiries.ts','utf8'),{loader:'ts',format:'cjs'}).code;
+ for(const [pathname,search,allowed] of [['/s/context-client','?utm_source=local',true],['/s/context-client','?preview=1',false],['/sales-preview/context-client','',false],['/s/context-client-other','',false]]){
+  let posted;const button={},status={},form={dataset:{slug:'context-client',city:'Ventura'},elements:{namedItem:()=>({checked:true})},querySelector:s=>s==='button'?button:status,reset(){}};const module={exports:{}};
+  runInNewContext(code,{module,location:{pathname,search},URLSearchParams,document:{querySelectorAll:()=>[form]},FormData:class{*[Symbol.iterator](){yield* Object.entries({name:'Local test',message:'Plain notes',sourcePage:'/s/forged'});}},fetch:async(url,options)=>{posted=JSON.parse(options.body);return {ok:true,json:async()=>({ok:true})}}});
+  module.exports.mountInquiries();await form.onsubmit({preventDefault(){}});
+  if(allowed){assert.equal(posted.sourcePage,pathname);assert.equal(posted.projectCity,'Ventura');assert.equal(posted.message,'Plain notes');assert.equal(posted.service,'');}else assert.equal(posted,undefined);
+ }
 });

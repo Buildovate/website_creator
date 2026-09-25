@@ -75,7 +75,7 @@ for(const [i,service] of ['Roof repair','Roof replacement'].entries()){
 }
 ({tenant:roofing}=await api('/tenants/'+roofing.id));
 const saved=await api('/tenants/'+roofing.id);
-for(const service of ['Roof repair','Roof replacement'])assert.ok(saved.inquiries.some(x=>x.message.startsWith(service+' ·')));
+for(const service of ['Roof repair','Roof replacement'])assert.ok(saved.inquiries.some(x=>x.message.includes('\n\n'+service+' ·')));
 ({tenant:roofing}=await api('/tenants/'+roofing.id,'PUT',{version:roofing.version,settings:{...roofing.settings,services:[{name:'Roof repair'}],effects:{...roofing.settings.effects,scrollStory:false}}}));
 const repairOnly=await (await request(roofPath+'?preview=1')).text();
 assert.ok(repairOnly.includes('Request roof repair'));assert.ok(!repairOnly.includes('ROOF REPAIR &amp; REPLACEMENT'));
