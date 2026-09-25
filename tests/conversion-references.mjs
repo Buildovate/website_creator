@@ -67,7 +67,7 @@ assert.ok(!roofHtml.includes('Request roof repair'),'Replacement visitors must n
 assert.ok(roofHtml.includes('href="tel:+18055550123"'));
 assert.ok(roofHtml.includes('class="cx-header"'));
 assert.equal((roofHtml.match(/data-build-video/g)||[]).length,1);
-for(const {name} of roofingFixture.settings.services){assert.ok(roofHtml.includes(`<h3>${name}</h3>`));assert.ok(roofHtml.includes(`data-service-link="${name}"`));}
+for(const {name} of roofingFixture.settings.services){assert.ok(roofHtml.includes(`<h3>${name}</h3>`));assert.ok(roofHtml.includes(`/services/${name.toLowerCase().replace(/[^a-z0-9]+/g,'-')}`));}
 assert.ok(!roofHtml.includes('<h3>Metal roofing</h3>'),'Unselected services stay absent');
 for(const [i,service] of ['Roof repair','Roof replacement'].entries()){
  const response=await request('/api/public/'+roofing.slug+'/inquiries','POST',{name:'Roofing QA '+i,phone:'805555015'+i,consent:true,message:service+' · Project city: Ventura · Preferred timing: Planning ahead · Local ticket 002 check'},null);

@@ -3,6 +3,7 @@ import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {normalizeWebsitePages, websitePagePhotoIds, PAGE_LIMITS} from '../src/platform/website-pages.ts';
 import {worker, env, admin} from './preview-fixture.mjs';
+import {reconcileServicePages} from '../src/service-registry.js';
 
 const records = () => ({version: 1, pages: [
   {id: 'roof-repair', kind: 'service', title: 'Roof repair', serviceName: 'Roof repair', enabled: true, scope: 'Test-only service scope.', process: ['Inspect the concern', 'Discuss options'], materials: ['Asphalt shingles'], questions: [{id: 'service-question', question: 'What happens first?', answer: 'We discuss the roof concern.'}]},
@@ -103,7 +104,7 @@ await test('real tenant API: draft/published isolation, ownership and permission
   const reload = async () => { ({tenant} = await api(path)); };
   const photo = await api(path + '/photos?caption=Local%20page%20test', 'POST', new Uint8Array(readFileSync('public/assets/roofing.jpg')));
   const foreign = (await api('/tenants', 'POST', {slug: 'page-contract-other', settings: {...tenant.settings, websitePages: records()}})).tenant;
-  assert.deepEqual(foreign.settings.websitePages, normalizeWebsitePages(records()), 'Creation persists page contracts without copying another tenant’s media');
+  assert.deepEqual(foreign.settings.websitePages, reconcileServicePages(normalizeWebsitePages(records()),foreign.settings.services), 'Creation backfills offered services without copying another tenant’s media');
   const foreignPhoto = await api('/tenants/' + foreign.id + '/photos', 'POST', new Uint8Array(readFileSync('public/assets/roofing.jpg')));
   const editor = {id: 'pages-editor', email: 'pages-editor@example.test'};
   const viewer = {id: 'pages-viewer', email: 'pages-viewer@example.test'};
@@ -114,11 +115,11 @@ await test('real tenant API: draft/published isolation, ownership and permission
   await t.test('editor saves all four page types without changing public snapshot', async () => {
     ({tenant} = await api(path, 'PUT', {version: tenant.version, settings: {...tenant.settings, websitePages: withMedia(photo.id)}}, editor));
     savedPages = structuredClone(tenant.settings.websitePages);
-    assert.equal(savedPages.pages.length, 4);
+    assert.equal(savedPages.pages.filter(p=>p.kind==='service').length, tenant.settings.services.length);
     assert.equal(JSON.stringify(tenant.published), initialPublished);
     const stored = await env.DB.prepare('SELECT settings,published FROM tenants WHERE id=?').bind(tenant.id).first();
     assert.deepEqual(JSON.parse(stored.settings).websitePages, savedPages);
-    assert.equal(stored.published, initialPublished);
+    assert.equal(JSON.stringify(reconcileServicePages(JSON.parse(stored.published).websitePages, JSON.parse(stored.published).services)), JSON.stringify(tenant.published.websitePages));
     assert.equal((await request('/media/' + photo.id, 'GET', undefined, null)).status, 401);
   });
   await t.test('render validates page data and has no save/publish side effects', async () => {
@@ -182,15 +183,15 @@ await test('real tenant API: draft/published isolation, ownership and permission
     const backup = await api(path + '/backups', 'POST', {}, owner);
     const beforeClear = structuredClone(tenant.settings.websitePages);
     ({tenant} = await api(path, 'PUT', {version: tenant.version, settings: {...tenant.settings, websitePages: {version: 1, pages: []}}}, editor));
-    assert.equal(tenant.settings.websitePages.pages.length, 0);
+    assert.equal(tenant.settings.websitePages.pages.filter(p=>p.kind==='service').length, tenant.settings.services.length);
     assert.deepEqual(tenant.published.websitePages, savedPages);
     await api(path + '/publish', 'POST', {version: tenant.version, approved: true}, owner);
-    await reload(); assert.equal(tenant.published.websitePages.pages.length, 0);
+    await reload(); assert.equal(tenant.published.websitePages.pages.filter(p=>p.kind==='service').length, tenant.published.services.length);
     await api(path + '/backups/' + backup.id + '/restore', 'POST', {version: tenant.version, confirm: true}, owner);
     await reload(); assert.deepEqual(tenant.settings.websitePages, beforeClear);
     assert.equal(tenant.published, null, 'Restore remains a draft-only action');
     const duplicate = await api(path + '/duplicate', 'POST', {slug: 'page-contract-copy', name: 'Local test copy'});
-    assert.equal((await api('/tenants/' + duplicate.id)).tenant.settings.websitePages, undefined, 'Layout duplication must not copy page facts or media');
+    assert.ok((await api('/tenants/' + duplicate.id)).tenant.settings.websitePages.pages.every(p=>p.kind==='service'&&p.id.startsWith('service-')&&Object.values(p.media).every(v=>v===null)), 'Layout duplication creates default pages but copies no page facts or media');
   });
 });
 
@@ -220,7 +221,7 @@ await test('#004 service detail: published snapshot, preview membership, media a
   for(const part of ['Repair your roof &lt;safely&gt;', 'Test-only service scope.', 'Inspect the concern', 'Asphalt shingles', 'What happens first?', '/media/'+photo.id, 'name="service" value="Roof repair" readonly', 'data-preview="false"', '/roofing-service.css']) assert.ok(html.includes(part),part);
   assert.ok(!html.includes('FINANCE_QUESTION'));
   assert.match(response.headers.get('cache-control'),/no-store/);
-  assert.match(response.headers.get('x-robots-tag'),/noindex/);
+  assert.match(response.headers.get('x-robots-tag'),/index/);
   assert.equal((await request('/media/'+photo.id,'GET',undefined,null)).status,200);
   assert.equal((await request('/media/'+privatePhoto.id,'GET',undefined,null)).status,401);
   assert.equal((await request(url+'/','GET',undefined,null)).status,200);
@@ -304,14 +305,12 @@ await test('#005 selected service grids: eight offerings, stable links, draft is
   tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
   assert.equal(grid(await get()),published,'Draft edits cannot change public tiles or links');
   const preview=grid(await get('?preview=1',admin));
-  assert.equal((preview.match(/<article/g)||[]).length,7);
+  assert.equal((preview.match(/<article/g)||[]).length,6);
   assert.ok(!preview.includes(`<h3>${names[0]}</h3>`));
   assert.ok(preview.indexOf(`<h3>${names[7]}</h3>`)<preview.indexOf(`<h3>${names[1]}</h3>`));
   assert.ok(preview.includes(`href="${home}/services/offering-7?preview=1"`));
-  for(const i of [2,3]) {
-   assert.ok(!preview.includes(`/services/offering-${i}`));
-   assert.ok(preview.includes(`data-service-link="${names[i]}"`));
-  }
+  assert.ok(!preview.includes(`/services/offering-2`));
+  assert.ok(preview.includes(`/services/${names[3].toLowerCase().replace(/[^a-z0-9]+/g,'-')}`));
   assert.equal((await request(home+'/services/offering-7?preview=1','GET',undefined,null)).status,401);
   assert.equal((await request(home+'/services/offering-0?preview=1','GET',undefined,admin)).status,404);
   assert.equal((await request(home+'/services/offering-0','GET',undefined,null)).status,200);

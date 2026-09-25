@@ -9,6 +9,7 @@ import { createAuthHttp, AuthError, responseHeaders, workspacePage, workspaceErr
 import { assertRuntimeConfig, loadEnv } from './env.js';
 import { createD1Adapter } from './d1.js';
 import { applyMigrations } from './migrate.js';
+import { backfillServicePageSettings } from '../service-backfill.js';
 import { createAssets, createMemoryBucket, createS3Bucket, createS3Client } from './s3.js';
 
 const HOP = new Set(['connection', 'keep-alive', 'transfer-encoding', 'upgrade', 'host', 'expect', 'content-length']);
@@ -184,6 +185,7 @@ export async function createRuntime(options = {}) {
   const executor = options.executor || await createExecutor(env);
   if (env.MIGRATE_ON_BOOT === '1' && !options.skipMigrate) await applyMigrations((sql, params) => executor.query(sql, params));
   const db = options.db || createD1Adapter(executor);
+  await backfillServicePageSettings(db);
   const bucket = options.bucket || await createBucket(env);
   const assetsRoot = env.ASSETS_ROOT || (existsSync('dist/client') ? 'dist/client' : 'public');
   const runtimeEnv = { ...env, GEOIP_LOOKUP:await createGeoLookup(env), DB: db, BUCKET: bucket, ASSETS: createAssets(path.resolve(assetsRoot)) };

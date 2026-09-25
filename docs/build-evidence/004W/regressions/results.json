@@ -1,0 +1,314 @@
+[
+  {
+    "name": "build",
+    "code": 0,
+    "passed": true,
+    "ms": 1043
+  },
+  {
+    "name": "typecheck",
+    "code": 0,
+    "passed": true,
+    "ms": 240
+  },
+  {
+    "name": "auth-session.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 2751
+  },
+  {
+    "name": "aws-adapter.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 3658
+  },
+  {
+    "name": "builder.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 141
+  },
+  {
+    "name": "callback-browser.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 5332
+  },
+  {
+    "name": "callback-restore.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 141
+  },
+  {
+    "name": "cinematic-films.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 134
+  },
+  {
+    "name": "client-modules.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 126
+  },
+  {
+    "name": "constitution.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 285
+  },
+  {
+    "name": "contact-linkage-browser.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 7108
+  },
+  {
+    "name": "contact-linkage.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 163
+  },
+  {
+    "name": "contacts-browser.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 5375
+  },
+  {
+    "name": "contacts-restore.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 141
+  },
+  {
+    "name": "control.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 208
+  },
+  {
+    "name": "conversion-references.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 269
+  },
+  {
+    "name": "crm-next.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 140
+  },
+  {
+    "name": "crm.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 155
+  },
+  {
+    "name": "design-kits.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 237
+  },
+  {
+    "name": "engagement-providers.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 136
+  },
+  {
+    "name": "engagement.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 150
+  },
+  {
+    "name": "financing-comparison.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 302
+  },
+  {
+    "name": "footer-policy.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 194
+  },
+  {
+    "name": "legacy-scroll-video.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 55
+  },
+  {
+    "name": "legal-policy.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 195
+  },
+  {
+    "name": "media-ranges.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 87
+  },
+  {
+    "name": "motion-v2.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 101
+  },
+  {
+    "name": "neighborhood.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 244
+  },
+  {
+    "name": "owner-photo.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 232
+  },
+  {
+    "name": "planning-motion.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 82
+  },
+  {
+    "name": "platform-mobile.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 51234
+  },
+  {
+    "name": "platform.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 157
+  },
+  {
+    "name": "premium-service.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 204
+  },
+  {
+    "name": "presentation.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 200
+  },
+  {
+    "name": "project-experience.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 147
+  },
+  {
+    "name": "reference-proof.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 184
+  },
+  {
+    "name": "review-lookup.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 147
+  },
+  {
+    "name": "sales-ops.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 161
+  },
+  {
+    "name": "saved-designs.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 184
+  },
+  {
+    "name": "scroll-media.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 13358
+  },
+  {
+    "name": "scroll-story.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 236
+  },
+  {
+    "name": "scroll-video-controller.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 81
+  },
+  {
+    "name": "service-pages-all-trades.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 271
+  },
+  {
+    "name": "service-playbook.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 239
+  },
+  {
+    "name": "trade-revisions.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 306
+  },
+  {
+    "name": "trade-upgrade.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 201
+  },
+  {
+    "name": "trades-financing.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 198
+  },
+  {
+    "name": "trust.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 285
+  },
+  {
+    "name": "website-pages.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 568
+  },
+  {
+    "name": "workspace-owner.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 1799
+  },
+  {
+    "name": "workspace.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 202
+  },
+  {
+    "name": "zoom.mjs",
+    "code": 0,
+    "passed": true,
+    "ms": 161
+  }
+]

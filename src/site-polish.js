@@ -3,6 +3,13 @@ import {neighborhoodBanner} from './neighborhood.js';
 import {socialIcon} from './social-icons.js';
 import {normalizePlatform,SOCIALS,FINANCING_DISCLOSURE} from './platform/constitution.ts';
 import {e,one,must,access} from './core.js';
+import {visibleServicePages} from './service-registry.js';
+export function expertiseNavigation(s,{base='',preview=false,sample=false,currentService=''}={}){
+ const pages=!sample&&/^\/s\/[^/?]+$/.test(base)?visibleServicePages(s):[];
+ if(!pages.length)return `<a href="${e(base)}#services">Expertise</a>`;
+ const suffix=preview?'?preview=1':'';
+ return `<details class="site-expertise"><summary>Expertise</summary><div class="site-expertise-list"><a href="${e(base)}${suffix}#services">All services</a>${pages.map(p=>`<a href="${e(base)}/services/${e(p.slug)}${suffix}"${p.slug===currentService?' aria-current="page"':''}>${e(p.serviceName)}</a>`).join('')}</div></details>`;
+}
 export function faqLink(s,base='',preview=false,sample=false){
  return !sample && /^\/s\/[^/?]+$/.test(base) && s.trade==='Roofing' && (s.websitePages?.pages||[]).some(p=>p.kind==='faq'&&p.enabled)
   ? '<a href="'+e(base)+'/faq'+(preview?'?preview=1':'')+'">Roofing FAQ</a>' : '';
@@ -15,9 +22,9 @@ export function websiteBrand(s){
  const mark=s.logoId?`<img class="site-brand-logo" src="/media/${e(s.logoId)}" alt="" width="120" height="44">`:`<span class="site-brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M7 23 24 9l17 14M13 21v18h22V21" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 39V28h8v11" stroke="currentColor" stroke-width="3"/></svg></span>`;
  return mark+`<span class="site-brand-name">${e(s.name)}</span>`;
 }
-export function websiteHeader(s,{base='',preview=false,sample=false,project=false,layout='immersive',portfolio=true}={}){
+export function websiteHeader(s,{base='',preview=false,sample=false,project=false,layout='immersive',portfolio=true,currentService=''}={}){
  const platform=normalizePlatform(s.platform),home=sample?base:(base+(preview?'?preview=1':'')),pricing=sample?base.split('?')[0]+'/pricing'+(base.includes('?')?'?'+base.split('?')[1]:''):base+'/pricing'+(preview?'?preview=1':''),blog=sample?base.split('?')[0]+'/blog'+(base.includes('?')?'?'+base.split('?')[1]:''):base+'/blog'+(preview?'?preview=1':''),anchor=project?home:'',projectAnchor=!s.designKit&&s.trade==='Roofing'&&['craft','cinematic'].includes(s.template)?'area':'projects';
- const links=`<a href="${e(anchor)}#services">Expertise</a>${portfolio?`<a href="${e(anchor)}#${projectAnchor}">Projects</a>`:''}${preview||sample||s.reviews?.googleUrl||s.reviews?.yelpUrl?`<a href="${e(anchor)}#customer-reviews">Reviews</a>`:''}<a href="${e(pricing)}">Pricing</a><a href="${e(blog)}">Blog</a>${faqLink(s,base,preview,sample)}${aboutLink(s,base,preview,sample)}${!sample&&platform.financing.enabled?`<a href="${e(base)}/financing${preview?'?preview=1':''}">Financing</a>`:''}${!sample&&platform.promotions.enabled?`<a href="${e(base)}/promotions${preview?'?preview=1':''}">Promotions</a>`:''}<a href="${e(anchor)}#contact">Contact Us ↗</a>`;
+ const links=`${expertiseNavigation(s,{base,preview,sample,currentService})}${portfolio?`<a href="${e(anchor)}#${projectAnchor}">Projects</a>`:''}${preview||sample||s.reviews?.googleUrl||s.reviews?.yelpUrl?`<a href="${e(anchor)}#customer-reviews">Reviews</a>`:''}<a href="${e(pricing)}">Pricing</a><a href="${e(blog)}">Blog</a>${faqLink(s,base,preview,sample)}${aboutLink(s,base,preview,sample)}${!sample&&platform.financing.enabled?`<a href="${e(base)}/financing${preview?'?preview=1':''}">Financing</a>`:''}${!sample&&platform.promotions.enabled?`<a href="${e(base)}/promotions${preview?'?preview=1':''}">Promotions</a>`:''}<a href="${e(anchor)}#contact">Contact Us ↗</a>`;
  const phone=String(s.phone||'').replace(/[^+\d]/g,'');
  return `<header class="kit-header shared-site-header"><a href="${e(home||'/')}" class="kit-brand">${websiteBrand(s)}</a><nav class="site-desktop-nav" aria-label="Main navigation">${links}</nav><details class="site-mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation">${links}${phone?`<a class="site-call-link" href="tel:${e(phone)}">Call ${e(s.phone)} ↗</a>`:''}</nav></details></header>`;
 }

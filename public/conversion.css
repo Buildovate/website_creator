@@ -71,3 +71,13 @@
 
 /* Reserve the measured default header before enhancement. */
 .conversion-site{--cx-header-height:97px}@media(max-width:760px){.conversion-site{--cx-header-height:84px}}
+.cx-header .site-expertise{position:relative}
+.cx-header .site-expertise>summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center}
+.cx-header .site-expertise>summary::-webkit-details-marker{display:none}
+.cx-header .site-expertise>summary::after{content:'⌄';margin-left:6px}
+.cx-header .site-expertise-list{position:absolute;top:100%;left:0;z-index:70;display:grid;min-width:230px;max-height:65vh;overflow:auto;padding:7px;background:#fff;box-shadow:0 15px 35px #0003}
+.cx-header .site-expertise:not([open]) .site-expertise-list{display:none}
+.cx-header .site-expertise-list a{display:block;padding:10px 12px;min-height:44px;color:var(--cx-dark);text-decoration:none;white-space:nowrap}
+.cx-header .site-expertise-list a:hover,.cx-header .site-expertise-list a[aria-current=page]{background:#e5ece5;border-left:3px solid var(--accent)}
+@media(hover:hover) and (min-width:761px){.cx-header .site-expertise:hover .site-expertise-list{display:grid}}
+@media(max-width:760px){.cx-mobile-menu nav{width:min(88vw,330px);max-height:calc(100dvh - 110px);overflow:auto}.cx-mobile-menu .site-expertise-list{position:static;min-width:0;max-height:none;padding:0 0 0 8px;box-shadow:none;background:transparent}.cx-mobile-menu .site-expertise>summary{padding:12px;min-height:44px}}
