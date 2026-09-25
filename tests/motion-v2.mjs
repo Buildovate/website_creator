@@ -3,7 +3,7 @@ import {readFileSync} from 'node:fs';
 import {gzipSync} from 'node:zlib';
 import {build} from 'esbuild';
 const result=await build({entryPoints:['src/trade-motion-v2.js'],bundle:true,write:false,format:'esm',platform:'node'});
-const {LayerExplode,RevealCompare,KineticText,roofingMotionOptions}=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+const {LayerExplode,RevealCompare,KineticText,StickyStack,StatsMask,roofingMotionOptions}=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 for(const style of ['bold-industrial','clean-modern'])for(const variant of ['A','B','C']){
  const options=roofingMotionOptions({motionStyle:style,motionLayout:variant});
  const anatomy=LayerExplode(options),compare=RevealCompare(options),headline=KineticText({...options,text:'A safe <roof>\nA clear plan.'});
@@ -14,6 +14,21 @@ for(const style of ['bold-industrial','clean-modern'])for(const variant of ['A',
  assert.ok(compare.includes(variant==='C'?'data-compare-state="2"':'role="slider"'));
  assert.ok(headline.includes('A safe &lt;roof&gt;'));assert.ok(headline.includes('aria-hidden="true"'));
 }
+const stack=StickyStack({cards:[{title:'Describe',body:'Tell us what you see.',image:'/assets/premium-roofing/stain.png'},{title:'Discuss',body:'Review the concern.'}],index:true});
+assert.equal((stack.match(/data-stack-card=/g)||[]).length,2);
+assert.match(stack,/aria-label="Process steps"/);
+assert.match(stack,/loading="lazy"/);
+assert.equal(StickyStack({cards:[]}), '');
+const facts={years:18,licenseState:'CA',licenseNumber:'123456',jobsCompleted:1250,googleRating:4.9,googleReviewCount:212,googleUrl:'https://www.google.com/maps?cid=123',warrantyYears:10,confirmed:{years:true,jobsCompleted:true,google:true,license:true,warranty:false}};
+const mask=StatsMask({trust:facts});
+for(const key of ['years','jobsCompleted','rating','reviews','license'])assert.ok(mask.includes('data-stat-key="'+key+'"'));
+assert.ok(!mask.includes('data-stat-key="warranty"'));
+assert.ok(mask.includes('data-mask-shape="gable"'));
+assert.ok(mask.includes('4.9 / 5'));
+assert.equal(StatsMask({trust:{}}),'');
+assert.equal(StatsMask({trust:{years:18,confirmed:{years:false}}}),'');
+assert.ok(StatsMask({trust:facts,shape:'logo',logoMask:'/media/logo-1'}).includes('data-mask-shape="logo"'));
+assert.ok(StatsMask({trust:facts,shape:'logo'}).includes('data-mask-shape="gable"'));
 assert.ok(!LayerExplode({style:{surface:'red;position:fixed'}}).includes('position:fixed'));
 assert.equal(roofingMotionOptions({motionLayout:'Z'}).variant,'A');
 const css=readFileSync('public/trade-motion-v2.css','utf8');assert.ok(css.includes('prefers-reduced-motion:reduce'));

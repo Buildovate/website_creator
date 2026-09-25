@@ -24,4 +24,4 @@ export function anatomySection(trade='roofing'){
 export function warningArt(kind){const art={shingles:'<path class="tm-lift" d="M30 80 95 40 170 70 110 110Z"/><path d="M35 105 110 135 175 95"/>',stain:'<path d="M25 120H175M65 122Q95 150 132 122"/><path class="tm-drip" d="M100 35Q seventy 90 100 90Q120 90 100 35Z"/>'.replace('seventy','80'),flashing:'<path d="M30 120 100 65 175 120M115 76V30H140V95"/><path class="tm-lift" d="M100 78 126 97 150 87"/>',gutter:'<path d="M25 85H175L160 125H40Z"/><g class="tm-drip"><circle cx="60" cy="65" r="4"/><circle cx="95" cy="45" r="4"/><circle cx="125" cy="70" r="4"/></g>'};return `<svg class="tm-warning" viewBox="0 0 200 160" aria-hidden="true">${art[kind]||art.shingles}</svg>`;}
 
 // Motion kit v2 shares the v1 renderer entry point and client scheduler.
-export {LayerExplode,RevealCompare,KineticText,roofingMotionOptions,motionV2Assets} from './trade-motion-v2.js';
+export {LayerExplode,RevealCompare,KineticText,StickyStack,StatsMask,roofingMotionOptions,motionV2Assets} from './trade-motion-v2.js';

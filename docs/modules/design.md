@@ -154,3 +154,8 @@ The Roofing motion homepage uses responsive AVIF/WebP finished stills and media-
 ## #004G-v4 — current service-flight framing and playback
 
 The portrait uses a tracked central crop (40 WebP frames in public/assets/trade-motion/v4) with the exact final frame as its still. The preloaded static opening is identical to frame 0; reduced motion and no JS show the final still. All media planes share the same fit. The controller loads consecutively and traverses adjacent frames within the contiguous loaded prefix in either direction. Headline placement and desktop final foreground layering are preserved. Clean motion-layer sticky panels have an explicit token surface for contrast. [Six final phone audits and complete QA](../build-evidence/004G-v4/README.md).
+
+
+## #004I — Roofing process stack and confirmed stats
+
+The roof-repair homepage now uses `StickyStack` for its three reviewed process steps, with an optional native-link index, A/B/C layout variants, and the same bold/clean token choices as #004H. The component reserves its scroll space before lazy enhancement; reduced motion and no JS show static cards. `StatsMask` consumes `cleanBusinessTrust` and requires each fact's own confirmation. The count-up affects only visual numeric copies; semantic final values and license IDs are static. Empty confirmation sets omit the section. Its photo mask defaults to gable, with drop/sun/flame/validated-logo choices for later trades. Images are lazy, and the Roofing drone hero stays unchanged. [Screenshots, recordings and gates](../build-evidence/004I/README.md).

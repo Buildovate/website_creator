@@ -1,0 +1,51 @@
+{
+  "files": [
+    {
+      "file": "public/trade-motion.js",
+      "bytes": 11017,
+      "gzipBytes": 4069
+    },
+    {
+      "file": "public/trade-motion.css",
+      "bytes": 17516,
+      "gzipBytes": 4835
+    },
+    {
+      "file": "public/trade-motion-v2.js",
+      "bytes": 1129,
+      "gzipBytes": 602
+    },
+    {
+      "file": "public/trade-motion-v2-interactions.js",
+      "bytes": 7630,
+      "gzipBytes": 2553
+    },
+    {
+      "file": "public/trade-motion-v2.css",
+      "bytes": 17645,
+      "gzipBytes": 4557
+    },
+    {
+      "file": "src/trade-motion.js",
+      "bytes": 7897,
+      "gzipBytes": 3260
+    },
+    {
+      "file": "src/trade-motion-v2.js",
+      "bytes": 12344,
+      "gzipBytes": 4935
+    },
+    {
+      "file": "src/roofing-performance.js",
+      "bytes": 4483,
+      "gzipBytes": 1633
+    },
+    {
+      "file": "src/roofing-critical-css.js",
+      "bytes": 42184,
+      "gzipBytes": 9027
+    }
+  ],
+  "totalGzipBytes": 35471,
+  "ceiling": 61440
+}

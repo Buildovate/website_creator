@@ -4,6 +4,19 @@ export function mountMotionV2(clock) {
  let paused=false;
  const layers=[...document.querySelectorAll('[data-layer-explode]')].map(root=>({root,stage:root.querySelector('.mk-layer-stage'),parts:[...root.querySelectorAll('[data-roof-layer]')],phase:root.querySelector('[data-layer-phase]')}));
  const words=[...document.querySelectorAll('[data-kinetic-text=words]')].map(root=>({root,parts:[...root.querySelectorAll('[data-kinetic-part]')]}));
+ const stacks=[...document.querySelectorAll('[data-sticky-stack]')].map(root=>({root,cards:[...root.querySelectorAll('[data-stack-card]')],links:[...root.querySelectorAll('.mk-stack-index a')]}));
+ const stats=[...document.querySelectorAll('[data-stats-mask]')].map(root=>({root,grid:root.querySelector('.mk-stats-grid'),photo:root.querySelector('.mk-stats-photo'),numbers:[...root.querySelectorAll('[data-stats-number]')]}));
+ stacks.forEach(({cards,links})=>links.forEach((link,i)=>link.addEventListener('click',event=>{
+  if(reduce.matches)return;
+  event.preventDefault();
+  const list=cards[0].parentElement,top=list.getBoundingClientRect().top+scrollY;
+  const gap=parseFloat(getComputedStyle(cards[0]).marginBottom)||0;
+  const header=document.querySelector('.cx-header,.tp-header')?.getBoundingClientRect().height||0;
+  scrollTo({top:top+i*(cards[0].offsetHeight+gap)-header-16,behavior:'auto'});
+  history.replaceState(null,'',link.hash);clock.request();
+ })));
+
+
  function draw(){const still=reduce.matches||paused,header=document.querySelector('.cx-header,.tp-header')?.getBoundingClientRect().height||0;
   layers.forEach(({root,stage,parts,phase})=>{const r=root.getBoundingClientRect();if(!still&&(r.top>innerHeight+300||r.bottom< -300))return;
    const p=still?1:clamp((header-r.top)/Math.max(1,root.offsetHeight-stage.offsetHeight));
@@ -11,6 +24,25 @@ export function mountMotionV2(clock) {
    parts.forEach((part,i)=>{part.style.transform=`translate(${root.dataset.variant==='C'?i*spread*4:0}px,${-(i*44-95)*spread}px)`;});
    phase.textContent=p===0?'Ready to explore':p<.45?'Layers separating':p<.65?'Every layer matters':p<.92?'Coming together':'Finished roof';
    root.dataset.motionProgress=p.toFixed(3);
+  });
+  stacks.forEach(({root,cards,links})=>{
+   root.classList.toggle('mk-stack-ready',!still);
+   const threshold=header+innerHeight*.28;
+   let active=0;cards.forEach((card,i)=>{if(card.getBoundingClientRect().top<=threshold)active=i;});
+   root.dataset.stackActive=String(active);
+   links.forEach((link,i)=>{if(i===active)link.setAttribute('aria-current','step');else link.removeAttribute('aria-current');});
+  });
+  stats.forEach(({root,grid,photo,numbers})=>{
+   const r=root.getBoundingClientRect();if(!still&&(r.top>innerHeight+300||r.bottom< -300))return;
+   const p=still?1:ease((innerHeight*.88-grid.getBoundingClientRect().top)/Math.max(1,innerHeight*.48));
+   const photoP=still?1:ease((innerHeight*1.2-photo.getBoundingClientRect().top)/Math.max(1,innerHeight*.55));
+   root.classList.toggle('mk-stats-ready',!still);
+   root.style.setProperty('--mk-reveal',`${((1-p)*100).toFixed(2)}%`);
+   root.style.setProperty('--mk-photo-reveal',`${((1-photoP)*100).toFixed(2)}%`);
+   root.dataset.motionProgress=p.toFixed(3);root.dataset.photoProgress=photoP.toFixed(3);
+   numbers.forEach(number=>{const value=Number(number.dataset.statsNumber),decimals=Number(number.dataset.statsDecimals)||0;
+    number.textContent=(decimals?Math.round(value*p*10)/10:Math.round(value*p)).toLocaleString('en-US',{minimumFractionDigits:decimals,maximumFractionDigits:decimals});
+   });
   });
   words.forEach(({root,parts})=>{const r=root.getBoundingClientRect(),p=still?1:clamp((innerHeight*.86-r.top)/Math.max(1,innerHeight*.55));
    parts.forEach((part,i)=>{const q=clamp(p*parts.length-i);part.style.opacity=String(.36+.64*q);part.style.transform=`translateY(${(1-q)*3}px)`;});root.dataset.motionProgress=p.toFixed(3);

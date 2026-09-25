@@ -353,3 +353,12 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Clean sticky-panel contrast fixed. Six final mobile Lighthouse audits (three per style) pass Performance >=85, Accessibility >=95 and CLS <=0.05; all contrast checks pass.
 - [Final evidence, six reports, first-paint/timed screenshots, down/up/down recordings, delayed-frame/fallback checks and 43/43 regression commands](docs/build-evidence/004G-v4/README.md). Motion/render/style source budget 31136 gzip bytes / 61440.
 - Commit locator: fix: correct Roofing flight framing and two-way scrub (#004G-v4). #004I remains queued, not built. No push or deployment.
+
+
+### #004I — Done (2026-09-24)
+
+- Replaced Roofing's process rows with visual, sticky Describe / Discuss / Decide cards and an optional touch/keyboard index. Added A/B/C compositions under bold-industrial and clean-modern tokens. Static no-JS and reduced-motion states keep every card readable.
+- Added StatsMask from per-field confirmed `businessTrust` data only. Missing/unconfirmed facts are hidden and zero facts omit the section. Numeric facts count up as visible; photo uses a gable mask by default, with drop/sun/flame/validated-logo options. License identifiers stay static.
+- Local fictional fixture shows years, jobs, Google rating, review count and license; its unconfirmed warranty is hidden. No real contractor fact was introduced. The #004G-v4 drone hero renderer/media/controller are unchanged.
+- [Final #004I evidence](docs/build-evidence/004I/README.md): desktop/mobile rest/mid/finished/reduced screenshots across 12/12 profiles, no-JS, touch/keyboard and down/up/down recordings. Final mobile Lighthouse bold Performance 100/100/99, clean 100/98/99; Accessibility 100 on all six, CLS <=0.00953 and contrast all pass. Full regression 43/43. Motion/render/style budget 35,471/61,440 gzip bytes.
+- Commit locator: `feat: add Roofing StickyStack and confirmed StatsMask (#004I)`. No push or deployment. Next numbered ticket: #013.

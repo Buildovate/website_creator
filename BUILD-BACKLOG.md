@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish is Done with passing performance gates and complete final evidence. #004I is queued only, not built. The ordinary next numbered backlog ticket remains #013; neither #004I implementation nor #013 is authorized by this request.
+Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish and #004I are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #013; it is not authorized by this request.
 
 ## Session contract
 
@@ -127,15 +127,14 @@ Tickets #001–#041.
 - State: **Done via #004H-finish**. [Final evidence](docs/build-evidence/004H/README.md).
 - LayerExplode, RevealCompare A/B/C and KineticText verified at 1440×900 and 390×844 in both styles, including rest/mid/finished/reduced-motion, touch/keyboard checks and both recordings.
 - Final phone audits: bold 100 Performance / 100 Accessibility / 0.0095 CLS; clean 97 / 96 / 0.0095. Three attempts used. All 43 regression commands pass. Motion/style code remains under 60KB gzip.
-- No push or deployment. #004I below remains queued only.
+- No push or deployment. #004I was completed in its own ticket.
 
-### #004I — Motion kit v2, part 2 (queued only)
+### #004I — Motion kit v2, part 2 (Roofing)
 
-- State: **Not started — backlog only; do not build in #004H.**
-- StickyStack: reusable service cards that stack on scroll, with an optional left index; accept A/B/C layout and style tokens and extend the existing motion controller.
-- StatsMask: count-up trust statistics beside a photo cut into a configurable shape. Default gable for Roofing; other trades may pass drop, sun, flame or logo shapes.
-- Statistics must come only from individually confirmed questionnaire facts. Hide each missing/unconfirmed fact; omit the stat block when no confirmed facts exist. Never fabricate counts or trust claims.
-- Retain accessible final text and reduced-motion finished states, lazy heavy assets, current sections and a reachable legacy variant. Reassess the <=1-day scope before any authorized build.
+- State: **Done**. [Final screenshots, recordings, audits and tests](docs/build-evidence/004I/README.md).
+- StickyStack replaces Roofing's process list with three visual pinned cards and optional keyboard/touch index. A/B/C layouts and bold/clean token styles pass 12/12 browser profiles; static no-JS and reduced-motion states remain readable.
+- StatsMask renders only individually confirmed questionnaire facts, counts numeric facts in view and fills a gable-shaped photo. Drop, sun, flame and validated logo mask options are available. Missing/unconfirmed facts disappear; zero confirmed facts omit the section. License IDs stay static.
+- Final mobile Lighthouse: bold Performance 100/100/99; clean 100/98/99; all Accessibility 100 and CLS <=0.00953. Full 43/43 regression suite passes. Motion/render/style code is 35,471 bytes gzip <=61,440. Drone hero #004G-v4 unchanged. Local commit only; #013 is next.
 
 ### #005 — Connect the selected-service grid to detail pages
 

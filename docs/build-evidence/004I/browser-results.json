@@ -1,0 +1,370 @@
+{
+  "profiles": [
+    {
+      "name": "desktop-bold-industrial-A",
+      "width": 1440,
+      "height": 900,
+      "cardRead": {
+        "top": 115.59375,
+        "bottom": 761.59375,
+        "actionTop": 900
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop-bold-industrial-B",
+      "width": 1440,
+      "height": 900,
+      "cardRead": {
+        "top": 115.59375,
+        "bottom": 761.59375,
+        "actionTop": 900
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop-bold-industrial-C",
+      "width": 1440,
+      "height": 900,
+      "cardRead": {
+        "top": 115.65625,
+        "bottom": 761.65625,
+        "actionTop": 900
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-A",
+      "width": 1440,
+      "height": 900,
+      "cardRead": {
+        "top": 115.59375,
+        "bottom": 761.59375,
+        "actionTop": 900
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-B",
+      "width": 1440,
+      "height": 900,
+      "cardRead": {
+        "top": 115.59375,
+        "bottom": 761.59375,
+        "actionTop": 900
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-C",
+      "width": 1440,
+      "height": 900,
+      "cardRead": {
+        "top": 115.65625,
+        "bottom": 761.65625,
+        "actionTop": 900
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-A",
+      "width": 390,
+      "height": 844,
+      "cardRead": {
+        "top": 329.140625,
+        "bottom": 651.65625,
+        "actionTop": 769.703125
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-B",
+      "width": 390,
+      "height": 844,
+      "cardRead": {
+        "top": 329.140625,
+        "bottom": 651.65625,
+        "actionTop": 769.703125
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-C",
+      "width": 390,
+      "height": 844,
+      "cardRead": {
+        "top": 329.140625,
+        "bottom": 651.65625,
+        "actionTop": 769.703125
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-A",
+      "width": 390,
+      "height": 844,
+      "cardRead": {
+        "top": 329.140625,
+        "bottom": 651.65625,
+        "actionTop": 769.703125
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-B",
+      "width": 390,
+      "height": 844,
+      "cardRead": {
+        "top": 329.140625,
+        "bottom": 651.65625,
+        "actionTop": 769.703125
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-C",
+      "width": 390,
+      "height": 844,
+      "cardRead": {
+        "top": 329.140625,
+        "bottom": 651.65625,
+        "actionTop": 769.703125
+      },
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "desktop-bold-industrial-A-stack-rest.png",
+    "desktop-bold-industrial-A-stack-mid.png",
+    "desktop-bold-industrial-A-stack-finished.png",
+    "desktop-bold-industrial-A-stats-rest.png",
+    "desktop-bold-industrial-A-stats-mid.png",
+    "desktop-bold-industrial-A-stats-finished.png",
+    "desktop-bold-industrial-A-stack-reduced.png",
+    "desktop-bold-industrial-A-stats-reduced.png",
+    "desktop-bold-industrial-B-stack-rest.png",
+    "desktop-bold-industrial-B-stack-mid.png",
+    "desktop-bold-industrial-B-stack-finished.png",
+    "desktop-bold-industrial-B-stats-rest.png",
+    "desktop-bold-industrial-B-stats-mid.png",
+    "desktop-bold-industrial-B-stats-finished.png",
+    "desktop-bold-industrial-B-stack-reduced.png",
+    "desktop-bold-industrial-B-stats-reduced.png",
+    "desktop-bold-industrial-C-stack-rest.png",
+    "desktop-bold-industrial-C-stack-mid.png",
+    "desktop-bold-industrial-C-stack-finished.png",
+    "desktop-bold-industrial-C-stats-rest.png",
+    "desktop-bold-industrial-C-stats-mid.png",
+    "desktop-bold-industrial-C-stats-finished.png",
+    "desktop-bold-industrial-C-stack-reduced.png",
+    "desktop-bold-industrial-C-stats-reduced.png",
+    "desktop-clean-modern-A-stack-rest.png",
+    "desktop-clean-modern-A-stack-mid.png",
+    "desktop-clean-modern-A-stack-finished.png",
+    "desktop-clean-modern-A-stats-rest.png",
+    "desktop-clean-modern-A-stats-mid.png",
+    "desktop-clean-modern-A-stats-finished.png",
+    "desktop-clean-modern-A-stack-reduced.png",
+    "desktop-clean-modern-A-stats-reduced.png",
+    "desktop-clean-modern-B-stack-rest.png",
+    "desktop-clean-modern-B-stack-mid.png",
+    "desktop-clean-modern-B-stack-finished.png",
+    "desktop-clean-modern-B-stats-rest.png",
+    "desktop-clean-modern-B-stats-mid.png",
+    "desktop-clean-modern-B-stats-finished.png",
+    "desktop-clean-modern-B-stack-reduced.png",
+    "desktop-clean-modern-B-stats-reduced.png",
+    "desktop-clean-modern-C-stack-rest.png",
+    "desktop-clean-modern-C-stack-mid.png",
+    "desktop-clean-modern-C-stack-finished.png",
+    "desktop-clean-modern-C-stats-rest.png",
+    "desktop-clean-modern-C-stats-mid.png",
+    "desktop-clean-modern-C-stats-finished.png",
+    "desktop-clean-modern-C-stack-reduced.png",
+    "desktop-clean-modern-C-stats-reduced.png",
+    "mobile-bold-industrial-A-stack-rest.png",
+    "mobile-bold-industrial-A-stack-mid.png",
+    "mobile-bold-industrial-A-stack-finished.png",
+    "mobile-bold-industrial-A-stats-rest.png",
+    "mobile-bold-industrial-A-stats-mid.png",
+    "mobile-bold-industrial-A-stats-finished.png",
+    "mobile-bold-industrial-A-stack-reduced.png",
+    "mobile-bold-industrial-A-stats-reduced.png",
+    "mobile-bold-industrial-B-stack-rest.png",
+    "mobile-bold-industrial-B-stack-mid.png",
+    "mobile-bold-industrial-B-stack-finished.png",
+    "mobile-bold-industrial-B-stats-rest.png",
+    "mobile-bold-industrial-B-stats-mid.png",
+    "mobile-bold-industrial-B-stats-finished.png",
+    "mobile-bold-industrial-B-stack-reduced.png",
+    "mobile-bold-industrial-B-stats-reduced.png",
+    "mobile-bold-industrial-C-stack-rest.png",
+    "mobile-bold-industrial-C-stack-mid.png",
+    "mobile-bold-industrial-C-stack-finished.png",
+    "mobile-bold-industrial-C-stats-rest.png",
+    "mobile-bold-industrial-C-stats-mid.png",
+    "mobile-bold-industrial-C-stats-finished.png",
+    "mobile-bold-industrial-C-stack-reduced.png",
+    "mobile-bold-industrial-C-stats-reduced.png",
+    "mobile-clean-modern-A-stack-rest.png",
+    "mobile-clean-modern-A-stack-mid.png",
+    "mobile-clean-modern-A-stack-finished.png",
+    "mobile-clean-modern-A-stats-rest.png",
+    "mobile-clean-modern-A-stats-mid.png",
+    "mobile-clean-modern-A-stats-finished.png",
+    "mobile-clean-modern-A-stack-reduced.png",
+    "mobile-clean-modern-A-stats-reduced.png",
+    "mobile-clean-modern-B-stack-rest.png",
+    "mobile-clean-modern-B-stack-mid.png",
+    "mobile-clean-modern-B-stack-finished.png",
+    "mobile-clean-modern-B-stats-rest.png",
+    "mobile-clean-modern-B-stats-mid.png",
+    "mobile-clean-modern-B-stats-finished.png",
+    "mobile-clean-modern-B-stack-reduced.png",
+    "mobile-clean-modern-B-stats-reduced.png",
+    "mobile-clean-modern-C-stack-rest.png",
+    "mobile-clean-modern-C-stack-mid.png",
+    "mobile-clean-modern-C-stack-finished.png",
+    "mobile-clean-modern-C-stats-rest.png",
+    "mobile-clean-modern-C-stats-mid.png",
+    "mobile-clean-modern-C-stats-finished.png",
+    "mobile-clean-modern-C-stack-reduced.png",
+    "mobile-clean-modern-C-stats-reduced.png",
+    "desktop-no-js-stack.png",
+    "desktop-no-js-stats.png",
+    "mobile-no-js-stack.png",
+    "mobile-no-js-stats.png"
+  ],
+  "recordings": [],
+  "fallbacks": [
+    {
+      "view": "desktop",
+      "noJS": true
+    },
+    {
+      "view": "mobile",
+      "noJS": true
+    }
+  ],
+  "errors": []
+}
