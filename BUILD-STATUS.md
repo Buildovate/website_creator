@@ -444,6 +444,12 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Contact detail has the profile avatar, trade/demo badges and Next callback. Call Back and Book Appt are visible on cards and rows. Contact phone numbers display as `(805) 555-0102` while tel links retain digits. The 1440px Contacts table fits the Stage badge, notes and Quick actions. The desktop sidebar has one Workspace heading. Phone Calendar starts on Upcoming with styled controls and capitalized view names.
 - [Evidence](docs/build-evidence/015D/README.md): 48/48 full regression commands; 101 phone + 101 desktop platform states with zero layout failures/browser errors; callback, contact and calendar captures. The v11 recovery tree was read only. #015A physical iPhone camera acceptance remains pending separately. Local only; no push or deployment. Next ticket: #015E.
 
+### #015E — Done (2026-09-25)
+
+- Admins can link a global contact to an existing contractor website, see the customer in Websites, and open the Portal from Customers. Appointment preparation creates a private, contact-prefilled draft; Overview lists upcoming website walkthroughs. Built and Shown shortcuts remain tenant scoped and audited. Appointment interests, 15–120-minute duration, and email/SMS reminder preferences are stored without claiming delivery.
+- Contacts cards and rows use a keyboard accessible platform More menu. Phone cards open Details from the company name and keep bulk selection separate. Desktop month/week Calendar marks today; the phone Calendar controls fit one row at 390px.
+- [Evidence](docs/build-evidence/015E/README.md): 51/51 full regression commands, including two new #015E tests and the #015A platform mobile inventory; 101 phone + 101 desktop states with zero layout failures or browser errors. The v11 recovery tree was read only. The separate physical iPhone camera check from #015A remains pending. Local only; no push or deployment. Next ticket: #015F.
+
 ### #004L — Done (2026-09-25)
 
 - Roofing's owner band now pairs the tilted Mario Robles Jr. quote card with a responsive sample owner/operator portrait. A sample-only gradient says “YOUR PHOTO HERE” and “Upload your photo”; uploaded media uses the same placement without the overlay. The portrait has dynamic business-name alt text and lazy-loaded 480/960 px WebP sources. The sample is marked `isSample: true` in site data, listed as media needed in readiness and the sales approval checklist, and credited as AI-generated illustrative media.

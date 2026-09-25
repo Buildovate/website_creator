@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2 and #004L** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015E — Contact-to-website linkage**, followed by #015F before #016. #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015E–#015F and #016 remain Not started. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2 and #004L** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015F — Contractor forms**, followed by #016. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F and #016 remain Not started. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -384,11 +384,11 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #015E — Contact-to-website linkage and appointment prep
 
-- State: **Not started** · Estimate: **6h** (≤1 day).
+- State: **Done** (2026-09-25) · Estimate: **6h** (≤1 day).
 - Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §4, using `.data/sites-v11-recovery/public/sales-upgrade-ui.js`, `public/flow-ui.js`, `public/app.js`, `src/sales-upgrade.js` and `src/workspace.js` for behavior. Keep the recovery directory intact.
 - Scope: Let an admin link a contact to an existing contractor website; show the linked customer in the Websites table and a Portal action on linked Customers rows under current admin permissions. From an appointment, add Prepare design (a private contact-prefilled website draft) and Built/Shown stage shortcuts. Show upcoming walkthroughs needing a design on staff Overview. Add meeting interests, 15–120-minute duration and stored reminder email/SMS preference toggles to the appointment editor. Show Not connected when delivery is unavailable; do not send email/SMS. Payments, invoices and preview emails remain with #051–#057 and #140/#140A.
 - Done when: Linkage, portal access, draft creation, stage shortcuts and appointment preferences are scoped and auditable; phone workflows meet the standing mobile rule and desktop remains usable.
-- Verification/evidence: Automated role/tenant, link preservation, private-draft and appointment tests; 390×844 phone and 1440×900 desktop screenshots and platform mobile acceptance output under `docs/build-evidence/015E/`.
+- Verification/evidence: Automated role/tenant, link preservation, private-draft and appointment tests; 390×844 phone and 1440×900 desktop screenshots and platform mobile acceptance output in [#015E evidence](docs/build-evidence/015E/README.md).
 - External keys/accounts: None for stored preferences; live delivery remains gated by its provider tickets.
 
 ### #015F — Contractor forms: multi-step capture and inquiry linkage
