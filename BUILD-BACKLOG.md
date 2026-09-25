@@ -36,7 +36,7 @@ Existing source requirements are narrower: [Pack 1 §M](docs/product/01-CORE-SIT
 
 ## Phase 1 — the homeowner website that sells; Roofing first
 
-Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K showpieces, #004T/#004S/#004U additions and per-trade signature insertions. Execute #004M–#004R before #004J; #004J and #004K follow in that order, then #004T, #004S and #004U. #004S depends on #004T.
+Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K showpieces, #004T/#004S/#004U/#004V additions and per-trade signature insertions. Execute #004M–#004R before #004J; #004J and #004K follow in that order, then #004T, #004S, #004U and #004V. #004S depends on #004T.
 
 ### #001 — Resolve the Roofing review-lookup test mismatch
 
@@ -240,6 +240,21 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - Controlled exception: Build an opt-in “AI media in Our Work” setting, but hard-disable it behind `AI_OUR_WORK_ENABLED=false`; the contractor UI cannot turn it on until the flag is flipped after legal approval. Once enabled, require contractor sign-off before the setting saves: checkbox acknowledgement and typed name, stored with timestamp, user ID, site ID and clause version. The clause is a placeholder marked **PENDING ATTORNEY REVIEW (K23)**. With no stored sign-off, the setting stays off.
 - Internal controls and terms: Store an internal `isAiGenerated` flag and registry fingerprint for every AI item, never shown publicly, so AI items can be pulled from Our Work instantly. Add a contractor-terms placeholder, marked **PENDING ATTORNEY REVIEW**, stating the contractor is responsible for the accuracy of everything published on their site, including photos they upload or approve, and indemnifies Buildovate.
 - Done when: The Robles test library, category matching, fingerprint uniqueness, credit log, public placement rules, disabled opt-in, sign-off record and immediate removal path have tests and review evidence. Apply the standing platform mobile acceptance rule. Do not enable AI media in Our Work or finalize either legal clause before K23 review.
+
+### #004V — Legal page (Sol High)
+
+- State: **Not started — backlog only**. Run after #004U; K23 attorney review is required for final legal text.
+- Scope: Give every contractor site a dedicated `/legal` page, linked by a small “Legal” link in the footer. Keep legal wording on this page only: no legal tags, banners or section fine print elsewhere on the public site.
+- Page sections (all text is placeholder until reviewed):
+  - **Images — PENDING ATTORNEY REVIEW (K23):** Some images show representative styles, materials and designs offered and may not depict a specific completed project.
+  - **License — PENDING ATTORNEY REVIEW (K23):** Pull the contractor license number from site settings; results vary by home and conditions.
+  - **Promotions and Financing — PENDING ATTORNEY REVIEW (K23):** Pull terms and eligibility from active promotions; financing is subject to credit approval.
+  - **Reviews — PENDING ATTORNEY REVIEW (K23):** Show the source and date of displayed reviews.
+  - **Privacy — PENDING ATTORNEY REVIEW (K23).**
+  - **Text and Call Consent — PENDING ATTORNEY REVIEW (K23).**
+- Presentation: Match the contractor site's theme and keep the page readable on a 390px phone.
+- Our Work boundary: This page does not change #004U. AI media never appears as real completed jobs in Our Work unless `AI_OUR_WORK_ENABLED` is flipped after legal approval and the required contractor sign-off is stored.
+- Done when: Every site has the themed page and footer link, each section is sourced from the relevant site setting or active record where specified, no legal wording leaks to other site sections, and phone/desktop tests and evidence cover the page. Attorney approval under K23 is required before replacing placeholder text.
 
 ### #005 — Connect the selected-service grid to detail pages
 
