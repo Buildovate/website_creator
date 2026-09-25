@@ -3,6 +3,8 @@
 ## Purpose
 Stores contractor JPEG uploads and backup copies. Public kit images and films under `public/assets/` are static files, not objects in this bucket. See `design.md` for those.
 
+Roofing's owner-section fallback is a local, responsive WebP sample under `public/assets/owner-roofing/`. `src/core.js` marks it `ownerPhoto.isSample: true` until an owner image is selected through the existing upload flow. `src/design-personality.js` renders the sample label only in that state; `src/builder.js` flags the missing real portrait in readiness. Provenance and replacement notes are in [`MEDIA-CREDITS.md`](../product/MEDIA-CREDITS.md).
+
 ## Server
 - **Routes**:
   - `POST /api/tenants/:id/photos` — `write`. Query: `projectId`, `stage`, `caption`. Body is the JPEG bytes (not JSON).

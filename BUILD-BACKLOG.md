@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015E — Contact-to-website linkage**, followed by #015F before #016. #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015E–#015F and #016 remain Not started. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2 and #004L** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015E — Contact-to-website linkage**, followed by #015F before #016. #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015E–#015F and #016 remain Not started. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -166,6 +166,11 @@ Tickets #001–#041.
 ### #004I-v4 — StickyStack handoff continuity
 - State: **Done** (2026-09-24). Overlapping panels with non-overlapping legible copy; intact Decide release into stats; compact scene; equal phone cards and fixed images. Every v3 gate and the drone hero remain intact.
 - Evidence: [baseline, sampled checks, distinct phone captures, recordings and all acceptance gates](docs/build-evidence/004I-v4/README.md). Local commit only, no push/deployment. #013 remains next and unstarted.
+
+### #004L — Roofing owner section photo
+
+- State: **Done** (2026-09-25). The owner story's dark band now pairs its tilted quote card with a responsive, lazy-loaded owner/operator sample portrait. The sample carries `isSample: true`, an on-photo replacement label, a media-needed readiness check and an approval checklist note. The existing owner upload flow selects the real photo and removes the overlay.
+- Evidence: [desktop and phone captures, upload-state comparison, media credit and full regressions](docs/build-evidence/004L/README.md). Local commit only; no push or deployment. #015E remains the next queued ticket.
 
 ### #005 — Connect the selected-service grid to detail pages
 

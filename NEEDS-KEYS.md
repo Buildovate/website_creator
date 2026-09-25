@@ -46,6 +46,7 @@ Every external-dependent ticket must expose an honest missing-access state. Plan
 - **Maps/geography:** current Project Map uses local project records and existing map assets; IP personalization uses the configured local GeoIP database. Neither requires a new geolocation API for ticket #002. Tile/data attribution and permitted usage still need review if the source changes; do not silently select a new paid map vendor.
 - **Trust networks without a feed:** Angi, Houzz, BBB, NATE, license boards and similar selections need verified profile/membership evidence and permitted marks (K22/K23). They do not automatically require or possess a usable public API. Never scrape or invent one to imply a connection.
 - **Local media tooling:** a PDF renderer, QR encoder or video transcoder may require ordinary local software dependencies, not an account/API key. Implement only in its ticket, using approved packages and no secret-bearing shell commands.
+- **#004L Roofing owner portrait:** The local template image is AI generated sample media (`ownerPhoto.isSample: true`), not a photograph of the named owner. A customer-supplied portrait and usage permission are needed before owner-photo approval. No external key is needed; the existing Owner photo upload flow replaces the sample. See [media credits](docs/product/MEDIA-CREDITS.md).
 
 ## Readiness gate
 
