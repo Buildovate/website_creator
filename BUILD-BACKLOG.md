@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015B — Platform mobile polish**, the review follow-up to #015A (e2b8418), before #016. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015B and #016 remain Not started. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015-v2 — Roofing promotion review fixes**, followed by #015B–#015F before #016. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015-v2, #015B–#015F and #016 remain Not started. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -277,7 +277,7 @@ Tickets #001–#041.
 ### #015A — Mobile-friendly platform pass
 
 - State: **Automated acceptance complete — manual iPhone check pending for Joe** · Estimate: **6h initial estimate** (≤1 day; apply the session-contract split rule before coding if the audit reveals a larger implementation).
-- Queue: Immediately after #015, which is Done, and before #015B and #016. No existing ticket is renumbered. The automated implementation is complete; #015B is next.
+- Queue: Immediately after #015, which is Done, and before #015B and #016. No existing ticket is renumbered. The automated implementation is complete; #015-v2 is next, followed by #015B–#015F.
 - References: [Standing platform mobile acceptance](#standing-platform-mobile-acceptance); [Pack 1](docs/product/01-CORE-SITE-A-N.md) §M; [Pack 3](docs/product/03-UPSELLS-MEDIA-CRM-U-AA.md) §X2.B; [Pack 4](docs/product/04-GROWTH-ADS-EMAIL-AB-AF.md) §AD3/AE4b; [dashboard wireframes](docs/product/PACK4_ANALYTICS_ADS.md#analytics-dashboard-wireframes). Owning modules: workspace, sites and media.
 - Scope: Inventory **every platform screen built so far**, including contractor questionnaire and subsections, dashboard, inquiry inbox/list/detail, preview and publish controls, settings, photo/media upload and galleries, navigation, dialogs and drawers. Include other existing platform/admin screens in the inventory; do not limit the pass to those named examples or to public-site previews. Audit empty, populated, validation/error and long-content states under the roles that can access them.
 - Files to touch: existing platform shell/views, workspace client modules and their styles as identified by the inventory, including src/views.js, src/client/workspace/ and applicable public/ styles/scripts; existing media upload client; tests/platform-mobile.mjs **(new)**; docs/build-evidence/015A/ **(new)**. No separate Contractor CRM changes, new external integrations or public-site redesign.
@@ -286,6 +286,15 @@ Tickets #001–#041.
 - External keys/accounts: None for local platform work. Device requirement: a phone/browser with camera access for the capture acceptance check; do not substitute emulation for that evidence.
 
 - Accepted exception from Joe: commit #015A now with automated evidence; **Real iPhone camera upload remains a pending manual check for Joe**, not a passed result. Keep the secured pairing script for later use. [Evidence and audit matrix](docs/build-evidence/015A/README.md): 44/44 regression commands and 200 phone/desktop state checks pass.
+
+### #015-v2 — Roofing promotion review fixes
+
+- State: **Not started** · Estimate: **5h** (≤1 day).
+- Queue: #015 review follow-up, after #015A's automated pass and before #015B. See [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) for the adjacent platform restoration queue.
+- Scope: Add a business time-zone setting defaulting to `America/Los_Angeles`; display promotion dates in that zone as short dates, with no “UTC” label or seconds. At phone width, replace the header navigation cut off after “PROM” with one menu button containing every navigation link and tap-to-call. Replace the public raw `<No guarantee>` placeholder with finished copy and prevent placeholder tokens from rendering publicly.
+- Done when: Promotion dates use the saved business zone across day and daylight-saving boundaries; the complete phone menu works by touch and keyboard; no public page emits placeholder tokens. Preserve desktop navigation, offer eligibility and draft/published boundaries.
+- Verification/evidence: Add automated date/menu/placeholder regression checks, including a public-render assertion that fails on placeholder tokens. Save 390×844 phone and 1440×900 desktop screenshots, test output and mobile acceptance results under `docs/build-evidence/015-v2/`.
+- External keys/accounts: None. Local commit only; no push or deployment.
 
 ### #015B — Platform mobile polish
 
@@ -299,6 +308,42 @@ Tickets #001–#041.
 - Done when: All four findings are resolved at 390×844 without losing touch/keyboard access or desktop behavior. Contacts are visible without scrolling past wrapped filters; CRM-style lists have no publish bar; mobile upload has one clearly styled action; Add contact is visually primary.
 - Verification/evidence: Capture affected phone and desktop screens, verify the actions and navigation with touch/keyboard, and run the relevant platform mobile regressions. Store results under `docs/build-evidence/015B/` when implemented.
 - External keys/accounts: None. No separate Contractor CRM changes.
+
+### #015C — Contacts restore: bulk actions, call-outcome filter and inline notes
+
+- State: **Not started** · Estimate: **6h** (≤1 day).
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §4, using `.data/sites-v11-recovery/public/crm-enhancements.js`, `public/sales-upgrade-ui.js`, `src/sales-upgrade.js` and v11 bulk tests for behavior. Keep the recovery directory intact; port behavior into the current modules, not whole files.
+- Scope: Restore row checkboxes and select-page for both global Sales CRM and contractor Contacts. Add a sticky bulk bar for Assign team, Change stage (with the manual-Paid notice), Export CSV (UTF-8 BOM and formula-injection guard) and Delete (preserve appointments, documents and audit history; cancel pending reminders). A scoped server bulk endpoint must enforce per-record optimistic versions and report changed/skipped counts. Restore the call-outcome filter including “Never called” and a scoped, versioned inline notes Save. Remove the dead `legacyContacts` bulk toolbar.
+- Done when: All actions enforce role/tenant boundaries, stale versions do not overwrite changes, and the list works by touch and keyboard at 390×844 without obscuring contacts; desktop behavior remains usable.
+- Verification/evidence: Automated bulk, cross-tenant, stale-version, export-escaping and notes tests; 390×844 phone and 1440×900 desktop screenshots plus platform mobile acceptance output under `docs/build-evidence/015C/`.
+- External keys/accounts: None. No separate Contractor CRM changes.
+
+### #015D — Contacts restore: callbacks and contact detail
+
+- State: **Not started** · Estimate: **5h** (≤1 day).
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §4, using `.data/sites-v11-recovery/public/sales-upgrade-ui.js`, `public/crm-enhancements.js`, `src/workspace.js` and `src/crm-next.js` for behavior. Keep the recovery directory intact.
+- Scope: Add Call Back from row and detail, with a local-time picker, 15/30/45/60-minute reservation, status, assignees and notes. Create a `callback` calendar event, log the attempt and set next-callback time; distinguish callbacks in all calendar views and reopen the callback editor. Never send a prospect invitation. Make Book Appt a visible row action. Restore the detail profile header (initials, trade and demo badges) and Next callback summary. Preserve website/design/payment/callback system-link fields on edit and duplicate merge.
+- Done when: Callback creation and edit keep the contact and calendar in sync, preserve protected fields and tenant boundaries, and work by touch and keyboard at 390×844 and on desktop.
+- Verification/evidence: Automated callback, preserve-on-edit and tenant-isolation tests; 390×844 phone and 1440×900 desktop screenshots and platform mobile acceptance output under `docs/build-evidence/015D/`.
+- External keys/accounts: None; no prospect message is sent.
+
+### #015E — Contact-to-website linkage and appointment prep
+
+- State: **Not started** · Estimate: **6h** (≤1 day).
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §4, using `.data/sites-v11-recovery/public/sales-upgrade-ui.js`, `public/flow-ui.js`, `public/app.js`, `src/sales-upgrade.js` and `src/workspace.js` for behavior. Keep the recovery directory intact.
+- Scope: Let an admin link a contact to an existing contractor website; show the linked customer in the Websites table and a Portal action on linked Customers rows under current admin permissions. From an appointment, add Prepare design (a private contact-prefilled website draft) and Built/Shown stage shortcuts. Show upcoming walkthroughs needing a design on staff Overview. Add meeting interests, 15–120-minute duration and stored reminder email/SMS preference toggles to the appointment editor. Show Not connected when delivery is unavailable; do not send email/SMS. Payments, invoices and preview emails remain with #051–#057 and #140/#140A.
+- Done when: Linkage, portal access, draft creation, stage shortcuts and appointment preferences are scoped and auditable; phone workflows meet the standing mobile rule and desktop remains usable.
+- Verification/evidence: Automated role/tenant, link preservation, private-draft and appointment tests; 390×844 phone and 1440×900 desktop screenshots and platform mobile acceptance output under `docs/build-evidence/015E/`.
+- External keys/accounts: None for stored preferences; live delivery remains gated by its provider tickets.
+
+### #015F — Contractor forms: multi-step capture and inquiry linkage
+
+- State: **Not started** · Estimate: **6h** (≤1 day).
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §4, using `.data/sites-v11-recovery/public/lead-steps.js`, `public/launch-refinements-ui.js` and the v11 submission dashboard for behavior. Keep the recovery directory intact.
+- Scope: Restore the four-step homeowner form. Save contact details after step 1 and update the same inquiry on later steps with an idempotent capture key, retaining consent, honeypot, rate limits and #014 page context. Replace the plain contractor Forms list with Forms & submissions counts and filters for form and Partial/Complete status. Give each Inquiries entry its status and an Open contact link to the auto-captured contact. Never enroll partial inquiries in marketing.
+- Done when: Partial-to-complete updates stay single-record and tenant-scoped; previews/drafts cannot submit; contractor controls and homeowner form satisfy the standing 390×844 mobile rule and remain usable on desktop.
+- Verification/evidence: Automated partial-to-complete, idempotency, cross-tenant, consent and preview/draft tests; 390×844 phone and 1440×900 desktop screenshots and platform mobile acceptance output under `docs/build-evidence/015F/`.
+- External keys/accounts: None; no external delivery.
 
 ### #016 — Persist quiz completion evidence
 
@@ -363,6 +408,15 @@ Tickets #001–#041.
 - Files to touch: `src/platform/generation.ts` **(new)**; `src/design-variant.js`; `src/saved-designs.js`; `tests/generation.mjs` **(new)**.
 - Done when: Regeneration preserves business facts, selected services and URLs; records a new generation ID and locked choices; missing creative jobs are Pending, not silently reused as new AI work.
 - External keys/accounts: None.
+
+### #023A — Restore the scroll-story hero editor
+
+- State: **Not started** · Estimate: **5h** (≤1 day). Dependency: #023 generation manifest and the existing approved hero media pipeline.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2, using `.data/sites-v11-recovery/public/scroll-story-ui.js` as a behavior reference only; keep the recovery directory intact.
+- Scope: Restore contractor controls for the existing scroll-story hero without replacing approved imagery or bypassing the generation manifest. Save a private draft, preview it, and require explicit publication. Preserve reduced-motion and no-JS fallbacks and media provenance.
+- Done when: Authorized edits round-trip, a public hero changes only after publish, and editor controls work at 390×844 and 1440×900 with touch/keyboard.
+- Verification/evidence: Draft/publish and media-validation tests plus phone and desktop screenshots under `docs/build-evidence/023A/`.
+- External keys/accounts: None for approved existing media; new generation remains gated by K02.
 
 ### #024 — Produce and attach one Financing ambient clip
 
@@ -635,6 +689,24 @@ Tickets #042–#103.
 - Done when: A saved effect applies to service tiles; regenerate varies only unlocked choices; mobile/reduced-motion fallback works.
 - External keys/accounts: None.
 
+### #048A — Review an existing website for new-tenant import
+
+- State: **Not started** · Estimate: **6h** (≤1 day). Dependency: authorized tenant creation and current design-kit controls.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2, using `.data/sites-v11-recovery/public/launch-refinements-ui.js` and `src/website-import.js` for behavior; keep the recovery directory intact.
+- Scope: Let an authorized operator provide a contractor-owned website URL, review bounded source findings and choose which business details/service suggestions enter a private new-tenant draft. Do not scrape private pages, infer legal/trust claims, or publish imported copy automatically. Missing research capability stays a labeled manual-entry path; never present guessed facts as verified.
+- Done when: Import suggestions have source/approval state, can be rejected, cannot cross tenants, and preserve existing create-site fields. Phone 390×844 and desktop 1440×900 workflows meet the standing mobile rule.
+- Verification/evidence: URL/source, permission, draft and no-provider tests plus phone/desktop screenshots under `docs/build-evidence/048A/`.
+- External keys/accounts: K01 only if approved AI research is used; otherwise manual review.
+
+### #048B — Assign a reviewed design to a customer
+
+- State: **Not started** · Estimate: **5h** (≤1 day). Dependency: #028C and #048A.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2, using `.data/sites-v11-recovery/public/design-studio-ui.js` and `src/design-studio.js` for behavior; keep the recovery directory intact.
+- Scope: Restore customer/contact selection for a generated design and save the assignment as a private, versioned draft. Use only confirmed service/business facts; keep the Price Book and invoice workflow in #049–#053. No automatic customer email, purchase or publication.
+- Done when: Assignments respect roles/tenant scope and survive reload without altering the public website; phone/desktop platform acceptance passes.
+- Verification/evidence: Assignment/authorization tests and 390×844 phone plus 1440×900 desktop screenshots under `docs/build-evidence/048B/`.
+- External keys/accounts: None for saved assignment; optional research remains under #048A.
+
 ### #049 — Create versioned Price Book data contracts
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
@@ -706,6 +778,24 @@ Tickets #042–#103.
 - Files to touch: `src/entitlements.js` **(new)**; `src/payments/webhooks.ts` **(new)**; `tests/entitlements.mjs` **(new)**.
 - Done when: Verified settlement grants only purchased quantities; refund/revocation is audited and idempotent; a manual Paid label grants nothing.
 - External keys/accounts: None.
+
+### #057A — Restore the manual domain launch wizard
+
+- State: **Not started** · Estimate: **6h** (≤1 day). Dependency: existing domain ownership/TXT verification; do not confuse this with #126 email-sending DNS.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2, using `.data/sites-v11-recovery/public/launch-ui.js`, `src/launch.js` and `public/domain-guides.json` for behavior; keep the recovery directory intact.
+- Scope: Guide an owner through choose, verify, connect and secure, then launch. Show registrar-specific manual instructions and real verification state; never claim DNS, TLS or publication succeeded without proof. No registrar write is authorized by this ticket.
+- Done when: The wizard preserves progress, handles failed/pending checks honestly and requires the existing publish approval. It works at 390×844 and 1440×900.
+- Verification/evidence: Domain-state/permission tests and phone/desktop screenshots under `docs/build-evidence/057A/`.
+- External keys/accounts: Domain owner/DNS access needed for live connection; manual guide works without it.
+
+### #057B — Restore the contractor setup-progress rail
+
+- State: **Not started** · Estimate: **5h** (≤1 day). Dependency: #057A and existing questionnaire/readiness steps.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2, using `.data/sites-v11-recovery/public/portal-ui.js` and `src/portal-setup.js` for behavior; keep the recovery directory intact.
+- Scope: Show accurate setup progress and Save & continue between the existing business, media, website, domain and approval sections. A step completes only from persisted evidence; pending domain/payment/provider states remain pending.
+- Done when: Progress survives reload, does not skip required approval, and phone/desktop navigation meets the standing mobile rule.
+- Verification/evidence: Progress/accessibility tests plus 390×844 phone and 1440×900 desktop screenshots under `docs/build-evidence/057B/`.
+- External keys/accounts: None for the rail; provider steps retain their own gates.
 
 ### #058 — Add durable creative job leases
 
@@ -1095,6 +1185,42 @@ Tickets #104–#169.
 - Done when: Tenant-scoped tokens use the approved secret-storage mechanism, expiration/revocation are explicit, and no token reaches page HTML or logs; no-key adapters say Not connected.
 - External keys/accounts: K08 (deployed secret storage).
 
+### #105A — Define Inbox connections and show a disconnected conversation shell
+
+- State: **Not started** · Estimate: **5h** (≤1 day). Dependency: #105 secure connection storage.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2, using `.data/sites-v11-recovery/public/launch-ui.js`, `public/flow-ui.js` and `src/inbox.js` for behavior; keep the recovery directory intact.
+- Scope: Restore admin/staff Inbox navigation, search/thread layout and contact context with explicit Not connected states. Document permitted Gmail inbound and Twilio SMS capabilities and add their missing access/evidence rows to NEEDS-KEYS before live integration. Outbound email remains SendGrid-only under K17; no Gmail send, SMS send or fake messages.
+- Done when: The shell is role-scoped and truthful without keys, and phone/desktop platform acceptance passes.
+- Verification/evidence: Role/no-key/navigation tests plus 390×844 phone and 1440×900 desktop screenshots under `docs/build-evidence/105A/`.
+- External keys/accounts: Gmail OAuth and Twilio capability/credentials unverified; key entries required before #105B/#105C.
+
+### #105B — Connect one approved inbound Gmail mailbox
+
+- State: **Not started** · Estimate: **6h** (≤1 day). Dependency: #105A and approved Gmail OAuth scopes/account.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2 and `.data/sites-v11-recovery/src/inbox.js`; keep the recovery directory intact.
+- Scope: Securely connect one permitted staff mailbox for read/search/thread sync, with revocation, expiry, audit and contact matching. Keep outgoing email on the SendGrid-only path; no Gmail reply is authorized.
+- Done when: One authorized test mailbox has real read results; no access gives Not connected, and tenant/staff isolation holds. Phone/desktop platform acceptance passes.
+- Verification/evidence: OAuth/scope, stale-token and isolation tests plus phone/desktop screenshots under `docs/build-evidence/105B/`.
+- External keys/accounts: Approved Gmail OAuth app/account/scopes, to be recorded in NEEDS-KEYS.
+
+### #105C — Connect one approved inbound SMS thread source
+
+- State: **Not started** · Estimate: **6h** (≤1 day). Dependency: #105A and approved Twilio capability/number.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2 and `.data/sites-v11-recovery/src/inbox.js`; keep the recovery directory intact.
+- Scope: Verify signed inbound SMS events, deduplicate and attach threads to the correct staff/contact scope. Show disconnected and delivery-failure states honestly. No outbound SMS or prospect invitation is authorized.
+- Done when: Real sandbox inbound events appear once and cross-tenant/forged events fail; phone/desktop platform acceptance passes.
+- Verification/evidence: Signature, duplicate, scope and no-key tests plus phone/desktop screenshots under `docs/build-evidence/105C/`.
+- External keys/accounts: Approved Twilio account, number and webhook signing material, to be recorded in NEEDS-KEYS.
+
+### #105D — Validate a Google Calendar connection for appointments
+
+- State: **Not started** · Estimate: **6h** (≤1 day). Dependency: #105 secure storage and #015D callbacks.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2 and `.data/sites-v11-recovery/src/calendar-connection.js`; keep the recovery directory intact.
+- Scope: Verify approved Google Calendar OAuth capability and connect one test calendar with bounded two-way appointment/callback mapping, conflict handling and revocation. Without access, keep local calendar events and show Not connected; never claim synchronization.
+- Done when: One authorized sandbox calendar round-trips without duplicate or cross-tenant events; phone/desktop platform acceptance passes.
+- Verification/evidence: OAuth, replay/conflict, isolation and no-key tests plus phone/desktop screenshots under `docs/build-evidence/105D/`.
+- External keys/accounts: Approved Google Calendar OAuth scopes/account, to be recorded in NEEDS-KEYS.
+
 ### #106 — Authorize one Facebook Pages account
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
@@ -1271,6 +1397,15 @@ Tickets #104–#169.
 - Done when: One responsive template renders desktop/mobile previews, real links, alt text, identity and required unsubscribe/footer; missing images have fallbacks and text-only alternative.
 - External keys/accounts: None.
 
+### #127A — Restore appointment reminder templates and outbox staging
+
+- State: **Not started** · Estimate: **6h** (≤1 day). Dependency: #015E stored preferences and #127 rendering/preview.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2, using `.data/sites-v11-recovery/public/flow-ui.js`, `src/communications.js` and `src/control.js` for behavior; keep the recovery directory intact.
+- Scope: Add a branded appointment confirmation/morning/one-hour reminder template studio with editable preview and explicit On hold/Ready/Expired outbox states. Keep transactional reminders separate from marketing consent and #140–#142 campaigns; do not send without connected delivery, recipient authorization and suppression checks.
+- Done when: Saved templates and staged status reflect actual eligibility, with no-key mode never showing Sent. Phone/desktop platform acceptance passes.
+- Verification/evidence: Template, status-transition, consent/no-key tests plus 390×844 phone and 1440×900 desktop screenshots under `docs/build-evidence/127A/`.
+- External keys/accounts: K17/K18 for future SendGrid email; SMS delivery requires separately verified provider access.
+
 ### #128 — Import the four fully written trade email sets
 
 - State: **Not started** · Estimate: **5h** (≤1 day).
@@ -1374,6 +1509,15 @@ Tickets #104–#169.
 - Files to touch: `src/email/sendgrid.js` **(new)**; `src/email/send.js` **(new)**; `tests/email-send.mjs` **(new)**.
 - Done when: Server validates exact approved content/recipient scope, permissions and domain readiness; one explicitly authorized test recipient gets a real message and provider receipt; no-key mode is a labeled stub.
 - External keys/accounts: K17, K18.
+
+### #140A — Rebuild the approved customer preview and purchase journey
+
+- State: **Not started** · Estimate: **6h** (≤1 day). Dependency: #051–#057, #057A–#057B and #140 for any real preview email.
+- Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2, using `.data/sites-v11-recovery/public/website-sales-ui.js`, `public/checkout-simulation.js`, `public/launch-public.js`, `src/website-sales.js` and `src/website-invoice.js` for behavior; keep the recovery directory intact.
+- Scope: Restore an approved per-contact website invoice/preview and a scoped purchase path through payment, questionnaire, domain and approval. The global Contacts payment column shows verified or explicit unverified/test status, and Send Preview uses only approved #140 delivery after consent/recipient checks. No simulation grants entitlements or claims payment. Preserve the local sales-preview boundary.
+- Done when: Preview access, status, handoffs and failure states are accurate; no payment or message occurs without its separate authorization. Phone/desktop platform acceptance passes.
+- Verification/evidence: Authorization, preview, status and no-key tests plus 390×844 phone and 1440×900 desktop screenshots under `docs/build-evidence/140A/`.
+- External keys/accounts: K09 for live payment; K17/K18 for approved SendGrid delivery. No production purchase authorized.
 
 ### #141 — Handle signed email events and unsubscribe
 
@@ -1499,8 +1643,8 @@ Tickets #104–#169.
 
 - State: **Not started** · Estimate: **4h** (≤1 day).
 - Pack section: [`AA`](docs/product/03-UPSELLS-MEDIA-CRM-U-AA.md) §AA.
-- Files to touch: `src/integrations/crm.js` **(new)**; `tests/crm-adapter.mjs` **(new)**.
-- Done when: Contract, tenant mapping, permitted fields and authentication requirements are recorded from real remote documentation; missing access is Not connected; local capture is not reported as sync.
+- Files to touch: `src/integrations/crm.js` **(new)**; `src/client/workspace/` contractor CRM status view; `tests/crm-adapter.mjs` **(new)**.
+- Done when: Contract, tenant mapping, permitted fields and authentication requirements are recorded from real remote documentation; the contractor CRM status screen shows Website → CRM inquiry queue and CRM → Project stories with Pending authorization/Not connected states; local capture is not reported as sync. Use `.data/sites-v11-recovery/public/portal-ui.js` and `src/launch.js` only as behavior references, preserving the recovery directory. Test role/tenant/no-key states and capture 390×844 phone and 1440×900 desktop screenshots under `docs/build-evidence/156/`; satisfy the standing platform mobile rule.
 - External keys/accounts: K24.
 
 ### #157 — Deliver one website lead to the remote sandbox
