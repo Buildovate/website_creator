@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2 and #004L** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015F — Contractor forms**, followed by #016. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F and #016 remain Not started. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2 and #004L** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015F — Contractor forms**, followed by #015G and #016. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F, #015G and #016 remain Not started. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -440,6 +440,20 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - Done when: Partial-to-complete updates stay single-record and tenant-scoped; previews/drafts cannot submit; contractor controls and homeowner form satisfy the standing 390×844 mobile rule and remain usable on desktop.
 - Verification/evidence: Automated partial-to-complete, idempotency, cross-tenant, consent and preview/draft tests; 390×844 phone and 1440×900 desktop screenshots and platform mobile acceptance output under `docs/build-evidence/015F/`.
 - External keys/accounts: None; no external delivery.
+
+### #015G — Admin Expenses & Margin module (Sol High)
+
+- State: **Not started — backlog only**. Queue immediately after #015F. Cover **every expense the operation incurs**, including future vendors and products; do not constrain the ledger to a fixed provider list.
+- Access/navigation: Add an admin-only “Expenses & Margin” page under Revenue, beside Financials and Sales performance. Only Buildovate administrators can view or change it; contractors cannot.
+- Vendor registry: Admins can add any vendor without a code change, including AI model providers, media generators, upsell suppliers, APIs, SaaS tools, freelancers or contractors, hardware, domain registrars and ad platforms. Each vendor has a category, billing type (per use, monthly, yearly or one-time), and one or more rate lines with units (tokens, credits, images, videos, messages, requests, hours, items or seats) and effective dates. Seed OpenAI API, Higgsfield, AWS, SendGrid, Twilio, Google Places, domain registrar and Codex/ChatGPT plan as **Rate needed** until actual rates are supplied.
+- AI model costs: Record provider, individual model name and effort level on every AI call, so spend can be viewed and compared by model.
+- Product/upsell catalog: Admins manage everything Buildovate sells, including the base website, Exclusive Media Library, AR, photo visualizer, SMS/inbox, domain and future upsells. Each product has a price and links to the vendors and cost lines it consumes. Admins add new upsells from this page without changing code.
+- Unified expense ledger: Store one entry per expense with date, vendor, optional product/upsell, optional site/contractor, units, rate, dollar amount, source (automatic platform usage, recurring bill or manual entry) and optional PDF/image receipt. Platform actions create automatic entries only when their integration is connected; otherwise record nothing automatically and show **Not connected**. Never present sample costs as real. Manual entry covers any expense the platform cannot capture automatically.
+- Recurring bills: Admins configure fixed monthly or yearly bills that auto-post each period. Show them separately from direct costs and allocate each bill evenly across active sites.
+- Dashboard: Support month-to-date and arbitrary date ranges. Show spend by vendor, category, AI model, product/upsell and site; show revenue from existing sales/billing records beside costs and margin per site, per upsell and business-wide. Separate one-time site-generation cost from monthly running cost per site. Show Higgsfield and other credit balances against plan allowances with a warning at 80%, plus a monthly trend.
+- Drill-down/export: Clicking any vendor, product, model or site opens its full expense entries. Export the ledger and every summary as CSV for any selected date range.
+- Done when: Admin-only access and audit logging protect every action; arbitrary vendors, rates, products, usage entries, recurring allocations, margins, balances, drill-downs and CSV exports are tested. The page is readable at 390px and follows the #015A platform mobile rules, with phone and desktop evidence.
+- Rate source: Seed actual rates later from `docs/product/UNIT-COSTS.md` when Champ's cost research is supplied; until then keep missing rates labeled **Rate needed**.
 
 ### #016 — Persist quiz completion evidence
 
