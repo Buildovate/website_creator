@@ -172,6 +172,11 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - State: **Done** (2026-09-25). The owner story's dark band now pairs its tilted quote card with a responsive, lazy-loaded owner/operator sample portrait. The sample carries `isSample: true`, an on-photo replacement label, a media-needed readiness check and an approval checklist note. The existing owner upload flow selects the real photo and removes the overlay.
 - Evidence: [desktop and phone captures, upload-state comparison, media credit and full regressions](docs/build-evidence/004L/README.md). Local commit only; no push or deployment. #015E remains the next queued ticket.
 
+### #004L-v2 — Roofing owner section polish
+
+- State: **Done** (2026-09-25). Roofing-specific layout fixes the mid-width squeeze: straight 4:5 photo at about 64% of the content width, 2.4° tilted card overlapping its left edge, and photo above the overlapping card on phone. Sample-only corner pill replaces the large overlay. Short editable default quote, one-line top eyebrow, decorative quote mark and safe phone spacing complete the section.
+- Evidence: [five sample widths, desktop/phone uploaded state, phone call-bar view, full regressions and #015A mobile audit](docs/build-evidence/004L-v2/README.md). Local commit only; no push or deployment. #015F remains the next queued ticket.
+
 ### #004M — Scroll Before/After variant (Astra High)
 
 - State: **Queued** · Run before #004J. Preserve existing templates: add an inspiration-based variant to the current before/after section, selected by a deterministic per-site variation seed that can be overridden in settings. If the seed does not yet exist, add it in this ticket. Keep the classic slider as the other variant.

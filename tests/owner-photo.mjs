@@ -12,8 +12,9 @@ test('Roofing owner sample is marked in site data and media readiness',()=>{
  assert.match(site.ownerPhoto.src,/owner-sample-960\.webp$/);
  const html=ownerSection(site,[]);
  assert.match(html,/data-sample-media="owner-photo"/);
- assert.match(html,/YOUR PHOTO HERE/);
- assert.match(html,/Upload your photo/);
+ assert.match(html,/Sample photo · Upload yours/);
+ assert.match(html,/I listen before I quote\./);
+ assert.doesNotMatch(html,/THE BELIEF BEHIND THE WORK|YOUR PHOTO HERE/);
  assert.match(html,/alt="Owner of Robles Roofing"/);
  assert.match(html,/loading="lazy"/);
  assert.match(html,/srcset="[^"]+480w,[^"]+960w"/);
@@ -25,7 +26,7 @@ test('a saved upload replaces the sample and removes its overlay',()=>{
  assert.deepEqual(site.ownerPhoto,{photoId:'owner-upload-1',isSample:false});
  const html=ownerSection(site,[{id:'owner-upload-1'}]);
  assert.match(html,/src="\/media\/owner-upload-1"/);
- assert.doesNotMatch(html,/YOUR PHOTO HERE|Upload your photo|data-sample-media/);
+ assert.doesNotMatch(html,/Sample photo · Upload yours|data-sample-media/);
  assert.equal(readiness(site,[{id:'owner-upload-1'}],[]).find(x=>x.label==='Real owner photo')?.ready,true);
 });
 
@@ -45,5 +46,12 @@ test('the existing brand-image upload and owner selection remove the sample from
  assert.deepEqual(saved.tenant.settings.ownerPhoto,{photoId:photo.id,isSample:false});
  const page=await (await call('/s/robles-roofing?preview=1')).text();
  assert.match(page,new RegExp(`/media/${photo.id}`));
- assert.doesNotMatch(page,/YOUR PHOTO HERE|data-sample-media="owner-photo"/);
+ assert.doesNotMatch(page,/Sample photo · Upload yours|data-sample-media="owner-photo"/);
+});
+
+test('Roofing owner statement remains editable',()=>{
+ const site=settings({...ROBLES,ownerStatement:'We start by listening.'});
+ const html=ownerSection(site,[]);
+ assert.match(html,/We start by listening\./);
+ assert.doesNotMatch(html,/I listen before I quote\./);
 });

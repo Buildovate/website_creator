@@ -454,3 +454,8 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 
 - Roofing's owner band now pairs the tilted Mario Robles Jr. quote card with a responsive sample owner/operator portrait. A sample-only gradient says “YOUR PHOTO HERE” and “Upload your photo”; uploaded media uses the same placement without the overlay. The portrait has dynamic business-name alt text and lazy-loaded 480/960 px WebP sources. The sample is marked `isSample: true` in site data, listed as media needed in readiness and the sales approval checklist, and credited as AI-generated illustrative media.
 - [Evidence](docs/build-evidence/004L/README.md): 1440px desktop and 390×844 phone captures for sample and uploaded-image states, plus 49/49 full regression commands. The uploaded-image capture is a local test state, not an actual customer-provided portrait. Local commit only; no push or deployment. Next queued ticket: #015E.
+
+### #004L-v2 — Done (2026-09-25)
+
+- Roofing's owner band now fills the content width at mid sizes. A fixed 4:5 photo stays straight while the tilted card overlaps its left edge; at 390px, the photo leads and the card overlaps its bottom edge. The sample label is a small corner pill, absent for uploaded media. The default quote is “I listen before I quote.” and remains editable.
+- [Evidence](docs/build-evidence/004L-v2/README.md): five sample widths, 1440px/390px uploaded-state captures, phone quote above the fixed call bar, 51/51 full regression commands, and #015A mobile checks at 101 phone plus 101 desktop states with zero audit issues or browser errors. The separate real-iPhone camera check remains pending from #015A. Local only; no push or deployment. Next queued ticket: #015F.

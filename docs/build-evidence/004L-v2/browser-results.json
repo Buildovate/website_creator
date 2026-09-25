@@ -1,0 +1,285 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "sample",
+      "geometry": {
+        "sample": true,
+        "badge": true,
+        "photo": {
+          "x": 546.625,
+          "y": 4.234375,
+          "width": 792.578125,
+          "height": 990.71875,
+          "right": 1339.203125,
+          "bottom": 994.953125
+        },
+        "card": {
+          "x": 93.4623794555664,
+          "y": 305.93194580078125,
+          "width": 609.0908203125,
+          "height": 387.3236083984375,
+          "right": 702.5531997680664,
+          "bottom": 693.2555541992188
+        },
+        "outer": {
+          "x": 0,
+          "y": -96.5625,
+          "width": 1440,
+          "height": 1192.3125,
+          "right": 1440,
+          "bottom": 1095.75
+        },
+        "scrollWidth": 1440,
+        "imageFit": "cover",
+        "eyebrow": {
+          "width": 506,
+          "scrollWidth": 506
+        },
+        "quote": "I listen before I quote."
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "uploaded",
+      "geometry": {
+        "sample": false,
+        "badge": false,
+        "photo": {
+          "x": 546.625,
+          "y": 4.234375,
+          "width": 792.578125,
+          "height": 990.71875,
+          "right": 1339.203125,
+          "bottom": 994.953125
+        },
+        "card": {
+          "x": 93.4623794555664,
+          "y": 305.93194580078125,
+          "width": 609.0908203125,
+          "height": 387.3236083984375,
+          "right": 702.5531997680664,
+          "bottom": 693.2555541992188
+        },
+        "outer": {
+          "x": 0,
+          "y": -96.5625,
+          "width": 1440,
+          "height": 1192.3125,
+          "right": 1440,
+          "bottom": 1095.75
+        },
+        "scrollWidth": 1440,
+        "imageFit": "cover",
+        "eyebrow": {
+          "width": 506,
+          "scrollWidth": 506
+        },
+        "quote": "I listen before I quote."
+      }
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "state": "sample",
+      "geometry": {
+        "sample": true,
+        "badge": true,
+        "photo": {
+          "x": 485.890625,
+          "y": 59.625,
+          "width": 704.515625,
+          "height": 880.640625,
+          "right": 1190.40625,
+          "bottom": 940.265625
+        },
+        "card": {
+          "x": 82.7913589477539,
+          "y": 321.0530700683594,
+          "width": 541.979736328125,
+          "height": 357.7845153808594,
+          "right": 624.7710952758789,
+          "bottom": 678.8375854492188
+        },
+        "outer": {
+          "x": 0,
+          "y": -29.96875,
+          "width": 1280,
+          "height": 1059.828125,
+          "right": 1280,
+          "bottom": 1029.859375
+        },
+        "scrollWidth": 1280,
+        "imageFit": "cover",
+        "eyebrow": {
+          "width": 450,
+          "scrollWidth": 450
+        },
+        "quote": "I listen before I quote."
+      }
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "state": "sample",
+      "geometry": {
+        "sample": true,
+        "badge": true,
+        "photo": {
+          "x": 388.71875,
+          "y": 148.125,
+          "width": 563.609375,
+          "height": 704.5,
+          "right": 952.328125,
+          "bottom": 852.625
+        },
+        "card": {
+          "x": 65.83567810058594,
+          "y": 347.853759765625,
+          "width": 434.37554931640625,
+          "height": 305.04248046875,
+          "right": 500.2112274169922,
+          "bottom": 652.896240234375
+        },
+        "outer": {
+          "x": 0,
+          "y": 76.453125,
+          "width": 1024,
+          "height": 847.84375,
+          "right": 1024,
+          "bottom": 924.296875
+        },
+        "scrollWidth": 1024,
+        "imageFit": "cover",
+        "eyebrow": {
+          "width": 359,
+          "scrollWidth": 359
+        },
+        "quote": "I listen before I quote."
+      }
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "state": "sample",
+      "geometry": {
+        "sample": true,
+        "badge": true,
+        "photo": {
+          "x": 291.53125,
+          "y": 235.359375,
+          "width": 422.71875,
+          "height": 528.390625,
+          "right": 714.25,
+          "bottom": 763.75
+        },
+        "card": {
+          "x": 47.621437072753906,
+          "y": 343.36834716796875,
+          "width": 329.28839111328125,
+          "height": 312.3570556640625,
+          "right": 376.90982818603516,
+          "bottom": 655.7254028320312
+        },
+        "outer": {
+          "x": 0,
+          "y": 173.359375,
+          "width": 768,
+          "height": 652.390625,
+          "right": 768,
+          "bottom": 825.75
+        },
+        "scrollWidth": 768,
+        "imageFit": "cover",
+        "eyebrow": {
+          "width": 265,
+          "scrollWidth": 265
+        },
+        "quote": "I listen before I quote."
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "sample",
+      "geometry": {
+        "sample": true,
+        "badge": true,
+        "photo": {
+          "x": 19.5,
+          "y": 91,
+          "width": 351,
+          "height": 438.75,
+          "right": 370.5,
+          "bottom": 529.75
+        },
+        "card": {
+          "x": 19.394987106323242,
+          "y": 481.9603271484375,
+          "width": 347.21002197265625,
+          "height": 310.016845703125,
+          "right": 366.6050090789795,
+          "bottom": 791.9771728515625
+        },
+        "outer": {
+          "x": 0,
+          "y": 27,
+          "width": 390,
+          "height": 889.1875,
+          "right": 390,
+          "bottom": 916.1875
+        },
+        "scrollWidth": 390,
+        "imageFit": "cover",
+        "eyebrow": {
+          "width": 287,
+          "scrollWidth": 287
+        },
+        "quote": "I listen before I quote."
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "uploaded",
+      "geometry": {
+        "sample": false,
+        "badge": false,
+        "photo": {
+          "x": 19.5,
+          "y": 91,
+          "width": 351,
+          "height": 438.75,
+          "right": 370.5,
+          "bottom": 529.75
+        },
+        "card": {
+          "x": 19.394987106323242,
+          "y": 481.9603271484375,
+          "width": 347.21002197265625,
+          "height": 310.016845703125,
+          "right": 366.6050090789795,
+          "bottom": 791.9771728515625
+        },
+        "outer": {
+          "x": 0,
+          "y": 27,
+          "width": 390,
+          "height": 889.1875,
+          "right": 390,
+          "bottom": 916.1875
+        },
+        "scrollWidth": 390,
+        "imageFit": "cover",
+        "eyebrow": {
+          "width": 287,
+          "scrollWidth": 287
+        },
+        "quote": "I listen before I quote."
+      }
+    }
+  ],
+  "errors": []
+}
