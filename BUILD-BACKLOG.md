@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015D — Contacts restore**, followed by #015E–#015F before #016. #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015D–#015F and #016 remain Not started. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015E — Contact-to-website linkage**, followed by #015F before #016. #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015E–#015F and #016 remain Not started. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -321,12 +321,12 @@ Tickets #001–#041.
 
 ### #015D — Contacts restore: callbacks and contact detail
 
-- State: **Not started** · Estimate: **5h** (≤1 day).
+- State: **Done** (2026-09-25) · Estimate: **5h** (≤1 day).
 - Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §4, using `.data/sites-v11-recovery/public/sales-upgrade-ui.js`, `public/crm-enhancements.js`, `src/workspace.js` and `src/crm-next.js` for behavior. Keep the recovery directory intact.
 - Scope: Add Call Back from row and detail, with a local-time picker, 15/30/45/60-minute reservation, status, assignees and notes. Create a `callback` calendar event, log the attempt and set next-callback time; distinguish callbacks in all calendar views and reopen the callback editor. Never send a prospect invitation. Make Book Appt a visible row action. Restore the detail profile header (initials, trade and demo badges) and Next callback summary. Preserve website/design/payment/callback system-link fields on edit and duplicate merge.
 - Platform mobile review follow-up from #015B: On phones, Calendar opens to an upcoming-appointments list instead of the month grid. Style the arrow, Today and Settings buttons with platform button styles, and capitalize the view names.
 - Done when: Callback creation and edit keep the contact and calendar in sync, preserve protected fields and tenant boundaries, and work by touch and keyboard at 390×844 and on desktop.
-- Verification/evidence: Automated callback, preserve-on-edit and tenant-isolation tests; 390×844 phone and 1440×900 desktop screenshots and platform mobile acceptance output under `docs/build-evidence/015D/`.
+- Verification/evidence: Automated callback, preserve-on-edit and tenant-isolation tests; 390×844 phone and 1440×900 desktop screenshots and platform mobile acceptance output in [#015D evidence](docs/build-evidence/015D/README.md).
 - External keys/accounts: None; no prospect message is sent.
 
 ### #015E — Contact-to-website linkage and appointment prep

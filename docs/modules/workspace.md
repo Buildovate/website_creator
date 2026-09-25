@@ -116,3 +116,7 @@ The shared phone CSS keeps Contacts trade tabs in one scrollable row, while the 
 ### #015C Contacts restore
 
 Global Sales CRM and contractor Contacts share the scoped `crm-next` bulk endpoint for assign, stage and delete. It validates record versions and reports changed/skipped counts. The scoped inline notes endpoint updates only notes with an optimistic version check. The client adds select-page, a sticky bulk bar, guarded UTF-8 CSV export, call-outcome filtering and editable notes. At phone width, search and a Filters dialog sit above compact contact cards; desktop uses the table and inline controls. [Tests and screenshots](../build-evidence/015C/README.md). The `.data/sites-v11-recovery` reference remains untouched.
+
+### #015D Callbacks and contact detail
+
+`POST`/`PUT /api/workspace/:scope/contacts/:id/callback` validates the contact and callback versions, team assignees, 15/30/45/60-minute reservation and same-scope calendar conflicts. It writes a `callback` calendar record and updates the contact’s scheduling activity and next callback; ordinary calendar edits cannot change callback records. Follow-up staging excludes callbacks, and the callback editor sends no prospect invitation. Contact edits preserve existing website, design, payment and callback link fields. Phone Calendar starts in Upcoming; callbacks use a distinct event treatment in every calendar view. [Tests and screenshots](../build-evidence/015D/README.md). The v11 recovery tree remains unchanged.
