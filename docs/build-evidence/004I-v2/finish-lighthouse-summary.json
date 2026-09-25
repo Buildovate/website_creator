@@ -1,0 +1,68 @@
+[
+  {
+    "attempt": 1,
+    "name": "bold-industrial-1",
+    "url": "http://127.0.0.1:8120/s/motion-bold-industrial-a",
+    "performance": 97,
+    "accessibility": 100,
+    "cls": 0.009518248055071028,
+    "lcpMs": 1204.8426081328384,
+    "tbtMs": 186,
+    "version": "13.5.0"
+  },
+  {
+    "attempt": 2,
+    "name": "clean-modern-1",
+    "url": "http://127.0.0.1:8120/s/motion-clean-modern-a",
+    "performance": 98,
+    "accessibility": 100,
+    "cls": 0.009518248055071028,
+    "lcpMs": 1203.872606382483,
+    "tbtMs": 151,
+    "version": "13.5.0"
+  },
+  {
+    "attempt": 3,
+    "name": "bold-industrial-2",
+    "url": "http://127.0.0.1:8120/s/motion-bold-industrial-a",
+    "performance": 100,
+    "accessibility": 100,
+    "cls": 0.009527600897569,
+    "lcpMs": 1204.3445905746298,
+    "tbtMs": 74.5,
+    "version": "13.5.0"
+  },
+  {
+    "attempt": 4,
+    "name": "clean-modern-2",
+    "url": "http://127.0.0.1:8120/s/motion-clean-modern-a",
+    "performance": 100,
+    "accessibility": 100,
+    "cls": 0.009527600897569,
+    "lcpMs": 1204.5613669451932,
+    "tbtMs": 75.5,
+    "version": "13.5.0"
+  },
+  {
+    "attempt": 5,
+    "name": "bold-industrial-3",
+    "url": "http://127.0.0.1:8120/s/motion-bold-industrial-a",
+    "performance": 100,
+    "accessibility": 100,
+    "cls": 0.009527600897569,
+    "lcpMs": 1204.3424199289088,
+    "tbtMs": 47,
+    "version": "13.5.0"
+  },
+  {
+    "attempt": 6,
+    "name": "clean-modern-3",
+    "url": "http://127.0.0.1:8120/s/motion-clean-modern-a",
+    "performance": 100,
+    "accessibility": 100,
+    "cls": 0.009527600897569,
+    "lcpMs": 1204.510428472137,
+    "tbtMs": 59,
+    "version": "13.5.0"
+  }
+]

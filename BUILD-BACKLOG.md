@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish and #004I are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #013; it is not authorized by this request.
+Completed: **#001–#012, #010A, #007A, #004B–#004F and #004F-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I and #004I-v2 are Done with passing performance, accessibility and regression gates. The ordinary next numbered backlog ticket is #013; it is not authorized by this request.
 
 ## Session contract
 
@@ -135,6 +135,13 @@ Tickets #001–#041.
 - StickyStack replaces Roofing's process list with three visual pinned cards and optional keyboard/touch index. A/B/C layouts and bold/clean token styles pass 12/12 browser profiles; static no-JS and reduced-motion states remain readable.
 - StatsMask renders only individually confirmed questionnaire facts, counts numeric facts in view and fills a gable-shaped photo. Drop, sun, flame and validated logo mask options are available. Missing/unconfirmed facts disappear; zero confirmed facts omit the section. License IDs stay static.
 - Final mobile Lighthouse: bold Performance 100/100/99; clean 100/98/99; all Accessibility 100 and CLS <=0.00953. Full 43/43 regression suite passes. Motion/render/style code is 35,471 bytes gzip <=61,440. Drone hero #004G-v4 unchanged. Local commit only; #013 is next.
+
+### #004I-v2 — StickyStack and StatsMask recording fixes (Roofing)
+
+- State: **Done**. [Transition screenshots, two recordings, six Lighthouse reports and test results](docs/build-evidence/004I-v2/README.md).
+- Bounded scroll slots keep the pinned heading and complete paragraph in front until the next card enters below them. At 390×844 each mobile card fits between the step tabs and bottom action bar; its image occupies 43% of the card.
+- Stats counters count up once on first grid entry, then remain at their confirmed final values through reverse scrolling and re-entry. Headline: “The numbers behind the work.” Confirmation rules, photo masks, both styles/layouts and #004G-v4 drone hero remain unchanged.
+- Browser overlap and replay assertions pass 12/12 profiles; reduced motion, no JS, touch and keyboard pass. Full regressions 43/43. Mobile Lighthouse bold Performance 97/100/100 and clean 98/100/100; Accessibility 100 in all six, CLS <=0.00953. Motion/render/style source 35,676 gzip bytes / 61,440. Local commit only; #013 is next.
 
 ### #005 — Connect the selected-service grid to detail pages
 

@@ -159,3 +159,8 @@ The portrait uses a tracked central crop (40 WebP frames in public/assets/trade-
 ## #004I — Roofing process stack and confirmed stats
 
 The roof-repair homepage now uses `StickyStack` for its three reviewed process steps, with an optional native-link index, A/B/C layout variants, and the same bold/clean token choices as #004H. The component reserves its scroll space before lazy enhancement; reduced motion and no JS show static cards. `StatsMask` consumes `cleanBusinessTrust` and requires each fact's own confirmation. The count-up affects only visual numeric copies; semantic final values and license IDs are static. Empty confirmation sets omit the section. Its photo mask defaults to gable, with drop/sun/flame/validated-logo choices for later trades. Images are lazy, and the Roofing drone hero stays unchanged. [Screenshots, recordings and gates](../build-evidence/004I/README.md).
+
+
+## #004I-v2 — bounded process cards and one-time counters
+
+Each StickyStack card pins within its own scroll slot, so the next card enters below the outgoing copy and cannot paint through a heading or paragraph. The mobile card height reserves the shared header, step tabs and bottom action bar; image height is 43%. Keyboard/touch index offsets target the card's actual pin. Reduced motion and no JS use static cards. StatsMask counts numeric visual copies once from first grid entry and keeps final text on re-entry; its photo mask and per-field confirmation gates are unchanged. [Transition evidence and measured gates](../build-evidence/004I-v2/README.md).

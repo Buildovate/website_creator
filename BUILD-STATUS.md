@@ -362,3 +362,11 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Local fictional fixture shows years, jobs, Google rating, review count and license; its unconfirmed warranty is hidden. No real contractor fact was introduced. The #004G-v4 drone hero renderer/media/controller are unchanged.
 - [Final #004I evidence](docs/build-evidence/004I/README.md): desktop/mobile rest/mid/finished/reduced screenshots across 12/12 profiles, no-JS, touch/keyboard and down/up/down recordings. Final mobile Lighthouse bold Performance 100/100/99, clean 100/98/99; Accessibility 100 on all six, CLS <=0.00953 and contrast all pass. Full regression 43/43. Motion/render/style budget 35,471/61,440 gzip bytes.
 - Commit locator: `feat: add Roofing StickyStack and confirmed StatsMask (#004I)`. No push or deployment. Next numbered ticket: #013.
+
+
+### #004I-v2 — Done (2026-09-24)
+
+- Replaced sticky list items with bounded slots and sticky cards. The incoming image/card enters below the outgoing heading and full paragraph in either scroll direction. The 390×844 card fits between the step tabs and bottom call bar with a 43% image.
+- StatsMask numeric copies animate on first grid entry only and retain final values after leaving/re-entering; confirmation/visibility rules, shape options and license ID behavior are unchanged. The headline is “The numbers behind the work.” #004G-v4 drone hero source/controller/media remain unchanged.
+- [#004I-v2 evidence](docs/build-evidence/004I-v2/README.md): desktop/mobile down/up/down recordings; 18 mobile transition/finished screenshots; 12/12 browser profiles with automated pinned-text hit-target and no-replay assertions; no-JS, reduced-motion, touch, keyboard; 43/43 regressions. Six mobile Lighthouse runs: bold Performance 97/100/100, clean 98/100/100; Accessibility 100 throughout, CLS <=0.00953 and contrast all pass. Motion/render/style budget 35,676/61,440 gzip bytes.
+- Commit locator: `fix: keep Roofing stack copy clear and stats count once (#004I-v2)`. No push or deployment. Next numbered ticket: #013.

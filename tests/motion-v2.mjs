@@ -25,6 +25,7 @@ for(const key of ['years','jobsCompleted','rating','reviews','license'])assert.o
 assert.ok(!mask.includes('data-stat-key="warranty"'));
 assert.ok(mask.includes('data-mask-shape="gable"'));
 assert.ok(mask.includes('4.9 / 5'));
+assert.ok(mask.includes('The numbers behind the work.'));
 assert.equal(StatsMask({trust:{}}),'');
 assert.equal(StatsMask({trust:{years:18,confirmed:{years:false}}}),'');
 assert.ok(StatsMask({trust:facts,shape:'logo',logoMask:'/media/logo-1'}).includes('data-mask-shape="logo"'));
