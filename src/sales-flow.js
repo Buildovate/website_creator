@@ -45,15 +45,19 @@ export async function salesFlowApi(req,env,url){
   if(contact.data.tenantId){await access(req,env,contact.data.tenantId);return {tenant:tenantView(await one(env,'SELECT * FROM tenants WHERE id=?',contact.data.tenantId))}}
   const v=await body(req),kit=kits[v.kit];must(kit&&(!contact.data.trade||kit.trade===contact.data.trade),'Choose a design for this contact’s trade.');
   const tenantId='lead-'+contact.id,existing=await one(env,'SELECT * FROM tenants WHERE id=?',tenantId);
-  if(existing)return {tenant:tenantView(existing)};
+  if(existing){
+   await run(env,"UPDATE workspace_records SET data=?,version=version+1,updated_at=? WHERE id=? AND scope='global'",JSON.stringify({...contact.data,tenantId,designStatus:'In preparation'}),now(),contact.id);
+   return {tenant:tenantView(existing)};
+  }
   const offered=(specialties[kit.trade]||[]).slice(0,8).map(name=>({name,description:''}));
   const draft=settings({...DEFAULT,...kitDefaults(kit.id,{name:contact.data.company||contact.data.name,owner:contact.data.name||'',phone:contact.data.phone||'',email:contact.data.email||'',area:contact.data.city||'',services:offered}),phone:contact.data.phone||'',email:contact.data.email||'',owner:contact.data.name||'',showDemoProjects:true});
   const slug=(contact.data.company||contact.data.name).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)+'-'+contact.id.slice(-8),stamp=now();
   const inserted=await run(env,'INSERT OR IGNORE INTO tenants(id,slug,name,settings,created_at,updated_at) VALUES(?,?,?,?,?,?)',tenantId,slug,draft.name,JSON.stringify(draft),stamp,stamp);
   must(inserted.meta.changes,'A website with this address already exists.',409);
   if(!user.admin)await run(env,'INSERT OR IGNORE INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)',uid(),tenantId,user.id,user.email,'editor',stamp);
-  await run(env,"UPDATE workspace_records SET data=json_set(data,'$.tenantId',?,'$.designStatus','In preparation'),version=version+1,updated_at=? WHERE id=? AND scope='global'",tenantId,stamp,contact.id);
-  await run(env,"UPDATE workspace_records SET data=json_set(data,'$.status','Design linked','$.tenantId',?),version=version+1,updated_at=? WHERE id=? AND kind='design_task'",tenantId,stamp,'design-'+contact.id);
+  await run(env,"UPDATE workspace_records SET data=?,version=version+1,updated_at=? WHERE id=? AND scope='global'",JSON.stringify({...contact.data,tenantId,designStatus:'In preparation'}),stamp,contact.id);
+  const designTask=decode(await one(env,"SELECT * FROM workspace_records WHERE id=? AND kind='design_task'",'design-'+contact.id));
+  if(designTask)await run(env,"UPDATE workspace_records SET data=?,version=version+1,updated_at=? WHERE id=? AND kind='design_task'",JSON.stringify({...designTask.data,status:'Design linked',tenantId}),stamp,designTask.id);
   await log(env,user,tenantId,'website.preparation.started',contact.id);
   return {tenant:tenantView(await one(env,'SELECT * FROM tenants WHERE id=?',tenantId))};
  }

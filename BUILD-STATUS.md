@@ -458,6 +458,11 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Contacts cards and rows use a keyboard accessible platform More menu. Phone cards open Details from the company name and keep bulk selection separate. Desktop month/week Calendar marks today; the phone Calendar controls fit one row at 390px.
 - [Evidence](docs/build-evidence/015E/README.md): 51/51 full regression commands, including two new #015E tests and the #015A platform mobile inventory; 101 phone + 101 desktop states with zero layout failures or browser errors. The v11 recovery tree was read only. The separate physical iPhone camera check from #015A remains pending. Local only; no push or deployment. Next ticket: #015F.
 
+### #015FA — Done (2026-09-26)
+
+- Removed the duplicate mobile linked-draft action, compacted its prepare dialog, and verified the remaining submit creates and links a private website. Template labels now share the “Name (Trade)” formatter. Desktop contact-row actions stay on one line at 1280px and 1440px, with Details in More. Long names truncate with a full-name tooltip.
+- [Evidence](docs/build-evidence/015FA/README.md): 58/58 full regression commands, including build, typecheck, new formatter and browser regressions, and the platform mobile inventory. No public trade-site template or drone edits. #015F Contractor forms remains queued; no push or deployment.
+
 ### #004L — Done (2026-09-25)
 
 - Roofing's owner band now pairs the tilted Mario Robles Jr. quote card with a responsive sample owner/operator portrait. A sample-only gradient says “YOUR PHOTO HERE” and “Upload your photo”; uploaded media uses the same placement without the overlay. The portrait has dynamic business-name alt text and lazy-loaded 480/960 px WebP sources. The sample is marked `isSample: true` in site data, listed as media needed in readiness and the sales approval checklist, and credited as AI-generated illustrative media.

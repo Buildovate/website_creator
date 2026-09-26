@@ -43,7 +43,7 @@ try{
   }else state.actions=await capture(page,'desktop-contact-row-actions');
   await row.locator('[data-quick-menu]').click();await page.waitForSelector('.quick-menu-list:popover-open');assert.equal(await row.locator('[data-quick-menu]').getAttribute('aria-expanded'),'true');
   const box=await page.locator('.quick-menu-list:popover-open').boundingBox();assert.ok(box.x>=0&&box.x+box.width<=viewport.width,JSON.stringify(box));
-  assert.equal(await page.locator('.quick-menu-list:popover-open [data-quick-choice]').count(),4);state.more=await capture(page,device+'-contact-more-open');
+  assert.equal(await page.locator('.quick-menu-list:popover-open [data-quick-choice]').count(),5);state.more=await capture(page,device+'-contact-more-open');
   await page.keyboard.press('Escape');await page.waitForSelector('.quick-menu-list:popover-open',{state:'hidden'});assert.equal(await row.locator('[data-quick-menu]').getAttribute('aria-expanded'),'false');
   await row.locator('[data-detail]').first().click();await page.waitForSelector('.contact-website-link');assert.equal(await page.locator('#detail-open-website').isVisible(),true);state.link=await capture(page,device+'-linked-contact-detail');
   await page.locator('.dialog-close').click();

@@ -464,6 +464,12 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - Verification/evidence: Automated role/tenant, link preservation, private-draft and appointment tests; 390×844 phone and 1440×900 desktop screenshots and platform mobile acceptance output in [#015E evidence](docs/build-evidence/015E/README.md).
 - External keys/accounts: None for stored preferences; live delivery remains gated by its provider tickets.
 
+### #015FA — Platform UI cleanup (#015E review follow-up)
+
+- State: **Done** (2026-09-26). Separate from the queued #015F Contractor forms ticket.
+- Scope: Keep one working linked-website-draft action in the contact's Prepare design form; fit the phone dialog to its content. Display template labels through one “Name (Trade)” formatter in lists, pickers, composers, and website design settings. Keep desktop contact-row actions on one line at 1280px and 1440px, with Details under More. Fix touched-screen UX rule violations.
+- Verification/evidence: Build, typecheck, full regression and platform browser suites; before/after desktop and 390px phone captures in [#015FA evidence](docs/build-evidence/015FA/README.md). No public trade-site template or drone changes.
+
 ### #015F — Contractor forms: multi-step capture and inquiry linkage
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
