@@ -67,3 +67,7 @@ K23 remains missing. The local framework supports administrator-supplied, review
 - Can AI items show a city or project type, or must they stay location-free?
 - Is an unlabeled “Styles we build” gallery acceptable for AI media outside Our Work?
 - Approve the `/legal` page text in #004V for all trades, including Images, License, Promotions and Financing, Reviews, Privacy, and Text and Call Consent.
+- For #029V, what exact financing APR and term wording must appear beside each monthly payment and in slider/quote states?
+- For #041D Locksmith, what California locksmith license number/type must appear in site copy and advertising, including emergency ads and mobile views?
+- For #029V/#029C, what reviewed language is required for address-specific rebates and tax credits, and for storm insurance-claim help without implying eligibility, coverage or an outcome?
+- For #029V, what TCPA-compliant language and recording are required for the estimator's initially unticked call/text consent checkbox, including a lead that declines marketing consent?

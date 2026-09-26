@@ -1,6 +1,6 @@
 # Trade work categories — draft library for #004T
 
-This is a proposed work-category library for the 16 trade families in the rollout sequence. It does not assert that any contractor offers a category. Each contractor checks the categories they actually offer in settings; only checked categories can appear on that contractor's site. Owners confirm or change AI-suggested tags on jobsite uploads. The same confirmed list drives service pages, inquiry options, AR (#004Q), the photo visualizer (#004R), and project tagging. Public filter chips appear only when at least two categories have projects.
+This is a proposed work-category library for the 17 trade families in the rollout sequence. It does not assert that any contractor offers a category. Each contractor checks the categories they actually offer in settings; only checked categories can appear on that contractor's site. Owners confirm or change AI-suggested tags on jobsite uploads. The same confirmed list drives service pages, inquiry options, AR (#004Q), the photo visualizer (#004R), and project tagging. Public filter chips appear only when at least two categories have projects.
 
 | Trade | Draft categories |
 | --- | --- |
@@ -20,5 +20,6 @@ This is a proposed work-category library for the 16 trade families in the rollou
 | Solar | Rooftop solar, Ground-mount solar, Battery storage, Solar maintenance, Solar panel upgrades, EV integration |
 | Concrete | Driveways, Patios, Walkways, Foundations, Decorative concrete, Retaining walls |
 | Pools | New pools, Pool renovations, Spas, Decking and coping, Tile and plaster, Pool equipment |
+| Locksmith | Home lockouts, Business lockouts, Rekeying, Lock repair, Deadbolts, Smart locks |
 
 Confirm category names with each contractor before publication. A category can have no projects; it remains available to the contractor's selected service and inquiry flows but does not create a public project filter chip until the two-category project threshold is met.

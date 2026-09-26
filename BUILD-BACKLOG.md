@@ -18,7 +18,7 @@ Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2
 
 12. Every ticket that touches a contractor-facing platform/admin screen must pass the standing platform mobile acceptance rule below at **390×844** and **1440×900 desktop**, with a phone screenshot in its evidence. Public-site mobile checks do not substitute for platform checks.
 
-Scope: Website Design only. Retain the 14 existing trades, and queue Concrete and Pools as two additional trade families; Remodel is a specialist rollout sharing General Contractors primitives. Preserve existing templates, good media, scroll hero, sticky header, selected services, uploaded branding, source reviews and approved Project Map. Latest financing direction is calculator → Get Financing Options → configured provider flow; no lender marketing showcase. All external account state is unverified unless NEEDS-KEYS records a confirmed fact or Joe explicitly confirms a connection for the selected ticket.
+Scope: Website Design only. Retain the 14 existing trades, queue Concrete and Pools as two additional trade families, and queue Locksmith as trade #17 under #041D/#041DS; Remodel is a specialist rollout sharing General Contractors primitives. Preserve existing templates, good media, scroll hero, sticky header, selected services, uploaded branding, source reviews and approved Project Map. Latest financing direction is calculator → Get Financing Options → configured provider flow; no lender marketing showcase. All external account state is unverified unless NEEDS-KEYS records a confirmed fact or Joe explicitly confirms a connection for the selected ticket. New public, dashboard and admin work follows [UX-RULES.md](docs/product/UX-RULES.md) and the [full-preview rule](docs/product/PREVIEW-MODE.md).
 
 Pricing source for affected tickets: read only the referenced W/AB/AF pricing paragraphs and the named rows in `docs/product/PACK4_CATALOG_DELTA.md`. Do not reread all packs or invent SKU contents. Planning does not provision accounts or authorize any charges.
 
@@ -203,11 +203,13 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 - State: **Queued** · Run before #004J. Add an optional section for product trades: Patios first, then pergolas, garage doors, fencing and HVAC units. Use `<model-viewer>` to offer a life-size phone-camera placement through Scene Viewer or WebXR on Android and AR Quick Look (USDZ) on iPhone, with a rotatable 3D view on desktop. Lazy-load it and show a graceful static fallback when AR is unsupported.
 - Start with 2–3 generic patio covers. Put `.glb`, `.usdz` and a manifest with dimensions, colors, source, license and `isSample` in `assets/ar/<trade>/`; document the contract in `docs/product/AR-MODELS.md`. Show “Preview only, actual size and finish vary.” The “Get a quote for this” CTA carries the selected model and color into the inquiry. Verify AR/fallback routing, privacy, desktop and 390px usability.
+- Extend the shared AR/visualizer engine to all trade-specific scroll scenes: labels pinned to moving house geometry, useful X-ray and wireframe layers, measurement lines, HVAC airflow paths, and a new system scanning onto the old one. Select only effects that explain the service; one primary motion per section, no adjacent repeat. Patios remains the first real-camera GLB/USDZ placement. Feed selected model, measurements and finish into #029V; use a “Preview on your home” entry badge. AI-generated results carry a concise AI label and are never represented as real completed jobs. Verify static, keyboard, touch and reduced-motion views.
 
 ### #004R — “See it on your home” photo visualizer (Sol High; Astra if review fails)
 
 - State: **Queued** · Run before #004J. Let a homeowner upload a home photo and choose roof color, paint, flooring, landscaping or patio cover. Return an AI image labeled “AI concept preview, not a guarantee of final results.” Require name, phone and address to view it, and create an inquiry linked to the private photo and selected option.
 - Keep uploaded photos private to the contractor; add rate limits and abuse protection. Add the required AI image key to `NEEDS-KEYS.md` when this ticket runs and use an explicit mock mode until the key exists. Verify authorization, retention, inquiry linkage, mobile/desktop layout and failure states; do not imply the preview is a final-result promise.
+- Share the #004Q/#029V scene, selections and dimensions rather than creating a disconnected preview. Use service-specific AI photo treatments and the “Preview on your home” badge. Keep the AI label on the generated image, exclude it from real Our Work/projects, and preserve the private upload, no-JS and reduced-motion alternatives. Follow [UX-RULES.md](docs/product/UX-RULES.md).
 
 **Variant direction and media credit gate:** These are additions to sections already in use, not template redesigns. The per-site variation seed creates a different, repeatable mix for each contractor and remains manually overridable. Higgsfield Ultra is connected, but #004M spends generation credits on Roofing only; no other trade transformation media is generated until its own ticket runs after Roofing frame approval.
 
@@ -227,7 +229,7 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #004T — Trade work categories (Sol High)
 
-- State: **Not started — backlog only**. Run after #004K. Use the draft category library in [TRADE-CATEGORIES.md](docs/product/TRADE-CATEGORIES.md) for all 16 trades, including Fencing: Vinyl, Aluminum, Wood, Chain-link, Wrought iron and Gates.
+- State: **Not started — backlog only**. Run after #004K. Use the draft category library in [TRADE-CATEGORIES.md](docs/product/TRADE-CATEGORIES.md) for all 17 planned trades, including Fencing: Vinyl, Aluminum, Wood, Chain-link, Wrought iron and Gates and queued Locksmith (#041D).
 - Scope: In contractor settings, let the contractor check the work categories they offer. Only checked categories may appear anywhere on that contractor's public site. On a jobsite upload, AI may suggest a category tag, but the owner must confirm or change it. Show public project filter chips only when two or more categories have projects. Use the same category list for service pages, inquiry form options, AR (#004Q) and the photo visualizer (#004R).
 - Done when: The category selection is the single source for those surfaces; unselected categories stay hidden, upload suggestions do not publish themselves, and project filters follow the two-category threshold. Apply the standing platform mobile acceptance rule, with phone and desktop evidence and tests.
 
@@ -490,6 +492,18 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - Drill-down/export: Clicking any vendor, product, model or site opens its full expense entries; development summaries also drill down by month, phase, ticket and vendor. Export the ledger and all Development and Operating summaries as CSV for any selected date range.
 - Done when: Admin-only access and audit logging protect every action; arbitrary vendors, rates, products, usage entries, Development/Operating classification, historical development import, automatic imports, matching without double-counting, reconciliation, recurring allocations, margins, payback, balances, drill-downs and CSV exports are tested. The page is readable at 390px and follows the #015A platform mobile rules, with phone and desktop evidence.
 - Rate source: Seed actual rates later from `docs/product/UNIT-COSTS.md` when Champ's cost research is supplied; until then keep missing rates labeled **Rate needed**.
+- Bundle economics (#015H): Track actual revenue, direct usage, allocated recurring cost and margin per Website only/Growth/All-in bundle, per opted-in top-up, per site and business-wide. Separate Development spend. Report estimator runs, SMS and visualizer renders against the bought allowance; do not post an automatic overage charge. Compare actual gate-position conversion and cost for #029V without treating preview/sample activity as revenue or expense.
+
+### #015H — Bundle pricing and opt-in fair use (Sol High)
+
+- State: **Not started — proposal only**. See #015G for cost and margin accounting. Proposed monthly prices: Website only **$50**, Growth **$279**, All-in **$449** (website and all add-ons; CRM excluded). Annual prepay gives two months free. Publish no proposal as an active price until Joe approves it and billing entitlements are configured.
+- Define exact included features and fair-use allowances per bundle; extra capacity is a deliberate purchase, never an automatic overage. Proposed opt-in packs: $35 per 100 estimator runs, $25 per 500 SMS, $15 per 50 visualizer renders. Show usage, allowance and next renewal, warn before exhaustion, then stop or offer purchase without surprise billing. Apply one-tap/one-charge idempotency to each purchase.
+- Done when: Plan comparisons and entitlements agree across public checkout, contractor settings and billing; annual discount arithmetic, upgrades, cancellation, limit exhaustion and top-up consent are tested. #015G shows **actual** cost and margin per bundle, top-up, site and whole business against a **70%+ target**, with missing costs labeled unknown rather than assumed. Phone/desktop evidence and [UX rules](docs/product/UX-RULES.md) apply.
+
+### #015Q — Contractor questionnaire v2 (Sol High)
+
+- State: **Not started — backlog only**. Use [QUESTIONNAIRE-V2.md](docs/product/QUESTIONNAIRE-V2.md), which inventories the current live asks and lists only missing fields. Prefill CRM and earlier answers, keep every new question skippable, show trade/plan relevant questions only, save and restore progress on phone, and fill unanswered preview sections with labeled Sample content that cannot publish as fact.
+- Done when: Migration preserves current answers and evidence; conditional estimator, financing, booking, trust, social/Nextdoor/GBP, core-page, Locksmith and plan fields pass 390px/desktop, keyboard and draft/published tests. Follow [UX-RULES.md](docs/product/UX-RULES.md) and [PREVIEW-MODE.md](docs/product/PREVIEW-MODE.md).
 
 ### #016 — Persist quiz completion evidence
 
@@ -611,6 +625,7 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - Caption scope clarification, queued only: remove “Concept imagery · your project will be individual” and similar concept/illustration image captions across the site and rendered variants. Keep only the required AI-example label immediately beneath the before/after comparison. This adds to the already queued truck/footer caption removals; it is not implemented in #010A or this backlog update.
 - Financing polish (queued 2026-09-24; do not implement in #004E): add a compact comparison chart with one bar per plan and monthly/total-cost views so low-monthly versus least-total tradeoffs are visual; move financing onto the dark premium band with lime accents; format budget with commas (e.g. $6,000).
 - Homepage polish (queued 2026-09-24; do not build in #006): give every service tile its own unique image, with no duplicates (installation and replacement currently share one); use the service-page display font for homepage section headings; on mobile use two compact service columns or a horizontal swipe row instead of one full-screen card per service; remove the empty band under the homepage header. Verify desktop/mobile and image uniqueness when #027A is executed.
+- Queue the [two next-step storyboards for each of 17 trades](docs/product/NEXT-STEP-STORYBOARDS.md): select a trade-specific layout/art/motion mix by the site variation seed, one primary motion per section with no adjacent repeat, and a static reduced-motion/no-JS account of every step. This is a future polish acceptance criterion; no assets are generated in this documentation pass.
 - Queued only after #006; do not implement in #007:
 
 Roofing FAQ default answers. Rewrite every default Roofing FAQ answer to be concrete and helpful instead of evasive. Each answer is 40–70 words, written in plain homeowner language to CONVERSION-PLAYBOOK.md tone. Answers should give typical warning signs, rough timelines (for example "most repairs take a day; a full replacement usually takes 2–4 days depending on size and weather"), what drives the price (roof size, pitch, material, layers to remove, decking damage, permits), and when repair versus replacement usually makes sense (for example "repair usually makes sense when damage is limited to one area and the roof is under about 15 years old; replacement is worth discussing when leaks appear in several places or shingles are curling across the roof"). Never state prices, guarantees, warranties or insurance outcomes. End each answer with a soft next step where it fits ("Describe what you're seeing and we'll tell you which applies."). Done when no answer uses empty phrases like "it depends on the condition" without then explaining what it depends on.
@@ -673,7 +688,7 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 
 ### Trade rollout and signature map
 
-The 16 trade families retain their existing templates. [TRADE-SIGNATURES.md](docs/product/TRADE-SIGNATURES.md) §0–§16 supplies the primary interaction and shared honesty, access and performance rules. Each signature ticket also owns **one** “Scroll before/after scene (Higgsfield, generated when this ticket runs)” from the table below. Its media goes in `assets/transformations/<trade>/` with step labels, source, license and `isSample: true` in `manifest.json`; sample output is tagged “Concept project.” **No non-Roofing transformation is generated until #004M Roofing frames receive review approval.** Later trades generate their own media only during their own S ticket, never in a shared batch. Existing rollout tickets remain separate from signature work.
+The 17 trade families retain their existing templates or queued rollout slots. [TRADE-SIGNATURES.md](docs/product/TRADE-SIGNATURES.md) supplies the primary interaction and shared honesty, access and performance rules. Each signature ticket also owns **one** “Scroll before/after scene (Higgsfield, generated when this ticket runs)” from the table below. Its media goes in `assets/transformations/<trade>/` with step labels, source, license and `isSample: true` in `manifest.json`; sample output is tagged “Concept project.” **No non-Roofing transformation is generated until #004M Roofing frames receive review approval.** Later trades generate their own media only during their own S ticket, never in a shared batch. Existing rollout tickets remain separate from signature work.
 
 | Trade family | Rollout | Signature |
 |---|---|---|
@@ -693,6 +708,53 @@ The 16 trade families retain their existing templates. [TRADE-SIGNATURES.md](doc
 | Solar | #041 | #041S Sun Path |
 | Concrete | #041A | #041AS The Pour |
 | Pools | #041B | #041BS Fill & Glow |
+| Locksmith | #041D | #041DS Pin & Tumbler (planned) |
+
+### #029V — Virtual Estimator across all trades (Astra High visual pass)
+
+- State: **Not started — flagship scope**. The existing #029 is the HVAC rollout; keep it intact. Implement the full journey in [VIRTUAL-ESTIMATOR.md](docs/product/VIRTUAL-ESTIMATOR.md), linked to #004Q/#004R and [UX-RULES.md](docs/product/UX-RULES.md). Included with no setup fee; final commercial terms follow #015H. Use only approved price-book numbers, verified programs and confirmed trust facts.
+- Lead gate is estimator step one by default: name/mobile plus unticked call/text consent, then address. Create the CRM lead on submit and attach partial answers thereafter; allow contractor-selected gate timing before start, after range or before exact quote. Track starts, gate completions and finished estimates by setting and placement for #015G. Use covered Google Solar/Maps satellite outlines and roof/yard measurements with manual correction/fallback. Visual answers animate a trade-specific house scene through swatches, reveal, X-ray, scan, weather/daylight and booking. Share the AR/photo engine.
+- Show Good/Better/Best approved inclusions, warranty, full price and payment; smart priced add-ons; 5–10-year repair/replace where relevant; address-verified rebates and utilities, storm insurance-help path, and evidence-based energy savings/payback. Put APR and term next to **every** payment and offer two or three real plans, a payment slider and configured real lender prequalification via an extensible adapter. No invented offer, payment, coverage, savings, slot or prequalification. K23 reviews wording.
+- Close through optional e-sign/deposit with backend idempotency, real CRM inspection slots reservable without payment, or Call now. Secure saved/texted quote, reopen alert, permitted text target within 60 seconds, contractor-approved AI follow-up, voice/chat entry with editable answers, rep/tablet mode and private photo upload. CRM record carries house image, package, add-ons, finance budget signal, score and tracked source. Research Google's Online Estimates eligibility; whether the gate affects it remains open.
+- Every public page gets a page-specific entry: header and phone bar Get my price beside Call now; homepage hero plus lower preview; preset service pages; locally worded city pages; proof-page prompt; one About/FAQ/blog prompt; none on `/legal`; Save your quote on `/thank-you`. Emergency Locksmith/Plumbing keep Call now primary. Copy/source IDs are unique per placement; outside header/bar only one prompt per screen. Preserve full-preview Sample/noindex and hide unanswered published content.
+- Done when: [the spec](docs/product/VIRTUAL-ESTIMATOR.md) passes price arithmetic, consent/gate/partial lead, missing-provider fallbacks, real booking/lender/payment, attribution, secure share, phone/desktop, touch/keyboard, no-JS and reduced-motion tests with evidence. Visual treatment gets Astra High review. Competitor planning comparison is user supplied and must be verified before public use.
+
+### #029A — Instant roof measurement and price range
+
+- State: **Not started**. For Roofing, use a covered satellite measurement feed plus homeowner-correctable roof outline and contractor-approved unit rates to show a bounded price range; route unsupported addresses or uncertain geometry to manual measurement/inspection. Feed #029V, never a fake exact quote. Done when known/unknown address, correction, price-book changes and 390px/desktop are tested with source/confidence visible.
+
+### #029B — Jobs near you from real CRM jobs
+
+- State: **Not started**. **Unlock with Buildovate CRM.** Use only published, permissioned job records at neighborhood precision; no exact address unless separately homeowner approved. Empty state hides published proof and full preview uses tagged Sample. Done when tenant isolation, approval, location fuzzing, no-job state, and phone/desktop map/list access are tested.
+
+### #029C — Weather-triggered offers
+
+- State: **Not started**. Trigger a contractor-approved offer only from a fresh applicable National Weather Service alert and explicit offer terms; do not invent damage, urgency, scarcity or discounts. Expire or withdraw with the source alert, and keep a neutral no-alert state. Done when stale/missing/overlapping alerts, offer approval, attribution and 390px/desktop fallbacks pass.
+
+### #029D — Booking into the real CRM calendar
+
+- State: **Not started**. **Unlock with Buildovate CRM.** Show only open contractor inspection slots, reserve without payment and prevent double booking across public, estimator and staff views. If disconnected, offer request-a-time. Done when simultaneous reservations, time zones, cancellation, stale-slot refresh and phone/keyboard operation pass.
+
+### #029E — Text-a-photo AI triage
+
+- State: **Not started**. Accept a consented homeowner photo privately, link it to the lead and propose service routing/urgency for contractor review; AI output is a triage suggestion, never a diagnosis, insurance or price guarantee. Done when upload failure, retention, cross-tenant access, human override and responsive text alternative pass.
+
+### #029F — Homeowner job tracker
+
+- State: **Not started**. **Unlock with Buildovate CRM.** Securely show actual approved job milestones, next appointment and relevant uploads, not guessed completion dates. Staff edits control visibility; no public index. Done when authentication, tenant/job access, missing milestones, notifications and 390px/desktop access pass.
+
+### #029G — One-tap Spanish
+
+- State: **Not started**. Offer a persistent, keyboard-accessible Spanish choice across site and estimator while retaining service selection and quote state. Human-review critical prices, warranty, consent and payment copy; hide untranslated claims rather than fall back to misleading text. Done when route/state continuity, language metadata, forms and 390px/desktop/reduced-motion pass.
+
+### #029H — Seasonal reminders from job history
+
+- State: **Not started**. **Unlock with Buildovate CRM.** Derive relevant season/service reminders from real completed-job dates and consent, with contractor-approved templates, suppression and opt-out. No fabricated maintenance interval or unsolicited marketing. Done when consent, timing, duplicate prevention, timezone, opt-out and empty history pass.
+
+### #030N — Nextdoor Business Page drafting (Sol High)
+
+- State: **Not started — drafting only**. From an approved CRM job close, draft a neighborhood-level “just finished a job near you” post for one-tap contractor approval; never reveal an exact home or claim a job without permission. Provide a consented recommendation-request text, a Neighbor offer landing page with #029V, and drafts mirroring #029C's verified weather offers. Network/business profile data comes from #015Q.
+- Done when: Draft-only boundary, homeowner/job consent, geoprivacy, per-post approval, duplicate prevention, missing CRM/alert/offer, audit history and phone/desktop accessibility pass. A future direct-posting integration is contingent on checking current Nextdoor business API/application/licensing access; do not assume access or auto-post now.
 
 ### #029 — Apply the approved page system to HVAC
 
@@ -968,6 +1030,17 @@ The 16 trade families retain their existing templates. [TRADE-SIGNATURES.md](doc
 - Done when: The scene and signature pass [TRADE-SIGNATURES.md §0](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, confirmed facts only, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/041CS/`. Local commit only; no push or deploy.
 - Files: `assets/transformations/remodel/` **(new)**, trade config and focused tests, `docs/build-evidence/041CS/` **(new)**.
 - External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
+### #041D — Apply the approved page system to Locksmith (trade #17)
+
+- State: **Not started — backlog only**. Queue after Remodel. Emergency-first layout keeps Call now primary and #029V secondary. Show an ETA only from confirmed dispatch capacity and upfront service prices only from the approved price book; no anti-scam comparison or local proof without verifiable evidence. Include a dedicated page for each selected Locksmith service, actual local review/job proof, state license facts reviewed under K23, and a recognizable pin-tumbler visual language.
+- Draft service brief plan: home/business lockout, rekeying, lock repair/replacement, deadbolt installation, smart-lock setup, and emergency access, selected only when the contractor offers them. Add Locksmith to trade selector/variation seed, category library, site page and content sources at implementation time; no runtime seed is changed by this backlog update. Preview fills unsupplied content with labeled trade-specific Sample, published sites hide missing claims.
+- Done when: Emergency phone task, service URLs, approved pricing/ETA, license/trust evidence, 390px and 1440px layouts, keyboard/touch, reduced motion and preview/published states pass focused tests with screenshots. Other 16 trades remain intact. Follow [UX-RULES.md](docs/product/UX-RULES.md).
+
+### #041DS — Locksmith signature: Pin & Tumbler
+
+- State: **Not started — backlog only**. Pair with #041D after the Roofing media approval gate. A lock-cylinder cutaway uses pins and key movement to explain diagnosis, options and a confirmed next step; its same-angle before/after scene replaces a worn lock with the selected hardware, labeled Sample until real approved job media exists. Keep Call now visible, avoid a fake unlock promise, and document source/license/`isSample` in `assets/transformations/locksmith/manifest.json` when built.
+- Done when: [TRADE-SIGNATURES.md](docs/product/TRADE-SIGNATURES.md) §0 gates hold: ≤60 KB gzip motion, static no-JS and reduced-motion information, touch/keyboard controls, mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, and desktop/phone rest/mid/finished evidence. Do not generate media during this planning pass.
 
 ## Phase 2 — contractor backoffice and one-time upsells
 

@@ -2,6 +2,8 @@
 
 Generated from `scripts/service-content-source.mjs` and reviewed card blurbs in `public/service-content.json` using `node scripts/build-service-content.mjs`. The JSON file is the runtime data source. Concrete and Pools are prepared for their queued rollouts; the current live trade selector has 14 trades.
 
+**Planned trade #17 — Locksmith (#041D):** This document does not add runtime service data. During #041D, author unique service briefs for home/business lockout, rekeying, lock repair/replacement, deadbolt installation, smart-lock setup and emergency access, after confirming the contractor offers each. Every brief needs a distinct card blurb, 4–6-word hero, three included items, three actual homeowner symptoms, a four-step process and 3–5 service-specific FAQs. Emergency ETA, price, license and local proof appear only from verified contractor settings. Use pin-tumbler-specific visuals, Call now primary, and a dedicated SEO page per selected service. Add these records to the runtime service-content source and tests only when #041D runs.
+
 Every entry has a unique card blurb, a four-to-six-word hero, three specific scope items, three homeowner signs, four process steps, and three FAQs. The third FAQ receives the contractor’s city and service region at render time. No cost, credential, warranty, statistic, or legal claim is supplied by this library.
 
 ## Roofing (12)

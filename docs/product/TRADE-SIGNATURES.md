@@ -1,6 +1,8 @@
 # Trade Signatures: Buildovate contractor trade-site templates
 
-Status: concept approved by Joe on Sep 24, 2026. This version adds more creative alternates and cross-trade ideas. Updated the same day after Joe's trade decision: 16 trades, now including Garage Doors and Pest Control, with Concrete and Pools as new template trades.
+Status: concept approved by Joe on Sep 24, 2026. This version adds more creative alternates and cross-trade ideas. The original 16 trades include Garage Doors, Pest Control, Concrete and Pools. Locksmith is queued as trade #17 in #041D/#041DS; its media and runtime seed are not yet built.
+
+**Locksmith planning addendum (#041DS):** An emergency-first pin-tumbler cutaway carries a four-step identify, inspect, approve price, test sequence. A same-angle worn-lock-to-selected-hardware transformation is Sample until a permissioned real job replaces it. Keep Call now primary, draw only confirmed arrival windows and approved prices, and apply the §0 performance/accessibility gates. Add the Locksmith variation seed and dedicated art when #041DS runs.
 Audience: the template team and Codex. Roofing gets built first and Patio second. The other trades attach to their own template tickets (see §20).
 
 **Companion docs (read them, don't copy from them):**
@@ -50,7 +52,7 @@ Lesson from #004H: code size passed (28.7 KB gzip) but mobile Performance scored
 
 ## 0.1 New shared components (continuing LIBRARY numbering)
 
-Most signatures turn out to be the same few mechanics with different art. Building these four once is what keeps 16 trades affordable:
+Most signatures turn out to be the same few mechanics with different art. Building these four once keeps the original 16 trades and planned Locksmith affordable:
 
 | # | Component | What it does | Used by | Est. JS gzip |
 |---|---|---|---|---|
@@ -539,7 +541,7 @@ This extends the LIBRARY §5 fingerprint. **The trade signature takes the LIBRAR
 
 - **Core fingerprints per trade** = S × F × L × P × C = 4 × 4 × 3 × 15 × 3 = **2,160**
 - **With type pairings (2) and micro-moment choice (2)** = 2,160 × 2 × 2 = **8,640 per trade**
-- **All 16 trades:** core 2,160 × 16 = **34,560**; extended 8,640 × 16 = **138,240** (it was 30,240 and 120,960 with 14 trades)
+- **Original 16 trades:** core 2,160 × 16 = **34,560**; extended 8,640 × 16 = **138,240**. Planned Locksmith makes 17: core **36,720**, extended **146,880**, if the same four-signature kit is supplied. These are design combinations, not built variants.
 - **Optional modules** (upper bound, not a headline number): if about 10 of the 22 §17 modules have data for a contractor, choosing 0, 1 or 2 of them = 1 + 10 + 45 = 56 options, so 8,640 × 56 ≈ **483,840 per trade**
 - **What actually limits a single metro** is the side-by-side rule, not the raw count: 4 signatures × 4 families = **16 distinct signature + family pairs per trade per metro** before any pair repeats. On top of that, the layout, palette and support re-rolls keep every site at least 3 slots apart.
 
@@ -582,10 +584,13 @@ The order follows Joe's sequence, and it's also the order that creates the new s
 | Solar | #041S | #041 |
 | Concrete | #041AS | **#041A** (new Concrete template ticket, after #041) |
 | Pools | #041BS | **#041B** (new Pools template ticket, after #041A) |
+| Locksmith | #041DS | **#041D** (planned trade #17, after #041C) |
 | Cross-trade hero | #028G | after #028F; weather mode depends on #160/#161 |
 | Symptom router | #028H | after #028G |
 
 **Joe's decision (2026-09-24):** Kitchen/Bath remodel stays attached to #034 General Contractors. Concrete and Pools are added as new template trades (#041A, #041B). All 16 trades get signatures: Roofing, HVAC, Plumbing, Electrical, Solar, Patio covers, Kitchen/Bath remodel (General Contractors), Painting, Landscaping, Concrete, Fencing, Windows/Doors, Pools, Flooring, Garage Doors and Pest Control.
+
+**Later planning addition:** Locksmith becomes trade #17 (#041D) with a Pin & Tumbler signature (#041DS). Its full alternates, media and seed are to be specified and built in that ticket; the 16-trade counts below describe the previously approved set.
 
 ## 21. Counts at a glance
 - **16 trades**, each with a fully specced primary signature (14 approved earlier, plus Garage Doors and Pest Control added on 2026-09-24)
