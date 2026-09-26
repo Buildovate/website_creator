@@ -14,6 +14,7 @@ for(const [kit,journey,service,cta] of cases){
   assert.ok(h.includes(`data-journey="${journey}"`));assert.ok(h.includes('cx-film-hero'));assert.equal((h.match(/data-build-video/g)||[]).length,1,'One scroll film in the hero');assert.ok(h.includes(kit==='roofing'?'Discuss my roofing options':cta));assert.equal((h.match(/<h1(?:\s[^>]*)?>/g)||[]).length,1);assert.equal((h.match(/id="home"/g)||[]).length,1);
   assert.equal((h.match(/id="lead-form"/g)||[]).length,1);assert.ok(h.includes('Preview — submission disabled'));assert.ok(!h.includes('Free estimate'));assert.ok(!h.includes('fictional customer'));assert.ok(!h.includes('About the business'));assert.ok(!h.includes('data-review-slug'));
   assert.ok(h.includes('name="projectCity"'));assert.ok(h.includes('name="timeframe"'));assert.ok(h.includes('Illustrative')||h.includes('Concept imagery'));
+  assert.equal((h.match(/data-roof-burst/g)||[]).length,kit==='roofing'?1:0,'Roofing burst only, once');assert.equal((h.match(/data-roof-price-cta/g)||[]).length,kit==='roofing'?1:0,'One Roofing preview pricing action');
   const allIds=[...h.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(allIds).size,allIds.length,'No duplicate DOM IDs');
   for(const link of h.matchAll(/href="#([^"]+)"/g))assert.ok(allIds.includes(link[1]),`Missing anchor ${link[1]}`);
  }

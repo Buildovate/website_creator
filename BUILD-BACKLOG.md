@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. Both #016 and #017 are Done locally; the next numbered ticket is #018. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. Both #016 and #017 are Done locally; #018 is also Done locally and the next numbered ticket is #019. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -550,11 +550,13 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #018 — Add one Roofing CTA burst and pricing placement
 
-- State: **Not started** · Estimate: **5h** (≤1 day).
+- State: **Done locally** · Estimate: **5h** (≤1 day).
 - Pack section: [`F`](docs/product/01-CORE-SITE-A-N.md) §F.
 - Files to touch: `src/conversion-page.js`; `src/client/site/conversion.ts`; `public/conversion.css`; `tests/conversion-references.mjs`.
 - Done when: One approved burst decorates an actual action; keyboard/touch/reduced-motion work; exactly one pricing CTA uses a saved allowed placement, with no fake urgency.
 - External keys/accounts: None.
+
+- Evidence: [#018 README](docs/build-evidence/018/README.md). One Roofing inquiry burst, saved owner-controlled placement and approved price-book gating; preview-only Sample values strip on publish. Build/typecheck, 59 regression scripts, 32 new server checks, 88 new browser checks, all 11 browser suites and 206 platform states passed. Zero credits.
 
 ### #019 — Build accessible thumbnail motion primitives
 

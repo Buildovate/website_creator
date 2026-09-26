@@ -18,3 +18,5 @@ document.querySelectorAll<HTMLAnchorElement>('[data-service-link]').forEach(link
 document.querySelectorAll('.cx-mobile-menu a').forEach(link=>link.addEventListener('click',()=>document.querySelector<HTMLDetailsElement>('.cx-mobile-menu')?.removeAttribute('open')));
 const contact=document.querySelector('#contact'),dock=document.querySelector<HTMLElement>('.cx-mobile-action');
 if(contact&&dock&&'IntersectionObserver' in window)new IntersectionObserver(entries=>{dock.hidden=entries[0].isIntersecting},{threshold:0}).observe(contact);
+
+if(document.body.classList.contains('cx-roof-repair'))document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>{const target=document.getElementById(link.hash.slice(1));if(!target)return;document.querySelector('.cx-mobile-menu')?.removeAttribute('open');requestAnimationFrame(()=>{const header=document.querySelector('.cx-header');if(header)document.body.style.setProperty('--cx-header-height',header.getBoundingClientRect().height+'px');target.scrollIntoView({block:'start',behavior:'instant'});});}));

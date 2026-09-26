@@ -1,0 +1,57 @@
+[
+  {
+    "suite": "callback-browser.mjs",
+    "status": 0,
+    "ms": 5514
+  },
+  {
+    "suite": "contact-linkage-browser.mjs",
+    "status": 0,
+    "ms": 6900
+  },
+  {
+    "suite": "contacts-browser.mjs",
+    "status": 0,
+    "ms": 5538
+  },
+  {
+    "suite": "expense-polish-browser.mjs",
+    "status": 0,
+    "ms": 6321
+  },
+  {
+    "suite": "expenses-browser.mjs",
+    "status": 0,
+    "ms": 9856
+  },
+  {
+    "suite": "financing-states-browser.mjs",
+    "status": 0,
+    "ms": 18673
+  },
+  {
+    "suite": "platform-ui-cleanup-browser.mjs",
+    "status": 0,
+    "ms": 6983
+  },
+  {
+    "suite": "promotion-unlocks-browser.mjs",
+    "status": 0,
+    "ms": 20078
+  },
+  {
+    "suite": "roofing-cta-browser.mjs",
+    "status": 0,
+    "ms": 24688
+  },
+  {
+    "suite": "trade-enablement-browser.mjs",
+    "status": 0,
+    "ms": 39101
+  },
+  {
+    "suite": "trade-visual-browser.mjs",
+    "status": 0,
+    "ms": 32897
+  }
+]

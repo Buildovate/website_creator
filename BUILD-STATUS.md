@@ -1,8 +1,14 @@
 # BUILD STATUS
 
+## #018 — Roofing CTA burst and pricing placement
+
+**Done locally.** A photo-led Roofing action has one restrained six-shingle burst; a secondary price-book CTA uses one saved allowed slot. Owners can lock/re-roll the placement. Approved offered-service prices publish; missing prices use Sample only in noindex previews and disappear on publish. Roofing header offsets protect anchored headings/cards. Build/typecheck, 59 regression scripts, 32 new server checks, 88 new browser checks, all 11 browser suites and 206 platform states passed. 24 desktop/phone captures, 5 restarted Vite 200s, 604 asset references / 17 kits checked. Restored 1338 evidence files and verified 262 unrelated hashes. [Evidence](docs/build-evidence/018/README.md). Zero credits; #019 remains Not started.
+
+
+
 ## #017 — Honest financing connection states
 
-**Done locally — stub/link-state acceptance.** Hearth, Enhancify, Service Finance, Wisetack, Sunbit and Other/None share an honest Not connected adapter. Saved merchant links are distinct from API connections. Unavailable public financing hides; published payments use confirmed contractor-supplied terms with adjacent APR/term, while Sample payments stay in private noindex previews. Existing quiz, Expenses & Margin and homepage/drone code remain unchanged. Build/typecheck, 58 regression scripts, 74 new server checks, 77 new browser checks, all 10 browser suites and 204 platform states passed. 40 desktop/phone captures. Six local routes return 200; unavailable public Financing correctly returns 404. [Evidence](docs/build-evidence/017/README.md). Zero credits; live lender integrations remain Not connected and listed in NEEDS-KEYS. #018 not started.
+**Done locally — stub/link-state acceptance.** Hearth, Enhancify, Service Finance, Wisetack, Sunbit and Other/None share an honest Not connected adapter. Saved merchant links are distinct from API connections. Unavailable public financing hides; published payments use confirmed contractor-supplied terms with adjacent APR/term, while Sample payments stay in private noindex previews. Existing quiz, Expenses & Margin and homepage/drone code remain unchanged. Build/typecheck, 58 regression scripts, 74 new server checks, 77 new browser checks, all 10 browser suites and 204 platform states passed. 40 desktop/phone captures. Six local routes return 200; unavailable public Financing correctly returns 404. [Evidence](docs/build-evidence/017/README.md). Zero credits; live lender integrations remain Not connected and listed in NEEDS-KEYS. #018 is completed above.
 
 ## #016 — Persist quiz completion evidence
 
