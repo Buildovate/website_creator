@@ -80,3 +80,10 @@ Passthrough provider names loaded by `src/aws/env.js` when set: `OPENAI_API_KEY`
 ## Website experience redesign — local, 2026-09-24
 
 AWS city personalization uses `src/aws/geoip.js`, `mmdb-lib` and a local DB-IP City Lite database. New configuration: `GEOIP_DB_PATH` (optional path) and `GEOIP_TRUSTED_PROXIES` (explicit IP/CIDR allowlist, empty by default). `npm run geoip:update -- YYYY-MM` installs the gitignored MMDB under `aws/geoip`; clean image builds must include the data. No external visitor-IP lookup is performed. `src/aws/s3.js` now supports HEAD and single byte ranges for reliable video scrubbing. This work is not deployed. See [experience implementation and validation](../product/EXPERIENCE_REDESIGN.md).
+
+
+## #015G recurring expenses and credential storage
+
+The normal Node entrypoint invokes Worker scheduled() on boot and hourly for due recurring expense bills. Deterministic bill/date IDs make catch-up idempotent; no vendor request is made. Dashboard access also catches up configured bills, and an admin can Post due bills. Vite remains a local admin fixture, not an authentication test server. Role/CSRF/receipt tests use the actual AWS HTTP adapter with isolated sessions.
+
+EXPENSE_VAULT_KEY is a new optional passthrough, base64 for exactly 32 random bytes. It is never given a default or committed value. The admin credential endpoint encrypts with AES-GCM and vendor ID as authenticated context. Live credential consumption, rotation and provider transport remain gated in NEEDS-KEYS.md. No infrastructure or live configuration was changed.

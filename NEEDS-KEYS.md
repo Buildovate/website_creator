@@ -77,3 +77,24 @@ K23 remains missing. The local framework supports administrator-supplied, review
 - For #031A, what wording and substantiation are required for the computed $956-versus-$449 savings claim and the contractor-input job calculator's revenue-only illustration disclaimer?
 - For #031A, what citation, freshness, scope and comparison wording is acceptable when naming competitor prices, billing terms or setup fees?
 - For #031A, what cancellation, domain/content ownership, connected social-account/post access and data export terms must the pricing FAQ and `/legal` state?
+
+
+## #015G — Expense imports and cost research (Not connected)
+
+No vendor billing account, paid API, bank account or inbound email was contacted or configured for this ticket. Manual ledger, receipt upload, CSV review/matching and recurring bills work locally.
+
+| Connection / input | Needed before live enablement | Current behavior |
+|---|---|---|
+| AWS Cost Explorer (K08) | Approved billing read access; platform workload tags/services; reviewed response mapping and pagination | Not connected; no shared-workload costs imported |
+| OpenAI Usage and Costs (K01) | Organization admin billing key, project attribution and reviewed billing adapter | Not connected; existing connected generation calls can self-meter actual model/effort/tokens |
+| Twilio Usage Records | Approved account/subaccount billing read access, site mapping and verified categories | Not connected |
+| Higgsfield (K02) | Approved application generation integration and actual dollar rate per credit / plan allowance | Not connected; 318 documented historical images / 636 credits imported on initialization, dollar Rate needed |
+| Google Places (K03) | Approved existing application key and effective request rates | Existing connected requests can self-meter; no key supplied or used here; billing import Not connected |
+| SendGrid / Codex / Higgsfield / Metricool plans | Actual invoice amounts, billing dates and classification | Admin-configured recurring bills only; seeded rates remain Rate needed |
+| Receipt inbox (K17/K18) | Approved dedicated inbound address, verified inbound transport and invoice parser | Not connected; no invented address; original PDF/image upload and pending receipt CSV work |
+| Plaid bank/card feed | Approved business account consent, verified tokens/webhooks, transaction IDs, refund and decline semantics | Not connected; bank CSV can be reviewed, matched or linked without double-counting |
+| Expense encryption | Server-only EXPENSE_VAULT_KEY: base64 of 32 random bytes, maintained in the approved secret store | No key configured. Credential POST refuses storage until configured; AES-GCM encrypted records never return plaintext |
+| Dollar rates / allowances | Champ's UNIT-COSTS.md or actual supplier invoices; effective dates | Rate needed / allowance Not supplied; no guessed plan allowance or credit price |
+| Estimator / SMS / visualizer allowances and gate conversion | Connected metering for the corresponding future product, entitlement and conversion events | Not connected; no overage charge or fabricated conversion data |
+
+Live provider transports, webhook validation and source-specific attribution must be reviewed before enabling automatic import. The Sync control currently reports Not connected and performs no network operation. Do not paste keys into chat.

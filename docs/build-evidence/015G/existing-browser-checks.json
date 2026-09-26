@@ -1,0 +1,33 @@
+[
+  {
+    "suite": "callback-browser.mjs",
+    "status": 0,
+    "ms": 5866
+  },
+  {
+    "suite": "contact-linkage-browser.mjs",
+    "status": 0,
+    "ms": 7847
+  },
+  {
+    "suite": "contacts-browser.mjs",
+    "status": 0,
+    "ms": 6337
+  },
+  {
+    "suite": "platform-ui-cleanup-browser.mjs",
+    "status": 0,
+    "ms": 8101
+  },
+  {
+    "suite": "trade-enablement-browser.mjs",
+    "status": 0,
+    "ms": 44902
+  },
+  {
+    "suite": "trade-visual-browser.mjs",
+    "status": 0,
+    "ms": 33554,
+    "note": "Rerun after build output stopped changing; previous image decode was interrupted by rebuild."
+  }
+]

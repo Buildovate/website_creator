@@ -17,6 +17,7 @@ export const EB_ENVS = {
 };
 
 const PASSTHROUGH = [
+  'EXPENSE_VAULT_KEY',
   'OPENAI_API_KEY',
   'OPENAI_MODEL',
   'OPENAI_CHAT_MODEL',

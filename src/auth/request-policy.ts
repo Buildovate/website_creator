@@ -15,7 +15,7 @@ export function publicApi(path: string, method: string): boolean {
     (path === '/api/chat/sms' && method === 'POST');
 }
 export function privateHtml(url: URL) {
-  return ['/', '/join', '/team-join'].includes(url.pathname) ||
+  return ['/', '/join', '/team-join', '/admin/expenses'].includes(url.pathname) ||
     url.pathname.startsWith('/preview/') || url.pathname.startsWith('/design-preview/') ||
     url.searchParams.get('preview') === '1';
 }

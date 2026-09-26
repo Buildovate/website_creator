@@ -196,6 +196,7 @@ export async function createRuntime(options = {}) {
     executor,
     auth,
     handler: createHandler({ worker, env: runtimeEnv, db, auth }),
+    async maintain(){await worker.scheduled?.({},runtimeEnv);},
     async close() { await executor.close?.(); },
   };
 }
@@ -233,9 +234,13 @@ export async function listen(runtime, port = Number(runtime.env.PORT || 8080)) {
 async function main() {
   const runtime = await createRuntime();
   const server = await listen(runtime);
+  const maintenance=()=>runtime.maintain().catch(()=>console.error('Expense recurring maintenance failed; it will retry.'));
+  await maintenance();
+  const expenseTimer=setInterval(maintenance,60*60*1000);expenseTimer.unref();
   const address = server.address();
   console.log(`website-creator listening on ${address.port} env=${runtime.env.APP_ENV} auth=${runtime.auth.mode} region=${runtime.env.AWS_REGION} bucket=${runtime.env.BUCKET.bucket || runtime.env.BUCKET.driver} openai=${OPENAI_API_ORIGIN}`);
   const shutdown = () => {
+    clearInterval(expenseTimer);
     server.close();
     runtime.close().catch(() => {});
   };

@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## #015G — Admin Expenses & Margin
+
+**Local implementation complete; live imports Not connected by instruction.** Admin-only Revenue module, editable vendors/rates/products, per-model metering, private receipts, pending CSV imports/matching, recurring bills, per-product/site/business profit and separate development/payback views. Imported 318 actual Higgsfield generations / 636 credits with unknown USD rates. Build/typecheck, 55 regression scripts, 97 new accounting/meter checks, 93 new browser checks, 204 platform states and six other browser suites passed. Restarted Vite returns 200; real-session contractor access returns 403. Restored 869 evidence files and verified 262 unrelated hashes. [Evidence and live gates](docs/build-evidence/015G/README.md). No vendor connection, paid usage, push, deployment or staging access. #015H remains queued.
+
 ## #170A — Trade-correct visuals and homepage cleanup
 
 **Done locally.** Exact-service photography replaces generic house/roof diagrams and package swatches across 140 services / 17 trades. Homepage review, CTA and craft-form duplication is removed. Sample maps have visible server-rendered service-city pins; published maps require real located projects. City pages use tighter photo/FAQ layouts and trade photography in the neighborhood banner. Build/typecheck, 53 regression scripts, six existing browser suites, 173 new browser checks, 1326 template renders and 51 restarted-Vite preview URLs passed. No generation credits used (2513.8 before/after). Restored 771 backed-up evidence files and verified all 262 unrelated file hashes. [Evidence and map fallback limits](docs/build-evidence/170A/README.md). No platform screens or drone assets changed; local commit only.
@@ -12,7 +16,7 @@
 
 ## #004W-v4 — showpiece fix pass
 
-**Done for the requested local fix pass.** All 284 requested Higgsfield stills are installed (20 missing heroes + 264 section photos), all 132 services have distinct hero/scope/process assets, and legacy authored Roofing services use the shared renderer. Rich AR assemblies, unique service/city copy, consistent financing and estimator-entry styling, sample-only previews and empty published-state suppression are verified. Build/typecheck, 50 regression scripts, 166 page browser checks, 202 platform states, the existing contacts/callback/linkage browser suites, 10 zero-violation phone accessibility scans and 1,092 local template renders passed. [Evidence and preservation exception](docs/build-evidence/004W-v4/README.md). Full Virtual Estimator remains #029V; no push or deployment.
+**Done for the requested local fix pass.** All 284 requested Higgsfield stills are installed (20 missing heroes + 264 section photos), all 132 services have distinct hero/scope/process assets, and legacy authored Roofing services use the shared renderer. Rich AR assemblies, unique service/city copy, consistent financing and estimator-entry styling, sample-only previews and empty published-state suppression are verified. Build/typecheck, 50 regression scripts, 166 page browser checks, 204 platform states, the existing contacts/callback/linkage browser suites, 10 zero-violation phone accessibility scans and 1,092 local template renders passed. [Evidence and preservation exception](docs/build-evidence/004W-v4/README.md). Full Virtual Estimator remains #029V; no push or deployment.
 
 ## #004W-v3 visual pass (2026-09-25)
 

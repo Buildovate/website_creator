@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015F — Contractor forms**, followed by #015G and #016. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F, #015G and #016 remain Not started. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015F — Contractor forms**, followed by #016. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F and #016 remain Not started; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -481,7 +481,7 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #015G — Admin Expenses & Margin module (Sol High)
 
-- State: **Not started — backlog only**. Queue immediately after #015F. Cover **every expense the operation incurs**, including future vendors and products; do not constrain the ledger to a fixed provider list.
+- State: **Done locally — Joe explicitly selected #015G. Live imports remain Not connected as instructed.** Cover **every expense the operation incurs**, including future vendors and products; do not constrain the ledger to a fixed provider list.
 - Access/navigation: Add an admin-only “Expenses & Margin” page under Revenue, beside Financials and Sales performance. Only Buildovate administrators can view or change it; contractors cannot.
 - Vendor registry: Admins can add any vendor without a code change, including AI model providers, media generators, upsell suppliers, APIs, SaaS tools, freelancers or contractors, attorneys, hardware, domain registrars and ad platforms. Attorney is also a vendor category. Each vendor has a category, billing type (per use, monthly, yearly or one-time), and one or more rate lines with units (tokens, credits, images, videos, messages, requests, hours, items or seats) and effective dates. Seed OpenAI API, Higgsfield, AWS, SendGrid, Twilio, Google Places, domain registrar and Codex/ChatGPT plan as **Rate needed** until actual rates are supplied.
 - AI model costs: Record provider, individual model name and effort level on every AI call, so spend can be viewed and compared by model.
@@ -507,6 +507,8 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - Done when: Admin-only access and audit logging protect every action; arbitrary vendors, rates, products, usage entries, Development/Operating classification, historical development import, automatic imports, matching without double-counting, reconciliation, recurring allocations, margins, payback, balances, drill-downs and CSV exports are tested. The page is readable at 390px and follows the #015A platform mobile rules, with phone and desktop evidence.
 - Rate source: Seed actual rates later from `docs/product/UNIT-COSTS.md` when Champ's cost research is supplied; until then keep missing rates labeled **Rate needed**.
 - Bundle economics (#015H): Track actual revenue, direct usage, allocated recurring cost and margin per Website only/Growth/All-in bundle, per opted-in top-up, per site and business-wide. Separate Development spend. Report estimator runs, SMS and visualizer renders against the bought allowance; do not post an automatic overage charge. Compare actual gate-position conversion and cost for #029V without treating preview/sample activity as revenue or expense.
+
+- Local evidence: [#015G README](docs/build-evidence/015G/README.md). Build/typecheck, 55 regression scripts, 97 new accounting/meter checks, 93 new browser checks, 204 existing platform states and six other browser suites passed. No vendor APIs, billing accounts, real keys or paid credits used.
 
 ### #015H — Bundle pricing and opt-in fair use (Sol High)
 
