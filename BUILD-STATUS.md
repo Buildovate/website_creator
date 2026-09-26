@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## #015GA — Expenses & Margin polish
+
+**Done locally.** Recorded-data KPI trends/charts, actionable status badges, collapsed phone menu, scrollable keyboard-reachable tabs, dense tables and desktop/phone drill sheets. Approved Website/Growth/All-in catalog prices and annual prepay seeded without changing accounting, access, imports or Higgsfield history. Build/typecheck, 56 regression scripts, unchanged #015G checks (82 accounting + 15 metering + 93 browser), 86 new browser checks, 204 platform states and six other browser suites passed. Vite /admin/expenses returns 200. Restored 977 evidence files and verified 262 unrelated hashes. [Evidence](docs/build-evidence/015GA/README.md). Local only; #015H remains queued.
+
 ## #015G — Admin Expenses & Margin
 
 **Local implementation complete; live imports Not connected by instruction.** Admin-only Revenue module, editable vendors/rates/products, per-model metering, private receipts, pending CSV imports/matching, recurring bills, per-product/site/business profit and separate development/payback views. Imported 318 actual Higgsfield generations / 636 credits with unknown USD rates. Build/typecheck, 55 regression scripts, 97 new accounting/meter checks, 93 new browser checks, 204 platform states and six other browser suites passed. Restarted Vite returns 200; real-session contractor access returns 403. Restored 869 evidence files and verified 262 unrelated hashes. [Evidence and live gates](docs/build-evidence/015G/README.md). No vendor connection, paid usage, push, deployment or staging access. #015H remains queued.

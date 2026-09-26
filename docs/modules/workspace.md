@@ -131,3 +131,8 @@ Initialize loads nine unknown-rate vendors, six unpriced products and the immuta
 Existing OpenAI and Places fetches use expenseFetch: actual connected response usage, provider/model/effort and known site/product are retained. Higgsfield has an internal self-meter hook for a future connected generation path. These hooks make no extra external request. Imports are Not connected; Sync posts nothing. The encrypted credential API is admin-only and returns only stored status, never ciphertext or plaintext. No live connector consumes credentials yet. See NEEDS-KEYS.md and docs/build-evidence/015G/README.md for the explicit live gates.
 
 UI: src/client/workspace/expenses.js and public/expenses-admin.css. Seven views, date ranges, scoped drill-downs, CSV export, native focus-trapped edit dialogs, sticky Save, phone cards, 44px targets, loading/empty/error/offline/partial states. No public template or drone asset changed.
+
+
+### #015GA expense dashboard polish
+
+The expense UI adds recorded-data charts in src/client/workspace/expense-charts.js, four KPI cards, scoped phone menu, pill navigation and native drill/editor sheets. Chart rendering reuses the existing posted/priced math and never fills missing rates with observations. src/expense-plans.js contains the three approved internal catalog prices and unknown Metricool pack rates. A versioned admin-only catalog seed upgrades initialized #015G registries once while preserving supplied prices and rates; new initialization also applies it. Product metadata now includes annual prepay, setup fee, billing period and social-post allowance. No accounting, import, access or real-history changes. This does not activate public billing or #015H. Evidence: docs/build-evidence/015GA/README.md.

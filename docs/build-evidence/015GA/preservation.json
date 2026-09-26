@@ -1,0 +1,18 @@
+{
+  "base": "251dab8bef43c44ac1a7a55c27845bfa2ff510e7",
+  "unchangedUnrelatedFiles": 262,
+  "restoredEvidenceFiles": 977,
+  "allHashesMatch": true,
+  "unchangedProtectedFiles": [
+    "src/expenses-math.js",
+    "src/expenses-history.json",
+    "tests/expenses.mjs",
+    "tests/expense-metering.mjs",
+    "tests/expenses-browser.mjs"
+  ],
+  "regeneratedExtrasMoved": [
+    "docs/build-evidence/015A/after/admin-expenses.png",
+    "docs/build-evidence/015A/after/desktop-admin-expenses.png"
+  ],
+  "backupDirectory": "C:/Users/joe/OneDrive/Documents/ChatGPT/Buildovate - Website Design/015GA-backup"
+}

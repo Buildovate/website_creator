@@ -510,6 +510,13 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 - Local evidence: [#015G README](docs/build-evidence/015G/README.md). Build/typecheck, 55 regression scripts, 97 new accounting/meter checks, 93 new browser checks, 204 existing platform states and six other browser suites passed. No vendor APIs, billing accounts, real keys or paid credits used.
 
+### #015GA — Admin Expenses & Margin visual and usability polish (Sol High)
+
+- State: **Done locally**, explicitly selected after #015G (251dab8).
+- Four recorded-data KPI cards and trends, monthly Operating/Development bars, vendor donut and model costs; truthful empty/partial states, actionable rate/connection badges, collapsed phone menu, accessible pill tabs, dense money-aligned tables and responsive drill-down sheets.
+- Approved internal catalog: Website $50/month, Growth $279/month, All-in $449/month; annual ten-month prepay and no setup fee. Growth includes 12 social posts and All-in 20, mapped to unknown-rate Metricool cost lines. Other prices/rates remain unknown. No change to public billing or #015H scope.
+- Existing #015G logic, access, imports, real history and regressions remain unchanged. Build/typecheck, 56 regression scripts, 93 unchanged expense browser checks, 86 new browser checks, 204 platform states and six other browser suites passed. [Evidence](docs/build-evidence/015GA/README.md). Local commit only.
+
 ### #015H — Bundle pricing and opt-in fair use (Sol High)
 
 - State: **Not started — proposal only**. See #015G for cost and margin accounting. Proposed monthly prices: Website only **$50**, Growth **$279**, All-in **$449** (website and all add-ons; CRM excluded). Annual prepay gives two months free. Publish no proposal as an active price until Joe approves it and billing entitlements are configured.
