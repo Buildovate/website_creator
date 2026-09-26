@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## #016 — Persist quiz completion evidence
+
+**Done locally.** Eligible quiz success now commits a tenant/offer/revision/browser-scoped receipt and audit before revealing a code. Atomic uniqueness makes retries and concurrent submissions idempotent; expiry, withdrawal, failed writes and durable browser/tenant limits are enforced. Accessible checking/saved/reference/error/offline/retry states reuse the existing quiz and preview rules. Build/typecheck, 57 regression scripts (64 new server checks), all nine browser suites (94 new quiz checks), 204 platform states and template asset integrity passed. Four restarted Vite route checks returned 200. 28 desktop/phone captures. Restored 1,081 evidence files and verified all 262 unrelated hashes. [Evidence](docs/build-evidence/016/README.md). Zero credits, no live vendor or deployment; #017 not started and #015F remains queued.
+
 ## #015GA — Expenses & Margin polish
 
 **Done locally.** Recorded-data KPI trends/charts, actionable status badges, collapsed phone menu, scrollable keyboard-reachable tabs, dense tables and desktop/phone drill sheets. Approved Website/Growth/All-in catalog prices and annual prepay seeded without changing accounting, access, imports or Higgsfield history. Build/typecheck, 56 regression scripts, unchanged #015G checks (82 accounting + 15 metering + 93 browser), 86 new browser checks, 204 platform states and six other browser suites passed. Vite /admin/expenses returns 200. Restored 977 evidence files and verified 262 unrelated hashes. [Evidence](docs/build-evidence/015GA/README.md). Local only; #015H remains queued.

@@ -30,7 +30,30 @@ document.querySelectorAll<HTMLFormElement>('[data-financing-calculator]').forEac
  }));
 });
 
-document.querySelectorAll<HTMLFormElement>('[data-promotion-quiz]').forEach(form=>{form.onsubmit=async event=>{event.preventDefault();if(form.dataset.preview==='true')return;const button=form.querySelector<HTMLButtonElement>('button')!,status=form.querySelector<HTMLElement>('[data-unlock-status]')!,answer=new FormData(form).get('answer');if(answer===null)return;button.disabled=true;status.textContent='Checking your answer…';try{const response=await fetch('/api/public/'+encodeURIComponent(form.dataset.slug!)+'/promotion-unlock',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({offerId:form.dataset.offer,answer:Number(answer)})}),data=await response.json();if(!response.ok)throw Error(data.error||'The offer could not be unlocked.');status.replaceChildren();const code=document.createElement('strong');code.textContent='Your code: '+data.code;const message=document.createElement('p');message.textContent=data.message;status.append(code,message);}catch(error){status.textContent=error instanceof Error?error.message:'Please try again.';}finally{button.disabled=false;}};});
+document.querySelectorAll<HTMLFormElement>('[data-promotion-quiz]').forEach(form=>{
+ let busy=false,sessionReady=false;
+ const button=form.querySelector<HTMLButtonElement>('button')!,status=form.querySelector<HTMLElement>('[data-unlock-status]')!,original=button.innerHTML;
+ const fail=(message:string)=>{status.replaceChildren();status.textContent=message;status.setAttribute('role','alert');status.focus();};
+ form.onsubmit=async event=>{
+  event.preventDefault();if(form.dataset.preview==='true'||busy)return;
+  const answer=new FormData(form).get('answer');
+  if(answer===null){fail('Choose an answer, then check your quiz.');form.querySelector<HTMLInputElement>('[name=answer]')?.focus();return;}
+  busy=true;form.setAttribute('aria-busy','true');status.setAttribute('role','status');status.textContent='Checking your answer and saving completion…';button.style.minWidth=button.getBoundingClientRect().width+'px';button.textContent='Checking…';
+  try{
+   if(!sessionReady){const start=await fetch('/api/public/'+encodeURIComponent(form.dataset.slug!)+'/promotion-unlock',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({offerId:form.dataset.offer,action:'start'})});const ready=await start.json();if(!start.ok||!ready.ready)throw Error(ready.error||'The quiz could not start. Please try again.');sessionReady=true;}
+   const response=await fetch('/api/public/'+encodeURIComponent(form.dataset.slug!)+'/promotion-unlock',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({offerId:form.dataset.offer,answer:Number(answer)})}),data=await response.json();
+   if(!response.ok)throw Error(data.error||'The offer could not be unlocked.');
+   if(!data.receipt?.id||!data.code)throw Error('Completion could not be confirmed. Please try again.');
+   status.replaceChildren();const code=document.createElement('strong');code.textContent='Your code: '+data.code;
+   const message=document.createElement('p');message.textContent=data.message;
+   const receipt=document.createElement('p');receipt.className='foundation-completion';receipt.textContent='Completion reference: '+data.receipt.id;
+   const expiry=document.createElement('p');expiry.textContent='Saved through '+new Date(data.receipt.expiresAt).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'})+'.';
+   const next=document.createElement('a');next.className='foundation-button';next.href='#contact';next.textContent='Ask about this offer';next.onclick=()=>document.querySelector<HTMLInputElement>('#contact [name=name]')?.focus({preventScroll:true});
+   status.append(code,message,receipt,expiry,next);status.focus();
+  }catch(error){fail(navigator.onLine?(error instanceof Error?error.message:'Please try again.'):'You’re offline. Reconnect and try again; your answer is still selected.');}
+  finally{busy=false;form.removeAttribute('aria-busy');button.innerHTML=original;}
+ };
+});
 
 // Content stays visible without JavaScript and with reduced motion enabled.
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');

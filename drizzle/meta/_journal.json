@@ -43,6 +43,13 @@
       "when": 1790201941442,
       "tag": "0005_auth_sessions",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1790461537438,
+      "tag": "0006_promotion_completions",
+      "breakpoints": true
     }
   ]
 }

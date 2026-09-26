@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015F — Contractor forms**, followed by #016. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F and #016 remain Not started; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. The next numbered ticket after #016 is #017. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -530,11 +530,13 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #016 — Persist quiz completion evidence
 
-- State: **Not started** · Estimate: **6h** (≤1 day).
+- State: **Done locally** · Estimate: **6h** (≤1 day).
 - Pack section: [`T`](docs/product/02-CREATIVE-TRUST-O-T.md) §T.
 - Files to touch: `src/constitution-pages.js`; `db/schema.ts`; `drizzle/`; `tests/promotion-unlocks.mjs` **(new)**.
 - Done when: Eligible quiz success creates a scoped completion receipt; expiry/replay/rate limits are tested; the reward code is absent before successful verification.
 - External keys/accounts: None.
+
+- Evidence: [#016 README](docs/build-evidence/016/README.md). Scoped durable receipt/audit, idempotent replay, expiry and atomic browser/tenant quotas; code returned only after persistence. Build/typecheck, 57 regression scripts, 64 new server checks, 94 new browser checks, all nine browser suites and 204 platform states passed. Existing display/eligibility behavior reused; no external keys or credits.
 
 ### #017 — Expose honest financing connection states
 

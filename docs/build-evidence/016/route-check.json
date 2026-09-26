@@ -1,0 +1,27 @@
+{
+  "command": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5173",
+  "fixture": "Disposable local Vite fixture, no vendor or deployment",
+  "results": [
+    {
+      "url": "http://127.0.0.1:5173/s/quiz-016-local/promotions",
+      "status": 200,
+      "rewardCodeAbsent": true
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/quiz-016-local/promotions?preview=1",
+      "status": 200,
+      "rewardCodeAbsent": true
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/quiz-016-local/legal",
+      "status": 200,
+      "rewardCodeAbsent": true
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/public/quiz-016-local/promotion-unlock",
+      "method": "POST session start",
+      "status": 200,
+      "rewardCodeAbsent": true
+    }
+  ]
+}
