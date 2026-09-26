@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## #017 — Honest financing connection states
+
+**Done locally — stub/link-state acceptance.** Hearth, Enhancify, Service Finance, Wisetack, Sunbit and Other/None share an honest Not connected adapter. Saved merchant links are distinct from API connections. Unavailable public financing hides; published payments use confirmed contractor-supplied terms with adjacent APR/term, while Sample payments stay in private noindex previews. Existing quiz, Expenses & Margin and homepage/drone code remain unchanged. Build/typecheck, 58 regression scripts, 74 new server checks, 77 new browser checks, all 10 browser suites and 204 platform states passed. 40 desktop/phone captures. Six local routes return 200; unavailable public Financing correctly returns 404. [Evidence](docs/build-evidence/017/README.md). Zero credits; live lender integrations remain Not connected and listed in NEEDS-KEYS. #018 not started.
+
 ## #016 — Persist quiz completion evidence
 
 **Done locally.** Eligible quiz success now commits a tenant/offer/revision/browser-scoped receipt and audit before revealing a code. Atomic uniqueness makes retries and concurrent submissions idempotent; expiry, withdrawal, failed writes and durable browser/tenant limits are enforced. Accessible checking/saved/reference/error/offline/retry states reuse the existing quiz and preview rules. Build/typecheck, 57 regression scripts (64 new server checks), all nine browser suites (94 new quiz checks), 204 platform states and template asset integrity passed. Four restarted Vite route checks returned 200. 28 desktop/phone captures. Restored 1,081 evidence files and verified all 262 unrelated hashes. [Evidence](docs/build-evidence/016/README.md). Zero credits, no live vendor or deployment; #017 not started and #015F remains queued.

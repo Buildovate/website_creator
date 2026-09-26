@@ -34,7 +34,7 @@ assert.equal(serviceFinance(legacy,false).programs.length,1);
 assert.equal(serviceFinance(normalizePlatform({...legacy,financing:{...legacy.financing,programs:[]}}),false),null);
 let html=financeSection(fin,false,page);assert.equal((html.match(/data-plan-id=/g)||[]).length,4);assert.match(html,/value="6000"/);assert.match(html,/9.99% APR/);assert.match(html,/132 months/);assert.match(html,/down payment/);assert.ok(!html.includes('example.test/merchant'));
 const deferred=serviceFinance(normalizePlatform({...config,financing:{...config.financing,programs:[program('conditional',0,18,{deferredInterest:true})]}}),false);
-assert.match(financeSection(deferred,false,page),/Deferred interest/);assert.match(financeSection(deferred,false,page),/conditions are met/);
+assert.match(financeSection(deferred,false,page),/Deferred interest/);assert.doesNotMatch(financeSection(deferred,false,page),/conditions are met/); // Full legal wording stays on /legal.
 assert.equal(serviceFinance(p,true).programs.length,4);assert.deepEqual(serviceFinance(p,true).programs.map(p=>[p.apr,p.months]),[[9.99,132],[7.99,73],[5.99,58],[0,18]]);
 assert.match(financeSection(serviceFinance(p,true),true,page),/Sample — replaced with your info/);
 for(const range of [{min:0,max:100},{min:200,max:100},{min:100,max:100},{min:100,max:1000001}])assert.throws(()=>normalizeWebsitePages({version:1,pages:[{...page,typicalPriceRange:range}]}));

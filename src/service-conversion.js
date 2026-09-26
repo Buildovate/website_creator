@@ -1,3 +1,4 @@
+import {lenderName} from './platform/lender-adapter.ts';
 import {e,one,must,access,body} from './core.js';
 import {activeOffers,LENDERS,FINANCING_DISCLOSURE} from './platform/constitution.ts';
 export const sampleBadge='<span class="tp-sample-badge">Sample — replaced with your info</span>';
@@ -9,7 +10,7 @@ export {financeSection} from './service-financing.js';
 export function serviceFinance(p,salesPreview){
  if(salesPreview)return {programs:[[9.99,132,'A little each month'],[7.99,73,'Find your balance'],[5.99,58,'A shorter path'],[0,18,'Pay without interest']].map(([apr,months,name],i)=>({id:'sample-'+i,name,lenderId:'sample',lender:'Sample financing partner',apr,months,enabled:true,confirmed:true,deferredInterest:false})),amount:6000,downPayment:0,disclosure:'SAMPLE financing only — these fictional terms are not available financing or an offer. '+FINANCING_DISCLOSURE};
  if(!p.financing.enabled||!p.footer.financingDisclosure)return null;
- const programs=p.financing.programs.filter(t=>t.enabled&&t.confirmed).flatMap(t=>{const l=p.financing.lenders.find(l=>l.id===t.lenderId&&l.enabled&&l.confirmed&&l.applicationUrl);return l?[{...t,lender:LENDERS[l.id]}]:[];});
+ const programs=p.financing.programs.filter(t=>t.enabled&&t.confirmed).flatMap(t=>{const l=p.financing.lenders.find(l=>l.id===t.lenderId&&l.enabled&&l.confirmed&&l.applicationUrl);return l?[{...t,lender:lenderName(l)}]:[];});
  return programs.length?{...p.financing.serviceTerms,programs,disclosure:p.footer.financingDisclosure}:null;
 }
 export function promoBanner(offers,sample){return offers.length?`<aside class="tp-promo-banner"><div class="tp-shell">${sample?sampleBadge:''}<span>${sample?'SAMPLE OFFER · ':''}${e(offers[0].reward)}</span><a href="#service-offers">Unlock my repair offer ↗</a></div></aside>`:'';}

@@ -351,7 +351,7 @@ await test('#006 FAQ: published snapshots, feature gating, schema, escaping and 
  for(const route of [home,home+'/services/roof-repair'])assert.ok((await (await request(route,'GET',undefined,null)).text()).includes('href="'+url+'"'));
  assert.equal((await request(url,'POST',{},null)).status,405);
  assert.equal((await request(home+'/faq/unknown','GET',undefined,null)).status,404);
- let draft=structuredClone(tenant.settings);draft.platform.financing={enabled:true,lenders:[{id:'sfc',enabled:true,confirmed:true,applicationUrl:'https://merchant.example.test/sfc'}]};draft.platform.promotions.enabled=true;draft.websitePages.pages[1].title='Draft FAQ title';
+ let draft=structuredClone(tenant.settings);draft.platform.financing={enabled:true,programs:[{id:'qa-sfc',name:'QA supplied terms',lenderId:'sfc',apr:8,months:60,enabled:true,confirmed:true},{id:'qa-wisetack',name:'QA supplied terms two',lenderId:'wisetack',apr:9,months:48,enabled:true,confirmed:true}],lenders:[{id:'sfc',enabled:true,confirmed:true,applicationUrl:'https://merchant.example.test/sfc'}]};draft.platform.promotions.enabled=true;draft.websitePages.pages[1].title='Draft FAQ title';
  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
  assert.equal(await get(),html);
  const preview=await get('?preview=1',admin);assert.equal(schema(preview).mainEntity.length,4);assert.ok(preview.includes('/financing?preview=1'));assert.ok(preview.includes('/services/roof-repair?preview=1'));
@@ -360,7 +360,7 @@ await test('#006 FAQ: published snapshots, feature gating, schema, escaping and 
  assert.equal(schema(await get()).mainEntity.length,4);
  // Each dependency can be switched independently; empty groups disappear too.
  for(const [financing,promotions,count] of [[true,false,3],[false,true,3],[false,false,2]]) {
-  draft=structuredClone(tenant.settings);draft.platform.financing.enabled=financing;draft.platform.promotions.enabled=promotions;
+  draft=structuredClone(tenant.settings);draft.platform.financing.enabled=financing;draft.platform.financing.requested=financing;draft.platform.promotions.enabled=promotions;
   tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
   const h=await get('?preview=1',admin);assert.equal(schema(h).mainEntity.length,count);assert.equal(h.includes('Finance-only'),financing);assert.equal(h.includes('Promotion-only'),promotions);assert.equal(h.includes('>Payment</h2>'),financing||promotions);
  }

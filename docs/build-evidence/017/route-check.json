@@ -1,0 +1,41 @@
+{
+  "command": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5173",
+  "fixture": "Disposable local fixtures; not deployed or connected",
+  "results": [
+    {
+      "url": "http://127.0.0.1:5173/s/finance-017-empty/financing?preview=1",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/finance-017-empty/financing",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/finance-017-empty/services/roof-repair",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/finance-017-supplied/financing?preview=1",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/finance-017-supplied/financing",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/finance-017-supplied/services/roof-repair",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/",
+      "status": 200,
+      "expected": 200
+    }
+  ]
+}

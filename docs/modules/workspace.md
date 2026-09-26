@@ -136,3 +136,8 @@ UI: src/client/workspace/expenses.js and public/expenses-admin.css. Seven views,
 ### #015GA expense dashboard polish
 
 The expense UI adds recorded-data charts in src/client/workspace/expense-charts.js, four KPI cards, scoped phone menu, pill navigation and native drill/editor sheets. Chart rendering reuses the existing posted/priced math and never fills missing rates with observations. src/expense-plans.js contains the three approved internal catalog prices and unknown Metricool pack rates. A versioned admin-only catalog seed upgrades initialized #015G registries once while preserving supplied prices and rates; new initialization also applies it. Product metadata now includes annual prepay, setup fee, billing period and social-post allowance. No accounting, import, access or real-history changes. This does not activate public billing or #015H. Evidence: docs/build-evidence/015GA/README.md.
+
+
+## #017 — financing setup states
+
+The Questionnaire retains incomplete lender selections, supports the five named lenders plus Other/None, and labels API status Not connected separately from a confirmed business link. Saving does not connect a provider or publish. The master control writes financing.requested and enabled together; normalized enabled is the derived public-availability flag, while requested preserves setup intent. Public availability requires current supplied terms and a confirmed link; None hides financing without deleting settings. The existing role/save/publish boundary and phone action dock are reused. New programs start with blank APR and term, not guessed defaults. Disclosure editing is labeled for /legal. Offline save failures retain answers and explain retry. Evidence: ../build-evidence/017/README.md.

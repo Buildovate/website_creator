@@ -1,6 +1,6 @@
 # NEEDS KEYS / EXTERNAL ACCESS
 
-Audit: 2026-09-24. This is a dependency register, **not a request to paste secrets**. No private `.env`, credentials, tokens or provider account contents were read for this audit. “Not verified” is not proof an account does not exist. Joe explicitly confirmed the three financing providers are not connected.
+Audit: 2026-09-24. This is a dependency register, **not a request to paste secrets**. No private `.env`, credentials, tokens or provider account contents were read for this audit. “Not verified” is not proof an account does not exist. The financing adapters are Not connected; confirmed merchant links are separate from API access. No lender connection or credentials were accessed for #017.
 
 Keep real secrets in the approved local ignored environment file (`aws/env/docker.env`), process environment or approved server secret storage. Existing cloud storage uses IAM roles. Never put secrets in these Markdown files, examples, screenshots, commits or chat. New configuration variable names are intentionally TBD until the provider contract is implemented; do not make up keys/endpoints.
 
@@ -98,3 +98,16 @@ No vendor billing account, paid API, bank account or inbound email was contacted
 | Estimator / SMS / visualizer allowances and gate conversion | Connected metering for the corresponding future product, entitlement and conversion events | Not connected; no overage charge or fabricated conversion data |
 
 Live provider transports, webhook validation and source-specific attribution must be reviewed before enabling automatic import. The Sync control currently reports Not connected and performs no network operation. Do not paste keys into chat.
+
+
+## #017 — financing adapter access gates
+
+Service Finance (K05), Wisetack (K06), Sunbit (K07), Hearth and Enhancify all remain **Not connected**. Each contractor selects its lenders (or Other/None). A confirmed business-issued application link and contractor-supplied current APR/term are link-only setup, not a live API connection, approval, pre-qualification or retrieved offer.
+
+| Adapter | Missing dependency | Current fallback |
+|---|---|---|
+| Hearth | Approved merchant relationship and provider-documented integration/sandbox authorization; credential names and API availability TBD | Not connected; confirmed link + supplied terms only |
+| Enhancify | Approved merchant relationship and provider-documented integration/sandbox authorization; credential names and API availability TBD | Not connected; confirmed link + supplied terms only |
+| Other | Contractor names the provider, supplies a confirmed application link and terms; any future API requires separate documented access | Not connected; no generic API or guessed credentials |
+
+No key fields, credential storage, external verification, vendor calls or automatic underwriting were added. Public financing with no supported supplied terms is hidden; Sample payments remain private noindex previews. Existing future live-integration tickets remain open; #017 does not complete them.

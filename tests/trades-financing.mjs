@@ -22,7 +22,7 @@ for(const id of ['windows-doors','solar']){
 const providers=['sfc','wisetack','sunbit'];
 for(let count=1;count<=3;count++){
  const lenders=providers.map((id,i)=>({id,enabled:i<count,confirmed:true,applicationUrl:`https://merchant.example.test/${id}`}));
- let {tenant:t}=await api('/tenants','POST',{designKit:'solar',slug:'finance-options-'+count,settings:{name:'QA Solar',phone:'8055550123',area:'Ventura',services:[{name:'Solar panel installation'}],platform:{financing:{enabled:true,lenders}}}});
+ let {tenant:t}=await api('/tenants','POST',{designKit:'solar',slug:'finance-options-'+count,settings:{name:'QA Solar',phone:'8055550123',area:'Ventura',services:[{name:'Solar panel installation'}],platform:{financing:{enabled:true,lenders,programs:lenders.filter(l=>l.enabled).map(l=>({id:l.id,name:'QA '+l.id,lenderId:l.id,apr:8,months:60,enabled:true,confirmed:true}))}}}});
  const path='/s/'+t.slug+'/financing';assert.equal((await req(path,'GET',undefined,false)).status,404);
  const draft=await (await req(path+'?preview=1')).text();assert.match(draft,/Application opens on the published site/);assert.doesNotMatch(draft,/href="https:\/\/merchant/);
  await api('/tenants/'+t.id+'/publish','POST',{version:t.version,approved:true});
@@ -34,8 +34,8 @@ for(let count=1;count<=3;count++){
  assert.match(choices,/not matched loan offers/);assert.match(choices,/not sent to a lender/);assert.doesNotMatch(choices,/subject to change based on approved credit/); // Legal copy lives on /legal.
  assert.doesNotMatch(html,/foundation-lenders|foundation-provider-mark/);
  assert.ok(html.indexOf('Get Financing Options')>html.indexOf('data-finance-result'));
- assert.ok(html.indexOf('Get Financing Options')<html.indexOf('finance-comparison'));
- ({tenant:t}=await api('/tenants/'+t.id));const changed=structuredClone(t.settings);changed.platform.financing.enabled=false;
+ assert.doesNotMatch(html,/data-finance-examples|data-finance-scenario/,'Published pages have no sample-term controls');
+ ({tenant:t}=await api('/tenants/'+t.id));const changed=structuredClone(t.settings);changed.platform.financing.enabled=false;changed.platform.financing.requested=false;
  ({tenant:t}=await api('/tenants/'+t.id,'PUT',{version:t.version,settings:changed}));
  assert.equal((await req(path,'GET',undefined,false)).status,200,'Draft disable must not change the published flow');
  await api('/tenants/'+t.id+'/publish','POST',{version:t.version,approved:true});

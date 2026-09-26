@@ -1,0 +1,10 @@
+{ suite: 'callback-browser.mjs', status: 0, ms: 6956 }
+{ suite: 'contact-linkage-browser.mjs', status: 0, ms: 7670 }
+{ suite: 'contacts-browser.mjs', status: 0, ms: 5792 }
+{ suite: 'expense-polish-browser.mjs', status: 0, ms: 6707 }
+{ suite: 'expenses-browser.mjs', status: 0, ms: 11167 }
+{ suite: 'financing-states-browser.mjs', status: 0, ms: 21294 }
+{ suite: 'platform-ui-cleanup-browser.mjs', status: 0, ms: 7256 }
+{ suite: 'promotion-unlocks-browser.mjs', status: 0, ms: 19399 }
+{ suite: 'trade-enablement-browser.mjs', status: 0, ms: 40385 }
+{ suite: 'trade-visual-browser.mjs', status: 0, ms: 32903 }

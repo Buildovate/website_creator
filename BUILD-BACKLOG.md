@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. The next numbered ticket after #016 is #017. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. Both #016 and #017 are Done locally; the next numbered ticket is #018. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -540,11 +540,13 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #017 — Expose honest financing connection states
 
-- State: **Not started** · Estimate: **5h** (≤1 day).
+- State: **Done locally — stub/link states; live connections remain Not connected** · Estimate: **5h** (≤1 day).
 - Pack section: [`B`](docs/product/01-CORE-SITE-A-N.md) §B; [`C`](docs/product/01-CORE-SITE-A-N.md) §C.
 - Files to touch: `src/platform/constitution.ts`; `src/constitution-pages.js`; `src/client/workspace/questionnaire.ts`; `tests/trades-financing.mjs`.
 - Done when: Enabled financing with zero ready providers has a clear Not connected/estimate fallback; one/two/three confirmed links work; calculator assumptions never become offers. Missing-provider mode is explicitly a stub.
 - External keys/accounts: K05–K07 missing; this ticket is stub/link-state work only.
+
+- Evidence: [#017 README](docs/build-evidence/017/README.md). Five lenders plus Other/None, honest setup badges, contractor-supplied public terms and preview-only samples. Build/typecheck, 58 regression scripts, 74 new server checks, 77 new browser checks, all 10 browser suites and 204 platform states passed. Zero credits; no live accounts or credentials accessed.
 
 ### #018 — Add one Roofing CTA burst and pricing placement
 

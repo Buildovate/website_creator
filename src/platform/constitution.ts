@@ -1,3 +1,4 @@
+import {LENDER_NAMES,suppliedPrograms} from './lender-adapter.ts';
 import {normalizeLegal,type LegalSettings} from './legal-policy.ts';
 // Pack 0 contracts shared by server and browser. No provider secrets belong here.
 export const CONSTITUTION = Object.freeze({version:1, salesCommission:0.5, videoPackage:'Higgsfield Ultra', upsellDiscount:0.10, upsellWindowSeconds:900, maxServiceCities:5, requireOwnerAdApproval:true});
@@ -7,14 +8,14 @@ export const PRICE_BOOK = Object.freeze([
   {id:'ugc-plus',name:'AI UGC Plus',priceCents:29700},
   {id:'ugc-refresh',name:'AI UGC refresh',priceCents:9700},
 ]);
-export const LENDERS = {sfc:'Service Finance Company',wisetack:'Wisetack',sunbit:'Sunbit'} as const;
+export const LENDERS = LENDER_NAMES;
 export const DEFAULT_BUSINESS_TIME_ZONE='America/Los_Angeles';
 export const SOCIALS = {facebook:'Facebook',instagram:'Instagram',youtube:'YouTube',tiktok:'TikTok',googleBusiness:'Google Business',linkedin:'LinkedIn',xTwitter:'X (Twitter)',nextdoor:'Nextdoor'} as const;
 export const COMPANY_FIELDS = {name:'Company name',address:'Address',phone:'Phone',email:'Email',hours:'Hours of operation',license:'License number',bonded:'Bonded',insured:'Insured'} as const;
 export type CompanyField = keyof typeof COMPANY_FIELDS;
 export type Visibility = Record<CompanyField,boolean>;
 export interface Location {id:string;name:string;address:string;phone:string;email:string;hours:string;license:string;bonded:boolean;insured:boolean;visible:Visibility}
-export interface Lender {id:keyof typeof LENDERS;enabled:boolean;applicationUrl:string;confirmed:boolean}
+export interface Lender {id:keyof typeof LENDERS;enabled:boolean;applicationUrl:string;confirmed:boolean;displayName?:string}
 export interface FinancingProgram {id:string;name:string;lenderId:string;apr:number;months:number;enabled:boolean;confirmed:boolean;deferredInterest:boolean}
 export interface ServiceFinanceTerms {lenderId:string;amount:number;downPayment:number;apr:number;months:number;confirmed:boolean}
 export interface Promotion {serviceNames:string[];graphic:string;id:string;enabled:boolean;title:string;description:string;reward:string;terms:string;startsAt:string;endsAt:string;question:string;choices:string[];answer:number;code:string}
@@ -25,7 +26,7 @@ export interface PlatformSettings {
   neighborhood:{enabled:boolean;country:string;region:string;proofs:{city:string;url:string;confirmed:boolean}[]};
   questionnaire:{story:string;priorities:string;factsConfirmed:boolean};
   footer:{financingDisclosure:string;visible:Visibility;bonded:boolean;insured:boolean;locations:Location[];socials:Record<keyof typeof SOCIALS,{enabled:boolean;url:string}>};
-  financing:{enabled:boolean;lenders:Lender[];serviceTerms:ServiceFinanceTerms|null;programs:FinancingProgram[]};
+  financing:{enabled:boolean;requested:boolean;selection:'lenders'|'none';lenders:Lender[];serviceTerms:ServiceFinanceTerms|null;programs:FinancingProgram[]};
   promotions:{enabled:boolean;offers:Promotion[]};
 }
 const obj=(v:unknown):Record<string,unknown>=>v!==null&&typeof v==='object'&&!Array.isArray(v)?v as Record<string,unknown>:{};
@@ -51,11 +52,11 @@ export function normalizePlatform(value:unknown):PlatformSettings {
   const locations=list(f.locations,10,'Locations').map((item,i)=>{const l=obj(item),out={id:id(l.id,'location-'+(i+1)),name:str(l.name),address:str(l.address,500),phone:str(l.phone,40),email:str(l.email),hours:str(l.hours),license:str(l.license),bonded:l.bonded===true,insured:l.insured===true,visible:visibility(l.visible)};check(!!out.name,'Name each business location.');check(!out.email||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(out.email),'Enter a valid location email.');return out;});
   check(new Set(locations.map(l=>l.id)).size===locations.length,'Each location needs a unique identifier.');
   const socials=Object.fromEntries(Object.keys(SOCIALS).map(k=>{const s=obj(social[k]),url=safeHttps(s.url);check(s.enabled!==true||url,'Add a profile link before showing a social button.');return [k,{enabled:s.enabled===true,url}];})) as PlatformSettings['footer']['socials'];
-  const incoming=list(fin.lenders,3,'Lenders').map(obj);
+  const incoming=list(fin.lenders,6,'Lenders').map(obj);
   check(incoming.every(l=>typeof l.id==='string'&&Object.hasOwn(LENDERS,l.id)),'Choose a supported financing company.');
   check(new Set(incoming.map(l=>l.id)).size===incoming.length,'Choose each financing company once.');
-  const lenders=(Object.keys(LENDERS) as (keyof typeof LENDERS)[]).map(key=>{const l=incoming.find(x=>x.id===key)||{},applicationUrl=safeHttps(l.applicationUrl),enabled=l.enabled===true,confirmed=l.confirmed===true;check(!enabled||(applicationUrl&&confirmed),'Confirm the merchant relationship and approved link before enabling a lender.');return {id:key,enabled,applicationUrl,confirmed};});
-  check(fin.enabled!==true||lenders.some(l=>l.enabled),'Enable at least one confirmed lender before showing Financing.');
+  const lenders=(Object.keys(LENDERS) as (keyof typeof LENDERS)[]).map(key=>{const l=incoming.find(x=>x.id===key)||{},applicationUrl=safeHttps(l.applicationUrl),enabled=l.enabled===true,confirmed=l.confirmed===true;check(!confirmed||applicationUrl,'Add the approved application link before confirming it.');const displayName=key==='other'?str(l.displayName,80):LENDERS[key];check(!confirmed||key!=='other'||displayName,'Name your other lender before confirming it.');return {id:key,enabled,applicationUrl,confirmed,displayName};});
+
   const term=obj(fin.serviceTerms);let serviceTerms:ServiceFinanceTerms|null=null;
   if(Object.keys(term).length){
     serviceTerms={lenderId:str(term.lenderId,30),amount:Number(term.amount),downPayment:Number(term.downPayment??0),apr:Number(term.apr),months:Number(term.months),confirmed:term.confirmed===true};
@@ -82,7 +83,7 @@ export function normalizePlatform(value:unknown):PlatformSettings {
     if(out.startsAt)out.startsAt=new Date(start).toISOString();if(out.endsAt)out.endsAt=new Date(end).toISOString();return out;
   });
   check(new Set(offers.map(p=>p.id)).size===offers.length,'Each promotion needs a unique identifier.');
-  return {version:1,timeZone:businessTimeZone(v.timeZone),legal:normalizeLegal(v.legal),neighborhood,questionnaire:{story:str(q.story,2500),priorities:str(q.priorities,1500),factsConfirmed:q.factsConfirmed===true},footer:{financingDisclosure:str(f.financingDisclosure,3000),visible:visibility(f.visible),bonded:f.bonded===true,insured:f.insured===true,locations,socials},financing:{enabled:fin.enabled===true,lenders,serviceTerms,programs},promotions:{enabled:prom.enabled===true,offers}};
+  return {version:1,timeZone:businessTimeZone(v.timeZone),legal:normalizeLegal(v.legal),neighborhood,questionnaire:{story:str(q.story,2500),priorities:str(q.priorities,1500),factsConfirmed:q.factsConfirmed===true},footer:{financingDisclosure:str(f.financingDisclosure,3000),visible:visibility(f.visible),bonded:f.bonded===true,insured:f.insured===true,locations,socials},financing:{requested:fin.requested===true||fin.enabled===true,selection:fin.selection==='none'?'none':'lenders',enabled:(fin.requested===true||fin.enabled===true)&&fin.selection!=='none'&&suppliedPrograms({lenders,programs}).length>0,lenders,serviceTerms,programs},promotions:{enabled:prom.enabled===true,offers}};
 }
 export function activeOffers(platform:PlatformSettings,time=Date.now()) {return platform.promotions.enabled?platform.promotions.offers.filter(p=>p.enabled&&Date.parse(p.startsAt)<=time&&Date.parse(p.endsAt)>time):[];}
 export const FINANCING_DISCLOSURE='All financing and loan terms are subject to change based on approved credit. Estimate only; partner underwriting applies. Rates, terms and eligibility vary. This is not a loan offer or approval.';

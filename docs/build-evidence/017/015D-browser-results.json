@@ -1,0 +1,25 @@
+{
+  "phone": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "card": "phone-contact-card-actions.png",
+    "scheduler": "phone-callback-scheduler.png",
+    "detail": "phone-contact-detail.png",
+    "upcoming": "phone-upcoming-appointments.png",
+    "calendar": "phone-calendar-callback.png"
+  },
+  "desktop": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "table": "desktop-contacts-table-actions.png",
+    "scheduler": "desktop-callback-scheduler.png",
+    "detail": "desktop-contact-detail.png",
+    "month": "desktop-calendar-month-callback.png",
+    "calendar": "desktop-calendar-callback.png"
+  },
+  "errors": []
+}

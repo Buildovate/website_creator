@@ -26,3 +26,6 @@
 
 [data-promotion-quiz] [data-unlock-status]{overflow-wrap:anywhere;scroll-margin-top:110px}[data-promotion-quiz] [data-unlock-status]:focus-visible{outline:3px solid var(--accent,#2855a1);outline-offset:5px}[data-promotion-quiz] .foundation-completion{font-size:14px;font-variant-numeric:tabular-nums}[data-promotion-quiz] [aria-busy=true]{cursor:progress}[data-promotion-quiz] [data-unlock-status] a{min-height:44px;padding:12px 16px;display:inline-flex;align-items:center;margin-top:12px}
 .foundation-promotions .foundation-offer-body>a{display:inline-flex;align-items:center;min-height:44px;min-width:44px}
+
+/* #017 financing controls retain the shared platform/site palette. */
+.foundation-finance-state{margin:24px clamp(20px,5vw,80px);padding:20px;border:1px solid currentColor;border-radius:12px}.foundation-calculator select{width:100%;min-height:48px;font:inherit;padding:12px;border:1px solid #687677;border-radius:6px;background:#fff;color:#17292f}.foundation-calculator [readonly]{background:#eef1f0}.foundation-calculator a{display:inline-flex;align-items:center;min-height:44px}.foundation-finance-state p{max-width:65ch}
