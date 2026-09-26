@@ -1,7 +1,7 @@
 {
   "Roofing": {
     "roof installation": {
-      "card": "Plan the roof covering, detailing and drainage for a new roof.",
+      "card": "A new addition needs cover? Shape the roof plan around its framing and drainage.",
       "headline": "A roof made for home",
       "includes": [
         "Roof plan and measurements",
@@ -35,7 +35,7 @@
       ]
     },
     "roof repair": {
-      "card": "Discuss leaks, damaged coverings and the areas that need attention.",
+      "card": "Missing or curled shingles? Trace the affected area before choosing a repair.",
       "headline": "Stop the leak at its source",
       "includes": [
         "Leak tracing around the affected area",
@@ -69,7 +69,7 @@
       ]
     },
     "roof replacement": {
-      "card": "Explore replacing an aging roof and choosing the next roofing system.",
+      "card": "Granules collecting below the downspout? Review the roof's condition and next system.",
       "headline": "Make the next roof count",
       "includes": [
         "Old covering removal plan",
@@ -103,7 +103,7 @@
       ]
     },
     "asphalt shingles": {
-      "card": "Compare shingle styles and discuss installation or repair needs.",
+      "card": "Shingle tabs lifting? Compare the covering, fastening, and repair scope.",
       "headline": "Find the right shingle fit",
       "includes": [
         "Shingle profile and color choices",
@@ -137,7 +137,7 @@
       ]
     },
     "metal roofing": {
-      "card": "Explore metal roof profiles, finishes and detailing for your property.",
+      "card": "Rust at an old seam? Look at the panels and weather-tight details together.",
       "headline": "Shape a lasting metal roof",
       "includes": [
         "Panel profile and finish choices",
@@ -171,7 +171,7 @@
       ]
     },
     "flat roofs": {
-      "card": "Discuss low-slope coverings, drainage and roof-surface needs.",
+      "card": "Ponding water after rain? Drainage and surface condition deserve a closer look.",
       "headline": "Give low slopes a plan",
       "includes": [
         "Low-slope membrane options",
@@ -205,7 +205,7 @@
       ]
     },
     "roof maintenance": {
-      "card": "Review roof condition and plan routine care before small issues grow.",
+      "card": "Debris in roof valleys? A condition check can guide routine care.",
       "headline": "Catch wear before rain returns",
       "includes": [
         "Roof surface walk-through",
@@ -239,7 +239,7 @@
       ]
     },
     "gutters": {
-      "card": "Plan collection and drainage of rainwater at the roof edge.",
+      "card": "Water spilling over an edge? Follow the path from roofline to downspout.",
       "headline": "Move rain away from home",
       "includes": [
         "Gutter runs and outlet placement",
@@ -273,7 +273,7 @@
       ]
     },
     "asphalt shingle install / repair": {
-      "card": "Explore asphalt shingle install / repair with a plan for shingle damage assessment.",
+      "card": "Shingle corners lifting in wind? Assess fastening and nearby damage.",
       "headline": "Keep shingle lines sound",
       "includes": [
         "Shingle damage assessment",
@@ -307,7 +307,7 @@
       ]
     },
     "roof sealing": {
-      "card": "Explore roof sealing with a plan for joint and penetration review.",
+      "card": "Sealant peeling around a vent? Review joints and penetrations before sealing.",
       "headline": "Close vulnerable roof openings",
       "includes": [
         "Joint and penetration review",
@@ -341,7 +341,7 @@
       ]
     },
     "storm damage": {
-      "card": "Explore storm damage with a plan for post-storm roof assessment.",
+      "card": "Shingles in the yard? Document the affected roof areas after the storm.",
       "headline": "Find what the storm changed",
       "includes": [
         "Post-storm roof assessment",
@@ -375,7 +375,7 @@
       ]
     },
     "inspections": {
-      "card": "Explore inspections with a plan for visible roof condition review.",
+      "card": "Buying a home? Understand the visible roof condition before making plans.",
       "headline": "Know what the roof needs",
       "includes": [
         "Visible roof condition review",
@@ -411,7 +411,7 @@
   },
   "Patios": {
     "patio covers": {
-      "card": "Create overhead shade for an outdoor seating or dining area.",
+      "card": "Too much sun over the seating area? Find the right shade footprint.",
       "headline": "Make room for afternoon shade",
       "includes": [
         "Cover footprint and height",
@@ -445,7 +445,7 @@
       ]
     },
     "motorized pergolas": {
-      "card": "Explore adjustable coverage with motor-operated pergola louvers.",
+      "card": "Moving chairs to chase shade? Explore adjustable louvers and controls.",
       "headline": "Control shade when it changes",
       "includes": [
         "Motor and control options",
@@ -479,7 +479,7 @@
       ]
     },
     "louvered roofs": {
-      "card": "Compare louver configurations for shade, airflow and outdoor comfort.",
+      "card": "Glare across the patio table? Consider how the louvers direct light.",
       "headline": "Let the light shift naturally",
       "includes": [
         "Louver orientation and spacing",
@@ -513,7 +513,7 @@
       ]
     },
     "aluminum patio covers": {
-      "card": "Explore clean-lined aluminum coverage for an outdoor gathering space.",
+      "card": "An old cover peeling? Compare new lines, finishes, and support details.",
       "headline": "Bring clean lines outdoors",
       "includes": [
         "Aluminum finish and profile",
@@ -547,7 +547,7 @@
       ]
     },
     "wood pergolas": {
-      "card": "Bring the warmth and texture of wood to an open-air structure.",
+      "card": "No defined gathering spot outdoors? Use wood structure to shape one.",
       "headline": "Make the garden feel gathered",
       "includes": [
         "Wood species and finish",
@@ -581,7 +581,7 @@
       ]
     },
     "outdoor living spaces": {
-      "card": "Plan spaces for cooking, dining and spending time outdoors.",
+      "card": "The grill far from the table? Bring cooking and seating into one plan.",
       "headline": "Give outdoors a daily purpose",
       "includes": [
         "Cooking and dining zones",
@@ -615,7 +615,7 @@
       ]
     },
     "patio enclosures": {
-      "card": "Discuss enclosing a patio while considering light, access and airflow.",
+      "card": "Bugs interrupt dinner outside? Discuss enclosure, airflow, and access.",
       "headline": "Keep the patio in play",
       "includes": [
         "Opening and screen choices",
@@ -649,7 +649,7 @@
       ]
     },
     "patio repair": {
-      "card": "Review worn components, connections and surfaces that need attention.",
+      "card": "Pavers rocking underfoot? Locate the worn surface and its support.",
       "headline": "Bring the patio back together",
       "includes": [
         "Damaged surface review",
@@ -685,7 +685,7 @@
   },
   "Plumbing": {
     "leak detection": {
-      "card": "Discuss signs of hidden leaks and the areas that need investigation.",
+      "card": "A wall feels damp? Ask about moisture pattern review.",
       "headline": "Find the hidden water path",
       "includes": [
         "Moisture pattern review",
@@ -719,7 +719,7 @@
       ]
     },
     "drain cleaning": {
-      "card": "Address slow drains and discuss blockages in the drainage system.",
+      "card": "The sink empties slowly? Consider slow-drain diagnosis.",
       "headline": "Get water moving again",
       "includes": [
         "Slow-drain diagnosis",
@@ -753,7 +753,7 @@
       ]
     },
     "water heaters": {
-      "card": "Compare water-heating needs, equipment options and replacement scope.",
+      "card": "Showers turn cold too soon? Talk through tank or tankless fit review.",
       "headline": "Make hot water dependable",
       "includes": [
         "Tank or tankless fit review",
@@ -787,7 +787,7 @@
       ]
     },
     "sewer lines": {
-      "card": "Review sewer-line concerns and the options for investigation or repair.",
+      "card": "Multiple drains back up together? Look at sewer access and cleanout review.",
       "headline": "Understand the line below",
       "includes": [
         "Sewer access and cleanout review",
@@ -821,7 +821,7 @@
       ]
     },
     "repiping": {
-      "card": "Plan replacement of aging water-supply piping throughout a property.",
+      "card": "Several pipes keep leaking? Ask about pipe route planning.",
       "headline": "Renew the supply behind walls",
       "includes": [
         "Pipe route planning",
@@ -855,7 +855,7 @@
       ]
     },
     "fixture installation": {
-      "card": "Update faucets, sinks and other plumbing fixtures with a clear scope.",
+      "card": "A faucet leaks at its base? Consider fixture sizing and fit.",
       "headline": "Put daily fixtures in place",
       "includes": [
         "Fixture sizing and fit",
@@ -889,7 +889,7 @@
       ]
     },
     "water filtration": {
-      "card": "Discuss filtration options around the water-quality concerns you identify.",
+      "card": "Water tastes unusual? Talk through water concern discussion.",
       "headline": "Choose cleaner water at home",
       "includes": [
         "Water concern discussion",
@@ -923,7 +923,7 @@
       ]
     },
     "plumbing repair": {
-      "card": "Address leaking fixtures, damaged pipes and other plumbing concerns.",
+      "card": "A valve will not shut off? Look at problem fixture assessment.",
       "headline": "Fix the part causing trouble",
       "includes": [
         "Problem fixture assessment",
@@ -959,7 +959,7 @@
   },
   "HVAC": {
     "air conditioning installation": {
-      "card": "Plan cooling equipment around the rooms and comfort needs of your home.",
+      "card": "Rooms hot by afternoon? Match cooling equipment to the spaces you use.",
       "headline": "Bring cooler air to every room",
       "includes": [
         "Cooling load and room review",
@@ -993,7 +993,7 @@
       ]
     },
     "air conditioning repair": {
-      "card": "Discuss cooling problems and the equipment that needs attention.",
+      "card": "Warm air from the vents? Follow the symptom back to the equipment.",
       "headline": "Get the cool air back",
       "includes": [
         "Cooling symptom diagnosis",
@@ -1027,7 +1027,7 @@
       ]
     },
     "heating installation": {
-      "card": "Explore heating equipment and distribution options for your property.",
+      "card": "Some rooms never warm up? Explore equipment and distribution together.",
       "headline": "Make winter rooms comfortable",
       "includes": [
         "Heating needs and room layout",
@@ -1061,7 +1061,7 @@
       ]
     },
     "heating repair": {
-      "card": "Review heating symptoms and the components that need investigation.",
+      "card": "The heater blows cool air? Diagnose the cause before choosing a fix.",
       "headline": "Find why warmth has stopped",
       "includes": [
         "Heat call and control review",
@@ -1095,7 +1095,7 @@
       ]
     },
     "heat pumps": {
-      "card": "Explore a system that transfers heat for heating and cooling.",
+      "card": "Need heat and cooling? Consider how one system can serve both seasons.",
       "headline": "Use one system for seasons",
       "includes": [
         "Heating and cooling fit review",
@@ -1129,7 +1129,7 @@
       ]
     },
     "ductwork": {
-      "card": "Discuss air distribution, duct condition and connections between rooms.",
+      "card": "One bedroom short on airflow? Trace the route through the ducts.",
       "headline": "Help air reach the rooms",
       "includes": [
         "Duct route and size review",
@@ -1163,7 +1163,7 @@
       ]
     },
     "indoor air quality": {
-      "card": "Review filtration, ventilation and indoor-air concerns.",
+      "card": "Dust returns quickly? Look at filtration, ventilation, and the rooms affected.",
       "headline": "Make indoor air feel easier",
       "includes": [
         "Filter and ventilation review",
@@ -1197,7 +1197,7 @@
       ]
     },
     "system maintenance": {
-      "card": "Plan routine attention to heating and cooling equipment.",
+      "card": "Airflow feeling weaker? Plan a check of the system's working parts.",
       "headline": "Keep heating and cooling ready",
       "includes": [
         "Filter and coil review",
@@ -1233,7 +1233,7 @@
   },
   "Electrical": {
     "electrical repairs": {
-      "card": "Discuss faulty circuits, damaged components and electrical concerns.",
+      "card": "A breaker trips repeatedly? Ask about circuit fault investigation.",
       "headline": "Put the power problem right",
       "includes": [
         "Circuit fault investigation",
@@ -1267,7 +1267,7 @@
       ]
     },
     "panel upgrades": {
-      "card": "Review panel capacity and the scope of a potential upgrade.",
+      "card": "The panel has no open spaces? Consider existing panel and load review.",
       "headline": "Give the panel room to grow",
       "includes": [
         "Existing panel and load review",
@@ -1301,7 +1301,7 @@
       ]
     },
     "ev chargers": {
-      "card": "Plan a charging location and discuss the electrical work involved.",
+      "card": "Extension cords reach the driveway? Talk through charging location selection.",
       "headline": "Bring charging home comfortably",
       "includes": [
         "Charging location selection",
@@ -1335,7 +1335,7 @@
       ]
     },
     "lighting installation": {
-      "card": "Shape practical lighting for rooms, task areas and outdoor spaces.",
+      "card": "The kitchen counter stays dim? Look at fixture and beam placement.",
       "headline": "Put light where life happens",
       "includes": [
         "Fixture and beam placement",
@@ -1369,7 +1369,7 @@
       ]
     },
     "rewiring": {
-      "card": "Plan updates to wiring in older rooms or renovated spaces.",
+      "card": "Outlets lack grounding? Ask about existing wiring assessment.",
       "headline": "Refresh the wires behind walls",
       "includes": [
         "Existing wiring assessment",
@@ -1403,7 +1403,7 @@
       ]
     },
     "outlets and switches": {
-      "card": "Discuss convenient placement and replacement of outlets and switches.",
+      "card": "A plug hangs loose? Consider outlet and switch placement.",
       "headline": "Make power easier to reach",
       "includes": [
         "Outlet and switch placement",
@@ -1437,7 +1437,7 @@
       ]
     },
     "backup generators": {
-      "card": "Explore standby power needs and equipment placement.",
+      "card": "Outages interrupt essential equipment? Talk through priority load review.",
       "headline": "Keep essential circuits planned",
       "includes": [
         "Priority load review",
@@ -1471,7 +1471,7 @@
       ]
     },
     "electrical inspections": {
-      "card": "Review the condition of electrical components and discuss next steps.",
+      "card": "You are purchasing an older home? Look at panel and circuit observations.",
       "headline": "Understand what the wiring says",
       "includes": [
         "Panel and circuit observations",
@@ -1507,7 +1507,7 @@
   },
   "Landscaping": {
     "landscape design": {
-      "card": "Bring planting, pathways and outdoor-use priorities into one plan.",
+      "card": "The yard feels disconnected? Ask about planting and shade plan.",
       "headline": "See the yard differently",
       "includes": [
         "Planting and shade plan",
@@ -1541,7 +1541,7 @@
       ]
     },
     "landscape installation": {
-      "card": "Turn an approved planting and outdoor-space plan into a defined scope.",
+      "card": "The yard is bare after construction? Consider site preparation and grading.",
       "headline": "Bring the outdoor plan alive",
       "includes": [
         "Site preparation and grading",
@@ -1575,7 +1575,7 @@
       ]
     },
     "irrigation": {
-      "card": "Plan how water reaches planted areas and discuss existing system needs.",
+      "card": "Dry patches appear beside wet ones? Talk through zone and coverage review.",
       "headline": "Give plants the water they need",
       "includes": [
         "Zone and coverage review",
@@ -1609,7 +1609,7 @@
       ]
     },
     "lawn care": {
-      "card": "Discuss the condition, care and seasonal needs of your lawn.",
+      "card": "Brown patches spread across grass? Look at turf condition assessment.",
       "headline": "Help the lawn recover",
       "includes": [
         "Turf condition assessment",
@@ -1643,7 +1643,7 @@
       ]
     },
     "artificial turf": {
-      "card": "Explore a turf surface, including preparation and drainage considerations.",
+      "card": "Mud follows pets indoors? Ask about base and drainage preparation.",
       "headline": "Keep a green space practical",
       "includes": [
         "Base and drainage preparation",
@@ -1677,7 +1677,7 @@
       ]
     },
     "hardscaping": {
-      "card": "Plan durable paths, patios and other built landscape surfaces.",
+      "card": "Stepping stones shift underfoot? Consider paver and stone selection.",
       "headline": "Give paths a stronger footing",
       "includes": [
         "Paver and stone selection",
@@ -1711,7 +1711,7 @@
       ]
     },
     "landscape lighting": {
-      "card": "Bring attention to planting, paths and outdoor gathering areas after dark.",
+      "card": "Garden steps disappear at night? Talk through path and feature lighting plan.",
       "headline": "Let the garden glow after dark",
       "includes": [
         "Path and feature lighting plan",
@@ -1745,7 +1745,7 @@
       ]
     },
     "seasonal maintenance": {
-      "card": "Plan seasonal care for planting beds, lawns and outdoor spaces.",
+      "card": "Leaves bury the planting beds? Look at plant and bed review.",
       "headline": "Care for each changing season",
       "includes": [
         "Plant and bed review",
@@ -1781,7 +1781,7 @@
   },
   "General Contractors": {
     "home remodeling": {
-      "card": "Define the rooms, priorities and scope of your home remodel.",
+      "card": "Rooms no longer suit your routine? Ask about room-by-room scope planning.",
       "headline": "Make home fit your life",
       "includes": [
         "Room-by-room scope planning",
@@ -1815,7 +1815,7 @@
       ]
     },
     "kitchen remodeling": {
-      "card": "Plan a kitchen around cooking, storage and everyday movement.",
+      "card": "Counters lack usable space? Consider cabinet and counter layout.",
       "headline": "Build around how you cook",
       "includes": [
         "Cabinet and counter layout",
@@ -1849,7 +1849,7 @@
       ]
     },
     "bathroom remodeling": {
-      "card": "Explore bathroom layout, fixtures and finish selections.",
+      "card": "The shower leaks at the edge? Talk through shower and fixture layout.",
       "headline": "Make the bathroom work better",
       "includes": [
         "Shower and fixture layout",
@@ -1883,7 +1883,7 @@
       ]
     },
     "room additions": {
-      "card": "Discuss additional space and how it connects to your existing home.",
+      "card": "A growing family needs a room? Look at new room footprint.",
       "headline": "Make space for what is next",
       "includes": [
         "New room footprint",
@@ -1917,7 +1917,7 @@
       ]
     },
     "adus": {
-      "card": "Explore a separate living space and discuss the project requirements.",
+      "card": "Family needs nearby independent space? Ask about site and access review.",
       "headline": "Give a small home its place",
       "includes": [
         "Site and access review",
@@ -1951,7 +1951,7 @@
       ]
     },
     "new construction": {
-      "card": "Bring a new building concept into a coordinated scope of work.",
+      "card": "You have land but no building plan? Consider building layout and site fit.",
       "headline": "Start with a grounded plan",
       "includes": [
         "Building layout and site fit",
@@ -1985,7 +1985,7 @@
       ]
     },
     "commercial improvements": {
-      "card": "Plan changes that support the way a commercial space is used.",
+      "card": "Staff work around awkward counters? Talk through workflow and customer-path review.",
       "headline": "Make the space serve work",
       "includes": [
         "Workflow and customer-path review",
@@ -2019,7 +2019,7 @@
       ]
     },
     "whole-home renovation": {
-      "card": "Coordinate rooms, systems and finishes across a larger home renovation.",
+      "card": "Updates happened in mismatched phases? Look at whole-house scope map.",
       "headline": "Bring every room into rhythm",
       "includes": [
         "Whole-house scope map",
@@ -2055,7 +2055,7 @@
   },
   "Flooring": {
     "hardwood flooring": {
-      "card": "Explore wood species, plank formats and installation for your space.",
+      "card": "Old flooring is beyond refinishing? Ask about wood species and plank selection.",
       "headline": "Bring real wood underfoot",
       "includes": [
         "Wood species and plank selection",
@@ -2089,7 +2089,7 @@
       ]
     },
     "luxury vinyl flooring": {
-      "card": "Discuss durable vinyl plank and tile options for daily life.",
+      "card": "The floor scratches easily? Consider vinyl plank or tile choice.",
       "headline": "Choose floors for everyday life",
       "includes": [
         "Vinyl plank or tile choice",
@@ -2123,7 +2123,7 @@
       ]
     },
     "laminate flooring": {
-      "card": "Compare laminate looks, finishes and installation requirements.",
+      "card": "The existing floor is worn? Talk through laminate color and texture.",
       "headline": "Refresh rooms with a new surface",
       "includes": [
         "Laminate color and texture",
@@ -2157,7 +2157,7 @@
       ]
     },
     "tile flooring": {
-      "card": "Plan tile sizes, patterns and details for a considered finish.",
+      "card": "A bathroom floor is cracking? Look at tile size and pattern.",
       "headline": "Give tile a thoughtful pattern",
       "includes": [
         "Tile size and pattern",
@@ -2191,7 +2191,7 @@
       ]
     },
     "floor refinishing": {
-      "card": "Discuss restoring the finish on an existing wood floor.",
+      "card": "Wood looks dull and scratched? Ask about existing finish and wear review.",
       "headline": "Let the wood show again",
       "includes": [
         "Existing finish and wear review",
@@ -2225,7 +2225,7 @@
       ]
     },
     "floor repair": {
-      "card": "Assess worn, damaged or uneven areas and the repair options.",
+      "card": "Boards lift at the edge? Consider damaged board assessment.",
       "headline": "Fix the patch that catches",
       "includes": [
         "Damaged board assessment",
@@ -2259,7 +2259,7 @@
       ]
     },
     "subfloor preparation": {
-      "card": "Start with the surface underneath for an informed installation plan.",
+      "card": "New flooring would sit unevenly? Talk through level and movement review.",
       "headline": "Start with a steadier base",
       "includes": [
         "Level and movement review",
@@ -2293,7 +2293,7 @@
       ]
     },
     "commercial flooring": {
-      "card": "Plan flooring around traffic, use and your business schedule.",
+      "card": "Entry flooring wears quickly? Look at traffic and cleaning needs.",
       "headline": "Fit floors around business days",
       "includes": [
         "Traffic and cleaning needs",
@@ -2329,7 +2329,7 @@
   },
   "Painting": {
     "interior painting": {
-      "card": "Bring a new palette to living rooms, bedrooms and everyday spaces.",
+      "card": "Walls are scuffed in busy rooms? Ask about color and sheen choices.",
       "headline": "Let the room feel new",
       "includes": [
         "Color and sheen choices",
@@ -2363,7 +2363,7 @@
       ]
     },
     "exterior painting": {
-      "card": "Refresh exterior surfaces with a plan tailored to your property.",
+      "card": "Paint peels near the eaves? Consider siding and trim condition.",
       "headline": "Refresh the face of home",
       "includes": [
         "Siding and trim condition",
@@ -2397,7 +2397,7 @@
       ]
     },
     "cabinet painting": {
-      "card": "Explore a new finish for existing cabinetry.",
+      "card": "Cabinet finish chips near handles? Talk through door and drawer preparation.",
       "headline": "Give cabinets a fresh start",
       "includes": [
         "Door and drawer preparation",
@@ -2431,7 +2431,7 @@
       ]
     },
     "deck and fence staining": {
-      "card": "Discuss protection and color for exterior wood surfaces.",
+      "card": "Deck boards look gray? Look at wood condition and cleaning.",
       "headline": "Bring warmth back to wood",
       "includes": [
         "Wood condition and cleaning",
@@ -2465,7 +2465,7 @@
       ]
     },
     "surface preparation": {
-      "card": "Plan the cleaning, sanding and preparation the surface needs.",
+      "card": "Old paint flakes under a finger? Ask about loose coating removal.",
       "headline": "Give the finish a clean base",
       "includes": [
         "Loose coating removal",
@@ -2499,7 +2499,7 @@
       ]
     },
     "drywall repair": {
-      "card": "Address holes, seams and surface damage before the finish.",
+      "card": "A door handle punched a hole? Consider hole and crack assessment.",
       "headline": "Make the wall whole again",
       "includes": [
         "Hole and crack assessment",
@@ -2533,7 +2533,7 @@
       ]
     },
     "decorative finishes": {
-      "card": "Explore specialty textures and finishes with a considered color palette.",
+      "card": "A feature wall feels flat? Talk through finish sample and color palette.",
       "headline": "Give one wall a voice",
       "includes": [
         "Finish sample and color palette",
@@ -2567,7 +2567,7 @@
       ]
     },
     "commercial painting": {
-      "card": "Plan a fresh finish around your business and its operating hours.",
+      "card": "High-touch walls look worn? Look at work-zone and access plan.",
       "headline": "Refresh space around your hours",
       "includes": [
         "Work-zone and access plan",
@@ -2603,7 +2603,7 @@
   },
   "Fencing": {
     "wood fencing": {
-      "card": "Explore natural wood styles, heights and finishing details.",
+      "card": "Old boards lean after wind? Ask about board style and spacing.",
       "headline": "Frame the yard with wood",
       "includes": [
         "Board style and spacing",
@@ -2637,7 +2637,7 @@
       ]
     },
     "vinyl fencing": {
-      "card": "Compare vinyl profiles and configurations for your property.",
+      "card": "Fence panels discolor? Consider vinyl profile and color.",
       "headline": "Keep the boundary clean-lined",
       "includes": [
         "Vinyl profile and color",
@@ -2671,7 +2671,7 @@
       ]
     },
     "metal fencing": {
-      "card": "Discuss metal fence styles, finishes and property boundaries.",
+      "card": "An open edge needs a barrier? Talk through metal style and finish.",
       "headline": "Give the boundary definition",
       "includes": [
         "Metal style and finish",
@@ -2705,7 +2705,7 @@
       ]
     },
     "privacy fencing": {
-      "card": "Create a more private outdoor setting with a considered fence plan.",
+      "card": "Neighbors overlook the patio? Look at sightline and height review.",
       "headline": "Make outdoor time feel private",
       "includes": [
         "Sightline and height review",
@@ -2739,7 +2739,7 @@
       ]
     },
     "gates": {
-      "card": "Plan access, hardware and gates that complement the fence.",
+      "card": "The gate drags on the path? Ask about gate opening and swing.",
       "headline": "Make the entry easy to use",
       "includes": [
         "Gate opening and swing",
@@ -2773,7 +2773,7 @@
       ]
     },
     "fence repair": {
-      "card": "Assess damaged sections, posts and hardware for targeted repair.",
+      "card": "A fence section sways? Consider loose post assessment.",
       "headline": "Steady the weak fence section",
       "includes": [
         "Loose post assessment",
@@ -2807,7 +2807,7 @@
       ]
     },
     "pool fencing": {
-      "card": "Discuss a pool enclosure suited to your property and applicable requirements.",
+      "card": "The pool area lacks a separate edge? Talk through pool-edge layout.",
       "headline": "Shape a clear pool boundary",
       "includes": [
         "Pool-edge layout",
@@ -2841,7 +2841,7 @@
       ]
     },
     "commercial fencing": {
-      "card": "Plan access and boundaries for your commercial property.",
+      "card": "Delivery areas lack separation? Look at perimeter and entry review.",
       "headline": "Define access for the site",
       "includes": [
         "Perimeter and entry review",
@@ -2877,7 +2877,7 @@
   },
   "Garage Doors": {
     "garage door installation": {
-      "card": "Choose a door style and operating system for your home.",
+      "card": "The old door is badly worn? Ask about door size and style review.",
       "headline": "Welcome home with a better door",
       "includes": [
         "Door size and style review",
@@ -2911,7 +2911,7 @@
       ]
     },
     "garage door repair": {
-      "card": "Discuss unusual noise, damage or trouble opening and closing.",
+      "card": "The door sticks halfway? Consider noise and movement diagnosis.",
       "headline": "Get the door moving safely",
       "includes": [
         "Noise and movement diagnosis",
@@ -2945,7 +2945,7 @@
       ]
     },
     "spring replacement": {
-      "card": "Have a trained professional assess and replace worn door springs.",
+      "card": "The door feels suddenly heavy? Talk through spring condition assessment.",
       "headline": "Restore the door's balance",
       "includes": [
         "Spring condition assessment",
@@ -2979,7 +2979,7 @@
       ]
     },
     "opener installation": {
-      "card": "Explore opener options and compatibility with your door.",
+      "card": "Manual lifting has become difficult? Look at opener type and force fit.",
       "headline": "Make every arrival smoother",
       "includes": [
         "Opener type and force fit",
@@ -3013,7 +3013,7 @@
       ]
     },
     "opener repair": {
-      "card": "Get help diagnosing an opener that is not working as expected.",
+      "card": "The remote gets no response? Ask about power and control checks.",
       "headline": "Find the missing opener signal",
       "includes": [
         "Power and control checks",
@@ -3047,7 +3047,7 @@
       ]
     },
     "panel replacement": {
-      "card": "Discuss replacing damaged panels and matching the existing door.",
+      "card": "A lower panel is dented? Consider damaged panel measurement.",
       "headline": "Restore the door's front",
       "includes": [
         "Damaged panel measurement",
@@ -3081,7 +3081,7 @@
       ]
     },
     "weather sealing": {
-      "card": "Address gaps around the door and discuss sealing options.",
+      "card": "Daylight shows under the door? Talk through bottom seal fit.",
       "headline": "Close the gaps around garage",
       "includes": [
         "Bottom seal fit",
@@ -3115,7 +3115,7 @@
       ]
     },
     "garage door maintenance": {
-      "card": "Arrange an assessment of moving parts, balance and operation.",
+      "card": "The door rattles more than before? Look at roller and hinge inspection.",
       "headline": "Keep the door running evenly",
       "includes": [
         "Roller and hinge inspection",
@@ -3151,7 +3151,7 @@
   },
   "Pest Control": {
     "pest inspections": {
-      "card": "Start with an inspection to understand activity and possible entry points.",
+      "card": "Droppings appear in a cupboard? Ask about evidence and entry-point review.",
       "headline": "Find where activity begins",
       "includes": [
         "Evidence and entry-point review",
@@ -3185,7 +3185,7 @@
       ]
     },
     "ant control": {
-      "card": "Discuss ant activity and treatment options for your property.",
+      "card": "Ants cross the kitchen counter? Consider trail and nest observation.",
       "headline": "Trace the ant trail home",
       "includes": [
         "Trail and nest observation",
@@ -3219,7 +3219,7 @@
       ]
     },
     "rodent control": {
-      "card": "Assess signs of rodents and possible exclusion measures.",
+      "card": "Scratching sounds at night? Talk through rodent sign assessment.",
       "headline": "Keep unwanted guests outside",
       "includes": [
         "Rodent sign assessment",
@@ -3253,7 +3253,7 @@
       ]
     },
     "termite inspections": {
-      "card": "Arrange a professional inspection of suspected termite activity.",
+      "card": "Mud tubes appear on a wall? Look at wood and soil contact review.",
       "headline": "Look beneath the surface",
       "includes": [
         "Wood and soil contact review",
@@ -3287,7 +3287,7 @@
       ]
     },
     "cockroach control": {
-      "card": "Discuss observed activity and an appropriate control approach.",
+      "card": "Roaches scatter when lights come on? Ask about activity and hiding-place review.",
       "headline": "Follow activity to its source",
       "includes": [
         "Activity and hiding-place review",
@@ -3321,7 +3321,7 @@
       ]
     },
     "spider control": {
-      "card": "Assess spider activity around your home and available options.",
+      "card": "Webs reappear by doorways? Consider web and activity review.",
       "headline": "Make corners less inviting",
       "includes": [
         "Web and activity review",
@@ -3355,7 +3355,7 @@
       ]
     },
     "mosquito control": {
-      "card": "Explore ways to manage mosquito activity around outdoor areas.",
+      "card": "Bites begin at dusk? Talk through standing-water survey.",
       "headline": "Take back the evening yard",
       "includes": [
         "Standing-water survey",
@@ -3389,7 +3389,7 @@
       ]
     },
     "preventive maintenance": {
-      "card": "Plan recurring assessments and prevention suited to your property.",
+      "card": "Pests return each season? Look at seasonal risk review.",
       "headline": "Stay ahead of pest activity",
       "includes": [
         "Seasonal risk review",
@@ -3425,7 +3425,7 @@
   },
   "Windows/Doors": {
     "window replacement": {
-      "card": "Explore frame styles, glazing choices and the scope of replacing existing windows.",
+      "card": "Windows stick when opened? Ask about existing opening measurements.",
       "headline": "Let the room see more",
       "includes": [
         "Existing opening measurements",
@@ -3459,7 +3459,7 @@
       ]
     },
     "window installation": {
-      "card": "Plan openings, measurements and installation details for your project.",
+      "card": "A renovation needs more daylight? Consider new opening and sightline plan.",
       "headline": "Put daylight in its place",
       "includes": [
         "New opening and sightline plan",
@@ -3493,7 +3493,7 @@
       ]
     },
     "energy-efficient windows": {
-      "card": "Discuss glazing and frame options suited to your home; performance depends on the selected product and installation.",
+      "card": "Rooms overheat near glass? Talk through glazing and frame comparison.",
       "headline": "Make comfort part of the view",
       "includes": [
         "Glazing and frame comparison",
@@ -3527,7 +3527,7 @@
       ]
     },
     "entry doors": {
-      "card": "Compare materials, finishes and entry-door styles for the way you come home.",
+      "card": "The front door drags? Look at door material and style.",
       "headline": "Make the first step feel right",
       "includes": [
         "Door material and style",
@@ -3561,7 +3561,7 @@
       ]
     },
     "patio doors": {
-      "card": "Explore sliding or hinged doors that connect your home and outdoor space.",
+      "card": "The patio door is hard to slide? Ask about opening and traffic flow.",
       "headline": "Open the route outdoors",
       "includes": [
         "Opening and traffic flow",
@@ -3595,7 +3595,7 @@
       ]
     },
     "sliding glass doors": {
-      "card": "Plan sightlines, access and a properly fitted sliding glass door.",
+      "card": "Glass panels drag in the track? Consider panel and track selection.",
       "headline": "Keep the view moving freely",
       "includes": [
         "Panel and track selection",
@@ -3629,7 +3629,7 @@
       ]
     },
     "french doors": {
-      "card": "Discuss paired-door layouts, swing clearance and finishing details.",
+      "card": "A single door feels too narrow? Talk through paired-door swing plan.",
       "headline": "Give the opening a welcome",
       "includes": [
         "Paired-door swing plan",
@@ -3663,7 +3663,7 @@
       ]
     },
     "window and door repair": {
-      "card": "Describe sticking, worn seals or damaged components so the contractor can assess repair options.",
+      "card": "A window will not stay open? Look at sticking or leak diagnosis.",
       "headline": "Set the opening right again",
       "includes": [
         "Sticking or leak diagnosis",
@@ -3699,7 +3699,7 @@
   },
   "Solar": {
     "solar panel installation": {
-      "card": "Discuss your roof, electricity use and a proposed panel layout before choosing a system.",
+      "card": "You are considering roof solar? Ask about roof and shade review.",
       "headline": "Put sunlight to work thoughtfully",
       "includes": [
         "Roof and shade review",
@@ -3733,7 +3733,7 @@
       ]
     },
     "solar battery storage": {
-      "card": "Explore storage capacity, compatibility and which loads a proposed system could support.",
+      "card": "Outages interrupt key circuits? Consider backup load priorities.",
       "headline": "Keep stored energy in mind",
       "includes": [
         "Backup load priorities",
@@ -3767,7 +3767,7 @@
       ]
     },
     "solar system design": {
-      "card": "Plan equipment and layout around the property, utility requirements and your priorities.",
+      "card": "A roof has several orientations? Talk through shade and roof geometry.",
       "headline": "Give the array a clear plan",
       "includes": [
         "Shade and roof geometry",
@@ -3801,7 +3801,7 @@
       ]
     },
     "solar panel maintenance": {
-      "card": "Discuss condition checks, access and care appropriate for the installed equipment.",
+      "card": "An inverter shows a warning? Look at visible panel and mounting review.",
       "headline": "Keep an eye on the array",
       "includes": [
         "Visible panel and mounting review",
@@ -3835,7 +3835,7 @@
       ]
     },
     "solar panel cleaning": {
-      "card": "Ask about safe access and a cleaning approach suited to the panels and manufacturer guidance.",
+      "card": "Dust coats the panel glass? Ask about panel soil and access review.",
       "headline": "Let panels face the sun",
       "includes": [
         "Panel soil and access review",
@@ -3869,7 +3869,7 @@
       ]
     },
     "solar inverter replacement": {
-      "card": "Review the existing equipment and compatible replacement options.",
+      "card": "The inverter display is dark? Consider existing inverter diagnosis.",
       "headline": "Restore the system's conversion",
       "includes": [
         "Existing inverter diagnosis",
@@ -3903,7 +3903,7 @@
       ]
     },
     "solar removal and reinstallation": {
-      "card": "Coordinate system removal and reinstallation when roof work is planned.",
+      "card": "Roof replacement is scheduled? Talk through panel and racking inventory.",
       "headline": "Make room for roof work",
       "includes": [
         "Panel and racking inventory",
@@ -3937,7 +3937,7 @@
       ]
     },
     "solar system monitoring": {
-      "card": "Understand the available monitoring tools and how to review system performance.",
+      "card": "The monitoring app stopped updating? Look at portal and data access review.",
       "headline": "See what the system does",
       "includes": [
         "Portal and data access review",
@@ -3973,7 +3973,7 @@
   },
   "Concrete": {
     "concrete driveways": {
-      "card": "Explore concrete driveways with a plan for driveway footprint and slope.",
+      "card": "The driveway has deep cracks? Ask about driveway footprint and slope.",
       "headline": "Give the arrival a firm surface",
       "includes": [
         "Driveway footprint and slope",
@@ -4007,7 +4007,7 @@
       ]
     },
     "concrete patios": {
-      "card": "Explore concrete patios with a plan for patio shape and elevation.",
+      "card": "The yard has no level seating area? Consider patio shape and elevation.",
       "headline": "Make a place to gather",
       "includes": [
         "Patio shape and elevation",
@@ -4041,7 +4041,7 @@
       ]
     },
     "stamped concrete": {
-      "card": "Explore stamped concrete with a plan for pattern and color samples.",
+      "card": "Plain paving feels out of place? Talk through pattern and color samples.",
       "headline": "Give concrete its own texture",
       "includes": [
         "Pattern and color samples",
@@ -4075,7 +4075,7 @@
       ]
     },
     "concrete walkways": {
-      "card": "Explore concrete walkways with a plan for route and width planning.",
+      "card": "A muddy path leads to the door? Look at route and width planning.",
       "headline": "Make the path easy to follow",
       "includes": [
         "Route and width planning",
@@ -4109,7 +4109,7 @@
       ]
     },
     "concrete foundations": {
-      "card": "Explore concrete foundations with a plan for site and soil review.",
+      "card": "A new structure needs support? Ask about site and soil review.",
       "headline": "Start with sound footing",
       "includes": [
         "Site and soil review",
@@ -4143,7 +4143,7 @@
       ]
     },
     "concrete slabs": {
-      "card": "Explore concrete slabs with a plan for slab size and use.",
+      "card": "A shed sits on bare soil? Consider slab size and use.",
       "headline": "Build from a level base",
       "includes": [
         "Slab size and use",
@@ -4177,7 +4177,7 @@
       ]
     },
     "concrete repair": {
-      "card": "Explore concrete repair with a plan for crack and movement assessment.",
+      "card": "A corner has broken away? Talk through crack and movement assessment.",
       "headline": "Fix the surface that failed",
       "includes": [
         "Crack and movement assessment",
@@ -4211,7 +4211,7 @@
       ]
     },
     "decorative concrete": {
-      "card": "Explore decorative concrete with a plan for color and texture direction.",
+      "card": "A courtyard feels too plain? Look at color and texture direction.",
       "headline": "Put character in the ground",
       "includes": [
         "Color and texture direction",
@@ -4247,7 +4247,7 @@
   },
   "Pools": {
     "pool design": {
-      "card": "Explore pool design with a plan for pool footprint and depth.",
+      "card": "The yard has room for a pool? Ask about pool footprint and depth.",
       "headline": "Shape the water around life",
       "includes": [
         "Pool footprint and depth",
@@ -4281,7 +4281,7 @@
       ]
     },
     "pool construction": {
-      "card": "Explore pool construction with a plan for excavation and shell sequence.",
+      "card": "A pool design is ready to build? Consider excavation and shell sequence.",
       "headline": "Bring the pool plan to life",
       "includes": [
         "Excavation and shell sequence",
@@ -4315,7 +4315,7 @@
       ]
     },
     "pool remodeling": {
-      "card": "Explore pool remodeling with a plan for existing shell assessment.",
+      "card": "The pool feels dated? Talk through existing shell assessment.",
       "headline": "Make the old pool fit again",
       "includes": [
         "Existing shell assessment",
@@ -4349,7 +4349,7 @@
       ]
     },
     "pool resurfacing": {
-      "card": "Explore pool resurfacing with a plan for existing finish condition.",
+      "card": "The finish feels rough? Look at existing finish condition.",
       "headline": "Give the pool a fresh skin",
       "includes": [
         "Existing finish condition",
@@ -4383,7 +4383,7 @@
       ]
     },
     "pool equipment": {
-      "card": "Explore pool equipment with a plan for pump and filter fit.",
+      "card": "The pump is unusually loud? Ask about pump and filter fit.",
       "headline": "Keep water circulating well",
       "includes": [
         "Pump and filter fit",
@@ -4417,7 +4417,7 @@
       ]
     },
     "pool tile and coping": {
-      "card": "Explore pool tile and coping with a plan for waterline tile choices.",
+      "card": "Waterline tile is loose? Consider waterline tile choices.",
       "headline": "Frame the water with detail",
       "includes": [
         "Waterline tile choices",
@@ -4451,7 +4451,7 @@
       ]
     },
     "pool decking": {
-      "card": "Explore pool decking with a plan for deck layout and drainage.",
+      "card": "The deck gets slick when wet? Talk through deck layout and drainage.",
       "headline": "Make the poolside comfortable",
       "includes": [
         "Deck layout and drainage",
@@ -4485,7 +4485,7 @@
       ]
     },
     "pool maintenance": {
-      "card": "Explore pool maintenance with a plan for water and equipment checks.",
+      "card": "Water turns cloudy? Look at water and equipment checks.",
       "headline": "Keep the water inviting",
       "includes": [
         "Water and equipment checks",

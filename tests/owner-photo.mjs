@@ -10,7 +10,7 @@ test('Roofing owner sample is marked in site data and media readiness',()=>{
  const site=settings(ROBLES);
  assert.equal(site.ownerPhoto.isSample,true);
  assert.match(site.ownerPhoto.src,/owner-sample-960\.webp$/);
- const html=ownerSection(site,[]);
+ const html=ownerSection(site,[],true);
  assert.match(html,/data-sample-media="owner-photo"/);
  assert.match(html,/Sample photo · Upload yours/);
  assert.match(html,/I listen before I quote\./);
@@ -18,6 +18,7 @@ test('Roofing owner sample is marked in site data and media readiness',()=>{
  assert.match(html,/alt="Owner of Robles Roofing"/);
  assert.match(html,/loading="lazy"/);
  assert.match(html,/srcset="[^"]+480w,[^"]+960w"/);
+ assert.doesNotMatch(ownerSection(site,[],false),/owner-sample-960|Sample photo · Upload yours|data-sample-media/);
  assert.equal(readiness(site,[],[]).find(x=>x.label==='Real owner photo')?.ready,false);
 });
 
@@ -51,7 +52,7 @@ test('the existing brand-image upload and owner selection remove the sample from
 
 test('Roofing owner statement remains editable',()=>{
  const site=settings({...ROBLES,ownerStatement:'We start by listening.'});
- const html=ownerSection(site,[]);
+ const html=ownerSection(site,[],true);
  assert.match(html,/We start by listening\./);
  assert.doesNotMatch(html,/I listen before I quote\./);
 });

@@ -41,9 +41,14 @@ test('pages on one site never repeat card blurbs, signs, steps, or FAQ questions
     const site = library[trade] ? settings({...DEFAULT, name: trade + ' Example', trade, area: 'Ventura County', serviceAreas: [{city: 'Oxnard'}], services: names.map(name => ({name, description: ''}))}) : null;
     const pages = site ? visibleServicePages(site) : names.map(name => ({serviceName: name}));
     const used = new Map();
+    const openings = new Set();
     for (const page of pages) {
       const item = serviceBrief(trade, page.serviceName);
       assert.ok(item);
+      const opening=(item.card.toLowerCase().match(/[a-z0-9]+/g)||[]).slice(0,3).join(' ');
+      assert.ok(!openings.has(opening), trade+' cards repeat the opening '+opening);
+      openings.add(opening);
+      assert.ok(!normalize(item.card).includes(normalize(page.serviceName)), trade+' card repeats its title: '+page.serviceName);
       for (const [field, lines] of Object.entries({card: [item.card], signs: item.signs, process: item.process, faq: item.faq.map(faq => faq.question)})) {
         for (const value of lines) {
           const key = normalize(value.replaceAll('{{city}}', 'Oxnard'));

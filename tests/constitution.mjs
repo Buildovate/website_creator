@@ -116,15 +116,15 @@ const saveDisplay=async(offers,enabled=true,publish=true)=>{
 let promotionCases=0;
 for(const [state,offers] of Object.entries(promotionStates)){
  await saveDisplay(offers);
- const html=await(await request(displayRoot+'/promotions','GET',undefined,null)).text();
+ const response=await request(displayRoot+'/promotions','GET',undefined,null),html=await response.text();
  const home=await(await request(displayRoot,'GET',undefined,null)).text();
- assert.match(home,/data-promotion-strip/);assert.match(home,/View promotions/);
+ if(state==='none'||state==='disabledOffer'){assert.equal(response.status,404);assert.equal(home.match(/<aside[^>]*data-promotion-strip|View promotions/),null,state+' hidden promotion strip');promotionCases++;console.log('PASS promotion display fixture: '+state);continue;}
+ assert.equal(response.status,200);assert.match(home,/<aside[^>]*data-promotion-strip/);assert.match(home,/View promotions/);
  assert.doesNotMatch(html,/QA-015-PRIVATE-CODE|data-countdown|claim (?:your |my )?free/i);
  assert.doesNotMatch(home,/QA-015-PRIVATE-CODE|claim (?:your |my )?free/i);
  const count=(html.match(/data-promotion-quiz/g)||[]).length;
  assert.equal(count,state==='current'||state==='mixed'?1:0,state+' only current cards have quizzes');
- if(state==='none'||state==='disabledOffer'){assert.doesNotMatch(html,/data-promotion-state=/);assert.match(html,/no active promotions/);}
- else {
+ {
   for(const offer of offers){const expected=Date.parse(offer.startsAt)>Date.now()?'upcoming':Date.parse(offer.endsAt)<=Date.now()?'expired':'current';assert.ok(html.includes('data-promotion-state="'+expected+'" data-offer-id="'+offer.id+'"'));}
   assert.match(html,/Eligibility &amp; offer terms/);assert.match(html,/Results are not guaranteed/);assert.match(html,/Dates below follow this business’s local time zone/);
   const visibleDates=[...html.matchAll(/<time datetime="[^"]+">([^<]+)<\/time>/g)].map(m=>m[1]);assert.ok(visibleDates.length>=2);for(const date of visibleDates)assert.match(date,/^[A-Z][a-z]{2} \d{1,2}, \d{4}$/);
@@ -155,11 +155,11 @@ const promoPreview=await(await request(displayRoot+'/promotions?preview=1')).tex
 assert.match(promoPreview,/<button class="foundation-button" disabled>Unlock my offer/);assert.doesNotMatch(promoPreview,/QA-015-PRIVATE-CODE/);
 assert.ok((await(await request(displayRoot+'?preview=1')).text()).includes('href="'+displayRoot+'/promotions?preview=1"'));
 await saveDisplay(promotionStates.current,false,false);
-assert.match(await(await request(displayRoot,'GET',undefined,null)).text(),/data-promotion-strip/);
-assert.doesNotMatch(await(await request(displayRoot+'?preview=1')).text(),/data-promotion-strip/);
-assert.equal((await request(displayRoot+'/promotions?preview=1')).status,404);
+assert.match(await(await request(displayRoot,'GET',undefined,null)).text(),/<aside[^>]*data-promotion-strip/);
+assert.match(await(await request(displayRoot+'?preview=1')).text(),/<aside[^>]*data-promotion-strip/);
+const disabledPreview=await request(displayRoot+'/promotions?preview=1');assert.equal(disabledPreview.status,200);assert.match(await disabledPreview.text(),/Sample/);
 await api('/tenants/'+displayTenant.id+'/publish','POST',{approved:true,version:displayTenant.version});
-assert.doesNotMatch(await(await request(displayRoot,'GET',undefined,null)).text(),/data-promotion-strip|href="[^" ]*\/promotions(?:[?"#])/);
+assert.doesNotMatch(await(await request(displayRoot,'GET',undefined,null)).text(),/<aside[^>]*data-promotion-strip|href="[^" ]*\/promotions(?:[?"#])/);
 assert.equal((await request(displayRoot+'/promotions','GET',undefined,null)).status,404);
 promotionCases++;console.log('PASS draft/publication isolation and homepage/page switch');
 assert.equal(promotionCases,8);console.log('PASS 8 promotion display scenarios');

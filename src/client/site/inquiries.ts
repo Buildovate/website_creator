@@ -13,7 +13,7 @@ export function mountInquiries(){
    data.projectCity=data.projectCity||data.city||form.dataset.city||'';
    data.service=data.service||form.dataset.service||'';
    const response=await fetch('/api/public/'+form.dataset.slug+'/inquiries',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}),result=await response.json();
-   if(!response.ok)throw Error(result.error);form.reset();status.textContent='Your request has been saved for the business to review. For immediate contact, please call.';
+   if(!response.ok)throw Error(result.error);form.reset();const path=base+'/thank-you';sessionStorage.setItem('buildovate-lead-submitted',JSON.stringify({path,site:form.dataset.slug}));location.assign(path);
   }catch(error){status.textContent=error instanceof Error?error.message:'Request could not be saved. Please call.';}finally{button.disabled=false;}
  });
 }

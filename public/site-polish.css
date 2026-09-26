@@ -101,3 +101,7 @@
  body .shared-site-header .site-mobile-menu .site-expertise-list a[aria-current=page]{background:#ffffff24!important;border-left:3px solid var(--accent)!important}
  body .shared-site-header .site-mobile-menu nav a.site-call-link{position:static!important;inset:auto!important;display:flex!important;width:100%!important;min-height:44px!important;margin-top:10px!important;padding:10px 12px!important}
 }
+
+.sample-tag{display:inline-flex;align-items:center;border-radius:999px;padding:4px 9px;background:var(--accent,#bf7650);color:#17232a;font:800 11px/1 DM,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;vertical-align:middle}
+
+body:has(.project-story) .shared-site-header{background:#182020!important;color:#fff!important}

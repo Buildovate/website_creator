@@ -275,6 +275,14 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - Homepage cards use the library blurbs. Service pages alternate image and copy sections with three service-art placements and a stable site layout variant. Expertise matches neighboring desktop nav labels. Our Work excludes empty, demo, QA and sample projects.
 - Gates: 53/53 full regression commands passed; #015A inventory passed 101 phone and 101 desktop states with zero layout or browser errors. Roofing, HVAC and Patios before/after captures cover cards and two full pages per trade at 1440×900 and 390×844. Local commit only; no push or deployment.
 
+### #004X — Core site pages for all trades + full-preview mode (Sol High)
+
+- State: **In progress**. Builds on #004W-v2.
+- Add shared `/services`, `/areas`, `/areas/<city>`, `/about`, `/reviews`, `/faq`, `/contact`, `/thank-you`, and `/legal` pages for every trade. Preserve the existing `/financing` and `/promotions` flows, showing them in preview and only with real enabled offers on published sites.
+- Connect the shared header, phone menu, footer, sitemap and page metadata to real routes. City pages need distinct copy and an automated sentence-uniqueness check. Published reviews and AggregateRating must use real sourced reviews only.
+- Establish the standing full-preview rule in `docs/product/PREVIEW-MODE.md`: trade-specific tagged samples fill missing content in private noindex previews, while published pages omit unsupplied content and never expose sample data in schema or sitemap.
+- Refine service card blurbs so cards on one site do not share template openings or repeat their own titles. Verify Roofing, HVAC and Patios on desktop and phone; rerun regressions and the #015A mobile audit. Evidence: `docs/build-evidence/004X/README.md`.
+
 ### #005 — Connect the selected-service grid to detail pages
 
 - State: **Done** · Evidence: [005](docs/build-evidence/005/README.md) · Estimate: **4h** (≤1 day).

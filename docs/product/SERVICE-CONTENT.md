@@ -1,6 +1,6 @@
 # Service content library
 
-Generated from `scripts/service-content-source.mjs` using `node scripts/build-service-content.mjs`. The JSON file is the runtime data source. Concrete and Pools are prepared for their queued rollouts; the current live trade selector has 14 trades.
+Generated from `scripts/service-content-source.mjs` and reviewed card blurbs in `public/service-content.json` using `node scripts/build-service-content.mjs`. The JSON file is the runtime data source. Concrete and Pools are prepared for their queued rollouts; the current live trade selector has 14 trades.
 
 Every entry has a unique card blurb, a four-to-six-word hero, three specific scope items, three homeowner signs, four process steps, and three FAQs. The third FAQ receives the contractor’s city and service region at render time. No cost, credential, warranty, statistic, or legal claim is supplied by this library.
 
@@ -8,7 +8,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Roof installation
 
-- Card: Plan the roof covering, detailing and drainage for a new roof.
+- Card: A new addition needs cover? Shape the roof plan around its framing and drainage.
 - Hero: A roof made for home
 - Includes: Roof plan and measurements · Deck and edge review · Covering and flashing details
 - Signs: An addition needs a roof · Your new build has open framing · You need roofing that fits the home
@@ -20,7 +20,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Roof repair
 
-- Card: Discuss leaks, damaged coverings and the areas that need attention.
+- Card: Missing or curled shingles? Trace the affected area before choosing a repair.
 - Hero: Stop the leak at its source
 - Includes: Leak tracing around the affected area · Shingle and flashing repair · Water-shedding detail checks
 - Signs: Missing or curled shingles · Water stains on the ceiling · Leaks after a storm
@@ -32,7 +32,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Roof replacement
 
-- Card: Explore replacing an aging roof and choosing the next roofing system.
+- Card: Granules collecting below the downspout? Review the roof's condition and next system.
 - Hero: Make the next roof count
 - Includes: Old covering removal plan · Deck condition review · New roof system selection
 - Signs: Shingles keep shedding granules · Repairs are becoming frequent · Several roof areas show wear
@@ -44,7 +44,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Asphalt shingles
 
-- Card: Compare shingle styles and discuss installation or repair needs.
+- Card: Shingle tabs lifting? Compare the covering, fastening, and repair scope.
 - Hero: Find the right shingle fit
 - Includes: Shingle profile and color choices · Underlayment and edge details · Ridge and valley treatment
 - Signs: Shingle tabs are lifting · Bald patches appear on slopes · You want a different roof look
@@ -56,7 +56,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Metal roofing
 
-- Card: Explore metal roof profiles, finishes and detailing for your property.
+- Card: Rust at an old seam? Look at the panels and weather-tight details together.
 - Hero: Shape a lasting metal roof
 - Includes: Panel profile and finish choices · Fastener and seam details · Transition and trim planning
 - Signs: Rust appears at old seams · Panels rattle in wind · You want a metal roof finish
@@ -68,7 +68,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Flat roofs
 
-- Card: Discuss low-slope coverings, drainage and roof-surface needs.
+- Card: Ponding water after rain? Drainage and surface condition deserve a closer look.
 - Hero: Give low slopes a plan
 - Includes: Low-slope membrane options · Drain and ponding review · Parapet and penetration details
 - Signs: Water sits after rain · Bubbles appear in roof material · Leaks show near a roof drain
@@ -80,7 +80,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Roof maintenance
 
-- Card: Review roof condition and plan routine care before small issues grow.
+- Card: Debris in roof valleys? A condition check can guide routine care.
 - Hero: Catch wear before rain returns
 - Includes: Roof surface walk-through · Seal and flashing review · Drainage clearing plan
 - Signs: Debris collects in roof valleys · Sealant has cracked around vents · You have not checked the roof lately
@@ -92,7 +92,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Gutters
 
-- Card: Plan collection and drainage of rainwater at the roof edge.
+- Card: Water spilling over an edge? Follow the path from roofline to downspout.
 - Hero: Move rain away from home
 - Includes: Gutter runs and outlet placement · Downspout routing · Roof-edge connection review
 - Signs: Water spills over gutter edges · Soil washes out below eaves · Gutters pull away from fascia
@@ -104,7 +104,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Asphalt Shingle Install / Repair
 
-- Card: Explore asphalt shingle install / repair with a plan for shingle damage assessment.
+- Card: Shingle corners lifting in wind? Assess fastening and nearby damage.
 - Hero: Keep shingle lines sound
 - Includes: Shingle damage assessment · Matching shingle profile review · Underlayment and flashing check
 - Signs: Shingle corners lift in wind · Granules gather by downspouts · A roof patch no longer blends
@@ -116,7 +116,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Roof Sealing
 
-- Card: Explore roof sealing with a plan for joint and penetration review.
+- Card: Sealant peeling around a vent? Review joints and penetrations before sealing.
 - Hero: Close vulnerable roof openings
 - Includes: Joint and penetration review · Compatible sealant selection · Surface preparation before sealing
 - Signs: Sealant peels around a vent · Fine cracks appear at a joint · Water marks show below a penetration
@@ -128,7 +128,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Storm Damage
 
-- Card: Explore storm damage with a plan for post-storm roof assessment.
+- Card: Shingles in the yard? Document the affected roof areas after the storm.
 - Hero: Find what the storm changed
 - Includes: Post-storm roof assessment · Loose covering and flashing review · Temporary protection discussion
 - Signs: Shingles lie in the yard · A branch struck the roof · New stains appeared after wind and rain
@@ -140,7 +140,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Inspections
 
-- Card: Explore inspections with a plan for visible roof condition review.
+- Card: Buying a home? Understand the visible roof condition before making plans.
 - Hero: Know what the roof needs
 - Includes: Visible roof condition review · Flashing and drainage observations · Photo-backed findings discussion
 - Signs: You are buying a home · An older roof has unknown history · A small leak needs a closer look
@@ -154,7 +154,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Patio covers
 
-- Card: Create overhead shade for an outdoor seating or dining area.
+- Card: Too much sun over the seating area? Find the right shade footprint.
 - Hero: Make room for afternoon shade
 - Includes: Cover footprint and height · Roofing and support choices · Drainage at the patio edge
 - Signs: Your seating area gets too hot · Rain drives onto the table · The patio feels unusable at midday
@@ -166,7 +166,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Motorized pergolas
 
-- Card: Explore adjustable coverage with motor-operated pergola louvers.
+- Card: Moving chairs to chase shade? Explore adjustable louvers and controls.
 - Hero: Control shade when it changes
 - Includes: Motor and control options · Louver travel and clearance · Power and drainage planning
 - Signs: You keep moving chairs from the sun · A fixed cover feels too dark · You want flexible outdoor shade
@@ -178,7 +178,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Louvered roofs
 
-- Card: Compare louver configurations for shade, airflow and outdoor comfort.
+- Card: Glare across the patio table? Consider how the louvers direct light.
 - Hero: Let the light shift naturally
 - Includes: Louver orientation and spacing · Post and beam layout · Rainwater channel detailing
 - Signs: Glare hits the patio table · You want airflow above seating · Shade is needed only part of the day
@@ -190,7 +190,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Aluminum patio covers
 
-- Card: Explore clean-lined aluminum coverage for an outdoor gathering space.
+- Card: An old cover peeling? Compare new lines, finishes, and support details.
 - Hero: Bring clean lines outdoors
 - Includes: Aluminum finish and profile · Post placement and span · House tie-in and drainage
 - Signs: An old cover is peeling · You want lower-upkeep shade · The patio needs a cleaner outline
@@ -202,7 +202,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Wood pergolas
 
-- Card: Bring the warmth and texture of wood to an open-air structure.
+- Card: No defined gathering spot outdoors? Use wood structure to shape one.
 - Hero: Make the garden feel gathered
 - Includes: Wood species and finish · Beam spacing and shadow pattern · Footing and post locations
 - Signs: The yard has no defined seating area · You want dappled light outdoors · A bare patio needs warmth
@@ -214,7 +214,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Outdoor living spaces
 
-- Card: Plan spaces for cooking, dining and spending time outdoors.
+- Card: The grill far from the table? Bring cooking and seating into one plan.
 - Hero: Give outdoors a daily purpose
 - Includes: Cooking and dining zones · Circulation and seating layout · Shade and lighting coordination
 - Signs: The grill sits far from seating · Guests crowd one narrow corner · You rarely use the backyard
@@ -226,7 +226,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Patio enclosures
 
-- Card: Discuss enclosing a patio while considering light, access and airflow.
+- Card: Bugs interrupt dinner outside? Discuss enclosure, airflow, and access.
 - Hero: Keep the patio in play
 - Includes: Opening and screen choices · Wall and roof connections · Ventilation and door placement
 - Signs: Bugs interrupt outdoor meals · Wind blows through the patio · You want a more sheltered room
@@ -238,7 +238,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Patio repair
 
-- Card: Review worn components, connections and surfaces that need attention.
+- Card: Pavers rocking underfoot? Locate the worn surface and its support.
 - Hero: Bring the patio back together
 - Includes: Damaged surface review · Loose connection assessment · Targeted material replacement
 - Signs: Pavers rock underfoot · A patio post feels loose · Water pools against the house
@@ -252,7 +252,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Leak detection
 
-- Card: Discuss signs of hidden leaks and the areas that need investigation.
+- Card: A wall feels damp? Ask about moisture pattern review.
 - Hero: Find the hidden water path
 - Includes: Moisture pattern review · Fixture and pipe testing plan · Access point discussion
 - Signs: A wall feels damp · The water meter moves when taps are off · Paint bubbles near a pipe
@@ -264,7 +264,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Drain cleaning
 
-- Card: Address slow drains and discuss blockages in the drainage system.
+- Card: The sink empties slowly? Consider slow-drain diagnosis.
 - Hero: Get water moving again
 - Includes: Slow-drain diagnosis · Trap and line access · Blockage removal approach
 - Signs: The sink empties slowly · A shower drain gurgles · Water backs up in a tub
@@ -276,7 +276,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Water heaters
 
-- Card: Compare water-heating needs, equipment options and replacement scope.
+- Card: Showers turn cold too soon? Talk through tank or tankless fit review.
 - Hero: Make hot water dependable
 - Includes: Tank or tankless fit review · Venting and connection planning · Removal and installation scope
 - Signs: Showers turn cold too soon · Hot water takes longer to arrive · The heater makes new noises
@@ -288,7 +288,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Sewer lines
 
-- Card: Review sewer-line concerns and the options for investigation or repair.
+- Card: Multiple drains back up together? Look at sewer access and cleanout review.
 - Hero: Understand the line below
 - Includes: Sewer access and cleanout review · Line condition investigation · Repair route planning
 - Signs: Multiple drains back up together · Sewer odors reach the yard · A cleanout overflows
@@ -300,7 +300,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Repiping
 
-- Card: Plan replacement of aging water-supply piping throughout a property.
+- Card: Several pipes keep leaking? Ask about pipe route planning.
 - Hero: Renew the supply behind walls
 - Includes: Pipe route planning · Fixture connection mapping · Wall access and patch coordination
 - Signs: Several pipes keep leaking · Water pressure drops at fixtures · Old lines show corrosion
@@ -312,7 +312,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Fixture installation
 
-- Card: Update faucets, sinks and other plumbing fixtures with a clear scope.
+- Card: A faucet leaks at its base? Consider fixture sizing and fit.
 - Hero: Put daily fixtures in place
 - Includes: Fixture sizing and fit · Supply and drain connections · Finish and seal details
 - Signs: A faucet leaks at its base · The sink no longer fits your routine · You chose a new bathroom fixture
@@ -324,7 +324,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Water filtration
 
-- Card: Discuss filtration options around the water-quality concerns you identify.
+- Card: Water tastes unusual? Talk through water concern discussion.
 - Hero: Choose cleaner water at home
 - Includes: Water concern discussion · Filter location and capacity · Cartridge access planning
 - Signs: Water tastes unusual · Sediment collects in glasses · You want filtration at the tap
@@ -336,7 +336,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Plumbing repair
 
-- Card: Address leaking fixtures, damaged pipes and other plumbing concerns.
+- Card: A valve will not shut off? Look at problem fixture assessment.
 - Hero: Fix the part causing trouble
 - Includes: Problem fixture assessment · Pipe or valve repair plan · Leak and flow checks
 - Signs: A valve will not shut off · A pipe drips under the sink · A toilet runs between uses
@@ -350,7 +350,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Air conditioning installation
 
-- Card: Plan cooling equipment around the rooms and comfort needs of your home.
+- Card: Rooms hot by afternoon? Match cooling equipment to the spaces you use.
 - Hero: Bring cooler air to every room
 - Includes: Cooling load and room review · Equipment and location choices · Airflow and controls planning
 - Signs: Rooms are hot by afternoon · An old unit no longer keeps up · You are adding cooling to the home
@@ -362,7 +362,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Air conditioning repair
 
-- Card: Discuss cooling problems and the equipment that needs attention.
+- Card: Warm air from the vents? Follow the symptom back to the equipment.
 - Hero: Get the cool air back
 - Includes: Cooling symptom diagnosis · Refrigerant and electrical checks · Affected component repair
 - Signs: Warm air comes from vents · The unit stops mid-cycle · Water appears near the indoor unit
@@ -374,7 +374,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Heating installation
 
-- Card: Explore heating equipment and distribution options for your property.
+- Card: Some rooms never warm up? Explore equipment and distribution together.
 - Hero: Make winter rooms comfortable
 - Includes: Heating needs and room layout · Equipment and venting choices · Control and distribution setup
 - Signs: Some rooms never warm up · You are replacing an old heater · A new space needs heat
@@ -386,7 +386,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Heating repair
 
-- Card: Review heating symptoms and the components that need investigation.
+- Card: The heater blows cool air? Diagnose the cause before choosing a fix.
 - Hero: Find why warmth has stopped
 - Includes: Heat call and control review · Burner or heating element checks · Fault-specific repair plan
 - Signs: The heater blows cool air · A furnace cycles too often · The thermostat calls without heat
@@ -398,7 +398,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Heat pumps
 
-- Card: Explore a system that transfers heat for heating and cooling.
+- Card: Need heat and cooling? Consider how one system can serve both seasons.
 - Hero: Use one system for seasons
 - Includes: Heating and cooling fit review · Outdoor unit placement · Indoor distribution planning
 - Signs: You need both heat and cooling · The current system struggles in one season · You want to compare all-electric options
@@ -410,7 +410,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Ductwork
 
-- Card: Discuss air distribution, duct condition and connections between rooms.
+- Card: One bedroom short on airflow? Trace the route through the ducts.
 - Hero: Help air reach the rooms
 - Includes: Duct route and size review · Joint and insulation checks · Supply and return balance
 - Signs: One bedroom gets little airflow · Whistling comes from a vent · Ducts are visibly disconnected
@@ -422,7 +422,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Indoor air quality
 
-- Card: Review filtration, ventilation and indoor-air concerns.
+- Card: Dust returns quickly? Look at filtration, ventilation, and the rooms affected.
 - Hero: Make indoor air feel easier
 - Includes: Filter and ventilation review · Room-by-room concern mapping · Equipment compatibility check
 - Signs: Dust returns soon after cleaning · Rooms feel stuffy with windows shut · Odors linger after cooking
@@ -434,7 +434,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### System maintenance
 
-- Card: Plan routine attention to heating and cooling equipment.
+- Card: Airflow feeling weaker? Plan a check of the system's working parts.
 - Hero: Keep heating and cooling ready
 - Includes: Filter and coil review · Electrical and drain inspection · Operating cycle checks
 - Signs: Airflow has weakened · The outdoor unit is unusually loud · It has been a while since service
@@ -448,7 +448,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Electrical repairs
 
-- Card: Discuss faulty circuits, damaged components and electrical concerns.
+- Card: A breaker trips repeatedly? Ask about circuit fault investigation.
 - Hero: Put the power problem right
 - Includes: Circuit fault investigation · Device and connection checks · Repair and safety testing
 - Signs: A breaker trips repeatedly · Lights flicker in one room · An outlet feels warm
@@ -460,7 +460,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Panel upgrades
 
-- Card: Review panel capacity and the scope of a potential upgrade.
+- Card: The panel has no open spaces? Consider existing panel and load review.
 - Hero: Give the panel room to grow
 - Includes: Existing panel and load review · Circuit layout planning · New panel and breaker fit
 - Signs: The panel has no open spaces · Breakers trip under normal use · You are adding major equipment
@@ -472,7 +472,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### EV chargers
 
-- Card: Plan a charging location and discuss the electrical work involved.
+- Card: Extension cords reach the driveway? Talk through charging location selection.
 - Hero: Bring charging home comfortably
 - Includes: Charging location selection · Electrical capacity review · Charger circuit and mounting
 - Signs: Extension cords reach the driveway · You bought an electric vehicle · Charging away from home is inconvenient
@@ -484,7 +484,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Lighting installation
 
-- Card: Shape practical lighting for rooms, task areas and outdoor spaces.
+- Card: The kitchen counter stays dim? Look at fixture and beam placement.
 - Hero: Put light where life happens
 - Includes: Fixture and beam placement · Switching and dimming plan · Mounting and wiring details
 - Signs: The kitchen counter stays dim · A hallway has dark corners · Outdoor steps need better light
@@ -496,7 +496,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Rewiring
 
-- Card: Plan updates to wiring in older rooms or renovated spaces.
+- Card: Outlets lack grounding? Ask about existing wiring assessment.
 - Hero: Refresh the wires behind walls
 - Includes: Existing wiring assessment · New circuit routes · Device and panel connections
 - Signs: Outlets lack grounding · Old insulation is brittle · Renovation has opened the walls
@@ -508,7 +508,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Outlets and switches
 
-- Card: Discuss convenient placement and replacement of outlets and switches.
+- Card: A plug hangs loose? Consider outlet and switch placement.
 - Hero: Make power easier to reach
 - Includes: Outlet and switch placement · Device type and finish choices · Box and circuit connections
 - Signs: A plug hangs loose · A switch sparks when used · You need power near a desk
@@ -520,7 +520,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Backup generators
 
-- Card: Explore standby power needs and equipment placement.
+- Card: Outages interrupt essential equipment? Talk through priority load review.
 - Hero: Keep essential circuits planned
 - Includes: Priority load review · Generator location and fuel planning · Transfer equipment coordination
 - Signs: Outages interrupt essential equipment · Food spoils during long outages · You want a backup power plan
@@ -532,7 +532,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Electrical inspections
 
-- Card: Review the condition of electrical components and discuss next steps.
+- Card: You are purchasing an older home? Look at panel and circuit observations.
 - Hero: Understand what the wiring says
 - Includes: Panel and circuit observations · Outlet and device checks · Findings and priority review
 - Signs: You are purchasing an older home · A remodel exposed unusual wiring · A breaker has an unknown label
@@ -546,7 +546,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Landscape design
 
-- Card: Bring planting, pathways and outdoor-use priorities into one plan.
+- Card: The yard feels disconnected? Ask about planting and shade plan.
 - Hero: See the yard differently
 - Includes: Planting and shade plan · Path and gathering layout · Water and maintenance needs
 - Signs: The yard feels disconnected · Beds get too much sun · You want a clearer outdoor plan
@@ -558,7 +558,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Landscape installation
 
-- Card: Turn an approved planting and outdoor-space plan into a defined scope.
+- Card: The yard is bare after construction? Consider site preparation and grading.
 - Hero: Bring the outdoor plan alive
 - Includes: Site preparation and grading · Plant and bed placement · Path and feature installation
 - Signs: The yard is bare after construction · You have a plan but no planting · Outdoor paths end in dirt
@@ -570,7 +570,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Irrigation
 
-- Card: Plan how water reaches planted areas and discuss existing system needs.
+- Card: Dry patches appear beside wet ones? Talk through zone and coverage review.
 - Hero: Give plants the water they need
 - Includes: Zone and coverage review · Valve and controller placement · Emitter and sprinkler choices
 - Signs: Dry patches appear beside wet ones · Sprinklers soak the sidewalk · Plants wilt despite watering
@@ -582,7 +582,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Lawn care
 
-- Card: Discuss the condition, care and seasonal needs of your lawn.
+- Card: Brown patches spread across grass? Look at turf condition assessment.
 - Hero: Help the lawn recover
 - Includes: Turf condition assessment · Mowing and feeding plan · Watering pattern review
 - Signs: Brown patches spread across grass · The lawn thins near shade · Weeds take over bare spots
@@ -594,7 +594,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Artificial turf
 
-- Card: Explore a turf surface, including preparation and drainage considerations.
+- Card: Mud follows pets indoors? Ask about base and drainage preparation.
 - Hero: Keep a green space practical
 - Includes: Base and drainage preparation · Turf pile and color selection · Seams and edge finish
 - Signs: Mud follows pets indoors · Grass fails in a shaded corner · You want less lawn watering
@@ -606,7 +606,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Hardscaping
 
-- Card: Plan durable paths, patios and other built landscape surfaces.
+- Card: Stepping stones shift underfoot? Consider paver and stone selection.
 - Hero: Give paths a stronger footing
 - Includes: Paver and stone selection · Base and slope planning · Edges and joint finish
 - Signs: Stepping stones shift underfoot · Mud blocks the path to the gate · You need a firm outdoor gathering area
@@ -618,7 +618,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Landscape lighting
 
-- Card: Bring attention to planting, paths and outdoor gathering areas after dark.
+- Card: Garden steps disappear at night? Talk through path and feature lighting plan.
 - Hero: Let the garden glow after dark
 - Includes: Path and feature lighting plan · Cable and transformer placement · Nighttime aiming and control
 - Signs: Garden steps disappear at night · Guests miss the path to the door · A favorite tree fades after sunset
@@ -630,7 +630,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Seasonal maintenance
 
-- Card: Plan seasonal care for planting beds, lawns and outdoor spaces.
+- Card: Leaves bury the planting beds? Look at plant and bed review.
 - Hero: Care for each changing season
 - Includes: Plant and bed review · Pruning and cleanup priorities · Irrigation schedule changes
 - Signs: Leaves bury the planting beds · Shrubs crowd a walkway · Watering still follows a winter schedule
@@ -644,7 +644,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Home remodeling
 
-- Card: Define the rooms, priorities and scope of your home remodel.
+- Card: Rooms no longer suit your routine? Ask about room-by-room scope planning.
 - Hero: Make home fit your life
 - Includes: Room-by-room scope planning · Existing structure and system review · Finish and trade coordination
 - Signs: Rooms no longer suit your routine · Storage spills into living space · You want a more connected layout
@@ -656,7 +656,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Kitchen remodeling
 
-- Card: Plan a kitchen around cooking, storage and everyday movement.
+- Card: Counters lack usable space? Consider cabinet and counter layout.
 - Hero: Build around how you cook
 - Includes: Cabinet and counter layout · Appliance and service locations · Lighting and finish coordination
 - Signs: Counters lack usable space · Cabinet doors block the walkway · The kitchen feels dark at prep time
@@ -668,7 +668,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Bathroom remodeling
 
-- Card: Explore bathroom layout, fixtures and finish selections.
+- Card: The shower leaks at the edge? Talk through shower and fixture layout.
 - Hero: Make the bathroom work better
 - Includes: Shower and fixture layout · Waterproofing and ventilation plan · Tile and storage selections
 - Signs: The shower leaks at the edge · Morning routines crowd the sink · Moisture lingers after bathing
@@ -680,7 +680,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Room additions
 
-- Card: Discuss additional space and how it connects to your existing home.
+- Card: A growing family needs a room? Look at new room footprint.
 - Hero: Make space for what is next
 - Includes: New room footprint · Connection to existing structure · Window and utility planning
 - Signs: A growing family needs a room · Work now happens at the dining table · Guests have no private place
@@ -692,7 +692,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### ADUs
 
-- Card: Explore a separate living space and discuss the project requirements.
+- Card: Family needs nearby independent space? Ask about site and access review.
 - Hero: Give a small home its place
 - Includes: Site and access review · Living layout and storage · Utility connection planning
 - Signs: Family needs nearby independent space · A backyard corner is unused · You want to explore an ADU
@@ -704,7 +704,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### New construction
 
-- Card: Bring a new building concept into a coordinated scope of work.
+- Card: You have land but no building plan? Consider building layout and site fit.
 - Hero: Start with a grounded plan
 - Includes: Building layout and site fit · Structural and system coordination · Finish and trade sequencing
 - Signs: You have land but no building plan · The current home cannot be adapted · A new space is needed for work
@@ -716,7 +716,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Commercial improvements
 
-- Card: Plan changes that support the way a commercial space is used.
+- Card: Staff work around awkward counters? Talk through workflow and customer-path review.
 - Hero: Make the space serve work
 - Includes: Workflow and customer-path review · Interior systems coordination · Finish and access planning
 - Signs: Staff work around awkward counters · Customers struggle to find the entrance · A leased space needs fitting out
@@ -728,7 +728,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Whole-home renovation
 
-- Card: Coordinate rooms, systems and finishes across a larger home renovation.
+- Card: Updates happened in mismatched phases? Look at whole-house scope map.
 - Hero: Bring every room into rhythm
 - Includes: Whole-house scope map · Structural and systems review · Finish schedule across rooms
 - Signs: Updates happened in mismatched phases · Several rooms need major work · You want one coordinated home plan
@@ -742,7 +742,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Hardwood flooring
 
-- Card: Explore wood species, plank formats and installation for your space.
+- Card: Old flooring is beyond refinishing? Ask about wood species and plank selection.
 - Hero: Bring real wood underfoot
 - Includes: Wood species and plank selection · Subfloor and moisture review · Layout and transition details
 - Signs: Old flooring is beyond refinishing · You want the feel of wood · A room needs new flooring
@@ -754,7 +754,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Luxury vinyl flooring
 
-- Card: Discuss durable vinyl plank and tile options for daily life.
+- Card: The floor scratches easily? Consider vinyl plank or tile choice.
 - Hero: Choose floors for everyday life
 - Includes: Vinyl plank or tile choice · Base preparation · Edge and doorway transitions
 - Signs: The floor scratches easily · Moisture reaches a busy entry · You need resilient flooring
@@ -766,7 +766,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Laminate flooring
 
-- Card: Compare laminate looks, finishes and installation requirements.
+- Card: The existing floor is worn? Talk through laminate color and texture.
 - Hero: Refresh rooms with a new surface
 - Includes: Laminate color and texture · Underlayment and base review · Expansion and trim details
 - Signs: The existing floor is worn · You want a wood-look surface · Several rooms need one visual line
@@ -778,7 +778,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Tile flooring
 
-- Card: Plan tile sizes, patterns and details for a considered finish.
+- Card: A bathroom floor is cracking? Look at tile size and pattern.
 - Hero: Give tile a thoughtful pattern
 - Includes: Tile size and pattern · Base and waterproofing review · Grout and edge finish
 - Signs: A bathroom floor is cracking · Wet areas need a new surface · You want a distinct tile pattern
@@ -790,7 +790,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Floor refinishing
 
-- Card: Discuss restoring the finish on an existing wood floor.
+- Card: Wood looks dull and scratched? Ask about existing finish and wear review.
 - Hero: Let the wood show again
 - Includes: Existing finish and wear review · Sanding and stain choices · Protective topcoat plan
 - Signs: Wood looks dull and scratched · Finish wears through in traffic paths · You want a different wood tone
@@ -802,7 +802,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Floor repair
 
-- Card: Assess worn, damaged or uneven areas and the repair options.
+- Card: Boards lift at the edge? Consider damaged board assessment.
 - Hero: Fix the patch that catches
 - Includes: Damaged board assessment · Matching material review · Level and transition correction
 - Signs: Boards lift at the edge · A tile is loose underfoot · A floor section feels soft
@@ -814,7 +814,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Subfloor preparation
 
-- Card: Start with the surface underneath for an informed installation plan.
+- Card: New flooring would sit unevenly? Talk through level and movement review.
 - Hero: Start with a steadier base
 - Includes: Level and movement review · Moisture and damage checks · Patch or underlayment plan
 - Signs: New flooring would sit unevenly · The floor creaks in one spot · Old material left ridges behind
@@ -826,7 +826,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Commercial flooring
 
-- Card: Plan flooring around traffic, use and your business schedule.
+- Card: Entry flooring wears quickly? Look at traffic and cleaning needs.
 - Hero: Fit floors around business days
 - Includes: Traffic and cleaning needs · Surface and installation planning · Phased access and transitions
 - Signs: Entry flooring wears quickly · Staff move equipment across seams · A business needs new flooring with less disruption
@@ -840,7 +840,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Interior painting
 
-- Card: Bring a new palette to living rooms, bedrooms and everyday spaces.
+- Card: Walls are scuffed in busy rooms? Ask about color and sheen choices.
 - Hero: Let the room feel new
 - Includes: Color and sheen choices · Wall and trim preparation · Clean edge and finish work
 - Signs: Walls are scuffed in busy rooms · The old color darkens the space · Patch marks show through paint
@@ -852,7 +852,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Exterior painting
 
-- Card: Refresh exterior surfaces with a plan tailored to your property.
+- Card: Paint peels near the eaves? Consider siding and trim condition.
 - Hero: Refresh the face of home
 - Includes: Siding and trim condition · Cleaning and surface preparation · Coating and color plan
 - Signs: Paint peels near the eaves · Trim fades faster than siding · Bare spots appear on wood
@@ -864,7 +864,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Cabinet painting
 
-- Card: Explore a new finish for existing cabinetry.
+- Card: Cabinet finish chips near handles? Talk through door and drawer preparation.
 - Hero: Give cabinets a fresh start
 - Includes: Door and drawer preparation · Finish and color sampling · Spray or brush approach
 - Signs: Cabinet finish chips near handles · The kitchen feels dated · Doors are sound but colors are tired
@@ -876,7 +876,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Deck and fence staining
 
-- Card: Discuss protection and color for exterior wood surfaces.
+- Card: Deck boards look gray? Look at wood condition and cleaning.
 - Hero: Bring warmth back to wood
 - Includes: Wood condition and cleaning · Stain color and opacity · End-grain and edge coverage
 - Signs: Deck boards look gray · Fence color fades unevenly · Water darkens bare wood
@@ -888,7 +888,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Surface preparation
 
-- Card: Plan the cleaning, sanding and preparation the surface needs.
+- Card: Old paint flakes under a finger? Ask about loose coating removal.
 - Hero: Give the finish a clean base
 - Includes: Loose coating removal · Patch and sanding work · Primer selection by surface
 - Signs: Old paint flakes under a finger · Patches show through the wall · Glossy surfaces resist new paint
@@ -900,7 +900,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Drywall repair
 
-- Card: Address holes, seams and surface damage before the finish.
+- Card: A door handle punched a hole? Consider hole and crack assessment.
 - Hero: Make the wall whole again
 - Includes: Hole and crack assessment · Joint and patch treatment · Texture blend before paint
 - Signs: A door handle punched a hole · A seam cracks along the ceiling · Old anchors left a row of marks
@@ -912,7 +912,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Decorative finishes
 
-- Card: Explore specialty textures and finishes with a considered color palette.
+- Card: A feature wall feels flat? Talk through finish sample and color palette.
 - Hero: Give one wall a voice
 - Includes: Finish sample and color palette · Texture application plan · Edge and lighting review
 - Signs: A feature wall feels flat · You want more depth than paint · Lighting reveals every plain surface
@@ -924,7 +924,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Commercial painting
 
-- Card: Plan a fresh finish around your business and its operating hours.
+- Card: High-touch walls look worn? Look at work-zone and access plan.
 - Hero: Refresh space around your hours
 - Includes: Work-zone and access plan · Durable finish selection · Phased coating schedule
 - Signs: High-touch walls look worn · The storefront color has faded · Customers see patchy repairs
@@ -938,7 +938,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Wood fencing
 
-- Card: Explore natural wood styles, heights and finishing details.
+- Card: Old boards lean after wind? Ask about board style and spacing.
 - Hero: Frame the yard with wood
 - Includes: Board style and spacing · Post and footing layout · Finish and gate details
 - Signs: Old boards lean after wind · You want a warmer boundary · Pets slip through fence gaps
@@ -950,7 +950,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Vinyl fencing
 
-- Card: Compare vinyl profiles and configurations for your property.
+- Card: Fence panels discolor? Consider vinyl profile and color.
 - Hero: Keep the boundary clean-lined
 - Includes: Vinyl profile and color · Post spacing and reinforcement · Gate and corner details
 - Signs: Fence panels discolor · You want fewer finish chores · The yard needs a clear boundary
@@ -962,7 +962,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Metal fencing
 
-- Card: Discuss metal fence styles, finishes and property boundaries.
+- Card: An open edge needs a barrier? Talk through metal style and finish.
 - Hero: Give the boundary definition
 - Includes: Metal style and finish · Post and panel layout · Gate hardware coordination
 - Signs: An open edge needs a barrier · Existing rails have rust · You want clear views through fencing
@@ -974,7 +974,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Privacy fencing
 
-- Card: Create a more private outdoor setting with a considered fence plan.
+- Card: Neighbors overlook the patio? Look at sightline and height review.
 - Hero: Make outdoor time feel private
 - Includes: Sightline and height review · Panel material and spacing · Gate and setback planning
 - Signs: Neighbors overlook the patio · A street view reaches the yard · Outdoor seating feels exposed
@@ -986,7 +986,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Gates
 
-- Card: Plan access, hardware and gates that complement the fence.
+- Card: The gate drags on the path? Ask about gate opening and swing.
 - Hero: Make the entry easy to use
 - Includes: Gate opening and swing · Hinge and latch selection · Post strength and alignment
 - Signs: The gate drags on the path · A latch no longer catches · You need wider yard access
@@ -998,7 +998,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Fence repair
 
-- Card: Assess damaged sections, posts and hardware for targeted repair.
+- Card: A fence section sways? Consider loose post assessment.
 - Hero: Steady the weak fence section
 - Includes: Loose post assessment · Broken rail and board review · Matched replacement parts
 - Signs: A fence section sways · Boards split near fasteners · The gate pulls a post loose
@@ -1010,7 +1010,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Pool fencing
 
-- Card: Discuss a pool enclosure suited to your property and applicable requirements.
+- Card: The pool area lacks a separate edge? Talk through pool-edge layout.
 - Hero: Shape a clear pool boundary
 - Includes: Pool-edge layout · Gate and latch placement · Panel and sightline choices
 - Signs: The pool area lacks a separate edge · A gate does not self-close · You want clearer yard zones
@@ -1022,7 +1022,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Commercial fencing
 
-- Card: Plan access and boundaries for your commercial property.
+- Card: Delivery areas lack separation? Look at perimeter and entry review.
 - Hero: Define access for the site
 - Includes: Perimeter and entry review · Durable panel selection · Gate and traffic coordination
 - Signs: Delivery areas lack separation · An old perimeter is damaged · Vehicle access needs control
@@ -1036,7 +1036,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Garage door installation
 
-- Card: Choose a door style and operating system for your home.
+- Card: The old door is badly worn? Ask about door size and style review.
 - Hero: Welcome home with a better door
 - Includes: Door size and style review · Track and opener compatibility · Seal and trim details
 - Signs: The old door is badly worn · You want a different facade look · A new garage needs its door
@@ -1048,7 +1048,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Garage door repair
 
-- Card: Discuss unusual noise, damage or trouble opening and closing.
+- Card: The door sticks halfway? Consider noise and movement diagnosis.
 - Hero: Get the door moving safely
 - Includes: Noise and movement diagnosis · Track and roller review · Targeted part replacement
 - Signs: The door sticks halfway · Grinding starts during travel · One side hangs lower
@@ -1060,7 +1060,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Spring replacement
 
-- Card: Have a trained professional assess and replace worn door springs.
+- Card: The door feels suddenly heavy? Talk through spring condition assessment.
 - Hero: Restore the door's balance
 - Includes: Spring condition assessment · Door weight and sizing · Balanced operation testing
 - Signs: The door feels suddenly heavy · A spring has a visible gap · The opener strains to lift
@@ -1072,7 +1072,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Opener installation
 
-- Card: Explore opener options and compatibility with your door.
+- Card: Manual lifting has become difficult? Look at opener type and force fit.
 - Hero: Make every arrival smoother
 - Includes: Opener type and force fit · Rail and mounting location · Remote and safety setup
 - Signs: Manual lifting has become difficult · The garage has no powered opener · An old opener lacks the features you want
@@ -1084,7 +1084,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Opener repair
 
-- Card: Get help diagnosing an opener that is not working as expected.
+- Card: The remote gets no response? Ask about power and control checks.
 - Hero: Find the missing opener signal
 - Includes: Power and control checks · Drive and sensor assessment · Repair or replacement options
 - Signs: The remote gets no response · The opener hums but stays still · The door reverses unexpectedly
@@ -1096,7 +1096,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Panel replacement
 
-- Card: Discuss replacing damaged panels and matching the existing door.
+- Card: A lower panel is dented? Consider damaged panel measurement.
 - Hero: Restore the door's front
 - Includes: Damaged panel measurement · Color and profile matching · Hinge and seal connections
 - Signs: A lower panel is dented · One section has rusted through · A panel cracks near its hinge
@@ -1108,7 +1108,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Weather sealing
 
-- Card: Address gaps around the door and discuss sealing options.
+- Card: Daylight shows under the door? Talk through bottom seal fit.
 - Hero: Close the gaps around garage
 - Includes: Bottom seal fit · Side and top weatherstrip · Threshold and drainage review
 - Signs: Daylight shows under the door · Wind blows leaves inside · Rain reaches the garage floor
@@ -1120,7 +1120,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Garage door maintenance
 
-- Card: Arrange an assessment of moving parts, balance and operation.
+- Card: The door rattles more than before? Look at roller and hinge inspection.
 - Hero: Keep the door running evenly
 - Includes: Roller and hinge inspection · Balance and track review · Opener safety test
 - Signs: The door rattles more than before · Moving parts look dry · The door no longer closes smoothly
@@ -1134,7 +1134,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Pest inspections
 
-- Card: Start with an inspection to understand activity and possible entry points.
+- Card: Droppings appear in a cupboard? Ask about evidence and entry-point review.
 - Hero: Find where activity begins
 - Includes: Evidence and entry-point review · Moisture and shelter observations · Findings and next-step discussion
 - Signs: Droppings appear in a cupboard · Scratching comes from a wall · You keep seeing insects indoors
@@ -1146,7 +1146,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Ant control
 
-- Card: Discuss ant activity and treatment options for your property.
+- Card: Ants cross the kitchen counter? Consider trail and nest observation.
 - Hero: Trace the ant trail home
 - Includes: Trail and nest observation · Food and moisture source review · Treatment route planning
 - Signs: Ants cross the kitchen counter · Trails return after wiping · Small mounds appear near paving
@@ -1158,7 +1158,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Rodent control
 
-- Card: Assess signs of rodents and possible exclusion measures.
+- Card: Scratching sounds at night? Talk through rodent sign assessment.
 - Hero: Keep unwanted guests outside
 - Includes: Rodent sign assessment · Entry gap mapping · Exclusion and monitoring plan
 - Signs: Scratching sounds at night · Chew marks appear on stored items · Droppings collect in the garage
@@ -1170,7 +1170,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Termite inspections
 
-- Card: Arrange a professional inspection of suspected termite activity.
+- Card: Mud tubes appear on a wall? Look at wood and soil contact review.
 - Hero: Look beneath the surface
 - Includes: Wood and soil contact review · Visible activity assessment · Inspection findings and options
 - Signs: Mud tubes appear on a wall · Wood sounds hollow when tapped · A swarm appears near a window
@@ -1182,7 +1182,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Cockroach control
 
-- Card: Discuss observed activity and an appropriate control approach.
+- Card: Roaches scatter when lights come on? Ask about activity and hiding-place review.
 - Hero: Follow activity to its source
 - Includes: Activity and hiding-place review · Food and water source checks · Treatment and follow-up plan
 - Signs: Roaches scatter when lights come on · Dark specks collect near cabinets · Activity returns behind appliances
@@ -1194,7 +1194,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Spider control
 
-- Card: Assess spider activity around your home and available options.
+- Card: Webs reappear by doorways? Consider web and activity review.
 - Hero: Make corners less inviting
 - Includes: Web and activity review · Entry and shelter checks · Targeted control discussion
 - Signs: Webs reappear by doorways · Spiders gather around porch lights · Egg sacs show in corners
@@ -1206,7 +1206,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Mosquito control
 
-- Card: Explore ways to manage mosquito activity around outdoor areas.
+- Card: Bites begin at dusk? Talk through standing-water survey.
 - Hero: Take back the evening yard
 - Includes: Standing-water survey · Breeding-area reduction · Outdoor treatment options
 - Signs: Bites begin at dusk · Water sits in outdoor containers · The patio is hard to use after rain
@@ -1218,7 +1218,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Preventive maintenance
 
-- Card: Plan recurring assessments and prevention suited to your property.
+- Card: Pests return each season? Look at seasonal risk review.
 - Hero: Stay ahead of pest activity
 - Includes: Seasonal risk review · Entry and moisture checks · Monitoring schedule planning
 - Signs: Pests return each season · Gaps appear near utility lines · You want fewer surprises indoors
@@ -1232,7 +1232,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Window replacement
 
-- Card: Explore frame styles, glazing choices and the scope of replacing existing windows.
+- Card: Windows stick when opened? Ask about existing opening measurements.
 - Hero: Let the room see more
 - Includes: Existing opening measurements · Frame and glass choices · Trim and seal details
 - Signs: Windows stick when opened · Drafts reach the sofa · Frames show visible rot
@@ -1244,7 +1244,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Window installation
 
-- Card: Plan openings, measurements and installation details for your project.
+- Card: A renovation needs more daylight? Consider new opening and sightline plan.
 - Hero: Put daylight in its place
 - Includes: New opening and sightline plan · Frame and glazing selection · Flashing and interior finish
 - Signs: A renovation needs more daylight · A new room has bare openings · You want a view in another wall
@@ -1256,7 +1256,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Energy-efficient windows
 
-- Card: Discuss glazing and frame options suited to your home; performance depends on the selected product and installation.
+- Card: Rooms overheat near glass? Talk through glazing and frame comparison.
 - Hero: Make comfort part of the view
 - Includes: Glazing and frame comparison · Sun exposure review · Installation and seal planning
 - Signs: Rooms overheat near glass · Cold drafts reach the window seat · Existing panes fog between layers
@@ -1268,7 +1268,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Entry doors
 
-- Card: Compare materials, finishes and entry-door styles for the way you come home.
+- Card: The front door drags? Look at door material and style.
 - Hero: Make the first step feel right
 - Includes: Door material and style · Lockset and swing planning · Threshold and weather seal
 - Signs: The front door drags · Daylight shows by the jamb · You want a new entry look
@@ -1280,7 +1280,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Patio doors
 
-- Card: Explore sliding or hinged doors that connect your home and outdoor space.
+- Card: The patio door is hard to slide? Ask about opening and traffic flow.
 - Hero: Open the route outdoors
 - Includes: Opening and traffic flow · Sliding or hinged options · Threshold and water management
 - Signs: The patio door is hard to slide · You want a wider garden view · The threshold lets water in
@@ -1292,7 +1292,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Sliding glass doors
 
-- Card: Plan sightlines, access and a properly fitted sliding glass door.
+- Card: Glass panels drag in the track? Consider panel and track selection.
 - Hero: Keep the view moving freely
 - Includes: Panel and track selection · Opening measurements · Roller and seal setup
 - Signs: Glass panels drag in the track · The slider no longer latches · You want more daylight to the patio
@@ -1304,7 +1304,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### French doors
 
-- Card: Discuss paired-door layouts, swing clearance and finishing details.
+- Card: A single door feels too narrow? Talk through paired-door swing plan.
 - Hero: Give the opening a welcome
 - Includes: Paired-door swing plan · Frame and glazing choices · Hardware and astragal details
 - Signs: A single door feels too narrow · You want a garden-facing entry · The current doors leak at the center
@@ -1316,7 +1316,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Window and door repair
 
-- Card: Describe sticking, worn seals or damaged components so the contractor can assess repair options.
+- Card: A window will not stay open? Look at sticking or leak diagnosis.
 - Hero: Set the opening right again
 - Includes: Sticking or leak diagnosis · Hardware and seal review · Targeted adjustment or replacement
 - Signs: A window will not stay open · A door catches on the frame · Water appears below the sill
@@ -1330,7 +1330,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Solar panel installation
 
-- Card: Discuss your roof, electricity use and a proposed panel layout before choosing a system.
+- Card: You are considering roof solar? Ask about roof and shade review.
 - Hero: Put sunlight to work thoughtfully
 - Includes: Roof and shade review · Panel and inverter layout · Connection and monitoring plan
 - Signs: You are considering roof solar · A sunny roof area goes unused · Energy use has changed at home
@@ -1342,7 +1342,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Solar battery storage
 
-- Card: Explore storage capacity, compatibility and which loads a proposed system could support.
+- Card: Outages interrupt key circuits? Consider backup load priorities.
 - Hero: Keep stored energy in mind
 - Includes: Backup load priorities · Battery and inverter compatibility · Placement and control planning
 - Signs: Outages interrupt key circuits · Solar power is unused at midday · You want to compare storage options
@@ -1354,7 +1354,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Solar system design
 
-- Card: Plan equipment and layout around the property, utility requirements and your priorities.
+- Card: A roof has several orientations? Talk through shade and roof geometry.
 - Hero: Give the array a clear plan
 - Includes: Shade and roof geometry · Equipment sizing options · Electrical connection route
 - Signs: A roof has several orientations · You want to plan before installing · Trees shade part of the roof
@@ -1366,7 +1366,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Solar panel maintenance
 
-- Card: Discuss condition checks, access and care appropriate for the installed equipment.
+- Card: An inverter shows a warning? Look at visible panel and mounting review.
 - Hero: Keep an eye on the array
 - Includes: Visible panel and mounting review · Connection and inverter checks · Performance concern discussion
 - Signs: An inverter shows a warning · One panel looks damaged · Production has changed unexpectedly
@@ -1378,7 +1378,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Solar panel cleaning
 
-- Card: Ask about safe access and a cleaning approach suited to the panels and manufacturer guidance.
+- Card: Dust coats the panel glass? Ask about panel soil and access review.
 - Hero: Let panels face the sun
 - Includes: Panel soil and access review · Manufacturer care guidance · Gentle cleaning approach
 - Signs: Dust coats the panel glass · Bird droppings collect on modules · A nearby tree sheds debris
@@ -1390,7 +1390,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Solar inverter replacement
 
-- Card: Review the existing equipment and compatible replacement options.
+- Card: The inverter display is dark? Consider existing inverter diagnosis.
 - Hero: Restore the system's conversion
 - Includes: Existing inverter diagnosis · Compatible replacement selection · Monitoring reconnection plan
 - Signs: The inverter display is dark · Production stopped despite sun · Fault codes keep returning
@@ -1402,7 +1402,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Solar removal and reinstallation
 
-- Card: Coordinate system removal and reinstallation when roof work is planned.
+- Card: Roof replacement is scheduled? Talk through panel and racking inventory.
 - Hero: Make room for roof work
 - Includes: Panel and racking inventory · Safe removal sequence · Reinstallation and test plan
 - Signs: Roof replacement is scheduled · Roof leaks sit below the array · Panels block needed roof access
@@ -1414,7 +1414,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Solar system monitoring
 
-- Card: Understand the available monitoring tools and how to review system performance.
+- Card: The monitoring app stopped updating? Look at portal and data access review.
 - Hero: See what the system does
 - Includes: Portal and data access review · Alert and trend setup · Reading performance reports
 - Signs: The monitoring app stopped updating · You cannot tell when output drops · Alerts go to an old email
@@ -1428,7 +1428,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Concrete driveways
 
-- Card: Explore concrete driveways with a plan for driveway footprint and slope.
+- Card: The driveway has deep cracks? Ask about driveway footprint and slope.
 - Hero: Give the arrival a firm surface
 - Includes: Driveway footprint and slope · Base and reinforcement plan · Joint and finish layout
 - Signs: The driveway has deep cracks · Water runs toward the garage · Tires sink into gravel
@@ -1440,7 +1440,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Concrete patios
 
-- Card: Explore concrete patios with a plan for patio shape and elevation.
+- Card: The yard has no level seating area? Consider patio shape and elevation.
 - Hero: Make a place to gather
 - Includes: Patio shape and elevation · Patio base and drainage preparation · Surface texture and joints
 - Signs: The yard has no level seating area · Pavers rock beneath chairs · Water sits where you want a table
@@ -1452,7 +1452,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Stamped concrete
 
-- Card: Explore stamped concrete with a plan for pattern and color samples.
+- Card: Plain paving feels out of place? Talk through pattern and color samples.
 - Hero: Give concrete its own texture
 - Includes: Pattern and color samples · Slab and stamp timing · Sealer and edge details
 - Signs: Plain paving feels out of place · You want a patterned patio · Existing hardscape lacks character
@@ -1464,7 +1464,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Concrete walkways
 
-- Card: Explore concrete walkways with a plan for route and width planning.
+- Card: A muddy path leads to the door? Look at route and width planning.
 - Hero: Make the path easy to follow
 - Includes: Route and width planning · Grade and base setup · Slip-conscious surface finish
 - Signs: A muddy path leads to the door · Walkway panels have lifted · Guests cross the lawn to enter
@@ -1476,7 +1476,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Concrete foundations
 
-- Card: Explore concrete foundations with a plan for site and soil review.
+- Card: A new structure needs support? Ask about site and soil review.
 - Hero: Start with sound footing
 - Includes: Site and soil review · Footing and reinforcement plan · Form and pour coordination
 - Signs: A new structure needs support · Existing footings show movement · A building plan reaches the ground stage
@@ -1488,7 +1488,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Concrete slabs
 
-- Card: Explore concrete slabs with a plan for slab size and use.
+- Card: A shed sits on bare soil? Consider slab size and use.
 - Hero: Build from a level base
 - Includes: Slab size and use · Base and vapor needs · Reinforcement and joint design
 - Signs: A shed sits on bare soil · A garage floor has failed · You need a flat working surface
@@ -1500,7 +1500,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Concrete repair
 
-- Card: Explore concrete repair with a plan for crack and movement assessment.
+- Card: A corner has broken away? Talk through crack and movement assessment.
 - Hero: Fix the surface that failed
 - Includes: Crack and movement assessment · Patch or replacement options · Edge and finish matching
 - Signs: A corner has broken away · Trip edges appear on paving · A patch keeps crumbling
@@ -1512,7 +1512,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Decorative concrete
 
-- Card: Explore decorative concrete with a plan for color and texture direction.
+- Card: A courtyard feels too plain? Look at color and texture direction.
 - Hero: Put character in the ground
 - Includes: Color and texture direction · Surface preparation · Border and finish details
 - Signs: A courtyard feels too plain · You want a custom walkway look · An old surface needs visual renewal
@@ -1526,7 +1526,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Pool design
 
-- Card: Explore pool design with a plan for pool footprint and depth.
+- Card: The yard has room for a pool? Ask about pool footprint and depth.
 - Hero: Shape the water around life
 - Includes: Pool footprint and depth · Entry and seating ideas · Deck and equipment placement
 - Signs: The yard has room for a pool · You need a safer entry layout · The current plan ignores seating
@@ -1538,7 +1538,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Pool construction
 
-- Card: Explore pool construction with a plan for excavation and shell sequence.
+- Card: A pool design is ready to build? Consider excavation and shell sequence.
 - Hero: Bring the pool plan to life
 - Includes: Excavation and shell sequence · Plumbing and equipment coordination · Tile and finish installation
 - Signs: A pool design is ready to build · The yard has no swimming space · You want a new backyard center
@@ -1550,7 +1550,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Pool remodeling
 
-- Card: Explore pool remodeling with a plan for existing shell assessment.
+- Card: The pool feels dated? Talk through existing shell assessment.
 - Hero: Make the old pool fit again
 - Includes: Existing shell assessment · Layout and feature changes · Finish and deck coordination
 - Signs: The pool feels dated · Steps no longer fit your routine · Decking and coping are worn
@@ -1562,7 +1562,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Pool resurfacing
 
-- Card: Explore pool resurfacing with a plan for existing finish condition.
+- Card: The finish feels rough? Look at existing finish condition.
 - Hero: Give the pool a fresh skin
 - Includes: Existing finish condition · Surface and color choice · Preparation and application plan
 - Signs: The finish feels rough · Stains persist after cleaning · Plaster is visibly worn
@@ -1574,7 +1574,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Pool equipment
 
-- Card: Explore pool equipment with a plan for pump and filter fit.
+- Card: The pump is unusually loud? Ask about pump and filter fit.
 - Hero: Keep water circulating well
 - Includes: Pump and filter fit · Heater and control options · Plumbing and power connections
 - Signs: The pump is unusually loud · Water circulation seems weak · Controls no longer respond
@@ -1586,7 +1586,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Pool tile and coping
 
-- Card: Explore pool tile and coping with a plan for waterline tile choices.
+- Card: Waterline tile is loose? Consider waterline tile choices.
 - Hero: Frame the water with detail
 - Includes: Waterline tile choices · Coping profile and edge · Joint and seal treatment
 - Signs: Waterline tile is loose · Coping stones shift underfoot · Edges look chipped or worn
@@ -1598,7 +1598,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Pool decking
 
-- Card: Explore pool decking with a plan for deck layout and drainage.
+- Card: The deck gets slick when wet? Talk through deck layout and drainage.
 - Hero: Make the poolside comfortable
 - Includes: Deck layout and drainage · Surface texture and color · Expansion and edge details
 - Signs: The deck gets slick when wet · Cracks spread near the pool · Chairs sit on uneven paving
@@ -1610,7 +1610,7 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
 
 ### Pool maintenance
 
-- Card: Explore pool maintenance with a plan for water and equipment checks.
+- Card: Water turns cloudy? Look at water and equipment checks.
 - Hero: Keep the water inviting
 - Includes: Water and equipment checks · Cleaning and debris removal · Seasonal care discussion
 - Signs: Water turns cloudy · Leaves collect at the skimmer · Filters need frequent attention

@@ -17,11 +17,13 @@ test('#012 hidden contact regions collapse; required facts, legal links and publ
  t=(await api('/tenants/'+t.id,'PUT',{version:t.version,settings:s})).tenant;
  assert.doesNotMatch(await footer(root),/QA-LICENSE-001/,'draft required facts stay private');
  assert.equal((await request(root+'?preview=1','GET',undefined,null)).status,401);
- const preview=await footer(root+'?preview=1',admin);assert.match(preview,/ZZ License QA-LICENSE-001/);assert.match(preview,/\/legal\/privacy\?preview=1/);
+ const preview=await footer(root+'?preview=1',admin);assert.doesNotMatch(preview,/QA-LICENSE-001/);assert.match(preview,/\/legal\/privacy\?preview=1/);
+ assert.match(await(await request(root+'/legal?preview=1','GET',undefined,admin)).text(),/ZZ License QA-LICENSE-001/);
  t=await publish(t);
  for(const path of [root,root+'/pricing',root+'/blog']){
-  const html=await footer(path);assert.match(html,/class="footer-required-license">ZZ License QA-LICENSE-001/);assert.match(html,/QA disclosure fixture/);assert.equal((html.match(/QA-LICENSE-001/g)||[]).length,1);assert.doesNotMatch(html,/footer-company|footer-locations|>Bonded<|>Insured</);
+  const html=await footer(path);assert.doesNotMatch(html,/QA-LICENSE-001|QA disclosure fixture|footer-policy/);assert.doesNotMatch(html,/footer-company|footer-locations|>Bonded<|>Insured</);
  }
+ const legal=await(await request(root+'/legal','GET',undefined,null)).text();assert.match(legal,/ZZ License QA-LICENSE-001/);assert.match(legal,/QA disclosure fixture/);
  // The actual public legal pages must use the published snapshot, including after a draft rename.
  s=structuredClone(t.settings);s.name='Draft-only legal name';t=(await api('/tenants/'+t.id,'PUT',{version:t.version,settings:s})).tenant;
  assert.doesNotMatch(await(await request(root+'/legal/privacy','GET',undefined,null)).text(),/Draft-only legal name/);
@@ -35,11 +37,12 @@ test('#012 multiple locations, optional facts, custom links, financing details a
  let t=(await api('/tenants','POST',f)).tenant;t=await publish(t);const root='/s/'+t.slug,html=await footer(root);
  assert.equal((html.match(/class="footer-location"/g)||[]).length,2);assert.doesNotMatch(html,/Empty location heading/);
  assert.match(html,/tel:\+18055550111/);assert.match(html,/mailto:oxnard-office@example.test/);assert.match(html,/>Insured</);assert.doesNotMatch(html,/>Bonded</);
- assert.match(html,/QA &lt;script&gt;alert\(1\)&lt;\/script&gt; &amp; policy/);assert.doesNotMatch(html,/<script>/);
+ assert.doesNotMatch(html,/QA &lt;script&gt;alert\(1\)&lt;\/script&gt; &amp; policy/);
+ const legal=await(await request(root+'/legal','GET',undefined,null)).text();assert.match(legal,/QA &lt;script&gt;alert\(1\)&lt;\/script&gt; &amp; policy/);assert.doesNotMatch(legal,/<script>alert/);
  assert.match(html,/href="https:\/\/example.test\/privacy"/);assert.match(html,/href="https:\/\/example.test\/terms"/);
- assert.match(html,/class="footer-financing"/);assert.match(html,/<summary>Financing details<\/summary>/);assert.match(html,/Estimate only; partner underwriting applies/);
+ assert.doesNotMatch(html,/class="footer-financing"|Estimate only; partner underwriting applies/);assert.match(legal,/Estimate only; partner underwriting applies/);
  let s=structuredClone(t.settings);s.platform.financing.enabled=false;s.platform.footer.locations.forEach(l=>l.visible=structuredClone(hiddenFooterFields));s.platform.footer.visible=structuredClone(hiddenFooterFields);
  t=(await api('/tenants/'+t.id,'PUT',{version:t.version,settings:s})).tenant;t=await publish(t);
- const off=await footer(root);assert.doesNotMatch(off,/footer-financing|footer-locations|footer-company|>Insured</);assert.match(off,/footer-required-license/);
+ const off=await footer(root);assert.doesNotMatch(off,/footer-financing|footer-locations|footer-company|>Insured</);assert.match(await(await request(root+'/legal','GET',undefined,null)).text(),/License QA-LICENSE-001/);
  console.log('PASS two visible locations, hidden empty third location, permitted optional facts, escaped policy, custom links and financing on/off');
 });

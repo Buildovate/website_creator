@@ -4,9 +4,13 @@ import {source, plannedTrades} from './service-content-source.mjs';
 const root = new URL('../', import.meta.url);
 const library = JSON.parse(readFileSync(new URL('public/trade-library.json', root), 'utf8'));
 const blurbs = JSON.parse(readFileSync(new URL('public/service-copy.json', root), 'utf8'));
+// The runtime library owns the editorial card line. Rebuilding scope/process
+// copy must not silently replace reviewed card writing with template fallback.
+const editorialCards = JSON.parse(readFileSync(new URL('public/service-content.json', root), 'utf8'));
 const content = {};
 const normalized = value => value.trim().toLocaleLowerCase('en-US');
 const seen = new Map();
+const openings = new Map();
 
 for (const [trade, block] of Object.entries(source)) {
   const expected = library[trade] || plannedTrades[trade];
@@ -22,7 +26,13 @@ for (const [trade, block] of Object.entries(source)) {
     const process = stepText.split(';').map(value => value.trim());
     if (includes.length !== 3 || signs.length !== 3 || process.length !== 4) throw Error(`Wrong item count: ${trade} / ${name}`);
     if (headline.split(/\s+/).length < 4 || headline.split(/\s+/).length > 6) throw Error(`Hero must have 4–6 words: ${trade} / ${name}`);
-    const card = blurbs[trade]?.[key] || `Explore ${name.toLowerCase()} with a plan for ${includes[0].toLowerCase()}.`;
+    const card = editorialCards[trade]?.[key]?.card || blurbs[trade]?.[key];
+    if(!card)throw Error(`Write a card blurb before adding ${trade} / ${name}.`);
+    const opening=(card.toLowerCase().match(/[a-z0-9]+/g)||[]).slice(0,3).join(' ');
+    if(!openings.has(trade))openings.set(trade,new Set());
+    if(openings.get(trade).has(opening))throw Error(`Repeated card opening in ${trade}: ${opening}`);
+    openings.get(trade).add(opening);
+    if(normalized(card).includes(key))throw Error(`Card repeats its service title: ${trade} / ${name}`);
     // Questions draw on the homeowner symptoms and scope selected for this
     // exact service; the third gets the contractor's actual service region.
     const faq = [
@@ -54,7 +64,7 @@ writeFileSync(new URL('public/service-content.json', root), JSON.stringify(conte
 const lines = [
   '# Service content library',
   '',
-  'Generated from `scripts/service-content-source.mjs` using `node scripts/build-service-content.mjs`. The JSON file is the runtime data source. Concrete and Pools are prepared for their queued rollouts; the current live trade selector has 14 trades.',
+  'Generated from `scripts/service-content-source.mjs` and reviewed card blurbs in `public/service-content.json` using `node scripts/build-service-content.mjs`. The JSON file is the runtime data source. Concrete and Pools are prepared for their queued rollouts; the current live trade selector has 14 trades.',
   '',
   'Every entry has a unique card blurb, a four-to-six-word hero, three specific scope items, three homeowner signs, four process steps, and three FAQs. The third FAQ receives the contractor’s city and service region at render time. No cost, credential, warranty, statistic, or legal claim is supplied by this library.',
   '',

@@ -54,18 +54,19 @@ assert.doesNotMatch(forms.textarea('Text','text','</textarea><script>bad</script
 assert.match(forms.select('Trade','trade',['General Contractors'],'General contracting'),/selected/);
 
 // Public inquiries do not acquire a workspace session, and failed forms retain their values.
-let reset=0,posts=0,fail=false;
+let reset=0,posts=0,fail=false,redirect='';
+const leadStorage=new Map();
 const button={disabled:false},status={textContent:''};
 const form={dataset:{slug:'fixture',preview:'true'},elements:{namedItem:()=>({checked:true})},querySelector:s=>s==='button'?button:status,reset:()=>reset++};
 class FixtureData { *[Symbol.iterator](){yield ['name','Local test'];yield ['service','Repair'];yield ['message','Test request'];} }
 const inquiries=await moduleAt('src/client/site/inquiries.ts',{
-  document:{querySelectorAll:()=>[form]},FormData:FixtureData,location:{pathname:'/s/fixture',search:''},URLSearchParams,
+  document:{querySelectorAll:()=>[form]},FormData:FixtureData,location:{pathname:'/s/fixture',search:'',assign:path=>{redirect=path}},sessionStorage:{setItem:(key,value)=>leadStorage.set(key,value)},URLSearchParams,
   fetch:async(url,options)=>{posts++;assert.equal(url,'/api/public/fixture/inquiries');assert.equal(JSON.parse(options.body).consent,true);return Response.json(fail?{error:'Please retry.'}:{ok:true},{status:fail?503:200});},
 });
 inquiries.mountInquiries();
 await form.onsubmit({preventDefault(){}});assert.equal(posts,0);
 form.dataset.preview='false';await form.onsubmit({preventDefault(){}});
-assert.equal(posts,1);assert.equal(reset,1);assert.equal(button.disabled,false);assert.match(status.textContent,/saved/);
+assert.equal(posts,1);assert.equal(reset,1);assert.equal(button.disabled,false);assert.equal(redirect,'/s/fixture/thank-you');assert.equal(JSON.parse(leadStorage.get('buildovate-lead-submitted')).site,'fixture');
 fail=true;await form.onsubmit({preventDefault(){}});
 assert.equal(reset,1);assert.equal(button.disabled,false);assert.equal(status.textContent,'Please retry.');
 
