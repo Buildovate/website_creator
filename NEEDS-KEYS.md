@@ -71,3 +71,6 @@ K23 remains missing. The local framework supports administrator-supplied, review
 - For #041D Locksmith, what California locksmith license number/type must appear in site copy and advertising, including emergency ads and mobile views?
 - For #029V/#029C, what reviewed language is required for address-specific rebates and tax credits, and for storm insurance-claim help without implying eligibility, coverage or an outcome?
 - For #029V, what TCPA-compliant language and recording are required for the estimator's initially unticked call/text consent checkbox, including a lead that declines marketing consent?
+- For #030M, what contractor consent and public disclosure, if any, are required for AI-written social posts, including posts edited or auto-approved by category?
+- For #030M, what homeowner/customer permissions and source attribution are required before using completed-project photos or real reviews in social posts on each network?
+- For #030M, what financing advertising disclosures must appear within each network's post, creative, link preview and destination when a monthly payment is shown?

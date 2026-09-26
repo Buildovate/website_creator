@@ -756,6 +756,11 @@ The 17 trade families retain their existing templates or queued rollout slots. [
 - State: **Not started — drafting only**. From an approved CRM job close, draft a neighborhood-level “just finished a job near you” post for one-tap contractor approval; never reveal an exact home or claim a job without permission. Provide a consented recommendation-request text, a Neighbor offer landing page with #029V, and drafts mirroring #029C's verified weather offers. Network/business profile data comes from #015Q.
 - Done when: Draft-only boundary, homeowner/job consent, geoprivacy, per-post approval, duplicate prevention, missing CRM/alert/offer, audit history and phone/desktop accessibility pass. A future direct-posting integration is contingent on checking current Nextdoor business API/application/licensing access; do not assume access or auto-post now.
 
+### #030M — Metricool social auto-posting for contractors (Sol High)
+
+- State: **Not started — backlog only**. Build a contractor-facing monthly 20-post pack (Growth light pack: 12) from real approved jobs, reviews, offers, services, cities and price-book facts. Use Metricool **REST API** on Advanced as the production engine, one brand per contractor and contractor-owned account connections; its MCP is internal-only. Default to contractor approval, track post-specific UTM leads, pause disconnected networks, prevent duplicate retries, and report only measured results. Keep Nextdoor under #030N and other unsupported channels draft-only. Full networks, connect flow, approvals, costs, plan entitlements, K23 questions and acceptance gates are in [SOCIAL-AUTOPOSTING.md](docs/product/SOCIAL-AUTOPOSTING.md).
+- Launch blockers: Written Metricool approval of this product use on Advanced, verified live API/branding contract, and K23 review. Custom pricing beyond 50 brands is an open #015G cost question. Verify desktop/390px, keyboard, reduced motion, entitlement and real cost logging before release.
+
 ### #029 — Apply the approved page system to HVAC
 
 - State: **Not started** · Estimate: **6h** (≤1 day).
