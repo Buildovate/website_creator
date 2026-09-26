@@ -174,3 +174,8 @@ The stack uses one pinned stage with intact cards fading/scaling in place, inclu
 ## #004I-v4 — current continuous process handoffs
 
 Supersedes the v3 disjoint fade and final fade-before-release: complete panels overlap with a minimum peak opacity of 0.6; copy/captions use disjoint legibility intervals and the active step switches at the midpoint. The compact pinned scene retains its introduction. Decide releases intact, with tabs/introduction clearing before header contact and stats entering directly below. Phone B specificity is corrected so every image remains 200px; enhanced cards share the measured content height. All v3 trust/decode/fallback behavior and #004G-v4 drone code/media are preserved. [V4 baseline and final acceptance](../build-evidence/004I-v4/README.md).
+
+
+## #004W-v4 service and core visuals
+
+`src/service-detail.js` is the sole service renderer, including the compatibility export in `website-pages.js`. It preserves authored content and data gates. `public/service-art.json` maps 132 unique heroes; `public/service-media.json` maps 264 unique scope/process photographs. `service-showpiece.js` supplies trade-correct dimensional SVG assemblies; its small browser controller animates only the signature section with reversible scroll progress and anchored labels, with static reduced-motion/no-JS output. Generated photos are representative scope media, not customer projects. Full previews use Sample tags and noindex; published comparison requires distinct owned photos. Financing uses the shared site typography/palette and preview-only unit loan math with adjacent APR/term, never an inferred service price. `city-editorial.js` holds the reviewed local copy. [Evidence](../build-evidence/004W-v4/README.md).

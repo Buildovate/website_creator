@@ -31,7 +31,7 @@ for(let count=1;count<=3;count++){
  assert.match(choices,/<summary class="foundation-button">Get Financing Options/);assert.doesNotMatch(choices,/<details[^>]*\sopen/);
  assert.equal((choices.match(/class="finance-option-link"/g)||[]).length,count);
  for(let i=0;i<providers.length;i++)assert.equal(choices.includes('href="https://merchant.example.test/'+providers[i]+'"'),i<count);
- assert.match(choices,/not matched loan offers/);assert.match(choices,/not sent to a lender/);assert.match(choices,/subject to change based on approved credit/);
+ assert.match(choices,/not matched loan offers/);assert.match(choices,/not sent to a lender/);assert.doesNotMatch(choices,/subject to change based on approved credit/); // Legal copy lives on /legal.
  assert.doesNotMatch(html,/foundation-lenders|foundation-provider-mark/);
  assert.ok(html.indexOf('Get Financing Options')>html.indexOf('data-finance-result'));
  assert.ok(html.indexOf('Get Financing Options')<html.indexOf('finance-comparison'));

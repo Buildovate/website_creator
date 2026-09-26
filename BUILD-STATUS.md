@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## #004W-v4 — showpiece fix pass
+
+**Done for the requested local fix pass.** All 284 requested Higgsfield stills are installed (20 missing heroes + 264 section photos), all 132 services have distinct hero/scope/process assets, and legacy authored Roofing services use the shared renderer. Rich AR assemblies, unique service/city copy, consistent financing and estimator-entry styling, sample-only previews and empty published-state suppression are verified. Build/typecheck, 50 regression scripts, 166 page browser checks, 202 platform states, the existing contacts/callback/linkage browser suites, 10 zero-violation phone accessibility scans and 1,092 local template renders passed. [Evidence and preservation exception](docs/build-evidence/004W-v4/README.md). Full Virtual Estimator remains #029V; no push or deployment.
+
 ## #004W-v3 visual pass (2026-09-25)
 
 **Partial.** Shared service pages now have four new Higgsfield hero stills, distinct section diagrams, service-keyed inspection hotspots, conditional comparison, Good/Better/Best scope cards that display a price only from an approved price-book item, themed estimator bands and a phone action bar. Core pages have filled visual heroes, warmer city copy and a consistent trade palette on financing. [Ticket evidence](docs/build-evidence/004W-v3/README.md) contains desktop and 390px captures. [MEDIA-NEEDED.md](docs/product/MEDIA-NEEDED.md) enumerates the remaining commissioned section photos and missing unique hero stills. The Virtual Estimator remains planned under #029V, so current “Get my price” actions lead to a preselected price discussion rather than an instant calculated quote. The thank-you Save your quote action is a visual prompt; secure quote saving is not implemented. Do not count this ticket as Done until those features and full media coverage are implemented and verified.

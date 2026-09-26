@@ -1,0 +1,22 @@
+{
+  "prompt": "Premium architectural documentary photograph, close-up of a residential privacy FENCE made of vertical cedar wooden boards in a suburban backyard. A contractor's gloved hands fasten a cedar board to a horizontal wood rail using a cordless drill. Six-foot solid timber privacy boundary, warm wood grain, attractive garden, realistic carpentry and hardware, rich natural daylight. This is construction of a wooden garden barrier, not the sport of fencing. No athletes, no swords, no sporting equipment, no words, no logos. Landscape 3:2 composition.",
+  "jobs": [
+    {
+      "index": 284,
+      "job_id": "7f704525-f6af-45ff-ad68-b2ecd634195d",
+      "status": "pending"
+    }
+  ],
+  "submitted_count": 1,
+  "failed_count": 0,
+  "result": {
+    "index": 284,
+    "job_id": "7f704525-f6af-45ff-ad68-b2ecd634195d",
+    "status": "completed",
+    "type": "image",
+    "model": "nano_banana_flash",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260926_063919_7f704525-f6af-45ff-ad68-b2ecd634195d.png"
+  },
+  "replaces": 179,
+  "reason": "Rejected first privacy-fencing process result because it depicted the sport rather than a wood fence."
+}

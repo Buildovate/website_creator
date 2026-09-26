@@ -281,6 +281,10 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 - State: **In progress**. Service and core visual treatment, trade backgrounds, service signature diagrams and media inventory are in [SERVICE-SIGNATURES.md](docs/product/SERVICE-SIGNATURES.md), [TRADE-BACKGROUNDS.md](docs/product/TRADE-BACKGROUNDS.md) and [MEDIA-NEEDED.md](docs/product/MEDIA-NEEDED.md). Do not mark Done until every service has unique section media and hero imagery, the Virtual Estimator is connected, published/preview behavior is verified, and the required desktop/phone screenshots and checks are saved.
 
+### #004W-v4 — Showpiece fix pass (Astra High)
+
+- State: **Done — local fix pass**. [Evidence](docs/build-evidence/004W-v4/README.md): 284 installed stills (285 generations including one rejected result), shared legacy renderer, rich AR/service sections, rewritten service/city copy, shared financing theme, Sample-only preview content and estimator-entry form. Build, typecheck, regressions, routes, browser and local media/accessibility audits pass. The v4 user instruction explicitly keeps the full Virtual Estimator queued at #029V. No push or deploy. Next queued implementation stays #015F.
+
 ### #004X — Core site pages for all trades + full-preview mode (Sol High)
 
 - State: **In progress**. Builds on #004W-v2.

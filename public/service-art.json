@@ -67,7 +67,11 @@
     "metal roofing": "/assets/service-metal.webp",
     "flat roofs": "/assets/service-flat.webp",
     "roof maintenance": "/assets/service-maintenance.webp",
-    "gutters": "/assets/service-gutters.webp"
+    "gutters": "/assets/service-gutters.webp",
+    "storm damage": "/assets/service-showpiece/roofing-storm-damage-hero.webp",
+    "inspections": "/assets/service-showpiece/roofing-inspections-hero.webp",
+    "asphalt shingle install / repair": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+    "roof sealing": "/assets/service-showpiece/roofing-roof-sealing-hero.webp"
   },
   "Flooring": {
     "hardwood flooring": "/assets/specialties/flooring-hardwood-flooring.webp",
@@ -138,5 +142,25 @@
     "solar inverter replacement": "/assets/specialties/solar-solar-inverter-replacement.svg",
     "solar removal and reinstallation": "/assets/specialties/solar-solar-removal-and-reinstallation.svg",
     "solar system monitoring": "/assets/specialties/solar-solar-system-monitoring.svg"
+  },
+  "Concrete": {
+    "concrete patios": "/assets/service-showpiece/concrete-concrete-patios-hero.webp",
+    "concrete driveways": "/assets/service-showpiece/concrete-concrete-driveways-hero.webp",
+    "concrete foundations": "/assets/service-showpiece/concrete-concrete-foundations-hero.webp",
+    "stamped concrete": "/assets/service-showpiece/concrete-stamped-concrete-hero.webp",
+    "concrete walkways": "/assets/service-showpiece/concrete-concrete-walkways-hero.webp",
+    "concrete slabs": "/assets/service-showpiece/concrete-concrete-slabs-hero.webp",
+    "decorative concrete": "/assets/service-showpiece/concrete-decorative-concrete-hero.webp",
+    "concrete repair": "/assets/service-showpiece/concrete-concrete-repair-hero.webp"
+  },
+  "Pools": {
+    "pool tile and coping": "/assets/service-showpiece/pools-pool-tile-and-coping-hero.webp",
+    "pool construction": "/assets/service-showpiece/pools-pool-construction-hero.webp",
+    "pool remodeling": "/assets/service-showpiece/pools-pool-remodeling-hero.webp",
+    "pool design": "/assets/service-showpiece/pools-pool-design-hero.webp",
+    "pool equipment": "/assets/service-showpiece/pools-pool-equipment-hero.webp",
+    "pool resurfacing": "/assets/service-showpiece/pools-pool-resurfacing-hero.webp",
+    "pool maintenance": "/assets/service-showpiece/pools-pool-maintenance-hero.webp",
+    "pool decking": "/assets/service-showpiece/pools-pool-decking-hero.webp"
   }
 }

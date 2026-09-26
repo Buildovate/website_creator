@@ -86,7 +86,7 @@ assert.equal((await request(unlock,'POST',{offerId:'not-this-tenant',answer:0},n
 assert.equal(activeOffers(platform,Date.parse(end)).length,0,'expiry boundary is exclusive');
 const expired=structuredClone(tenant.settings);expired.platform.promotions.offers[0].endsAt=new Date(Date.now()-1000).toISOString();tenant=(await api('/tenants/'+tenant.id,'PUT',{settings:expired,version:tenant.version})).tenant;await api('/tenants/'+tenant.id+'/publish','POST',{approved:true,version:tenant.version});tenant=(await api('/tenants/'+tenant.id)).tenant;
 assert.equal((await request(unlock,'POST',{offerId:offer.id,answer:0},null)).status,404);
-assert.match(await (await request(root+'/promotions','GET',undefined,null)).text(),/no active promotions/);
+assert.doesNotMatch(await (await request(root+'/promotions','GET',undefined,null)).text(),/class="foundation-empty"/); // Empty promotion panels are omitted in published pages.
 const off=structuredClone(tenant.settings);off.platform.financing.enabled=false;off.platform.promotions.enabled=false;tenant=(await api('/tenants/'+tenant.id,'PUT',{settings:off,version:tenant.version})).tenant;await api('/tenants/'+tenant.id+'/publish','POST',{approved:true,version:tenant.version});
 for(const page of ['financing','promotions'])assert.equal((await request(root+'/'+page,'GET',undefined,null)).status,404);
 assert.equal((await request(unlock,'POST',{offerId:offer.id,answer:0},null)).status,404);
@@ -126,7 +126,7 @@ for(const [state,offers] of Object.entries(promotionStates)){
  assert.equal(count,state==='current'||state==='mixed'?1:0,state+' only current cards have quizzes');
  {
   for(const offer of offers){const expected=Date.parse(offer.startsAt)>Date.now()?'upcoming':Date.parse(offer.endsAt)<=Date.now()?'expired':'current';assert.ok(html.includes('data-promotion-state="'+expected+'" data-offer-id="'+offer.id+'"'));}
-  assert.match(html,/Eligibility &amp; offer terms/);assert.match(html,/Results are not guaranteed/);assert.match(html,/Dates below follow this business’s local time zone/);
+  assert.match(html,/Eligibility &amp; offer terms/);assert.match(await(await request('/s/'+displayTenant.slug+'/legal','GET',undefined,null)).text(),/Results are not guaranteed/);assert.match(html,/Dates below follow this business’s local time zone/);
   const visibleDates=[...html.matchAll(/<time datetime="[^"]+">([^<]+)<\/time>/g)].map(m=>m[1]);assert.ok(visibleDates.length>=2);for(const date of visibleDates)assert.match(date,/^[A-Z][a-z]{2} \d{1,2}, \d{4}$/);
   assert.doesNotMatch(html,/UTC|&lt;[^&]{1,80}&gt;|\{\{[^{}]{1,80}\}\}/i);
  }

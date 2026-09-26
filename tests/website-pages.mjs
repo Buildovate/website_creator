@@ -218,7 +218,7 @@ await test('#004 service detail: published snapshot, preview membership, media a
   response=await request(url,'GET',undefined,null);
   assert.equal(response.status,200);
   const html=await response.text();
-  for(const part of ['Repair your roof &lt;safely&gt;', 'Test-only service scope.', 'Inspect the concern', 'Asphalt shingles', 'What happens first?', '/media/'+photo.id, 'name="service" value="Roof repair" readonly', 'data-preview="false"', '/roofing-service.css']) assert.ok(html.includes(part),part);
+  for(const part of ['Repair your roof &lt;safely&gt;', 'Test-only service scope.', 'Inspect the concern', 'Asphalt shingles', 'What happens first?', '/media/'+photo.id, 'name="service" value="Roof repair" readonly', 'data-preview="false"', '/service-detail.css']) assert.ok(html.includes(part),part);
   assert.ok(!html.includes('FINANCE_QUESTION'));
   assert.match(response.headers.get('cache-control'),/no-store/);
   assert.match(response.headers.get('x-robots-tag'),/index/);
@@ -336,7 +336,7 @@ await test('#006 FAQ: published snapshots, feature gating, schema, escaping and 
  assert.equal((await request(url,'GET',undefined,null)).status,404);
  assert.equal((await request(url+'?preview=1','GET',undefined,null)).status,401);
  assert.equal((await request(url+'?preview=1','GET',undefined,{id:'outsider',email:'outsider@example.test'})).status,404);
- assert.match(await get('?preview=1',admin),/Private draft preview/);
+ assert.match(await get('?preview=1',admin),/Private preview/);
  await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
  const html=await get();
  const schema=h=>JSON.parse(h.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
@@ -417,13 +417,13 @@ await test('#007 About route: confirmed copy, publication, owned portrait/logo a
  draft=structuredClone(tenant.settings);draft.websitePages.pages[2].portraitMode='ai_logo_shirt';
  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
  await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
- assert.ok((await get()).includes('Designed truck illustration · not a crew photograph'));
+ assert.ok((await get()).includes('Roofing / ready for the work'));
  assert.ok(!(await get()).includes('data-about-portrait'));
  assert.equal((await request('/media/'+photo.id,'GET',undefined,null)).status,401);
  assert.equal((await request('/media/'+privatePhoto.id,'GET',undefined,null)).status,401);
  draft=structuredClone(tenant.settings);draft.platform.questionnaire.factsConfirmed=false;draft.websitePages.pages[2].portraitMode='hidden';draft.websitePages.pages[2].portrait=null;
  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
- const unconfirmed=await get('?preview=1',admin);assert.ok(!unconfirmed.includes('DRAFT_ONLY_STORY'));assert.ok(!unconfirmed.includes('Explain the &lt;scope&gt;'));assert.ok(!unconfirmed.includes('Roofing with &lt;care&gt;'));assert.match(unconfirmed,/Good work starts/);
+ const unconfirmed=await get('?preview=1',admin);assert.ok(!unconfirmed.includes('DRAFT_ONLY_STORY'));assert.ok(!unconfirmed.includes('Explain the &lt;scope&gt;'));assert.ok(!unconfirmed.includes('Roofing with &lt;care&gt;'));assert.match(unconfirmed,/The work we do/);
  draft=structuredClone(tenant.settings);draft.websitePages.pages[2].enabled=false;
  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
  assert.equal((await request(url+'?preview=1','GET',undefined,admin)).status,404);
@@ -450,7 +450,7 @@ await test('#007A confirmed trust facts, concise story, owner hero and published
  await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
  let html=await get();assert.equal((html.match(/class="ta-stat"/g)||[]).length,5);assert.ok(html.indexOf('class="ta-stats"')>html.indexOf('class="ta-hero"')&&html.indexOf('class="ta-stats"')<html.indexOf('class="tp-section ta-proof"'));
  for(const text of ['18 years','CA Lic. #123456','4.9 from 212 reviews','10-year','1,250','Manufacturer training confirmed','8 people'])assert.ok(html.includes(text),text);
- assert.ok(!html.includes('roofing-house-still'));assert.ok(html.includes('Designed truck illustration'));assert.ok(!html.includes('id="about-work"'));
+ assert.ok(!html.includes('roofing-house-still'));assert.ok(html.includes('Roofing / ready for the work'));assert.ok(!html.includes('id="about-work"'));
  const story=html.match(/data-about-story>(.*?)<\/p>/s)[1];assert.ok(story.split(/\s+/).length<=60);assert.ok(!story.includes(tenant.settings.name));
  const cards=html.match(/<div class="ta-cards">(.*?)<\/div>/s)[1];assert.equal((cards.match(/<article>/g)||[]).length,3);for(const [,claim] of cards.matchAll(/<h3>(.*?)<\/h3>/g))assert.ok(claim.split(/\s+/).length>=3&&claim.split(/\s+/).length<=5);
  let draft=structuredClone(tenant.settings);draft.businessTrust.confirmed={};tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;

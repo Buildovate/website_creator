@@ -1,0 +1,40 @@
+✔ typed records round-trip; IDs/slugs survive edits and reordering (3.821ms)
+✔ malformed records, duplicate URLs, broken city links and limits are rejected (2.3298ms)
+✔ media uses bounded photo IDs and alt text, never arbitrary URLs (0.5575ms)
+▶ real tenant API: draft/published isolation, ownership and permissions
+  ✔ editor saves all four page types without changing public snapshot (6.9708ms)
+  ✔ render validates page data and has no save/publish side effects (15.4294ms)
+  ✔ foreign/missing media are rejected at save/create without side effects (16.4191ms)
+  ✔ malformed contracts return HTTP 400; access/origin/concurrency stay enforced (8.229ms)
+  ✔ old editors omit the field safely; owner publishes a frozen snapshot (14.8538ms)
+  ✔ publish rechecks ownership even if a stored draft is stale or forged (4.214ms)
+  ✔ explicit deletion remains draft until publish; backups retain page records (13.0676ms)
+✔ real tenant API: draft/published isolation, ownership and permissions (91.4062ms)
+✔ #004 service detail: published snapshot, preview membership, media and inquiry (34.2993ms)
+✔ #004 shared browser handler preserves service context and suppresses preview sends (64.2511ms)
+✔ #005 selected service grids: eight offerings, stable links, draft isolation and safe fallbacks (75.6852ms)
+✔ #006 FAQ: published snapshots, feature gating, schema, escaping and route access (60.4105ms)
+✔ #007 About route: confirmed copy, publication, owned portrait/logo and safe fallback (59.8564ms)
+✔ #007A confirmed trust facts, concise story, owner hero and published project tiles (64.6357ms)
+▶ #014 inquiry context and public submission boundaries
+  ✔ unpublished tenants cannot accept inquiries (0.6129ms)
+  ✔ service/city/source/timing and notes reach only the route tenant (3.4078ms)
+  ✔ city-only forms retain context without a selected service (2.1886ms)
+  ✔ published city context supports a hidden city field without inventing a route renderer (2.2466ms)
+  ✔ published settings win over later draft changes (6.5549ms)
+  ✔ origin, consent, input validation and honeypot remain enforced (4.4108ms)
+  ✔ preview and foreign source attribution are rejected server-side (4.433ms)
+  ✔ project attribution uses only an owned published project snapshot (7.0189ms)
+  ✔ context is bounded and survives long notes (2.2762ms)
+  ✔ three-per-phone limit cannot be bypassed with different context (3.2641ms)
+  ✔ contact capture does not enroll marketing or schedule delivery (0.4852ms)
+✔ #014 inquiry context and public submission boundaries (44.1178ms)
+✔ #014 browser captures source/city independently and suppresses draft paths (8.1032ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 516.6726

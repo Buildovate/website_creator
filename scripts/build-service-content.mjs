@@ -35,7 +35,7 @@ for (const [trade, block] of Object.entries(source)) {
     if(normalized(card).includes(key))throw Error(`Card repeats its service title: ${trade} / ${name}`);
     // Questions draw on the homeowner symptoms and scope selected for this
     // exact service; the third gets the contractor's actual service region.
-    const faq = [
+    const faq = editorialCards[trade]?.[key]?.faq || [
       {question: `What should I do about ${signs[0].toLowerCase()}?`, answer: `Start by telling us where you see it. ${process[0]}. ${process[1]}.`},
       {question: `Does ${name.toLowerCase()} include ${includes[1].toLowerCase()}?`, answer: `We look at ${includes[1].toLowerCase()} alongside ${includes[2].toLowerCase()}. ${process[2]}.`},
       {question: `Can we plan ${name.toLowerCase()} in {{city}}?`, answer: `{{business}} can discuss ${name.toLowerCase()} in {{region}}. ${process[3]}.`},

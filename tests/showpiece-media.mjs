@@ -17,7 +17,7 @@ test('every curated service has a distinct hero or an explicit media request',()
   assert.ok(!used.has(source),`${trade}/${name} shares ${source} with ${used.get(source)}`);
   used.set(source,`${trade}/${name}`);
  }
- assert.equal(total,132);assert.equal(missing,20);
+ assert.equal(total,132);assert.equal(missing,0);
 });
 test('section photo requests cover all services until distinct photography is available',()=>{
  for(const [trade,services] of Object.entries(content))for(const name of Object.keys(services)){

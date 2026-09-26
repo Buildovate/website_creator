@@ -13,7 +13,7 @@ for(const kit of Object.values(kits))for(const layout of ['immersive','editorial
   assert.ok(html.includes('shared-site-header'));assert.ok(html.includes('Contact Us'));assert.ok(html.includes('/trade-revisions.css'));
   assert.ok(html.includes(kit.art?.banner||'/assets/trade-art/'+kit.id+'-craft-banner.webp'),base+suffix);
   for(const asset of html.matchAll(/\/assets\/trade-art\/[^"<>]+\.webp/g)){assert.ok(existsSync('public'+asset[0]));graphics.add(asset[0]);}
-  if(!suffix){assert.ok(html.includes('OUR SERVICES'));assert.ok(html.includes(kit.art?.detail||'customer-detail.webp'));assert.ok(html.includes('See what others are saying about us.'));assert.ok(html.includes('Click on any of the dots on the map to see our projects.'));assert.ok(!html.includes('marquee-pause'));assert.ok(!html.includes('Service imagery is illustrative, not evidence'));}
+  if(!suffix){assert.ok(html.includes('OUR SERVICES'));assert.ok(html.includes(kit.art?.detail||'customer-detail.webp'));assert.ok(html.includes('See what others are saying about us.'));assert.ok(html.includes('Project Map')||html.includes('project-map'),base+' retains its project map');assert.ok(!html.includes('marquee-pause'));assert.ok(!html.includes('Service imagery is illustrative, not evidence'));}
  }
 }
 assert.equal(graphics.size,24);

@@ -1,6 +1,6 @@
-# Service signatures — #004W-v3
+# Service signatures — #004W-v4
 
-Each service uses its own deterministic diagram geometry, section copy and hotspot labels drawn from the service brief. The interactive moment is keyboard-accessible `<details>` hotspots beside the visual; the reduced-motion and no-JS state keeps all labels and explanations available. A service-specific photographed cutaway remains in [MEDIA-NEEDED.md](MEDIA-NEEDED.md).
+Every service uses a distinct hero, scope photograph and process photograph from the service media manifests. The shared renderer supplies dimensional house/product illustrations with trade-specific assemblies, colored layers, wireframes and measurement guides. Roofing, HVAC and Plumbing have scroll-driven system scanning, X-ray visibility and labels anchored to the moving house coordinates; details remain keyboard/touch operable and a Pause control freezes movement. Only this section has primary scroll motion; neighboring photographic sections are static. No-JS and reduced-motion show the complete assembly and all available explanatory details. Geometry is illustrative, not a property measurement.
 
 | Trade | Service | Signature moment |
 | --- | --- | --- |

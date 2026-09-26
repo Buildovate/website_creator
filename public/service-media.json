@@ -1,0 +1,582 @@
+{
+  "Roofing": {
+    "asphalt shingle install / repair": {
+      "hero": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+      "scope": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-scope.webp",
+      "process": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-process.webp"
+    },
+    "roof sealing": {
+      "hero": "/assets/service-showpiece/roofing-roof-sealing-hero.webp",
+      "scope": "/assets/service-showpiece/roofing-roof-sealing-scope.webp",
+      "process": "/assets/service-showpiece/roofing-roof-sealing-process.webp"
+    },
+    "storm damage": {
+      "hero": "/assets/service-showpiece/roofing-storm-damage-hero.webp",
+      "scope": "/assets/service-showpiece/roofing-storm-damage-scope.webp",
+      "process": "/assets/service-showpiece/roofing-storm-damage-process.webp"
+    },
+    "inspections": {
+      "hero": "/assets/service-showpiece/roofing-inspections-hero.webp",
+      "scope": "/assets/service-showpiece/roofing-inspections-scope.webp",
+      "process": "/assets/service-showpiece/roofing-inspections-process.webp"
+    },
+    "roof installation": {
+      "scope": "/assets/service-showpiece/roofing-roof-installation-scope.webp",
+      "process": "/assets/service-showpiece/roofing-roof-installation-process.webp"
+    },
+    "roof repair": {
+      "scope": "/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "process": "/assets/service-showpiece/roofing-roof-repair-process.webp"
+    },
+    "roof replacement": {
+      "scope": "/assets/service-showpiece/roofing-roof-replacement-scope.webp",
+      "process": "/assets/service-showpiece/roofing-roof-replacement-process.webp"
+    },
+    "asphalt shingles": {
+      "scope": "/assets/service-showpiece/roofing-asphalt-shingles-scope.webp",
+      "process": "/assets/service-showpiece/roofing-asphalt-shingles-process.webp"
+    },
+    "metal roofing": {
+      "scope": "/assets/service-showpiece/roofing-metal-roofing-scope.webp",
+      "process": "/assets/service-showpiece/roofing-metal-roofing-process.webp"
+    },
+    "flat roofs": {
+      "scope": "/assets/service-showpiece/roofing-flat-roofs-scope.webp",
+      "process": "/assets/service-showpiece/roofing-flat-roofs-process.webp"
+    },
+    "roof maintenance": {
+      "scope": "/assets/service-showpiece/roofing-roof-maintenance-scope.webp",
+      "process": "/assets/service-showpiece/roofing-roof-maintenance-process.webp"
+    },
+    "gutters": {
+      "scope": "/assets/service-showpiece/roofing-gutters-scope.webp",
+      "process": "/assets/service-showpiece/roofing-gutters-process.webp"
+    }
+  },
+  "Concrete": {
+    "concrete driveways": {
+      "hero": "/assets/service-showpiece/concrete-concrete-driveways-hero.webp",
+      "scope": "/assets/service-showpiece/concrete-concrete-driveways-scope.webp",
+      "process": "/assets/service-showpiece/concrete-concrete-driveways-process.webp"
+    },
+    "concrete patios": {
+      "hero": "/assets/service-showpiece/concrete-concrete-patios-hero.webp",
+      "scope": "/assets/service-showpiece/concrete-concrete-patios-scope.webp",
+      "process": "/assets/service-showpiece/concrete-concrete-patios-process.webp"
+    },
+    "stamped concrete": {
+      "hero": "/assets/service-showpiece/concrete-stamped-concrete-hero.webp",
+      "scope": "/assets/service-showpiece/concrete-stamped-concrete-scope.webp",
+      "process": "/assets/service-showpiece/concrete-stamped-concrete-process.webp"
+    },
+    "concrete walkways": {
+      "hero": "/assets/service-showpiece/concrete-concrete-walkways-hero.webp",
+      "scope": "/assets/service-showpiece/concrete-concrete-walkways-scope.webp",
+      "process": "/assets/service-showpiece/concrete-concrete-walkways-process.webp"
+    },
+    "concrete foundations": {
+      "hero": "/assets/service-showpiece/concrete-concrete-foundations-hero.webp",
+      "scope": "/assets/service-showpiece/concrete-concrete-foundations-scope.webp",
+      "process": "/assets/service-showpiece/concrete-concrete-foundations-process.webp"
+    },
+    "concrete slabs": {
+      "hero": "/assets/service-showpiece/concrete-concrete-slabs-hero.webp",
+      "scope": "/assets/service-showpiece/concrete-concrete-slabs-scope.webp",
+      "process": "/assets/service-showpiece/concrete-concrete-slabs-process.webp"
+    },
+    "concrete repair": {
+      "hero": "/assets/service-showpiece/concrete-concrete-repair-hero.webp",
+      "scope": "/assets/service-showpiece/concrete-concrete-repair-scope.webp",
+      "process": "/assets/service-showpiece/concrete-concrete-repair-process.webp"
+    },
+    "decorative concrete": {
+      "hero": "/assets/service-showpiece/concrete-decorative-concrete-hero.webp",
+      "scope": "/assets/service-showpiece/concrete-decorative-concrete-scope.webp",
+      "process": "/assets/service-showpiece/concrete-decorative-concrete-process.webp"
+    }
+  },
+  "Pools": {
+    "pool design": {
+      "hero": "/assets/service-showpiece/pools-pool-design-hero.webp",
+      "scope": "/assets/service-showpiece/pools-pool-design-scope.webp",
+      "process": "/assets/service-showpiece/pools-pool-design-process.webp"
+    },
+    "pool construction": {
+      "hero": "/assets/service-showpiece/pools-pool-construction-hero.webp",
+      "scope": "/assets/service-showpiece/pools-pool-construction-scope.webp",
+      "process": "/assets/service-showpiece/pools-pool-construction-process.webp"
+    },
+    "pool remodeling": {
+      "hero": "/assets/service-showpiece/pools-pool-remodeling-hero.webp",
+      "scope": "/assets/service-showpiece/pools-pool-remodeling-scope.webp",
+      "process": "/assets/service-showpiece/pools-pool-remodeling-process.webp"
+    },
+    "pool resurfacing": {
+      "hero": "/assets/service-showpiece/pools-pool-resurfacing-hero.webp",
+      "scope": "/assets/service-showpiece/pools-pool-resurfacing-scope.webp",
+      "process": "/assets/service-showpiece/pools-pool-resurfacing-process.webp"
+    },
+    "pool equipment": {
+      "hero": "/assets/service-showpiece/pools-pool-equipment-hero.webp",
+      "scope": "/assets/service-showpiece/pools-pool-equipment-scope.webp",
+      "process": "/assets/service-showpiece/pools-pool-equipment-process.webp"
+    },
+    "pool tile and coping": {
+      "hero": "/assets/service-showpiece/pools-pool-tile-and-coping-hero.webp",
+      "scope": "/assets/service-showpiece/pools-pool-tile-and-coping-scope.webp",
+      "process": "/assets/service-showpiece/pools-pool-tile-and-coping-process.webp"
+    },
+    "pool decking": {
+      "hero": "/assets/service-showpiece/pools-pool-decking-hero.webp",
+      "scope": "/assets/service-showpiece/pools-pool-decking-scope.webp",
+      "process": "/assets/service-showpiece/pools-pool-decking-process.webp"
+    },
+    "pool maintenance": {
+      "hero": "/assets/service-showpiece/pools-pool-maintenance-hero.webp",
+      "scope": "/assets/service-showpiece/pools-pool-maintenance-scope.webp",
+      "process": "/assets/service-showpiece/pools-pool-maintenance-process.webp"
+    }
+  },
+  "Plumbing": {
+    "leak detection": {
+      "scope": "/assets/service-showpiece/plumbing-leak-detection-scope.webp",
+      "process": "/assets/service-showpiece/plumbing-leak-detection-process.webp"
+    },
+    "drain cleaning": {
+      "scope": "/assets/service-showpiece/plumbing-drain-cleaning-scope.webp",
+      "process": "/assets/service-showpiece/plumbing-drain-cleaning-process.webp"
+    },
+    "water heaters": {
+      "scope": "/assets/service-showpiece/plumbing-water-heaters-scope.webp",
+      "process": "/assets/service-showpiece/plumbing-water-heaters-process.webp"
+    },
+    "sewer lines": {
+      "scope": "/assets/service-showpiece/plumbing-sewer-lines-scope.webp",
+      "process": "/assets/service-showpiece/plumbing-sewer-lines-process.webp"
+    },
+    "repiping": {
+      "scope": "/assets/service-showpiece/plumbing-repiping-scope.webp",
+      "process": "/assets/service-showpiece/plumbing-repiping-process.webp"
+    },
+    "fixture installation": {
+      "scope": "/assets/service-showpiece/plumbing-fixture-installation-scope.webp",
+      "process": "/assets/service-showpiece/plumbing-fixture-installation-process.webp"
+    },
+    "water filtration": {
+      "scope": "/assets/service-showpiece/plumbing-water-filtration-scope.webp",
+      "process": "/assets/service-showpiece/plumbing-water-filtration-process.webp"
+    },
+    "plumbing repair": {
+      "scope": "/assets/service-showpiece/plumbing-plumbing-repair-scope.webp",
+      "process": "/assets/service-showpiece/plumbing-plumbing-repair-process.webp"
+    }
+  },
+  "HVAC": {
+    "air conditioning installation": {
+      "scope": "/assets/service-showpiece/hvac-air-conditioning-installation-scope.webp",
+      "process": "/assets/service-showpiece/hvac-air-conditioning-installation-process.webp"
+    },
+    "air conditioning repair": {
+      "scope": "/assets/service-showpiece/hvac-air-conditioning-repair-scope.webp",
+      "process": "/assets/service-showpiece/hvac-air-conditioning-repair-process.webp"
+    },
+    "heating installation": {
+      "scope": "/assets/service-showpiece/hvac-heating-installation-scope.webp",
+      "process": "/assets/service-showpiece/hvac-heating-installation-process.webp"
+    },
+    "heating repair": {
+      "scope": "/assets/service-showpiece/hvac-heating-repair-scope.webp",
+      "process": "/assets/service-showpiece/hvac-heating-repair-process.webp"
+    },
+    "heat pumps": {
+      "scope": "/assets/service-showpiece/hvac-heat-pumps-scope.webp",
+      "process": "/assets/service-showpiece/hvac-heat-pumps-process.webp"
+    },
+    "ductwork": {
+      "scope": "/assets/service-showpiece/hvac-ductwork-scope.webp",
+      "process": "/assets/service-showpiece/hvac-ductwork-process.webp"
+    },
+    "indoor air quality": {
+      "scope": "/assets/service-showpiece/hvac-indoor-air-quality-scope.webp",
+      "process": "/assets/service-showpiece/hvac-indoor-air-quality-process.webp"
+    },
+    "system maintenance": {
+      "scope": "/assets/service-showpiece/hvac-system-maintenance-scope.webp",
+      "process": "/assets/service-showpiece/hvac-system-maintenance-process.webp"
+    }
+  },
+  "Patios": {
+    "patio covers": {
+      "scope": "/assets/service-showpiece/patios-patio-covers-scope.webp",
+      "process": "/assets/service-showpiece/patios-patio-covers-process.webp"
+    },
+    "motorized pergolas": {
+      "scope": "/assets/service-showpiece/patios-motorized-pergolas-scope.webp",
+      "process": "/assets/service-showpiece/patios-motorized-pergolas-process.webp"
+    },
+    "louvered roofs": {
+      "scope": "/assets/service-showpiece/patios-louvered-roofs-scope.webp",
+      "process": "/assets/service-showpiece/patios-louvered-roofs-process.webp"
+    },
+    "aluminum patio covers": {
+      "scope": "/assets/service-showpiece/patios-aluminum-patio-covers-scope.webp",
+      "process": "/assets/service-showpiece/patios-aluminum-patio-covers-process.webp"
+    },
+    "wood pergolas": {
+      "scope": "/assets/service-showpiece/patios-wood-pergolas-scope.webp",
+      "process": "/assets/service-showpiece/patios-wood-pergolas-process.webp"
+    },
+    "outdoor living spaces": {
+      "scope": "/assets/service-showpiece/patios-outdoor-living-spaces-scope.webp",
+      "process": "/assets/service-showpiece/patios-outdoor-living-spaces-process.webp"
+    },
+    "patio enclosures": {
+      "scope": "/assets/service-showpiece/patios-patio-enclosures-scope.webp",
+      "process": "/assets/service-showpiece/patios-patio-enclosures-process.webp"
+    },
+    "patio repair": {
+      "scope": "/assets/service-showpiece/patios-patio-repair-scope.webp",
+      "process": "/assets/service-showpiece/patios-patio-repair-process.webp"
+    }
+  },
+  "Electrical": {
+    "electrical repairs": {
+      "scope": "/assets/service-showpiece/electrical-electrical-repairs-scope.webp",
+      "process": "/assets/service-showpiece/electrical-electrical-repairs-process.webp"
+    },
+    "panel upgrades": {
+      "scope": "/assets/service-showpiece/electrical-panel-upgrades-scope.webp",
+      "process": "/assets/service-showpiece/electrical-panel-upgrades-process.webp"
+    },
+    "ev chargers": {
+      "scope": "/assets/service-showpiece/electrical-ev-chargers-scope.webp",
+      "process": "/assets/service-showpiece/electrical-ev-chargers-process.webp"
+    },
+    "lighting installation": {
+      "scope": "/assets/service-showpiece/electrical-lighting-installation-scope.webp",
+      "process": "/assets/service-showpiece/electrical-lighting-installation-process.webp"
+    },
+    "rewiring": {
+      "scope": "/assets/service-showpiece/electrical-rewiring-scope.webp",
+      "process": "/assets/service-showpiece/electrical-rewiring-process.webp"
+    },
+    "outlets and switches": {
+      "scope": "/assets/service-showpiece/electrical-outlets-and-switches-scope.webp",
+      "process": "/assets/service-showpiece/electrical-outlets-and-switches-process.webp"
+    },
+    "backup generators": {
+      "scope": "/assets/service-showpiece/electrical-backup-generators-scope.webp",
+      "process": "/assets/service-showpiece/electrical-backup-generators-process.webp"
+    },
+    "electrical inspections": {
+      "scope": "/assets/service-showpiece/electrical-electrical-inspections-scope.webp",
+      "process": "/assets/service-showpiece/electrical-electrical-inspections-process.webp"
+    }
+  },
+  "Landscaping": {
+    "landscape design": {
+      "scope": "/assets/service-showpiece/landscaping-landscape-design-scope.webp",
+      "process": "/assets/service-showpiece/landscaping-landscape-design-process.webp"
+    },
+    "landscape installation": {
+      "scope": "/assets/service-showpiece/landscaping-landscape-installation-scope.webp",
+      "process": "/assets/service-showpiece/landscaping-landscape-installation-process.webp"
+    },
+    "irrigation": {
+      "scope": "/assets/service-showpiece/landscaping-irrigation-scope.webp",
+      "process": "/assets/service-showpiece/landscaping-irrigation-process.webp"
+    },
+    "lawn care": {
+      "scope": "/assets/service-showpiece/landscaping-lawn-care-scope.webp",
+      "process": "/assets/service-showpiece/landscaping-lawn-care-process.webp"
+    },
+    "artificial turf": {
+      "scope": "/assets/service-showpiece/landscaping-artificial-turf-scope.webp",
+      "process": "/assets/service-showpiece/landscaping-artificial-turf-process.webp"
+    },
+    "hardscaping": {
+      "scope": "/assets/service-showpiece/landscaping-hardscaping-scope.webp",
+      "process": "/assets/service-showpiece/landscaping-hardscaping-process.webp"
+    },
+    "landscape lighting": {
+      "scope": "/assets/service-showpiece/landscaping-landscape-lighting-scope.webp",
+      "process": "/assets/service-showpiece/landscaping-landscape-lighting-process.webp"
+    },
+    "seasonal maintenance": {
+      "scope": "/assets/service-showpiece/landscaping-seasonal-maintenance-scope.webp",
+      "process": "/assets/service-showpiece/landscaping-seasonal-maintenance-process.webp"
+    }
+  },
+  "General Contractors": {
+    "home remodeling": {
+      "scope": "/assets/service-showpiece/general-contractors-home-remodeling-scope.webp",
+      "process": "/assets/service-showpiece/general-contractors-home-remodeling-process.webp"
+    },
+    "kitchen remodeling": {
+      "scope": "/assets/service-showpiece/general-contractors-kitchen-remodeling-scope.webp",
+      "process": "/assets/service-showpiece/general-contractors-kitchen-remodeling-process.webp"
+    },
+    "bathroom remodeling": {
+      "scope": "/assets/service-showpiece/general-contractors-bathroom-remodeling-scope.webp",
+      "process": "/assets/service-showpiece/general-contractors-bathroom-remodeling-process.webp"
+    },
+    "room additions": {
+      "scope": "/assets/service-showpiece/general-contractors-room-additions-scope.webp",
+      "process": "/assets/service-showpiece/general-contractors-room-additions-process.webp"
+    },
+    "adus": {
+      "scope": "/assets/service-showpiece/general-contractors-adus-scope.webp",
+      "process": "/assets/service-showpiece/general-contractors-adus-process.webp"
+    },
+    "new construction": {
+      "scope": "/assets/service-showpiece/general-contractors-new-construction-scope.webp",
+      "process": "/assets/service-showpiece/general-contractors-new-construction-process.webp"
+    },
+    "commercial improvements": {
+      "scope": "/assets/service-showpiece/general-contractors-commercial-improvements-scope.webp",
+      "process": "/assets/service-showpiece/general-contractors-commercial-improvements-process.webp"
+    },
+    "whole-home renovation": {
+      "scope": "/assets/service-showpiece/general-contractors-whole-home-renovation-scope.webp",
+      "process": "/assets/service-showpiece/general-contractors-whole-home-renovation-process.webp"
+    }
+  },
+  "Flooring": {
+    "hardwood flooring": {
+      "scope": "/assets/service-showpiece/flooring-hardwood-flooring-scope.webp",
+      "process": "/assets/service-showpiece/flooring-hardwood-flooring-process.webp"
+    },
+    "luxury vinyl flooring": {
+      "scope": "/assets/service-showpiece/flooring-luxury-vinyl-flooring-scope.webp",
+      "process": "/assets/service-showpiece/flooring-luxury-vinyl-flooring-process.webp"
+    },
+    "laminate flooring": {
+      "scope": "/assets/service-showpiece/flooring-laminate-flooring-scope.webp",
+      "process": "/assets/service-showpiece/flooring-laminate-flooring-process.webp"
+    },
+    "tile flooring": {
+      "scope": "/assets/service-showpiece/flooring-tile-flooring-scope.webp",
+      "process": "/assets/service-showpiece/flooring-tile-flooring-process.webp"
+    },
+    "floor refinishing": {
+      "scope": "/assets/service-showpiece/flooring-floor-refinishing-scope.webp",
+      "process": "/assets/service-showpiece/flooring-floor-refinishing-process.webp"
+    },
+    "floor repair": {
+      "scope": "/assets/service-showpiece/flooring-floor-repair-scope.webp",
+      "process": "/assets/service-showpiece/flooring-floor-repair-process.webp"
+    },
+    "subfloor preparation": {
+      "scope": "/assets/service-showpiece/flooring-subfloor-preparation-scope.webp",
+      "process": "/assets/service-showpiece/flooring-subfloor-preparation-process.webp"
+    },
+    "commercial flooring": {
+      "scope": "/assets/service-showpiece/flooring-commercial-flooring-scope.webp",
+      "process": "/assets/service-showpiece/flooring-commercial-flooring-process.webp"
+    }
+  },
+  "Painting": {
+    "interior painting": {
+      "scope": "/assets/service-showpiece/painting-interior-painting-scope.webp",
+      "process": "/assets/service-showpiece/painting-interior-painting-process.webp"
+    },
+    "exterior painting": {
+      "scope": "/assets/service-showpiece/painting-exterior-painting-scope.webp",
+      "process": "/assets/service-showpiece/painting-exterior-painting-process.webp"
+    },
+    "cabinet painting": {
+      "scope": "/assets/service-showpiece/painting-cabinet-painting-scope.webp",
+      "process": "/assets/service-showpiece/painting-cabinet-painting-process.webp"
+    },
+    "deck and fence staining": {
+      "scope": "/assets/service-showpiece/painting-deck-and-fence-staining-scope.webp",
+      "process": "/assets/service-showpiece/painting-deck-and-fence-staining-process.webp"
+    },
+    "surface preparation": {
+      "scope": "/assets/service-showpiece/painting-surface-preparation-scope.webp",
+      "process": "/assets/service-showpiece/painting-surface-preparation-process.webp"
+    },
+    "drywall repair": {
+      "scope": "/assets/service-showpiece/painting-drywall-repair-scope.webp",
+      "process": "/assets/service-showpiece/painting-drywall-repair-process.webp"
+    },
+    "decorative finishes": {
+      "scope": "/assets/service-showpiece/painting-decorative-finishes-scope.webp",
+      "process": "/assets/service-showpiece/painting-decorative-finishes-process.webp"
+    },
+    "commercial painting": {
+      "scope": "/assets/service-showpiece/painting-commercial-painting-scope.webp",
+      "process": "/assets/service-showpiece/painting-commercial-painting-process.webp"
+    }
+  },
+  "Fencing": {
+    "wood fencing": {
+      "scope": "/assets/service-showpiece/fencing-wood-fencing-scope.webp",
+      "process": "/assets/service-showpiece/fencing-wood-fencing-process.webp"
+    },
+    "vinyl fencing": {
+      "scope": "/assets/service-showpiece/fencing-vinyl-fencing-scope.webp",
+      "process": "/assets/service-showpiece/fencing-vinyl-fencing-process.webp"
+    },
+    "metal fencing": {
+      "scope": "/assets/service-showpiece/fencing-metal-fencing-scope.webp",
+      "process": "/assets/service-showpiece/fencing-metal-fencing-process.webp"
+    },
+    "privacy fencing": {
+      "scope": "/assets/service-showpiece/fencing-privacy-fencing-scope.webp",
+      "process": "/assets/service-showpiece/fencing-privacy-fencing-process.webp"
+    },
+    "gates": {
+      "scope": "/assets/service-showpiece/fencing-gates-scope.webp",
+      "process": "/assets/service-showpiece/fencing-gates-process.webp"
+    },
+    "fence repair": {
+      "scope": "/assets/service-showpiece/fencing-fence-repair-scope.webp",
+      "process": "/assets/service-showpiece/fencing-fence-repair-process.webp"
+    },
+    "pool fencing": {
+      "scope": "/assets/service-showpiece/fencing-pool-fencing-scope.webp",
+      "process": "/assets/service-showpiece/fencing-pool-fencing-process.webp"
+    },
+    "commercial fencing": {
+      "scope": "/assets/service-showpiece/fencing-commercial-fencing-scope.webp",
+      "process": "/assets/service-showpiece/fencing-commercial-fencing-process.webp"
+    }
+  },
+  "Garage Doors": {
+    "garage door installation": {
+      "scope": "/assets/service-showpiece/garage-doors-garage-door-installation-scope.webp",
+      "process": "/assets/service-showpiece/garage-doors-garage-door-installation-process.webp"
+    },
+    "garage door repair": {
+      "scope": "/assets/service-showpiece/garage-doors-garage-door-repair-scope.webp",
+      "process": "/assets/service-showpiece/garage-doors-garage-door-repair-process.webp"
+    },
+    "spring replacement": {
+      "scope": "/assets/service-showpiece/garage-doors-spring-replacement-scope.webp",
+      "process": "/assets/service-showpiece/garage-doors-spring-replacement-process.webp"
+    },
+    "opener installation": {
+      "scope": "/assets/service-showpiece/garage-doors-opener-installation-scope.webp",
+      "process": "/assets/service-showpiece/garage-doors-opener-installation-process.webp"
+    },
+    "opener repair": {
+      "scope": "/assets/service-showpiece/garage-doors-opener-repair-scope.webp",
+      "process": "/assets/service-showpiece/garage-doors-opener-repair-process.webp"
+    },
+    "panel replacement": {
+      "scope": "/assets/service-showpiece/garage-doors-panel-replacement-scope.webp",
+      "process": "/assets/service-showpiece/garage-doors-panel-replacement-process.webp"
+    },
+    "weather sealing": {
+      "scope": "/assets/service-showpiece/garage-doors-weather-sealing-scope.webp",
+      "process": "/assets/service-showpiece/garage-doors-weather-sealing-process.webp"
+    },
+    "garage door maintenance": {
+      "scope": "/assets/service-showpiece/garage-doors-garage-door-maintenance-scope.webp",
+      "process": "/assets/service-showpiece/garage-doors-garage-door-maintenance-process.webp"
+    }
+  },
+  "Pest Control": {
+    "pest inspections": {
+      "scope": "/assets/service-showpiece/pest-control-pest-inspections-scope.webp",
+      "process": "/assets/service-showpiece/pest-control-pest-inspections-process.webp"
+    },
+    "ant control": {
+      "scope": "/assets/service-showpiece/pest-control-ant-control-scope.webp",
+      "process": "/assets/service-showpiece/pest-control-ant-control-process.webp"
+    },
+    "rodent control": {
+      "scope": "/assets/service-showpiece/pest-control-rodent-control-scope.webp",
+      "process": "/assets/service-showpiece/pest-control-rodent-control-process.webp"
+    },
+    "termite inspections": {
+      "scope": "/assets/service-showpiece/pest-control-termite-inspections-scope.webp",
+      "process": "/assets/service-showpiece/pest-control-termite-inspections-process.webp"
+    },
+    "cockroach control": {
+      "scope": "/assets/service-showpiece/pest-control-cockroach-control-scope.webp",
+      "process": "/assets/service-showpiece/pest-control-cockroach-control-process.webp"
+    },
+    "spider control": {
+      "scope": "/assets/service-showpiece/pest-control-spider-control-scope.webp",
+      "process": "/assets/service-showpiece/pest-control-spider-control-process.webp"
+    },
+    "mosquito control": {
+      "scope": "/assets/service-showpiece/pest-control-mosquito-control-scope.webp",
+      "process": "/assets/service-showpiece/pest-control-mosquito-control-process.webp"
+    },
+    "preventive maintenance": {
+      "scope": "/assets/service-showpiece/pest-control-preventive-maintenance-scope.webp",
+      "process": "/assets/service-showpiece/pest-control-preventive-maintenance-process.webp"
+    }
+  },
+  "Windows/Doors": {
+    "window replacement": {
+      "scope": "/assets/service-showpiece/windows-doors-window-replacement-scope.webp",
+      "process": "/assets/service-showpiece/windows-doors-window-replacement-process.webp"
+    },
+    "window installation": {
+      "scope": "/assets/service-showpiece/windows-doors-window-installation-scope.webp",
+      "process": "/assets/service-showpiece/windows-doors-window-installation-process.webp"
+    },
+    "energy-efficient windows": {
+      "scope": "/assets/service-showpiece/windows-doors-energy-efficient-windows-scope.webp",
+      "process": "/assets/service-showpiece/windows-doors-energy-efficient-windows-process.webp"
+    },
+    "entry doors": {
+      "scope": "/assets/service-showpiece/windows-doors-entry-doors-scope.webp",
+      "process": "/assets/service-showpiece/windows-doors-entry-doors-process.webp"
+    },
+    "patio doors": {
+      "scope": "/assets/service-showpiece/windows-doors-patio-doors-scope.webp",
+      "process": "/assets/service-showpiece/windows-doors-patio-doors-process.webp"
+    },
+    "sliding glass doors": {
+      "scope": "/assets/service-showpiece/windows-doors-sliding-glass-doors-scope.webp",
+      "process": "/assets/service-showpiece/windows-doors-sliding-glass-doors-process.webp"
+    },
+    "french doors": {
+      "scope": "/assets/service-showpiece/windows-doors-french-doors-scope.webp",
+      "process": "/assets/service-showpiece/windows-doors-french-doors-process.webp"
+    },
+    "window and door repair": {
+      "scope": "/assets/service-showpiece/windows-doors-window-and-door-repair-scope.webp",
+      "process": "/assets/service-showpiece/windows-doors-window-and-door-repair-process.webp"
+    }
+  },
+  "Solar": {
+    "solar panel installation": {
+      "scope": "/assets/service-showpiece/solar-solar-panel-installation-scope.webp",
+      "process": "/assets/service-showpiece/solar-solar-panel-installation-process.webp"
+    },
+    "solar battery storage": {
+      "scope": "/assets/service-showpiece/solar-solar-battery-storage-scope.webp",
+      "process": "/assets/service-showpiece/solar-solar-battery-storage-process.webp"
+    },
+    "solar system design": {
+      "scope": "/assets/service-showpiece/solar-solar-system-design-scope.webp",
+      "process": "/assets/service-showpiece/solar-solar-system-design-process.webp"
+    },
+    "solar panel maintenance": {
+      "scope": "/assets/service-showpiece/solar-solar-panel-maintenance-scope.webp",
+      "process": "/assets/service-showpiece/solar-solar-panel-maintenance-process.webp"
+    },
+    "solar panel cleaning": {
+      "scope": "/assets/service-showpiece/solar-solar-panel-cleaning-scope.webp",
+      "process": "/assets/service-showpiece/solar-solar-panel-cleaning-process.webp"
+    },
+    "solar inverter replacement": {
+      "scope": "/assets/service-showpiece/solar-solar-inverter-replacement-scope.webp",
+      "process": "/assets/service-showpiece/solar-solar-inverter-replacement-process.webp"
+    },
+    "solar removal and reinstallation": {
+      "scope": "/assets/service-showpiece/solar-solar-removal-and-reinstallation-scope.webp",
+      "process": "/assets/service-showpiece/solar-solar-removal-and-reinstallation-process.webp"
+    },
+    "solar system monitoring": {
+      "scope": "/assets/service-showpiece/solar-solar-system-monitoring-scope.webp",
+      "process": "/assets/service-showpiece/solar-solar-system-monitoring-process.webp"
+    }
+  }
+}
