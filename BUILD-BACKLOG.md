@@ -812,6 +812,11 @@ The 17 trade families retain their existing templates or queued rollout slots. [
 - Files: `assets/transformations/plumbing/` **(new)**, trade config and focused tests, `docs/build-evidence/031S/` **(new)**.
 - External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
 
+### #031A — All-in sales page for contractors (Sol High)
+
+- State: **Not started — backlog only**. Build the Buildovate-to-contractor sales page specified in [ALL-IN-SALES-PAGE.md](docs/product/ALL-IN-SALES-PAGE.md), separate from contractor public sites. Show Website/Growth/All-in from one approved pricing config, a real-product hero, a computed $956 à la carte receipt versus the proposed $449 All-in, a homeowner journey, responsive plan comparison, clearly illustrative job math, sourced and dated competitor comparisons, real proof only, FAQ and tracked calls to action. Annual prepay is two months free; there is no setup fee, while the website build is quoted separately.
+- Done when: Config-driven prices, 21-line receipt arithmetic and 53% display, reduced-motion/no-JS state, calculator labeling, empty-proof hiding, cited competitor checks, 390px/desktop comparison and sticky CTA, keyboard access, conversion tracking, #015G margin linkage and the in-dashboard upgrade path pass. Resolve the Growth social-pack entitlement difference between this brief and #030M before publication; K23 must approve sales/comparison/cancellation wording.
+
 ### #032 — Apply the approved page system to Electrical
 
 - State: **Not started** · Estimate: **6h** (≤1 day).

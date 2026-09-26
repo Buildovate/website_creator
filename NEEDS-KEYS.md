@@ -74,3 +74,6 @@ K23 remains missing. The local framework supports administrator-supplied, review
 - For #030M, what contractor consent and public disclosure, if any, are required for AI-written social posts, including posts edited or auto-approved by category?
 - For #030M, what homeowner/customer permissions and source attribution are required before using completed-project photos or real reviews in social posts on each network?
 - For #030M, what financing advertising disclosures must appear within each network's post, creative, link preview and destination when a monthly payment is shown?
+- For #031A, what wording and substantiation are required for the computed $956-versus-$449 savings claim and the contractor-input job calculator's revenue-only illustration disclaimer?
+- For #031A, what citation, freshness, scope and comparison wording is acceptable when naming competitor prices, billing terms or setup fees?
+- For #031A, what cancellation, domain/content ownership, connected social-account/post access and data export terms must the pricing FAQ and `/legal` state?
