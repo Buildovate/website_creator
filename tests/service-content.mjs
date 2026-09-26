@@ -10,8 +10,8 @@ import {plannedTrades} from '../scripts/service-content-source.mjs';
 const library = JSON.parse(readFileSync('public/trade-library.json', 'utf8'));
 const normalize = value => value.trim().toLowerCase();
 
-test('all 16 trade briefs and Robles extra services have complete, unique service copy', () => {
-  assert.equal(Object.keys(serviceContent).length, 16);
+test('all 17 trade briefs and Robles extra services have complete, unique service copy', () => {
+  assert.equal(Object.keys(serviceContent).length, 17);
   for (const [trade, names] of Object.entries({...library, ...plannedTrades})) {
     for (const name of names) assert.ok(serviceBrief(trade, name), trade + ': ' + name);
     assert.equal(Object.keys(serviceContent[trade]).length, names.length + (trade === 'Roofing' ? 4 : 0));

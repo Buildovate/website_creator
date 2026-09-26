@@ -136,3 +136,18 @@ Every service uses a distinct hero, scope photograph and process photograph from
 | Pools | pool tile and coping | Trace waterline tile choices through the pool tile and coping scope; reveal coping profile and edge at the second hotspot. |
 | Pools | pool decking | Trace deck layout and drainage through the pool decking scope; reveal surface texture and color at the second hotspot. |
 | Pools | pool maintenance | Trace water and equipment checks through the pool maintenance scope; reveal cleaning and debris removal at the second hotspot. |
+
+## #170 — Locksmith
+
+Uses the existing shared service renderer, dimensional house/door assembly, brass cylinder and key overlay, labeled hotspots and scanned hardware. The underlying hero, scope and process photos are distinct per service. Static content and controls remain available without JavaScript and with reduced motion.
+
+| Trade | Service | Interaction content |
+|---|---|---|
+| Locksmith | residential lockout | Door and lock identification; Entry approach and condition check; Operation check after access. |
+| Locksmith | rekeying | Cylinder compatibility assessment; New key grouping and quantities; Old-key retirement check. |
+| Locksmith | lock installation | Door preparation and hardware fit; Latch and strike alignment; Key and handle operation testing. |
+| Locksmith | smart locks | Keypad and door compatibility; Power and connectivity requirements; Guest-code and backup-access setup. |
+| Locksmith | automotive lockout | Vehicle identification and access review; Door-seal and glass condition check; Entry completion without key programming. |
+| Locksmith | commercial access control | Door and credential inventory; Reader and controller compatibility; Access-role and handover plan. |
+| Locksmith | safe servicing | Safe model and condition review; Handle and keypad diagnostics; Service scope and access verification. |
+| Locksmith | key duplication | Original-key and blank matching; Cut accuracy and edge finishing; Spare-key fit verification. |

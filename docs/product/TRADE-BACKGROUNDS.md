@@ -21,3 +21,7 @@ The site seed selects layout variant 0/2 (A) or 1 (B). Patterns sit behind copy 
 | Concrete | form lines | aggregate speckle |
 | Pools | waterline ripple | tile bands |
 | Locksmith | cylinder rings | keyway lines |
+
+## #170 enabled kits
+
+Concrete and Pools are selectable. Locksmith uses the existing key-cut and pin-tumbler seed treatments. Service/core section transitions now pair form lines/aggregate dots, waterlines/tile bands and key-cut/pin-tumbler edges for variants 0/2 and 1 respectively. Decorations remain static under reduced motion; homepage renderer and drone media are unchanged.

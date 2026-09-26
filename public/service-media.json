@@ -578,5 +578,47 @@
       "scope": "/assets/service-showpiece/solar-solar-system-monitoring-scope.webp",
       "process": "/assets/service-showpiece/solar-solar-system-monitoring-process.webp"
     }
+  },
+  "Locksmith": {
+    "residential lockout": {
+      "process": "/assets/trade-enablement/locksmith-residential-lockout-process.webp",
+      "scope": "/assets/trade-enablement/locksmith-residential-lockout-scope.webp",
+      "hero": "/assets/trade-enablement/locksmith-residential-lockout-hero.webp"
+    },
+    "rekeying": {
+      "scope": "/assets/trade-enablement/locksmith-rekeying-scope.webp",
+      "process": "/assets/trade-enablement/locksmith-rekeying-process.webp",
+      "hero": "/assets/trade-enablement/locksmith-rekeying-hero.webp"
+    },
+    "lock installation": {
+      "scope": "/assets/trade-enablement/locksmith-lock-installation-scope.webp",
+      "hero": "/assets/trade-enablement/locksmith-lock-installation-hero.webp",
+      "process": "/assets/trade-enablement/locksmith-lock-installation-process.webp"
+    },
+    "automotive lockout": {
+      "scope": "/assets/trade-enablement/locksmith-automotive-lockout-scope.webp",
+      "process": "/assets/trade-enablement/locksmith-automotive-lockout-process.webp",
+      "hero": "/assets/trade-enablement/locksmith-automotive-lockout-hero.webp"
+    },
+    "smart locks": {
+      "process": "/assets/trade-enablement/locksmith-smart-locks-process.webp",
+      "hero": "/assets/trade-enablement/locksmith-smart-locks-hero.webp",
+      "scope": "/assets/trade-enablement/locksmith-smart-locks-scope.webp"
+    },
+    "safe servicing": {
+      "process": "/assets/trade-enablement/locksmith-safe-servicing-process.webp",
+      "hero": "/assets/trade-enablement/locksmith-safe-servicing-hero.webp",
+      "scope": "/assets/trade-enablement/locksmith-safe-servicing-scope.webp"
+    },
+    "commercial access control": {
+      "process": "/assets/trade-enablement/locksmith-commercial-access-control-process.webp",
+      "scope": "/assets/trade-enablement/locksmith-commercial-access-control-scope.webp",
+      "hero": "/assets/trade-enablement/locksmith-commercial-access-control-hero.webp"
+    },
+    "key duplication": {
+      "hero": "/assets/trade-enablement/locksmith-key-duplication-hero.webp",
+      "process": "/assets/trade-enablement/locksmith-key-duplication-process.webp",
+      "scope": "/assets/trade-enablement/locksmith-key-duplication-scope.webp"
+    }
   }
 }

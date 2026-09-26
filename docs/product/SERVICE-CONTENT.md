@@ -1619,3 +1619,101 @@ Every entry has a unique card blurb, a four-to-six-word hero, three specific sco
   - **What does pool maintenance cover?** For pool maintenance, the scope includes water and equipment checks, cleaning and debris removal, and seasonal care discussion.
   - **How do you start pool maintenance?** Ask about recent water changes, so the pool maintenance plan reflects what is actually at your home.
   - **Can we plan pool maintenance in {{city}}?** For pool maintenance in {{city}}, tell {{business}} about water turns cloudy and any earlier work on that part of your home.
+
+## Locksmith (8)
+
+### Residential lockout
+
+- Card: Locked outside with the keys indoors? Explain the door and lock so the technician can discuss an appropriate way to help.
+- Hero: Get back through your door
+- Includes: Door and lock identification · Entry approach and condition check · Operation check after access
+- Signs: Your house key is inside · The front latch closed behind you · A damaged key will not turn
+- Process: Confirm permission to enter the home → Assess the closed door and its hardware → Agree on the entry work before starting → Check the latch and hand back access
+- FAQs:
+  - **What information helps when I am locked outside?** Describe the door, the lock type and whether a key is lost, inside or broken. Confirm your address and permission to enter when arranging help.
+  - **Will the door need a new lock afterward?** That depends on its condition and the agreed entry method. Ask the technician to explain any proposed replacement before work begins.
+  - **Can someone meet me at my home in {{city}}?** {{business}} can discuss access assistance in {{region}}. Call to confirm the location and actual availability; no arrival time is promised by this page.
+
+### Rekeying
+
+- Card: Moving in or changing who has a key? A compatible cylinder can be reset without replacing every piece of door hardware.
+- Hero: Keep the lock, change access
+- Includes: Cylinder compatibility assessment · New key grouping and quantities · Old-key retirement check
+- Signs: You do not know who holds copies · A former occupant still has a key · Several doors need a coordinated key
+- Process: List the doors and keys in circulation → Check which cylinders can be reset → Reconfigure the agreed locks for new keys → Test the new key at each changed door
+- FAQs:
+  - **How is changing the key different from replacing the lock?** Resetting a compatible cylinder changes which key operates it while retaining the surrounding hardware. Worn or incompatible hardware may call for replacement instead.
+  - **Can my exterior doors use one key?** Some cylinders can share a key pattern, but their keyways must be compatible. Show the technician each door before deciding on a common-key arrangement.
+  - **What should I bring to a rekeying appointment?** Have the existing keys, a list of doors and the number of new keys needed. For work in {{city}}, {{business}} also confirms who is authorized to change access.
+
+### Lock installation
+
+- Card: A new deadbolt or handle needs more than a matching finish. Door thickness, bore spacing and strike alignment determine the fit.
+- Hero: Fit the hardware to your door
+- Includes: Door preparation and hardware fit · Latch and strike alignment · Key and handle operation testing
+- Signs: The existing deadbolt sticks · A door needs its first deadbolt · The handle no longer secures the latch
+- Process: Measure the door and existing bore locations → Select hardware that fits the opening → Fit the lock and align its strike → Demonstrate locking from both sides
+- FAQs:
+  - **Can I supply the deadbolt I want installed?** Share its model and door measurements before booking. The installer needs to check the backset, thickness range and existing preparation before confirming the fit.
+  - **Why does my door only lock when I lift it?** The hinges, door position or strike alignment may be contributing. Inspecting the opening can avoid replacing a sound lock without addressing the cause.
+  - **Does lock installation include repairing the door frame?** Describe any split wood or loose strike screws when requesting a scope in {{city}}. {{business}} can separate the hardware work from any frame repairs that are needed.
+
+### Smart locks
+
+- Card: Keypad entry can simplify coming and going. Start with door compatibility, battery access and a backup way in before choosing connected features.
+- Hero: Make everyday entry work simply
+- Includes: Keypad and door compatibility · Power and connectivity requirements · Guest-code and backup-access setup
+- Signs: You want entry without handing out keys · A keypad fails to engage the bolt · Guest access needs a clearer routine
+- Process: Match the device to the door and latch → Review batteries and connection needs → Install and pair the selected entry device → Practice a guest code and backup entry
+- FAQs:
+  - **Will a keypad still work if Wi-Fi is down?** Offline operation varies by model. Review its local keypad, battery requirements and physical backup before deciding which features matter to your household.
+  - **Can I keep my current key as a backup?** Some devices retain an existing cylinder while others replace it. Bring the model details so the lock and key arrangement can be checked together.
+  - **Who controls the codes after installation?** The property owner should hold the administrator account and decide who receives access. {{business}} can walk through the selected device with you during a smart-lock visit in {{city}}.
+
+### Automotive lockout
+
+- Card: Keys left in a locked vehicle need help suited to that vehicle. Share the make, model and year before arranging an access visit.
+- Hero: Reach the keys inside your car
+- Includes: Vehicle identification and access review · Door-seal and glass condition check · Entry completion without key programming
+- Signs: Your keys are visible inside the car · The vehicle locked while unloading · A spare key is out of reach
+- Process: Confirm the vehicle and your authorization → Assess the door and available entry approach → Discuss the agreed vehicle-access work → Return access and check the door closure
+- FAQs:
+  - **What vehicle details should I have ready?** Provide the make, model, year and where the keys are located. A description of the lock or electronic-entry issue helps establish whether the requested visit is suitable.
+  - **Is opening the vehicle the same as making a new key?** No. Gaining access and cutting or programming a replacement key are different jobs. Ask separately about the vehicle-specific capability if the keys are missing.
+  - **Can I request automotive lockout help in {{city}}?** Call {{business}} with your location in {{region}} and vehicle details. The team must confirm service coverage and availability before you rely on a visit.
+
+### Commercial access control
+
+- Card: Manage staff entry around the doors your business uses. Readers, credentials and exit hardware need a coordinated plan, not disconnected devices.
+- Hero: Give each person appropriate access
+- Includes: Door and credential inventory · Reader and controller compatibility · Access-role and handover plan
+- Signs: Departing staff retain entry credentials · Your building uses several disconnected systems · Managers need different access schedules
+- Process: Map staff routes and controlled openings → Review existing readers and exit hardware → Configure the agreed access roles and devices → Test entry permissions and hand over controls
+- FAQs:
+  - **Can you work with our existing badge readers?** Supply the manufacturer, controller details and available administration records. Compatibility and account access need checking before any hardware or credential changes are proposed.
+  - **Can different staff groups have different permissions?** Role and schedule controls depend on the chosen system. List the doors and hours each group needs so those requirements can be compared with supported features.
+  - **What should a business prepare for an access-control survey?** Bring an authorized contact, a door list and the current credential process. {{business}} can use those details to scope the commercial access control requested in {{city}}.
+
+### Safe servicing
+
+- Card: A reluctant handle, worn keypad or forgotten combination calls for a careful assessment of the safe, its condition and the owner access needs.
+- Hero: Care for the safe you use
+- Includes: Safe model and condition review · Handle and keypad diagnostics · Service scope and access verification
+- Signs: The safe handle resists normal movement · The keypad has stopped responding · You need help with an owned safe
+- Process: Confirm ownership and identify the safe model → Review symptoms and available documentation → Agree on diagnostic or servicing work → Check normal operation with the owner present
+- FAQs:
+  - **What details help identify my safe?** Photograph the exterior model label if accessible and note the keypad or dial type. Do not send combinations or private contents through an inquiry form.
+  - **Does a silent keypad mean the safe needs replacing?** Power supply, keypad condition and the lock mechanism are separate possibilities. A model-specific assessment comes before recommending servicing or replacement.
+  - **Can you service a safe at my property in {{city}}?** {{business}} can review the safe type and access conditions in {{region}}. Confirm model support, handling needs and the scope before scheduling.
+
+### Key duplication
+
+- Card: A useful spare starts with the right blank and a sound original. Check the key profile before cutting, then test it in the intended lock.
+- Hero: Make a spare that turns smoothly
+- Includes: Original-key and blank matching · Cut accuracy and edge finishing · Spare-key fit verification
+- Signs: You need a spare for a household member · An old copy catches in the cylinder · The only working key is wearing down
+- Process: Inspect the original and identify its profile → Match an available compatible key blank → Cut and finish the agreed duplicate → Check the copy in its intended lock
+- FAQs:
+  - **Can any key be copied from an existing spare?** Wear and copying errors can carry forward. Bring the best working original available; restricted profiles and some electronic keys require a different authorized service.
+  - **Why does a freshly cut copy feel rough?** Blank compatibility, cut accuracy, burrs and the condition of the original can affect fit. Stop forcing a reluctant copy and have it checked against the working key.
+  - **Where can I arrange key duplication in {{city}}?** Ask {{business}} about the key type and service arrangements in {{region}}. Confirm support before traveling with a specialty or restricted key.

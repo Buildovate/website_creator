@@ -1,5 +1,10 @@
 # BUILD STATUS
 
+## #170 — Trade kit enablement (Concrete, Pools, Locksmith)
+
+**Done locally.** Groundwork (Concrete), Stillwater (Pools) and Keyline (Locksmith) use the existing kit pattern. All 17 kits are selectable in the library, create/prepare pickers, composer and questionnaire; 24 enabled services have unique hero/scope/process images and unique briefs. Higgsfield generated 33 representative stills for 66 credits (2579.8 → 2513.8). Build/typecheck, 52 regression scripts, all five existing browser suites, 258 new browser checks and 1326 local template renders passed. Nine restarted Vite preview URLs return 200. All 654 backed-up evidence files and 262 pre-existing changes were hash-verified after restoration. [Evidence](docs/build-evidence/170/README.md). Local commit only; no staging, push or deployment.
+
+
 ## #004W-v4 — showpiece fix pass
 
 **Done for the requested local fix pass.** All 284 requested Higgsfield stills are installed (20 missing heroes + 264 section photos), all 132 services have distinct hero/scope/process assets, and legacy authored Roofing services use the shared renderer. Rich AR assemblies, unique service/city copy, consistent financing and estimator-entry styling, sample-only previews and empty published-state suppression are verified. Build/typecheck, 50 regression scripts, 166 page browser checks, 202 platform states, the existing contacts/callback/linkage browser suites, 10 zero-violation phone accessibility scans and 1,092 local template renders passed. [Evidence and preservation exception](docs/build-evidence/004W-v4/README.md). Full Virtual Estimator remains #029V; no push or deployment.

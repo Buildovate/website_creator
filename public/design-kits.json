@@ -299,5 +299,86 @@
       "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
       "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
     }
+  },
+  "concrete": {
+    "id": "concrete",
+    "trade": "Concrete",
+    "name": "GROUNDWORK",
+    "headline": "A sound base.\nA considered finish.",
+    "intro": "Plan the grade, joints and finish for concrete that fits how you use the space.",
+    "color": "#bf9974",
+    "tone": "clay",
+    "layout": "studio",
+    "image": "/assets/trade-enablement/concrete-kit-hero.webp",
+    "videoPoster": "/assets/trade-enablement/concrete-kit-hero.webp",
+    "art": {
+      "banner": "/assets/trade-enablement/concrete-kit-banner.webp",
+      "detail": "/assets/trade-enablement/concrete-kit-detail.webp"
+    },
+    "mediaStatus": "representative generated stills; no trade film",
+    "direction": "Form lines, aggregate texture and warm stone; show preparation, drainage and finish choices.",
+    "prompt": "Build an accessible contractor site using only confirmed business facts and the selected services. Form lines, aggregate texture and warm stone; show preparation, drainage and finish choices. Representative imagery is not a completed customer project. Use Sample tags in private noindex previews and omit empty published sections. Never invent reviews, ratings, urgency, prices or financing terms. Preserve selected services, owned branding and accessible static fallbacks.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use restrained concrete material details with readable text and a static reduced-motion state.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "pools": {
+    "id": "pools",
+    "trade": "Pools",
+    "name": "STILLWATER",
+    "headline": "Room to swim.\nSpace to unwind.",
+    "intro": "Plan the water, the poolside and the equipment around your yard and your routine.",
+    "color": "#71b8bb",
+    "tone": "clay",
+    "layout": "editorial",
+    "image": "/assets/trade-enablement/pools-kit-hero.webp",
+    "videoPoster": "/assets/trade-enablement/pools-kit-hero.webp",
+    "art": {
+      "banner": "/assets/trade-enablement/pools-kit-banner.webp",
+      "detail": "/assets/trade-enablement/pools-kit-detail.webp"
+    },
+    "mediaStatus": "representative generated stills; no trade film",
+    "direction": "Waterline tile, soft reflections and pale stone; focus on shell, circulation and comfortable poolside access.",
+    "prompt": "Build an accessible contractor site using only confirmed business facts and the selected services. Waterline tile, soft reflections and pale stone; focus on shell, circulation and comfortable poolside access. Representative imagery is not a completed customer project. Use Sample tags in private noindex previews and omit empty published sections. Never invent reviews, ratings, urgency, prices or financing terms. Preserve selected services, owned branding and accessible static fallbacks.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use restrained pools material details with readable text and a static reduced-motion state.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "locksmith": {
+    "id": "locksmith",
+    "trade": "Locksmith",
+    "name": "KEYLINE",
+    "headline": "The right access.\nA better fit.",
+    "intro": "Tell us about the door, key or entry system. We will check compatibility and discuss the work before starting.",
+    "color": "#b39a69",
+    "tone": "clay",
+    "layout": "studio",
+    "image": "/assets/trade-enablement/locksmith-kit-hero.webp",
+    "videoPoster": "/assets/trade-enablement/locksmith-kit-hero.webp",
+    "art": {
+      "banner": "/assets/trade-enablement/locksmith-kit-banner.webp",
+      "detail": "/assets/trade-enablement/locksmith-kit-detail.webp"
+    },
+    "mediaStatus": "representative generated stills; no trade film",
+    "direction": "Brushed brass, precise key-cut edges and pin-tumbler lines; clear access choices with no invented urgency or arrival times.",
+    "prompt": "Build an accessible contractor site using only confirmed business facts and the selected services. Brushed brass, precise key-cut edges and pin-tumbler lines; clear access choices with no invented urgency or arrival times. Representative imagery is not a completed customer project. Use Sample tags in private noindex previews and omit empty published sections. Never invent reviews, ratings, urgency, prices or financing terms. Preserve selected services, owned branding and accessible static fallbacks.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use restrained locksmith material details with readable text and a static reduced-motion state.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
   }
 }

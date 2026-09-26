@@ -2193,3 +2193,10 @@ Tickets #104–#169.
 These are implementation slices, not a promise that a single starter catalog or successful provider fixture completes an entire pack. The email starters deliberately do not represent a finished year of campaigns; the yearly calendar remains review-driven and new content is generated/approved through the implemented workflow. At each phase acceptance gate, reconcile every relevant BUILD-STATUS row. If any required behavior, trade-specific asset, language or provider is still missing, retain Partial and add small numbered follow-up tickets before claiming the section Done. Never silently drop unsupported integrations or requirements.
 
 No deployment ticket is included. After a reviewed candidate exists, staging/production release remains a separate user-authorized action. No feature ticket has been started by this audit.
+
+
+### #170 — Trade kit enablement (Concrete, Pools, Locksmith)
+
+- State: **Done — local verification complete**. Enable all 17 trades using the existing kit/library/composer/questionnaire pattern; preserve the homepage renderers and drone assets. Complete service briefs, unique representative imagery, backgrounds and city/estimator support. Fix preview-art design labels.
+- Acceptance: build, typecheck, all regression and platform browser suites, local-only template media audit, all-picker and media/copy regressions, desktop/390px captures, Higgsfield balance reconciliation, and byte-for-byte restoration of all pre-existing evidence files.
+- Evidence: [#170](docs/build-evidence/170/README.md). Local commit only; no push, deployment or staging. #015G and other queued tickets are not started.

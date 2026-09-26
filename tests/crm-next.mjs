@@ -23,6 +23,6 @@ await api('/proposal/'+doc.data.token,'POST',{approved:true,name:'Test Customer'
 const stranger={id:'stranger',email:'stranger@example.test'};assert.equal((await req(base,'GET',null,stranger)).status,403);assert.equal((await req(base+'/'+a.id,'DELETE',{version:r.version},stranger)).status,403);
 const t=(await api('/api/tenants')).tenants[0];assert.equal((await req('/api/workspace/'+t.id+'/contacts/'+a.id)).status,404);
 await api('/api/session');const team=await api('/api/team');assert.ok(team.members.find(x=>x.email===admin.email).lastSeen);
-assert.equal((await api('/api/crm/global/demo','POST',{once:true})).added,14);assert.equal((await api('/api/crm/global/demo','POST',{once:true})).added,0);
+assert.equal((await api('/api/crm/global/demo','POST',{once:true})).added,17);assert.equal((await api('/api/crm/global/demo','POST',{once:true})).added,0);
 await api(base+'/'+a.id,'DELETE',{version:r.version});assert.equal((await req(base+'/'+a.id)).status,404);assert.equal((await api(paybase+'/'+p.id)).record.data.contactId,a.id);
 console.log('PASS CRM refresh: cross-kind normalized dedup, batch duplicate skipping, versioned call logs, assignment validation, stage/program history, field configuration, calendar overlap/custom answers, signed document hash and immutable approval, tenant isolation, deletion, idempotent demo seeding and authenticated last-seen.');

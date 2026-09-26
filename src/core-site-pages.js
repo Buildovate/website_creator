@@ -6,7 +6,7 @@ import {publicLegalSettings,assessLegalPolicy} from './platform/legal-policy.ts'
 import {demoProjects} from './crm.js';
 import {normalizePlatform,FINANCING_DISCLOSURE} from './platform/constitution.ts';
 import {kits} from './design-kits.js';
-import {cityEditorial} from './city-editorial.js';
+import {cityEditorial,newTradeCityContent} from './city-editorial.js';
 import media from '../public/service-media.json' with {type:'json'};
 import art from '../public/service-art.json' with {type:'json'};
 import {serviceDiagram,visualLabels} from './service-showpiece.js';
@@ -39,6 +39,7 @@ const category=(trade,name)=>{
   'Windows/Doors':[['Windows',/window/],['Doors',/door/],['Repair',/repair/]],
   Solar:[['Solar panels',/panel|system design|monitoring/],['Storage & equipment',/battery|inverter/],['Care',/maintenance|cleaning|removal/]],
   Concrete:[['Flatwork',/driveway|patio|walkway|slab/],['Structure & repair',/foundation|repair/],['Finishes',/stamped|decorative/]],
+  Locksmith:[['Home access',/residential|rekey|lock installation|smart/],['Vehicle access',/automotive/],['Business & specialist',/commercial|safe|key duplication/]],
   Pools:[['New pools',/design|construction/],['Renovation',/remodel|resurfac|tile|deck/],['Equipment & care',/equipment|maintenance/]]
  };
  return (groups[trade]||[]).find(([,rx])=>rx.test(n))?.[0]||'More services';
@@ -55,7 +56,7 @@ const sentence=(value)=>String(value).replace(/\s+/g,' ').trim();
 export function cityContent(s,city,index=0){
  const local=cityEditorial[city],record=(s.serviceAreas||[]).find(x=>x.city===city);
  const fallback={intro:`Talk with ${s.name} about ${s.trade.toLowerCase()} work at your ${city} address.`,detail:record?.description||`Send photos and the location of your ${city} property so the team can discuss the building and access before a visit.`,faq:[['What should I send about my '+city+' property?','Include the '+city+' address and a description of the affected area.'],['How do I discuss access in '+city+'?','Mention gates, stairs and shared spaces at your '+city+' home.'],['Can I ask about previous work in '+city+'?','Share any records for earlier repairs at the '+city+' property.']]};
- const copy=local||fallback;return {...copy,question:copy.faq[0][0],answer:copy.faq[0][1]};
+ const copy=newTradeCityContent(s,city)||local||fallback;return {...copy,question:copy.faq[0][0],answer:copy.faq[0][1]};
 }
 export function assertUniqueCitySentences(s){
  const found=new Map();for(const city of cityList(s)){const c=cityContent(s,city);for(const value of [c.intro,c.detail,...c.faq.flat()])for(const part of value.match(/[^.!?]+[.!?]?/g)||[]){const normalized=part.trim().toLowerCase();if(!normalized)continue;if(found.has(normalized)&&found.get(normalized)!==city)throw Error('Two city pages share a sentence: '+normalized);found.set(normalized,city)}}return true;

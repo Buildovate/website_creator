@@ -3,6 +3,9 @@ import {kits} from './design-kits.js';
 
 export const tradeArtId = trade => ({'Windows/Doors':'windows-doors','General Contractors':'general-contractors','Garage Doors':'garage-doors','Pest Control':'pest-control'}[trade] || String(trade).toLowerCase());
 const copy = {
+ Concrete:['Prepare the base. Plan the finish.','Discuss grade, joints and use.','A closer look at concrete work.'],
+ Pools:['Water, equipment and the space around it.','Shape a pool plan around your yard.','Understand the shell and circulation.'],
+ Locksmith:['Hardware that fits your daily routine.','Plan who can enter and how.','Understand your doors, keys and access.'],
  'Windows/Doors':['Light changes a room. Details make it home.','A clearer plan for your next opening.','Frame your next chapter.'],
  Solar:['Your roof. A different possibility.','A solar plan starts with your home.','A clearer view of solar.'],
  Roofing:['Protection, down to the detail.','A roof worth planning for.','Good decisions start at the roof.'],

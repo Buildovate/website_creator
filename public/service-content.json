@@ -4518,5 +4518,279 @@
         }
       ]
     }
+  },
+  "Locksmith": {
+    "residential lockout": {
+      "card": "Locked outside with the keys indoors? Explain the door and lock so the technician can discuss an appropriate way to help.",
+      "headline": "Get back through your door",
+      "includes": [
+        "Door and lock identification",
+        "Entry approach and condition check",
+        "Operation check after access"
+      ],
+      "signs": [
+        "Your house key is inside",
+        "The front latch closed behind you",
+        "A damaged key will not turn"
+      ],
+      "process": [
+        "Confirm permission to enter the home",
+        "Assess the closed door and its hardware",
+        "Agree on the entry work before starting",
+        "Check the latch and hand back access"
+      ],
+      "faq": [
+        {
+          "question": "What information helps when I am locked outside?",
+          "answer": "Describe the door, the lock type and whether a key is lost, inside or broken. Confirm your address and permission to enter when arranging help."
+        },
+        {
+          "question": "Will the door need a new lock afterward?",
+          "answer": "That depends on its condition and the agreed entry method. Ask the technician to explain any proposed replacement before work begins."
+        },
+        {
+          "question": "Can someone meet me at my home in {{city}}?",
+          "answer": "{{business}} can discuss access assistance in {{region}}. Call to confirm the location and actual availability; no arrival time is promised by this page."
+        }
+      ]
+    },
+    "rekeying": {
+      "card": "Moving in or changing who has a key? A compatible cylinder can be reset without replacing every piece of door hardware.",
+      "headline": "Keep the lock, change access",
+      "includes": [
+        "Cylinder compatibility assessment",
+        "New key grouping and quantities",
+        "Old-key retirement check"
+      ],
+      "signs": [
+        "You do not know who holds copies",
+        "A former occupant still has a key",
+        "Several doors need a coordinated key"
+      ],
+      "process": [
+        "List the doors and keys in circulation",
+        "Check which cylinders can be reset",
+        "Reconfigure the agreed locks for new keys",
+        "Test the new key at each changed door"
+      ],
+      "faq": [
+        {
+          "question": "How is changing the key different from replacing the lock?",
+          "answer": "Resetting a compatible cylinder changes which key operates it while retaining the surrounding hardware. Worn or incompatible hardware may call for replacement instead."
+        },
+        {
+          "question": "Can my exterior doors use one key?",
+          "answer": "Some cylinders can share a key pattern, but their keyways must be compatible. Show the technician each door before deciding on a common-key arrangement."
+        },
+        {
+          "question": "What should I bring to a rekeying appointment?",
+          "answer": "Have the existing keys, a list of doors and the number of new keys needed. For work in {{city}}, {{business}} also confirms who is authorized to change access."
+        }
+      ]
+    },
+    "lock installation": {
+      "card": "A new deadbolt or handle needs more than a matching finish. Door thickness, bore spacing and strike alignment determine the fit.",
+      "headline": "Fit the hardware to your door",
+      "includes": [
+        "Door preparation and hardware fit",
+        "Latch and strike alignment",
+        "Key and handle operation testing"
+      ],
+      "signs": [
+        "The existing deadbolt sticks",
+        "A door needs its first deadbolt",
+        "The handle no longer secures the latch"
+      ],
+      "process": [
+        "Measure the door and existing bore locations",
+        "Select hardware that fits the opening",
+        "Fit the lock and align its strike",
+        "Demonstrate locking from both sides"
+      ],
+      "faq": [
+        {
+          "question": "Can I supply the deadbolt I want installed?",
+          "answer": "Share its model and door measurements before booking. The installer needs to check the backset, thickness range and existing preparation before confirming the fit."
+        },
+        {
+          "question": "Why does my door only lock when I lift it?",
+          "answer": "The hinges, door position or strike alignment may be contributing. Inspecting the opening can avoid replacing a sound lock without addressing the cause."
+        },
+        {
+          "question": "Does lock installation include repairing the door frame?",
+          "answer": "Describe any split wood or loose strike screws when requesting a scope in {{city}}. {{business}} can separate the hardware work from any frame repairs that are needed."
+        }
+      ]
+    },
+    "smart locks": {
+      "card": "Keypad entry can simplify coming and going. Start with door compatibility, battery access and a backup way in before choosing connected features.",
+      "headline": "Make everyday entry work simply",
+      "includes": [
+        "Keypad and door compatibility",
+        "Power and connectivity requirements",
+        "Guest-code and backup-access setup"
+      ],
+      "signs": [
+        "You want entry without handing out keys",
+        "A keypad fails to engage the bolt",
+        "Guest access needs a clearer routine"
+      ],
+      "process": [
+        "Match the device to the door and latch",
+        "Review batteries and connection needs",
+        "Install and pair the selected entry device",
+        "Practice a guest code and backup entry"
+      ],
+      "faq": [
+        {
+          "question": "Will a keypad still work if Wi-Fi is down?",
+          "answer": "Offline operation varies by model. Review its local keypad, battery requirements and physical backup before deciding which features matter to your household."
+        },
+        {
+          "question": "Can I keep my current key as a backup?",
+          "answer": "Some devices retain an existing cylinder while others replace it. Bring the model details so the lock and key arrangement can be checked together."
+        },
+        {
+          "question": "Who controls the codes after installation?",
+          "answer": "The property owner should hold the administrator account and decide who receives access. {{business}} can walk through the selected device with you during a smart-lock visit in {{city}}."
+        }
+      ]
+    },
+    "automotive lockout": {
+      "card": "Keys left in a locked vehicle need help suited to that vehicle. Share the make, model and year before arranging an access visit.",
+      "headline": "Reach the keys inside your car",
+      "includes": [
+        "Vehicle identification and access review",
+        "Door-seal and glass condition check",
+        "Entry completion without key programming"
+      ],
+      "signs": [
+        "Your keys are visible inside the car",
+        "The vehicle locked while unloading",
+        "A spare key is out of reach"
+      ],
+      "process": [
+        "Confirm the vehicle and your authorization",
+        "Assess the door and available entry approach",
+        "Discuss the agreed vehicle-access work",
+        "Return access and check the door closure"
+      ],
+      "faq": [
+        {
+          "question": "What vehicle details should I have ready?",
+          "answer": "Provide the make, model, year and where the keys are located. A description of the lock or electronic-entry issue helps establish whether the requested visit is suitable."
+        },
+        {
+          "question": "Is opening the vehicle the same as making a new key?",
+          "answer": "No. Gaining access and cutting or programming a replacement key are different jobs. Ask separately about the vehicle-specific capability if the keys are missing."
+        },
+        {
+          "question": "Can I request automotive lockout help in {{city}}?",
+          "answer": "Call {{business}} with your location in {{region}} and vehicle details. The team must confirm service coverage and availability before you rely on a visit."
+        }
+      ]
+    },
+    "commercial access control": {
+      "card": "Manage staff entry around the doors your business uses. Readers, credentials and exit hardware need a coordinated plan, not disconnected devices.",
+      "headline": "Give each person appropriate access",
+      "includes": [
+        "Door and credential inventory",
+        "Reader and controller compatibility",
+        "Access-role and handover plan"
+      ],
+      "signs": [
+        "Departing staff retain entry credentials",
+        "Your building uses several disconnected systems",
+        "Managers need different access schedules"
+      ],
+      "process": [
+        "Map staff routes and controlled openings",
+        "Review existing readers and exit hardware",
+        "Configure the agreed access roles and devices",
+        "Test entry permissions and hand over controls"
+      ],
+      "faq": [
+        {
+          "question": "Can you work with our existing badge readers?",
+          "answer": "Supply the manufacturer, controller details and available administration records. Compatibility and account access need checking before any hardware or credential changes are proposed."
+        },
+        {
+          "question": "Can different staff groups have different permissions?",
+          "answer": "Role and schedule controls depend on the chosen system. List the doors and hours each group needs so those requirements can be compared with supported features."
+        },
+        {
+          "question": "What should a business prepare for an access-control survey?",
+          "answer": "Bring an authorized contact, a door list and the current credential process. {{business}} can use those details to scope the commercial access control requested in {{city}}."
+        }
+      ]
+    },
+    "safe servicing": {
+      "card": "A reluctant handle, worn keypad or forgotten combination calls for a careful assessment of the safe, its condition and the owner access needs.",
+      "headline": "Care for the safe you use",
+      "includes": [
+        "Safe model and condition review",
+        "Handle and keypad diagnostics",
+        "Service scope and access verification"
+      ],
+      "signs": [
+        "The safe handle resists normal movement",
+        "The keypad has stopped responding",
+        "You need help with an owned safe"
+      ],
+      "process": [
+        "Confirm ownership and identify the safe model",
+        "Review symptoms and available documentation",
+        "Agree on diagnostic or servicing work",
+        "Check normal operation with the owner present"
+      ],
+      "faq": [
+        {
+          "question": "What details help identify my safe?",
+          "answer": "Photograph the exterior model label if accessible and note the keypad or dial type. Do not send combinations or private contents through an inquiry form."
+        },
+        {
+          "question": "Does a silent keypad mean the safe needs replacing?",
+          "answer": "Power supply, keypad condition and the lock mechanism are separate possibilities. A model-specific assessment comes before recommending servicing or replacement."
+        },
+        {
+          "question": "Can you service a safe at my property in {{city}}?",
+          "answer": "{{business}} can review the safe type and access conditions in {{region}}. Confirm model support, handling needs and the scope before scheduling."
+        }
+      ]
+    },
+    "key duplication": {
+      "card": "A useful spare starts with the right blank and a sound original. Check the key profile before cutting, then test it in the intended lock.",
+      "headline": "Make a spare that turns smoothly",
+      "includes": [
+        "Original-key and blank matching",
+        "Cut accuracy and edge finishing",
+        "Spare-key fit verification"
+      ],
+      "signs": [
+        "You need a spare for a household member",
+        "An old copy catches in the cylinder",
+        "The only working key is wearing down"
+      ],
+      "process": [
+        "Inspect the original and identify its profile",
+        "Match an available compatible key blank",
+        "Cut and finish the agreed duplicate",
+        "Check the copy in its intended lock"
+      ],
+      "faq": [
+        {
+          "question": "Can any key be copied from an existing spare?",
+          "answer": "Wear and copying errors can carry forward. Bring the best working original available; restricted profiles and some electronic keys require a different authorized service."
+        },
+        {
+          "question": "Why does a freshly cut copy feel rough?",
+          "answer": "Blank compatibility, cut accuracy, burrs and the condition of the original can affect fit. Stop forcing a reluctant copy and have it checked against the working key."
+        },
+        {
+          "question": "Where can I arrange key duplication in {{city}}?",
+          "answer": "Ask {{business}} about the key type and service arrangements in {{region}}. Confirm support before traveling with a specialty or restricted key."
+        }
+      ]
+    }
   }
 }

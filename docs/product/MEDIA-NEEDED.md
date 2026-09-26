@@ -288,3 +288,34 @@ All 132 service heroes now have distinct assets. #004W-v4 installed 284 accepted
 | Pools | pool maintenance | Hero | Cinematic editorial photograph of pool maintenance for a pools homeowner service page, accurate tools and materials, wide composition, no text or logo. | Done #004W-v4: `/assets/service-showpiece/pools-pool-maintenance-hero.webp` |
 | Pools | pool maintenance | Scope detail | Close documentary photograph showing Water and equipment checks in a real pools setting; distinct from hero, no text or logo. | Done #004W-v4: `/assets/service-showpiece/pools-pool-maintenance-scope.webp` |
 | Pools | pool maintenance | Process detail | Documentary photograph of Check circulation and visible equipment; distinct composition and property from hero and scope, no text or logo. | Done #004W-v4: `/assets/service-showpiece/pools-pool-maintenance-process.webp` |
+
+## #170 — Trade kit enablement media
+
+Done: 33 representative stills generated with Higgsfield nano_banana_2, 2K, 3:2, one image per prompt. Balance 2579.8 → 2513.8; 66 credits used. Nine kit hero/banner/detail photos and 24 Locksmith service photos. Existing 48 Concrete/Pools service photos are retained. No videos generated. These images are not customer project proof. No missing stills remain for these three kits.
+
+| Trade | Service | Slot | Description | Status |
+|---|---|---|---|---|
+| Locksmith | residential lockout | Hero | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-residential-lockout-hero.webp` |
+| Locksmith | residential lockout | Scope detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-residential-lockout-scope.webp` |
+| Locksmith | residential lockout | Process detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-residential-lockout-process.webp` |
+| Locksmith | rekeying | Hero | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-rekeying-hero.webp` |
+| Locksmith | rekeying | Scope detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-rekeying-scope.webp` |
+| Locksmith | rekeying | Process detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-rekeying-process.webp` |
+| Locksmith | lock installation | Hero | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-lock-installation-hero.webp` |
+| Locksmith | lock installation | Scope detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-lock-installation-scope.webp` |
+| Locksmith | lock installation | Process detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-lock-installation-process.webp` |
+| Locksmith | automotive lockout | Hero | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-automotive-lockout-hero.webp` |
+| Locksmith | automotive lockout | Scope detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-automotive-lockout-scope.webp` |
+| Locksmith | automotive lockout | Process detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-automotive-lockout-process.webp` |
+| Locksmith | smart locks | Hero | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-smart-locks-hero.webp` |
+| Locksmith | smart locks | Scope detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-smart-locks-scope.webp` |
+| Locksmith | smart locks | Process detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-smart-locks-process.webp` |
+| Locksmith | safe servicing | Hero | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-safe-servicing-hero.webp` |
+| Locksmith | safe servicing | Scope detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-safe-servicing-scope.webp` |
+| Locksmith | safe servicing | Process detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-safe-servicing-process.webp` |
+| Locksmith | commercial access control | Hero | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-commercial-access-control-hero.webp` |
+| Locksmith | commercial access control | Scope detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-commercial-access-control-scope.webp` |
+| Locksmith | commercial access control | Process detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-commercial-access-control-process.webp` |
+| Locksmith | key duplication | Hero | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-key-duplication-hero.webp` |
+| Locksmith | key duplication | Scope detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-key-duplication-scope.webp` |
+| Locksmith | key duplication | Process detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-key-duplication-process.webp` |
