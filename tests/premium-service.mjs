@@ -24,7 +24,7 @@ assert.equal((html.match(/class="sd-sign-list"/g)||[]).length,1);
 assert.equal((html.match(/<li><b>0[1-4]<\/b>/g)||[]).length,4);
 assert.ok(!html.includes('sd-comparison'), 'No fabricated project comparison is published');
 assert.ok(html.includes('--accent:#ffea00'));
-assert.ok(html.includes('data-ar-scene'));
+assert.ok(html.includes('data-art-trade="Roofing"'));assert.ok(!html.includes('ar-house'));
 assert.ok(!html.includes('data-review-slug'));
 const photo=await api(path+'/photos','POST',new Uint8Array(readFileSync('public/assets/roofing.jpg')));
 await save({...t.settings,serviceProfile:{years:'12',warranty:'Written workmanship warranty',rating:'4.8',ratingSource:'https://example.test/reviews',confirmed:true},platform:{...t.settings.platform,legal:legalFixture,footer:{...t.settings.platform.footer,insured:true}},websitePages:{...t.settings.websitePages,pages:t.settings.websitePages.pages.filter(p=>p.id==='repair').map(p=>({...p,headline:'CUSTOM DRAFT <headline>',media:{...p.media,hero:{photoId:photo.id,alt:'Private hero',caption:''}}}))}});

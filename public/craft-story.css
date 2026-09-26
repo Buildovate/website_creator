@@ -17,3 +17,6 @@
 /* New detail films are composed close to the work; preserve the complete frame. */
 .craft-detail-camera :is(img,video){transform:none}.craft-detail-scene{aspect-ratio:16/10;min-height:0}.craft-materials{font:500 12px/1.6 Arial,sans-serif;letter-spacing:.08em;color:#dfb38e;margin:20px 0 0}
 @media(max-width:760px){.craft-detail-scene{aspect-ratio:4/3;min-height:0}.detail-caption p{font-size:27px}.detail-viewfinder{font-size:10px}}
+
+/* #170A: the craft story has no duplicate inquiry column. */
+.craft-story-grid:not(:has(.craft-story-form)){grid-template-columns:minmax(0,1fr)}.craft-story-grid:not(:has(.craft-story-form))>.craft-story-media{width:100%;max-width:1100px;margin-inline:auto}

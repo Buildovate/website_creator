@@ -49,6 +49,7 @@ function mountPortfolio() {
       if (window.L) L.DomEvent.disableClickPropagation(div);
       return div;
     }, pins = function() {
+      target.querySelectorAll('[data-map-pin]').forEach(pin=>pin.hidden=!visible.some(p=>p.id===pin.dataset.mapPin));
       if (!map) return;
       markers.clearLayers();
       pinIndex.clear();
@@ -70,15 +71,17 @@ function mountPortfolio() {
       document.querySelector("#no-projects").hidden = !!visible.length;
       pins();
     }, start = function() {
-      if (map) return;
+      if (map || target.dataset.mapSample==='true' || target.dataset.mapGeographic==='false') return;
       if (!window.L) {
         document.querySelector("#result-count").textContent = "Map unavailable. Browse all project stories below.";
         return;
       }
-      map = L.map(target, { scrollWheelZoom: false }).setView(projects.length ? [projects[0].lat, projects[0].lng] : [34.1975, -119.1771], 9);
+      const live=document.createElement("div");live.className="project-map-live";target.append(live);
+      map = L.map(live, { scrollWheelZoom: false }).setView(projects.length ? [projects[0].lat, projects[0].lng] : [34.1975, -119.1771], 9);
       markers = L.layerGroup().addTo(map);
       const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution: '\xA9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', maxZoom: 18 }).addTo(map);
-      tiles.on("tileerror", () => {
+      tiles.on("load",()=>{if(!failed){live.classList.add("is-ready");target.querySelector(".project-map-static")?.setAttribute("hidden","");}});
+      let failed=false;tiles.on("tileerror", () => {failed=true;live.hidden=true;target.querySelector(".project-map-static")?.removeAttribute("hidden");
         document.querySelector("#result-count").textContent = visible.length + " matching projects. Map imagery is unavailable; use the photos below.";
       });
       pins();
@@ -87,7 +90,7 @@ function mountPortfolio() {
     let map, markers, visible = projects, pinIndex = /* @__PURE__ */ new Map();
     const toolbar = document.createElement("div");
     toolbar.className = "portfolio-toolbar";
-    toolbar.innerHTML = '<label class="portfolio-search">Search project stories<input type="search" placeholder="Try a city, service, or roof material" aria-label="Search project stories"></label><button type="button" data-view="map" aria-pressed="true">Map + photos</button><button type="button" data-view="list" aria-pressed="false">Photos only</button><button type="button" data-reset>Reset filters</button>';
+    toolbar.innerHTML = '<label class="portfolio-search">Search project stories<input type="search" placeholder="Try a city, service, or material" aria-label="Search project stories"></label><button type="button" data-view="map" aria-pressed="true">Map + photos</button><button type="button" data-view="list" aria-pressed="false">Photos only</button><button type="button" data-reset>Reset filters</button>';
     target.before(toolbar);
     const search = toolbar.querySelector("input");
     filters.forEach((f) => f.onchange = filter);

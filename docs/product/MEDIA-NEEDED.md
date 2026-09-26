@@ -319,3 +319,7 @@ Done: 33 representative stills generated with Higgsfield nano_banana_2, 2K, 3:2,
 | Locksmith | key duplication | Hero | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-key-duplication-hero.webp` |
 | Locksmith | key duplication | Scope detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-key-duplication-scope.webp` |
 | Locksmith | key duplication | Process detail | Representative service photography; distinct property or detail, no business claims. | Done #170: `/assets/trade-enablement/locksmith-key-duplication-process.webp` |
+
+## #170A — trade-correct visual audit
+
+All 140 curated service pages audited across 17 trades. Existing generated scope/process photography covers the former generic diagram and package/FAQ placements; no new still or video was needed. Higgsfield balance before and after: 2513.8; credits used: 0. Source manifests remain #004W-v4 and #170. Package/FAQ photo slots cannot resolve an SVG hero or another trade’s source. No new media request remains for this fix pass.

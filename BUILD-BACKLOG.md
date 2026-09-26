@@ -2200,3 +2200,10 @@ No deployment ticket is included. After a reviewed candidate exists, staging/pro
 - State: **Done — local verification complete**. Enable all 17 trades using the existing kit/library/composer/questionnaire pattern; preserve the homepage renderers and drone assets. Complete service briefs, unique representative imagery, backgrounds and city/estimator support. Fix preview-art design labels.
 - Acceptance: build, typecheck, all regression and platform browser suites, local-only template media audit, all-picker and media/copy regressions, desktop/390px captures, Higgsfield balance reconciliation, and byte-for-byte restoration of all pre-existing evidence files.
 - Evidence: [#170](docs/build-evidence/170/README.md). Local commit only; no push, deployment or staging. #015G and other queued tickets are not started.
+
+
+### #170A — Trade-correct visuals and homepage cleanup
+
+- State: **Done — verified locally**. Audit every service in all 17 trades; replace cross-trade artwork and generic package swatches, deduplicate homepage sections, provide useful Sample maps and hide empty published maps, and tighten city pages. Preserve drone assets and platform behavior.
+- Acceptance: build, typecheck, all regression and platform browser suites, local-only template media audit, all-picker and media/copy regressions, desktop/390px captures, Higgsfield balance reconciliation, and byte-for-byte restoration of all pre-existing evidence files.
+- Evidence: [#170A](docs/build-evidence/170A/README.md). Local commit only; no push, deployment or staging. #015G and other queued tickets are not started.

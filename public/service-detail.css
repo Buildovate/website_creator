@@ -152,3 +152,8 @@
 @media(max-width:750px){.service-detail .tp-finance-steps{display:grid}.service-detail .tp-promo-card{grid-template-columns:1fr}.service-detail .tp-plan-card{flex-basis:90%}}
 
 .sd-preview-support h2{max-width:22ch}.sd-feedback-art{display:grid;gap:8px;padding:18px;background:#dee7e5;width:100%;border-radius:6px}.sd-feedback-art span{padding:8px 12px;background:#fff;border-radius:10px 10px 10px 0;font-size:.8rem;box-shadow:3px 5px 0 #18202516}.sd-feedback-art span:nth-child(2){margin-left:20px;background:#294b61;color:#fff}
+
+/* #170A: exact-service photographs, with no borrowed roof or package artwork. */
+.service-detail .sd-service-photo{position:relative;overflow:hidden;aspect-ratio:3/2;width:100%;height:auto;min-height:0;padding:0;clip-path:none;border-radius:6px;background:transparent}
+.sd-service-photo img{display:block;width:100%;height:100%;aspect-ratio:3/2;object-fit:cover}.sd-photo-caption{display:block;position:absolute;inset:auto 0 0;padding:20px 16px 12px;background:linear-gradient(transparent,#14232dee);color:#fff;font:650 12px/1.5 system-ui}
+.sd-signature-visual .sd-service-photo{min-height:0}.sd-options-grid .sd-service-photo{margin:12px 0 24px}.sd-options-grid .sd-photo-caption{font-size:11px}.sd-questions .sd-service-photo{max-width:none;clip-path:none}.sd-compare-ready .sd-service-photo{height:100%;aspect-ratio:auto}.sd-compare-ready .sd-service-photo img{height:100%;aspect-ratio:auto}.sd-request>div:after{display:none}

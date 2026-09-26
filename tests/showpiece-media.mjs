@@ -28,7 +28,7 @@ test('preview comparison is tagged, publication hides absent project photos, and
  const s=settings(ROBLES),page=visibleServicePages(s).find(item=>item.serviceName==='Roof repair');
  const render=(site,preview)=>renderUniversalServicePage(site,page,{slug:'robles-roofing',preview,photos:[],projects:[],origin:'https://example.test'});
  const draft=render(s,true),published=render(s,false);
- assert.match(draft,/sd-comparison/);assert.match(draft,/Sample · Before/);assert.match(draft,/data-compare-range/);
+ assert.match(draft,/sd-comparison/);assert.match(draft,/Sample · Scope detail/);assert.match(draft,/data-compare-range/);
  assert.doesNotMatch(published,/sd-comparison/);assert.doesNotMatch(published,/sd-sample-tag/);
  assert.doesNotMatch(published,/\$123\.45/);
  const unapproved=render({...s,priceBook:{items:[{service:'Roof repair',tier:'Good',priceCents:12345}]}},false);

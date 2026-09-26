@@ -1,5 +1,10 @@
 # BUILD STATUS
 
+## #170A — Trade-correct visuals and homepage cleanup
+
+**Done locally.** Exact-service photography replaces generic house/roof diagrams and package swatches across 140 services / 17 trades. Homepage review, CTA and craft-form duplication is removed. Sample maps have visible server-rendered service-city pins; published maps require real located projects. City pages use tighter photo/FAQ layouts and trade photography in the neighborhood banner. Build/typecheck, 53 regression scripts, six existing browser suites, 173 new browser checks, 1326 template renders and 51 restarted-Vite preview URLs passed. No generation credits used (2513.8 before/after). Restored 771 backed-up evidence files and verified all 262 unrelated file hashes. [Evidence and map fallback limits](docs/build-evidence/170A/README.md). No platform screens or drone assets changed; local commit only.
+
+
 ## #170 — Trade kit enablement (Concrete, Pools, Locksmith)
 
 **Done locally.** Groundwork (Concrete), Stillwater (Pools) and Keyline (Locksmith) use the existing kit pattern. All 17 kits are selectable in the library, create/prepare pickers, composer and questionnaire; 24 enabled services have unique hero/scope/process images and unique briefs. Higgsfield generated 33 representative stills for 66 credits (2579.8 → 2513.8). Build/typecheck, 52 regression scripts, all five existing browser suites, 258 new browser checks and 1326 local template renders passed. Nine restarted Vite preview URLs return 200. All 654 backed-up evidence files and 262 pre-existing changes were hash-verified after restoration. [Evidence](docs/build-evidence/170/README.md). Local commit only; no staging, push or deployment.

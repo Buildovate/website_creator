@@ -183,3 +183,9 @@ Supersedes the v3 disjoint fade and final fade-before-release: complete panels o
 ## #170 catalog extension
 
 The shared JSON kit catalog now exposes 17 trades. Concrete/Groundwork and Pools/Stillwater are enabled; Locksmith/Keyline adds eight service briefs. Library, create, prepare, composer and questionnaire use those existing catalogs. Questionnaire kit changes refresh explicit service choices and save trade/kit only to the draft. `formatDesignName` is reserved for preview artwork; `formatTemplateName` retains trade context in template titles and selectors. Generated still provenance and local verification are in `docs/build-evidence/170/`.
+
+## #170A — public visual correctness
+
+Service detail artwork now resolves the exact trade/service through `servicePhoto` and uses existing generated raster photography for former diagram, scope, package and FAQ slots. Unknown services get no substitute artwork. Existing Windows/Doors and Solar hero SVGs depict their own services; package/FAQ photo slots use their raster service photos. The generic roof assembly, material stack and fake dimensional overlay are removed from universal service pages. This supersedes the earlier shared AR-house description.
+
+The homepage owns its review region; the public response decorator adds one only when absent. One CTA band and one craft inquiry remain. Preview feedback contains no invented quote or rating, including optional chapter mode. `projectMapSurface` provides server-rendered, keyboard-linked pins; previews use configured service cities. Published maps require real, non-sample projects with numeric coordinates. Tiles progressively enhance the static map and failures retain it. Empty published maps are omitted. City pages combine local context and FAQs beside service photography with a tighter rhythm. See #170A evidence.

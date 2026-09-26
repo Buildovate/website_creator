@@ -151,3 +151,7 @@ Uses the existing shared service renderer, dimensional house/door assembly, bras
 | Locksmith | commercial access control | Door and credential inventory; Reader and controller compatibility; Access-role and handover plan. |
 | Locksmith | safe servicing | Safe model and condition review; Handle and keypad diagnostics; Service scope and access verification. |
 | Locksmith | key duplication | Original-key and blank matching; Cut accuracy and edge finishing; Spare-key fit verification. |
+
+## #170A correction — exact-service visual fallback
+
+The previous universal house/roof assembly and tier stack were not appropriate to every trade. All 140 curated service pages now use their exact-service Higgsfield photographs in scope, diagnostic, comparison, package and FAQ placements. Labeled scope disclosures stay keyboard accessible. Sample comparison shows two illustrative service details, not a claimed before/after job; real before/after still requires two distinct owned photos. No simulated measurements, roof wireframes on other trades or invented X-ray claims remain. Unknown services omit artwork rather than borrowing it. Existing homepage drone media and its control code are unchanged.
