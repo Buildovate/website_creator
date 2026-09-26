@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## #004W-v3 visual pass (2026-09-25)
+
+**Partial.** Shared service pages now have four new Higgsfield hero stills, distinct section diagrams, service-keyed inspection hotspots, conditional comparison, Good/Better/Best scope cards that display a price only from an approved price-book item, themed estimator bands and a phone action bar. Core pages have filled visual heroes, warmer city copy and a consistent trade palette on financing. [Ticket evidence](docs/build-evidence/004W-v3/README.md) contains desktop and 390px captures. [MEDIA-NEEDED.md](docs/product/MEDIA-NEEDED.md) enumerates the remaining commissioned section photos and missing unique hero stills. The Virtual Estimator remains planned under #029V, so current “Get my price” actions lead to a preselected price discussion rather than an instant calculated quote. The thank-you Save your quote action is a visual prompt; secure quote saving is not implemented. Do not count this ticket as Done until those features and full media coverage are implemented and verified.
+
 ## Waiting on Joe
 
 **K23 — reviewed policy content:** Please supply the reviewed jurisdiction/trade policy, reviewer/date/reference and required business license facts before activating a real policy. #011 implements and tests the framework with fictional fixtures; businesses without a supplied policy remain **Needs review**. The #011 framework and #012 footer are complete in this fallback mode. #004F-v2 is cleared.

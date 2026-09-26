@@ -7,12 +7,12 @@ Status: future-build specification. This page sells **Buildovate plans to contra
 | Proposed plan | Monthly | Annual prepay, two months free | Included scope |
 | --- | ---: | ---: | --- |
 | Website | $50 | $500 | Custom domain, hosting, SSL, reviews display, and all base-site features. |
-| Growth | $279 | $2,790 | Website plus exclusive Higgsfield media library, cinematic hero video, AI chat assistant, [Virtual Estimator #029V](VIRTUAL-ESTIMATOR.md), weather-triggered offers, one-tap Spanish, city/area SEO pages, review requests, missed-call text-back and SMS inbox, financing prequalification, promotions and multi-step forms. |
+| Growth | $279 | $2,790 | Website plus exclusive Higgsfield media library, cinematic hero video, AI chat assistant, [Virtual Estimator #029V](VIRTUAL-ESTIMATOR.md), weather-triggered offers, one-tap Spanish, city/area SEO pages, review requests, missed-call text-back and SMS inbox, financing prequalification, promotions, multi-step forms, and the 12-post light social pack. |
 | All-in | $449 | $4,490 | Growth plus estimator voice mode, AR “Preview on your home,” AI photo visualizer, Our Work map and project pages, text-a-photo AI triage, seasonal maintenance reminders, [Nextdoor draft flow #030N](../../BUILD-BACKLOG.md), blog and SEO content, and the monthly [social posting pack #030M](SOCIAL-AUTOPOSTING.md). |
 
 No setup fee applies to any plan or add-on. **The website build itself is quoted separately**; show that distinction adjacent to plan prices and in FAQ. Plans do not silently include Buildovate CRM: mark CRM-dependent data and actions with an accurate dependency and show the fallback when a contractor has not connected CRM data. A customer's own domain and content rights, cancellation and export behavior need approved terms before sale.
 
-**Entitlement conflict to resolve before publication:** #030M's earlier proposal gives Growth a 12-post light pack; the Growth list in this brief does not include social posting. The final pricing config and approved product terms must choose one answer. Until then, this sales page does **not** claim the light pack in Growth. The 20-post full pack is “also included” in All-in with no dollar value in the receipt until its separate price is final.
+**Social pack entitlement:** Growth includes the 12-post light pack; All-in includes the full 20-post pack. Both remain subject to the same approved entitlement configuration before sale. The full pack is “also included” in All-in with no dollar value in the receipt until its separate price is final.
 
 ## Page sequence
 

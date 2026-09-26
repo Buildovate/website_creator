@@ -10,7 +10,7 @@
     "patio repair": "/assets/specialties/patios-patio-repair.webp"
   },
   "Plumbing": {
-    "leak detection": "/assets/specialties/plumbing-leak-detection.webp",
+    "leak detection": "/assets/service-plumbing-leak-showpiece.png",
     "drain cleaning": "/assets/specialties/plumbing-drain-cleaning.webp",
     "water heaters": "/assets/specialties/plumbing-water-heaters.webp",
     "sewer lines": "/assets/specialties/plumbing-sewer-lines.webp",
@@ -20,7 +20,7 @@
     "plumbing repair": "/assets/specialties/plumbing-plumbing-repair.webp"
   },
   "HVAC": {
-    "air conditioning installation": "/assets/specialties/hvac-air-conditioning-installation.webp",
+    "air conditioning installation": "/assets/service-hvac-install-showpiece.png",
     "air conditioning repair": "/assets/specialties/hvac-air-conditioning-repair.webp",
     "heating installation": "/assets/specialties/hvac-heating-installation.webp",
     "heating repair": "/assets/specialties/hvac-heating-repair.webp",
@@ -61,8 +61,8 @@
   },
   "Roofing": {
     "roof installation": "/assets/service-installation.webp",
-    "roof repair": "/assets/service-repair.webp",
-    "roof replacement": "/assets/service-installation.webp",
+    "roof repair": "/assets/service-roof-repair-showpiece.png",
+    "roof replacement": "/assets/service-roof-replacement-showpiece.png",
     "asphalt shingles": "/assets/service-shingles.webp",
     "metal roofing": "/assets/service-metal.webp",
     "flat roofs": "/assets/service-flat.webp",

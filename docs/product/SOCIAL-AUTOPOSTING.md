@@ -43,7 +43,7 @@ Status: product specification for a future customer feature. This publishes for 
 
 - Monthly per-contractor report: real posts published by network, available reach and engagement from Metricool, link clicks, estimator starts and CRM leads attributed by UTM/post. Explain attribution window and avoid assigning unmatched leads. Hide a metric with no data rather than showing zero as if measured; distinguish unavailable provider metrics from a measured zero.
 - **Planning cost estimate supplied for review, not a booked expense:** Metricool Advanced approximately **$3.18–$6.70 per contractor/month** depending on brand count and billing, plus approximately **$5.11** AI-generation cost for a 20-post pack, yielding approximately **$8.30–$11.80** total. Recalculate from current invoices, seat occupancy, token usage and any Custom quote before pricing or margin claims. #015G records actual per-contractor subscription allocation, model/effort usage and X add-on cost; never seed sample costs as real.
-- Proposed entitlement: full 20-post pack in **All-in ($449/month)**; **Growth** gets the 12-post light pack; lower plans may opt into the full pack for **$97/month**. Reconcile this with #015H's exact plan entitlements before sale; no automatic upgrade, overage or X charge.
+- Proposed entitlement: **Growth includes the 12-post light pack** and **All-in includes the full 20-post pack**. Lower plans may opt into the full pack for **$97/month**. Encode these inclusions in #015H's exact plan entitlements before sale; no automatic upgrade, overage or X charge.
 
 ## Questionnaire and acceptance
 

@@ -68,7 +68,7 @@ for(const path of [root,root+'/pricing',root+'/blog',root+'/financing',root+'/pr
  assert.equal((footer.match(/data-social-network=/g)||[]).length,3);assert.match(footer,/target="_blank" rel="noopener noreferrer"/);assert.match(footer,/QA Ventura/);assert.match(footer,/8055550999/);assert.doesNotMatch(footer,/>Bonded</,'Missing reviewed policy withholds optional bonding claims');assert.doesNotMatch(footer,/Insured/);
  assert.doesNotMatch(html,/QA-NOT-PUBLIC-IN-HTML/);assert.doesNotMatch(html,/50\/50|Sales Rep|15-minute|Price Book/);
 }
-const financeHtml=await (await request(root+'/financing','GET',undefined,null)).text();assert.match(financeHtml,/Service Finance Company/);assert.match(financeHtml,/Wisetack/);assert.doesNotMatch(financeHtml,/>Sunbit</);assert.match(financeHtml,/partner underwriting/);assert.match(financeHtml,/data-financing-calculator/);
+const financeHtml=await (await request(root+'/financing','GET',undefined,null)).text();assert.match(financeHtml,/Service Finance Company/);assert.match(financeHtml,/Wisetack/);assert.doesNotMatch(financeHtml,/>Sunbit</);assert.doesNotMatch(financeHtml,/partner underwriting/);assert.match(financeHtml,/data-financing-calculator/);assert.match(await (await request(root+'/legal','GET',undefined,null)).text(),/partner underwriting/);
 const socialOff=structuredClone(tenant.settings);socialOff.platform.footer.socials.googleBusiness.enabled=false;socialOff.platform.footer.socials.xTwitter.enabled=false;
 tenant=(await api('/tenants/'+tenant.id,'PUT',{settings:socialOff,version:tenant.version})).tenant;
 assert.match(await (await request(root+'/financing','GET',undefined,null)).text(),/data-social-network="googleBusiness"/,'draft toggle cannot change published footer');

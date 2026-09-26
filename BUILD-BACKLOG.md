@@ -277,6 +277,10 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - Homepage cards use the library blurbs. Service pages alternate image and copy sections with three service-art placements and a stable site layout variant. Expertise matches neighboring desktop nav labels. Our Work excludes empty, demo, QA and sample projects.
 - Gates: 53/53 full regression commands passed; #015A inventory passed 101 phone and 101 desktop states with zero layout or browser errors. Roofing, HVAC and Patios before/after captures cover cards and two full pages per trade at 1440×900 and 390×844. Local commit only; no push or deployment.
 
+### #004W-v3 — Showpiece design pass for service and core pages (Astra High)
+
+- State: **In progress**. Service and core visual treatment, trade backgrounds, service signature diagrams and media inventory are in [SERVICE-SIGNATURES.md](docs/product/SERVICE-SIGNATURES.md), [TRADE-BACKGROUNDS.md](docs/product/TRADE-BACKGROUNDS.md) and [MEDIA-NEEDED.md](docs/product/MEDIA-NEEDED.md). Do not mark Done until every service has unique section media and hero imagery, the Virtual Estimator is connected, published/preview behavior is verified, and the required desktop/phone screenshots and checks are saved.
+
 ### #004X — Core site pages for all trades + full-preview mode (Sol High)
 
 - State: **In progress**. Builds on #004W-v2.
@@ -758,7 +762,7 @@ The 17 trade families retain their existing templates or queued rollout slots. [
 
 ### #030M — Metricool social auto-posting for contractors (Sol High)
 
-- State: **Not started — backlog only**. Build a contractor-facing monthly 20-post pack (Growth light pack: 12) from real approved jobs, reviews, offers, services, cities and price-book facts. Use Metricool **REST API** on Advanced as the production engine, one brand per contractor and contractor-owned account connections; its MCP is internal-only. Default to contractor approval, track post-specific UTM leads, pause disconnected networks, prevent duplicate retries, and report only measured results. Keep Nextdoor under #030N and other unsupported channels draft-only. Full networks, connect flow, approvals, costs, plan entitlements, K23 questions and acceptance gates are in [SOCIAL-AUTOPOSTING.md](docs/product/SOCIAL-AUTOPOSTING.md).
+- State: **Not started — backlog only**. Build a contractor-facing monthly social pack: **Growth includes 12 light posts; All-in includes the full 20 posts**. Source real approved jobs, reviews, offers, services, cities and price-book facts. Use Metricool **REST API** on Advanced as the production engine, one brand per contractor and contractor-owned account connections; its MCP is internal-only. Default to contractor approval, track post-specific UTM leads, pause disconnected networks, prevent duplicate retries, and report only measured results. Keep Nextdoor under #030N and other unsupported channels draft-only. Full networks, connect flow, approvals, costs, plan entitlements, K23 questions and acceptance gates are in [SOCIAL-AUTOPOSTING.md](docs/product/SOCIAL-AUTOPOSTING.md).
 - Launch blockers: Written Metricool approval of this product use on Advanced, verified live API/branding contract, and K23 review. Custom pricing beyond 50 brands is an open #015G cost question. Verify desktop/390px, keyboard, reduced motion, entitlement and real cost logging before release.
 
 ### #029 — Apply the approved page system to HVAC
@@ -815,7 +819,7 @@ The 17 trade families retain their existing templates or queued rollout slots. [
 ### #031A — All-in sales page for contractors (Sol High)
 
 - State: **Not started — backlog only**. Build the Buildovate-to-contractor sales page specified in [ALL-IN-SALES-PAGE.md](docs/product/ALL-IN-SALES-PAGE.md), separate from contractor public sites. Show Website/Growth/All-in from one approved pricing config, a real-product hero, a computed $956 à la carte receipt versus the proposed $449 All-in, a homeowner journey, responsive plan comparison, clearly illustrative job math, sourced and dated competitor comparisons, real proof only, FAQ and tracked calls to action. Annual prepay is two months free; there is no setup fee, while the website build is quoted separately.
-- Done when: Config-driven prices, 21-line receipt arithmetic and 53% display, reduced-motion/no-JS state, calculator labeling, empty-proof hiding, cited competitor checks, 390px/desktop comparison and sticky CTA, keyboard access, conversion tracking, #015G margin linkage and the in-dashboard upgrade path pass. Resolve the Growth social-pack entitlement difference between this brief and #030M before publication; K23 must approve sales/comparison/cancellation wording.
+- Done when: Config-driven prices, 21-line receipt arithmetic and 53% display, reduced-motion/no-JS state, calculator labeling, empty-proof hiding, cited competitor checks, 390px/desktop comparison and sticky CTA, keyboard access, conversion tracking, #015G margin linkage and the in-dashboard upgrade path pass. Check that Growth includes the 12-post light pack and All-in includes the full 20-post pack in pricing config and checkout; K23 must approve sales/comparison/cancellation wording.
 
 ### #032 — Apply the approved page system to Electrical
 
