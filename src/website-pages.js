@@ -67,17 +67,18 @@ export async function websitePage(req, env, url) {
   const projects = await all(env, 'SELECT id,published FROM projects WHERE tenant_id=? AND published IS NOT NULL ORDER BY created_at DESC', tenant.id);
   const authored=s.trade==='Roofing'&&(s.websitePages?.pages||[]).some(record=>record.kind==='service'&&record.slug===page.slug&&!record.id.startsWith('service-'));
   return authored
-    ? premiumServiceSeo(renderServicePage(s,page,{slug:tenant.slug,preview,salesPreview,photos}),s,page,{slug:tenant.slug,preview,origin:url.origin,projects})
+    ? premiumServiceSeo(renderServicePage(s,page,{slug:tenant.slug,preview,salesPreview,photos}),s,page,{slug:tenant.slug,preview,origin:url.origin,projects,photos})
     : renderUniversalServicePage(s, page, {slug: tenant.slug, preview, salesPreview, photos, projects, origin: url.origin});
 }
-function premiumServiceSeo(html,s,page,{slug,preview,origin,projects}){
+function premiumServiceSeo(html,s,page,{slug,preview,origin,projects,photos}){
  const base=`${origin}/s/${slug}`,canonical=`${base}/services/${page.slug}`,city=primaryCity(s);
  const title=page.seoTitle||`${page.serviceName}${city?` in ${city}`:''} | ${s.name}`;
  const description=page.seoDescription||`${page.serviceName}${city?` in ${city}`:''} from ${s.name}. Explore the scope, process, and how to request an estimate.`;
  const schema=[{'@context':'https://schema.org','@type':'LocalBusiness','@id':base+'#business',name:s.name,telephone:s.phone||undefined,address:s.address||undefined,areaServed:city||undefined,url:base},{'@context':'https://schema.org','@type':'Service',name:page.serviceName,serviceType:page.serviceName,description,provider:{'@id':base+'#business'},areaServed:city||undefined,url:canonical}];
  html=html.replace(/<meta name="robots" content="[^"]*">/,`<meta name="robots" content="${preview?'noindex,nofollow':'index,follow'}">`).replace(/<title>[\s\S]*?<\/title>/,`<title>${e(title)}</title>`).replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${e(description)}">`).replace('</head>',`<link rel="canonical" href="${e(canonical)}"><script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script></head>`);
  const related=visibleServicePages(s).filter(item=>item.slug!==page.slug).slice(0,3);
- const work=projects.map(row=>({id:row.id,data:JSON.parse(row.published)})).filter(row=>!row.data.demo&&row.data.service?.toLowerCase()===page.serviceName.toLowerCase()).slice(0,3);
+ const known=new Set(photos.map(photo=>photo.id));
+ const work=projects.map(row=>({id:row.id,data:JSON.parse(row.published)})).filter(row=>!row.data.demo&&!row.data.isSample&&!/\b(?:qa example|test-only|sample|demo|concept project|illustrative)\b/i.test([row.data.title,row.data.problem,row.data.work,row.data.outcome].join(' '))&&row.data.service?.toLowerCase()===page.serviceName.toLowerCase()&&known.has(row.data.coverId||row.data.afterId)).slice(0,3);
  const links=related.length?`<section class="tp-section"><div class="tp-shell"><p class="tp-eyebrow">MORE SERVICES</p><h2>Explore the next possibility.</h2><div class="tp-inclusions">${related.map(item=>`<article><h3><a href="/s/${e(slug)}/services/${e(item.slug)}${preview?'?preview=1':''}">${e(item.serviceName)} ↗</a></h3></article>`).join('')}</div></div></section>`:'';
  const proof=work.length?`<section class="tp-section"><div class="tp-shell"><p class="tp-eyebrow">OUR WORK</p><h2>See the work up close.</h2><div class="tp-inclusions">${work.map(({id,data})=>`<article>${data.coverId||data.afterId?`<img src="/media/${e(data.coverId||data.afterId)}" alt="${e(data.title)}" loading="lazy" width="420" height="300">`:''}<h3><a href="/s/${e(slug)}/projects/${e(id)}${preview?'?preview=1':''}">${e(data.title)}</a></h3></article>`).join('')}</div></div></section>`:'';
  return html.replace('<section class="tp-section tp-contact"',proof+links+'<section class="tp-section tp-contact"');

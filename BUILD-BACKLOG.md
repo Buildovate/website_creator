@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2 and #004W** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015F — Contractor forms**, followed by #015G and #016. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F, #015G and #016 remain Not started. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next to execute: **#015F — Contractor forms**, followed by #015G and #016. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F, #015G and #016 remain Not started. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -36,7 +36,7 @@ Existing source requirements are narrower: [Pack 1 §M](docs/product/01-CORE-SIT
 
 ## Phase 1 — the homeowner website that sells; Roofing first
 
-Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K showpieces, #004T/#004S/#004U/#004V additions, completed #004W, and per-trade signature insertions. Execute #004M–#004R before #004J; #004J and #004K follow in that order, then #004T, #004S, #004U and #004V. #004S depends on #004T.
+Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K showpieces, #004T/#004S/#004U/#004V additions, completed #004W/#004W-v2, and per-trade signature insertions. Execute #004M–#004R before #004J; #004J and #004K follow in that order, then #004T, #004S, #004U and #004V. #004S depends on #004T.
 
 ### #001 — Resolve the Roofing review-lookup test mismatch
 
@@ -267,6 +267,13 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 - Every selected service gets an enabled page by default. Existing draft and published snapshots are backfilled, including Robles Roofing. Contractors can hide an individual page in the questionnaire; hidden pages return 404 and leave cards, Expertise menus and sitemaps.
 - Pages have service-specific art and copy, work/signal/process sections, matching published projects when present, FAQs, related services and a preselected estimate form. Published pages include city-aware title/description, canonical URL, one H1 and Service + LocalBusiness data. The shared Expertise menu supports desktop hover/click and phone/keyboard access. Authored Roofing premium pages retain existing trust and financing behavior.
 - Gates: 52/52 full regression commands passed; #015A inventory passed 101 phone and 101 desktop states with zero layout or browser errors. Roofing, HVAC and Patios browser captures at 1440×900 and 390×844 show cards, menus and full service pages with no horizontal overflow. Local commit only; no push or deployment.
+
+### #004W-v2 — Service-specific content and page composition (Sol High)
+
+- State: **Done (2026-09-25)** · Evidence: [004W-v2](docs/build-evidence/004W-v2/README.md).
+- Curated library and matching product document cover 132 service briefs across 16 trade families, including queued Concrete and Pools and all 11 Robles Roofing services. Each brief has a unique card blurb, four-to-six-word hero, three scope details, three homeowner symptoms, four service-specific steps, and three FAQs; contractor city/area personalize the hero and one FAQ.
+- Homepage cards use the library blurbs. Service pages alternate image and copy sections with three service-art placements and a stable site layout variant. Expertise matches neighboring desktop nav labels. Our Work excludes empty, demo, QA and sample projects.
+- Gates: 53/53 full regression commands passed; #015A inventory passed 101 phone and 101 desktop states with zero layout or browser errors. Roofing, HVAC and Patios before/after captures cover cards and two full pages per trade at 1440×900 and 390×844. Local commit only; no push or deployment.
 
 ### #005 — Connect the selected-service grid to detail pages
 

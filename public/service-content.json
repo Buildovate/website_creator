@@ -1,0 +1,4522 @@
+{
+  "Roofing": {
+    "roof installation": {
+      "card": "Plan the roof covering, detailing and drainage for a new roof.",
+      "headline": "A roof made for home",
+      "includes": [
+        "Roof plan and measurements",
+        "Deck and edge review",
+        "Covering and flashing details"
+      ],
+      "signs": [
+        "An addition needs a roof",
+        "Your new build has open framing",
+        "You need roofing that fits the home"
+      ],
+      "process": [
+        "Measure the roof planes and access",
+        "Review decking and drainage paths",
+        "Choose covering and edge details",
+        "Install and inspect the finished roof"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about an addition needs a roof?",
+          "answer": "Start by telling us where you see it. Measure the roof planes and access. Review decking and drainage paths."
+        },
+        {
+          "question": "Does roof installation include deck and edge review?",
+          "answer": "We look at deck and edge review alongside covering and flashing details. Choose covering and edge details."
+        },
+        {
+          "question": "Can we plan roof installation in {{city}}?",
+          "answer": "{{business}} can discuss roof installation in {{region}}. Install and inspect the finished roof."
+        }
+      ]
+    },
+    "roof repair": {
+      "card": "Discuss leaks, damaged coverings and the areas that need attention.",
+      "headline": "Stop the leak at its source",
+      "includes": [
+        "Leak tracing around the affected area",
+        "Shingle and flashing repair",
+        "Water-shedding detail checks"
+      ],
+      "signs": [
+        "Missing or curled shingles",
+        "Water stains on the ceiling",
+        "Leaks after a storm"
+      ],
+      "process": [
+        "Locate where water enters",
+        "Inspect shingles and nearby flashing",
+        "Repair the damaged roof area",
+        "Check the repair against the water path"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about missing or curled shingles?",
+          "answer": "Start by telling us where you see it. Locate where water enters. Inspect shingles and nearby flashing."
+        },
+        {
+          "question": "Does roof repair include shingle and flashing repair?",
+          "answer": "We look at shingle and flashing repair alongside water-shedding detail checks. Repair the damaged roof area."
+        },
+        {
+          "question": "Can we plan roof repair in {{city}}?",
+          "answer": "{{business}} can discuss roof repair in {{region}}. Check the repair against the water path."
+        }
+      ]
+    },
+    "roof replacement": {
+      "card": "Explore replacing an aging roof and choosing the next roofing system.",
+      "headline": "Make the next roof count",
+      "includes": [
+        "Old covering removal plan",
+        "Deck condition review",
+        "New roof system selection"
+      ],
+      "signs": [
+        "Shingles keep shedding granules",
+        "Repairs are becoming frequent",
+        "Several roof areas show wear"
+      ],
+      "process": [
+        "Walk the roof and document wear",
+        "Review deck and ventilation needs",
+        "Select a suitable replacement system",
+        "Remove old layers and fit the new roof"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about shingles keep shedding granules?",
+          "answer": "Start by telling us where you see it. Walk the roof and document wear. Review deck and ventilation needs."
+        },
+        {
+          "question": "Does roof replacement include deck condition review?",
+          "answer": "We look at deck condition review alongside new roof system selection. Select a suitable replacement system."
+        },
+        {
+          "question": "Can we plan roof replacement in {{city}}?",
+          "answer": "{{business}} can discuss roof replacement in {{region}}. Remove old layers and fit the new roof."
+        }
+      ]
+    },
+    "asphalt shingles": {
+      "card": "Compare shingle styles and discuss installation or repair needs.",
+      "headline": "Find the right shingle fit",
+      "includes": [
+        "Shingle profile and color choices",
+        "Underlayment and edge details",
+        "Ridge and valley treatment"
+      ],
+      "signs": [
+        "Shingle tabs are lifting",
+        "Bald patches appear on slopes",
+        "You want a different roof look"
+      ],
+      "process": [
+        "Compare shingle styles on the home",
+        "Check slope and existing layers",
+        "Plan underlayment and flashing",
+        "Lay shingles from eave to ridge"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about shingle tabs are lifting?",
+          "answer": "Start by telling us where you see it. Compare shingle styles on the home. Check slope and existing layers."
+        },
+        {
+          "question": "Does asphalt shingles include underlayment and edge details?",
+          "answer": "We look at underlayment and edge details alongside ridge and valley treatment. Plan underlayment and flashing."
+        },
+        {
+          "question": "Can we plan asphalt shingles in {{city}}?",
+          "answer": "{{business}} can discuss asphalt shingles in {{region}}. Lay shingles from eave to ridge."
+        }
+      ]
+    },
+    "metal roofing": {
+      "card": "Explore metal roof profiles, finishes and detailing for your property.",
+      "headline": "Shape a lasting metal roof",
+      "includes": [
+        "Panel profile and finish choices",
+        "Fastener and seam details",
+        "Transition and trim planning"
+      ],
+      "signs": [
+        "Rust appears at old seams",
+        "Panels rattle in wind",
+        "You want a metal roof finish"
+      ],
+      "process": [
+        "Review roof geometry and runoff",
+        "Compare panel profiles and finishes",
+        "Plan seams and penetration trim",
+        "Fit panels and check transitions"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about rust appears at old seams?",
+          "answer": "Start by telling us where you see it. Review roof geometry and runoff. Compare panel profiles and finishes."
+        },
+        {
+          "question": "Does metal roofing include fastener and seam details?",
+          "answer": "We look at fastener and seam details alongside transition and trim planning. Plan seams and penetration trim."
+        },
+        {
+          "question": "Can we plan metal roofing in {{city}}?",
+          "answer": "{{business}} can discuss metal roofing in {{region}}. Fit panels and check transitions."
+        }
+      ]
+    },
+    "flat roofs": {
+      "card": "Discuss low-slope coverings, drainage and roof-surface needs.",
+      "headline": "Give low slopes a plan",
+      "includes": [
+        "Low-slope membrane options",
+        "Drain and ponding review",
+        "Parapet and penetration details"
+      ],
+      "signs": [
+        "Water sits after rain",
+        "Bubbles appear in roof material",
+        "Leaks show near a roof drain"
+      ],
+      "process": [
+        "Survey slope and drain locations",
+        "Inspect membrane and edge conditions",
+        "Choose the low-slope assembly",
+        "Install and detail drains and seams"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about water sits after rain?",
+          "answer": "Start by telling us where you see it. Survey slope and drain locations. Inspect membrane and edge conditions."
+        },
+        {
+          "question": "Does flat roofs include drain and ponding review?",
+          "answer": "We look at drain and ponding review alongside parapet and penetration details. Choose the low-slope assembly."
+        },
+        {
+          "question": "Can we plan flat roofs in {{city}}?",
+          "answer": "{{business}} can discuss flat roofs in {{region}}. Install and detail drains and seams."
+        }
+      ]
+    },
+    "roof maintenance": {
+      "card": "Review roof condition and plan routine care before small issues grow.",
+      "headline": "Catch wear before rain returns",
+      "includes": [
+        "Roof surface walk-through",
+        "Seal and flashing review",
+        "Drainage clearing plan"
+      ],
+      "signs": [
+        "Debris collects in roof valleys",
+        "Sealant has cracked around vents",
+        "You have not checked the roof lately"
+      ],
+      "process": [
+        "Ask about past leaks and repairs",
+        "Inspect vulnerable roof details",
+        "Clear accessible drainage areas",
+        "Record items needing repair or follow-up"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about debris collects in roof valleys?",
+          "answer": "Start by telling us where you see it. Ask about past leaks and repairs. Inspect vulnerable roof details."
+        },
+        {
+          "question": "Does roof maintenance include seal and flashing review?",
+          "answer": "We look at seal and flashing review alongside drainage clearing plan. Clear accessible drainage areas."
+        },
+        {
+          "question": "Can we plan roof maintenance in {{city}}?",
+          "answer": "{{business}} can discuss roof maintenance in {{region}}. Record items needing repair or follow-up."
+        }
+      ]
+    },
+    "gutters": {
+      "card": "Plan collection and drainage of rainwater at the roof edge.",
+      "headline": "Move rain away from home",
+      "includes": [
+        "Gutter runs and outlet placement",
+        "Downspout routing",
+        "Roof-edge connection review"
+      ],
+      "signs": [
+        "Water spills over gutter edges",
+        "Soil washes out below eaves",
+        "Gutters pull away from fascia"
+      ],
+      "process": [
+        "Trace where roof water lands",
+        "Measure runs and downspout positions",
+        "Fit gutters and secure connections",
+        "Check flow toward the outlets"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about water spills over gutter edges?",
+          "answer": "Start by telling us where you see it. Trace where roof water lands. Measure runs and downspout positions."
+        },
+        {
+          "question": "Does gutters include downspout routing?",
+          "answer": "We look at downspout routing alongside roof-edge connection review. Fit gutters and secure connections."
+        },
+        {
+          "question": "Can we plan gutters in {{city}}?",
+          "answer": "{{business}} can discuss gutters in {{region}}. Check flow toward the outlets."
+        }
+      ]
+    },
+    "asphalt shingle install / repair": {
+      "card": "Explore asphalt shingle install / repair with a plan for shingle damage assessment.",
+      "headline": "Keep shingle lines sound",
+      "includes": [
+        "Shingle damage assessment",
+        "Matching shingle profile review",
+        "Underlayment and flashing check"
+      ],
+      "signs": [
+        "Shingle corners lift in wind",
+        "Granules gather by downspouts",
+        "A roof patch no longer blends"
+      ],
+      "process": [
+        "Inspect the affected shingle courses",
+        "Check the layer beneath exposed tabs",
+        "Match repair materials where possible",
+        "Replace damaged sections and check edges"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about shingle corners lift in wind?",
+          "answer": "Start by telling us where you see it. Inspect the affected shingle courses. Check the layer beneath exposed tabs."
+        },
+        {
+          "question": "Does asphalt shingle install / repair include matching shingle profile review?",
+          "answer": "We look at matching shingle profile review alongside underlayment and flashing check. Match repair materials where possible."
+        },
+        {
+          "question": "Can we plan asphalt shingle install / repair in {{city}}?",
+          "answer": "{{business}} can discuss asphalt shingle install / repair in {{region}}. Replace damaged sections and check edges."
+        }
+      ]
+    },
+    "roof sealing": {
+      "card": "Explore roof sealing with a plan for joint and penetration review.",
+      "headline": "Close vulnerable roof openings",
+      "includes": [
+        "Joint and penetration review",
+        "Compatible sealant selection",
+        "Surface preparation before sealing"
+      ],
+      "signs": [
+        "Sealant peels around a vent",
+        "Fine cracks appear at a joint",
+        "Water marks show below a penetration"
+      ],
+      "process": [
+        "Find the joint letting water through",
+        "Clean and prepare the affected surface",
+        "Apply the compatible sealing detail",
+        "Review the sealed edge after curing"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about sealant peels around a vent?",
+          "answer": "Start by telling us where you see it. Find the joint letting water through. Clean and prepare the affected surface."
+        },
+        {
+          "question": "Does roof sealing include compatible sealant selection?",
+          "answer": "We look at compatible sealant selection alongside surface preparation before sealing. Apply the compatible sealing detail."
+        },
+        {
+          "question": "Can we plan roof sealing in {{city}}?",
+          "answer": "{{business}} can discuss roof sealing in {{region}}. Review the sealed edge after curing."
+        }
+      ]
+    },
+    "storm damage": {
+      "card": "Explore storm damage with a plan for post-storm roof assessment.",
+      "headline": "Find what the storm changed",
+      "includes": [
+        "Post-storm roof assessment",
+        "Loose covering and flashing review",
+        "Temporary protection discussion"
+      ],
+      "signs": [
+        "Shingles lie in the yard",
+        "A branch struck the roof",
+        "New stains appeared after wind and rain"
+      ],
+      "process": [
+        "Document the areas hit by weather",
+        "Check coverings and exposed edges",
+        "Discuss urgent protection needs",
+        "Plan targeted repair or replacement"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about shingles lie in the yard?",
+          "answer": "Start by telling us where you see it. Document the areas hit by weather. Check coverings and exposed edges."
+        },
+        {
+          "question": "Does storm damage include loose covering and flashing review?",
+          "answer": "We look at loose covering and flashing review alongside temporary protection discussion. Discuss urgent protection needs."
+        },
+        {
+          "question": "Can we plan storm damage in {{city}}?",
+          "answer": "{{business}} can discuss storm damage in {{region}}. Plan targeted repair or replacement."
+        }
+      ]
+    },
+    "inspections": {
+      "card": "Explore inspections with a plan for visible roof condition review.",
+      "headline": "Know what the roof needs",
+      "includes": [
+        "Visible roof condition review",
+        "Flashing and drainage observations",
+        "Photo-backed findings discussion"
+      ],
+      "signs": [
+        "You are buying a home",
+        "An older roof has unknown history",
+        "A small leak needs a closer look"
+      ],
+      "process": [
+        "Hear the reason for the inspection",
+        "Review accessible roof surfaces",
+        "Photograph notable wear or damage",
+        "Walk through findings and next steps"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about you are buying a home?",
+          "answer": "Start by telling us where you see it. Hear the reason for the inspection. Review accessible roof surfaces."
+        },
+        {
+          "question": "Does inspections include flashing and drainage observations?",
+          "answer": "We look at flashing and drainage observations alongside photo-backed findings discussion. Photograph notable wear or damage."
+        },
+        {
+          "question": "Can we plan inspections in {{city}}?",
+          "answer": "{{business}} can discuss inspections in {{region}}. Walk through findings and next steps."
+        }
+      ]
+    }
+  },
+  "Patios": {
+    "patio covers": {
+      "card": "Create overhead shade for an outdoor seating or dining area.",
+      "headline": "Make room for afternoon shade",
+      "includes": [
+        "Cover footprint and height",
+        "Roofing and support choices",
+        "Drainage at the patio edge"
+      ],
+      "signs": [
+        "Your seating area gets too hot",
+        "Rain drives onto the table",
+        "The patio feels unusable at midday"
+      ],
+      "process": [
+        "Measure the outdoor seating area",
+        "Study sun direction and house connection",
+        "Choose cover material and supports",
+        "Build the cover and check runoff"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about your seating area gets too hot?",
+          "answer": "Start by telling us where you see it. Measure the outdoor seating area. Study sun direction and house connection."
+        },
+        {
+          "question": "Does patio covers include roofing and support choices?",
+          "answer": "We look at roofing and support choices alongside drainage at the patio edge. Choose cover material and supports."
+        },
+        {
+          "question": "Can we plan patio covers in {{city}}?",
+          "answer": "{{business}} can discuss patio covers in {{region}}. Build the cover and check runoff."
+        }
+      ]
+    },
+    "motorized pergolas": {
+      "card": "Explore adjustable coverage with motor-operated pergola louvers.",
+      "headline": "Control shade when it changes",
+      "includes": [
+        "Motor and control options",
+        "Louver travel and clearance",
+        "Power and drainage planning"
+      ],
+      "signs": [
+        "You keep moving chairs from the sun",
+        "A fixed cover feels too dark",
+        "You want flexible outdoor shade"
+      ],
+      "process": [
+        "Map sun exposure through the day",
+        "Review power and control location",
+        "Set the louver footprint and angle",
+        "Install and test the moving roof"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about you keep moving chairs from the sun?",
+          "answer": "Start by telling us where you see it. Map sun exposure through the day. Review power and control location."
+        },
+        {
+          "question": "Does motorized pergolas include louver travel and clearance?",
+          "answer": "We look at louver travel and clearance alongside power and drainage planning. Set the louver footprint and angle."
+        },
+        {
+          "question": "Can we plan motorized pergolas in {{city}}?",
+          "answer": "{{business}} can discuss motorized pergolas in {{region}}. Install and test the moving roof."
+        }
+      ]
+    },
+    "louvered roofs": {
+      "card": "Compare louver configurations for shade, airflow and outdoor comfort.",
+      "headline": "Let the light shift naturally",
+      "includes": [
+        "Louver orientation and spacing",
+        "Post and beam layout",
+        "Rainwater channel detailing"
+      ],
+      "signs": [
+        "Glare hits the patio table",
+        "You want airflow above seating",
+        "Shade is needed only part of the day"
+      ],
+      "process": [
+        "Watch where light crosses the patio",
+        "Select louver orientation and span",
+        "Plan water channels and supports",
+        "Fit louvers and check their movement"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about glare hits the patio table?",
+          "answer": "Start by telling us where you see it. Watch where light crosses the patio. Select louver orientation and span."
+        },
+        {
+          "question": "Does louvered roofs include post and beam layout?",
+          "answer": "We look at post and beam layout alongside rainwater channel detailing. Plan water channels and supports."
+        },
+        {
+          "question": "Can we plan louvered roofs in {{city}}?",
+          "answer": "{{business}} can discuss louvered roofs in {{region}}. Fit louvers and check their movement."
+        }
+      ]
+    },
+    "aluminum patio covers": {
+      "card": "Explore clean-lined aluminum coverage for an outdoor gathering space.",
+      "headline": "Bring clean lines outdoors",
+      "includes": [
+        "Aluminum finish and profile",
+        "Post placement and span",
+        "House tie-in and drainage"
+      ],
+      "signs": [
+        "An old cover is peeling",
+        "You want lower-upkeep shade",
+        "The patio needs a cleaner outline"
+      ],
+      "process": [
+        "Measure the patio and attachment points",
+        "Choose profile and finish",
+        "Set post and beam positions",
+        "Install panels and route runoff"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about an old cover is peeling?",
+          "answer": "Start by telling us where you see it. Measure the patio and attachment points. Choose profile and finish."
+        },
+        {
+          "question": "Does aluminum patio covers include post placement and span?",
+          "answer": "We look at post placement and span alongside house tie-in and drainage. Set post and beam positions."
+        },
+        {
+          "question": "Can we plan aluminum patio covers in {{city}}?",
+          "answer": "{{business}} can discuss aluminum patio covers in {{region}}. Install panels and route runoff."
+        }
+      ]
+    },
+    "wood pergolas": {
+      "card": "Bring the warmth and texture of wood to an open-air structure.",
+      "headline": "Make the garden feel gathered",
+      "includes": [
+        "Wood species and finish",
+        "Beam spacing and shadow pattern",
+        "Footing and post locations"
+      ],
+      "signs": [
+        "The yard has no defined seating area",
+        "You want dappled light outdoors",
+        "A bare patio needs warmth"
+      ],
+      "process": [
+        "Mark the gathering area in the yard",
+        "Choose wood and protective finish",
+        "Lay out posts and overhead beams",
+        "Build and finish the pergola"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the yard has no defined seating area?",
+          "answer": "Start by telling us where you see it. Mark the gathering area in the yard. Choose wood and protective finish."
+        },
+        {
+          "question": "Does wood pergolas include beam spacing and shadow pattern?",
+          "answer": "We look at beam spacing and shadow pattern alongside footing and post locations. Lay out posts and overhead beams."
+        },
+        {
+          "question": "Can we plan wood pergolas in {{city}}?",
+          "answer": "{{business}} can discuss wood pergolas in {{region}}. Build and finish the pergola."
+        }
+      ]
+    },
+    "outdoor living spaces": {
+      "card": "Plan spaces for cooking, dining and spending time outdoors.",
+      "headline": "Give outdoors a daily purpose",
+      "includes": [
+        "Cooking and dining zones",
+        "Circulation and seating layout",
+        "Shade and lighting coordination"
+      ],
+      "signs": [
+        "The grill sits far from seating",
+        "Guests crowd one narrow corner",
+        "You rarely use the backyard"
+      ],
+      "process": [
+        "Talk through how you spend time outside",
+        "Map cooking, seating and walking paths",
+        "Coordinate shade and surface materials",
+        "Build the selected outdoor zones"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the grill sits far from seating?",
+          "answer": "Start by telling us where you see it. Talk through how you spend time outside. Map cooking, seating and walking paths."
+        },
+        {
+          "question": "Does outdoor living spaces include circulation and seating layout?",
+          "answer": "We look at circulation and seating layout alongside shade and lighting coordination. Coordinate shade and surface materials."
+        },
+        {
+          "question": "Can we plan outdoor living spaces in {{city}}?",
+          "answer": "{{business}} can discuss outdoor living spaces in {{region}}. Build the selected outdoor zones."
+        }
+      ]
+    },
+    "patio enclosures": {
+      "card": "Discuss enclosing a patio while considering light, access and airflow.",
+      "headline": "Keep the patio in play",
+      "includes": [
+        "Opening and screen choices",
+        "Wall and roof connections",
+        "Ventilation and door placement"
+      ],
+      "signs": [
+        "Bugs interrupt outdoor meals",
+        "Wind blows through the patio",
+        "You want a more sheltered room"
+      ],
+      "process": [
+        "Study the existing patio structure",
+        "Choose openings and door positions",
+        "Plan weather and airflow details",
+        "Enclose the space and check access"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about bugs interrupt outdoor meals?",
+          "answer": "Start by telling us where you see it. Study the existing patio structure. Choose openings and door positions."
+        },
+        {
+          "question": "Does patio enclosures include wall and roof connections?",
+          "answer": "We look at wall and roof connections alongside ventilation and door placement. Plan weather and airflow details."
+        },
+        {
+          "question": "Can we plan patio enclosures in {{city}}?",
+          "answer": "{{business}} can discuss patio enclosures in {{region}}. Enclose the space and check access."
+        }
+      ]
+    },
+    "patio repair": {
+      "card": "Review worn components, connections and surfaces that need attention.",
+      "headline": "Bring the patio back together",
+      "includes": [
+        "Damaged surface review",
+        "Loose connection assessment",
+        "Targeted material replacement"
+      ],
+      "signs": [
+        "Pavers rock underfoot",
+        "A patio post feels loose",
+        "Water pools against the house"
+      ],
+      "process": [
+        "Identify unstable or worn areas",
+        "Check supports and nearby drainage",
+        "Match repair materials to the patio",
+        "Repair and review the finished surface"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about pavers rock underfoot?",
+          "answer": "Start by telling us where you see it. Identify unstable or worn areas. Check supports and nearby drainage."
+        },
+        {
+          "question": "Does patio repair include loose connection assessment?",
+          "answer": "We look at loose connection assessment alongside targeted material replacement. Match repair materials to the patio."
+        },
+        {
+          "question": "Can we plan patio repair in {{city}}?",
+          "answer": "{{business}} can discuss patio repair in {{region}}. Repair and review the finished surface."
+        }
+      ]
+    }
+  },
+  "Plumbing": {
+    "leak detection": {
+      "card": "Discuss signs of hidden leaks and the areas that need investigation.",
+      "headline": "Find the hidden water path",
+      "includes": [
+        "Moisture pattern review",
+        "Fixture and pipe testing plan",
+        "Access point discussion"
+      ],
+      "signs": [
+        "A wall feels damp",
+        "The water meter moves when taps are off",
+        "Paint bubbles near a pipe"
+      ],
+      "process": [
+        "Ask when the moisture appears",
+        "Check accessible fixtures and lines",
+        "Narrow the likely leak location",
+        "Explain repair access and next steps"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a wall feels damp?",
+          "answer": "Start by telling us where you see it. Ask when the moisture appears. Check accessible fixtures and lines."
+        },
+        {
+          "question": "Does leak detection include fixture and pipe testing plan?",
+          "answer": "We look at fixture and pipe testing plan alongside access point discussion. Narrow the likely leak location."
+        },
+        {
+          "question": "Can we plan leak detection in {{city}}?",
+          "answer": "{{business}} can discuss leak detection in {{region}}. Explain repair access and next steps."
+        }
+      ]
+    },
+    "drain cleaning": {
+      "card": "Address slow drains and discuss blockages in the drainage system.",
+      "headline": "Get water moving again",
+      "includes": [
+        "Slow-drain diagnosis",
+        "Trap and line access",
+        "Blockage removal approach"
+      ],
+      "signs": [
+        "The sink empties slowly",
+        "A shower drain gurgles",
+        "Water backs up in a tub"
+      ],
+      "process": [
+        "Locate the slow or blocked fixture",
+        "Check traps and line access",
+        "Clear the obstruction appropriately",
+        "Run water to confirm drainage"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the sink empties slowly?",
+          "answer": "Start by telling us where you see it. Locate the slow or blocked fixture. Check traps and line access."
+        },
+        {
+          "question": "Does drain cleaning include trap and line access?",
+          "answer": "We look at trap and line access alongside blockage removal approach. Clear the obstruction appropriately."
+        },
+        {
+          "question": "Can we plan drain cleaning in {{city}}?",
+          "answer": "{{business}} can discuss drain cleaning in {{region}}. Run water to confirm drainage."
+        }
+      ]
+    },
+    "water heaters": {
+      "card": "Compare water-heating needs, equipment options and replacement scope.",
+      "headline": "Make hot water dependable",
+      "includes": [
+        "Tank or tankless fit review",
+        "Venting and connection planning",
+        "Removal and installation scope"
+      ],
+      "signs": [
+        "Showers turn cold too soon",
+        "Hot water takes longer to arrive",
+        "The heater makes new noises"
+      ],
+      "process": [
+        "Review household hot water use",
+        "Inspect the existing heater location",
+        "Compare suitable equipment options",
+        "Install and test the selected unit"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about showers turn cold too soon?",
+          "answer": "Start by telling us where you see it. Review household hot water use. Inspect the existing heater location."
+        },
+        {
+          "question": "Does water heaters include venting and connection planning?",
+          "answer": "We look at venting and connection planning alongside removal and installation scope. Compare suitable equipment options."
+        },
+        {
+          "question": "Can we plan water heaters in {{city}}?",
+          "answer": "{{business}} can discuss water heaters in {{region}}. Install and test the selected unit."
+        }
+      ]
+    },
+    "sewer lines": {
+      "card": "Review sewer-line concerns and the options for investigation or repair.",
+      "headline": "Understand the line below",
+      "includes": [
+        "Sewer access and cleanout review",
+        "Line condition investigation",
+        "Repair route planning"
+      ],
+      "signs": [
+        "Multiple drains back up together",
+        "Sewer odors reach the yard",
+        "A cleanout overflows"
+      ],
+      "process": [
+        "Map the affected drain fixtures",
+        "Locate cleanouts and line route",
+        "Investigate the likely trouble spot",
+        "Review repair access and restoration"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about multiple drains back up together?",
+          "answer": "Start by telling us where you see it. Map the affected drain fixtures. Locate cleanouts and line route."
+        },
+        {
+          "question": "Does sewer lines include line condition investigation?",
+          "answer": "We look at line condition investigation alongside repair route planning. Investigate the likely trouble spot."
+        },
+        {
+          "question": "Can we plan sewer lines in {{city}}?",
+          "answer": "{{business}} can discuss sewer lines in {{region}}. Review repair access and restoration."
+        }
+      ]
+    },
+    "repiping": {
+      "card": "Plan replacement of aging water-supply piping throughout a property.",
+      "headline": "Renew the supply behind walls",
+      "includes": [
+        "Pipe route planning",
+        "Fixture connection mapping",
+        "Wall access and patch coordination"
+      ],
+      "signs": [
+        "Several pipes keep leaking",
+        "Water pressure drops at fixtures",
+        "Old lines show corrosion"
+      ],
+      "process": [
+        "Survey existing supply routes",
+        "Map fixture shutoffs and access",
+        "Plan replacement pipe paths",
+        "Install and test the new supply lines"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about several pipes keep leaking?",
+          "answer": "Start by telling us where you see it. Survey existing supply routes. Map fixture shutoffs and access."
+        },
+        {
+          "question": "Does repiping include fixture connection mapping?",
+          "answer": "We look at fixture connection mapping alongside wall access and patch coordination. Plan replacement pipe paths."
+        },
+        {
+          "question": "Can we plan repiping in {{city}}?",
+          "answer": "{{business}} can discuss repiping in {{region}}. Install and test the new supply lines."
+        }
+      ]
+    },
+    "fixture installation": {
+      "card": "Update faucets, sinks and other plumbing fixtures with a clear scope.",
+      "headline": "Put daily fixtures in place",
+      "includes": [
+        "Fixture sizing and fit",
+        "Supply and drain connections",
+        "Finish and seal details"
+      ],
+      "signs": [
+        "A faucet leaks at its base",
+        "The sink no longer fits your routine",
+        "You chose a new bathroom fixture"
+      ],
+      "process": [
+        "Check the fixture and opening sizes",
+        "Review supply and drain positions",
+        "Fit and connect the new fixture",
+        "Test flow and visible joints"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a faucet leaks at its base?",
+          "answer": "Start by telling us where you see it. Check the fixture and opening sizes. Review supply and drain positions."
+        },
+        {
+          "question": "Does fixture installation include supply and drain connections?",
+          "answer": "We look at supply and drain connections alongside finish and seal details. Fit and connect the new fixture."
+        },
+        {
+          "question": "Can we plan fixture installation in {{city}}?",
+          "answer": "{{business}} can discuss fixture installation in {{region}}. Test flow and visible joints."
+        }
+      ]
+    },
+    "water filtration": {
+      "card": "Discuss filtration options around the water-quality concerns you identify.",
+      "headline": "Choose cleaner water at home",
+      "includes": [
+        "Water concern discussion",
+        "Filter location and capacity",
+        "Cartridge access planning"
+      ],
+      "signs": [
+        "Water tastes unusual",
+        "Sediment collects in glasses",
+        "You want filtration at the tap"
+      ],
+      "process": [
+        "Identify which water concerns matter",
+        "Review available installation space",
+        "Compare filtration approaches",
+        "Fit the system and explain upkeep"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about water tastes unusual?",
+          "answer": "Start by telling us where you see it. Identify which water concerns matter. Review available installation space."
+        },
+        {
+          "question": "Does water filtration include filter location and capacity?",
+          "answer": "We look at filter location and capacity alongside cartridge access planning. Compare filtration approaches."
+        },
+        {
+          "question": "Can we plan water filtration in {{city}}?",
+          "answer": "{{business}} can discuss water filtration in {{region}}. Fit the system and explain upkeep."
+        }
+      ]
+    },
+    "plumbing repair": {
+      "card": "Address leaking fixtures, damaged pipes and other plumbing concerns.",
+      "headline": "Fix the part causing trouble",
+      "includes": [
+        "Problem fixture assessment",
+        "Pipe or valve repair plan",
+        "Leak and flow checks"
+      ],
+      "signs": [
+        "A valve will not shut off",
+        "A pipe drips under the sink",
+        "A toilet runs between uses"
+      ],
+      "process": [
+        "Find the fixture or line at fault",
+        "Check nearby connections and damage",
+        "Repair the affected component",
+        "Test for leaks and normal flow"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a valve will not shut off?",
+          "answer": "Start by telling us where you see it. Find the fixture or line at fault. Check nearby connections and damage."
+        },
+        {
+          "question": "Does plumbing repair include pipe or valve repair plan?",
+          "answer": "We look at pipe or valve repair plan alongside leak and flow checks. Repair the affected component."
+        },
+        {
+          "question": "Can we plan plumbing repair in {{city}}?",
+          "answer": "{{business}} can discuss plumbing repair in {{region}}. Test for leaks and normal flow."
+        }
+      ]
+    }
+  },
+  "HVAC": {
+    "air conditioning installation": {
+      "card": "Plan cooling equipment around the rooms and comfort needs of your home.",
+      "headline": "Bring cooler air to every room",
+      "includes": [
+        "Cooling load and room review",
+        "Equipment and location choices",
+        "Airflow and controls planning"
+      ],
+      "signs": [
+        "Rooms are hot by afternoon",
+        "An old unit no longer keeps up",
+        "You are adding cooling to the home"
+      ],
+      "process": [
+        "Walk the rooms that need cooling",
+        "Assess equipment space and airflow",
+        "Choose the cooling system layout",
+        "Install and test air delivery"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about rooms are hot by afternoon?",
+          "answer": "Start by telling us where you see it. Walk the rooms that need cooling. Assess equipment space and airflow."
+        },
+        {
+          "question": "Does air conditioning installation include equipment and location choices?",
+          "answer": "We look at equipment and location choices alongside airflow and controls planning. Choose the cooling system layout."
+        },
+        {
+          "question": "Can we plan air conditioning installation in {{city}}?",
+          "answer": "{{business}} can discuss air conditioning installation in {{region}}. Install and test air delivery."
+        }
+      ]
+    },
+    "air conditioning repair": {
+      "card": "Discuss cooling problems and the equipment that needs attention.",
+      "headline": "Get the cool air back",
+      "includes": [
+        "Cooling symptom diagnosis",
+        "Refrigerant and electrical checks",
+        "Affected component repair"
+      ],
+      "signs": [
+        "Warm air comes from vents",
+        "The unit stops mid-cycle",
+        "Water appears near the indoor unit"
+      ],
+      "process": [
+        "Listen to when cooling fails",
+        "Inspect accessible system components",
+        "Repair the fault found in testing",
+        "Run the system through a cooling cycle"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about warm air comes from vents?",
+          "answer": "Start by telling us where you see it. Listen to when cooling fails. Inspect accessible system components."
+        },
+        {
+          "question": "Does air conditioning repair include refrigerant and electrical checks?",
+          "answer": "We look at refrigerant and electrical checks alongside affected component repair. Repair the fault found in testing."
+        },
+        {
+          "question": "Can we plan air conditioning repair in {{city}}?",
+          "answer": "{{business}} can discuss air conditioning repair in {{region}}. Run the system through a cooling cycle."
+        }
+      ]
+    },
+    "heating installation": {
+      "card": "Explore heating equipment and distribution options for your property.",
+      "headline": "Make winter rooms comfortable",
+      "includes": [
+        "Heating needs and room layout",
+        "Equipment and venting choices",
+        "Control and distribution setup"
+      ],
+      "signs": [
+        "Some rooms never warm up",
+        "You are replacing an old heater",
+        "A new space needs heat"
+      ],
+      "process": [
+        "Review heat needs room by room",
+        "Check space for equipment and vents",
+        "Select the heating layout",
+        "Install and test heat delivery"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about some rooms never warm up?",
+          "answer": "Start by telling us where you see it. Review heat needs room by room. Check space for equipment and vents."
+        },
+        {
+          "question": "Does heating installation include equipment and venting choices?",
+          "answer": "We look at equipment and venting choices alongside control and distribution setup. Select the heating layout."
+        },
+        {
+          "question": "Can we plan heating installation in {{city}}?",
+          "answer": "{{business}} can discuss heating installation in {{region}}. Install and test heat delivery."
+        }
+      ]
+    },
+    "heating repair": {
+      "card": "Review heating symptoms and the components that need investigation.",
+      "headline": "Find why warmth has stopped",
+      "includes": [
+        "Heat call and control review",
+        "Burner or heating element checks",
+        "Fault-specific repair plan"
+      ],
+      "signs": [
+        "The heater blows cool air",
+        "A furnace cycles too often",
+        "The thermostat calls without heat"
+      ],
+      "process": [
+        "Note the pattern of lost heat",
+        "Test controls and heating components",
+        "Repair the identified fault",
+        "Confirm warm air reaches rooms"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the heater blows cool air?",
+          "answer": "Start by telling us where you see it. Note the pattern of lost heat. Test controls and heating components."
+        },
+        {
+          "question": "Does heating repair include burner or heating element checks?",
+          "answer": "We look at burner or heating element checks alongside fault-specific repair plan. Repair the identified fault."
+        },
+        {
+          "question": "Can we plan heating repair in {{city}}?",
+          "answer": "{{business}} can discuss heating repair in {{region}}. Confirm warm air reaches rooms."
+        }
+      ]
+    },
+    "heat pumps": {
+      "card": "Explore a system that transfers heat for heating and cooling.",
+      "headline": "Use one system for seasons",
+      "includes": [
+        "Heating and cooling fit review",
+        "Outdoor unit placement",
+        "Indoor distribution planning"
+      ],
+      "signs": [
+        "You need both heat and cooling",
+        "The current system struggles in one season",
+        "You want to compare all-electric options"
+      ],
+      "process": [
+        "Map year-round comfort needs",
+        "Check indoor and outdoor unit locations",
+        "Choose compatible heat pump equipment",
+        "Test both operating modes"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about you need both heat and cooling?",
+          "answer": "Start by telling us where you see it. Map year-round comfort needs. Check indoor and outdoor unit locations."
+        },
+        {
+          "question": "Does heat pumps include outdoor unit placement?",
+          "answer": "We look at outdoor unit placement alongside indoor distribution planning. Choose compatible heat pump equipment."
+        },
+        {
+          "question": "Can we plan heat pumps in {{city}}?",
+          "answer": "{{business}} can discuss heat pumps in {{region}}. Test both operating modes."
+        }
+      ]
+    },
+    "ductwork": {
+      "card": "Discuss air distribution, duct condition and connections between rooms.",
+      "headline": "Help air reach the rooms",
+      "includes": [
+        "Duct route and size review",
+        "Joint and insulation checks",
+        "Supply and return balance"
+      ],
+      "signs": [
+        "One bedroom gets little airflow",
+        "Whistling comes from a vent",
+        "Ducts are visibly disconnected"
+      ],
+      "process": [
+        "Trace the supply and return routes",
+        "Inspect accessible seams and insulation",
+        "Plan repairs or route changes",
+        "Check airflow at the affected rooms"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about one bedroom gets little airflow?",
+          "answer": "Start by telling us where you see it. Trace the supply and return routes. Inspect accessible seams and insulation."
+        },
+        {
+          "question": "Does ductwork include joint and insulation checks?",
+          "answer": "We look at joint and insulation checks alongside supply and return balance. Plan repairs or route changes."
+        },
+        {
+          "question": "Can we plan ductwork in {{city}}?",
+          "answer": "{{business}} can discuss ductwork in {{region}}. Check airflow at the affected rooms."
+        }
+      ]
+    },
+    "indoor air quality": {
+      "card": "Review filtration, ventilation and indoor-air concerns.",
+      "headline": "Make indoor air feel easier",
+      "includes": [
+        "Filter and ventilation review",
+        "Room-by-room concern mapping",
+        "Equipment compatibility check"
+      ],
+      "signs": [
+        "Dust returns soon after cleaning",
+        "Rooms feel stuffy with windows shut",
+        "Odors linger after cooking"
+      ],
+      "process": [
+        "Hear where the air feels different",
+        "Check filters and ventilation paths",
+        "Compare suitable air-quality options",
+        "Review operation and maintenance"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about dust returns soon after cleaning?",
+          "answer": "Start by telling us where you see it. Hear where the air feels different. Check filters and ventilation paths."
+        },
+        {
+          "question": "Does indoor air quality include room-by-room concern mapping?",
+          "answer": "We look at room-by-room concern mapping alongside equipment compatibility check. Compare suitable air-quality options."
+        },
+        {
+          "question": "Can we plan indoor air quality in {{city}}?",
+          "answer": "{{business}} can discuss indoor air quality in {{region}}. Review operation and maintenance."
+        }
+      ]
+    },
+    "system maintenance": {
+      "card": "Plan routine attention to heating and cooling equipment.",
+      "headline": "Keep heating and cooling ready",
+      "includes": [
+        "Filter and coil review",
+        "Electrical and drain inspection",
+        "Operating cycle checks"
+      ],
+      "signs": [
+        "Airflow has weakened",
+        "The outdoor unit is unusually loud",
+        "It has been a while since service"
+      ],
+      "process": [
+        "Ask about comfort changes",
+        "Inspect accessible system parts",
+        "Clean or adjust agreed items",
+        "Test heating and cooling operation"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about airflow has weakened?",
+          "answer": "Start by telling us where you see it. Ask about comfort changes. Inspect accessible system parts."
+        },
+        {
+          "question": "Does system maintenance include electrical and drain inspection?",
+          "answer": "We look at electrical and drain inspection alongside operating cycle checks. Clean or adjust agreed items."
+        },
+        {
+          "question": "Can we plan system maintenance in {{city}}?",
+          "answer": "{{business}} can discuss system maintenance in {{region}}. Test heating and cooling operation."
+        }
+      ]
+    }
+  },
+  "Electrical": {
+    "electrical repairs": {
+      "card": "Discuss faulty circuits, damaged components and electrical concerns.",
+      "headline": "Put the power problem right",
+      "includes": [
+        "Circuit fault investigation",
+        "Device and connection checks",
+        "Repair and safety testing"
+      ],
+      "signs": [
+        "A breaker trips repeatedly",
+        "Lights flicker in one room",
+        "An outlet feels warm"
+      ],
+      "process": [
+        "Identify the affected circuit",
+        "Test accessible devices and connections",
+        "Repair the faulty electrical part",
+        "Verify the circuit operates normally"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a breaker trips repeatedly?",
+          "answer": "Start by telling us where you see it. Identify the affected circuit. Test accessible devices and connections."
+        },
+        {
+          "question": "Does electrical repairs include device and connection checks?",
+          "answer": "We look at device and connection checks alongside repair and safety testing. Repair the faulty electrical part."
+        },
+        {
+          "question": "Can we plan electrical repairs in {{city}}?",
+          "answer": "{{business}} can discuss electrical repairs in {{region}}. Verify the circuit operates normally."
+        }
+      ]
+    },
+    "panel upgrades": {
+      "card": "Review panel capacity and the scope of a potential upgrade.",
+      "headline": "Give the panel room to grow",
+      "includes": [
+        "Existing panel and load review",
+        "Circuit layout planning",
+        "New panel and breaker fit"
+      ],
+      "signs": [
+        "The panel has no open spaces",
+        "Breakers trip under normal use",
+        "You are adding major equipment"
+      ],
+      "process": [
+        "Inventory present circuits and loads",
+        "Review service and panel space",
+        "Plan the new breaker layout",
+        "Replace and label the panel equipment"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the panel has no open spaces?",
+          "answer": "Start by telling us where you see it. Inventory present circuits and loads. Review service and panel space."
+        },
+        {
+          "question": "Does panel upgrades include circuit layout planning?",
+          "answer": "We look at circuit layout planning alongside new panel and breaker fit. Plan the new breaker layout."
+        },
+        {
+          "question": "Can we plan panel upgrades in {{city}}?",
+          "answer": "{{business}} can discuss panel upgrades in {{region}}. Replace and label the panel equipment."
+        }
+      ]
+    },
+    "ev chargers": {
+      "card": "Plan a charging location and discuss the electrical work involved.",
+      "headline": "Bring charging home comfortably",
+      "includes": [
+        "Charging location selection",
+        "Electrical capacity review",
+        "Charger circuit and mounting"
+      ],
+      "signs": [
+        "Extension cords reach the driveway",
+        "You bought an electric vehicle",
+        "Charging away from home is inconvenient"
+      ],
+      "process": [
+        "Choose where the vehicle parks",
+        "Check available electrical capacity",
+        "Plan the dedicated charger circuit",
+        "Install and test charging operation"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about extension cords reach the driveway?",
+          "answer": "Start by telling us where you see it. Choose where the vehicle parks. Check available electrical capacity."
+        },
+        {
+          "question": "Does ev chargers include electrical capacity review?",
+          "answer": "We look at electrical capacity review alongside charger circuit and mounting. Plan the dedicated charger circuit."
+        },
+        {
+          "question": "Can we plan ev chargers in {{city}}?",
+          "answer": "{{business}} can discuss ev chargers in {{region}}. Install and test charging operation."
+        }
+      ]
+    },
+    "lighting installation": {
+      "card": "Shape practical lighting for rooms, task areas and outdoor spaces.",
+      "headline": "Put light where life happens",
+      "includes": [
+        "Fixture and beam placement",
+        "Switching and dimming plan",
+        "Mounting and wiring details"
+      ],
+      "signs": [
+        "The kitchen counter stays dim",
+        "A hallway has dark corners",
+        "Outdoor steps need better light"
+      ],
+      "process": [
+        "Walk the spaces after dark",
+        "Choose fixture positions and controls",
+        "Prepare wiring and mounting points",
+        "Install and aim the lights"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the kitchen counter stays dim?",
+          "answer": "Start by telling us where you see it. Walk the spaces after dark. Choose fixture positions and controls."
+        },
+        {
+          "question": "Does lighting installation include switching and dimming plan?",
+          "answer": "We look at switching and dimming plan alongside mounting and wiring details. Prepare wiring and mounting points."
+        },
+        {
+          "question": "Can we plan lighting installation in {{city}}?",
+          "answer": "{{business}} can discuss lighting installation in {{region}}. Install and aim the lights."
+        }
+      ]
+    },
+    "rewiring": {
+      "card": "Plan updates to wiring in older rooms or renovated spaces.",
+      "headline": "Refresh the wires behind walls",
+      "includes": [
+        "Existing wiring assessment",
+        "New circuit routes",
+        "Device and panel connections"
+      ],
+      "signs": [
+        "Outlets lack grounding",
+        "Old insulation is brittle",
+        "Renovation has opened the walls"
+      ],
+      "process": [
+        "Map rooms and existing circuits",
+        "Identify access for new wire routes",
+        "Run and connect replacement wiring",
+        "Test and label the finished circuits"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about outlets lack grounding?",
+          "answer": "Start by telling us where you see it. Map rooms and existing circuits. Identify access for new wire routes."
+        },
+        {
+          "question": "Does rewiring include new circuit routes?",
+          "answer": "We look at new circuit routes alongside device and panel connections. Run and connect replacement wiring."
+        },
+        {
+          "question": "Can we plan rewiring in {{city}}?",
+          "answer": "{{business}} can discuss rewiring in {{region}}. Test and label the finished circuits."
+        }
+      ]
+    },
+    "outlets and switches": {
+      "card": "Discuss convenient placement and replacement of outlets and switches.",
+      "headline": "Make power easier to reach",
+      "includes": [
+        "Outlet and switch placement",
+        "Device type and finish choices",
+        "Box and circuit connections"
+      ],
+      "signs": [
+        "A plug hangs loose",
+        "A switch sparks when used",
+        "You need power near a desk"
+      ],
+      "process": [
+        "Mark convenient device locations",
+        "Check existing boxes and circuits",
+        "Fit outlets or switches",
+        "Test each device in use"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a plug hangs loose?",
+          "answer": "Start by telling us where you see it. Mark convenient device locations. Check existing boxes and circuits."
+        },
+        {
+          "question": "Does outlets and switches include device type and finish choices?",
+          "answer": "We look at device type and finish choices alongside box and circuit connections. Fit outlets or switches."
+        },
+        {
+          "question": "Can we plan outlets and switches in {{city}}?",
+          "answer": "{{business}} can discuss outlets and switches in {{region}}. Test each device in use."
+        }
+      ]
+    },
+    "backup generators": {
+      "card": "Explore standby power needs and equipment placement.",
+      "headline": "Keep essential circuits planned",
+      "includes": [
+        "Priority load review",
+        "Generator location and fuel planning",
+        "Transfer equipment coordination"
+      ],
+      "signs": [
+        "Outages interrupt essential equipment",
+        "Food spoils during long outages",
+        "You want a backup power plan"
+      ],
+      "process": [
+        "List the circuits to support",
+        "Review generator space and fuel options",
+        "Plan transfer and connection equipment",
+        "Install and test backup operation"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about outages interrupt essential equipment?",
+          "answer": "Start by telling us where you see it. List the circuits to support. Review generator space and fuel options."
+        },
+        {
+          "question": "Does backup generators include generator location and fuel planning?",
+          "answer": "We look at generator location and fuel planning alongside transfer equipment coordination. Plan transfer and connection equipment."
+        },
+        {
+          "question": "Can we plan backup generators in {{city}}?",
+          "answer": "{{business}} can discuss backup generators in {{region}}. Install and test backup operation."
+        }
+      ]
+    },
+    "electrical inspections": {
+      "card": "Review the condition of electrical components and discuss next steps.",
+      "headline": "Understand what the wiring says",
+      "includes": [
+        "Panel and circuit observations",
+        "Outlet and device checks",
+        "Findings and priority review"
+      ],
+      "signs": [
+        "You are purchasing an older home",
+        "A remodel exposed unusual wiring",
+        "A breaker has an unknown label"
+      ],
+      "process": [
+        "Ask which wiring concerns brought you in",
+        "Check accessible electrical components",
+        "Document concerns and limitations",
+        "Discuss findings and possible next steps"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about you are purchasing an older home?",
+          "answer": "Start by telling us where you see it. Ask which wiring concerns brought you in. Check accessible electrical components."
+        },
+        {
+          "question": "Does electrical inspections include outlet and device checks?",
+          "answer": "We look at outlet and device checks alongside findings and priority review. Document concerns and limitations."
+        },
+        {
+          "question": "Can we plan electrical inspections in {{city}}?",
+          "answer": "{{business}} can discuss electrical inspections in {{region}}. Discuss findings and possible next steps."
+        }
+      ]
+    }
+  },
+  "Landscaping": {
+    "landscape design": {
+      "card": "Bring planting, pathways and outdoor-use priorities into one plan.",
+      "headline": "See the yard differently",
+      "includes": [
+        "Planting and shade plan",
+        "Path and gathering layout",
+        "Water and maintenance needs"
+      ],
+      "signs": [
+        "The yard feels disconnected",
+        "Beds get too much sun",
+        "You want a clearer outdoor plan"
+      ],
+      "process": [
+        "Walk the yard at different exposures",
+        "Map use zones and circulation",
+        "Choose planting and surface ideas",
+        "Refine a buildable landscape plan"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the yard feels disconnected?",
+          "answer": "Start by telling us where you see it. Walk the yard at different exposures. Map use zones and circulation."
+        },
+        {
+          "question": "Does landscape design include path and gathering layout?",
+          "answer": "We look at path and gathering layout alongside water and maintenance needs. Choose planting and surface ideas."
+        },
+        {
+          "question": "Can we plan landscape design in {{city}}?",
+          "answer": "{{business}} can discuss landscape design in {{region}}. Refine a buildable landscape plan."
+        }
+      ]
+    },
+    "landscape installation": {
+      "card": "Turn an approved planting and outdoor-space plan into a defined scope.",
+      "headline": "Bring the outdoor plan alive",
+      "includes": [
+        "Site preparation and grading",
+        "Plant and bed placement",
+        "Path and feature installation"
+      ],
+      "signs": [
+        "The yard is bare after construction",
+        "You have a plan but no planting",
+        "Outdoor paths end in dirt"
+      ],
+      "process": [
+        "Review the approved layout onsite",
+        "Prepare soil and drainage areas",
+        "Set plants and built features",
+        "Check finish levels and watering"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the yard is bare after construction?",
+          "answer": "Start by telling us where you see it. Review the approved layout onsite. Prepare soil and drainage areas."
+        },
+        {
+          "question": "Does landscape installation include plant and bed placement?",
+          "answer": "We look at plant and bed placement alongside path and feature installation. Set plants and built features."
+        },
+        {
+          "question": "Can we plan landscape installation in {{city}}?",
+          "answer": "{{business}} can discuss landscape installation in {{region}}. Check finish levels and watering."
+        }
+      ]
+    },
+    "irrigation": {
+      "card": "Plan how water reaches planted areas and discuss existing system needs.",
+      "headline": "Give plants the water they need",
+      "includes": [
+        "Zone and coverage review",
+        "Valve and controller placement",
+        "Emitter and sprinkler choices"
+      ],
+      "signs": [
+        "Dry patches appear beside wet ones",
+        "Sprinklers soak the sidewalk",
+        "Plants wilt despite watering"
+      ],
+      "process": [
+        "Map planted areas and water sources",
+        "Check pressure and existing zones",
+        "Place lines and watering heads",
+        "Run zones and adjust coverage"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about dry patches appear beside wet ones?",
+          "answer": "Start by telling us where you see it. Map planted areas and water sources. Check pressure and existing zones."
+        },
+        {
+          "question": "Does irrigation include valve and controller placement?",
+          "answer": "We look at valve and controller placement alongside emitter and sprinkler choices. Place lines and watering heads."
+        },
+        {
+          "question": "Can we plan irrigation in {{city}}?",
+          "answer": "{{business}} can discuss irrigation in {{region}}. Run zones and adjust coverage."
+        }
+      ]
+    },
+    "lawn care": {
+      "card": "Discuss the condition, care and seasonal needs of your lawn.",
+      "headline": "Help the lawn recover",
+      "includes": [
+        "Turf condition assessment",
+        "Mowing and feeding plan",
+        "Watering pattern review"
+      ],
+      "signs": [
+        "Brown patches spread across grass",
+        "The lawn thins near shade",
+        "Weeds take over bare spots"
+      ],
+      "process": [
+        "Look at turf and soil conditions",
+        "Review sun and watering habits",
+        "Plan mowing and treatment needs",
+        "Track the lawn's response over time"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about brown patches spread across grass?",
+          "answer": "Start by telling us where you see it. Look at turf and soil conditions. Review sun and watering habits."
+        },
+        {
+          "question": "Does lawn care include mowing and feeding plan?",
+          "answer": "We look at mowing and feeding plan alongside watering pattern review. Plan mowing and treatment needs."
+        },
+        {
+          "question": "Can we plan lawn care in {{city}}?",
+          "answer": "{{business}} can discuss lawn care in {{region}}. Track the lawn's response over time."
+        }
+      ]
+    },
+    "artificial turf": {
+      "card": "Explore a turf surface, including preparation and drainage considerations.",
+      "headline": "Keep a green space practical",
+      "includes": [
+        "Base and drainage preparation",
+        "Turf pile and color selection",
+        "Seams and edge finish"
+      ],
+      "signs": [
+        "Mud follows pets indoors",
+        "Grass fails in a shaded corner",
+        "You want less lawn watering"
+      ],
+      "process": [
+        "Measure the turf footprint",
+        "Check grade and drainage needs",
+        "Prepare the base and cut turf",
+        "Join seams and secure edges"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about mud follows pets indoors?",
+          "answer": "Start by telling us where you see it. Measure the turf footprint. Check grade and drainage needs."
+        },
+        {
+          "question": "Does artificial turf include turf pile and color selection?",
+          "answer": "We look at turf pile and color selection alongside seams and edge finish. Prepare the base and cut turf."
+        },
+        {
+          "question": "Can we plan artificial turf in {{city}}?",
+          "answer": "{{business}} can discuss artificial turf in {{region}}. Join seams and secure edges."
+        }
+      ]
+    },
+    "hardscaping": {
+      "card": "Plan durable paths, patios and other built landscape surfaces.",
+      "headline": "Give paths a stronger footing",
+      "includes": [
+        "Paver and stone selection",
+        "Base and slope planning",
+        "Edges and joint finish"
+      ],
+      "signs": [
+        "Stepping stones shift underfoot",
+        "Mud blocks the path to the gate",
+        "You need a firm outdoor gathering area"
+      ],
+      "process": [
+        "Mark the travel and seating routes",
+        "Check slope and water flow",
+        "Build the compacted base",
+        "Lay and finish the hard surface"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about stepping stones shift underfoot?",
+          "answer": "Start by telling us where you see it. Mark the travel and seating routes. Check slope and water flow."
+        },
+        {
+          "question": "Does hardscaping include base and slope planning?",
+          "answer": "We look at base and slope planning alongside edges and joint finish. Build the compacted base."
+        },
+        {
+          "question": "Can we plan hardscaping in {{city}}?",
+          "answer": "{{business}} can discuss hardscaping in {{region}}. Lay and finish the hard surface."
+        }
+      ]
+    },
+    "landscape lighting": {
+      "card": "Bring attention to planting, paths and outdoor gathering areas after dark.",
+      "headline": "Let the garden glow after dark",
+      "includes": [
+        "Path and feature lighting plan",
+        "Cable and transformer placement",
+        "Nighttime aiming and control"
+      ],
+      "signs": [
+        "Garden steps disappear at night",
+        "Guests miss the path to the door",
+        "A favorite tree fades after sunset"
+      ],
+      "process": [
+        "Walk the yard after sunset",
+        "Mark paths and focal points",
+        "Install cable and selected fixtures",
+        "Aim lights and test controls"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about garden steps disappear at night?",
+          "answer": "Start by telling us where you see it. Walk the yard after sunset. Mark paths and focal points."
+        },
+        {
+          "question": "Does landscape lighting include cable and transformer placement?",
+          "answer": "We look at cable and transformer placement alongside nighttime aiming and control. Install cable and selected fixtures."
+        },
+        {
+          "question": "Can we plan landscape lighting in {{city}}?",
+          "answer": "{{business}} can discuss landscape lighting in {{region}}. Aim lights and test controls."
+        }
+      ]
+    },
+    "seasonal maintenance": {
+      "card": "Plan seasonal care for planting beds, lawns and outdoor spaces.",
+      "headline": "Care for each changing season",
+      "includes": [
+        "Plant and bed review",
+        "Pruning and cleanup priorities",
+        "Irrigation schedule changes"
+      ],
+      "signs": [
+        "Leaves bury the planting beds",
+        "Shrubs crowd a walkway",
+        "Watering still follows a winter schedule"
+      ],
+      "process": [
+        "Walk the property for seasonal changes",
+        "Set pruning and cleanup priorities",
+        "Adjust watering to current conditions",
+        "Review plants that need follow-up"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about leaves bury the planting beds?",
+          "answer": "Start by telling us where you see it. Walk the property for seasonal changes. Set pruning and cleanup priorities."
+        },
+        {
+          "question": "Does seasonal maintenance include pruning and cleanup priorities?",
+          "answer": "We look at pruning and cleanup priorities alongside irrigation schedule changes. Adjust watering to current conditions."
+        },
+        {
+          "question": "Can we plan seasonal maintenance in {{city}}?",
+          "answer": "{{business}} can discuss seasonal maintenance in {{region}}. Review plants that need follow-up."
+        }
+      ]
+    }
+  },
+  "General Contractors": {
+    "home remodeling": {
+      "card": "Define the rooms, priorities and scope of your home remodel.",
+      "headline": "Make home fit your life",
+      "includes": [
+        "Room-by-room scope planning",
+        "Existing structure and system review",
+        "Finish and trade coordination"
+      ],
+      "signs": [
+        "Rooms no longer suit your routine",
+        "Storage spills into living space",
+        "You want a more connected layout"
+      ],
+      "process": [
+        "Walk the rooms and hear your priorities",
+        "Check walls and systems affected",
+        "Sequence trades and selections",
+        "Review completed spaces together"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about rooms no longer suit your routine?",
+          "answer": "Start by telling us where you see it. Walk the rooms and hear your priorities. Check walls and systems affected."
+        },
+        {
+          "question": "Does home remodeling include existing structure and system review?",
+          "answer": "We look at existing structure and system review alongside finish and trade coordination. Sequence trades and selections."
+        },
+        {
+          "question": "Can we plan home remodeling in {{city}}?",
+          "answer": "{{business}} can discuss home remodeling in {{region}}. Review completed spaces together."
+        }
+      ]
+    },
+    "kitchen remodeling": {
+      "card": "Plan a kitchen around cooking, storage and everyday movement.",
+      "headline": "Build around how you cook",
+      "includes": [
+        "Cabinet and counter layout",
+        "Appliance and service locations",
+        "Lighting and finish coordination"
+      ],
+      "signs": [
+        "Counters lack usable space",
+        "Cabinet doors block the walkway",
+        "The kitchen feels dark at prep time"
+      ],
+      "process": [
+        "Map cooking and movement patterns",
+        "Measure cabinets and appliance clearances",
+        "Coordinate plumbing, power and finishes",
+        "Fit the kitchen and check daily flow"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about counters lack usable space?",
+          "answer": "Start by telling us where you see it. Map cooking and movement patterns. Measure cabinets and appliance clearances."
+        },
+        {
+          "question": "Does kitchen remodeling include appliance and service locations?",
+          "answer": "We look at appliance and service locations alongside lighting and finish coordination. Coordinate plumbing, power and finishes."
+        },
+        {
+          "question": "Can we plan kitchen remodeling in {{city}}?",
+          "answer": "{{business}} can discuss kitchen remodeling in {{region}}. Fit the kitchen and check daily flow."
+        }
+      ]
+    },
+    "bathroom remodeling": {
+      "card": "Explore bathroom layout, fixtures and finish selections.",
+      "headline": "Make the bathroom work better",
+      "includes": [
+        "Shower and fixture layout",
+        "Waterproofing and ventilation plan",
+        "Tile and storage selections"
+      ],
+      "signs": [
+        "The shower leaks at the edge",
+        "Morning routines crowd the sink",
+        "Moisture lingers after bathing"
+      ],
+      "process": [
+        "Review fixture use and room dimensions",
+        "Check plumbing and moisture conditions",
+        "Plan waterproofing and finishes",
+        "Install and test the new bathroom"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the shower leaks at the edge?",
+          "answer": "Start by telling us where you see it. Review fixture use and room dimensions. Check plumbing and moisture conditions."
+        },
+        {
+          "question": "Does bathroom remodeling include waterproofing and ventilation plan?",
+          "answer": "We look at waterproofing and ventilation plan alongside tile and storage selections. Plan waterproofing and finishes."
+        },
+        {
+          "question": "Can we plan bathroom remodeling in {{city}}?",
+          "answer": "{{business}} can discuss bathroom remodeling in {{region}}. Install and test the new bathroom."
+        }
+      ]
+    },
+    "room additions": {
+      "card": "Discuss additional space and how it connects to your existing home.",
+      "headline": "Make space for what is next",
+      "includes": [
+        "New room footprint",
+        "Connection to existing structure",
+        "Window and utility planning"
+      ],
+      "signs": [
+        "A growing family needs a room",
+        "Work now happens at the dining table",
+        "Guests have no private place"
+      ],
+      "process": [
+        "Define the room's daily purpose",
+        "Study how it joins the house",
+        "Coordinate structure and utilities",
+        "Build and finish the added space"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a growing family needs a room?",
+          "answer": "Start by telling us where you see it. Define the room's daily purpose. Study how it joins the house."
+        },
+        {
+          "question": "Does room additions include connection to existing structure?",
+          "answer": "We look at connection to existing structure alongside window and utility planning. Coordinate structure and utilities."
+        },
+        {
+          "question": "Can we plan room additions in {{city}}?",
+          "answer": "{{business}} can discuss room additions in {{region}}. Build and finish the added space."
+        }
+      ]
+    },
+    "adus": {
+      "card": "Explore a separate living space and discuss the project requirements.",
+      "headline": "Give a small home its place",
+      "includes": [
+        "Site and access review",
+        "Living layout and storage",
+        "Utility connection planning"
+      ],
+      "signs": [
+        "Family needs nearby independent space",
+        "A backyard corner is unused",
+        "You want to explore an ADU"
+      ],
+      "process": [
+        "Walk the site and access route",
+        "Shape the compact floor plan",
+        "Review utility and construction needs",
+        "Coordinate the build sequence"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about family needs nearby independent space?",
+          "answer": "Start by telling us where you see it. Walk the site and access route. Shape the compact floor plan."
+        },
+        {
+          "question": "Does adus include living layout and storage?",
+          "answer": "We look at living layout and storage alongside utility connection planning. Review utility and construction needs."
+        },
+        {
+          "question": "Can we plan adus in {{city}}?",
+          "answer": "{{business}} can discuss adus in {{region}}. Coordinate the build sequence."
+        }
+      ]
+    },
+    "new construction": {
+      "card": "Bring a new building concept into a coordinated scope of work.",
+      "headline": "Start with a grounded plan",
+      "includes": [
+        "Building layout and site fit",
+        "Structural and system coordination",
+        "Finish and trade sequencing"
+      ],
+      "signs": [
+        "You have land but no building plan",
+        "The current home cannot be adapted",
+        "A new space is needed for work"
+      ],
+      "process": [
+        "Clarify how the building will be used",
+        "Review site conditions and access",
+        "Coordinate plans across trades",
+        "Build and review each major stage"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about you have land but no building plan?",
+          "answer": "Start by telling us where you see it. Clarify how the building will be used. Review site conditions and access."
+        },
+        {
+          "question": "Does new construction include structural and system coordination?",
+          "answer": "We look at structural and system coordination alongside finish and trade sequencing. Coordinate plans across trades."
+        },
+        {
+          "question": "Can we plan new construction in {{city}}?",
+          "answer": "{{business}} can discuss new construction in {{region}}. Build and review each major stage."
+        }
+      ]
+    },
+    "commercial improvements": {
+      "card": "Plan changes that support the way a commercial space is used.",
+      "headline": "Make the space serve work",
+      "includes": [
+        "Workflow and customer-path review",
+        "Interior systems coordination",
+        "Finish and access planning"
+      ],
+      "signs": [
+        "Staff work around awkward counters",
+        "Customers struggle to find the entrance",
+        "A leased space needs fitting out"
+      ],
+      "process": [
+        "Watch how people use the space",
+        "Map business and access needs",
+        "Plan trade work around operations",
+        "Finish and review the updated layout"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about staff work around awkward counters?",
+          "answer": "Start by telling us where you see it. Watch how people use the space. Map business and access needs."
+        },
+        {
+          "question": "Does commercial improvements include interior systems coordination?",
+          "answer": "We look at interior systems coordination alongside finish and access planning. Plan trade work around operations."
+        },
+        {
+          "question": "Can we plan commercial improvements in {{city}}?",
+          "answer": "{{business}} can discuss commercial improvements in {{region}}. Finish and review the updated layout."
+        }
+      ]
+    },
+    "whole-home renovation": {
+      "card": "Coordinate rooms, systems and finishes across a larger home renovation.",
+      "headline": "Bring every room into rhythm",
+      "includes": [
+        "Whole-house scope map",
+        "Structural and systems review",
+        "Finish schedule across rooms"
+      ],
+      "signs": [
+        "Updates happened in mismatched phases",
+        "Several rooms need major work",
+        "You want one coordinated home plan"
+      ],
+      "process": [
+        "List priorities across the house",
+        "Check shared systems and structure",
+        "Sequence rooms and trade work",
+        "Walk through the finished home"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about updates happened in mismatched phases?",
+          "answer": "Start by telling us where you see it. List priorities across the house. Check shared systems and structure."
+        },
+        {
+          "question": "Does whole-home renovation include structural and systems review?",
+          "answer": "We look at structural and systems review alongside finish schedule across rooms. Sequence rooms and trade work."
+        },
+        {
+          "question": "Can we plan whole-home renovation in {{city}}?",
+          "answer": "{{business}} can discuss whole-home renovation in {{region}}. Walk through the finished home."
+        }
+      ]
+    }
+  },
+  "Flooring": {
+    "hardwood flooring": {
+      "card": "Explore wood species, plank formats and installation for your space.",
+      "headline": "Bring real wood underfoot",
+      "includes": [
+        "Wood species and plank selection",
+        "Subfloor and moisture review",
+        "Layout and transition details"
+      ],
+      "signs": [
+        "Old flooring is beyond refinishing",
+        "You want the feel of wood",
+        "A room needs new flooring"
+      ],
+      "process": [
+        "Compare wood and plank samples",
+        "Check the base and room conditions",
+        "Set the plank layout",
+        "Install and finish transitions"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about old flooring is beyond refinishing?",
+          "answer": "Start by telling us where you see it. Compare wood and plank samples. Check the base and room conditions."
+        },
+        {
+          "question": "Does hardwood flooring include subfloor and moisture review?",
+          "answer": "We look at subfloor and moisture review alongside layout and transition details. Set the plank layout."
+        },
+        {
+          "question": "Can we plan hardwood flooring in {{city}}?",
+          "answer": "{{business}} can discuss hardwood flooring in {{region}}. Install and finish transitions."
+        }
+      ]
+    },
+    "luxury vinyl flooring": {
+      "card": "Discuss durable vinyl plank and tile options for daily life.",
+      "headline": "Choose floors for everyday life",
+      "includes": [
+        "Vinyl plank or tile choice",
+        "Base preparation",
+        "Edge and doorway transitions"
+      ],
+      "signs": [
+        "The floor scratches easily",
+        "Moisture reaches a busy entry",
+        "You need resilient flooring"
+      ],
+      "process": [
+        "Review traffic and room use",
+        "Choose vinyl format and finish",
+        "Prepare the base for a flat fit",
+        "Lay pieces and finish thresholds"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the floor scratches easily?",
+          "answer": "Start by telling us where you see it. Review traffic and room use. Choose vinyl format and finish."
+        },
+        {
+          "question": "Does luxury vinyl flooring include base preparation?",
+          "answer": "We look at base preparation alongside edge and doorway transitions. Prepare the base for a flat fit."
+        },
+        {
+          "question": "Can we plan luxury vinyl flooring in {{city}}?",
+          "answer": "{{business}} can discuss luxury vinyl flooring in {{region}}. Lay pieces and finish thresholds."
+        }
+      ]
+    },
+    "laminate flooring": {
+      "card": "Compare laminate looks, finishes and installation requirements.",
+      "headline": "Refresh rooms with a new surface",
+      "includes": [
+        "Laminate color and texture",
+        "Underlayment and base review",
+        "Expansion and trim details"
+      ],
+      "signs": [
+        "The existing floor is worn",
+        "You want a wood-look surface",
+        "Several rooms need one visual line"
+      ],
+      "process": [
+        "Compare samples in room light",
+        "Check subfloor level and moisture",
+        "Plan joint and doorway positions",
+        "Install planks with proper edges"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the existing floor is worn?",
+          "answer": "Start by telling us where you see it. Compare samples in room light. Check subfloor level and moisture."
+        },
+        {
+          "question": "Does laminate flooring include underlayment and base review?",
+          "answer": "We look at underlayment and base review alongside expansion and trim details. Plan joint and doorway positions."
+        },
+        {
+          "question": "Can we plan laminate flooring in {{city}}?",
+          "answer": "{{business}} can discuss laminate flooring in {{region}}. Install planks with proper edges."
+        }
+      ]
+    },
+    "tile flooring": {
+      "card": "Plan tile sizes, patterns and details for a considered finish.",
+      "headline": "Give tile a thoughtful pattern",
+      "includes": [
+        "Tile size and pattern",
+        "Base and waterproofing review",
+        "Grout and edge finish"
+      ],
+      "signs": [
+        "A bathroom floor is cracking",
+        "Wet areas need a new surface",
+        "You want a distinct tile pattern"
+      ],
+      "process": [
+        "Choose tile in the room's light",
+        "Check the base and wet-area needs",
+        "Dry-lay the pattern and cuts",
+        "Set, grout and finish the tile"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a bathroom floor is cracking?",
+          "answer": "Start by telling us where you see it. Choose tile in the room's light. Check the base and wet-area needs."
+        },
+        {
+          "question": "Does tile flooring include base and waterproofing review?",
+          "answer": "We look at base and waterproofing review alongside grout and edge finish. Dry-lay the pattern and cuts."
+        },
+        {
+          "question": "Can we plan tile flooring in {{city}}?",
+          "answer": "{{business}} can discuss tile flooring in {{region}}. Set, grout and finish the tile."
+        }
+      ]
+    },
+    "floor refinishing": {
+      "card": "Discuss restoring the finish on an existing wood floor.",
+      "headline": "Let the wood show again",
+      "includes": [
+        "Existing finish and wear review",
+        "Sanding and stain choices",
+        "Protective topcoat plan"
+      ],
+      "signs": [
+        "Wood looks dull and scratched",
+        "Finish wears through in traffic paths",
+        "You want a different wood tone"
+      ],
+      "process": [
+        "Check how much wood can be worked",
+        "Prepare and sand the surface",
+        "Sample stain or finish options",
+        "Apply coats and review the sheen"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about wood looks dull and scratched?",
+          "answer": "Start by telling us where you see it. Check how much wood can be worked. Prepare and sand the surface."
+        },
+        {
+          "question": "Does floor refinishing include sanding and stain choices?",
+          "answer": "We look at sanding and stain choices alongside protective topcoat plan. Sample stain or finish options."
+        },
+        {
+          "question": "Can we plan floor refinishing in {{city}}?",
+          "answer": "{{business}} can discuss floor refinishing in {{region}}. Apply coats and review the sheen."
+        }
+      ]
+    },
+    "floor repair": {
+      "card": "Assess worn, damaged or uneven areas and the repair options.",
+      "headline": "Fix the patch that catches",
+      "includes": [
+        "Damaged board assessment",
+        "Matching material review",
+        "Level and transition correction"
+      ],
+      "signs": [
+        "Boards lift at the edge",
+        "A tile is loose underfoot",
+        "A floor section feels soft"
+      ],
+      "process": [
+        "Find the extent of the damaged area",
+        "Check the base beneath it",
+        "Replace or reset affected pieces",
+        "Blend the repair into nearby flooring"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about boards lift at the edge?",
+          "answer": "Start by telling us where you see it. Find the extent of the damaged area. Check the base beneath it."
+        },
+        {
+          "question": "Does floor repair include matching material review?",
+          "answer": "We look at matching material review alongside level and transition correction. Replace or reset affected pieces."
+        },
+        {
+          "question": "Can we plan floor repair in {{city}}?",
+          "answer": "{{business}} can discuss floor repair in {{region}}. Blend the repair into nearby flooring."
+        }
+      ]
+    },
+    "subfloor preparation": {
+      "card": "Start with the surface underneath for an informed installation plan.",
+      "headline": "Start with a steadier base",
+      "includes": [
+        "Level and movement review",
+        "Moisture and damage checks",
+        "Patch or underlayment plan"
+      ],
+      "signs": [
+        "New flooring would sit unevenly",
+        "The floor creaks in one spot",
+        "Old material left ridges behind"
+      ],
+      "process": [
+        "Remove obstructions and inspect the base",
+        "Measure uneven or moving areas",
+        "Correct the agreed base issues",
+        "Confirm readiness for finish flooring"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about new flooring would sit unevenly?",
+          "answer": "Start by telling us where you see it. Remove obstructions and inspect the base. Measure uneven or moving areas."
+        },
+        {
+          "question": "Does subfloor preparation include moisture and damage checks?",
+          "answer": "We look at moisture and damage checks alongside patch or underlayment plan. Correct the agreed base issues."
+        },
+        {
+          "question": "Can we plan subfloor preparation in {{city}}?",
+          "answer": "{{business}} can discuss subfloor preparation in {{region}}. Confirm readiness for finish flooring."
+        }
+      ]
+    },
+    "commercial flooring": {
+      "card": "Plan flooring around traffic, use and your business schedule.",
+      "headline": "Fit floors around business days",
+      "includes": [
+        "Traffic and cleaning needs",
+        "Surface and installation planning",
+        "Phased access and transitions"
+      ],
+      "signs": [
+        "Entry flooring wears quickly",
+        "Staff move equipment across seams",
+        "A business needs new flooring with less disruption"
+      ],
+      "process": [
+        "Review traffic and work hours",
+        "Choose suitable floor materials",
+        "Plan access and installation phases",
+        "Fit and inspect the finished surface"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about entry flooring wears quickly?",
+          "answer": "Start by telling us where you see it. Review traffic and work hours. Choose suitable floor materials."
+        },
+        {
+          "question": "Does commercial flooring include surface and installation planning?",
+          "answer": "We look at surface and installation planning alongside phased access and transitions. Plan access and installation phases."
+        },
+        {
+          "question": "Can we plan commercial flooring in {{city}}?",
+          "answer": "{{business}} can discuss commercial flooring in {{region}}. Fit and inspect the finished surface."
+        }
+      ]
+    }
+  },
+  "Painting": {
+    "interior painting": {
+      "card": "Bring a new palette to living rooms, bedrooms and everyday spaces.",
+      "headline": "Let the room feel new",
+      "includes": [
+        "Color and sheen choices",
+        "Wall and trim preparation",
+        "Clean edge and finish work"
+      ],
+      "signs": [
+        "Walls are scuffed in busy rooms",
+        "The old color darkens the space",
+        "Patch marks show through paint"
+      ],
+      "process": [
+        "Look at colors in the room's light",
+        "Protect furnishings and prepare walls",
+        "Paint walls and trim in sequence",
+        "Check coverage and clean edges"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about walls are scuffed in busy rooms?",
+          "answer": "Start by telling us where you see it. Look at colors in the room's light. Protect furnishings and prepare walls."
+        },
+        {
+          "question": "Does interior painting include wall and trim preparation?",
+          "answer": "We look at wall and trim preparation alongside clean edge and finish work. Paint walls and trim in sequence."
+        },
+        {
+          "question": "Can we plan interior painting in {{city}}?",
+          "answer": "{{business}} can discuss interior painting in {{region}}. Check coverage and clean edges."
+        }
+      ]
+    },
+    "exterior painting": {
+      "card": "Refresh exterior surfaces with a plan tailored to your property.",
+      "headline": "Refresh the face of home",
+      "includes": [
+        "Siding and trim condition",
+        "Cleaning and surface preparation",
+        "Coating and color plan"
+      ],
+      "signs": [
+        "Paint peels near the eaves",
+        "Trim fades faster than siding",
+        "Bare spots appear on wood"
+      ],
+      "process": [
+        "Walk every exterior elevation",
+        "Clean and repair the paintable surface",
+        "Choose coatings for each material",
+        "Apply and inspect the finish"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about paint peels near the eaves?",
+          "answer": "Start by telling us where you see it. Walk every exterior elevation. Clean and repair the paintable surface."
+        },
+        {
+          "question": "Does exterior painting include cleaning and surface preparation?",
+          "answer": "We look at cleaning and surface preparation alongside coating and color plan. Choose coatings for each material."
+        },
+        {
+          "question": "Can we plan exterior painting in {{city}}?",
+          "answer": "{{business}} can discuss exterior painting in {{region}}. Apply and inspect the finish."
+        }
+      ]
+    },
+    "cabinet painting": {
+      "card": "Explore a new finish for existing cabinetry.",
+      "headline": "Give cabinets a fresh start",
+      "includes": [
+        "Door and drawer preparation",
+        "Finish and color sampling",
+        "Spray or brush approach"
+      ],
+      "signs": [
+        "Cabinet finish chips near handles",
+        "The kitchen feels dated",
+        "Doors are sound but colors are tired"
+      ],
+      "process": [
+        "Label and remove cabinet hardware",
+        "Clean and prepare each surface",
+        "Apply the selected cabinet finish",
+        "Reassemble and check door alignment"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about cabinet finish chips near handles?",
+          "answer": "Start by telling us where you see it. Label and remove cabinet hardware. Clean and prepare each surface."
+        },
+        {
+          "question": "Does cabinet painting include finish and color sampling?",
+          "answer": "We look at finish and color sampling alongside spray or brush approach. Apply the selected cabinet finish."
+        },
+        {
+          "question": "Can we plan cabinet painting in {{city}}?",
+          "answer": "{{business}} can discuss cabinet painting in {{region}}. Reassemble and check door alignment."
+        }
+      ]
+    },
+    "deck and fence staining": {
+      "card": "Discuss protection and color for exterior wood surfaces.",
+      "headline": "Bring warmth back to wood",
+      "includes": [
+        "Wood condition and cleaning",
+        "Stain color and opacity",
+        "End-grain and edge coverage"
+      ],
+      "signs": [
+        "Deck boards look gray",
+        "Fence color fades unevenly",
+        "Water darkens bare wood"
+      ],
+      "process": [
+        "Check wood dryness and wear",
+        "Clean and prepare boards",
+        "Test stain color on a small area",
+        "Coat surfaces and review coverage"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about deck boards look gray?",
+          "answer": "Start by telling us where you see it. Check wood dryness and wear. Clean and prepare boards."
+        },
+        {
+          "question": "Does deck and fence staining include stain color and opacity?",
+          "answer": "We look at stain color and opacity alongside end-grain and edge coverage. Test stain color on a small area."
+        },
+        {
+          "question": "Can we plan deck and fence staining in {{city}}?",
+          "answer": "{{business}} can discuss deck and fence staining in {{region}}. Coat surfaces and review coverage."
+        }
+      ]
+    },
+    "surface preparation": {
+      "card": "Plan the cleaning, sanding and preparation the surface needs.",
+      "headline": "Give the finish a clean base",
+      "includes": [
+        "Loose coating removal",
+        "Patch and sanding work",
+        "Primer selection by surface"
+      ],
+      "signs": [
+        "Old paint flakes under a finger",
+        "Patches show through the wall",
+        "Glossy surfaces resist new paint"
+      ],
+      "process": [
+        "Identify paint and substrate condition",
+        "Remove loose material and fill defects",
+        "Sand and clean the surface",
+        "Prime the areas that need it"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about old paint flakes under a finger?",
+          "answer": "Start by telling us where you see it. Identify paint and substrate condition. Remove loose material and fill defects."
+        },
+        {
+          "question": "Does surface preparation include patch and sanding work?",
+          "answer": "We look at patch and sanding work alongside primer selection by surface. Sand and clean the surface."
+        },
+        {
+          "question": "Can we plan surface preparation in {{city}}?",
+          "answer": "{{business}} can discuss surface preparation in {{region}}. Prime the areas that need it."
+        }
+      ]
+    },
+    "drywall repair": {
+      "card": "Address holes, seams and surface damage before the finish.",
+      "headline": "Make the wall whole again",
+      "includes": [
+        "Hole and crack assessment",
+        "Joint and patch treatment",
+        "Texture blend before paint"
+      ],
+      "signs": [
+        "A door handle punched a hole",
+        "A seam cracks along the ceiling",
+        "Old anchors left a row of marks"
+      ],
+      "process": [
+        "Check the damage and nearby board",
+        "Patch and reinforce the area",
+        "Build smooth joint compound layers",
+        "Match texture for finishing"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a door handle punched a hole?",
+          "answer": "Start by telling us where you see it. Check the damage and nearby board. Patch and reinforce the area."
+        },
+        {
+          "question": "Does drywall repair include joint and patch treatment?",
+          "answer": "We look at joint and patch treatment alongside texture blend before paint. Build smooth joint compound layers."
+        },
+        {
+          "question": "Can we plan drywall repair in {{city}}?",
+          "answer": "{{business}} can discuss drywall repair in {{region}}. Match texture for finishing."
+        }
+      ]
+    },
+    "decorative finishes": {
+      "card": "Explore specialty textures and finishes with a considered color palette.",
+      "headline": "Give one wall a voice",
+      "includes": [
+        "Finish sample and color palette",
+        "Texture application plan",
+        "Edge and lighting review"
+      ],
+      "signs": [
+        "A feature wall feels flat",
+        "You want more depth than paint",
+        "Lighting reveals every plain surface"
+      ],
+      "process": [
+        "Explore the room and focal wall",
+        "Make a finish sample in its light",
+        "Prepare the base and edges",
+        "Apply and review the texture"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a feature wall feels flat?",
+          "answer": "Start by telling us where you see it. Explore the room and focal wall. Make a finish sample in its light."
+        },
+        {
+          "question": "Does decorative finishes include texture application plan?",
+          "answer": "We look at texture application plan alongside edge and lighting review. Prepare the base and edges."
+        },
+        {
+          "question": "Can we plan decorative finishes in {{city}}?",
+          "answer": "{{business}} can discuss decorative finishes in {{region}}. Apply and review the texture."
+        }
+      ]
+    },
+    "commercial painting": {
+      "card": "Plan a fresh finish around your business and its operating hours.",
+      "headline": "Refresh space around your hours",
+      "includes": [
+        "Work-zone and access plan",
+        "Durable finish selection",
+        "Phased coating schedule"
+      ],
+      "signs": [
+        "High-touch walls look worn",
+        "The storefront color has faded",
+        "Customers see patchy repairs"
+      ],
+      "process": [
+        "Walk the business during operations",
+        "Plan safe access and work phases",
+        "Prepare high-wear surfaces",
+        "Paint and reopen each area"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about high-touch walls look worn?",
+          "answer": "Start by telling us where you see it. Walk the business during operations. Plan safe access and work phases."
+        },
+        {
+          "question": "Does commercial painting include durable finish selection?",
+          "answer": "We look at durable finish selection alongside phased coating schedule. Prepare high-wear surfaces."
+        },
+        {
+          "question": "Can we plan commercial painting in {{city}}?",
+          "answer": "{{business}} can discuss commercial painting in {{region}}. Paint and reopen each area."
+        }
+      ]
+    }
+  },
+  "Fencing": {
+    "wood fencing": {
+      "card": "Explore natural wood styles, heights and finishing details.",
+      "headline": "Frame the yard with wood",
+      "includes": [
+        "Board style and spacing",
+        "Post and footing layout",
+        "Finish and gate details"
+      ],
+      "signs": [
+        "Old boards lean after wind",
+        "You want a warmer boundary",
+        "Pets slip through fence gaps"
+      ],
+      "process": [
+        "Walk the property line and access",
+        "Choose board pattern and height",
+        "Set posts and rails",
+        "Fit boards and finish edges"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about old boards lean after wind?",
+          "answer": "Start by telling us where you see it. Walk the property line and access. Choose board pattern and height."
+        },
+        {
+          "question": "Does wood fencing include post and footing layout?",
+          "answer": "We look at post and footing layout alongside finish and gate details. Set posts and rails."
+        },
+        {
+          "question": "Can we plan wood fencing in {{city}}?",
+          "answer": "{{business}} can discuss wood fencing in {{region}}. Fit boards and finish edges."
+        }
+      ]
+    },
+    "vinyl fencing": {
+      "card": "Compare vinyl profiles and configurations for your property.",
+      "headline": "Keep the boundary clean-lined",
+      "includes": [
+        "Vinyl profile and color",
+        "Post spacing and reinforcement",
+        "Gate and corner details"
+      ],
+      "signs": [
+        "Fence panels discolor",
+        "You want fewer finish chores",
+        "The yard needs a clear boundary"
+      ],
+      "process": [
+        "Measure runs and changing grades",
+        "Compare panel styles and colors",
+        "Set posts and install rails",
+        "Fit panels and align gates"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about fence panels discolor?",
+          "answer": "Start by telling us where you see it. Measure runs and changing grades. Compare panel styles and colors."
+        },
+        {
+          "question": "Does vinyl fencing include post spacing and reinforcement?",
+          "answer": "We look at post spacing and reinforcement alongside gate and corner details. Set posts and install rails."
+        },
+        {
+          "question": "Can we plan vinyl fencing in {{city}}?",
+          "answer": "{{business}} can discuss vinyl fencing in {{region}}. Fit panels and align gates."
+        }
+      ]
+    },
+    "metal fencing": {
+      "card": "Discuss metal fence styles, finishes and property boundaries.",
+      "headline": "Give the boundary definition",
+      "includes": [
+        "Metal style and finish",
+        "Post and panel layout",
+        "Gate hardware coordination"
+      ],
+      "signs": [
+        "An open edge needs a barrier",
+        "Existing rails have rust",
+        "You want clear views through fencing"
+      ],
+      "process": [
+        "Review the line and ground levels",
+        "Select metal pattern and finish",
+        "Set support posts",
+        "Mount panels and test gates"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about an open edge needs a barrier?",
+          "answer": "Start by telling us where you see it. Review the line and ground levels. Select metal pattern and finish."
+        },
+        {
+          "question": "Does metal fencing include post and panel layout?",
+          "answer": "We look at post and panel layout alongside gate hardware coordination. Set support posts."
+        },
+        {
+          "question": "Can we plan metal fencing in {{city}}?",
+          "answer": "{{business}} can discuss metal fencing in {{region}}. Mount panels and test gates."
+        }
+      ]
+    },
+    "privacy fencing": {
+      "card": "Create a more private outdoor setting with a considered fence plan.",
+      "headline": "Make outdoor time feel private",
+      "includes": [
+        "Sightline and height review",
+        "Panel material and spacing",
+        "Gate and setback planning"
+      ],
+      "signs": [
+        "Neighbors overlook the patio",
+        "A street view reaches the yard",
+        "Outdoor seating feels exposed"
+      ],
+      "process": [
+        "Map views from the spaces used",
+        "Choose height and panel opacity",
+        "Plan posts around access points",
+        "Build and check the screening effect"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about neighbors overlook the patio?",
+          "answer": "Start by telling us where you see it. Map views from the spaces used. Choose height and panel opacity."
+        },
+        {
+          "question": "Does privacy fencing include panel material and spacing?",
+          "answer": "We look at panel material and spacing alongside gate and setback planning. Plan posts around access points."
+        },
+        {
+          "question": "Can we plan privacy fencing in {{city}}?",
+          "answer": "{{business}} can discuss privacy fencing in {{region}}. Build and check the screening effect."
+        }
+      ]
+    },
+    "gates": {
+      "card": "Plan access, hardware and gates that complement the fence.",
+      "headline": "Make the entry easy to use",
+      "includes": [
+        "Gate opening and swing",
+        "Hinge and latch selection",
+        "Post strength and alignment"
+      ],
+      "signs": [
+        "The gate drags on the path",
+        "A latch no longer catches",
+        "You need wider yard access"
+      ],
+      "process": [
+        "Measure the clear opening",
+        "Review swing and post support",
+        "Fit hinges, frame and latch",
+        "Test travel and closure"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the gate drags on the path?",
+          "answer": "Start by telling us where you see it. Measure the clear opening. Review swing and post support."
+        },
+        {
+          "question": "Does gates include hinge and latch selection?",
+          "answer": "We look at hinge and latch selection alongside post strength and alignment. Fit hinges, frame and latch."
+        },
+        {
+          "question": "Can we plan gates in {{city}}?",
+          "answer": "{{business}} can discuss gates in {{region}}. Test travel and closure."
+        }
+      ]
+    },
+    "fence repair": {
+      "card": "Assess damaged sections, posts and hardware for targeted repair.",
+      "headline": "Steady the weak fence section",
+      "includes": [
+        "Loose post assessment",
+        "Broken rail and board review",
+        "Matched replacement parts"
+      ],
+      "signs": [
+        "A fence section sways",
+        "Boards split near fasteners",
+        "The gate pulls a post loose"
+      ],
+      "process": [
+        "Identify the weak connection",
+        "Check adjacent posts and rails",
+        "Replace or secure damaged pieces",
+        "Test the repaired run"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a fence section sways?",
+          "answer": "Start by telling us where you see it. Identify the weak connection. Check adjacent posts and rails."
+        },
+        {
+          "question": "Does fence repair include broken rail and board review?",
+          "answer": "We look at broken rail and board review alongside matched replacement parts. Replace or secure damaged pieces."
+        },
+        {
+          "question": "Can we plan fence repair in {{city}}?",
+          "answer": "{{business}} can discuss fence repair in {{region}}. Test the repaired run."
+        }
+      ]
+    },
+    "pool fencing": {
+      "card": "Discuss a pool enclosure suited to your property and applicable requirements.",
+      "headline": "Shape a clear pool boundary",
+      "includes": [
+        "Pool-edge layout",
+        "Gate and latch placement",
+        "Panel and sightline choices"
+      ],
+      "signs": [
+        "The pool area lacks a separate edge",
+        "A gate does not self-close",
+        "You want clearer yard zones"
+      ],
+      "process": [
+        "Walk the pool perimeter and access",
+        "Review local requirements with the owner",
+        "Plan panel and gate positions",
+        "Install and test the enclosure"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the pool area lacks a separate edge?",
+          "answer": "Start by telling us where you see it. Walk the pool perimeter and access. Review local requirements with the owner."
+        },
+        {
+          "question": "Does pool fencing include gate and latch placement?",
+          "answer": "We look at gate and latch placement alongside panel and sightline choices. Plan panel and gate positions."
+        },
+        {
+          "question": "Can we plan pool fencing in {{city}}?",
+          "answer": "{{business}} can discuss pool fencing in {{region}}. Install and test the enclosure."
+        }
+      ]
+    },
+    "commercial fencing": {
+      "card": "Plan access and boundaries for your commercial property.",
+      "headline": "Define access for the site",
+      "includes": [
+        "Perimeter and entry review",
+        "Durable panel selection",
+        "Gate and traffic coordination"
+      ],
+      "signs": [
+        "Delivery areas lack separation",
+        "An old perimeter is damaged",
+        "Vehicle access needs control"
+      ],
+      "process": [
+        "Map people and vehicle routes",
+        "Choose boundary and gate layout",
+        "Set structural posts and panels",
+        "Test entry movement and closure"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about delivery areas lack separation?",
+          "answer": "Start by telling us where you see it. Map people and vehicle routes. Choose boundary and gate layout."
+        },
+        {
+          "question": "Does commercial fencing include durable panel selection?",
+          "answer": "We look at durable panel selection alongside gate and traffic coordination. Set structural posts and panels."
+        },
+        {
+          "question": "Can we plan commercial fencing in {{city}}?",
+          "answer": "{{business}} can discuss commercial fencing in {{region}}. Test entry movement and closure."
+        }
+      ]
+    }
+  },
+  "Garage Doors": {
+    "garage door installation": {
+      "card": "Choose a door style and operating system for your home.",
+      "headline": "Welcome home with a better door",
+      "includes": [
+        "Door size and style review",
+        "Track and opener compatibility",
+        "Seal and trim details"
+      ],
+      "signs": [
+        "The old door is badly worn",
+        "You want a different facade look",
+        "A new garage needs its door"
+      ],
+      "process": [
+        "Measure the opening and headroom",
+        "Compare door materials and panels",
+        "Fit tracks and door sections",
+        "Balance and test the door"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the old door is badly worn?",
+          "answer": "Start by telling us where you see it. Measure the opening and headroom. Compare door materials and panels."
+        },
+        {
+          "question": "Does garage door installation include track and opener compatibility?",
+          "answer": "We look at track and opener compatibility alongside seal and trim details. Fit tracks and door sections."
+        },
+        {
+          "question": "Can we plan garage door installation in {{city}}?",
+          "answer": "{{business}} can discuss garage door installation in {{region}}. Balance and test the door."
+        }
+      ]
+    },
+    "garage door repair": {
+      "card": "Discuss unusual noise, damage or trouble opening and closing.",
+      "headline": "Get the door moving safely",
+      "includes": [
+        "Noise and movement diagnosis",
+        "Track and roller review",
+        "Targeted part replacement"
+      ],
+      "signs": [
+        "The door sticks halfway",
+        "Grinding starts during travel",
+        "One side hangs lower"
+      ],
+      "process": [
+        "Observe a complete door cycle",
+        "Inspect tracks, rollers and cables",
+        "Repair the component causing trouble",
+        "Test balance and closing"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the door sticks halfway?",
+          "answer": "Start by telling us where you see it. Observe a complete door cycle. Inspect tracks, rollers and cables."
+        },
+        {
+          "question": "Does garage door repair include track and roller review?",
+          "answer": "We look at track and roller review alongside targeted part replacement. Repair the component causing trouble."
+        },
+        {
+          "question": "Can we plan garage door repair in {{city}}?",
+          "answer": "{{business}} can discuss garage door repair in {{region}}. Test balance and closing."
+        }
+      ]
+    },
+    "spring replacement": {
+      "card": "Have a trained professional assess and replace worn door springs.",
+      "headline": "Restore the door's balance",
+      "includes": [
+        "Spring condition assessment",
+        "Door weight and sizing",
+        "Balanced operation testing"
+      ],
+      "signs": [
+        "The door feels suddenly heavy",
+        "A spring has a visible gap",
+        "The opener strains to lift"
+      ],
+      "process": [
+        "Keep the door still for assessment",
+        "Measure door weight and spring fit",
+        "Replace the spring with proper tools",
+        "Verify the door lifts evenly"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the door feels suddenly heavy?",
+          "answer": "Start by telling us where you see it. Keep the door still for assessment. Measure door weight and spring fit."
+        },
+        {
+          "question": "Does spring replacement include door weight and sizing?",
+          "answer": "We look at door weight and sizing alongside balanced operation testing. Replace the spring with proper tools."
+        },
+        {
+          "question": "Can we plan spring replacement in {{city}}?",
+          "answer": "{{business}} can discuss spring replacement in {{region}}. Verify the door lifts evenly."
+        }
+      ]
+    },
+    "opener installation": {
+      "card": "Explore opener options and compatibility with your door.",
+      "headline": "Make every arrival smoother",
+      "includes": [
+        "Opener type and force fit",
+        "Rail and mounting location",
+        "Remote and safety setup"
+      ],
+      "signs": [
+        "Manual lifting has become difficult",
+        "The garage has no powered opener",
+        "An old opener lacks the features you want"
+      ],
+      "process": [
+        "Check door balance before adding power",
+        "Choose opener and rail placement",
+        "Mount and connect the unit",
+        "Program controls and test reversal"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about manual lifting has become difficult?",
+          "answer": "Start by telling us where you see it. Check door balance before adding power. Choose opener and rail placement."
+        },
+        {
+          "question": "Does opener installation include rail and mounting location?",
+          "answer": "We look at rail and mounting location alongside remote and safety setup. Mount and connect the unit."
+        },
+        {
+          "question": "Can we plan opener installation in {{city}}?",
+          "answer": "{{business}} can discuss opener installation in {{region}}. Program controls and test reversal."
+        }
+      ]
+    },
+    "opener repair": {
+      "card": "Get help diagnosing an opener that is not working as expected.",
+      "headline": "Find the missing opener signal",
+      "includes": [
+        "Power and control checks",
+        "Drive and sensor assessment",
+        "Repair or replacement options"
+      ],
+      "signs": [
+        "The remote gets no response",
+        "The opener hums but stays still",
+        "The door reverses unexpectedly"
+      ],
+      "process": [
+        "Test wall control and remote response",
+        "Inspect power, sensors and drive",
+        "Repair the identified opener fault",
+        "Run open and close safety checks"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the remote gets no response?",
+          "answer": "Start by telling us where you see it. Test wall control and remote response. Inspect power, sensors and drive."
+        },
+        {
+          "question": "Does opener repair include drive and sensor assessment?",
+          "answer": "We look at drive and sensor assessment alongside repair or replacement options. Repair the identified opener fault."
+        },
+        {
+          "question": "Can we plan opener repair in {{city}}?",
+          "answer": "{{business}} can discuss opener repair in {{region}}. Run open and close safety checks."
+        }
+      ]
+    },
+    "panel replacement": {
+      "card": "Discuss replacing damaged panels and matching the existing door.",
+      "headline": "Restore the door's front",
+      "includes": [
+        "Damaged panel measurement",
+        "Color and profile matching",
+        "Hinge and seal connections"
+      ],
+      "signs": [
+        "A lower panel is dented",
+        "One section has rusted through",
+        "A panel cracks near its hinge"
+      ],
+      "process": [
+        "Check damage beyond the visible panel",
+        "Confirm a compatible replacement section",
+        "Remove and fit the new panel",
+        "Align sections and test travel"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a lower panel is dented?",
+          "answer": "Start by telling us where you see it. Check damage beyond the visible panel. Confirm a compatible replacement section."
+        },
+        {
+          "question": "Does panel replacement include color and profile matching?",
+          "answer": "We look at color and profile matching alongside hinge and seal connections. Remove and fit the new panel."
+        },
+        {
+          "question": "Can we plan panel replacement in {{city}}?",
+          "answer": "{{business}} can discuss panel replacement in {{region}}. Align sections and test travel."
+        }
+      ]
+    },
+    "weather sealing": {
+      "card": "Address gaps around the door and discuss sealing options.",
+      "headline": "Close the gaps around garage",
+      "includes": [
+        "Bottom seal fit",
+        "Side and top weatherstrip",
+        "Threshold and drainage review"
+      ],
+      "signs": [
+        "Daylight shows under the door",
+        "Wind blows leaves inside",
+        "Rain reaches the garage floor"
+      ],
+      "process": [
+        "Find where air or water enters",
+        "Measure bottom and perimeter gaps",
+        "Fit appropriate sealing pieces",
+        "Close the door and check contact"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about daylight shows under the door?",
+          "answer": "Start by telling us where you see it. Find where air or water enters. Measure bottom and perimeter gaps."
+        },
+        {
+          "question": "Does weather sealing include side and top weatherstrip?",
+          "answer": "We look at side and top weatherstrip alongside threshold and drainage review. Fit appropriate sealing pieces."
+        },
+        {
+          "question": "Can we plan weather sealing in {{city}}?",
+          "answer": "{{business}} can discuss weather sealing in {{region}}. Close the door and check contact."
+        }
+      ]
+    },
+    "garage door maintenance": {
+      "card": "Arrange an assessment of moving parts, balance and operation.",
+      "headline": "Keep the door running evenly",
+      "includes": [
+        "Roller and hinge inspection",
+        "Balance and track review",
+        "Opener safety test"
+      ],
+      "signs": [
+        "The door rattles more than before",
+        "Moving parts look dry",
+        "The door no longer closes smoothly"
+      ],
+      "process": [
+        "Listen through a full cycle",
+        "Inspect wear and door balance",
+        "Adjust and lubricate agreed parts",
+        "Retest travel and safety response"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the door rattles more than before?",
+          "answer": "Start by telling us where you see it. Listen through a full cycle. Inspect wear and door balance."
+        },
+        {
+          "question": "Does garage door maintenance include balance and track review?",
+          "answer": "We look at balance and track review alongside opener safety test. Adjust and lubricate agreed parts."
+        },
+        {
+          "question": "Can we plan garage door maintenance in {{city}}?",
+          "answer": "{{business}} can discuss garage door maintenance in {{region}}. Retest travel and safety response."
+        }
+      ]
+    }
+  },
+  "Pest Control": {
+    "pest inspections": {
+      "card": "Start with an inspection to understand activity and possible entry points.",
+      "headline": "Find where activity begins",
+      "includes": [
+        "Evidence and entry-point review",
+        "Moisture and shelter observations",
+        "Findings and next-step discussion"
+      ],
+      "signs": [
+        "Droppings appear in a cupboard",
+        "Scratching comes from a wall",
+        "You keep seeing insects indoors"
+      ],
+      "process": [
+        "Ask where and when activity appears",
+        "Inspect likely routes and harborage",
+        "Document signs found onsite",
+        "Explain treatment or exclusion options"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about droppings appear in a cupboard?",
+          "answer": "Start by telling us where you see it. Ask where and when activity appears. Inspect likely routes and harborage."
+        },
+        {
+          "question": "Does pest inspections include moisture and shelter observations?",
+          "answer": "We look at moisture and shelter observations alongside findings and next-step discussion. Document signs found onsite."
+        },
+        {
+          "question": "Can we plan pest inspections in {{city}}?",
+          "answer": "{{business}} can discuss pest inspections in {{region}}. Explain treatment or exclusion options."
+        }
+      ]
+    },
+    "ant control": {
+      "card": "Discuss ant activity and treatment options for your property.",
+      "headline": "Trace the ant trail home",
+      "includes": [
+        "Trail and nest observation",
+        "Food and moisture source review",
+        "Treatment route planning"
+      ],
+      "signs": [
+        "Ants cross the kitchen counter",
+        "Trails return after wiping",
+        "Small mounds appear near paving"
+      ],
+      "process": [
+        "Follow active ant trails",
+        "Check entry points and attractants",
+        "Choose treatment for the observed activity",
+        "Review ways to reduce return visits"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about ants cross the kitchen counter?",
+          "answer": "Start by telling us where you see it. Follow active ant trails. Check entry points and attractants."
+        },
+        {
+          "question": "Does ant control include food and moisture source review?",
+          "answer": "We look at food and moisture source review alongside treatment route planning. Choose treatment for the observed activity."
+        },
+        {
+          "question": "Can we plan ant control in {{city}}?",
+          "answer": "{{business}} can discuss ant control in {{region}}. Review ways to reduce return visits."
+        }
+      ]
+    },
+    "rodent control": {
+      "card": "Assess signs of rodents and possible exclusion measures.",
+      "headline": "Keep unwanted guests outside",
+      "includes": [
+        "Rodent sign assessment",
+        "Entry gap mapping",
+        "Exclusion and monitoring plan"
+      ],
+      "signs": [
+        "Scratching sounds at night",
+        "Chew marks appear on stored items",
+        "Droppings collect in the garage"
+      ],
+      "process": [
+        "Find signs and likely travel routes",
+        "Inspect openings around the building",
+        "Plan control and exclusion work",
+        "Monitor for renewed activity"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about scratching sounds at night?",
+          "answer": "Start by telling us where you see it. Find signs and likely travel routes. Inspect openings around the building."
+        },
+        {
+          "question": "Does rodent control include entry gap mapping?",
+          "answer": "We look at entry gap mapping alongside exclusion and monitoring plan. Plan control and exclusion work."
+        },
+        {
+          "question": "Can we plan rodent control in {{city}}?",
+          "answer": "{{business}} can discuss rodent control in {{region}}. Monitor for renewed activity."
+        }
+      ]
+    },
+    "termite inspections": {
+      "card": "Arrange a professional inspection of suspected termite activity.",
+      "headline": "Look beneath the surface",
+      "includes": [
+        "Wood and soil contact review",
+        "Visible activity assessment",
+        "Inspection findings and options"
+      ],
+      "signs": [
+        "Mud tubes appear on a wall",
+        "Wood sounds hollow when tapped",
+        "A swarm appears near a window"
+      ],
+      "process": [
+        "Hear where activity was noticed",
+        "Inspect accessible wood and perimeter",
+        "Record visible signs and limits",
+        "Discuss the findings and next steps"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about mud tubes appear on a wall?",
+          "answer": "Start by telling us where you see it. Hear where activity was noticed. Inspect accessible wood and perimeter."
+        },
+        {
+          "question": "Does termite inspections include visible activity assessment?",
+          "answer": "We look at visible activity assessment alongside inspection findings and options. Record visible signs and limits."
+        },
+        {
+          "question": "Can we plan termite inspections in {{city}}?",
+          "answer": "{{business}} can discuss termite inspections in {{region}}. Discuss the findings and next steps."
+        }
+      ]
+    },
+    "cockroach control": {
+      "card": "Discuss observed activity and an appropriate control approach.",
+      "headline": "Follow activity to its source",
+      "includes": [
+        "Activity and hiding-place review",
+        "Food and water source checks",
+        "Treatment and follow-up plan"
+      ],
+      "signs": [
+        "Roaches scatter when lights come on",
+        "Dark specks collect near cabinets",
+        "Activity returns behind appliances"
+      ],
+      "process": [
+        "Locate active hiding areas",
+        "Check moisture and food access",
+        "Treat the affected locations",
+        "Review monitoring and follow-up"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about roaches scatter when lights come on?",
+          "answer": "Start by telling us where you see it. Locate active hiding areas. Check moisture and food access."
+        },
+        {
+          "question": "Does cockroach control include food and water source checks?",
+          "answer": "We look at food and water source checks alongside treatment and follow-up plan. Treat the affected locations."
+        },
+        {
+          "question": "Can we plan cockroach control in {{city}}?",
+          "answer": "{{business}} can discuss cockroach control in {{region}}. Review monitoring and follow-up."
+        }
+      ]
+    },
+    "spider control": {
+      "card": "Assess spider activity around your home and available options.",
+      "headline": "Make corners less inviting",
+      "includes": [
+        "Web and activity review",
+        "Entry and shelter checks",
+        "Targeted control discussion"
+      ],
+      "signs": [
+        "Webs reappear by doorways",
+        "Spiders gather around porch lights",
+        "Egg sacs show in corners"
+      ],
+      "process": [
+        "Map where webs keep forming",
+        "Check insects and sheltered spaces",
+        "Choose a targeted control approach",
+        "Recheck high-activity corners"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about webs reappear by doorways?",
+          "answer": "Start by telling us where you see it. Map where webs keep forming. Check insects and sheltered spaces."
+        },
+        {
+          "question": "Does spider control include entry and shelter checks?",
+          "answer": "We look at entry and shelter checks alongside targeted control discussion. Choose a targeted control approach."
+        },
+        {
+          "question": "Can we plan spider control in {{city}}?",
+          "answer": "{{business}} can discuss spider control in {{region}}. Recheck high-activity corners."
+        }
+      ]
+    },
+    "mosquito control": {
+      "card": "Explore ways to manage mosquito activity around outdoor areas.",
+      "headline": "Take back the evening yard",
+      "includes": [
+        "Standing-water survey",
+        "Breeding-area reduction",
+        "Outdoor treatment options"
+      ],
+      "signs": [
+        "Bites begin at dusk",
+        "Water sits in outdoor containers",
+        "The patio is hard to use after rain"
+      ],
+      "process": [
+        "Walk the yard for water sources",
+        "Remove or address breeding spots",
+        "Discuss suitable outdoor control",
+        "Review upkeep after rain"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about bites begin at dusk?",
+          "answer": "Start by telling us where you see it. Walk the yard for water sources. Remove or address breeding spots."
+        },
+        {
+          "question": "Does mosquito control include breeding-area reduction?",
+          "answer": "We look at breeding-area reduction alongside outdoor treatment options. Discuss suitable outdoor control."
+        },
+        {
+          "question": "Can we plan mosquito control in {{city}}?",
+          "answer": "{{business}} can discuss mosquito control in {{region}}. Review upkeep after rain."
+        }
+      ]
+    },
+    "preventive maintenance": {
+      "card": "Plan recurring assessments and prevention suited to your property.",
+      "headline": "Stay ahead of pest activity",
+      "includes": [
+        "Seasonal risk review",
+        "Entry and moisture checks",
+        "Monitoring schedule planning"
+      ],
+      "signs": [
+        "Pests return each season",
+        "Gaps appear near utility lines",
+        "You want fewer surprises indoors"
+      ],
+      "process": [
+        "Review past pest activity",
+        "Inspect likely entry and shelter areas",
+        "Set prevention and monitoring steps",
+        "Adjust the plan as conditions change"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about pests return each season?",
+          "answer": "Start by telling us where you see it. Review past pest activity. Inspect likely entry and shelter areas."
+        },
+        {
+          "question": "Does preventive maintenance include entry and moisture checks?",
+          "answer": "We look at entry and moisture checks alongside monitoring schedule planning. Set prevention and monitoring steps."
+        },
+        {
+          "question": "Can we plan preventive maintenance in {{city}}?",
+          "answer": "{{business}} can discuss preventive maintenance in {{region}}. Adjust the plan as conditions change."
+        }
+      ]
+    }
+  },
+  "Windows/Doors": {
+    "window replacement": {
+      "card": "Explore frame styles, glazing choices and the scope of replacing existing windows.",
+      "headline": "Let the room see more",
+      "includes": [
+        "Existing opening measurements",
+        "Frame and glass choices",
+        "Trim and seal details"
+      ],
+      "signs": [
+        "Windows stick when opened",
+        "Drafts reach the sofa",
+        "Frames show visible rot"
+      ],
+      "process": [
+        "Measure each existing opening",
+        "Review frame and glazing options",
+        "Remove and fit replacement windows",
+        "Seal and finish the trim"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about windows stick when opened?",
+          "answer": "Start by telling us where you see it. Measure each existing opening. Review frame and glazing options."
+        },
+        {
+          "question": "Does window replacement include frame and glass choices?",
+          "answer": "We look at frame and glass choices alongside trim and seal details. Remove and fit replacement windows."
+        },
+        {
+          "question": "Can we plan window replacement in {{city}}?",
+          "answer": "{{business}} can discuss window replacement in {{region}}. Seal and finish the trim."
+        }
+      ]
+    },
+    "window installation": {
+      "card": "Plan openings, measurements and installation details for your project.",
+      "headline": "Put daylight in its place",
+      "includes": [
+        "New opening and sightline plan",
+        "Frame and glazing selection",
+        "Flashing and interior finish"
+      ],
+      "signs": [
+        "A renovation needs more daylight",
+        "A new room has bare openings",
+        "You want a view in another wall"
+      ],
+      "process": [
+        "Choose the view and opening location",
+        "Coordinate framing and window size",
+        "Install flashing and the window",
+        "Finish inside and outside edges"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a renovation needs more daylight?",
+          "answer": "Start by telling us where you see it. Choose the view and opening location. Coordinate framing and window size."
+        },
+        {
+          "question": "Does window installation include frame and glazing selection?",
+          "answer": "We look at frame and glazing selection alongside flashing and interior finish. Install flashing and the window."
+        },
+        {
+          "question": "Can we plan window installation in {{city}}?",
+          "answer": "{{business}} can discuss window installation in {{region}}. Finish inside and outside edges."
+        }
+      ]
+    },
+    "energy-efficient windows": {
+      "card": "Discuss glazing and frame options suited to your home; performance depends on the selected product and installation.",
+      "headline": "Make comfort part of the view",
+      "includes": [
+        "Glazing and frame comparison",
+        "Sun exposure review",
+        "Installation and seal planning"
+      ],
+      "signs": [
+        "Rooms overheat near glass",
+        "Cold drafts reach the window seat",
+        "Existing panes fog between layers"
+      ],
+      "process": [
+        "Review sun and comfort concerns",
+        "Compare documented product options",
+        "Measure openings and plan the fit",
+        "Install and seal the selected windows"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about rooms overheat near glass?",
+          "answer": "Start by telling us where you see it. Review sun and comfort concerns. Compare documented product options."
+        },
+        {
+          "question": "Does energy-efficient windows include sun exposure review?",
+          "answer": "We look at sun exposure review alongside installation and seal planning. Measure openings and plan the fit."
+        },
+        {
+          "question": "Can we plan energy-efficient windows in {{city}}?",
+          "answer": "{{business}} can discuss energy-efficient windows in {{region}}. Install and seal the selected windows."
+        }
+      ]
+    },
+    "entry doors": {
+      "card": "Compare materials, finishes and entry-door styles for the way you come home.",
+      "headline": "Make the first step feel right",
+      "includes": [
+        "Door material and style",
+        "Lockset and swing planning",
+        "Threshold and weather seal"
+      ],
+      "signs": [
+        "The front door drags",
+        "Daylight shows by the jamb",
+        "You want a new entry look"
+      ],
+      "process": [
+        "Measure the opening and swing",
+        "Choose door style and hardware",
+        "Set the frame and threshold",
+        "Fit the door and test closure"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the front door drags?",
+          "answer": "Start by telling us where you see it. Measure the opening and swing. Choose door style and hardware."
+        },
+        {
+          "question": "Does entry doors include lockset and swing planning?",
+          "answer": "We look at lockset and swing planning alongside threshold and weather seal. Set the frame and threshold."
+        },
+        {
+          "question": "Can we plan entry doors in {{city}}?",
+          "answer": "{{business}} can discuss entry doors in {{region}}. Fit the door and test closure."
+        }
+      ]
+    },
+    "patio doors": {
+      "card": "Explore sliding or hinged doors that connect your home and outdoor space.",
+      "headline": "Open the route outdoors",
+      "includes": [
+        "Opening and traffic flow",
+        "Sliding or hinged options",
+        "Threshold and water management"
+      ],
+      "signs": [
+        "The patio door is hard to slide",
+        "You want a wider garden view",
+        "The threshold lets water in"
+      ],
+      "process": [
+        "Watch how people use the opening",
+        "Compare door operation and sightlines",
+        "Plan threshold and flashing details",
+        "Install and check the door travel"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the patio door is hard to slide?",
+          "answer": "Start by telling us where you see it. Watch how people use the opening. Compare door operation and sightlines."
+        },
+        {
+          "question": "Does patio doors include sliding or hinged options?",
+          "answer": "We look at sliding or hinged options alongside threshold and water management. Plan threshold and flashing details."
+        },
+        {
+          "question": "Can we plan patio doors in {{city}}?",
+          "answer": "{{business}} can discuss patio doors in {{region}}. Install and check the door travel."
+        }
+      ]
+    },
+    "sliding glass doors": {
+      "card": "Plan sightlines, access and a properly fitted sliding glass door.",
+      "headline": "Keep the view moving freely",
+      "includes": [
+        "Panel and track selection",
+        "Opening measurements",
+        "Roller and seal setup"
+      ],
+      "signs": [
+        "Glass panels drag in the track",
+        "The slider no longer latches",
+        "You want more daylight to the patio"
+      ],
+      "process": [
+        "Measure the wall and clear opening",
+        "Choose panels and operating side",
+        "Prepare track and weather details",
+        "Fit panels and test sliding"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about glass panels drag in the track?",
+          "answer": "Start by telling us where you see it. Measure the wall and clear opening. Choose panels and operating side."
+        },
+        {
+          "question": "Does sliding glass doors include opening measurements?",
+          "answer": "We look at opening measurements alongside roller and seal setup. Prepare track and weather details."
+        },
+        {
+          "question": "Can we plan sliding glass doors in {{city}}?",
+          "answer": "{{business}} can discuss sliding glass doors in {{region}}. Fit panels and test sliding."
+        }
+      ]
+    },
+    "french doors": {
+      "card": "Discuss paired-door layouts, swing clearance and finishing details.",
+      "headline": "Give the opening a welcome",
+      "includes": [
+        "Paired-door swing plan",
+        "Frame and glazing choices",
+        "Hardware and astragal details"
+      ],
+      "signs": [
+        "A single door feels too narrow",
+        "You want a garden-facing entry",
+        "The current doors leak at the center"
+      ],
+      "process": [
+        "Check room for door swing",
+        "Select glazing and door proportions",
+        "Set frame and paired panels",
+        "Align hardware and center seal"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a single door feels too narrow?",
+          "answer": "Start by telling us where you see it. Check room for door swing. Select glazing and door proportions."
+        },
+        {
+          "question": "Does french doors include frame and glazing choices?",
+          "answer": "We look at frame and glazing choices alongside hardware and astragal details. Set frame and paired panels."
+        },
+        {
+          "question": "Can we plan french doors in {{city}}?",
+          "answer": "{{business}} can discuss french doors in {{region}}. Align hardware and center seal."
+        }
+      ]
+    },
+    "window and door repair": {
+      "card": "Describe sticking, worn seals or damaged components so the contractor can assess repair options.",
+      "headline": "Set the opening right again",
+      "includes": [
+        "Sticking or leak diagnosis",
+        "Hardware and seal review",
+        "Targeted adjustment or replacement"
+      ],
+      "signs": [
+        "A window will not stay open",
+        "A door catches on the frame",
+        "Water appears below the sill"
+      ],
+      "process": [
+        "Reproduce the sticking or leak",
+        "Inspect frame, hardware and seals",
+        "Repair or adjust the affected part",
+        "Test operation and weather contact"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a window will not stay open?",
+          "answer": "Start by telling us where you see it. Reproduce the sticking or leak. Inspect frame, hardware and seals."
+        },
+        {
+          "question": "Does window and door repair include hardware and seal review?",
+          "answer": "We look at hardware and seal review alongside targeted adjustment or replacement. Repair or adjust the affected part."
+        },
+        {
+          "question": "Can we plan window and door repair in {{city}}?",
+          "answer": "{{business}} can discuss window and door repair in {{region}}. Test operation and weather contact."
+        }
+      ]
+    }
+  },
+  "Solar": {
+    "solar panel installation": {
+      "card": "Discuss your roof, electricity use and a proposed panel layout before choosing a system.",
+      "headline": "Put sunlight to work thoughtfully",
+      "includes": [
+        "Roof and shade review",
+        "Panel and inverter layout",
+        "Connection and monitoring plan"
+      ],
+      "signs": [
+        "You are considering roof solar",
+        "A sunny roof area goes unused",
+        "Energy use has changed at home"
+      ],
+      "process": [
+        "Review electric use and roof space",
+        "Map shade and panel positions",
+        "Choose compatible system equipment",
+        "Install and check system operation"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about you are considering roof solar?",
+          "answer": "Start by telling us where you see it. Review electric use and roof space. Map shade and panel positions."
+        },
+        {
+          "question": "Does solar panel installation include panel and inverter layout?",
+          "answer": "We look at panel and inverter layout alongside connection and monitoring plan. Choose compatible system equipment."
+        },
+        {
+          "question": "Can we plan solar panel installation in {{city}}?",
+          "answer": "{{business}} can discuss solar panel installation in {{region}}. Install and check system operation."
+        }
+      ]
+    },
+    "solar battery storage": {
+      "card": "Explore storage capacity, compatibility and which loads a proposed system could support.",
+      "headline": "Keep stored energy in mind",
+      "includes": [
+        "Backup load priorities",
+        "Battery and inverter compatibility",
+        "Placement and control planning"
+      ],
+      "signs": [
+        "Outages interrupt key circuits",
+        "Solar power is unused at midday",
+        "You want to compare storage options"
+      ],
+      "process": [
+        "List the loads that matter most",
+        "Check existing solar equipment",
+        "Plan battery size and location",
+        "Install and test the selected controls"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about outages interrupt key circuits?",
+          "answer": "Start by telling us where you see it. List the loads that matter most. Check existing solar equipment."
+        },
+        {
+          "question": "Does solar battery storage include battery and inverter compatibility?",
+          "answer": "We look at battery and inverter compatibility alongside placement and control planning. Plan battery size and location."
+        },
+        {
+          "question": "Can we plan solar battery storage in {{city}}?",
+          "answer": "{{business}} can discuss solar battery storage in {{region}}. Install and test the selected controls."
+        }
+      ]
+    },
+    "solar system design": {
+      "card": "Plan equipment and layout around the property, utility requirements and your priorities.",
+      "headline": "Give the array a clear plan",
+      "includes": [
+        "Shade and roof geometry",
+        "Equipment sizing options",
+        "Electrical connection route"
+      ],
+      "signs": [
+        "A roof has several orientations",
+        "You want to plan before installing",
+        "Trees shade part of the roof"
+      ],
+      "process": [
+        "Gather roof and energy details",
+        "Model suitable panel locations",
+        "Coordinate equipment and wire routes",
+        "Review the proposed system layout"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a roof has several orientations?",
+          "answer": "Start by telling us where you see it. Gather roof and energy details. Model suitable panel locations."
+        },
+        {
+          "question": "Does solar system design include equipment sizing options?",
+          "answer": "We look at equipment sizing options alongside electrical connection route. Coordinate equipment and wire routes."
+        },
+        {
+          "question": "Can we plan solar system design in {{city}}?",
+          "answer": "{{business}} can discuss solar system design in {{region}}. Review the proposed system layout."
+        }
+      ]
+    },
+    "solar panel maintenance": {
+      "card": "Discuss condition checks, access and care appropriate for the installed equipment.",
+      "headline": "Keep an eye on the array",
+      "includes": [
+        "Visible panel and mounting review",
+        "Connection and inverter checks",
+        "Performance concern discussion"
+      ],
+      "signs": [
+        "An inverter shows a warning",
+        "One panel looks damaged",
+        "Production has changed unexpectedly"
+      ],
+      "process": [
+        "Hear when output seemed different",
+        "Inspect accessible array parts",
+        "Check monitoring and visible connections",
+        "Explain any follow-up work needed"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about an inverter shows a warning?",
+          "answer": "Start by telling us where you see it. Hear when output seemed different. Inspect accessible array parts."
+        },
+        {
+          "question": "Does solar panel maintenance include connection and inverter checks?",
+          "answer": "We look at connection and inverter checks alongside performance concern discussion. Check monitoring and visible connections."
+        },
+        {
+          "question": "Can we plan solar panel maintenance in {{city}}?",
+          "answer": "{{business}} can discuss solar panel maintenance in {{region}}. Explain any follow-up work needed."
+        }
+      ]
+    },
+    "solar panel cleaning": {
+      "card": "Ask about safe access and a cleaning approach suited to the panels and manufacturer guidance.",
+      "headline": "Let panels face the sun",
+      "includes": [
+        "Panel soil and access review",
+        "Manufacturer care guidance",
+        "Gentle cleaning approach"
+      ],
+      "signs": [
+        "Dust coats the panel glass",
+        "Bird droppings collect on modules",
+        "A nearby tree sheds debris"
+      ],
+      "process": [
+        "Check safe access to the array",
+        "Review panel maker care guidance",
+        "Remove surface buildup appropriately",
+        "Look for visible panel damage"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about dust coats the panel glass?",
+          "answer": "Start by telling us where you see it. Check safe access to the array. Review panel maker care guidance."
+        },
+        {
+          "question": "Does solar panel cleaning include manufacturer care guidance?",
+          "answer": "We look at manufacturer care guidance alongside gentle cleaning approach. Remove surface buildup appropriately."
+        },
+        {
+          "question": "Can we plan solar panel cleaning in {{city}}?",
+          "answer": "{{business}} can discuss solar panel cleaning in {{region}}. Look for visible panel damage."
+        }
+      ]
+    },
+    "solar inverter replacement": {
+      "card": "Review the existing equipment and compatible replacement options.",
+      "headline": "Restore the system's conversion",
+      "includes": [
+        "Existing inverter diagnosis",
+        "Compatible replacement selection",
+        "Monitoring reconnection plan"
+      ],
+      "signs": [
+        "The inverter display is dark",
+        "Production stopped despite sun",
+        "Fault codes keep returning"
+      ],
+      "process": [
+        "Record the current fault behavior",
+        "Check compatibility with the array",
+        "Replace the selected inverter unit",
+        "Reconnect monitoring and verify output"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the inverter display is dark?",
+          "answer": "Start by telling us where you see it. Record the current fault behavior. Check compatibility with the array."
+        },
+        {
+          "question": "Does solar inverter replacement include compatible replacement selection?",
+          "answer": "We look at compatible replacement selection alongside monitoring reconnection plan. Replace the selected inverter unit."
+        },
+        {
+          "question": "Can we plan solar inverter replacement in {{city}}?",
+          "answer": "{{business}} can discuss solar inverter replacement in {{region}}. Reconnect monitoring and verify output."
+        }
+      ]
+    },
+    "solar removal and reinstallation": {
+      "card": "Coordinate system removal and reinstallation when roof work is planned.",
+      "headline": "Make room for roof work",
+      "includes": [
+        "Panel and racking inventory",
+        "Safe removal sequence",
+        "Reinstallation and test plan"
+      ],
+      "signs": [
+        "Roof replacement is scheduled",
+        "Roof leaks sit below the array",
+        "Panels block needed roof access"
+      ],
+      "process": [
+        "Coordinate the roof work schedule",
+        "Label and remove system components",
+        "Protect equipment during roof work",
+        "Reinstall and test the array"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about roof replacement is scheduled?",
+          "answer": "Start by telling us where you see it. Coordinate the roof work schedule. Label and remove system components."
+        },
+        {
+          "question": "Does solar removal and reinstallation include safe removal sequence?",
+          "answer": "We look at safe removal sequence alongside reinstallation and test plan. Protect equipment during roof work."
+        },
+        {
+          "question": "Can we plan solar removal and reinstallation in {{city}}?",
+          "answer": "{{business}} can discuss solar removal and reinstallation in {{region}}. Reinstall and test the array."
+        }
+      ]
+    },
+    "solar system monitoring": {
+      "card": "Understand the available monitoring tools and how to review system performance.",
+      "headline": "See what the system does",
+      "includes": [
+        "Portal and data access review",
+        "Alert and trend setup",
+        "Reading performance reports"
+      ],
+      "signs": [
+        "The monitoring app stopped updating",
+        "You cannot tell when output drops",
+        "Alerts go to an old email"
+      ],
+      "process": [
+        "Check portal and device connections",
+        "Review available production data",
+        "Set useful alerts and access",
+        "Explain how to read changes over time"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the monitoring app stopped updating?",
+          "answer": "Start by telling us where you see it. Check portal and device connections. Review available production data."
+        },
+        {
+          "question": "Does solar system monitoring include alert and trend setup?",
+          "answer": "We look at alert and trend setup alongside reading performance reports. Set useful alerts and access."
+        },
+        {
+          "question": "Can we plan solar system monitoring in {{city}}?",
+          "answer": "{{business}} can discuss solar system monitoring in {{region}}. Explain how to read changes over time."
+        }
+      ]
+    }
+  },
+  "Concrete": {
+    "concrete driveways": {
+      "card": "Explore concrete driveways with a plan for driveway footprint and slope.",
+      "headline": "Give the arrival a firm surface",
+      "includes": [
+        "Driveway footprint and slope",
+        "Base and reinforcement plan",
+        "Joint and finish layout"
+      ],
+      "signs": [
+        "The driveway has deep cracks",
+        "Water runs toward the garage",
+        "Tires sink into gravel"
+      ],
+      "process": [
+        "Measure vehicle access and drainage",
+        "Prepare and compact the base",
+        "Place concrete with planned joints",
+        "Finish and review the surface"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the driveway has deep cracks?",
+          "answer": "Start by telling us where you see it. Measure vehicle access and drainage. Prepare and compact the base."
+        },
+        {
+          "question": "Does concrete driveways include base and reinforcement plan?",
+          "answer": "We look at base and reinforcement plan alongside joint and finish layout. Place concrete with planned joints."
+        },
+        {
+          "question": "Can we plan concrete driveways in {{city}}?",
+          "answer": "{{business}} can discuss concrete driveways in {{region}}. Finish and review the surface."
+        }
+      ]
+    },
+    "concrete patios": {
+      "card": "Explore concrete patios with a plan for patio shape and elevation.",
+      "headline": "Make a place to gather",
+      "includes": [
+        "Patio shape and elevation",
+        "Patio base and drainage preparation",
+        "Surface texture and joints"
+      ],
+      "signs": [
+        "The yard has no level seating area",
+        "Pavers rock beneath chairs",
+        "Water sits where you want a table"
+      ],
+      "process": [
+        "Mark the seating footprint",
+        "Set grade away from the house",
+        "Form and place the patio slab",
+        "Finish edges and control joints"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the yard has no level seating area?",
+          "answer": "Start by telling us where you see it. Mark the seating footprint. Set grade away from the house."
+        },
+        {
+          "question": "Does concrete patios include patio base and drainage preparation?",
+          "answer": "We look at patio base and drainage preparation alongside surface texture and joints. Form and place the patio slab."
+        },
+        {
+          "question": "Can we plan concrete patios in {{city}}?",
+          "answer": "{{business}} can discuss concrete patios in {{region}}. Finish edges and control joints."
+        }
+      ]
+    },
+    "stamped concrete": {
+      "card": "Explore stamped concrete with a plan for pattern and color samples.",
+      "headline": "Give concrete its own texture",
+      "includes": [
+        "Pattern and color samples",
+        "Slab and stamp timing",
+        "Sealer and edge details"
+      ],
+      "signs": [
+        "Plain paving feels out of place",
+        "You want a patterned patio",
+        "Existing hardscape lacks character"
+      ],
+      "process": [
+        "Compare patterns in outdoor light",
+        "Prepare forms and base",
+        "Place and stamp the fresh surface",
+        "Review finish and seal options"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about plain paving feels out of place?",
+          "answer": "Start by telling us where you see it. Compare patterns in outdoor light. Prepare forms and base."
+        },
+        {
+          "question": "Does stamped concrete include slab and stamp timing?",
+          "answer": "We look at slab and stamp timing alongside sealer and edge details. Place and stamp the fresh surface."
+        },
+        {
+          "question": "Can we plan stamped concrete in {{city}}?",
+          "answer": "{{business}} can discuss stamped concrete in {{region}}. Review finish and seal options."
+        }
+      ]
+    },
+    "concrete walkways": {
+      "card": "Explore concrete walkways with a plan for route and width planning.",
+      "headline": "Make the path easy to follow",
+      "includes": [
+        "Route and width planning",
+        "Grade and base setup",
+        "Slip-conscious surface finish"
+      ],
+      "signs": [
+        "A muddy path leads to the door",
+        "Walkway panels have lifted",
+        "Guests cross the lawn to enter"
+      ],
+      "process": [
+        "Trace the natural walking route",
+        "Check slope and drainage",
+        "Form and place pathway sections",
+        "Finish the surface and edges"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a muddy path leads to the door?",
+          "answer": "Start by telling us where you see it. Trace the natural walking route. Check slope and drainage."
+        },
+        {
+          "question": "Does concrete walkways include grade and base setup?",
+          "answer": "We look at grade and base setup alongside slip-conscious surface finish. Form and place pathway sections."
+        },
+        {
+          "question": "Can we plan concrete walkways in {{city}}?",
+          "answer": "{{business}} can discuss concrete walkways in {{region}}. Finish the surface and edges."
+        }
+      ]
+    },
+    "concrete foundations": {
+      "card": "Explore concrete foundations with a plan for site and soil review.",
+      "headline": "Start with sound footing",
+      "includes": [
+        "Site and soil review",
+        "Footing and reinforcement plan",
+        "Form and pour coordination"
+      ],
+      "signs": [
+        "A new structure needs support",
+        "Existing footings show movement",
+        "A building plan reaches the ground stage"
+      ],
+      "process": [
+        "Review the structural plan and site",
+        "Lay out footing positions",
+        "Set forms and reinforcement",
+        "Place concrete and review the pour"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a new structure needs support?",
+          "answer": "Start by telling us where you see it. Review the structural plan and site. Lay out footing positions."
+        },
+        {
+          "question": "Does concrete foundations include footing and reinforcement plan?",
+          "answer": "We look at footing and reinforcement plan alongside form and pour coordination. Set forms and reinforcement."
+        },
+        {
+          "question": "Can we plan concrete foundations in {{city}}?",
+          "answer": "{{business}} can discuss concrete foundations in {{region}}. Place concrete and review the pour."
+        }
+      ]
+    },
+    "concrete slabs": {
+      "card": "Explore concrete slabs with a plan for slab size and use.",
+      "headline": "Build from a level base",
+      "includes": [
+        "Slab size and use",
+        "Base and vapor needs",
+        "Reinforcement and joint design"
+      ],
+      "signs": [
+        "A shed sits on bare soil",
+        "A garage floor has failed",
+        "You need a flat working surface"
+      ],
+      "process": [
+        "Confirm loads and slab dimensions",
+        "Prepare the ground and forms",
+        "Place reinforcement and concrete",
+        "Finish and check the slab"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a shed sits on bare soil?",
+          "answer": "Start by telling us where you see it. Confirm loads and slab dimensions. Prepare the ground and forms."
+        },
+        {
+          "question": "Does concrete slabs include base and vapor needs?",
+          "answer": "We look at base and vapor needs alongside reinforcement and joint design. Place reinforcement and concrete."
+        },
+        {
+          "question": "Can we plan concrete slabs in {{city}}?",
+          "answer": "{{business}} can discuss concrete slabs in {{region}}. Finish and check the slab."
+        }
+      ]
+    },
+    "concrete repair": {
+      "card": "Explore concrete repair with a plan for crack and movement assessment.",
+      "headline": "Fix the surface that failed",
+      "includes": [
+        "Crack and movement assessment",
+        "Patch or replacement options",
+        "Edge and finish matching"
+      ],
+      "signs": [
+        "A corner has broken away",
+        "Trip edges appear on paving",
+        "A patch keeps crumbling"
+      ],
+      "process": [
+        "Find why the concrete changed",
+        "Check nearby base and drainage",
+        "Repair the affected area",
+        "Blend the finish and review use"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a corner has broken away?",
+          "answer": "Start by telling us where you see it. Find why the concrete changed. Check nearby base and drainage."
+        },
+        {
+          "question": "Does concrete repair include patch or replacement options?",
+          "answer": "We look at patch or replacement options alongside edge and finish matching. Repair the affected area."
+        },
+        {
+          "question": "Can we plan concrete repair in {{city}}?",
+          "answer": "{{business}} can discuss concrete repair in {{region}}. Blend the finish and review use."
+        }
+      ]
+    },
+    "decorative concrete": {
+      "card": "Explore decorative concrete with a plan for color and texture direction.",
+      "headline": "Put character in the ground",
+      "includes": [
+        "Color and texture direction",
+        "Surface preparation",
+        "Border and finish details"
+      ],
+      "signs": [
+        "A courtyard feels too plain",
+        "You want a custom walkway look",
+        "An old surface needs visual renewal"
+      ],
+      "process": [
+        "Select color and finish samples",
+        "Assess the existing surface or base",
+        "Apply the chosen decorative treatment",
+        "Finish borders and review texture"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a courtyard feels too plain?",
+          "answer": "Start by telling us where you see it. Select color and finish samples. Assess the existing surface or base."
+        },
+        {
+          "question": "Does decorative concrete include surface preparation?",
+          "answer": "We look at surface preparation alongside border and finish details. Apply the chosen decorative treatment."
+        },
+        {
+          "question": "Can we plan decorative concrete in {{city}}?",
+          "answer": "{{business}} can discuss decorative concrete in {{region}}. Finish borders and review texture."
+        }
+      ]
+    }
+  },
+  "Pools": {
+    "pool design": {
+      "card": "Explore pool design with a plan for pool footprint and depth.",
+      "headline": "Shape the water around life",
+      "includes": [
+        "Pool footprint and depth",
+        "Entry and seating ideas",
+        "Deck and equipment placement"
+      ],
+      "signs": [
+        "The yard has room for a pool",
+        "You need a safer entry layout",
+        "The current plan ignores seating"
+      ],
+      "process": [
+        "Walk the yard and sun path",
+        "Sketch swimming and gathering zones",
+        "Coordinate equipment and deck space",
+        "Refine the pool design together"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the yard has room for a pool?",
+          "answer": "Start by telling us where you see it. Walk the yard and sun path. Sketch swimming and gathering zones."
+        },
+        {
+          "question": "Does pool design include entry and seating ideas?",
+          "answer": "We look at entry and seating ideas alongside deck and equipment placement. Coordinate equipment and deck space."
+        },
+        {
+          "question": "Can we plan pool design in {{city}}?",
+          "answer": "{{business}} can discuss pool design in {{region}}. Refine the pool design together."
+        }
+      ]
+    },
+    "pool construction": {
+      "card": "Explore pool construction with a plan for excavation and shell sequence.",
+      "headline": "Bring the pool plan to life",
+      "includes": [
+        "Excavation and shell sequence",
+        "Plumbing and equipment coordination",
+        "Tile and finish installation"
+      ],
+      "signs": [
+        "A pool design is ready to build",
+        "The yard has no swimming space",
+        "You want a new backyard center"
+      ],
+      "process": [
+        "Lay out the pool footprint",
+        "Excavate and build the shell",
+        "Connect circulation and equipment",
+        "Finish surfaces and test the system"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about a pool design is ready to build?",
+          "answer": "Start by telling us where you see it. Lay out the pool footprint. Excavate and build the shell."
+        },
+        {
+          "question": "Does pool construction include plumbing and equipment coordination?",
+          "answer": "We look at plumbing and equipment coordination alongside tile and finish installation. Connect circulation and equipment."
+        },
+        {
+          "question": "Can we plan pool construction in {{city}}?",
+          "answer": "{{business}} can discuss pool construction in {{region}}. Finish surfaces and test the system."
+        }
+      ]
+    },
+    "pool remodeling": {
+      "card": "Explore pool remodeling with a plan for existing shell assessment.",
+      "headline": "Make the old pool fit again",
+      "includes": [
+        "Existing shell assessment",
+        "Layout and feature changes",
+        "Finish and deck coordination"
+      ],
+      "signs": [
+        "The pool feels dated",
+        "Steps no longer fit your routine",
+        "Decking and coping are worn"
+      ],
+      "process": [
+        "Review the pool's present condition",
+        "Choose changes that fit the shell",
+        "Coordinate equipment and finish work",
+        "Refill and check operation"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the pool feels dated?",
+          "answer": "Start by telling us where you see it. Review the pool's present condition. Choose changes that fit the shell."
+        },
+        {
+          "question": "Does pool remodeling include layout and feature changes?",
+          "answer": "We look at layout and feature changes alongside finish and deck coordination. Coordinate equipment and finish work."
+        },
+        {
+          "question": "Can we plan pool remodeling in {{city}}?",
+          "answer": "{{business}} can discuss pool remodeling in {{region}}. Refill and check operation."
+        }
+      ]
+    },
+    "pool resurfacing": {
+      "card": "Explore pool resurfacing with a plan for existing finish condition.",
+      "headline": "Give the pool a fresh skin",
+      "includes": [
+        "Existing finish condition",
+        "Surface and color choice",
+        "Preparation and application plan"
+      ],
+      "signs": [
+        "The finish feels rough",
+        "Stains persist after cleaning",
+        "Plaster is visibly worn"
+      ],
+      "process": [
+        "Inspect the existing pool finish",
+        "Choose surface material and color",
+        "Prepare and apply the new finish",
+        "Review cure and refill steps"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the finish feels rough?",
+          "answer": "Start by telling us where you see it. Inspect the existing pool finish. Choose surface material and color."
+        },
+        {
+          "question": "Does pool resurfacing include surface and color choice?",
+          "answer": "We look at surface and color choice alongside preparation and application plan. Prepare and apply the new finish."
+        },
+        {
+          "question": "Can we plan pool resurfacing in {{city}}?",
+          "answer": "{{business}} can discuss pool resurfacing in {{region}}. Review cure and refill steps."
+        }
+      ]
+    },
+    "pool equipment": {
+      "card": "Explore pool equipment with a plan for pump and filter fit.",
+      "headline": "Keep water circulating well",
+      "includes": [
+        "Pump and filter fit",
+        "Heater and control options",
+        "Plumbing and power connections"
+      ],
+      "signs": [
+        "The pump is unusually loud",
+        "Water circulation seems weak",
+        "Controls no longer respond"
+      ],
+      "process": [
+        "Test the equipment symptoms",
+        "Check capacity and connections",
+        "Choose compatible replacement parts",
+        "Install and verify circulation"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the pump is unusually loud?",
+          "answer": "Start by telling us where you see it. Test the equipment symptoms. Check capacity and connections."
+        },
+        {
+          "question": "Does pool equipment include heater and control options?",
+          "answer": "We look at heater and control options alongside plumbing and power connections. Choose compatible replacement parts."
+        },
+        {
+          "question": "Can we plan pool equipment in {{city}}?",
+          "answer": "{{business}} can discuss pool equipment in {{region}}. Install and verify circulation."
+        }
+      ]
+    },
+    "pool tile and coping": {
+      "card": "Explore pool tile and coping with a plan for waterline tile choices.",
+      "headline": "Frame the water with detail",
+      "includes": [
+        "Waterline tile choices",
+        "Coping profile and edge",
+        "Joint and seal treatment"
+      ],
+      "signs": [
+        "Waterline tile is loose",
+        "Coping stones shift underfoot",
+        "Edges look chipped or worn"
+      ],
+      "process": [
+        "Inspect the pool edge and bond",
+        "Select tile and coping materials",
+        "Remove and reset affected edges",
+        "Grout and finish the transitions"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about waterline tile is loose?",
+          "answer": "Start by telling us where you see it. Inspect the pool edge and bond. Select tile and coping materials."
+        },
+        {
+          "question": "Does pool tile and coping include coping profile and edge?",
+          "answer": "We look at coping profile and edge alongside joint and seal treatment. Remove and reset affected edges."
+        },
+        {
+          "question": "Can we plan pool tile and coping in {{city}}?",
+          "answer": "{{business}} can discuss pool tile and coping in {{region}}. Grout and finish the transitions."
+        }
+      ]
+    },
+    "pool decking": {
+      "card": "Explore pool decking with a plan for deck layout and drainage.",
+      "headline": "Make the poolside comfortable",
+      "includes": [
+        "Deck layout and drainage",
+        "Surface texture and color",
+        "Expansion and edge details"
+      ],
+      "signs": [
+        "The deck gets slick when wet",
+        "Cracks spread near the pool",
+        "Chairs sit on uneven paving"
+      ],
+      "process": [
+        "Map traffic and seating around water",
+        "Check grade and drainage",
+        "Prepare the deck base and joints",
+        "Install and finish the surface"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about the deck gets slick when wet?",
+          "answer": "Start by telling us where you see it. Map traffic and seating around water. Check grade and drainage."
+        },
+        {
+          "question": "Does pool decking include surface texture and color?",
+          "answer": "We look at surface texture and color alongside expansion and edge details. Prepare the deck base and joints."
+        },
+        {
+          "question": "Can we plan pool decking in {{city}}?",
+          "answer": "{{business}} can discuss pool decking in {{region}}. Install and finish the surface."
+        }
+      ]
+    },
+    "pool maintenance": {
+      "card": "Explore pool maintenance with a plan for water and equipment checks.",
+      "headline": "Keep the water inviting",
+      "includes": [
+        "Water and equipment checks",
+        "Cleaning and debris removal",
+        "Seasonal care discussion"
+      ],
+      "signs": [
+        "Water turns cloudy",
+        "Leaves collect at the skimmer",
+        "Filters need frequent attention"
+      ],
+      "process": [
+        "Ask about recent water changes",
+        "Check circulation and visible equipment",
+        "Clean agreed pool areas",
+        "Review ongoing care needs"
+      ],
+      "faq": [
+        {
+          "question": "What should I do about water turns cloudy?",
+          "answer": "Start by telling us where you see it. Ask about recent water changes. Check circulation and visible equipment."
+        },
+        {
+          "question": "Does pool maintenance include cleaning and debris removal?",
+          "answer": "We look at cleaning and debris removal alongside seasonal care discussion. Clean agreed pool areas."
+        },
+        {
+          "question": "Can we plan pool maintenance in {{city}}?",
+          "answer": "{{business}} can discuss pool maintenance in {{region}}. Review ongoing care needs."
+        }
+      ]
+    }
+  }
+}
