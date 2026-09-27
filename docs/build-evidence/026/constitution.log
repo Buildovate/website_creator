@@ -1,0 +1,24 @@
+PASS configuration safety, locked values and calculator math
+PASS tenant roles, draft/publication isolation, shared footers, feature gates and promotion unlock/expiry
+PASS 102 trade/layout legal-preview links and their access controls
+PASS promotion display fixture: current
+PASS promotion display fixture: upcoming
+PASS promotion display fixture: expired
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+200 !== 404
+
+    at file:///C:/Users/joe/website_creator/tests/constitution.mjs:121:53 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 200,
+  expected: 404,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

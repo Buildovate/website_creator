@@ -133,3 +133,8 @@ Phase 1 is complete locally using installed still imagery; the live film remains
 ## #025 — Dedicated Roofing Financing scroll film (K02)
 
 Phase 1 is complete locally using installed still imagery and the existing scroll player. The live versioned slot remains Pending / Not connected; its finished poster story is public, while its status panel is private-preview-only. One silent 12-second 1080p Seedance 2.5 clip / one generation is proposed. Credits: **quote needed**. No provider/credit check, generation, credential access or vendor call ran. Combine with the existing #024 ambient clip estimate before seeking explicit Phase 2 approval. [Evidence and exact prompt](docs/build-evidence/025/README.md).
+
+
+## #026 — Roofing Promotions ambient film (K02)
+
+Phase 1 is complete in tested stub mode. The finished installed-photo chapter publishes; only private media status remains Pending / Not connected. One 8-second silent 1080p Cinema Studio Video 3.0 (cinematic_studio_3_0) clip / one generation is proposed; credits **quote needed**. No provider, credit, credential or generation call ran. Combine with #024–#027 before seeking production approval. [Exact prompt and evidence](docs/build-evidence/026/README.md).

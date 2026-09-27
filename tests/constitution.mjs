@@ -118,7 +118,7 @@ for(const [state,offers] of Object.entries(promotionStates)){
  await saveDisplay(offers);
  const response=await request(displayRoot+'/promotions','GET',undefined,null),html=await response.text();
  const home=await(await request(displayRoot,'GET',undefined,null)).text();
- if(state==='none'||state==='disabledOffer'){assert.equal(response.status,404);assert.equal(home.match(/<aside[^>]*data-promotion-strip|View promotions/),null,state+' hidden promotion strip');promotionCases++;console.log('PASS promotion display fixture: '+state);continue;}
+ if(state==='none'||state==='disabledOffer'){assert.equal(response.status,200);assert.match(html,/id="roofing-home-planning"/);assert.doesNotMatch(html,/data-promotion-state|Sample offer layout/);assert.equal(home.match(/<aside[^>]*data-promotion-strip|View promotions/),null,state+' hidden promotion strip');promotionCases++;console.log('PASS promotion display fixture: '+state);continue;}
  assert.equal(response.status,200);assert.match(home,/<aside[^>]*data-promotion-strip/);assert.match(home,/View promotions/);
  assert.doesNotMatch(html,/QA-015-PRIVATE-CODE|data-countdown|claim (?:your |my )?free/i);
  assert.doesNotMatch(home,/QA-015-PRIVATE-CODE|claim (?:your |my )?free/i);

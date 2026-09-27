@@ -66,6 +66,43 @@
           "body": "Discuss the roof work and timing before making a commitment."
         }
       ]
+    },
+    "roofing-promotions-ambient": {
+      "version": 1,
+      "id": "roofing-promotions-ambient-v1",
+      "trade": "Roofing",
+      "page": "promotions",
+      "role": "ambient",
+      "status": "Pending",
+      "connection": "Not connected",
+      "clip": null,
+      "poster": "/assets/planning/roofing-promotions-ambient-1280.webp",
+      "posterMobile": "/assets/planning/roofing-promotions-ambient-720.webp",
+      "sourcePoster": "/assets/trade-art/roofing-craft-banner.webp",
+      "duration": 8,
+      "width": 1920,
+      "height": 1080,
+      "muted": true,
+      "model": "cinematic_studio_3_0",
+      "purpose": "Consider how roof work can fit around everyday life, without implying an available offer.",
+      "focalPoint": "55% 50%",
+      "beats": [
+        {
+          "at": 0,
+          "title": "A home still in use.",
+          "body": "Roof details in quiet afternoon light."
+        },
+        {
+          "at": 0.33,
+          "title": "Room for the work.",
+          "body": "Light reveals the roof edge and material texture."
+        },
+        {
+          "at": 0.66,
+          "title": "Back to your day.",
+          "body": "A soft branch shadow returns to the opening composition."
+        }
+      ]
     }
   }
 }

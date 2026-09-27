@@ -1,0 +1,35 @@
+{
+  "part": "026",
+  "regressionScripts": 68,
+  "serverChecks": 354,
+  "browserSuites": 20,
+  "browserChecks": 139,
+  "platformStates": 210,
+  "screenshots": 72,
+  "route200s": 9,
+  "creditsUsed": 0,
+  "priorEvidenceRestored": 2907,
+  "unrelatedFilesUnchanged": 262,
+  "retries": [
+    {
+      "suite": "callback-browser",
+      "attempts": [
+        {
+          "status": 1,
+          "ms": 5848,
+          "log": "callback-browser.log"
+        },
+        {
+          "status": 1,
+          "ms": 5941,
+          "log": "callback-browser-retry.log"
+        },
+        {
+          "status": 0,
+          "ms": 7773,
+          "log": "callback-controlled-clock.log"
+        }
+      ]
+    }
+  ]
+}
