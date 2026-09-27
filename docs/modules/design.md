@@ -204,3 +204,10 @@ Roofing Services overview uses src/platform/thumbnail-motion.ts for persisted th
 ## #020 Roofing planning chapter
 
 src/roofing-story.js adds one photographic planning story to the Roofing roof-repair journey after the existing layer scene and before gallery content. The saved effects.planning switch controls it; a relevant selected service is required. Existing representative Roofing service imagery remains attributed, with an additional Sample label only in noindex preview. Public output has no sample label or empty chapter. Native inquiry links reuse service preselection; only decorative path/rules settle at 120ms on fine-pointer desktop. Touch, reduced-motion and no-JS retain the full static content. Existing hero, process, CTA and thumbnail modules are preserved. See docs/build-evidence/020/README.md.
+
+
+## #023 stable generation manifest
+
+The manifest is server-owned metadata inside each existing tenant draft/published snapshot. src/platform/generation.ts validates its version, identity, choices, locks and digest; src/generation.js inventories existing catalog/rendered asset references and coordinates adoption/regeneration. The original cleanDesign options are exported from design-variant.js, not duplicated. Existing thumbnail and CTA locks/seeds are preserved. Generic saves cannot forge a manifest or bypass locked composition choices.
+
+GET /api/tenants/:id/generation exposes the saved choices and tenant-scoped history. POST accepts version plus action locks/regenerate and requires owner/admin. Regeneration changes approved unlocked options, keeps facts/services/URLs/protected content and leaves new AI assets Pending / Not connected. The existing composer stores its Vary flags using manifest lock keys; library recipes retain optional locks. Current settings, normal saves and republishing do not reroll choices. Existing sites are adopted with a compare-and-swap metadata write, without publishing a draft. Migration 0008 stores immutable generation_manifests history; all 17 kits have identical before/after rendering proof. See docs/build-evidence/023/README.md for the regeneration checklist and limits.

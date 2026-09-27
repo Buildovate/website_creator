@@ -1,5 +1,10 @@
 # BUILD STATUS
 
+## #023 — Stable generation manifest
+
+**Done locally; new creative production Pending / Not connected.** Versioned, validated site/revision records adopt existing saved choices without changing their look. Existing thumbnail/composer locks, treatment seeds, installed media and draft/published snapshots are reused. Only owners/admins can mutate manifest locks or regenerate; history is tenant-scoped. 64 regression scripts, 185 new server assertions, 16 browser suites, 51 generation browser assertions and 208 platform states passed. All 17 kit migrations have byte-identical homepage HTML; service-page comparisons pass. Zero credits, no vendor calls; 2029 old evidence files restored and 262 unrelated files unchanged. [Evidence](docs/build-evidence/023/README.md). #023A remains Not started.
+
+
 ## #022 — Local ebook preview and consent stub
 
 **Done locally; delivery Not connected.** One eight-page Roofing guide with designed cover, contents, readable opening chapters and consent-gated private PDF. Existing inquiry inbox, local contact capture, tenant access and #016 atomic receipt/quota patterns reused. Consent is unticked, exact wording/time/purpose recorded, retries idempotent and Sample receipts isolated. Business settings require review before publication. Build/typecheck, 63 regression scripts, 62 new server checks, 85 browser assertions, 15 browser suites and 208 platform states passed; 28 browser captures, 9 PDF proof images, 7 Vite 200s and zero measured initial CLS. Zero credits and no outbound delivery. Restored 1876 evidence files; 262 unrelated files unchanged. [Evidence](docs/build-evidence/022/README.md). K17/K18 live delivery remains queued; #023 Not started.

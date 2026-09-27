@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. Both #016 and #017 are Done locally; #018 and #019 are also Done locally and the next numbered ticket is #023. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. Both #016 and #017 are Done locally; #018 and #019 are also Done locally and the next numbered ticket is #023A. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -600,11 +600,13 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #023 — Persist a stable generation manifest
 
-- State: **Not started** · Estimate: **6h** (≤1 day).
+- State: **Done locally — creative production Pending / Not connected** · Estimate: **6h** (≤1 day).
 - Pack section: [`J`](docs/product/01-CORE-SITE-A-N.md) §J.
 - Files to touch: `src/platform/generation.ts` **(new)**; `src/design-variant.js`; `src/saved-designs.js`; `tests/generation.mjs` **(new)**.
 - Done when: Regeneration preserves business facts, selected services and URLs; records a new generation ID and locked choices; missing creative jobs are Pending, not silently reused as new AI work.
 - External keys/accounts: None.
+
+- Evidence: [#023 README](docs/build-evidence/023/README.md): versioned per-site generation records, existing seed/lock reuse, owner-controlled regeneration and 17 identical trade migrations. 64 regression scripts, 16 browser suites and 208 platform states passed. Zero credits.
 
 ### #023A — Restore the scroll-story hero editor
 
