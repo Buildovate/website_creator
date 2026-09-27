@@ -1,3 +1,4 @@
+import {cleanThumbnailMotion,thumbnailVisual} from './platform/thumbnail-motion.ts';
 import {e,one,all,must,access} from './core.js';
 import {visibleServicePages,primaryCity,serviceSlug} from './service-registry.js';
 import {serviceBrief,serviceCardBlurb,serviceLayoutVariant} from './service-content.js';
@@ -50,6 +51,7 @@ function serviceCards(s,slug,preview){
  const showGroups=groups.size>1;
  return [...groups].map(([group,items])=>`<section class="core-group">${showGroups?`<h2>${e(group)}</h2>`:''}<div class="core-grid">${items.map(page=>{
   const name=page.serviceName,src=art[s.trade]?.[name.toLowerCase()]||'',blurb=serviceCardBlurb(s.trade,name,s.services.find(x=>x.name===name)?.description||'');
+  if(s.trade==='Roofing'&&src){const effect=cleanThumbnailMotion(s).thumb_motion_effect,rear=media[s.trade]?.[name.toLowerCase()]?.scope||src;return '<article class="core-card sm-shell"><a class="sm-card" data-service-motion="'+effect+'" href="'+base+'/services/'+e(page.slug)+suffix(preview)+'">'+thumbnailVisual(name,src,rear,effect)+'<div class="sm-copy"><span class="core-kicker">'+e(s.trade)+'</span><h3>'+e(name)+'</h3><p>'+e(blurb)+'</p><p class="sm-caption">Illustrative '+e(name.toLowerCase())+' imagery</p><span class="sm-link">Explore '+e(name)+' <span aria-hidden="true">→</span></span></div></a></article>'}
   return `<article class="core-card">${src?`<img src="${e(src)}" alt="${e(name)} design inspiration" width="384" height="512" loading="eager">`:`<div class="core-card-art">${serviceDiagram(s.trade,name,'route',visualLabels(s.trade,[name,'Scope','Finish']))}</div>`}<div><span class="core-kicker">${e(s.trade)}</span><h3>${e(name)}</h3><p>${e(blurb)}</p><a href="${base}/services/${e(page.slug)}${suffix(preview)}">Explore ${e(name)}</a></div></article>`}).join('')}</div></section>`).join('');
 }
 const sentence=(value)=>String(value).replace(/\s+/g,' ').trim();
@@ -80,7 +82,7 @@ function inquiryForm(s,slug,preview){
 }
 function content(s,kind,city,slug,preview,projects){
  const base='/s/'+slug,link=path=>base+path+suffix(preview),cities=cityList(s),phone=phoneHref(s),p=normalizePlatform(s.platform),pages=offered(s),photo=s.ownerPhotoId?'/media/'+s.ownerPhotoId:preview&&s.ownerPhoto?.isSample?s.ownerPhoto.src:null;
- if(kind==='services')return {h1:`Find the ${s.trade.toLowerCase()} help you need.`,eyebrow:'OUR SERVICES',lead:`Explore the ${s.trade.toLowerCase()} services ${s.name} offers.`,body:serviceCards(s,slug,preview)};
+ if(kind==='services')return {h1:`Find the ${s.trade.toLowerCase()} help you need.`,eyebrow:'OUR SERVICES',lead:`Explore the ${s.trade.toLowerCase()} services ${s.name} offers.`,body:serviceCards(s,slug,preview),scripts:s.trade==='Roofing'?'<link rel="stylesheet" href="/service-motion.css"><script defer src="/service-motion.js"></script>':''};
  if(kind==='areas'&&!city)return {h1:'Find your neighborhood.',eyebrow:'SERVICE AREAS',lead:`See where ${s.name} discusses ${s.trade.toLowerCase()} projects.`,body:`<div class="core-grid">${cities.map((name,i)=>`<article class="core-card"><span class="core-kicker">0${i+1} / SERVICE AREA</span><h2>${e(name)}</h2><p>Explore the services available for your ${e(name)} property.</p><a href="${link('/areas/'+serviceSlug(name))}">Explore ${e(name)}</a></article>`).join('')}</div>`};
  if(kind==='areas'){
   const i=cities.indexOf(city),c=cityContent(s,city,i),nearby=cities.filter(x=>x!==city).slice(0,4);

@@ -5,6 +5,7 @@ import {readFile} from 'node:fs/promises';
 export const clientEntries={
   'app':'src/client/workspace/index.ts',
   'site':'src/client/site/index.ts',
+  'service-motion':'src/client/site/service-motion.ts',
   'conversion':'src/client/site/conversion.ts',
   'finance-comparison':'src/client/site/finance-comparison.ts',
   'constitution':'src/client/site/constitution.ts',

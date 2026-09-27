@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. Both #016 and #017 are Done locally; #018 is also Done locally and the next numbered ticket is #019. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. Both #016 and #017 are Done locally; #018 and #019 are also Done locally and the next numbered ticket is #020. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -560,11 +560,13 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #019 — Build accessible thumbnail motion primitives
 
-- State: **Not started** · Estimate: **5h** (≤1 day).
+- State: **Done locally** · Estimate: **5h** (≤1 day).
 - Pack section: [`O`](docs/product/02-CREATIVE-TRUST-O-T.md) §O.
 - Files to touch: `src/client/site/service-motion.ts` **(new)**; `public/service-motion.css` **(new)**; `tests/service-motion.mjs` **(new)**.
 - Done when: 3D flip plus two restrained effects preserve readable front content, keyboard/touch access and a static reduced-motion mode; no service detail is hover-only.
 - External keys/accounts: None.
+
+- Evidence: [#019 README](docs/build-evidence/019/README.md). Photo-only flip, gentle zoom and corner frame with static fallback, saved owner choice/lock/seed, native links and permanent copy. Build/typecheck, 60 regression scripts, 30 new server checks, 167 new browser checks, all 12 browser suites and 208 platform states passed. Zero motion layout shift; zero credits.
 
 ### #020 — Complete one distinct Roofing mid-page story
 

@@ -1,5 +1,11 @@
 # BUILD STATUS
 
+## #019 — Accessible thumbnail motion primitives
+
+**Done locally.** Roofing Services overview offers photo-only 3D flip, gentle zoom and corner frame, plus static fallback. Names, descriptions, captions and links never animate away. Saved owner effect/lock/seed and three-card preview reuse the Questionnaire. Keyboard, touch, reduced motion, no JavaScript and failed/partial photos retain native navigation. Build/typecheck, 60 regression scripts, 30 new server checks, 167 new browser assertions, 12 browser suites and 208 platform states passed; sampled motion causes zero layout shift. 44 captures and 13 restarted Vite 200s. Restored 1464 prior evidence files; 262 unrelated hashes preserved. [Evidence](docs/build-evidence/019/README.md). Zero credits; #020 remains Not started.
+
+
+
 ## #018 — Roofing CTA burst and pricing placement
 
 **Done locally.** A photo-led Roofing action has one restrained six-shingle burst; a secondary price-book CTA uses one saved allowed slot. Owners can lock/re-roll the placement. Approved offered-service prices publish; missing prices use Sample only in noindex previews and disappear on publish. Roofing header offsets protect anchored headings/cards. Build/typecheck, 59 regression scripts, 32 new server checks, 88 new browser checks, all 11 browser suites and 206 platform states passed. 24 desktop/phone captures, 5 restarted Vite 200s, 604 asset references / 17 kits checked. Restored 1338 evidence files and verified 262 unrelated hashes. [Evidence](docs/build-evidence/018/README.md). Zero credits; #019 remains Not started.
