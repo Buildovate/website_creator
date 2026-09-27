@@ -1,0 +1,56 @@
+{
+  "part": "027",
+  "regressionScripts": 69,
+  "serverChecks": 362,
+  "browserSuites": 21,
+  "browserChecks": 177,
+  "platformStates": 210,
+  "screenshots": 66,
+  "route200s": 9,
+  "creditsUsed": 0,
+  "priorEvidenceRestored": 3125,
+  "unrelatedFilesUnchanged": 262,
+  "retries": [
+    {
+      "suite": "callback-browser",
+      "attempts": [
+        {
+          "status": 1,
+          "ms": 5768,
+          "log": "callback-browser.log"
+        },
+        {
+          "status": 1,
+          "ms": 5791,
+          "log": "callback-browser-retry.log"
+        },
+        {
+          "status": 0,
+          "ms": 7219,
+          "log": "callback-controlled-clock.log"
+        }
+      ]
+    },
+    {
+      "suite": "promotions-ambient-browser",
+      "attempts": [
+        {
+          "status": 1,
+          "ms": 5410,
+          "log": "promotions-ambient-browser-before-migration-fix.log"
+        },
+        {
+          "status": 1,
+          "ms": 5150,
+          "log": "promotions-ambient-browser-retry.log"
+        },
+        {
+          "status": 0,
+          "ms": 34313,
+          "log": "promotions-ambient-browser.log",
+          "note": "Scoped existing ambient status selector to its own chapter."
+        }
+      ]
+    }
+  ]
+}

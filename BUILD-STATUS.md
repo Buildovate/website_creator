@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## #027 — Roofing Promotions scroll planning
+
+**Phase 1 Done locally in stub mode; dedicated film Pending.** Finished poster-first written-estimate story publishes even without entered offers; only private media status is hidden. Shared catalog/player/manifest reused. 69 regression scripts, 362 server/render assertions, 21 browser suites, 177 new browser assertions and 210 platform states passed. Legacy calendar suite uses a documented controlled date after its month-boundary fixture failure; unchanged source. 306 outside-scope responses across all 17 kits byte-identical. 66 viewport captures; 9 Vite 200s. 3125 evidence files restored and 262 unrelated files preserved. Zero credits. Phase 2: one 12s clip, **quote needed**, not run. [Evidence and exact prompt](docs/build-evidence/027/README.md). K02 remains open.
+
 ## #026 — Roofing Promotions ambient planning
 
 **Phase 1 Done locally in stub mode; dedicated film Pending.** Finished poster-first household planning chapter publishes even without entered offers; only private media status is hidden. Shared catalog/player/manifest reused. 68 regression scripts, 354 server/render assertions, 20 browser suites, 139 new browser assertions and 210 platform states passed. Legacy calendar suite uses a documented controlled date after its month-boundary fixture failure; unchanged source. 306 outside-scope responses across all 17 kits byte-identical. 72 viewport captures; 9 Vite 200s. 2907 evidence files restored and 262 unrelated files preserved. Zero credits. Phase 2: one 8s clip, **quote needed**, not run. [Evidence and exact prompt](docs/build-evidence/026/README.md). K02 remains open.

@@ -138,3 +138,8 @@ Phase 1 is complete locally using installed still imagery and the existing scrol
 ## #026 — Roofing Promotions ambient film (K02)
 
 Phase 1 is complete in tested stub mode. The finished installed-photo chapter publishes; only private media status remains Pending / Not connected. One 8-second silent 1080p Cinema Studio Video 3.0 (cinematic_studio_3_0) clip / one generation is proposed; credits **quote needed**. No provider, credit, credential or generation call ran. Combine with #024–#027 before seeking production approval. [Exact prompt and evidence](docs/build-evidence/026/README.md).
+
+
+## #027 — Roofing Promotions scroll film (K02)
+
+Phase 1 is complete in tested stub mode. The finished installed-photo chapter publishes; only private media status remains Pending / Not connected. One 12-second silent 1080p Seedance 2.5 (seedance_2_5) clip / one generation is proposed; credits **quote needed**. No provider, credit, credential or generation call ran. Combine with #024–#027 before seeking production approval. [Exact prompt and evidence](docs/build-evidence/027/README.md).

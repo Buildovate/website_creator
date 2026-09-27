@@ -1,0 +1,602 @@
+[
+  {
+    "label": "build",
+    "kind": "build",
+    "status": 0,
+    "ms": 1636
+  },
+  {
+    "label": "typecheck",
+    "kind": "typecheck",
+    "status": 0,
+    "ms": 298
+  },
+  {
+    "label": "auth-session",
+    "kind": "regression",
+    "status": 0,
+    "ms": 3252
+  },
+  {
+    "label": "aws-adapter",
+    "kind": "regression",
+    "status": 0,
+    "ms": 3855
+  },
+  {
+    "label": "builder",
+    "kind": "regression",
+    "status": 0,
+    "ms": 332
+  },
+  {
+    "label": "callback-restore",
+    "kind": "regression",
+    "status": 0,
+    "ms": 275
+  },
+  {
+    "label": "cinematic-films",
+    "kind": "regression",
+    "status": 0,
+    "ms": 325
+  },
+  {
+    "label": "client-modules",
+    "kind": "regression",
+    "status": 0,
+    "ms": 155
+  },
+  {
+    "label": "constitution",
+    "kind": "regression",
+    "status": 0,
+    "ms": 772
+  },
+  {
+    "label": "contact-linkage",
+    "kind": "regression",
+    "status": 0,
+    "ms": 338
+  },
+  {
+    "label": "contacts-restore",
+    "kind": "regression",
+    "status": 0,
+    "ms": 322
+  },
+  {
+    "label": "control",
+    "kind": "regression",
+    "status": 0,
+    "ms": 421
+  },
+  {
+    "label": "conversion-references",
+    "kind": "regression",
+    "status": 0,
+    "ms": 680
+  },
+  {
+    "label": "core-site-pages",
+    "kind": "regression",
+    "status": 0,
+    "ms": 692
+  },
+  {
+    "label": "crm-next",
+    "kind": "regression",
+    "status": 0,
+    "ms": 314
+  },
+  {
+    "label": "crm",
+    "kind": "regression",
+    "status": 0,
+    "ms": 434
+  },
+  {
+    "label": "design-kits",
+    "kind": "regression",
+    "status": 0,
+    "ms": 568
+  },
+  {
+    "label": "ebook",
+    "kind": "regression",
+    "status": 0,
+    "ms": 483
+  },
+  {
+    "label": "engagement-providers",
+    "kind": "regression",
+    "status": 0,
+    "ms": 350
+  },
+  {
+    "label": "engagement",
+    "kind": "regression",
+    "status": 0,
+    "ms": 398
+  },
+  {
+    "label": "expense-metering",
+    "kind": "regression",
+    "status": 0,
+    "ms": 366
+  },
+  {
+    "label": "expense-polish",
+    "kind": "regression",
+    "status": 0,
+    "ms": 351
+  },
+  {
+    "label": "expenses",
+    "kind": "regression",
+    "status": 0,
+    "ms": 420
+  },
+  {
+    "label": "financing-comparison",
+    "kind": "regression",
+    "status": 0,
+    "ms": 541
+  },
+  {
+    "label": "financing-states",
+    "kind": "regression",
+    "status": 0,
+    "ms": 602
+  },
+  {
+    "label": "footer-policy",
+    "kind": "regression",
+    "status": 0,
+    "ms": 449
+  },
+  {
+    "label": "generation",
+    "kind": "regression",
+    "status": 0,
+    "ms": 5077
+  },
+  {
+    "label": "hero-editor",
+    "kind": "regression",
+    "status": 0,
+    "ms": 4314
+  },
+  {
+    "label": "legacy-scroll-video",
+    "kind": "regression",
+    "status": 0,
+    "ms": 77
+  },
+  {
+    "label": "legal-policy",
+    "kind": "regression",
+    "status": 0,
+    "ms": 417
+  },
+  {
+    "label": "media-ranges",
+    "kind": "regression",
+    "status": 0,
+    "ms": 114
+  },
+  {
+    "label": "motion-v2",
+    "kind": "regression",
+    "status": 0,
+    "ms": 144
+  },
+  {
+    "label": "neighborhood",
+    "kind": "regression",
+    "status": 0,
+    "ms": 430
+  },
+  {
+    "label": "owner-photo",
+    "kind": "regression",
+    "status": 0,
+    "ms": 427
+  },
+  {
+    "label": "planning-ambient",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1089
+  },
+  {
+    "label": "planning-motion",
+    "kind": "regression",
+    "status": 0,
+    "ms": 104
+  },
+  {
+    "label": "planning-scroll",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1014
+  },
+  {
+    "label": "platform",
+    "kind": "regression",
+    "status": 0,
+    "ms": 343
+  },
+  {
+    "label": "premium-service",
+    "kind": "regression",
+    "status": 0,
+    "ms": 508
+  },
+  {
+    "label": "presentation",
+    "kind": "regression",
+    "status": 0,
+    "ms": 335
+  },
+  {
+    "label": "project-experience",
+    "kind": "regression",
+    "status": 0,
+    "ms": 366
+  },
+  {
+    "label": "promotion-unlocks",
+    "kind": "regression",
+    "status": 0,
+    "ms": 338
+  },
+  {
+    "label": "promotions-ambient",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1151
+  },
+  {
+    "label": "promotions-scroll",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1200
+  },
+  {
+    "label": "reference-proof",
+    "kind": "regression",
+    "status": 0,
+    "ms": 523
+  },
+  {
+    "label": "review-lookup",
+    "kind": "regression",
+    "status": 0,
+    "ms": 378
+  },
+  {
+    "label": "roofing-cities",
+    "kind": "regression",
+    "status": 0,
+    "ms": 472
+  },
+  {
+    "label": "roofing-cta",
+    "kind": "regression",
+    "status": 0,
+    "ms": 467
+  },
+  {
+    "label": "roofing-story",
+    "kind": "regression",
+    "status": 0,
+    "ms": 453
+  },
+  {
+    "label": "sales-ops",
+    "kind": "regression",
+    "status": 0,
+    "ms": 342
+  },
+  {
+    "label": "saved-designs",
+    "kind": "regression",
+    "status": 0,
+    "ms": 352
+  },
+  {
+    "label": "scroll-media",
+    "kind": "regression",
+    "status": 0,
+    "ms": 13122
+  },
+  {
+    "label": "scroll-story",
+    "kind": "regression",
+    "status": 0,
+    "ms": 431
+  },
+  {
+    "label": "scroll-video-controller",
+    "kind": "regression",
+    "status": 0,
+    "ms": 117
+  },
+  {
+    "label": "service-content",
+    "kind": "regression",
+    "status": 0,
+    "ms": 238
+  },
+  {
+    "label": "service-motion",
+    "kind": "regression",
+    "status": 0,
+    "ms": 497
+  },
+  {
+    "label": "service-pages-all-trades",
+    "kind": "regression",
+    "status": 0,
+    "ms": 552
+  },
+  {
+    "label": "service-playbook",
+    "kind": "regression",
+    "status": 0,
+    "ms": 518
+  },
+  {
+    "label": "showpiece-media",
+    "kind": "regression",
+    "status": 0,
+    "ms": 193
+  },
+  {
+    "label": "showpiece-v4",
+    "kind": "regression",
+    "status": 0,
+    "ms": 461
+  },
+  {
+    "label": "template-name",
+    "kind": "regression",
+    "status": 0,
+    "ms": 85
+  },
+  {
+    "label": "trade-enablement",
+    "kind": "regression",
+    "status": 0,
+    "ms": 312
+  },
+  {
+    "label": "trade-revisions",
+    "kind": "regression",
+    "status": 0,
+    "ms": 564
+  },
+  {
+    "label": "trade-upgrade",
+    "kind": "regression",
+    "status": 0,
+    "ms": 346
+  },
+  {
+    "label": "trade-visual-correctness",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1490
+  },
+  {
+    "label": "trades-financing",
+    "kind": "regression",
+    "status": 0,
+    "ms": 483
+  },
+  {
+    "label": "trust",
+    "kind": "regression",
+    "status": 0,
+    "ms": 747
+  },
+  {
+    "label": "website-pages",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1879
+  },
+  {
+    "label": "workspace-owner",
+    "kind": "regression",
+    "status": 0,
+    "ms": 2107
+  },
+  {
+    "label": "workspace",
+    "kind": "regression",
+    "status": 0,
+    "ms": 456
+  },
+  {
+    "label": "zoom",
+    "kind": "regression",
+    "status": 0,
+    "ms": 314
+  },
+  {
+    "label": "template-assets",
+    "kind": "assets",
+    "status": 0,
+    "ms": 193
+  },
+  {
+    "label": "platform-mobile",
+    "kind": "platform",
+    "status": 0,
+    "ms": 53436
+  },
+  {
+    "label": "callback-browser",
+    "kind": "browser",
+    "status": 1,
+    "ms": 5768,
+    "attempts": [
+      {
+        "status": 1,
+        "ms": 5768,
+        "log": "callback-browser.log"
+      },
+      {
+        "status": 1,
+        "ms": 5791,
+        "log": "callback-browser-retry.log"
+      }
+    ]
+  },
+  {
+    "label": "callback-browser-retry",
+    "kind": "retry",
+    "status": 1,
+    "ms": 5791
+  },
+  {
+    "label": "contact-linkage-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 7519
+  },
+  {
+    "label": "contacts-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 5789
+  },
+  {
+    "label": "ebook-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 13940
+  },
+  {
+    "label": "expense-polish-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 7128
+  },
+  {
+    "label": "expenses-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 10037
+  },
+  {
+    "label": "financing-states-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 18514
+  },
+  {
+    "label": "generation-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 9907
+  },
+  {
+    "label": "hero-editor-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 32356
+  },
+  {
+    "label": "planning-ambient-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 23261
+  },
+  {
+    "label": "planning-scroll-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 34328
+  },
+  {
+    "label": "platform-ui-cleanup-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 7732
+  },
+  {
+    "label": "promotion-unlocks-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 18949
+  },
+  {
+    "label": "promotions-ambient-browser",
+    "kind": "browser",
+    "status": 1,
+    "ms": 5410,
+    "attempts": [
+      {
+        "status": 1,
+        "ms": 5410,
+        "log": "promotions-ambient-browser.log"
+      },
+      {
+        "status": 1,
+        "ms": 5150,
+        "log": "promotions-ambient-browser-retry.log"
+      }
+    ]
+  },
+  {
+    "label": "promotions-ambient-browser-retry",
+    "kind": "retry",
+    "status": 1,
+    "ms": 5150
+  },
+  {
+    "label": "promotions-scroll-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 36578
+  },
+  {
+    "label": "roofing-cities-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 21522
+  },
+  {
+    "label": "roofing-cta-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 25905
+  },
+  {
+    "label": "roofing-story-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 14887
+  },
+  {
+    "label": "service-motion-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 21440
+  },
+  {
+    "label": "trade-enablement-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 39601
+  },
+  {
+    "label": "trade-visual-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 32909
+  }
+]

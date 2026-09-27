@@ -1,0 +1,17 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.evaluate: Error: strict mode violation: locator('.promo-media-state') resolved to 2 elements:
+    1) <aside class="promo-media-state">…</aside> aka getByText('SamplePromotions ambient film')
+    2) <aside class="promo-media-state">…</aside> aka getByText('SamplePromotions story film')
+
+Call log:
+[2m  - waiting for locator('.promo-media-state')[22m
+
+    at capture (C:\Users\joe\website_creator\tests\promotions-ambient-browser.mjs:12:85)
+    at C:\Users\joe\website_creator\tests\promotions-ambient-browser.mjs:17:443 {
+  log: [ "  - waiting for locator('.promo-media-state')" ]
+}
+
+Node.js v24.19.0

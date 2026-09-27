@@ -103,6 +103,48 @@
           "body": "A soft branch shadow returns to the opening composition."
         }
       ]
+    },
+    "roofing-promotions-scroll": {
+      "version": 1,
+      "id": "roofing-promotions-scroll-v1",
+      "trade": "Roofing",
+      "page": "promotions",
+      "role": "scrub",
+      "status": "Pending",
+      "connection": "Not connected",
+      "clip": null,
+      "poster": "/assets/planning/roofing-promotions-scroll-1280.webp",
+      "posterMobile": "/assets/planning/roofing-promotions-scroll-720.webp",
+      "sourcePoster": "/assets/service-showpiece/roofing-roof-maintenance-scope.webp",
+      "duration": 12,
+      "width": 1920,
+      "height": 1080,
+      "muted": true,
+      "model": "seedance_2_5",
+      "purpose": "Bring an entered offer into a clear written roofing estimate, without implying an offer exists.",
+      "focalPoint": "62% 48%",
+      "beats": [
+        {
+          "at": 0,
+          "title": "Bring the exact offer.",
+          "body": "If you saved an offer, bring its name or code so you and the contractor are discussing the same thing."
+        },
+        {
+          "at": 0.33,
+          "title": "Match it to the roof work.",
+          "body": "Ask which part of the proposed repair or replacement it can apply to."
+        },
+        {
+          "at": 0.66,
+          "title": "Ask for the revised estimate.",
+          "body": "Have the contractor show how the offer affects the quoted work and total, rather than leaving you to work it out."
+        },
+        {
+          "at": 1,
+          "title": "Keep one agreed version.",
+          "body": "Before moving ahead, keep the estimate that reflects the scope and any offer the contractor has confirmed."
+        }
+      ]
     }
   }
 }

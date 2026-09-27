@@ -1,0 +1,782 @@
+{
+  "passed": true,
+  "note": "Final outcomes include the documented targeted rechecks. Original full-run outcomes and retry failures are retained.",
+  "results": [
+    {
+      "label": "build",
+      "kind": "build",
+      "status": 0,
+      "ms": 1913,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "typecheck",
+      "kind": "typecheck",
+      "status": 0,
+      "ms": 360,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "auth-session",
+      "kind": "regression",
+      "status": 0,
+      "ms": 3054,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "aws-adapter",
+      "kind": "regression",
+      "status": 0,
+      "ms": 3654,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "builder",
+      "kind": "regression",
+      "status": 0,
+      "ms": 385,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "callback-restore",
+      "kind": "regression",
+      "status": 0,
+      "ms": 292,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "cinematic-films",
+      "kind": "regression",
+      "status": 0,
+      "ms": 525,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "client-modules",
+      "kind": "regression",
+      "status": 0,
+      "ms": 290,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "constitution",
+      "kind": "regression",
+      "status": 0,
+      "ms": 853,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Old no-offer 404 assertions updated to the requested enabled Roofing poster publication behavior.",
+      "firstRunStatus": 0,
+      "verifiedBy": "constitution-corrected.log",
+      "attempts": [
+        {
+          "status": 0,
+          "ms": 853,
+          "log": "constitution.log"
+        },
+        {
+          "status": 0,
+          "ms": 1071,
+          "log": "constitution-corrected.log"
+        }
+      ]
+    },
+    {
+      "label": "contact-linkage",
+      "kind": "regression",
+      "status": 0,
+      "ms": 312,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "contacts-restore",
+      "kind": "regression",
+      "status": 0,
+      "ms": 375,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "control",
+      "kind": "regression",
+      "status": 0,
+      "ms": 368,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "conversion-references",
+      "kind": "regression",
+      "status": 0,
+      "ms": 608,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "core-site-pages",
+      "kind": "regression",
+      "status": 0,
+      "ms": 637,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "crm-next",
+      "kind": "regression",
+      "status": 0,
+      "ms": 373,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "crm",
+      "kind": "regression",
+      "status": 0,
+      "ms": 454,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "design-kits",
+      "kind": "regression",
+      "status": 0,
+      "ms": 832,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "ebook",
+      "kind": "regression",
+      "status": 0,
+      "ms": 494,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "engagement-providers",
+      "kind": "regression",
+      "status": 0,
+      "ms": 431,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "engagement",
+      "kind": "regression",
+      "status": 0,
+      "ms": 584,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "expense-metering",
+      "kind": "regression",
+      "status": 0,
+      "ms": 399,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "expense-polish",
+      "kind": "regression",
+      "status": 0,
+      "ms": 329,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "expenses",
+      "kind": "regression",
+      "status": 0,
+      "ms": 495,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "financing-comparison",
+      "kind": "regression",
+      "status": 0,
+      "ms": 651,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "financing-states",
+      "kind": "regression",
+      "status": 0,
+      "ms": 690,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "footer-policy",
+      "kind": "regression",
+      "status": 0,
+      "ms": 521,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "generation",
+      "kind": "regression",
+      "status": 0,
+      "ms": 5195,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "hero-editor",
+      "kind": "regression",
+      "status": 0,
+      "ms": 4513,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "legacy-scroll-video",
+      "kind": "regression",
+      "status": 0,
+      "ms": 96,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "legal-policy",
+      "kind": "regression",
+      "status": 0,
+      "ms": 428,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "media-ranges",
+      "kind": "regression",
+      "status": 0,
+      "ms": 117,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "motion-v2",
+      "kind": "regression",
+      "status": 0,
+      "ms": 153,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "neighborhood",
+      "kind": "regression",
+      "status": 0,
+      "ms": 428,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "owner-photo",
+      "kind": "regression",
+      "status": 0,
+      "ms": 420,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "planning-ambient",
+      "kind": "regression",
+      "status": 0,
+      "ms": 1155,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "planning-motion",
+      "kind": "regression",
+      "status": 0,
+      "ms": 119,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "planning-scroll",
+      "kind": "regression",
+      "status": 0,
+      "ms": 1436,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "platform",
+      "kind": "regression",
+      "status": 0,
+      "ms": 520,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "premium-service",
+      "kind": "regression",
+      "status": 0,
+      "ms": 683,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "presentation",
+      "kind": "regression",
+      "status": 0,
+      "ms": 403,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "project-experience",
+      "kind": "regression",
+      "status": 0,
+      "ms": 338,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "promotion-unlocks",
+      "kind": "regression",
+      "status": 0,
+      "ms": 529,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "promotions-ambient",
+      "kind": "regression",
+      "status": 0,
+      "ms": 1130,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "promotions-scroll",
+      "kind": "regression",
+      "status": 0,
+      "ms": 1134,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "reference-proof",
+      "kind": "regression",
+      "status": 0,
+      "ms": 573,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "review-lookup",
+      "kind": "regression",
+      "status": 0,
+      "ms": 344,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "roofing-cities",
+      "kind": "regression",
+      "status": 0,
+      "ms": 484,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "roofing-cta",
+      "kind": "regression",
+      "status": 0,
+      "ms": 453,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "roofing-story",
+      "kind": "regression",
+      "status": 0,
+      "ms": 400,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "sales-ops",
+      "kind": "regression",
+      "status": 0,
+      "ms": 320,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "saved-designs",
+      "kind": "regression",
+      "status": 0,
+      "ms": 349,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "scroll-media",
+      "kind": "regression",
+      "status": 0,
+      "ms": 12820,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "scroll-story",
+      "kind": "regression",
+      "status": 0,
+      "ms": 540,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "scroll-video-controller",
+      "kind": "regression",
+      "status": 0,
+      "ms": 134,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "service-content",
+      "kind": "regression",
+      "status": 0,
+      "ms": 262,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "service-motion",
+      "kind": "regression",
+      "status": 0,
+      "ms": 628,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "service-pages-all-trades",
+      "kind": "regression",
+      "status": 0,
+      "ms": 708,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "service-playbook",
+      "kind": "regression",
+      "status": 0,
+      "ms": 490,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "showpiece-media",
+      "kind": "regression",
+      "status": 0,
+      "ms": 259,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "showpiece-v4",
+      "kind": "regression",
+      "status": 0,
+      "ms": 573,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "template-name",
+      "kind": "regression",
+      "status": 0,
+      "ms": 87,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "trade-enablement",
+      "kind": "regression",
+      "status": 0,
+      "ms": 334,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "trade-revisions",
+      "kind": "regression",
+      "status": 0,
+      "ms": 474,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "trade-upgrade",
+      "kind": "regression",
+      "status": 0,
+      "ms": 417,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "trade-visual-correctness",
+      "kind": "regression",
+      "status": 0,
+      "ms": 1832,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "trades-financing",
+      "kind": "regression",
+      "status": 0,
+      "ms": 521,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "trust",
+      "kind": "regression",
+      "status": 0,
+      "ms": 828,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "website-pages",
+      "kind": "regression",
+      "status": 0,
+      "ms": 2287,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "workspace-owner",
+      "kind": "regression",
+      "status": 0,
+      "ms": 2231,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "workspace",
+      "kind": "regression",
+      "status": 0,
+      "ms": 376,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "zoom",
+      "kind": "regression",
+      "status": 0,
+      "ms": 283,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "template-assets",
+      "kind": "assets",
+      "status": 0,
+      "ms": 193
+    },
+    {
+      "label": "platform-mobile",
+      "kind": "platform",
+      "status": 0,
+      "ms": 53436
+    },
+    {
+      "label": "callback-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 5768,
+      "attempts": [
+        {
+          "status": 1,
+          "ms": 5768,
+          "log": "callback-browser.log"
+        },
+        {
+          "status": 1,
+          "ms": 5791,
+          "log": "callback-browser-retry.log"
+        },
+        {
+          "status": 0,
+          "ms": 7219,
+          "log": "callback-controlled-clock.log"
+        }
+      ],
+      "firstRunStatus": 1,
+      "verifiedBy": "callback-controlled-clock.log",
+      "verificationNote": "Unchanged legacy callback source with matching mid-month Node/browser clock; original plus-four-day fixture crosses the current month boundary."
+    },
+    {
+      "label": "callback-browser-retry",
+      "kind": "retry",
+      "status": 1,
+      "ms": 5791
+    },
+    {
+      "label": "contact-linkage-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 7519
+    },
+    {
+      "label": "contacts-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 5789
+    },
+    {
+      "label": "ebook-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 13940
+    },
+    {
+      "label": "expense-polish-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 7128
+    },
+    {
+      "label": "expenses-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 10037
+    },
+    {
+      "label": "financing-states-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 18514
+    },
+    {
+      "label": "generation-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 10572,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "hero-editor-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 32356
+    },
+    {
+      "label": "planning-ambient-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 23261
+    },
+    {
+      "label": "planning-scroll-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 34328
+    },
+    {
+      "label": "platform-ui-cleanup-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 7732
+    },
+    {
+      "label": "promotion-unlocks-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 18949
+    },
+    {
+      "label": "promotions-ambient-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 34313,
+      "attempts": [
+        {
+          "status": 1,
+          "ms": 5410,
+          "log": "promotions-ambient-browser-before-migration-fix.log"
+        },
+        {
+          "status": 1,
+          "ms": 5150,
+          "log": "promotions-ambient-browser-retry.log"
+        },
+        {
+          "status": 0,
+          "ms": 34313,
+          "log": "promotions-ambient-browser.log",
+          "note": "Scoped existing ambient status selector to its own chapter."
+        }
+      ],
+      "beforeMigrationStatus": 1,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "promotions-ambient-browser-retry",
+      "kind": "retry",
+      "status": 1,
+      "ms": 5150
+    },
+    {
+      "label": "promotions-scroll-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 35945,
+      "beforeMigrationStatus": 0,
+      "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment."
+    },
+    {
+      "label": "roofing-cities-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 21522
+    },
+    {
+      "label": "roofing-cta-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 25905
+    },
+    {
+      "label": "roofing-story-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 14887
+    },
+    {
+      "label": "service-motion-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 21440
+    },
+    {
+      "label": "trade-enablement-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 39601
+    },
+    {
+      "label": "trade-visual-browser",
+      "kind": "browser",
+      "status": 0,
+      "ms": 32909
+    }
+  ]
+}

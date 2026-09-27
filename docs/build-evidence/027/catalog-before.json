@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "slots": {
+    "roofing-financing-ambient": {
+      "version": 1,
+      "id": "roofing-financing-ambient-v1",
+      "trade": "Roofing",
+      "page": "financing",
+      "role": "ambient",
+      "status": "Pending",
+      "connection": "Not connected",
+      "clip": null,
+      "poster": "/assets/planning/roofing-financing-1280.webp",
+      "posterMobile": "/assets/planning/roofing-financing-720.webp",
+      "sourcePoster": "/assets/trade-art/roofing-customer-detail.webp",
+      "duration": 8,
+      "width": 1920,
+      "height": 1080,
+      "muted": true,
+      "model": "cinematic_studio_3_0",
+      "purpose": "A quiet pause to understand the roof scope before comparing payment terms."
+    },
+    "roofing-financing-scroll": {
+      "version": 1,
+      "id": "roofing-financing-scroll-v1",
+      "trade": "Roofing",
+      "page": "financing",
+      "role": "scrub",
+      "status": "Pending",
+      "connection": "Not connected",
+      "clip": null,
+      "poster": "/assets/planning/roofing-scroll-1280.webp",
+      "posterMobile": "/assets/planning/roofing-scroll-720.webp",
+      "sourcePoster": "/assets/service-showpiece/roofing-inspections-hero.webp",
+      "duration": 12,
+      "width": 1920,
+      "height": 1080,
+      "muted": true,
+      "model": "seedance_2_5",
+      "purpose": "Understand the roof estimate, compare terms and decide on the next step without suggesting approval.",
+      "focalPoint": "64% 50%",
+      "beats": [
+        {
+          "at": 0,
+          "title": "Start with the project.",
+          "body": "Ask for a written roof scope before choosing how to pay."
+        },
+        {
+          "at": 0.25,
+          "title": "Compare the available paths.",
+          "body": "Consider your own budget and any options the contractor has confirmed."
+        },
+        {
+          "at": 0.5,
+          "title": "Read the total cost and terms.",
+          "body": "Look at the APR, repayment term and total alongside the payment."
+        },
+        {
+          "at": 0.75,
+          "title": "Apply with the lender, if you choose.",
+          "body": "Use the contractor’s confirmed lender link when you are ready."
+        },
+        {
+          "at": 1,
+          "title": "Confirm your next step.",
+          "body": "Discuss the roof work and timing before making a commitment."
+        }
+      ]
+    },
+    "roofing-promotions-ambient": {
+      "version": 1,
+      "id": "roofing-promotions-ambient-v1",
+      "trade": "Roofing",
+      "page": "promotions",
+      "role": "ambient",
+      "status": "Pending",
+      "connection": "Not connected",
+      "clip": null,
+      "poster": "/assets/planning/roofing-promotions-ambient-1280.webp",
+      "posterMobile": "/assets/planning/roofing-promotions-ambient-720.webp",
+      "sourcePoster": "/assets/trade-art/roofing-craft-banner.webp",
+      "duration": 8,
+      "width": 1920,
+      "height": 1080,
+      "muted": true,
+      "model": "cinematic_studio_3_0",
+      "purpose": "Consider how roof work can fit around everyday life, without implying an available offer.",
+      "focalPoint": "55% 50%",
+      "beats": [
+        {
+          "at": 0,
+          "title": "A home still in use.",
+          "body": "Roof details in quiet afternoon light."
+        },
+        {
+          "at": 0.33,
+          "title": "Room for the work.",
+          "body": "Light reveals the roof edge and material texture."
+        },
+        {
+          "at": 0.66,
+          "title": "Back to your day.",
+          "body": "A soft branch shadow returns to the opening composition."
+        }
+      ]
+    }
+  }
+}
