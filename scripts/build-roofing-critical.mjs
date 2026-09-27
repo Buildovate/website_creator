@@ -2,7 +2,7 @@ import {build} from 'esbuild';
 import postcss from 'postcss';
 import {writeFile} from 'node:fs/promises';
 // First-screen selectors only; complete section styles load after the hero paints.
-const home=/^(conversion-site|cx-(roof-repair|font-.*|cards-.*|paper|dark|muted|ink|header|brand|desktop-nav|button|mobile-menu|mobile-action|call|skip|preview|film-hero|film-disclosure)|story-.*|build-.*|scroll-story|film-ready|static-story|mk-(kinetic.*|readable|line|text-ready|v2-paused)|site-brand.*|brand-.*|shared-.*)$/;
+const home=/^(conversion-site|cx-(roof-repair|font-.*|cards-.*|paper|dark|muted|ink|header|brand|desktop-nav|button|mobile-menu|mobile-action|call|skip|preview|film-hero|film-disclosure|section|section-heading|story|benefits|reveal-.*)|cutaway.*|story-.*|build-.*|scroll-story|film-ready|static-story|mk-(kinetic.*|readable|line|text-ready|v2-paused)|site-brand.*|site-expertise.*|brand-.*|shared-.*)$/;
 const service=/^(trade-page|tp-(shell|header.*|brand|nav|mobile-menu|menu|skip|breadcrumbs|eyebrow|intro|actions|button.*|preview|sales-notice)|tm-(journey|stage|sky|copy|caption|controls|progress|poster|landing|media|production-mask|spatial|has-media|landed|reduced|mobile|paused|offscreen|media-failed|motion-paused)|site-brand.*|brand-.*|shared-.*)$/;
 function critical(css,allow){const tree=postcss.parse(css);tree.walkRules(rule=>{
  if(rule.parent.type==='atrule'&&/keyframes$/.test(rule.parent.name))return;

@@ -1,0 +1,18 @@
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: #028G exactly the two approved substitutions
+    at check (file:///C:/Users/joe/website_creator/tests/roofing-polish-part2.mjs:2:136)
+    at file:///C:/Users/joe/website_creator/tests/roofing-polish-part2.mjs:24:1
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

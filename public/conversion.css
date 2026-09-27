@@ -72,15 +72,20 @@
 /* Reserve the measured default header before enhancement. */
 .conversion-site{--cx-header-height:97px}@media(max-width:760px){.conversion-site{--cx-header-height:84px}}
 .cx-header .site-expertise{position:relative}
-.cx-header .site-expertise>summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center}
+.cx-header .site-expertise>summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;font:600 13px/1.3 Arial,sans-serif;letter-spacing:normal;text-transform:none}
 .cx-header .site-expertise>summary::-webkit-details-marker{display:none}
-.cx-header .site-expertise>summary::after{content:'⌄';margin-left:6px}
+.cx-header .site-expertise>summary::after{content:'⌄';margin-left:6px;font-size:13px;line-height:1}
 .cx-header .site-expertise-list{position:absolute;top:100%;left:0;z-index:70;display:grid;min-width:230px;max-height:65vh;overflow:auto;padding:7px;background:#fff;box-shadow:0 15px 35px #0003}
 .cx-header .site-expertise:not([open]) .site-expertise-list{display:none}
 .cx-header .site-expertise-list a{display:block;padding:10px 12px;min-height:44px;color:var(--cx-dark);text-decoration:none;white-space:nowrap}
 .cx-header .site-expertise-list a:hover,.cx-header .site-expertise-list a[aria-current=page]{background:#e5ece5;border-left:3px solid var(--accent)}
 @media(hover:hover) and (min-width:761px){.cx-header .site-expertise:hover .site-expertise-list{display:grid}}
 @media(max-width:760px){.cx-mobile-menu nav{width:min(88vw,330px);max-height:calc(100dvh - 110px);overflow:auto}.cx-mobile-menu .site-expertise-list{position:static;min-width:0;max-height:none;padding:0 0 0 8px;box-shadow:none;background:transparent}.cx-mobile-menu .site-expertise>summary{padding:12px;min-height:44px}}
+
+/* #028: Roofing service cards retain full photo and text contrast during reveal. */
+.cx-roof-repair .cx-service-grid article.cx-reveal-pending{opacity:1;transform:none;transition:none}
+.cx-roof-repair .cx-service-grid article h3{color:#193c31}
+.cx-roof-repair .cx-service-grid article p{color:#3d594e}
 
 /* #018: a single Roofing action, below the unchanged film. */
 .cx-roof-repair .cx-roof-moment{margin:30px 4.5vw 100px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);background:#e9eee8;border:1px solid #c8d3c9;border-radius:6px 6px 36px 6px;overflow:clip;color:#193c31}
