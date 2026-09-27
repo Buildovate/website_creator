@@ -14,6 +14,6 @@ await buildClient();
 await buildRoofingCritical();
 await build({entryPoints:['src/excel-reader.js'],outfile:'dist/client/excel-reader.js',bundle:true,format:'iife',globalName:'ExcelReader',platform:'browser',target:'es2022'});
 // HTML templates must be rendered by the Worker, never served ahead of it as assets.
-await build({entryPoints:['src/worker.js'],outfile:'dist/server/index.js',bundle:true,format:'esm',platform:'browser',target:'es2022',loader:{'.html':'text'},external:['cloudflare:workers']});
+await build({entryPoints:['src/worker.js'],outfile:'dist/server/index.js',bundle:true,format:'esm',platform:'browser',target:'es2022',loader:{'.html':'text','.pdf':'binary'},external:['cloudflare:workers']});
 await mkdir('dist/.openai',{recursive:true});await cp('.openai/hosting.json','dist/.openai/hosting.json');await cp('drizzle','dist/.openai/drizzle',{recursive:true});
 const manifest=JSON.parse(await readFile('dist/.openai/hosting.json','utf8'));if(manifest.static)throw Error('Worker cannot retain static mode');

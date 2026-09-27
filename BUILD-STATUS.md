@@ -1,5 +1,10 @@
 # BUILD STATUS
 
+## #022 — Local ebook preview and consent stub
+
+**Done locally; delivery Not connected.** One eight-page Roofing guide with designed cover, contents, readable opening chapters and consent-gated private PDF. Existing inquiry inbox, local contact capture, tenant access and #016 atomic receipt/quota patterns reused. Consent is unticked, exact wording/time/purpose recorded, retries idempotent and Sample receipts isolated. Business settings require review before publication. Build/typecheck, 63 regression scripts, 62 new server checks, 85 browser assertions, 15 browser suites and 208 platform states passed; 28 browser captures, 9 PDF proof images, 7 Vite 200s and zero measured initial CLS. Zero credits and no outbound delivery. Restored 1876 evidence files; 262 unrelated files unchanged. [Evidence](docs/build-evidence/022/README.md). K17/K18 live delivery remains queued; #023 Not started.
+
+
 ## #021 — Five Roofing city pages
 
 **Done locally.** Reused #004X routes, approved serviceAreas and publication boundaries for Oxnard, Ventura, Camarillo, Thousand Oaks and Santa Paula. Distinct photographic layouts, original copy/four FAQs, service links, footer links and city-prefilled inquiries; no invented local proof or branch offices. Build/typecheck, 62 regression scripts, 402 new server checks, 189 new browser assertions, 14 browser suites and 208 platform states passed. 16 captures, 11 Vite 200s, zero sampled CLS, zero credits. Restored 1745 old evidence files and verified 262 unrelated files unchanged. [Evidence](docs/build-evidence/021/README.md). #022 remains Not started.

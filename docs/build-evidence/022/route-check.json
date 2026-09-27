@@ -1,0 +1,34 @@
+{
+  "command": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5173",
+  "results": [
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-guide-022/resources/before-you-decide-on-your-roof",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-guide-022/resources/before-you-decide-on-your-roof?preview=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/ebook.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/ebook.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-guide-022/legal",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/public/roofing-guide-022/ebook",
+      "status": 200,
+      "delivery": "not_connected"
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-guide-022/resources/before-you-decide-on-your-roof/download (consented browser)",
+      "status": 200
+    }
+  ]
+}

@@ -111,3 +111,15 @@ Service Finance (K05), Wisetack (K06), Sunbit (K07), Hearth and Enhancify all re
 | Other | Contractor names the provider, supplies a confirmed application link and terms; any future API requires separate documented access | Not connected; no generic API or guessed credentials |
 
 No key fields, credential storage, external verification, vendor calls or automatic underwriting were added. Public financing with no supported supplied terms is hidden; Sample payments remain private noindex previews. Existing future live-integration tickets remain open; #017 does not complete them.
+
+
+## #022 local ebook delivery gate
+
+The local Roofing guide uses installed imagery, bundled PDFs, existing tenant access and the local inquiry database. No external delivery, storage, CRM or generation adapter is invoked. Every receipt remains **Delivery not connected**, with no email-sent event.
+
+- **K17 / K18:** Before a future live email ticket, establish the contractor's SendGrid subuser, authenticated sending domain, verified sender/reply-to, approved ebook message template, consent purpose and version, suppression checks, event verification and any double-opt-in setting. Credential variable names remain unimplemented; do not populate guessed keys. Never infer delivery from a stored request or PDF download.
+- **K24:** Remote CRM remains Not connected; this ticket uses only the existing local inquiry inbox and local contact records. Future remote delivery requires an approved tenant mapping and sandbox contract.
+- **K08 / K01 / K02:** Remote file hosting and generated per-customer guide artwork are Not connected for this stub. Its PDFs are bundled private server assets; no cloud storage, AI or Higgsfield call is made. Future generation needs separate authorization.
+- SMS and marketing are not requested: phone is optional and neither permission is inferred from guide consent. No SMS credential setup is part of #022.
+
+Live delivery remains queued under #124/#125 and #140–#144. No provider is connected by #022.

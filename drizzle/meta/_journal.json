@@ -50,6 +50,13 @@
       "when": 1790461537438,
       "tag": "0006_promotion_completions",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1790474819746,
+      "tag": "0007_ebook_receipts",
+      "breakpoints": true
     }
   ]
 }

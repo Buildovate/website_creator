@@ -10,6 +10,8 @@ export function safeReturnPath(value: unknown): string {
   } catch { return '/'; }
 }
 export function publicApi(path: string, method: string): boolean {
+  // Ebook requests retain their own origin, consent, cookie and preview-access checks.
+  if(method==='POST' && /^\/api\/public\/[^/]+\/ebook$/.test(path)) return true;
   return (path === '/api/session' && method === 'GET') ||
     /^\/api\/public\/[^/]+\/(inquiries|reviews|pricing-inquiry|promotion-unlock|location|chat(?:\/(start|message|handoff))?)$/.test(path) ||
     (path === '/api/chat/sms' && method === 'POST');

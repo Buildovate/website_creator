@@ -52,3 +52,8 @@ The AWS handler supplies nosniff and strict-origin-when-cross-origin Referrer-Po
 HSTS (max-age=31536000, without includeSubDomains or preload) is emitted only for a configured HTTPS origin in a shared environment, never locally. Public pages do not receive workspace framing/CSP restrictions. Protected API responses remain JSON; workspace HTML errors have an app recovery page.
 
 Initial-load failures offer Try again and clear the busy state. Failed save requests retain the existing form. Sign-out uses an accessible in-page confirmation with cancel, then the CSRF-protected POST logout route. Public visitor forms and signed webhooks keep their separate existing checks; workspace CSRF is not used to bypass them.
+
+
+## #022 visitor ebook requests
+
+POST /api/public/:slug/ebook is registered with the existing public-route policy. The handler enforces exact same-origin requests, bounded bodies, honeypot, unticked explicit consent, browser-scoped receipts and persisted quotas. Private preview capture/download still calls tenant access; public download requires its consent receipt and the same HttpOnly browser cookie. No platform mutation becomes anonymous. Native no-JavaScript form POST uses the existing strict-origin-when-cross-origin response policy.
