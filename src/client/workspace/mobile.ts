@@ -33,7 +33,7 @@ function sync(){
  const publish=originals.find(b=>/^publish/i.test(b.textContent?.trim()||''));
  // The prepare form's submit belongs inside its short dialog; cloning it here
  // creates a second action and reserves an empty dock area below the form.
- const next=dialog?.querySelector('#prepare-design')?[]:[save,publish].filter((x):x is HTMLButtonElement=>!!x);
+ const next=dialog?.querySelector('#prepare-design')||(!dialog&&document.querySelector('#hero-editor'))?[]:[save,publish].filter((x):x is HTMLButtonElement=>!!x);
  for(const original of document.querySelectorAll<HTMLButtonElement>(".photo-upload-submit")){if(phone.matches){original.tabIndex=-1;original.setAttribute("aria-hidden","true")}else{original.removeAttribute("tabindex");original.removeAttribute("aria-hidden")}}
  const status=(dialog?.querySelector('#dialog-status')||document.querySelector('#status'))?.textContent||'';
  const parent=dialog||document.body;if(dock.parentElement!==parent)parent.append(dock);

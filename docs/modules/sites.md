@@ -194,3 +194,8 @@ Migration 0007 adds ebook_receipts linked to inquiry IDs. Exact consent wording,
 ## #023 generation snapshot metadata
 
 Full tenant loads validate generationManifest and adopt older snapshots using their effective saved seeds and choices. Metadata adoption keeps the content version and publication state unchanged and independently records draft/published choices. Corrupt manifests fail validation; they are not regenerated. Normal authorized draft saves synchronize the record; publication still copies the existing draft snapshot with owner approval. Backup restore validates/adopts the original generation record before restoring as draft. generation_manifests keeps immutable history bound to tenant_id; no CRM inbox or workspace record schema is repurposed. The Design templates screen reuses the phone menu and sticky Save flow. Details and role checks are in the design module and #023 evidence.
+
+
+## #023A — Hero editor
+
+The Hero workspace screen edits existing scrollStory settings through tenant PUT/render and owner publication. Owners/admins must unlock the #023 Scroll Story choice first; editor/viewer mutations fail server-side. Every selected photo is checked against the tenant on create/render/save/publish; public media access uses published references only. New journey hero overrides require scrollStory.editorVersion=1; existing sites render identically until intentionally edited. #023 keeps its existing revision history and stable treatment seeds. See [evidence](../build-evidence/023A/README.md).

@@ -15,6 +15,7 @@ for(const id of Object.keys(kits).filter(id=>films[id]))for(const layout of ['im
  const off=await (await req('/design-preview/'+id+'/'+layout+'?scrollStory=false')).text();assert.ok(off.includes('founder-standard-hero'));assert.ok(!off.includes('data-feature="hero.scrollStory"'));assert.ok(off.includes('id="craft-inquiry"'));
 }
 let {tenant:t}=await api('/tenants','POST',{designKit:'roofing',slug:'story-control-test',settings:{name:'Story Test Roofing',phone:'8055550199',area:'Oxnard',services:[{name:'Roof repair',description:'Discuss the condition.'}]}});
+({tenant:t}=await api('/tenants/'+t.id+'/generation','POST',{version:t.version,action:'locks',locks:{scrollStory:false}}));
 ({tenant:t}=await api('/tenants/'+t.id,'PUT',{version:t.version,settings:{...t.settings,scrollStory:{chapters:[{headline:'APPROVED OPENING'}],heroCaptions:['A clear start.','Work underway.','The result.'],detailIntro:'The roof details.',detailCaptions:['Plan.','Protect.','Finish.'],proof:[{text:'UNAPPROVED CLAIM',approved:false},{text:'APPROVED FACT',approved:true}]}}}));
 assert.equal(t.settings.scrollStory.detailCaptions[1],'Protect.');
 let h=await (await req('/s/'+t.slug+'?preview=1')).text();assert.ok(h.includes('APPROVED OPENING'));assert.ok(h.includes('UNAPPROVED CLAIM · preview'));assert.ok(h.includes('The roof details.'));assert.ok(h.includes('Work underway.'));

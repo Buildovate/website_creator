@@ -1,0 +1,39 @@
+{
+  "base": "288a5916d29e578b92cf1994ae07cf91d0d05a4a",
+  "unchangedUnrelatedFiles": 262,
+  "restoredEvidenceFiles": 2206,
+  "allHashesMatch": true,
+  "protectedFiles": [
+    "src/generation.js",
+    "src/platform/generation.ts",
+    "src/core.js",
+    "src/operations.js",
+    "src/expenses.js",
+    "src/client/workspace/expenses.js",
+    "src/constitution-pages.js",
+    "src/platform/lender-adapter.ts",
+    "src/roofing-performance.js",
+    "src/roofing-cta.js",
+    "src/platform/thumbnail-motion.ts",
+    "src/roofing-story.js",
+    "src/city-editorial.js",
+    "src/core-site-pages.js",
+    "src/ebook",
+    "public/assets",
+    "public/conversion.css",
+    "src/client/site/conversion.ts",
+    "src/trade-motion.js",
+    "public/trade-motion.js"
+  ],
+  "regeneratedExtrasMoved": [
+    "docs/build-evidence/015A/after/admin-expenses.png",
+    "docs/build-evidence/015A/after/desktop-admin-expenses.png",
+    "docs/build-evidence/015A/after/desktop-hero.png",
+    "docs/build-evidence/015A/after/desktop-questionnaire-q-roofing-cta.png",
+    "docs/build-evidence/015A/after/desktop-questionnaire-q-thumbnail-motion.png",
+    "docs/build-evidence/015A/after/hero.png",
+    "docs/build-evidence/015A/after/questionnaire-q-roofing-cta.png",
+    "docs/build-evidence/015A/after/questionnaire-q-thumbnail-motion.png"
+  ],
+  "backupDirectory": "C:/Users/joe/OneDrive/Documents/ChatGPT/Buildovate - Website Design/023A-backup"
+}

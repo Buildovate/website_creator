@@ -50,7 +50,8 @@ export function conversionPage(s,{base='',preview=false,sample=false,samplePath=
  const navigationBase=sample?samplePath:base,[path,query='']=navigationBase.split('?'),params=new URLSearchParams(query);if(preview&&!sample)params.set('preview','1');const suffix=params.size?'?'+params:'';
  const home=path+suffix,pricing=path+'/pricing'+suffix,slug=base.split('/').pop(),digits=String(s.phone||'').replace(/\D/g,''),phone=digits.length>=10?'tel:+'+(digits.length===10?'1':'')+digits:'';
  const known=new Set(photos.map(x=>x.id)),uploaded=s.heroPhotoId&&known.has(s.heroPhotoId),hero=uploaded?'/media/'+s.heroPhotoId:(s.journey==='roof-repair'?art[s.trade]?.[c.visual]:films[kit.id]?.poster)||kit.image;
- const headline=custom&&brief.headline?brief.headline:c.headline,intro=custom&&brief.intro?brief.intro:c.intro;
+ const editedHero=s.scrollStory?.editorVersion===1,heroStory=editedHero?s.scrollStory:null;
+ const headline=heroStory?.chapters?.[0]?.headline||(custom&&brief.headline?brief.headline:c.headline),intro=heroStory?.chapters?.[0]?.body||(custom&&brief.intro?brief.intro:c.intro);
  const proof=[s.experience,s.license?'License '+s.license:''].filter(Boolean),reviews=s.reviews?.confirmed&&(s.reviews.googleUrl||s.reviews.yelpUrl),hasPortfolio=s.showProjects!==false&&!!portfolio&&s.effects?.projectMap!==false,hasOwner=s.showOwner!==false&&!!s.owner;
  const button=(label,href='#contact',extra='')=>`<a class="cx-button" href="${e(href)}" ${extra}>${e(label)} ${arrow}</a>`;
  const real=/^\/s\/[^/?]+$/.test(path),financeVisible=preview||p.financing.enabled&&p.financing.lenders.some(x=>x.enabled&&x.confirmed),offers=preview||p.promotions.enabled&&p.promotions.offers.some(x=>x.enabled);
@@ -69,7 +70,7 @@ export function conversionPage(s,{base='',preview=false,sample=false,samplePath=
  const stats=motionRoof?StatsMask({...motionOptions,trust:s.businessTrust,image:uploaded?hero:'/assets/premium-roofing/hero.png',imageAlt:uploaded?'Business-supplied roofing photograph':'Illustrative roof at sunset'}):'';
  const scrollHero=s.effects?.scrollStory!==false&&s.scrollStory?.enabled!==false;
  const heroCaptions=s.journey==='roof-repair'?['The starting point.','The layers of protection.','The finished concept.']:s.journey==='hvac-replacement'?['Plan the system.','Connect the details.','Picture the comfort.']:['The possibility.','The details.','The outdoor room.'];
- let film=scrollHero?buildTimelapse({...s,hero:headline,intro},cleanScrollStory({...s.scrollStory,chapters:[],primaryLabel:c.cta,primaryTarget:'contact',secondaryLabel:'Explore our services',heroCaptions}),kit,{preview:demo,photos,pricingPath:pricing})
+ let film=scrollHero?buildTimelapse({...s,hero:headline,intro},cleanScrollStory({...s.scrollStory,chapters:editedHero?s.scrollStory.chapters:[],primaryLabel:editedHero?s.scrollStory.primaryLabel:c.cta,primaryTarget:editedHero?s.scrollStory.primaryTarget:'contact',secondaryLabel:editedHero?s.scrollStory.secondaryLabel:'Explore our services',heroCaptions:editedHero?s.scrollStory.heroCaptions:heroCaptions}),kit,{preview:demo,photos,pricingPath:pricing})
   .replace('class="scroll-story build-timelapse"','class="scroll-story build-timelapse cx-film-hero"')
   .replace('href="#craft-inquiry"','href="#contact"')
   .replace('<p class="story-kicker">'+e(s.name)+'</p>','<p class="story-kicker">'+e(c.eyebrow)+'</p>')

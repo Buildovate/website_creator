@@ -610,12 +610,14 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #023A — Restore the scroll-story hero editor
 
-- State: **Not started** · Estimate: **5h** (≤1 day). Dependency: #023 generation manifest and the existing approved hero media pipeline.
+- State: **Done locally** · Estimate: **5h** (≤1 day). Dependency: #023 generation manifest and the existing approved hero media pipeline.
 - Reference: [platform gap audit](docs/product/PLATFORM-GAP-AUDIT.md) §2, using `.data/sites-v11-recovery/public/scroll-story-ui.js` as a behavior reference only; keep the recovery directory intact.
 - Scope: Restore contractor controls for the existing scroll-story hero without replacing approved imagery or bypassing the generation manifest. Save a private draft, preview it, and require explicit publication. Preserve reduced-motion and no-JS fallbacks and media provenance.
 - Done when: Authorized edits round-trip, a public hero changes only after publish, and editor controls work at 390×844 and 1440×900 with touch/keyboard.
 - Verification/evidence: Draft/publish and media-validation tests plus phone and desktop screenshots under `docs/build-evidence/023A/`.
 - External keys/accounts: None for approved existing media; new generation remains gated by K02.
+
+- Completed: owner/admin hero editing restored through existing settings/manifest, private preview, explicit publish and media gates; 65 regression scripts, 17 browser suites, 210 platform states, 17 byte-identical unedited kits. [Evidence](docs/build-evidence/023A/README.md). Zero credits.
 
 ### #024 — Produce and attach one Financing ambient clip
 

@@ -26,6 +26,7 @@ for(const [kit,journey,service,cta] of cases){
  ({tenant:t}=await api('/tenants/'+t.id,'PUT',{version:t.version,settings:{...t.settings,conversionBrief:{headline:'A confirmed headline',difference:'<script>unsafe()</script>',nextStep:'We discuss the scope first.',confirmed:true}}}));
  h=await (await request('/s/'+t.slug+'?preview=1')).text();assert.ok(h.includes('A confirmed headline'));assert.ok(h.includes('&lt;script&gt;'));assert.ok(!h.includes('<script>unsafe()'));
  const published=await (await request('/s/'+t.slug,'GET',null,null)).text();assert.ok(!published.includes('0 published projects'));assert.ok(!published.includes('id="customer-reviews"'));assert.ok(!published.includes('href="#projects"'));assert.ok(!published.includes('data-empty-project-map'));assert.ok(!published.includes('id="job-map"'),'No invented coordinates when there are no projects');assert.ok(!published.includes('A confirmed headline'));assert.ok(published.includes(`data-journey="${journey}"`));
+ ({tenant:t}=await api('/tenants/'+t.id+'/generation','POST',{version:t.version,action:'locks',locks:{scrollStory:false}}));
  ({tenant:t}=await api('/tenants/'+t.id,'PUT',{version:t.version,settings:{...t.settings,design:{...t.settings.design,font:'editorial',cards:'soft'},effects:{...t.settings.effects,scrollStory:false,cutaway:false}}}));
  assert.equal(t.settings.journey,journey);assert.equal(t.settings.conversionBrief.confirmed,true);
  h=await (await request('/s/'+t.slug+'?preview=1')).text();assert.ok(h.includes('cx-font-editorial'));assert.ok(!h.includes('data-build-video'));assert.ok(!h.includes('id="inside"'));
@@ -77,6 +78,7 @@ for(const [i,service] of ['Roof repair','Roof replacement'].entries()){
 ({tenant:roofing}=await api('/tenants/'+roofing.id));
 const saved=await api('/tenants/'+roofing.id);
 for(const service of ['Roof repair','Roof replacement'])assert.ok(saved.inquiries.some(x=>x.message.includes('\n\n'+service+' ·')));
+({tenant:roofing}=await api('/tenants/'+roofing.id+'/generation','POST',{version:roofing.version,action:'locks',locks:{scrollStory:false}}));
 ({tenant:roofing}=await api('/tenants/'+roofing.id,'PUT',{version:roofing.version,settings:{...roofing.settings,services:[{name:'Roof repair'}],effects:{...roofing.settings.effects,scrollStory:false}}}));
 const repairOnly=await (await request(roofPath+'?preview=1')).text();
 assert.ok(repairOnly.includes('Request roof repair'));assert.ok(!repairOnly.includes('ROOF REPAIR &amp; REPLACEMENT'));

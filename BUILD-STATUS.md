@@ -1,8 +1,12 @@
 # BUILD STATUS
 
+## #023A — Scroll-story hero editor
+
+**Done locally.** Restored owner/admin controls, live private preview, single sticky Save/Publish bar and honest state handling. Reuses #023 records/locks, optimistic versions, media ownership and backups. 65 regression scripts, 50 new server checks, 17 browser suites, 45 new browser checks and 210 platform states passed. 17 unedited published kit homepages remain byte-identical; zero save CLS, 23 viewport captures, zero credits. 2206 older evidence files restored and 262 unrelated files unchanged. [Evidence](docs/build-evidence/023A/README.md). #024 remains Not started.
+
 ## #023 — Stable generation manifest
 
-**Done locally; new creative production Pending / Not connected.** Versioned, validated site/revision records adopt existing saved choices without changing their look. Existing thumbnail/composer locks, treatment seeds, installed media and draft/published snapshots are reused. Only owners/admins can mutate manifest locks or regenerate; history is tenant-scoped. 64 regression scripts, 185 new server assertions, 16 browser suites, 51 generation browser assertions and 208 platform states passed. All 17 kit migrations have byte-identical homepage HTML; service-page comparisons pass. Zero credits, no vendor calls; 2029 old evidence files restored and 262 unrelated files unchanged. [Evidence](docs/build-evidence/023/README.md). #023A remains Not started.
+**Done locally; new creative production Pending / Not connected.** Versioned, validated site/revision records adopt existing saved choices without changing their look. Existing thumbnail/composer locks, treatment seeds, installed media and draft/published snapshots are reused. Only owners/admins can mutate manifest locks or regenerate; history is tenant-scoped. 64 regression scripts, 185 new server assertions, 16 browser suites, 51 generation browser assertions and 208 platform states passed. All 17 kit migrations have byte-identical homepage HTML; service-page comparisons pass. Zero credits, no vendor calls; 2029 old evidence files restored and 262 unrelated files unchanged. [Evidence](docs/build-evidence/023/README.md). #023A is completed below.
 
 
 ## #022 — Local ebook preview and consent stub
