@@ -1,0 +1,61 @@
+{
+  "command": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5173",
+  "results": [
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-cities-021/areas/oxnard",
+      "status": 200,
+      "finalStatus": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-cities-021/areas/ventura",
+      "status": 200,
+      "finalStatus": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-cities-021/areas/camarillo",
+      "status": 200,
+      "finalStatus": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-cities-021/areas/thousand-oaks",
+      "status": 200,
+      "finalStatus": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-cities-021/areas/santa-paula",
+      "status": 200,
+      "finalStatus": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-cities-021/areas/oxnard?preview=1",
+      "status": 200,
+      "finalStatus": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-cities-021/areas",
+      "status": 200,
+      "finalStatus": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-cities-021",
+      "status": 200,
+      "finalStatus": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-cities-021/services/roof-repair",
+      "status": 200,
+      "finalStatus": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/roofing-city.css",
+      "status": 200,
+      "finalStatus": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/roofing-city.js",
+      "status": 200,
+      "finalStatus": 200
+    }
+  ],
+  "finalSourceVerified": true
+}

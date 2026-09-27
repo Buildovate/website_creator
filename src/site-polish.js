@@ -3,7 +3,7 @@ import {neighborhoodBanner} from './neighborhood.js';
 import {socialIcon} from './social-icons.js';
 import {normalizePlatform,SOCIALS,FINANCING_DISCLOSURE} from './platform/constitution.ts';
 import {e,one,must,access} from './core.js';
-import {visibleServicePages} from './service-registry.js';
+import {visibleServicePages,serviceSlug} from './service-registry.js';
 const coreVisible=(s,kind)=>{const record=(s.websitePages?.pages||[]).find(page=>page.kind===kind);return !record||record.enabled};
 export function expertiseNavigation(s,{base='',preview=false,sample=false,currentService=''}={}){
  const pages=!sample&&/^\/s\/[^/?]+$/.test(base)?visibleServicePages(s):[];
@@ -32,7 +32,7 @@ export function websiteHeader(s,{base='',preview=false,sample=false,project=fals
  return `<header class="kit-header shared-site-header"><a href="${e(home||'/')}" class="kit-brand">${websiteBrand(s)}</a><nav class="site-desktop-nav" aria-label="Main navigation">${links}</nav><details class="site-mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation">${links}${phone?`<a class="site-call-link" href="tel:${e(phone)}">Call ${e(s.phone)} ↗</a>`:''}</nav></details></header>`;
 }
 
-export function websiteFooter(s,base='',preview=false,{omitHeadingName=false}={}){
+export function websiteFooter(s,base='',preview=false,{omitHeadingName=false,cityEditorial=false}={}){
  s=publicLegalSettings(s);const p=normalizePlatform(s.platform),v=p.footer.visible,policy=assessLegalPolicy(s);
  const [path,query='']=base.split('?'),params=new URLSearchParams(query);base=path;if(preview&&base.startsWith('/s/'))params.set('preview','1');const suffix=params.size?'?'+params.toString():'';
  const contact=(data,visible)=>{const digits=String(data.phone||'').replace(/\D/g,''),call=digits?'tel:+'+(digits.length===10?'1':'')+digits:'';return `${visible.address&&data.address?`<p>${e(data.address)}</p>`:''}${visible.phone&&call?`<a href="${call}">${e(data.phone)}</a>`:''}${visible.email&&data.email?`<a href="mailto:${e(data.email)}">${e(data.email)}</a>`:''}${visible.hours&&data.hours?`<p>${e(data.hours)}</p>`:''}${visible.license&&data.license?`<p>${data.licenseState?e(data.licenseState)+' ':''}License ${e(data.license)}</p>`:''}${visible.bonded&&data.bonded?'<p>Bonded</p>':''}${visible.insured&&data.insured?'<p>Insured</p>':''}`;};
@@ -43,10 +43,10 @@ export function websiteFooter(s,base='',preview=false,{omitHeadingName=false}={}
  const roof=!s.designKit&&s.trade==='Roofing'&&['craft','cinematic'].includes(s.template),projectAnchor=roof?'area':'projects';
  const cities=(s.serviceAreas||[]).slice(0,5).map(x=>x.city).filter(Boolean);
  const social=Object.entries(SOCIALS).map(([key,label])=>({key,label,...p.footer.socials[key]})).filter(x=>x.enabled&&x.url);
- const areas=cities.length?cities.map(city=>`<p>${e(city)}</p>`).join(''):s.area?`<p>${e(s.area)}</p>`:'';
- return `${neighborhoodBanner(s,base,preview)}<footer class="studio-footer" data-footer-settings="1">
+ const areas=cities.length?cities.map(city=>s.trade==='Roofing'&&/^\/s\/[^/?]+$/.test(base)?`<a href="${e(base)}/areas/${e(serviceSlug(city))}${e(suffix)}">${e(city)}</a>`:`<p>${e(city)}</p>`).join(''):s.area?`<p>${e(s.area)}</p>`:'';
+ return `${cityEditorial?'':neighborhoodBanner(s,base,preview)}<footer class="studio-footer" data-footer-settings="1">
  <div class="studio-footer-grid${primary?' has-company':''}">
- ${primary?`<div class="footer-company"><p class="kit-eyebrow">BUILT FOR YOUR EVERYDAY</p>${v.name&&!omitHeadingName?`<strong>${e(s.name)}</strong>`:''}${primary}</div>`:''}
+ ${primary?`<div class="footer-company">${cityEditorial?'':'<p class="kit-eyebrow">BUILT FOR YOUR EVERYDAY</p>'}${v.name&&!omitHeadingName?`<strong>${e(s.name)}</strong>`:''}${primary}</div>`:''}
  <nav aria-label="Explore website"><h3>Explore</h3>${base?`<a href="${e(base)}/services${e(suffix)}">Our services</a><a href="${e(base)}/areas${e(suffix)}">Service areas</a>${coreVisible(s,'about')?`<a href="${e(base)}/about${e(suffix)}">About</a>`:''}${coreVisible(s,'faq')?`<a href="${e(base)}/faq${e(suffix)}">FAQ</a>`:''}<a href="${e(base)}/contact${e(suffix)}">Contact</a>`:''}${s.showProjects!==false&&s.effects?.projectMap!==false?`<a href="${e(base+suffix)}#${projectAnchor}">Project Map</a>`:''}${base?`<a href="${e(base)}/pricing${e(suffix)}">Pricing & your project</a><a href="${e(base)}/blog${e(suffix)}">Journal & guides</a>`:''}${base&&(preview||s.reviews?.confirmed&&(s.reviews.googleUrl||s.reviews.yelpUrl))?`<a href="${e(base)}/reviews${e(suffix)}">Reviews</a>`:''}${base&&(preview||p.financing.enabled&&p.financing.lenders.some(x=>x.enabled&&x.confirmed))?`<a href="${e(base)}/financing${e(suffix)}">Financing</a>`:''}${base&&(preview||p.promotions.enabled&&p.promotions.offers.some(x=>x.enabled))?`<a href="${e(base)}/promotions${e(suffix)}">Promotions</a>`:''}</nav>
  ${areas||social.length?`<div class="footer-areas">${areas?`<h3>Service areas</h3>${areas}`:''}${social.length?`<nav aria-label="Social profiles" class="footer-socials">${social.map(({key,label,url})=>`<a data-social-network="${e(key)}" href="${e(url)}" target="_blank" rel="noopener noreferrer" aria-label="${e(label)} profile (opens a new tab)" title="${e(label)}">${socialIcon(key)}</a>`).join('')}</nav>`:''}</div>`:''}</div>
  ${locations.length?`<div class="footer-locations" aria-label="Business locations">${locations.join('')}</div>`:''}

@@ -1,5 +1,10 @@
 # BUILD STATUS
 
+## #021 — Five Roofing city pages
+
+**Done locally.** Reused #004X routes, approved serviceAreas and publication boundaries for Oxnard, Ventura, Camarillo, Thousand Oaks and Santa Paula. Distinct photographic layouts, original copy/four FAQs, service links, footer links and city-prefilled inquiries; no invented local proof or branch offices. Build/typecheck, 62 regression scripts, 402 new server checks, 189 new browser assertions, 14 browser suites and 208 platform states passed. 16 captures, 11 Vite 200s, zero sampled CLS, zero credits. Restored 1745 old evidence files and verified 262 unrelated files unchanged. [Evidence](docs/build-evidence/021/README.md). #022 remains Not started.
+
+
 ## #020 — Distinct Roofing mid-page story
 
 **Done locally.** One photographic planning chapter explains whether a leak calls for a contained repair or a broader look. Existing Roofing imagery, Planning questions toggle, native inquiry link and saved publication boundaries are reused. Text and action stay visible during a decorative 120ms settle; touch, reduced motion and no-JS are static. 61 regression scripts, 30 new server checks, 3 conversion assertions, 58 new browser assertions, 13 browser suites and 208 platform states passed. 22 captures, 8 Vite 200s, no sampled story layout shift, zero credits. Restored 1615 evidence files and verified 262 unrelated files unchanged. [Evidence](docs/build-evidence/020/README.md). #021 remains Not started.

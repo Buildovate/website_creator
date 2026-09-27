@@ -1,6 +1,6 @@
 # BUILD BACKLOG
 
-Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. Both #016 and #017 are Done locally; #018 and #019 are also Done locally and the next numbered ticket is #021. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
+Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. Both #016 and #017 are Done locally; #018 and #019 are also Done locally and the next numbered ticket is #022. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
 
 ## Session contract
 
@@ -580,11 +580,13 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #021 — Render five Roofing city pages
 
-- State: **Not started** · Estimate: **6h** (≤1 day).
+- State: **Done locally** · Estimate: **6h** (≤1 day).
 - Pack section: [`N`](docs/product/01-CORE-SITE-A-N.md) §N.
 - Files to touch: `src/website-pages.js` **(new)**; `src/site-polish.js`; `tests/website-pages.mjs` **(new)**.
 - Done when: Five contractor-approved cities resolve to unique owned pages and footer links; context reaches the inquiry; cities are not represented as branch offices.
 - External keys/accounts: None.
+
+- Evidence: [#021 README](docs/build-evidence/021/README.md): five distinct Roofing city pages on #004X routes, linked footer and city-attributed inquiries; 62 regression scripts, 14 browser suites and 208 platform states passed; zero credits.
 
 ### #022 — Add a local ebook preview and consent capture stub
 

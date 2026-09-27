@@ -1,3 +1,4 @@
+import {serviceSlug,primaryCity} from './service-registry.js';
 import {text,e,must,uid} from './core.js';
 export const fieldTypes=['text','textarea','email','tel','number','date','select','radio','checkbox','checkboxes'];
 export function cleanFields(input){must(Array.isArray(input)&&input.length<=20,'Use up to 20 custom fields.');const keys=new Set(),labels=new Set();return input.map((f,index)=>{const key=/^field[a-zA-Z0-9_-]{0,60}$/.test(f.key||'')?f.key:'field'+index,label=text(f.label,100),type=fieldTypes.includes(f.type)?f.type:'textarea';must(label,'Every field needs a label.');must(!keys.has(key)&&!labels.has(label.toLowerCase()),'Field keys and labels must be unique.');keys.add(key);labels.add(label.toLowerCase());const options=[...new Set((Array.isArray(f.options)?f.options:[]).map(v=>text(v,150)).filter(Boolean))].slice(0,20);if(['select','radio','checkboxes'].includes(type))must(options.length>=2,'Choice fields need at least two options.');const min=f.min===''||f.min==null?null:Number(f.min),max=f.max===''||f.max==null?null:Number(f.max);must((min===null||Number.isFinite(min))&&(max===null||Number.isFinite(max))&&(min===null||max===null||min<=max),'Choose valid numeric limits.');return {key,label,type,options,required:f.required===true,placeholder:text(f.placeholder,200),help:text(f.help,300),min,max}})}
@@ -28,7 +29,7 @@ export function inquiryMessage(values,{slug,origin,settings,project=null,referer
   const page=pages.find(p=>p.kind==='service'&&p.enabled&&p.slug===serviceRoute[1]&&(settings.services||[]).some(s=>s.name===p.serviceName));
   must(page,'Service unavailable.',404);must(!service||service===page.serviceName,'Service does not match this page.');service=page.serviceName;
  }
- if(cityRoute){const page=pages.find(p=>p.kind==='city'&&p.enabled&&p.slug===cityRoute[1]);must(page,'City unavailable.',404);city=city||page.city;}
+ if(cityRoute){const page=pages.find(p=>p.kind==='city'&&p.enabled&&p.slug===cityRoute[1]),configured=(settings.serviceAreas?.length?settings.serviceAreas:[{city:primaryCity(settings)}]).find(a=>a.city&&serviceSlug(a.city)===cityRoute[1]);must(page||configured,'City unavailable.',404);city=city||(configured?.city||page.city);}
  if(projectRoute)must(project&&project.id===projectRoute[1],'Project unavailable.',404);
  if(project){const published=JSON.parse(project.published);service=service||published.service||'';city=city||published.city||'';}
  const lines=[service&&'Service: '+service,city&&'Project city: '+city,'Source page: '+path];
