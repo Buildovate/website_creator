@@ -1,0 +1,11 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+route.continue: Route is already handled!
+    at C:\Users\joe\website_creator\tests\service-motion-browser.mjs:23:136 {
+  log: [],
+  name: 'Error'
+}
+
+Node.js v24.19.0

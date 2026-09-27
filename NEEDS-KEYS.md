@@ -128,3 +128,8 @@ Live delivery remains queued under #124/#125 and #140–#144. No provider is con
 ## #024 — Dedicated Roofing Financing ambient film (K02)
 
 Phase 1 is complete locally using installed still imagery; the live film remains Pending / Not connected. No provider calls, credit checks or generation ran. One silent 8-second 1080p Cinema Studio Video 3.0 clip is planned; the local brief contains no credit tariff, so a numeric provider quote and explicit Phase 2 approval are still needed. No credential has been read or stored. See [#024 evidence and exact prompt](docs/build-evidence/024/README.md). The finished planning chapter publishes with its poster. Only pending-film status panels and Sample badges are private-preview-only (#024 Part A).
+
+
+## #025 — Dedicated Roofing Financing scroll film (K02)
+
+Phase 1 is complete locally using installed still imagery and the existing scroll player. The live versioned slot remains Pending / Not connected; its finished poster story is public, while its status panel is private-preview-only. One silent 12-second 1080p Seedance 2.5 clip / one generation is proposed. Credits: **quote needed**. No provider/credit check, generation, credential access or vendor call ran. Combine with the existing #024 ambient clip estimate before seeking explicit Phase 2 approval. [Evidence and exact prompt](docs/build-evidence/025/README.md).

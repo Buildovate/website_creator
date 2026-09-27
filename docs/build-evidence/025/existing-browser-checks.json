@@ -1,0 +1,123 @@
+[
+  {
+    "suite": "callback-browser.mjs",
+    "status": 0,
+    "ms": 6425
+  },
+  {
+    "suite": "contact-linkage-browser.mjs",
+    "status": 0,
+    "ms": 7902
+  },
+  {
+    "suite": "contacts-browser.mjs",
+    "status": 0,
+    "ms": 6583
+  },
+  {
+    "suite": "ebook-browser.mjs",
+    "status": 0,
+    "ms": 14960
+  },
+  {
+    "suite": "expense-polish-browser.mjs",
+    "status": 0,
+    "ms": 7051
+  },
+  {
+    "suite": "expenses-browser.mjs",
+    "status": 0,
+    "ms": 4486,
+    "attempts": [
+      {
+        "status": 1,
+        "ms": 4486,
+        "log": "expenses-browser.log"
+      },
+      {
+        "status": 0,
+        "ms": 10081,
+        "log": "expenses-browser-retry.log"
+      }
+    ],
+    "note": "Existing vendor-row assertion ran immediately after editor dismissal. Test and Expenses module source unchanged for rerun."
+  },
+  {
+    "suite": "financing-states-browser.mjs",
+    "status": 0,
+    "ms": 19081
+  },
+  {
+    "suite": "generation-browser.mjs",
+    "status": 0,
+    "ms": 10744
+  },
+  {
+    "suite": "hero-editor-browser.mjs",
+    "status": 0,
+    "ms": 31078
+  },
+  {
+    "suite": "planning-ambient-browser.mjs",
+    "status": 0,
+    "ms": 21684
+  },
+  {
+    "suite": "planning-scroll-browser.mjs",
+    "status": 0,
+    "ms": 33723
+  },
+  {
+    "suite": "platform-ui-cleanup-browser.mjs",
+    "status": 0,
+    "ms": 7505
+  },
+  {
+    "suite": "promotion-unlocks-browser.mjs",
+    "status": 0,
+    "ms": 18524
+  },
+  {
+    "suite": "roofing-cities-browser.mjs",
+    "status": 0,
+    "ms": 20963
+  },
+  {
+    "suite": "roofing-cta-browser.mjs",
+    "status": 0,
+    "ms": 24864
+  },
+  {
+    "suite": "roofing-story-browser.mjs",
+    "status": 0,
+    "ms": 14459
+  },
+  {
+    "suite": "service-motion-browser.mjs",
+    "status": 0,
+    "ms": 11217,
+    "attempts": [
+      {
+        "status": 1,
+        "ms": 11217,
+        "log": "service-motion-browser.log"
+      },
+      {
+        "status": 0,
+        "ms": 19486,
+        "log": "service-motion-browser-retry.log"
+      }
+    ],
+    "note": "Existing request interception race: Route is already handled. Test and feature source unchanged for rerun."
+  },
+  {
+    "suite": "trade-enablement-browser.mjs",
+    "status": 0,
+    "ms": 39220
+  },
+  {
+    "suite": "trade-visual-browser.mjs",
+    "status": 0,
+    "ms": 33102
+  }
+]

@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## #025 — Roofing Financing decision story
+
+**Phase 1 Done locally in stub mode; dedicated film Pending.** Five-step poster-first planning story, saved versioned catalog/manifest slot, shared bidirectional scroll player, silent lazy loading, pause/off-screen/static data-saving/reduced-motion/no-JS/error fallbacks. Finished content publishes with the poster; only private status is hidden. 67 regression scripts, 353 new server/render assertions, 19 browser suites, 155 new browser assertions and 210 platform states passed. All 305 outside-scope pages across 17 kits and the Part A chapter remain byte-identical. 60 viewport captures, zero measured CLS, 8 Vite 200s. Zero credits. One 12-second Phase 2 clip; credits **quote needed**, generation not run. 2698 older evidence files restored; 262 unrelated files preserved. [Evidence, clip table and exact prompt](docs/build-evidence/025/README.md). K02 remains open. No other ticket started.
+
 ## #024A — Published planning chapter
 
 **Done locally.** The finished Roofing Financing chapter publishes with the responsive poster while the film is Pending; only private status/Sample decoration is hidden. Existing manifest and players unchanged. 66 regression scripts, 18 browser suites and 210 platform states passed; 305 outside-scope pages across 17 kits byte-identical. Zero credits. [Evidence](docs/build-evidence/024A/README.md). Supersedes #024’s earlier whole-chapter publication gate.

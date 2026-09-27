@@ -1,0 +1,23 @@
+[
+  {
+    "label": "regression-run",
+    "status": 0,
+    "ms": 61320
+  },
+  {
+    "label": "platform-mobile",
+    "status": 0,
+    "ms": 52768
+  },
+  {
+    "label": "browser-run",
+    "status": 0,
+    "ms": 333679,
+    "firstAttemptStatus": 1,
+    "retries": [
+      "service-motion-browser-retry.json",
+      "expenses-browser-retry.json"
+    ],
+    "note": "All 19 suites passed. Two unchanged pre-existing browser tests needed retries after an interception race and immediate post-save DOM assertion. Initial results retained separately."
+  }
+]
