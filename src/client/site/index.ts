@@ -1,3 +1,4 @@
+import './roofing-next-steps.js';
 import {mountPortfolio} from './portfolio.js';
 import {mountInquiries} from './inquiries.js';
 document.querySelectorAll<HTMLInputElement>('.comparison input').forEach(input=>input.oninput=()=>input.parentElement?.style.setProperty('--split',input.value+'%'));

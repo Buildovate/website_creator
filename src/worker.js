@@ -1,3 +1,4 @@
+import {uniquePageImages} from './page-images.js';
 import {publicHeroPhoto} from './hero-editor.js';
 import {ebookRoute} from './ebook.js';
 import {expensesApi,postRecurringExpenses} from './expenses.js';
@@ -31,7 +32,7 @@ import {dashboard,sitePage} from './views.js';
 import {Fault,must,uid,now,one,all,run,access,body,text,person} from './core.js';
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'content-type':'application/json','cache-control':'no-store','x-content-type-options':'nosniff'}});
 const html=(markup,status=200)=>{
- let data=markup.replaceAll('↗','')
+ let data=uniquePageImages(markup).replaceAll('↗','')
   .replaceAll('Private draft preview · Requests are disabled','Private preview · Sample content · Forms disabled')
   .replaceAll('PRIVATE DRAFT · Forms and promotion unlocks are disabled','Private preview · Sample content · Forms disabled')
   .replaceAll('PRIVATE DRAFT · Review your business details before publishing','Private preview · Sample content · Forms disabled')

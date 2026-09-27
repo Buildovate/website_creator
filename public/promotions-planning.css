@@ -15,3 +15,8 @@
 /* #027A Part 1: widescreen story above a horizontal reading row. */
 .promo-story-stage{grid-template-columns:1fr}.promo-story-photo{height:350px;min-height:350px}.promo-story-beats{grid-template-columns:repeat(4,minmax(0,1fr));padding:24px 30px;gap:28px;align-content:start}.promo-story-beats li{padding:0;border:0;display:block}.promo-story-dot{display:block;margin:0 0 12px}.promo-story-beats h3{font-size:20px}.promo-story-beats p{font-size:14px;line-height:1.5}.promo-story-photo.sm-card .sm-visual img{object-position:50% 50%}
 @media(max-width:760px){.promo-story-photo{height:210px;min-height:210px}.promo-story-beats{grid-template-columns:1fr 1fr;padding:18px;gap:18px}.promo-story-beats h3{font-size:17px}.promo-story-beats p{font-size:12px;line-height:1.4}.promo-story-dot{margin-bottom:8px}}
+
+/* #027A Part 2: a compact scrub runway, all four beats retain their order. */
+@media(min-width:761px){.promo-story-track[data-story-enhanced]{height:calc(100vh + 260px)}.promo-story{padding-bottom:40px}.promo-story-track[data-story-enhanced] .promo-story-stage{top:calc(var(--planning-header,80px) + 12px)}}
+
+@media(min-width:761px) and (prefers-reduced-motion:no-preference){.promo-story-track[data-story-enhanced] .promo-story-stage{height:calc(100svh - var(--planning-header,80px) - 24px);min-height:520px;grid-template-rows:minmax(0,1fr) auto}.promo-story-track[data-story-enhanced] .promo-story-photo{height:100%;min-height:0}}

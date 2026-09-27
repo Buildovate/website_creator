@@ -48,7 +48,7 @@ function sync(){
 }
 function schedule(){if(!raf)raf=requestAnimationFrame(sync)}
 const observer=new MutationObserver(schedule);
-for(const selector of ['#content','#dialog','#status']){const el=document.querySelector(selector);if(el)observer.observe(el,{childList:true,subtree:true,attributes:true,attributeFilter:['disabled','open']});}
+for(const selector of ['#content','#dialog','#status']){const el=document.querySelector(selector);if(el)observer.observe(el,{childList:true,subtree:true,attributes:true,attributeFilter:['disabled','open','hidden']});}
 phone.addEventListener('change',schedule);
 document.addEventListener('change',e=>{const select=e.target as HTMLSelectElement;if(select.matches('[data-platform-screen]'))document.querySelector<HTMLButtonElement>('nav.tabs [data-section="'+CSS.escape(select.value)+'"]')?.click();});
 const viewport=()=>{const v=window.visualViewport;document.documentElement.style.setProperty('--platform-keyboard',Math.max(0,innerHeight-(v?.height||innerHeight)-(v?.offsetTop||0))+'px')};

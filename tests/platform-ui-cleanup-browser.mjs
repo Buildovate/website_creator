@@ -62,7 +62,7 @@ try{
   await page.locator(`[data-action="open"][data-id="${site.id}"]`).first().click();
   await page.waitForSelector('[data-section="templates"]',{state:'attached'});
   await page.locator('[data-section="templates"]').first().evaluate(el=>el.click());
-  await page.waitForSelector('#kit-settings');await page.locator('#content .eyebrow').filter({hasText:'YOUR ACTIVE DESIGN KIT'}).first().scrollIntoViewIfNeeded();await capture(page,device+'-template-detail');
+  await page.getByRole('button',{name:'Creative direction',exact:true}).click();await page.waitForSelector('#kit-settings');await page.locator('#content .eyebrow').filter({hasText:'YOUR ACTIVE DESIGN KIT'}).first().scrollIntoViewIfNeeded();await capture(page,device+'-template-detail');
   if(phase==='after')assert.ok((await page.locator('#content').textContent()).includes('Ridgeline (Roofing)'));
   await nav(page,'contacts');await page.waitForSelector('.contact-workspace');
   const prepared=device==='phone'?page.locator(`[data-contact-card="${contact.id}"]`):page.locator('.contact-desktop-table tbody tr').filter({has:page.locator(`[data-detail="${contact.id}"]`)}).first();

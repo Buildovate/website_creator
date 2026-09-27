@@ -42,7 +42,7 @@ for(const providers of [[],[{status:'Unavailable',reviews:[]}],[{provider:'Googl
  const wrapper={hidden:true},button={disabled:false,click(){return this.onclick()}},status={},target={};
  const el={dataset:{hideEmptyReviews:'true',reviewSlug:'test',reviewPreview:'false'},closest:()=>wrapper,querySelector:s=>s==='[data-load-reviews]'?button:s==='[data-review-status]'?status:target};
  runInNewContext(readFileSync('public/reviews.js','utf8'),{document:{querySelector:()=>el},window:{},fetch:async()=>({ok:true,json:async()=>({providers,minimum:4})})});
- await button.onclick();assert.equal(wrapper.hidden,providers.every(p=>!p.reviews?.length));
+ await new Promise(resolve=>setImmediate(resolve));assert.equal(wrapper.hidden,providers.every(p=>!p.reviews?.length));
 }
 console.log('PASS #004C: authenticated draft-only visual samples without invented reviews or ratings, publish/query isolation, no hidden promo codes, sample unlock auth/origin/answer, configured finance terms and math, price-book-only service amounts, no lender exits, service/date promotion filters, real unlock validation and empty-review suppression.');
 

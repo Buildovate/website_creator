@@ -1,0 +1,30 @@
+[
+  {
+    "url": "http://127.0.0.1:5173/s/roofing-part2-frames",
+    "name": "15-roof-a-complete-desktop",
+    "width": 1440,
+    "height": 900,
+    "fixedNavigationOmitted": true
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/roofing-part2-frames",
+    "name": "15-roof-a-complete-phone",
+    "width": 390,
+    "height": 844,
+    "fixedNavigationOmitted": true
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/roofing-part2-qa",
+    "name": "15-roof-b-complete-desktop",
+    "width": 1440,
+    "height": 900,
+    "fixedNavigationOmitted": true
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/roofing-part2-qa",
+    "name": "15-roof-b-complete-phone",
+    "width": 390,
+    "height": 844,
+    "fixedNavigationOmitted": true
+  }
+]

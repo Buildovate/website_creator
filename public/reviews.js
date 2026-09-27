@@ -1,7 +1,6 @@
 (() => {
   const el = document.querySelector('[data-review-slug]');
   if (!el) return;
-  const button = el.querySelector('[data-load-reviews]');
   const status = el.querySelector('[data-review-status]');
   const target = el.querySelector('[data-review-results]');
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -17,14 +16,13 @@
   }
 
   function providerSummary(provider, minimum) {
-    if (provider.status) return `<article class="provider-reviews"><a class="provider-name" translate="no" href="${esc(provider.url)}" target="_blank" rel="noopener">${esc(provider.provider)} ↗</a><p>${el.dataset.reviewPreview === 'true' ? esc(provider.status) : 'Read customer feedback on the source profile.'}</p></article>`;
-    const rating = Number.isFinite(provider.rating) ? Number(provider.rating).toFixed(1) + ' / 5' : '';
-    const count = Number.isFinite(provider.count) ? provider.count + ' reviews' : '';
-    return `<article class="provider-reviews"><a class="provider-name" translate="no" href="${esc(provider.url)}" target="_blank" rel="noopener">${esc(provider.provider)} ↗</a>${provider.name ? `<h3>${esc(provider.name)}</h3>` : ''}${rating || count ? `<p class="aggregate-rating">${[rating, count].filter(Boolean).join(' · ')}</p><p>Overall provider rating, independent of featured reviews.</p>` : ''}<p>${provider.provider === 'Google Maps' ? `Google’s relevance-ranked sample${minimum ? ' · selected 4+ star reviews' : ''}.` : 'Available Yelp excerpts. See the source for all reviews.'}</p>${(provider.attributions || []).map(a => `<a href="${esc(a.url)}" rel="noopener">${esc(a.name)}</a>`).join('')}${provider.privacyUrl ? `<p><a href="${esc(provider.privacyUrl)}">Privacy policy</a> · <a href="${esc(provider.termsUrl)}">Terms of use</a></p>` : ''}</article>`;
+    if (provider.status) return el.dataset.reviewPreview === 'true' ? '<p class="provider-state">'+esc(provider.status)+'</p>' : '';
+    const confirmed = Number.isFinite(provider.rating) && provider.rating >= 0 && provider.rating <= 5 && Number.isSafeInteger(provider.count) && provider.count >= 0;
+    const badge = confirmed ? '<article class="provider-reviews provider-rating-badge"><a class="provider-name" translate="no" href="'+esc(provider.url)+'" target="_blank" rel="noopener">'+esc(provider.provider)+' ↗</a><strong>'+provider.rating.toFixed(1)+' / 5</strong><span>'+provider.count.toLocaleString('en-US')+' reviews</span></article>' : '';
+    return '<div class="provider-evidence">'+badge+'<div class="provider-attribution"><small>'+(provider.provider==='Google Maps'?'Google’s relevance-ranked sample'+(minimum?' · selected 4+ star reviews':'')+'.':'Available Yelp excerpts. See the source for all reviews.')+'</small>'+(provider.attributions||[]).map(a=>'<a href="'+esc(a.url)+'" rel="noopener">'+esc(a.name)+'</a>').join('')+(provider.privacyUrl?'<span><a href="'+esc(provider.privacyUrl)+'">Privacy policy</a> · <a href="'+esc(provider.termsUrl)+'">Terms of use</a></span>':'')+'</div></div>';
   }
 
-  button.onclick = async () => {
-    button.disabled = true;
+  const load = async () => {
     status.textContent = 'Loading current provider data…';
     try {
       const response = await fetch('/api/public/' + encodeURIComponent(el.dataset.reviewSlug) + '/reviews' + (el.dataset.reviewPreview === 'true' ? '?preview=1' : ''));
@@ -42,18 +40,16 @@
       if (wrapper) wrapper.hidden = true;
       target.innerHTML = '';
       status.textContent = 'Reviews are temporarily unavailable. Read them at the source links.';
-    } finally {
-      button.disabled = false;
     }
   };
   if (hideEmpty || !('IntersectionObserver' in window)) {
-    button.click();
+    load();
     return;
   }
   const observer = new IntersectionObserver(entries => {
     if (entries.some(entry => entry.isIntersecting)) {
       observer.disconnect();
-      button.click();
+      load();
     }
   }, {rootMargin:'180px'});
   observer.observe(el);

@@ -1,0 +1,2772 @@
+{
+  "Roofing": [
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+      "service": "asphalt shingle install / repair",
+      "slot": "hero",
+      "sha256": "5a9d48796bf9256dd55aa0912332750891f860f858ad0dfa6d4d9524f2ae6c20"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-scope.webp",
+      "service": "asphalt shingle install / repair",
+      "slot": "scope",
+      "sha256": "933b7fdfd5a67de472691b75152d63a8104b0f1a81c6d272dd18420d4c6e3d24"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-process.webp",
+      "service": "asphalt shingle install / repair",
+      "slot": "process",
+      "sha256": "e83895c14c016977b177c653a409f244045f87bdb7baaeaea5d35b273efe8430"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+      "service": "asphalt shingle install / repair",
+      "slot": "thumbnail",
+      "sha256": "5a9d48796bf9256dd55aa0912332750891f860f858ad0dfa6d4d9524f2ae6c20"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-sealing-hero.webp",
+      "service": "roof sealing",
+      "slot": "hero",
+      "sha256": "0edd61b7532ff32fe53158e69b6d075eca6c3c6a2bef4d67bbf4c1648780f6ac"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-sealing-scope.webp",
+      "service": "roof sealing",
+      "slot": "scope",
+      "sha256": "27ee3e3823e3678e9ad2849a0f24962a4c399839bee5a4771e435dc0b9f00ca7"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-sealing-process.webp",
+      "service": "roof sealing",
+      "slot": "process",
+      "sha256": "27c53208ee7e9d2f06d6992ee0f1e31dc8e2c9b4fd2f354d2ba2c73bca3a0352"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-sealing-hero.webp",
+      "service": "roof sealing",
+      "slot": "thumbnail",
+      "sha256": "0edd61b7532ff32fe53158e69b6d075eca6c3c6a2bef4d67bbf4c1648780f6ac"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-storm-damage-hero.webp",
+      "service": "storm damage",
+      "slot": "hero",
+      "sha256": "67ca996ab96d1caba9406c9eb17cca33f0c2fff081e2a38e9d3c1c023950b5d5"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-storm-damage-scope.webp",
+      "service": "storm damage",
+      "slot": "scope",
+      "sha256": "6957ad8b626e937f6671cfcac81bb1b30130392fc30b1e49fba5e0622ba1a226"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-storm-damage-process.webp",
+      "service": "storm damage",
+      "slot": "process",
+      "sha256": "187f0e3c937816058c44695accceacc8df2dee628efd971ec7f66e16af4abc78"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-storm-damage-hero.webp",
+      "service": "storm damage",
+      "slot": "thumbnail",
+      "sha256": "67ca996ab96d1caba9406c9eb17cca33f0c2fff081e2a38e9d3c1c023950b5d5"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-inspections-hero.webp",
+      "service": "inspections",
+      "slot": "hero",
+      "sha256": "0657a85329526034363cfbe87ffc1ac4c12c636981b226b79f51ba885458b10e"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-inspections-scope.webp",
+      "service": "inspections",
+      "slot": "scope",
+      "sha256": "1a0a4a0dd05691c304196c0a10e9eee4c88b65097b799945c734566961ed442a"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-inspections-process.webp",
+      "service": "inspections",
+      "slot": "process",
+      "sha256": "e8529c2ef63c21e30fda8e1ba07b82b81517ae74289c7c7e90a3d796f7dabc12"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-inspections-hero.webp",
+      "service": "inspections",
+      "slot": "thumbnail",
+      "sha256": "0657a85329526034363cfbe87ffc1ac4c12c636981b226b79f51ba885458b10e"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-installation-scope.webp",
+      "service": "roof installation",
+      "slot": "scope",
+      "sha256": "b7de6a399b15ef3ee195cf4b2976504c0acf06c2cae57c49d4fa22dca70eb139"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-installation-process.webp",
+      "service": "roof installation",
+      "slot": "process",
+      "sha256": "4c9a957ff25467253fd0afcf42fa01dea21def2322b141d18a3a37d4f33023af"
+    },
+    {
+      "url": "/assets/service-installation.webp",
+      "service": "roof installation",
+      "slot": "thumbnail",
+      "sha256": "844f0b33b123c07eaa1b752828c170d5fbf28647f96417b684ef08b8dd2a16b4"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "service": "roof repair",
+      "slot": "scope",
+      "sha256": "478460c6e8705f35fb9c822973f4cc1a31bd426ef3cc4dfa6a4de813edaa8ec2"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-repair-process.webp",
+      "service": "roof repair",
+      "slot": "process",
+      "sha256": "72eda981c2b0353ca5f0359ba61d3b87ace5bbd71614db10138e5566fb8b2a20"
+    },
+    {
+      "url": "/assets/service-roof-repair-showpiece.png",
+      "service": "roof repair",
+      "slot": "thumbnail",
+      "sha256": "a96d6613f07d63912a94ba2c49967806c2d2a7cdad7a9ba8dc4c7b39c4ad9505"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-replacement-scope.webp",
+      "service": "roof replacement",
+      "slot": "scope",
+      "sha256": "955a0fdf3397af1a95f00e169bb008bdfca3b5005a7d7d70b0d569a5ad1c0650"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-replacement-process.webp",
+      "service": "roof replacement",
+      "slot": "process",
+      "sha256": "e97a9519bccd4d0dc8b3356dae0e390c74b183cde00651cb1debd4f762c85c85"
+    },
+    {
+      "url": "/assets/service-roof-replacement-showpiece.png",
+      "service": "roof replacement",
+      "slot": "thumbnail",
+      "sha256": "7160d58999c9f7dce8e61f2d48f99a52739d28f281f7c7ac5f85d51bcca6cd76"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingles-scope.webp",
+      "service": "asphalt shingles",
+      "slot": "scope",
+      "sha256": "ccd65c399568d1c077ae07b01bba3de5838e4f14472715703d90de857fe00b5e"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingles-process.webp",
+      "service": "asphalt shingles",
+      "slot": "process",
+      "sha256": "38deeb9a85bb6fdd22b45c8eb626ad5d0c9f46daafb01534e326c319db365e02"
+    },
+    {
+      "url": "/assets/service-shingles.webp",
+      "service": "asphalt shingles",
+      "slot": "thumbnail",
+      "sha256": "4fb80fe00eb5207616a3d67c001237ae52cb952ebf04ca7247fee3467145614e"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-metal-roofing-scope.webp",
+      "service": "metal roofing",
+      "slot": "scope",
+      "sha256": "a9aad2c915d55151e264c52d3ff64edb1184846d82629cb64ef1a4704a49587d"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-metal-roofing-process.webp",
+      "service": "metal roofing",
+      "slot": "process",
+      "sha256": "869cb35cf4e1eff460ef70cf889f0212bf60944d758182e8d0a9e319184590ec"
+    },
+    {
+      "url": "/assets/service-metal.webp",
+      "service": "metal roofing",
+      "slot": "thumbnail",
+      "sha256": "b2936650611c02a092cff7c1c6ecc09d909c34a81007ab8da1f30ba885d3d882"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-flat-roofs-scope.webp",
+      "service": "flat roofs",
+      "slot": "scope",
+      "sha256": "e008ac7641406c28afad2be94397f4f132bee5a8740777269593686e1017f750"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-flat-roofs-process.webp",
+      "service": "flat roofs",
+      "slot": "process",
+      "sha256": "05e2ba5a80e324cc1122b331690e4d8e4e26e96ac8aaab160039ae1406497a0e"
+    },
+    {
+      "url": "/assets/service-flat.webp",
+      "service": "flat roofs",
+      "slot": "thumbnail",
+      "sha256": "27a78b30b055cffc715c4c9b3ab1160c53e535941077a2cfcc119a15d3b2f482"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-maintenance-scope.webp",
+      "service": "roof maintenance",
+      "slot": "scope",
+      "sha256": "7efe6dd27b70c64af1135dce573002efca927254906b3732cfc2647a38650d29"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-maintenance-process.webp",
+      "service": "roof maintenance",
+      "slot": "process",
+      "sha256": "e8fdc2ef274c12f0806df6939f1c7576eb73c668d6e4852142b923cf9e867421"
+    },
+    {
+      "url": "/assets/service-maintenance.webp",
+      "service": "roof maintenance",
+      "slot": "thumbnail",
+      "sha256": "8d7bc037098838e3e8cf713aa3653168937451794a4dc1039557bd17784facd8"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-gutters-scope.webp",
+      "service": "gutters",
+      "slot": "scope",
+      "sha256": "ac470bbf04776726dee3cfa897b095bb17c9ae3be3404f577d4dfa6e0b068914"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-gutters-process.webp",
+      "service": "gutters",
+      "slot": "process",
+      "sha256": "2a7f278cdbfef539d42ff52e360d5302763db9e22ccd17d7fbbb27667eee39ee"
+    },
+    {
+      "url": "/assets/service-gutters.webp",
+      "service": "gutters",
+      "slot": "thumbnail",
+      "sha256": "671cba394c4f399676459bfafd5b4666a662399347c796d0da4b182995d78008"
+    }
+  ],
+  "Concrete": [
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-driveways-hero.webp",
+      "service": "concrete driveways",
+      "slot": "hero",
+      "sha256": "c0a6242e82f1d99b48cb96c42b655a93afa926bca241683703a17b58c58f5873"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-driveways-scope.webp",
+      "service": "concrete driveways",
+      "slot": "scope",
+      "sha256": "647a2aadd5308d7fd06b05aa1cc12c12e4d0943ddbaa18ab20b177227f07c479"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-driveways-process.webp",
+      "service": "concrete driveways",
+      "slot": "process",
+      "sha256": "fbf6f580fa886d08a1a9c373f3bd67ff53de63bdbe1ba3e1ced8d13cac4b9103"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-driveways-hero.webp",
+      "service": "concrete driveways",
+      "slot": "thumbnail",
+      "sha256": "c0a6242e82f1d99b48cb96c42b655a93afa926bca241683703a17b58c58f5873"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-patios-hero.webp",
+      "service": "concrete patios",
+      "slot": "hero",
+      "sha256": "2800279892175e73da6dc2cec42995dddb7b5a7de7ade39048031371a6b84d3a"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-patios-scope.webp",
+      "service": "concrete patios",
+      "slot": "scope",
+      "sha256": "e5653a11c62ff59fde39fca6c4ed642722ab9be758721dbec28c0fcd726ca65e"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-patios-process.webp",
+      "service": "concrete patios",
+      "slot": "process",
+      "sha256": "aae4cbf23b33ebf15b798f01d0204e68ae80f7939ca8fabfa35041f7ca1a8561"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-patios-hero.webp",
+      "service": "concrete patios",
+      "slot": "thumbnail",
+      "sha256": "2800279892175e73da6dc2cec42995dddb7b5a7de7ade39048031371a6b84d3a"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-stamped-concrete-hero.webp",
+      "service": "stamped concrete",
+      "slot": "hero",
+      "sha256": "4a29a510ea3831ecc242b1a8a58f138e0bd0e308d3d7183277001d8983a46cef"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-stamped-concrete-scope.webp",
+      "service": "stamped concrete",
+      "slot": "scope",
+      "sha256": "14659e1ee5b23f58568fad2b3e73847b4974d25f7d47a5cf86f9c48fcc728618"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-stamped-concrete-process.webp",
+      "service": "stamped concrete",
+      "slot": "process",
+      "sha256": "9b16ce60d9f517a6293259ee09aeec8261c4ed35018b4368c99a97e5d08ffa14"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-stamped-concrete-hero.webp",
+      "service": "stamped concrete",
+      "slot": "thumbnail",
+      "sha256": "4a29a510ea3831ecc242b1a8a58f138e0bd0e308d3d7183277001d8983a46cef"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-walkways-hero.webp",
+      "service": "concrete walkways",
+      "slot": "hero",
+      "sha256": "a81332bda20707789d2cb996357051c4be2119274ef67f0da04fa1ec70177c22"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-walkways-scope.webp",
+      "service": "concrete walkways",
+      "slot": "scope",
+      "sha256": "a01ad42836c9da8372b60d71792ba727054b41320dbf238722d3fead59603dba"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-walkways-process.webp",
+      "service": "concrete walkways",
+      "slot": "process",
+      "sha256": "89d21988a2270b795dda3e1a2bfc7a7bdc98492ff7175eacac19863fb3ce4c22"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-walkways-hero.webp",
+      "service": "concrete walkways",
+      "slot": "thumbnail",
+      "sha256": "a81332bda20707789d2cb996357051c4be2119274ef67f0da04fa1ec70177c22"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-foundations-hero.webp",
+      "service": "concrete foundations",
+      "slot": "hero",
+      "sha256": "a97dbf7fc402caa0ebeea07cb7e31d36687e0dd927cca960448e5d65227182df"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-foundations-scope.webp",
+      "service": "concrete foundations",
+      "slot": "scope",
+      "sha256": "604019c93365567d4af39278c7453fca7f97bed2af380feb39ecb7a3ad296cfa"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-foundations-process.webp",
+      "service": "concrete foundations",
+      "slot": "process",
+      "sha256": "331eafd3b481f4e905d98cd893335f46db9d6a44a034f807a86eb688bf2e2702"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-foundations-hero.webp",
+      "service": "concrete foundations",
+      "slot": "thumbnail",
+      "sha256": "a97dbf7fc402caa0ebeea07cb7e31d36687e0dd927cca960448e5d65227182df"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-slabs-hero.webp",
+      "service": "concrete slabs",
+      "slot": "hero",
+      "sha256": "8600c234cc1ed1573cd4041ec8965045cab0220ea0cc4d9501be281ec51d6c35"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-slabs-scope.webp",
+      "service": "concrete slabs",
+      "slot": "scope",
+      "sha256": "a497fe162130af3d3a1595c0524c92981b627c558127073e0f96589be781a68e"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-slabs-process.webp",
+      "service": "concrete slabs",
+      "slot": "process",
+      "sha256": "501a4058354da5e9fcc6e48752247a2237d972aee842e52bc1706d53c46f0ecf"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-slabs-hero.webp",
+      "service": "concrete slabs",
+      "slot": "thumbnail",
+      "sha256": "8600c234cc1ed1573cd4041ec8965045cab0220ea0cc4d9501be281ec51d6c35"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-repair-hero.webp",
+      "service": "concrete repair",
+      "slot": "hero",
+      "sha256": "2b16fe0112965a364c4e008258f250afddfe23da928bb7edbabe4b96708259a7"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-repair-scope.webp",
+      "service": "concrete repair",
+      "slot": "scope",
+      "sha256": "9f94d679ee3bb590925eb11834f6b07f203e7cd1eee8960986cd82fa008687f9"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-repair-process.webp",
+      "service": "concrete repair",
+      "slot": "process",
+      "sha256": "862d12f71fa2b787fb9c7978915ee038d6230265ccc3b2c6101f7a0f1b1d0928"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-concrete-repair-hero.webp",
+      "service": "concrete repair",
+      "slot": "thumbnail",
+      "sha256": "2b16fe0112965a364c4e008258f250afddfe23da928bb7edbabe4b96708259a7"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-decorative-concrete-hero.webp",
+      "service": "decorative concrete",
+      "slot": "hero",
+      "sha256": "47e2c9ecf4cee1b0bf26bcc277297664b060ef9571e184d16f32e028064b638f"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-decorative-concrete-scope.webp",
+      "service": "decorative concrete",
+      "slot": "scope",
+      "sha256": "25c1609133eb9292b2fb157c1c5aa859ea0e26dbe26be32231396dd58e7f41d7"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-decorative-concrete-process.webp",
+      "service": "decorative concrete",
+      "slot": "process",
+      "sha256": "bdcc80271ae5d28e3aaf8312774aff07e6d41a9c2616ac0e078da79800b15cb6"
+    },
+    {
+      "url": "/assets/service-showpiece/concrete-decorative-concrete-hero.webp",
+      "service": "decorative concrete",
+      "slot": "thumbnail",
+      "sha256": "47e2c9ecf4cee1b0bf26bcc277297664b060ef9571e184d16f32e028064b638f"
+    },
+    {
+      "url": "/assets/kit-concrete.webp",
+      "service": "concrete",
+      "slot": "overview",
+      "sha256": "7354c5e21ede849e6513b7ad9e560373c9622819e69f0605a306b28a320b4b79"
+    },
+    {
+      "url": "/assets/trade-enablement/concrete-kit-detail.webp",
+      "service": "concrete",
+      "slot": "overview",
+      "sha256": "7354c5e21ede849e6513b7ad9e560373c9622819e69f0605a306b28a320b4b79"
+    }
+  ],
+  "Pools": [
+    {
+      "url": "/assets/service-showpiece/pools-pool-design-hero.webp",
+      "service": "pool design",
+      "slot": "hero",
+      "sha256": "b0f0e12bda33c9c41791de151e6515381156b4df41ea992673ed41664f2a0cee"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-design-scope.webp",
+      "service": "pool design",
+      "slot": "scope",
+      "sha256": "d222554ae9972a53357297a870c406d3287a05665cd8760a53c22dc4c2b55c43"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-design-process.webp",
+      "service": "pool design",
+      "slot": "process",
+      "sha256": "2f6a9b36b76414549077e5d53073509ac7e7a8bd8408ccb0b75a89974f34374e"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-design-hero.webp",
+      "service": "pool design",
+      "slot": "thumbnail",
+      "sha256": "b0f0e12bda33c9c41791de151e6515381156b4df41ea992673ed41664f2a0cee"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-construction-hero.webp",
+      "service": "pool construction",
+      "slot": "hero",
+      "sha256": "8a9c3ceb8db507ac6bfaf5c63f8e278e8cbcb6bdefe524c4640244827ec2f6a6"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-construction-scope.webp",
+      "service": "pool construction",
+      "slot": "scope",
+      "sha256": "94ffde4bffa973e76436d8541affd0f7034f089a5e94d3b9b468e639f4f19802"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-construction-process.webp",
+      "service": "pool construction",
+      "slot": "process",
+      "sha256": "1bc52a0a04842bb3c3b740390ab05b71aa89964e8fb0884b85607e13fcc5621a"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-construction-hero.webp",
+      "service": "pool construction",
+      "slot": "thumbnail",
+      "sha256": "8a9c3ceb8db507ac6bfaf5c63f8e278e8cbcb6bdefe524c4640244827ec2f6a6"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-remodeling-hero.webp",
+      "service": "pool remodeling",
+      "slot": "hero",
+      "sha256": "9dc716b2a94749d2f6a7ca0ceeb0d5f299f08a778f005995c4e527afeaa56b30"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-remodeling-scope.webp",
+      "service": "pool remodeling",
+      "slot": "scope",
+      "sha256": "c3907de569789a1b519f8d5c108333e902d556e1dcacfd90edc9f186dd486996"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-remodeling-process.webp",
+      "service": "pool remodeling",
+      "slot": "process",
+      "sha256": "0ea1d0330ba178bda5b93e1d1159235293f85813bc3eed72df244d244317fca3"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-remodeling-hero.webp",
+      "service": "pool remodeling",
+      "slot": "thumbnail",
+      "sha256": "9dc716b2a94749d2f6a7ca0ceeb0d5f299f08a778f005995c4e527afeaa56b30"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-resurfacing-hero.webp",
+      "service": "pool resurfacing",
+      "slot": "hero",
+      "sha256": "916caff358da6b236bf40d877cbe0f9291eea059fbffdeacb8fb617b6764d9e8"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-resurfacing-scope.webp",
+      "service": "pool resurfacing",
+      "slot": "scope",
+      "sha256": "c82be6f26995094d3be50c741a4ca7d768fc40e3b7ff8c31bc3ce04d8c27a71f"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-resurfacing-process.webp",
+      "service": "pool resurfacing",
+      "slot": "process",
+      "sha256": "b521e19322f72aed0d2b8714a763e825fb40599848c1c1190e98fc1de438dca7"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-resurfacing-hero.webp",
+      "service": "pool resurfacing",
+      "slot": "thumbnail",
+      "sha256": "916caff358da6b236bf40d877cbe0f9291eea059fbffdeacb8fb617b6764d9e8"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-equipment-hero.webp",
+      "service": "pool equipment",
+      "slot": "hero",
+      "sha256": "61e3d083ff4fe0e76ba6f086f9fa3d306b99212eb3e577f5d92ae0f9e82960e3"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-equipment-scope.webp",
+      "service": "pool equipment",
+      "slot": "scope",
+      "sha256": "5af9fc0a44b31aba151732466dc165a529dfb337d2fa6d05442b3a881c904d4b"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-equipment-process.webp",
+      "service": "pool equipment",
+      "slot": "process",
+      "sha256": "346697b56995f5dd7cabd0da901ae204a304d3ff9e737fcc658eb9e31303e1cf"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-equipment-hero.webp",
+      "service": "pool equipment",
+      "slot": "thumbnail",
+      "sha256": "61e3d083ff4fe0e76ba6f086f9fa3d306b99212eb3e577f5d92ae0f9e82960e3"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-tile-and-coping-hero.webp",
+      "service": "pool tile and coping",
+      "slot": "hero",
+      "sha256": "18b77cac061eaccf32b24a9a325f2741aeee326f9cc362e8aad2904d2a2e5cd8"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-tile-and-coping-scope.webp",
+      "service": "pool tile and coping",
+      "slot": "scope",
+      "sha256": "47b2fe64017f29b99a2d9f0b967630ca870d0ffb182c47f45efa11d717e6d75f"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-tile-and-coping-process.webp",
+      "service": "pool tile and coping",
+      "slot": "process",
+      "sha256": "334d7e363cbe6e3632d9df95f93f327fad11b93f1835e54d41279e08b140c002"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-tile-and-coping-hero.webp",
+      "service": "pool tile and coping",
+      "slot": "thumbnail",
+      "sha256": "18b77cac061eaccf32b24a9a325f2741aeee326f9cc362e8aad2904d2a2e5cd8"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-decking-hero.webp",
+      "service": "pool decking",
+      "slot": "hero",
+      "sha256": "8bd67f2d5774ef1abf65e8c42b117d4aad11a391f92dd45e5d4f3eee33ef5da6"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-decking-scope.webp",
+      "service": "pool decking",
+      "slot": "scope",
+      "sha256": "edbc16ea294a9d754b7cb8b97c6f7db16f179ff043eb05fd8cf52764c0c2b648"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-decking-process.webp",
+      "service": "pool decking",
+      "slot": "process",
+      "sha256": "5c35a7b5ecaedcaa14cdd8056d266923c0592220f095724b7e266f79badba90f"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-decking-hero.webp",
+      "service": "pool decking",
+      "slot": "thumbnail",
+      "sha256": "8bd67f2d5774ef1abf65e8c42b117d4aad11a391f92dd45e5d4f3eee33ef5da6"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-maintenance-hero.webp",
+      "service": "pool maintenance",
+      "slot": "hero",
+      "sha256": "a3861c1f13efbe6a0a6849ff98ebacff3f3e859bdddf38ae6a373fa52875959b"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-maintenance-scope.webp",
+      "service": "pool maintenance",
+      "slot": "scope",
+      "sha256": "8ff180000fad0536d03012f2c6f157c90ccce8d22b1fbf6017db653868005ed0"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-maintenance-process.webp",
+      "service": "pool maintenance",
+      "slot": "process",
+      "sha256": "c6a2ef4b43dee98943c4a8741a9ffe788e0a5820ad2d87d2d4a3bf34c720ef75"
+    },
+    {
+      "url": "/assets/service-showpiece/pools-pool-maintenance-hero.webp",
+      "service": "pool maintenance",
+      "slot": "thumbnail",
+      "sha256": "a3861c1f13efbe6a0a6849ff98ebacff3f3e859bdddf38ae6a373fa52875959b"
+    },
+    {
+      "url": "/assets/kit-pools.webp",
+      "service": "pools",
+      "slot": "overview",
+      "sha256": "8e6504867217d9766d56279528a1f3728a0ac1ced136cb171b5c9e05da41d637"
+    },
+    {
+      "url": "/assets/trade-enablement/pools-kit-detail.webp",
+      "service": "pools",
+      "slot": "overview",
+      "sha256": "8e6504867217d9766d56279528a1f3728a0ac1ced136cb171b5c9e05da41d637"
+    }
+  ],
+  "Plumbing": [
+    {
+      "url": "/assets/service-showpiece/plumbing-leak-detection-scope.webp",
+      "service": "leak detection",
+      "slot": "scope",
+      "sha256": "54faad22814e544c13bc87228c32a9b3ed2c7b45318485eadf740642d9485f99"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-leak-detection-process.webp",
+      "service": "leak detection",
+      "slot": "process",
+      "sha256": "c4548ed71edcd1a1ece9faab3eb80c989cfa74007987cb8ed59bf14c095c6bbd"
+    },
+    {
+      "url": "/assets/service-plumbing-leak-showpiece.png",
+      "service": "leak detection",
+      "slot": "thumbnail",
+      "sha256": "d523a75b37b96140e12f4b5676c40cbb3ee07453044706ad35377bb7df08aa15"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-drain-cleaning-scope.webp",
+      "service": "drain cleaning",
+      "slot": "scope",
+      "sha256": "3ae4a155415eaa4a503660d5d51fff20b0e28019ec49c771fa7a7bab32c7dde5"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-drain-cleaning-process.webp",
+      "service": "drain cleaning",
+      "slot": "process",
+      "sha256": "5f6202dbfe01a6ee2cf4e9f7cc16583f7b1392839bb72a6494d7c899a5944193"
+    },
+    {
+      "url": "/assets/specialties/plumbing-drain-cleaning.webp",
+      "service": "drain cleaning",
+      "slot": "thumbnail",
+      "sha256": "0a2176c090898296ccf8b37228d4f3df8187992f40f237b18a8c1180627b4c57"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-water-heaters-scope.webp",
+      "service": "water heaters",
+      "slot": "scope",
+      "sha256": "f939f939c3668632912bd27f9185370a1633074af719489aa196e31dca5301da"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-water-heaters-process.webp",
+      "service": "water heaters",
+      "slot": "process",
+      "sha256": "2cf6f4997116e1e7945789fe9219353a8148464489e694489dede291b6912320"
+    },
+    {
+      "url": "/assets/specialties/plumbing-water-heaters.webp",
+      "service": "water heaters",
+      "slot": "thumbnail",
+      "sha256": "25c6865e12ec78f8d143ce89140cd16a5f9a83f21351f900da61786c0eea8ea0"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-sewer-lines-scope.webp",
+      "service": "sewer lines",
+      "slot": "scope",
+      "sha256": "76e37d39fd77ab9e69b02bcf80a2baaa901bc7db4f53187a799c0dff33c2ff1b"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-sewer-lines-process.webp",
+      "service": "sewer lines",
+      "slot": "process",
+      "sha256": "921356ad771fa6966892548e63e66b02ad9da4fc19e439c95e6e193bdb223352"
+    },
+    {
+      "url": "/assets/specialties/plumbing-sewer-lines.webp",
+      "service": "sewer lines",
+      "slot": "thumbnail",
+      "sha256": "46ddbc3cba74df0c4030ae81be4f45baed1225a6e4690a93b6148d5365f77d5a"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-repiping-scope.webp",
+      "service": "repiping",
+      "slot": "scope",
+      "sha256": "4238e170b8ac0d8491e8e53e0603c4762a2bd64adebe09b0d4e81b6ddc6c6438"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-repiping-process.webp",
+      "service": "repiping",
+      "slot": "process",
+      "sha256": "72ca3982d2ccaf228dcbb3890b647ff11fd3119c01ba193f0e4e6d9708b0c385"
+    },
+    {
+      "url": "/assets/specialties/plumbing-repiping.webp",
+      "service": "repiping",
+      "slot": "thumbnail",
+      "sha256": "8be7344af1d7a1b1226961079ed9c9e3fb838dfa6bf1c20db16ad4c6b0557375"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-fixture-installation-scope.webp",
+      "service": "fixture installation",
+      "slot": "scope",
+      "sha256": "15be2fcece834285dec15b82ea1fc8ded317830fe3adfa29f0c1f5691cecd5b1"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-fixture-installation-process.webp",
+      "service": "fixture installation",
+      "slot": "process",
+      "sha256": "296667a2a1e7aea2f8cc03b6d2c1b24c8acc3e5b18c2d82af92d857f754de305"
+    },
+    {
+      "url": "/assets/specialties/plumbing-fixture-installation.webp",
+      "service": "fixture installation",
+      "slot": "thumbnail",
+      "sha256": "f47f9e83322d0bbd343c57ee73946b0ffed1abe952a8ed3c5df514d00eaaf6ad"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-water-filtration-scope.webp",
+      "service": "water filtration",
+      "slot": "scope",
+      "sha256": "60506ee435bcc4a3465393a276a0d47893996dfbce3e163a5965e0433187eb74"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-water-filtration-process.webp",
+      "service": "water filtration",
+      "slot": "process",
+      "sha256": "78395f105079f2d088b0edc01b74b72dc6e201805214e62944811b15e2d05227"
+    },
+    {
+      "url": "/assets/specialties/plumbing-water-filtration.webp",
+      "service": "water filtration",
+      "slot": "thumbnail",
+      "sha256": "2f204e8378be9774e18fa7185bfd7f82b0f7d6e13a9466fa723f18e463dcae31"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-plumbing-repair-scope.webp",
+      "service": "plumbing repair",
+      "slot": "scope",
+      "sha256": "13fa20b4caf5ba81c13452fceda07edd7e2a3fadc22e743ebf631a063f9fe13e"
+    },
+    {
+      "url": "/assets/service-showpiece/plumbing-plumbing-repair-process.webp",
+      "service": "plumbing repair",
+      "slot": "process",
+      "sha256": "55643c81eaaeb1857ba40dd36867380f3113aaaec0fd20555c4cec501e0cd972"
+    },
+    {
+      "url": "/assets/specialties/plumbing-plumbing-repair.webp",
+      "service": "plumbing repair",
+      "slot": "thumbnail",
+      "sha256": "c32f37786a709ea892a128840d9aba580f60bfbf35c8b63717ebc45802f43342"
+    }
+  ],
+  "HVAC": [
+    {
+      "url": "/assets/service-showpiece/hvac-air-conditioning-installation-scope.webp",
+      "service": "air conditioning installation",
+      "slot": "scope",
+      "sha256": "25022832c923caa4913a9436a01bcf1ff460a8a206ed6358049f10caaf7a599f"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-air-conditioning-installation-process.webp",
+      "service": "air conditioning installation",
+      "slot": "process",
+      "sha256": "9c8763377f0c9504cade7d12685f7e6ae390cb08f0bd24587aa26033a858fa8c"
+    },
+    {
+      "url": "/assets/service-hvac-install-showpiece.png",
+      "service": "air conditioning installation",
+      "slot": "thumbnail",
+      "sha256": "d91a3a683e0abdcefd80b3fcf5b5c9dbff445a95bd5ae689958efa3e5d4a5193"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-air-conditioning-repair-scope.webp",
+      "service": "air conditioning repair",
+      "slot": "scope",
+      "sha256": "dafdca8be5075967dfcb7740e67275cfe5666d87e5ab9e106c605d4c69f7beef"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-air-conditioning-repair-process.webp",
+      "service": "air conditioning repair",
+      "slot": "process",
+      "sha256": "0c5e210916ad1c122746bf7c13fa7dfeb5989ce8138fbb452396279020ecb9dc"
+    },
+    {
+      "url": "/assets/specialties/hvac-air-conditioning-repair.webp",
+      "service": "air conditioning repair",
+      "slot": "thumbnail",
+      "sha256": "cf0e083018df1f56b3147d126737df42b579ad38cb8484e2b4411c79f3bbbed4"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-heating-installation-scope.webp",
+      "service": "heating installation",
+      "slot": "scope",
+      "sha256": "e4f42fa66ab25aa31947267f02145cd1f9236ce1185d4b14e8b9d27e8b7d674a"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-heating-installation-process.webp",
+      "service": "heating installation",
+      "slot": "process",
+      "sha256": "af48d06fe16bf019b871d0ed9fb3e299ba151792a63156b1e915457fd3f0724e"
+    },
+    {
+      "url": "/assets/specialties/hvac-heating-installation.webp",
+      "service": "heating installation",
+      "slot": "thumbnail",
+      "sha256": "c29f4b8a34b282b6554c9eeee168984b90a9d40d795ef26d8f0cd98e776c915c"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-heating-repair-scope.webp",
+      "service": "heating repair",
+      "slot": "scope",
+      "sha256": "77dca63840e50c885ef23514d1ffa6984f6f083f032d44e70e6ac901badd0c65"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-heating-repair-process.webp",
+      "service": "heating repair",
+      "slot": "process",
+      "sha256": "74ad30d7e10a18790bc588ddff6d28c2bb208e7396caea486b31573f0cb4ab5c"
+    },
+    {
+      "url": "/assets/specialties/hvac-heating-repair.webp",
+      "service": "heating repair",
+      "slot": "thumbnail",
+      "sha256": "70824f50661f76d495c241de9360fa44c3350f1530f4defdd46dc2604e608159"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-heat-pumps-scope.webp",
+      "service": "heat pumps",
+      "slot": "scope",
+      "sha256": "88075c635bafa6fedfb4a12c25638200ef1f6631117e6a1240866ae1a9407de0"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-heat-pumps-process.webp",
+      "service": "heat pumps",
+      "slot": "process",
+      "sha256": "594c65665a70253c717e1acb13c976cee0b5c6afad724f1315b3ad14d0b83373"
+    },
+    {
+      "url": "/assets/specialties/hvac-heat-pumps.webp",
+      "service": "heat pumps",
+      "slot": "thumbnail",
+      "sha256": "bbe73becf1d8841c2738829ce6591193335ab1760bbeb6e044ae9c76afdae910"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-ductwork-scope.webp",
+      "service": "ductwork",
+      "slot": "scope",
+      "sha256": "022786c71463e3bce790b7e3b07a63a665a072a5058f07133e0f670ad7bae4d2"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-ductwork-process.webp",
+      "service": "ductwork",
+      "slot": "process",
+      "sha256": "a4779e366baf829f787c976217d50228f2cae98683b1597f57f61d3612f8c246"
+    },
+    {
+      "url": "/assets/specialties/hvac-ductwork.webp",
+      "service": "ductwork",
+      "slot": "thumbnail",
+      "sha256": "7d9c07d95f1eaac457573cf67b63a92a487877dd88c169217be8b937a6f43e2e"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-indoor-air-quality-scope.webp",
+      "service": "indoor air quality",
+      "slot": "scope",
+      "sha256": "80f15b81000b6ce49da4f16fb1a1f5b959cb3679bb1f126f25a679777110c57b"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-indoor-air-quality-process.webp",
+      "service": "indoor air quality",
+      "slot": "process",
+      "sha256": "b7a9188adbe914294b90d36d85ecc1a4942501b2cd69ef165fce02595ebce75e"
+    },
+    {
+      "url": "/assets/specialties/hvac-indoor-air-quality.webp",
+      "service": "indoor air quality",
+      "slot": "thumbnail",
+      "sha256": "b1c087026281cbeb7bfa79a748db57e383525f71d3374ed1e77ad6ac3053b838"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-system-maintenance-scope.webp",
+      "service": "system maintenance",
+      "slot": "scope",
+      "sha256": "ac5a928cdf03ca0f5b4fb07f61e828fc03b3906a973e372f188044150068f9c3"
+    },
+    {
+      "url": "/assets/service-showpiece/hvac-system-maintenance-process.webp",
+      "service": "system maintenance",
+      "slot": "process",
+      "sha256": "caa2bf273a4f103e13156a1a4bc84627d2a4aa1e815ed5d9003389ab53193cc1"
+    },
+    {
+      "url": "/assets/specialties/hvac-system-maintenance.webp",
+      "service": "system maintenance",
+      "slot": "thumbnail",
+      "sha256": "70eb4ce94b804f3632d1e9738ff6d501b7a6bcb126a4951f21dde05990ec6fde"
+    }
+  ],
+  "Patios": [
+    {
+      "url": "/assets/service-showpiece/patios-patio-covers-scope.webp",
+      "service": "patio covers",
+      "slot": "scope",
+      "sha256": "162f8b047d84bdd4eeb7e0665fc76b5df2be8f94b291743431760ee07a37148d"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-patio-covers-process.webp",
+      "service": "patio covers",
+      "slot": "process",
+      "sha256": "ac104a9ec16314397977ebaa5033c0523ad0735832ec34b45320ed814ba2094d"
+    },
+    {
+      "url": "/assets/specialties/patios-patio-covers.webp",
+      "service": "patio covers",
+      "slot": "thumbnail",
+      "sha256": "de4fd94472f6d105c9f809175f8f23e9eec723e7c339d3a162be503ea6ab28dd"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-motorized-pergolas-scope.webp",
+      "service": "motorized pergolas",
+      "slot": "scope",
+      "sha256": "37a964eb483a19a55c06038f57133a93075dff6c8ff2a51d30972c2a3a9ce04a"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-motorized-pergolas-process.webp",
+      "service": "motorized pergolas",
+      "slot": "process",
+      "sha256": "3b5102a3d9c3d190260ce79f4bfaa4cd9a87dfa875ed44bc53c5450d08c83548"
+    },
+    {
+      "url": "/assets/specialties/patios-motorized-pergolas.webp",
+      "service": "motorized pergolas",
+      "slot": "thumbnail",
+      "sha256": "9b0dcc8eda9ef767ea6f86be4b27847a59f433f48e67bdd83224369d87895673"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-louvered-roofs-scope.webp",
+      "service": "louvered roofs",
+      "slot": "scope",
+      "sha256": "6fdee2bdba56d999b7eb31a299c05fe160c8a78e9d159720c4aeb53b49fa573e"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-louvered-roofs-process.webp",
+      "service": "louvered roofs",
+      "slot": "process",
+      "sha256": "83bcc41c25d1f96704d7cbcb96b95a997ab2edf1ddf00e2e2670e833f23122a7"
+    },
+    {
+      "url": "/assets/specialties/patios-louvered-roofs.webp",
+      "service": "louvered roofs",
+      "slot": "thumbnail",
+      "sha256": "d2a0f9f4521479f6d7582963223794d19fe3a46d8041baa6baeb3c0b672b2667"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-aluminum-patio-covers-scope.webp",
+      "service": "aluminum patio covers",
+      "slot": "scope",
+      "sha256": "6696d6d587df093ab1277da92599cbdfbd2b2bbaadb3e4a1ab33e6685bc2d71c"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-aluminum-patio-covers-process.webp",
+      "service": "aluminum patio covers",
+      "slot": "process",
+      "sha256": "b1bc6cf26dd0ca6cb3119b8e0c08b507b4458791843ea7025715ab11a7da5bfa"
+    },
+    {
+      "url": "/assets/specialties/patios-aluminum-patio-covers.webp",
+      "service": "aluminum patio covers",
+      "slot": "thumbnail",
+      "sha256": "e43a652321d635581fb77633fc8e9f0577a1efe14a38b89e63c6c1c38975b562"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-wood-pergolas-scope.webp",
+      "service": "wood pergolas",
+      "slot": "scope",
+      "sha256": "bbbaaa923203b1165e0f6eab93aff2e7e038858e47ca101393982b1fff4cfaa7"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-wood-pergolas-process.webp",
+      "service": "wood pergolas",
+      "slot": "process",
+      "sha256": "fbd3163ef5d8f91d49b0861074a6df932a6afd82e21702e69dcb8db32dd2b344"
+    },
+    {
+      "url": "/assets/specialties/patios-wood-pergolas.webp",
+      "service": "wood pergolas",
+      "slot": "thumbnail",
+      "sha256": "5493046cfac86534e7d752e7b55d2a34aa048ddf5c2ca9ea2ae20e80e577c331"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-outdoor-living-spaces-scope.webp",
+      "service": "outdoor living spaces",
+      "slot": "scope",
+      "sha256": "b046ba016f1f7d320a6a9122ddf10c0a26de987b02b68fa67e5502f9730eb7e4"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-outdoor-living-spaces-process.webp",
+      "service": "outdoor living spaces",
+      "slot": "process",
+      "sha256": "9fc9dc10bcd18a13b0d5f43700b951a7a4aa39d3bc47c2b11ea049e1444e98b6"
+    },
+    {
+      "url": "/assets/specialties/patios-outdoor-living-spaces.webp",
+      "service": "outdoor living spaces",
+      "slot": "thumbnail",
+      "sha256": "06cc92a55c7c998cecbf096b9c62002098be1bd7a79cd9718a30468bbb58c0ff"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-patio-enclosures-scope.webp",
+      "service": "patio enclosures",
+      "slot": "scope",
+      "sha256": "d0f1b125dac42616f491ab8620c9bff8d3cd59cb109d95bf7beca3d90ee38a21"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-patio-enclosures-process.webp",
+      "service": "patio enclosures",
+      "slot": "process",
+      "sha256": "4526facb135e12458ba190ece57b9c142473b19dd2a215a56b577787421b2d2b"
+    },
+    {
+      "url": "/assets/specialties/patios-patio-enclosures.webp",
+      "service": "patio enclosures",
+      "slot": "thumbnail",
+      "sha256": "2f82de9f6abab04012be3dba6c53342737ed85bd3a8695e5cb83bd2546d1ea01"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-patio-repair-scope.webp",
+      "service": "patio repair",
+      "slot": "scope",
+      "sha256": "820dabfef2cc8132c5017ba8334c520f738126a175718a58a2305638fbcb2f61"
+    },
+    {
+      "url": "/assets/service-showpiece/patios-patio-repair-process.webp",
+      "service": "patio repair",
+      "slot": "process",
+      "sha256": "ed95d12ee611530fd655dd8f2a64912ec880526b291440f9b833232d4fbcd044"
+    },
+    {
+      "url": "/assets/specialties/patios-patio-repair.webp",
+      "service": "patio repair",
+      "slot": "thumbnail",
+      "sha256": "cd07c9a324f929a79cae42d750cc073abf2b573163946a63d272eab0e4349a2b"
+    }
+  ],
+  "Electrical": [
+    {
+      "url": "/assets/service-showpiece/electrical-electrical-repairs-scope.webp",
+      "service": "electrical repairs",
+      "slot": "scope",
+      "sha256": "11023e8b286f03633576ce472ce20d0400f2afcc28c6899562ec146aa8fb303e"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-electrical-repairs-process.webp",
+      "service": "electrical repairs",
+      "slot": "process",
+      "sha256": "d704b0f8d52037fc2c479eb805ecf2006ac62b05de803a2f5a23069596b2574c"
+    },
+    {
+      "url": "/assets/specialties/electrical-electrical-repairs.webp",
+      "service": "electrical repairs",
+      "slot": "thumbnail",
+      "sha256": "9cebbb4a69c0fc0560cb82b9a1cf9bba57c562435bc29a90e574bb682beb1a07"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-panel-upgrades-scope.webp",
+      "service": "panel upgrades",
+      "slot": "scope",
+      "sha256": "5c9c2ce93237ece62b55fdb3a42cf085d72e3a224ad3a9a775f5c0435f9aba2c"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-panel-upgrades-process.webp",
+      "service": "panel upgrades",
+      "slot": "process",
+      "sha256": "25fa3a1e737e85b42d0e6f7e1e5b635a5d23feebb5762ff626c69421b7e15b18"
+    },
+    {
+      "url": "/assets/specialties/electrical-panel-upgrades.webp",
+      "service": "panel upgrades",
+      "slot": "thumbnail",
+      "sha256": "154bce30b406a182bbf53fc3d04f35f22b70bfb128480f64827c55b8c8b4e75f"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-ev-chargers-scope.webp",
+      "service": "ev chargers",
+      "slot": "scope",
+      "sha256": "f2af636fa398faa07618f6489cfa29c50db4590786aee1a990e17fb8bdd44756"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-ev-chargers-process.webp",
+      "service": "ev chargers",
+      "slot": "process",
+      "sha256": "2385e636fe6751bac60f5a25a696a51c6195665137c1345b6d44451dd469da62"
+    },
+    {
+      "url": "/assets/specialties/electrical-ev-chargers.webp",
+      "service": "ev chargers",
+      "slot": "thumbnail",
+      "sha256": "759c3376220ec1aafc7eb43f90e7924c309e8df0a5d31a017957a71ef362c583"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-lighting-installation-scope.webp",
+      "service": "lighting installation",
+      "slot": "scope",
+      "sha256": "f47ec608c2366f8ca6ff2153b0cb71dfcf83197a497425a7394a70b788370fb5"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-lighting-installation-process.webp",
+      "service": "lighting installation",
+      "slot": "process",
+      "sha256": "8b20bd4297b2a8489a48df41822b761d9be20c877ff9e7a34ed477744ad06b67"
+    },
+    {
+      "url": "/assets/specialties/electrical-lighting-installation.webp",
+      "service": "lighting installation",
+      "slot": "thumbnail",
+      "sha256": "375e4e59c6f9c2da08a0fbbd2d3c54588d773c0477690e013015d5a445e265d6"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-rewiring-scope.webp",
+      "service": "rewiring",
+      "slot": "scope",
+      "sha256": "cafd7e2c84cbf238cb6fb743d35aec6738b1cc7dde4a21b02080d2e01240979d"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-rewiring-process.webp",
+      "service": "rewiring",
+      "slot": "process",
+      "sha256": "97e4bbff6d412980861ac577c904d484be8772af03460c8ebd8a80e47206e16a"
+    },
+    {
+      "url": "/assets/specialties/electrical-rewiring.webp",
+      "service": "rewiring",
+      "slot": "thumbnail",
+      "sha256": "1b4ea9d2f493376ac3d1795feadb7d953ab97bc55b72cb09adee71a60753d850"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-outlets-and-switches-scope.webp",
+      "service": "outlets and switches",
+      "slot": "scope",
+      "sha256": "7a034d871dc77e4252dbe6c843e27541f73bd92be5653d06574b00d13cdb69e9"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-outlets-and-switches-process.webp",
+      "service": "outlets and switches",
+      "slot": "process",
+      "sha256": "2300535239abd9d68f76c5751a812ac30fafb27197bf941f85c6a7d16f1d9c9e"
+    },
+    {
+      "url": "/assets/specialties/electrical-outlets-and-switches.webp",
+      "service": "outlets and switches",
+      "slot": "thumbnail",
+      "sha256": "7d1e8985e642b99bd1f91eca74454a1c55801ffa7eca04c61f6fca3285c5809f"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-backup-generators-scope.webp",
+      "service": "backup generators",
+      "slot": "scope",
+      "sha256": "71e7f11f0affb2d20f159a51a92bcc8b18a3e191bfd905b42720e6911ccf3fbb"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-backup-generators-process.webp",
+      "service": "backup generators",
+      "slot": "process",
+      "sha256": "167fcbad44b9223eaafdc8e9f2a6795ba5326a617c4bf98fb4e9cee7baa16522"
+    },
+    {
+      "url": "/assets/specialties/electrical-backup-generators.webp",
+      "service": "backup generators",
+      "slot": "thumbnail",
+      "sha256": "e39d30c5450a05bda8575560455c5bc98daf846ac48da5e88cffa21e1e0c1e4d"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-electrical-inspections-scope.webp",
+      "service": "electrical inspections",
+      "slot": "scope",
+      "sha256": "231ce769685e655d1c43cbe6b25bfbd058dfdd8c531796afaba0796ce0c7ae42"
+    },
+    {
+      "url": "/assets/service-showpiece/electrical-electrical-inspections-process.webp",
+      "service": "electrical inspections",
+      "slot": "process",
+      "sha256": "d3f19da2f7ca9349b47b91585c73d1c0e69ec92bc8a73168dc9c68594f7ddae0"
+    },
+    {
+      "url": "/assets/specialties/electrical-electrical-inspections.webp",
+      "service": "electrical inspections",
+      "slot": "thumbnail",
+      "sha256": "098166682526e0614c7e6c2624a8504282f8f5794a35e7bfa92a3f7175dbc2b2"
+    }
+  ],
+  "Landscaping": [
+    {
+      "url": "/assets/service-showpiece/landscaping-landscape-design-scope.webp",
+      "service": "landscape design",
+      "slot": "scope",
+      "sha256": "60a5cb7c5fc81b0f23199e64e247a0a2806cde514a87eb1ac180abe90b7807be"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-landscape-design-process.webp",
+      "service": "landscape design",
+      "slot": "process",
+      "sha256": "9403bcbbb7dc2696fcccc0789efca35192d7fb4435f6189798542cadba6b9839"
+    },
+    {
+      "url": "/assets/specialties/landscaping-landscape-design.webp",
+      "service": "landscape design",
+      "slot": "thumbnail",
+      "sha256": "36215b5f3d9f10c2e72d8dbb9bf6cc90fbbf8cffa9045c61212c14399dd381e8"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-landscape-installation-scope.webp",
+      "service": "landscape installation",
+      "slot": "scope",
+      "sha256": "2de60acea5fc23dc3906259e152def4dc8e80a54b588373c51258be1ddd96c1c"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-landscape-installation-process.webp",
+      "service": "landscape installation",
+      "slot": "process",
+      "sha256": "bb89afda77b3e6ab5c3fd7e00ffb3d9e8f7e4f6ec8c37a058948539444538811"
+    },
+    {
+      "url": "/assets/specialties/landscaping-landscape-installation.webp",
+      "service": "landscape installation",
+      "slot": "thumbnail",
+      "sha256": "de95c709ff3616918f88a816315bc521a20de07c0fba10adfec6e006db14cb03"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-irrigation-scope.webp",
+      "service": "irrigation",
+      "slot": "scope",
+      "sha256": "0ee2a08dd997cd18d4f124b611a343099715578c5d17547b8f5cbdf26c5af44f"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-irrigation-process.webp",
+      "service": "irrigation",
+      "slot": "process",
+      "sha256": "e5546567137a33f666f3b0df08442670ae45f1b37096a5cd345bfc8ed5cb4d53"
+    },
+    {
+      "url": "/assets/specialties/landscaping-irrigation.webp",
+      "service": "irrigation",
+      "slot": "thumbnail",
+      "sha256": "040abde894c1954846d925bcfd8adf88d4c427d89bdc665ffdf74cd5535865ed"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-lawn-care-scope.webp",
+      "service": "lawn care",
+      "slot": "scope",
+      "sha256": "30629b9acfaf2e905cc229a6d65e4f906c3f73e031e82a623f6aeb4d02480b38"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-lawn-care-process.webp",
+      "service": "lawn care",
+      "slot": "process",
+      "sha256": "5620c18d5baa4badf6a9131eff118b028a4fa9e0ce64f682114cce5321963a5d"
+    },
+    {
+      "url": "/assets/specialties/landscaping-lawn-care.webp",
+      "service": "lawn care",
+      "slot": "thumbnail",
+      "sha256": "9aa2e219b58fe230e1c2cc46b9237eebd6fa582ccbeebf9feedc10fc55895010"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-artificial-turf-scope.webp",
+      "service": "artificial turf",
+      "slot": "scope",
+      "sha256": "56de741e79b92fd6fc77554a30e6df11cd55cc21ef070c3912d0ae6bbe24ad56"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-artificial-turf-process.webp",
+      "service": "artificial turf",
+      "slot": "process",
+      "sha256": "c1351be51e5d85c748525d6ebcb24e78d64af55b57aeaf01632fb152b90726f8"
+    },
+    {
+      "url": "/assets/specialties/landscaping-artificial-turf.webp",
+      "service": "artificial turf",
+      "slot": "thumbnail",
+      "sha256": "f524aeb5b89774b318f6150d1e95c91428490977b9287d02ffd29bde1e6d11ee"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-hardscaping-scope.webp",
+      "service": "hardscaping",
+      "slot": "scope",
+      "sha256": "b62e97da1303247e9ae362dac98c2f12723ebdee7ee3e2af2f3e1e4589172638"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-hardscaping-process.webp",
+      "service": "hardscaping",
+      "slot": "process",
+      "sha256": "eecb1b6e86d6d415521b3cb0fc5d9871fe7a6333f55f6012a265c8ec27d2eadc"
+    },
+    {
+      "url": "/assets/specialties/landscaping-hardscaping.webp",
+      "service": "hardscaping",
+      "slot": "thumbnail",
+      "sha256": "28ed3767c61cc16a88a0543089b3a0ca8af46b44bf61f76c983f73f28d44f93b"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-landscape-lighting-scope.webp",
+      "service": "landscape lighting",
+      "slot": "scope",
+      "sha256": "b98e5c9c121ed5b7e26c5f9a34dd7b1ddb61cf3f64841eb6024a6952c976bf37"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-landscape-lighting-process.webp",
+      "service": "landscape lighting",
+      "slot": "process",
+      "sha256": "fb218d64c469c6b30505c4b125aeaf151867d91533da11993b54b9b6dbc6a9e9"
+    },
+    {
+      "url": "/assets/specialties/landscaping-landscape-lighting.webp",
+      "service": "landscape lighting",
+      "slot": "thumbnail",
+      "sha256": "30134f7790de85754e508640b46d7597f39bc09283b4869b1ca94e6432826fb0"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-seasonal-maintenance-scope.webp",
+      "service": "seasonal maintenance",
+      "slot": "scope",
+      "sha256": "5a4893e96cfc6afe743ad88ce24b3bf16f57b9b8d1730f644a076ae25abd0b00"
+    },
+    {
+      "url": "/assets/service-showpiece/landscaping-seasonal-maintenance-process.webp",
+      "service": "seasonal maintenance",
+      "slot": "process",
+      "sha256": "97f9f972ca2e87423ffb5e4a2ac75d0cc27493b84a5fb5b6e1a9ae23424894e0"
+    },
+    {
+      "url": "/assets/specialties/landscaping-seasonal-maintenance.webp",
+      "service": "seasonal maintenance",
+      "slot": "thumbnail",
+      "sha256": "6761795a25895352b1f616c551893f70651bb351882cd7383a3b876059e12a51"
+    }
+  ],
+  "General Contractors": [
+    {
+      "url": "/assets/service-showpiece/general-contractors-home-remodeling-scope.webp",
+      "service": "home remodeling",
+      "slot": "scope",
+      "sha256": "0548f72dd12b60f25861376c949c7b2b695d44e2a6c9fe3044033c7e0a9960c6"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-home-remodeling-process.webp",
+      "service": "home remodeling",
+      "slot": "process",
+      "sha256": "ff4334bb74effb3f9f16ba0d4d9d461532493bb8bd64a73a033b14dbdbd2698a"
+    },
+    {
+      "url": "/assets/specialties/general-contractors-home-remodeling.webp",
+      "service": "home remodeling",
+      "slot": "thumbnail",
+      "sha256": "b009eb098f3070d9c49ad87d34ad787343f90ecc45d4eaed7061c2c465d5aeb2"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-kitchen-remodeling-scope.webp",
+      "service": "kitchen remodeling",
+      "slot": "scope",
+      "sha256": "68247eab69adf7ec804fde85e7b81fdc0433cdc122e2e483f74bb6dedddee1b3"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-kitchen-remodeling-process.webp",
+      "service": "kitchen remodeling",
+      "slot": "process",
+      "sha256": "dd84f20a2d417edb2b70463cc5ff4cb772600537bf3dc53a3ca65a3e86eddd4a"
+    },
+    {
+      "url": "/assets/specialties/general-contractors-kitchen-remodeling.webp",
+      "service": "kitchen remodeling",
+      "slot": "thumbnail",
+      "sha256": "a586b9c2a9321ac87153dc2b746d150d98dfb6591ca2c83b1b2d5f7c8d3f75fc"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-bathroom-remodeling-scope.webp",
+      "service": "bathroom remodeling",
+      "slot": "scope",
+      "sha256": "eee6ff1b449d508ee674c3a1af54db0e83694434ace098bb148c263e1e849201"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-bathroom-remodeling-process.webp",
+      "service": "bathroom remodeling",
+      "slot": "process",
+      "sha256": "c3945863032798fa272c29e41bfcfd534d08680fac4394027644f39bc2623ecd"
+    },
+    {
+      "url": "/assets/specialties/general-contractors-bathroom-remodeling.webp",
+      "service": "bathroom remodeling",
+      "slot": "thumbnail",
+      "sha256": "9d6bc8bd12207a892fb0ea9f892cfb9a1cef53e1342f994846e95af9f5db7a0e"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-room-additions-scope.webp",
+      "service": "room additions",
+      "slot": "scope",
+      "sha256": "eb8935e6a68498a1d6359b09ce46d344893a6171d0a9749517437ed253c0d9ea"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-room-additions-process.webp",
+      "service": "room additions",
+      "slot": "process",
+      "sha256": "e322a7cc951601cd944d5eb5ee35632a5d3518f9b7a5e9d9beb95bdc5eb40eed"
+    },
+    {
+      "url": "/assets/specialties/general-contractors-room-additions.webp",
+      "service": "room additions",
+      "slot": "thumbnail",
+      "sha256": "b23fe556395ef9b60aa32bd631f8fefb5816dd7c52040152768f3db6f08ab156"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-adus-scope.webp",
+      "service": "adus",
+      "slot": "scope",
+      "sha256": "70a28681515ca7e8c3d29eca0e0a7945f5663795dd08e74145e6d1153a1900ea"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-adus-process.webp",
+      "service": "adus",
+      "slot": "process",
+      "sha256": "3ab9cf2cb44a191d531a70af1daf8f92577d9fb60b4f6918512ad5062a07c31a"
+    },
+    {
+      "url": "/assets/specialties/general-contractors-adus.webp",
+      "service": "adus",
+      "slot": "thumbnail",
+      "sha256": "0a239eec2b247457725bad69c2867987ce3a0da734ace1d301605411b6a665d4"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-new-construction-scope.webp",
+      "service": "new construction",
+      "slot": "scope",
+      "sha256": "892bbc9703d411b68783d70390ad6743f086fe5221454520d93cb68ed96717e7"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-new-construction-process.webp",
+      "service": "new construction",
+      "slot": "process",
+      "sha256": "047f87d8b5f6868eb4cf269fbb542cd089259746b526d7479f8f737e799edc1c"
+    },
+    {
+      "url": "/assets/specialties/general-contractors-new-construction.webp",
+      "service": "new construction",
+      "slot": "thumbnail",
+      "sha256": "b2d8a5cf3ae811e97110392c941a2e6c8db51ad53ce3bfb4d065901f53edbd82"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-commercial-improvements-scope.webp",
+      "service": "commercial improvements",
+      "slot": "scope",
+      "sha256": "39111959cca396e6bc6a854b9ff1eccb381957c73d0e1e0862a79927daffcca2"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-commercial-improvements-process.webp",
+      "service": "commercial improvements",
+      "slot": "process",
+      "sha256": "483906967076d6f6ca9a55233af42c461c19530baf268141127e68720d0949c4"
+    },
+    {
+      "url": "/assets/specialties/general-contractors-commercial-improvements.webp",
+      "service": "commercial improvements",
+      "slot": "thumbnail",
+      "sha256": "06b378c5c9eb3b3b7d8a6257183ddb789bb8c5d0f278115781a131ba440caec6"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-whole-home-renovation-scope.webp",
+      "service": "whole-home renovation",
+      "slot": "scope",
+      "sha256": "5997305c5913c68ef012ba5c98da738bea333ff81ac248b2f9966c54c24da312"
+    },
+    {
+      "url": "/assets/service-showpiece/general-contractors-whole-home-renovation-process.webp",
+      "service": "whole-home renovation",
+      "slot": "process",
+      "sha256": "9f67518a4bea11c846126baa054c53acb5ff2b7f4404fcfcb013dbf38c4a222e"
+    },
+    {
+      "url": "/assets/specialties/general-contractors-whole-home-renovation.webp",
+      "service": "whole-home renovation",
+      "slot": "thumbnail",
+      "sha256": "d755f145914d6394cc44652db12ab1f3b01e4b79bb1a3487823cddddbf51a226"
+    }
+  ],
+  "Flooring": [
+    {
+      "url": "/assets/service-showpiece/flooring-hardwood-flooring-scope.webp",
+      "service": "hardwood flooring",
+      "slot": "scope",
+      "sha256": "b13b5b86c9102026429d10c7e1f37b2950bfbb3874048936558af9659a5da380"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-hardwood-flooring-process.webp",
+      "service": "hardwood flooring",
+      "slot": "process",
+      "sha256": "48b0ff01c2a09de7770d2ae678aac351d8a9fad96ba61e8fbcc1c791bc89070a"
+    },
+    {
+      "url": "/assets/specialties/flooring-hardwood-flooring.webp",
+      "service": "hardwood flooring",
+      "slot": "thumbnail",
+      "sha256": "eafcdc59b3b9a60e587f6050383f79ac8821bb8364675492cce23ad97233629d"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-luxury-vinyl-flooring-scope.webp",
+      "service": "luxury vinyl flooring",
+      "slot": "scope",
+      "sha256": "258741eaae0aa969b0dfa2b8e60b589d967224615c4c376eb4e870d9abcc25b2"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-luxury-vinyl-flooring-process.webp",
+      "service": "luxury vinyl flooring",
+      "slot": "process",
+      "sha256": "65fb4b731a79ba8e504d841f43a54e29a3295e0193ffce5ffb4f966db1d83767"
+    },
+    {
+      "url": "/assets/specialties/flooring-luxury-vinyl-flooring.webp",
+      "service": "luxury vinyl flooring",
+      "slot": "thumbnail",
+      "sha256": "f8794e7a65277905ecd0f18f9ab529ec23c2abd5960bf47b9fc57592786fcbaa"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-laminate-flooring-scope.webp",
+      "service": "laminate flooring",
+      "slot": "scope",
+      "sha256": "6b53542e2ef2fd434bdef673402704fb7f2c6937f3563f51cfc214557e8f41c6"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-laminate-flooring-process.webp",
+      "service": "laminate flooring",
+      "slot": "process",
+      "sha256": "25915b861f1f819626437968f68b7876e49d6b9a0f16e44c0f657b5dc81536fd"
+    },
+    {
+      "url": "/assets/specialties/flooring-laminate-flooring.webp",
+      "service": "laminate flooring",
+      "slot": "thumbnail",
+      "sha256": "a12a716e4f1835f3331705b8792a03ca83399adb3509b4fb65c997f33072f039"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-tile-flooring-scope.webp",
+      "service": "tile flooring",
+      "slot": "scope",
+      "sha256": "832dba63f974070f06b6ee3a0abe5e4c098927815510bfa050dc45a4d7a0b0f6"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-tile-flooring-process.webp",
+      "service": "tile flooring",
+      "slot": "process",
+      "sha256": "5617a3a03ff099019de0f66c268dc3d6b7467ab92ddfaaa60af2114f390d854c"
+    },
+    {
+      "url": "/assets/specialties/flooring-tile-flooring.webp",
+      "service": "tile flooring",
+      "slot": "thumbnail",
+      "sha256": "b2192c39ce2ac4d7207236f62ebbbbf25b4e5f1ce6cc9306bbbb799a1e305b7b"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-floor-refinishing-scope.webp",
+      "service": "floor refinishing",
+      "slot": "scope",
+      "sha256": "e12a1d9b30dbdb40b4106b6c09b33c49417d9ed06cb9ed73a310d4ad2b8ec141"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-floor-refinishing-process.webp",
+      "service": "floor refinishing",
+      "slot": "process",
+      "sha256": "e1e20f592862db4b20dc183a171feda70c0fc788a5cdf0a2bbc62f80f59e234a"
+    },
+    {
+      "url": "/assets/specialties/flooring-floor-refinishing.webp",
+      "service": "floor refinishing",
+      "slot": "thumbnail",
+      "sha256": "46940904aa04d109130461a0549d3da82e00d8feb17ab1a0d6a61801ea644fc0"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-floor-repair-scope.webp",
+      "service": "floor repair",
+      "slot": "scope",
+      "sha256": "271cd937c748fd2402b197303e2034e7a92276fdf9510d87b6348b07184d4b72"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-floor-repair-process.webp",
+      "service": "floor repair",
+      "slot": "process",
+      "sha256": "c0d629852a3b4dabed7c4d9ce2fe3fdf09075a491cd999de5056ee68cb1ebec5"
+    },
+    {
+      "url": "/assets/specialties/flooring-floor-repair.webp",
+      "service": "floor repair",
+      "slot": "thumbnail",
+      "sha256": "3beef9bd23fa98fc9b7b93c5ad8e0ea56ab412c9d58aff1b52468edb41d10300"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-subfloor-preparation-scope.webp",
+      "service": "subfloor preparation",
+      "slot": "scope",
+      "sha256": "082108c9b8b889b84733c632fdc21116b51104d31592f9fbada0286bc479ddd7"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-subfloor-preparation-process.webp",
+      "service": "subfloor preparation",
+      "slot": "process",
+      "sha256": "3d16508719014feeda0b17074b370d5a4ee3ba69821625a3250d9c32a388f194"
+    },
+    {
+      "url": "/assets/specialties/flooring-subfloor-preparation.webp",
+      "service": "subfloor preparation",
+      "slot": "thumbnail",
+      "sha256": "e694d37e0b6482f4b81ae466a4e3bb090419efbfa216c0ef69e3c1b6be346e6e"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-commercial-flooring-scope.webp",
+      "service": "commercial flooring",
+      "slot": "scope",
+      "sha256": "270ea34a2a3713d675fe787c810403fd8221b1a2d6496d4de4b0fa198a1c086a"
+    },
+    {
+      "url": "/assets/service-showpiece/flooring-commercial-flooring-process.webp",
+      "service": "commercial flooring",
+      "slot": "process",
+      "sha256": "2a610285951388b19bb70250d785f59469f6469a6645d3ed7449d4f986c70dc9"
+    },
+    {
+      "url": "/assets/specialties/flooring-commercial-flooring.webp",
+      "service": "commercial flooring",
+      "slot": "thumbnail",
+      "sha256": "e64df5605dccc30a7121f02a4985cb541185a4d09913b62cfddff5225148316d"
+    }
+  ],
+  "Painting": [
+    {
+      "url": "/assets/service-showpiece/painting-interior-painting-scope.webp",
+      "service": "interior painting",
+      "slot": "scope",
+      "sha256": "23b87cec419dc88672364c625e35b7400766e3b1d46a435007ce292b772dbd66"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-interior-painting-process.webp",
+      "service": "interior painting",
+      "slot": "process",
+      "sha256": "e234ba90b2938ab4c527b86aa02edfc9dbdf990011165b1ee84dd11ac0007856"
+    },
+    {
+      "url": "/assets/specialties/painting-interior-painting.webp",
+      "service": "interior painting",
+      "slot": "thumbnail",
+      "sha256": "780e48a48d4e73fcbac5e271fdffac7356918419127fc3e4fc7990ccda0e6902"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-exterior-painting-scope.webp",
+      "service": "exterior painting",
+      "slot": "scope",
+      "sha256": "99dcd2e8d566bd270d4b4519e32c358f87d405e2e1bc886f42070527d065c547"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-exterior-painting-process.webp",
+      "service": "exterior painting",
+      "slot": "process",
+      "sha256": "edcbb7ab347a699902664849db6b6f3a0a12e97ad606b52d3b18160ac2de162c"
+    },
+    {
+      "url": "/assets/specialties/painting-exterior-painting.webp",
+      "service": "exterior painting",
+      "slot": "thumbnail",
+      "sha256": "60b878a30118b427830e434212953872a78709c51fed591a30aa5c9d6b2b175b"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-cabinet-painting-scope.webp",
+      "service": "cabinet painting",
+      "slot": "scope",
+      "sha256": "0bd57151b8dc9d24ea98aa1f27a1bafb364195f33d5e6327ba2a78d9fe0f8192"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-cabinet-painting-process.webp",
+      "service": "cabinet painting",
+      "slot": "process",
+      "sha256": "74b25e9dd18ddf9f36661989f871ca495175fc7a872c2f247a12699493c2c6d3"
+    },
+    {
+      "url": "/assets/specialties/painting-cabinet-painting.webp",
+      "service": "cabinet painting",
+      "slot": "thumbnail",
+      "sha256": "ec074b69bfaf5800d61164db3f2deb7941c6882d54ad4f188a172beff0afece4"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-deck-and-fence-staining-scope.webp",
+      "service": "deck and fence staining",
+      "slot": "scope",
+      "sha256": "9de7a233e2d00960857f1a01fd15ddcb4e4aebace904827516e73b316a6c774d"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-deck-and-fence-staining-process.webp",
+      "service": "deck and fence staining",
+      "slot": "process",
+      "sha256": "95261a08be60d334b0c376a81090d8d8eb1483308f96245090c6048b0a6fcbf5"
+    },
+    {
+      "url": "/assets/specialties/painting-deck-and-fence-staining.webp",
+      "service": "deck and fence staining",
+      "slot": "thumbnail",
+      "sha256": "e3c43e0c77478d8a1fc6de07ea203c9737d4727a57de439874c05e33abf15ef8"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-surface-preparation-scope.webp",
+      "service": "surface preparation",
+      "slot": "scope",
+      "sha256": "3d089bb1698204416135cf08451070af0ce0198472a8fe1a14d829ebd4caaa0a"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-surface-preparation-process.webp",
+      "service": "surface preparation",
+      "slot": "process",
+      "sha256": "4afc3c173863fadce101bde9a5b4aa7b5d6ca402b733be9a2817fcc4d6d57355"
+    },
+    {
+      "url": "/assets/specialties/painting-surface-preparation.webp",
+      "service": "surface preparation",
+      "slot": "thumbnail",
+      "sha256": "6a3cd3ea447ede879ae44166aa244c2fdab663edc68459326ecf5b8244ca1821"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-drywall-repair-scope.webp",
+      "service": "drywall repair",
+      "slot": "scope",
+      "sha256": "d9aabe216e3a2e247ab148589f600c84d3678d9b3f339b1aa63fde76f4fc7be1"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-drywall-repair-process.webp",
+      "service": "drywall repair",
+      "slot": "process",
+      "sha256": "6e49ae25fbd4aecbbbda0421e7af9f2e0775d5fb4146ffbc37e5dd8e30df9eac"
+    },
+    {
+      "url": "/assets/specialties/painting-drywall-repair.webp",
+      "service": "drywall repair",
+      "slot": "thumbnail",
+      "sha256": "8441fd2b73cff9802194bf12d60d8bceb8091621760f9359f27629311270eea0"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-decorative-finishes-scope.webp",
+      "service": "decorative finishes",
+      "slot": "scope",
+      "sha256": "663125cc8396456624556f7ef106cfbe4888eded4ee7a259e61cc28cd757a35e"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-decorative-finishes-process.webp",
+      "service": "decorative finishes",
+      "slot": "process",
+      "sha256": "50f1bed4246af6ad6843e16de8852ba6fcb7ff390620385ffba0a692ebd58fb8"
+    },
+    {
+      "url": "/assets/specialties/painting-decorative-finishes.webp",
+      "service": "decorative finishes",
+      "slot": "thumbnail",
+      "sha256": "8ead00e2ca936abfb57647834245ab5f147eabdd71f1d798d59d955f5e829123"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-commercial-painting-scope.webp",
+      "service": "commercial painting",
+      "slot": "scope",
+      "sha256": "581136585e1ae420596fef0639f92aefc361f9e0fb698f22f3e28e439a645efa"
+    },
+    {
+      "url": "/assets/service-showpiece/painting-commercial-painting-process.webp",
+      "service": "commercial painting",
+      "slot": "process",
+      "sha256": "9ef8fbe22dd5c9a8d3cd7924566fc3a49a809ab31690324cb526c305586568f2"
+    },
+    {
+      "url": "/assets/specialties/painting-commercial-painting.webp",
+      "service": "commercial painting",
+      "slot": "thumbnail",
+      "sha256": "2019e0f38412110268f75153c88ebfe12999b8fcfbc62687a1a4cb63f934f5df"
+    }
+  ],
+  "Fencing": [
+    {
+      "url": "/assets/service-showpiece/fencing-wood-fencing-scope.webp",
+      "service": "wood fencing",
+      "slot": "scope",
+      "sha256": "4295b91f6778f4839f685e115734f86a4cdc65a0530babd0bb8e1430dde8f8c4"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-wood-fencing-process.webp",
+      "service": "wood fencing",
+      "slot": "process",
+      "sha256": "d750d58be7b2dc8f1e4f1a7f53782fcb5e54e7189f76637b8a25a54fdff58d8a"
+    },
+    {
+      "url": "/assets/specialties/fencing-wood-fencing.webp",
+      "service": "wood fencing",
+      "slot": "thumbnail",
+      "sha256": "35f4e02635284363f19a25983153c95a6a1f4038ecb7f110c11bb3a71c3b4495"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-vinyl-fencing-scope.webp",
+      "service": "vinyl fencing",
+      "slot": "scope",
+      "sha256": "798e60b1985fb0d93cc1d7e6b75745a314351eb76a011e0a5598b95f2127fe13"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-vinyl-fencing-process.webp",
+      "service": "vinyl fencing",
+      "slot": "process",
+      "sha256": "0eb614c0cc7576d92ce3a638fd1bab79b66d5170b05e280f093eb0517cc0fcba"
+    },
+    {
+      "url": "/assets/specialties/fencing-vinyl-fencing.webp",
+      "service": "vinyl fencing",
+      "slot": "thumbnail",
+      "sha256": "86d4a5e250424b301b009cfbe538a0f00b58e6dea28b071dfd16ce51c6467bb2"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-metal-fencing-scope.webp",
+      "service": "metal fencing",
+      "slot": "scope",
+      "sha256": "d9715ff423baa30b1013d0467b2520b54bfcea93e3d1221e76d4f682e1eef3df"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-metal-fencing-process.webp",
+      "service": "metal fencing",
+      "slot": "process",
+      "sha256": "40c390a7157b9601641d146ff4453d70d78e19676facd8c753b71ff864644396"
+    },
+    {
+      "url": "/assets/specialties/fencing-metal-fencing.webp",
+      "service": "metal fencing",
+      "slot": "thumbnail",
+      "sha256": "d26e67ae6f4e2cb9298f5b62dc9c2a7eb4c5ea007117410af69546678e777409"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-privacy-fencing-scope.webp",
+      "service": "privacy fencing",
+      "slot": "scope",
+      "sha256": "46bc6da37026366d278226349775ab76ece1ae9d00c03b85ebe96bfcaca12c20"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-privacy-fencing-process.webp",
+      "service": "privacy fencing",
+      "slot": "process",
+      "sha256": "88981d5306171c06ae0112b1ebaf9ffd7fa09f5c6183fcc7ef7db3161d251457"
+    },
+    {
+      "url": "/assets/specialties/fencing-privacy-fencing.webp",
+      "service": "privacy fencing",
+      "slot": "thumbnail",
+      "sha256": "c7a983afdd61e236f61541419043f341b34d3f9c79089c1b32e204a7d4e20de9"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-gates-scope.webp",
+      "service": "gates",
+      "slot": "scope",
+      "sha256": "320dad9d3c5b6ceb8277a15ff6848bf99c8b4618682fc2aa25220d597146e08a"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-gates-process.webp",
+      "service": "gates",
+      "slot": "process",
+      "sha256": "67eb3f55224f7ddf5f35190d2f75749e46c595d214ed353206d2cb0ce7fae3dd"
+    },
+    {
+      "url": "/assets/specialties/fencing-gates.webp",
+      "service": "gates",
+      "slot": "thumbnail",
+      "sha256": "79ebbf06f16c1fe8f820c2f0b9d5d9b04b64d27fd1c951c455d549f1f4bd9c4a"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-fence-repair-scope.webp",
+      "service": "fence repair",
+      "slot": "scope",
+      "sha256": "5fd704ba9f77b6a33fc7012b7e68deb4edd42c477e743f495ba1d968a5da32bd"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-fence-repair-process.webp",
+      "service": "fence repair",
+      "slot": "process",
+      "sha256": "73ff5ee372f6aceaf985b038fb8c5aac0ce710b18083bf0e29de7952b3d6515b"
+    },
+    {
+      "url": "/assets/specialties/fencing-fence-repair.webp",
+      "service": "fence repair",
+      "slot": "thumbnail",
+      "sha256": "f63e26585519ed31e7b3d052a39e8053bfb37e50db91a4b11a028048eaec1c67"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-pool-fencing-scope.webp",
+      "service": "pool fencing",
+      "slot": "scope",
+      "sha256": "471eef8ccd199ad2fdaba37230725fb69efb51330499096b848c116745df245e"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-pool-fencing-process.webp",
+      "service": "pool fencing",
+      "slot": "process",
+      "sha256": "11c1f64f3e8f317499d337f5bd2d685c9a0891b5b804d93f948a4f25fbc1679a"
+    },
+    {
+      "url": "/assets/specialties/fencing-pool-fencing.webp",
+      "service": "pool fencing",
+      "slot": "thumbnail",
+      "sha256": "be4944f47f6ff7ee5b201078eece656231699320cfc1afdf61ffea617ee69516"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-commercial-fencing-scope.webp",
+      "service": "commercial fencing",
+      "slot": "scope",
+      "sha256": "e029701217f831a935e872aca2ddc9d093ab27f5530d4fbd820038dced5e2fee"
+    },
+    {
+      "url": "/assets/service-showpiece/fencing-commercial-fencing-process.webp",
+      "service": "commercial fencing",
+      "slot": "process",
+      "sha256": "8b60faeccb29e9c03325d409cbd1ad0d7751c65a8233196b1ae8a585735e6f1a"
+    },
+    {
+      "url": "/assets/specialties/fencing-commercial-fencing.webp",
+      "service": "commercial fencing",
+      "slot": "thumbnail",
+      "sha256": "bf7360b92c56bd99e87640e19e7f92d76cc09dcb51993c7ff8495efa3f33bb53"
+    }
+  ],
+  "Garage Doors": [
+    {
+      "url": "/assets/service-showpiece/garage-doors-garage-door-installation-scope.webp",
+      "service": "garage door installation",
+      "slot": "scope",
+      "sha256": "35e73f985624515a21c96284d3951f0d20300abd2acf0ef548f8c009679933d3"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-garage-door-installation-process.webp",
+      "service": "garage door installation",
+      "slot": "process",
+      "sha256": "c8c5cb3af67b7e1e2c8da0f4ca550fb11d016b534210bf64cff4443685556633"
+    },
+    {
+      "url": "/assets/specialties/garage-doors-garage-door-installation.webp",
+      "service": "garage door installation",
+      "slot": "thumbnail",
+      "sha256": "151929252b0356b4a26daa253aea1a48ebfa2af234c51feab42b9d5710833413"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-garage-door-repair-scope.webp",
+      "service": "garage door repair",
+      "slot": "scope",
+      "sha256": "59527c4acda0c4f521c840ae038268aabbc50efac0636eaeb77888c13790b4a6"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-garage-door-repair-process.webp",
+      "service": "garage door repair",
+      "slot": "process",
+      "sha256": "62d3c91fc492552dfb2c688b67aa8297f897838ba3fc4e2d3490f01220af6134"
+    },
+    {
+      "url": "/assets/specialties/garage-doors-garage-door-repair.webp",
+      "service": "garage door repair",
+      "slot": "thumbnail",
+      "sha256": "fdf28dc6eb5b14370e74fa8941f2cdc73522fba54e5494e785ea87f65f8d10ad"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-spring-replacement-scope.webp",
+      "service": "spring replacement",
+      "slot": "scope",
+      "sha256": "f239ba1c60394a49847c0bdbe97237c95650d2ff5b3d3b8fa22285b3505cdc8c"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-spring-replacement-process.webp",
+      "service": "spring replacement",
+      "slot": "process",
+      "sha256": "f25c06caff0278c86edd54c89f1f1a2cc83ecd85c83c55f09fc9e125d21b00e7"
+    },
+    {
+      "url": "/assets/specialties/garage-doors-spring-replacement.webp",
+      "service": "spring replacement",
+      "slot": "thumbnail",
+      "sha256": "bbcd55273701aa00271531a6773a62807e9640aed5df2130a7a6c107f754021d"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-opener-installation-scope.webp",
+      "service": "opener installation",
+      "slot": "scope",
+      "sha256": "a776da42fe4a1ef462e43df86898bd15b8bc18113b5d9124ddad89ca7bc854e8"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-opener-installation-process.webp",
+      "service": "opener installation",
+      "slot": "process",
+      "sha256": "6800afbb189fadabeaaccd1fdcb61ec7e379b35e278e65ea3f8cac2118f092ab"
+    },
+    {
+      "url": "/assets/specialties/garage-doors-opener-installation.webp",
+      "service": "opener installation",
+      "slot": "thumbnail",
+      "sha256": "7add6b5f6cb1e65d3149952778e6e76c17cc41e2a27f686f107a2fa5ce940529"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-opener-repair-scope.webp",
+      "service": "opener repair",
+      "slot": "scope",
+      "sha256": "e3612226dc9e1acda4b629b3b29ff9b2330d0572e0a3190cd607650fd83c9590"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-opener-repair-process.webp",
+      "service": "opener repair",
+      "slot": "process",
+      "sha256": "85f37f4cb306bd0d12596c792fbcecfa1552f4fcdb16851209a4b6b49845a878"
+    },
+    {
+      "url": "/assets/specialties/garage-doors-opener-repair.webp",
+      "service": "opener repair",
+      "slot": "thumbnail",
+      "sha256": "8676a2611b0ae0615e4152b0fdfe08f83e0c426d73a716464c6cdee2f7790c13"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-panel-replacement-scope.webp",
+      "service": "panel replacement",
+      "slot": "scope",
+      "sha256": "726c8608a723805f80077cadd0261fd2baf804ab5e71863b206c0ec3b6247dd6"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-panel-replacement-process.webp",
+      "service": "panel replacement",
+      "slot": "process",
+      "sha256": "55808fc62ac71913dded74462556d4f8ed8359c682b00d378c6ecf19a49c0e40"
+    },
+    {
+      "url": "/assets/specialties/garage-doors-panel-replacement.webp",
+      "service": "panel replacement",
+      "slot": "thumbnail",
+      "sha256": "e5e74ce20c656dce28aee59a9701e86f5f8a71f0f695a702f82d09dabcc66c9f"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-weather-sealing-scope.webp",
+      "service": "weather sealing",
+      "slot": "scope",
+      "sha256": "055333b4f146a997c8e1c80fd493b7200049d26ca0c7635c9d6a6ccde571587e"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-weather-sealing-process.webp",
+      "service": "weather sealing",
+      "slot": "process",
+      "sha256": "8a2cb3223b2f705f7b9069b0885c30ada418c328c8086ad39d727f82162bb8e0"
+    },
+    {
+      "url": "/assets/specialties/garage-doors-weather-sealing.webp",
+      "service": "weather sealing",
+      "slot": "thumbnail",
+      "sha256": "62a1ad239f37c6a89d9f9c980934a7428f4324a0aba11644b99031a8ce795f32"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-garage-door-maintenance-scope.webp",
+      "service": "garage door maintenance",
+      "slot": "scope",
+      "sha256": "c4e9111e7f291b0c1439dfeeac681906dd90a9136f53eb01017563bed8c69c83"
+    },
+    {
+      "url": "/assets/service-showpiece/garage-doors-garage-door-maintenance-process.webp",
+      "service": "garage door maintenance",
+      "slot": "process",
+      "sha256": "9b8f1600a132cd8db5ec0ddc7baddb43fa6ec1d30be932c82fcefd1215a9bbb7"
+    },
+    {
+      "url": "/assets/specialties/garage-doors-garage-door-maintenance.webp",
+      "service": "garage door maintenance",
+      "slot": "thumbnail",
+      "sha256": "48989995a9c576cc7893fca525e572a31b3cea89fb29872a42ea70bcad883c70"
+    }
+  ],
+  "Pest Control": [
+    {
+      "url": "/assets/service-showpiece/pest-control-pest-inspections-scope.webp",
+      "service": "pest inspections",
+      "slot": "scope",
+      "sha256": "bc9c92742af5116b210e2563789a59d63430bb31f668013334757c6d7ea45e9d"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-pest-inspections-process.webp",
+      "service": "pest inspections",
+      "slot": "process",
+      "sha256": "8d089a138ea7ffe7b0705cabc7dc1c078e745e5490b94141a79584f4d5e87972"
+    },
+    {
+      "url": "/assets/specialties/pest-control-pest-inspections.webp",
+      "service": "pest inspections",
+      "slot": "thumbnail",
+      "sha256": "cbb557a65e95d79f95ee84fdf1a6a86e294fff4f7c92987fec36b7af732e4edc"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-ant-control-scope.webp",
+      "service": "ant control",
+      "slot": "scope",
+      "sha256": "b96f71dfd9462ac60bbb691db8d942fb80722a21a31137e9201ec5b514706b3b"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-ant-control-process.webp",
+      "service": "ant control",
+      "slot": "process",
+      "sha256": "3274bfe97c31a74d7cf06857d917359b011b119978634e69ba35b470201777a5"
+    },
+    {
+      "url": "/assets/specialties/pest-control-ant-control.webp",
+      "service": "ant control",
+      "slot": "thumbnail",
+      "sha256": "502594694652f7d1c04e8c3be818231a554e41c9c5a506c476ab5f58027634cd"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-rodent-control-scope.webp",
+      "service": "rodent control",
+      "slot": "scope",
+      "sha256": "480ef320d66c3e496115df6a8a3b001c486a0739a2b06d8b76939d977e9e5f7c"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-rodent-control-process.webp",
+      "service": "rodent control",
+      "slot": "process",
+      "sha256": "5021f6b15b4e836713faa1f37d52914244ee6192abdd3baab883a53534cf0fa8"
+    },
+    {
+      "url": "/assets/specialties/pest-control-rodent-control.webp",
+      "service": "rodent control",
+      "slot": "thumbnail",
+      "sha256": "af30516b47b04141919daaeb77bb12b6f471cfffc6e085b543cb9755e42bfcbb"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-termite-inspections-scope.webp",
+      "service": "termite inspections",
+      "slot": "scope",
+      "sha256": "085cddcfbe859ba6117334b6b710c55db598509593b78bae71506fa726788bbb"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-termite-inspections-process.webp",
+      "service": "termite inspections",
+      "slot": "process",
+      "sha256": "e6ffe75665bfc9c3fc516f16370a18eb59dfc8f3157a827b13c198e902e59147"
+    },
+    {
+      "url": "/assets/specialties/pest-control-termite-inspections.webp",
+      "service": "termite inspections",
+      "slot": "thumbnail",
+      "sha256": "853522978166ac7d754e3dd4c665e0580c8e83633e1a7123ca44feea46f7ba1b"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-cockroach-control-scope.webp",
+      "service": "cockroach control",
+      "slot": "scope",
+      "sha256": "88fc66b4ba1e26d51c806ffe8fc22932edcec0f10b66c53adb3847f5f583a5d5"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-cockroach-control-process.webp",
+      "service": "cockroach control",
+      "slot": "process",
+      "sha256": "d1aa4d7882ebf226680f8c40ab5fd3eeb041d330fd58b25af5ddfe5f508b779c"
+    },
+    {
+      "url": "/assets/specialties/pest-control-cockroach-control.webp",
+      "service": "cockroach control",
+      "slot": "thumbnail",
+      "sha256": "e8c9fba7b4bb7086efef189d320c844b92b16874e261303df1930080adc68781"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-spider-control-scope.webp",
+      "service": "spider control",
+      "slot": "scope",
+      "sha256": "975c679a1953a4ca31023f84463662c37cf25ecbc73e807b872e6bd6221a5804"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-spider-control-process.webp",
+      "service": "spider control",
+      "slot": "process",
+      "sha256": "917f62290afe23f746b1001769ede46f0fb7edd33eb33d26b7927b3231d4f22c"
+    },
+    {
+      "url": "/assets/specialties/pest-control-spider-control.webp",
+      "service": "spider control",
+      "slot": "thumbnail",
+      "sha256": "4832ed197a2ef2c27f7a391d64dcdf9c836af05540edfa88354409443f15cbb5"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-mosquito-control-scope.webp",
+      "service": "mosquito control",
+      "slot": "scope",
+      "sha256": "beea7a2983dddc2a2120c7999217f89d746be258fbd40c68dca2b48b48ada64c"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-mosquito-control-process.webp",
+      "service": "mosquito control",
+      "slot": "process",
+      "sha256": "978dc25eb7f6b4fcdbb82d687f3d175f7fc3dcb0d42e5018656714ea702177f5"
+    },
+    {
+      "url": "/assets/specialties/pest-control-mosquito-control.webp",
+      "service": "mosquito control",
+      "slot": "thumbnail",
+      "sha256": "41a999b10f9b4fb21a9861775148e93ef1e5a7af1a46a5692bdcf4a3a57f4b57"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-preventive-maintenance-scope.webp",
+      "service": "preventive maintenance",
+      "slot": "scope",
+      "sha256": "a16528db1806719e15349739b2f8885b533ba2f0eba8b5bac0f01aac836574f4"
+    },
+    {
+      "url": "/assets/service-showpiece/pest-control-preventive-maintenance-process.webp",
+      "service": "preventive maintenance",
+      "slot": "process",
+      "sha256": "a327dfc16fb86c4d562f2756dbb6b8a74197e72c37f314dcf219814aeee04124"
+    },
+    {
+      "url": "/assets/specialties/pest-control-preventive-maintenance.webp",
+      "service": "preventive maintenance",
+      "slot": "thumbnail",
+      "sha256": "962919148c9a105fb35b0df18ab4a0145e0a52f400df5d3509a4b890fc45785a"
+    }
+  ],
+  "Windows/Doors": [
+    {
+      "url": "/assets/service-showpiece/windows-doors-window-replacement-scope.webp",
+      "service": "window replacement",
+      "slot": "scope",
+      "sha256": "4369590a0db6c158fd058b96cae1955130cf5dffbfaa5c9306d1d799e9e50eb3"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-window-replacement-process.webp",
+      "service": "window replacement",
+      "slot": "process",
+      "sha256": "4a84b7d78582f7c781d2f93a6b1ccec983ed12dd7e1ece1a987e62b37a341b8d"
+    },
+    {
+      "url": "/assets/specialties/windows-doors-window-replacement.svg",
+      "service": "window replacement",
+      "slot": "thumbnail",
+      "sha256": "7c7b890e91f4a758acfad5c9dd133e66d9c71d557753226ef336f6b4bffdf96d"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-window-installation-scope.webp",
+      "service": "window installation",
+      "slot": "scope",
+      "sha256": "0b4838c7c0fc4e2be4961d4a1fa86e4b51ea31a6d1d17197b57ba4b9a70942ba"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-window-installation-process.webp",
+      "service": "window installation",
+      "slot": "process",
+      "sha256": "f3f7a4b24209a15d15cbb36bacea8bc64ca094320ccbaa2e7a5fac45e35c4262"
+    },
+    {
+      "url": "/assets/specialties/windows-doors-window-installation.svg",
+      "service": "window installation",
+      "slot": "thumbnail",
+      "sha256": "ac25df2af9c9e833e8955059d79626862d67b28fe4bc5ab5618be631676d4f63"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-energy-efficient-windows-scope.webp",
+      "service": "energy-efficient windows",
+      "slot": "scope",
+      "sha256": "d5a1e81e1fe3c1464e88d7daa90b514dd553d75544bc36758555cc318174b226"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-energy-efficient-windows-process.webp",
+      "service": "energy-efficient windows",
+      "slot": "process",
+      "sha256": "244292f6e7468a0e554da69230e940f091931f9ab41aca01f57f86fe08d79f3d"
+    },
+    {
+      "url": "/assets/specialties/windows-doors-energy-efficient-windows.svg",
+      "service": "energy-efficient windows",
+      "slot": "thumbnail",
+      "sha256": "107cb8a2bab066f672e07bcfa2ca3198aac2e8a6a2fd7ed718069c30905f621e"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-entry-doors-scope.webp",
+      "service": "entry doors",
+      "slot": "scope",
+      "sha256": "d5d34b7d53ede99e929b81cfc416b1baa0fa9990d0a2c757c89281551b8ede81"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-entry-doors-process.webp",
+      "service": "entry doors",
+      "slot": "process",
+      "sha256": "44c9584de752947101d0bfc8f657b2ec5140345aefc1fbde6f265eaf2f5b4c83"
+    },
+    {
+      "url": "/assets/specialties/windows-doors-entry-doors.svg",
+      "service": "entry doors",
+      "slot": "thumbnail",
+      "sha256": "20a0fdf11f525fd56e5d95ce798ad57bfb90d546462c05631de9a8cd2a6c938b"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-patio-doors-scope.webp",
+      "service": "patio doors",
+      "slot": "scope",
+      "sha256": "4ca649bd7beb24663a7cc342abeb01391be6a512d9c0b826a69f0024369dd0d6"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-patio-doors-process.webp",
+      "service": "patio doors",
+      "slot": "process",
+      "sha256": "461a6940963147df2d121ff6ff0e0eedf201f48553c6a2535ce3a752fd9ccdd7"
+    },
+    {
+      "url": "/assets/specialties/windows-doors-patio-doors.svg",
+      "service": "patio doors",
+      "slot": "thumbnail",
+      "sha256": "138cad41ad56e150472dc5a5522afe9e79ebbdb1e6598634437afcc0e78c8d38"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-sliding-glass-doors-scope.webp",
+      "service": "sliding glass doors",
+      "slot": "scope",
+      "sha256": "38d52a334d00ede4807b4663107c3605ecad8d7bd2b71fd036f336d5bc1044d3"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-sliding-glass-doors-process.webp",
+      "service": "sliding glass doors",
+      "slot": "process",
+      "sha256": "7dff609c1e34293933c0de14ef84a6ea9add1b1e207ef30c071a6ef64d40571d"
+    },
+    {
+      "url": "/assets/specialties/windows-doors-sliding-glass-doors.svg",
+      "service": "sliding glass doors",
+      "slot": "thumbnail",
+      "sha256": "7469149dd230a494ce84b47150c6489cea9fd65f2fb6c5c139073736981ce495"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-french-doors-scope.webp",
+      "service": "french doors",
+      "slot": "scope",
+      "sha256": "be931f8edd69b9e19ebebfc8ab97ab26994765e4e93d8c766e7eefa81f85bf2a"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-french-doors-process.webp",
+      "service": "french doors",
+      "slot": "process",
+      "sha256": "12bc33b2aea7b09b5b2b3a28f5a0a2d472bea6bbbb8cec35a776ad670b45b296"
+    },
+    {
+      "url": "/assets/specialties/windows-doors-french-doors.svg",
+      "service": "french doors",
+      "slot": "thumbnail",
+      "sha256": "37e50d291159b68cc85f3128199bd0ba51c06585e5eb20314a85bce04fb6ad2d"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-window-and-door-repair-scope.webp",
+      "service": "window and door repair",
+      "slot": "scope",
+      "sha256": "bdc0c47d75d9ac7468f4eb2eff3a11bf8a1802fa3e86d8880026515b8758c554"
+    },
+    {
+      "url": "/assets/service-showpiece/windows-doors-window-and-door-repair-process.webp",
+      "service": "window and door repair",
+      "slot": "process",
+      "sha256": "56830dcae07a213b6649f5104c5b8d6d2621bdc84f8c9556ca2264269c3510a1"
+    },
+    {
+      "url": "/assets/specialties/windows-doors-window-and-door-repair.svg",
+      "service": "window and door repair",
+      "slot": "thumbnail",
+      "sha256": "79de9a683f0deb254b36798ae9ed9ad953035dea50b73af8ee7b199fcab5f404"
+    },
+    {
+      "url": "/assets/kit-windows-doors.webp",
+      "service": "windows/doors",
+      "slot": "overview",
+      "sha256": "38350611d701721f1c7ac0c50c0a8f77dd018f13eab1826293add60030ee2653"
+    }
+  ],
+  "Solar": [
+    {
+      "url": "/assets/service-showpiece/solar-solar-panel-installation-scope.webp",
+      "service": "solar panel installation",
+      "slot": "scope",
+      "sha256": "9b2f4a208e9a19a71b7d70b89123897be45f05c348a8557e8da1dc51047880ea"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-panel-installation-process.webp",
+      "service": "solar panel installation",
+      "slot": "process",
+      "sha256": "94ac76470edfe30fea998aa6c1ebf7bd871a564a84e3c91d634928021e4f7d83"
+    },
+    {
+      "url": "/assets/specialties/solar-solar-panel-installation.svg",
+      "service": "solar panel installation",
+      "slot": "thumbnail",
+      "sha256": "c02eda702f0af15f672912c320122aa6e5c259f462dc12a8f7d2d8def0046fdb"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-battery-storage-scope.webp",
+      "service": "solar battery storage",
+      "slot": "scope",
+      "sha256": "c4c4cf1c5e3dfd5e4055940d7f4b5cf98c0d4b9d5147d78baf0ecc46a629538b"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-battery-storage-process.webp",
+      "service": "solar battery storage",
+      "slot": "process",
+      "sha256": "359ddada1fa86b05eea157c8e4a780c4d3c031d95dfc62fc5c018927bfc44d7d"
+    },
+    {
+      "url": "/assets/specialties/solar-solar-battery-storage.svg",
+      "service": "solar battery storage",
+      "slot": "thumbnail",
+      "sha256": "bd47480d567b483233f23914ccbed5d14815bb41ef5552f1a7729beceeb61bab"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-system-design-scope.webp",
+      "service": "solar system design",
+      "slot": "scope",
+      "sha256": "b622e7817894ec4b68884b94c722dadea12b6adf29f3d669eadce824ae23c792"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-system-design-process.webp",
+      "service": "solar system design",
+      "slot": "process",
+      "sha256": "55d90569b455a4983ff96b433f54a9df7a7a8429514ad6a26e809a8b7a43d48c"
+    },
+    {
+      "url": "/assets/specialties/solar-solar-system-design.svg",
+      "service": "solar system design",
+      "slot": "thumbnail",
+      "sha256": "b4c7fbbc7e968fc6838c2c7351559f8a504f8021767ff2cb8cdb27da30bd5114"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-panel-maintenance-scope.webp",
+      "service": "solar panel maintenance",
+      "slot": "scope",
+      "sha256": "b263407ce8b3c6a0d3ae0e41040b6fa2fd55f6d62416798186928d4eadf03573"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-panel-maintenance-process.webp",
+      "service": "solar panel maintenance",
+      "slot": "process",
+      "sha256": "cfc332767293394c96fa81dd8dd3b25de2c3a11d51d638c025b53ad2cd32f3b1"
+    },
+    {
+      "url": "/assets/specialties/solar-solar-panel-maintenance.svg",
+      "service": "solar panel maintenance",
+      "slot": "thumbnail",
+      "sha256": "557cf931b4a4c0a095ffed569033f70db39d1e4a02c01925d86973c293fce2f0"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-panel-cleaning-scope.webp",
+      "service": "solar panel cleaning",
+      "slot": "scope",
+      "sha256": "f9f4f1c21aa3822cfeaa95eec99c1b64a98196225682ba8513d584d645d442e5"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-panel-cleaning-process.webp",
+      "service": "solar panel cleaning",
+      "slot": "process",
+      "sha256": "0600cec3fb96b86b8243db52e02e05b177f335fe522adef8128e3070b8f033cf"
+    },
+    {
+      "url": "/assets/specialties/solar-solar-panel-cleaning.svg",
+      "service": "solar panel cleaning",
+      "slot": "thumbnail",
+      "sha256": "793be60d55e6c90a38ca7cd5fe13f9559ea6a67db0eb1df299c5322509af4039"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-inverter-replacement-scope.webp",
+      "service": "solar inverter replacement",
+      "slot": "scope",
+      "sha256": "9317299bc5d9e18ab381b66c21f7dfcdcde3b0ea7a9f72dd12cdcaeca8de93cd"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-inverter-replacement-process.webp",
+      "service": "solar inverter replacement",
+      "slot": "process",
+      "sha256": "6bde86392614f361b6c80a054e4807e329ef926b9997e53d6ae2468b99e6d3cb"
+    },
+    {
+      "url": "/assets/specialties/solar-solar-inverter-replacement.svg",
+      "service": "solar inverter replacement",
+      "slot": "thumbnail",
+      "sha256": "318a9ac840de5352b73e6045035cc03b3ecec94d738a54d05cc9273faa5d1516"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-removal-and-reinstallation-scope.webp",
+      "service": "solar removal and reinstallation",
+      "slot": "scope",
+      "sha256": "11700b9663527b7f1a54cfddafb7627f05430cccbdaae8a1d31a4c2f20ee785a"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-removal-and-reinstallation-process.webp",
+      "service": "solar removal and reinstallation",
+      "slot": "process",
+      "sha256": "bde26d097d583aeb088b34f4c70342e7faa918c4ae9ddccb83ae095e56ee4832"
+    },
+    {
+      "url": "/assets/specialties/solar-solar-removal-and-reinstallation.svg",
+      "service": "solar removal and reinstallation",
+      "slot": "thumbnail",
+      "sha256": "d4ad042e5f9f4e2ba95bdfa789f7622a33e6223f4c28d0fc28bd0b3266315f37"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-system-monitoring-scope.webp",
+      "service": "solar system monitoring",
+      "slot": "scope",
+      "sha256": "b5461eb265ebfae8abd69230db0dcd8b99645a041274b830c71bf557c980ef8e"
+    },
+    {
+      "url": "/assets/service-showpiece/solar-solar-system-monitoring-process.webp",
+      "service": "solar system monitoring",
+      "slot": "process",
+      "sha256": "512826644f813b571cf115957001ecb96ce433ce973a3e43a1479184c87998c2"
+    },
+    {
+      "url": "/assets/specialties/solar-solar-system-monitoring.svg",
+      "service": "solar system monitoring",
+      "slot": "thumbnail",
+      "sha256": "3fd9f1bb834553f05a25efbc84b413abf66a374a6bc6442bf50f1c207186d137"
+    },
+    {
+      "url": "/assets/kit-solar.webp",
+      "service": "solar",
+      "slot": "overview",
+      "sha256": "2291ac5377657c1ea2e2635a406be4eef2110894a7ccc2bddf2adbfc045d0bd1"
+    }
+  ],
+  "Locksmith": [
+    {
+      "url": "/assets/trade-enablement/locksmith-residential-lockout-process.webp",
+      "service": "residential lockout",
+      "slot": "process",
+      "sha256": "45ed8b491e123753c836dc4fce49f1ecbb56845bf8e41862c333c5cbaf27cfce"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-residential-lockout-scope.webp",
+      "service": "residential lockout",
+      "slot": "scope",
+      "sha256": "2580d5af47a3db4bdf0e41eab409f894a7dd840912a7d6ccb6c21ad0c04f54c5"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-residential-lockout-hero.webp",
+      "service": "residential lockout",
+      "slot": "hero",
+      "sha256": "51c792d7936ad9784ed16ae6757f76e95a749b1224a20adbf77fde4c4b3da1d0"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-residential-lockout-hero.webp",
+      "service": "residential lockout",
+      "slot": "thumbnail",
+      "sha256": "51c792d7936ad9784ed16ae6757f76e95a749b1224a20adbf77fde4c4b3da1d0"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-rekeying-scope.webp",
+      "service": "rekeying",
+      "slot": "scope",
+      "sha256": "8707b18c519e9025107ac455f98c2b3f4b8a0991bcf6816e57a4908e99a7894d"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-rekeying-process.webp",
+      "service": "rekeying",
+      "slot": "process",
+      "sha256": "91993a995477e94f6dedfb86ff4cd9af4f988d2a834c38df9cec95d357f08b91"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-rekeying-hero.webp",
+      "service": "rekeying",
+      "slot": "hero",
+      "sha256": "4bda27c0933c1a765af65b6439bbf9912c5ea671e37b217cf7be73551067694c"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-rekeying-hero.webp",
+      "service": "rekeying",
+      "slot": "thumbnail",
+      "sha256": "4bda27c0933c1a765af65b6439bbf9912c5ea671e37b217cf7be73551067694c"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-lock-installation-scope.webp",
+      "service": "lock installation",
+      "slot": "scope",
+      "sha256": "c34c42db3e9284bd9f9196ebf7ec2b9165deb90863f8b4348922f48cdda2dfb2"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-lock-installation-hero.webp",
+      "service": "lock installation",
+      "slot": "hero",
+      "sha256": "a44b57a47b5ed3f9070252d02bced6b127ff2ac9f0c4b23babb51907a1c87208"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-lock-installation-process.webp",
+      "service": "lock installation",
+      "slot": "process",
+      "sha256": "465ac4e13b782f107e156fe002f538e9e531e967da13590f16a03287a3acacf2"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-lock-installation-hero.webp",
+      "service": "lock installation",
+      "slot": "thumbnail",
+      "sha256": "a44b57a47b5ed3f9070252d02bced6b127ff2ac9f0c4b23babb51907a1c87208"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-automotive-lockout-scope.webp",
+      "service": "automotive lockout",
+      "slot": "scope",
+      "sha256": "bb764ccc21c91844fc9769bcf0403657bff0915c4ad995c953eeac070cef8a04"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-automotive-lockout-process.webp",
+      "service": "automotive lockout",
+      "slot": "process",
+      "sha256": "c82886c074621d496ce9d49c8a4c8f922c839592488baccbb5094e71ed03b386"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-automotive-lockout-hero.webp",
+      "service": "automotive lockout",
+      "slot": "hero",
+      "sha256": "ead30e51d22786b010f521b15ce9f07ed0c88675f8bf9805b8f98b7d3c3ac6e9"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-automotive-lockout-hero.webp",
+      "service": "automotive lockout",
+      "slot": "thumbnail",
+      "sha256": "ead30e51d22786b010f521b15ce9f07ed0c88675f8bf9805b8f98b7d3c3ac6e9"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-smart-locks-process.webp",
+      "service": "smart locks",
+      "slot": "process",
+      "sha256": "0d847f1c204ac5160df19bd27e4e1b26e49599d4383de83259a39ea605208190"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-smart-locks-hero.webp",
+      "service": "smart locks",
+      "slot": "hero",
+      "sha256": "d7a547463bfc32f1f82027a5b18790a4eef2087f01c82a87121a1223cb914541"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-smart-locks-scope.webp",
+      "service": "smart locks",
+      "slot": "scope",
+      "sha256": "0579b169dab26ad014f3433fd0ecd289afcc5366f7fa29e30e0038db2bf94ed7"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-smart-locks-hero.webp",
+      "service": "smart locks",
+      "slot": "thumbnail",
+      "sha256": "d7a547463bfc32f1f82027a5b18790a4eef2087f01c82a87121a1223cb914541"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-safe-servicing-process.webp",
+      "service": "safe servicing",
+      "slot": "process",
+      "sha256": "244f4d5dafbc69bb0d42af7ab691fd4815c5e78bc24125cd6b0667514b17659c"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-safe-servicing-hero.webp",
+      "service": "safe servicing",
+      "slot": "hero",
+      "sha256": "bbe800d9dfdf952739ac164c45b92fd7e25b7b458bbac8f2eef3c7914d5285f4"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-safe-servicing-scope.webp",
+      "service": "safe servicing",
+      "slot": "scope",
+      "sha256": "53134c8301c3c788a2dd1f9009abc2c75af6c89a6c10a5e23f3690d068d21255"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-safe-servicing-hero.webp",
+      "service": "safe servicing",
+      "slot": "thumbnail",
+      "sha256": "bbe800d9dfdf952739ac164c45b92fd7e25b7b458bbac8f2eef3c7914d5285f4"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-commercial-access-control-process.webp",
+      "service": "commercial access control",
+      "slot": "process",
+      "sha256": "657de7f8914f7ac270ee16888b6b4b9f1c9df34367c812bba002d313184d6506"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-commercial-access-control-scope.webp",
+      "service": "commercial access control",
+      "slot": "scope",
+      "sha256": "2d99c8f4bb5335ccf1e1af27ec3106459ad0ef31e65e9ba3d04dd0a31ad74475"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-commercial-access-control-hero.webp",
+      "service": "commercial access control",
+      "slot": "hero",
+      "sha256": "e0d9ab8d706aac2f0c9367c87d8e5b8d17e66e5e446cb6b71a27e12b60b2911f"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-commercial-access-control-hero.webp",
+      "service": "commercial access control",
+      "slot": "thumbnail",
+      "sha256": "e0d9ab8d706aac2f0c9367c87d8e5b8d17e66e5e446cb6b71a27e12b60b2911f"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-key-duplication-hero.webp",
+      "service": "key duplication",
+      "slot": "hero",
+      "sha256": "88a8d89129c94f494aa0f90a17191187f902a1ffbadcff1f820c75b9a01201bf"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-key-duplication-process.webp",
+      "service": "key duplication",
+      "slot": "process",
+      "sha256": "0d456867f94363b1757bd025261c04d6b3bf56417cb0088026a9e8e0d0981b95"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-key-duplication-scope.webp",
+      "service": "key duplication",
+      "slot": "scope",
+      "sha256": "55b28a795c1e6a732fffbc5c4f9eb70f036ada080a768e43381339b501b46019"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-key-duplication-hero.webp",
+      "service": "key duplication",
+      "slot": "thumbnail",
+      "sha256": "88a8d89129c94f494aa0f90a17191187f902a1ffbadcff1f820c75b9a01201bf"
+    },
+    {
+      "url": "/assets/kit-locksmith.webp",
+      "service": "locksmith",
+      "slot": "overview",
+      "sha256": "022fea9a5d5a067a350ffdb0000fe3dd2dea73c3f07d55e7163bd09fd5539f93"
+    },
+    {
+      "url": "/assets/trade-enablement/locksmith-kit-detail.webp",
+      "service": "locksmith",
+      "slot": "overview",
+      "sha256": "022fea9a5d5a067a350ffdb0000fe3dd2dea73c3f07d55e7163bd09fd5539f93"
+    }
+  ]
+}

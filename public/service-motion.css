@@ -11,3 +11,10 @@
 /* The same three-card preview, inside the existing platform save lifecycle. */
 .sm-preview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}.sm-preview-grid .sm-card{border:1px solid #ccd6cc}.sm-preview-grid .sm-copy{padding:16px}.sm-preview-grid .sm-copy h3{font-size:18px}.sm-preview-grid .sm-copy p{font-size:14px}.sm-preview-grid .sm-link{font-size:14px}.sm-preview-grid[data-static=true] .sm-rotor,.sm-preview-grid[data-static=true] .sm-front,.sm-preview-grid[data-static=true] .sm-frame{transform:none!important;transition:none!important}.sm-preview-grid[data-static=true] .sm-rear{visibility:hidden}.sm-preview-grid[data-static=true] .sm-frame{opacity:1}.sm-preview-grid[data-phone=true]{grid-template-columns:minmax(0,354px)}
 @media(max-width:600px){.sm-preview-grid{grid-template-columns:1fr}.sm-copy{padding:22px}.sm-copy h3{font-size:23px}.sm-card .sm-visual{aspect-ratio:3/2}}
+
+/* #027A: a two-part drawn frame, one motion and a complete static state. */
+.sm-card[data-service-motion=border_draw] .sm-frame{border:0;opacity:1;transform:none;inset:12px;filter:drop-shadow(0 1px 2px #102d26);--frame-color:#d6f69e}
+.sm-card[data-service-motion=border_draw] .sm-frame:before,.sm-card[data-service-motion=border_draw] .sm-frame:after{content:'';position:absolute;inset:0;border:3px solid var(--frame-color);clip-path:inset(0);transition:clip-path 120ms ease-out}
+.sm-card[data-service-motion=border_draw] .sm-frame:after{inset:7px;border-width:1px;border-color:#fff8}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.sm-ready[data-service-motion=border_draw]:not(:hover):not(:focus-visible):not([data-preview-active=true]) .sm-frame:before{clip-path:inset(0 100% 100% 0)}.sm-ready[data-service-motion=border_draw]:not(:hover):not(:focus-visible):not([data-preview-active=true]) .sm-frame:after{clip-path:inset(100% 0 0 100%)}}
+@media(prefers-reduced-motion:reduce){.sm-card .sm-frame:before,.sm-card .sm-frame:after{transition:none!important;clip-path:inset(0)!important}}
