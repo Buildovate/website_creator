@@ -1,24 +1,29 @@
 {
-  "version": 1,
+  "version": 2,
   "slots": {
     "roofing-financing-ambient": {
-      "version": 1,
-      "id": "roofing-financing-ambient-v1",
+      "version": 2,
+      "id": "roofing-financing-ambient-v2",
       "trade": "Roofing",
       "page": "financing",
       "role": "ambient",
-      "status": "Pending",
-      "connection": "Not connected",
-      "clip": null,
-      "poster": "/assets/planning/roofing-financing-1280.webp",
-      "posterMobile": "/assets/planning/roofing-financing-720.webp",
+      "status": "Ready",
+      "connection": "Installed",
+      "clip": "/assets/planning/clips-phase2/024-1920.mp4",
+      "poster": "/assets/planning/clips-phase2/024-poster-1280.webp",
+      "posterMobile": "/assets/planning/clips-phase2/024-poster-720.webp",
       "sourcePoster": "/assets/trade-art/roofing-customer-detail.webp",
       "duration": 8,
       "width": 1920,
       "height": 1080,
       "muted": true,
       "model": "cinematic_studio_3_0",
-      "purpose": "A quiet pause to understand the roof scope before comparing payment terms."
+      "purpose": "A quiet pause to understand the roof scope before comparing payment terms.",
+      "clipWebm": "/assets/planning/clips-phase2/024-1920.webm",
+      "clipMobile": "/assets/planning/clips-phase2/024-960.mp4",
+      "clipMobileWebm": "/assets/planning/clips-phase2/024-960.webm",
+      "extractedPoster": "/assets/planning/clips-phase2/024-poster-1280.webp",
+      "focalPoint": "50% 65%"
     },
     "roofing-financing-scroll": {
       "version": 1,
@@ -68,14 +73,14 @@
       ]
     },
     "roofing-promotions-ambient": {
-      "version": 1,
-      "id": "roofing-promotions-ambient-v1",
+      "version": 2,
+      "id": "roofing-promotions-ambient-v2",
       "trade": "Roofing",
       "page": "promotions",
       "role": "ambient",
-      "status": "Pending",
-      "connection": "Not connected",
-      "clip": null,
+      "status": "Ready",
+      "connection": "Installed",
+      "clip": "/assets/planning/clips-phase2/026-1920.mp4",
       "poster": "/assets/planning/roofing-promotions-ambient-1280.webp",
       "posterMobile": "/assets/planning/roofing-promotions-ambient-720.webp",
       "sourcePoster": "/assets/trade-art/roofing-craft-banner.webp",
@@ -85,7 +90,7 @@
       "muted": true,
       "model": "cinematic_studio_3_0",
       "purpose": "Consider how roof work can fit around everyday life, without implying an available offer.",
-      "focalPoint": "55% 50%",
+      "focalPoint": "50% 65%",
       "beats": [
         {
           "at": 0,
@@ -102,17 +107,21 @@
           "title": "Back to your day.",
           "body": "A soft branch shadow returns to the opening composition."
         }
-      ]
+      ],
+      "clipWebm": "/assets/planning/clips-phase2/026-1920.webm",
+      "clipMobile": "/assets/planning/clips-phase2/026-960.mp4",
+      "clipMobileWebm": "/assets/planning/clips-phase2/026-960.webm",
+      "extractedPoster": "/assets/planning/clips-phase2/026-poster-1280.webp"
     },
     "roofing-promotions-scroll": {
-      "version": 1,
-      "id": "roofing-promotions-scroll-v1",
+      "version": 2,
+      "id": "roofing-promotions-scroll-v2",
       "trade": "Roofing",
       "page": "promotions",
       "role": "scrub",
-      "status": "Pending",
-      "connection": "Not connected",
-      "clip": null,
+      "status": "Ready",
+      "connection": "Installed",
+      "clip": "/assets/planning/clips-phase2/027-1920.mp4",
       "poster": "/assets/planning/roofing-promotions-scroll-1280.webp",
       "posterMobile": "/assets/planning/roofing-promotions-scroll-720.webp",
       "sourcePoster": "/assets/service-showpiece/roofing-roof-maintenance-scope.webp",
@@ -122,7 +131,7 @@
       "muted": true,
       "model": "seedance_2_5",
       "purpose": "Bring an entered offer into a clear written roofing estimate, without implying an offer exists.",
-      "focalPoint": "62% 48%",
+      "focalPoint": "50% 50%",
       "beats": [
         {
           "at": 0,
@@ -144,7 +153,11 @@
           "title": "Keep one agreed version.",
           "body": "Before moving ahead, keep the estimate that reflects the scope and any offer the contractor has confirmed."
         }
-      ]
+      ],
+      "clipWebm": "/assets/planning/clips-phase2/027-1920.webm",
+      "clipMobile": "/assets/planning/clips-phase2/027-960.mp4",
+      "clipMobileWebm": "/assets/planning/clips-phase2/027-960.webm",
+      "extractedPoster": "/assets/planning/clips-phase2/027-poster-1280.webp"
     }
   }
 }

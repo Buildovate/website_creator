@@ -1,0 +1,140 @@
+[
+  {
+    "ticket": "024",
+    "retake": false,
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_145046_dd20c98b-5c74-4c2f-b51e-a45c6b7a4cb0.mp4",
+    "local": "024-take1/master.mp4",
+    "bytes": 2657841,
+    "sha256": "9d7b700fa5df1c864f9d3ed6e6eb6960f886b66971ac2d075b97955aaa3ab115",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "frames": [
+      "024-take1/frame-0.png",
+      "024-take1/frame-25.png",
+      "024-take1/frame-50.png",
+      "024-take1/frame-75.png",
+      "024-take1/frame-100.png"
+    ]
+  },
+  {
+    "ticket": "025",
+    "retake": false,
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_145329_b6c94b54-b0c3-40b4-a5b8-ffd0426f1f21.mp4",
+    "local": "025-take1/master.mp4",
+    "bytes": 14932623,
+    "sha256": "0ebba0496f045165d303d2a0e6cc4c668095975050b22cd9871e0fe60b0608a6",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "hevc",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "frames": [
+      "025-take1/frame-0.png",
+      "025-take1/frame-25.png",
+      "025-take1/frame-50.png",
+      "025-take1/frame-75.png",
+      "025-take1/frame-100.png"
+    ]
+  },
+  {
+    "ticket": "026",
+    "retake": false,
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_145331_6d8a3d73-b928-4a17-be6d-d2c4f829b0bb.mp4",
+    "local": "promotions-take1/026/master.mp4",
+    "bytes": 3238784,
+    "sha256": "6ee5489d6854a448800b98e3fde20a20fe9397a29c4db5920920b18c9fe5ec80",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "frames": [
+      "promotions-take1/026/frame-0.png",
+      "promotions-take1/026/frame-25.png",
+      "promotions-take1/026/frame-50.png",
+      "promotions-take1/026/frame-75.png",
+      "promotions-take1/026/frame-100.png"
+    ]
+  },
+  {
+    "ticket": "027",
+    "retake": false,
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_145450_268ad343-3fe1-4185-8bf4-21b5c6de8310.mp4",
+    "local": "promotions-take1/027/master.mp4",
+    "bytes": 16638285,
+    "sha256": "a7d9ba77cdb0686c34fef68e62c8a9e00660fb1f2598114e55f893d9c2d0ac40",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "hevc",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "frames": [
+      "promotions-take1/027/frame-0.png",
+      "promotions-take1/027/frame-25.png",
+      "promotions-take1/027/frame-50.png",
+      "promotions-take1/027/frame-75.png",
+      "promotions-take1/027/frame-100.png"
+    ]
+  },
+  {
+    "ticket": "025",
+    "retake": true,
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_150713_119d1dc2-5ffe-42b4-9d03-39a38762740b.mp4",
+    "local": "025-take2/master.mp4",
+    "bytes": 14726377,
+    "sha256": "c1e8ce81f390f3353cc87b791a50b80ff1488ce0665f77eb9a5a584ada2323de",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "hevc",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "frames": [
+      "025-take2/frame-0.png",
+      "025-take2/frame-25.png",
+      "025-take2/frame-50.png",
+      "025-take2/frame-75.png",
+      "025-take2/frame-100.png"
+    ]
+  },
+  {
+    "ticket": "027",
+    "retake": true,
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_151742_47d7d2f2-a629-4318-aefa-fbf596f9bd82.mp4",
+    "local": "027-take2/master.mp4",
+    "bytes": 18448013,
+    "sha256": "3d09c35284828c8f2ba1f43c42aa5c19c58a6f9c5f05b93807cfa4dd9e9d79ba",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "hevc",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "frames": [
+      "027-take2/frame-0.png",
+      "027-take2/frame-25.png",
+      "027-take2/frame-50.png",
+      "027-take2/frame-75.png",
+      "027-take2/frame-100.png"
+    ]
+  }
+]

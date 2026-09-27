@@ -9,7 +9,7 @@ return;}
  const stop=()=>{request++;video.pause();};
  const label=()=>{button.textContent=userPaused?'Play ambient clip':'Pause ambient clip';button.setAttribute('aria-pressed',String(userPaused));};
  const play=()=>{if(!visible||!allowed()||userPaused||failed||document.hidden||!video.getAttribute('src'))return;const n=++request;video.play().then(()=>{if(!visible||!allowed()||userPaused||document.hidden){video.pause();return;}state('playing','Ambient clip playing.');}).catch(()=>{if(n===request&&!failed){userPaused=true;label();state('paused','Still image shown. Play the clip when you choose.');}});};
- const load=()=>{if(!near||!allowed()||failed||!video.dataset.src||video.getAttribute('src'))return;state('loading','Loading clip. Still image remains visible.');video.src=video.dataset.src;video.preload='auto';video.load();};
+ const load=()=>{if(!near||!allowed()||failed||!video.dataset.src||video.getAttribute('src'))return;state('loading','Loading clip. Still image remains visible.');const mobile=matchMedia('(max-width:760px)').matches,mp4=(mobile?video.dataset.srcMobile:undefined)||video.dataset.src,webm=(mobile?video.dataset.srcMobileWebm:undefined)||video.dataset.srcWebm;video.src=(video.canPlayType('video/mp4; codecs="avc1.42E01E"')?mp4:webm)||mp4;video.preload='auto';video.load();};
  video.muted=true;video.loop=true;video.playsInline=true;button.hidden=!allowed();label();
  video.addEventListener('playing',()=>{if(visible&&allowed()&&!userPaused&&!document.hidden)state('playing','Ambient clip playing.');else stop();});
  video.addEventListener('loadeddata',play);
