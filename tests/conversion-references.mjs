@@ -84,3 +84,8 @@ assert.ok(!repairOnly.includes('data-build-video'));assert.ok(repairOnly.include
 roofHtml=await (await request(roofPath,'GET',null,null)).text();
 assert.ok(roofHtml.includes('Discuss my roofing options'));assert.ok(roofHtml.includes('data-build-video'),'Draft preferences must not change the published journey');
 console.log('PASS Roofing #002: repair/replacement copy matches selected services, direct call/inquiry paths, both inquiry intents persisted, one preserved hero film, repair-only/static fallback and published isolation. Local fixture only.');
+
+assert.equal((roofHtml.match(/data-roof-planning-story/g)||[]).length,1,'One distinct Roofing planning story');
+assert.ok(roofHtml.includes('A small leak.<br>A bigger question.'));
+assert.ok(!roofHtml.includes('class="rs-sample"'),'Published narrative has no preview Sample');
+console.log('PASS #020 integration: one planning chapter, homeowner decision copy, no published Sample.');

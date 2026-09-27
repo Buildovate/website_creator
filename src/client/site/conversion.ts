@@ -20,3 +20,16 @@ const contact=document.querySelector('#contact'),dock=document.querySelector<HTM
 if(contact&&dock&&'IntersectionObserver' in window)new IntersectionObserver(entries=>{dock.hidden=entries[0].isIntersecting},{threshold:0}).observe(contact);
 
 if(document.body.classList.contains('cx-roof-repair'))document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>{const target=document.getElementById(link.hash.slice(1));if(!target)return;document.querySelector('.cx-mobile-menu')?.removeAttribute('open');requestAnimationFrame(()=>{const header=document.querySelector('.cx-header');if(header)document.body.style.setProperty('--cx-header-height',header.getBoundingClientRect().height+'px');target.scrollIntoView({block:'start',behavior:'instant'});});}));
+
+
+// #020 only: one-shot decorative settle; all semantic content is already visible.
+document.querySelectorAll<HTMLElement>('[data-roof-planning-story]').forEach(story=>{
+ const photo=story.querySelector<HTMLImageElement>('.rs-image-frame>img');
+ const failed=()=>{if(!photo)return;photo.hidden=true;photo.style.display='none';story.querySelector('.rs-image-frame')?.classList.add('rs-image-failed');const fallback=story.querySelector<HTMLElement>('.rs-image-fallback');if(fallback)fallback.hidden=false};
+ photo?.addEventListener('error',failed,{once:true});if(photo?.complete&&!photo.naturalWidth)failed();
+ if(!('IntersectionObserver' in window)||reduce.matches||!matchMedia('(hover:hover) and (min-width:761px)').matches||document.body.dataset.cxMotion!=='true')return;
+ story.classList.add('rs-awaiting');
+ const settle=()=>{story.classList.add('rs-settled');story.classList.remove('rs-awaiting')};
+ const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){settle();observer.disconnect()}},{rootMargin:'0px 0px -40% 0px',threshold:0});observer.observe(story);
+ reduce.addEventListener('change',()=>{if(reduce.matches){settle();observer.disconnect()}});
+});

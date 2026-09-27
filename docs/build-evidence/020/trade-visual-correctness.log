@@ -1,0 +1,14 @@
+✔ all 140 services use only their own trade photography in published and sample layouts (134.3357ms)
+✔ the artwork audit rejects a wrong trade tag and an incorrectly sourced photo (1.7379ms)
+✔ all 17 decorated homepages render each section once in all three layouts (278.1678ms)
+✔ published maps require real located projects for every trade and layout (180.7451ms)
+✔ sample map pins come from configured service cities with a no-JS baseline (0.5874ms)
+✔ save exhaustive audit coverage (0.833ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 602.909

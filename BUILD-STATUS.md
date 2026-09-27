@@ -1,5 +1,10 @@
 # BUILD STATUS
 
+## #020 — Distinct Roofing mid-page story
+
+**Done locally.** One photographic planning chapter explains whether a leak calls for a contained repair or a broader look. Existing Roofing imagery, Planning questions toggle, native inquiry link and saved publication boundaries are reused. Text and action stay visible during a decorative 120ms settle; touch, reduced motion and no-JS are static. 61 regression scripts, 30 new server checks, 3 conversion assertions, 58 new browser assertions, 13 browser suites and 208 platform states passed. 22 captures, 8 Vite 200s, no sampled story layout shift, zero credits. Restored 1615 evidence files and verified 262 unrelated files unchanged. [Evidence](docs/build-evidence/020/README.md). #021 remains Not started.
+
+
 ## #019 — Accessible thumbnail motion primitives
 
 **Done locally.** Roofing Services overview offers photo-only 3D flip, gentle zoom and corner frame, plus static fallback. Names, descriptions, captions and links never animate away. Saved owner effect/lock/seed and three-card preview reuse the Questionnaire. Keyboard, touch, reduced motion, no JavaScript and failed/partial photos retain native navigation. Build/typecheck, 60 regression scripts, 30 new server checks, 167 new browser assertions, 12 browser suites and 208 platform states passed; sampled motion causes zero layout shift. 44 captures and 13 restarted Vite 200s. Restored 1464 prior evidence files; 262 unrelated hashes preserved. [Evidence](docs/build-evidence/019/README.md). Zero credits; #020 remains Not started.

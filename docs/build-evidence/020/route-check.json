@@ -1,0 +1,41 @@
+{
+  "command": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5173",
+  "results": [
+    {
+      "url": "http://127.0.0.1:5173/s/story-020-enabled",
+      "status": 200,
+      "chapter": true
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/story-020-enabled?preview=1",
+      "status": 200,
+      "chapter": true
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/story-020-disabled",
+      "status": 200,
+      "chapter": false
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/story-020-disabled?preview=1",
+      "status": 200,
+      "chapter": false
+    },
+    {
+      "url": "http://127.0.0.1:5173/conversion.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/conversion.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/assets/stories/roofing.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "status": 200
+    }
+  ]
+}
