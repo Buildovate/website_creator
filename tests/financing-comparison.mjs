@@ -57,7 +57,7 @@ const ctx={document:{querySelector:()=>inquiry,querySelectorAll:()=>[],createEle
 runInNewContext(built.outputFiles[0].text,ctx);ctx.Finance.mountFinanceComparison(root);
 cards[3].querySelector('[data-choose-plan]').listeners.click({preventDefault(){}});assert.equal(fields.financingPlanId.value,'zero');assert.equal(fields.financingMonthly.value,'333.33');assert.equal(fields.name.focused,true);
 cost.value='9000';cost.listeners.input();assert.equal(fields.financingMonthly.value,'500.00');assert.equal(fields.financingAmount.value,'9000.00');
-radios[0].checked=false;radios[2].checked=true;radios[2].listeners.change();assert.equal(fields.financingDown.value,'1800.00');assert.equal(fields.financingMonthly.value,'400.00');assert.match(summary.textContent,/\$1,800.00 down/);
+radios[0].checked=false;radios[2].checked=true;radios[2].listeners.change();assert.equal(fields.financingDown.value,'1800.00');assert.equal(fields.financingMonthly.value,'400.00');assert.match(summary.textContent,/\$1,800 down/);
 cost.value='';cost.listeners.input();assert.equal(summary.hidden,true);assert.equal(fields.financingPlanId.value,'');assert.equal(cards[0].querySelector('[data-choose-plan]').attributes['aria-disabled'],'true');
 slider.value='6000';slider.listeners.input();assert.equal(fields.financingMonthly.value,'266.67');
 const origin='https://test.local';

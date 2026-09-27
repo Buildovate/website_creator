@@ -1,0 +1,34 @@
+[
+  {
+    "file": "financing-1920.mp4",
+    "firstFrame": 0,
+    "lastFrame": 143,
+    "meanAbsoluteRGBDifference": 0.8428645833333334,
+    "psnrDB": 45.47786095973194,
+    "review": "Last half-second dissolves to first composition; no visible loop jump. Compression differences only."
+  },
+  {
+    "file": "financing-1920.webm",
+    "firstFrame": 0,
+    "lastFrame": 143,
+    "meanAbsoluteRGBDifference": 1.0863599537037036,
+    "psnrDB": 44.01588285847307,
+    "review": "Last half-second dissolves to first composition; no visible loop jump. Compression differences only."
+  },
+  {
+    "file": "financing-960.mp4",
+    "firstFrame": 0,
+    "lastFrame": 143,
+    "meanAbsoluteRGBDifference": 1.3728645833333333,
+    "psnrDB": 41.838578229856516,
+    "review": "Last half-second dissolves to first composition; no visible loop jump. Compression differences only."
+  },
+  {
+    "file": "financing-960.webm",
+    "firstFrame": 0,
+    "lastFrame": 143,
+    "meanAbsoluteRGBDifference": 1.6061168981481482,
+    "psnrDB": 40.88097081977497,
+    "review": "Last half-second dissolves to first composition; no visible loop jump. Compression differences only."
+  }
+]

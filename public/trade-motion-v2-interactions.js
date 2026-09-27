@@ -67,7 +67,7 @@ export function mountMotionV2(clock) {
      alpha*=clamp((firstText-header)/40);
     }
     card.style.opacity=String(alpha);card.style.transform='none';copy.style.opacity=String(text);
-    card.querySelector('figcaption').style.opacity=String(text);
+    const caption=card.querySelector('figcaption');if(caption)caption.style.opacity=String(text);
     card.style.pointerEvents=alpha>.1&&i===active?'auto':'none';
    });
    root.dataset.stackActive=String(active);root.dataset.stackProgress=p.toFixed(4);

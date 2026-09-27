@@ -158,6 +158,32 @@
       "clipMobile": "/assets/planning/clips-phase2/027-960.mp4",
       "clipMobileWebm": "/assets/planning/clips-phase2/027-960.webm",
       "extractedPoster": "/assets/planning/clips-phase2/027-poster-1280.webp"
+    },
+    "roofing-financing-chapter": {
+      "version": 1,
+      "id": "roofing-financing-chapter-v1",
+      "trade": "Roofing",
+      "page": "financing",
+      "role": "ambient",
+      "status": "Ready",
+      "connection": "Installed",
+      "clip": "/assets/planning/027A-part1/financing-1920.mp4",
+      "poster": "/assets/planning/027A-part1/financing-poster-1280.webp",
+      "posterMobile": "/assets/planning/027A-part1/financing-poster-720.webp",
+      "sourcePoster": "/assets/service-showpiece/roofing-inspections-hero.webp",
+      "duration": 6,
+      "width": 1920,
+      "height": 1080,
+      "muted": true,
+      "model": "seedance_2_5",
+      "purpose": "A quiet pause to understand the roof scope before comparing payment terms.",
+      "clipWebm": "/assets/planning/027A-part1/financing-1920.webm",
+      "clipMobile": "/assets/planning/027A-part1/financing-960.mp4",
+      "clipMobileWebm": "/assets/planning/027A-part1/financing-960.webm",
+      "extractedPoster": "/assets/planning/027A-part1/financing-poster-1280.webp",
+      "focalPoint": "50% 50%",
+      "seconds": 6,
+      "source": "025-take2 clean opening"
     }
   }
 }

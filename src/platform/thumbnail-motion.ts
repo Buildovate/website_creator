@@ -11,5 +11,5 @@ export function cleanThumbnailMotion(input:any={},previous:any={},generation='')
 }
 const esc=(v:string)=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 export function thumbnailVisual(name:string,src:string,rear:string,effect:ThumbEffect){
- return '<span class="sm-visual" data-image-state="loading"><span class="sm-fallback" aria-hidden="true">'+esc(name)+'</span><span class="sm-rotor"><img class="sm-front" src="'+esc(src)+'" alt="Illustrative '+esc(name.toLowerCase())+' photograph" width="900" height="600" loading="lazy">'+(effect==='flip_3d'&&rear?'<img class="sm-rear" src="'+esc(rear)+'" alt="" aria-hidden="true" width="900" height="600" loading="lazy">':'')+'</span><span class="sm-frame" aria-hidden="true"></span></span>';
+ return '<span class="sm-visual" data-image-state="loading"><span class="sm-fallback" aria-hidden="true">'+esc(name)+'</span><span class="sm-rotor"><img class="sm-front" src="'+esc(src)+'" alt="'+esc(name.toLowerCase())+' photograph" width="900" height="600" loading="lazy">'+(effect==='flip_3d'&&rear?'<img class="sm-rear" src="'+esc(rear)+'" alt="" aria-hidden="true" width="900" height="600" loading="lazy">':'')+'</span><span class="sm-frame" aria-hidden="true"></span></span>';
 }

@@ -1,5 +1,6 @@
 import catalog from '../../public/planning-films.json' with {type:'json'};
 import {serviceLayoutVariant} from '../service-content.js';
+export const financingChapter=catalog.slots['roofing-financing-chapter'];
 export const financingAmbient=catalog.slots['roofing-financing-ambient'];
 export const financingScroll=catalog.slots['roofing-financing-scroll'];
 export const promotionsAmbient=catalog.slots['roofing-promotions-ambient'];

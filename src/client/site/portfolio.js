@@ -28,7 +28,7 @@ function mountPortfolio() {
       if (p.demoImage) {
         const im = document.createElement("img");
         im.src = p.demoImage;
-        im.alt = "Illustrative " + p.service + " photograph";
+        im.alt = "" + p.service + " photograph";
         comparison.append(im);
       }
       div.append(comparison);

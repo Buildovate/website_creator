@@ -3,14 +3,15 @@ document.querySelectorAll('[data-planning-ambient]').forEach(video=>mountAmbient
 const planningPage=document.querySelector<HTMLElement>('[data-planning-page]');
 if(planningPage){const header=document.querySelector('header'),update=()=>planningPage.style.setProperty('--planning-header',Math.ceil(header?.getBoundingClientRect().height||80)+'px');update();if(header)new ResizeObserver(update).observe(header);}
 import {financingEstimate,FINANCING_DISCLOSURE} from '../../platform/constitution.js';
-const money=(value:number)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(value);
+const money=(value:number)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:Number.isInteger(value)?0:2,maximumFractionDigits:2}).format(value);
 document.querySelectorAll<HTMLFormElement>('[data-financing-calculator]').forEach(form=>{
  const approved=JSON.parse(form.dataset.approvedPlans||'null') as {id:string;apr:number;months:number}[]|null;
  const sync=()=>{if(!approved)return;const selected=approved.find(p=>p.id===(form.elements.namedItem('program') as HTMLSelectElement).value);if(!selected)throw Error('Choose a configured program.');(form.elements.namedItem('apr') as HTMLInputElement).value=String(selected.apr);(form.elements.namedItem('months') as HTMLInputElement).value=String(selected.months);};
+ for(const input of form.querySelectorAll<HTMLInputElement>('[name=amount],[name=downPayment]')){input.type='text';input.inputMode='decimal';input.addEventListener('blur',()=>{const value=Number(input.value.replace(/,/g,''));if(input.value.trim()&&Number.isFinite(value))input.value=value.toLocaleString('en-US',{maximumFractionDigits:2});});}
  const result=form.querySelector<HTMLElement>('[data-finance-result]')!;
  const rows=[...form.querySelectorAll<HTMLElement>('[data-finance-scenario]')];
  const status=form.querySelector<HTMLElement>('[data-comparison-status]')!;
- const value=(name:string)=>{const input=form.elements.namedItem(name) as HTMLInputElement;if(!input.value.trim())throw Error('Enter all four calculator values.');return Number(input.value);};
+ const value=(name:string)=>{const input=form.elements.namedItem(name) as HTMLInputElement;if(!input.value.trim())throw Error('Enter all four calculator values.');return Number(input.value.replace(/,/g,''));};
  const clearRows=()=>rows.forEach(row=>{row.querySelector('[data-scenario-payment]')!.textContent='—';row.querySelector('[data-scenario-total]')!.textContent='Calculate to update';(row.querySelector('[data-use-scenario]') as HTMLButtonElement).disabled=true;});
  const compare=()=>{if(approved)return;
   let valid=0;

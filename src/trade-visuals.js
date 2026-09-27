@@ -23,7 +23,7 @@ const copy = {
 };
 export function tradeBanner(s,placement='story'){
  const id=tradeArtId(s.trade),lines=copy[s.trade]||copy['General Contractors'],index={story:0,pricing:1,blog:2}[placement]||0;
- return `<figure class="trade-graphic trade-graphic-${placement}" data-trade-art="${e(id)}"><img src="${e(kits[id]?.art?.banner||'/assets/trade-art/'+id+'-craft-banner.webp')}" width="1536" height="1024" loading="lazy" alt="${e(s.trade)} materials and design inspiration"><figcaption><span>${e(s.trade.toUpperCase())} / ${placement==='pricing'?'THE PLAN':placement==='blog'?'THE JOURNAL':'THE POSSIBILITIES'}</span><strong>${e(lines[index])}</strong></figcaption></figure>`;
+ return `<figure class="trade-graphic trade-graphic-${placement}" data-trade-art="${e(id)}"><img src="${e(kits[id]?.art?.banner||'/assets/trade-art/'+id+'-craft-banner.webp')}" width="1536" height="1024" loading="lazy" alt="${e(s.trade)} materials and design inspiration"></figure>`;
 }
 export function customerGraphic(s){return `<figure class="customer-detail-art"><img src="${e(kits[tradeArtId(s.trade)]?.art?.detail||'/assets/trade-art/'+tradeArtId(s.trade)+'-customer-detail.webp')}" width="1536" height="1024" loading="lazy" alt="${e(s.trade)} inspiration for the place you call home"></figure>`;}
 export function serviceAreaRibbon(s){

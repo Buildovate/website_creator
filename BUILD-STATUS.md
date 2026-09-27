@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## #027A Part 1 — Roofing homeowner-facing polish
+
+**Done locally; Part 2 Not started.** One Financing chapter reuses the clean 0–6s opening of paid #025 take 2 with a half-second loop dissolve and four small web encodes; all original clips remain intact. Distinct Promotions layout, warm copy, eight 40–70-word FAQ defaults, unique group eyebrows, all-kit caption/header/anchor/phone fixes, whole-money and grouped-budget formatting, and a profile mark for logos containing the business name. No hero/drone, expense, financing eligibility or player behavior change. 98/98 commands passed: 71 regression scripts, 23 browser suites, build/typecheck/asset integrity and 210 platform states. New checks: 624 regression assertions, 199 browser assertions; 374 responses across 17 kits contain only authorized deltas, plus 158 rendered variants checked. 31 viewport captures, all 144 trim frames reviewed, 43 Vite 200s. Restored 7,041 prior evidence files and preserved 688 unrelated/untracked files. **Higgsfield credits used: 0.** [Evidence](docs/build-evidence/027A-part1/README.md). No other ticket started.
+
 ## #027 — Roofing Promotions scroll planning
 
 **Phase 1 Done locally in stub mode; dedicated film Pending.** Finished poster-first written-estimate story publishes even without entered offers; only private media status is hidden. Shared catalog/player/manifest reused. 69 regression scripts, 362 server/render assertions, 21 browser suites, 177 new browser assertions and 210 platform states passed. Legacy calendar suite uses a documented controlled date after its month-boundary fixture failure; unchanged source. 306 outside-scope responses across all 17 kits byte-identical. 66 viewport captures; 9 Vite 200s. 3125 evidence files restored and 262 unrelated files preserved. Zero credits. Phase 2: one 12s clip, **quote needed**, not run. [Evidence and exact prompt](docs/build-evidence/027/README.md). K02 remains open.

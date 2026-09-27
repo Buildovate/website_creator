@@ -417,7 +417,7 @@ await test('#007 About route: confirmed copy, publication, owned portrait/logo a
  draft=structuredClone(tenant.settings);draft.websitePages.pages[2].portraitMode='ai_logo_shirt';
  tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;
  await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
- assert.ok((await get()).includes('Roofing / ready for the work'));
+ assert.ok(!(await get()).includes('Roofing / ready for the work')); // Part 1 removes image captions.
  assert.ok(!(await get()).includes('data-about-portrait'));
  assert.equal((await request('/media/'+photo.id,'GET',undefined,null)).status,401);
  assert.equal((await request('/media/'+privatePhoto.id,'GET',undefined,null)).status,401);
@@ -450,7 +450,7 @@ await test('#007A confirmed trust facts, concise story, owner hero and published
  await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;
  let html=await get();assert.equal((html.match(/class="ta-stat"/g)||[]).length,5);assert.ok(html.indexOf('class="ta-stats"')>html.indexOf('class="ta-hero"')&&html.indexOf('class="ta-stats"')<html.indexOf('class="tp-section ta-proof"'));
  for(const text of ['18 years','CA Lic. #123456','4.9 from 212 reviews','10-year','1,250','Manufacturer training confirmed','8 people'])assert.ok(html.includes(text),text);
- assert.ok(!html.includes('roofing-house-still'));assert.ok(html.includes('Roofing / ready for the work'));assert.ok(!html.includes('id="about-work"'));
+ assert.ok(!html.includes('roofing-house-still'));assert.ok(!html.includes('Roofing / ready for the work'));assert.ok(!html.includes('id="about-work"'));
  const story=html.match(/data-about-story>(.*?)<\/p>/s)[1];assert.ok(story.split(/\s+/).length<=60);assert.ok(!story.includes(tenant.settings.name));
  const cards=html.match(/<div class="ta-cards">(.*?)<\/div>/s)[1];assert.equal((cards.match(/<article>/g)||[]).length,3);for(const [,claim] of cards.matchAll(/<h3>(.*?)<\/h3>/g))assert.ok(claim.split(/\s+/).length>=3&&claim.split(/\s+/).length<=5);
  let draft=structuredClone(tenant.settings);draft.businessTrust.confirmed={};tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;

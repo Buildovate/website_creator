@@ -11,7 +11,7 @@ for(const id of ['windows-doors','solar']){
  for(const layout of ['immersive','editorial','studio']){
   const r=await req(`/design-preview/${id}/${layout}`);assert.equal(r.status,200);const html=await r.text();
   assert.match(html,/data-feature="hero.scrollStory"/);assert.equal((html.match(/data-story-scene=/g)||[]).length,5);
-  assert.equal((html.match(/class="service-art"/g)||[]).length,8);assert.ok(html.includes(kit.intro));assert.match(html,/Concept imagery/);
+  assert.equal((html.match(/class="service-art"/g)||[]).length,8);assert.ok(html.includes(kit.intro));assert.doesNotMatch(html,/Concept imagery/);
   assert.doesNotMatch(html,/<video|undefined|\/assets\/films\/roofing/,'No fake or unrelated film fallback');
   for(const match of html.matchAll(/(?:src|poster)="(\/assets\/[^"?]+)/g))assert.ok(existsSync('public'+match[1]),match[1]);
  }

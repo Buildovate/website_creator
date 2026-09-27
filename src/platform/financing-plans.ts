@@ -1,6 +1,6 @@
 import {financingEstimate, type FinancingProgram} from './constitution.ts';
 
-export const money = (value:number) => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD'}).format(value);
+export const money = (value:number) => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD',minimumFractionDigits:Number.isInteger(value)?0:2,maximumFractionDigits:2}).format(value);
 export function comparePlans(programs:FinancingProgram[], amount:number, downPercent:number) {
   if (![0,10,20].includes(downPercent)) throw new Error('Choose no down payment, 10% or 20%.');
   const downPayment = Math.round(amount * downPercent) / 100;

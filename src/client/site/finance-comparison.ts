@@ -4,6 +4,7 @@ import type {FinancingProgram} from '../../platform/constitution.ts';
 export function mountFinanceComparison(root:HTMLElement) {
  const config=JSON.parse(root.dataset.financeConfig!) as {programs:FinancingProgram[];amount:number|null;downPercent:number};
  const cost=root.querySelector<HTMLInputElement>('[data-project-cost]')!;
+ cost.type='text';cost.inputMode='decimal';cost.addEventListener('blur',()=>{const value=Number(cost.value.replace(/,/g,''));if(cost.value.trim()&&Number.isFinite(value))cost.value=value.toLocaleString('en-US',{maximumFractionDigits:2});});
  const slider=root.querySelector<HTMLInputElement>('[data-cost-slider]')!;
  const inquiry=document.querySelector<HTMLFormElement>('#lead-form');
  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
@@ -21,7 +22,7 @@ export function mountFinanceComparison(root:HTMLElement) {
  function clearPrefill(){if(!inquiry)return;inquiry.querySelectorAll<HTMLInputElement>('[data-plan-field]').forEach(input=>input.value='');const summary=inquiry.querySelector<HTMLElement>('[data-plan-summary]');if(summary)summary.hidden=true;}
  function update(animate=true) {
   clearTimeout(statusTimer);
-  const amount=cost.value.trim()?Number(cost.value):NaN;
+  const amount=cost.value.trim()?Number(cost.value.replace(/,/g,'')):NaN;
   const percent=Number(root.querySelector<HTMLInputElement>('[name=planDownPercent]:checked')!.value);
   try {plans=comparePlans(config.programs,amount,percent);root.querySelector<HTMLElement>('[data-finance-error]')!.textContent='';}
   catch(error){plans=[];clearPrefill();root.querySelector<HTMLElement>('[data-finance-error]')!.textContent=cost.value?(error as Error).message:'Enter a project cost to compare payments.';}
@@ -46,8 +47,8 @@ export function mountFinanceComparison(root:HTMLElement) {
   if(chosen&&selected&&inquiry)prefillInquiry(inquiry,selected);
   statusTimer=setTimeout(()=>{root.querySelector<HTMLElement>('[data-finance-status]')!.textContent=selected?`Updated ${plans.length} plans. ${selected.name}: approximately ${money(selected.monthly)} per month with ${money(selected.downPayment)} down.`:'Enter a valid cost.';},350);
  }
- cost.addEventListener('input',()=>{if(cost.value&&Number.isFinite(Number(cost.value))&&Number(cost.value)>0&&Number(cost.value)<=1000000){slider.min=String(Math.min(Number(slider.min),Number(cost.value)));slider.max=String(Math.max(Number(slider.max),Number(cost.value)));slider.value=cost.value;}update();});
- slider.addEventListener('input',()=>{cost.value=slider.value;update();});
+ cost.addEventListener('input',()=>{if(cost.value&&Number.isFinite(Number(cost.value.replace(/,/g,'')))&&Number(cost.value.replace(/,/g,''))>0&&Number(cost.value.replace(/,/g,''))<=1000000){slider.min=String(Math.min(Number(slider.min),Number(cost.value.replace(/,/g,''))));slider.max=String(Math.max(Number(slider.max),Number(cost.value.replace(/,/g,''))));slider.value=cost.value.replace(/,/g,'');}update();});
+ slider.addEventListener('input',()=>{cost.value=Number(slider.value).toLocaleString('en-US');update();});
  root.querySelectorAll<HTMLInputElement>('[name=planDownPercent]').forEach(input=>input.addEventListener('change',()=>update()));
  root.querySelectorAll<HTMLElement>('[data-plan-id]').forEach(card=>card.querySelector<HTMLAnchorElement>('[data-choose-plan]')!.addEventListener('click',event=>{
   const plan=plans.find(p=>p.id===card.dataset.planId);if(!plan){event.preventDefault();cost.focus();return;}

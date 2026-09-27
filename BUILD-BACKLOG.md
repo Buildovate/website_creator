@@ -663,7 +663,7 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #027A — Polish the Roofing hero story and headline choice
 
-- State: **Not started** · Estimate: **6h** (≤1 day). Inserted before #028; existing ticket numbers and adapter references stay unchanged.
+- State: **Part 1 Done locally; Part 2 Not started** · Estimate: **6h** (≤1 day). Inserted before #028; existing ticket numbers and adapter references stay unchanged.
 - Pack section: Core Pack §§F–G (hero/copy), §M (contractor controls), with Joe’s 2026-09-24 correction taking precedence.
 - Files to touch: `src/conversion-page.js`; `src/platform/conversion.ts`; `src/scroll-story.js`; `src/hero-timelapse.js`; `public/scroll-story.js`; `src/client/workspace/questionnaire.ts`; the existing Roofing imagery/sequence configuration located during this ticket; `tests/conversion-references.mjs`; `tests/scroll-story.mjs`; `docs/build-evidence/027A/` **(new)**.
 - Done when: (1) Keep the designed/generated hero imagery; do not replace it with real contractor photos. The finished roof is shown first and trusses remain story step 1. Verify forward/reverse scrolling and reduced-motion fallback. (2) Remove the “illustrative concept” note everywhere it appears in rendered site content; search source/variants and check the Roofing page family. (3) Add one additional direct headline option selectable in the contractor backoffice; show that the selection saves as draft and appears after publish. (4) Keep current CTA labels exactly unchanged. Show desktop/mobile screenshots and test output before #028.
@@ -683,7 +683,7 @@ Roofing FAQ default answers. Rewrite every default Roofing FAQ answer to be conc
 
 FAQ group eyebrows. Replace the repeated "Your questions, explained" label with a unique eyebrow per group, drawn from the trade config: Services becomes "Repair or replace", Planning & price becomes "Cost and timing", and the other groups get short, specific labels in the same style. Done when no two groups share an eyebrow.
 
-- Scope note: Logged only; #027A remains before #028 and is not implemented by #004D or #004E.
+- Part 1 completed 2026-09-27 per Joe’s narrowed request: captions, merged Financing chapter with clean six-second local trim, distinct Promotions layout, warm copy, FAQ defaults/eyebrows, shared header/anchor fixes, phone/money formatting, and marked-logo name handling. 98 checks passed, including 71 regression scripts, 23 browser suites and all 210 platform mobile states; 624 new regression and 199 browser assertions. Zero Higgsfield credits. [Evidence and all changed pages](docs/build-evidence/027A-part1/README.md). All remaining scope above is Part 2, not started; #028 was not started.
 
 ### #028 — Approve the Roofing homeowner reference
 

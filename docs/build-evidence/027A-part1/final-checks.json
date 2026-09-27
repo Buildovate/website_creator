@@ -1,0 +1,867 @@
+[
+  {
+    "label": "build",
+    "kind": "build",
+    "status": 0,
+    "ms": 1623,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "typecheck",
+    "kind": "typecheck",
+    "status": 0,
+    "ms": 275,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "auth-session",
+    "kind": "regression",
+    "status": 0,
+    "ms": 2892,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "aws-adapter",
+    "kind": "regression",
+    "status": 0,
+    "ms": 3750,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "builder",
+    "kind": "regression",
+    "status": 0,
+    "ms": 347,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "callback-restore",
+    "kind": "regression",
+    "status": 0,
+    "ms": 283,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "cinematic-films",
+    "kind": "regression",
+    "status": 0,
+    "ms": 262,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "client-modules",
+    "kind": "regression",
+    "status": 0,
+    "ms": 151,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "constitution",
+    "kind": "regression",
+    "status": 0,
+    "ms": 866,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Old no-offer 404 assertions updated to the requested enabled Roofing poster publication behavior.",
+    "firstRunStatus": 0,
+    "verifiedBy": "constitution-corrected.log",
+    "attempts": [
+      {
+        "status": 0,
+        "ms": 853,
+        "log": "constitution.log"
+      },
+      {
+        "status": 0,
+        "ms": 1071,
+        "log": "constitution-corrected.log"
+      }
+    ],
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "contact-linkage",
+    "kind": "regression",
+    "status": 0,
+    "ms": 354,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "contacts-restore",
+    "kind": "regression",
+    "status": 0,
+    "ms": 309,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "control",
+    "kind": "regression",
+    "status": 0,
+    "ms": 344,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "conversion-references",
+    "kind": "regression",
+    "status": 0,
+    "ms": 822,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 1
+  },
+  {
+    "label": "core-site-pages",
+    "kind": "regression",
+    "status": 0,
+    "ms": 867,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "crm-next",
+    "kind": "regression",
+    "status": 0,
+    "ms": 320,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "crm",
+    "kind": "regression",
+    "status": 0,
+    "ms": 393,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 1
+  },
+  {
+    "label": "design-kits",
+    "kind": "regression",
+    "status": 0,
+    "ms": 550,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "ebook",
+    "kind": "regression",
+    "status": 0,
+    "ms": 384,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "engagement-providers",
+    "kind": "regression",
+    "status": 0,
+    "ms": 357,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "engagement",
+    "kind": "regression",
+    "status": 0,
+    "ms": 383,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "expense-metering",
+    "kind": "regression",
+    "status": 0,
+    "ms": 435,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "expense-polish",
+    "kind": "regression",
+    "status": 0,
+    "ms": 316,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "expenses",
+    "kind": "regression",
+    "status": 0,
+    "ms": 342,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "financing-comparison",
+    "kind": "regression",
+    "status": 0,
+    "ms": 531,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "financing-states",
+    "kind": "regression",
+    "status": 0,
+    "ms": 557,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "footer-policy",
+    "kind": "regression",
+    "status": 0,
+    "ms": 469,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "generation",
+    "kind": "regression",
+    "status": 0,
+    "ms": 5495,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "hero-editor",
+    "kind": "regression",
+    "status": 0,
+    "ms": 4495,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "legacy-scroll-video",
+    "kind": "regression",
+    "status": 0,
+    "ms": 63,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "legal-policy",
+    "kind": "regression",
+    "status": 0,
+    "ms": 366,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "media-ranges",
+    "kind": "regression",
+    "status": 0,
+    "ms": 113,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "motion-v2",
+    "kind": "regression",
+    "status": 0,
+    "ms": 134,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "neighborhood",
+    "kind": "regression",
+    "status": 0,
+    "ms": 403,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "owner-photo",
+    "kind": "regression",
+    "status": 0,
+    "ms": 371,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "planning-ambient",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1219,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "planning-motion",
+    "kind": "regression",
+    "status": 0,
+    "ms": 98,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "planning-scroll",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1207,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "platform",
+    "kind": "regression",
+    "status": 0,
+    "ms": 366,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "premium-service",
+    "kind": "regression",
+    "status": 0,
+    "ms": 469,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0
+  },
+  {
+    "label": "presentation",
+    "kind": "regression",
+    "status": 0,
+    "ms": 331,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "project-experience",
+    "kind": "regression",
+    "status": 0,
+    "ms": 342,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "promotion-unlocks",
+    "kind": "regression",
+    "status": 0,
+    "ms": 335,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "reference-proof",
+    "kind": "regression",
+    "status": 0,
+    "ms": 409,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "review-lookup",
+    "kind": "regression",
+    "status": 0,
+    "ms": 281,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "roofing-cities",
+    "kind": "regression",
+    "status": 0,
+    "ms": 355,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "roofing-cta",
+    "kind": "regression",
+    "status": 0,
+    "ms": 362,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "roofing-story",
+    "kind": "regression",
+    "status": 0,
+    "ms": 354,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "sales-ops",
+    "kind": "regression",
+    "status": 0,
+    "ms": 291,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 1
+  },
+  {
+    "label": "saved-designs",
+    "kind": "regression",
+    "status": 0,
+    "ms": 291,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 1
+  },
+  {
+    "label": "scroll-media",
+    "kind": "regression",
+    "status": 0,
+    "ms": 11172,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "scroll-story",
+    "kind": "regression",
+    "status": 0,
+    "ms": 502,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "scroll-video-controller",
+    "kind": "regression",
+    "status": 0,
+    "ms": 105,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "service-content",
+    "kind": "regression",
+    "status": 0,
+    "ms": 189,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0
+  },
+  {
+    "label": "service-motion",
+    "kind": "regression",
+    "status": 0,
+    "ms": 584,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "service-pages-all-trades",
+    "kind": "regression",
+    "status": 0,
+    "ms": 467,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0
+  },
+  {
+    "label": "service-playbook",
+    "kind": "regression",
+    "status": 0,
+    "ms": 552,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "showpiece-media",
+    "kind": "regression",
+    "status": 0,
+    "ms": 231,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0
+  },
+  {
+    "label": "showpiece-v4",
+    "kind": "regression",
+    "status": 0,
+    "ms": 446,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0
+  },
+  {
+    "label": "template-name",
+    "kind": "regression",
+    "status": 0,
+    "ms": 73,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "trade-enablement",
+    "kind": "regression",
+    "status": 0,
+    "ms": 335,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "trade-revisions",
+    "kind": "regression",
+    "status": 0,
+    "ms": 561,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "trade-upgrade",
+    "kind": "regression",
+    "status": 0,
+    "ms": 434,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "trade-visual-correctness",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1291,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "trades-financing",
+    "kind": "regression",
+    "status": 0,
+    "ms": 413,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "trust",
+    "kind": "regression",
+    "status": 0,
+    "ms": 751,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "website-pages",
+    "kind": "regression",
+    "status": 0,
+    "ms": 2036,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "workspace-owner",
+    "kind": "regression",
+    "status": 0,
+    "ms": 2192,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "workspace",
+    "kind": "regression",
+    "status": 0,
+    "ms": 506,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "zoom",
+    "kind": "regression",
+    "status": 0,
+    "ms": 324,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "template-assets",
+    "kind": "assets",
+    "status": 0,
+    "ms": 161,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "platform-mobile",
+    "kind": "platform",
+    "status": 0,
+    "ms": 56420,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "callback-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 7138,
+    "attempts": [
+      {
+        "status": 1,
+        "ms": 5768,
+        "log": "callback-browser.log"
+      },
+      {
+        "status": 1,
+        "ms": 5791,
+        "log": "callback-browser-retry.log"
+      },
+      {
+        "status": 0,
+        "ms": 7219,
+        "log": "callback-controlled-clock.log"
+      }
+    ],
+    "firstRunStatus": 1,
+    "verifiedBy": "callback-controlled-clock.log",
+    "verificationNote": "Unchanged legacy callback source with matching mid-month Node/browser clock; original plus-four-day fixture crosses the current month boundary.",
+    "fixture": "Existing controlled calendar clock"
+  },
+  {
+    "label": "contact-linkage-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 8546,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "contacts-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 7835,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "ebook-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 18709,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "expense-polish-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 10549,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "expenses-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 16523,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "financing-states-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 28723,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "generation-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 15047,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "hero-editor-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 40907,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "planning-ambient-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 31610,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "planning-scroll-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 43576,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "platform-ui-cleanup-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 11956,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "promotion-unlocks-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 35160,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "roofing-cities-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 33279,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "roofing-cta-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 29663,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "roofing-story-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 17569,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "service-motion-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 23559,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "trade-enablement-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 52667,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "trade-visual-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 46864,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "clips-phase2",
+    "kind": "regression",
+    "status": 0,
+    "ms": 499,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "clips-phase2-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 30353,
+    "fixture": "Final Part 1 source and installed catalog"
+  },
+  {
+    "label": "roofing-polish-part1",
+    "kind": "regression",
+    "status": 0,
+    "ms": 3095,
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked."
+  },
+  {
+    "label": "roofing-polish-part1-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 54980,
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked."
+  },
+  {
+    "label": "promotions-ambient",
+    "status": 0,
+    "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward."
+  },
+  {
+    "label": "promotions-scroll",
+    "status": 0,
+    "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward."
+  },
+  {
+    "label": "promotions-ambient-browser",
+    "status": 0,
+    "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward."
+  },
+  {
+    "label": "promotions-scroll-browser",
+    "status": 0,
+    "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward."
+  }
+]
