@@ -629,6 +629,8 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 - Evidence: [#024 Phase 1](docs/build-evidence/024/README.md). Zero credits; 66 regression scripts, 18 browser suites, 210 platform states, 305 byte-identical outside-scope pages. No generation calls. K02 remains open.
 
+- #024 Part A follow-up completed: the finished chapter publishes with its poster; only pending-film status/Sample decoration is private. [Evidence](docs/build-evidence/024A/README.md).
+
 ### #025 — Produce and attach one Financing scroll clip
 
 - State: **Not started** · Estimate: **6h** (≤1 day).

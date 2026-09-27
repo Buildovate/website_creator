@@ -1,5 +1,9 @@
 # BUILD STATUS
 
+## #024A — Published planning chapter
+
+**Done locally.** The finished Roofing Financing chapter publishes with the responsive poster while the film is Pending; only private status/Sample decoration is hidden. Existing manifest and players unchanged. 66 regression scripts, 18 browser suites and 210 platform states passed; 305 outside-scope pages across 17 kits byte-identical. Zero credits. [Evidence](docs/build-evidence/024A/README.md). Supersedes #024’s earlier whole-chapter publication gate.
+
 ## #024 — Roofing Financing ambient media
 
 **Phase 1 Done locally in stub mode; real film and numeric credit quote Pending.** Finished poster-first planning chapter, responsive installed WebP imagery, shared lazy ambient player with pause/off-screen/reduced-motion/no-JS/error behavior, saved manifest descriptor/assets and scoped header offsets. Pending media appears only in private Sample preview and hides on publish. Current Roofing payment rule enforced without changing the lender adapter. 66 regression scripts, 344 new server/HTML assertions, 18 browser suites, 91 new browser assertions and 210 platform states passed. 305 outside-scope pages across 17 kits are byte-identical; 38 viewport captures and 8 Vite 200s. Zero credits; 2391 evidence files restored, 262 unrelated files preserved. [Evidence and one-clip Phase 2 prompt](docs/build-evidence/024/README.md). K02 remains open: the local brief has no credit tariff, and vendor calls were prohibited, so the numeric estimate is unverified. No Phase 2, #025 or other ticket started.
