@@ -621,11 +621,13 @@ Tickets #001–#041C, including the queued #004M–#004R variants, #004J/#004K s
 
 ### #024 — Produce and attach one Financing ambient clip
 
-- State: **Not started** · Estimate: **6h** (≤1 day).
+- State: **Done locally — Phase 1 stub; dedicated film and Phase 2 credit quote Pending** · Estimate: **6h** (≤1 day).
 - Pack section: [`D`](docs/product/01-CORE-SITE-A-N.md) §D; [`B`](docs/product/01-CORE-SITE-A-N.md) §B.
 - Files to touch: `public/planning-films.json` **(new)**; `src/constitution-pages.js`; `src/client/site/constitution.ts`; `tests/planning-motion.mjs`.
 - Done when: One distinct approved Roofing clip and poster are attached to the correct slot; ambient can pause or scroll reaches the full duration; reduced-motion/network failure shows its poster. If K02 is unavailable, a working clearly labeled missing-media stub with an accessible static fallback satisfies this ticket in stub mode; show evidence and retain the live film gate in BUILD-STATUS/NEEDS-KEYS. Continue to #028 without blocking the selling site.
 - External keys/accounts: K02.
+
+- Evidence: [#024 Phase 1](docs/build-evidence/024/README.md). Zero credits; 66 regression scripts, 18 browser suites, 210 platform states, 305 byte-identical outside-scope pages. No generation calls. K02 remains open.
 
 ### #025 — Produce and attach one Financing scroll clip
 

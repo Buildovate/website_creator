@@ -1,0 +1,22 @@
+[
+  {
+    "label": "build",
+    "status": 0,
+    "ms": 1771
+  },
+  {
+    "label": "typecheck",
+    "status": 0,
+    "ms": 319
+  },
+  {
+    "label": "planning-ambient",
+    "status": 0,
+    "ms": 1054
+  },
+  {
+    "label": "planning-ambient-browser",
+    "status": 0,
+    "ms": 19702
+  }
+]

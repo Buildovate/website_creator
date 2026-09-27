@@ -1,3 +1,7 @@
+import {mountAmbientVideo} from './ambient-video.js';
+document.querySelectorAll('[data-planning-ambient]').forEach(video=>mountAmbientVideo(video,{lazy:true}));
+const planningPage=document.querySelector<HTMLElement>('[data-planning-page]');
+if(planningPage){const header=document.querySelector('header'),update=()=>planningPage.style.setProperty('--planning-header',Math.ceil(header?.getBoundingClientRect().height||80)+'px');update();if(header)new ResizeObserver(update).observe(header);}
 import {financingEstimate,FINANCING_DISCLOSURE} from '../../platform/constitution.js';
 const money=(value:number)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(value);
 document.querySelectorAll<HTMLFormElement>('[data-financing-calculator]').forEach(form=>{

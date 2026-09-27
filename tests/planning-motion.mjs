@@ -9,7 +9,7 @@ function mount(reduced=false){
  const button={...events(),setAttribute(){},disabled:false},chapters=[0,1,2].map(()=>({toggleAttribute(){}}));
  const section={style:{setProperty(k,v){styles.set(k,v);}},getBoundingClientRect(){return {top,height:1800};},querySelector(selector){return selector==='[data-story-film]'?video:button;},querySelectorAll(){return chapters;}};
  const win={innerHeight:800,matchMedia(){return media;},...events()};
- const context={window:win,document:{body:{classList:{add(){}}},querySelector(){return {getBoundingClientRect(){return {height:100};}};},querySelectorAll(selector){return selector==='[data-project-story]'?[section]:[];}},requestAnimationFrame(fn){frames.set(++serial,fn);return serial;},IntersectionObserver:class{constructor(fn){this.fn=fn;}observe(el){if(el===section)intersection=this.fn;}}};context.window.IntersectionObserver=context.IntersectionObserver;
+ const context={window:win,document:{body:{classList:{add(){}}},querySelector(selector){return selector==='[data-planning-page]'?null:{getBoundingClientRect(){return {height:100};}};},querySelectorAll(selector){return selector==='[data-project-story]'?[section]:[];}},requestAnimationFrame(fn){frames.set(++serial,fn);return serial;},IntersectionObserver:class{constructor(fn){this.fn=fn;}observe(el){if(el===section)intersection=this.fn;}}};context.window.IntersectionObserver=context.IntersectionObserver;
  vm.runInNewContext(compiled.outputFiles[0].text,context);
  const flush=()=>{const todo=[...frames.values()];frames.clear();todo.forEach(fn=>fn());};
  const settle=()=>{for(let n=0;seeking&&n<5;n++){seeking=false;video.emit('seeked');}assert.equal(seeking,false);};

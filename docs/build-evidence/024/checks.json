@@ -1,0 +1,351 @@
+[
+  {
+    "label": "build",
+    "status": 0,
+    "ms": 1774,
+    "rerun": "final scoped static header offset"
+  },
+  {
+    "label": "typecheck",
+    "status": 0,
+    "ms": 319,
+    "rerun": "final scoped static header offset"
+  },
+  {
+    "label": "auth-session",
+    "status": 0,
+    "ms": 3001
+  },
+  {
+    "label": "aws-adapter",
+    "status": 0,
+    "ms": 3871
+  },
+  {
+    "label": "builder",
+    "status": 0,
+    "ms": 344
+  },
+  {
+    "label": "callback-restore",
+    "status": 0,
+    "ms": 303
+  },
+  {
+    "label": "cinematic-films",
+    "status": 0,
+    "ms": 330
+  },
+  {
+    "label": "client-modules",
+    "status": 0,
+    "ms": 212
+  },
+  {
+    "label": "constitution",
+    "status": 0,
+    "ms": 755
+  },
+  {
+    "label": "contact-linkage",
+    "status": 0,
+    "ms": 334
+  },
+  {
+    "label": "contacts-restore",
+    "status": 0,
+    "ms": 315
+  },
+  {
+    "label": "control",
+    "status": 0,
+    "ms": 409
+  },
+  {
+    "label": "conversion-references",
+    "status": 0,
+    "ms": 680
+  },
+  {
+    "label": "core-site-pages",
+    "status": 0,
+    "ms": 593
+  },
+  {
+    "label": "crm-next",
+    "status": 0,
+    "ms": 316
+  },
+  {
+    "label": "crm",
+    "status": 0,
+    "ms": 360
+  },
+  {
+    "label": "design-kits",
+    "status": 0,
+    "ms": 588
+  },
+  {
+    "label": "ebook",
+    "status": 0,
+    "ms": 338
+  },
+  {
+    "label": "engagement-providers",
+    "status": 0,
+    "ms": 304
+  },
+  {
+    "label": "engagement",
+    "status": 0,
+    "ms": 304
+  },
+  {
+    "label": "expense-metering",
+    "status": 0,
+    "ms": 359
+  },
+  {
+    "label": "expense-polish",
+    "status": 0,
+    "ms": 307
+  },
+  {
+    "label": "expenses",
+    "status": 0,
+    "ms": 399
+  },
+  {
+    "label": "financing-comparison",
+    "status": 0,
+    "ms": 653
+  },
+  {
+    "label": "financing-states",
+    "status": 0,
+    "ms": 582
+  },
+  {
+    "label": "footer-policy",
+    "status": 0,
+    "ms": 484
+  },
+  {
+    "label": "generation",
+    "status": 0,
+    "ms": 5186
+  },
+  {
+    "label": "hero-editor",
+    "status": 0,
+    "ms": 4062
+  },
+  {
+    "label": "legacy-scroll-video",
+    "status": 0,
+    "ms": 73
+  },
+  {
+    "label": "legal-policy",
+    "status": 0,
+    "ms": 319
+  },
+  {
+    "label": "media-ranges",
+    "status": 0,
+    "ms": 99
+  },
+  {
+    "label": "motion-v2",
+    "status": 0,
+    "ms": 143
+  },
+  {
+    "label": "neighborhood",
+    "status": 0,
+    "ms": 371
+  },
+  {
+    "label": "owner-photo",
+    "status": 0,
+    "ms": 349
+  },
+  {
+    "label": "planning-ambient",
+    "status": 0,
+    "ms": 1054,
+    "rerun": "final scoped static header offset"
+  },
+  {
+    "label": "planning-motion",
+    "status": 0,
+    "ms": 104
+  },
+  {
+    "label": "platform",
+    "status": 0,
+    "ms": 314
+  },
+  {
+    "label": "premium-service",
+    "status": 0,
+    "ms": 398
+  },
+  {
+    "label": "presentation",
+    "status": 0,
+    "ms": 307
+  },
+  {
+    "label": "project-experience",
+    "status": 0,
+    "ms": 301
+  },
+  {
+    "label": "promotion-unlocks",
+    "status": 0,
+    "ms": 310
+  },
+  {
+    "label": "reference-proof",
+    "status": 0,
+    "ms": 372
+  },
+  {
+    "label": "review-lookup",
+    "status": 0,
+    "ms": 262
+  },
+  {
+    "label": "roofing-cities",
+    "status": 0,
+    "ms": 334
+  },
+  {
+    "label": "roofing-cta",
+    "status": 0,
+    "ms": 339
+  },
+  {
+    "label": "roofing-story",
+    "status": 0,
+    "ms": 333
+  },
+  {
+    "label": "sales-ops",
+    "status": 0,
+    "ms": 248
+  },
+  {
+    "label": "saved-designs",
+    "status": 0,
+    "ms": 272
+  },
+  {
+    "label": "scroll-media",
+    "status": 0,
+    "ms": 13798
+  },
+  {
+    "label": "scroll-story",
+    "status": 0,
+    "ms": 354
+  },
+  {
+    "label": "scroll-video-controller",
+    "status": 0,
+    "ms": 86
+  },
+  {
+    "label": "service-content",
+    "status": 0,
+    "ms": 180
+  },
+  {
+    "label": "service-motion",
+    "status": 0,
+    "ms": 407
+  },
+  {
+    "label": "service-pages-all-trades",
+    "status": 0,
+    "ms": 415
+  },
+  {
+    "label": "service-playbook",
+    "status": 0,
+    "ms": 379
+  },
+  {
+    "label": "showpiece-media",
+    "status": 0,
+    "ms": 185
+  },
+  {
+    "label": "showpiece-v4",
+    "status": 0,
+    "ms": 472,
+    "rerun": "updated superseded Sample-payment assertion only"
+  },
+  {
+    "label": "template-name",
+    "status": 0,
+    "ms": 70
+  },
+  {
+    "label": "trade-enablement",
+    "status": 0,
+    "ms": 265
+  },
+  {
+    "label": "trade-revisions",
+    "status": 0,
+    "ms": 481
+  },
+  {
+    "label": "trade-upgrade",
+    "status": 0,
+    "ms": 454
+  },
+  {
+    "label": "trade-visual-correctness",
+    "status": 0,
+    "ms": 1722
+  },
+  {
+    "label": "trades-financing",
+    "status": 0,
+    "ms": 437
+  },
+  {
+    "label": "trust",
+    "status": 0,
+    "ms": 599
+  },
+  {
+    "label": "website-pages",
+    "status": 0,
+    "ms": 1545
+  },
+  {
+    "label": "workspace-owner",
+    "status": 0,
+    "ms": 2154
+  },
+  {
+    "label": "workspace",
+    "status": 0,
+    "ms": 356
+  },
+  {
+    "label": "zoom",
+    "status": 0,
+    "ms": 238
+  },
+  {
+    "label": "template-assets",
+    "status": 0,
+    "ms": 183
+  }
+]

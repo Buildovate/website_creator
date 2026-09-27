@@ -1,0 +1,93 @@
+[
+  {
+    "suite": "callback-browser.mjs",
+    "status": 0,
+    "ms": 5744
+  },
+  {
+    "suite": "contact-linkage-browser.mjs",
+    "status": 0,
+    "ms": 7025
+  },
+  {
+    "suite": "contacts-browser.mjs",
+    "status": 0,
+    "ms": 6048
+  },
+  {
+    "suite": "ebook-browser.mjs",
+    "status": 0,
+    "ms": 13613
+  },
+  {
+    "suite": "expense-polish-browser.mjs",
+    "status": 0,
+    "ms": 6882
+  },
+  {
+    "suite": "expenses-browser.mjs",
+    "status": 0,
+    "ms": 9948
+  },
+  {
+    "suite": "financing-states-browser.mjs",
+    "status": 0,
+    "ms": 18755
+  },
+  {
+    "suite": "generation-browser.mjs",
+    "status": 0,
+    "ms": 9566
+  },
+  {
+    "suite": "hero-editor-browser.mjs",
+    "status": 0,
+    "ms": 34442
+  },
+  {
+    "suite": "planning-ambient-browser.mjs",
+    "status": 0,
+    "ms": 19702,
+    "rerun": "final header offset and static heading checks"
+  },
+  {
+    "suite": "platform-ui-cleanup-browser.mjs",
+    "status": 0,
+    "ms": 7623
+  },
+  {
+    "suite": "promotion-unlocks-browser.mjs",
+    "status": 0,
+    "ms": 19853
+  },
+  {
+    "suite": "roofing-cities-browser.mjs",
+    "status": 0,
+    "ms": 21264
+  },
+  {
+    "suite": "roofing-cta-browser.mjs",
+    "status": 0,
+    "ms": 24223
+  },
+  {
+    "suite": "roofing-story-browser.mjs",
+    "status": 0,
+    "ms": 13011
+  },
+  {
+    "suite": "service-motion-browser.mjs",
+    "status": 0,
+    "ms": 19200
+  },
+  {
+    "suite": "trade-enablement-browser.mjs",
+    "status": 0,
+    "ms": 38710
+  },
+  {
+    "suite": "trade-visual-browser.mjs",
+    "status": 0,
+    "ms": 33296
+  }
+]

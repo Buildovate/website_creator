@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "slots": {
+    "roofing-financing-ambient": {
+      "version": 1,
+      "id": "roofing-financing-ambient-v1",
+      "trade": "Roofing",
+      "page": "financing",
+      "role": "ambient",
+      "status": "Pending",
+      "connection": "Not connected",
+      "clip": null,
+      "poster": "/assets/planning/roofing-financing-1280.webp",
+      "posterMobile": "/assets/planning/roofing-financing-720.webp",
+      "sourcePoster": "/assets/trade-art/roofing-customer-detail.webp",
+      "duration": 8,
+      "width": 1920,
+      "height": 1080,
+      "muted": true,
+      "model": "cinematic_studio_3_0",
+      "purpose": "A quiet pause to understand the roof scope before comparing payment terms."
+    }
+  }
+}

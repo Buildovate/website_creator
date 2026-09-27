@@ -123,3 +123,8 @@ The local Roofing guide uses installed imagery, bundled PDFs, existing tenant ac
 - SMS and marketing are not requested: phone is optional and neither permission is inferred from guide consent. No SMS credential setup is part of #022.
 
 Live delivery remains queued under #124/#125 and #140–#144. No provider is connected by #022.
+
+
+## #024 — Dedicated Roofing Financing ambient film (K02)
+
+Phase 1 is complete locally using installed still imagery; the live film remains Pending / Not connected. No provider calls, credit checks or generation ran. One silent 8-second 1080p Cinema Studio Video 3.0 clip is planned; the local brief contains no credit tariff, so a numeric provider quote and explicit Phase 2 approval are still needed. No credential has been read or stored. See [#024 evidence and exact prompt](docs/build-evidence/024/README.md). Pending media is private-preview-only and hidden on published sites.

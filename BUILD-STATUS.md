@@ -1,8 +1,12 @@
 # BUILD STATUS
 
+## #024 — Roofing Financing ambient media
+
+**Phase 1 Done locally in stub mode; real film and numeric credit quote Pending.** Finished poster-first planning chapter, responsive installed WebP imagery, shared lazy ambient player with pause/off-screen/reduced-motion/no-JS/error behavior, saved manifest descriptor/assets and scoped header offsets. Pending media appears only in private Sample preview and hides on publish. Current Roofing payment rule enforced without changing the lender adapter. 66 regression scripts, 344 new server/HTML assertions, 18 browser suites, 91 new browser assertions and 210 platform states passed. 305 outside-scope pages across 17 kits are byte-identical; 38 viewport captures and 8 Vite 200s. Zero credits; 2391 evidence files restored, 262 unrelated files preserved. [Evidence and one-clip Phase 2 prompt](docs/build-evidence/024/README.md). K02 remains open: the local brief has no credit tariff, and vendor calls were prohibited, so the numeric estimate is unverified. No Phase 2, #025 or other ticket started.
+
 ## #023A — Scroll-story hero editor
 
-**Done locally.** Restored owner/admin controls, live private preview, single sticky Save/Publish bar and honest state handling. Reuses #023 records/locks, optimistic versions, media ownership and backups. 65 regression scripts, 50 new server checks, 17 browser suites, 45 new browser checks and 210 platform states passed. 17 unedited published kit homepages remain byte-identical; zero save CLS, 23 viewport captures, zero credits. 2206 older evidence files restored and 262 unrelated files unchanged. [Evidence](docs/build-evidence/023A/README.md). #024 remains Not started.
+**Done locally.** Restored owner/admin controls, live private preview, single sticky Save/Publish bar and honest state handling. Reuses #023 records/locks, optimistic versions, media ownership and backups. 65 regression scripts, 50 new server checks, 17 browser suites, 45 new browser checks and 210 platform states passed. 17 unedited published kit homepages remain byte-identical; zero save CLS, 23 viewport captures, zero credits. 2206 older evidence files restored and 262 unrelated files unchanged. [Evidence](docs/build-evidence/023A/README.md). #024 Phase 1 is recorded above.
 
 ## #023 — Stable generation manifest
 
