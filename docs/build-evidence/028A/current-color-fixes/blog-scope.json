@@ -1,0 +1,104 @@
+[
+  {
+    "kit": "roofing",
+    "color": "rgb(98, 109, 96)",
+    "expected": "rgb(98, 109, 96)",
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "color": "rgb(115, 124, 112)",
+    "expected": "rgb(115, 124, 112)",
+    "pass": true
+  }
+]

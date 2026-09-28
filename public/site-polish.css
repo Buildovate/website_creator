@@ -151,3 +151,16 @@ body [data-ambient-toggle],body [data-motion-toggle],body .detail-motion,body .s
 .studio-footer[data-footer-settings] .footer-areas:has(.footer-socials){grid-column:1/-1}.studio-footer[data-footer-settings] .footer-socials{margin-top:20px}body .studio-footer .footer-socials a{width:44px!important;height:44px!important;padding:0!important;box-sizing:border-box}
 
 .reviews-section .review-provider-notes{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}.reviews-section .provider-evidence .provider-rating-badge{border:1px solid #b8cbbc!important;border-radius:9px!important;padding:12px!important;gap:8px!important;margin:0!important}.provider-evidence .provider-attribution{gap:6px;margin:8px 0 0;font-size:12px}.provider-attribution small{flex-basis:100%}@media(max-width:700px){.reviews-section .review-provider-notes{grid-template-columns:1fr;gap:16px}}
+
+/* #028A: one center line, including details summaries and the separate light-header CTA. */
+body :is(.shared-site-header,.cx-header,.tp-header){align-items:center!important}
+body :is(.shared-site-header,.cx-header,.tp-header) :is(.site-desktop-nav,.cx-desktop-nav,.tp-nav){align-items:center!important}
+body :is(.shared-site-header,.cx-header,.tp-header) :is(.site-desktop-nav,.cx-desktop-nav,.tp-nav)>:is(a,details),body :is(.shared-site-header,.cx-header,.tp-header)>.cx-button{align-self:center!important;margin-block:0!important;transform:none!important}
+body :is(.shared-site-header,.cx-header,.tp-header) :is(.site-desktop-nav,.cx-desktop-nav,.tp-nav)>a,body :is(.shared-site-header,.cx-header,.tp-header) :is(.site-desktop-nav,.cx-desktop-nav,.tp-nav)>details>summary{display:inline-flex!important;align-items:center!important;justify-content:center;min-height:44px;font-family:inherit!important;line-height:1.3!important;margin-block:0!important;box-sizing:border-box;vertical-align:middle}
+body :is(.shared-site-header,.cx-header,.tp-header) :is(.site-desktop-nav,.cx-desktop-nav,.tp-nav)>details{padding-block:0!important}
+body :is(.shared-site-header,.cx-header,.tp-header) :is(.site-desktop-nav,.cx-desktop-nav,.tp-nav)>details>summary::after{align-self:center;position:static;transform:none;line-height:1;margin-top:-3px}
+
+
+/* Retain the server's expanded link list when scripts are off. */
+html:not(.site-nav-js) body .shared-site-header .site-more:not([data-nav-enhanced])>summary{display:none!important}
+html:not(.site-nav-js) body .shared-site-header .site-more:not([data-nav-enhanced]),html:not(.site-nav-js) body .shared-site-header .site-more:not([data-nav-enhanced]) .site-more-list{display:flex!important;align-items:center!important;flex-direction:row!important}

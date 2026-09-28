@@ -1,0 +1,1806 @@
+[
+  {
+    "kit": "patios",
+    "style": "current",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0.0017155364864647636,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": [
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "01",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Too much sun over the seating area? Find the right shade footprint.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "02",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Moving chairs to chase shade? Explore adjustable louvers and controls.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "03",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Glare across the patio table? Consider how the louvers direct light.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "04",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "An old cover peeling? Compare new lines, finishes, and support details.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "05",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "No defined gathering spot outdoors? Use wood structure to shape one.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "06",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "The grill far from the table? Bring cooking and seating into one plan.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "07",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Bugs interrupt dinner outside? Discuss enclosure, airflow, and access.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "08",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Pavers rocking underfoot? Locate the worn surface and its support.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "current",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": [
+      {
+        "tag": "A",
+        "cls": "story-primary",
+        "parent": "story-actions",
+        "text": "Request an estimate",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          187,
+          112,
+          76
+        ],
+        "ratio": 3.794,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "current",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": [
+      {
+        "tag": "A",
+        "cls": "story-primary",
+        "parent": "story-actions",
+        "text": "Request an estimate",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          187,
+          112,
+          76
+        ],
+        "ratio": 3.794,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "current",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0.00003626543209876543,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "bold",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0.00003626543209876543,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "fresh",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0.00003626543209876543,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "classic",
+    "width": 1440,
+    "mode": "reduced",
+    "cls": 0.00003626543209876543,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "current",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": [
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "01",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Too much sun over the seating area? Find the right shade footprint.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "02",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Moving chairs to chase shade? Explore adjustable louvers and controls.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "03",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Glare across the patio table? Consider how the louvers direct light.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "04",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "An old cover peeling? Compare new lines, finishes, and support details.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "05",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "No defined gathering spot outdoors? Use wood structure to shape one.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "06",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "The grill far from the table? Bring cooking and seating into one plan.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "07",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Bugs interrupt dinner outside? Discuss enclosure, airflow, and access.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "08",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Pavers rocking underfoot? Locate the worn surface and its support.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "current",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": [
+      {
+        "tag": "A",
+        "cls": "story-primary",
+        "parent": "story-actions",
+        "text": "Request an estimate",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          187,
+          112,
+          76
+        ],
+        "ratio": 3.794,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "current",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": [
+      {
+        "tag": "A",
+        "cls": "story-primary",
+        "parent": "story-actions",
+        "text": "Request an estimate",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          187,
+          112,
+          76
+        ],
+        "ratio": 3.794,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "current",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "bold",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "fresh",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "classic",
+    "width": 1440,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 0,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "current",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": [
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "01",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Too much sun over the seating area? Find the right shade footprint.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "02",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Moving chairs to chase shade? Explore adjustable louvers and controls.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "03",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Glare across the patio table? Consider how the louvers direct light.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "04",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "An old cover peeling? Compare new lines, finishes, and support details.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "05",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "No defined gathering spot outdoors? Use wood structure to shape one.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "06",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "The grill far from the table? Bring cooking and seating into one plan.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "07",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Bugs interrupt dinner outside? Discuss enclosure, airflow, and access.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "08",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Pavers rocking underfoot? Locate the worn surface and its support.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "current",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": [
+      {
+        "tag": "A",
+        "cls": "story-primary",
+        "parent": "story-actions",
+        "text": "Request an estimate",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          187,
+          112,
+          76
+        ],
+        "ratio": 3.794,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "current",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": [
+      {
+        "tag": "A",
+        "cls": "story-primary",
+        "parent": "story-actions",
+        "text": "Request an estimate",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          187,
+          112,
+          76
+        ],
+        "ratio": 3.794,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "current",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 286,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "bold",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 286,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "fresh",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 286,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "classic",
+    "width": 390,
+    "mode": "reduced",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 286,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "current",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": [
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "01",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Too much sun over the seating area? Find the right shade footprint.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "02",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Moving chairs to chase shade? Explore adjustable louvers and controls.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "03",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Glare across the patio table? Consider how the louvers direct light.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "04",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "An old cover peeling? Compare new lines, finishes, and support details.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "05",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "No defined gathering spot outdoors? Use wood structure to shape one.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "06",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "The grill far from the table? Bring cooking and seating into one plan.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "07",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Bugs interrupt dinner outside? Discuss enclosure, airflow, and access.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      },
+      {
+        "tag": "SPAN",
+        "cls": "service-index",
+        "parent": "",
+        "text": "08",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 13,
+        "pass": false
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "parent": "",
+        "text": "Pavers rocking underfoot? Locate the worn surface and its support.",
+        "fg": "rgb(110, 115, 95)",
+        "bg": [
+          246,
+          245,
+          237
+        ],
+        "ratio": 4.486,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "current",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": [
+      {
+        "tag": "A",
+        "cls": "story-primary",
+        "parent": "story-actions",
+        "text": "Request an estimate",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          187,
+          112,
+          76
+        ],
+        "ratio": 3.794,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "current",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": [
+      {
+        "tag": "A",
+        "cls": "story-primary",
+        "parent": "story-actions",
+        "text": "Request an estimate",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          187,
+          112,
+          76
+        ],
+        "ratio": 3.794,
+        "minimum": 4.5,
+        "font": 14,
+        "pass": false
+      }
+    ]
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 472.375,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "current",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 286,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "bold",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 286,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "fresh",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 286,
+    "failures": []
+  },
+  {
+    "kit": "roofing-complete",
+    "style": "classic",
+    "width": 390,
+    "mode": "nojs",
+    "cls": 0,
+    "overflow": 0,
+    "headerSpread": 286,
+    "failures": []
+  }
+]

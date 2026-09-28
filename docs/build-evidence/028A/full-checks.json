@@ -1,0 +1,610 @@
+[
+  {
+    "label": "build",
+    "kind": "build",
+    "status": 0,
+    "ms": 1590
+  },
+  {
+    "label": "typecheck",
+    "kind": "typecheck",
+    "status": 0,
+    "ms": 314
+  },
+  {
+    "label": "auth-session",
+    "kind": "regression",
+    "status": 0,
+    "ms": 3042
+  },
+  {
+    "label": "aws-adapter",
+    "kind": "regression",
+    "status": 0,
+    "ms": 4202
+  },
+  {
+    "label": "builder",
+    "kind": "regression",
+    "status": 0,
+    "ms": 379
+  },
+  {
+    "label": "callback-restore",
+    "kind": "regression",
+    "status": 0,
+    "ms": 366
+  },
+  {
+    "label": "cinematic-films",
+    "kind": "regression",
+    "status": 0,
+    "ms": 311
+  },
+  {
+    "label": "client-modules",
+    "kind": "regression",
+    "status": 0,
+    "ms": 149
+  },
+  {
+    "label": "constitution",
+    "kind": "regression",
+    "status": 0,
+    "ms": 981
+  },
+  {
+    "label": "contact-linkage",
+    "kind": "regression",
+    "status": 0,
+    "ms": 402
+  },
+  {
+    "label": "contacts-restore",
+    "kind": "regression",
+    "status": 0,
+    "ms": 315
+  },
+  {
+    "label": "control",
+    "kind": "regression",
+    "status": 0,
+    "ms": 478
+  },
+  {
+    "label": "conversion-references",
+    "kind": "regression",
+    "status": 0,
+    "ms": 685
+  },
+  {
+    "label": "core-site-pages",
+    "kind": "regression",
+    "status": 0,
+    "ms": 881
+  },
+  {
+    "label": "crm-next",
+    "kind": "regression",
+    "status": 0,
+    "ms": 318
+  },
+  {
+    "label": "crm",
+    "kind": "regression",
+    "status": 0,
+    "ms": 369
+  },
+  {
+    "label": "design-kits",
+    "kind": "regression",
+    "status": 0,
+    "ms": 649
+  },
+  {
+    "label": "ebook",
+    "kind": "regression",
+    "status": 0,
+    "ms": 483
+  },
+  {
+    "label": "engagement-providers",
+    "kind": "regression",
+    "status": 0,
+    "ms": 348
+  },
+  {
+    "label": "engagement",
+    "kind": "regression",
+    "status": 0,
+    "ms": 441
+  },
+  {
+    "label": "expense-metering",
+    "kind": "regression",
+    "status": 0,
+    "ms": 373
+  },
+  {
+    "label": "expense-polish",
+    "kind": "regression",
+    "status": 0,
+    "ms": 382
+  },
+  {
+    "label": "expenses",
+    "kind": "regression",
+    "status": 0,
+    "ms": 364
+  },
+  {
+    "label": "financing-comparison",
+    "kind": "regression",
+    "status": 0,
+    "ms": 568
+  },
+  {
+    "label": "financing-states",
+    "kind": "regression",
+    "status": 0,
+    "ms": 602
+  },
+  {
+    "label": "footer-policy",
+    "kind": "regression",
+    "status": 0,
+    "ms": 521
+  },
+  {
+    "label": "generation",
+    "kind": "regression",
+    "status": 0,
+    "ms": 5253
+  },
+  {
+    "label": "hero-editor",
+    "kind": "regression",
+    "status": 0,
+    "ms": 4512
+  },
+  {
+    "label": "legacy-scroll-video",
+    "kind": "regression",
+    "status": 0,
+    "ms": 56
+  },
+  {
+    "label": "legal-policy",
+    "kind": "regression",
+    "status": 0,
+    "ms": 511
+  },
+  {
+    "label": "media-ranges",
+    "kind": "regression",
+    "status": 0,
+    "ms": 90
+  },
+  {
+    "label": "motion-v2",
+    "kind": "regression",
+    "status": 0,
+    "ms": 134
+  },
+  {
+    "label": "neighborhood",
+    "kind": "regression",
+    "status": 0,
+    "ms": 494
+  },
+  {
+    "label": "owner-photo",
+    "kind": "regression",
+    "status": 0,
+    "ms": 440
+  },
+  {
+    "label": "planning-ambient",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1736
+  },
+  {
+    "label": "planning-motion",
+    "kind": "regression",
+    "status": 0,
+    "ms": 88
+  },
+  {
+    "label": "planning-scroll",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1833
+  },
+  {
+    "label": "platform",
+    "kind": "regression",
+    "status": 0,
+    "ms": 440
+  },
+  {
+    "label": "premium-service",
+    "kind": "regression",
+    "status": 0,
+    "ms": 488
+  },
+  {
+    "label": "presentation",
+    "kind": "regression",
+    "status": 0,
+    "ms": 431
+  },
+  {
+    "label": "project-experience",
+    "kind": "regression",
+    "status": 0,
+    "ms": 370
+  },
+  {
+    "label": "promotion-unlocks",
+    "kind": "regression",
+    "status": 0,
+    "ms": 451
+  },
+  {
+    "label": "reference-proof",
+    "kind": "regression",
+    "status": 0,
+    "ms": 564
+  },
+  {
+    "label": "review-lookup",
+    "kind": "regression",
+    "status": 0,
+    "ms": 368
+  },
+  {
+    "label": "roofing-cities",
+    "kind": "regression",
+    "status": 0,
+    "ms": 585
+  },
+  {
+    "label": "roofing-cta",
+    "kind": "regression",
+    "status": 0,
+    "ms": 446
+  },
+  {
+    "label": "roofing-story",
+    "kind": "regression",
+    "status": 0,
+    "ms": 496
+  },
+  {
+    "label": "sales-ops",
+    "kind": "regression",
+    "status": 0,
+    "ms": 312
+  },
+  {
+    "label": "saved-designs",
+    "kind": "regression",
+    "status": 0,
+    "ms": 408
+  },
+  {
+    "label": "scroll-media",
+    "kind": "regression",
+    "status": 0,
+    "ms": 13723
+  },
+  {
+    "label": "scroll-story",
+    "kind": "regression",
+    "status": 0,
+    "ms": 403
+  },
+  {
+    "label": "scroll-video-controller",
+    "kind": "regression",
+    "status": 0,
+    "ms": 91
+  },
+  {
+    "label": "service-content",
+    "kind": "regression",
+    "status": 0,
+    "ms": 172
+  },
+  {
+    "label": "service-motion",
+    "kind": "regression",
+    "status": 0,
+    "ms": 467
+  },
+  {
+    "label": "service-pages-all-trades",
+    "kind": "regression",
+    "status": 0,
+    "ms": 491
+  },
+  {
+    "label": "service-playbook",
+    "kind": "regression",
+    "status": 0,
+    "ms": 424
+  },
+  {
+    "label": "showpiece-media",
+    "kind": "regression",
+    "status": 0,
+    "ms": 198
+  },
+  {
+    "label": "showpiece-v4",
+    "kind": "regression",
+    "status": 0,
+    "ms": 433
+  },
+  {
+    "label": "template-name",
+    "kind": "regression",
+    "status": 0,
+    "ms": 55
+  },
+  {
+    "label": "trade-enablement",
+    "kind": "regression",
+    "status": 0,
+    "ms": 243
+  },
+  {
+    "label": "trade-revisions",
+    "kind": "regression",
+    "status": 0,
+    "ms": 470
+  },
+  {
+    "label": "trade-upgrade",
+    "kind": "regression",
+    "status": 0,
+    "ms": 380
+  },
+  {
+    "label": "trade-visual-correctness",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1359
+  },
+  {
+    "label": "trades-financing",
+    "kind": "regression",
+    "status": 0,
+    "ms": 377
+  },
+  {
+    "label": "trust",
+    "kind": "regression",
+    "status": 0,
+    "ms": 595
+  },
+  {
+    "label": "website-pages",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1731
+  },
+  {
+    "label": "workspace-owner",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1933
+  },
+  {
+    "label": "workspace",
+    "kind": "regression",
+    "status": 0,
+    "ms": 470
+  },
+  {
+    "label": "zoom",
+    "kind": "regression",
+    "status": 0,
+    "ms": 295
+  },
+  {
+    "label": "template-assets",
+    "kind": "assets",
+    "status": 0,
+    "ms": 157
+  },
+  {
+    "label": "platform-mobile",
+    "kind": "platform",
+    "status": 0,
+    "ms": 51535
+  },
+  {
+    "label": "callback-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 5785
+  },
+  {
+    "label": "contact-linkage-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 7006
+  },
+  {
+    "label": "contacts-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 5739
+  },
+  {
+    "label": "ebook-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 14037
+  },
+  {
+    "label": "expense-polish-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 6481
+  },
+  {
+    "label": "expenses-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 9901
+  },
+  {
+    "label": "financing-states-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 16474
+  },
+  {
+    "label": "generation-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 9534
+  },
+  {
+    "label": "hero-editor-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 32755
+  },
+  {
+    "label": "planning-ambient-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 19913
+  },
+  {
+    "label": "planning-scroll-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 32445
+  },
+  {
+    "label": "platform-ui-cleanup-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 6695
+  },
+  {
+    "label": "promotion-unlocks-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 17388
+  },
+  {
+    "label": "roofing-cities-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 19492
+  },
+  {
+    "label": "roofing-cta-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 23512
+  },
+  {
+    "label": "roofing-story-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 13734
+  },
+  {
+    "label": "service-motion-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 20644
+  },
+  {
+    "label": "trade-enablement-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 38871
+  },
+  {
+    "label": "trade-visual-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 35337
+  },
+  {
+    "label": "clips-phase2",
+    "kind": "regression",
+    "status": 0,
+    "ms": 610
+  },
+  {
+    "label": "clips-phase2-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 23564
+  },
+  {
+    "label": "roofing-polish-part1",
+    "kind": "regression",
+    "status": 0,
+    "ms": 2975
+  },
+  {
+    "label": "roofing-polish-part1-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 46956
+  },
+  {
+    "label": "roofing-polish-part2",
+    "kind": "regression",
+    "status": 0,
+    "ms": 5370
+  },
+  {
+    "label": "roofing-polish-part2-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 44972
+  },
+  {
+    "label": "roofing-acceptance",
+    "kind": "browser",
+    "status": 0,
+    "ms": 101358
+  },
+  {
+    "label": "design-styles",
+    "kind": "regression",
+    "status": 0,
+    "ms": 2310
+  },
+  {
+    "label": "promotions-ambient",
+    "status": 0,
+    "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward."
+  },
+  {
+    "label": "promotions-scroll",
+    "status": 0,
+    "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward."
+  },
+  {
+    "label": "promotions-ambient-browser",
+    "status": 0,
+    "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward."
+  },
+  {
+    "label": "promotions-scroll-browser",
+    "status": 0,
+    "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward."
+  }
+]

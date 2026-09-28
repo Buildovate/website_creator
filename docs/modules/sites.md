@@ -199,3 +199,9 @@ Full tenant loads validate generationManifest and adopt older snapshots using th
 ## #023A — Hero editor
 
 The Hero workspace screen edits existing scrollStory settings through tenant PUT/render and owner publication. Owners/admins must unlock the #023 Scroll Story choice first; editor/viewer mutations fail server-side. Every selected photo is checked against the tenant on create/render/save/publish; public media access uses published references only. New journey hero overrides require scrollStory.editorVersion=1; existing sites render identically until intentionally edited. #023 keeps its existing revision history and stable treatment seeds. See [evidence](../build-evidence/023A/README.md).
+
+## #028A style snapshots
+
+`siteStyle` and `siteStyleSeed` live in the existing tenant settings/published JSON. `cleanSiteStyle` validates the four ids and unsigned seed, preserves omitted values, and retains a stored seed across saves. Creation and duplication use `stableSiteStyleSeed`; no database migration is needed. Existing draft write and owner publish permissions are unchanged.
+
+The public worker applies the published style to every successful `/s/:slug` HTML response. Authorized `?preview=1&siteStyle=classic` previews may try an unsaved look and propagate that choice through the site's own links. Public style query parameters cannot override the published snapshot. The editor render endpoint uses the same decorator. Current adds no style markup or asset links.

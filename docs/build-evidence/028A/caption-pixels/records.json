@@ -1,0 +1,770 @@
+[
+  {
+    "service": "roof-installation",
+    "width": 1440,
+    "key": "roof-installation-1440-0",
+    "text": "Roof installation / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 1440,
+    "key": "roof-installation-1440-1",
+    "text": "Roof installation / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 1440,
+    "key": "roof-installation-1440-2",
+    "text": "Roof installation / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 1440,
+    "key": "roof-installation-1440-3",
+    "text": "Roof installation / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 1440,
+    "key": "roof-installation-1440-4",
+    "text": "Roof installation / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 1440,
+    "key": "roof-installation-1440-5",
+    "text": "Roof installation / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 1440,
+    "key": "roof-repair-1440-0",
+    "text": "Roof repair / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 1440,
+    "key": "roof-repair-1440-1",
+    "text": "Roof repair / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 1440,
+    "key": "roof-repair-1440-2",
+    "text": "Roof repair / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 1440,
+    "key": "roof-repair-1440-3",
+    "text": "Roof repair / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 1440,
+    "key": "roof-repair-1440-4",
+    "text": "Roof repair / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 1440,
+    "key": "roof-repair-1440-5",
+    "text": "Roof repair / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 1440,
+    "key": "roof-replacement-1440-0",
+    "text": "Roof replacement / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 1440,
+    "key": "roof-replacement-1440-1",
+    "text": "Roof replacement / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 1440,
+    "key": "roof-replacement-1440-2",
+    "text": "Roof replacement / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 1440,
+    "key": "roof-replacement-1440-3",
+    "text": "Roof replacement / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 1440,
+    "key": "roof-replacement-1440-4",
+    "text": "Roof replacement / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 1440,
+    "key": "roof-replacement-1440-5",
+    "text": "Roof replacement / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 1440,
+    "key": "asphalt-shingles-1440-0",
+    "text": "Asphalt shingles / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 1440,
+    "key": "asphalt-shingles-1440-1",
+    "text": "Asphalt shingles / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 1440,
+    "key": "asphalt-shingles-1440-2",
+    "text": "Asphalt shingles / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 1440,
+    "key": "asphalt-shingles-1440-3",
+    "text": "Asphalt shingles / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 1440,
+    "key": "asphalt-shingles-1440-4",
+    "text": "Asphalt shingles / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 1440,
+    "key": "asphalt-shingles-1440-5",
+    "text": "Asphalt shingles / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 1440,
+    "key": "metal-roofing-1440-0",
+    "text": "Metal roofing / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 1440,
+    "key": "metal-roofing-1440-1",
+    "text": "Metal roofing / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 1440,
+    "key": "metal-roofing-1440-2",
+    "text": "Metal roofing / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 1440,
+    "key": "metal-roofing-1440-3",
+    "text": "Metal roofing / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 1440,
+    "key": "metal-roofing-1440-4",
+    "text": "Metal roofing / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 1440,
+    "key": "metal-roofing-1440-5",
+    "text": "Metal roofing / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 1440,
+    "key": "flat-roofs-1440-0",
+    "text": "Flat roofs / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 1440,
+    "key": "flat-roofs-1440-1",
+    "text": "Flat roofs / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 1440,
+    "key": "flat-roofs-1440-2",
+    "text": "Flat roofs / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 1440,
+    "key": "flat-roofs-1440-3",
+    "text": "Flat roofs / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 1440,
+    "key": "flat-roofs-1440-4",
+    "text": "Flat roofs / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 1440,
+    "key": "flat-roofs-1440-5",
+    "text": "Flat roofs / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 1440,
+    "key": "roof-maintenance-1440-0",
+    "text": "Roof maintenance / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 1440,
+    "key": "roof-maintenance-1440-1",
+    "text": "Roof maintenance / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 1440,
+    "key": "roof-maintenance-1440-2",
+    "text": "Roof maintenance / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 1440,
+    "key": "roof-maintenance-1440-3",
+    "text": "Roof maintenance / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 1440,
+    "key": "roof-maintenance-1440-4",
+    "text": "Roof maintenance / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 1440,
+    "key": "roof-maintenance-1440-5",
+    "text": "Roof maintenance / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 1440,
+    "key": "gutters-1440-0",
+    "text": "Gutters / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 1440,
+    "key": "gutters-1440-1",
+    "text": "Gutters / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 1440,
+    "key": "gutters-1440-2",
+    "text": "Gutters / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 1440,
+    "key": "gutters-1440-3",
+    "text": "Gutters / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 1440,
+    "key": "gutters-1440-4",
+    "text": "Gutters / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 1440,
+    "key": "gutters-1440-5",
+    "text": "Gutters / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 390,
+    "key": "roof-installation-390-0",
+    "text": "Roof installation / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 390,
+    "key": "roof-installation-390-1",
+    "text": "Roof installation / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 390,
+    "key": "roof-installation-390-2",
+    "text": "Roof installation / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 390,
+    "key": "roof-installation-390-3",
+    "text": "Roof installation / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 390,
+    "key": "roof-installation-390-4",
+    "text": "Roof installation / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-installation",
+    "width": 390,
+    "key": "roof-installation-390-5",
+    "text": "Roof installation / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 390,
+    "key": "roof-repair-390-0",
+    "text": "Roof repair / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 390,
+    "key": "roof-repair-390-1",
+    "text": "Roof repair / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 390,
+    "key": "roof-repair-390-2",
+    "text": "Roof repair / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 390,
+    "key": "roof-repair-390-3",
+    "text": "Roof repair / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 390,
+    "key": "roof-repair-390-4",
+    "text": "Roof repair / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-repair",
+    "width": 390,
+    "key": "roof-repair-390-5",
+    "text": "Roof repair / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 390,
+    "key": "roof-replacement-390-0",
+    "text": "Roof replacement / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 390,
+    "key": "roof-replacement-390-1",
+    "text": "Roof replacement / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 390,
+    "key": "roof-replacement-390-2",
+    "text": "Roof replacement / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 390,
+    "key": "roof-replacement-390-3",
+    "text": "Roof replacement / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 390,
+    "key": "roof-replacement-390-4",
+    "text": "Roof replacement / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-replacement",
+    "width": 390,
+    "key": "roof-replacement-390-5",
+    "text": "Roof replacement / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 390,
+    "key": "asphalt-shingles-390-0",
+    "text": "Asphalt shingles / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 390,
+    "key": "asphalt-shingles-390-1",
+    "text": "Asphalt shingles / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 390,
+    "key": "asphalt-shingles-390-2",
+    "text": "Asphalt shingles / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 390,
+    "key": "asphalt-shingles-390-3",
+    "text": "Asphalt shingles / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 390,
+    "key": "asphalt-shingles-390-4",
+    "text": "Asphalt shingles / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "asphalt-shingles",
+    "width": 390,
+    "key": "asphalt-shingles-390-5",
+    "text": "Asphalt shingles / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 390,
+    "key": "metal-roofing-390-0",
+    "text": "Metal roofing / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 390,
+    "key": "metal-roofing-390-1",
+    "text": "Metal roofing / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 390,
+    "key": "metal-roofing-390-2",
+    "text": "Metal roofing / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 390,
+    "key": "metal-roofing-390-3",
+    "text": "Metal roofing / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 390,
+    "key": "metal-roofing-390-4",
+    "text": "Metal roofing / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "metal-roofing",
+    "width": 390,
+    "key": "metal-roofing-390-5",
+    "text": "Metal roofing / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 390,
+    "key": "flat-roofs-390-0",
+    "text": "Flat roofs / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 390,
+    "key": "flat-roofs-390-1",
+    "text": "Flat roofs / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 390,
+    "key": "flat-roofs-390-2",
+    "text": "Flat roofs / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 390,
+    "key": "flat-roofs-390-3",
+    "text": "Flat roofs / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 390,
+    "key": "flat-roofs-390-4",
+    "text": "Flat roofs / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "flat-roofs",
+    "width": 390,
+    "key": "flat-roofs-390-5",
+    "text": "Flat roofs / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 390,
+    "key": "roof-maintenance-390-0",
+    "text": "Roof maintenance / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 390,
+    "key": "roof-maintenance-390-1",
+    "text": "Roof maintenance / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 390,
+    "key": "roof-maintenance-390-2",
+    "text": "Roof maintenance / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 390,
+    "key": "roof-maintenance-390-3",
+    "text": "Roof maintenance / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 390,
+    "key": "roof-maintenance-390-4",
+    "text": "Roof maintenance / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "roof-maintenance",
+    "width": 390,
+    "key": "roof-maintenance-390-5",
+    "text": "Roof maintenance / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 390,
+    "key": "gutters-390-0",
+    "text": "Gutters / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 390,
+    "key": "gutters-390-1",
+    "text": "Gutters / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 390,
+    "key": "gutters-390-2",
+    "text": "Gutters / project setting",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 390,
+    "key": "gutters-390-3",
+    "text": "Gutters / scope detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 390,
+    "key": "gutters-390-4",
+    "text": "Gutters / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  },
+  {
+    "service": "gutters",
+    "width": 390,
+    "key": "gutters-390-5",
+    "text": "Gutters / work detail",
+    "color": "rgb(255, 255, 255)",
+    "style": null
+  }
+]

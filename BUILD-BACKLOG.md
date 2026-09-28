@@ -697,7 +697,7 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 
 ### #028A — Design styles
 
-- State: **Not started** · Estimate: **8h** (≤1 day).
+- State: **Done** · [Evidence](docs/build-evidence/028A/README.md) · Estimate: **8h** (≤1 day).
 - Scope: Preserve existing templates. Add four or five configurable inspiration-based style variations per trade within the current section system; each variation defines its type pairing, palette, corner radius, spacing rhythm and light or dark surface treatment. The deterministic per-site seed from #004M chooses a variation unless the contractor overrides it.
 - Done when: The Roofing site renders correctly in every existing template and added style variation, preserving content, permissions, responsive behavior and accessibility without a template redesign.
 - External keys/accounts: None.

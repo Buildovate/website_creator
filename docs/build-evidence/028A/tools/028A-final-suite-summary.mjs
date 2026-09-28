@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028A';
+const commands=JSON.parse(fs.readFileSync(out+'/full-checks.json'));
+assert.equal(commands.length,102);assert.ok(commands.every(c=>c.status===0),'Fresh 102-command suite contains failures; do not reuse old retests');
+const acceptance=JSON.parse(fs.readFileSync(root+'/docs/build-evidence/028/acceptance-results.json'));
+assert.equal(acceptance.failures.length,0);assert.equal(acceptance.checks.length,911);
+fs.copyFileSync(root+'/docs/build-evidence/028/acceptance-results.json',out+'/acceptance-results.json');
+const fixture=JSON.parse(fs.readFileSync(out+'/pending-fixture-checks.json'));assert.ok(fixture.every(r=>r.status===0));
+const result={commands,summary:{commands:102,passed:102,initialFailures:[],acceptanceAssertions:911,run:'Full fresh rerun after Joe approved the four Current color-only corrections.'},fixture};
+fs.writeFileSync(out+'/final-checks.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result.summary));

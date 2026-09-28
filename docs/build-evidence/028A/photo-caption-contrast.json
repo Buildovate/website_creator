@@ -1,0 +1,966 @@
+{
+  "method": "Actual installed photo pixels at text glyph locations. Two lossless rendered element captures, original white text and identical layout with transparent text. Difference threshold 25 excludes near-zero antialias coverage; foreground is the computed full text color. Minimum ratio across the glyph mask.",
+  "captions": [
+    {
+      "service": "roof-installation",
+      "width": 1440,
+      "key": "roof-installation-1440-0",
+      "text": "Roof installation / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 939,
+      "minimumRatio": 13.17103416541072,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 1440,
+      "key": "roof-installation-1440-1",
+      "text": "Roof installation / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 962,
+      "minimumRatio": 14.297920430035154,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 1440,
+      "key": "roof-installation-1440-2",
+      "text": "Roof installation / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 953,
+      "minimumRatio": 13.127031959517156,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 1440,
+      "key": "roof-installation-1440-3",
+      "text": "Roof installation / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 870,
+      "minimumRatio": 12.51912585573658,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 1440,
+      "key": "roof-installation-1440-4",
+      "text": "Roof installation / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 863,
+      "minimumRatio": 12.955803457347896,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 1440,
+      "key": "roof-installation-1440-5",
+      "text": "Roof installation / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 929,
+      "minimumRatio": 12.753020628847281,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 1440,
+      "key": "roof-repair-1440-0",
+      "text": "Roof repair / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 766,
+      "minimumRatio": 13.300873613784482,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 1440,
+      "key": "roof-repair-1440-1",
+      "text": "Roof repair / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 746,
+      "minimumRatio": 14.297920430035154,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 1440,
+      "key": "roof-repair-1440-2",
+      "text": "Roof repair / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 768,
+      "minimumRatio": 13.127031959517156,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 1440,
+      "key": "roof-repair-1440-3",
+      "text": "Roof repair / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 714,
+      "minimumRatio": 12.76741796053378,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 1440,
+      "key": "roof-repair-1440-4",
+      "text": "Roof repair / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 672,
+      "minimumRatio": 13.488549328116289,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 1440,
+      "key": "roof-repair-1440-5",
+      "text": "Roof repair / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 743,
+      "minimumRatio": 12.753020628847281,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 1440,
+      "key": "roof-replacement-1440-0",
+      "text": "Roof replacement / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 971,
+      "minimumRatio": 13.251590423615495,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 1440,
+      "key": "roof-replacement-1440-1",
+      "text": "Roof replacement / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 944,
+      "minimumRatio": 14.297920430035154,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 1440,
+      "key": "roof-replacement-1440-2",
+      "text": "Roof replacement / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 958,
+      "minimumRatio": 13.14359654452831,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 1440,
+      "key": "roof-replacement-1440-3",
+      "text": "Roof replacement / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 906,
+      "minimumRatio": 12.614784634383419,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 1440,
+      "key": "roof-replacement-1440-4",
+      "text": "Roof replacement / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 860,
+      "minimumRatio": 13.522548883296206,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 1440,
+      "key": "roof-replacement-1440-5",
+      "text": "Roof replacement / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 937,
+      "minimumRatio": 12.753020628847281,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 1440,
+      "key": "asphalt-shingles-1440-0",
+      "text": "Asphalt shingles / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 950,
+      "minimumRatio": 13.380007879059177,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 1440,
+      "key": "asphalt-shingles-1440-1",
+      "text": "Asphalt shingles / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 951,
+      "minimumRatio": 14.297920430035154,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 1440,
+      "key": "asphalt-shingles-1440-2",
+      "text": "Asphalt shingles / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 970,
+      "minimumRatio": 13.14359654452831,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 1440,
+      "key": "asphalt-shingles-1440-3",
+      "text": "Asphalt shingles / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 868,
+      "minimumRatio": 12.51912585573658,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 1440,
+      "key": "asphalt-shingles-1440-4",
+      "text": "Asphalt shingles / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 871,
+      "minimumRatio": 12.955803457347896,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 1440,
+      "key": "asphalt-shingles-1440-5",
+      "text": "Asphalt shingles / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 956,
+      "minimumRatio": 12.705216937271969,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 1440,
+      "key": "metal-roofing-1440-0",
+      "text": "Metal roofing / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 870,
+      "minimumRatio": 12.067828895249063,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 1440,
+      "key": "metal-roofing-1440-1",
+      "text": "Metal roofing / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 865,
+      "minimumRatio": 14.297920430035154,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 1440,
+      "key": "metal-roofing-1440-2",
+      "text": "Metal roofing / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 887,
+      "minimumRatio": 13.300873613784482,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 1440,
+      "key": "metal-roofing-1440-3",
+      "text": "Metal roofing / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 789,
+      "minimumRatio": 12.551872570295076,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 1440,
+      "key": "metal-roofing-1440-4",
+      "text": "Metal roofing / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 776,
+      "minimumRatio": 12.955803457347896,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 1440,
+      "key": "metal-roofing-1440-5",
+      "text": "Metal roofing / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 862,
+      "minimumRatio": 12.955803457347896,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 1440,
+      "key": "flat-roofs-1440-0",
+      "text": "Flat roofs / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 687,
+      "minimumRatio": 12.614784634383419,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 1440,
+      "key": "flat-roofs-1440-1",
+      "text": "Flat roofs / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 679,
+      "minimumRatio": 14.297920430035154,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 1440,
+      "key": "flat-roofs-1440-2",
+      "text": "Flat roofs / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 709,
+      "minimumRatio": 13.127031959517156,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 1440,
+      "key": "flat-roofs-1440-3",
+      "text": "Flat roofs / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 640,
+      "minimumRatio": 12.76741796053378,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 1440,
+      "key": "flat-roofs-1440-4",
+      "text": "Flat roofs / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 630,
+      "minimumRatio": 13.664875557696051,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 1440,
+      "key": "flat-roofs-1440-5",
+      "text": "Flat roofs / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 695,
+      "minimumRatio": 12.939393032717911,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 1440,
+      "key": "roof-maintenance-1440-0",
+      "text": "Roof maintenance / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 948,
+      "minimumRatio": 13.679215158986983,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 1440,
+      "key": "roof-maintenance-1440-1",
+      "text": "Roof maintenance / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 971,
+      "minimumRatio": 14.326810253790635,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 1440,
+      "key": "roof-maintenance-1440-2",
+      "text": "Roof maintenance / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 971,
+      "minimumRatio": 13.14359654452831,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 1440,
+      "key": "roof-maintenance-1440-3",
+      "text": "Roof maintenance / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 914,
+      "minimumRatio": 12.614784634383419,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 1440,
+      "key": "roof-maintenance-1440-4",
+      "text": "Roof maintenance / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 876,
+      "minimumRatio": 13.127031959517156,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 1440,
+      "key": "roof-maintenance-1440-5",
+      "text": "Roof maintenance / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 971,
+      "minimumRatio": 12.753020628847281,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 1440,
+      "key": "gutters-1440-0",
+      "text": "Gutters / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 639,
+      "minimumRatio": 12.986834853515209,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 1440,
+      "key": "gutters-1440-1",
+      "text": "Gutters / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 639,
+      "minimumRatio": 14.326810253790635,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 1440,
+      "key": "gutters-1440-2",
+      "text": "Gutters / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 685,
+      "minimumRatio": 13.127031959517156,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 1440,
+      "key": "gutters-1440-3",
+      "text": "Gutters / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 578,
+      "minimumRatio": 12.614784634383419,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 1440,
+      "key": "gutters-1440-4",
+      "text": "Gutters / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 584,
+      "minimumRatio": 13.536591178132456,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 1440,
+      "key": "gutters-1440-5",
+      "text": "Gutters / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 630,
+      "minimumRatio": 12.907927421693742,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 390,
+      "key": "roof-installation-390-0",
+      "text": "Roof installation / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 929,
+      "minimumRatio": 13.359732692784618,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 390,
+      "key": "roof-installation-390-1",
+      "text": "Roof installation / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 941,
+      "minimumRatio": 12.398697197620846,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 390,
+      "key": "roof-installation-390-2",
+      "text": "Roof installation / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 953,
+      "minimumRatio": 13.315836075524372,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 390,
+      "key": "roof-installation-390-3",
+      "text": "Roof installation / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 861,
+      "minimumRatio": 12.567016567021753,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 390,
+      "key": "roof-installation-390-4",
+      "text": "Roof installation / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 843,
+      "minimumRatio": 13.157882617750605,
+      "pass": true
+    },
+    {
+      "service": "roof-installation",
+      "width": 390,
+      "key": "roof-installation-390-5",
+      "text": "Roof installation / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 929,
+      "minimumRatio": 12.986675214952745,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 390,
+      "key": "roof-repair-390-0",
+      "text": "Roof repair / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 743,
+      "minimumRatio": 13.300873613784482,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 390,
+      "key": "roof-repair-390-1",
+      "text": "Roof repair / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 749,
+      "minimumRatio": 13.519364372235444,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 390,
+      "key": "roof-repair-390-2",
+      "text": "Roof repair / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 768,
+      "minimumRatio": 13.14359654452831,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 390,
+      "key": "roof-repair-390-3",
+      "text": "Roof repair / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 672,
+      "minimumRatio": 12.551872570295076,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 390,
+      "key": "roof-repair-390-4",
+      "text": "Roof repair / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 670,
+      "minimumRatio": 13.157882617750605,
+      "pass": true
+    },
+    {
+      "service": "roof-repair",
+      "width": 390,
+      "key": "roof-repair-390-5",
+      "text": "Roof repair / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 743,
+      "minimumRatio": 12.907927421693742,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 390,
+      "key": "roof-replacement-390-0",
+      "text": "Roof replacement / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 937,
+      "minimumRatio": 12.536468861104499,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 390,
+      "key": "roof-replacement-390-1",
+      "text": "Roof replacement / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 950,
+      "minimumRatio": 12.020213728865826,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 390,
+      "key": "roof-replacement-390-2",
+      "text": "Roof replacement / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 958,
+      "minimumRatio": 13.127031959517156,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 390,
+      "key": "roof-replacement-390-3",
+      "text": "Roof replacement / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 874,
+      "minimumRatio": 12.704201942004547,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 390,
+      "key": "roof-replacement-390-4",
+      "text": "Roof replacement / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 872,
+      "minimumRatio": 13.157882617750605,
+      "pass": true
+    },
+    {
+      "service": "roof-replacement",
+      "width": 390,
+      "key": "roof-replacement-390-5",
+      "text": "Roof replacement / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 937,
+      "minimumRatio": 12.970186539696583,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 390,
+      "key": "asphalt-shingles-390-0",
+      "text": "Asphalt shingles / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 956,
+      "minimumRatio": 13.14359654452831,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 390,
+      "key": "asphalt-shingles-390-1",
+      "text": "Asphalt shingles / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 968,
+      "minimumRatio": 12.38219845722038,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 390,
+      "key": "asphalt-shingles-390-2",
+      "text": "Asphalt shingles / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 970,
+      "minimumRatio": 13.127031959517156,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 390,
+      "key": "asphalt-shingles-390-3",
+      "text": "Asphalt shingles / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 884,
+      "minimumRatio": 12.551872570295076,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 390,
+      "key": "asphalt-shingles-390-4",
+      "text": "Asphalt shingles / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 874,
+      "minimumRatio": 13.267320412762432,
+      "pass": true
+    },
+    {
+      "service": "asphalt-shingles",
+      "width": 390,
+      "key": "asphalt-shingles-390-5",
+      "text": "Asphalt shingles / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 956,
+      "minimumRatio": 12.800062813791875,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 390,
+      "key": "metal-roofing-390-0",
+      "text": "Metal roofing / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 862,
+      "minimumRatio": 12.202421679722026,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 390,
+      "key": "metal-roofing-390-1",
+      "text": "Metal roofing / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 859,
+      "minimumRatio": 12.020213728865826,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 390,
+      "key": "metal-roofing-390-2",
+      "text": "Metal roofing / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 887,
+      "minimumRatio": 13.315836075524372,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 390,
+      "key": "metal-roofing-390-3",
+      "text": "Metal roofing / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 797,
+      "minimumRatio": 12.551872570295076,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 390,
+      "key": "metal-roofing-390-4",
+      "text": "Metal roofing / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 780,
+      "minimumRatio": 13.505697642679898,
+      "pass": true
+    },
+    {
+      "service": "metal-roofing",
+      "width": 390,
+      "key": "metal-roofing-390-5",
+      "text": "Metal roofing / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 862,
+      "minimumRatio": 12.891323077303738,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 390,
+      "key": "flat-roofs-390-0",
+      "text": "Flat roofs / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 695,
+      "minimumRatio": 13.74006152111026,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 390,
+      "key": "flat-roofs-390-1",
+      "text": "Flat roofs / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 701,
+      "minimumRatio": 13.883660468821105,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 390,
+      "key": "flat-roofs-390-2",
+      "text": "Flat roofs / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 709,
+      "minimumRatio": 13.315836075524372,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 390,
+      "key": "flat-roofs-390-3",
+      "text": "Flat roofs / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 630,
+      "minimumRatio": 12.737105356419406,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 390,
+      "key": "flat-roofs-390-4",
+      "text": "Flat roofs / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 624,
+      "minimumRatio": 13.488549328116289,
+      "pass": true
+    },
+    {
+      "service": "flat-roofs",
+      "width": 390,
+      "key": "flat-roofs-390-5",
+      "text": "Flat roofs / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 695,
+      "minimumRatio": 12.753020628847281,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 390,
+      "key": "roof-maintenance-390-0",
+      "text": "Roof maintenance / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 971,
+      "minimumRatio": 13.45700586490598,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 390,
+      "key": "roof-maintenance-390-1",
+      "text": "Roof maintenance / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 974,
+      "minimumRatio": 12.428490225843928,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 390,
+      "key": "roof-maintenance-390-2",
+      "text": "Roof maintenance / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 971,
+      "minimumRatio": 13.315836075524372,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 390,
+      "key": "roof-maintenance-390-3",
+      "text": "Roof maintenance / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 875,
+      "minimumRatio": 12.53419088944964,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 390,
+      "key": "roof-maintenance-390-4",
+      "text": "Roof maintenance / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 873,
+      "minimumRatio": 13.127031959517156,
+      "pass": true
+    },
+    {
+      "service": "roof-maintenance",
+      "width": 390,
+      "key": "roof-maintenance-390-5",
+      "text": "Roof maintenance / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 971,
+      "minimumRatio": 12.753020628847281,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 390,
+      "key": "gutters-390-0",
+      "text": "Gutters / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 630,
+      "minimumRatio": 12.18644082924916,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 390,
+      "key": "gutters-390-1",
+      "text": "Gutters / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 623,
+      "minimumRatio": 13.710014258496114,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 390,
+      "key": "gutters-390-2",
+      "text": "Gutters / project setting",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 685,
+      "minimumRatio": 13.14359654452831,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 390,
+      "key": "gutters-390-3",
+      "text": "Gutters / scope detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 593,
+      "minimumRatio": 12.688725711271195,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 390,
+      "key": "gutters-390-4",
+      "text": "Gutters / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 578,
+      "minimumRatio": 13.157882617750605,
+      "pass": true
+    },
+    {
+      "service": "gutters",
+      "width": 390,
+      "key": "gutters-390-5",
+      "text": "Gutters / work detail",
+      "color": "rgb(255, 255, 255)",
+      "glyphPixels": 630,
+      "minimumRatio": 12.753020628847281,
+      "pass": true
+    }
+  ],
+  "failures": []
+}

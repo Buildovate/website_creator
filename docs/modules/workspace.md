@@ -141,3 +141,9 @@ The expense UI adds recorded-data charts in src/client/workspace/expense-charts.
 ## #017 — financing setup states
 
 The Questionnaire retains incomplete lender selections, supports the five named lenders plus Other/None, and labels API status Not connected separately from a confirmed business link. Saving does not connect a provider or publish. The master control writes financing.requested and enabled together; normalized enabled is the derived public-availability flag, while requested preserves setup intent. Public availability requires current supplied terms and a confirmed link; None hides financing without deleting settings. The existing role/save/publish boundary and phone action dock are reused. New programs start with blank APR and term, not guessed defaults. Disclosure editing is labeled for /legal. Offline save failures retain answers and explain retry. Evidence: ../build-evidence/017/README.md.
+
+## #028A Look of your site
+
+The contractor's Design settings switcher adds Look of your site alongside Design locks and Creative direction. `src/client/workspace/site-look.js` renders four real homepage hero previews in script-disabled iframes, sized to their cards. Each Preview link opens the authorized full-site preview. One Save look action uses the existing tenant draft API; the existing Publish action remains separate. Editors can save a look; viewers can inspect previews but cannot save; only existing owner/admin permissions allow publication. Offline, failed and stale saves retain the selected option.
+
+Design-lock status uses ordinary draft/live wording, and its heading reads “Choices to keep when we refresh your site.” Existing lock and regeneration behavior is retained. The mobile platform dock remains the only visible Save action on its screen.

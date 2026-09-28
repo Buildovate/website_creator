@@ -157,3 +157,6 @@
 .service-detail .sd-service-photo{position:relative;overflow:hidden;aspect-ratio:3/2;width:100%;height:auto;min-height:0;padding:0;clip-path:none;border-radius:6px;background:transparent}
 .sd-service-photo img{display:block;width:100%;height:100%;aspect-ratio:3/2;object-fit:cover}.sd-photo-caption{display:block;position:absolute;inset:auto 0 0;padding:20px 16px 12px;background:linear-gradient(transparent,#14232dee);color:#fff;font:650 12px/1.5 system-ui}
 .sd-signature-visual .sd-service-photo{min-height:0}.sd-options-grid .sd-service-photo{margin:12px 0 24px}.sd-options-grid .sd-photo-caption{font-size:11px}.sd-questions .sd-service-photo{max-width:none;clip-path:none}.sd-compare-ready .sd-service-photo{height:100%;aspect-ratio:auto}.sd-compare-ready .sd-service-photo img{height:100%;aspect-ratio:auto}.sd-request>div:after{display:none}
+
+/* #028A: keep Current photo captions readable over the lightest installed images. */
+body:not([data-site-style]) .sd-photo-caption{background-color:#14232dcf}

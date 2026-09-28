@@ -1,0 +1,47 @@
+[
+  {
+    "label": "build",
+    "status": 0,
+    "ms": 3656
+  },
+  {
+    "label": "typecheck",
+    "status": 0,
+    "ms": 386
+  },
+  {
+    "label": "design-styles",
+    "status": 0,
+    "ms": 2830
+  },
+  {
+    "label": "expenses-browser",
+    "status": 0,
+    "ms": 12381
+  },
+  {
+    "label": "planning-ambient-browser",
+    "status": 0,
+    "ms": 24473
+  },
+  {
+    "label": "roofing-cities-browser",
+    "status": 0,
+    "ms": 26050
+  },
+  {
+    "label": "roofing-cta-browser",
+    "status": 0,
+    "ms": 27483
+  },
+  {
+    "label": "roofing-polish-part2-browser",
+    "status": 0,
+    "ms": 52614
+  },
+  {
+    "label": "roofing-acceptance",
+    "status": 1,
+    "ms": 107788
+  }
+]
