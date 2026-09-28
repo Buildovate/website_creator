@@ -1,0 +1,247 @@
+desktop-admin-overview: 0
+desktop-admin-contacts: 0
+desktop-modal: 0
+desktop-contact-drawer: 0
+desktop-admin-customers: 0
+desktop-admin-pipeline: 0
+desktop-admin-calendar: 0
+desktop-admin-followupCenter: 0
+desktop-admin-leadGen: 0
+desktop-admin-commissions: 0
+desktop-admin-payments: 0
+desktop-admin-expenses: 0
+desktop-admin-websites: 0
+desktop-admin-tradeLibrary: 0
+desktop-admin-templateLibrary: 0
+desktop-admin-settings: 0
+desktop-admin-profile: 0
+desktop-admin-launch: 0
+desktop-admin-team: 0
+desktop-admin-monitoring: 0
+desktop-admin-audit: 0
+desktop-expenses-admin: 0
+desktop-contractor-launchpad: 0
+desktop-contractor-questionnaire: 0
+desktop-questionnaire-first: 0
+desktop-questionnaire-midway: 0
+desktop-contractor-hero: 0
+desktop-contractor-editor: 0
+desktop-contractor-pages: 0
+desktop-empty-state: 0
+desktop-contractor-business: 0
+desktop-contractor-ownerphoto: 0
+desktop-contractor-templates: 0
+desktop-look-picker: 0
+desktop-contractor-services: 0
+desktop-contractor-projects: 0
+desktop-contractor-blog: 0
+desktop-contractor-contacts: 0
+desktop-contractor-calendar: 0
+desktop-contractor-forms: 0
+desktop-contractor-inquiries: 0
+desktop-contractor-chat: 0
+desktop-contractor-pricing: 0
+desktop-contractor-reviews: 0
+desktop-contractor-visibility: 0
+desktop-contractor-plan: 0
+desktop-contractor-readiness: 0
+desktop-contractor-followups: 0
+desktop-contractor-access: 0
+desktop-contractor-domains: 0
+desktop-contractor-backups: 0
+desktop-preview-chrome: 0
+desktop-sign-in: 0
+desktop-error-state: 0
+desktop-1280-admin-overview: 0
+desktop-1280-admin-contacts: 0
+desktop-1280-modal: 0
+desktop-1280-contact-drawer: 0
+desktop-1280-admin-customers: 0
+desktop-1280-admin-pipeline: 0
+desktop-1280-admin-calendar: 0
+desktop-1280-admin-followupCenter: 0
+desktop-1280-admin-leadGen: 0
+desktop-1280-admin-commissions: 0
+desktop-1280-admin-payments: 0
+desktop-1280-admin-expenses: 0
+desktop-1280-admin-websites: 0
+desktop-1280-admin-tradeLibrary: 0
+desktop-1280-admin-templateLibrary: 0
+desktop-1280-admin-settings: 0
+desktop-1280-admin-profile: 0
+desktop-1280-admin-launch: 0
+desktop-1280-admin-team: 0
+desktop-1280-admin-monitoring: 0
+desktop-1280-admin-audit: 0
+desktop-1280-expenses-admin: 0
+desktop-1280-contractor-launchpad: 0
+desktop-1280-contractor-questionnaire: 0
+desktop-1280-questionnaire-first: 0
+desktop-1280-questionnaire-midway: 0
+desktop-1280-contractor-hero: 0
+desktop-1280-contractor-editor: 0
+desktop-1280-contractor-pages: 0
+desktop-1280-empty-state: 0
+desktop-1280-contractor-business: 0
+desktop-1280-contractor-ownerphoto: 0
+desktop-1280-contractor-templates: 0
+desktop-1280-look-picker: 0
+desktop-1280-contractor-services: 0
+desktop-1280-contractor-projects: 0
+desktop-1280-contractor-blog: 0
+desktop-1280-contractor-contacts: 0
+desktop-1280-contractor-calendar: 0
+desktop-1280-contractor-forms: 0
+desktop-1280-contractor-inquiries: 0
+desktop-1280-contractor-chat: 0
+desktop-1280-contractor-pricing: 0
+desktop-1280-contractor-reviews: 0
+desktop-1280-contractor-visibility: 0
+desktop-1280-contractor-plan: 0
+desktop-1280-contractor-readiness: 0
+desktop-1280-contractor-followups: 0
+desktop-1280-contractor-access: 0
+desktop-1280-contractor-domains: 0
+desktop-1280-contractor-backups: 0
+desktop-1280-preview-chrome: 0
+desktop-1280-sign-in: 0
+desktop-1280-error-state: 0
+phone-admin-overview: 0
+phone-admin-contacts: 0
+phone-modal: 0
+phone-contact-drawer: 0
+phone-admin-customers: 0
+phone-admin-pipeline: 0
+phone-admin-calendar: 0
+phone-admin-followupCenter: 0
+phone-admin-leadGen: 0
+phone-admin-commissions: 0
+phone-admin-payments: 0
+phone-admin-expenses: 0
+phone-admin-websites: 0
+phone-admin-tradeLibrary: 0
+phone-admin-templateLibrary: 0
+phone-admin-settings: 0
+phone-admin-profile: 0
+phone-admin-launch: 0
+phone-admin-team: 0
+phone-admin-monitoring: 0
+phone-admin-audit: 0
+phone-expenses-admin: 0
+phone-contractor-launchpad: 0
+phone-contractor-questionnaire: 0
+phone-questionnaire-first: 0
+phone-questionnaire-midway: 0
+phone-contractor-hero: 0
+phone-contractor-editor: 0
+phone-contractor-pages: 0
+phone-empty-state: 0
+phone-contractor-business: 0
+phone-contractor-ownerphoto: 0
+phone-contractor-templates: 0
+phone-look-picker: 0
+phone-contractor-services: 0
+phone-contractor-projects: 0
+phone-contractor-blog: 0
+phone-contractor-contacts: 0
+phone-contractor-calendar: 0
+phone-contractor-forms: 0
+phone-contractor-inquiries: 0
+phone-contractor-chat: 0
+phone-contractor-pricing: 0
+phone-contractor-reviews: 0
+phone-contractor-visibility: 0
+phone-contractor-plan: 0
+phone-contractor-readiness: 0
+phone-contractor-followups: 0
+phone-contractor-access: 0
+phone-contractor-domains: 0
+phone-contractor-backups: 0
+phone-preview-chrome: 0
+phone-sign-in: 0
+phone-error-state: 0
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   {
++     allowed: false,
++     location: {
++       column: 0,
++       columnNumber: 0,
++       line: 0,
++       lineNumber: 0,
++       url: 'about:srcdoc'
++     },
++     state: 'desktop-1280-contractor-hero',
++     text: "Refused to apply style from 'http://127.0.0.1:8191/roofing-motion-home.css?v=004I-v2' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled.",
++     type: 'error',
++     viewport: {
++       height: 800,
++       width: 1280
++     }
++   },
++   {
++     allowed: false,
++     location: {
++       column: 0,
++       columnNumber: 0,
++       line: 0,
++       lineNumber: 0,
++       url: 'about:srcdoc'
++     },
++     state: 'desktop-1280-contractor-hero',
++     text: "Refused to apply style from 'http://127.0.0.1:8191/reviews.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled.",
++     type: 'error',
++     viewport: {
++       height: 800,
++       width: 1280
++     }
++   }
++ ]
+- []
+
+    at file:///C:/Users/joe/website_creator/docs/build-evidence/028P/tools/platform-browser.mjs:34:43
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    {
+      state: 'desktop-1280-contractor-hero',
+      type: 'error',
+      text: "Refused to apply style from 'http://127.0.0.1:8191/roofing-motion-home.css?v=004I-v2' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled.",
+      location: {
+        url: 'about:srcdoc',
+        line: 0,
+        column: 0,
+        lineNumber: 0,
+        columnNumber: 0
+      },
+      viewport: { width: 1280, height: 800 },
+      allowed: false
+    },
+    {
+      state: 'desktop-1280-contractor-hero',
+      type: 'error',
+      text: "Refused to apply style from 'http://127.0.0.1:8191/reviews.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled.",
+      location: {
+        url: 'about:srcdoc',
+        line: 0,
+        column: 0,
+        lineNumber: 0,
+        columnNumber: 0
+      },
+      viewport: { width: 1280, height: 800 },
+      allowed: false
+    }
+  ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

@@ -1,0 +1,28 @@
+[
+  {
+    "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/photos?stage=brand&caption=",
+    "method": "POST",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:91:61"
+  },
+  {
+    "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+    "method": "GET",
+    "status": 403,
+    "state": "permission-editor",
+    "source": "at file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:95:23",
+    "kind": "permission-state",
+    "active": true
+  },
+  {
+    "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+    "method": "GET",
+    "status": 403,
+    "state": "permission-viewer",
+    "source": "at file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:95:23",
+    "kind": "permission-state",
+    "active": true
+  }
+]

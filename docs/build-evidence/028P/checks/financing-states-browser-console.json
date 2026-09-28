@@ -1,0 +1,136 @@
+[
+  {
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8153/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "method": "PUT",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:25:83"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "method": "PUT",
+      "status": 503
+    }
+  },
+  {
+    "state": "settings-offline-desktop",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8153/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "method": "GET",
+      "status": "offline",
+      "state": "settings-offline-desktop",
+      "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:26:19",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "method": "GET",
+      "status": "offline"
+    }
+  },
+  {
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8153/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "method": "PUT",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:25:83"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "method": "PUT",
+      "status": 503
+    }
+  },
+  {
+    "state": "settings-offline-phone",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8153/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "method": "GET",
+      "status": "offline",
+      "state": "settings-offline-phone",
+      "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:26:19",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "method": "GET",
+      "status": "offline"
+    }
+  }
+]

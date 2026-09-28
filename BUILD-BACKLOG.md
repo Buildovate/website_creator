@@ -702,6 +702,28 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Done when: The Roofing site renders correctly in every existing template and added style variation, preserving content, permissions, responsive behavior and accessibility without a template redesign.
 - External keys/accounts: None.
 
+### #028P — Platform look
+
+- State: **Done** · [Evidence](docs/build-evidence/028P/README.md).
+- Scope: Apply the approved platform-2026-09-27 design guide across existing contractor/admin platform screens using isolated bv- tokens, self-hosted fonts and components under body.bv-platform. Preserve all routes, data, auth, copy and behavior; use a 720px phone breakpoint. No trade-site or shared app.css changes.
+- Done when: Before/after evidence, the full 102-command suite, platform layout/contrast/control/keyboard/font checks, all 17-kit/four-style HTML and CSS hashes, and the 374 archived responses pass. Document components in PLATFORM-LOOK.md and future-screen guidance in AGENTS.md. One local commit, no push/deploy; zero media credits.
+- External keys/accounts: None.
+
+### Editor preview iframe sandbox (security review, owner Louie)
+
+- State: **Follow-up — not started**. Owner: **Louie**.
+- Chrome warns: “An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.” The warning comes from the editor preview iframe created at src/client/editor/visual-editor.js:13.
+- It predates #028P: a separate reproduction of accepted commit 49b032eefdda23a7e7a66f9031c4f3d4f26c7271 emits the exact warning at 1440×900, 1280×800 and 390×844. See [baseline console reproduction](docs/build-evidence/028P/before-console/baseline-console.md). The original before evidence remains unchanged.
+- Louie decides the fix. No implementation is proposed or performed in #028P.
+
+### Public trade-site favicon missing (404 on /favicon.ico)
+
+- On public trade-site pages visited by the legacy browser suites, Chrome requests `/favicon.ico` and receives HTTP 404. Recorded by `ebook-browser` and `roofing-acceptance`; see [public baseline console](docs/build-evidence/028P/before-console/public-baseline-console.md). This predates #028P.
+
+### Legacy test pages: roofing-part2 financing link 404 and empty-guide resource 404, confirm intended
+
+- The `roofing-polish-part2-browser` fixture follows `/s/roofing-part2/financing` and receives HTTP 404. The `ebook-browser` fixture visits `/s/empty-guide-022/resources/before-you-decide-on-your-roof` and receives HTTP 404. Confirm whether these fixture responses are intended; see [public baseline console](docs/build-evidence/028P/before-console/public-baseline-console.md). Both predate #028P.
+
 ### #028B — Section layout variants
 
 - State: **Not started** · Estimate: **8h** (≤1 day).

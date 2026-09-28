@@ -1,0 +1,102 @@
+[
+  {
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8150/admin/expenses",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:27:49"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": 503
+    }
+  },
+  {
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8150/admin/expenses",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:27:49"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": 503
+    }
+  },
+  {
+    "state": "offline-phone",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8150/admin/expenses",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": "offline",
+      "state": "offline-phone",
+      "source": "at file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:32:468",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": "offline"
+    }
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+    "method": "GET",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:27:49"
+  },
+  {
+    "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+    "method": "GET",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:27:49"
+  },
+  {
+    "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+    "method": "GET",
+    "status": "offline",
+    "state": "offline-phone",
+    "source": "at file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:32:468",
+    "kind": "offline-injection",
+    "active": true
+  }
+]

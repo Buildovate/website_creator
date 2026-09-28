@@ -4,6 +4,7 @@ import {readFile} from 'node:fs/promises';
 // Keep compatibility filenames used by Worker-rendered HTML.
 export const clientEntries={
   'app':'src/client/workspace/index.ts',
+  'platform-look':'src/client/workspace/platform-look.ts',
   'site':'src/client/site/index.ts',
   'service-motion':'src/client/site/service-motion.ts',
   'conversion':'src/client/site/conversion.ts',
@@ -27,5 +28,6 @@ export async function buildClient() {
     }}],
   });
   await build({entryPoints:['src/client/styles/roofing-motion-home.css'],outfile:'dist/client/roofing-motion-home.css',bundle:true,minify:true,external:['/assets/*'],target:'es2022'});
+  await build({entryPoints:['src/client/styles/platform/index.css'],outfile:'dist/client/platform.css',bundle:true,external:['/assets/*'],target:'es2022'});
   await build({entryPoints:['src/client/styles/app.css'],outfile:'dist/client/app.css',bundle:true,external:['/assets/*'],target:'es2022'});
 }

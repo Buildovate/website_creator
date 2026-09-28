@@ -1,0 +1,20 @@
+{
+  "file": "C:/Users/joe/website_creator/docs/build-evidence/028P/before-platform.json",
+  "sha256": "525e522fedd037c8d5ec92512e3497194947758901f2d1843f9fd56533763a90",
+  "keys": [
+    "phase",
+    "screens",
+    "errors",
+    "fontRequests"
+  ],
+  "screens": 162,
+  "recordedPageExceptions": [],
+  "exactWarningRecorded": false,
+  "consoleCollectionPresent": false,
+  "editorBaselineBlob": "420119219c78f2b3e7e809b6c76956a2c352728a",
+  "editorCurrentBlob": "420119219c78f2b3e7e809b6c76956a2c352728a",
+  "conclusion": "The original before run did not record console diagnostics. Its file cannot establish presence or absence of this warning. Matching source blobs do not substitute for the specifically requested before-run proof.",
+  "productChangesThisDecision": 0,
+  "allowlistChangesThisDecision": 0,
+  "commitMade": false
+}

@@ -1,0 +1,948 @@
+{
+  "variants": 158,
+  "records": [
+    {
+      "kit": "roofing",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "c22777c898654632b42492235ec264b8aaa0c100a3efd1e585e8392f037ab018"
+    },
+    {
+      "kit": "roofing",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "c22777c898654632b42492235ec264b8aaa0c100a3efd1e585e8392f037ab018"
+    },
+    {
+      "kit": "roofing",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "c22777c898654632b42492235ec264b8aaa0c100a3efd1e585e8392f037ab018"
+    },
+    {
+      "kit": "roofing",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "30fc7ed8131ceb06fffdfc13692a5054ce075696cca1384884312db47974d314"
+    },
+    {
+      "kit": "roofing",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "30fc7ed8131ceb06fffdfc13692a5054ce075696cca1384884312db47974d314"
+    },
+    {
+      "kit": "roofing",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "30fc7ed8131ceb06fffdfc13692a5054ce075696cca1384884312db47974d314"
+    },
+    {
+      "kit": "roofing",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "629bc3253195f7420f53b8e2a2d9af5a8292029c060ed38bcce2c2f040df4aa5"
+    },
+    {
+      "kit": "roofing",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "629bc3253195f7420f53b8e2a2d9af5a8292029c060ed38bcce2c2f040df4aa5"
+    },
+    {
+      "kit": "roofing",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "629bc3253195f7420f53b8e2a2d9af5a8292029c060ed38bcce2c2f040df4aa5"
+    },
+    {
+      "kit": "patios",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "9719e0d803b770cca452d31e62fb8d91f931a05c5f686b52d34927b2a84644b0"
+    },
+    {
+      "kit": "patios",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "9719e0d803b770cca452d31e62fb8d91f931a05c5f686b52d34927b2a84644b0"
+    },
+    {
+      "kit": "patios",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "9719e0d803b770cca452d31e62fb8d91f931a05c5f686b52d34927b2a84644b0"
+    },
+    {
+      "kit": "patios",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "a34f04aae0e4f4439ffb80e06cdc2bfb62714b77a38d510ec90f0879e049cd74"
+    },
+    {
+      "kit": "patios",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "a34f04aae0e4f4439ffb80e06cdc2bfb62714b77a38d510ec90f0879e049cd74"
+    },
+    {
+      "kit": "patios",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "a34f04aae0e4f4439ffb80e06cdc2bfb62714b77a38d510ec90f0879e049cd74"
+    },
+    {
+      "kit": "patios",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "287acf3d560563b38db6ec70e9a108e9bddd668ffc73303d14cfaf25a1503adb"
+    },
+    {
+      "kit": "patios",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "287acf3d560563b38db6ec70e9a108e9bddd668ffc73303d14cfaf25a1503adb"
+    },
+    {
+      "kit": "patios",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "287acf3d560563b38db6ec70e9a108e9bddd668ffc73303d14cfaf25a1503adb"
+    },
+    {
+      "kit": "plumbing",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "54b26f821d9b706a237156d451f7409f578bf1fa01f522249d6f282eb8a6ec1b"
+    },
+    {
+      "kit": "plumbing",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "54b26f821d9b706a237156d451f7409f578bf1fa01f522249d6f282eb8a6ec1b"
+    },
+    {
+      "kit": "plumbing",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "54b26f821d9b706a237156d451f7409f578bf1fa01f522249d6f282eb8a6ec1b"
+    },
+    {
+      "kit": "plumbing",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "7c7941e211ad4143b86b4b96ea2be55f973caf4583a685a3bd66484984f20c99"
+    },
+    {
+      "kit": "plumbing",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "7c7941e211ad4143b86b4b96ea2be55f973caf4583a685a3bd66484984f20c99"
+    },
+    {
+      "kit": "plumbing",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "7c7941e211ad4143b86b4b96ea2be55f973caf4583a685a3bd66484984f20c99"
+    },
+    {
+      "kit": "plumbing",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "c73e0ed6c66480588271eeedf529b106321a8d90897d94ea74e354f5f3b01195"
+    },
+    {
+      "kit": "plumbing",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "c73e0ed6c66480588271eeedf529b106321a8d90897d94ea74e354f5f3b01195"
+    },
+    {
+      "kit": "plumbing",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "c73e0ed6c66480588271eeedf529b106321a8d90897d94ea74e354f5f3b01195"
+    },
+    {
+      "kit": "hvac",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "590d9e34e2886caaccdefccddcbfc9ee6d58b90d5b9cfbefcf9543d3d25086a2"
+    },
+    {
+      "kit": "hvac",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "590d9e34e2886caaccdefccddcbfc9ee6d58b90d5b9cfbefcf9543d3d25086a2"
+    },
+    {
+      "kit": "hvac",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "590d9e34e2886caaccdefccddcbfc9ee6d58b90d5b9cfbefcf9543d3d25086a2"
+    },
+    {
+      "kit": "hvac",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "029292855f3516b476636b409a20a738065c297c0e038d002855312fd2d90784"
+    },
+    {
+      "kit": "hvac",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "029292855f3516b476636b409a20a738065c297c0e038d002855312fd2d90784"
+    },
+    {
+      "kit": "hvac",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "029292855f3516b476636b409a20a738065c297c0e038d002855312fd2d90784"
+    },
+    {
+      "kit": "hvac",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "31df520919653b360f8a29bab45cb67ea7e90930dfa49ad373a87492d14b5012"
+    },
+    {
+      "kit": "hvac",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "31df520919653b360f8a29bab45cb67ea7e90930dfa49ad373a87492d14b5012"
+    },
+    {
+      "kit": "hvac",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "31df520919653b360f8a29bab45cb67ea7e90930dfa49ad373a87492d14b5012"
+    },
+    {
+      "kit": "electrical",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "376a7f5e90eedb56c4ce65eea16ad8d290d8771c71e4184a5d04d7b4a89384aa"
+    },
+    {
+      "kit": "electrical",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "376a7f5e90eedb56c4ce65eea16ad8d290d8771c71e4184a5d04d7b4a89384aa"
+    },
+    {
+      "kit": "electrical",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "376a7f5e90eedb56c4ce65eea16ad8d290d8771c71e4184a5d04d7b4a89384aa"
+    },
+    {
+      "kit": "electrical",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "46b02a2e725aac7fc18bb90b375b3e0c0e26c6e70242d3930601fc5a617228da"
+    },
+    {
+      "kit": "electrical",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "46b02a2e725aac7fc18bb90b375b3e0c0e26c6e70242d3930601fc5a617228da"
+    },
+    {
+      "kit": "electrical",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "46b02a2e725aac7fc18bb90b375b3e0c0e26c6e70242d3930601fc5a617228da"
+    },
+    {
+      "kit": "electrical",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "558da1a7c68a1f360053467308e1fab5fc40befc70451dd5bc5c891ed15f74be"
+    },
+    {
+      "kit": "electrical",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "558da1a7c68a1f360053467308e1fab5fc40befc70451dd5bc5c891ed15f74be"
+    },
+    {
+      "kit": "electrical",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "558da1a7c68a1f360053467308e1fab5fc40befc70451dd5bc5c891ed15f74be"
+    },
+    {
+      "kit": "landscaping",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "8f701ccf2c9661797c15b667df01da6cecf25de80328287d387d11226ea17cb0"
+    },
+    {
+      "kit": "landscaping",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "8f701ccf2c9661797c15b667df01da6cecf25de80328287d387d11226ea17cb0"
+    },
+    {
+      "kit": "landscaping",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "8f701ccf2c9661797c15b667df01da6cecf25de80328287d387d11226ea17cb0"
+    },
+    {
+      "kit": "landscaping",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "4e9e6b5f4d3229c994401d0670a02e58a5fb3b3d00b64353a3e90933417eeae4"
+    },
+    {
+      "kit": "landscaping",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "4e9e6b5f4d3229c994401d0670a02e58a5fb3b3d00b64353a3e90933417eeae4"
+    },
+    {
+      "kit": "landscaping",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "4e9e6b5f4d3229c994401d0670a02e58a5fb3b3d00b64353a3e90933417eeae4"
+    },
+    {
+      "kit": "landscaping",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "5a93f02ff8c4c838aeaab7c87e347526dc369a9b455950e67d66bf4913400bed"
+    },
+    {
+      "kit": "landscaping",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "5a93f02ff8c4c838aeaab7c87e347526dc369a9b455950e67d66bf4913400bed"
+    },
+    {
+      "kit": "landscaping",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "5a93f02ff8c4c838aeaab7c87e347526dc369a9b455950e67d66bf4913400bed"
+    },
+    {
+      "kit": "general-contractors",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "9a3719bfbbcf0de3956afebb494c9cc79518442bb585370a0d58cb11ddd89776"
+    },
+    {
+      "kit": "general-contractors",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "9a3719bfbbcf0de3956afebb494c9cc79518442bb585370a0d58cb11ddd89776"
+    },
+    {
+      "kit": "general-contractors",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "9a3719bfbbcf0de3956afebb494c9cc79518442bb585370a0d58cb11ddd89776"
+    },
+    {
+      "kit": "general-contractors",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "6d9844c9e6c5fe98864a880d9dd32cf9b77143bd8b31cf3c10bf358d003030b3"
+    },
+    {
+      "kit": "general-contractors",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "6d9844c9e6c5fe98864a880d9dd32cf9b77143bd8b31cf3c10bf358d003030b3"
+    },
+    {
+      "kit": "general-contractors",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "6d9844c9e6c5fe98864a880d9dd32cf9b77143bd8b31cf3c10bf358d003030b3"
+    },
+    {
+      "kit": "general-contractors",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "96d610837681ef46f991612d66eef8c469076fffc3311702857110ed25052087"
+    },
+    {
+      "kit": "general-contractors",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "96d610837681ef46f991612d66eef8c469076fffc3311702857110ed25052087"
+    },
+    {
+      "kit": "general-contractors",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "96d610837681ef46f991612d66eef8c469076fffc3311702857110ed25052087"
+    },
+    {
+      "kit": "flooring",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "fbb8c5604ffd1474dc7481847800240ea2c45d3186a6b306108b8c8fd2495ee7"
+    },
+    {
+      "kit": "flooring",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "fbb8c5604ffd1474dc7481847800240ea2c45d3186a6b306108b8c8fd2495ee7"
+    },
+    {
+      "kit": "flooring",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "fbb8c5604ffd1474dc7481847800240ea2c45d3186a6b306108b8c8fd2495ee7"
+    },
+    {
+      "kit": "flooring",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "93e89aca1d3a4236823f0a31b605662f559c8f28cb67cd782c88cc2dcad4f743"
+    },
+    {
+      "kit": "flooring",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "93e89aca1d3a4236823f0a31b605662f559c8f28cb67cd782c88cc2dcad4f743"
+    },
+    {
+      "kit": "flooring",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "93e89aca1d3a4236823f0a31b605662f559c8f28cb67cd782c88cc2dcad4f743"
+    },
+    {
+      "kit": "flooring",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "08e03c7ccd0d461472a9183eada69d3e32fd81972169a54287e42944560065cd"
+    },
+    {
+      "kit": "flooring",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "08e03c7ccd0d461472a9183eada69d3e32fd81972169a54287e42944560065cd"
+    },
+    {
+      "kit": "flooring",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "08e03c7ccd0d461472a9183eada69d3e32fd81972169a54287e42944560065cd"
+    },
+    {
+      "kit": "painting",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "6d1f51292c6ca7961a8b060e587242132926434ed5d8f2d9c76e9dcc0897fc3b"
+    },
+    {
+      "kit": "painting",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "6d1f51292c6ca7961a8b060e587242132926434ed5d8f2d9c76e9dcc0897fc3b"
+    },
+    {
+      "kit": "painting",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "6d1f51292c6ca7961a8b060e587242132926434ed5d8f2d9c76e9dcc0897fc3b"
+    },
+    {
+      "kit": "painting",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "4a84c051e6b09767f929be80a2380c3fc58572fa38e6c3332acc97deb21b2ad4"
+    },
+    {
+      "kit": "painting",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "4a84c051e6b09767f929be80a2380c3fc58572fa38e6c3332acc97deb21b2ad4"
+    },
+    {
+      "kit": "painting",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "4a84c051e6b09767f929be80a2380c3fc58572fa38e6c3332acc97deb21b2ad4"
+    },
+    {
+      "kit": "painting",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "6264a2b7da2d95b2fdf987ab5556b454e365b87df658d8c5cc08621c14c5a442"
+    },
+    {
+      "kit": "painting",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "6264a2b7da2d95b2fdf987ab5556b454e365b87df658d8c5cc08621c14c5a442"
+    },
+    {
+      "kit": "painting",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "6264a2b7da2d95b2fdf987ab5556b454e365b87df658d8c5cc08621c14c5a442"
+    },
+    {
+      "kit": "fencing",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "0369b862920ca4ad29af661eb34cf3acedb10422f07f2a63e95eb3d5baffc919"
+    },
+    {
+      "kit": "fencing",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "0369b862920ca4ad29af661eb34cf3acedb10422f07f2a63e95eb3d5baffc919"
+    },
+    {
+      "kit": "fencing",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "0369b862920ca4ad29af661eb34cf3acedb10422f07f2a63e95eb3d5baffc919"
+    },
+    {
+      "kit": "fencing",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "3cbdf0af9ad7d0dfb13dcaf88c78ddfc8fcaaa84bf25ede6ddf09c951c10f450"
+    },
+    {
+      "kit": "fencing",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "3cbdf0af9ad7d0dfb13dcaf88c78ddfc8fcaaa84bf25ede6ddf09c951c10f450"
+    },
+    {
+      "kit": "fencing",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "3cbdf0af9ad7d0dfb13dcaf88c78ddfc8fcaaa84bf25ede6ddf09c951c10f450"
+    },
+    {
+      "kit": "fencing",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "74bb5bfaaa4ae4ad934640ba5e0c5a7ca9691f90efd2252cb93ef2091de19408"
+    },
+    {
+      "kit": "fencing",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "74bb5bfaaa4ae4ad934640ba5e0c5a7ca9691f90efd2252cb93ef2091de19408"
+    },
+    {
+      "kit": "fencing",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "74bb5bfaaa4ae4ad934640ba5e0c5a7ca9691f90efd2252cb93ef2091de19408"
+    },
+    {
+      "kit": "garage-doors",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "c66f31e86d05b8bd44252b16ab08153340d6b29cff9afc43794cf6568a4b856c"
+    },
+    {
+      "kit": "garage-doors",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "c66f31e86d05b8bd44252b16ab08153340d6b29cff9afc43794cf6568a4b856c"
+    },
+    {
+      "kit": "garage-doors",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "c66f31e86d05b8bd44252b16ab08153340d6b29cff9afc43794cf6568a4b856c"
+    },
+    {
+      "kit": "garage-doors",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "b2e9ab115eb3257edcb67c2807153ac6a0b2b423f6d80346c1cbc6866899eac7"
+    },
+    {
+      "kit": "garage-doors",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "b2e9ab115eb3257edcb67c2807153ac6a0b2b423f6d80346c1cbc6866899eac7"
+    },
+    {
+      "kit": "garage-doors",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "b2e9ab115eb3257edcb67c2807153ac6a0b2b423f6d80346c1cbc6866899eac7"
+    },
+    {
+      "kit": "garage-doors",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "9b4d7bdb03c27aacc6ef6168d56c6e522fee1b8070aa148e460d58131eaf673f"
+    },
+    {
+      "kit": "garage-doors",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "9b4d7bdb03c27aacc6ef6168d56c6e522fee1b8070aa148e460d58131eaf673f"
+    },
+    {
+      "kit": "garage-doors",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "9b4d7bdb03c27aacc6ef6168d56c6e522fee1b8070aa148e460d58131eaf673f"
+    },
+    {
+      "kit": "pest-control",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "7f3e7096b0fe0a983b3378d4b26ea72f56c5d6ed8e66a8e55b7aabf38be18910"
+    },
+    {
+      "kit": "pest-control",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "7f3e7096b0fe0a983b3378d4b26ea72f56c5d6ed8e66a8e55b7aabf38be18910"
+    },
+    {
+      "kit": "pest-control",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "7f3e7096b0fe0a983b3378d4b26ea72f56c5d6ed8e66a8e55b7aabf38be18910"
+    },
+    {
+      "kit": "pest-control",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "1672640111ce7dceeb6ee51b02ed2d27b25bf31b1c3bd30ad5bae4a500834bf8"
+    },
+    {
+      "kit": "pest-control",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "1672640111ce7dceeb6ee51b02ed2d27b25bf31b1c3bd30ad5bae4a500834bf8"
+    },
+    {
+      "kit": "pest-control",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "1672640111ce7dceeb6ee51b02ed2d27b25bf31b1c3bd30ad5bae4a500834bf8"
+    },
+    {
+      "kit": "pest-control",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "d3a5ca2c577bea478ccfc1ab6d3a676bc3647adfdce773663c2fb8a3440cbd1a"
+    },
+    {
+      "kit": "pest-control",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "d3a5ca2c577bea478ccfc1ab6d3a676bc3647adfdce773663c2fb8a3440cbd1a"
+    },
+    {
+      "kit": "pest-control",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "d3a5ca2c577bea478ccfc1ab6d3a676bc3647adfdce773663c2fb8a3440cbd1a"
+    },
+    {
+      "kit": "windows-doors",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "a3232efaabd5e2dd20b723fde476f9e7b69f8d941b43fb4c1c9cb88a8fc53bcf"
+    },
+    {
+      "kit": "windows-doors",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "a3232efaabd5e2dd20b723fde476f9e7b69f8d941b43fb4c1c9cb88a8fc53bcf"
+    },
+    {
+      "kit": "windows-doors",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "a3232efaabd5e2dd20b723fde476f9e7b69f8d941b43fb4c1c9cb88a8fc53bcf"
+    },
+    {
+      "kit": "windows-doors",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "1a06647d6aebb8a7f2d48a9e1eba5a616c28908875ad3ed843fadc6a94d96195"
+    },
+    {
+      "kit": "windows-doors",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "1a06647d6aebb8a7f2d48a9e1eba5a616c28908875ad3ed843fadc6a94d96195"
+    },
+    {
+      "kit": "windows-doors",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "1a06647d6aebb8a7f2d48a9e1eba5a616c28908875ad3ed843fadc6a94d96195"
+    },
+    {
+      "kit": "windows-doors",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "d0d7385ed71f1adf58c1354d6fe487890f09b4d7864b67616a9a526370affa63"
+    },
+    {
+      "kit": "windows-doors",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "d0d7385ed71f1adf58c1354d6fe487890f09b4d7864b67616a9a526370affa63"
+    },
+    {
+      "kit": "windows-doors",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "d0d7385ed71f1adf58c1354d6fe487890f09b4d7864b67616a9a526370affa63"
+    },
+    {
+      "kit": "solar",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "0ee114941ff967bf356b421478c120a117ab2e92539e46d31e64afab2acb410b"
+    },
+    {
+      "kit": "solar",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "0ee114941ff967bf356b421478c120a117ab2e92539e46d31e64afab2acb410b"
+    },
+    {
+      "kit": "solar",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "0ee114941ff967bf356b421478c120a117ab2e92539e46d31e64afab2acb410b"
+    },
+    {
+      "kit": "solar",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "ec414102c9e551a99233e19f86bfd1aa117b9a39b6990e9a71aa085166576e30"
+    },
+    {
+      "kit": "solar",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "ec414102c9e551a99233e19f86bfd1aa117b9a39b6990e9a71aa085166576e30"
+    },
+    {
+      "kit": "solar",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "ec414102c9e551a99233e19f86bfd1aa117b9a39b6990e9a71aa085166576e30"
+    },
+    {
+      "kit": "solar",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "42a5ca8428f53a08b48effa0bddc3b3b05e9dc92471e4785b843a0b95edc598a"
+    },
+    {
+      "kit": "solar",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "42a5ca8428f53a08b48effa0bddc3b3b05e9dc92471e4785b843a0b95edc598a"
+    },
+    {
+      "kit": "solar",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "42a5ca8428f53a08b48effa0bddc3b3b05e9dc92471e4785b843a0b95edc598a"
+    },
+    {
+      "kit": "concrete",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "057a9e6aba0a21057bce947765da5b1158c83b96e6e893e2a87e913e69b2a380"
+    },
+    {
+      "kit": "concrete",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "057a9e6aba0a21057bce947765da5b1158c83b96e6e893e2a87e913e69b2a380"
+    },
+    {
+      "kit": "concrete",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "057a9e6aba0a21057bce947765da5b1158c83b96e6e893e2a87e913e69b2a380"
+    },
+    {
+      "kit": "concrete",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "22514351de6aa908c45e94729647f793dfd7784d558d2ad778d917bea41d4217"
+    },
+    {
+      "kit": "concrete",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "22514351de6aa908c45e94729647f793dfd7784d558d2ad778d917bea41d4217"
+    },
+    {
+      "kit": "concrete",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "22514351de6aa908c45e94729647f793dfd7784d558d2ad778d917bea41d4217"
+    },
+    {
+      "kit": "concrete",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "f4c41a7d859300a81093acea8aa90bb797eb3133905473108a6d3702845f073e"
+    },
+    {
+      "kit": "concrete",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "f4c41a7d859300a81093acea8aa90bb797eb3133905473108a6d3702845f073e"
+    },
+    {
+      "kit": "concrete",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "f4c41a7d859300a81093acea8aa90bb797eb3133905473108a6d3702845f073e"
+    },
+    {
+      "kit": "pools",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "38acc867a98d89e2118e2fcaea4a1745191ea727144f42356bf80d42a19de626"
+    },
+    {
+      "kit": "pools",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "38acc867a98d89e2118e2fcaea4a1745191ea727144f42356bf80d42a19de626"
+    },
+    {
+      "kit": "pools",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "38acc867a98d89e2118e2fcaea4a1745191ea727144f42356bf80d42a19de626"
+    },
+    {
+      "kit": "pools",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "a02e9227862cd126d68efc18f06bf825123700247f7643b2059257bdb03b9d5a"
+    },
+    {
+      "kit": "pools",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "a02e9227862cd126d68efc18f06bf825123700247f7643b2059257bdb03b9d5a"
+    },
+    {
+      "kit": "pools",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "a02e9227862cd126d68efc18f06bf825123700247f7643b2059257bdb03b9d5a"
+    },
+    {
+      "kit": "pools",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "e56303c7111bdb5f9ad23d09df731c114832beaa8ecf443abb07d88461e944b4"
+    },
+    {
+      "kit": "pools",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "e56303c7111bdb5f9ad23d09df731c114832beaa8ecf443abb07d88461e944b4"
+    },
+    {
+      "kit": "pools",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "e56303c7111bdb5f9ad23d09df731c114832beaa8ecf443abb07d88461e944b4"
+    },
+    {
+      "kit": "locksmith",
+      "template": "cinematic",
+      "motionLayout": "A",
+      "sha256": "2ce22baf3e330ec50c29761d6d9841db0265b5efd8ffba400934eaae624414dc"
+    },
+    {
+      "kit": "locksmith",
+      "template": "cinematic",
+      "motionLayout": "B",
+      "sha256": "2ce22baf3e330ec50c29761d6d9841db0265b5efd8ffba400934eaae624414dc"
+    },
+    {
+      "kit": "locksmith",
+      "template": "cinematic",
+      "motionLayout": "C",
+      "sha256": "2ce22baf3e330ec50c29761d6d9841db0265b5efd8ffba400934eaae624414dc"
+    },
+    {
+      "kit": "locksmith",
+      "template": "clean",
+      "motionLayout": "A",
+      "sha256": "70d9e24f32f35ddcd8deb8db8ead848a8eec3899a6cb6aea19596e5dbd2e95ba"
+    },
+    {
+      "kit": "locksmith",
+      "template": "clean",
+      "motionLayout": "B",
+      "sha256": "70d9e24f32f35ddcd8deb8db8ead848a8eec3899a6cb6aea19596e5dbd2e95ba"
+    },
+    {
+      "kit": "locksmith",
+      "template": "clean",
+      "motionLayout": "C",
+      "sha256": "70d9e24f32f35ddcd8deb8db8ead848a8eec3899a6cb6aea19596e5dbd2e95ba"
+    },
+    {
+      "kit": "locksmith",
+      "template": "blueprint",
+      "motionLayout": "A",
+      "sha256": "ff9a1eb939092acd88e014e4649d34242dcdfe50fe6e59193fb4b38415163edf"
+    },
+    {
+      "kit": "locksmith",
+      "template": "blueprint",
+      "motionLayout": "B",
+      "sha256": "ff9a1eb939092acd88e014e4649d34242dcdfe50fe6e59193fb4b38415163edf"
+    },
+    {
+      "kit": "locksmith",
+      "template": "blueprint",
+      "motionLayout": "C",
+      "sha256": "ff9a1eb939092acd88e014e4649d34242dcdfe50fe6e59193fb4b38415163edf"
+    },
+    {
+      "kit": "legacy-roofing",
+      "template": "craft",
+      "sha256": "6ddad45500777d25309575bd9bfbb50267c7012d8b9ddb592c65c490c70c218e"
+    },
+    {
+      "kit": "legacy-roofing",
+      "template": "cinematic",
+      "sha256": "6ddad45500777d25309575bd9bfbb50267c7012d8b9ddb592c65c490c70c218e"
+    },
+    {
+      "kit": "legacy-roofing",
+      "template": "editorial",
+      "sha256": "6192b12cf4f6a8826f4430db784d6591506cabffe601cf7683ec1a10f6229c51"
+    },
+    {
+      "kit": "legacy-roofing",
+      "template": "clean",
+      "sha256": "957fcabcbedec4da8b68902a17a9768b954054d56ba1f74b0650c2ce4946d1da"
+    },
+    {
+      "kit": "legacy-roofing",
+      "template": "blueprint",
+      "sha256": "346da7fb02f6e817d85e3f28c5c56ce59b4b91cd394aa546c30144be97ce0aaf"
+    }
+  ]
+}

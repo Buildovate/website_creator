@@ -1,0 +1,36 @@
+[
+  {
+    "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+    "method": "PUT",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:25:83"
+  },
+  {
+    "url": "http://127.0.0.1:8153/api/session",
+    "method": "GET",
+    "status": "offline",
+    "state": "settings-offline-desktop",
+    "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:26:19",
+    "kind": "offline-injection",
+    "active": true
+  },
+  {
+    "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+    "method": "PUT",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:25:83"
+  },
+  {
+    "url": "http://127.0.0.1:8153/api/session",
+    "method": "GET",
+    "status": "offline",
+    "state": "settings-offline-phone",
+    "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:26:19",
+    "kind": "offline-injection",
+    "active": true
+  }
+]

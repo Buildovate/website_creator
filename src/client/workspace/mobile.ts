@@ -1,5 +1,5 @@
 // Responsive helpers preserve the existing form handlers and authorization checks.
-const phone=matchMedia('(max-width:700px)');
+const phone=matchMedia('(max-width:720px)');
 const dock=document.createElement('div');dock.className='platform-action-dock';dock.setAttribute('aria-label','Screen actions');
 let targets:HTMLButtonElement[]=[],lastStatus='',raf=0;
 const photoUrls=new Map<HTMLInputElement,string[]>();

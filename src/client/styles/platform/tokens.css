@@ -1,0 +1,57 @@
+/* Buildovate platform tokens: scope component rules under body.bv-platform */
+:root{
+  /* surfaces & text */
+  --bv-bg:#f5f3ee; --bv-card:#ffffff; --bv-surface-2:#f7f5f1; --bv-surface-3:#f3f1ec;
+  --bv-ink:#15212b; --bv-ink-2:#4b5967; --bv-ink-3:#5d6873; /* prototype #66717d; darkened for AA on --bv-bg */
+  --bv-line:#e4dfd5; --bv-line-2:#d6d0c4; --bv-line-strong:#8a8375; /* input/radio/switch boundaries, 3:1 */
+  /* brand */
+  --bv-navy:#10304d; --bv-navy-2:#1b4468;
+  --bv-sand:#eab97f; --bv-sand-soft:#fbf0e1; --bv-sand-ink:#8a4f12;
+  /* focus / info / link */
+  --bv-blue:#1f6feb; --bv-blue-soft:#e8f0fe; --bv-info-ink:#1a3f7a;
+  --bv-link:#1e5bb8; --bv-link-hover:#174c9c; --bv-link-soft:#e7effc; --bv-link-line:#bcd0f1;
+  /* status */
+  --bv-ok:#1d7a4c; --bv-ok-hover:#176640; --bv-ok-soft:#e5f4ec; --bv-ok-line:#b8dcc7; --bv-ok-ink:#155c39;
+  --bv-warn:#8a5300; --bv-warn-soft:#fff3dc; --bv-warn-line:#f1d9a8; --bv-warn-ink:#6d4200;
+  --bv-bad:#b3261e; --bv-bad-hover:#8f1f18; --bv-bad-soft:#fdecea; --bv-bad-line:#f0b4ae; --bv-bad-ink:#7d1a14;
+  --bv-team:#5b4b8a; --bv-team-soft:#efebfa; --bv-team-line:#d6cdf0; --bv-team-ink:#3e3168;
+  --bv-overlay:rgba(21,33,43,.5); --bv-overlay-drawer:rgba(21,33,43,.35);
+  /* blueprint sub-theme */
+  --bv-bp:#0f2c4d; --bv-bp-deep:#0b2240; --bv-bp-lift:#133a63; --bv-bp-ink:#e8f6ff;
+  --bv-bp-line:#bfe6ff; --bv-bp-line-soft:rgba(191,230,255,.55); --bv-bp-line-faint:rgba(191,230,255,.22);
+  --bv-bp-done:#4ade80; --bv-bp-need:#fbbf24; --bv-bp-off:#94a3b8; --bv-bp-stamp:#ff7a59; --bv-bp-lit:#fde68a;
+  --bv-town:#0f2536;
+  /* type */
+  --bv-sans:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --bv-cond:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --bv-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --bv-fs-display:40px; --bv-fs-h1:32px; --bv-fs-h1-phone:28px; --bv-fs-bigvalue:34px; --bv-fs-stat:26px;
+  --bv-fs-band:20px; --bv-fs-h2:21px; --bv-fs-choice:20px; --bv-fs-h3:18px; --bv-fs-lead:17px;
+  --bv-fs-body:16px; --bv-fs-small:14.5px; --bv-fs-label:13px; --bv-fs-eyebrow:11.5px; --bv-fs-tag:10.5px;
+  --bv-lh-body:1.45; --bv-lh-tight:1.1;
+  /* space */
+  --bv-space-1:4px; --bv-space-2:8px; --bv-space-3:10px; --bv-space-4:12px; --bv-space-5:14px;
+  --bv-space-6:16px; --bv-space-7:20px; --bv-space-8:24px; --bv-space-9:26px; --bv-space-10:32px;
+  --bv-w-narrow:760px; --bv-w-wide:1140px; --bv-w-band:1080px;
+  /* radius */
+  --bv-r-xs:5px; --bv-r-sm:8px; --bv-r-md:10px; --bv-r-lg:12px; --bv-r-xl:14px; --bv-r-pill:99px;
+  /* elevation & rings */
+  --bv-shadow-hover:0 6px 18px rgba(16,48,77,.08);
+  --bv-shadow-callout:0 10px 24px rgba(16,48,77,.28);
+  --bv-shadow-tip:0 6px 18px rgba(0,0,0,.18);
+  --bv-shadow-toast:0 10px 26px rgba(0,0,0,.2);
+  --bv-shadow-modal:0 24px 60px rgba(0,0,0,.35);
+  --bv-shadow-drawer:-18px 0 44px rgba(0,0,0,.18);
+  --bv-shadow-sticky:0 -10px 16px -8px rgba(21,33,43,.10);
+  --bv-ring-select:0 0 0 3px rgba(16,48,77,.12);
+  --bv-ring-rec:0 0 0 3px var(--bv-sand-soft);
+  --bv-ring-focus:0 0 0 3px var(--bv-blue-soft);
+  --bv-ring-error:0 0 0 3px var(--bv-bad-soft);
+  /* motion */
+  --bv-t:120ms; --bv-t-enter:220ms;
+  /* control sizes */
+  --bv-h-btn:52px; --bv-h-btn-sm:44px; --bv-h-btn-xs:40px; --bv-h-field:54px; --bv-h-field-sm:48px;
+  --bv-h-topbar:56px; --bv-h-topbar-phone:54px;
+  --bv-disabled-ink:#6b737c; --bv-phone:720px; --bv-sidebar:220px;
+  --bv-bottom-space:120px; --bv-bottom-space-phone:110px; --bv-transparent:transparent;
+}

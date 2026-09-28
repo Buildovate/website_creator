@@ -1,0 +1,36 @@
+[
+  {
+    "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+    "method": "POST",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs:23:33"
+  },
+  {
+    "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+    "method": "POST",
+    "status": "offline",
+    "state": "promotions-offline-desktop",
+    "source": "at file:///C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs:24:19",
+    "kind": "offline-injection",
+    "active": true
+  },
+  {
+    "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+    "method": "POST",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs:23:33"
+  },
+  {
+    "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+    "method": "POST",
+    "status": "offline",
+    "state": "promotions-offline-phone",
+    "source": "at file:///C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs:24:19",
+    "kind": "offline-injection",
+    "active": true
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "label": "generation-browser",
+  "records": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "location": {
+        "url": "http://127.0.0.1:8159/api/tenants/fc7c7624-97f1-4c9e-a8db-074258712da5/generation",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8159/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "state": {
+        "section": "templates",
+        "view": "websites",
+        "generation": "error"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "http://127.0.0.1:8159/api/tenants/fc7c7624-97f1-4c9e-a8db-074258712da5/domains",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8159/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "state": {
+        "section": "launchpad",
+        "view": "websites"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "location": {
+        "url": "http://127.0.0.1:8159/api/tenants/fc7c7624-97f1-4c9e-a8db-074258712da5/generation",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8159/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": {
+        "section": "templates",
+        "view": "websites",
+        "generation": "error"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "http://127.0.0.1:8159/api/tenants/fc7c7624-97f1-4c9e-a8db-074258712da5/domains",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8159/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": {
+        "section": "launchpad",
+        "view": "websites"
+      }
+    }
+  ],
+  "states": [
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023/screen-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8159/"
+    }
+  ]
+}

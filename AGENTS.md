@@ -20,3 +20,7 @@ Homeowner pages never expose rep/CRM sales language. Paid generation, external m
 Read the authoritative current/next ticket state in BUILD-BACKLOG and BUILD-STATUS. The initial Step 1 audit did not execute a feature ticket; keep those ledgers current after each ticket.
 
 Premium trade-page standard: all new trade detail pages must reuse [docs/TRADE_DESIGN_SYSTEM.md](docs/TRADE_DESIGN_SYSTEM.md), public/trade-page.css and public/trade-page.js; use trade-specific generated media and truthful contractor data. #004B establishes this standard without starting later trade rollouts.
+
+## Platform look for future screens
+
+All new contractor and staff platform screens—including Blueprint/town, price book, domain wizard and setup rail, questionnaire v2, and staff views—must use the `bv-` tokens and components in `src/client/styles/platform/`. Match [the approved platform references](docs/design-reference/platform-2026-09-27/PLATFORM-DESIGN-GUIDE.md), with the guide taking precedence over prototypes. See [PLATFORM-LOOK.md](docs/product/PLATFORM-LOOK.md) for component examples. Load `/platform.css` only through a platform shell with `body.bv-platform`; never restyle public trade pages through `/app.css`. Keep one visual primary action, a 720px phone breakpoint, AA text and 3:1 control boundaries, local fonts, keyboard focus, reduced motion, and honest data. The future dark canvas uses `bv-blueprint-*` names; the existing trade presentation template named `blueprint` is unrelated and protected.

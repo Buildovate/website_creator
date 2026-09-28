@@ -10,7 +10,7 @@ const {chromium}=require('C:/Users/joe/.cache/codex-runtimes/codex-primary-runti
 const phase=process.argv[2]||'after';
 assert.ok(['before','after'].includes(phase));
 const root='C:/Users/joe/website_creator';
-const out=root+'/docs/build-evidence/015FA/'+phase;
+const out=(process.env.PLATFORM_CLEANUP_EVIDENCE||root+'/docs/build-evidence/015FA')+'/'+phase;
 fs.mkdirSync(out,{recursive:true});
 const base='http://127.0.0.1:8146';
 const runtime=await createRuntime({env:{APP_ENV:'local',NODE_ENV:'development',AUTH_MODE:'dev-header',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',MIGRATE_ON_BOOT:'1',WORKSPACE_OWNER_EMAIL:'cleanup-admin@example.test',LISTEN_HOST:'127.0.0.1',PORT:'8146',APP_ORIGIN:base}});

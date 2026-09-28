@@ -1,0 +1,13 @@
+{
+  "commit": "49b032eefdda23a7e7a66f9031c4f3d4f26c7271",
+  "comparison": "Multiset by suite, message, status and source URL; only port numbers normalized",
+  "baselineSuites": 11,
+  "baselineSuiteFailures": [],
+  "baselineRecords": 37,
+  "currentRecords": 37,
+  "currentUnapproved": 31,
+  "matchingCurrentRecords": 37,
+  "newCurrentDiagnostics": [],
+  "baselineOnlyDiagnostics": [],
+  "passed": true
+}

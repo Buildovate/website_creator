@@ -1,0 +1,211 @@
+{
+  "passed": 41,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "exact look message",
+      "expected": true,
+      "result": "PASS"
+    },
+    {
+      "name": "wrong state",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "wrong type",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "wrong source",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "different text",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "favicon error",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "missing frame",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "scripts allowed",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "hidden frames",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "unverified srcdoc",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "duplicate styles",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "exact editor warning",
+      "expected": true,
+      "result": "PASS"
+    },
+    {
+      "name": "editor text differs",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "editor wrong state",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "editor wrong source",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "editor missing frame",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "editor different frame id",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "editor changed sandbox",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "editor hidden",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "editor wrong section",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "editor wrong severity",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "exact injected 503",
+      "expected": true,
+      "result": "PASS"
+    },
+    {
+      "name": "same URL unexpected status",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "unexpected URL expected status",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "unexpected method",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "no registered fixture",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "already consumed request",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "wrong resource severity",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "different resource text",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "expected 403 but got 503",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "wrong fixture type",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "exact permission-state",
+      "expected": true,
+      "result": "PASS"
+    },
+    {
+      "name": "permission-state wrong URL",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "permission-state wrong status",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "exact offline-injection",
+      "expected": true,
+      "result": "PASS"
+    },
+    {
+      "name": "offline-injection wrong URL",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "offline-injection wrong status",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "platform diagnostic gates",
+      "expected": true,
+      "result": "PASS"
+    },
+    {
+      "name": "protected public diagnostic logged outside gate",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "approved platform exception",
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "unknown page scope fails closed",
+      "expected": true,
+      "result": "PASS"
+    }
+  ]
+}

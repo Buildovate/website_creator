@@ -583,3 +583,11 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - [Evidence](docs/build-evidence/028A/README.md): fresh 102/102 commands passed; 1,032 page/device/mode checks and 9,920 assertions across all four styles passed with zero AA, overflow, header or browser failures. Roofing acceptance: 911 assertions, 132 page states, 88 assets. Platform mobile: 210 states. Asset integrity: 635 references across 17 kits. Archived HTML: 374/374 byte-identical. QA URLs after Vite restart: 39/39 HTTP 200.
 - Joe approved four remaining Current color-only fixes: Patios service text #6e735f → #6d725e; five trade hero buttons #bb704c → #a65e3a; Roofing Blog label #737c70 → #626d60; policy footer caption #64748b → #617187. The README links 18 before/after capture pairs with identical measured layout, fonts and spacing. Earlier approved copper/photo-caption fixes remain; all 96 photo-pixel samples pass.
 - 10,799 prior evidence files and 2,523 unrelated files were byte-verified. Higgsfield credits used: 0. Local commit only; no push, deployment or staging. #028B is next and has not started.
+
+
+### #028P — Platform look Done (2026-09-28)
+
+- Scoped platform bundle, local fonts, responsive guide tokens and components are complete. Expenses phone-menu contrast is fixed. No protected public-site, route, data, auth or trade-iframe change.
+- [Evidence](docs/build-evidence/028P/README.md): 102/102 commands; 162/162 platform states; expanded contrast 0 failures; keyboard, overflow, one-primary, token/font and 41 exception-boundary checks pass.
+- Platform console gate: 0 non-allowlisted diagnostics. Approved exceptions: 12 Look-picker frames, 6 pre-existing editor warnings, 26 declared failure fixtures. Editor warning reproduced on 49b032e. All 31 other public diagnostics are retained; 37/37 full public records match the baseline, with 0 new.
+- Protected hashes 279/279, archived responses 374/374, preservation differences 0. Higgsfield credits 0. One local commit only; no push or deployment.

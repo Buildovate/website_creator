@@ -1,0 +1,91 @@
+{
+  "label": "editor",
+  "records": [
+    {
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+      "location": {
+        "url": "http://127.0.0.1:8191/s/platform-look-qa?preview=1",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8191/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "state": {
+        "section": "editor",
+        "view": "websites"
+      }
+    },
+    {
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+      "location": {
+        "url": "http://127.0.0.1:8191/s/platform-look-qa?preview=1",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8191/",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "state": {
+        "section": "editor",
+        "view": "websites"
+      }
+    },
+    {
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+      "location": {
+        "url": "http://127.0.0.1:8191/s/platform-look-qa?preview=1",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8191/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": {
+        "section": "editor",
+        "view": "websites"
+      }
+    }
+  ],
+  "states": [
+    {
+      "name": "C:/Users/joe/website_creator/docs/build-evidence/028P/before-console/desktop-editor.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8191/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator/docs/build-evidence/028P/before-console/desktop-1280-editor.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "url": "http://127.0.0.1:8191/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator/docs/build-evidence/028P/before-console/phone-editor.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8191/"
+    }
+  ]
+}

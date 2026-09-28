@@ -1,0 +1,280 @@
+{
+  "label": "expenses-browser",
+  "records": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "location": {
+        "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "state": {
+        "view": "expenses"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "location": {
+        "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": {
+        "view": "expenses"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+      "location": {
+        "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": {
+        "view": "expenses"
+      }
+    }
+  ],
+  "states": [
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/empty-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/empty-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/vendor-editor-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/overview-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/vendors-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/models-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/products-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/development-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/connections-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/ledger-receipt-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/empty-period-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/error-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/overview-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/vendors-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/models-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/products-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/development-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/connections-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/ledger-receipt-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/empty-period-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/error-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/full-overview-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/development-payback-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/full-overview-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/development-payback-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/loading-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/015G/offline-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8150/admin/expenses"
+    }
+  ]
+}
