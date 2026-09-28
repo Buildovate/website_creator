@@ -4,6 +4,7 @@
   const status = el.querySelector('[data-review-status]');
   const target = el.querySelector('[data-review-results]');
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const omitEmpty = el.dataset.omitEmptyReviews === 'true';
   const hideEmpty = el.dataset.hideEmptyReviews === 'true';
   const wrapper = hideEmpty ? el.closest('[data-service-reviews]') : null;
 
@@ -19,7 +20,7 @@
     if (provider.status) return el.dataset.reviewPreview === 'true' ? '<p class="provider-state">'+esc(provider.status)+'</p>' : '';
     const confirmed = Number.isFinite(provider.rating) && provider.rating >= 0 && provider.rating <= 5 && Number.isSafeInteger(provider.count) && provider.count >= 0;
     const badge = confirmed ? '<article class="provider-reviews provider-rating-badge"><a class="provider-name" translate="no" href="'+esc(provider.url)+'" target="_blank" rel="noopener">'+esc(provider.provider)+' ↗</a><strong>'+provider.rating.toFixed(1)+' / 5</strong><span>'+provider.count.toLocaleString('en-US')+' reviews</span></article>' : '';
-    return '<div class="provider-evidence">'+badge+'<div class="provider-attribution"><small>'+(provider.provider==='Google Maps'?'Google’s relevance-ranked sample'+(minimum?' · selected 4+ star reviews':'')+'.':'Available Yelp excerpts. See the source for all reviews.')+'</small>'+(provider.attributions||[]).map(a=>'<a href="'+esc(a.url)+'" rel="noopener">'+esc(a.name)+'</a>').join('')+(provider.privacyUrl?'<span><a href="'+esc(provider.privacyUrl)+'">Privacy policy</a> · <a href="'+esc(provider.termsUrl)+'">Terms of use</a></span>':'')+'</div></div>';
+    return '<div class="provider-evidence">'+badge+'<div class="provider-attribution"><small>'+(provider.provider==='Google Maps'?'Google’s relevance-ranked sample'+(minimum?' · selected '+minimum+'+ star reviews':'')+'.':'Available Yelp excerpts. See the source for all reviews.')+'</small>'+(provider.attributions||[]).map(a=>'<a href="'+esc(a.url)+'" rel="noopener">'+esc(a.name)+'</a>').join('')+(provider.privacyUrl?'<span><a href="'+esc(provider.privacyUrl)+'">Privacy policy</a> · <a href="'+esc(provider.termsUrl)+'">Terms of use</a></span>':'')+'</div></div>';
   }
 
   const load = async () => {
@@ -33,16 +34,19 @@
         if (wrapper) wrapper.hidden = !data.providers.length;
       }
       const cards = data.providers.flatMap(p => p.status ? [] : (p.reviews || []).map(review => card(review, p)));
+      if (omitEmpty && !cards.length && el.dataset.reviewPreview !== 'true') { (wrapper || el).remove(); return; }
+      if (omitEmpty) el.hidden = false;
       target.innerHTML = (cards.length ? `<div class="review-grid source-review-grid">${cards.join('')}</div>` : '') + `<div class="review-provider-notes">${data.providers.map(p => providerSummary(p, data.minimum)).join('')}</div>`;
       // Source reviews stay still so the quote, author and source remain readable together.
       status.textContent = data.providers.some(p => !p.status) ? 'Follow the source links for all reviews.' : 'Read customer feedback directly on the linked profiles.';
     } catch (error) {
+      if (omitEmpty && el.dataset.reviewPreview !== 'true') { (wrapper || el).remove(); return; }
       if (wrapper) wrapper.hidden = true;
       target.innerHTML = '';
       status.textContent = 'Reviews are temporarily unavailable. Read them at the source links.';
     }
   };
-  if (hideEmpty || !('IntersectionObserver' in window)) {
+  if (omitEmpty || hideEmpty || !('IntersectionObserver' in window)) {
     load();
     return;
   }

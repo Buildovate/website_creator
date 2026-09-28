@@ -219,3 +219,12 @@ GET /api/tenants/:id/generation exposes the saved choices and tenant-scoped hist
 `stableSiteStyleSeed(tenantId)` is the single FNV-1a adapter reserved for replacement by #004M. New tenants and duplicates receive a stored seed. A saved `siteStyle` overrides it. Legacy sites with neither field remain Current to preserve existing sites; their renderer remains an identity operation. The generation manifest records the style and seed only when present, and refresh retains them. This ticket does not implement #028B section variants.
 
 Current retains its final presentation except the requested shared-header alignment and Joe-approved minimal AA color corrections. Reduced-motion first-paint CSS now matches the existing controller's settled static layout. See [#028A evidence](../build-evidence/028A/README.md) for the four approved final color values, before/after captures and passing checks.
+
+
+## #028B section layout variants
+
+The optional root `sectionVariants` object stores independent `hero`, `services`, `process`, `financing`, `reviews` and `finalCta` choices (`a`, `b`, `c`) in existing draft/published JSON. Each missing key defaults to `a`; missing settings and explicit all-`a` are identity operations. An explicit empty object clears choices, while an omitted object preserves saved choices on ordinary draft updates. No selector, randomizer, route or migration is added.
+
+`src/section-variants.js` composes opt-in layouts from the existing renderer-owned content and forms. Homepages use media-left / panorama heroes, alternating rows / native disclosure services, timeline / step-card processes, and wide / reversed inquiry forms. The existing financing page gets wide / sidebar calculator arrangements, with the same approved terms, selected lender handoff and legal links. Connected reviews get an editorial list / featured grid. `public/section-variants.css` loads once in the head only when needed and consumes the #028A style tokens. All installed media and default renderers remain intact. No platform styles change.
+
+Hero and final CTA require exactly one section primary action; other sections allow at most one (Joe-approved clarification). Published no-source/zero-filter reviews are omitted; preview keeps its existing honest sample treatment. Layout metadata declares structural patterns, which the variant regressions check for duplicates on a page. See [catalog and evidence](../build-evidence/028B/README.md) and the engagement module for review filtering. #028C remains unstarted.

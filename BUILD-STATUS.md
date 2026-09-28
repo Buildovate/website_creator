@@ -591,3 +591,12 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - [Evidence](docs/build-evidence/028P/README.md): 102/102 commands; 162/162 platform states; expanded contrast 0 failures; keyboard, overflow, one-primary, token/font and 41 exception-boundary checks pass.
 - Platform console gate: 0 non-allowlisted diagnostics. Approved exceptions: 12 Look-picker frames, 6 pre-existing editor warnings, 26 declared failure fixtures. Editor warning reproduced on 49b032e. All 31 other public diagnostics are retained; 37/37 full public records match the baseline, with 0 new.
 - Protected hashes 279/279, archived responses 374/374, preservation differences 0. Higgsfield credits 0. One local commit only; no push or deployment.
+
+
+## #028B — Section layout variants
+
+**Done locally (2026-09-28).** Three variants per section (hero, services, process, financing, reviews, final CTA): 18 catalog entries / 12 new layouts, preserving default a byte-for-byte. Optional sectionVariants and minReviewRating live in existing draft/published JSON; no selector, randomizer, routes, auth changes, migrations or platform restyle. Real-review filtering preserves full-source aggregates and omits zero-result public sections.
+
+- Checks: **102/102** existing commands; **8,293** render assertions (408 base + 204 configured-offer cases across 17 kits / 4 styles); **62** filter/API checks; **216** browser states; **608** fallback assertions / **94** states including both real local inquiry submissions. AA: **6,768** text measurements, 0 failures; **2,676** focus checks; 72 review geometry checks; overflow/content-loss/primary failures 0; max CLS **0.023204** <= 0.05.
+- Preservation: **279/279** accepted hashes plus platform.css (**280/280** current protections), **374/374** archived responses and **241** original preflight evidence files match. Platform/build/dependency source unchanged. Asset integrity: 643 references / 17 kits.
+- Evidence: **114** screenshots and **6** contact sheets; [catalog, exact commands and results](docs/build-evidence/028B/README.md). Credits **0**; actual provider calls **0**. One local commit; no push or deployment. #028C not started.

@@ -1,0 +1,962 @@
+{
+  "commit": "17e35f0",
+  "purpose": "Accepted default a preflight; no product changes",
+  "homeReviewPresence": [
+    {
+      "kit": "roofing",
+      "style": "current",
+      "url": "/s/platform-look-baseline-roofing-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "roofing",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-roofing-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "roofing",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-roofing-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "roofing",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-roofing-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "patios",
+      "style": "current",
+      "url": "/s/platform-look-baseline-patios-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "patios",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-patios-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "patios",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-patios-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "patios",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-patios-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "plumbing",
+      "style": "current",
+      "url": "/s/platform-look-baseline-plumbing-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "plumbing",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-plumbing-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "plumbing",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-plumbing-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "plumbing",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-plumbing-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "hvac",
+      "style": "current",
+      "url": "/s/platform-look-baseline-hvac-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "hvac",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-hvac-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "hvac",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-hvac-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "hvac",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-hvac-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "electrical",
+      "style": "current",
+      "url": "/s/platform-look-baseline-electrical-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "electrical",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-electrical-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "electrical",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-electrical-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "electrical",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-electrical-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "landscaping",
+      "style": "current",
+      "url": "/s/platform-look-baseline-landscaping-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "landscaping",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-landscaping-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "landscaping",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-landscaping-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "landscaping",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-landscaping-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "general-contractors",
+      "style": "current",
+      "url": "/s/platform-look-baseline-general-contractors-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "general-contractors",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-general-contractors-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "general-contractors",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-general-contractors-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "general-contractors",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-general-contractors-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "flooring",
+      "style": "current",
+      "url": "/s/platform-look-baseline-flooring-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "flooring",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-flooring-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "flooring",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-flooring-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "flooring",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-flooring-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "painting",
+      "style": "current",
+      "url": "/s/platform-look-baseline-painting-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "painting",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-painting-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "painting",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-painting-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "painting",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-painting-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "fencing",
+      "style": "current",
+      "url": "/s/platform-look-baseline-fencing-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "fencing",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-fencing-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "fencing",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-fencing-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "fencing",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-fencing-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "garage-doors",
+      "style": "current",
+      "url": "/s/platform-look-baseline-garage-doors-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "garage-doors",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-garage-doors-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "garage-doors",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-garage-doors-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "garage-doors",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-garage-doors-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "pest-control",
+      "style": "current",
+      "url": "/s/platform-look-baseline-pest-control-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "pest-control",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-pest-control-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "pest-control",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-pest-control-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "pest-control",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-pest-control-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "windows-doors",
+      "style": "current",
+      "url": "/s/platform-look-baseline-windows-doors-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "windows-doors",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-windows-doors-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "windows-doors",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-windows-doors-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "windows-doors",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-windows-doors-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "solar",
+      "style": "current",
+      "url": "/s/platform-look-baseline-solar-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "solar",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-solar-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "solar",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-solar-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "solar",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-solar-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "concrete",
+      "style": "current",
+      "url": "/s/platform-look-baseline-concrete-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "concrete",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-concrete-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "concrete",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-concrete-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "concrete",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-concrete-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "pools",
+      "style": "current",
+      "url": "/s/platform-look-baseline-pools-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "pools",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-pools-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "pools",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-pools-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "pools",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-pools-classic",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "locksmith",
+      "style": "current",
+      "url": "/s/platform-look-baseline-locksmith-current",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "locksmith",
+      "style": "bold",
+      "url": "/s/platform-look-baseline-locksmith-bold",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "locksmith",
+      "style": "fresh",
+      "url": "/s/platform-look-baseline-locksmith-fresh",
+      "reviewSectionPresent": false
+    },
+    {
+      "kit": "locksmith",
+      "style": "classic",
+      "url": "/s/platform-look-baseline-locksmith-classic",
+      "reviewSectionPresent": false
+    }
+  ],
+  "screens": [
+    {
+      "kit": "roofing",
+      "width": 1440,
+      "url": "http://127.0.0.1:8194/s/ambient-baseline-roofing",
+      "file": "before/roofing-services-a-1440.png",
+      "reviewSectionPresent": false,
+      "servicesHeading": "OUR SERVICES",
+      "primaryButtons": [],
+      "controls": [
+        {
+          "text": "Explore roof installation",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 260.34375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore roof repair",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 260.359375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore roof replacement",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 260.34375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore asphalt shingles",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 260.359375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore metal roofing",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 260.34375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore flat roofs",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 260.359375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore roof maintenance",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 260.34375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore gutters",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 260.359375,
+          "height": 37.4375
+        }
+      ]
+    },
+    {
+      "kit": "roofing",
+      "width": 768,
+      "url": "http://127.0.0.1:8194/s/ambient-baseline-roofing",
+      "file": "before/roofing-services-a-768.png",
+      "reviewSectionPresent": false,
+      "servicesHeading": "OUR SERVICES",
+      "primaryButtons": [],
+      "controls": [
+        {
+          "text": "Explore roof installation",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore roof repair",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore roof replacement",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore asphalt shingles",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore metal roofing",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore flat roofs",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore roof maintenance",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore gutters",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        }
+      ]
+    },
+    {
+      "kit": "roofing",
+      "width": 390,
+      "url": "http://127.0.0.1:8194/s/ambient-baseline-roofing",
+      "file": "before/roofing-services-a-390.png",
+      "reviewSectionPresent": false,
+      "servicesHeading": "OUR SERVICES",
+      "primaryButtons": [],
+      "controls": [
+        {
+          "text": "Explore roof installation",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore roof repair",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore roof replacement",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore asphalt shingles",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore metal roofing",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore flat roofs",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore roof maintenance",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore gutters",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(23, 36, 33)",
+          "border": "0px none rgb(23, 36, 33)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        }
+      ]
+    },
+    {
+      "kit": "patios",
+      "width": 1440,
+      "url": "http://127.0.0.1:8194/s/ambient-baseline-patios",
+      "file": "before/patios-services-a-1440.png",
+      "reviewSectionPresent": false,
+      "servicesHeading": "OUR SERVICES",
+      "primaryButtons": [],
+      "controls": [
+        {
+          "text": "Explore patio covers",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 260.34375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore motorized pergolas",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 260.359375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore louvered roofs",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 260.34375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore aluminum patio covers",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 260.359375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore wood pergolas",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 260.34375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore outdoor living spaces",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 260.359375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore patio enclosures",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 260.34375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore patio repair",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 260.359375,
+          "height": 37.4375
+        }
+      ]
+    },
+    {
+      "kit": "patios",
+      "width": 768,
+      "url": "http://127.0.0.1:8194/s/ambient-baseline-patios",
+      "file": "before/patios-services-a-768.png",
+      "reviewSectionPresent": false,
+      "servicesHeading": "OUR SERVICES",
+      "primaryButtons": [],
+      "controls": [
+        {
+          "text": "Explore patio covers",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore motorized pergolas",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore louvered roofs",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore aluminum patio covers",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore wood pergolas",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore outdoor living spaces",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore patio enclosures",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore patio repair",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 296.109375,
+          "height": 37.4375
+        }
+      ]
+    },
+    {
+      "kit": "patios",
+      "width": 390,
+      "url": "http://127.0.0.1:8194/s/ambient-baseline-patios",
+      "file": "before/patios-services-a-390.png",
+      "reviewSectionPresent": false,
+      "servicesHeading": "OUR SERVICES",
+      "primaryButtons": [],
+      "controls": [
+        {
+          "text": "Explore patio covers",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore motorized pergolas",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore louvered roofs",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore aluminum patio covers",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore wood pergolas",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore outdoor living spaces",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore patio enclosures",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        },
+        {
+          "text": "Explore patio repair",
+          "class": "",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(50, 59, 39)",
+          "border": "0px none rgb(50, 59, 39)",
+          "display": "block",
+          "width": 301,
+          "height": 37.4375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+✔ network contract: bounded HTTPS fields, supported networks, stable order and explicit clear (3.896ms)
+✔ publication and render-time evidence gates: approval, freshness, counts and license support (1.6303ms)
+✔ actual API: draft/snapshot separation, old-client preservation, validation, publish recheck and permissions (118.403ms)
+✔ #009 strip renders only approved selections with source links, no assumed marks or ratings (60.3589ms)
+✔ #009 public/preview rendering preserves selected network snapshot and source privacy (124.4055ms)
+✔ #009 selected placement hooks work on both Roofing homepages and the service page (96.7869ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 412.4486
+

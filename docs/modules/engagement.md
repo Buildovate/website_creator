@@ -109,3 +109,12 @@ Connected reviews place compact source cards immediately below the display headi
 ## #017 — current financing visibility and adapter rules
 
 This supersedes the earlier three-lender and visitor-assumption public calculator notes above. src/platform/lender-adapter.ts registers Service Finance, Wisetack, Sunbit, Hearth, Enhancify and Other. All APIs report Not connected; linkReady is a distinct contractor-confirmed business application URL. No credentials or provider calls are implemented. SuppliedPrograms requires enabled/confirmed program terms and a selected confirmed link. normalizePlatform preserves financing.requested intent and derives financing.enabled only when terms exist and selection is not none. The public calculator uses only selected supplied APR/term; arbitrary sample scenarios exist only in noindex previews. Service blocks retain the same math, but full disclosure wording appears only on /legal. Existing future integration tickets and NEEDS-KEYS gates remain open. Evidence: ../build-evidence/017/README.md.
+
+
+## #028B optional minimum review rating
+
+The existing site JSON accepts optional root `minReviewRating`: `all`, `3`, `4` or `5` (numbers for thresholds). No UI, route, migration or provider call is added. `all` is the new option’s default, but an absent field deliberately retains the accepted legacy `reviews.minimum` behavior byte-for-byte; for legacy Google snapshots that may mean the existing 4+ setting. Explicit `all` removes that legacy display threshold. Ordinary draft updates preserve an existing saved value when omitted.
+
+`src/review-filter.js` applies the explicit choice consistently to both existing providers and layouts a/b/c. Numeric thresholds exclude missing/non-numeric ratings. Provider-wide confirmed average/count remain unchanged by excerpt filtering; when the full-source pair is unavailable it is omitted, never recomputed from displayed cards. Source attribution continues to describe excerpts, not a complete collection. The current API has no review structured-data aggregate to recompute.
+
+With an explicit filter or a new reviews layout, the published section is initially hidden, loads its existing local review endpoint, and is removed entirely when no qualifying excerpts exist (including unavailable providers). No-JS remains static with no fabricated review evidence. Absent filter + variant a retains the legacy HTML and populated browser DOM. Samples remain confined to existing preview behavior. [Evidence and mixed-rating fixtures](../build-evidence/028B/README.md).

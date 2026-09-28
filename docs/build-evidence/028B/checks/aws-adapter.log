@@ -1,0 +1,5 @@
+PASS: SQL translation, Postgres migrations, D1 adapter, S3 shim, MinIO client config, ALB/Cognito/dev auth, /healthz, static assets, OpenAI egress.
+
+healthz database check failed database offline
+Request failed / Error
+Request failed /api/session Error

@@ -726,10 +726,10 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 
 ### #028B — Section layout variants
 
-- State: **Not started** · Estimate: **8h** (≤1 day).
-- Scope: Add at least three layout variants each for hero, services, process, financing, reviews and final CTA. Every variant uses the same trade configuration and factual contractor data.
-- Done when: Every section variant passes the existing tests and reduced-motion checks, with no broken responsive layout or content loss.
-- External keys/accounts: None.
+- State: **Done locally (2026-09-28)** · Estimate: **8h** (≤1 day).
+- Delivered: three variants each for hero, services, process, financing, reviews and final CTA, optional saved section choices and minReviewRating (all/3/4/5), with full-source review aggregates and zero-result omission. Default a is byte-identical. Hero/final CTA have exactly one primary; other sections allow at most one, as Joe approved. No selector or randomizer.
+- Validation: **102/102** commands; **8,293** render assertions; **62** filter/API checks; **216** browser states; **608** fallback assertions / **94** states; **279/279** accepted protections (+ platform.css), **374/374** archived responses; AA/overflow/focus/geometry/CLS pass. [Evidence and 18-variant catalog](docs/build-evidence/028B/README.md).
+- External keys/accounts: None. **0 Higgsfield credits**, no provider calls, no push or deployment. #028C not started.
 
 ### #028C — Uniqueness generator
 
