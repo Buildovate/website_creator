@@ -2,7 +2,7 @@ import fs from 'node:fs';import assert from 'node:assert/strict';import{createRe
 import{createRuntime,listen}from'../src/aws/server.js';
 import{originalRows,variantSettings,styles,mixedReviews}from'./fixtures/section-variants.mjs';
 import{financingChapter}from'../src/platform/planning-films.ts';
-const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028B',base='http://127.0.0.1:8196';
+const root='C:/Users/joe/website_creator',out=process.env.BV_028B_EVIDENCE||root+'/docs/build-evidence/028B',base='http://127.0.0.1:8196';
 const{chromium}=createRequire(import.meta.url)('C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const runtime=await createRuntime({env:{APP_ENV:'local',NODE_ENV:'development',AUTH_MODE:'dev-header',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',MIGRATE_ON_BOOT:'1',WORKSPACE_OWNER_EMAIL:'fallback-qa@example.test',APP_ORIGIN:base,LISTEN_HOST:'127.0.0.1',PORT:'8196'}});
 runtime.env.GOOGLE_PLACES_API_KEY='test-only-mocked';

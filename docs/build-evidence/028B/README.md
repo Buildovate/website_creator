@@ -1,5 +1,7 @@
 # #028B — Section layout variants
 
+**Follow-up to `10df48d`:** [process content parity and hero rail spacing](followup/README.md). Current fixes, retaken screenshots, updated contact sheets and rerun results are in that separate folder. The original evidence below records the accepted initial implementation and is preserved.
+
 **Complete locally (2026-09-28).** All required checks pass on feature/local-environment-setup, starting from accepted #028P commit 17e35f0 (following #028A 49b032e). Local commit only; no push or deployment. **Higgsfield credits: 0. Actual provider calls: 0.**
 
 ## What was built

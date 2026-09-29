@@ -600,3 +600,11 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Checks: **102/102** existing commands; **8,293** render assertions (408 base + 204 configured-offer cases across 17 kits / 4 styles); **62** filter/API checks; **216** browser states; **608** fallback assertions / **94** states including both real local inquiry submissions. AA: **6,768** text measurements, 0 failures; **2,676** focus checks; 72 review geometry checks; overflow/content-loss/primary failures 0; max CLS **0.023204** <= 0.05.
 - Preservation: **279/279** accepted hashes plus platform.css (**280/280** current protections), **374/374** archived responses and **241** original preflight evidence files match. Platform/build/dependency source unchanged. Asset integrity: 643 references / 17 kits.
 - Evidence: **114** screenshots and **6** contact sheets; [catalog, exact commands and results](docs/build-evidence/028B/README.md). Credits **0**; actual provider calls **0**. One local commit; no push or deployment. #028C not started.
+
+### #028B follow-up — process content parity and hero spacing
+
+**Done locally (2026-09-28), on top of 10df48d.** Process b/c restore original supporting copy, contact and installed artwork. Hero b/c preserve source facts and clear the unchanged rail. Default a and platform rendering remain unchanged. The lowercase trade-name issue in process a is logged for later.
+
+- Verification: **102/102** commands; **216 + 544** browser states; **2,448** content-parity comparisons plus four negative boundaries; **8,293** render assertions; **62** filter checks; **608** fallback assertions / **94** states. AA **50104** measurements, zero failures; focus/overflow/geometry/primary/content loss/images/page exceptions pass; max CLS **0.023765** <= 0.05.
+- Preservation: **279/279** accepted hashes plus platform.css, **374/374** archived responses, and original 028B evidence preserved (parent README link intentionally updated).
+- Evidence: **138** retaken captures and **6** updated contact sheets; [follow-up README](docs/build-evidence/028B/followup/README.md). **0 credits**, no provider calls, no push/deployment. #028C not started.

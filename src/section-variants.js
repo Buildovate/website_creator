@@ -21,14 +21,26 @@ const heading=html=>inner(html,'h2');
 const replace=(html,part,value)=>part?html.slice(0,part.start)+value+html.slice(part.end):html;
 const image=(src,alt='',hero=false)=>src?'<img class="sv-image" src="'+e(src)+'" alt="'+e(alt)+'" width="1280" height="800" '+(hero?'fetchpriority="high"':'loading="lazy"')+'>':'';
 const start=(name,choice,pattern,extra='')=>'<section class="sv-section sv-'+name+' sv-'+name+'-'+choice+'" data-section-variant="'+name+':'+choice+'" data-section-pattern="'+pattern+'" '+extra+'>';
-export function sectionVariantAssets(html){if(!html.includes('data-section-variant="'))return html;html=html.replaceAll('<link rel="stylesheet" href="/section-variants.css">','');return html.replace('</head>','<link rel="stylesheet" href="/section-variants.css"></head>');}
+export function sectionVariantAssets(html){
+ if(!html.includes('data-section-variant="'))return html;
+ // The alternate heroes expose source contacts at first paint. Load their existing
+ // fonts early so a font swap cannot rewrap the headline and contact rows.
+ if(/data-section-variant="hero:[bc]"/.test(html)&&!html.includes('data-sv-hero-font'))html=html.replace('<head>','<head><link data-sv-hero-font rel="preload" href="/assets/dm-sans.ttf" as="font" type="font/ttf" crossorigin><link data-sv-hero-font rel="preload" href="/assets/barlow-bold.ttf" as="font" type="font/ttf" crossorigin>');
+ html=html.replaceAll('<link rel="stylesheet" href="/section-variants.css">','');
+ return html.replace('</head>','<link rel="stylesheet" href="/section-variants.css"></head>');
+}
 function heroVariant(part,s,choice){
  const h1=plain(element(part.body,t=>hasClass(t,'mk-readable'),'span')?.body||inner(part.body,'h1')),intro=element(part.body,t=>/class="[^"]*(?:story-description|kit-intro|cx-intro)/.test(t),'p')?.body||e(s.intro);
  const action=element(part.body,t=>/class="[^"]*(?:story-primary|kit-button|cx-button)/.test(t),'a');
  if(!action)throw Error('Hero variant needs the existing primary action');
  const href=action.open.match(/href="([^"]*)"/)?.[1]||'#contact';
  const img=part.body.match(/<img\b[^>]*\bsrc="([^"]+)"/)?.[1]||'';
- const copy='<div class="sv-hero-copy"><p class="sv-kicker">'+e(s.area||s.trade)+'</p><h1>'+h1+'</h1><p>'+intro+'</p><div class="sv-actions"><a class="sv-primary" href="'+href+'">'+plain(action.body)+'</a><a href="#services">Explore our services</a></div></div>';
+ const kicker=element(part.body,t=>/class="[^"]*(?:story-kicker|kit-eyebrow|cx-eyebrow)/.test(t),'p')?.body||'';
+ const topline=element(part.body,t=>hasClass(t,'story-topline'),'div'),context=topline?inner(topline.body,'span'):'';
+ const links=[...part.body.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/g)].map(m=>m[0]);
+ const seen=new Set([href]),secondary=[];
+ for(const link of links){const target=link.match(/href="([^"]*)"/)?.[1];if(!target||seen.has(target))continue;seen.add(target);secondary.push('<a href="'+target+'">'+inner(link,'a')+'</a>');}
+ const copy='<div class="sv-hero-copy">'+(context?'<p class="sv-hero-context">'+context+'</p>':'')+(kicker?'<p class="sv-kicker">'+kicker+'</p>':'')+'<h1>'+h1+'</h1><p class="sv-hero-description">'+intro+'</p><div class="sv-actions"><a class="sv-primary" href="'+href+'">'+action.body+'</a>'+secondary.join('')+'</div></div>';
  const media='<figure class="sv-hero-media">'+image(img,s.trade+' design inspiration',true)+'</figure>';
  return start('hero',choice,choice==='b'?'media-split':'headline-panorama','id="home"')+(choice==='b'?media+copy:copy+media)+'</section>';
 }
@@ -42,10 +54,22 @@ function serviceVariant(part,choice){
  return start('services',choice,choice==='b'?'alternating-rows':'disclosure-list','id="services"')+'<header><p class="sv-kicker">CHOOSE YOUR STARTING POINT</p><h2>'+heading(part.body)+'</h2></header><div class="sv-services-list">'+items+'</div></section>';
 }
 function processVariant(part,choice){
- const steps=[...part.body.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/g)].map(m=>({title:inner(m[1],'h3')||inner(m[1],'strong'),body:inner(m[1],'p')}));
+ const list=element(part.body,()=>true,'ol');
+ const steps=[...(list?.body||'').matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/g)].map(m=>({title:inner(m[1],'h3')||inner(m[1],'strong'),body:inner(m[1],'p')}));
  const title=heading(part.body)||inner(part.body,'h3');
+ const map=element(part.body,t=>hasClass(t,'roof-next-map'),'div');
+ const pictures=[...part.body.matchAll(/<img\b[^>]*>/g)].map(m=>m[0].replace(/class="[^"]*"/,'class="sv-process-image"'));
+ const captions=[...part.body.matchAll(/<figcaption\b[^>]*>([\s\S]*?)<\/figcaption>/g)].map(m=>m[1]);
+ const media=map?'<div class="sv-process-art sv-process-map">'+map.body+'</div>':pictures.length?'<div class="sv-process-art'+(pictures.length>1?' sv-process-mosaic':'')+'">'+pictures.map((img,i)=>'<figure>'+img+(captions[i]?'<figcaption>'+captions[i]+'</figcaption>':'')+'</figure>').join('')+'</div>':'';
+ let outside=part.body;if(list)outside=outside.replace(list.html,'');if(map)outside=outside.replace(map.html,'');
+ const paragraphs=[...outside.matchAll(/<p\b[^>]*>[\s\S]*?<\/p>/g)].map(m=>m[0]);
+ const kickers=paragraphs.filter(p=>/class="[^"]*eyebrow/.test(p)).map(p=>inner(p,'p'));
+ const supporting=paragraphs.filter(p=>!/class="[^"]*eyebrow/.test(p)).join('');
+ const links=[...outside.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/g)].map((m,i)=>m[0].replace(/class="[^"]*"/,'class="'+(i?'sv-process-link':'sv-primary')+'"')).join('');
  const items=steps.map((step,i)=>'<li><span class="sv-step-index" aria-hidden="true">'+String(i+1).padStart(2,'0')+'</span><div><h3>'+step.title+'</h3>'+(step.body?'<p>'+step.body+'</p>':'')+'</div></li>').join('');
- return start('process',choice,choice==='b'?'vertical-timeline':'horizontal-step-cards')+'<header><p class="sv-kicker">WHAT HAPPENS NEXT</p><h2>'+title+'</h2></header><ol>'+items+'</ol></section>';
+ const header='<header>'+(kickers[0]?'<p class="sv-kicker">'+kickers[0]+'</p>':'')+'<h2>'+title+'</h2>'+supporting+'</header>';
+ const sequence='<div class="sv-process-steps">'+kickers.slice(1).map(k=>'<p class="sv-kicker">'+k+'</p>').join('')+'<ol>'+items+'</ol><div class="sv-process-contact">'+links+'</div></div>';
+ return start('process',choice,choice==='b'?'vertical-timeline':'horizontal-step-cards')+'<div class="sv-process-intro">'+header+media+'</div>'+sequence+'</section>';
 }
 function finalVariant(part,choice){
  // Preserve the form, field names, validation, consent, transport and factual copy.

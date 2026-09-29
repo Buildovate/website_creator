@@ -731,6 +731,9 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Validation: **102/102** commands; **8,293** render assertions; **62** filter/API checks; **216** browser states; **608** fallback assertions / **94** states; **279/279** accepted protections (+ platform.css), **374/374** archived responses; AA/overflow/focus/geometry/CLS pass. [Evidence and 18-variant catalog](docs/build-evidence/028B/README.md).
 - External keys/accounts: None. **0 Higgsfield credits**, no provider calls, no push or deployment. #028C not started.
 
+- Follow-up done locally (2026-09-28), based on 10df48d: restored process b/c copy, contact and installed artwork; preserved hero facts and rail clearance. Checks: 102/102 commands, 216 + 544 browser states, 2,448 parity comparisons, 8,293 render assertions, 62 filter checks, 608 fallback assertions, 279 protected hashes (+ platform.css) and 374 archived responses; all pass. Evidence: [028B follow-up](docs/build-evidence/028B/followup/README.md).
+- Deferred, not started: Process 'a' supporting line lowercases trade names (e.g. 'your hvac project'); needs proper trade display names. The accepted a renderer remains untouched in this fix.
+
 ### #028C — Uniqueness generator
 
 - State: **Not started** · Estimate: **8h** (≤1 day).

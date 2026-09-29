@@ -110,3 +110,37 @@ body .sv-reviews-b>.sv-review-body{grid-column:2;grid-row:1;min-width:0}
 body .sv-reviews-c{display:block}
 body .sv-reviews-c>.sv-review-heading{margin-bottom:32px}
 @media(max-width:768px){body .sv-reviews-b>.sv-review-heading,body .sv-reviews-b>.sv-review-body{grid-column:1;grid-row:auto}}
+
+/* #028B follow-up: source facts and artwork remain in the alternate process layouts. */
+body .sv-process-b{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:5vw;align-items:center}
+body .sv-process-intro header>p:not(.sv-kicker){margin-top:20px}
+body .sv-process-art{margin-top:28px;min-width:0}
+body .sv-process-art img{display:block;width:100%;height:auto;object-fit:contain}
+body .sv-process-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+body .sv-process-mosaic img{aspect-ratio:3/2;object-fit:cover}
+body .sv-process-art figcaption{font-size:14px;padding-top:8px}
+body .sv-process-map{padding:20px;background:var(--look-deep,#172421);color:var(--look-deep-text,#ffffff);border-radius:var(--look-radius,4px)}
+body .sv-process-map svg{display:block;width:100%;height:auto;max-height:320px}
+body .sv-process-map p{color:inherit}
+body .sv-process-steps{min-width:0}
+body .sv-process-b .sv-process-steps>.sv-kicker{margin-bottom:28px}
+body .sv-process-b li:last-child{padding-bottom:0}
+body .sv-process-contact{margin-top:28px;display:flex;gap:16px;flex-wrap:wrap}
+body .sv-process-c .sv-process-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5vw;align-items:center}
+body .sv-process-c .sv-process-art{margin-top:0}
+body .sv-process-c .sv-process-steps>.sv-kicker{margin:32px 0 -16px}
+body .sv-process-c .sv-process-contact{justify-content:center}
+body .sv-hero-copy>.sv-hero-context{margin:0 0 14px;font-size:14px}
+body .sv-hero-b .sv-hero-copy{min-width:0}
+body .sv-hero-copy .sv-actions{gap:12px 24px}
+@media(min-width:1001px){
+ body:has(.kit-chapter-rail) :is(.sv-hero-b,.sv-hero-c){padding-right:max(176px,11vw)}
+ body .sv-hero-b{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+ body .sv-hero-b h1{font-size:clamp(40px,4.5vw,72px)}
+}
+@media(max-width:768px){
+ body .sv-process-b,body .sv-process-c .sv-process-intro{grid-template-columns:minmax(0,1fr);gap:28px}
+ body .sv-process-art{margin-top:24px}
+ body .sv-process-c .sv-process-art{margin-top:0}
+ body .sv-process-mosaic{gap:12px}
+}

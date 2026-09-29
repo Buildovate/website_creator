@@ -53,4 +53,4 @@ try {
  const defaultWithA=reviewSection({...original,sectionVariants:{reviews:'a'}},tenant.slug,true);eq(legacy,defaultWithA);
 }finally{globalThis.fetch=originalFetch;}
 const report={passed:true,checks,mockedProviderCalls:calls,actualProviderCalls:0,fullSetAverage:3.5,fullSetCount:4,values:['all',3,4,5]};
-fs.writeFileSync('docs/build-evidence/028B/checks/review-rating-filter.json',JSON.stringify(report,null,2));console.log('PASS '+JSON.stringify(report));
+fs.writeFileSync((process.env.BV_028B_EVIDENCE||'docs/build-evidence/028B')+'/checks/review-rating-filter.json',JSON.stringify(report,null,2));console.log('PASS '+JSON.stringify(report));

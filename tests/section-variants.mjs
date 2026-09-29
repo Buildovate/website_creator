@@ -60,4 +60,4 @@ for(const {row} of originalRows)for(const style of styles)for(const variant of v
 }
 
 const report={passed:true,checks,cases,optionalCases,kits:originalRows.length,styles:styles.length,variantsPerSection:3,sections:6,optionalStates:2};
-fs.mkdirSync('docs/build-evidence/028B/checks',{recursive:true});fs.writeFileSync('docs/build-evidence/028B/checks/section-variants.json',JSON.stringify(report,null,2));console.log('PASS '+JSON.stringify(report));
+fs.mkdirSync((process.env.BV_028B_EVIDENCE||'docs/build-evidence/028B')+'/checks',{recursive:true});fs.writeFileSync((process.env.BV_028B_EVIDENCE||'docs/build-evidence/028B')+'/checks/section-variants.json',JSON.stringify(report,null,2));console.log('PASS '+JSON.stringify(report));
