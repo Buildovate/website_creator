@@ -1,0 +1,382 @@
+[
+  {
+    "tradeKey": "roofing",
+    "catalog": "public/trade-films.json",
+    "url": "/assets/films/roofing-transformation.mp4",
+    "poster": "/assets/films/roofing-poster.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 12,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "patios",
+    "catalog": "public/trade-films.json",
+    "url": "/assets/films/patios-transformation.mp4",
+    "poster": "/assets/films/patios-poster.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 12,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "plumbing",
+    "catalog": "public/trade-films.json",
+    "url": "/assets/films/plumbing-transformation.mp4",
+    "poster": "/assets/films/plumbing-poster.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 12,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "hvac",
+    "catalog": "public/trade-films.json",
+    "url": "/assets/films/hvac-transformation.mp4",
+    "poster": "/assets/films/hvac-poster.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 12,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "electrical",
+    "catalog": "public/trade-films.json",
+    "url": "/assets/films/electrical-transformation.mp4",
+    "poster": "/assets/films/electrical-poster.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 12,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "landscaping",
+    "catalog": "public/trade-films.json",
+    "url": "/assets/films/landscaping-transformation.mp4",
+    "poster": "/assets/films/landscaping-poster.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 12,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "general-contractors",
+    "catalog": "public/trade-films.json",
+    "url": "/assets/films/general-contractors-transformation.mp4",
+    "poster": "/assets/films/general-contractors-poster.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 12,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "roofing",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/roofing.mp4",
+    "poster": "/assets/build-films/roofing-finished.webp",
+    "openingPoster": "/assets/build-films/roofing-opening.webp",
+    "jobId": "0bb63cd0-826b-4db0-8cf3-03e2e14b0c29",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "patios",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/patios.mp4?v=complete-20260918",
+    "poster": "/assets/build-films/patios-finished.webp",
+    "openingPoster": "/assets/build-films/patios-opening.webp",
+    "jobId": "69bc372d-90f6-4590-8305-5fb3279b13a6",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "plumbing",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/plumbing.mp4",
+    "poster": "/assets/build-films/plumbing-finished.webp",
+    "openingPoster": "/assets/build-films/plumbing-opening.webp",
+    "jobId": "84ea2362-aff1-4298-ba8d-0cf236f29d9e",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "hvac",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/hvac.mp4",
+    "poster": "/assets/build-films/hvac-finished.webp",
+    "openingPoster": "/assets/build-films/hvac-opening.webp",
+    "jobId": "a951e1ea-1873-4a87-8182-73e14b31f09f",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "electrical",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/electrical.mp4",
+    "poster": "/assets/build-films/electrical-finished.webp",
+    "openingPoster": "/assets/build-films/electrical-opening.webp",
+    "jobId": "2e0a9df4-f8ce-45b8-adb8-149fd93eebcd",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "landscaping",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/landscaping.mp4",
+    "poster": "/assets/build-films/landscaping-finished.webp",
+    "openingPoster": "/assets/build-films/landscaping-opening.webp",
+    "jobId": "ce4e60a6-dd17-40f6-99ca-bdad73e34bdc",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "general-contractors",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/general-contractors.mp4?v=complete-20260918",
+    "poster": "/assets/build-films/general-contractors-finished.webp",
+    "openingPoster": "/assets/build-films/general-contractors-opening.webp",
+    "jobId": "099097cb-1d25-4458-83cf-5e8b122c499d",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "flooring",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/flooring.mp4?v=complete-20260918",
+    "poster": "/assets/build-films/flooring-finished.webp",
+    "openingPoster": "/assets/build-films/flooring-opening.webp",
+    "jobId": "4c25a402-c271-4f59-8729-79b4e17c3ba9",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "fencing",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/fencing.mp4",
+    "poster": "/assets/build-films/fencing-finished.webp",
+    "openingPoster": "/assets/build-films/fencing-opening.webp",
+    "jobId": "e538658e-228c-484a-9fe7-0bde5d3b6b16",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "pest-control",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/pest-control.mp4",
+    "poster": "/assets/build-films/pest-control-finished.webp",
+    "openingPoster": "/assets/build-films/pest-control-opening.webp",
+    "jobId": "65e6ce9d-fad4-43e5-93f6-1d258bd368d5",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "painting",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/painting.mp4",
+    "poster": "/assets/build-films/painting-finished.webp",
+    "openingPoster": "/assets/build-films/painting-opening.webp",
+    "jobId": "1c341e76-4b4d-49c1-8084-424b6e09bd7b",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "garage-doors",
+    "catalog": "public/trade-build-films.json",
+    "url": "/assets/build-films/garage-doors.mp4?v=complete-20260918",
+    "poster": "/assets/build-films/garage-doors-finished.webp",
+    "openingPoster": "/assets/build-films/garage-doors-opening.webp",
+    "jobId": "f606858a-c60f-4cc7-be90-30e84d6ba28a",
+    "duration": 12,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "roofing",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/roofing.mp4",
+    "poster": "/assets/craft-films/roofing-finished.webp",
+    "openingPoster": "/assets/craft-films/roofing-opening.webp",
+    "jobId": "167783d0-8b8f-437b-80e5-96e608e4f418",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "patios",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/patios.mp4",
+    "poster": "/assets/craft-films/patios-finished.webp",
+    "openingPoster": "/assets/craft-films/patios-opening.webp",
+    "jobId": "14dc42c4-bee7-47da-9f83-12926cf50fa5",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "plumbing",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/plumbing.mp4",
+    "poster": "/assets/craft-films/plumbing-finished.webp",
+    "openingPoster": "/assets/craft-films/plumbing-opening.webp",
+    "jobId": "44d5c1c2-6101-4e80-9644-d97accff3dab",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "hvac",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/hvac.mp4",
+    "poster": "/assets/craft-films/hvac-finished.webp",
+    "openingPoster": "/assets/craft-films/hvac-opening.webp",
+    "jobId": "ef654c4f-96a4-4192-b608-6cc0485166bc",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "electrical",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/electrical.mp4",
+    "poster": "/assets/craft-films/electrical-finished.webp",
+    "openingPoster": "/assets/craft-films/electrical-opening.webp",
+    "jobId": "e7f0434c-ab18-4810-839d-86a2a437a28a",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "landscaping",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/landscaping.mp4",
+    "poster": "/assets/craft-films/landscaping-finished.webp",
+    "openingPoster": "/assets/craft-films/landscaping-opening.webp",
+    "jobId": "a2ee6b53-ec4f-4dd0-851d-505bf0c34c5e",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "general-contractors",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/general-contractors.mp4",
+    "poster": "/assets/craft-films/general-contractors-finished.webp",
+    "openingPoster": "/assets/craft-films/general-contractors-opening.webp",
+    "jobId": "4c4c5455-cb23-47b9-8865-e5b2eccd4f6d",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "flooring",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/flooring.mp4",
+    "poster": "/assets/craft-films/flooring-finished.webp",
+    "openingPoster": "/assets/craft-films/flooring-opening.webp",
+    "jobId": "f716190d-aa57-48ee-a516-7e05511c403b",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "painting",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/painting.mp4",
+    "poster": "/assets/craft-films/painting-finished.webp",
+    "openingPoster": "/assets/craft-films/painting-opening.webp",
+    "jobId": "59668086-f464-43d0-b8b5-2f26f7f7299c",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "fencing",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/fencing.mp4",
+    "poster": "/assets/craft-films/fencing-finished.webp",
+    "openingPoster": "/assets/craft-films/fencing-opening.webp",
+    "jobId": "b4738f7c-c366-42ad-8210-0e0d3a0e7f06",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "garage-doors",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/garage-doors.mp4",
+    "poster": "/assets/craft-films/garage-doors-finished.webp",
+    "openingPoster": "/assets/craft-films/garage-doors-opening.webp",
+    "jobId": "829b11ae-e8af-4d08-87e1-888c00291cc8",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "pest-control",
+    "catalog": "public/trade-craft-films.json",
+    "url": "/assets/craft-films/pest-control.mp4",
+    "poster": "/assets/craft-films/pest-control-finished.webp",
+    "openingPoster": "/assets/craft-films/pest-control-opening.webp",
+    "jobId": "d6061c5c-9d17-4a3b-87d2-2e652a1a8e78",
+    "duration": 12.041667,
+    "sourceRecorded": true
+  },
+  {
+    "tradeKey": "roofing",
+    "catalog": "public/pricing-films.json",
+    "url": "/assets/films/roofing-story.mp4",
+    "poster": "/assets/films/roofing-story.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 15,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "patios",
+    "catalog": "public/pricing-films.json",
+    "url": "/assets/films/patios-story.mp4",
+    "poster": "/assets/films/patios-story.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 15,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "plumbing",
+    "catalog": "public/pricing-films.json",
+    "url": "/assets/films/plumbing-story.mp4",
+    "poster": "/assets/films/plumbing-story.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 15,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "hvac",
+    "catalog": "public/pricing-films.json",
+    "url": "/assets/films/hvac-story.mp4",
+    "poster": "/assets/films/hvac-story.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 15,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "electrical",
+    "catalog": "public/pricing-films.json",
+    "url": "/assets/films/electrical-story.mp4",
+    "poster": "/assets/films/electrical-story.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 15,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "landscaping",
+    "catalog": "public/pricing-films.json",
+    "url": "/assets/films/landscaping-story.mp4",
+    "poster": "/assets/films/landscaping-story.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 15,
+    "sourceRecorded": false
+  },
+  {
+    "tradeKey": "general-contractors",
+    "catalog": "public/pricing-films.json",
+    "url": "/assets/films/general-contractors-story.mp4",
+    "poster": "/assets/films/general-contractors-story.webp",
+    "openingPoster": null,
+    "jobId": null,
+    "duration": 15,
+    "sourceRecorded": false
+  }
+]

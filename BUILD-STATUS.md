@@ -618,3 +618,13 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Quality: **98186** trade-page AA text measurements and **3048** generated border measurements, **0 failures**; focus, primary actions, layout/rail geometry, overflow, images and page exceptions pass. Maximum CLS **0.023765** <= 0.05. Expanded legacy platform contrast also passes.
 - Preservation: **279 + platform.css = 280** exact protected hashes; **374** archived responses byte-identical; original variant-a functions and existing CSS remain unchanged.
 - Evidence: [README](docs/build-evidence/028C/README.md), six full Sample homepage captures and desktop/phone side-by-side sheets. **0 credits**, **0 provider calls**, no push or deploy. #028D has not started.
+
+## #028D — Media library fallback (Done locally)
+
+Completed on top of accepted fc25c85 with Joe Engel’s 2026-09-28 rights and library-approval record. All 17 trades have runtime catalogs, seeded approved-only reservations, staff overrides, same-trade reuse avoidance, still heroes for thin clip pools, non-destructive palette treatments, exact #023 manifest replay, selected owned-photo priority and poster/motion fallbacks. Existing sites without picks remain byte-identical. #028B2 is logged for later only.
+
+Approved: 14 hero clips, 3 Roofing section clips and 60 distinct stills/posters. Pending content/provenance and rejected takes are excluded. Starter estimates: 1,600 credits to reach two hero clips per trade; 4,320 to reach four. Reported balance 1,777.8; **0 credits spent, no provider calls**. No new dependency, route, migration, push or deployment.
+
+Verification: 102/102 existing commands; 3,287 media-unit, 481 media-API and 6,868 inventory checks; 1,183 main browser states, 20 normal/JS-off states and 84 media-interaction states, plus 117 affected-state rechecks and 94 existing fallback states. 109,000 text measurements, 3,084 control-border checks, 29,284 focus checks and the legacy platform audit all pass with zero failures. Both 2,448-comparison content-parity gates pass. All 279 protected hashes plus platform.css and 374 archived responses match exactly.
+
+Five explicitly fictional Roofing/HVAC sites captured at 1440 and 390; full-page and hero comparison sheets saved. [README and all command results](docs/build-evidence/028D/README.md) · [Media gaps and Starter estimates](docs/build-evidence/028D/MEDIA-GAPS.md) · [Rights record](docs/media/RIGHTS-AND-APPROVALS.md). Commit message: `feat: media library fallback (#028D)`. #028E not started.

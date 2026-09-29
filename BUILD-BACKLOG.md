@@ -734,6 +734,12 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 - Follow-up done locally (2026-09-28), based on 10df48d: restored process b/c copy, contact and installed artwork; preserved hero facts and rail clearance. Checks: 102/102 commands, 216 + 544 browser states, 2,448 parity comparisons, 8,293 render assertions, 62 filter checks, 608 fallback assertions, 279 protected hashes (+ platform.css) and 374 archived responses; all pass. Evidence: [028B follow-up](docs/build-evidence/028B/followup/README.md).
 - Deferred, not started: Process 'a' supporting line lowercases trade names (e.g. 'your hvac project'); needs proper trade display names. The accepted a renderer remains untouched in this fix.
 
+### #028B2 More section variants
+
+- State: **Not started — later backlog only**. Logged at Joe’s request during #028D; do not implement in #028D.
+- Scope: Add a/b/c variants for the fixed middle sections that currently render identically across sites: the roof/trade cutaway with hotspots, the “space between an idea and reality” scroll scene, the estimator block, and the footer.
+- Preserve factual content, media honesty, accessibility and the accepted default layout. Coordinate their eventual seeded selection with #028C.
+
 ### #028C — Uniqueness generator
 
 - State: **Done locally** · Estimate: **8h** (≤1 day).
@@ -745,10 +751,17 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 
 ### #028D — Media library fallback
 
-- State: **Not started** · Estimate: **8h** (≤1 day).
+- State: **Done locally — approved existing-media runtime; unfilled media targets reported**.
 - Scope: For each trade, curate about ten approved hero clips that can be recolored to the contractor's palette, plus per-contractor AI stills. Record provenance, approval and fallback behavior for every asset.
 - Done when: The approved fallback library works through trade configuration without inventing contractor work or proof. Custom per-contractor video remains disabled until #028F passes.
 - External keys/accounts: K01 for application-generated stills and K02 for new video production when required; approved existing assets need no new key.
+
+- Current instruction: inventory existing media first, record provenance/approval, deterministic per-site media picks and non-destructive palette treatment; no new media or provider calls. Report every gap and historical credit estimate for Joe’s approval. [Evidence](docs/build-evidence/028D/README.md).
+
+
+- 2026-09-28 resume: Joe Engel supplied the rights and approver record. Approved assets are individually reviewed; thin hero pools use stills. Starter to 2: 1,600 credits; to 4: 4,320. 0 spent; no provider calls. All required gates pass; no generation was performed.
+
+- Completion: 102/102 suite commands; 1,183 main browser states, 20 normal/JS-off and 84 media interactions; 0 AA failures; 279 protected hashes plus platform.css and 374 archived responses unchanged. 14 approved hero clips, 3 section clips and 60 distinct stills/posters. [Final evidence and per-trade counts](docs/build-evidence/028D/README.md). Local commit only: `feat: media library fallback (#028D)`. #028E not started.
 
 ### #028E — Review packet
 

@@ -1,0 +1,204 @@
+[
+  {
+    "state": "hero-offline-desktop",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "method": "GET",
+      "status": "offline",
+      "state": "hero-offline-desktop",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:15:19",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "method": "GET",
+      "status": "offline"
+    }
+  },
+  {
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/tenants/8be81326-7a3c-4a23-91eb-bccfea49baad",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/tenants/8be81326-7a3c-4a23-91eb-bccfea49baad",
+      "method": "PUT",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:16:109"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/tenants/8be81326-7a3c-4a23-91eb-bccfea49baad",
+      "method": "PUT",
+      "status": 503
+    }
+  },
+  {
+    "state": "hero-viewer-desktop",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/tenants/8be81326-7a3c-4a23-91eb-bccfea49baad/domains",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/tenants/8be81326-7a3c-4a23-91eb-bccfea49baad/domains",
+      "method": "GET",
+      "status": 403,
+      "state": "hero-viewer-desktop",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:21:89",
+      "kind": "permission-state",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/tenants/8be81326-7a3c-4a23-91eb-bccfea49baad/domains",
+      "method": "GET",
+      "status": 403
+    }
+  },
+  {
+    "state": "hero-offline-phone",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "method": "GET",
+      "status": "offline",
+      "state": "hero-offline-phone",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:15:19",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "method": "GET",
+      "status": "offline"
+    }
+  },
+  {
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/tenants/3e566e3a-f8db-4ac8-ba78-ae450dce7d92",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/tenants/3e566e3a-f8db-4ac8-ba78-ae450dce7d92",
+      "method": "PUT",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:16:109"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/tenants/3e566e3a-f8db-4ac8-ba78-ae450dce7d92",
+      "method": "PUT",
+      "status": 503
+    }
+  },
+  {
+    "state": "hero-viewer-phone",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/tenants/3e566e3a-f8db-4ac8-ba78-ae450dce7d92/domains",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/tenants/3e566e3a-f8db-4ac8-ba78-ae450dce7d92/domains",
+      "method": "GET",
+      "status": 403,
+      "state": "hero-viewer-phone",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:21:89",
+      "kind": "permission-state",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/tenants/3e566e3a-f8db-4ac8-ba78-ae450dce7d92/domains",
+      "method": "GET",
+      "status": 403
+    }
+  }
+]

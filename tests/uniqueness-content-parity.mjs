@@ -48,7 +48,7 @@ function inventory({html,finance,settings}){
   const phones=links.filter(h=>h.startsWith('tel:'));
   const media=[...el.querySelectorAll('img,video,svg[role=img]')].filter(e=>e.matches('img,video')||!e.closest('a,button,summary'));
   const mediaSources=unique(media.flatMap(e=>[e.getAttribute('src'),e.getAttribute('poster')]).filter(Boolean));
-  const controls=unique([...el.querySelectorAll('input,select,textarea,button')].filter(e=>!e.closest('.story-chapters,.story-topline')).map(e=>JSON.stringify({tag:e.tagName,name:e.getAttribute('name'),type:e.getAttribute('type'),value:e.getAttribute('value'),placeholder:e.getAttribute('placeholder'),required:e.required||false})));
+  const controls=unique([...el.querySelectorAll('input,select,textarea,button')].filter(e=>e.matches('.ml-motion')||!e.closest('.story-chapters,.story-topline')).map(e=>JSON.stringify({tag:e.tagName,name:e.getAttribute('name'),type:e.getAttribute('type'),value:e.getAttribute('value'),placeholder:e.getAttribute('placeholder'),required:e.required||false})));
   result[name]={text:unique(factText),businessFacts:unique(businessFacts),links,phones,mediaPresent:media.length>0,mediaSources,controls};
  }
  return result;

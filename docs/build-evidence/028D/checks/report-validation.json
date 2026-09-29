@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "checks": 20,
+  "assertions": [
+    "All 17 trade entries present",
+    "Ten hero clip/poster slots per trade",
+    "All four section-still slots",
+    "Draft entries disabled pending approval",
+    "No unverified file marked Approved",
+    "No invented license or approver",
+    "All inventory file paths exist",
+    "Inventory has no duplicate path entries",
+    "Protected/dependency trees excluded",
+    "317 distinct recorded generated stills; aliases deduplicated",
+    "Every still candidate exists",
+    "Every assigned existing clip and poster exists",
+    "170 clip and 68 still proposals",
+    "Proposal IDs unique",
+    "Every proposal has prompt/model/estimate source",
+    "Historical full replacement estimate totals 13,736 credits",
+    "170 extracted posters add no generation credits",
+    "Generation spend recorded as zero",
+    "No product/dependency/test changes from accepted fc25c85",
+    "No new commit"
+  ],
+  "inventory": {
+    "files": 11355,
+    "images": 11241,
+    "clips": 114,
+    "installed": 804,
+    "installedKnownGeneratedStills": 320,
+    "roles": {
+      "evidence": 10406,
+      "reference": 144,
+      "installed": 804,
+      "repository media": 1
+    },
+    "statuses": {
+      "pending": 11352,
+      "rejected": 3
+    },
+    "excludedTrees": [
+      ".cache",
+      ".data",
+      ".git",
+      ".next",
+      ".preserve",
+      "dist",
+      "node_modules"
+    ],
+    "exclusionReason": "Dependencies, Git objects, build copies and runtime/backups are not source-media libraries. .preserve is untouched. This ticket's new evidence is excluded from its own input inventory.",
+    "hashScope": "Every installed file and local master.mp4; evidence/reference images are path/size inventory only.",
+    "providerCalls": 0,
+    "creditsUsed": 0,
+    "recordedPhase2DeliveryFiles": 20
+  },
+  "productDiff": "",
+  "fullSuite": "Not run: stopped at requested report/approval point",
+  "providerCalls": 0,
+  "creditsUsed": 0
+}

@@ -1,3 +1,4 @@
+import {selectMedia,refreshMediaTreatment} from './media-library.js';
 import {selectUnique,applyUniqueChoices,refreshGeneratedCopy} from './uniqueness.js';
 import {cleanThumbnailMotion} from './platform/thumbnail-motion.ts';
 import {cleanRoofingCta} from './platform/roofing-cta.ts';
@@ -19,14 +20,16 @@ export function assetReferences(s,slug){const found=new Set();const walk=v=>{if(
 export function assertGeneration(s,id,slug){if(Object.hasOwn(s,'generationManifest'))validateManifest(s.generationManifest,s,id,slug);return s}
 export function adoptGeneration(s,id,slug){assertGeneration(s,id,slug);if(s.generationManifest)return s;const adopted=s.trade==='Roofing'?{...s,...cleanThumbnailMotion(s),roofingCta:s.roofingCta||cleanRoofingCta({}, {},s.generationId||s.name)}:s;return {...adopted,generationManifest:createManifest(adopted,id,slug,assetReferences(adopted,slug))}}
 export function saveGeneration(s,old,id,slug,reason='save',locks=null,actor=null){assertGeneration(old,id,slug);const prior=old.generationManifest;const m=prior||adoptGeneration(old,id,slug).generationManifest;
- s=refreshGeneratedCopy(s);if(s.uniqueness&&s.siteStyle&&s.siteStyle!==old.siteStyle)s.uniqueness.overrides.look={value:s.siteStyle,source:'contractor chosen Look',by:actor||null};const choices=choicesFor(s,slug);if(stable(choices)===stable(m.choices)&&!locks&&reason==='save')return {...s,generationManifest:m};
+ s=refreshMediaTreatment(refreshGeneratedCopy(s));if(s.uniqueness&&s.siteStyle&&s.siteStyle!==old.siteStyle)s.uniqueness.overrides.look={value:s.siteStyle,source:'contractor chosen Look',by:actor||null};const choices=choicesFor(s,slug);if(stable(choices)===stable(m.choices)&&!locks&&reason==='save')return {...s,generationManifest:m};
  return {...s,generationManifest:createManifest(s,id,slug,assetReferences(s,slug),m,reason,locks)};}
 export function regenerate(s,id,slug,options={}){const m=adoptGeneration(s,id,slug).generationManifest;
  const record=selectUnique(s,id,options);
  // Legacy unlocked compositions advance once at adoption using the stable seed,
  // never the revision UUID. Later regeneration replays its saved reservation.
  const base=s.uniqueness?s:nextSettings(s,{...m,id:'gen-seed-'+record.seed});
- return saveGeneration(applyUniqueChoices(base,record),{...s,generationManifest:m},id,slug,'regenerate');}
+ const chosen=applyUniqueChoices(base,record);
+ if(chosen.designKit)chosen.mediaPicks=selectMedia(chosen,id,options);
+ return saveGeneration(chosen,{...s,generationManifest:m},id,slug,'regenerate');}
 export async function generationNeighbours(env,id){const {results}=await env.DB.prepare('SELECT id,settings,published FROM tenants WHERE id<>?').bind(id).all();return results.flatMap(row=>[...new Set([row.settings,row.published].filter(Boolean))].map(value=>({id:row.id,settings:JSON.parse(value)})));}
 export function changedLocks(old,next){return old.thumb_motion_locked!==next.thumb_motion_locked||old.roofingCta?.locked!==next.roofingCta?.locked}
 export function checkLockedEdits(old,next){const m=old.generationManifest;if(!m)return;const choices=choicesFor(next,m.slug);for(const [key,locked]of Object.entries(m.locks)){if(!locked)continue;if(key.startsWith('design.')){const k=key.slice(7);if(stable(m.choices.design[k])!==stable(choices.design[k]))throw Error('Unlock '+k+' before changing this saved choice.')}else if(['template','effects','treatments'].includes(key)&&stable(m.choices[key])!==stable(choices[key]))throw Error('Unlock '+key+' before changing this saved choice.')}}

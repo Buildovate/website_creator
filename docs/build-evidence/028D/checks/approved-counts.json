@@ -1,0 +1,70 @@
+{
+  "roofing": {
+    "approvedClips": 1,
+    "approvedStills": 10
+  },
+  "patios": {
+    "approvedClips": 2,
+    "approvedStills": 3
+  },
+  "plumbing": {
+    "approvedClips": 1,
+    "approvedStills": 2
+  },
+  "hvac": {
+    "approvedClips": 1,
+    "approvedStills": 5
+  },
+  "electrical": {
+    "approvedClips": 1,
+    "approvedStills": 2
+  },
+  "landscaping": {
+    "approvedClips": 1,
+    "approvedStills": 2
+  },
+  "general-contractors": {
+    "approvedClips": 1,
+    "approvedStills": 2
+  },
+  "flooring": {
+    "approvedClips": 2,
+    "approvedStills": 4
+  },
+  "painting": {
+    "approvedClips": 1,
+    "approvedStills": 4
+  },
+  "fencing": {
+    "approvedClips": 1,
+    "approvedStills": 8
+  },
+  "garage-doors": {
+    "approvedClips": 2,
+    "approvedStills": 4
+  },
+  "pest-control": {
+    "approvedClips": 0,
+    "approvedStills": 3
+  },
+  "windows-doors": {
+    "approvedClips": 0,
+    "approvedStills": 4
+  },
+  "solar": {
+    "approvedClips": 0,
+    "approvedStills": 1
+  },
+  "concrete": {
+    "approvedClips": 0,
+    "approvedStills": 3
+  },
+  "pools": {
+    "approvedClips": 0,
+    "approvedStills": 2
+  },
+  "locksmith": {
+    "approvedClips": 0,
+    "approvedStills": 2
+  }
+}

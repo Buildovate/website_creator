@@ -1,0 +1,4 @@
+# Preserve raw served responses and command output byte-for-byte.
+after-html/** -text -whitespace
+after-css/** -text -whitespace
+checks/*.log -text -whitespace

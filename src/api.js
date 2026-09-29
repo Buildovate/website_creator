@@ -37,9 +37,9 @@ const route=path.match(/^\/api\/tenants\/([^/]+)(?:\/(.*))?$/);must(route,'Not f
 if(tail==='generation'){
  if(method==='GET'){const s=JSON.parse(tenant.settings);await recordGeneration(env,s);return {manifest:s.generationManifest,published:tenant.published?JSON.parse(tenant.published).generationManifest:null,canEdit:['admin','owner'].includes(auth.role),history:(await all(env,"SELECT data FROM generation_manifests WHERE tenant_id=? ORDER BY created_at DESC LIMIT 30",tenantId)).map(r=>JSON.parse(r.data))}}
  must(method==='POST','Method not supported.',405);await requireRole('owner');const v=await body(req);must(v.version===tenant.version,'This website changed. Reload before changing generation choices.',409);
- if(v.overrides!==undefined)must(user.admin,'Staff administrator access is required for generation overrides.',403);
+ if(v.overrides!==undefined||v.mediaOverrides!==undefined)must(user.admin,'Staff administrator access is required for generation overrides.',403);
  let s,result;try{const old=JSON.parse(tenant.settings);must(['regenerate','locks'].includes(v.action),'Choose a generation action.');await recordGeneration(env,old);
-  if(v.action==='regenerate'){const committed=await commitUniqueGeneration(env,old,tenantId,tenant.slug,v.version,{overrides:v.overrides,actor:{id:user.id,role:user.admin?'admin':auth.role}},now());s=committed.settings;result=committed.result;}
+  if(v.action==='regenerate'){const committed=await commitUniqueGeneration(env,old,tenantId,tenant.slug,v.version,{overrides:v.overrides,mediaOverrides:v.mediaOverrides,actor:{id:user.id,role:user.admin?'admin':auth.role}},now());s=committed.settings;result=committed.result;}
   else {s=applyLocks(old,v.locks,tenantId,tenant.slug);result=await run(env,'UPDATE tenants SET settings=?,version=version+1,updated_at=? WHERE id=? AND version=?',JSON.stringify(s),now(),tenantId,v.version)}
  }catch(error){throw new Fault(error.message,400)}
  must(result.meta.changes,'Website changed. Reload before retrying.',409);await recordGeneration(env,s);await log(env,user,tenantId,'generation.'+v.action,s.generationManifest.id);return {tenant:tenantView(await one(env,'SELECT * FROM tenants WHERE id=?',tenantId))}
