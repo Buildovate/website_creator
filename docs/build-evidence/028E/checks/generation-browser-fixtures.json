@@ -1,0 +1,36 @@
+[
+  {
+    "url": "http://127.0.0.1:8159/api/tenants/7be332d0-3a50-433b-9888-fc50097024b8/generation",
+    "method": "POST",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:18:72"
+  },
+  {
+    "url": "http://127.0.0.1:8159/api/tenants/7be332d0-3a50-433b-9888-fc50097024b8/domains",
+    "method": "GET",
+    "status": 403,
+    "state": "generation-viewer-desktop",
+    "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:27:107",
+    "kind": "permission-state",
+    "active": true
+  },
+  {
+    "url": "http://127.0.0.1:8159/api/tenants/7be332d0-3a50-433b-9888-fc50097024b8/generation",
+    "method": "POST",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:18:72"
+  },
+  {
+    "url": "http://127.0.0.1:8159/api/tenants/7be332d0-3a50-433b-9888-fc50097024b8/domains",
+    "method": "GET",
+    "status": 403,
+    "state": "generation-viewer-phone",
+    "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:27:107",
+    "kind": "permission-state",
+    "active": true
+  }
+]

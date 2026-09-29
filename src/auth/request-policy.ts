@@ -18,7 +18,7 @@ export function publicApi(path: string, method: string): boolean {
 }
 export function privateHtml(url: URL) {
   return ['/', '/join', '/team-join', '/admin/expenses'].includes(url.pathname) ||
-    url.pathname.startsWith('/preview/') || url.pathname.startsWith('/design-preview/') ||
+    url.pathname.startsWith('/admin/review-packets/') || url.pathname.startsWith('/preview/') || url.pathname.startsWith('/design-preview/') ||
     url.searchParams.get('preview') === '1';
 }
 export function requireOrigin(request: Request) {

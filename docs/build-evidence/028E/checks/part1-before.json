@@ -1,0 +1,562 @@
+[
+  {
+    "id": "sample-fictional-copper-kite-ventura",
+    "width": 1440,
+    "h1": "Your roof project starts here.",
+    "intro": "Talk with Sample Fictional Copper Kite Roofing about Roof installation and Roof repair in Ventura. Bring your questions and choose where to begin.",
+    "videos": [
+      {
+        "html": "<video controls=\"\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\" preload=\"none\" poster=\"/assets/films/roofing-poster.webp\" aria-label=\"Roofing conceptual transformation film\"><source src=\"/assets/films/roofing-transformation.mp4\" type=\"video/mp4\"><p>Your browser cannot play this film.</p></video>",
+        "controls": true,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/films/roofing-poster.webp"
+      },
+      {
+        "html": "<video class=\"detail-film\" data-detail-video=\"\" muted=\"\" playsinline=\"\" preload=\"none\" poster=\"/assets/craft-films/roofing-opening.webp\" tabindex=\"-1\" aria-hidden=\"true\"><source data-src=\"/assets/craft-films/roofing.mp4\" type=\"video/mp4\"></video>",
+        "controls": false,
+        "muted": true,
+        "loop": false,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/craft-films/roofing-opening.webp"
+      }
+    ],
+    "fixed": [
+      {
+        "text": "Plan your project ",
+        "html": "<a class=\"kit-mobile-dock\" href=\"#contact\">Plan your project </a>",
+        "position": "static",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      {
+        "text": "◌ Ask about your project",
+        "html": "<button class=\"chat-launcher\" aria-expanded=\"false\" aria-controls=\"visitor-chat-panel\"><span aria-hidden=\"true\">◌</span> Ask about your project</button>",
+        "position": "static",
+        "box": {
+          "x": 1183.9375,
+          "y": 815,
+          "width": 232.0625,
+          "height": 59,
+          "top": 815,
+          "right": 1416,
+          "bottom": 874,
+          "left": 1183.9375
+        }
+      }
+    ]
+  },
+  {
+    "id": "sample-fictional-copper-kite-ventura",
+    "width": 390,
+    "h1": "Your roof project starts here.",
+    "intro": "Talk with Sample Fictional Copper Kite Roofing about Roof installation and Roof repair in Ventura. Bring your questions and choose where to begin.",
+    "videos": [
+      {
+        "html": "<video controls=\"\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\" preload=\"none\" poster=\"/assets/films/roofing-poster.webp\" aria-label=\"Roofing conceptual transformation film\"><source src=\"/assets/films/roofing-transformation.mp4\" type=\"video/mp4\"><p>Your browser cannot play this film.</p></video>",
+        "controls": true,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/films/roofing-poster.webp"
+      },
+      {
+        "html": "<video class=\"detail-film\" data-detail-video=\"\" muted=\"\" playsinline=\"\" preload=\"none\" poster=\"/assets/craft-films/roofing-opening.webp\" tabindex=\"-1\" aria-hidden=\"true\"><source data-src=\"/assets/craft-films/roofing.mp4\" type=\"video/mp4\"></video>",
+        "controls": false,
+        "muted": true,
+        "loop": false,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/craft-films/roofing-opening.webp"
+      }
+    ],
+    "fixed": [
+      {
+        "text": "Plan your project ",
+        "html": "<a class=\"kit-mobile-dock\" href=\"#contact\">Plan your project </a>",
+        "position": "fixed",
+        "box": {
+          "x": 20,
+          "y": 773.25,
+          "width": 350,
+          "height": 56.75,
+          "top": 773.25,
+          "right": 370,
+          "bottom": 830,
+          "left": 20
+        }
+      },
+      {
+        "text": "◌ Ask about your project",
+        "html": "<button class=\"chat-launcher\" aria-expanded=\"false\" aria-controls=\"visitor-chat-panel\"><span aria-hidden=\"true\">◌</span> Ask about your project</button>",
+        "position": "static",
+        "box": {
+          "x": 153.9375,
+          "y": 711,
+          "width": 222.0625,
+          "height": 51,
+          "top": 711,
+          "right": 376,
+          "bottom": 762,
+          "left": 153.9375
+        }
+      }
+    ]
+  },
+  {
+    "id": "sample-fictional-blue-orchard-pasadena",
+    "width": 1440,
+    "h1": "Roof repair in Pasadena.",
+    "intro": "Sample Fictional Blue Orchard Roofing offers Roof repair and Roof replacement in Pasadena. Start with the work your property needs.",
+    "videos": [
+      {
+        "html": "<video controls=\"\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\" preload=\"none\" poster=\"/assets/films/roofing-poster.webp\" aria-label=\"Roofing conceptual transformation film\"><source src=\"/assets/films/roofing-transformation.mp4\" type=\"video/mp4\"><p>Your browser cannot play this film.</p></video>",
+        "controls": true,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/films/roofing-poster.webp"
+      },
+      {
+        "html": "<video class=\"detail-film\" data-detail-video=\"\" muted=\"\" playsinline=\"\" preload=\"none\" poster=\"/assets/craft-films/roofing-opening.webp\" tabindex=\"-1\" aria-hidden=\"true\"><source data-src=\"/assets/craft-films/roofing.mp4\" type=\"video/mp4\"></video>",
+        "controls": false,
+        "muted": true,
+        "loop": false,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/craft-films/roofing-opening.webp"
+      }
+    ],
+    "fixed": [
+      {
+        "text": "Plan your project ",
+        "html": "<a class=\"kit-mobile-dock\" href=\"#contact\">Plan your project </a>",
+        "position": "static",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      {
+        "text": "◌ Ask about your project",
+        "html": "<button class=\"chat-launcher\" aria-expanded=\"false\" aria-controls=\"visitor-chat-panel\"><span aria-hidden=\"true\">◌</span> Ask about your project</button>",
+        "position": "static",
+        "box": {
+          "x": 1173.984375,
+          "y": 815,
+          "width": 242.015625,
+          "height": 59,
+          "top": 815,
+          "right": 1416,
+          "bottom": 874,
+          "left": 1173.984375
+        }
+      }
+    ]
+  },
+  {
+    "id": "sample-fictional-blue-orchard-pasadena",
+    "width": 390,
+    "h1": "Roof repair in Pasadena.",
+    "intro": "Sample Fictional Blue Orchard Roofing offers Roof repair and Roof replacement in Pasadena. Start with the work your property needs.",
+    "videos": [
+      {
+        "html": "<video controls=\"\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\" preload=\"none\" poster=\"/assets/films/roofing-poster.webp\" aria-label=\"Roofing conceptual transformation film\"><source src=\"/assets/films/roofing-transformation.mp4\" type=\"video/mp4\"><p>Your browser cannot play this film.</p></video>",
+        "controls": true,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/films/roofing-poster.webp"
+      },
+      {
+        "html": "<video class=\"detail-film\" data-detail-video=\"\" muted=\"\" playsinline=\"\" preload=\"none\" poster=\"/assets/craft-films/roofing-opening.webp\" tabindex=\"-1\" aria-hidden=\"true\"><source data-src=\"/assets/craft-films/roofing.mp4\" type=\"video/mp4\"></video>",
+        "controls": false,
+        "muted": true,
+        "loop": false,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/craft-films/roofing-opening.webp"
+      }
+    ],
+    "fixed": [
+      {
+        "text": "Plan your project ",
+        "html": "<a class=\"kit-mobile-dock\" href=\"#contact\">Plan your project </a>",
+        "position": "fixed",
+        "box": {
+          "x": 20,
+          "y": 773.25,
+          "width": 350,
+          "height": 56.75,
+          "top": 773.25,
+          "right": 370,
+          "bottom": 830,
+          "left": 20
+        }
+      },
+      {
+        "text": "◌ Ask about your project",
+        "html": "<button class=\"chat-launcher\" aria-expanded=\"false\" aria-controls=\"visitor-chat-panel\"><span aria-hidden=\"true\">◌</span> Ask about your project</button>",
+        "position": "static",
+        "box": {
+          "x": 143.984375,
+          "y": 711,
+          "width": 232.015625,
+          "height": 51,
+          "top": 711,
+          "right": 376,
+          "bottom": 762,
+          "left": 143.984375
+        }
+      }
+    ]
+  },
+  {
+    "id": "sample-fictional-paper-lantern-temecula",
+    "width": 1440,
+    "h1": "Roof replacement in Temecula.",
+    "intro": "Sample Fictional Paper Lantern Roofing offers Roof replacement and Asphalt shingles in Temecula. Start with the work your property needs.",
+    "videos": [
+      {
+        "html": "<video controls=\"\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\" preload=\"none\" poster=\"/assets/films/roofing-poster.webp\" aria-label=\"Roofing conceptual transformation film\"><source src=\"/assets/films/roofing-transformation.mp4\" type=\"video/mp4\"><p>Your browser cannot play this film.</p></video>",
+        "controls": true,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/films/roofing-poster.webp"
+      },
+      {
+        "html": "<video class=\"detail-film\" data-detail-video=\"\" muted=\"\" playsinline=\"\" preload=\"none\" poster=\"/assets/craft-films/roofing-opening.webp\" tabindex=\"-1\" aria-hidden=\"true\"><source data-src=\"/assets/craft-films/roofing.mp4\" type=\"video/mp4\"></video>",
+        "controls": false,
+        "muted": true,
+        "loop": false,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/craft-films/roofing-opening.webp"
+      }
+    ],
+    "fixed": [
+      {
+        "text": "Plan your project ",
+        "html": "<a class=\"kit-mobile-dock\" href=\"#contact\">Plan your project </a>",
+        "position": "static",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      {
+        "text": "◌ Ask about your project",
+        "html": "<button class=\"chat-launcher\" aria-expanded=\"false\" aria-controls=\"visitor-chat-panel\"><span aria-hidden=\"true\">◌</span> Ask about your project</button>",
+        "position": "static",
+        "box": {
+          "x": 1183.9375,
+          "y": 815,
+          "width": 232.0625,
+          "height": 59,
+          "top": 815,
+          "right": 1416,
+          "bottom": 874,
+          "left": 1183.9375
+        }
+      }
+    ]
+  },
+  {
+    "id": "sample-fictional-paper-lantern-temecula",
+    "width": 390,
+    "h1": "Roof replacement in Temecula.",
+    "intro": "Sample Fictional Paper Lantern Roofing offers Roof replacement and Asphalt shingles in Temecula. Start with the work your property needs.",
+    "videos": [
+      {
+        "html": "<video controls=\"\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\" preload=\"none\" poster=\"/assets/films/roofing-poster.webp\" aria-label=\"Roofing conceptual transformation film\"><source src=\"/assets/films/roofing-transformation.mp4\" type=\"video/mp4\"><p>Your browser cannot play this film.</p></video>",
+        "controls": true,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/films/roofing-poster.webp"
+      },
+      {
+        "html": "<video class=\"detail-film\" data-detail-video=\"\" muted=\"\" playsinline=\"\" preload=\"none\" poster=\"/assets/craft-films/roofing-opening.webp\" tabindex=\"-1\" aria-hidden=\"true\"><source data-src=\"/assets/craft-films/roofing.mp4\" type=\"video/mp4\"></video>",
+        "controls": false,
+        "muted": true,
+        "loop": false,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/craft-films/roofing-opening.webp"
+      }
+    ],
+    "fixed": [
+      {
+        "text": "Plan your project ",
+        "html": "<a class=\"kit-mobile-dock\" href=\"#contact\">Plan your project </a>",
+        "position": "fixed",
+        "box": {
+          "x": 20,
+          "y": 773.25,
+          "width": 350,
+          "height": 56.75,
+          "top": 773.25,
+          "right": 370,
+          "bottom": 830,
+          "left": 20
+        }
+      },
+      {
+        "text": "◌ Ask about your project",
+        "html": "<button class=\"chat-launcher\" aria-expanded=\"false\" aria-controls=\"visitor-chat-panel\"><span aria-hidden=\"true\">◌</span> Ask about your project</button>",
+        "position": "static",
+        "box": {
+          "x": 153.9375,
+          "y": 711,
+          "width": 222.0625,
+          "height": 51,
+          "top": 711,
+          "right": 376,
+          "bottom": 762,
+          "left": 153.9375
+        }
+      }
+    ]
+  },
+  {
+    "id": "sample-fictional-cobalt-heron-irvine",
+    "width": 1440,
+    "h1": "Air conditioning installation. A clear starting point.",
+    "intro": "Sample Fictional Cobalt Heron HVAC. Serving Irvine. Explore Air conditioning installation and Air conditioning repair and tell us what matters to you.",
+    "videos": [
+      {
+        "html": "<video controls=\"\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\" preload=\"none\" poster=\"/assets/films/hvac-poster.webp\" aria-label=\"HVAC conceptual transformation film\"><source src=\"/assets/films/hvac-transformation.mp4\" type=\"video/mp4\"><p>Your browser cannot play this film.</p></video>",
+        "controls": true,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/films/hvac-poster.webp"
+      },
+      {
+        "html": "<video class=\"detail-film\" data-detail-video=\"\" muted=\"\" playsinline=\"\" preload=\"none\" poster=\"/assets/craft-films/hvac-opening.webp\" tabindex=\"-1\" aria-hidden=\"true\"><source data-src=\"/assets/craft-films/hvac.mp4\" type=\"video/mp4\"></video>",
+        "controls": false,
+        "muted": true,
+        "loop": false,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/craft-films/hvac-opening.webp"
+      }
+    ],
+    "fixed": [
+      {
+        "text": "Plan your project ",
+        "html": "<a class=\"kit-mobile-dock\" href=\"#contact\">Plan your project </a>",
+        "position": "static",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      {
+        "text": "◌ Ask about your project",
+        "html": "<button class=\"chat-launcher\" aria-expanded=\"false\" aria-controls=\"visitor-chat-panel\"><span aria-hidden=\"true\">◌</span> Ask about your project</button>",
+        "position": "static",
+        "box": {
+          "x": 1173.984375,
+          "y": 815,
+          "width": 242.015625,
+          "height": 59,
+          "top": 815,
+          "right": 1416,
+          "bottom": 874,
+          "left": 1173.984375
+        }
+      }
+    ]
+  },
+  {
+    "id": "sample-fictional-cobalt-heron-irvine",
+    "width": 390,
+    "h1": "Air conditioning installation. A clear starting point.",
+    "intro": "Sample Fictional Cobalt Heron HVAC. Serving Irvine. Explore Air conditioning installation and Air conditioning repair and tell us what matters to you.",
+    "videos": [
+      {
+        "html": "<video controls=\"\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\" preload=\"none\" poster=\"/assets/films/hvac-poster.webp\" aria-label=\"HVAC conceptual transformation film\"><source src=\"/assets/films/hvac-transformation.mp4\" type=\"video/mp4\"><p>Your browser cannot play this film.</p></video>",
+        "controls": true,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/films/hvac-poster.webp"
+      },
+      {
+        "html": "<video class=\"detail-film\" data-detail-video=\"\" muted=\"\" playsinline=\"\" preload=\"none\" poster=\"/assets/craft-films/hvac-opening.webp\" tabindex=\"-1\" aria-hidden=\"true\"><source data-src=\"/assets/craft-films/hvac.mp4\" type=\"video/mp4\"></video>",
+        "controls": false,
+        "muted": true,
+        "loop": false,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/craft-films/hvac-opening.webp"
+      }
+    ],
+    "fixed": [
+      {
+        "text": "Plan your project ",
+        "html": "<a class=\"kit-mobile-dock\" href=\"#contact\">Plan your project </a>",
+        "position": "fixed",
+        "box": {
+          "x": 20,
+          "y": 773.25,
+          "width": 350,
+          "height": 56.75,
+          "top": 773.25,
+          "right": 370,
+          "bottom": 830,
+          "left": 20
+        }
+      },
+      {
+        "text": "◌ Ask about your project",
+        "html": "<button class=\"chat-launcher\" aria-expanded=\"false\" aria-controls=\"visitor-chat-panel\"><span aria-hidden=\"true\">◌</span> Ask about your project</button>",
+        "position": "static",
+        "box": {
+          "x": 143.984375,
+          "y": 711,
+          "width": 232.015625,
+          "height": 51,
+          "top": 711,
+          "right": 376,
+          "bottom": 762,
+          "left": 143.984375
+        }
+      }
+    ]
+  },
+  {
+    "id": "sample-fictional-ochre-willow-riverside",
+    "width": 1440,
+    "h1": "Heating installation. A clear starting point.",
+    "intro": "Sample Fictional Ochre Willow HVAC. Serving Riverside. Explore Heating installation and Heating repair and tell us what matters to you.",
+    "videos": [
+      {
+        "html": "<video controls=\"\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\" preload=\"none\" poster=\"/assets/films/hvac-poster.webp\" aria-label=\"HVAC conceptual transformation film\"><source src=\"/assets/films/hvac-transformation.mp4\" type=\"video/mp4\"><p>Your browser cannot play this film.</p></video>",
+        "controls": true,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/films/hvac-poster.webp"
+      },
+      {
+        "html": "<video class=\"detail-film\" data-detail-video=\"\" muted=\"\" playsinline=\"\" preload=\"none\" poster=\"/assets/craft-films/hvac-opening.webp\" tabindex=\"-1\" aria-hidden=\"true\"><source data-src=\"/assets/craft-films/hvac.mp4\" type=\"video/mp4\"></video>",
+        "controls": false,
+        "muted": true,
+        "loop": false,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/craft-films/hvac-opening.webp"
+      }
+    ],
+    "fixed": [
+      {
+        "text": "Plan your project ",
+        "html": "<a class=\"kit-mobile-dock\" href=\"#contact\">Plan your project </a>",
+        "position": "static",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      {
+        "text": "◌ Ask about your project",
+        "html": "<button class=\"chat-launcher\" aria-expanded=\"false\" aria-controls=\"visitor-chat-panel\"><span aria-hidden=\"true\">◌</span> Ask about your project</button>",
+        "position": "static",
+        "box": {
+          "x": 1173.984375,
+          "y": 815,
+          "width": 242.015625,
+          "height": 59,
+          "top": 815,
+          "right": 1416,
+          "bottom": 874,
+          "left": 1173.984375
+        }
+      }
+    ]
+  },
+  {
+    "id": "sample-fictional-ochre-willow-riverside",
+    "width": 390,
+    "h1": "Heating installation. A clear starting point.",
+    "intro": "Sample Fictional Ochre Willow HVAC. Serving Riverside. Explore Heating installation and Heating repair and tell us what matters to you.",
+    "videos": [
+      {
+        "html": "<video controls=\"\" autoplay=\"\" loop=\"\" playsinline=\"\" muted=\"\" preload=\"none\" poster=\"/assets/films/hvac-poster.webp\" aria-label=\"HVAC conceptual transformation film\"><source src=\"/assets/films/hvac-transformation.mp4\" type=\"video/mp4\"><p>Your browser cannot play this film.</p></video>",
+        "controls": true,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/films/hvac-poster.webp"
+      },
+      {
+        "html": "<video class=\"detail-film\" data-detail-video=\"\" muted=\"\" playsinline=\"\" preload=\"none\" poster=\"/assets/craft-films/hvac-opening.webp\" tabindex=\"-1\" aria-hidden=\"true\"><source data-src=\"/assets/craft-films/hvac.mp4\" type=\"video/mp4\"></video>",
+        "controls": false,
+        "muted": true,
+        "loop": false,
+        "inline": true,
+        "poster": "http://127.0.0.1:8210/assets/craft-films/hvac-opening.webp"
+      }
+    ],
+    "fixed": [
+      {
+        "text": "Plan your project ",
+        "html": "<a class=\"kit-mobile-dock\" href=\"#contact\">Plan your project </a>",
+        "position": "fixed",
+        "box": {
+          "x": 20,
+          "y": 773.25,
+          "width": 350,
+          "height": 56.75,
+          "top": 773.25,
+          "right": 370,
+          "bottom": 830,
+          "left": 20
+        }
+      },
+      {
+        "text": "◌ Ask about your project",
+        "html": "<button class=\"chat-launcher\" aria-expanded=\"false\" aria-controls=\"visitor-chat-panel\"><span aria-hidden=\"true\">◌</span> Ask about your project</button>",
+        "position": "static",
+        "box": {
+          "x": 143.984375,
+          "y": 711,
+          "width": 232.015625,
+          "height": 51,
+          "top": 711,
+          "right": 376,
+          "bottom": 762,
+          "left": 143.984375
+        }
+      }
+    ]
+  }
+]

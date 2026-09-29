@@ -1,0 +1,18 @@
+Review approval test prerequisite: e70d6c56-ccf9-4ed7-a318-1372a173e84c website
+Review approval test prerequisite: e70d6c56-ccf9-4ed7-a318-1372a173e84c project:231f0aa0-e6c1-48bd-b237-57cc17d5116b
+Review approval test prerequisite: e70d6c56-ccf9-4ed7-a318-1372a173e84c project:c35c4865-0c90-4bee-b2dc-0ec790234ac1
+✔ all 140 services use only their own trade photography in published and sample layouts (124.4205ms)
+✔ the artwork audit rejects a wrong trade tag and an incorrectly sourced photo (1.8292ms)
+✔ all 17 decorated homepages render each section once in all three layouts (5182.4684ms)
+✔ published maps require real located projects for every trade and layout (155.1775ms)
+✔ sample map pins come from configured service cities with a no-JS baseline (1.1754ms)
+✔ save exhaustive audit coverage (1.7496ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5477.5187
+

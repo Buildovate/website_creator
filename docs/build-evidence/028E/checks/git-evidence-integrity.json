@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "checkedStagedCapturedFiles": 552,
+  "byteDifferences": [],
+  "attributes": "../.gitattributes",
+  "note": "Staged HTML/CSS and all five final packet folders match captured bytes; local -text attributes preserve them on Windows checkout."
+}

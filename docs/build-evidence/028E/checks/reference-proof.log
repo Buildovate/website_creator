@@ -1,0 +1,8 @@
+Review approval test prerequisite: 872fa0c6-95c3-4aa0-ae18-f1cd88474fd9 website
+Review approval test prerequisite: 872fa0c6-95c3-4aa0-ae18-f1cd88474fd9 project:71f41836-cf12-49cc-8f6b-587fca005508
+Review approval test prerequisite: 872fa0c6-95c3-4aa0-ae18-f1cd88474fd9 project:7ee2553e-07ee-4a6d-8274-b34294174a5c
+Review approval test prerequisite: 872fa0c6-95c3-4aa0-ae18-f1cd88474fd9 website
+PASS reference proof: published project map, unpublished isolation, owner visibility, logo privacy/publish, connected review placement, no-key fallback and mocked provider attribution/filtering.
+Review approval test prerequisite: 85a81afe-bc22-4b90-936e-22f48b546044 website
+PASS #010: project snapshot vs draft edits, post-publication private photos, draft logo/review privacy, cross-tenant logo rejection, actual story-to-map anchor, empty map/logo/review states and immediate project/media revocation. All provider results above are mocked.
+

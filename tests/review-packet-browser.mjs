@@ -1,0 +1,31 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
+import {createRuntime,listen} from '../src/aws/server.js';import worker from '../dist/server/index.js';
+import {inspectStylePage} from './helpers/style-inspection.mjs';import {inspectPlatformControls,inspectPlatformKeyboard} from './helpers/platform-inspection.mjs';
+const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028E',origin='http://127.0.0.1:8214';
+const {chromium}=createRequire(import.meta.url)('C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const runtime=await createRuntime({worker,env:{APP_ENV:'local',NODE_ENV:'development',AUTH_MODE:'dev-header',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',MIGRATE_ON_BOOT:'1',WORKSPACE_OWNER_EMAIL:'staff-review@example.test',APP_ORIGIN:origin,LISTEN_HOST:'127.0.0.1',PORT:'8214',OPENAI_API_KEY:'',GOOGLE_PLACES_API_KEY:'',YELP_API_KEY:''}});
+const headers={origin,'content-type':'application/json','oai-authenticated-user-id':'staff-review-admin','oai-authenticated-user-email':'staff-review@example.test'};
+const req=(path,method='GET',body)=>worker.fetch(new Request(origin+path,{method,headers,body:body===undefined?undefined:JSON.stringify(body)}),runtime.env);
+let browser,server;const records=[],errors=[],requests=[];
+try{
+ assert.equal((await req('/api/setup','POST',{})).status,200);
+ const fixture=JSON.parse(fs.readFileSync(out+'/checks/review-packets.json')).packets[0],folder=out+'/packets/'+fixture.id+'/'+fixture.versionHash,source=JSON.parse(fs.readFileSync(folder+'/source.json')),packet=JSON.parse(fs.readFileSync(folder+'/packet.json'));
+ await runtime.env.DB.prepare('INSERT INTO tenants(id,slug,name,settings,version,status,created_at,updated_at) VALUES(?,?,?,?,1,\'draft\',?,?)').bind(source.siteId,source.slug,source.settings.name,JSON.stringify(source.settings),'2026-09-28T00:00:00Z','2026-09-28T00:00:00Z').run();
+ for(const file of ['packet.json','source.json',...packet.files.map(x=>x.path)])await runtime.env.BUCKET.put('review-packets/'+source.siteId+'/'+fixture.versionHash+'/'+file,fs.readFileSync(folder+'/'+file),{httpMetadata:{contentType:file.endsWith('.png')?'image/png':'application/json'}});
+ server=await listen(runtime,8214);browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+ const context=await browser.newContext({extraHTTPHeaders:{'x-dev-user-id':'staff-review-admin','x-dev-user-email':'staff-review@example.test'},reducedMotion:'reduce',deviceScaleFactor:1});
+ await context.route('**/*',r=>new URL(r.request().url()).origin===origin?r.continue():r.abort());
+ const login=await context.request.post(origin+'/auth/local-session',{headers:{origin},data:{userId:'staff-review-admin',email:'staff-review@example.test'}});assert.equal(login.status(),200);
+ const page=await context.newPage();page.on('console',m=>{if(['warning','error'].includes(m.type()))errors.push({type:m.type(),text:m.text(),location:m.location()})});page.on('pageerror',e=>errors.push({type:'pageerror',text:e.message}));page.on('request',r=>requests.push(r.url()));
+ const audit=async(name,width)=>{await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(180);const text=await page.evaluate(inspectStylePage),controls=await page.evaluate(inspectPlatformControls),keyboard=await inspectPlatformKeyboard(page),primary=await page.locator('.bv-button-primary:visible').count();const file='after/staff-'+name+'-'+width+'.png';await page.screenshot({path:out+'/'+file});records.push({name,width,file,text,controls,keyboard,primary});};
+ for(const width of [1440,1280,390]){
+  await page.setViewportSize({width,height:width===390?844:900});await page.goto(origin+'/admin/review-packets/'+fixture.id,{waitUntil:'networkidle'});await page.locator('[data-approve]').waitFor().catch(async error=>{console.log('Staff body:',await page.locator('body').innerText());console.log('Diagnostics:',JSON.stringify(errors));throw error});await audit('packet',width);
+  await page.getByText('Legal, financing and consent text (',{exact:false}).click();await page.locator('.bv-review-claim').first().scrollIntoViewIfNeeded();await audit('claims',width);
+  await page.locator('#review-reason').fill('Sample fixture rejection for approval workflow verification');await page.locator('[data-reject]').click();await page.getByText('Rejected: Sample fixture rejection',{exact:false}).waitFor();await audit('rejected',width);
+  await page.locator('[data-check]').evaluateAll(es=>es.forEach(e=>e.click()));await page.locator('[data-approve]').click();await page.getByText('Approved for this exact version.',{exact:false}).waitFor();await audit('approved',width);
+ }
+ await runtime.env.DB.prepare('UPDATE tenants SET settings=? WHERE id=?').bind(JSON.stringify({...source.settings,phone:'8055550197'}),fixture.id).run();
+ await page.goto(origin+'/admin/review-packets/'+fixture.id,{waitUntil:'networkidle'});await page.locator('[data-capture]').waitFor();await audit('changed-version-pending',390);
+ const failures=records.flatMap(r=>[...r.text.contrasts.filter(x=>!x.pass).map(x=>({state:r.name,width:r.width,type:'text',...x})),...r.controls.targets.filter(x=>!x.disabled&&(x.height<44||x.width<44)).map(x=>({state:r.name,width:r.width,type:'tap target',...x})),...r.controls.borders.filter(x=>!x.pass).map(x=>({state:r.name,width:r.width,type:'border',...x})),...(r.text.overflow?[{state:r.name,width:r.width,type:'overflow',value:r.text.overflow}]:[]),...(r.primary>1?[{state:r.name,type:'primary',value:r.primary}]:[]),...r.keyboard.focusFailures.map(x=>({state:r.name,type:'focus',...x})),...r.keyboard.unreachable.map(x=>({state:r.name,type:'keyboard',value:x}))]);
+ const report={passed:!failures.length&&!errors.length,states:records.length,failures,errors,fontProviderRequests:requests.filter(u=>/fonts.googleapis.com|fonts.gstatic.com/.test(u)),records};fs.writeFileSync(out+'/checks/review-packet-browser.json',JSON.stringify(report,null,2));console.log(JSON.stringify({states:records.length,failures:failures.length,errors:errors.length}));assert.equal(failures.length,0);assert.equal(errors.length,0);
+}finally{await browser?.close();if(server)await new Promise(r=>server.close(r));await runtime.close()}

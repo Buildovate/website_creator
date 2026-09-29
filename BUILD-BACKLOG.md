@@ -765,9 +765,10 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 
 ### #028E — Review packet
 
-- State: **Not started** · Estimate: **8h** (≤1 day).
+- State: **Done locally** · Estimate: **8h** (≤1 day).
 - Scope: Every generated site produces a review-packet folder containing desktop and mobile screenshots of every page, video frames at 0%, 25%, 50%, 75% and 100%, checklist results against `docs/product/CONVERSION-PLAYBOOK.md`, and a list of every legal or financing claim.
 - Done when: The packet is complete and reproducible, and nothing publishes without a recorded approval tied to that generated version.
+- Completion: Live Google/Yelp reviews remain live and outside the approval hash; dated packet snapshots are evidence only. Exact-version staff approval gates publication. Five Sample packets: 77 pages, 154 screenshots, 75 video frames; 46 real-packet and 48 contract checks. 102/102 suite commands, 14/14 additional commands, 1,183 main browser states and 13 staff states pass; 0 AA failures. Protected hashes and 374 archived responses contain only the approved Part 1 changes. [Final evidence](docs/build-evidence/028E/README.md). Local commit: `feat: review packet (#028E)`. 0 credits and 0 real provider calls; #028F not started.
 - External keys/accounts: None.
 
 ### #028F — Automatic QA gate
@@ -945,6 +946,30 @@ The 17 trade families retain their existing templates or queued rollout slots. [
 - Done when: The scene and signature pass the shared [§0 rules](docs/product/TRADE-SIGNATURES.md): ≤60 KB gzip added whole-page motion JS, production mobile Lighthouse Performance ≥85 / Accessibility ≥95 / CLS ≤0.05, lazy loading, factual source gates, static no-JS and reduced-motion states, touch/keyboard controls, and 1440×900 plus 390×844 screenshots and scroll recordings in `docs/build-evidence/032S/`. Preserve existing templates; local commit only, no push or deploy.
 - Files: `assets/transformations/electrical/` **(new)**, trade config and focused tests, `docs/build-evidence/032S/` **(new)**.
 - External keys/accounts: Connected Higgsfield Ultra generation only for this trade when its ticket runs.
+
+### #033I — Inspiration page
+
+- State: **Not scheduled, after #028F QA gate and #029V Estimator**. Backlog only.
+- Per-trade, SEO-friendly idea-board pages reuse the #028D media library. Homeowners save ideas to a "My ideas" board and can send it with their estimate request.
+- Contractor-owned photos appear first with an "Our work" tag. Library images are labeled inspiration and never presented as contractor work. Captions are pre-written per trade; the contractor writes nothing.
+- Each card has one light action ("Save" or "Get a price for this"). The estimate remains the page's primary action.
+
+### #033V — Visualize my project
+
+- State: **Not scheduled, after #028F QA gate and #029V Estimator**. Backlog only.
+- Homeowners upload one to three photos of their space. A per-trade guided picker is the main path, with an optional short text box; an AI image model generates the concept. Build the shared engine once, with each trade's picker options, tool name and example photos.
+- Picker choices come from the contractor's price book: only products/services the contractor sells. Show an indicative price range where the price book allows.
+- Change picks and choose "Update"; apply edits from the original photo plus all current picks to limit drift. Support tap-to-select-an-area changes, a version strip with side-by-side comparison, and a per-homeowner generation limit that also counts edits.
+- Before the full-size result, require name, mobile and an unticked TCPA consent gate matching the estimator. Every image reads "AI concept, not a final design or quote" and makes no past-work claim.
+- Blur or refuse faces, house numbers and license plates. Retain photos only for lead needs; Louie decides storage and security. Attach the chosen version and picks to the lead.
+- At build time, use OpenAI's newest image editing model, benchmark one alternative on real photos, and check cost per image. Contractor can switch the tool off.
+- Launch first on Patios, Roofing and Landscaping (or Pools); other trades follow. Low-visual trades may use Inspiration only.
+
+### #033T — Homeowner store and income add-ons
+
+- State: **Not scheduled, after #028F QA gate and #029V Estimator**. Backlog only. #033S remains Landscaping signature: Four Seasons Yard; Joe authorized the next free #033 letter.
+- Optional per-contractor add-on, off by default. Revenue priority: (1) financing referrals; (2) add-ons and maintenance plans, including recurring billing; (3) a trade-related recommended-products affiliate page; (4) cross-trade lead sharing across the contractor network, only with homeowner consent and contractor opt-in.
+- Buildovate takes a platform share; the revenue split model is to be decided. Never compete with the estimate as primary action. No invented offers, prices or urgency.
 
 ### #033 — Apply the approved page system to Landscaping
 

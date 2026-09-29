@@ -628,3 +628,12 @@ Approved: 14 hero clips, 3 Roofing section clips and 60 distinct stills/posters.
 Verification: 102/102 existing commands; 3,287 media-unit, 481 media-API and 6,868 inventory checks; 1,183 main browser states, 20 normal/JS-off states and 84 media-interaction states, plus 117 affected-state rechecks and 94 existing fallback states. 109,000 text measurements, 3,084 control-border checks, 29,284 focus checks and the legacy platform audit all pass with zero failures. Both 2,448-comparison content-parity gates pass. All 279 protected hashes plus platform.css and 374 archived responses match exactly.
 
 Five explicitly fictional Roofing/HVAC sites captured at 1440 and 390; full-page and hero comparison sheets saved. [README and all command results](docs/build-evidence/028D/README.md) · [Media gaps and Starter estimates](docs/build-evidence/028D/MEDIA-GAPS.md) · [Rights record](docs/media/RIGHTS-AND-APPROVALS.md). Commit message: `feat: media library fallback (#028D)`. #028E not started.
+
+
+## #028E — Review packet
+
+**Done locally.** Version-bound review packets, dated live-review snapshots, staff checklist/approve/reject UI and exact-version publication gates are complete. Live Google/Yelp content remains live; controlled content and review display settings invalidate approval. The Part 1 silent section-player, generated sentence-case service copy and phone hero-clearance fixes are included. Future #033I, #033V and accepted #033T are logged only; #032S and #033S remain unchanged.
+
+Verification: **102/102 existing commands and 14/14 additional commands pass**. Five fictional Sample packets include 77 pages, 154 page screenshots, 75 clip frames and 634 claim/consent entries; 46 real-packet checks and 48 approval/live-feed/security/race checks pass. 18,621 Part 1 assertions; 1,183 main browser states, 20 static/no-JS states, 84 media interactions and 13 staff-screen states. 108,932 public text measurements, 3,084 borders and 29,284 focus checks pass with 0 failures. Legacy platform and new staff audits also have 0 AA failures and 0 non-allowlisted platform diagnostics. Both 2,448-comparison content-parity gates pass. All 279 protected hashes plus platform.css and 374 archived responses pass the exact authorized Part 1 contract; all existing stylesheets are byte-identical.
+
+[Final README, before/after evidence and command results](docs/build-evidence/028E/README.md). Local commit only: `feat: review packet (#028E)`. **0 Higgsfield credits, 0 real provider calls.** No push or deploy. #028F not started.

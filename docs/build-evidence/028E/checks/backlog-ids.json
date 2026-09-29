@@ -1,0 +1,34 @@
+{
+  "assigned": [
+    {
+      "ticket": "#033I",
+      "base": "bd3169d",
+      "matchesBeforeTicket": 0,
+      "assigned": true
+    },
+    {
+      "ticket": "#033V",
+      "base": "bd3169d",
+      "matchesBeforeTicket": 0,
+      "assigned": true
+    },
+    {
+      "ticket": "#033T",
+      "base": "bd3169d",
+      "matchesBeforeTicket": 0,
+      "assigned": true
+    }
+  ],
+  "protected": [
+    {
+      "ticket": "#032S",
+      "unchanged": true,
+      "sha256": "dfa2ef1427dbc3a319cc8e95355704efcf9b9c6782b29ddd5f2220800d720b0b"
+    },
+    {
+      "ticket": "#033S",
+      "unchanged": true,
+      "sha256": "cbdaba59cbffaff1ea851912ed73018523691f187dc3e8ce2180a830b5a7f78b"
+    }
+  ]
+}

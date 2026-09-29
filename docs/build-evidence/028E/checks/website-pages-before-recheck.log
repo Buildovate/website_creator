@@ -1,0 +1,66 @@
+Review approval test prerequisite: 4fb2bf7c-e1b8-4c61-ae19-a2a66b6d8368 website
+Review approval test prerequisite: 4fb2bf7c-e1b8-4c61-ae19-a2a66b6d8368 project:23925895-7b17-4f17-b7d6-883995f0b185
+Review approval test prerequisite: 4fb2bf7c-e1b8-4c61-ae19-a2a66b6d8368 project:b577d5c7-a3a2-418b-8700-101abd4624dd
+✔ typed records round-trip; IDs/slugs survive edits and reordering (2.9113ms)
+✔ malformed records, duplicate URLs, broken city links and limits are rejected (1.9553ms)
+✔ media uses bounded photo IDs and alt text, never arbitrary URLs (0.5489ms)
+▶ real tenant API: draft/published isolation, ownership and permissions
+  ✔ editor saves all four page types without changing public snapshot (131.0774ms)
+  ✔ render validates page data and has no save/publish side effects (19.2623ms)
+  ✔ foreign/missing media are rejected at save/create without side effects (118.0513ms)
+  ✔ malformed contracts return HTTP 400; access/origin/concurrency stay enforced (40.7249ms)
+Review approval test prerequisite: 4fb2bf7c-e1b8-4c61-ae19-a2a66b6d8368 website
+  ✔ old editors omit the field safely; owner publishes a frozen snapshot (172.5763ms)
+  ✔ publish rechecks ownership even if a stored draft is stale or forged (7.564ms)
+Review approval test prerequisite: 4fb2bf7c-e1b8-4c61-ae19-a2a66b6d8368 website
+  ✔ explicit deletion remains draft until publish; backups retain page records (165.2433ms)
+✔ real tenant API: draft/published isolation, ownership and permissions (788.884ms)
+Review approval test prerequisite: d5165d93-d786-4afd-8d15-416e9af5d4bf website
+Review approval test prerequisite: d5165d93-d786-4afd-8d15-416e9af5d4bf website
+Review approval test prerequisite: d5165d93-d786-4afd-8d15-416e9af5d4bf website
+✔ #004 service detail: published snapshot, preview membership, media and inquiry (497.6634ms)
+✔ #004 shared browser handler preserves service context and suppresses preview sends (440.946ms)
+Review approval test prerequisite: 448ceaa7-46b9-4415-bfb8-d103322a2acd website
+Review approval test prerequisite: 448ceaa7-46b9-4415-bfb8-d103322a2acd website
+Review approval test prerequisite: 778744e3-7e8e-4f2f-b6be-707e9f899ed6 website
+Review approval test prerequisite: 778744e3-7e8e-4f2f-b6be-707e9f899ed6 website
+✔ #005 selected service grids: eight offerings, stable links, draft isolation and safe fallbacks (584.5085ms)
+Review approval test prerequisite: 0f47a920-098f-4c7e-9510-66e3f93007bc website
+Review approval test prerequisite: 0f47a920-098f-4c7e-9510-66e3f93007bc website
+Review approval test prerequisite: 0f47a920-098f-4c7e-9510-66e3f93007bc website
+✔ #006 FAQ: published snapshots, feature gating, schema, escaping and route access (769.2807ms)
+Review approval test prerequisite: 07d7b473-213e-41c4-b1c2-68491ff2a543 website
+Review approval test prerequisite: 07d7b473-213e-41c4-b1c2-68491ff2a543 website
+Review approval test prerequisite: 07d7b473-213e-41c4-b1c2-68491ff2a543 website
+✔ #007 About route: confirmed copy, publication, owned portrait/logo and safe fallback (730.1849ms)
+Review approval test prerequisite: 1257a982-5256-4ae0-9ae3-01f0472ac514 website
+Review approval test prerequisite: 1257a982-5256-4ae0-9ae3-01f0472ac514 website
+Review approval test prerequisite: 1257a982-5256-4ae0-9ae3-01f0472ac514 project:29dbe59b-bdef-437f-986d-cfe505c9d89f
+✔ #007A confirmed trust facts, concise story, owner hero and published project tiles (515.6154ms)
+▶ #014 inquiry context and public submission boundaries
+  ✔ unpublished tenants cannot accept inquiries (0.8543ms)
+Review approval test prerequisite: d91914cf-58e6-4274-acfc-a0ece6bb345b website
+  ✔ service/city/source/timing and notes reach only the route tenant (5.4402ms)
+  ✔ city-only forms retain context without a selected service (4.1013ms)
+  ✔ published city context supports a hidden city field without inventing a route renderer (3.9919ms)
+  ✔ published settings win over later draft changes (80.4446ms)
+  ✔ origin, consent, input validation and honeypot remain enforced (15.6369ms)
+  ✔ preview and foreign source attribution are rejected server-side (16.82ms)
+Review approval test prerequisite: 3baa7778-a612-4fae-b7d9-92dfb1877ea7 website
+  ✔ project attribution uses only an owned published project snapshot (21.9125ms)
+  ✔ context is bounded and survives long notes (5.3157ms)
+  ✔ three-per-phone limit cannot be bypassed with different context (10.3189ms)
+  ✔ contact capture does not enroll marketing or schedule delivery (0.3627ms)
+✔ #014 inquiry context and public submission boundaries (303.2283ms)
+✔ #014 browser captures source/city independently and suppresses draft paths (4.6376ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4645.8348
+
+Review packet preparation failed 0f47a920-098f-4c7e-9510-66e3f93007bc Cannot capture /s/faq-ticket-six/faq: HTTP 404
+Review packet preparation failed 07d7b473-213e-41c4-b1c2-68491ff2a543 Cannot capture /s/about-ticket-seven/about: HTTP 404

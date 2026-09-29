@@ -531,7 +531,7 @@ await test('#014 inquiry context and public submission boundaries', async t => {
  });
  await t.test('contact capture does not enroll marketing or schedule delivery',async()=>{
   const rows=(await env.DB.prepare('SELECT kind,data FROM workspace_records WHERE scope=?').bind(tenant.id).all()).results;
-  assert.ok(rows.some(r=>r.kind==='contacts'));assert.ok(rows.every(r=>['contacts','blog'].includes(r.kind)));
+  assert.ok(rows.some(r=>r.kind==='contacts'));assert.ok(rows.every(r=>['contacts','blog','review_approval'].includes(r.kind)));for(const r of rows.filter(r=>r.kind==='review_approval')){const d=JSON.parse(r.data);assert.equal(d.decision,'approve');assert.match(d.versionHash,/^[a-f0-9]{64}$/);}
   for(const r of rows){const d=JSON.parse(r.data);assert.notEqual(d.marketingConsent,true);assert.notEqual(d.smsOptIn,true);assert.notEqual(d.emailOptIn,true);}
  });
 });

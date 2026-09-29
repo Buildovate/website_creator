@@ -190,6 +190,11 @@ export async function createRuntime(options = {}) {
   const assetsRoot = env.ASSETS_ROOT || (existsSync('dist/client') ? 'dist/client' : 'public');
   const runtimeEnv = { ...env, GEOIP_LOOKUP:await createGeoLookup(env), DB: db, BUCKET: bucket, ASSETS: createAssets(path.resolve(assetsRoot)) };
   const worker = options.worker || await loadWorker();
+  const reviewJobs=new Map();let reviewCaptureTail=Promise.resolve();
+  runtimeEnv.REVIEW_QUEUE=(key,task)=>{if(reviewJobs.has(key))return reviewJobs.get(key);const job=Promise.resolve().then(task).catch(error=>console.error('Review capture failed',error.message)).finally(()=>reviewJobs.delete(key));reviewJobs.set(key,job);return job};
+  if(options.reviewCapture)runtimeEnv.REVIEW_CAPTURE=options.reviewCapture;
+  else if(runtimeEnv.REVIEW_BROWSER_MODULE){const {createReviewCapture}=await import('./review-capture.js');runtimeEnv.REVIEW_CAPTURE=createReviewCapture({browserModule:runtimeEnv.REVIEW_BROWSER_MODULE,executablePath:runtimeEnv.REVIEW_BROWSER_EXECUTABLE})}
+  if(runtimeEnv.REVIEW_CAPTURE){const capture=runtimeEnv.REVIEW_CAPTURE;runtimeEnv.REVIEW_CAPTURE=args=>{const next=reviewCaptureTail.then(()=>capture(args));reviewCaptureTail=next.catch(()=>{});return next}}
   const auth = options.auth || authConfig(runtimeEnv);
   return {
     env: runtimeEnv,
@@ -197,7 +202,7 @@ export async function createRuntime(options = {}) {
     auth,
     handler: createHandler({ worker, env: runtimeEnv, db, auth }),
     async maintain(){await worker.scheduled?.({},runtimeEnv);},
-    async close() { await executor.close?.(); },
+    async close() { while(reviewJobs.size)await Promise.allSettled([...reviewJobs.values()]);await executor.close?.(); },
   };
 }
 

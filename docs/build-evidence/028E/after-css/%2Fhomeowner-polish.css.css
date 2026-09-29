@@ -1,0 +1,15 @@
+/* #028E: shared films remain moving photographs; no native browser chrome. */
+.cinematic-commercial .film-theater{position:relative}
+.cinematic-commercial .commercial-poster{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:1;pointer-events:none}
+.cinematic-commercial [data-ambient-state=playing] .commercial-poster{visibility:hidden}
+.cinematic-commercial .commercial-motion{position:absolute;z-index:4;right:16px;bottom:16px;min-height:44px;padding:10px 16px;border:1px solid currentColor;border-radius:6px;background:#172421;color:#fff;font:600 14px/1.4 Arial,sans-serif;cursor:pointer}
+.cinematic-commercial .commercial-motion[hidden]{display:none!important}
+.cinematic-commercial .commercial-motion:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:720px){
+ /* Static/no-JS fallback keeps both actions out of the hero's viewport. */
+ body:not(.homeowner-motion-ready) .kit-mobile-dock{position:static;margin:16px 20px}
+ body:not(.homeowner-motion-ready) .visitor-chat{position:relative;margin:16px;right:auto;bottom:auto;z-index:auto}
+ .homeowner-motion-ready .kit-mobile-dock[data-hero-hidden=true],.homeowner-motion-ready .visitor-chat[data-hero-hidden=true]{visibility:hidden!important;pointer-events:none!important}
+ .homeowner-motion-ready .visitor-chat{bottom:var(--homeowner-dock-clearance,82px)}
+}
+@media(prefers-reduced-motion:reduce){.cinematic-commercial .commercial-poster{visibility:visible!important}.cinematic-commercial .commercial-motion{display:none!important}}

@@ -1,0 +1,57 @@
+/* Shared rules are loaded last on all contractor pages and design previews. */
+:root{--site-nav-height:96px}
+html{scroll-padding-top:calc(var(--site-nav-height) + 20px)}
+body:has(.shared-site-header){overflow-x:clip}
+.shared-site-header,.showcase[data-sticky] .shared-site-header{position:sticky!important;top:0!important;z-index:100!important;box-shadow:0 1px 0 #ffffff20}
+.shared-site-header nav a{font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+.scroll-story .story-stage{top:var(--site-nav-height);height:calc(100svh - var(--site-nav-height));min-height:0}
+.build-timelapse .story-stage{padding-bottom:18px}
+.craft-detail-camera :is(img,video){object-fit:contain;transform:none}
+.craft-detail-scene{aspect-ratio:16/9;background:#101b19}
+#services .trade-title-motif{display:none}
+.kit-section-heading:has(+ .kit-services){margin-bottom:40px}
+.kit-cta-band{margin-block:60px!important;padding:clamp(28px,4vw,64px)!important}
+.kit-cta-band+.kit-contact{margin-top:60px}
+.journey-animation{position:relative;overflow:hidden;border-radius:10px;isolation:isolate}
+.journey-animation .journey-art{width:100%;height:auto;display:block;transform-origin:center;animation:journey-reveal 900ms both;animation-play-state:paused}
+.journey-animation.is-visible .journey-art{animation-play-state:running}
+.journey-animation:after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,#ffffff24 47%,transparent 65%);transform:translateX(-130%);pointer-events:none}
+.journey-animation.is-visible:after{animation:journey-light 3s ease-in-out 1}
+.next-step-plan ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.next-step-plan li{max-width:none;align-items:start;opacity:1}
+.next-step-plan li strong{font-size:14px}
+.next-step-plan:has(.is-visible) li{animation:journey-step 650ms both}
+.next-step-plan:has(.is-visible) li:nth-child(2){animation-delay:.2s}.next-step-plan:has(.is-visible) li:nth-child(3){animation-delay:.4s}
+@keyframes journey-reveal{from{opacity:.4;transform:scale(1.06)}to{opacity:1;transform:scale(1)}}
+@keyframes journey-light{to{transform:translateX(130%)}}
+@keyframes journey-step{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.trade-graphic{position:relative;isolation:isolate;overflow:hidden;background:#162326;border-radius:8px;margin:28px 0 0;aspect-ratio:3/1;color:#fff}
+.trade-graphic img{position:absolute;inset:0;object-fit:cover;object-position:50% 50%;width:100%;height:100%;max-width:none}
+.trade-graphic:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#071515da,transparent 90%);z-index:1;pointer-events:none}
+.trade-graphic figcaption{position:relative;z-index:2;padding:clamp(18px,3vw,40px);min-height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;max-width:78%}
+.trade-graphic figcaption span{font:600 12px/1.5 Arial,sans-serif;letter-spacing:.12em;color:#fff}
+.trade-graphic figcaption strong{font:600 clamp(24px,2.5vw,42px)/1.08 Arial,sans-serif;letter-spacing:-.04em;color:#fff}
+.trade-graphic-pricing{aspect-ratio:2.5/1;margin-top:24px}.trade-graphic-pricing img{object-position:65% 55%}
+.trade-graphic-blog{aspect-ratio:4.5/1;margin:30px 0 46px}.trade-graphic-blog figcaption{max-width:65%}
+.reviews-section{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);column-gap:6vw;align-items:center}
+.reviews-section>.customer-detail-art{grid-column:2;grid-row:1/span 3;margin:0;align-self:stretch;min-height:250px;max-height:420px;overflow:hidden;border-radius:8px}
+.customer-detail-art img{height:100%;width:100%;object-fit:cover}
+.reviews-section>:not(.customer-detail-art){grid-column:1}
+.reviews-section :is(.sample-review-track,.review-marquee,.review-grid,.review-loop,[data-review-results]){grid-column:1/-1;min-width:0}
+.reviews-section>.review-motion-control{grid-column:1/-1;justify-self:start;width:auto}
+.reviews-section .sample-review-note{font-size:16px!important}
+.reviews-section h2{font-size:clamp(38px,4vw,68px)}
+.service-area-ribbon{margin:0!important;background:#1b2828;color:#fff;padding:24px 0}
+.service-area-ribbon b{font-size:clamp(22px,3vw,42px);font-weight:650}.service-area-ribbon small{font:400 14px Arial,sans-serif;opacity:.8;text-transform:none}
+.kit-marquee:is(:hover,:focus-within)>div,.service-area-ribbon:is(:hover,:focus-within)>div{animation-play-state:paused!important}
+.kit-marquee>button{display:none}
+.service-areas-editor{grid-column:1/-1;border:0;margin:0;padding:18px 0}.service-areas-editor legend{font-size:16px;font-weight:600}.service-area-row{display:grid;grid-template-columns:minmax(160px,2fr) minmax(120px,1fr) auto;align-items:end;gap:12px;margin:12px 0}.service-area-row label{margin:0}.service-area-row button{min-height:44px}.service-areas-editor small{display:block;color:#65738a;margin-top:10px}
+.domain-connect-shortcut{margin-top:10px;white-space:nowrap}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:850px){.shared-site-header{gap:12px}.shared-site-header nav a{font-size:14px}.reviews-section{grid-template-columns:1fr}.reviews-section>.customer-detail-art{grid-column:1;grid-row:auto;aspect-ratio:2/1;margin:20px 0}.reviews-section>:not(.customer-detail-art){grid-column:1}.trade-graphic-blog{aspect-ratio:3/1}.trade-graphic figcaption{max-width:90%}.next-step-plan{min-width:0}}
+@media(max-width:600px){.shared-site-header nav{gap:10px!important;overflow-x:auto!important;overflow-y:hidden!important;max-width:100%;min-width:0}.shared-site-header nav a{font-size:12px!important}.shared-site-header nav a:last-child{font-size:12px!important}.scroll-story .story-stage{padding-top:14px;padding-bottom:16px!important}.build-timelapse .story-content{margin:auto 0;padding:14px 0}.build-copy h1{font-size:clamp(32px,8.3vw,48px)}.build-timelapse .story-description{font-size:14px;line-height:1.45}.build-timelapse .story-kicker{margin-bottom:8px}.build-timelapse .story-chapters button{font-size:12px;min-height:44px}.build-timelapse .story-discover{display:none}.build-timelapse .story-actions{margin-top:10px}.build-timelapse .story-proof{margin:5px 0}.build-timelapse .story-accessible{display:none}.trade-graphic{aspect-ratio:2/1}.trade-graphic figcaption strong{font-size:24px}.trade-graphic figcaption span{font-size:12px}.kit-cta-band{margin-block:36px!important}.next-step-plan ol{gap:10px}.next-step-plan li strong{font-size:14px}.service-area-row{grid-template-columns:minmax(100px,1fr) 110px 44px}.service-area-row button{padding:10px}.service-area-row [data-remove-area]{font-size:0}.service-area-row [data-remove-area]:after{content:'×';font-size:22px}.craft-detail-scene{aspect-ratio:16/9}.detail-caption p{font-size:24px}.detail-viewfinder{display:none}}
+@media(prefers-reduced-motion:reduce){.journey-animation .journey-art,.journey-animation:after,.next-step-plan li,.kit-marquee>div{animation:none!important}.scroll-story .story-stage{position:relative;top:auto;height:auto;min-height:0}.trade-graphic img{transform:none}}
+.static-story .story-stage{top:auto}
+
+/* #028A: match the controller's static class from the first reduced-motion frame. */
+@media(prefers-reduced-motion:reduce){.build-timelapse .story-stage{min-height:85svh}.build-timelapse .story-content{margin:50px 0}}

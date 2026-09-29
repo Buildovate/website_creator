@@ -1,12 +1,21 @@
+import tradeServices from '../public/trade-library.json' with {type:'json'};
 import {kits} from './design-kits.js';
 import {stableSiteStyleSeed} from './design-styles.js';
 
 // Versioned, authored copy. No provider, free-text prompt, invented claim or render-time choice.
 export const COPY_VERSION=1;
 const subjects={Roofing:'roof',HVAC:'heating and cooling',Plumbing:'plumbing',Patios:'patio',Electrical:'electrical',Landscaping:'landscape','General Contractors':'building',Flooring:'flooring',Painting:'painting',Fencing:'fence','Garage Doors':'garage door','Pest Control':'pest control','Windows/Doors':'window and door',Solar:'solar',Concrete:'concrete',Pools:'pool',Remodel:'remodeling'};
+// Only authored service vocabulary is case-normalized. Unrecognized custom names
+// may contain proper nouns and are retained; acronyms and known names stay intact.
+const knownServices=new Set(Object.values(tradeServices).flat().map(x=>x.toLowerCase()));
+export function sentenceServiceName(value){
+ const name=String(value||'');
+ if(!knownServices.has(name.toLowerCase()))return name;
+ return name.replace(/[A-Za-z][A-Za-z'-]*/g,word=>/^[A-Z]{2,}$/.test(word)||/[a-z][A-Z]/.test(word)||['French','California','Alumawood','Tesla','Trane','Lennox','Carrier'].includes(word)?word:word.toLowerCase());
+}
 const join=values=>values.length<2?values[0]||'':values.slice(0,-1).join(', ')+' and '+values.at(-1);
 export function contractorFacts(s){return {name:s.name||'',trade:s.trade,city:s.serviceAreas?.[0]?.city||'',area:s.area||'',serviceAreas:s.serviceAreas||[],services:(s.services||[]).map(x=>({name:x.name,description:x.description||''})),experience:s.experience||'',license:s.license||'',phone:s.phone||'',offers:s.platform?.promotions?.offers||[],reviews:s.reviews||{},minReviewRating:s.minReviewRating??'all'};}
-function context(s){const facts=contractorFacts(s),subject=subjects[s.trade]||s.trade,place=facts.city||facts.area;return {...facts,subject,place,location:place?' in '+place:'',business:facts.name||'this '+s.trade+' business',serviceList:join(facts.services.map(x=>x.name)),firstService:facts.services[0]?.name||s.trade+' projects'};}
+function context(s){const facts=contractorFacts(s),subject=subjects[s.trade]||s.trade,place=facts.city||facts.area;return {...facts,subject,place,location:place?' in '+place:'',business:facts.name||'this '+s.trade+' business',serviceList:join(facts.services.map(x=>sentenceServiceName(x.name))),firstService:facts.services[0]?.name||s.trade+' projects'};}
 const templates={
  hero:[
   f=>({heading:f.firstService+f.location+'.',body:(f.name?f.name+' offers ':'Explore ')+(f.serviceList||f.trade+' project options')+f.location+'. Start with the work your property needs.',action:'Discuss my project'}),
@@ -15,7 +24,7 @@ const templates={
  ],
  services:[
   f=>({heading:'Choose the '+f.trade+' work you need.',body:'Explore the services offered by '+f.business+'.'}),
-  f=>({heading:'Where would you like to begin?',body:(f.serviceList||f.trade+' project options')+'. Choose a service to look more closely.'}),
+  f=>({heading:'Where would you like to begin?',body:((f.serviceList||f.trade+' project options').replace(/^./,c=>c.toUpperCase()))+'. Choose a service to look more closely.'}),
   f=>({heading:'Find your project’s starting point.',body:'Start with the service that fits your property'+f.location+'.'})
  ],
  process:[

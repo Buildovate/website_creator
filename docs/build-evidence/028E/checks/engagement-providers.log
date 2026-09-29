@@ -1,0 +1,5 @@
+Review approval test prerequisite: e15cfa3d-a85b-4da0-b8c3-6689546cb4fc website
+Review approval test prerequisite: e15cfa3d-a85b-4da0-b8c3-6689546cb4fc project:5b361296-46dd-4688-ba40-65171ed35314
+Review approval test prerequisite: e15cfa3d-a85b-4da0-b8c3-6689546cb4fc project:3042f7e0-0f2c-44b5-b89d-83b4b6faee5c
+PASS mocked providers: SMS verification, alert addressing, signed inbound replies, webhook replay deduplication, changed-phone re-verification, Google match/filter/aggregate integrity, Yelp excerpts and private draft access. No real messages or provider requests sent.
+

@@ -1,0 +1,21 @@
+Review approval test prerequisite: c4232944-1565-420a-b88f-6ec15e0bf359 website
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: no overflow home-desktop-normal {"window":1440,"scroll":1444,"items":[]}
+    at check (file:///C:/Users/joe/website_creator/tests/roofing-acceptance.mjs:12:36)
+    at pageCheck (file:///C:/Users/joe/website_creator/tests/roofing-acceptance.mjs:46:2)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:502:9)
+    at async file:///C:/Users/joe/website_creator/tests/roofing-acceptance.mjs:70:33 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
