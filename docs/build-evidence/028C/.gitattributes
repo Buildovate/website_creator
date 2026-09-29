@@ -1,0 +1,3 @@
+# Preserve the exact served bytes used by the protected-hash proof.
+after-html/** -text
+after-css/** -text

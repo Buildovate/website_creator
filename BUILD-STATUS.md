@@ -608,3 +608,13 @@ Joe’s corrected Roofing polish ticket is recorded in BUILD-BACKLOG.md: preserv
 - Verification: **102/102** commands; **216 + 544** browser states; **2,448** content-parity comparisons plus four negative boundaries; **8,293** render assertions; **62** filter checks; **608** fallback assertions / **94** states. AA **50104** measurements, zero failures; focus/overflow/geometry/primary/content loss/images/page exceptions pass; max CLS **0.023765** <= 0.05.
 - Preservation: **279/279** accepted hashes plus platform.css, **374/374** archived responses, and original 028B evidence preserved (parent README link intentionally updated).
 - Evidence: **138** retaken captures and **6** updated contact sheets; [follow-up README](docs/build-evidence/028B/followup/README.md). **0 credits**, no provider calls, no push/deployment. #028C not started.
+
+
+## #028C — Uniqueness generator (done locally)
+
+**Done locally (2026-09-28), based on 4880c3b.** Explicit regeneration saves deterministic seed/style/layout/copy choices in #023, with staff provenance, contractor Look precedence, rule fallbacks and same-trade distance. Concurrent reservations use the existing JSON store. Authored copy has 306 versioned entries across all 17 trades; AI copy remains not connected. Existing sites retain exact bytes until regeneration.
+
+- Checks: **102/102** commands; **3,859** generator and **418** API assertions; **417 + 12** generated browser/motion/JS-off states; **216 + 544** existing browser states; **4,896** total content-parity comparisons; **8,293** variant assertions, **62** filter checks and **608** fallback assertions across **94** states.
+- Quality: **98186** trade-page AA text measurements and **3048** generated border measurements, **0 failures**; focus, primary actions, layout/rail geometry, overflow, images and page exceptions pass. Maximum CLS **0.023765** <= 0.05. Expanded legacy platform contrast also passes.
+- Preservation: **279 + platform.css = 280** exact protected hashes; **374** archived responses byte-identical; original variant-a functions and existing CSS remain unchanged.
+- Evidence: [README](docs/build-evidence/028C/README.md), six full Sample homepage captures and desktop/phone side-by-side sheets. **0 credits**, **0 provider calls**, no push or deploy. #028D has not started.

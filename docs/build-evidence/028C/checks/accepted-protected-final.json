@@ -1,0 +1,1445 @@
+{
+  "baseCommit": "4880c3b",
+  "acceptedHashes": 279,
+  "matched": 279,
+  "platformCss": {
+    "path": "platform.css",
+    "sha256": "50b60cc6bd3eda2e69d735b9071a70d5a6544e5487055037beae8201f909d09c",
+    "identical": true
+  },
+  "comparisons": [
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-patios-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-plumbing-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-hvac-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-electrical-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-landscaping-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-general-contractors-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-flooring-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-painting-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-fencing-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-garage-doors-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pest-control-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-windows-doors-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-solar-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-concrete-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-pools-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-current",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-current/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-current/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-bold",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-bold/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-bold/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-fresh",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-fresh/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-fresh/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-classic",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-classic/legal/privacy",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-locksmith-classic/legal/terms",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-current/pages/look-baseline",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-roofing-current/forms/look-form",
+      "identical": true
+    },
+    {
+      "group": "html",
+      "key": "/s/platform-look-baseline-missing",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/design-studio.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/service-motion.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/app.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/site.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/portfolio-common.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/showcase.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/owner-photo.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/trade-components.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/cutaway.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/design-variants.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/assets/leaflet.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/hero-contact.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/site-polish.css?v=trade-options-v2",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/reviews.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/scroll-story.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/hero-timelapse.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/craft-story.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/trust.css?v=009",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/trade-revisions.css?v=constitution-v1",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/neighborhood.css?v=experience-v3",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/engagement.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/flow.css",
+      "identical": true
+    },
+    {
+      "group": "stylesheets",
+      "key": "/site-styles.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "about-trust.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "app.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "assets/leaflet.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "auth.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "blog.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "cinematic-enhancements.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "cinematic.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "constitution.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "conversion.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "core-site-pages.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "craft-story.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "cutaway.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "design-studio.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "design-variants.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "ebook.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "engagement.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "expenses-admin.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "flow.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "hero-contact.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "hero-timelapse.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "neighborhood.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "owner-photo.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "planning-ambient.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "planning-scroll.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "portfolio-common.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "portfolio-theme.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "pricing.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "project-story.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "promotions-planning.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "reviews.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "roofing-city.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "roofing-motion-home.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "roofing-service.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "scroll-story.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "service-detail.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "service-motion.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "showcase.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "showpiece-financing.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "site-polish.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "site-styles.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "site.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "trade-backgrounds.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "trade-components.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "trade-motion-v2.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "trade-motion.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "trade-page.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "trade-revisions.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "trust.css",
+      "identical": true
+    },
+    {
+      "group": "protectedCss",
+      "key": "website-pages.css",
+      "identical": true
+    }
+  ],
+  "existingCssCount": 52,
+  "modifiedExistingCss": "",
+  "sourceComparison": "Git source text ignores checkout line endings; protected rendered hashes remain byte-exact",
+  "sourceFiles": [
+    {
+      "file": "src/section-variants.js",
+      "identical": true
+    },
+    {
+      "file": "src/section-choices.js",
+      "identical": true
+    },
+    {
+      "file": "src/scroll-story.js",
+      "identical": true
+    },
+    {
+      "file": "src/roofing-cta.js",
+      "identical": true
+    },
+    {
+      "file": "src/reviews.js",
+      "identical": true
+    }
+  ],
+  "rendererBodies": [
+    {
+      "file": "src/showcase.js",
+      "renderer": "function renderShowcasePage",
+      "identical": true
+    },
+    {
+      "file": "src/constitution-pages.js",
+      "renderer": "function renderOriginalConstitutionPage",
+      "identical": true
+    }
+  ],
+  "passed": true
+}

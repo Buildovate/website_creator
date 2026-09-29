@@ -1,0 +1,5 @@
+/* Compatibility URL retained by the existing public policy templates.
+   Shared layout rules are supplied by app.css; no additional layout override. */
+
+/* #028A: Current policy footer caption only; keep all layout rules in app.css. */
+body:not([data-site-style]).welcome-page .welcome-card>small{color:#617187}

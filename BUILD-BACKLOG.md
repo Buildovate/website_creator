@@ -736,11 +736,12 @@ FAQ group eyebrows. Replace the repeated "Your questions, explained" label with 
 
 ### #028C — Uniqueness generator
 
-- State: **Not started** · Estimate: **8h** (≤1 day).
+- State: **Done locally** · Estimate: **8h** (≤1 day).
 - Dependency: #023 generation manifest, #028A design styles and #028B section variants.
 - Scope: Given contractor inputs and the deterministic, overridable per-site seed introduced in #004M, select style and section variants on existing templates, generate copy only from the contractor's facts, and save the selected choices in the #023 generation manifest.
 - Done when: Three fictional Roofing contractors with different inputs produce homepages that do not look like one template; show the three results side by side and preserve deterministic output for the same inputs and seed.
 - External keys/accounts: K01 only if application copy generation is enabled; otherwise use the ticket's honest missing-access behavior.
+- Verified (2026-09-28): 102/102 existing commands; 3,859 generator + 418 API assertions; 417 generated browser states + 12 motion/JS-off states; 216 + 544 existing browser states; both 2,448-comparison content-parity runs; AA zero failures; 279 protected hashes plus platform.css and 374 archived responses identical. Three clearly fictional Roofing Samples have different Looks/heroes and at least three differing section layouts. Evidence: [#028C README](docs/build-evidence/028C/README.md). AI copy not connected; 0 credits and no provider calls.
 
 ### #028D — Media library fallback
 
