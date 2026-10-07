@@ -81,7 +81,7 @@ export function conversionPage(s,{base='',preview=false,sample=false,samplePath=
   .replace('href="#trade-film"','href="#services"')
   .replace('Scroll to discover ↓','Explore services ↓')
   .replace('<details class="story-accessible">','<details class="story-accessible">'):'';
- if(motionRoof&&film)film=film.replace(/<img class="story-finished"[^>]*>/,image=>image.includes('/assets/build-films/roofing-finished.webp')?heroPicture:image).replace(/<img class="story-opening"[^>]*>/,'').replace(/ poster="[^"]*"/,'');
+ if(motionRoof&&film)film=film.replace(/<img class="story-finished"[^>]*>/,image=>image.includes('/assets/build-films/roofing-finished.webp')?heroPicture:image).replace(/<img class="story-opening"[^>]*>/,'');
  if(motionRoof&&film)film=film.replace('data-story-mode="build"','data-story-mode="build" data-lazy-until-scroll="true"').replace('<h1>'+e(headline).replace(/\n/g,'<br>')+'</h1>',()=>kineticHeadline);
  const detail=s.effects?.cutaway!==false?cutaway(kit.id):'';
  const legacyStory=detail?`<section class="cx-story"><div class="cx-section-heading cx-section"><p class="cx-eyebrow">A CLOSER LOOK</p><h2>${e(c.storyTitle)}</h2><p>${e(c.storyIntro)}</p><a href="#contact">Skip to my project request ${arrow}</a></div>${detail}</section>`:'';

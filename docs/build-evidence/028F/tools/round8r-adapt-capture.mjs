@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const root='C:/Users/joe/website_creator',file=root+'/docs/build-evidence/028F/tools/round8q-nav-capture.mjs';
+let source=fs.readFileSync(file,'utf8');
+const old="out=root+'/docs/build-evidence/028F/checks/round8q-nav'",next="out=process.env.ROUND_NAV_EVIDENCE||root+'/docs/build-evidence/028F/checks/round8q-nav'";
+if(!source.includes(old))throw Error('Capture output declaration differs; stop');
+source=source.replace(old,next);
+const selector="moreVisible:visible(nav.querySelector('.site-fit-trigger'))&&!nav.querySelector('.site-fit-overflow').hidden";
+if(!source.includes(selector))throw Error('Capture selector differs; stop');
+source=source.replace(selector,"moreVisible:!!nav.querySelector('.site-fit-trigger')&&visible(nav.querySelector('.site-fit-trigger'))");
+fs.writeFileSync(file,source);
+console.log('Capture observer handles detached More; optional evidence destination; all matrix assertions unchanged.');

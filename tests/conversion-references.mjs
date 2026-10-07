@@ -18,7 +18,7 @@ for(const [kit,journey,service,cta] of cases){
   const allIds=[...h.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(allIds).size,allIds.length,'No duplicate DOM IDs');
   for(const link of h.matchAll(/href="#([^"]+)"/g))assert.ok(allIds.includes(link[1]),`Missing anchor ${link[1]}`);
  }
- let {tenant:t}=await api('/tenants','POST',{designKit:kit,slug:'conversion-'+kit,settings:{name:'Reference '+kit,phone:'8055550123',area:'Test City',journey,showDemoProjects:false,services:[{name:service}],conversionBrief:{headline:'UNCONFIRMED_HEADLINE',difference:'UNCONFIRMED_CLAIM',nextStep:'UNCONFIRMED_PROMISE'}}});
+ let {tenant:t}=await api('/tenants','POST',{designKit:kit,slug:'conversion-'+kit,settings:{name:'Sample Fictional Reference '+kit,phone:'8055550123',area:'Test City',journey,showDemoProjects:false,services:[{name:service}],conversionBrief:{headline:'UNCONFIRMED_HEADLINE',difference:'UNCONFIRMED_CLAIM',nextStep:'UNCONFIRMED_PROMISE'}}});
  assert.equal(t.settings.journey,journey);
  let h=await (await request('/s/'+t.slug+'?preview=1')).text();for(const value of ['UNCONFIRMED_HEADLINE','UNCONFIRMED_CLAIM','UNCONFIRMED_PROMISE'])assert.ok(!h.includes(value));
  await api('/tenants/'+t.id+'/publish','POST',{version:t.version,approved:true});
@@ -59,7 +59,8 @@ assert.throws(()=>selectServices(custom,[]),/at least one/);assert.throws(()=>se
 console.log('PASS service checklist: custom names, descriptions, deduplication, selection limits, full service rendering and draft isolation.');
 
 // #002: one published Roofing fixture supports both intents without inventing services.
-let {tenant:roofing}=await api('/tenants','POST',roofingFixture);
+const sampleRoofingFixture=structuredClone(roofingFixture);sampleRoofingFixture.settings.name='Sample Fictional QA Roofing Intents';
+let {tenant:roofing}=await api('/tenants','POST',sampleRoofingFixture);
 await api('/tenants/'+roofing.id+'/publish','POST',{version:roofing.version,approved:true});
 const roofPath='/s/'+roofing.slug;
 let roofHtml=await (await request(roofPath,'GET',null,null)).text();

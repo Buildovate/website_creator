@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';
+const root='C:/Users/joe/website_creator',tools=root+'/docs/build-evidence/028F/tools',checks=root+'/docs/build-evidence/028F/checks';
+fs.writeFileSync(tools+'/round8q-backup-suite.mjs',fs.readFileSync(tools+'/round8p-backup-suite.mjs','utf8').replaceAll('round8p','round8q'));
+fs.writeFileSync(checks+'/round8q-run-suite.ps1',fs.readFileSync(checks+'/round8p-run-suite.ps1','utf8').replaceAll('round8p','round8q'));
+let scan=fs.readFileSync(tools+'/round8o-baseline-scan.mjs','utf8').replaceAll('round8o','round8q');
+scan=scan.replace("const approved=['src/worker.js','src/site-polish.js','src/website-pages.js','src/blog.js','src/pricing.js'];", "const approved=['src/roofing-critical-css.js'];");
+scan=scan.replace("execFileSync('git',['-c','safe.directory='+root,'show','HEAD:'+p],{cwd:root,encoding:'utf8',maxBuffer:50e6})", "read(checks+'/round8q-before/'+p)");
+scan=scan.replace('(worker|site-polish|website-pages|blog|pricing)', '(roofing-critical-css)');
+fs.writeFileSync(tools+'/round8q-baseline-scan.mjs',scan);
+fs.writeFileSync(tools+'/round8q-apply-reviewed-baselines.mjs',fs.readFileSync(tools+'/round8o-apply-reviewed-baselines.mjs','utf8').replaceAll('round8o','round8q'));
+console.log('Round8q validation helpers prepared; unchanged harness and normalizers.');

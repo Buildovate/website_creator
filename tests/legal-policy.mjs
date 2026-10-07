@@ -23,7 +23,7 @@ console.log('PASS policy normalization, missing Needs review, review scope/dates
 const origin='https://test.local',owner={id:'legal-owner',email:'legal-owner@example.test'};
 async function request(path,method='GET',value,user=admin){return worker.fetch(new Request(origin+path,{method,headers:{origin,'content-type':'application/json',...(user?{'oai-authenticated-user-id':user.id,'oai-authenticated-user-email':user.email}:{})},body:value===undefined?undefined:JSON.stringify(value)}),env);}
 async function api(path,method='GET',value,user=admin){const r=await request('/api'+path,method,value,user);assert.equal(r.status,200,await r.clone().text());return r.json();}
-let t=(await api('/tenants','POST',{slug:'legal-policy-qa',designKit:'roofing',settings:{name:'Legal policy QA',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}],license:'',platform:{footer:{bonded:true,insured:true}}}})).tenant;
+let t=(await api('/tenants','POST',{slug:'legal-policy-qa',designKit:'roofing',settings:{name:'Sample Fictional Legal policy QA',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}],license:'',platform:{footer:{bonded:true,insured:true}}}})).tenant;
 const path='/tenants/'+t.id;
 await env.DB.prepare('INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)').bind(crypto.randomUUID(),t.id,owner.id,owner.email,'owner',new Date().toISOString()).run();
 async function reload(){t=(await api(path)).tenant;}async function save(settings,user=admin){t=(await api(path,'PUT',{version:t.version,settings},user)).tenant;}

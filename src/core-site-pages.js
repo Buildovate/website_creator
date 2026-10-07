@@ -1,3 +1,4 @@
+import {qaPageAction} from './qa-page-action.js';
 import faqContent from '../public/faq-content.json' with {type:'json'};
 import {displayPhone} from './display-format.js';
 import {cleanThumbnailMotion,thumbnailVisual} from './platform/thumbnail-motion.ts';
@@ -125,7 +126,7 @@ function content(s,kind,city,slug,preview,projects){
  if(kind==='legal'){
   const pending='PENDING ATTORNEY REVIEW (K23)',offers=p.promotions.offers.filter(x=>x.enabled),policy=assessLegalPolicy(s);
   const sections=[['Images','Some images show representative styles, materials, and designs offered and may not depict a specific completed project.'],['License',`${licenseText(s)} Results vary by home and conditions.`],['Promotions and Financing',`${offers.length?offers.map(x=>x.title).join(', ')+'. ':''}Terms and eligibility apply; financing is subject to credit approval. ${FINANCING_DISCLOSURE} ${policy.footerDisclosure||''} ${p.footer.financingDisclosure||''}`],['Reviews','Displayed reviews should identify their source and date.'],['Privacy','Information sent through site forms is used to respond to project inquiries.'],['Text and Call Consent','Submitting a project request permits the business to contact you about that request.']];
-  return {h1:'The details behind this website.',eyebrow:'LEGAL',lead:`Information for visitors to ${s.name}.`,body:`<section class="core-legal">${offers.map(o=>`<section id="offer-${e(o.id)}"><h2>${e(o.title)}</h2><p>${e(String(o.terms||'').replace(/<\s*No guarantee\s*>/gi,'Results are not guaranteed.').replace(/<[^<>]{1,80}>|\{\{[^{}]{1,80}\}\}/g,''))}</p></section>`).join('')}${sections.map(([h,copy])=>`<section><span class="core-kicker">${pending}</span><h2>${e(h)}</h2><p>${e(copy)}</p></section>`).join('')}</section>`};
+  return {heroAction:qaPageAction('/s/'+slug,preview),h1:'The details behind this website.',eyebrow:'LEGAL',lead:`Information for visitors to ${s.name}.`,body:`<section class="core-legal">${offers.map(o=>`<section id="offer-${e(o.id)}"><h2>${e(o.title)}</h2><p>${e(String(o.terms||'').replace(/<\s*No guarantee\s*>/gi,'Results are not guaranteed.').replace(/<[^<>]{1,80}>|\{\{[^{}]{1,80}\}\}/g,''))}</p></section>`).join('')}${sections.map(([h,copy])=>`<section><span class="core-kicker">${pending}</span><h2>${e(h)}</h2><p>${e(copy)}</p></section>`).join('')}</section>`};
  }
 }
 function licenseText(s){const state=normalizePlatform(s.platform).legal.licenseState;return s.license?`${state?state+' ':''}License ${s.license}.`:'Contractor license details will be supplied by the business.'}

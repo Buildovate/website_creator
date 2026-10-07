@@ -1,0 +1,11 @@
+{
+  "entries": [
+    {
+      "path": "src/aws/qa-browser.js",
+      "from": "1cc4fd6c8ccbbe812af901650dd15a695ed02019b92e2c46153880bb14287bf9",
+      "to": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "reason": "the approved round-6 recognition entries, added after the frame-initialization baseline",
+      "proof": "checks/recognition-lock.json"
+    }
+  ]
+}

@@ -637,3 +637,10 @@ Five explicitly fictional Roofing/HVAC sites captured at 1440 and 390; full-page
 Verification: **102/102 existing commands and 14/14 additional commands pass**. Five fictional Sample packets include 77 pages, 154 page screenshots, 75 clip frames and 634 claim/consent entries; 46 real-packet checks and 48 approval/live-feed/security/race checks pass. 18,621 Part 1 assertions; 1,183 main browser states, 20 static/no-JS states, 84 media interactions and 13 staff-screen states. 108,932 public text measurements, 3,084 borders and 29,284 focus checks pass with 0 failures. Legacy platform and new staff audits also have 0 AA failures and 0 non-allowlisted platform diagnostics. Both 2,448-comparison content-parity gates pass. All 279 protected hashes plus platform.css and 374 archived responses pass the exact authorized Part 1 contract; all existing stylesheets are byte-identical.
 
 [Final README, before/after evidence and command results](docs/build-evidence/028E/README.md). Local commit only: `feat: review packet (#028E)`. **0 Higgsfield credits, 0 real provider calls.** No push or deploy. #028F not started.
+
+
+## #028F — Automatic QA gate
+
+**Stopped, uncommitted: exact replay mismatch.** Runtime-backed saved-version proof passed 604/604 PNGs and 165/165 frames. Main replay 1 passes 143/143; replay 2 changes Copper Kite Services page-013-768.png (134,619 pixels inside two card photos; identical image readiness; underlying raster cause not established). Replay 3 not run. Latest suite: 7 pass, 1 fail, 2 interrupted, 92 not started. Five Samples remain 3,425 Pass / 70 open Borderline / 0 Fail. No retry or commit; 0 credits/provider calls. [Preserved pair, crops and diagnosis](docs/build-evidence/028F/README.md).
+
+[Diagnosis, approved-change table, frame hashes and historical evidence](docs/build-evidence/028F/README.md).

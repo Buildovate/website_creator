@@ -21,7 +21,7 @@ const base='http://127.0.0.1:8186',headers={origin:base,'content-type':'applicat
 const runtime=await createRuntime({env:{APP_ENV:'local',NODE_ENV:'development',AUTH_MODE:'dev-header',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',MIGRATE_ON_BOOT:'1',WORKSPACE_OWNER_EMAIL:'style-test@example.test',PORT:'8186',APP_ORIGIN:base}});
 const request=(path,method='GET',data,h=headers)=>worker.fetch(new Request(base+path,{method,headers:h,body:data===undefined?undefined:JSON.stringify(data)}),runtime.env);
 async function api(path,method='GET',data){const r=await request('/api'+path,method,data);assert.equal(r.status,200,await r.clone().text());return r.json()}
-try{await api('/setup','POST',{});let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'style-flow',settings:{siteStyle:'current',name:'QA Style Flow',phone:'8055550111',area:'Ventura',services:[{name:'Roof repair'}]}});
+try{await api('/setup','POST',{});let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'style-flow',settings:{siteStyle:'current',name:'QA Style Flow',phone:'8054410199',area:'Ventura',services:[{name:'Roof repair'}]}});
 check(tenant.settings.siteStyleSeed===stableSiteStyleSeed(tenant.id),'new site gets tenant seed');
 await api('/tenants/'+tenant.id+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api('/tenants/'+tenant.id)).tenant;
 const original=await (await request('/s/style-flow')).text();

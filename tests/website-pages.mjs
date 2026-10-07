@@ -281,7 +281,7 @@ await test('#005 selected service grids: eight offerings, stable links, draft is
  const services = names.map(name => ({name}));
  const websitePages = {version:1, pages:names.map((name,i) => ({id:`grid-${i}`, kind:'service', serviceName:name, title:name, slug:`offering-${i}`, enabled:true}))};
  for (const journey of ['standard', 'roof-repair']) {
-  let {tenant} = await api('/tenants','POST',{designKit:'roofing',slug:`service-grid-${journey}`,settings:{name:'Local Roofing grid',phone:'8055550123',area:'Ventura',journey,services,websitePages}});
+  let {tenant} = await api('/tenants','POST',{designKit:'roofing',slug:`service-grid-${journey}`,settings:{name:'Sample Fictional Local Roofing grid',phone:'8055550123',area:'Ventura',journey,services,websitePages}});
   const path='/tenants/'+tenant.id, home='/s/'+tenant.slug;
   const get = async (suffix='', user=null) => {
    const response=await request(home+suffix,'GET',undefined,user);
@@ -330,7 +330,7 @@ await test('#006 FAQ: published snapshots, feature gating, schema, escaping and 
   {id:'finance',category:'Payment',question:'Finance question?',answer:'Finance-only answer.',requires:'financing'},
   {id:'promo',category:'Payment',question:'Promotion question?',answer:'Promotion-only answer.',requires:'promotions'}
  ];
- let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'faq-ticket-six',settings:{name:'Local FAQ fixture',phone:'8055550123',area:'Ventura',journey:'roof-repair',services:[{name:'Roof repair'}],websitePages,platform:{financing:{enabled:false},promotions:{enabled:false}}}});
+ let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'faq-ticket-six',settings:{name:'Sample Fictional Local FAQ fixture',phone:'8055550123',area:'Ventura',journey:'roof-repair',services:[{name:'Roof repair'}],websitePages,platform:{financing:{enabled:false},promotions:{enabled:false}}}});
  const path='/tenants/'+tenant.id,home='/s/'+tenant.slug,url=home+'/faq';
  const get=async(suffix='',user=null)=>{const r=await request(url+suffix,'GET',undefined,user);assert.equal(r.status,200);return r.text();};
  assert.equal((await request(url,'GET',undefined,null)).status,404);
@@ -382,11 +382,11 @@ await test('#006 FAQ: published snapshots, feature gating, schema, escaping and 
 await test('#007 About route: confirmed copy, publication, owned portrait/logo and safe fallback', async () => {
  const websitePages=records();websitePages.pages[2].enabled=true;websitePages.pages[1].enabled=true;
  Object.assign(websitePages.pages[2],{title:'Roofing with <care>',intro:'Local <intro>',story:'Owner-confirmed story <script>alert(1)</script>.\n\nSecond paragraph.',whyUs:['Explain the <scope>.'],portraitMode:'hidden'});
- let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'about-ticket-seven',settings:{name:'Local About fixture',phone:'8055550123',area:'Ventura',journey:'roof-repair',services:[{name:'Roof repair'}],websitePages,platform:{questionnaire:{factsConfirmed:true}}}});
+ let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'about-ticket-seven',settings:{name:'Sample Fictional Local About fixture',phone:'8055550123',area:'Ventura',journey:'roof-repair',services:[{name:'Roof repair'}],websitePages,platform:{questionnaire:{factsConfirmed:true}}}});
  const path='/tenants/'+tenant.id,home='/s/'+tenant.slug,url=home+'/about';
  const upload=async()=>api(path+'/photos','POST',new Uint8Array(readFileSync('public/assets/roofing.jpg')));
  const photo=await upload(),privatePhoto=await upload(),logo=await upload();
- const foreign=(await api('/tenants','POST',{designKit:'roofing',slug:'about-other-tenant',settings:{name:'Other local fixture',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}]}})).tenant;
+ const foreign=(await api('/tenants','POST',{designKit:'roofing',slug:'about-other-tenant',settings:{name:'Sample Fictional Other local fixture',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}]}})).tenant;
  const foreignPhoto=await api('/tenants/'+foreign.id+'/photos','POST',new Uint8Array(readFileSync('public/assets/roofing.jpg')));
  const get=async(suffix='',user=null)=>{const r=await request(url+suffix,'GET',undefined,user);assert.equal(r.status,200);return r.text();};
  assert.equal((await request(url,'GET',undefined,null)).status,404);
@@ -443,7 +443,7 @@ await test('#007A confirmed trust facts, concise story, owner hero and published
  for(const invalid of [{years:-1},{crewSize:2.5},{googleRating:5.1},{googleRating:4.95},{insured:'yes'},{googleUrl:'https://evil.test'},{licenseState:'CAL'}])assert.throws(()=>cleanBusinessTrust(invalid));
  assert.equal(cleanBusinessTrust({googleRating:4.9,confirmed:{google:true}}).confirmed.google,false);
  const websitePages=records();Object.assign(websitePages.pages[2],{enabled:true,title:'A team you can know.',story:'Local Trust Fixture listens. '+('We discuss your roofing questions before agreeing on the scope. '.repeat(12))});
- let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'trust-seven-a',settings:{name:'Local Trust Fixture',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}],websitePages,businessTrust:facts,platform:{questionnaire:{factsConfirmed:true}}}});
+ let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'trust-seven-a',settings:{name:'Sample Fictional Local Trust Fixture',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}],websitePages,businessTrust:facts,platform:{questionnaire:{factsConfirmed:true}}}});
  const path='/tenants/'+tenant.id,url='/s/'+tenant.slug+'/about';
  const get=async(preview=false)=>{const r=await request(url+(preview?'?preview=1':''),'GET',undefined,preview?admin:null);assert.equal(r.status,200);return r.text();};
  const invalid=await request('/api'+path,'PUT',{version:tenant.version,settings:{...tenant.settings,businessTrust:{years:-1}}});assert.equal(invalid.status,400);
@@ -463,27 +463,30 @@ await test('#007A confirmed trust facts, concise story, owner hero and published
  draft=structuredClone(tenant.settings);draft.ownerPhotoId=owner.id;tenant=(await api(path,'PUT',{version:tenant.version,settings:draft})).tenant;assert.match(await get(true),/data-about-portrait/);
  assert.equal((await request('/media/'+owner.id,'GET',undefined,null)).status,401);
  await api(path+'/publish','POST',{version:tenant.version,approved:true});tenant=(await api(path)).tenant;assert.match(await get(),/data-about-portrait/);
- const data={title:'Published roof project',lat:34.2746,lng:-119.229,city:'Ventura',service:'Roof repair',completedAt:'2026-09-01',problem:'Test-only project problem description.',work:'Test-only project work description.',outcome:'Test-only project outcome description.',approved:true};
+ // This fictional fixture exercises the published-work path, not the demo-project filter.
+ const data={title:'Published roof project',lat:34.2746,lng:-119.229,city:'Ventura',service:'Roof repair',completedAt:'2026-09-01',problem:'Water entered beside the chimney.',work:'Flashing was repaired around the chimney.',outcome:'The chimney flashing and surrounding shingles were restored.',approved:true};
  const {id}=await api(path+'/projects','POST',data);
  const before=await api(path+'/photos?projectId='+id+'&stage=before','POST',new Uint8Array(readFileSync('public/assets/roofing.jpg')));
  const after=await api(path+'/photos?projectId='+id+'&stage=after','POST',new Uint8Array(readFileSync('public/assets/finished-roof.jpg')));
  await api(path+'/projects/'+id,'PUT',{version:1,data:{...data,beforeId:before.id,afterId:after.id}});
  assert.ok(!(await get(true)).includes('Published roof project'));
- await api(path+'/projects/'+id+'/publish','POST',{version:2});html=await get();assert.match(html,/id="about-work"/);assert.ok(html.includes('/media/'+after.id));assert.match(html,/ta-map-chip/);
+ await api(path+'/projects/'+id+'/publish','POST',{version:2});html=await get();assert.match(html,/id="about-work"/);assert.ok(html.includes('/media/'+after.id));assert.match(html,/ta-map-chip/);assert.equal((await request('/media/'+after.id,'GET',undefined,null)).status,200,'Published work tile uses publicly available media');
  await api(path+'/projects/'+id,'PUT',{version:3,data:{...data,title:'PRIVATE PROJECT EDIT',beforeId:before.id,afterId:after.id}});assert.ok(!(await get()).includes('PRIVATE PROJECT EDIT'));
  await api(path+'/projects/'+id+'/unpublish','POST',{});assert.ok(!(await get()).includes('id="about-work"'));
 });
 
 await test('#014 inquiry context and public submission boundaries', async t => {
  const websitePages=records();websitePages.pages[3].enabled=true;
- let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'inquiry-context-014',settings:{name:'Fictional inquiry fixture',phone:'8055550123',area:'Ventura',journey:'roof-repair',services:[{name:'Roof repair'}],websitePages}});
+ let {tenant}=await api('/tenants','POST',{designKit:'roofing',slug:'inquiry-context-014',settings:{name:'Sample Fictional Fictional inquiry fixture',phone:'8055550123',area:'Ventura',journey:'roof-repair',services:[{name:'Roof repair'}],websitePages}});
  const path='/tenants/'+tenant.id,endpoint='/public/'+tenant.slug+'/inquiries',home='/s/'+tenant.slug;
- const other=(await api('/tenants','POST',{designKit:'roofing',slug:'inquiry-other-014',settings:{name:'Other fictional fixture',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}]}})).tenant;
+ const other=(await api('/tenants','POST',{designKit:'roofing',slug:'inquiry-other-014',settings:{name:'Sample Fictional Other fictional fixture',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}]}})).tenant;
  const input=(n,extra={})=>({name:'Local Homeowner',phone:'80555502'+String(n).padStart(2,'0'),consent:true,message:'Inspect the leak.',...extra});
  const count=async()=>Number((await env.DB.prepare('SELECT COUNT(*) AS n FROM inquiries WHERE tenant_id=?').bind(tenant.id).first()).n);
  const saved=async phone=>(await api(path)).inquiries.find(i=>i.phone===phone);
  await t.test('unpublished tenants cannot accept inquiries',async()=>{await expectStatus(endpoint,'POST',input(1),404,null)});
  await api(path+'/publish','POST',{approved:true,version:tenant.version});
+ // Publication creates staff QA records; measure contact capture against that baseline.
+ const publicationRecordIds=new Set((await env.DB.prepare('SELECT id FROM workspace_records WHERE scope=?').bind(tenant.id).all()).results.map(r=>r.id));
  await t.test('service/city/source/timing and notes reach only the route tenant',async()=>{
   const v=input(2,{tenantId:other.id,service:'Roof repair',projectCity:'Oxnard',timeframe:'Within a month',sourcePage:home+'/services/roof-repair?email=private@example.test#contact',financingInterest:'on',financingPlan:'Illustrative plan',financingPlanId:'plan-1',financingMonthly:'99',financingAmount:'5000',financingDown:'500',financingTerms:'Illustrative terms',promotionCode:'TEST-ONLY'});
   await expectStatus(endpoint,'POST',v,200,null);const row=await saved(v.phone);
@@ -530,8 +533,9 @@ await test('#014 inquiry context and public submission boundaries', async t => {
   await expectStatus(endpoint,'POST',input(12,{service:'Roof repair',sourcePage:home+'/services/roof-repair'}),429,null);
  });
  await t.test('contact capture does not enroll marketing or schedule delivery',async()=>{
-  const rows=(await env.DB.prepare('SELECT kind,data FROM workspace_records WHERE scope=?').bind(tenant.id).all()).results;
-  assert.ok(rows.some(r=>r.kind==='contacts'));assert.ok(rows.every(r=>['contacts','blog','review_approval'].includes(r.kind)));for(const r of rows.filter(r=>r.kind==='review_approval')){const d=JSON.parse(r.data);assert.equal(d.decision,'approve');assert.match(d.versionHash,/^[a-f0-9]{64}$/);}
+  const rows=(await env.DB.prepare('SELECT id,kind,data FROM workspace_records WHERE scope=?').bind(tenant.id).all()).results;
+  const capturedRows=rows.filter(r=>!publicationRecordIds.has(r.id));
+  assert.ok(capturedRows.some(r=>r.kind==='contacts'));assert.ok(capturedRows.every(r=>['contacts','blog','review_approval'].includes(r.kind)));for(const r of rows.filter(r=>r.kind==='review_approval')){const d=JSON.parse(r.data);assert.equal(d.decision,'approve');assert.match(d.versionHash,/^[a-f0-9]{64}$/);}
   for(const r of rows){const d=JSON.parse(r.data);assert.notEqual(d.marketingConsent,true);assert.notEqual(d.smsOptIn,true);assert.notEqual(d.emailOptIn,true);}
  });
 });

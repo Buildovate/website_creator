@@ -17,7 +17,24 @@ const configured=settings({...s,platform:{financing:{enabled:true,lenders:[{id:'
 check(renderConstitutionPage(configured,{slug:'unit',preview:false,kind:'financing'}).includes('data-plan-chart'),'chart inside existing supplied-term gate');check(!renderConstitutionPage({...configured,trade:'HVAC'},{slug:'unit',preview:false,kind:'financing'}).includes('data-plan-chart'),'other-trade financing chart unchanged');
 for(const seed of ['roof-a','roof-b']){const html=roofingNextSteps({...s,generationId:seed});check(html===roofingNextSteps({...s,generationId:seed}),'seed is repeatable '+seed);check((html.match(/data-next-step=/g)||[]).length===4,'four server-rendered steps '+seed);check((html.match(/data-next-motion=/g)||[]).length===1,'one primary motion '+seed);check(!/guarantee|within \d|approval guaranteed/.test(html),'no invented outcome '+seed);imageCheck(uniquePageImages(html),'Roofing storyboard '+seed)}check(nextStepVariant('roof-a')!==nextStepVariant('roof-b'),'two seeded storyboards');check(roofingNextSteps({...s,trade:'Locksmith'})==='','other trade storyboards stay queued');
 const blankFooter=websiteFooter(s,'/s/unit',false);check(!blankFooter.includes('data-social-network='),'no invented social profiles');const foot=websiteFooter({...s,platform:{footer:{socials:{facebook:{enabled:true,url:'https://example.test/confirmed-profile'},instagram:{enabled:false,url:'https://example.test/hidden-profile'}}}}},'/s/unit',false);check((foot.match(/data-social-network=/g)||[]).length===1&&foot.includes('confirmed-profile')&&!foot.includes('hidden-profile'),'only entered and enabled social profiles');
-const base=JSON.parse(fs.readFileSync(out+'/preserve-state.json')).head,git=p=>execFileSync('git',['-c','safe.directory=C:/Users/joe/website_creator','show',base+':'+p],{cwd:root,maxBuffer:50e6});
+const base=JSON.parse(fs.readFileSync(out+'/preserve-state.json')).head,git=p=>{
+ if(p==='src/planning-ambient.js'){
+  const snapshot=fs.readFileSync(root+'/docs/build-evidence/028F/source-locks/planning-ambient.js');
+  assert.equal(hash(snapshot),'4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b','approved planning-ambient source snapshot SHA-256');
+  return snapshot;
+ }
+ if(p==='src/promotions-scroll.js'){
+  const snapshot=fs.readFileSync(root+'/docs/build-evidence/028F/source-locks/promotions-scroll.js');
+  assert.equal(hash(snapshot),'9b460b8d8c348287addf094fc297448e5698b87a8257dd77d2dd5d96dceea43e','approved promotions-scroll source snapshot SHA-256');
+  return snapshot;
+ }
+ if(p==='src/promotions-ambient.js'){
+  const snapshot=fs.readFileSync(root+'/docs/build-evidence/028F/source-locks/promotions-ambient.js');
+  assert.equal(hash(snapshot),'43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4','approved promotions-ambient source snapshot SHA-256');
+  return snapshot;
+ }
+ return execFileSync('git',['-c','safe.directory=C:/Users/joe/website_creator','show',base+':'+p],{cwd:root,maxBuffer:50e6});
+};
 for(const file of ['src/expenses-history.json','src/expenses.js','src/expenses-math.js','src/client/site/ambient-video.js','src/planning-video-sources.js','src/planning-ambient.js','src/planning-scroll.js','src/promotions-scroll.js','src/promotions-ambient.js','src/hero-timelapse.js','src/scroll-config.js','public/planning-films.json','public/service-media.json','public/service-art.json'])check(fs.readFileSync(root+'/'+file,'utf8').replace(/\r\n/g,'\n')===git(file).toString().replace(/\r\n/g,'\n'),'protected source exact (checkout line endings normalized) '+file);
 const scrollMarker="document.querySelectorAll<HTMLElement>('[data-project-story]')";check(fs.readFileSync(root+'/src/client/site/constitution.ts','utf8').split(scrollMarker)[1].replace(/\r\n/g,'\n')===git('src/client/site/constitution.ts').toString().split(scrollMarker)[1].replace(/\r\n/g,'\n'),'paid film scroll controller byte-identical');
 for(const item of JSON.parse(fs.readFileSync(root+'/docs/build-evidence/027A-part1/trim-review/manifest.json')).files)check(hash(fs.readFileSync(root+'/public/assets/planning/027A-part1/'+item.name))===item.sha256,'Part 1 financing loop asset exact '+item.name);

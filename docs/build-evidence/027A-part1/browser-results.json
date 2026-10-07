@@ -1,5 +1,5 @@
 {
-  "count": 199,
+  "count": 201,
   "checks": [
     "home 200 desktop",
     "home-desktop no overflow",
@@ -84,11 +84,13 @@
     "promotions static without video request no-js phone",
     "promotions full text no-js phone",
     "header one line 1280",
+    "Measured overflow width for More 1280",
     "More opens by keyboard 1280",
     "header-more-1280 no overflow",
     "Escape closes More 1280",
     "outside closes More 1280",
     "header one line 1440",
+    "Measured overflow width for More 1440",
     "More opens by keyboard 1440",
     "header-more-1440 no overflow",
     "Escape closes More 1440",

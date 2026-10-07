@@ -7,6 +7,8 @@ Chooses how a contractor site looks: trade kits, layout compositions, cinematic 
 - **Routes**:
   - `GET /design-preview/:kit/:layout` — `layout` is `immersive`, `editorial`, or `studio` (`src/worker.js`). Staff may open it without a tenant. Anyone else must pass `?tenant=` and have `access`.
   - `GET /design-preview/:kit/:layout/pricing` — same gate (`src/pricing.js`).
+  - `GET /design-preview/:kit/:layout/{services,services/:slug,areas,areas/:slug,about,reviews,faq,contact,financing,promotions,projects,before-after,blog,legal}` — private, noindex sample pages using the same gate (`src/design-preview-pages.js`, `src/worker.js`). Content is visibly tagged Sample; forms cannot submit. The header and footer expose these routes while preserving design query parameters.
+  - Shared desktop headers show main pages with one Services link. `site-navigation.js` measures available width after font load and resize, moving rightmost links into one accessible More button only when needed. Phone keeps the native Menu; without JS, native More retains every desktop page link. Service details remain on Services and in the existing phone service list.
   - `GET|POST /api/design-library` — platform admin only (`src/saved-designs.js`).
   - Kit choice is also an input to `POST /api/tenants` and draft settings (`designKit`, `template`, `effects`, `design`). See `sites.md`.
 - **Tables**: no dedicated design table. Kit id and variant live in `tenants.settings` / `tenants.published`. Saved templates are `workspace_records` handled by `src/saved-designs.js` (global, admin-only). Usage counts mean distinct contractor websites, not page views (`OPERATIONS.md`).

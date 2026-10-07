@@ -1,0 +1,74 @@
+[
+  {
+    "label": "automatic-qa-contract",
+    "command": "node C:/Users/joe/website_creator/tests/automatic-qa-contract.mjs",
+    "status": 0,
+    "ms": 7867
+  },
+  {
+    "label": "automatic-qa-negative-browser",
+    "command": "node C:/Users/joe/website_creator/tests/automatic-qa-negative-browser.mjs",
+    "status": 0,
+    "ms": 34285
+  },
+  {
+    "label": "automatic-qa-normalizer",
+    "command": "node C:/Users/joe/website_creator/tests/automatic-qa-normalizer.mjs",
+    "status": 0,
+    "ms": 531
+  },
+  {
+    "label": "automatic-qa-guide-browser",
+    "command": "node C:/Users/joe/website_creator/tests/automatic-qa-guide-browser.mjs",
+    "status": 0,
+    "ms": 44828
+  },
+  {
+    "label": "automatic-qa-workspace-recognition",
+    "command": "node C:/Users/joe/website_creator/tests/automatic-qa-workspace-recognition.mjs",
+    "status": 0,
+    "ms": 39252
+  },
+  {
+    "label": "automatic-qa-workspace-form-recognition",
+    "command": "node C:/Users/joe/website_creator/tests/automatic-qa-workspace-form-recognition.mjs",
+    "status": 0,
+    "ms": 44302
+  },
+  {
+    "label": "automatic-qa-legacy-recognition",
+    "command": "node C:/Users/joe/website_creator/tests/automatic-qa-legacy-recognition.mjs",
+    "status": 0,
+    "ms": 137738
+  },
+  {
+    "label": "automatic-qa-recognition-lock",
+    "command": "node C:/Users/joe/website_creator/tests/automatic-qa-recognition-lock.mjs",
+    "status": 0,
+    "ms": 84
+  },
+  {
+    "label": "automatic-qa-workspace-phone-links",
+    "command": "node C:/Users/joe/website_creator/tests/automatic-qa-workspace-phone-links.mjs",
+    "status": 0,
+    "ms": 210
+  },
+  {
+    "label": "automatic-qa-blog-phone-links",
+    "command": "node C:/Users/joe/website_creator/tests/automatic-qa-blog-phone-links.mjs",
+    "status": 0,
+    "ms": 198
+  },
+  {
+    "label": "review-polish",
+    "command": "node C:/Users/joe/website_creator/tests/review-polish.mjs",
+    "status": 0,
+    "ms": 303
+  },
+  {
+    "label": "platform-look",
+    "command": "node C:/Users/joe/website_creator/tests/platform-look.mjs",
+    "status": 0,
+    "ms": 156
+  }
+]

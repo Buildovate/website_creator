@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';import fs from 'node:fs';
 import {filterReviewResult} from '../src/review-filter.js';
 import {reviewSection} from '../src/reviews.js';
 import {fullProvider} from './fixtures/section-variants.mjs';
-import {worker,env,admin} from './preview-fixture.mjs';
+import {worker,env,admin} from './helpers/review-filter-fixture.mjs';
 let checks=0;const eq=(a,b,label)=>{checks++;assert.deepEqual(a,b,label)},ok=(v,label)=>{checks++;assert.ok(v,label)};
 const baseResult={providers:[fullProvider],minimum:0};
 eq(filterReviewResult(baseResult,undefined),baseResult,'Absent is literal identity');
@@ -52,5 +52,5 @@ try {
  ok(!legacy.includes('omit-empty-reviews'),'Absent filter preserves old markup');
  const defaultWithA=reviewSection({...original,sectionVariants:{reviews:'a'}},tenant.slug,true);eq(legacy,defaultWithA);
 }finally{globalThis.fetch=originalFetch;}
-const report={passed:true,checks,mockedProviderCalls:calls,actualProviderCalls:0,fullSetAverage:3.5,fullSetCount:4,values:['all',3,4,5]};
+const report={passed:true,checks,publicationPrerequisite:'Missing QA blocks publication; existing published baseline seeded only for filter isolation. No synthetic QA report.',mockedProviderCalls:calls,actualProviderCalls:0,fullSetAverage:3.5,fullSetCount:4,values:['all',3,4,5]};
 fs.writeFileSync((process.env.BV_028B_EVIDENCE||'docs/build-evidence/028B')+'/checks/review-rating-filter.json',JSON.stringify(report,null,2));console.log('PASS '+JSON.stringify(report));

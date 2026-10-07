@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+const root='C:/Users/joe/website_creator',checks=root+'/docs/build-evidence/028F/checks',file=root+'/src/aws/review-capture.js',before=checks+'/round8t-before/src/aws/review-capture.js';
+const sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex'),source=fs.readFileSync(file,'utf8');
+const pre=JSON.parse(fs.readFileSync(checks+'/round8t-pre-run.json','utf8'));
+const locks=pre.hashes.filter(r=>r.path!=='src/aws/review-capture.js').map(r=>({...r,after:sha(root+'/'+r.path),unchanged:r.sha256===sha(root+'/'+r.path)}));
+if(locks.some(r=>!r.unchanged))throw Error('Protected input changed');
+const gotos=source.split(/\r?\n/).filter(l=>l.includes('.goto('));
+if(gotos.length!==4||gotos.some(l=>!l.includes('timeout:120000')))throw Error('Navigation timeout coverage failed');
+if(!source.includes('},{timeout:30000})')||!source.includes('15000);v.currentTime=time'))throw Error('Video limits changed');
+const diff=spawnSync('git',['diff','--no-index','--',before,file],{cwd:root,encoding:'utf8'});
+if(diff.status!==1)throw Error('Expected only harness diff');
+fs.writeFileSync(checks+'/round8t-harness-diff.txt',diff.stdout);
+const diagnoses=['service-pages-all-trades','financing-comparison','ebook'].map(label=>JSON.parse(fs.readFileSync(checks+'/round8t-diagnose-'+label+'.json','utf8')));
+if(diagnoses.some(r=>r.status!==0))throw Error('Diagnosis had a failure');
+const result={path:'src/aws/review-capture.js',before:sha(before),after:sha(file),changes:['Width heartbeat after each screenshot and page QA (including the legal-policy width check).','Frame heartbeat before each existing seek/readiness/screenshot.','All four goto call sites explicitly time out after 120000 ms; waitUntil unchanged.','Existing video-ready failures and outer capture/seek errors log their stack before existing handling/propagation.'],navigationWaits:'networkidle retained; existing frame-document domcontentloaded retained',videoReadyTimeoutMs:30000,seekTimeoutMs:15000,readinessUnchanged:true,detectorUnchanged:true,guardUnchanged:true,diagnosisConclusion:'All three complete standalone; earlier parallel silence hangs do not reproduce. A versus B remains unproven; no networkidle fallback is justified.',diagnoses:diagnoses.map(r=>({label:r.label,outcome:r.outcome,elapsedMs:r.elapsedMs,killed:false,AorB:r.AorB})),locks,diff:'round8t-harness-diff.txt'};
+fs.writeFileSync(checks+'/round8t-harness-change.json',JSON.stringify(result,null,2));console.log(JSON.stringify({changes:result.changes,locksUnchanged:locks.length},null,2));

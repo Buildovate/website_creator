@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+import {pathToFileURL} from 'node:url';
+const root='C:/Users/joe/website_creator',checks=root+'/docs/build-evidence/028F/checks';
+process.chdir(root);
+const {worker,env,admin}=await import(pathToFileURL(root+'/tests/preview-fixture.mjs').href);
+const {normalizePart2HTML}=await import(pathToFileURL(root+'/tests/part2-html-normalize.mjs').href);
+const {beforePart1}=await import(pathToFileURL(root+'/tests/review-part1-html-normalize.mjs').href);
+const entries=JSON.parse(fs.readFileSync(root+'/docs/build-evidence/clips-phase2/outside-scope-baseline.json'));
+for(const {row} of entries){const keys=Object.keys(row);await env.DB.prepare('INSERT INTO tenants('+keys.join(',')+') VALUES('+keys.map(()=>'?').join(',')+')').bind(...keys.map(k=>row[k])).run();}
+const record=JSON.parse(fs.readFileSync(root+'/docs/build-evidence/027A-part2/before-responses.json')).find(r=>r.url==='/s/ambient-baseline-roofing/financing?preview=1');
+const response=await worker.fetch(new Request('https://test.local'+record.url,{headers:{'oai-authenticated-user-id':admin.id,'oai-authenticated-user-email':admin.email}}),env);
+const actual=await response.text(),expected=fs.readFileSync(root+'/docs/build-evidence/027A-part2/before/'+record.name,'utf8');
+const a=normalizePart2HTML(expected,record.kit==='roofing'),b=normalizePart2HTML(beforePart1(actual),record.kit==='roofing');
+fs.writeFileSync(checks+'/round8i-financing-expected-normalized.txt',a);
+fs.writeFileSync(checks+'/round8i-financing-actual-normalized.txt',b);
+const diff=spawnSync('git',['-c','safe.directory='+root,'diff','--no-index','--no-ext-diff','--',checks+'/round8i-financing-expected-normalized.txt',checks+'/round8i-financing-actual-normalized.txt'],{encoding:'utf8',maxBuffer:50e6});
+if(diff.status!==0&&diff.status!==1)throw Error(diff.stderr||'Diff failed');
+fs.writeFileSync(checks+'/round8i-financing-diff.txt',diff.stdout);
+let start=0;while(start<Math.min(a.length,b.length)&&a[start]===b[start])start++;
+let end=0;while(end<Math.min(a.length,b.length)-start&&a[a.length-1-end]===b[b.length-1-end])end++;
+const sha=s=>createHash('sha256').update(s).digest('hex');
+const result={url:record.url,baseline:record.name,status:response.status,identical:a===b,expectedRawSha:sha(expected),actualRawSha:sha(actual),expectedNormalizedSha:sha(a),actualNormalizedSha:sha(b),expectedBytes:Buffer.byteLength(a),actualBytes:Buffer.byteLength(b),firstDifference:start,expectedChangedRange:a.slice(start,a.length-end),actualChangedRange:b.slice(start,b.length-end)};
+fs.writeFileSync(checks+'/round8i-financing-diagnosis.json',JSON.stringify(result,null,2));
+console.log(JSON.stringify({...result,expectedChangedRange:result.expectedChangedRange.slice(0,3000),actualChangedRange:result.actualChangedRange.slice(0,3000)},null,2));

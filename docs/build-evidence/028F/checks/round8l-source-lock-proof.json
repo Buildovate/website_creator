@@ -1,0 +1,41 @@
+{
+  "path": "src/planning-ambient.js",
+  "historicalHead": "cd31c4db0cbb51625ee36458f17e99a052bc4929",
+  "oldRawSha256": "4a77e08f32bf95fa850928f5fc63d9184149d97731c5c5082e4053c6d67f971f",
+  "currentRawSha256": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+  "oldNormalizedSha256": "4a77e08f32bf95fa850928f5fc63d9184149d97731c5c5082e4053c6d67f971f",
+  "currentNormalizedSha256": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+  "posterOnly": true,
+  "sourceLockDiff": "checks/round8l-source-lock-diff.txt",
+  "lockMechanism": {
+    "manifest": "docs/build-evidence/027A-part2/preserve-state.json",
+    "field": "head",
+    "lookup": "git show <head>:<path>",
+    "lookupLine": 20,
+    "assertionLine": 21,
+    "sharedGitReference": true,
+    "perFileSnapshotOrHashConsumed": false,
+    "callSites": [
+      {
+        "line": 20,
+        "code": "const base=JSON.parse(fs.readFileSync(out+'/preserve-state.json')).head,git=p=>execFileSync('git',['-c','safe.directory=C:/Users/joe/website_creator','show',base+':'+p],{cwd:root,maxBuffer:50e6});"
+      },
+      {
+        "line": 21,
+        "code": "for(const file of ['src/expenses-history.json','src/expenses.js','src/expenses-math.js','src/client/site/ambient-video.js','src/planning-video-sources.js','src/planning-ambient.js','src/planning-scroll.js','src/promotions-scroll.js','src/promotions-ambient.js','src/hero-timelapse.js','src/scroll-config.js','public/planning-films.json','public/service-media.json','public/service-art.json'])check(fs.readFileSync(root+'/'+file,'utf8').replace(/\\r\\n/g,'\\n')===git(file).toString().replace(/\\r\\n/g,'\\n'),'protected source exact (checkout line endings normalized) '+file);"
+      },
+      {
+        "line": 22,
+        "code": "const scrollMarker=\"document.querySelectorAll<HTMLElement>('[data-project-story]')\";check(fs.readFileSync(root+'/src/client/site/constitution.ts','utf8').split(scrollMarker)[1].replace(/\\r\\n/g,'\\n')===git('src/client/site/constitution.ts').toString().split(scrollMarker)[1].replace(/\\r\\n/g,'\\n'),'paid film scroll controller byte-identical');"
+      },
+      {
+        "line": 24,
+        "code": "const backlog=fs.readFileSync(root+'/BUILD-BACKLOG.md','utf8'),prior=git('BUILD-BACKLOG.md').toString(),section=x=>x.slice(x.indexOf('### #028G'),x.indexOf('\\n### ',x.indexOf('### #028G')+1));const old=\"At 100, replace the plan with a finished-house elevation, “Your site is live,” and one **View your site** button.\",replacement=\"At 100, replace the plan with a trade-neutral 'Business at work' site plan drawn in the same blueprint style: a bird's-eye town with the contractor's shop at the center (their name on the sign), a few of their work trucks driving out on slow, subtle routes, and homes that light up with a warm fill, soft glow and a check pin as finished jobs. The title block reads 'Site plan · Open for business', with 'Your site is live' and one View your site button. The scene is the same for every trade, with no trade-specific glyphs. After launch it keeps growing from real data only: one more home lights up per real booked job from the site, and a small star marker appears over a home for each real new review, with a small counter of jobs and new reviews from the site. Reduced motion shows the final frame statically.\";"
+      }
+    ]
+  },
+  "lockEntriesChanged": [],
+  "sourceUnchanged": true,
+  "testUnchanged": true,
+  "manifestSha256": "9d868c8845752e0c0caf54203077005d843fd88fa0966e777548a6bf2df3f3d6"
+}

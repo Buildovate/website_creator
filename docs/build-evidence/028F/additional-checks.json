@@ -1,0 +1,116 @@
+[
+  {
+    "label": "media-library",
+    "command": "node C:/Users/joe/website_creator/tests/media-library.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 2642
+  },
+  {
+    "label": "media-api",
+    "command": "node C:/Users/joe/website_creator/tests/media-api.mjs",
+    "status": 0,
+    "outcome": "PASS-WITH-WARNING",
+    "reason": "passed, then hung at exit",
+    "signal": null,
+    "ms": 40707
+  },
+  {
+    "label": "media-inventory",
+    "command": "node C:/Users/joe/website_creator/tests/media-inventory.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 801
+  },
+  {
+    "label": "section-variants",
+    "command": "node C:/Users/joe/website_creator/tests/section-variants.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 2230
+  },
+  {
+    "label": "review-rating-filter",
+    "command": "node C:/Users/joe/website_creator/tests/review-rating-filter.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 2425
+  },
+  {
+    "label": "section-variants-fallbacks",
+    "command": "node C:/Users/joe/website_creator/tests/section-variants-fallbacks.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 53515
+  },
+  {
+    "label": "section-content-parity",
+    "command": "node C:/Users/joe/website_creator/tests/section-content-parity.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 12951
+  },
+  {
+    "label": "uniqueness-content-parity",
+    "command": "node C:/Users/joe/website_creator/tests/uniqueness-content-parity.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 15629
+  },
+  {
+    "label": "uniqueness",
+    "command": "node C:/Users/joe/website_creator/tests/uniqueness.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 2325
+  },
+  {
+    "label": "uniqueness-api",
+    "command": "node C:/Users/joe/website_creator/tests/uniqueness-api.mjs",
+    "status": 0,
+    "outcome": "PASS-WITH-WARNING",
+    "reason": "passed, then hung at exit",
+    "signal": null,
+    "ms": 37642
+  },
+  {
+    "label": "section-variants-browser",
+    "command": "node C:/Users/joe/website_creator/tests/section-variants-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 238831
+  },
+  {
+    "label": "section-variants-browser-all-process",
+    "command": "node C:/Users/joe/website_creator/tests/section-variants-browser.mjs --all-process",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 680423
+  },
+  {
+    "label": "media-library-browser",
+    "command": "node C:/Users/joe/website_creator/tests/media-library-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 711867
+  },
+  {
+    "label": "media-library-browser-interactions",
+    "command": "node C:/Users/joe/website_creator/tests/media-library-browser.mjs --media-only",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 121838
+  }
+]

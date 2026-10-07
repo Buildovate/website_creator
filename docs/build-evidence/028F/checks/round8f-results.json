@@ -1,0 +1,23 @@
+{
+  "round": "8f",
+  "state": "Stopped on first new suite failure outside the three approved commands; no retry; no commit",
+  "targetedChecks": [
+    {"check": "node tests/planning-ambient-browser.mjs", "log": "checks/round8f-planning-ambient-browser.log", "outcome": "PASS", "exitCode": 0, "checks": 97, "screenshots": 40, "blockingQA": 0},
+    {"check": "node tests/website-pages.mjs", "log": "checks/round8f-website-pages.log", "outcome": "PASS", "exitCode": 0, "tests": 30, "pass": 30, "fail": 0, "skipped": 0, "remainingAsserts": [], "blockingQA": 0},
+    {"check": "node tests/hero-editor-browser.mjs", "log": "checks/round8f-hero-editor-browser.log", "outcome": "PASS", "exitCode": 0, "checks": 47, "screenshots": 23, "cls": {"desktop": 0, "phone": 0}, "browserErrors": [], "blockingQA": 0}
+  ],
+  "websitePagesAttempts": [
+    {"log": "checks/round8f-website-pages-attempt1.log", "pass": 28, "fail": 2, "reason": "FAQ/About sticky header overlapped portrait and primary CTA; scoped non-sticky header fix applied"},
+    {"log": "checks/round8f-website-pages-attempt2.log", "pass": 29, "fail": 1, "reason": "Fictional published-work fixture carried Test-only demo markers, making its project image private; fixture corrected without changing authorization or demo filtering"},
+    {"log": "checks/round8f-website-pages.log", "pass": 30, "fail": 0}
+  ],
+  "coordinator": {"resumeAt": "suite-102", "earlierCompletedGroups": 19, "earlierResults": "checks/round8e-results.json", "remainingOrder": ["suite-102", "sites-unchanged", "preservation", "broad-quality"], "modified": false, "suffixState": "Not run because suite-102 failed"},
+  "suite102": {"log": "checks/round8f-suite102.log", "errorLog": "checks/round8f-suite102-error.log", "results": "checks/round8f-suite102-results.json", "state": "Stopped", "completed": 83, "pass": 82, "passWithWarning": 0, "fail": 1, "notCompleted": 19, "targetedCommands": {"planning-ambient-browser": "PASS", "hero-editor-browser": "PASS", "website-pages": "Incomplete at stop; standalone 30/30 passed"}},
+  "stop": {"check": "roofing-cta-browser", "command": "node C:/Users/joe/website_creator/tests/roofing-cta-browser.mjs", "log": "checks/roofing-cta-browser.log", "exitCode": 1, "error": "AssertionError [ERR_ASSERTION]: published-copy placeholder findings include Call (805) 555-0100 with sample=false; actual 45 blocking findings, expected 0", "firstStackLocation": "tests/helpers/review-approval-fixture.mjs:27:9", "action": "Stopped the suite process tree at the first new FAILED row; no retry or out-of-scope fix"},
+  "samples": {"pass": 3425, "borderline": 70, "fail": 0, "qaGateClear": false, "snapshotSource": "Accepted round 8e snapshot; unchanged", "borderlineDecisionsRecordedThisRound": 0},
+  "detectorSha256": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+  "detectorChanges": false,
+  "commit": null,
+  "providerCalls": 0,
+  "credits": 0
+}

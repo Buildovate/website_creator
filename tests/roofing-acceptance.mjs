@@ -15,7 +15,7 @@ const runtime=await createRuntime({env:{APP_ENV:'local',NODE_ENV:'development',A
 const headers={origin:base,'content-type':'application/json','oai-authenticated-user-id':'acceptance-admin','oai-authenticated-user-email':'acceptance@example.test'};
 async function api(path,method='GET',data){const r=await worker.fetch(new Request(base+'/api'+path,{method,headers,body:data===undefined?undefined:JSON.stringify(data)}),runtime.env);assert.equal(r.status,200,await r.clone().text());return r.json()}
 await api('/setup','POST',{});
-const settings={siteStyle:'current',name:'QA Roofing Acceptance',journey:'roof-repair',phone:'8055550111',owner:'QA Owner',ownerStatement:'I listen before I quote.',area:'Ventura County',serviceAreas:[{city:'Ventura'},{city:'Oxnard'},{city:'Camarillo'}],services:['Roof installation','Roof repair','Roof replacement','Asphalt shingles','Metal roofing','Flat roofs','Roof maintenance','Gutters'].map(name=>({name})),ebook:{enabled:true,reviewedRevision:'roofing-guide-022-v1'},platform:{financing:{enabled:true,lenders:[{id:'hearth',enabled:true,confirmed:true,applicationUrl:'https://merchant.example.test/roofing'}],programs:[{id:'qa-term',lenderId:'hearth',name:'QA configured terms',apr:6,months:36,enabled:true,confirmed:true}]},promotions:{enabled:true,offers:[]}}};
+const settings={siteStyle:'current',name:'QA Roofing Acceptance',journey:'roof-repair',phone:'8054410199',owner:'QA Owner',ownerStatement:'I listen before I quote.',area:'Ventura County',serviceAreas:[{city:'Ventura'},{city:'Oxnard'},{city:'Camarillo'}],services:['Roof installation','Roof repair','Roof replacement','Asphalt shingles','Metal roofing','Flat roofs','Roof maintenance','Gutters'].map(name=>({name})),ebook:{enabled:true,reviewedRevision:'roofing-guide-022-v1'},platform:{financing:{enabled:true,lenders:[{id:'hearth',enabled:true,confirmed:true,applicationUrl:'https://merchant.example.test/roofing'}],programs:[{id:'qa-term',lenderId:'hearth',name:'QA configured terms',apr:6,months:36,enabled:true,confirmed:true}]},promotions:{enabled:true,offers:[]}}};
 const {tenant}=await api('/tenants','POST',{designKit:'roofing',slug,settings});
 await api('/tenants/'+tenant.id+'/publish','POST',{version:tenant.version,approved:true});
 await runtime.env.DB.prepare('INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)').bind('acceptance-owner',tenant.id,'acceptance-owner','owner-acceptance@example.test','owner',new Date().toISOString()).run();
@@ -29,6 +29,20 @@ const route='/s/'+slug;
 const safeName=path=>path===route?'home':path.slice(route.length+1).replaceAll('/','-');
 async function shot(page,name,fullPage=true){await page.screenshot({path:out+'/screenshots/'+name+'.jpg',type:'jpeg',quality:78,fullPage});result.screenshots.push('screenshots/'+name+'.jpg')}
 async function waitReady(page){await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(180)}
+async function navAlignment(page,selector='[data-nav-fit].site-desktop-nav,.site-desktop-nav,.cx-desktop-nav'){
+ await page.evaluate(()=>document.fonts.ready);
+ await page.waitForFunction(selector=>{const nav=document.querySelector(selector);return nav&&(!nav.matches('[data-nav-fit]')||nav.classList.contains('site-nav-fit-ready'))},selector,{timeout:10000});
+ return page.evaluate(async selector=>{
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+  const nav=document.querySelector(selector),visible=el=>{const r=el.getBoundingClientRect(),s=getComputedStyle(el);return r.width>0&&r.height>0&&s.display!=='none'&&s.visibility!=='hidden'&&!el.closest('[hidden]')};
+  const links=[...nav.querySelectorAll(':scope > a,:scope > .site-nav-links > a')].filter(el=>visible(el)&&!el.hasAttribute('data-nav-cta'));
+  const first=links.find(el=>/^(Services|Expertise)$/i.test(el.textContent.trim()))||links[0],peer=links.find(el=>el!==first&&/^(Areas|Pricing)$/i.test(el.textContent.trim()))||links.find(el=>el!==first);
+  if(!first||!peer)return null;
+  const measure=(item,link)=>{const a=getComputedStyle(item),b=getComputedStyle(link),x=item.getBoundingClientRect(),y=link.getBoundingClientRect();return {summary:a.fontSize+' '+a.fontWeight,link:b.fontSize+' '+b.fontWeight,baseline:Math.abs((x.top+x.height/2)-(y.top+y.height/2))}};
+  const summary=nav.querySelector('.site-expertise>summary');
+  return {...measure(first,peer),...(summary&&visible(summary)?{expertise:measure(summary,peer)}:{})};
+ },selector);
+}
 async function settlePage(page){const height=await page.evaluate(()=>document.documentElement.scrollHeight),step=await page.evaluate(()=>Math.max(500,Math.floor(innerHeight*.8)));for(let y=0;y<height;y+=step){await page.evaluate(value=>scrollTo(0,value),y);await page.waitForTimeout(25)}await page.evaluate(()=>scrollTo(0,0));await page.waitForTimeout(700)}
 async function testAssets(context,page,label){
  const refs=await page.evaluate(()=>[...document.querySelectorAll('img[src],source[src],video[poster],script[src],link[rel=stylesheet][href],img[srcset],source[srcset],link[imagesrcset]')].flatMap(el=>{const raw=[el.getAttribute('src'),el.getAttribute('poster'),el.getAttribute('href')].filter(Boolean);for(const value of [el.getAttribute('srcset'),el.getAttribute('imagesrcset')].filter(Boolean))raw.push(...value.split(',').map(part=>part.trim().split(/\s+/)[0]));return raw}));
@@ -78,7 +92,7 @@ try{
     check(cards.every(x=>x.opacity==='1'&&x.imageOpacity==='1'&&x.filter==='none'&&contrast(x.hColor)>=4.5&&contrast(x.pColor)>=4.5),'WCAG AA full-contrast Roofing cards '+device);
     await shot(page,'polish-service-cards-after-'+device,false);
     const header=await page.locator('.cx-desktop-nav').isVisible().catch(()=>false);
-    if(header){const geom=await page.evaluate(()=>{const nav=document.querySelector('.cx-desktop-nav'),sum=nav.querySelector('.site-expertise>summary'),link=nav.querySelector(':scope > a');const a=getComputedStyle(sum),b=getComputedStyle(link),x=sum.getBoundingClientRect(),y=link.getBoundingClientRect();return {font:a.fontSize,linkFont:b.fontSize,weight:a.fontWeight,linkWeight:b.fontWeight,center:x.top+x.height/2,linkCenter:y.top+y.height/2}});check(geom.font===geom.linkFont&&geom.weight===geom.linkWeight&&Math.abs(geom.center-geom.linkCenter)<=3,'light header Expertise matches links '+device+' '+JSON.stringify(geom));await shot(page,'polish-header-after-'+device,false)}else{await page.evaluate(()=>scrollTo(0,0));await page.locator('.cx-mobile-menu > summary').click();await shot(page,'polish-header-after-'+device,false)}
+    if(header){const geom=await navAlignment(page,'.cx-desktop-nav');check(geom&&geom.summary===geom.link&&geom.baseline<=3,'light header nav links match '+device+' '+JSON.stringify(geom));if(geom?.expertise)check(geom.expertise.summary===geom.expertise.link&&geom.expertise.baseline<=3,'light header Expertise peer alignment '+device+' '+JSON.stringify(geom.expertise));await shot(page,'polish-header-after-'+device,false)}else{await page.evaluate(()=>scrollTo(0,0));await page.locator('.cx-mobile-menu > summary').click();await shot(page,'polish-header-after-'+device,false)}
     await page.goto(base+route+'/contact');await waitReady(page);
     const form=page.locator('#lead-form');check(await form.count()===1,'one inquiry form '+device);check(await form.locator('button').count()===1,'one form save action '+device);
     await form.locator('[name=service]').selectOption('Roof repair');
@@ -108,7 +122,7 @@ try{
    await context.close();
   }
  }
- for(const {row} of baselines){const ctx=await browser.newContext({viewport:{width:1440,height:900}}),page=await ctx.newPage();await page.goto(base+'/s/'+row.slug);const h=await page.evaluate(()=>{const nav=document.querySelector('.shared-site-header nav,.cx-desktop-nav');if(!nav)return null;const summary=nav.querySelector('.site-expertise>summary'),link=nav.querySelector(':scope > a');if(!summary||!link)return null;const a=getComputedStyle(summary),b=getComputedStyle(link),x=summary.getBoundingClientRect(),y=link.getBoundingClientRect();return {summary:a.fontSize+' '+a.fontWeight,link:b.fontSize+' '+b.fontWeight,baseline:Math.abs((x.top+x.height/2)-(y.top+y.height/2))}});check(h&&h.summary===h.link&&h.baseline<=3,'Expertise alignment '+row.slug+' '+JSON.stringify(h));result.headers.push({kit:row.slug,...h});await ctx.close()}
+ for(const {row} of baselines){const ctx=await browser.newContext({viewport:{width:1440,height:900}}),page=await ctx.newPage();await page.goto(base+'/s/'+row.slug);const h=await navAlignment(page);check(h&&h.summary===h.link&&h.baseline<=3,'Nav link alignment '+row.slug+' '+JSON.stringify(h));if(h?.expertise)check(h.expertise.summary===h.expertise.link&&h.expertise.baseline<=3,'Expertise peer alignment '+row.slug+' '+JSON.stringify(h.expertise));result.headers.push({kit:row.slug,...h});await ctx.close()}
  check(result.browserErrors.length===0,'zero browser exceptions');
  if(result.failures.length)process.exitCode=1;
  console.log(JSON.stringify({checks:result.checks.length,pages:result.pages.length,screenshots:result.screenshots.length,assets:result.assets.length,headers:result.headers.length,failures:result.failures.length}));

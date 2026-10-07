@@ -1,0 +1,128 @@
+{
+  "page": "/s/sample-fictional-copper-kite-ventura/services",
+  "capture": "screenshots/page-013-768.png",
+  "width": 768,
+  "height": 3290,
+  "savedSha256": "01928202109a809e3eff7323ab590065d99022dffe8c7f7569bf602c84979d22",
+  "alternateSha256": "09117e05a89f9024d7b2a4869a0735a8d3852e186732811801b03e658545cc32",
+  "savedBytes": 900186,
+  "alternateBytes": 900642,
+  "changedPixels": 134619,
+  "outsideImagePixels": 0,
+  "readiness": {
+    "requiredFieldsEqualToSaved": true,
+    "fullStoredPairEqual": true,
+    "fullPairDescription": "saved versus alternate",
+    "savedRequired": {
+      "devicePixelRatio": 1,
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "documentSize": {
+        "width": 768,
+        "height": 3290
+      },
+      "images": [
+        {
+          "currentSrc": "http://review.local/assets/service-installation.webp",
+          "naturalWidth": 800,
+          "naturalHeight": 600,
+          "rendered": {
+            "x": 38.390625,
+            "y": 424.34375,
+            "width": 691.21875,
+            "height": 420
+          },
+          "complete": true,
+          "decodeResult": "decoded"
+        },
+        {
+          "currentSrc": "http://review.local/assets/service-showpiece/roofing-roof-installation-scope.webp",
+          "naturalWidth": 1536,
+          "naturalHeight": 1030,
+          "rendered": {
+            "x": 39.390625,
+            "y": 991.84375,
+            "width": 332.609375,
+            "height": 221.734375
+          },
+          "complete": true,
+          "decodeResult": "decoded"
+        },
+        {
+          "currentSrc": "http://review.local/assets/service-roof-repair-showpiece.png",
+          "naturalWidth": 1344,
+          "naturalHeight": 752,
+          "rendered": {
+            "x": 39.390625,
+            "y": 1599.734375,
+            "width": 332.609375,
+            "height": 221.734375
+          },
+          "complete": true,
+          "decodeResult": "decoded"
+        }
+      ]
+    },
+    "alternateRequired": {
+      "devicePixelRatio": 1,
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "documentSize": {
+        "width": 768,
+        "height": 3290
+      },
+      "images": [
+        {
+          "currentSrc": "http://review.local/assets/service-installation.webp",
+          "naturalWidth": 800,
+          "naturalHeight": 600,
+          "rendered": {
+            "x": 38.390625,
+            "y": 424.34375,
+            "width": 691.21875,
+            "height": 420
+          },
+          "complete": true,
+          "decodeResult": "decoded"
+        },
+        {
+          "currentSrc": "http://review.local/assets/service-showpiece/roofing-roof-installation-scope.webp",
+          "naturalWidth": 1536,
+          "naturalHeight": 1030,
+          "rendered": {
+            "x": 39.390625,
+            "y": 991.84375,
+            "width": 332.609375,
+            "height": 221.734375
+          },
+          "complete": true,
+          "decodeResult": "decoded"
+        },
+        {
+          "currentSrc": "http://review.local/assets/service-roof-repair-showpiece.png",
+          "naturalWidth": 1344,
+          "naturalHeight": 752,
+          "rendered": {
+            "x": 39.390625,
+            "y": 1599.734375,
+            "width": 332.609375,
+            "height": 221.734375
+          },
+          "complete": true,
+          "decodeResult": "decoded"
+        }
+      ]
+    }
+  },
+  "artifacts": {
+    "saved": "saved.png",
+    "alternate": "alternate.png",
+    "diffCrop": "diff-crop.png",
+    "readiness": "readiness.json",
+    "matchingRerun": null
+  }
+}

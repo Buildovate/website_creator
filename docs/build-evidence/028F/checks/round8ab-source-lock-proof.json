@@ -1,0 +1,39 @@
+{
+  "round": "8ab",
+  "posterOnly": true,
+  "insertions": 1,
+  "sourcePath": "src/promotions-ambient.js",
+  "historicalPath": "docs/build-evidence/027/ambient-source-before.txt",
+  "historicalBeforeSha256": "20382752620940b5e8315ce7758bf437b151fead9a2551095a29066fed41ed50",
+  "historicalAfterSha256": "20382752620940b5e8315ce7758bf437b151fead9a2551095a29066fed41ed50",
+  "snapshotPath": "docs/build-evidence/028F/source-locks/promotions-ambient.js",
+  "snapshotSha256": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4",
+  "currentSourceSha256": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4",
+  "normalizedBeforeSha256": "e38bf52944f0b1a69bb9f760109d76f17d522076c8fa5cead0540e792773c68f",
+  "normalizedAfterSha256": "e16af4d1ee0612056b10c33eaded085398d75005c28f22b071c46c2c047dda1f",
+  "poster": {
+    "url": "http://127.0.0.1:5173/assets/planning/roofing-promotions-ambient-1280.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 120386,
+    "sha256": "81b6b2ee69fcc7a6e584322193721336dd280b245903cc812d73d5c7a5a4b206"
+  },
+  "mutation": {
+    "path": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8ab-mutation-promotions-ambient.js",
+    "originalSha256": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4",
+    "mutatedSha256": "c0296707e23ec49544194f628d4480f10565febd48036c35b8d5cc06990788f2",
+    "restoredSha256": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4",
+    "error": {
+      "name": "AssertionError",
+      "message": "#026 renderer source unchanged"
+    },
+    "result": "PASS: non-poster mutation fails; restored copy passes"
+  },
+  "test": {
+    "path": "tests/promotions-scroll.mjs",
+    "before": "a4a76860df4dfb1ccb1c49cabda076cc196e680c1b41bbee8e69df6f5a36fefb",
+    "after": "1a34b1546c9ca6ebfac5b18fecd40132427c4adf98d499c38435aec2e03dd332"
+  },
+  "historicalUnchanged": true,
+  "productUnchanged": true
+}

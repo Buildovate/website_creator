@@ -1,0 +1,481 @@
+{
+  "commands": 102,
+  "passed": 23,
+  "failed": [
+    {
+      "command": "node C:/Users/joe/website_creator/tests/auth-session.mjs",
+      "label": "auth-session",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/builder.mjs",
+      "label": "builder",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/callback-restore.mjs",
+      "label": "callback-restore",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/cinematic-films.mjs",
+      "label": "cinematic-films",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/constitution.mjs",
+      "label": "constitution",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/contact-linkage.mjs",
+      "label": "contact-linkage",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/contacts-restore.mjs",
+      "label": "contacts-restore",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/control.mjs",
+      "label": "control",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/conversion-references.mjs",
+      "label": "conversion-references",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/core-site-pages.mjs",
+      "label": "core-site-pages",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/crm-next.mjs",
+      "label": "crm-next",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/crm.mjs",
+      "label": "crm",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/design-kits.mjs",
+      "label": "design-kits",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/ebook.mjs",
+      "label": "ebook",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/engagement-providers.mjs",
+      "label": "engagement-providers",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/engagement.mjs",
+      "label": "engagement",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/expense-metering.mjs",
+      "label": "expense-metering",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/expense-polish.mjs",
+      "label": "expense-polish",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/expenses.mjs",
+      "label": "expenses",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/financing-comparison.mjs",
+      "label": "financing-comparison",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/financing-states.mjs",
+      "label": "financing-states",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/footer-policy.mjs",
+      "label": "footer-policy",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/generation.mjs",
+      "label": "generation",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/hero-editor.mjs",
+      "label": "hero-editor",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/legal-policy.mjs",
+      "label": "legal-policy",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/neighborhood.mjs",
+      "label": "neighborhood",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/owner-photo.mjs",
+      "label": "owner-photo",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/planning-ambient.mjs",
+      "label": "planning-ambient",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/planning-scroll.mjs",
+      "label": "planning-scroll",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/platform.mjs",
+      "label": "platform",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/premium-service.mjs",
+      "label": "premium-service",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/presentation.mjs",
+      "label": "presentation",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/project-experience.mjs",
+      "label": "project-experience",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/promotion-unlocks.mjs",
+      "label": "promotion-unlocks",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/reference-proof.mjs",
+      "label": "reference-proof",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/review-lookup.mjs",
+      "label": "review-lookup",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-cities.mjs",
+      "label": "roofing-cities",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-cta.mjs",
+      "label": "roofing-cta",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-story.mjs",
+      "label": "roofing-story",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/sales-ops.mjs",
+      "label": "sales-ops",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/saved-designs.mjs",
+      "label": "saved-designs",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/scroll-story.mjs",
+      "label": "scroll-story",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/service-motion.mjs",
+      "label": "service-motion",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs",
+      "label": "service-pages-all-trades",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/service-playbook.mjs",
+      "label": "service-playbook",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/trade-revisions.mjs",
+      "label": "trade-revisions",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/trade-upgrade.mjs",
+      "label": "trade-upgrade",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/trade-visual-correctness.mjs",
+      "label": "trade-visual-correctness",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/trades-financing.mjs",
+      "label": "trades-financing",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/trust.mjs",
+      "label": "trust",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/website-pages.mjs",
+      "label": "website-pages",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/workspace.mjs",
+      "label": "workspace",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/zoom.mjs",
+      "label": "zoom",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/platform-mobile.mjs",
+      "label": "platform-mobile",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/ebook-browser.mjs",
+      "label": "ebook-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/expense-polish-browser.mjs",
+      "label": "expense-polish-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/expenses-browser.mjs",
+      "label": "expenses-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/financing-states-browser.mjs",
+      "label": "financing-states-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/generation-browser.mjs",
+      "label": "generation-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/hero-editor-browser.mjs",
+      "label": "hero-editor-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/planning-ambient-browser.mjs",
+      "label": "planning-ambient-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/planning-scroll-browser.mjs",
+      "label": "planning-scroll-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs",
+      "label": "promotion-unlocks-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-cities-browser.mjs",
+      "label": "roofing-cities-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-cta-browser.mjs",
+      "label": "roofing-cta-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-story-browser.mjs",
+      "label": "roofing-story-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/service-motion-browser.mjs",
+      "label": "service-motion-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/clips-phase2.mjs",
+      "label": "clips-phase2",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/clips-phase2-browser.mjs",
+      "label": "clips-phase2-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1.mjs",
+      "label": "roofing-polish-part1",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1-browser.mjs",
+      "label": "roofing-polish-part1-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part2.mjs",
+      "label": "roofing-polish-part2",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part2-browser.mjs",
+      "label": "roofing-polish-part2-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/roofing-acceptance.mjs",
+      "label": "roofing-acceptance",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/design-styles.mjs",
+      "label": "design-styles",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/promotions-ambient.mjs",
+      "label": "promotions-ambient",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/promotions-scroll.mjs",
+      "label": "promotions-scroll",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/promotions-ambient-browser.mjs",
+      "label": "promotions-ambient-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    },
+    {
+      "command": "node C:/Users/joe/website_creator/tests/promotions-scroll-browser.mjs",
+      "label": "promotions-scroll-browser",
+      "exitCode": 1,
+      "missingQaPrerequisite": true
+    }
+  ],
+  "syntheticQaReportsAdded": 0
+}

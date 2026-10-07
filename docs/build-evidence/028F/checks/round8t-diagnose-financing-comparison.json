@@ -1,0 +1,1350 @@
+{
+  "label": "financing-comparison",
+  "command": "node tests/financing-comparison.mjs",
+  "startedAt": "2026-10-07T01:27:20.358Z",
+  "finishedAt": "2026-10-07T01:30:14.567Z",
+  "elapsedMs": 174209,
+  "status": 0,
+  "outcome": "PASS",
+  "signal": null,
+  "lastStdout": {
+    "timestamp": "2026-10-07T01:30:14.504Z",
+    "elapsedMs": 174146,
+    "type": "stdout",
+    "line": "PASS #004D browser/API: live slider/input/down changes, reduced motion, invalid-input clearing, selected-plan prefill, updated estimates, same inquiry persistence, reset and preview-send suppression."
+  },
+  "lastOutput": {
+    "timestamp": "2026-10-07T01:30:14.504Z",
+    "elapsedMs": 174146,
+    "type": "stdout",
+    "line": "PASS #004D browser/API: live slider/input/down changes, reduced motion, invalid-input clearing, selected-plan prefill, updated estimates, same inquiry persistence, reset and preview-send suppression."
+  },
+  "atKill": null,
+  "cpu": [
+    {
+      "timestamp": "2026-10-07T01:27:21.333Z",
+      "elapsedMs": 975,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 1.03125
+        }
+      ],
+      "cpuDeltaSeconds": null,
+      "intervalMs": null
+    },
+    {
+      "timestamp": "2026-10-07T01:27:36.274Z",
+      "elapsedMs": 15916,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 2.875
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 5.78125
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.03125
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 1.03125
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.3125
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 66936,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.90625
+        },
+        {
+          "id": 66208,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.375
+        },
+        {
+          "id": 34916,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        }
+      ],
+      "cpuDeltaSeconds": 1.84375,
+      "intervalMs": 14941
+    },
+    {
+      "timestamp": "2026-10-07T01:27:51.335Z",
+      "elapsedMs": 30977,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 4.609375
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 9.6875
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.03125
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 1.921875
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.46875
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 11656,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.84375
+        },
+        {
+          "id": 36188,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.609375
+        },
+        {
+          "id": 57360,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        }
+      ],
+      "cpuDeltaSeconds": 6.6875,
+      "intervalMs": 15061
+    },
+    {
+      "timestamp": "2026-10-07T01:28:06.285Z",
+      "elapsedMs": 45927,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 6.421875
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 13.3125
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.03125
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 2.65625
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.609375
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 2936,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 1.03125
+        },
+        {
+          "id": 47108,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.265625
+        },
+        {
+          "id": 21240,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        }
+      ],
+      "cpuDeltaSeconds": 6.3125,
+      "intervalMs": 14950
+    },
+    {
+      "timestamp": "2026-10-07T01:28:21.290Z",
+      "elapsedMs": 60932,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 8.234375
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 17.71875
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.03125
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 3.34375
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.765625
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 60776,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.578125
+        },
+        {
+          "id": 65664,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.34375
+        },
+        {
+          "id": 64324,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        }
+      ],
+      "cpuDeltaSeconds": 7.0625,
+      "intervalMs": 15005
+    },
+    {
+      "timestamp": "2026-10-07T01:28:36.292Z",
+      "elapsedMs": 75934,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 9.890625
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 22.8125
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.03125
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 4.28125
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.875
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 17268,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.765625
+        },
+        {
+          "id": 55128,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.328125
+        },
+        {
+          "id": 63120,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.078125
+        }
+      ],
+      "cpuDeltaSeconds": 7.796875,
+      "intervalMs": 15002
+    },
+    {
+      "timestamp": "2026-10-07T01:28:51.484Z",
+      "elapsedMs": 91126,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 11.453125
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 28.171875
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.03125
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 5.21875
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.96875
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 23992,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.546875
+        },
+        {
+          "id": 61660,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.8125
+        },
+        {
+          "id": 26356,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.0625
+        }
+      ],
+      "cpuDeltaSeconds": 7.953125,
+      "intervalMs": 15192
+    },
+    {
+      "timestamp": "2026-10-07T01:29:06.374Z",
+      "elapsedMs": 106016,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 13.15625
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 33.078125
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.03125
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 5.9375
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 1.03125
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 1776,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 1.03125
+        },
+        {
+          "id": 63988,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.359375
+        },
+        {
+          "id": 44036,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.0625
+        }
+      ],
+      "cpuDeltaSeconds": 7.390625,
+      "intervalMs": 14890
+    },
+    {
+      "timestamp": "2026-10-07T01:29:21.421Z",
+      "elapsedMs": 121063,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 14.671875
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 39.09375
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 6.796875
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 1.21875
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.0625
+        },
+        {
+          "id": 59912,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.953125
+        },
+        {
+          "id": 62564,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.34375
+        },
+        {
+          "id": 44668,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.03125
+        }
+      ],
+      "cpuDeltaSeconds": 8.609375,
+      "intervalMs": 15047
+    },
+    {
+      "timestamp": "2026-10-07T01:29:36.597Z",
+      "elapsedMs": 136239,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 16.578125
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 44.328125
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 7.65625
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 1.25
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.0625
+        },
+        {
+          "id": 65960,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.5625
+        },
+        {
+          "id": 59716,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 1.015625
+        },
+        {
+          "id": 66148,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.0625
+        }
+      ],
+      "cpuDeltaSeconds": 8.03125,
+      "intervalMs": 15176
+    },
+    {
+      "timestamp": "2026-10-07T01:29:51.626Z",
+      "elapsedMs": 151268,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 18.890625
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 49.75
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 8.515625
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 1.46875
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.078125
+        },
+        {
+          "id": 30556,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.25
+        },
+        {
+          "id": 38356,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.421875
+        },
+        {
+          "id": 67728,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.4375
+        },
+        {
+          "id": 14344,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.03125
+        },
+        {
+          "id": 67080,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.078125
+        }
+      ],
+      "cpuDeltaSeconds": 8.828125,
+      "intervalMs": 15029
+    },
+    {
+      "timestamp": "2026-10-07T01:30:06.530Z",
+      "elapsedMs": 166172,
+      "processes": [
+        {
+          "id": 54492,
+          "parent": 44132,
+          "name": "node.exe",
+          "cpuSeconds": 21
+        },
+        {
+          "id": 50052,
+          "parent": 54492,
+          "name": "chrome.exe",
+          "cpuSeconds": 54.921875
+        },
+        {
+          "id": 47328,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.046875
+        },
+        {
+          "id": 66224,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 9.390625
+        },
+        {
+          "id": 67372,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 1.625
+        },
+        {
+          "id": 65404,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.109375
+        },
+        {
+          "id": 30556,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 3.84375
+        },
+        {
+          "id": 38356,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.46875
+        },
+        {
+          "id": 14344,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.03125
+        },
+        {
+          "id": 44324,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.4375
+        },
+        {
+          "id": 2388,
+          "parent": 50052,
+          "name": "chrome.exe",
+          "cpuSeconds": 0.109375
+        }
+      ],
+      "cpuDeltaSeconds": 11.984375,
+      "intervalMs": 14904
+    }
+  ],
+  "heartbeats": [
+    {
+      "timestamp": "2026-10-07T01:27:26.275Z",
+      "elapsedMs": 5917,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:29.328Z",
+      "elapsedMs": 8970,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:32.877Z",
+      "elapsedMs": 12519,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:34.421Z",
+      "elapsedMs": 14063,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/about 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:35.572Z",
+      "elapsedMs": 15214,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/about 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:36.913Z",
+      "elapsedMs": 16555,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/about 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:38.203Z",
+      "elapsedMs": 17845,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/areas 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:39.239Z",
+      "elapsedMs": 18882,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/areas 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:40.458Z",
+      "elapsedMs": 20100,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/areas 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:42.368Z",
+      "elapsedMs": 22010,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/areas/oxnard 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:43.864Z",
+      "elapsedMs": 23506,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/areas/oxnard 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:45.375Z",
+      "elapsedMs": 25017,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/areas/oxnard 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:46.867Z",
+      "elapsedMs": 26509,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/blog 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:47.955Z",
+      "elapsedMs": 27597,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/blog 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:49.093Z",
+      "elapsedMs": 28735,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/blog 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:50.643Z",
+      "elapsedMs": 30285,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/contact 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:51.769Z",
+      "elapsedMs": 31411,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/contact 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:53.002Z",
+      "elapsedMs": 32644,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/contact 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:54.438Z",
+      "elapsedMs": 34080,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/faq 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:55.468Z",
+      "elapsedMs": 35110,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/faq 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:56.605Z",
+      "elapsedMs": 36247,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/faq 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:58.354Z",
+      "elapsedMs": 37996,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/financing 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:27:59.788Z",
+      "elapsedMs": 39430,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/financing 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:01.212Z",
+      "elapsedMs": 40854,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/financing 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:02.607Z",
+      "elapsedMs": 42249,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/legal 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:03.722Z",
+      "elapsedMs": 43364,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/legal 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:04.903Z",
+      "elapsedMs": 44545,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/legal 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:05.940Z",
+      "elapsedMs": 45582,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/legal/privacy 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:06.800Z",
+      "elapsedMs": 46442,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/legal/privacy 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:07.669Z",
+      "elapsedMs": 47311,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/legal/privacy 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:08.680Z",
+      "elapsedMs": 48322,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/legal/terms 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:09.583Z",
+      "elapsedMs": 49225,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/legal/terms 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:10.435Z",
+      "elapsedMs": 50077,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/legal/terms 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:11.825Z",
+      "elapsedMs": 51467,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/pricing 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:12.919Z",
+      "elapsedMs": 52561,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/pricing 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:14.172Z",
+      "elapsedMs": 53814,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/pricing 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:16.286Z",
+      "elapsedMs": 55928,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:18.191Z",
+      "elapsedMs": 57833,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:20.009Z",
+      "elapsedMs": 59651,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:22.827Z",
+      "elapsedMs": 62469,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/asphalt-shingle-install-repair 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:24.968Z",
+      "elapsedMs": 64610,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/asphalt-shingle-install-repair 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:27.558Z",
+      "elapsedMs": 67200,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/asphalt-shingle-install-repair 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:30.183Z",
+      "elapsedMs": 69825,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/flat-roofs 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:32.169Z",
+      "elapsedMs": 71811,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/flat-roofs 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:34.457Z",
+      "elapsedMs": 74099,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/flat-roofs 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:37.183Z",
+      "elapsedMs": 76825,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/gutters 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:39.251Z",
+      "elapsedMs": 78893,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/gutters 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:41.667Z",
+      "elapsedMs": 81309,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/gutters 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:44.535Z",
+      "elapsedMs": 84177,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/inspections 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:46.706Z",
+      "elapsedMs": 86348,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/inspections 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:49.251Z",
+      "elapsedMs": 88893,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/inspections 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:52.146Z",
+      "elapsedMs": 91788,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/metal-roofing 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:54.235Z",
+      "elapsedMs": 93877,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/metal-roofing 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:56.654Z",
+      "elapsedMs": 96296,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/metal-roofing 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:28:59.434Z",
+      "elapsedMs": 99076,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-installation 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:01.533Z",
+      "elapsedMs": 101175,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-installation 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:04.018Z",
+      "elapsedMs": 103660,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-installation 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:06.937Z",
+      "elapsedMs": 106579,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-maintenance 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:09.178Z",
+      "elapsedMs": 108821,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-maintenance 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:11.703Z",
+      "elapsedMs": 111345,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-maintenance 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:14.798Z",
+      "elapsedMs": 114440,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-repair 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:16.916Z",
+      "elapsedMs": 116558,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-repair 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:19.405Z",
+      "elapsedMs": 119047,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-repair 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:22.519Z",
+      "elapsedMs": 122161,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-replacement 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:24.831Z",
+      "elapsedMs": 124473,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-replacement 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:27.502Z",
+      "elapsedMs": 127144,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-replacement 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:30.287Z",
+      "elapsedMs": 129929,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-sealing 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:32.364Z",
+      "elapsedMs": 132006,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-sealing 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:34.814Z",
+      "elapsedMs": 134456,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/roof-sealing 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:37.729Z",
+      "elapsedMs": 137371,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/storm-damage 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:39.888Z",
+      "elapsedMs": 139530,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/storm-damage 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:42.376Z",
+      "elapsedMs": 142018,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/services/storm-damage 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:43.818Z",
+      "elapsedMs": 143460,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/thank-you 1440"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:45.007Z",
+      "elapsedMs": 144649,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/thank-you 390"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:46.221Z",
+      "elapsedMs": 145863,
+      "type": "stdout",
+      "line": "Review capture width /s/finance-comparison/thank-you 768"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:49.320Z",
+      "elapsedMs": 148962,
+      "type": "stdout",
+      "line": "Review capture frame /assets/build-films/roofing.mp4 0"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:49.651Z",
+      "elapsedMs": 149293,
+      "type": "stdout",
+      "line": "Review capture frame /assets/build-films/roofing.mp4 25"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:49.910Z",
+      "elapsedMs": 149552,
+      "type": "stdout",
+      "line": "Review capture frame /assets/build-films/roofing.mp4 50"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:50.244Z",
+      "elapsedMs": 149886,
+      "type": "stdout",
+      "line": "Review capture frame /assets/build-films/roofing.mp4 75"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:50.483Z",
+      "elapsedMs": 150125,
+      "type": "stdout",
+      "line": "Review capture frame /assets/build-films/roofing.mp4 100"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:54.112Z",
+      "elapsedMs": 153754,
+      "type": "stdout",
+      "line": "Review capture frame /assets/films/roofing-transformation.mp4 0"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:54.385Z",
+      "elapsedMs": 154027,
+      "type": "stdout",
+      "line": "Review capture frame /assets/films/roofing-transformation.mp4 25"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:54.815Z",
+      "elapsedMs": 154457,
+      "type": "stdout",
+      "line": "Review capture frame /assets/films/roofing-transformation.mp4 50"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:55.373Z",
+      "elapsedMs": 155015,
+      "type": "stdout",
+      "line": "Review capture frame /assets/films/roofing-transformation.mp4 75"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:56.031Z",
+      "elapsedMs": 155673,
+      "type": "stdout",
+      "line": "Review capture frame /assets/films/roofing-transformation.mp4 100"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:59.167Z",
+      "elapsedMs": 158809,
+      "type": "stdout",
+      "line": "Review capture frame /assets/craft-films/roofing.mp4 0"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:59.467Z",
+      "elapsedMs": 159109,
+      "type": "stdout",
+      "line": "Review capture frame /assets/craft-films/roofing.mp4 25"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:59.650Z",
+      "elapsedMs": 159292,
+      "type": "stdout",
+      "line": "Review capture frame /assets/craft-films/roofing.mp4 50"
+    },
+    {
+      "timestamp": "2026-10-07T01:29:59.970Z",
+      "elapsedMs": 159612,
+      "type": "stdout",
+      "line": "Review capture frame /assets/craft-films/roofing.mp4 75"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:00.241Z",
+      "elapsedMs": 159883,
+      "type": "stdout",
+      "line": "Review capture frame /assets/craft-films/roofing.mp4 100"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:03.141Z",
+      "elapsedMs": 162783,
+      "type": "stdout",
+      "line": "Review capture frame /assets/planning/027A-part1/financing-1920.mp4 0"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:03.458Z",
+      "elapsedMs": 163100,
+      "type": "stdout",
+      "line": "Review capture frame /assets/planning/027A-part1/financing-1920.mp4 25"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:03.892Z",
+      "elapsedMs": 163534,
+      "type": "stdout",
+      "line": "Review capture frame /assets/planning/027A-part1/financing-1920.mp4 50"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:04.395Z",
+      "elapsedMs": 164037,
+      "type": "stdout",
+      "line": "Review capture frame /assets/planning/027A-part1/financing-1920.mp4 75"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:04.944Z",
+      "elapsedMs": 164586,
+      "type": "stdout",
+      "line": "Review capture frame /assets/planning/027A-part1/financing-1920.mp4 100"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:07.635Z",
+      "elapsedMs": 167277,
+      "type": "stdout",
+      "line": "Review capture frame /assets/films/roofing-story.mp4 0"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:07.989Z",
+      "elapsedMs": 167631,
+      "type": "stdout",
+      "line": "Review capture frame /assets/films/roofing-story.mp4 25"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:08.369Z",
+      "elapsedMs": 168011,
+      "type": "stdout",
+      "line": "Review capture frame /assets/films/roofing-story.mp4 50"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:08.792Z",
+      "elapsedMs": 168434,
+      "type": "stdout",
+      "line": "Review capture frame /assets/films/roofing-story.mp4 75"
+    },
+    {
+      "timestamp": "2026-10-07T01:30:09.138Z",
+      "elapsedMs": 168780,
+      "type": "stdout",
+      "line": "Review capture frame /assets/films/roofing-story.mp4 100"
+    }
+  ],
+  "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8t-diagnose-financing-comparison.log",
+  "diagnosis": "No hang reproduced standalone with heartbeat-only instrumentation; capture progress and command completion recorded",
+  "AorB": "Not reproduced; A/B of earlier parallel run remains unproven"
+}

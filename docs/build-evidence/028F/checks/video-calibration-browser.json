@@ -1,0 +1,1006 @@
+{
+  "method": "Same browser capture geometry and captureClipQA/frameMetrics implementation as review packets; central 80%, 96x64, local SSIM and RGB histogram",
+  "synthetic": {
+    "sources": [
+      "public/assets/build-films/roofing-finished.webp",
+      "public/assets/films/roofing-poster.webp"
+    ],
+    "method": "FFmpeg deterministic four-second cross-dissolve; fictional negative, never public",
+    "credits": 0
+  },
+  "approvedPassed": 17,
+  "approvedCount": 17,
+  "negativeDetected": true,
+  "results": [
+    {
+      "id": "patios-trade-build-films",
+      "url": "/assets/build-films/patios.mp4?v=complete-20260918",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.7235,
+            "histogramDistance": 0.353516
+          },
+          {
+            "percent": 50,
+            "ssim": 0.643726,
+            "histogramDistance": 0.45638
+          },
+          {
+            "percent": 75,
+            "ssim": 0.427685,
+            "histogramDistance": 0.431803
+          },
+          {
+            "percent": 100,
+            "ssim": 0.290211,
+            "histogramDistance": 0.401042
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.581628,
+          "endpointChange": {
+            "ssim": 0.290211,
+            "histogramDistance": 0.401042
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/patios-trade-build-films-0.png",
+        "25": "calibration/patios-trade-build-films-25.png",
+        "50": "calibration/patios-trade-build-films-50.png",
+        "75": "calibration/patios-trade-build-films-75.png",
+        "100": "calibration/patios-trade-build-films-100.png"
+      }
+    },
+    {
+      "id": "plumbing-trade-build-films",
+      "url": "/assets/build-films/plumbing.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.877894,
+            "histogramDistance": 0.069987
+          },
+          {
+            "percent": 50,
+            "ssim": 0.363211,
+            "histogramDistance": 0.567383
+          },
+          {
+            "percent": 75,
+            "ssim": 0.295639,
+            "histogramDistance": 0.568359
+          },
+          {
+            "percent": 100,
+            "ssim": 0.295121,
+            "histogramDistance": 0.567871
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.394893,
+          "endpointChange": {
+            "ssim": 0.295121,
+            "histogramDistance": 0.567871
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/plumbing-trade-build-films-0.png",
+        "25": "calibration/plumbing-trade-build-films-25.png",
+        "50": "calibration/plumbing-trade-build-films-50.png",
+        "75": "calibration/plumbing-trade-build-films-75.png",
+        "100": "calibration/plumbing-trade-build-films-100.png"
+      }
+    },
+    {
+      "id": "electrical-trade-build-films",
+      "url": "/assets/build-films/electrical.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.849055,
+            "histogramDistance": 0.143555
+          },
+          {
+            "percent": 50,
+            "ssim": 0.604956,
+            "histogramDistance": 0.451986
+          },
+          {
+            "percent": 75,
+            "ssim": 0.173975,
+            "histogramDistance": 0.352376
+          },
+          {
+            "percent": 100,
+            "ssim": 0.054637,
+            "histogramDistance": 0.601888
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.505113,
+          "endpointChange": {
+            "ssim": 0.054637,
+            "histogramDistance": 0.601888
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/electrical-trade-build-films-0.png",
+        "25": "calibration/electrical-trade-build-films-25.png",
+        "50": "calibration/electrical-trade-build-films-50.png",
+        "75": "calibration/electrical-trade-build-films-75.png",
+        "100": "calibration/electrical-trade-build-films-100.png"
+      }
+    },
+    {
+      "id": "landscaping-trade-build-films",
+      "url": "/assets/build-films/landscaping.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.732803,
+            "histogramDistance": 0.341797
+          },
+          {
+            "percent": 50,
+            "ssim": 0.52557,
+            "histogramDistance": 0.299479
+          },
+          {
+            "percent": 75,
+            "ssim": 0.276549,
+            "histogramDistance": 0.294759
+          },
+          {
+            "percent": 100,
+            "ssim": 0.255269,
+            "histogramDistance": 0.328288
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.550834,
+          "endpointChange": {
+            "ssim": 0.255269,
+            "histogramDistance": 0.328288
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/landscaping-trade-build-films-0.png",
+        "25": "calibration/landscaping-trade-build-films-25.png",
+        "50": "calibration/landscaping-trade-build-films-50.png",
+        "75": "calibration/landscaping-trade-build-films-75.png",
+        "100": "calibration/landscaping-trade-build-films-100.png"
+      }
+    },
+    {
+      "id": "flooring-trade-build-films",
+      "url": "/assets/build-films/flooring.mp4?v=complete-20260918",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.892863,
+            "histogramDistance": 0.257161
+          },
+          {
+            "percent": 50,
+            "ssim": 0.808418,
+            "histogramDistance": 0.455892
+          },
+          {
+            "percent": 75,
+            "ssim": 0.866857,
+            "histogramDistance": 0.489746
+          },
+          {
+            "percent": 100,
+            "ssim": 0.78476,
+            "histogramDistance": 0.401367
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 1.105998,
+          "endpointChange": {
+            "ssim": 0.78476,
+            "histogramDistance": 0.401367
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/flooring-trade-build-films-0.png",
+        "25": "calibration/flooring-trade-build-films-25.png",
+        "50": "calibration/flooring-trade-build-films-50.png",
+        "75": "calibration/flooring-trade-build-films-75.png",
+        "100": "calibration/flooring-trade-build-films-100.png"
+      }
+    },
+    {
+      "id": "garage-doors-trade-build-films",
+      "url": "/assets/build-films/garage-doors.mp4?v=complete-20260918",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.489661,
+            "histogramDistance": 0.369629
+          },
+          {
+            "percent": 50,
+            "ssim": 0.497433,
+            "histogramDistance": 0.398763
+          },
+          {
+            "percent": 75,
+            "ssim": 0.609653,
+            "histogramDistance": 0.40625
+          },
+          {
+            "percent": 100,
+            "ssim": 0.61163,
+            "histogramDistance": 0.398275
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.639484,
+          "endpointChange": {
+            "ssim": 0.61163,
+            "histogramDistance": 0.398275
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/garage-doors-trade-build-films-0.png",
+        "25": "calibration/garage-doors-trade-build-films-25.png",
+        "50": "calibration/garage-doors-trade-build-films-50.png",
+        "75": "calibration/garage-doors-trade-build-films-75.png",
+        "100": "calibration/garage-doors-trade-build-films-100.png"
+      }
+    },
+    {
+      "id": "roofing-trade-craft-films",
+      "url": "/assets/craft-films/roofing.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": -0.019167,
+            "histogramDistance": 0.287923
+          },
+          {
+            "percent": 50,
+            "ssim": 0.035535,
+            "histogramDistance": 0.32666
+          },
+          {
+            "percent": 75,
+            "ssim": 0.113595,
+            "histogramDistance": 0.561035
+          },
+          {
+            "percent": 100,
+            "ssim": 0.112534,
+            "histogramDistance": 0.553874
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.764279,
+          "endpointChange": {
+            "ssim": 0.112534,
+            "histogramDistance": 0.553874
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/roofing-trade-craft-films-0.png",
+        "25": "calibration/roofing-trade-craft-films-25.png",
+        "50": "calibration/roofing-trade-craft-films-50.png",
+        "75": "calibration/roofing-trade-craft-films-75.png",
+        "100": "calibration/roofing-trade-craft-films-100.png"
+      }
+    },
+    {
+      "id": "patios-trade-craft-films",
+      "url": "/assets/craft-films/patios.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.914982,
+            "histogramDistance": 0.145671
+          },
+          {
+            "percent": 50,
+            "ssim": 0.405238,
+            "histogramDistance": 0.457682
+          },
+          {
+            "percent": 75,
+            "ssim": 0.293227,
+            "histogramDistance": 0.468913
+          },
+          {
+            "percent": 100,
+            "ssim": 0.397937,
+            "histogramDistance": 0.143066
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 1.236294,
+          "endpointChange": {
+            "ssim": 0.397937,
+            "histogramDistance": 0.143066
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/patios-trade-craft-films-0.png",
+        "25": "calibration/patios-trade-craft-films-25.png",
+        "50": "calibration/patios-trade-craft-films-50.png",
+        "75": "calibration/patios-trade-craft-films-75.png",
+        "100": "calibration/patios-trade-craft-films-100.png"
+      }
+    },
+    {
+      "id": "hvac-trade-craft-films",
+      "url": "/assets/craft-films/hvac.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.29802,
+            "histogramDistance": 0.241374
+          },
+          {
+            "percent": 50,
+            "ssim": 0.097725,
+            "histogramDistance": 0.259115
+          },
+          {
+            "percent": 75,
+            "ssim": 0.213409,
+            "histogramDistance": 0.236816
+          },
+          {
+            "percent": 100,
+            "ssim": 0.194167,
+            "histogramDistance": 0.239746
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.664884,
+          "endpointChange": {
+            "ssim": 0.194167,
+            "histogramDistance": 0.239746
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/hvac-trade-craft-films-0.png",
+        "25": "calibration/hvac-trade-craft-films-25.png",
+        "50": "calibration/hvac-trade-craft-films-50.png",
+        "75": "calibration/hvac-trade-craft-films-75.png",
+        "100": "calibration/hvac-trade-craft-films-100.png"
+      }
+    },
+    {
+      "id": "general-contractors-trade-craft-films",
+      "url": "/assets/craft-films/general-contractors.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.316415,
+            "histogramDistance": 0.3361
+          },
+          {
+            "percent": 50,
+            "ssim": 0.135049,
+            "histogramDistance": 0.558105
+          },
+          {
+            "percent": 75,
+            "ssim": 0.239656,
+            "histogramDistance": 0.520996
+          },
+          {
+            "percent": 100,
+            "ssim": 0.251934,
+            "histogramDistance": 0.529948
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.887947,
+          "endpointChange": {
+            "ssim": 0.251934,
+            "histogramDistance": 0.529948
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/general-contractors-trade-craft-films-0.png",
+        "25": "calibration/general-contractors-trade-craft-films-25.png",
+        "50": "calibration/general-contractors-trade-craft-films-50.png",
+        "75": "calibration/general-contractors-trade-craft-films-75.png",
+        "100": "calibration/general-contractors-trade-craft-films-100.png"
+      }
+    },
+    {
+      "id": "flooring-trade-craft-films",
+      "url": "/assets/craft-films/flooring.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.385126,
+            "histogramDistance": 0.20638
+          },
+          {
+            "percent": 50,
+            "ssim": 0.130623,
+            "histogramDistance": 0.469889
+          },
+          {
+            "percent": 75,
+            "ssim": 0.124085,
+            "histogramDistance": 0.575358
+          },
+          {
+            "percent": 100,
+            "ssim": 0.075869,
+            "histogramDistance": 0.551921
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.658106,
+          "endpointChange": {
+            "ssim": 0.075869,
+            "histogramDistance": 0.551921
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/flooring-trade-craft-films-0.png",
+        "25": "calibration/flooring-trade-craft-films-25.png",
+        "50": "calibration/flooring-trade-craft-films-50.png",
+        "75": "calibration/flooring-trade-craft-films-75.png",
+        "100": "calibration/flooring-trade-craft-films-100.png"
+      }
+    },
+    {
+      "id": "painting-trade-craft-films",
+      "url": "/assets/craft-films/painting.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.30323,
+            "histogramDistance": 0.25
+          },
+          {
+            "percent": 50,
+            "ssim": 0.344759,
+            "histogramDistance": 0.337077
+          },
+          {
+            "percent": 75,
+            "ssim": 0.392948,
+            "histogramDistance": 0.326335
+          },
+          {
+            "percent": 100,
+            "ssim": 0.386915,
+            "histogramDistance": 0.342285
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 1.009754,
+          "endpointChange": {
+            "ssim": 0.386915,
+            "histogramDistance": 0.342285
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/painting-trade-craft-films-0.png",
+        "25": "calibration/painting-trade-craft-films-25.png",
+        "50": "calibration/painting-trade-craft-films-50.png",
+        "75": "calibration/painting-trade-craft-films-75.png",
+        "100": "calibration/painting-trade-craft-films-100.png"
+      }
+    },
+    {
+      "id": "fencing-trade-craft-films",
+      "url": "/assets/craft-films/fencing.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.228268,
+            "histogramDistance": 0.176432
+          },
+          {
+            "percent": 50,
+            "ssim": 0.231791,
+            "histogramDistance": 0.102376
+          },
+          {
+            "percent": 75,
+            "ssim": 0.403627,
+            "histogramDistance": 0.322591
+          },
+          {
+            "percent": 100,
+            "ssim": 0.120511,
+            "histogramDistance": 0.37972
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.594094,
+          "endpointChange": {
+            "ssim": 0.120511,
+            "histogramDistance": 0.37972
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/fencing-trade-craft-films-0.png",
+        "25": "calibration/fencing-trade-craft-films-25.png",
+        "50": "calibration/fencing-trade-craft-films-50.png",
+        "75": "calibration/fencing-trade-craft-films-75.png",
+        "100": "calibration/fencing-trade-craft-films-100.png"
+      }
+    },
+    {
+      "id": "garage-doors-trade-craft-films",
+      "url": "/assets/craft-films/garage-doors.mp4",
+      "approved": true,
+      "duration": 12.041667,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.60569,
+            "histogramDistance": 0.256673
+          },
+          {
+            "percent": 50,
+            "ssim": 0.311678,
+            "histogramDistance": 0.326172
+          },
+          {
+            "percent": 75,
+            "ssim": 0.492747,
+            "histogramDistance": 0.054036
+          },
+          {
+            "percent": 100,
+            "ssim": 0.379656,
+            "histogramDistance": 0.125488
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.925704,
+          "endpointChange": {
+            "ssim": 0.379656,
+            "histogramDistance": 0.125488
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/garage-doors-trade-craft-films-0.png",
+        "25": "calibration/garage-doors-trade-craft-films-25.png",
+        "50": "calibration/garage-doors-trade-craft-films-50.png",
+        "75": "calibration/garage-doors-trade-craft-films-75.png",
+        "100": "calibration/garage-doors-trade-craft-films-100.png"
+      }
+    },
+    {
+      "id": "roofing-phase2-024",
+      "url": "/assets/planning/clips-phase2/024-1920.mp4",
+      "approved": true,
+      "duration": 8,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.978703,
+            "histogramDistance": 0.013835
+          },
+          {
+            "percent": 50,
+            "ssim": 0.918115,
+            "histogramDistance": 0.022298
+          },
+          {
+            "percent": 75,
+            "ssim": 0.969956,
+            "histogramDistance": 0.015951
+          },
+          {
+            "percent": 100,
+            "ssim": 0.998948,
+            "histogramDistance": 0.015788
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 3.623042,
+          "endpointChange": {
+            "ssim": 0.998948,
+            "histogramDistance": 0.015788
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/roofing-phase2-024-0.png",
+        "25": "calibration/roofing-phase2-024-25.png",
+        "50": "calibration/roofing-phase2-024-50.png",
+        "75": "calibration/roofing-phase2-024-75.png",
+        "100": "calibration/roofing-phase2-024-100.png"
+      }
+    },
+    {
+      "id": "roofing-phase2-026",
+      "url": "/assets/planning/clips-phase2/026-1920.mp4",
+      "approved": true,
+      "duration": 8,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.693998,
+            "histogramDistance": 0.026855
+          },
+          {
+            "percent": 50,
+            "ssim": 0.572195,
+            "histogramDistance": 0.02474
+          },
+          {
+            "percent": 75,
+            "ssim": 0.61297,
+            "histogramDistance": 0.027669
+          },
+          {
+            "percent": 100,
+            "ssim": 0.993317,
+            "histogramDistance": 0.022624
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 7.147109,
+          "endpointChange": {
+            "ssim": 0.993317,
+            "histogramDistance": 0.022624
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/roofing-phase2-026-0.png",
+        "25": "calibration/roofing-phase2-026-25.png",
+        "50": "calibration/roofing-phase2-026-50.png",
+        "75": "calibration/roofing-phase2-026-75.png",
+        "100": "calibration/roofing-phase2-026-100.png"
+      }
+    },
+    {
+      "id": "roofing-phase2-027",
+      "url": "/assets/planning/clips-phase2/027-1920.mp4",
+      "approved": true,
+      "duration": 12,
+      "result": "Pass",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.069795,
+            "histogramDistance": 0.527507
+          },
+          {
+            "percent": 50,
+            "ssim": 0.041698,
+            "histogramDistance": 0.607585
+          },
+          {
+            "percent": 75,
+            "ssim": 0.06074,
+            "histogramDistance": 0.530436
+          },
+          {
+            "percent": 100,
+            "ssim": 0.080588,
+            "histogramDistance": 0.440592
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 1.009024,
+          "endpointChange": {
+            "ssim": 0.080588,
+            "histogramDistance": 0.440592
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/roofing-phase2-027-0.png",
+        "25": "calibration/roofing-phase2-027-25.png",
+        "50": "calibration/roofing-phase2-027-50.png",
+        "75": "calibration/roofing-phase2-027-75.png",
+        "100": "calibration/roofing-phase2-027-100.png"
+      }
+    },
+    {
+      "id": "synthetic-house-morph",
+      "url": "/negative.mp4",
+      "approved": false,
+      "duration": 4,
+      "result": "Fail",
+      "measures": {
+        "frames": [
+          {
+            "percent": 25,
+            "ssim": 0.725514,
+            "histogramDistance": 0.120443
+          },
+          {
+            "percent": 50,
+            "ssim": 0.426463,
+            "histogramDistance": 0.333659
+          },
+          {
+            "percent": 75,
+            "ssim": 0.23824,
+            "histogramDistance": 0.471029
+          },
+          {
+            "percent": 100,
+            "ssim": 0.12669,
+            "histogramDistance": 0.530599
+          }
+        ],
+        "morph": {
+          "interpolationResidual": 0.028026,
+          "endpointChange": {
+            "ssim": 0.12669,
+            "histogramDistance": 0.530599
+          }
+        }
+      },
+      "threshold": {
+        "passSsim": -0.05,
+        "failSsim": -0.15,
+        "passHistogram": 0.65,
+        "failHistogram": 0.8,
+        "morphFailResidual": 0.12,
+        "morphBorderlineResidual": 0.2,
+        "morphChangedSsim": 0.5,
+        "morphChangedHistogram": 0.1
+      },
+      "frames": {
+        "0": "calibration/synthetic-house-morph-0.png",
+        "25": "calibration/synthetic-house-morph-25.png",
+        "50": "calibration/synthetic-house-morph-50.png",
+        "75": "calibration/synthetic-house-morph-75.png",
+        "100": "calibration/synthetic-house-morph-100.png"
+      }
+    }
+  ]
+}

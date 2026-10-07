@@ -1,0 +1,1204 @@
+{
+  "status": "Blocked; no commit",
+  "reason": "Same-version #028E real-browser contract replay changes one Services screenshot. The three main 143-file replays pass, but this separate failure remains.",
+  "blocker": {
+    "passed": false,
+    "command": "node C:/Users/joe/website_creator/tests/review-packet-contract.mjs",
+    "assertion": "Exact packet file list and SHA-256 equality on same-version real-browser replay",
+    "changedScreenshot": "screenshots/page-014-1440.png",
+    "page": "/s/sample-fictional-copper-kite-ventura-contract/services",
+    "before": {
+      "bytes": 1087550,
+      "sha256": "b238097182794ac701711a66c4ea4634e6e0478b454b1eecdafa4e3a89608dad"
+    },
+    "after": {
+      "bytes": 1079637,
+      "sha256": "2da42f6cf9987b7658b111ec693d912b12f2d5e8c71ea57247ce994be1a2a4b1"
+    },
+    "derivedChanges": [
+      "qa-report.json",
+      "qa-summary.md"
+    ],
+    "cause": "Not yet established for this pair. The previous Services diagnostic found decoded/eager images, reduced motion, no hover, transform none, opacity 1 and no active CSS animations. No capture-mode change or image/hash tolerance is authorized.",
+    "log": "final-review-contract.log",
+    "diff": [
+      "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:",
+      "+ actual - expected",
+      "... Skipped lines",
+      "",
+      "  [",
+      "    {",
+      "      bytes: 26480,",
+      "      path: 'pages/page-001.html',",
+      "      sha256: '51c1a917acd3910dd78f4a18c7256cd771bbbdc20eacda9fbb00f2852d4d1fbe',",
+      "...",
+      "    {",
+      "+     bytes: 1079637,",
+      "-     bytes: 1087550,",
+      "      path: 'screenshots/page-014-1440.png',",
+      "+     sha256: '2da42f6cf9987b7658b111ec693d912b12f2d5e8c71ea57247ce994be1a2a4b1',",
+      "-     sha256: 'b238097182794ac701711a66c4ea4634e6e0478b454b1eecdafa4e3a89608dad',",
+      "      type: 'image/png'",
+      "    },",
+      "    {",
+      "      bytes: 11675,",
+      "      path: 'qa-crops/page-014-1440-1.png',",
+      "...",
+      "      path: 'qa-report.json',",
+      "+     sha256: '9f4140d38f2c8aead16f0810da5d8c3fd52613026608fd24ba29cb8c335bc2be',",
+      "-     sha256: 'cc7a3812fff0b7a4e57c9b8271993927d42ebb9d41ad744a451ed4feb9097e3c',",
+      "      type: 'application/json'",
+      "    },",
+      "    {",
+      "      bytes: 306291,",
+      "      path: 'qa-summary.md',",
+      "+     sha256: 'ba3f5b2b6bccff000914d4f0ecee9dcc7bf2f3f0a615e9b83a7f1fa1cead2bea',",
+      "-     sha256: 'b46775256088ec348f3e8e8402eadcc7a5b8aeb8d6131c3be10d76fbfc79767f',",
+      "      type: 'text/plain; charset=utf-8'",
+      "    }",
+      "  ]",
+      ""
+    ],
+    "credits": 0,
+    "realProviderCalls": 0
+  },
+  "mainReplay": {
+    "passed": true,
+    "reports": [
+      {
+        "attempt": 1,
+        "passed": true,
+        "versionHash": "252b7a6bdabada4ca8b9322f5874d0e6590121552e802d9305be39a8dd31f895",
+        "files": 143,
+        "differences": [],
+        "reviewSnapshotUnchanged": true,
+        "timestampsExcluded": [
+          "generatedAt",
+          "completedAt"
+        ],
+        "providerCalls": 0,
+        "exitCode": 0
+      },
+      {
+        "attempt": 2,
+        "passed": true,
+        "versionHash": "252b7a6bdabada4ca8b9322f5874d0e6590121552e802d9305be39a8dd31f895",
+        "files": 143,
+        "differences": [],
+        "reviewSnapshotUnchanged": true,
+        "timestampsExcluded": [
+          "generatedAt",
+          "completedAt"
+        ],
+        "providerCalls": 0,
+        "exitCode": 0
+      },
+      {
+        "attempt": 3,
+        "passed": true,
+        "versionHash": "252b7a6bdabada4ca8b9322f5874d0e6590121552e802d9305be39a8dd31f895",
+        "files": 143,
+        "differences": [],
+        "reviewSnapshotUnchanged": true,
+        "timestampsExcluded": [
+          "generatedAt",
+          "completedAt"
+        ],
+        "providerCalls": 0,
+        "exitCode": 0
+      }
+    ]
+  },
+  "fullSuite": {
+    "counts": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INTERRUPTED": 3,
+      "NOT RUN": 96
+    },
+    "commands": [
+      {
+        "label": "build",
+        "kind": "build",
+        "status": 0,
+        "ms": 1590,
+        "command": "node C:/Users/joe/website_creator/build.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "typecheck",
+        "kind": "typecheck",
+        "status": 0,
+        "ms": 314,
+        "command": "node C:/Users/joe/website_creator/node_modules/typescript/bin/tsc -p C:/Users/joe/website_creator/tsconfig.auth.json",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "auth-session",
+        "kind": "regression",
+        "status": 0,
+        "ms": 3042,
+        "command": "node C:/Users/joe/website_creator/tests/auth-session.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "aws-adapter",
+        "kind": "regression",
+        "status": 0,
+        "ms": 4202,
+        "command": "node C:/Users/joe/website_creator/tests/aws-adapter.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "builder",
+        "kind": "regression",
+        "status": 0,
+        "ms": 379,
+        "command": "node C:/Users/joe/website_creator/tests/builder.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "callback-restore",
+        "kind": "regression",
+        "status": 0,
+        "ms": 366,
+        "command": "node C:/Users/joe/website_creator/tests/callback-restore.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "cinematic-films",
+        "kind": "regression",
+        "status": 0,
+        "ms": 311,
+        "command": "node C:/Users/joe/website_creator/tests/cinematic-films.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "client-modules",
+        "kind": "regression",
+        "status": 0,
+        "ms": 149,
+        "command": "node C:/Users/joe/website_creator/tests/client-modules.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "constitution",
+        "kind": "regression",
+        "status": 0,
+        "ms": 981,
+        "command": "node C:/Users/joe/website_creator/tests/constitution.mjs",
+        "result": "INTERRUPTED",
+        "exitCode": null,
+        "log": "constitution.log"
+      },
+      {
+        "label": "contact-linkage",
+        "kind": "regression",
+        "status": 0,
+        "ms": 402,
+        "command": "node C:/Users/joe/website_creator/tests/contact-linkage.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "contacts-restore",
+        "kind": "regression",
+        "status": 0,
+        "ms": 315,
+        "command": "node C:/Users/joe/website_creator/tests/contacts-restore.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "control",
+        "kind": "regression",
+        "status": 0,
+        "ms": 478,
+        "command": "node C:/Users/joe/website_creator/tests/control.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "conversion-references",
+        "kind": "regression",
+        "status": 0,
+        "ms": 685,
+        "command": "node C:/Users/joe/website_creator/tests/conversion-references.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "core-site-pages",
+        "kind": "regression",
+        "status": 0,
+        "ms": 881,
+        "command": "node C:/Users/joe/website_creator/tests/core-site-pages.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "crm-next",
+        "kind": "regression",
+        "status": 0,
+        "ms": 318,
+        "command": "node C:/Users/joe/website_creator/tests/crm-next.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "crm",
+        "kind": "regression",
+        "status": 0,
+        "ms": 369,
+        "command": "node C:/Users/joe/website_creator/tests/crm.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "design-kits",
+        "kind": "regression",
+        "status": 0,
+        "ms": 649,
+        "command": "node C:/Users/joe/website_creator/tests/design-kits.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "ebook",
+        "kind": "regression",
+        "status": 0,
+        "ms": 483,
+        "command": "node C:/Users/joe/website_creator/tests/ebook.mjs",
+        "result": "PASS",
+        "exitCode": 0,
+        "log": "ebook.log"
+      },
+      {
+        "label": "engagement-providers",
+        "kind": "regression",
+        "status": 0,
+        "ms": 348,
+        "command": "node C:/Users/joe/website_creator/tests/engagement-providers.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "engagement",
+        "kind": "regression",
+        "status": 0,
+        "ms": 441,
+        "command": "node C:/Users/joe/website_creator/tests/engagement.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "expense-metering",
+        "kind": "regression",
+        "status": 0,
+        "ms": 373,
+        "command": "node C:/Users/joe/website_creator/tests/expense-metering.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "expense-polish",
+        "kind": "regression",
+        "status": 0,
+        "ms": 382,
+        "command": "node C:/Users/joe/website_creator/tests/expense-polish.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "expenses",
+        "kind": "regression",
+        "status": 0,
+        "ms": 364,
+        "command": "node C:/Users/joe/website_creator/tests/expenses.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "financing-comparison",
+        "kind": "regression",
+        "status": 0,
+        "ms": 568,
+        "command": "node C:/Users/joe/website_creator/tests/financing-comparison.mjs",
+        "result": "PASS",
+        "exitCode": 0,
+        "log": "financing-comparison.log"
+      },
+      {
+        "label": "financing-states",
+        "kind": "regression",
+        "status": 0,
+        "ms": 602,
+        "command": "node C:/Users/joe/website_creator/tests/financing-states.mjs",
+        "result": "PASS",
+        "exitCode": 0,
+        "log": "financing-states.log"
+      },
+      {
+        "label": "footer-policy",
+        "kind": "regression",
+        "status": 0,
+        "ms": 521,
+        "command": "node C:/Users/joe/website_creator/tests/footer-policy.mjs",
+        "result": "INTERRUPTED",
+        "exitCode": null,
+        "log": "footer-policy.log"
+      },
+      {
+        "label": "generation",
+        "kind": "regression",
+        "status": 0,
+        "ms": 5253,
+        "command": "node C:/Users/joe/website_creator/tests/generation.mjs",
+        "result": "INTERRUPTED",
+        "exitCode": null,
+        "log": "generation.log"
+      },
+      {
+        "label": "hero-editor",
+        "kind": "regression",
+        "status": 0,
+        "ms": 4512,
+        "command": "node C:/Users/joe/website_creator/tests/hero-editor.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "legacy-scroll-video",
+        "kind": "regression",
+        "status": 0,
+        "ms": 56,
+        "command": "node C:/Users/joe/website_creator/tests/legacy-scroll-video.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "legal-policy",
+        "kind": "regression",
+        "status": 0,
+        "ms": 511,
+        "command": "node C:/Users/joe/website_creator/tests/legal-policy.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "media-ranges",
+        "kind": "regression",
+        "status": 0,
+        "ms": 90,
+        "command": "node C:/Users/joe/website_creator/tests/media-ranges.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "motion-v2",
+        "kind": "regression",
+        "status": 0,
+        "ms": 134,
+        "command": "node C:/Users/joe/website_creator/tests/motion-v2.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "neighborhood",
+        "kind": "regression",
+        "status": 0,
+        "ms": 494,
+        "command": "node C:/Users/joe/website_creator/tests/neighborhood.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "owner-photo",
+        "kind": "regression",
+        "status": 0,
+        "ms": 440,
+        "command": "node C:/Users/joe/website_creator/tests/owner-photo.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "planning-ambient",
+        "kind": "regression",
+        "status": 0,
+        "ms": 1736,
+        "command": "node C:/Users/joe/website_creator/tests/planning-ambient.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "planning-motion",
+        "kind": "regression",
+        "status": 0,
+        "ms": 88,
+        "command": "node C:/Users/joe/website_creator/tests/planning-motion.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "planning-scroll",
+        "kind": "regression",
+        "status": 0,
+        "ms": 1833,
+        "command": "node C:/Users/joe/website_creator/tests/planning-scroll.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "platform",
+        "kind": "regression",
+        "status": 0,
+        "ms": 440,
+        "command": "node C:/Users/joe/website_creator/tests/platform.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "premium-service",
+        "kind": "regression",
+        "status": 0,
+        "ms": 488,
+        "command": "node C:/Users/joe/website_creator/tests/premium-service.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "presentation",
+        "kind": "regression",
+        "status": 0,
+        "ms": 431,
+        "command": "node C:/Users/joe/website_creator/tests/presentation.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "project-experience",
+        "kind": "regression",
+        "status": 0,
+        "ms": 370,
+        "command": "node C:/Users/joe/website_creator/tests/project-experience.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "promotion-unlocks",
+        "kind": "regression",
+        "status": 0,
+        "ms": 451,
+        "command": "node C:/Users/joe/website_creator/tests/promotion-unlocks.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "reference-proof",
+        "kind": "regression",
+        "status": 0,
+        "ms": 564,
+        "command": "node C:/Users/joe/website_creator/tests/reference-proof.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "review-lookup",
+        "kind": "regression",
+        "status": 0,
+        "ms": 368,
+        "command": "node C:/Users/joe/website_creator/tests/review-lookup.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-cities",
+        "kind": "regression",
+        "status": 0,
+        "ms": 585,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-cities.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-cta",
+        "kind": "regression",
+        "status": 0,
+        "ms": 446,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-cta.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-story",
+        "kind": "regression",
+        "status": 0,
+        "ms": 496,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-story.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "sales-ops",
+        "kind": "regression",
+        "status": 0,
+        "ms": 312,
+        "command": "node C:/Users/joe/website_creator/tests/sales-ops.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "saved-designs",
+        "kind": "regression",
+        "status": 0,
+        "ms": 408,
+        "command": "node C:/Users/joe/website_creator/tests/saved-designs.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "scroll-media",
+        "kind": "regression",
+        "status": 0,
+        "ms": 13723,
+        "command": "node C:/Users/joe/website_creator/tests/scroll-media.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "scroll-story",
+        "kind": "regression",
+        "status": 0,
+        "ms": 403,
+        "command": "node C:/Users/joe/website_creator/tests/scroll-story.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "scroll-video-controller",
+        "kind": "regression",
+        "status": 0,
+        "ms": 91,
+        "command": "node C:/Users/joe/website_creator/tests/scroll-video-controller.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "service-content",
+        "kind": "regression",
+        "status": 0,
+        "ms": 172,
+        "command": "node C:/Users/joe/website_creator/tests/service-content.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "service-motion",
+        "kind": "regression",
+        "status": 0,
+        "ms": 467,
+        "command": "node C:/Users/joe/website_creator/tests/service-motion.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "service-pages-all-trades",
+        "kind": "regression",
+        "status": 0,
+        "ms": 491,
+        "command": "node C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "service-playbook",
+        "kind": "regression",
+        "status": 0,
+        "ms": 424,
+        "command": "node C:/Users/joe/website_creator/tests/service-playbook.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "showpiece-media",
+        "kind": "regression",
+        "status": 0,
+        "ms": 198,
+        "command": "node C:/Users/joe/website_creator/tests/showpiece-media.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "showpiece-v4",
+        "kind": "regression",
+        "status": 0,
+        "ms": 433,
+        "command": "node C:/Users/joe/website_creator/tests/showpiece-v4.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "template-name",
+        "kind": "regression",
+        "status": 0,
+        "ms": 55,
+        "command": "node C:/Users/joe/website_creator/tests/template-name.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "trade-enablement",
+        "kind": "regression",
+        "status": 0,
+        "ms": 243,
+        "command": "node C:/Users/joe/website_creator/tests/trade-enablement.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "trade-revisions",
+        "kind": "regression",
+        "status": 0,
+        "ms": 470,
+        "command": "node C:/Users/joe/website_creator/tests/trade-revisions.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "trade-upgrade",
+        "kind": "regression",
+        "status": 0,
+        "ms": 380,
+        "command": "node C:/Users/joe/website_creator/tests/trade-upgrade.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "trade-visual-correctness",
+        "kind": "regression",
+        "status": 0,
+        "ms": 1359,
+        "command": "node C:/Users/joe/website_creator/tests/trade-visual-correctness.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "trades-financing",
+        "kind": "regression",
+        "status": 0,
+        "ms": 377,
+        "command": "node C:/Users/joe/website_creator/tests/trades-financing.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "trust",
+        "kind": "regression",
+        "status": 0,
+        "ms": 595,
+        "command": "node C:/Users/joe/website_creator/tests/trust.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "website-pages",
+        "kind": "regression",
+        "status": 0,
+        "ms": 1731,
+        "command": "node C:/Users/joe/website_creator/tests/website-pages.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "workspace-owner",
+        "kind": "regression",
+        "status": 0,
+        "ms": 1933,
+        "command": "node C:/Users/joe/website_creator/tests/workspace-owner.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "workspace",
+        "kind": "regression",
+        "status": 0,
+        "ms": 470,
+        "command": "node C:/Users/joe/website_creator/tests/workspace.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "zoom",
+        "kind": "regression",
+        "status": 0,
+        "ms": 295,
+        "command": "node C:/Users/joe/website_creator/tests/zoom.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "template-assets",
+        "kind": "assets",
+        "status": 0,
+        "ms": 157,
+        "command": "node C:/Users/joe/website_creator/scripts/check-template-assets.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "platform-mobile",
+        "kind": "platform",
+        "status": 0,
+        "ms": 51535,
+        "command": "node C:/Users/joe/website_creator/tests/platform-mobile.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "callback-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 5785,
+        "command": "node C:/Users/joe/website_creator/docs/build-evidence/clips-phase2/callback-calendar-clock.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "contact-linkage-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 7006,
+        "command": "node C:/Users/joe/website_creator/tests/contact-linkage-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "contacts-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 5739,
+        "command": "node C:/Users/joe/website_creator/tests/contacts-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "ebook-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 14037,
+        "command": "node C:/Users/joe/website_creator/tests/ebook-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "expense-polish-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 6481,
+        "command": "node C:/Users/joe/website_creator/tests/expense-polish-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "expenses-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 9901,
+        "command": "node C:/Users/joe/website_creator/tests/expenses-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "financing-states-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 16474,
+        "command": "node C:/Users/joe/website_creator/tests/financing-states-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "generation-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 9534,
+        "command": "node C:/Users/joe/website_creator/tests/generation-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "hero-editor-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 32755,
+        "command": "node C:/Users/joe/website_creator/tests/hero-editor-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "planning-ambient-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 19913,
+        "command": "node C:/Users/joe/website_creator/tests/planning-ambient-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "planning-scroll-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 32445,
+        "command": "node C:/Users/joe/website_creator/tests/planning-scroll-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "platform-ui-cleanup-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 6695,
+        "command": "node C:/Users/joe/website_creator/tests/platform-ui-cleanup-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "promotion-unlocks-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 17388,
+        "command": "node C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-cities-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 19492,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-cities-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-cta-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 23512,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-cta-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-story-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 13734,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-story-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "service-motion-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 20644,
+        "command": "node C:/Users/joe/website_creator/tests/service-motion-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "trade-enablement-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 38871,
+        "command": "node C:/Users/joe/website_creator/tests/trade-enablement-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "trade-visual-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 35337,
+        "command": "node C:/Users/joe/website_creator/tests/trade-visual-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "clips-phase2",
+        "kind": "regression",
+        "status": 0,
+        "ms": 610,
+        "command": "node C:/Users/joe/website_creator/tests/clips-phase2.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "clips-phase2-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 23564,
+        "command": "node C:/Users/joe/website_creator/tests/clips-phase2-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-polish-part1",
+        "kind": "regression",
+        "status": 0,
+        "ms": 2975,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-polish-part1-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 46956,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-polish-part2",
+        "kind": "regression",
+        "status": 0,
+        "ms": 5370,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part2.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-polish-part2-browser",
+        "kind": "browser",
+        "status": 0,
+        "ms": 44972,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part2-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "roofing-acceptance",
+        "kind": "browser",
+        "status": 0,
+        "ms": 101358,
+        "command": "node C:/Users/joe/website_creator/tests/roofing-acceptance.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "design-styles",
+        "kind": "regression",
+        "status": 0,
+        "ms": 2310,
+        "command": "node C:/Users/joe/website_creator/tests/design-styles.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "promotions-ambient",
+        "status": 0,
+        "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward.",
+        "command": "node C:/Users/joe/website_creator/tests/promotions-ambient.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "promotions-scroll",
+        "status": 0,
+        "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward.",
+        "command": "node C:/Users/joe/website_creator/tests/promotions-scroll.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "promotions-ambient-browser",
+        "status": 0,
+        "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward.",
+        "command": "node C:/Users/joe/website_creator/tests/promotions-ambient-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      },
+      {
+        "label": "promotions-scroll-browser",
+        "status": 0,
+        "fixture": "Original Phase 1 Pending Promotions descriptors; current Financing chapter. Restored installed catalog afterward.",
+        "command": "node C:/Users/joe/website_creator/tests/promotions-scroll-browser.mjs",
+        "result": "NOT RUN",
+        "exitCode": null,
+        "log": null
+      }
+    ]
+  },
+  "additionalSuite": {
+    "passed": 11,
+    "failed": 0,
+    "interrupted": 1,
+    "notRun": 2
+  },
+  "interruptedAdditional": [
+    "section-variants-browser --all-process"
+  ],
+  "notRunAdditional": [
+    "media-library-browser",
+    "media-library-browser --media-only"
+  ],
+  "otherInterrupted": [
+    "design-styles-browser"
+  ],
+  "notRunAfterContractFailure": [
+    "review-packets",
+    "review-packet-browser"
+  ],
+  "focusedCommands": {
+    "passed": 12,
+    "total": 12
+  },
+  "platformStates": 162,
+  "qaStaffStates": 15,
+  "completedPlatformAndStaffAaFailures": 0,
+  "broadFinalAuditComplete": false,
+  "clearanceStates": {
+    "javascript": 32,
+    "noJavascript": 16,
+    "legacy": 24,
+    "intersections": 0
+  },
+  "fiveSamples": {
+    "pass": 3425,
+    "borderline": 70,
+    "fail": 0,
+    "qaGateClear": false
+  },
+  "legacyCaptures": {
+    "Robles": {
+      "pass": 1086,
+      "borderline": 2,
+      "fail": 0,
+      "sample": false
+    },
+    "Constitution": {
+      "pass": 624,
+      "borderline": 14,
+      "fail": 0
+    },
+    "Conversion": {
+      "pass": 622,
+      "borderline": 12,
+      "fail": 0
+    }
+  },
+  "protectedHashesMatched": 279,
+  "platformCssUnchanged": true,
+  "existingCssUnchanged": 56,
+  "archivedResponsesMatched": 374,
+  "credits": 0,
+  "realProviderCalls": 0,
+  "stagedFiles": 0,
+  "commit": null
+}

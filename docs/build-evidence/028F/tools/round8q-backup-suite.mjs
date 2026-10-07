@@ -1,0 +1,9 @@
+import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';
+const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028F',backup=out+'/checks/round8q-before';
+const commands=JSON.parse(fs.readFileSync(root+'/docs/build-evidence/028A/final-checks.json')).commands,files=[];
+const save=p=>{const file=root+'/'+p,to=backup+'/'+p;if(fs.existsSync(file)&&!fs.existsSync(to)){fs.mkdirSync(path.dirname(to),{recursive:true});fs.cpSync(file,to,{recursive:true,preserveTimestamps:true});files.push(p);}};
+for(const directory of ['legacy','platform-mobile','platform-cleanup'])save('docs/build-evidence/028F/'+directory);
+for(const c of commands)for(const suffix of ['.log','-contrast.json','-console.json','-transitions.json'])save('docs/build-evidence/028F/checks/'+c.label+suffix);
+for(const p of ['src/roofing-critical-css.js','docs/build-evidence/028F/tools/parallel-suite.mjs','docs/build-evidence/028F/tools/child-hang-guard.mjs','BUILD-BACKLOG.md','BUILD-STATUS.md'])save(p);
+const inputHashes=['public/planning-films.json','tests/roofing-polish-part1.mjs','src/aws/qa-browser.js','tests/part2-html-normalize.mjs','tests/review-part1-html-normalize.mjs','docs/build-evidence/028F/tools/parallel-suite.mjs','docs/build-evidence/028F/tools/child-hang-guard.mjs','BUILD-BACKLOG.md','BUILD-STATUS.md'].map(p=>({path:p,sha256:createHash('sha256').update(fs.readFileSync(root+'/'+p)).digest('hex')}));
+fs.writeFileSync(out+'/checks/round8q-backup-manifest.json',JSON.stringify({files,inputHashes},null,2));console.log('Backed up suite-regenerated evidence and temporary inputs: '+files.length+' paths.');

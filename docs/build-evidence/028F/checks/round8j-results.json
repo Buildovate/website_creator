@@ -1,0 +1,143 @@
+{
+  "round": "8j",
+  "state": "Stopped under step 3: promotions baseline adds two different poster attributes beyond the exact financing-poster authorization",
+  "posterCheck": {
+    "path": "/assets/planning/027A-part1/financing-poster-1280.webp",
+    "exists": true,
+    "bytes": 30114,
+    "sha256": "a201cc4d558635392f817b74c01d1aee9882fbc8e93e4da2b8889bb34a2eaa97",
+    "url": "http://127.0.0.1:5173/assets/planning/027A-part1/financing-poster-1280.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "servedBytes": 30114
+  },
+  "baselineScan": {
+    "checked": 323,
+    "identical": 321,
+    "authorizedFinancingPosterOnly": 1,
+    "other": 1,
+    "log": "checks/round8j-baseline-scan.log",
+    "results": "checks/round8j-baseline-scan.json"
+  },
+  "eligibleBaseline": {
+    "url": "/s/ambient-baseline-roofing/financing?preview=1",
+    "name": "roofing-16.html",
+    "diff": "+poster=\"/assets/planning/027A-part1/financing-poster-1280.webp\" ",
+    "updated": false,
+    "reason": "No baseline was written before completing the scan; stopped on the other baseline difference"
+  },
+  "stop": {
+    "url": "/s/ambient-baseline-roofing/promotions?preview=1",
+    "name": "roofing-17.html",
+    "diffs": [
+      "poster=\"/assets/planning/roofing-promotions-ambient-1280.webp\" ",
+      "poster=\"/assets/planning/roofing-promotions-scroll-1280.webp\" "
+    ],
+    "onlyTheseTwoInsertions": true,
+    "diff": "checks/round8j-baseline-diffs/roofing-17.html.diff.txt",
+    "reason": "These are two different promotions poster attributes, not the exact financing poster authorized in round 8j"
+  },
+  "baselinesChanged": [],
+  "standalone": {
+    "roofingPolishPart2": "Not run: step 3 stop",
+    "headerLogo": "Not run: step 3 stop"
+  },
+  "suite102": {
+    "state": "Not run",
+    "pass": 0,
+    "passWithWarning": 0,
+    "fail": 0,
+    "incomplete": 102,
+    "log": "checks/round8j-suite102.log"
+  },
+  "samples": {
+    "pass": 3425,
+    "borderline": 70,
+    "fail": 0,
+    "qaGateClear": false,
+    "state": "Accepted prior snapshot, not rerun; all 70 stay open",
+    "decisionsRecorded": 0
+  },
+  "preservation": [
+    {
+      "path": "tests/roofing-polish-part2.mjs",
+      "before": "054d734aafd710b58daecd864874f80a1057777afd46cb2202a89efdc268a2d4",
+      "after": "054d734aafd710b58daecd864874f80a1057777afd46cb2202a89efdc268a2d4",
+      "unchanged": true
+    },
+    {
+      "path": "tests/part2-html-normalize.mjs",
+      "before": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "after": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "unchanged": true
+    },
+    {
+      "path": "tests/review-part1-html-normalize.mjs",
+      "before": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "after": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "unchanged": true
+    },
+    {
+      "path": "src/planning-ambient.js",
+      "before": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "after": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "unchanged": true
+    },
+    {
+      "path": "src/site-polish.js",
+      "before": "c0d0a2cb4c24ffa85851c854ce52788bd0c8f8b7e3c6ad80d0325ebc53a2db2b",
+      "after": "c0d0a2cb4c24ffa85851c854ce52788bd0c8f8b7e3c6ad80d0325ebc53a2db2b",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/qa-browser.js",
+      "before": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "public/planning-films.json",
+      "before": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part1.mjs",
+      "before": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "after": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/full-checks.json",
+      "before": "dc9b680c8db5723bcf336e23d73a733d12053237ec8f9b14338a89d5cd8d9485",
+      "after": "dc9b680c8db5723bcf336e23d73a733d12053237ec8f9b14338a89d5cd8d9485",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/027A-part2/before-responses.json",
+      "before": "f69f357192dc81333620a7fff0e7456b6f7c5f13068a100c7942bdbd40d27444",
+      "after": "f69f357192dc81333620a7fff0e7456b6f7c5f13068a100c7942bdbd40d27444",
+      "unchanged": true
+    }
+  ],
+  "filesChanged": [
+    "docs/build-evidence/028F/tools/round8j-baseline-scan.mjs",
+    "docs/build-evidence/028F/checks/round8j-poster-check.json",
+    "docs/build-evidence/028F/checks/round8j-baseline-scan.json",
+    "docs/build-evidence/028F/checks/round8j-baseline-scan.log",
+    "docs/build-evidence/028F/checks/round8j-baseline-diffs/roofing-16.html-expected.txt",
+    "docs/build-evidence/028F/checks/round8j-baseline-diffs/roofing-16.html-actual.txt",
+    "docs/build-evidence/028F/checks/round8j-baseline-diffs/roofing-16.html.diff.txt",
+    "docs/build-evidence/028F/checks/round8j-baseline-diffs/roofing-17.html-expected.txt",
+    "docs/build-evidence/028F/checks/round8j-baseline-diffs/roofing-17.html-actual.txt",
+    "docs/build-evidence/028F/checks/round8j-baseline-diffs/roofing-17.html.diff.txt",
+    "docs/build-evidence/028F/checks/round8j-results.json",
+    "docs/build-evidence/028F/checks/round8j-notes.md",
+    "docs/build-evidence/028F/checks/round8j-suite102.log"
+  ],
+  "temporaryInputs": "Unchanged byte-identically; no temporary harness override used",
+  "commit": null,
+  "staged": false,
+  "providerCalls": 0,
+  "credits": 0
+}

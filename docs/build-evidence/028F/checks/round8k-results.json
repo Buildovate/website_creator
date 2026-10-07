@@ -1,0 +1,210 @@
+{
+  "round": "8k",
+  "state": "Stopped: Part2 stale historical source-preservation assertion fails on the already-approved financing poster",
+  "posterChecks": [
+    {
+      "path": "/assets/planning/027A-part1/financing-poster-1280.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "localBytes": 30114,
+      "servedBytes": 30114,
+      "sha256": "a201cc4d558635392f817b74c01d1aee9882fbc8e93e4da2b8889bb34a2eaa97"
+    },
+    {
+      "path": "/assets/planning/roofing-promotions-ambient-1280.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "localBytes": 120386,
+      "servedBytes": 120386,
+      "sha256": "81b6b2ee69fcc7a6e584322193721336dd280b245903cc812d73d5c7a5a4b206"
+    },
+    {
+      "path": "/assets/planning/roofing-promotions-scroll-1280.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "localBytes": 130378,
+      "servedBytes": 130378,
+      "sha256": "787882ca0c7b8484aa6fff0243670f25049d69148f59810889a9ea8fbe60f948"
+    }
+  ],
+  "baselinesChanged": [
+    {
+      "path": "docs/build-evidence/027A-part2/before/roofing-16.html",
+      "name": "roofing-16.html",
+      "url": "/s/ambient-baseline-roofing/financing?preview=1",
+      "oldSha256": "7378cbe1c5900b5b4c093d844e045ed95cd4fc3ebbfa9307705c21e1df5e23a8",
+      "newSha256": "490ab2252205369051f101b7869aa09e264a19d7c5ef8982467e3bc42dec9f6c",
+      "bytesAdded": 64,
+      "additions": [
+        {
+          "path": "/assets/planning/027A-part1/financing-poster-1280.webp",
+          "before": "<video data-planning-ambient data-src=\"/assets/planning/027A-part1/financing-1920.mp4\" data-src-mobile=\"/assets/planning/027A-part1/financing-960.mp4\" data-src-webm=\"/assets/planning/027A-part1/financing-1920.webm\" data-src-mobile-webm=\"/assets/planning/027A-part1/financing-960.webm\" muted loop playsinline preload=\"none\" aria-label=\"Roofing materials and blank planning folders\">",
+          "after": "<video poster=\"/assets/planning/027A-part1/financing-poster-1280.webp\" data-planning-ambient data-src=\"/assets/planning/027A-part1/financing-1920.mp4\" data-src-mobile=\"/assets/planning/027A-part1/financing-960.mp4\" data-src-webm=\"/assets/planning/027A-part1/financing-1920.webm\" data-src-mobile-webm=\"/assets/planning/027A-part1/financing-960.webm\" muted loop playsinline preload=\"none\" aria-label=\"Roofing materials and blank planning folders\">"
+        }
+      ]
+    },
+    {
+      "path": "docs/build-evidence/027A-part2/before/roofing-17.html",
+      "name": "roofing-17.html",
+      "url": "/s/ambient-baseline-roofing/promotions?preview=1",
+      "oldSha256": "eb338f60d545eb039d0ee0c78975ed518f32ddbfa17682fa4406bf65a9f96dec",
+      "newSha256": "56d6d5a3ecc82fc1415506c1c31275833c037132e74e762a1dbd67f6eecc1dc4",
+      "bytesAdded": 125,
+      "additions": [
+        {
+          "path": "/assets/planning/roofing-promotions-ambient-1280.webp",
+          "before": "<video data-planning-ambient data-src=\"/assets/planning/clips-phase2/026-1920.mp4\" data-src-mobile=\"/assets/planning/clips-phase2/026-960.mp4\" data-src-webm=\"/assets/planning/clips-phase2/026-1920.webm\" data-src-mobile-webm=\"/assets/planning/clips-phase2/026-960.webm\" muted loop playsinline preload=\"none\" aria-label=\"Quiet roof detail scene\">",
+          "after": "<video poster=\"/assets/planning/roofing-promotions-ambient-1280.webp\" data-planning-ambient data-src=\"/assets/planning/clips-phase2/026-1920.mp4\" data-src-mobile=\"/assets/planning/clips-phase2/026-960.mp4\" data-src-webm=\"/assets/planning/clips-phase2/026-1920.webm\" data-src-mobile-webm=\"/assets/planning/clips-phase2/026-960.webm\" muted loop playsinline preload=\"none\" aria-label=\"Quiet roof detail scene\">"
+        },
+        {
+          "path": "/assets/planning/roofing-promotions-scroll-1280.webp",
+          "before": "<video data-story-film data-src=\"/assets/planning/clips-phase2/027-1920.mp4\" data-src-mobile=\"/assets/planning/clips-phase2/027-960.mp4\" data-src-webm=\"/assets/planning/clips-phase2/027-1920.webm\" data-src-mobile-webm=\"/assets/planning/clips-phase2/027-960.webm\" muted playsinline preload=\"none\" aria-label=\"Roof offer and written estimate planning scene\">",
+          "after": "<video poster=\"/assets/planning/roofing-promotions-scroll-1280.webp\" data-story-film data-src=\"/assets/planning/clips-phase2/027-1920.mp4\" data-src-mobile=\"/assets/planning/clips-phase2/027-960.mp4\" data-src-webm=\"/assets/planning/clips-phase2/027-1920.webm\" data-src-mobile-webm=\"/assets/planning/clips-phase2/027-960.webm\" muted playsinline preload=\"none\" aria-label=\"Roof offer and written estimate planning scene\">"
+        }
+      ]
+    }
+  ],
+  "checksumManifest": "docs/build-evidence/027A-part2/before-responses.json",
+  "manifestChange": "Only the two updated baseline SHA-256 values",
+  "untouchedBaselineFiles": 372,
+  "rescan": {
+    "checked": 323,
+    "identical": 323,
+    "differences": 0,
+    "evidence": "checks/round8k-baseline-rescan.json"
+  },
+  "standalone": {
+    "roofingPolishPart2": {
+      "outcome": "FAILED",
+      "exitCode": 1,
+      "command": "node tests/roofing-polish-part2.mjs",
+      "log": "checks/round8k-roofing-polish-part2.log",
+      "responseContractsPassedBeforeSourceLockFailure": 374,
+      "error": "protected source exact (checkout line endings normalized) src/planning-ambient.js",
+      "location": "tests/roofing-polish-part2.mjs:21:393"
+    },
+    "headerLogo": "Not run: Part2 failed before the required next step"
+  },
+  "sourceLockProof": {
+    "path": "src/planning-ambient.js",
+    "historicalHead": "cd31c4db0cbb51625ee36458f17e99a052bc4929",
+    "assertion": "protected source exact (checkout line endings normalized) src/planning-ambient.js",
+    "removingOnlyApprovedPosterMatchesHistoricalSource": true,
+    "currentSourceUnchangedThisRound": true,
+    "testAssertionUnchanged": true
+  },
+  "suite102": {
+    "state": "Not run",
+    "pass": 0,
+    "passWithWarning": 0,
+    "fail": 0,
+    "incomplete": 102,
+    "log": "checks/round8k-suite102.log"
+  },
+  "preservation": [
+    {
+      "path": "tests/roofing-polish-part2.mjs",
+      "before": "054d734aafd710b58daecd864874f80a1057777afd46cb2202a89efdc268a2d4",
+      "after": "054d734aafd710b58daecd864874f80a1057777afd46cb2202a89efdc268a2d4",
+      "unchanged": true
+    },
+    {
+      "path": "tests/part2-html-normalize.mjs",
+      "before": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "after": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "unchanged": true
+    },
+    {
+      "path": "tests/review-part1-html-normalize.mjs",
+      "before": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "after": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "unchanged": true
+    },
+    {
+      "path": "src/planning-ambient.js",
+      "before": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "after": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "unchanged": true
+    },
+    {
+      "path": "src/site-polish.js",
+      "before": "c0d0a2cb4c24ffa85851c854ce52788bd0c8f8b7e3c6ad80d0325ebc53a2db2b",
+      "after": "c0d0a2cb4c24ffa85851c854ce52788bd0c8f8b7e3c6ad80d0325ebc53a2db2b",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/qa-browser.js",
+      "before": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "public/planning-films.json",
+      "before": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part1.mjs",
+      "before": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "after": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/full-checks.json",
+      "before": "dc9b680c8db5723bcf336e23d73a733d12053237ec8f9b14338a89d5cd8d9485",
+      "after": "dc9b680c8db5723bcf336e23d73a733d12053237ec8f9b14338a89d5cd8d9485",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/parallel-suite.mjs",
+      "before": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "after": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/child-hang-guard.mjs",
+      "before": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "after": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/checks/round8h-header-logo-regression.json",
+      "before": "0eed489d7d2e8851756116d37ef6c4074872de08ef0d0574a9967ce4ff4993c4",
+      "after": "0eed489d7d2e8851756116d37ef6c4074872de08ef0d0574a9967ce4ff4993c4",
+      "unchanged": true
+    }
+  ],
+  "samples": {
+    "pass": 3425,
+    "borderline": 70,
+    "fail": 0,
+    "qaGateClear": false,
+    "state": "Accepted prior snapshot, not rerun; all 70 remain open",
+    "phoneHeaderEllipsis": 67,
+    "transformationVideo": 3,
+    "decisionsRecorded": 0
+  },
+  "filesChanged": [
+    "docs/build-evidence/027A-part2/before/roofing-16.html",
+    "docs/build-evidence/027A-part2/before/roofing-17.html",
+    "docs/build-evidence/027A-part2/before-responses.json",
+    "docs/build-evidence/028F/tools/round8k-poster-baselines.mjs",
+    "docs/build-evidence/028F/checks/round8k-poster-checks.json",
+    "docs/build-evidence/028F/checks/round8k-baseline-updates.json",
+    "docs/build-evidence/028F/checks/round8k-baseline-rescan.json",
+    "docs/build-evidence/028F/checks/round8k-baselines.log",
+    "docs/build-evidence/028F/checks/round8k-baseline-diffs/roofing-16.html.diff.txt",
+    "docs/build-evidence/028F/checks/round8k-baseline-diffs/roofing-17.html.diff.txt",
+    "docs/build-evidence/028F/checks/round8k-roofing-polish-part2.log",
+    "docs/build-evidence/028F/checks/round8k-source-lock-proof.json",
+    "docs/build-evidence/028F/checks/round8k-results.json",
+    "docs/build-evidence/028F/checks/round8k-notes.md",
+    "docs/build-evidence/028F/checks/round8k-suite102.log"
+  ],
+  "temporaryInputs": "Unchanged byte-identically; no temporary override needed",
+  "commit": null,
+  "staged": false,
+  "providerCalls": 0,
+  "credits": 0
+}

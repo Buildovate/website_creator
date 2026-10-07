@@ -1,0 +1,258 @@
+{
+  "round": "8s",
+  "state": "Stopped: three hung commands; no retry; Samples not run",
+  "standalones": "Not rerun separately; all four PASS in round8r",
+  "suite102": {
+    "state": "Stopped",
+    "pass": 5,
+    "passWithWarning": 0,
+    "fail": 3,
+    "incomplete": 94,
+    "completed": 8,
+    "failures": [
+      {
+        "label": "service-pages-all-trades",
+        "kind": "regression",
+        "command": "node C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs",
+        "status": 1,
+        "outcome": "FAILED",
+        "reason": "hung",
+        "signal": null,
+        "ms": 1399303
+      },
+      {
+        "label": "financing-comparison",
+        "kind": "regression",
+        "command": "node C:/Users/joe/website_creator/tests/financing-comparison.mjs",
+        "status": 1,
+        "outcome": "FAILED",
+        "reason": "hung",
+        "signal": null,
+        "ms": 1197023
+      },
+      {
+        "label": "ebook",
+        "kind": "regression",
+        "command": "node C:/Users/joe/website_creator/tests/ebook.mjs",
+        "status": 1,
+        "outcome": "FAILED",
+        "reason": "hung",
+        "signal": null,
+        "ms": 1339711
+      }
+    ],
+    "runnerExit": 1,
+    "planningFilmsMatch": true
+  },
+  "suiteRows": [
+    {
+      "label": "roofing-cta",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/roofing-cta.mjs",
+      "status": 0,
+      "outcome": "PASS",
+      "signal": null,
+      "ms": 156966
+    },
+    {
+      "label": "roofing-cities",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/roofing-cities.mjs",
+      "status": 0,
+      "outcome": "PASS",
+      "signal": null,
+      "ms": 238067
+    },
+    {
+      "label": "reference-proof",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/reference-proof.mjs",
+      "status": 0,
+      "outcome": "PASS",
+      "signal": null,
+      "ms": 250386
+    },
+    {
+      "label": "roofing-story",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/roofing-story.mjs",
+      "status": 0,
+      "outcome": "PASS",
+      "signal": null,
+      "ms": 153077
+    },
+    {
+      "label": "service-motion",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/service-motion.mjs",
+      "status": 0,
+      "outcome": "PASS",
+      "signal": null,
+      "ms": 214592
+    },
+    {
+      "label": "service-pages-all-trades",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs",
+      "status": 1,
+      "outcome": "FAILED",
+      "reason": "hung",
+      "signal": null,
+      "ms": 1399303
+    },
+    {
+      "label": "financing-comparison",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/financing-comparison.mjs",
+      "status": 1,
+      "outcome": "FAILED",
+      "reason": "hung",
+      "signal": null,
+      "ms": 1197023
+    },
+    {
+      "label": "ebook",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/ebook.mjs",
+      "status": 1,
+      "outcome": "FAILED",
+      "reason": "hung",
+      "signal": null,
+      "ms": 1339711
+    }
+  ],
+  "passWithWarning": [],
+  "failures": [
+    {
+      "label": "service-pages-all-trades",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs",
+      "status": 1,
+      "outcome": "FAILED",
+      "reason": "hung",
+      "signal": null,
+      "ms": 1399303,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8s-service-pages-all-trades.log",
+      "firstErrorLines": [
+        "FAILED/hung: silent for 10 minutes"
+      ]
+    },
+    {
+      "label": "financing-comparison",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/financing-comparison.mjs",
+      "status": 1,
+      "outcome": "FAILED",
+      "reason": "hung",
+      "signal": null,
+      "ms": 1197023,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8s-financing-comparison.log",
+      "firstErrorLines": [
+        "FAILED/hung: silent for 10 minutes"
+      ]
+    },
+    {
+      "label": "ebook",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/ebook.mjs",
+      "status": 1,
+      "outcome": "FAILED",
+      "reason": "hung",
+      "signal": null,
+      "ms": 1339711,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8s-ebook.log",
+      "firstErrorLines": [
+        "FAILED/hung: silent for 10 minutes"
+      ]
+    }
+  ],
+  "planningFilms": {
+    "before": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+    "atRunnerExit": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+    "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+    "matches": true,
+    "runnerRestored": true,
+    "supervisorRestored": []
+  },
+  "samples": {
+    "state": "Not run",
+    "historical": {
+      "pass": 3425,
+      "borderline": 70,
+      "fail": 0
+    },
+    "qaGateClear": false,
+    "original70Open": true,
+    "decisionsRecorded": 0
+  },
+  "locks": [
+    {
+      "path": "docs/build-evidence/028F/tools/parallel-suite.mjs",
+      "sha256": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "after": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/child-hang-guard.mjs",
+      "sha256": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "after": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "unchanged": true
+    },
+    {
+      "path": "BUILD-BACKLOG.md",
+      "sha256": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+      "after": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+      "unchanged": true
+    },
+    {
+      "path": "BUILD-STATUS.md",
+      "sha256": "6f1b9bcc2d8f53bb1e18dfb1c8575d56cd8b098010ff9384bccc2244c6591cc8",
+      "after": "6f1b9bcc2d8f53bb1e18dfb1c8575d56cd8b098010ff9384bccc2244c6591cc8",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/qa-browser.js",
+      "sha256": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "tests/part2-html-normalize.mjs",
+      "sha256": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "after": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "unchanged": true
+    },
+    {
+      "path": "tests/review-part1-html-normalize.mjs",
+      "sha256": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "after": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "unchanged": true
+    }
+  ],
+  "qaGateClear": false,
+  "original70Borderlines": {
+    "open": 70,
+    "accepted": 0,
+    "waived": 0,
+    "reclassified": 0
+  },
+  "productEdits": [],
+  "commit": null,
+  "staged": false,
+  "providerCalls": 0,
+  "credits": 0,
+  "baselineUpdates": 0,
+  "sourcePreservation": {
+    "checked": 479,
+    "changed": []
+  },
+  "originalSamplePreservation": {
+    "checkedFiles": 29039,
+    "changed": [],
+    "byteIdentical": true,
+    "original70Open": true,
+    "decisionsRecorded": 0,
+    "qaGateClear": false
+  },
+  "remainingSuiteProcesses": 0
+}

@@ -1,0 +1,1012 @@
+{
+  "passed": true,
+  "sourceCoverage": [
+    {
+      "kit": "ambient-baseline-roofing",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-roofing",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-roofing",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-roofing",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-patios",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-patios",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-patios",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-patios",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-plumbing",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-plumbing",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-plumbing",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-plumbing",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-hvac",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-hvac",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-hvac",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-hvac",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-electrical",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-electrical",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-electrical",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-electrical",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-landscaping",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-landscaping",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-landscaping",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-landscaping",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-general-contractors",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-general-contractors",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-general-contractors",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-general-contractors",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-flooring",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-flooring",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-flooring",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-flooring",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-painting",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-painting",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-painting",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-painting",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-fencing",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-fencing",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-fencing",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-fencing",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-garage-doors",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-garage-doors",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-garage-doors",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-garage-doors",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-pest-control",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-pest-control",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-pest-control",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-pest-control",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-windows-doors",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-windows-doors",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-windows-doors",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-windows-doors",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-solar",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-solar",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-solar",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-solar",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-concrete",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-concrete",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-concrete",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-concrete",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-pools",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-pools",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-pools",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-pools",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-locksmith",
+      "look": "current",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-locksmith",
+      "look": "bold",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-locksmith",
+      "look": "fresh",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    },
+    {
+      "kit": "ambient-baseline-locksmith",
+      "look": "classic",
+      "first": "primary",
+      "second": "secondary",
+      "controls": 2
+    }
+  ],
+  "archivedPromotions": [
+    {
+      "url": "/s/ambient-baseline-roofing/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-patios/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-painting/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-solar/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-pools/promotions?preview=1",
+      "offers": 0
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/promotions?preview=1",
+      "offers": 0
+    }
+  ],
+  "savedBaselinePromotions": 0,
+  "rebaselinedCaptures": [],
+  "visualPairs": [
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 390,
+      "look": "current",
+      "beforeSha256": "b582a859861157901703af92fa1a94647bf080c3555e33163ea340592bfd3eb8",
+      "afterSha256": "c44e612ab80c60ef609cf3c274ddf102f6e0d2474dd2ab6c6ef6abd302b9ccb4",
+      "changedPixels": 14876,
+      "changedRegions": [
+        {
+          "x": 52,
+          "y": 395,
+          "width": 286,
+          "height": 54,
+          "pixels": 14876
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 51.390625,
+          "y": 394.390625,
+          "width": 287.21875,
+          "height": 55.5,
+          "top": 394.390625,
+          "right": 338.609375,
+          "bottom": 449.890625,
+          "left": 51.390625
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 768,
+      "look": "current",
+      "beforeSha256": "8afa4c12f5d92c93e85ef055d3a0c0e907d7439dd947563d6429099c8d0d4d78",
+      "afterSha256": "a040e494368a6805aae0a74ad991dc7661a1786e6d60911ebf3368db4981236f",
+      "changedPixels": 14983,
+      "changedRegions": [
+        {
+          "x": 403,
+          "y": 423,
+          "width": 288,
+          "height": 54,
+          "pixels": 14983
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 401.71875,
+          "y": 422.4375,
+          "width": 290.046875,
+          "height": 55.5,
+          "top": 422.4375,
+          "right": 691.765625,
+          "bottom": 477.9375,
+          "left": 401.71875
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 1440,
+      "look": "current",
+      "beforeSha256": "2a710a3267811a3130e16c861f436ce2141dd27cdd0bc80cb551a99eba3a6d94",
+      "afterSha256": "c5b175d5f768b15e024b0539e995929a73c6d6847f38c832a01a303fdaed1a1b",
+      "changedPixels": 13150,
+      "changedRegions": [
+        {
+          "x": 1068,
+          "y": 423,
+          "width": 258,
+          "height": 53,
+          "pixels": 13150
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 1067,
+          "y": 421.78125,
+          "width": 259.8125,
+          "height": 55.5,
+          "top": 421.78125,
+          "right": 1326.8125,
+          "bottom": 477.28125,
+          "left": 1067
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 390,
+      "look": "bold",
+      "beforeSha256": "b582a859861157901703af92fa1a94647bf080c3555e33163ea340592bfd3eb8",
+      "afterSha256": "c44e612ab80c60ef609cf3c274ddf102f6e0d2474dd2ab6c6ef6abd302b9ccb4",
+      "changedPixels": 14876,
+      "changedRegions": [
+        {
+          "x": 52,
+          "y": 395,
+          "width": 286,
+          "height": 54,
+          "pixels": 14876
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 51.390625,
+          "y": 394.390625,
+          "width": 287.21875,
+          "height": 55.5,
+          "top": 394.390625,
+          "right": 338.609375,
+          "bottom": 449.890625,
+          "left": 51.390625
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 768,
+      "look": "bold",
+      "beforeSha256": "8afa4c12f5d92c93e85ef055d3a0c0e907d7439dd947563d6429099c8d0d4d78",
+      "afterSha256": "a040e494368a6805aae0a74ad991dc7661a1786e6d60911ebf3368db4981236f",
+      "changedPixels": 14983,
+      "changedRegions": [
+        {
+          "x": 403,
+          "y": 423,
+          "width": 288,
+          "height": 54,
+          "pixels": 14983
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 401.71875,
+          "y": 422.4375,
+          "width": 290.046875,
+          "height": 55.5,
+          "top": 422.4375,
+          "right": 691.765625,
+          "bottom": 477.9375,
+          "left": 401.71875
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 1440,
+      "look": "bold",
+      "beforeSha256": "2a710a3267811a3130e16c861f436ce2141dd27cdd0bc80cb551a99eba3a6d94",
+      "afterSha256": "c5b175d5f768b15e024b0539e995929a73c6d6847f38c832a01a303fdaed1a1b",
+      "changedPixels": 13150,
+      "changedRegions": [
+        {
+          "x": 1068,
+          "y": 423,
+          "width": 258,
+          "height": 53,
+          "pixels": 13150
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 1067,
+          "y": 421.78125,
+          "width": 259.8125,
+          "height": 55.5,
+          "top": 421.78125,
+          "right": 1326.8125,
+          "bottom": 477.28125,
+          "left": 1067
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 390,
+      "look": "fresh",
+      "beforeSha256": "b582a859861157901703af92fa1a94647bf080c3555e33163ea340592bfd3eb8",
+      "afterSha256": "c44e612ab80c60ef609cf3c274ddf102f6e0d2474dd2ab6c6ef6abd302b9ccb4",
+      "changedPixels": 14876,
+      "changedRegions": [
+        {
+          "x": 52,
+          "y": 395,
+          "width": 286,
+          "height": 54,
+          "pixels": 14876
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 51.390625,
+          "y": 394.390625,
+          "width": 287.21875,
+          "height": 55.5,
+          "top": 394.390625,
+          "right": 338.609375,
+          "bottom": 449.890625,
+          "left": 51.390625
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 768,
+      "look": "fresh",
+      "beforeSha256": "8afa4c12f5d92c93e85ef055d3a0c0e907d7439dd947563d6429099c8d0d4d78",
+      "afterSha256": "a040e494368a6805aae0a74ad991dc7661a1786e6d60911ebf3368db4981236f",
+      "changedPixels": 14983,
+      "changedRegions": [
+        {
+          "x": 403,
+          "y": 423,
+          "width": 288,
+          "height": 54,
+          "pixels": 14983
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 401.71875,
+          "y": 422.4375,
+          "width": 290.046875,
+          "height": 55.5,
+          "top": 422.4375,
+          "right": 691.765625,
+          "bottom": 477.9375,
+          "left": 401.71875
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 1440,
+      "look": "fresh",
+      "beforeSha256": "2a710a3267811a3130e16c861f436ce2141dd27cdd0bc80cb551a99eba3a6d94",
+      "afterSha256": "c5b175d5f768b15e024b0539e995929a73c6d6847f38c832a01a303fdaed1a1b",
+      "changedPixels": 13150,
+      "changedRegions": [
+        {
+          "x": 1068,
+          "y": 423,
+          "width": 258,
+          "height": 53,
+          "pixels": 13150
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 1067,
+          "y": 421.78125,
+          "width": 259.8125,
+          "height": 55.5,
+          "top": 421.78125,
+          "right": 1326.8125,
+          "bottom": 477.28125,
+          "left": 1067
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 390,
+      "look": "classic",
+      "beforeSha256": "b582a859861157901703af92fa1a94647bf080c3555e33163ea340592bfd3eb8",
+      "afterSha256": "c44e612ab80c60ef609cf3c274ddf102f6e0d2474dd2ab6c6ef6abd302b9ccb4",
+      "changedPixels": 14876,
+      "changedRegions": [
+        {
+          "x": 52,
+          "y": 395,
+          "width": 286,
+          "height": 54,
+          "pixels": 14876
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 51.390625,
+          "y": 394.390625,
+          "width": 287.21875,
+          "height": 55.5,
+          "top": 394.390625,
+          "right": 338.609375,
+          "bottom": 449.890625,
+          "left": 51.390625
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 768,
+      "look": "classic",
+      "beforeSha256": "8afa4c12f5d92c93e85ef055d3a0c0e907d7439dd947563d6429099c8d0d4d78",
+      "afterSha256": "a040e494368a6805aae0a74ad991dc7661a1786e6d60911ebf3368db4981236f",
+      "changedPixels": 14983,
+      "changedRegions": [
+        {
+          "x": 403,
+          "y": 423,
+          "width": 288,
+          "height": 54,
+          "pixels": 14983
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 401.71875,
+          "y": 422.4375,
+          "width": 290.046875,
+          "height": 55.5,
+          "top": 422.4375,
+          "right": 691.765625,
+          "bottom": 477.9375,
+          "left": 401.71875
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    },
+    {
+      "page": "/s/proof-ambient-baseline-roofing/promotions",
+      "width": 1440,
+      "look": "classic",
+      "beforeSha256": "2a710a3267811a3130e16c861f436ce2141dd27cdd0bc80cb551a99eba3a6d94",
+      "afterSha256": "c5b175d5f768b15e024b0539e995929a73c6d6847f38c832a01a303fdaed1a1b",
+      "changedPixels": 13150,
+      "changedRegions": [
+        {
+          "x": 1068,
+          "y": 423,
+          "width": 258,
+          "height": 53,
+          "pixels": 13150
+        }
+      ],
+      "buttonBoxes": [
+        {
+          "x": 1067,
+          "y": 421.78125,
+          "width": 259.8125,
+          "height": 55.5,
+          "top": 421.78125,
+          "right": 1326.8125,
+          "bottom": 477.28125,
+          "left": 1067
+        }
+      ],
+      "outsideButtonPixels": 0,
+      "passed": true,
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(36, 73, 219)",
+        "border": "rgb(36, 73, 219)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px"
+      }
+    }
+  ],
+  "providerCalls": 0
+}

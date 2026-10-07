@@ -9,6 +9,14 @@ const nativeFetch=globalThis.fetch;let mockCalls=0;
 globalThis.fetch=async(url,options)=>{if(String(url).startsWith('https://places.googleapis.com/')){mockCalls++;return Response.json({rating:3.5,userRatingCount:4,googleMapsUri:'https://www.google.com/maps?cid=028028',reviews:mixedReviews.map(r=>({...r,text:{text:r.text},authorAttribution:{displayName:r.author},googleMapsUri:r.url}))});}if(new URL(String(url)).hostname==='127.0.0.1')return nativeFetch(url,options);throw Error('External call blocked '+url)};
 const report={smoke,states:[],screenshots:[],errors:[],mockedProviderCalls:0},prefix=allProcess?'process-all-kits':smoke?'smoke':captures?'variant-captures':'variants-browser';
 const save=()=>fs.writeFileSync(out+'/checks/'+prefix+'.json',JSON.stringify(report,null,2));
+const progress=(state,step)=>console.log(new Date().toISOString()+' '+state+' | '+step);
+const actionTimeout=30_000,navigationTimeout=45_000;
+async function bounded(state,step,operation,timeout=actionTimeout){
+ let timer;
+ try{return await Promise.race([Promise.resolve().then(operation),new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error(state+' | '+step+' timed out after '+timeout+'ms')),timeout)})]);}
+ catch(error){throw new Error(state+' | '+step+': '+error.message,{cause:error});}
+ finally{clearTimeout(timer);}
+}
 let server,browser;
 function inspect(){
  const rgba=s=>{const x=s.match(/[\d.]+/g)?.map(Number)||[0,0,0,0];return x.length===3?[...x,1]:x},over=(a,b)=>a.slice(0,3).map((v,i)=>v*a[3]+b[i]*(1-a[3])).concat(1),lum=c=>c.slice(0,3).map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((n,v,i)=>n+v*[.2126,.7152,.0722][i],0);
@@ -54,36 +62,39 @@ try{
   const r={...row,id:'variant-'+s.designKit+'-'+style+'-'+variant,slug:'variant-'+s.designKit+'-'+style+'-'+variant,settings:JSON.stringify(s),published:JSON.stringify(s),status:'published'};
   const keys=Object.keys(r);await runtime.env.DB.prepare('INSERT INTO tenants('+keys.join(',')+') VALUES('+keys.map(()=>'?').join(',')+')').bind(...keys.map(k=>r[k])).run();fixtures.push({kit:s.designKit,style,variant,row:r});
  }
- server=await listen(runtime,8195);browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+ server=await bounded('setup','listen',()=>listen(runtime,8195));browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',timeout:actionTimeout});
  const widths=allProcess?[1440,1280,768,390]:smoke||captures?[1440,390]:[1440,768,390];
  async function runViewport(width){
-  const context=await browser.newContext({viewport:{width,height:width===390?844:900},reducedMotion:'reduce'});
-  await context.addInitScript(()=>{window.qaCLS=0;new PerformanceObserver(list=>{for(const entry of list.getEntries())if(!entry.hadRecentInput)window.qaCLS+=entry.value}).observe({type:'layout-shift',buffered:true})});
-  await context.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
-  const page=await context.newPage();let current;
+  const context=await bounded('viewport-'+width,'create context',()=>browser.newContext({viewport:{width,height:width===390?844:900},reducedMotion:'reduce'})),completed=[];
+  context.setDefaultTimeout(actionTimeout);context.setDefaultNavigationTimeout(navigationTimeout);
+  try{
+  await bounded('viewport-'+width,'init script',()=>context.addInitScript(()=>{window.qaCLS=0;new PerformanceObserver(list=>{for(const entry of list.getEntries())if(!entry.hadRecentInput)window.qaCLS+=entry.value}).observe({type:'layout-shift',buffered:true})}));
+  await bounded('viewport-'+width,'request route',()=>context.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort()));
+  const page=await bounded('viewport-'+width,'create page',()=>context.newPage());let current;
   page.on('pageerror',error=>report.errors.push({state:current,type:'pageerror',text:error.message}));
   for(const f of fixtures)for(const kind of allProcess?['home']:['home','financing']){
-   current=[f.kit,f.style,f.variant,width,kind].join('-');const response=await page.goto(base+'/s/'+f.row.slug+(kind==='home'?'':'/financing'),{waitUntil:'networkidle'});assert.equal(response.status(),200,current);await page.evaluate(()=>document.fonts.ready);
-   if(kind==='home'){await page.locator('#customer-reviews').scrollIntoViewIfNeeded();await page.locator('.source-review-card').first().waitFor();assert.equal(await page.locator('.source-review-card').count(),2,current+' filter4');assert.match(await page.locator('.provider-rating-badge').innerText(),/3.5 \/ 5[\s\S]*4 reviews/);}
-   for(const summary of await page.locator('.sv-service-disclosure>summary').all()){await summary.focus();await page.keyboard.press('Enter');}
-   if(kind==='home'&&f.variant!=='a'){await page.locator('.sv-process-art').scrollIntoViewIfNeeded();await page.locator('.sv-process-art img').evaluateAll(images=>Promise.all(images.map(img=>img.decode().catch(()=>{}))));}
+   current=[f.kit,f.style,f.variant,width,kind].join('-');progress(current,'start');const response=await page.goto(base+'/s/'+f.row.slug+(kind==='home'?'':'/financing'),{waitUntil:'networkidle',timeout:navigationTimeout});assert.equal(response.status(),200,current);progress(current,'page loaded');await bounded(current,'fonts ready',()=>page.evaluate(()=>document.fonts.ready));progress(current,'fonts ready');
+   if(kind==='home'){await page.locator('#customer-reviews').scrollIntoViewIfNeeded({timeout:actionTimeout});await page.locator('.source-review-card').first().waitFor({timeout:actionTimeout});assert.equal(await page.locator('.source-review-card').count(),2,current+' filter4');assert.match(await page.locator('.provider-rating-badge').innerText({timeout:actionTimeout}),/3.5 \/ 5[\s\S]*4 reviews/);}
+   progress(current,'reviews ready');for(const summary of await page.locator('.sv-service-disclosure>summary').all()){await summary.focus({timeout:actionTimeout});await bounded(current,'open service disclosure',()=>page.keyboard.press('Enter'));}progress(current,'service disclosures opened');
+   if(kind==='home'&&f.variant!=='a'){await page.locator('.sv-process-art').scrollIntoViewIfNeeded({timeout:actionTimeout});await bounded(current,'process image decode',()=>page.locator('.sv-process-art img').evaluateAll(images=>Promise.all(images.map(img=>img.decode().catch(()=>{})))));}
    await page.waitForTimeout(180);
-   const audit=await page.evaluate(inspect),focus=[];
-   await page.keyboard.press('Tab');
+   progress(current,'art decoded');const audit=await bounded(current,'inspect',()=>page.evaluate(inspect)),focus=[];
+   await bounded(current,'keyboard tab',()=>page.keyboard.press('Tab'));
    for(const control of await page.locator('[data-section-variant] a,[data-section-variant] button,[data-section-variant] summary,[data-section-variant] input,[data-section-variant] select,[data-section-variant] textarea').all()){
-    if(!await control.isVisible()||!await control.isEnabled())continue;await control.focus();focus.push(await control.evaluate(el=>({tag:el.tagName,text:(el.textContent||el.getAttribute('name')||'').trim().slice(0,50),focused:document.activeElement===el,outline:getComputedStyle(el).outlineStyle,width:parseFloat(getComputedStyle(el).outlineWidth)})));
+    if(!await control.isVisible()||!await control.isEnabled())continue;await control.focus({timeout:actionTimeout});focus.push(await bounded(current,'inspect focused control',()=>control.evaluate(el=>({tag:el.tagName,text:(el.textContent||el.getAttribute('name')||'').trim().slice(0,50),focused:document.activeElement===el,outline:getComputedStyle(el).outlineStyle,width:parseFloat(getComputedStyle(el).outlineWidth)}))));
    }
    const state={name:current,kit:f.kit,style:f.style,variant:f.variant,width,kind,...audit,focus};report.states.push(state);
+   progress(current,'controls checked');
    if(f.style==='current'&&(allProcess?['roofing','patios','hvac'].includes(f.kit)&&[1280,768].includes(width):width!==768)){
     const selectors=allProcess?{hero:'#home',process:'.sv-process'}:kind==='home'?{hero:'#home',services:'#services',process:'.roof-next-story,.kit-cta-band,.cx-process,.sv-process',reviews:'#customer-reviews',finalCta:'#contact'}:{financing:'#calculator'};
     for(const[section,selector]of Object.entries(selectors)){
      const target=page.locator(selector).first();assert.equal(await target.count(),1,current+' '+section);
-     await target.scrollIntoViewIfNeeded();await page.waitForTimeout(50);await page.evaluate(()=>{document.activeElement?.blur();scrollTo(0,0)});const box=await target.boundingBox();const file='after/'+f.kit+'-'+section+'-'+f.variant+'-'+width+'.png';await page.screenshot({path:out+'/'+file,fullPage:true,clip:{x:Math.max(0,box.x),y:Math.max(0,box.y),width:Math.min(width,box.width),height:box.height}});report.screenshots.push({kit:f.kit,section,variant:f.variant,width,file});
+     await target.scrollIntoViewIfNeeded({timeout:actionTimeout});await page.waitForTimeout(50);await bounded(current,'reset screenshot focus',()=>page.evaluate(()=>{document.activeElement?.blur();scrollTo(0,0)}));const box=await target.boundingBox();const file='after/'+f.kit+'-'+section+'-'+f.variant+'-'+width+'.png';await page.screenshot({path:out+'/'+file,fullPage:true,timeout:actionTimeout,clip:{x:Math.max(0,box.x),y:Math.max(0,box.y),width:Math.min(width,box.width),height:box.height}});report.screenshots.push({kit:f.kit,section,variant:f.variant,width,file});
     }
    }
-   save();console.log(current+': contrast '+audit.text.filter(x=>!x.pass).length+', overflow '+audit.overflow+', CLS '+audit.cls.toFixed(4));
+   progress(current,'screenshot done');save();console.log(current+': contrast '+audit.text.filter(x=>!x.pass).length+', overflow '+audit.overflow+', CLS '+audit.cls.toFixed(4));completed.push(current);progress(current,'complete (shared page retained until viewport close)');
   }
-  await context.close();
+  }finally{progress('viewport-'+width,'closing');await bounded('viewport-'+width,'close context',()=>context.close());for(const state of completed)progress(state,'closed');progress('viewport-'+width,'closed');}
  }
  // Each viewport has its own browser context, page, event handlers and immutable fixtures.
  const concurrency=process.env.BV_028B_PARALLEL==='2'?2:1;
@@ -93,4 +104,9 @@ try{
  report.failures=report.states.flatMap(s=>[...s.text.filter(x=>!x.pass).map(x=>({state:s.name,check:'contrast',...x})),...s.focus.filter(x=>!x.focused||x.outline==='none'||x.width<2).map(x=>({state:s.name,check:'focus',...x})),...(s.overflow>0?[{state:s.name,check:'overflow',value:s.overflow}]:[]),...(s.cls>.05?[{state:s.name,check:'CLS',value:s.cls}]:[]),...s.sections.filter(x=>['hero','finalCta'].includes(x.variant.split(':')[0])?x.primaries!==1:x.primaries>1).map(x=>({state:s.name,check:'primary',...x})),...s.clipped.map(x=>({state:s.name,check:'content loss',...x})),...s.brokenImages.map(url=>({state:s.name,check:'image load',url})),...s.geometry.filter(x=>!x.pass).map(x=>({state:s.name,check:'review layout geometry',...x}))]);save();
  console.log(JSON.stringify({states:report.states.length,screenshots:report.screenshots.length,failures:report.failures.length,pageErrors:report.errors.length,mockedProviderCalls:mockCalls,actualProviderCalls:0}));
  assert.deepEqual(report.errors,[]);assert.deepEqual(report.failures,[]);
-}finally{globalThis.fetch=nativeFetch;await browser?.close();if(server){server.closeAllConnections();await new Promise(r=>server.close(r));}await runtime.close();}
+}finally{
+ globalThis.fetch=nativeFetch;
+ try{if(browser)await bounded('teardown','close browser',()=>browser.close());}
+ finally{try{if(server){server.closeAllConnections();await bounded('teardown','close server',()=>new Promise(r=>server.close(r)));}}finally{await bounded('teardown','close runtime',()=>runtime.close());}}
+}
+console.log('PASS '+report.states.length+' section-variant states; assertions and teardown complete.');

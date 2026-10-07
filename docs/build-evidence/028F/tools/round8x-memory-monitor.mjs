@@ -1,0 +1,8 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+const root='C:/Users/joe/website_creator',checks=root+'/docs/build-evidence/028F/checks',pid=Number(process.argv[2]);
+if(!Number.isSafeInteger(pid)||pid<=0)throw Error('Suite PID required');
+const samples=[],pre=JSON.parse(fs.readFileSync(checks+'/round8x-preflight-system.json','utf8').replace(/^\uFEFF/,''));
+const command="$ErrorActionPreference='Stop'; $taskOs=Get-CimInstance Win32_OperatingSystem; $taskAlive=$null -ne (Get-Process -Id "+pid+" -ErrorAction SilentlyContinue); $taskTop=@(Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 10 | ForEach-Object {[pscustomobject]@{pid=$_.Id;name=$_.ProcessName;workingSetGB=[math]::Round($_.WorkingSet64/1GB,3)}}); [pscustomobject]@{recordedAt=(Get-Date).ToString('o');freeBytes=([int64]$taskOs.FreePhysicalMemory*1024);freeGB=[math]::Round(([int64]$taskOs.FreePhysicalMemory*1024)/1GB,3);runnerAlive=$taskAlive;topProcesses=$taskTop}|ConvertTo-Json -Depth 5 -Compress";
+while(true){const r=spawnSync('powershell.exe',['-NoProfile','-NonInteractive','-Command',command],{windowsHide:true,encoding:'utf8',timeout:15000});if(r.status!==0)throw Error(r.stderr||'Memory probe failed');const sample=JSON.parse(r.stdout);samples.push(sample);fs.writeFileSync(checks+'/round8x-memory-samples.json',JSON.stringify({runnerPid:pid,preflight:pre.freeGB,samplingIntervalMs:5000,samples,minimumFreeGB:Math.min(pre.freeGB,...samples.map(r=>r.freeGB)),after:sample.runnerAlive?null:sample},null,2));if(!sample.runnerAlive)break;await new Promise(resolve=>setTimeout(resolve,5000));}
+console.log('Memory before/during/after saved; monitor finished.');

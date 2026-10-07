@@ -1,0 +1,114 @@
+[
+  {
+    "label": "typecheck",
+    "kind": "typecheck",
+    "command": "node C:/Users/joe/website_creator/node_modules/typescript/bin/tsc -p C:/Users/joe/website_creator/tsconfig.auth.json",
+    "status": 0,
+    "ms": 683
+  },
+  {
+    "label": "auth-session",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/auth-session.mjs",
+    "status": 0,
+    "ms": 159671
+  },
+  {
+    "label": "aws-adapter",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/aws-adapter.mjs",
+    "status": 0,
+    "ms": 4489
+  },
+  {
+    "label": "builder",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/builder.mjs",
+    "status": 0,
+    "ms": 925
+  },
+  {
+    "label": "callback-restore",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/callback-restore.mjs",
+    "status": 0,
+    "ms": 828
+  },
+  {
+    "label": "cinematic-films",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/cinematic-films.mjs",
+    "status": 0,
+    "ms": 905
+  },
+  {
+    "label": "client-modules",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/client-modules.mjs",
+    "status": 0,
+    "ms": 546
+  },
+  {
+    "label": "constitution",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/constitution.mjs",
+    "status": 1,
+    "ms": 1214044
+  },
+  {
+    "label": "contact-linkage",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/contact-linkage.mjs",
+    "status": 0,
+    "ms": 1182
+  },
+  {
+    "label": "contacts-restore",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/contacts-restore.mjs",
+    "status": 0,
+    "ms": 1478
+  },
+  {
+    "label": "control",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/control.mjs",
+    "status": 0,
+    "ms": 1235
+  },
+  {
+    "label": "conversion-references",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/conversion-references.mjs",
+    "status": 4294967295,
+    "ms": 832197
+  },
+  {
+    "label": "core-site-pages",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/core-site-pages.mjs",
+    "status": 0,
+    "ms": 1832
+  },
+  {
+    "label": "crm-next",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/crm-next.mjs",
+    "status": 0,
+    "ms": 971
+  },
+  {
+    "label": "crm",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/crm.mjs",
+    "status": 0,
+    "ms": 331166
+  },
+  {
+    "label": "design-kits",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/design-kits.mjs",
+    "status": 0,
+    "ms": 3081
+  }
+]

@@ -1,0 +1,6 @@
+import fs from 'node:fs';
+const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028F';
+let code=fs.readFileSync(out+'/tools/round6-legacy-clearance.mjs','utf8');
+code=code.replace("['constitution','conversion']","['constitution']").replace("['motion','reduced','no-js']","['motion']").replace('[1440,1280,768,390]','[1440]');
+code=code.replace("body:fs.readFileSync(file)",`body:u.pathname==='/homeowner-polish.js'?fs.readFileSync(file,'utf8').replace('let frame=0,trackUntil=0','let frame=0,timer=0,trackUntil=0').replace('function tick(){', 'function pulse(){timer=0;update();if(performance.now()<trackUntil)timer=setTimeout(pulse,16)} function tick(){').replace('if(!frame)frame=requestAnimationFrame(tick);}', 'if(!frame)frame=requestAnimationFrame(tick);if(!timer)timer=setTimeout(pulse,16);}') :fs.readFileSync(file)`);
+code=code.replaceAll("out+'/checks/legacy-clearance.json'","out+'/checks/legacy-clearance-timer-probe.json'");fs.writeFileSync(out+'/tools/legacy-clearance-timer-probe.mjs',code);

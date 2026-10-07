@@ -5,3 +5,6 @@ Dockerfile.dev text eol=lf
 aws/env/*.example text eol=lf
 *.js text eol=lf
 *.mjs text eol=lf
+
+# Preserve the exact frozen #028F detector bytes used by its SHA-256 lock.
+src/aws/qa-browser.js -text -eol

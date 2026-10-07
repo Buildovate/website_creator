@@ -1,7 +1,7 @@
 import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
 import {createRuntime,listen} from '../src/aws/server.js';import worker from '../dist/server/index.js';
 import {inspectStylePage} from './helpers/style-inspection.mjs';import {inspectPlatformControls,inspectPlatformKeyboard} from './helpers/platform-inspection.mjs';
-const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028E',origin='http://127.0.0.1:8214';
+const root='C:/Users/joe/website_creator',out=process.env.BV_REVIEW_EVIDENCE||root+'/docs/build-evidence/028E',origin='http://127.0.0.1:8214';
 const {chromium}=createRequire(import.meta.url)('C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const runtime=await createRuntime({worker,env:{APP_ENV:'local',NODE_ENV:'development',AUTH_MODE:'dev-header',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',MIGRATE_ON_BOOT:'1',WORKSPACE_OWNER_EMAIL:'staff-review@example.test',APP_ORIGIN:origin,LISTEN_HOST:'127.0.0.1',PORT:'8214',OPENAI_API_KEY:'',GOOGLE_PLACES_API_KEY:'',YELP_API_KEY:''}});
 const headers={origin,'content-type':'application/json','oai-authenticated-user-id':'staff-review-admin','oai-authenticated-user-email':'staff-review@example.test'};
@@ -9,7 +9,7 @@ const req=(path,method='GET',body)=>worker.fetch(new Request(origin+path,{method
 let browser,server;const records=[],errors=[],requests=[];
 try{
  assert.equal((await req('/api/setup','POST',{})).status,200);
- const fixture=JSON.parse(fs.readFileSync(out+'/checks/review-packets.json')).packets[0],folder=out+'/packets/'+fixture.id+'/'+fixture.versionHash,source=JSON.parse(fs.readFileSync(folder+'/source.json')),packet=JSON.parse(fs.readFileSync(folder+'/packet.json'));
+ const fixture=JSON.parse(fs.readFileSync(out+'/checks/'+(process.env.BV_REVIEW_PACKET_INDEX||'review-packets.json'))).packets[0],folder=out+'/packets/'+fixture.id+'/'+fixture.versionHash,source=JSON.parse(fs.readFileSync(folder+'/source.json')),packet=JSON.parse(fs.readFileSync(folder+'/packet.json'));
  await runtime.env.DB.prepare('INSERT INTO tenants(id,slug,name,settings,version,status,created_at,updated_at) VALUES(?,?,?,?,1,\'draft\',?,?)').bind(source.siteId,source.slug,source.settings.name,JSON.stringify(source.settings),'2026-09-28T00:00:00Z','2026-09-28T00:00:00Z').run();
  for(const file of ['packet.json','source.json',...packet.files.map(x=>x.path)])await runtime.env.BUCKET.put('review-packets/'+source.siteId+'/'+fixture.versionHash+'/'+file,fs.readFileSync(folder+'/'+file),{httpMetadata:{contentType:file.endsWith('.png')?'image/png':'application/json'}});
  server=await listen(runtime,8214);browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
@@ -22,6 +22,12 @@ try{
   await page.setViewportSize({width,height:width===390?844:900});await page.goto(origin+'/admin/review-packets/'+fixture.id,{waitUntil:'networkidle'});await page.locator('[data-approve]').waitFor().catch(async error=>{console.log('Staff body:',await page.locator('body').innerText());console.log('Diagnostics:',JSON.stringify(errors));throw error});await audit('packet',width);
   await page.getByText('Legal, financing and consent text (',{exact:false}).click();await page.locator('.bv-review-claim').first().scrollIntoViewIfNeeded();await audit('claims',width);
   await page.locator('#review-reason').fill('Sample fixture rejection for approval workflow verification');await page.locator('[data-reject]').click();await page.getByText('Rejected: Sample fixture rejection',{exact:false}).waitFor();await audit('rejected',width);
+  // Keep the existing approve/reject assertions, satisfying the real QA gate
+  // through its recorded staff-decision API. A blocking Fail stops this test.
+  const current=await (await req('/api/tenants/'+fixture.id+'/review-packet')).json();
+  assert.equal(current.qa.summary.blocking,0,'Real packet must have no QA failures');
+  for(const item of current.qa.report.checks.filter(item=>item.result==='Borderline')){const decision=await req('/api/tenants/'+fixture.id+'/review-packet/qa-decision','POST',{versionHash:current.versionHash,manifestHash:current.manifestHash,reportHash:current.qa.report.reportHash,checkId:item.id,decision:'Accept',reason:'Fictional staff workflow test only; not a real-site approval.'});assert.equal(decision.status,200,await decision.clone().text());}
+  await page.reload({waitUntil:'networkidle'});
   await page.locator('[data-check]').evaluateAll(es=>es.forEach(e=>e.click()));await page.locator('[data-approve]').click();await page.getByText('Approved for this exact version.',{exact:false}).waitFor();await audit('approved',width);
  }
  await runtime.env.DB.prepare('UPDATE tenants SET settings=? WHERE id=?').bind(JSON.stringify({...source.settings,phone:'8055550197'}),fixture.id).run();

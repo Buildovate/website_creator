@@ -1,20 +1,22 @@
 import {element} from './section-variants.js';
-import {resolveMedia} from './media-library.js';
+import {resolveMedia,mediaCatalog} from './media-library.js';
+import {libraryDescription} from './media-description.js';
 import {e} from './core.js';
 const cls=(t,c)=>new RegExp('class="[^"]*\\b'+c+'\\b').test(t);
 const replace=(html,p,value)=>p?html.slice(0,p.start)+value+html.slice(p.end):html;
-function picture(m,slot){if(!m)return '';const tint=m.treatment?.type==='css-tint'&&/^#[0-9a-f]{6}$/i.test(m.treatment.color)?' style="--ml-tint:'+m.treatment.color+';--ml-tint-opacity:.12"':'';const video=m.kind==='clip';return '<div class="ml-media" data-media-slot="'+slot+'" data-media-kind="'+m.kind+'"'+tint+'><img class="ml-poster" src="'+e(video?m.poster:m.url)+'" alt="" width="1280" height="800" '+(slot==='hero'?'fetchpriority="high"':'loading="lazy"')+'>'+(video?'<video class="ml-video" muted playsinline loop preload="none" poster="'+e(m.poster)+'" aria-hidden="true" tabindex="-1"><source data-src="'+e(m.url)+'" type="video/mp4"></video>':'')+'<span class="ml-tint" aria-hidden="true"></span>'+(video?'<button class="ml-motion" type="button" hidden aria-pressed="false">Pause motion</button>':'')+'</div>';}
+function picture(m,slot,description,decorative=false){if(!m)return '';const tint=m.treatment?.type==='css-tint'&&/^#[0-9a-f]{6}$/i.test(m.treatment.color)?' style="--ml-tint:'+m.treatment.color+';--ml-tint-opacity:.12"':'';const video=m.kind==='clip';return '<div class="ml-media" data-media-slot="'+slot+'" data-media-kind="'+m.kind+'"'+tint+'><img class="ml-poster" src="'+e(video?m.poster:m.url)+'" alt="'+e(decorative?'':description)+'"'+(decorative?' data-media-decorative="true" role="presentation"':'')+' width="1280" height="800" '+(slot==='hero'?'fetchpriority="high"':'loading="lazy"')+'>'+(video?'<video class="ml-video" muted playsinline loop preload="none" poster="'+e(m.poster)+'" aria-hidden="true" tabindex="-1"><source data-src="'+e(m.url)+'" type="video/mp4"></video>':'')+'<span class="ml-tint" aria-hidden="true"></span>'+(video?'<button class="ml-motion" type="button" hidden aria-pressed="false">Pause motion</button>':'')+'</div>';}
 export function renderLibraryMedia(html,s,{photos=[],kind='home'}={}){
  if(s.mediaPicks?.version!==1||s.mediaPicks.kit!==s.designKit||s.mediaPicks.trade!==s.trade)return html;
  const selected=Object.fromEntries(Object.entries(s.mediaPicks.slots).map(([key,pick])=>[key,resolveMedia(pick,photos)]));
  // An explicitly selected, validated owned hero remains authoritative after a save,
  // even before another generation reserves a library pick.
+ const describe=(slot,m)=>m?.owned?String(photos.find(p=>'/media/'+p.id===m.url)?.caption||'Contractor-provided photograph'):libraryDescription(mediaCatalog.assets[s.mediaPicks.slots[slot]?.assetId],mediaCatalog);
  const own=s.heroPhotoId||s.scrollStory?.posterId;if(own&&photos.some(p=>p.id===own))selected.hero={kind:'still',url:'/media/'+own,owned:true,treatment:{type:'none'}};
  if(kind==='home'){
   const hero=element(html,t=>t.includes('id="home"')||cls(t,'cx-film-hero'));
   if(hero){let body=hero.body;const target=element(body,t=>['sv-hero-media','story-visuals','kit-hero-image','cx-hero-media','cx-film-media'].some(c=>cls(t,c)),'div|figure');
-   if(target)body=replace(body,target,target.open+picture(selected.hero,'hero')+'</'+target.open.match(/^<(\w+)/)[1]+'>');
-   else {body=body.replace(/<video\b[^>]*>[\s\S]*?<\/video>/g,'');let found=false;body=body.replace(/<img\b[^>]*>/g,tag=>{if(found)return tag;found=true;return picture(selected.hero,'hero')});if(!found)body=picture(selected.hero,'hero')+body;}
+   if(target)body=replace(body,target,target.open+picture(selected.hero,'hero',describe('hero',selected.hero),!!target&&/aria-hidden="true"/.test(target.open))+'</'+target.open.match(/^<(\w+)/)[1]+'>');
+   else {body=body.replace(/<video\b[^>]*>[\s\S]*?<\/video>/g,'');let found=false;body=body.replace(/<img\b[^>]*>/g,tag=>{if(found)return tag;found=true;return picture(selected.hero,'hero',describe('hero',selected.hero),!!target&&/aria-hidden="true"/.test(target.open))});if(!found)body=picture(selected.hero,'hero',describe('hero',selected.hero),!!target&&/aria-hidden="true"/.test(target.open))+body;}
    // The original full-bleed visual plane is aria-hidden and behind a shade.
    // Keep its new motion control in the accessible topline instead.
    if(target&&cls(target.open,'story-visuals')&&selected.hero?.kind==='clip'){
@@ -33,8 +35,8 @@ export function renderLibraryMedia(html,s,{photos=[],kind='home'}={}){
  for(const slot of kind==='financing'?['financing']:['services','process','finalCta']){
   const part=element(html,predicates[slot]);if(!part||!selected[slot])continue;
   // Preserve existing factual graphics and owned photos. The new still is a
-  // decorative section image; it has no project attribution or invented caption.
-  const figure='<figure class="ml-section-still">'+picture(selected[slot],slot)+'</figure>';
+  // descriptive section image; it has no project attribution or invented caption.
+  const figure='<figure class="ml-section-still">'+picture(selected[slot],slot,describe(slot,selected[slot]))+'</figure>';
   let body=part.body;const copy=element(body,t=>['sv-process-intro','sv-final-copy','sv-finance-copy'].some(c=>cls(t,c)),'div');
   if(copy)body=replace(body,copy,copy.open+figure+copy.body+'</div>');else body=figure+body;
   html=replace(html,part,part.open+body+'</'+part.open.match(/^<(\w+)/)[1]+'>');

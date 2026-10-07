@@ -1,0 +1,205 @@
+{
+  "round": "8q",
+  "state": "Stopped: roofing-polish-part1-browser — header one line 1280; no retry or commit",
+  "cause": "Roofing max-width constrained the brand box while its full name painted beyond it; the fit calculation also omitted the original Contact Us link when workspace decoration appended a Pricing & options CTA.",
+  "fix": "Measure an unclamped brand clone using the current loaded font, logo and gap; include every header link, CTA and margin; remove rightmost links into More before switching to native Menu when minimum desktop controls cannot fit. Refit after font loading and resize; preserve the full name at its existing font size, wrapping in Menu mode.",
+  "standalone": [
+    {
+      "name": "service-pages-all-trades",
+      "state": "PASS",
+      "final": [
+        "ℹ tests 3",
+        "ℹ pass 3",
+        "ℹ fail 0"
+      ],
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8q-service-pages-all-trades.log"
+    },
+    {
+      "name": "header-nav-fit",
+      "state": "PASS",
+      "final": [
+        "PASS header nav fit: 16422 checks; 8 evidence widths; 1632 trade/Look/name states; painted-name geometry, keyboard and resize"
+      ],
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8q-header-nav-fit.log"
+    },
+    {
+      "name": "header-logo",
+      "state": "PASS",
+      "final": [
+        "PASS header logo: 340 rendered headers, 6 edge cases"
+      ],
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8q-header-logo.log"
+    },
+    {
+      "name": "roofing-polish-part2",
+      "state": "PASS",
+      "final": [
+        "PASS 7633 Part 2 regression assertions; 374 response contracts; 2987 installed photo instances"
+      ],
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8q-roofing-polish-part2.log"
+    }
+  ],
+  "suite102": {
+    "state": "Stopped",
+    "pass": 93,
+    "passWithWarning": 0,
+    "fail": 1,
+    "incomplete": 8,
+    "completed": 94,
+    "failures": [
+      {
+        "label": "roofing-polish-part1-browser",
+        "kind": "browser",
+        "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1-browser.mjs",
+        "status": 1,
+        "outcome": "FAILED",
+        "signal": null,
+        "ms": 164804
+      }
+    ]
+  },
+  "samples": {
+    "state": "Not run",
+    "prior": {
+      "pass": 3425,
+      "borderline": 70,
+      "fail": 0
+    },
+    "qaGateClear": false,
+    "original70Open": true,
+    "decisionsRecorded": 0
+  },
+  "baselineScan": {
+    "checked": 1596,
+    "counts": {
+      "identical": 1596,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "a+c": 0,
+      "other": 0
+    },
+    "updated": []
+  },
+  "preservation": [
+    {
+      "path": "public/planning-films.json",
+      "sha256": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part1.mjs",
+      "sha256": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "after": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/qa-browser.js",
+      "sha256": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "tests/part2-html-normalize.mjs",
+      "sha256": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "after": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "unchanged": true
+    },
+    {
+      "path": "tests/review-part1-html-normalize.mjs",
+      "sha256": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "after": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/parallel-suite.mjs",
+      "sha256": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "after": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/child-hang-guard.mjs",
+      "sha256": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "after": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "unchanged": true
+    },
+    {
+      "path": "BUILD-BACKLOG.md",
+      "sha256": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+      "after": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+      "unchanged": true
+    },
+    {
+      "path": "BUILD-STATUS.md",
+      "sha256": "6f1b9bcc2d8f53bb1e18dfb1c8575d56cd8b098010ff9384bccc2244c6591cc8",
+      "after": "6f1b9bcc2d8f53bb1e18dfb1c8575d56cd8b098010ff9384bccc2244c6591cc8",
+      "unchanged": true
+    }
+  ],
+  "filesChanged": [
+    "public/site-navigation.js",
+    "public/site-polish.css",
+    "src/roofing-critical-css.js (generated from approved header CSS)",
+    "tests/header-nav-fit.mjs",
+    "docs/build-evidence/028F/tools/round8q-*.mjs",
+    "docs/build-evidence/028F/checks/round8q-*",
+    "docs/build-evidence/028F/legacy/ (suite evidence if run)"
+  ],
+  "screenshots": {
+    "before768": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8q-nav/before/roofing-768.png",
+    "after768": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8q-nav/after/roofing-768.png",
+    "longNames": [
+      "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8q-nav/after/long-name-38.png",
+      "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8q-nav/after/long-name-40.png"
+    ]
+  },
+  "commit": null,
+  "staged": false,
+  "credits": 0,
+  "providerCalls": 0,
+  "captureNote": "The matrix includes UTF-8 and the real site/Look fonts; final run: 16,422 checks. Initial encoding capture log retained. No product or assertion change for that capture correction.",
+  "generatedHeaderCSS": {
+    "before": "ea4add617ad815f48f8030ce2c83f17873f6ab3cbcf9c6ec378fd7dc608188aa",
+    "after": "651bc19c239480b2f08ac427915d7544aab170665513dc8d34f06c278202cca1",
+    "source": "scripts/build-roofing-critical.mjs over the approved shared-header CSS; response contracts remain unchanged"
+  },
+  "stop": {
+    "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1-browser.mjs",
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8q-roofing-polish-part1-browser.log",
+    "error": "AssertionError [ERR_ASSERTION]: header one line 1280",
+    "assertion": "tests/roofing-polish-part1-browser.mjs:27",
+    "firstErrorLines": [
+      "AssertionError [ERR_ASSERTION]: header one line 1280",
+      "    at check (file:///C:/Users/joe/website_creator/tests/roofing-polish-part1-browser.mjs:4:63)",
+      "    at file:///C:/Users/joe/website_creator/tests/roofing-polish-part1-browser.mjs:27:255 {",
+      "  generatedMessage: false,",
+      "  code: 'ERR_ASSERTION',",
+      "  actual: false,",
+      "  expected: true,",
+      "  operator: '==',",
+      "  diff: 'simple'",
+      "}",
+      "",
+      "Node.js v24.19.0"
+    ],
+    "retried": false,
+    "samplesSnapshotRun": false
+  },
+  "originalSamplesPreservation": {
+    "trees": [
+      {
+        "path": "packets",
+        "checked": 19976,
+        "changed": []
+      },
+      {
+        "path": "capture-readiness",
+        "checked": 9062,
+        "changed": []
+      }
+    ],
+    "qaPacketsUnchanged": true,
+    "decisionsRecorded": 0
+  }
+}

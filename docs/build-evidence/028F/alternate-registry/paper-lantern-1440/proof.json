@@ -1,0 +1,18 @@
+{
+  "page": "/s/sample-fictional-paper-lantern-temecula/services",
+  "capture": "screenshots/page-012-1440.png",
+  "width": 1440,
+  "savedSha256": "a74cdac48d22d2063b262d5340c76092ca0ca42ded1c721268208c3a2952ac37",
+  "alternateSha256": "079614957a3924bd5dd2789797a7098f3159c995868f51b19372b9e3cdb36800",
+  "savedBytes": 972733,
+  "alternateBytes": 973782,
+  "changedPixels": 171783,
+  "outsideImagePixels": 0,
+  "serviceImageRectangles": [
+    {"x": 734.953125, "y": 273.34375, "width": 593.046875, "height": 520},
+    {"x": 113, "y": 919.34375, "width": 388.65625, "height": 259.09375},
+    {"x": 525.65625, "y": 919.34375, "width": 388.671875, "height": 259.109375}
+  ],
+  "readiness": {"requiredFieldsEqualToSaved": true, "fullStoredPairEqual": true},
+  "source": "checks/replay-variance-sweep.json"
+}

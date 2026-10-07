@@ -1,0 +1,32 @@
+{
+  "label": "financing-comparison",
+  "command": "node tests/financing-comparison.mjs",
+  "startedAt": "2026-10-07T01:45:48.346Z",
+  "finishedAt": "2026-10-07T01:48:40.260Z",
+  "elapsedMs": 171914,
+  "status": 0,
+  "outcome": "PASS",
+  "lastLine": {
+    "timestamp": "2026-10-07T01:48:40.201Z",
+    "type": "stdout",
+    "line": "PASS #004D browser/API: live slider/input/down changes, reduced motion, invalid-input clearing, selected-plan prefill, updated estimates, same inquiry persistence, reset and preview-send suppression."
+  },
+  "passLines": [
+    {
+      "timestamp": "2026-10-07T01:45:49.144Z",
+      "type": "stdout",
+      "line": "PASS #004D payment math: amortization, zero APR, cents rounding, down-payment totals, computed badges/ties and invalid input."
+    },
+    {
+      "timestamp": "2026-10-07T01:45:49.154Z",
+      "type": "stdout",
+      "line": "PASS #004D configuration: every confirmed program, legacy migration/explicit clear, missing gates hide, invalid terms/ranges, required card details, deferred-interest labels and four isolated samples."
+    },
+    {
+      "timestamp": "2026-10-07T01:48:40.201Z",
+      "type": "stdout",
+      "line": "PASS #004D browser/API: live slider/input/down changes, reduced motion, invalid-input clearing, selected-plan prefill, updated estimates, same inquiry persistence, reset and preview-send suppression."
+    }
+  ],
+  "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8t-verify-financing-comparison.log"
+}

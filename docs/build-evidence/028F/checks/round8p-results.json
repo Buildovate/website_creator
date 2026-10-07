@@ -1,0 +1,195 @@
+{
+  "round": "8p",
+  "state": "Stopped at first suite failure; no retry",
+  "sourceLocks": {
+    "checked": 14,
+    "unchanged": 11,
+    "existingPlanningLookup": 1,
+    "added": [
+      {
+        "path": "src/promotions-scroll.js",
+        "beforeSha256": "2c237323b6573e549a1630b479e252f8b888cc9358b9cab21c3ffa2bf020bfc1",
+        "currentSha256": "9b460b8d8c348287addf094fc297448e5698b87a8257dd77d2dd5d96dceea43e",
+        "unchanged": false,
+        "posterOnly": true,
+        "posterAdditions": [
+          " poster=\"'+e(film.poster)+'\""
+        ],
+        "existingApprovedLookup": false,
+        "diff": "checks/round8p-source-lock-promotions-scroll.js.txt",
+        "snapshot": "docs/build-evidence/028F/source-locks/promotions-scroll.js",
+        "snapshotByteExact": true,
+        "pin": "9b460b8d8c348287addf094fc297448e5698b87a8257dd77d2dd5d96dceea43e"
+      },
+      {
+        "path": "src/promotions-ambient.js",
+        "beforeSha256": "e84158d5722b6f677d8753c17ea76ef916ee93294031716b40efbac0b48d8870",
+        "currentSha256": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4",
+        "unchanged": false,
+        "posterOnly": true,
+        "posterAdditions": [
+          " poster=\"'+e(film.poster)+'\""
+        ],
+        "existingApprovedLookup": false,
+        "diff": "checks/round8p-source-lock-promotions-ambient.js.txt",
+        "snapshot": "docs/build-evidence/028F/source-locks/promotions-ambient.js",
+        "snapshotByteExact": true,
+        "pin": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4"
+      }
+    ],
+    "nonPosterDiffs": [],
+    "assertionsUnchanged": true,
+    "everyOtherLookup": "Original git-show fallback retained"
+  },
+  "standalone": [
+    {
+      "check": "roofing-polish-part2",
+      "outcome": "PASS",
+      "finalLine": "PASS 7633 Part 2 regression assertions; 374 response contracts; 2987 installed photo instances",
+      "log": "checks/round8p-roofing-polish-part2.log"
+    },
+    {
+      "check": "header-logo",
+      "outcome": "PASS",
+      "finalLine": "PASS header logo: 340 rendered headers, 6 edge cases",
+      "log": "checks/round8p-header-logo.log"
+    },
+    {
+      "check": "header-nav-fit",
+      "outcome": "PASS",
+      "finalLine": "PASS header nav fit: 1137 checks; 5 evidence widths; 136 trade/Look states; keyboard and resize",
+      "log": "checks/round8p-header-nav-fit.log"
+    }
+  ],
+  "suite102": {
+    "state": "Stopped",
+    "pass": 4,
+    "passWithWarning": 0,
+    "fail": 1,
+    "incomplete": 97,
+    "completed": 5,
+    "failures": [
+      {
+        "label": "service-pages-all-trades",
+        "kind": "regression",
+        "command": "node C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs",
+        "status": 1,
+        "outcome": "FAILED",
+        "signal": null,
+        "ms": 126373
+      }
+    ]
+  },
+  "failures": [
+    {
+      "label": "service-pages-all-trades",
+      "kind": "regression",
+      "command": "node C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs",
+      "status": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 126373,
+      "log": "checks/round8p-service-pages-all-trades.log",
+      "firstErrorLines": [
+        "test at tests\\service-pages-all-trades.mjs:50:1",
+        "  AssertionError [ERR_ASSERTION]: [{\"category\":\"layout\",\"crop\":\"qa-crops/page-001-768-2.png\",\"id\":\"page-001-768-overlapping-text\",\"key\":\"overlapping-text\",\"measured\":{\"failures\":[{\"first\":\"body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)\",\"intersectionPx\":[30.09,10],\"second\":\"body>header:nth-child(3)>nav:nth-child(2)>a:nth-child(1)\"}],\"violations\":1},\"page\":\"/s/all-service-roofing\",\"result\":\"Fail\",\"selector\":\"body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)\",\"threshold\":{\"geometry\":\"Painted glyph extents from DOM Range and Canvas font metrics\",\"maximumPx\":2,\"minimumLineFraction\":0.3},\"title\":\"Overlapping text\",\"width\":768}]",
+        "      at realReviewPrerequisite (file:///C:/Users/joe/website_creator/tests/helpers/review-approval-fixture.mjs:27:9)",
+        "      at async worker.fetch (file:///C:/Users/joe/website_creator/tests/helpers/review-approval-fixture.mjs:51:2)",
+        "      at async json (file:///C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs:12:60)",
+        "      at async TestContext.<anonymous> (file:///C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs:55:3)",
+        "      at async Test.run (node:internal/test_runner/test:1389:7)",
+        "      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {",
+        "    actual: 1,",
+        "    expected: 0,"
+      ]
+    }
+  ],
+  "samples": {
+    "state": "Not run",
+    "prior": {
+      "pass": 3425,
+      "borderline": 70,
+      "fail": 0
+    },
+    "qaGateClear": false,
+    "all70Open": true,
+    "decisionsRecorded": 0
+  },
+  "preservation": [
+    {
+      "path": "public/planning-films.json",
+      "sha256": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part1.mjs",
+      "sha256": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "after": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/qa-browser.js",
+      "sha256": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "tests/part2-html-normalize.mjs",
+      "sha256": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "after": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "unchanged": true
+    },
+    {
+      "path": "tests/review-part1-html-normalize.mjs",
+      "sha256": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "after": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/parallel-suite.mjs",
+      "sha256": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "after": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/child-hang-guard.mjs",
+      "sha256": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "after": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "unchanged": true
+    },
+    {
+      "path": "BUILD-BACKLOG.md",
+      "sha256": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+      "after": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+      "unchanged": true
+    },
+    {
+      "path": "BUILD-STATUS.md",
+      "sha256": "6f1b9bcc2d8f53bb1e18dfb1c8575d56cd8b098010ff9384bccc2244c6591cc8",
+      "after": "6f1b9bcc2d8f53bb1e18dfb1c8575d56cd8b098010ff9384bccc2244c6591cc8",
+      "unchanged": true
+    }
+  ],
+  "filesChanged": [
+    "tests/roofing-polish-part2.mjs",
+    "docs/build-evidence/028F/source-locks/promotions-scroll.js",
+    "docs/build-evidence/028F/source-locks/promotions-ambient.js",
+    "docs/build-evidence/028F/checks/round8p-*",
+    "docs/build-evidence/028F/tools/round8p-source-locks.mjs",
+    "docs/build-evidence/028F/tools/round8p-backup-suite.mjs",
+    "docs/build-evidence/028F/tools/round8p-report.mjs",
+    "docs/build-evidence/028F/legacy/ (regenerated suite evidence)",
+    "docs/build-evidence/027A-part2/changed-pages.json",
+    "docs/build-evidence/027A-part2/image-integrity.json",
+    "docs/build-evidence/027A-part2/regression-results.json",
+    "docs/build-evidence/028F/checks/round8h-header-logo-regression.json",
+    "docs/build-evidence/028F/checks/round8o-nav/ (regenerated nav evidence)",
+    "docs/build-evidence/028F/full-checks.json"
+  ],
+  "temporaryHarnessInputsRestored": true,
+  "commit": null,
+  "staged": false,
+  "credits": 0,
+  "providerCalls": 0
+}

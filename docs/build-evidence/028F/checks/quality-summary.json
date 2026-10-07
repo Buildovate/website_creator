@@ -1,0 +1,57 @@
+{
+  "complete": false,
+  "commands": 29,
+  "commandsPassed": 29,
+  "captures": 177,
+  "textMeasurements": 17167,
+  "borderMeasurements": 20953,
+  "textFailures": [],
+  "borderFailures": [],
+  "consoleFailures": [
+    {
+      "state": "legacy-workspace",
+      "type": "warning",
+      "text": "The resource http://review.local/assets/roofing-fast/hero-1440.avif was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+      "location": {
+        "url": "http://review.local/s/hero-edit-qa",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 960,
+        "height": 540
+      },
+      "pageUrl": "http://review.local/s/hero-edit-qa",
+      "platform": false,
+      "allowed": false,
+      "suite": "hero-editor"
+    },
+    {
+      "state": "legacy-workspace",
+      "type": "warning",
+      "text": "The resource http://review.local/assets/roofing-fast/hero-1440.avif was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+      "location": {
+        "url": "http://review.local/s/hero-edit-qa",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 960,
+        "height": 540
+      },
+      "pageUrl": "http://review.local/s/hero-edit-qa",
+      "platform": false,
+      "allowed": false,
+      "suite": "hero-editor"
+    }
+  ],
+  "allowedConsoleCount": 15,
+  "measuredCommands": [
+    "platform-matrix",
+    "qa-staff"
+  ]
+}

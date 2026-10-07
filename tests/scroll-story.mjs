@@ -14,7 +14,7 @@ for(const id of Object.keys(kits).filter(id=>films[id]))for(const layout of ['im
  assert.ok(h.includes(films[id].scrubUrl));for(const key of ['url','poster','openingPoster'])assert.ok(existsSync('public'+new URL(films[id][key],origin).pathname),id+' '+key);
  const off=await (await req('/design-preview/'+id+'/'+layout+'?scrollStory=false')).text();assert.ok(off.includes('founder-standard-hero'));assert.ok(!off.includes('data-feature="hero.scrollStory"'));assert.ok(off.includes('id="craft-inquiry"'));
 }
-let {tenant:t}=await api('/tenants','POST',{designKit:'roofing',slug:'story-control-test',settings:{name:'Story Test Roofing',phone:'8055550199',area:'Oxnard',services:[{name:'Roof repair',description:'Discuss the condition.'}]}});
+let {tenant:t}=await api('/tenants','POST',{designKit:'roofing',slug:'story-control-test',settings:{name:'Sample Fictional Story Test Roofing',phone:'8055550199',area:'Oxnard',services:[{name:'Roof repair',description:'Discuss the condition.'}]}});
 ({tenant:t}=await api('/tenants/'+t.id+'/generation','POST',{version:t.version,action:'locks',locks:{scrollStory:false}}));
 ({tenant:t}=await api('/tenants/'+t.id,'PUT',{version:t.version,settings:{...t.settings,scrollStory:{chapters:[{headline:'APPROVED OPENING'}],heroCaptions:['A clear start.','Work underway.','The result.'],detailIntro:'The roof details.',detailCaptions:['Plan.','Protect.','Finish.'],proof:[{text:'UNAPPROVED CLAIM',approved:false},{text:'APPROVED FACT',approved:true}]}}}));
 assert.equal(t.settings.scrollStory.detailCaptions[1],'Protect.');

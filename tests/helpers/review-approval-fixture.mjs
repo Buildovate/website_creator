@@ -1,24 +1,53 @@
-// Explicit approved-version prerequisite for the pre-#028E regression suites.
-// These suites test existing publication/data/permission behavior, not capture.
-// The #028E contract and real-browser tests deliberately do NOT import this file.
+// #028F: actual browser QA and actual staff decisions. Never fabricate a Pass.
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import worker from '../../dist/server/index.js';
-import {reviewState,REVIEW_CHECKLIST} from '../../src/review-packets.js';
-import {hash} from '../../src/review-packet-utils.js';
-import {stable} from '../../src/platform/generation.ts';
-const fetch=worker.fetch.bind(worker);
-const png=Uint8Array.from(Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a7ioAAAAASUVORK5CYII=','base64'));
+import {createReviewCapture} from '../../src/aws/review-capture.js';
+import {createAssets} from '../../src/aws/s3.js';
+import {recordFrameInitializationProof} from './frame-initialization-proof.mjs';
+export const fetchWithoutReviewPrerequisite=worker.fetch.bind(worker);
+const capture=createReviewCapture({...(process.env.BV_FRAME_PROOF?{onScreenshot:recordFrameInitializationProof}:{}),browserModule:'C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright',executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+export async function realReviewPrerequisite(env,id,target='website',origin='https://test.local'){
+ env.ASSETS ||= createAssets('C:/Users/joe/website_creator/dist/client');
+ const previousCapture=env.REVIEW_CAPTURE;
+ env.REVIEW_CAPTURE ||= capture;
+ try{
+ const staff=await env.DB.prepare('SELECT user_id,email FROM admins ORDER BY created_at LIMIT 1').first();
+ assert.ok(staff,'Fixture must have a real staff identity');
+ const base='/api/tenants/'+id+'/review-packet',query='?target='+encodeURIComponent(target);
+ const api=async(suffix='',method='GET',value)=>{const response=await fetchWithoutReviewPrerequisite(new Request(origin+base+suffix+query,{method,headers:{origin,'content-type':'application/json','oai-authenticated-user-id':staff.user_id,'oai-authenticated-user-email':staff.email},body:value===undefined?undefined:JSON.stringify(value)}),env);assert.equal(response.status,200,await response.clone().text());return response.json()};
+ let status=await api();
+ await api('','POST',{versionHash:status.versionHash});
+ const deadline=Date.now()+1200000;
+ do{status=await api();assert.notEqual(status.packet?.status,'Capture failed',status.packet?.captureMessage);if(status.packet?.status==='Complete')break;assert.ok(Date.now()<deadline,'Real capture timeout');await new Promise(r=>setTimeout(r,250));}while(true);
+ if(status.qa.summary.blocking){
+  const folder='C:/Users/joe/website_creator/docs/build-evidence/028F/helper-blockers/'+(process.env.BV_CHECK_LABEL||'manual')+'/'+id+'/'+status.versionHash,failures=status.qa.report.checks.filter(c=>c.result==='Fail');fs.mkdirSync(folder,{recursive:true});fs.writeFileSync(folder+'/failures.json',JSON.stringify({target,versionHash:status.versionHash,failures},null,2));
+  for(const file of new Set(['packet.json','source.json','qa-report.json',...status.packet.pages.map(p=>p.file),...failures.map(c=>c.crop)])){const object=await env.BUCKET.get('review-packets/'+id+'/'+status.versionHash+'/'+file);if(object){fs.mkdirSync(folder+'/'+file.split('/').slice(0,-1).join('/'),{recursive:true});fs.writeFileSync(folder+'/'+file,Buffer.from(await new Response(object.body).arrayBuffer()));}}
+ }
+ assert.equal(status.qa.summary.blocking,0,JSON.stringify(status.qa.report.checks.filter(c=>c.result==='Fail')));
+ for(const check of status.qa.report.checks.filter(c=>c.result==='Borderline'))await api('/qa-decision','POST',{versionHash:status.versionHash,manifestHash:status.manifestHash,reportHash:status.qa.report.reportHash,checkId:check.id,decision:'Accept',reason:'Clearly fictional legacy regression staff decision; not approval of a real contractor site.'});
+ await api('/decision','POST',{versionHash:status.versionHash,decision:'approve',checkedItems:status.packet.checklist.map(c=>c.id)});
+ console.log('REAL browser QA prerequisite:',id,target,JSON.stringify(status.qa.summary));
+ }finally{
+  // This legacy fixture borrowed a real capture binding only for its QA prerequisite.
+  // Restore its original host setup; every later publication still requires real QA.
+  if(previousCapture===undefined)delete env.REVIEW_CAPTURE;else env.REVIEW_CAPTURE=previousCapture;
+ }
+}
 worker.fetch=async(req,env)=>{
- const copy=req.clone(),url=new URL(req.url),site=url.pathname.match(/^\/api\/tenants\/([^/]+)\/(?:projects\/([^/]+)\/)?publish$/),record=url.pathname.match(/^\/api\/workspace\/([^/]+)\/(pages|forms|blog|visibility)\/([^/]+)\/publish$/);
- const response=await fetch(req,env);
+ const retry=req.clone(),url=new URL(req.url),site=url.pathname.match(/^\/api\/tenants\/([^/]+)\/(?:projects\/([^/]+)\/)?publish$/),record=url.pathname.match(/^\/api\/workspace\/([^/]+)\/(pages|forms|blog|visibility)\/([^/]+)\/publish$/);
+ const response=await fetchWithoutReviewPrerequisite(req,env);
  if(req.method!=='POST'||(!site&&!record)||response.status!==409)return response;
  const error=(await response.clone().json().catch(()=>({}))).error;
- if(!['Complete the review packet before approval.','Staff must approve the review packet for this exact version before publishing.'].includes(error))return response;
+ if(error==='Resolve the blocking QA failures before approval.'){
+  const id=site?.[1]||record[1],target=site?(site[2]?'project:'+site[2]:'website'):record[2]+':'+record[3],staff=await env.DB.prepare('SELECT user_id,email FROM admins ORDER BY created_at LIMIT 1').first();
+  const diagnostic=await fetchWithoutReviewPrerequisite(new Request(url.origin+'/api/tenants/'+id+'/review-packet?target='+encodeURIComponent(target),{headers:{'oai-authenticated-user-id':staff.user_id,'oai-authenticated-user-email':staff.email}}),env);assert.equal(diagnostic.status,200);const current=await diagnostic.json(),failures=current.qa.report.checks.filter(c=>c.result==='Fail'),folder='C:/Users/joe/website_creator/docs/build-evidence/028F/helper-blockers/'+(process.env.BV_CHECK_LABEL||'manual')+'/'+id;
+  fs.mkdirSync(folder,{recursive:true});fs.writeFileSync(folder+'/failures.json',JSON.stringify({target,versionHash:current.versionHash,failures},null,2));
+  for(const file of ['packet.json','source.json','qa-report.json',...current.packet.pages.map(p=>p.file),...failures.map(c=>c.crop)]){const object=await env.BUCKET.get('review-packets/'+id+'/'+current.versionHash+'/'+file);if(object){fs.mkdirSync(folder+'/'+file.split('/').slice(0,-1).join('/'),{recursive:true});fs.writeFileSync(folder+'/'+file,Buffer.from(await new Response(object.body).arrayBuffer()));}}
+  console.error('REAL blocking QA details (publication stays blocked):',JSON.stringify(failures));
+ }
+ if(!['Complete the review packet before approval.','Staff must approve the review packet for this exact version before publishing.','Capture the automatic QA report before approval.','A staff reviewer must decide every Borderline item, with a reason.'].includes(error))return response;
  const id=site?.[1]||record[1],target=site?(site[2]?'project:'+site[2]:'website'):record[2]+':'+record[3];
- const state=await reviewState(env,id,target),version=state.versionHash,key='review-packets/'+encodeURIComponent(id)+'/'+version+'/';
- const packet={schema:1,siteId:id,target,versionHash:version,status:'Complete',expectedClips:[],clips:[],claims:[],pages:[{path:'/unit-test-prerequisite',screenshots:{1440:'screenshots/fixture.png',390:'screenshots/fixture.png'}}],checklist:REVIEW_CHECKLIST,files:[{path:'screenshots/fixture.png',sha256:await hash(png),bytes:png.length,type:'image/png'}],testFixture:'Capture double for pre-028E behavior suite; never review-packet proof'};
- await env.BUCKET.put(key+'screenshots/fixture.png',png);await env.BUCKET.put(key+'packet.json',stable(packet));
- const decision={versionHash:version,decision:'approve',approver:{id:'legacy-review-fixture'},timestamp:'2026-09-28T00:00:00Z',testFixture:true};
- await env.DB.prepare("INSERT INTO workspace_records(id,scope,kind,data,version,created_at,updated_at) VALUES(?,?,'review_approval',?,1,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data").bind('review-'+version,id,stable(decision),decision.timestamp,decision.timestamp).run();
- console.log('Review approval test prerequisite:',id,target);
- return fetch(copy,env);
+ await realReviewPrerequisite(env,id,target,url.origin);
+ return fetchWithoutReviewPrerequisite(retry,env);
 };

@@ -1,0 +1,115 @@
+{
+  "round": "8g",
+  "state": "Stopped on first full-suite failure; no retry; no commit",
+  "standalone": {
+    "command": "node tests/roofing-cta-browser.mjs",
+    "log": "checks/round8g-roofing-cta-browser.log",
+    "outcome": "PASS",
+    "exitCode": 0,
+    "checks": 88,
+    "screenshots": 24,
+    "browserErrors": [],
+    "blockingQA": 0
+  },
+  "suite102": {
+    "log": "checks/round8g-suite102.log",
+    "errorLog": "checks/round8g-suite102-error.log",
+    "state": "Stopped",
+    "completed": 91,
+    "pass": 90,
+    "passWithWarning": 0,
+    "fail": 1,
+    "notCompleted": 11
+  },
+  "filesChanged": [
+    "tests/roofing-cta-browser.mjs",
+    "tests/design-styles.mjs",
+    "tests/roofing-acceptance.mjs",
+    "tests/roofing-polish-part2-browser.mjs",
+    "tests/core-site-pages.mjs",
+    "tests/uniqueness-api.mjs"
+  ],
+  "audit": "checks/round8g-fixture-audit.json",
+  "samples": {
+    "pass": 3425,
+    "borderline": 70,
+    "fail": 0,
+    "qaGateClear": false,
+    "snapshotSource": "Accepted snapshot; not rerun or reclassified in round 8g",
+    "borderlineDecisionsRecordedOnFiveSamplesThisRound": 0,
+    "phoneHeaderEllipsis": {
+      "count": 67,
+      "state": "Open; Joe rejected acceptance"
+    },
+    "transformationVideo": {
+      "count": 3,
+      "state": "Open; Joe rejected acceptance"
+    }
+  },
+  "detectorChanges": false,
+  "commit": null,
+  "staged": false,
+  "providerCalls": 0,
+  "credits": 0,
+  "temporaryHarnessInputsRestored": true,
+  "failures": [
+    {
+      "check": "roofing-polish-part1",
+      "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1.mjs",
+      "outcome": "FAILED",
+      "log": "checks/round8g-roofing-polish-part1.log",
+      "error": "AssertionError [ERR_ASSERTION]: 17 !== 0 at realReviewPrerequisite (tests/helpers/review-approval-fixture.mjs:27:9); publication from tests/roofing-polish-part1.mjs:13:982",
+      "blockingChecks": {
+        "widths": [
+          390,
+          768,
+          1440
+        ],
+        "missingAlt": 3,
+        "total": 17,
+        "clippedText": 14,
+        "fixture": "/s/part1-logo-check"
+      }
+    }
+  ],
+  "fullSuiteResults": "checks/round8g-suite102-results.json",
+  "passedFixturesInFullSuite": [
+    "roofing-cta-browser",
+    "planning-ambient-browser",
+    "website-pages",
+    "hero-editor-browser",
+    "core-site-pages"
+  ],
+  "preservation": [
+    {
+      "path": "src/aws/qa-browser.js",
+      "before": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/parallel-suite.mjs",
+      "before": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "after": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/child-hang-guard.mjs",
+      "before": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "after": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "unchanged": true
+    },
+    {
+      "path": "public/planning-films.json",
+      "before": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part1.mjs",
+      "before": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "after": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "unchanged": true
+    }
+  ]
+}

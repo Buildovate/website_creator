@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "approval": "Joe approved 2026-09-29",
+  "path": "/s/platform-look-baseline-roofing-current/pages/look-baseline",
+  "oldHash": "1ffa41cae0d5cd99a2c0e8713567337c7e98a82cce1d8d2bd61038f984d673e0",
+  "newHash": "6f18942e6e19ec3e58e3d0dbcac1fdb047ac42d0d172a30f81b483425079dd06",
+  "oldHref": "href=\"tel:+8055550140\"",
+  "newHref": "href=\"tel:+18055550140\"",
+  "beforeBytes": 653,
+  "afterBytes": 654,
+  "onlyByteChange": {
+    "offset": 547,
+    "insertedUtf8": "1"
+  },
+  "exactReplacement": true,
+  "displayAndEveryOtherByteUnchanged": true,
+  "otherProtectedMismatches": 0,
+  "archivedIdentical": 374,
+  "reason": "Correct the existing public workspace Call href for a US 10-digit phone; no display or behavior change apart from the dial target."
+}

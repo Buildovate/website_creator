@@ -1,7 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {worker,env,admin} from './preview-fixture.mjs';
-import {footerFixture,hiddenFooterFields} from './fixtures/footer.mjs';
+import {footerFixture as baseFooterFixture,hiddenFooterFields} from './fixtures/footer.mjs';
+// Existing fictional 555 fixture, explicitly designated Sample in this test only.
+const footerFixture=mode=>{const f=baseFooterFixture(mode);f.settings.name='Sample Fictional '+f.settings.name;return f};
 const origin='https://test.local';
 async function request(path,method='GET',value,user=admin){return worker.fetch(new Request(origin+path,{method,headers:{origin,'content-type':'application/json',...(user?{'oai-authenticated-user-id':user.id,'oai-authenticated-user-email':user.email}:{})},body:value===undefined?undefined:JSON.stringify(value)}),env);}
 async function api(path,method='GET',value){const r=await request('/api'+path,method,value);assert.equal(r.status,200,await r.clone().text());return r.json();}

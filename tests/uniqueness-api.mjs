@@ -12,7 +12,7 @@ const nativeFetch=globalThis.fetch;let providerCalls=0;globalThis.fetch=()=>{pro
 let first;
 try{await api('/setup','POST',{});
 for(const {row}of originalRows)for(const style of styles){
- const s=variantSettings(row,style,'a',false);delete s.siteStyleSeed;s.name='Sample API '+s.trade;s.phone='8055550199';
+ const s=variantSettings(row,style,'a',false);delete s.siteStyleSeed;s.name='Sample API '+s.trade;s.phone='8054410199';
  const id='unique-api-'+s.designKit+'-'+style,fixture={...row,id,slug:id,settings:JSON.stringify(s),published:JSON.stringify(s),status:'published'};
  const keys=Object.keys(fixture);await runtime.env.DB.prepare('INSERT INTO tenants('+keys.join(',')+') VALUES('+keys.map(()=>'?').join(',')+')').bind(...keys.map(k=>fixture[k])).run();
  let tenant=(await api('/tenants/'+id)).tenant;const before=await(await request('/s/'+id)).text();
@@ -35,7 +35,7 @@ ok(first.settings.uniqueness.style==='classic','owner Look wins during ordinary 
 const save=(await api('/tenants/'+id,'PUT',{version:first.version,settings:{...first.settings,name:'Sample API Renamed'}})).tenant;
 ok(JSON.stringify(save.settings.uniqueness.copy).includes('Sample API Renamed'),'facts refresh without stale copy');
 ok(JSON.stringify(save.settings.sectionVariants)===JSON.stringify(first.settings.sectionVariants),'facts save preserves layout');
-const races=[];for(let n=0;n<2;n++){const {row}=originalRows.find(({row})=>JSON.parse(row.settings).designKit==='roofing'),s=variantSettings(row,'current','a',false);delete s.siteStyle;const fixture={...row,id:'unique-race-'+n,slug:'unique-race-'+n,settings:JSON.stringify(s),published:JSON.stringify(s),status:'published'},keys=Object.keys(fixture);await runtime.env.DB.prepare('INSERT INTO tenants('+keys.join(',')+') VALUES('+keys.map(()=>'?').join(',')+')').bind(...keys.map(k=>fixture[k])).run();races.push((await api('/tenants/'+fixture.id)).tenant)}
+const races=[];for(let n=0;n<2;n++){const {row}=originalRows.find(({row})=>JSON.parse(row.settings).designKit==='roofing'),s=variantSettings(row,'current','a',false);delete s.siteStyle;s.phone='8054410199';const fixture={...row,id:'unique-race-'+n,slug:'unique-race-'+n,settings:JSON.stringify(s),published:JSON.stringify(s),status:'published'},keys=Object.keys(fixture);await runtime.env.DB.prepare('INSERT INTO tenants('+keys.join(',')+') VALUES('+keys.map(()=>'?').join(',')+')').bind(...keys.map(k=>fixture[k])).run();races.push((await api('/tenants/'+fixture.id)).tenant)}
 const concurrent=await Promise.all(races.map(t=>api('/tenants/'+t.id+'/generation','POST',{version:t.version,action:'regenerate',overrides:{seed:222}})));
 const picks=concurrent.map(x=>({style:x.tenant.settings.uniqueness.style,...x.tenant.settings.sectionVariants}));ok(pickDistance(...picks)>=3,'concurrent same-seed sites reserve different combinations');
 ok(providerCalls===0,'zero provider calls');

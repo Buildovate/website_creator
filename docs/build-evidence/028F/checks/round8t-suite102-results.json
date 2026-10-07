@@ -1,0 +1,56 @@
+[
+  {
+    "label": "roofing-cta",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-cta.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 146798
+  },
+  {
+    "label": "roofing-cities",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-cities.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 224957
+  },
+  {
+    "label": "reference-proof",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/reference-proof.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 231914
+  },
+  {
+    "label": "roofing-story",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-story.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 146081
+  },
+  {
+    "label": "service-motion",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/service-motion.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 200862
+  },
+  {
+    "label": "financing-comparison",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/financing-comparison.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 184526
+  }
+]

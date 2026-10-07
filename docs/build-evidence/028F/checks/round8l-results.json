@@ -1,0 +1,162 @@
+{
+  "round": "8l",
+  "state": "Approved one-file lookup applied; stopped on Part2 design-preview response mismatch before reaching source-lock assertions",
+  "sourceDiff": {
+    "posterOnly": true,
+    "path": "src/planning-ambient.js",
+    "oldSha256": "4a77e08f32bf95fa850928f5fc63d9184149d97731c5c5082e4053c6d67f971f",
+    "newSha256": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+    "diff": "checks/round8l-source-lock-diff.txt",
+    "proof": "checks/round8l-source-lock-proof.json"
+  },
+  "lockMechanism": {
+    "manifest": "docs/build-evidence/027A-part2/preserve-state.json",
+    "field": "head",
+    "lookup": "git show <head>:<path>",
+    "lookupLine": 20,
+    "assertionLine": 21,
+    "sharedGitReference": true,
+    "perFileSnapshotOrHashConsumed": false,
+    "callSites": [
+      {
+        "line": 20,
+        "code": "const base=JSON.parse(fs.readFileSync(out+'/preserve-state.json')).head,git=p=>execFileSync('git',['-c','safe.directory=C:/Users/joe/website_creator','show',base+':'+p],{cwd:root,maxBuffer:50e6});"
+      },
+      {
+        "line": 21,
+        "code": "for(const file of ['src/expenses-history.json','src/expenses.js','src/expenses-math.js','src/client/site/ambient-video.js','src/planning-video-sources.js','src/planning-ambient.js','src/planning-scroll.js','src/promotions-scroll.js','src/promotions-ambient.js','src/hero-timelapse.js','src/scroll-config.js','public/planning-films.json','public/service-media.json','public/service-art.json'])check(fs.readFileSync(root+'/'+file,'utf8').replace(/\\r\\n/g,'\\n')===git(file).toString().replace(/\\r\\n/g,'\\n'),'protected source exact (checkout line endings normalized) '+file);"
+      },
+      {
+        "line": 22,
+        "code": "const scrollMarker=\"document.querySelectorAll<HTMLElement>('[data-project-story]')\";check(fs.readFileSync(root+'/src/client/site/constitution.ts','utf8').split(scrollMarker)[1].replace(/\\r\\n/g,'\\n')===git('src/client/site/constitution.ts').toString().split(scrollMarker)[1].replace(/\\r\\n/g,'\\n'),'paid film scroll controller byte-identical');"
+      },
+      {
+        "line": 24,
+        "code": "const backlog=fs.readFileSync(root+'/BUILD-BACKLOG.md','utf8'),prior=git('BUILD-BACKLOG.md').toString(),section=x=>x.slice(x.indexOf('### #028G'),x.indexOf('\\n### ',x.indexOf('### #028G')+1));const old=\"At 100, replace the plan with a finished-house elevation, “Your site is live,” and one **View your site** button.\",replacement=\"At 100, replace the plan with a trade-neutral 'Business at work' site plan drawn in the same blueprint style: a bird's-eye town with the contractor's shop at the center (their name on the sign), a few of their work trucks driving out on slow, subtle routes, and homes that light up with a warm fill, soft glow and a check pin as finished jobs. The title block reads 'Site plan · Open for business', with 'Your site is live' and one View your site button. The scene is the same for every trade, with no trade-specific glyphs. After launch it keeps growing from real data only: one more home lights up per real booked job from the site, and a small star marker appears over a home for each real new review, with a small counter of jobs and new reviews from the site. Reduced motion shows the final frame statically.\";"
+      }
+    ]
+  },
+  "currentBlob": "3576e5365333d0480c6aacd1b608a55e37849b14",
+  "currentBlobInReachableHistory": false,
+  "lockEntriesChanged": [
+    {
+      "path": "src/planning-ambient.js",
+      "snapshot": "docs/build-evidence/028F/source-locks/planning-ambient.js",
+      "sha256": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "historicalSha256": "4a77e08f32bf95fa850928f5fc63d9184149d97731c5c5082e4053c6d67f971f",
+      "snapshotEqualsCurrentBytes": true,
+      "historicalDiffPosterOnly": true,
+      "lookupPin": "Hardcoded exact SHA-256",
+      "otherLookups": "Original git show lookup unchanged",
+      "assertion": "Original equality assertion unchanged"
+    }
+  ],
+  "proposedLookup": {
+    "path": "src/planning-ambient.js",
+    "snapshot": "checks/round8l-source-lock-current.js",
+    "expectedSha256": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+    "historicalSha256": "4a77e08f32bf95fa850928f5fc63d9184149d97731c5c5082e4053c6d67f971f",
+    "assertion": "Retain exact current-equals-locked-copy assertion; retain every other original git-show lookup",
+    "status": "Approved and implemented only for src/planning-ambient.js"
+  },
+  "standalone": {
+    "syntax": "PASS",
+    "lookupDiffScope": "PASS: reversing only the lookup edit reproduces original test",
+    "roofingPolishPart2": {
+      "outcome": "FAILED",
+      "exitCode": 1,
+      "command": "node tests/roofing-polish-part2.mjs",
+      "log": "checks/round8l-roofing-polish-part2.log",
+      "error": "AssertionError [ERR_ASSERTION]: /design-preview/roofing/immersive byte-identical after precise authorized normalization",
+      "location": "tests/roofing-polish-part2.mjs:11:334",
+      "sourceLockReached": false
+    },
+    "headerLogo": "Not run after Part2 failure"
+  },
+  "suite102": {
+    "state": "Not run",
+    "pass": 0,
+    "passWithWarning": 0,
+    "fail": 0,
+    "incomplete": 102,
+    "log": "checks/round8l-suite102.log"
+  },
+  "preservation": [
+    {
+      "path": "src/planning-ambient.js",
+      "before": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "after": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "unchanged": true
+    },
+    {
+      "path": "tests/part2-html-normalize.mjs",
+      "before": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "after": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "unchanged": true
+    },
+    {
+      "path": "tests/review-part1-html-normalize.mjs",
+      "before": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "after": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/qa-browser.js",
+      "before": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/027A-part2/preserve-state.json",
+      "before": "9d868c8845752e0c0caf54203077005d843fd88fa0966e777548a6bf2df3f3d6",
+      "after": "9d868c8845752e0c0caf54203077005d843fd88fa0966e777548a6bf2df3f3d6",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/full-checks.json",
+      "before": "dc9b680c8db5723bcf336e23d73a733d12053237ec8f9b14338a89d5cd8d9485",
+      "after": "dc9b680c8db5723bcf336e23d73a733d12053237ec8f9b14338a89d5cd8d9485",
+      "unchanged": true
+    },
+    {
+      "path": "public/planning-films.json",
+      "before": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part1.mjs",
+      "before": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "after": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "unchanged": true
+    }
+  ],
+  "samples": {
+    "pass": 3425,
+    "borderline": 70,
+    "fail": 0,
+    "qaGateClear": false,
+    "state": "Accepted prior snapshot, not rerun; all 70 remain open",
+    "decisionsRecorded": 0
+  },
+  "filesChanged": [
+    "docs/build-evidence/028F/tools/round8l-source-lock-diagnosis.mjs",
+    "docs/build-evidence/028F/checks/round8l-source-lock-expected.js",
+    "docs/build-evidence/028F/checks/round8l-source-lock-current.js",
+    "docs/build-evidence/028F/checks/round8l-source-lock-diff.txt",
+    "docs/build-evidence/028F/checks/round8l-source-lock-proof.json",
+    "docs/build-evidence/028F/checks/round8l-source-lock-diagnosis.log",
+    "docs/build-evidence/028F/checks/round8l-results.json",
+    "docs/build-evidence/028F/checks/round8l-notes.md",
+    "docs/build-evidence/028F/checks/round8l-suite102.log",
+    "tests/roofing-polish-part2.mjs",
+    "docs/build-evidence/028F/source-locks/planning-ambient.js",
+    "docs/build-evidence/028F/checks/round8l-test-lookup-diff.txt",
+    "docs/build-evidence/028F/checks/round8l-roofing-polish-part2.log"
+  ],
+  "temporaryInputs": "Unchanged byte-identically; no temporary override used",
+  "commit": null,
+  "staged": false,
+  "credits": 0,
+  "providerCalls": 0
+}

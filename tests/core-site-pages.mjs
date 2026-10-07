@@ -11,7 +11,7 @@ const request=(path,user=null)=>worker.fetch(new Request(origin+path,{headers:us
 const areas=[{city:'Oxnard'},{city:'Ventura'},{city:'Camarillo'}];
 async function site(trade){
  const slug='core-'+trade.toLowerCase().replace(/[^a-z]+/g,'-');
- const input=trade==='Roofing'?ROBLES:{...DEFAULT,name:trade+' Studio',trade,designKit:trade.toLowerCase(),phone:'(805) 555-0123',area:'Ventura County',hero:'Made around your home.',services:library[trade].map(name=>({name,description:''}))};
+ const input=trade==='Roofing'?ROBLES:{...DEFAULT,name:trade+' Studio',trade,designKit:trade.toLowerCase(),phone:'(805) 441-0199',area:'Ventura County',hero:'Made around your home.',services:library[trade].map(name=>({name,description:''}))};
  const s=settings({...input,serviceAreas:areas});
  const id=crypto.randomUUID(),time=new Date().toISOString();
  await env.DB.prepare('INSERT INTO tenants (id,slug,name,settings,published,status,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?)').bind(id,slug,s.name,JSON.stringify(s),JSON.stringify(s),'published',time,time).run();

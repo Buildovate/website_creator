@@ -15,14 +15,14 @@ for(const id of ['windows-doors','solar']){
   assert.doesNotMatch(html,/<video|undefined|\/assets\/films\/roofing/,'No fake or unrelated film fallback');
   for(const match of html.matchAll(/(?:src|poster)="(\/assets\/[^"?]+)/g))assert.ok(existsSync('public'+match[1]),match[1]);
  }
- let {tenant:t}=await api('/tenants','POST',{designKit:id,slug:'new-'+id,settings:{name:'QA '+kit.trade,phone:'8055550123',area:'Ventura',services:library[kit.trade].slice(0,2).map(name=>({name})),platform:{neighborhood:{enabled:false}}}});
+ let {tenant:t}=await api('/tenants','POST',{designKit:id,slug:'new-'+id,settings:{name:'Sample Fictional QA '+kit.trade,phone:'8055550123',area:'Ventura',services:library[kit.trade].slice(0,2).map(name=>({name})),platform:{neighborhood:{enabled:false}}}});
  await api('/tenants/'+t.id+'/publish','POST',{version:t.version,approved:true});
  for(const path of ['/s/'+t.slug,'/s/'+t.slug+'/pricing','/s/'+t.slug+'/blog']){const r=await req(path,'GET',undefined,false);assert.equal(r.status,200);const html=await r.text();assert.ok(html.includes(kit.art.banner));assert.doesNotMatch(html,/fictional preview quotes/);for(const match of html.matchAll(/(?:src|poster)="(\/assets\/[^"?]+)/g))assert.ok(existsSync('public'+match[1]),match[1]);}
 }
 const providers=['sfc','wisetack','sunbit'];
 for(let count=1;count<=3;count++){
  const lenders=providers.map((id,i)=>({id,enabled:i<count,confirmed:true,applicationUrl:`https://merchant.example.test/${id}`}));
- let {tenant:t}=await api('/tenants','POST',{designKit:'solar',slug:'finance-options-'+count,settings:{name:'QA Solar',phone:'8055550123',area:'Ventura',services:[{name:'Solar panel installation'}],platform:{financing:{enabled:true,lenders,programs:lenders.filter(l=>l.enabled).map(l=>({id:l.id,name:'QA '+l.id,lenderId:l.id,apr:8,months:60,enabled:true,confirmed:true}))}}}});
+ let {tenant:t}=await api('/tenants','POST',{designKit:'solar',slug:'finance-options-'+count,settings:{name:'Sample Fictional QA Solar',phone:'8055550123',area:'Ventura',services:[{name:'Solar panel installation'}],platform:{financing:{enabled:true,lenders,programs:lenders.filter(l=>l.enabled).map(l=>({id:l.id,name:'QA '+l.id,lenderId:l.id,apr:8,months:60,enabled:true,confirmed:true}))}}}});
  const path='/s/'+t.slug+'/financing';assert.equal((await req(path,'GET',undefined,false)).status,404);
  const draft=await (await req(path+'?preview=1')).text();assert.match(draft,/Application opens on the published site/);assert.doesNotMatch(draft,/href="https:\/\/merchant/);
  await api('/tenants/'+t.id+'/publish','POST',{version:t.version,approved:true});

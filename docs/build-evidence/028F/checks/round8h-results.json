@@ -1,0 +1,144 @@
+{
+  "round": "8h",
+  "state": "Stopped on first full-suite failure; no retry; no commit",
+  "standalone": {
+    "command": "node tests/roofing-polish-part1.mjs",
+    "log": "checks/round8h-roofing-polish-part1.log",
+    "outcome": "PASS",
+    "exitCode": 0,
+    "checks": 660,
+    "additionalRenderedVariants": 158,
+    "blockingQA": 0,
+    "temporaryInputRestored": true
+  },
+  "headerChecks": {
+    "regression": "PASS",
+    "renderedHeaders": 340,
+    "edgeCases": 6,
+    "browser": "PASS",
+    "statesPerStage": 8,
+    "screenshotsPerStage": 16,
+    "pageErrors": 0,
+    "before": "checks/round8h-headers/before/results.json",
+    "after": "checks/round8h-headers/after/results.json",
+    "beforeLogoAlt": "",
+    "afterLogoAlt": "Business name",
+    "beforeTextRects": 1,
+    "afterTextRects": 0
+  },
+  "suite102": {
+    "log": "checks/round8h-suite102.log",
+    "errorLog": "checks/round8h-suite102-error.log",
+    "state": "Stopped",
+    "completed": 92,
+    "pass": 91,
+    "passWithWarning": 0,
+    "fail": 1,
+    "notCompleted": 10
+  },
+  "filesChanged": [
+    "src/site-polish.js",
+    "tests/header-logo.mjs"
+  ],
+  "productFix": {
+    "logoAlt": "Business name; Business logo only when name is absent",
+    "duplicateName": "Existing logoContainsName setting uses hidden plus display:none!important; image alt supplies the brand link's accessible name",
+    "publicStylesheetChanges": false,
+    "detectorChanges": false,
+    "assertionsChangedInRoofingPolishPart1": false
+  },
+  "samples": {
+    "pass": 3425,
+    "borderline": 70,
+    "fail": 0,
+    "qaGateClear": false,
+    "snapshotSource": "Accepted snapshot; no Five-Sample rerun or reclassification in round 8h",
+    "borderlineDecisionsRecordedOnFiveSamplesThisRound": 0,
+    "phoneHeaderEllipsis": {
+      "count": 67,
+      "state": "Open; Joe rejected acceptance"
+    },
+    "transformationVideo": {
+      "count": 3,
+      "state": "Open; Joe rejected acceptance"
+    }
+  },
+  "commit": null,
+  "staged": false,
+  "providerCalls": 0,
+  "credits": 0,
+  "temporaryHarnessInputsRestored": true,
+  "failures": [
+    {
+      "check": "roofing-polish-part2",
+      "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part2.mjs",
+      "outcome": "FAILED",
+      "log": "checks/roofing-polish-part2.log",
+      "error": "AssertionError [ERR_ASSERTION]: /s/ambient-baseline-roofing/financing?preview=1 byte-identical after precise authorized normalization",
+      "location": "tests/roofing-polish-part2.mjs:11:334"
+    }
+  ],
+  "preservation": [
+    {
+      "path": "src\\aws\\qa-browser.js",
+      "before": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "docs\\build-evidence\\028F\\tools\\parallel-suite.mjs",
+      "before": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "after": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "unchanged": true
+    },
+    {
+      "path": "docs\\build-evidence\\028F\\tools\\child-hang-guard.mjs",
+      "before": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "after": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "unchanged": true
+    },
+    {
+      "path": "public\\site-polish.css",
+      "before": "b04fc5f261fdac9fe6e3e5a4eeaf6f05748fd687472e01c524724ad26f1e86a3",
+      "after": "b04fc5f261fdac9fe6e3e5a4eeaf6f05748fd687472e01c524724ad26f1e86a3",
+      "unchanged": true
+    },
+    {
+      "path": "src\\roofing-critical-css.js",
+      "before": "4edeeede41927e343b364ce5048275d2b5288899485cdc48169b9d2c2b24351d",
+      "after": "4edeeede41927e343b364ce5048275d2b5288899485cdc48169b9d2c2b24351d",
+      "unchanged": true
+    },
+    {
+      "path": "tests\\roofing-polish-part1.mjs",
+      "before": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "after": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "unchanged": true
+    },
+    {
+      "path": "public\\planning-films.json",
+      "before": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true
+    }
+  ],
+  "processTreeStopped": true,
+  "fullSuiteRoofingPolishPart1": {
+    "outcome": "PASS",
+    "checks": 660,
+    "additionalRenderedVariants": 158,
+    "blockingQA": 0,
+    "log": "checks/roofing-polish-part1.log"
+  },
+  "evidenceFiles": [
+    "docs/build-evidence/028F/tools/round8h-headers.mjs",
+    "docs/build-evidence/028F/checks/round8h-run-suite.ps1",
+    "docs/build-evidence/028F/checks/round8h-results.json",
+    "docs/build-evidence/028F/checks/round8h-notes.md",
+    "docs/build-evidence/028F/checks/round8h-suite102.log",
+    "docs/build-evidence/028F/checks/round8h-suite102-error.log",
+    "docs/build-evidence/028F/checks/round8h-suite102-results.json",
+    "docs/build-evidence/028F/checks/round8h-headers/before/",
+    "docs/build-evidence/028F/checks/round8h-headers/after/"
+  ]
+}

@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import http from 'node:http';
+import {createRequire} from 'node:module';
+import {pathToFileURL} from 'node:url';
+const root='C:/Users/joe/website_creator',phase=process.argv[2]||'before',out=root+'/docs/build-evidence/028F/checks/round8r-header/'+phase;
+process.chdir(root);fs.mkdirSync(out,{recursive:true});
+const {worker,env,admin}=await import(pathToFileURL(root+'/tests/preview-fixture.mjs'));
+const headers={origin:'https://test.local','content-type':'application/json','oai-authenticated-user-id':admin.id,'oai-authenticated-user-email':admin.email};
+const response=await worker.fetch(new Request('https://test.local/api/tenants',{method:'POST',headers,body:JSON.stringify({designKit:'roofing',slug:'roofing-part1',settings:{name:'Sample Fictional QA Roofing',phone:'8055550111',area:'Oxnard, Ventura',serviceAreas:[{city:'Oxnard'},{city:'Ventura'}],services:[{name:'Roof repair'},{name:'Roof replacement'}],platform:{financing:{enabled:true,lenders:[{id:'hearth',enabled:true,confirmed:true,applicationUrl:'https://merchant.example.test/hearth'}],programs:[{id:'qa-plan',lenderId:'hearth',name:'QA supplied terms',apr:8.5,months:60,enabled:true,confirmed:true}]},promotions:{enabled:true,offers:[]}}}})}),env);
+if(!response.ok)throw Error(await response.text());const {tenant}=await response.json();
+// Visual-only fixture bootstrap: no QA result, approval or production publication.
+await env.DB.prepare("UPDATE tenants SET published=settings,status='published' WHERE id=?").bind(tenant.id).run();
+const types={'.js':'application/javascript','.css':'text/css','.svg':'image/svg+xml','.webp':'image/webp','.woff2':'font/woff2','.jpg':'image/jpeg','.mp4':'video/mp4','.json':'application/json'};
+const server=http.createServer(async(req,res)=>{try{const url=new URL(req.url,'http://localhost'),file=path.resolve(root+'/public','.'+decodeURIComponent(url.pathname));let r;if(file.startsWith(path.resolve(root+'/public')+path.sep)&&fs.existsSync(file)&&fs.statSync(file).isFile())r=new Response(fs.readFileSync(file),{headers:{'content-type':types[path.extname(file)]||'application/octet-stream'}});else r=await worker.fetch(new Request('https://test.local'+url.pathname+url.search,{headers}),env);res.writeHead(r.status,Object.fromEntries(r.headers));res.end(Buffer.from(await r.arrayBuffer()));}catch(e){res.writeHead(500);res.end(String(e));}});
+let browser;const rows=[],errors=[];
+try{await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const origin='http://127.0.0.1:'+server.address().port;
+const {chromium}=createRequire(import.meta.url)('C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+for(const js of [true]){const context=await browser.newContext({viewport:{width:1280,height:900},javaScriptEnabled:js,reducedMotion:'reduce'}),page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));await page.route('**/*',r=>new URL(r.request().url()).origin===origin?r.continue():r.abort());await page.goto(origin+'/s/roofing-part1/financing?preview=1',{timeout:60000});
+for(const width of js?[1280,1440,1024,900,820]:[1280]){await page.setViewportSize({width,height:900});await page.evaluate(async()=>{await document.fonts.ready;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));});
+const row=await page.evaluate(()=>{const nav=document.querySelector('[data-nav-fit]'),children=[...nav.children].map(e=>({tag:e.tagName,className:e.className,hidden:e.hidden,display:getComputedStyle(e).display,text:e.textContent.trim(),rect:e.getBoundingClientRect().toJSON()})),tops=children.map(e=>e.rect.top),trigger=nav.querySelector('.site-fit-trigger');return {width:innerWidth,mode:document.querySelector('.shared-site-header').dataset.navMode,children,topSpread:Math.max(...tops)-Math.min(...tops),scrollWidth:nav.scrollWidth,clientWidth:nav.clientWidth,overflowPresent:!!nav.querySelector('.site-fit-overflow'),moreVisible:!!trigger?.getClientRects().length,noJsLinks:[...nav.querySelectorAll('.site-fit-fallback a')].map(e=>({text:e.textContent.trim(),height:e.getBoundingClientRect().height}))};});row.js=js;
+const filename=`financing-${width}-${js?'js':'no-js'}.png`;await page.screenshot({path:out+'/'+filename});row.screenshot=filename;if(row.moreVisible){await page.locator('.site-fit-trigger').click();await page.screenshot({path:out+'/'+filename.replace('.png','-more.png')});await page.keyboard.press('Escape');}rows.push(row);
+}await context.close();}
+fs.writeFileSync(out+'/results.json',JSON.stringify({phase,rows,errors,noJsCapture:'Skipped by Joe; part1 still checks the real no-JS fallback.'},null,2));console.log(JSON.stringify({phase,rows:rows.map(({width,js,mode,topSpread,overflowPresent,moreVisible,noJsLinks})=>({width,js,mode,topSpread,overflowPresent,moreVisible,noJsLinks})),errors},null,2));
+}finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}

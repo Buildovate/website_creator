@@ -50,7 +50,7 @@ test('legacy draft and published snapshots are backfilled once without changing 
 test('Roofing, HVAC, and Patios publish cards, menus, SEO, sitemap, and hidden-page 404',async()=>{
  for(const trade of ['Roofing','HVAC','Patios']){
   const names=library[trade].slice(0,3),slug=`all-service-${trade.toLowerCase()}`;
-  let {tenant}=await json('/tenants','POST',{slug,settings:{...DEFAULT,name:`${trade} Local`,trade,phone:'8055550102',area:'Ventura',services:names.map(name=>({name,description:`Local ${name.toLowerCase()} work.`}))}});
+  let {tenant}=await json('/tenants','POST',{slug,settings:{...DEFAULT,name:`Sample Fictional ${trade} Local`,trade,phone:'8055550102',area:'Ventura',services:names.map(name=>({name,description:`Local ${name.toLowerCase()} work.`}))}});
   const base='/s/'+slug,path='/tenants/'+tenant.id;
   await json(path+'/publish','POST',{version:tenant.version,approved:true});
   ({tenant}=await json(path));
@@ -62,7 +62,7 @@ test('Roofing, HVAC, and Patios publish cards, menus, SEO, sitemap, and hidden-p
    assert.ok(homeHtml.includes(`href="${route}"`),`${trade} card or menu: ${route}`);
    const response=await request(route),html=await response.text();
    assert.equal(response.status,200,`${trade} ${route}`);
-   assert.match(html,new RegExp(`<title>[^<]*${page.serviceName.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}[^<]*Ventura[^<]*\\| ${trade} Local<\\/title>`));
+   assert.match(html,new RegExp(`<title>[^<]*${page.serviceName.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}[^<]*Ventura[^<]*\\| Sample Fictional ${trade} Local<\\/title>`));
    assert.ok(html.includes(`rel="canonical" href="https://test.local${route}"`));
    assert.equal((html.match(/<h1\b/g)||[]).length,1);
    assert.ok(html.includes(`name="service" value="${page.serviceName}" readonly`));

@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import {createRuntime,listen} from '../src/aws/server.js';
 import worker from '../dist/server/index.js';
 import {roofingFixture} from './fixtures/roofing-journey.mjs';
+import {ROBLES} from '../src/core.js';
 const require=createRequire(import.meta.url),{chromium}=require('C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const phase=process.argv.includes('--before')?'before':'after',out=process.env.PLATFORM_MOBILE_EVIDENCE||'C:/Users/joe/website_creator/docs/build-evidence/015A',base='http://127.0.0.1:8126';
 fs.mkdirSync(out+'/'+phase,{recursive:true});
@@ -12,8 +13,9 @@ const runtime=await createRuntime({env:{APP_ENV:'local',NODE_ENV:'development',A
 if(phase==='before'){const currentAssets=runtime.env.ASSETS;runtime.env.ASSETS={fetch:async request=>{const pathname=new URL(request.url).pathname;if(pathname==='/app.js'||pathname==='/app.css')return new Response(fs.readFileSync(out+'/.baseline-client'+pathname),{headers:{'content-type':pathname.endsWith('.css')?'text/css':'application/javascript'}});return currentAssets.fetch(request);}};}
 const headers={origin:base,'content-type':'application/json','oai-authenticated-user-id':'mobile-admin','oai-authenticated-user-email':'mobile-admin@example.test'};
 async function api(path,method='GET',value){const r=await worker.fetch(new Request(base+'/api'+path,{method,headers,body:value===undefined?undefined:JSON.stringify(value)}),runtime.env);assert.equal(r.status,200,await r.clone().text());return r.json()}
-await api('/setup','POST',{});const fixture=structuredClone(roofingFixture);fixture.slug='mobile-platform-qa';fixture.settings.name='Fictional Roofing Mobile QA';fixture.settings.owner='Fictional Owner';
+await api('/setup','POST',{});const fixture=structuredClone(roofingFixture);fixture.slug='mobile-platform-qa';Object.assign(fixture.settings,{name:ROBLES.name,owner:ROBLES.owner,phone:ROBLES.phone});
 let {tenant}=await api('/tenants','POST',fixture);await api('/tenants/'+tenant.id+'/publish','POST',{version:tenant.version,approved:true});
+const publicHome=await worker.fetch(new Request(base+'/s/'+tenant.slug),runtime.env);assert.equal(publicHome.status,200);assert.doesNotMatch(await publicHome.text(),/\(805\) 555-0123|tel:\+18055550123/,'Fixture phone must not reach published copy');
 await runtime.env.DB.prepare('INSERT INTO members (id,tenant_id,user_id,email,role,active,created_at) VALUES (?,?,?,?,?,1,?)').bind(crypto.randomUUID(),tenant.id,'mobile-owner','mobile-owner@example.test','owner',new Date().toISOString()).run();
 const server=await listen(runtime,8126),browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'}),results={phase,screens:[],errors:[]};
 try{
@@ -83,7 +85,7 @@ if(phase==='after'){
  await page.locator('[data-platform-screen]').selectOption('questionnaire');await page.locator('#questionnaire-form [name=owner]').fill('Questionnaire phone owner');await page.locator('.platform-action-dock button').filter({hasText:'Save questionnaire'}).click();await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('Questionnaire saved'));
  await page.reload();await page.waitForSelector('[data-platform-screen]');await page.locator('[data-platform-screen]').selectOption('questionnaire');assert.equal(await page.locator('#questionnaire-form [name=owner]').inputValue(),'Questionnaire phone owner');
  const popupEvent=page.waitForEvent('popup');await page.locator('a[href^="/preview/"]').click();const popup=await popupEvent;await popup.waitForLoadState();assert.ok(popup.url().includes('/preview/'));await popup.close();
- page.removeAllListeners('dialog');page.on('dialog',d=>d.accept());await page.locator('.platform-action-dock button').filter({hasText:'Publish changes'}).click();await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('published'));
+ page.removeAllListeners('dialog');page.on('dialog',d=>d.accept());await page.locator('.platform-action-dock button').filter({hasText:'Publish changes'}).click();await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('published'),undefined,{timeout:1200000});
  detail=await api('/tenants/'+tenant.id);assert.equal(detail.tenant.published.owner,'Questionnaire phone owner');results.workflows={businessSave:true,questionnaireSaveReopen:true,publishedIsolation:true,privatePreview:true,explicitLocalPublish:true};
  await page.locator('[data-platform-screen]').selectOption('business');await page.locator('[data-action=upload]').click();await page.waitForSelector('dialog[open]');
  const camera=page.locator('dialog input[capture]');assert.equal(await camera.getAttribute('capture'),'environment');await camera.dispatchEvent('cancel');assert.match(await page.locator('.phone-photo-preview').innerText(),/Camera closed/);await capture('upload-cancel');

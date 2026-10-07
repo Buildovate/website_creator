@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import {spawn,spawnSync} from 'node:child_process';
+const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028F',label=process.argv[2];
+if(!['diagnosis','solo-1','solo-2'].includes(label))throw Error('Expected diagnosis, solo-1 or solo-2');
+const evidence=out+'/round8d-variants/'+label;
+fs.mkdirSync(evidence+'/checks',{recursive:true});fs.mkdirSync(evidence+'/after',{recursive:true});
+const logPath=out+'/checks/round8d-'+label+'.log',log=fs.createWriteStream(logPath),started=Date.now();
+const child=spawn(process.execPath,[root+'/tests/section-variants-browser.mjs','--all-process'],{cwd:root,env:{...process.env,NODE_OPTIONS:'--import=file:///'+out+'/tools/evidence-redirect.mjs --import=file:///'+root+'/tests/helpers/review-approval-fixture.mjs',BV_CHECK_LABEL:'section-variants-browser-all-process',BV_028B_EVIDENCE:evidence,BV_028B_PARALLEL:'2'},stdio:['ignore','pipe','pipe'],windowsHide:true});
+let timedOut=false;
+child.stdout.pipe(log,{end:false});child.stderr.pipe(log,{end:false});
+child.stdout.pipe(process.stdout);child.stderr.pipe(process.stderr);
+const timer=setTimeout(()=>{timedOut=true;log.write('\nFAIL 15-minute test timeout\n');if(process.platform==='win32')spawnSync('taskkill',['/PID',String(child.pid),'/T','/F'],{windowsHide:true});else child.kill('SIGKILL');},900_000);
+child.on('error',error=>{log.write(error.stack+'\n');process.exitCode=1;});
+child.on('close',(code,signal)=>{clearTimeout(timer);log.end();fs.writeFileSync(out+'/checks/round8d-'+label+'.json',JSON.stringify({command:'node tests/section-variants-browser.mjs --all-process',code,signal,timedOut,ms:Date.now()-started,logPath},null,2));process.exitCode=timedOut?1:code??1;});

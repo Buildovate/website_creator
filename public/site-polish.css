@@ -164,3 +164,48 @@ body :is(.shared-site-header,.cx-header,.tp-header) :is(.site-desktop-nav,.cx-de
 /* Retain the server's expanded link list when scripts are off. */
 html:not(.site-nav-js) body .shared-site-header .site-more:not([data-nav-enhanced])>summary{display:none!important}
 html:not(.site-nav-js) body .shared-site-header .site-more:not([data-nav-enhanced]),html:not(.site-nav-js) body .shared-site-header .site-more:not([data-nav-enhanced]) .site-more-list{display:flex!important;align-items:center!important;flex-direction:row!important}
+
+/* Roofing kit header refresh: shared by sample and applied sites. */
+:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header.kit-header{min-height:76px;padding:12px 4.5vw;background:#f6f2e9;color:#173128;border-bottom:2px solid var(--accent,#c78353);box-shadow:0 9px 24px #12251f1f}
+:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header .kit-brand{gap:14px;max-width:38%;font-size:clamp(18px,1.6vw,23px)}
+:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header .site-brand-mark{width:42px;height:42px;flex-basis:42px;border-radius:12px;border-color:#284238;background:#284238;color:#fff}
+:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header .site-desktop-nav>a:last-child{background:#8b4828;color:#fff!important;border:1px solid #8b4828;border-radius:5px;padding:12px 18px}
+:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header .site-desktop-nav>a:last-child:hover{background:#71391f;color:#fff!important}
+:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header .site-mobile-menu>summary{border-color:#284238;color:#173128}
+:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header .site-mobile-menu[open]>summary{background:#e7e9dd}
+:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header .site-mobile-menu>nav{color:#fff}
+@media(max-width:850px){:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header.kit-header{min-height:68px;padding:10px 5vw}:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header .kit-brand{max-width:calc(100% - 100px);font-size:18px}:is(body.showcase[data-trade="Roofing"],body[data-design-preview][data-trade="Roofing"]) .shared-site-header .site-brand-mark{width:36px;height:36px;flex-basis:36px}}
+
+/* #028F 8o: measured page navigation; native More remains usable without JS. */
+body .shared-site-header>nav[data-nav-fit]{min-width:0;flex:1 1 auto;flex-wrap:nowrap!important;justify-content:flex-end;gap:8px!important}
+body .shared-site-header>nav[data-nav-fit]{overflow:visible!important}
+body .shared-site-header>nav[data-nav-fit]>a{flex:none;white-space:nowrap!important;text-overflow:clip;overflow:visible;letter-spacing:0!important;padding-inline:3px!important}
+body .shared-site-header>nav[data-nav-fit]>a[data-nav-cta]{padding-inline:12px!important;margin-left:4px}
+.site-fit-fallback,.site-fit-overflow{position:relative;flex:none}
+.site-fit-fallback>summary,.site-fit-trigger{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 10px;border:1px solid currentColor;border-radius:5px;background:transparent;color:inherit;font:600 11px/1.3 Arial,sans-serif;cursor:pointer;white-space:nowrap;list-style:none}
+.site-fit-fallback>summary::-webkit-details-marker{display:none}
+.site-fit-fallback>summary::after,.site-fit-trigger::after{content:'⌄';margin-left:6px}
+.site-fit-fallback>div,.site-fit-links{position:absolute;right:0;top:100%;z-index:40;display:grid;min-width:210px;max-width:calc(100vw - 32px);max-height:70dvh;overflow:auto;padding:8px;background:#182020;color:#fff;box-shadow:0 15px 35px #1118}
+.site-fit-fallback:not([open])>div,.site-fit-overflow[hidden],.site-fit-links[hidden]{display:none!important}
+.site-fit-links a,.site-fit-fallback>div>a{display:flex!important;align-items:center;min-height:44px;padding:10px 12px!important;color:#fff!important;background:transparent!important;border:0!important;border-radius:0!important;font:600 12px/1.3 Arial,sans-serif!important;text-transform:none!important;letter-spacing:0!important;white-space:nowrap!important}
+.site-fit-links a:hover,.site-fit-links a[aria-current=page]{background:#ffffff24!important}
+.site-fit-trigger:focus-visible,.site-fit-links a:focus-visible,.site-fit-fallback>summary:focus-visible{outline:3px solid #f5b488;outline-offset:3px}
+@media(min-width:721px){body .shared-site-header.kit-header:has([data-nav-fit]){display:flex!important;align-items:center!important;flex-wrap:nowrap!important;gap:20px;position:sticky}body .shared-site-header>nav.site-desktop-nav[data-nav-fit]{display:flex!important}body .shared-site-header:has([data-nav-fit])>.site-mobile-menu{display:none!important}body .shared-site-header:has([data-nav-fit])>.kit-brand{flex:none;max-width:none;white-space:nowrap}body .shared-site-header:has([data-nav-fit]) .site-brand-name{overflow:visible;text-overflow:clip}}
+@media(max-width:720px){body .shared-site-header>nav.site-desktop-nav[data-nav-fit]{display:none!important}body .shared-site-header:has([data-nav-fit])>.site-mobile-menu{display:block!important}}
+/* A font swap must not add/remove a line in the first-painted phone brand. */
+@media(max-width:720px){body.foundation-page .shared-site-header .kit-brand{font-family:Arial,sans-serif}}
+/* Full-name geometry drives fit; native Menu is the no-JS fallback. */
+body .shared-site-header[data-nav-mode="desktop"]:has([data-nav-fit])>.kit-brand{flex:0 0 var(--site-brand-full-width);width:var(--site-brand-full-width);max-width:none!important;min-width:0}
+body .shared-site-header[data-nav-mode="desktop"]:has([data-nav-fit]) .site-brand-name{white-space:nowrap!important;overflow:visible!important;text-overflow:clip!important}
+body .shared-site-header:has([data-nav-fit]):not([data-nav-mode="desktop"]){display:flex!important;align-items:center!important;flex-wrap:nowrap!important;gap:20px}
+body .shared-site-header:has([data-nav-fit]):not([data-nav-mode="desktop"])>nav[data-nav-fit]{display:none!important}
+body .shared-site-header:has([data-nav-fit]):not([data-nav-mode="desktop"])>.site-mobile-menu{display:block!important;flex:none}
+body .shared-site-header:has([data-nav-fit]):not([data-nav-mode="desktop"])>.kit-brand{flex:1 1 auto!important;width:auto!important;min-width:0!important;max-width:none!important;white-space:normal!important}
+body .shared-site-header:has([data-nav-fit]):not([data-nav-mode="desktop"]) .site-brand-name{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere}
+/* #028F 8r: the server link list remains plain and visible without JavaScript. */
+html:not(.site-nav-js) body .shared-site-header:has([data-nav-fit]){flex-wrap:wrap!important;position:relative!important;align-items:flex-start!important}
+html:not(.site-nav-js) body .shared-site-header>nav.site-desktop-nav[data-nav-fit]{display:flex!important;flex:1 1 100%;max-width:100%;flex-wrap:wrap!important;justify-content:flex-start;white-space:normal}
+html:not(.site-nav-js) body .shared-site-header .site-fit-fallback{display:block!important;max-width:100%}
+html:not(.site-nav-js) body .shared-site-header .site-fit-fallback>summary{display:none!important}
+html:not(.site-nav-js) body .shared-site-header .site-fit-fallback>div{position:static;display:flex!important;flex-wrap:wrap;gap:8px 14px;min-width:0;max-width:100%;max-height:none;overflow:visible;box-shadow:none}
+@media(min-width:721px){html:not(.site-nav-js) body .shared-site-header:has([data-nav-fit])>.site-mobile-menu{display:none!important}}

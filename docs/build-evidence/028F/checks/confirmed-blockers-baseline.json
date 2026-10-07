@@ -1,0 +1,80 @@
+{
+  "acceptedBase": "fdcd459",
+  "baselineReproduction": true,
+  "sample": "sample-fictional-copper-kite-ventura",
+  "versionHash": "decb89a5e79f9d410af831443391d877bf92abd8d79f4430ebd1d3e444ba58cd",
+  "realProviderCalls": 0,
+  "results": [
+    {
+      "check": "Meaningful hero media alternative text",
+      "selector": ".sv-hero-media .ml-poster",
+      "src": "/assets/service-showpiece/roofing-roof-repair-process.webp",
+      "alt": "",
+      "parent": "<div class=\"ml-media\" data-media-slot=\"hero\" data-media-kind=\"still\" style=\"--ml-tint:#95613d;--ml-tint-opacity:.12\"><img class=\"ml-poster\" src=\"/assets/service-showpiece/roofing-roof-repair-process.webp\" alt=\"\" width=\"1280\" height=\"800\" fetchpriority=\"high\" loading=\"eager\"><span class=\"ml-tint\" aria-hidden=\"true\"></span></div>",
+      "visible": true,
+      "naturalWidth": 1536,
+      "naturalHeight": 1030
+    },
+    {
+      "check": "Floating actions covering service image",
+      "scrollY": 2110,
+      "media": {
+        "selector": "#services img.service-art",
+        "src": "/assets/service-installation.webp",
+        "alt": "roof installation",
+        "box": {
+          "x": 20,
+          "y": 601.359375,
+          "width": 350,
+          "height": 218.75,
+          "top": 601.359375,
+          "right": 370,
+          "bottom": 820.109375,
+          "left": 20
+        }
+      },
+      "overlaps": [
+        {
+          "selector": ".kit-mobile-dock",
+          "box": {
+            "x": 20,
+            "y": 773.25,
+            "width": 350,
+            "height": 56.75,
+            "top": 773.25,
+            "right": 370,
+            "bottom": 830,
+            "left": 20
+          },
+          "intersectionWidth": 350,
+          "intersectionHeight": 46.859375
+        },
+        {
+          "selector": ".visitor-chat",
+          "box": {
+            "x": 153.9375,
+            "y": 710.25,
+            "width": 222.0625,
+            "height": 51,
+            "top": 710.25,
+            "right": 376,
+            "bottom": 761.25,
+            "left": 153.9375
+          },
+          "intersectionWidth": 216.0625,
+          "intersectionHeight": 51
+        }
+      ]
+    }
+  ],
+  "baselineProof": [
+    {
+      "file": "src/media-library.js",
+      "unchangedSinceAcceptedBase": true
+    },
+    {
+      "file": "public/homeowner-polish.js",
+      "unchangedSinceAcceptedBase": true
+    }
+  ]
+}

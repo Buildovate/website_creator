@@ -37,7 +37,7 @@ const tiny=financingEstimate(10000,0,.000000001,120);assert.ok(Number.isFinite(t
 for(const args of [[0,0,1,12],[100,100,1,12],[100,0,-1,12],[100,0,NaN,12],[100,0,1,0],[100,0,1,1.5],[100,0,101,12]])assert.throws(()=>financingEstimate(...args));
 console.log('PASS configuration safety, locked values and calculator math');
 
-let tenant=(await api('/tenants','POST',{slug:'constitution-qa',settings:{name:'QA Roofing',trade:'Roofing',template:'clean',color:'#526a42',phone:'8055550123',area:'Ventura',hero:'QA roofing projects',services:[{name:'Roof repair',description:'Inspect the issue and discuss the repair.'}]}})).tenant;
+let tenant=(await api('/tenants','POST',{slug:'constitution-qa',settings:{name:'Sample Fictional QA Roofing',trade:'Roofing',template:'clean',color:'#526a42',phone:'8055550123',area:'Ventura',hero:'QA roofing projects',services:[{name:'Roof repair',description:'Inspect the issue and discuss the repair.'}]}})).tenant;
 const root='/s/'+tenant.slug;
 assert.equal((await request(root+'/financing')).status,404);
 await api('/tenants/'+tenant.id+'/publish','POST',{approved:true,version:tenant.version});
@@ -105,7 +105,7 @@ console.log('PASS '+legalPages+' trade/layout legal-preview links and their acce
 // #015: public fixtures, exact clock boundaries, offset conversion and switch isolation.
 const {roofingFixture}=await import('./fixtures/roofing-journey.mjs');
 const {promotionFixture,promotionStates}=await import('./fixtures/roofing-promotions.mjs');
-const fixture=structuredClone(roofingFixture);fixture.slug='promotions-display-015';
+const fixture=structuredClone(roofingFixture);fixture.slug='promotions-display-015';fixture.settings.name='Sample Fictional QA Roofing Promotions';
 let displayTenant=(await api('/tenants','POST',fixture)).tenant;
 const displayRoot='/s/'+displayTenant.slug;
 const saveDisplay=async(offers,enabled=true,publish=true)=>{
