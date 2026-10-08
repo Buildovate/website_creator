@@ -99,3 +99,74 @@ Source: [original 70 findings](checks/round8q-samples-before-findings.json); [la
 | sample-fictional-copper-kite-ventura | `clip-0` | /s/sample-fictional-copper-kite-ventura | 960 |
 | sample-fictional-blue-orchard-pasadena | `clip-0` | /s/sample-fictional-blue-orchard-pasadena | 960 |
 | sample-fictional-paper-lantern-temecula | `clip-0` | /s/sample-fictional-paper-lantern-temecula | 960 |
+
+## Round 1d — read-only diagnosis (October 8, 2026 PT)
+
+All **70 original IDs remain REJECTED/OPEN**. No Accept, waiver, reclassification, deletion, saved-baseline update or QA gate edit. qaGateClear=false. The original version table and all 70 ID rows above are unchanged. Inventory: 67 header + 3 video, 70/70 matched by Sample and original version.
+
+### Timeout cause and probe correction
+
+Primary classification **(2): a universal attribute expectation that does not match every current page**. Ten service detail pages render a usable phone header/native Menu but do not include site-navigation.js; all 20 width cases therefore lack data-nav-mode. The old unconditional .shared-site-header[data-nav-mode] wait cannot complete on those pages. Current full-page measurements succeeded with no JavaScript or console errors. The old failing page was not logged, so its exact URL cannot be recovered; the ten pages incompatible with that wait are recorded in the JSON. This diagnoses the invalid wait, without claiming to reconstruct its lost trace.
+
+Supplementary category (3): homepage data-nav-mode was absent at DOM readiness, then menu after fonts/animation frames. public/site-navigation.js:3–4 conditions initialization on [data-nav-fit]; :28 sets menu at phone width; :47–50 schedules fit after font readiness, loadingdone or resize. Header presence and loaded fonts are the actual measurement prerequisites.
+
+Round 1c used no preview server: it routed a virtual diagnosis.invalid origin to an in-memory built worker. Port 5173 is currently not listening (ECONNREFUSED), but was not used and did not cause that timeout. The diagnostic sample returned **HTTP 200**, final URL **http://diagnosis.invalid/s/sample-fictional-copper-kite-ventura**, no redirects, header present, zero console/page errors. All verification page requests returned 200. Zero external/provider requests were sent.
+
+[Probe source](tools/028F-B-probe.mjs) now waits for visible header + document.fonts.ready + three animation frames; it measures text rectangles and clipping ancestors, and records optional nav-mode. It retains the whole page, all stylesheet locations and actual built scripts. Results are [written to JSON](checks/028F-B-probe.json), not oversized stdout. No product event is manually triggered to conceal clipping; long names change only temporary browser text. The earlier 1b head-only extraction omitted body-injected styles and was inconclusive; the earlier helper's guessed filenames and stdout truncation are not product evidence.
+
+### Group A — current phone verification
+
+**Group A fixed in product for the 67 original page/name cases tested.** 67/67 fully visible at 390px, and 67/67 at 360px; zero clipping, ellipsis, painted-name/control overlap or horizontal overflow. All 134 cases are in the JSON with scrollWidth/clientWidth, white-space/overflow/text-overflow, visual truncation, line count and header height. Header names naturally wrap. This is a diagnostic observation, not closure or reclassification of any original finding.
+
+Original cause: .shared-site-header .site-brand-name was nowrap + overflow:hidden + text-overflow:ellipsis under public/site-polish.css:80–83. The original evidence stores the text/selector and maximumPx=2, but no numeric pixel-overflow value; none is invented here. The actual repair is the 8q Menu-mode wrap override, public/site-polish.css:200–204 (normal whitespace, visible overflow, anywhere wrapping). 8x's Arial rule at :195–196 applies to foundation-page phone branding and prevents font-swap CLS; it is not the ellipsis repair. No additional Group A source fix is indicated by these cases. All these CSS/header/nav files remain protected and unchanged.
+
+| Sample name | Trade / Look | Original IDs | 390 fully visible | 360 fully visible | Lines at 390 | Header px at 390 |
+|---|---|---:|---:|---:|---:|---:|
+| Sample Fictional Copper Kite Roofing | Roofing / current | 14 | 14/14 | 14/14 | 2–2 | 68.00–84.28 |
+| Sample Fictional Blue Orchard Roofing | Roofing / classic | 14 | 14/14 | 14/14 | 2–2 | 68.00–84.28 |
+| Sample Fictional Paper Lantern Roofing | Roofing / current | 13 | 13/13 | 13/13 | 2–2 | 68.00–84.28 |
+| Sample Fictional Cobalt Heron HVAC | HVAC / bold | 13 | 13/13 | 13/13 | 2–2 | 80.00–84.28 |
+| Sample Fictional Ochre Willow HVAC | HVAC / fresh | 13 | 13/13 | 13/13 | 2–2 | 80.00–84.28 |
+
+#### Long names
+
+30-character Pacific Coast Roofing Services; 40-character Forty Character Roofing Services Company; 50-character unbroken W string. **30/30 cases fully visible**, loaded fonts, no clipping/overflow/control overlap. Longest name tested: **50 characters, no spaces**. At phone widths the desktop nav/CTA is hidden by design; Menu fits and the Contact CTA remains reachable inside it. These checks do not certify arbitrary names or desktop service-page nav behavior.
+
+| Characters | Width | Fully visible | Lines | Header px range across five samples | Navigation / CTA |
+|---|---:|---:|---:|---:|---|
+| 30 | 390 | 5/5 | 2–2 | 68.00–80.00 | 5/5 Menu fits; Contact reachable |
+| 30 | 360 | 5/5 | 2–2 | 68.00–80.00 | 5/5 Menu fits; Contact reachable |
+| 40 | 390 | 5/5 | 2–2 | 68.00–80.00 | 5/5 Menu fits; Contact reachable |
+| 40 | 360 | 5/5 | 3–3 | 84.06–98.06 | 5/5 Menu fits; Contact reachable |
+| 50 (no spaces) | 390 | 5/5 | 5–5 | 125.44–139.44 | 5/5 Menu fits; Contact reachable |
+| 50 (no spaces) | 360 | 5/5 | 5–5 | 125.44–139.44 | 5/5 Menu fits; Contact reachable |
+
+#### Before screenshots (current product before any Borderline fix)
+
+Five 390×844 screenshots, one for each Sample/Look combination. No after screenshots because this round changes no product code.
+
+- [sample-fictional-copper-kite-ventura — Roofing / current](screenshots/028F-B/sample-fictional-copper-kite-ventura-390-before.png)
+- [sample-fictional-blue-orchard-pasadena — Roofing / classic](screenshots/028F-B/sample-fictional-blue-orchard-pasadena-390-before.png)
+- [sample-fictional-paper-lantern-temecula — Roofing / current](screenshots/028F-B/sample-fictional-paper-lantern-temecula-390-before.png)
+- [sample-fictional-cobalt-heron-irvine — HVAC / bold](screenshots/028F-B/sample-fictional-cobalt-heron-irvine-390-before.png)
+- [sample-fictional-ochre-willow-riverside — HVAC / fresh](screenshots/028F-B/sample-fictional-ochre-willow-riverside-390-before.png)
+
+### Group B — identical transformation clip
+
+All three Roofing homepages use public/assets/films/roofing-transformation.mp4, **2,223,549 bytes**, SHA-256 **968e9fdfb507139b9a5516730d85bd8f435269f10e72813850c525babdb534a8**. The dist copy matches. The three original five-frame sets are byte-identical; each clip-0 remains OPEN and is also the remaining finding in the 8ab snapshot (3,492 Pass / 3 Borderline / 0 Fail).
+
+Trigger: **0% vs 75%, histogram distance 0.666341 > Pass maximum 0.65**, below Fail cutoff 0.80; SSIM 0.152492. Morph interpolation residual 0.592779 is above 0.20, so the morph-residual branch is not the trigger. Frames 50%/75% show detached/ghosted roof fragments over exposed framing, while crop/camera/background lighting shift substantially. This is one shared asset-quality cause. The raw 960px decoded-video capture contains no page headline or CSS overlay; changing poster, text or page crop cannot repair the video signal. All saved frames and per-clip measurements are linked in the JSON.
+
+Proposal only; none applied:
+
+| Option | Possible files / protected exception requiring Joe approval | Tradeoff |
+|---|---|---|
+| Re-render/replace with steadier camera and coherent roof assembly | public/assets/films/roofing-transformation.mp4; poster if needed; public/trade-films.json:2–24 only if metadata changes | Preserves the film; requires approved production/review work, no generation authorized here |
+| Swap to a reviewed, approved alternate clip | public/trade-films.json:3–7 and approved local asset | Must verify the alternate independently; none is claimed approved by this diagnosis |
+| Show existing poster only | public/trade-films.json:3 (null URL uses existing still fallback); src/trade-components.js:12 only if a later approved renderer change is needed | Removes the defective motion from product use; requires Joe's explicit product decision, not a waiver |
+
+Next-batch proposal: Group A needs verification rather than another CSS patch; select and approve one Group B option, then verify header-logo.mjs, header-nav-fit.mjs, new QA captures for all five Samples and full Suite-102 at the end. Estimate two later rounds (media repair, final verification). No historical packet or baseline rewrites; no detector/threshold changes. All 70 original IDs remain OPEN throughout this evidence round.
+
+### Preservation and scope
+
+Held work **228/228 SHA-256 matches**; BUILD-BACKLOG.md unchanged. No site, video, test, QA, threshold, normalization, baseline or checksum edits; no Suite-102 run. No parallel worktree/port use, push, deploy, real provider call or credit usage. Only this appended section, the diagnostic probe/JSON and five screenshots are authorized commit contents.
