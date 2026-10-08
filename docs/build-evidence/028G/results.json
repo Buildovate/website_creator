@@ -1,0 +1,27 @@
+{
+  "ticket": "028G",
+  "round": "1b",
+  "scope": "references only; no app code",
+  "state": "reference_setup_complete",
+  "originalG1EngineBuilt": false,
+  "worktree": "C:\\Users\\joe\\wc-game",
+  "branch": "launch/028G-game",
+  "base": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+  "port": 5183,
+  "serverStarted": false,
+  "inputGuideHash": "matched",
+  "inputScreenshotCount": 11,
+  "copiedPngHashMatches": 11,
+  "manifestAssetHashes": 12,
+  "curl": {
+    "status": 200,
+    "bytes": 214608,
+    "url": "https://bv-blueprint-proto.vercel.app/"
+  },
+  "protectedDiff": "empty",
+  "testSuitesRun": 0,
+  "providerCalls": 0,
+  "creditsUsed": 0,
+  "blocked": [],
+  "nextSubticket": "G-2 Desktop Game view"
+}
