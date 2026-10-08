@@ -34,3 +34,25 @@ export const fakeTestEnv = Object.freeze({
   STRIPE_PUBLISHABLE_KEY:'pk_test_FAKE_FOR_OFFLINE_TESTS',
   STRIPE_WEBHOOK_SECRET:'whsec_FAKE_FOR_OFFLINE_TESTS'
 });
+
+export function makeFakeBillingAdapter({quotedAmountCents=50000}={}){
+  const quotes=new Map(),switches=[],cancellations=[];
+  return {
+    quotes,switches,cancellations,
+    async previewSwitch(input){
+      const id=`quote_fake_${quotes.size+1}`;
+      quotes.set(id,structuredClone(input));
+      return {id,amountDueCents:quotedAmountCents,effectiveAt:'2026-10-08T00:00:00.000Z'};
+    },
+    async confirmSwitch(input){
+      const quote=quotes.get(input.quoteId);
+      if(!quote||quote.tenantId!==input.tenantId||quote.targetSku!==input.targetSku||quote.subscriptionId!==input.subscriptionId)return {accepted:false};
+      if(!switches.some(item=>item.idempotencyKey===input.idempotencyKey))switches.push(structuredClone(input));
+      return {accepted:true};
+    },
+    async scheduleCancellation(input){
+      if(!cancellations.some(item=>item.idempotencyKey===input.idempotencyKey))cancellations.push(structuredClone(input));
+      return {accepted:true};
+    }
+  };
+}

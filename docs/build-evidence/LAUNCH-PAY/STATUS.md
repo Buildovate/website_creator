@@ -171,3 +171,13 @@ git diff --name-only b2446730d551656067f2aaa15a9c27497dceb8f7 -- src/worker.js s
 ```
 
 `git diff --check` passed. Removing the four recorded legacy-workspace insertions reproduces the committed file exactly (after line-ending normalization): four additions, zero original characters removed. `dist/auth/index.js` is ignored build output and is not staged.
+
+## PAY-4b plan changes and cancellation (2026-10-08)
+
+Website renters can review a server-priced switch between $50/month and $500/year; Growth and All-in remain unavailable at “Price coming soon.” The fake billing adapter quotes the amount due before confirmation. A switch takes effect only after verified settlement. Monthly cancellation is refused until the three-month minimum ends; then it schedules the site to come down at the paid period end, with no export, the domain retained by its owner, and data held 90 days. Annual rental remains prepaid through its term with no refund, including after cancellation is scheduled. Owned sites have no rental cancellation control. The owner-hosting stop control and ownership buy flow remain for later tickets.
+
+The Billing browser API import keeps the existing `../shared/workspace-api.js` specifier and loads it only inside the click handler. Node's direct TypeScript test loader can therefore import the render-only Billing functions; the client build still resolves the `.js` specifier through esbuild. No shared API source or product navigation changed.
+
+PAY-4b verification: prior Pay tests 39/39; PAY-4a tests 6/6; PAY-4b tests 5/5. Isolated client build passed with 13 client and 3 style outputs. Browser checks passed on desktop 1440×900 and phone 390×844 for switch, early cancellation refusal, and allowed cancellation, with zero external requests. The phone uses the existing Website screen picker. The first combined browser run reused the allowed account after the desktop view scheduled cancellation, so the phone view correctly lacked its Review button. The test fixture now gives that phone view fresh allowed state; only `allowed-390` was rerun, once, and passed. No product cancellation rule or navigation was changed. Screenshots: `pay4b-switch-desktop.png`, `pay4b-switch-mobile.png`, `pay4b-early-desktop.png`, `pay4b-early-mobile.png`, `pay4b-allowed-desktop.png`, `pay4b-allowed-mobile.png` in `docs/build-evidence/LAUNCH-PAY/screenshots/`.
+
+PAY-4b protected-file diff against BASE is empty; `git diff --check` passed; no PAY-4b change to `legacy-workspace.js`. The PAY-3 Worker bundle exception recorded above remains open; no server bundle, provider calls, real keys, push, deploy, or credits were used.

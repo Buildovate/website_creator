@@ -12,5 +12,9 @@ body.bv-platform .bv-billing button{min-height:44px;font-size:16px}
 body.bv-platform .bv-billing button:focus-visible,body.bv-platform .bv-billing a:focus-visible{outline:3px solid var(--bv-blue);outline-offset:3px}
 body.bv-platform .bv-billing .bv-offer{border-color:var(--bv-link-line);background:var(--bv-link-soft)}
 body.bv-platform .bv-billing .bv-offer-dismiss{margin-left:var(--bv-space-6)}
+body.bv-platform .bv-billing-actions{max-width:var(--bv-w-narrow)}
+body.bv-platform .bv-billing-actions h3:not(:first-child){margin-top:var(--bv-space-10)}
+body.bv-platform .bv-billing-action-result:not(:empty){margin-top:var(--bv-space-6);padding:var(--bv-space-6);border:1px solid var(--bv-link-line);border-radius:var(--bv-r-md);background:var(--bv-link-soft);color:var(--bv-ink)}
+body.bv-platform .bv-billing-actions button{min-height:44px;font-size:16px}
 @media(max-width:720px){body.bv-platform .bv-billing-grid{grid-template-columns:1fr}body.bv-platform .bv-billing dl>div,body.bv-platform .bv-billing-receipt{display:block}body.bv-platform .bv-billing dd{text-align:left}}
 @media(prefers-reduced-motion:reduce){body.bv-platform .bv-billing *,body.bv-platform .bv-billing *::before,body.bv-platform .bv-billing *::after{animation:none!important;transition:none!important}}
