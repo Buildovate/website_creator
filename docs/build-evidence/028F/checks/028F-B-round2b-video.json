@@ -1,0 +1,2063 @@
+{
+  "round": "2b",
+  "mode": "timeout diagnosis",
+  "method": "Current source bundled in memory; same local browser flags and unchanged captureClipQA/readiness; only three homepage clips checked. No historical packets changed.",
+  "priorProbe": {
+    "serverUsed": false,
+    "origin": "http://diagnosis.invalid",
+    "port5173": {
+      "listening": false,
+      "request": "http://127.0.0.1:5173/s/sample-fictional-copper-kite-ventura",
+      "status": null,
+      "finalUrl": null,
+      "error": "ECONNREFUSED (confirmed before this probe)"
+    },
+    "explanation": "Round 1c used a virtual origin with local route fulfillment; port 5173 was not involved."
+  },
+  "requests": [
+    {
+      "url": "http://diagnosis.invalid/s/sample-fictional-copper-kite-ventura",
+      "status": 200,
+      "source": "built worker",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/dm-sans.ttf",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\dm-sans.ttf"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/barlow-bold.ttf",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\barlow-bold.ttf"
+    },
+    {
+      "url": "http://diagnosis.invalid/site.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/portfolio-common.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\portfolio-common.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/showcase.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\showcase.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/owner-photo.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\owner-photo.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-components.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-components.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/cutaway.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\cutaway.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/design-variants.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\design-variants.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/leaflet.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\leaflet.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/hero-contact.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\hero-contact.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/site-polish.css?v=trade-options-v2",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site-polish.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/reviews.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\reviews.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/scroll-story.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\scroll-story.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/hero-timelapse.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\hero-timelapse.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/craft-story.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\craft-story.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trust.css?v=009",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trust.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/generated-site.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\generated-site.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/media-library.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\media-library.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/review-qa-polish.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\review-qa-polish.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/homeowner-polish.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\homeowner-polish.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-revisions.css?v=constitution-v1",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-revisions.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/design-studio.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\design-studio.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/neighborhood.css?v=experience-v3",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\neighborhood.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/section-variants.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\section-variants.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/site-navigation-init.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site-navigation-init.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/service-showpiece/roofing-roof-repair-process.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\service-showpiece\\roofing-roof-repair-process.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/films/roofing-story.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\films\\roofing-story.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/craft-films/roofing-opening.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\craft-films\\roofing-opening.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/engagement.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\engagement.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-components.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-components.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/cutaway.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\cutaway.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/leaflet.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\leaflet.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/site.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/showcase.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\showcase.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/scroll-story.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\scroll-story.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/hero-timelapse.js?v=full-scroll-20260918",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\hero-timelapse.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/trust.js?v=009",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trust.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/media-library.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\media-library.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/homeowner-polish.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\homeowner-polish.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/design-personality.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\design-personality.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-revisions.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-revisions.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/review-marquee.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\review-marquee.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/neighborhood.js?v=experience-v3",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\neighborhood.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/reviews.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\reviews.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/site-navigation.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site-navigation.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/visitor-chat.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\visitor-chat.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/api/public/sample-fictional-copper-kite-ventura/reviews",
+      "status": 200,
+      "source": "built worker",
+      "contentType": "application/json"
+    },
+    {
+      "url": "http://diagnosis.invalid/favicon.svg",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\favicon.svg"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/finished-roof.jpg",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\finished-roof.jpg"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/service-showpiece/roofing-flat-roofs-scope.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\service-showpiece\\roofing-flat-roofs-scope.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/service-installation.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\service-installation.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/service-roof-repair-showpiece.png",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\service-roof-repair-showpiece.png"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/films/roofing-story.mp4",
+      "status": 200,
+      "requestRange": "bytes=0-",
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\films\\roofing-story.mp4"
+    },
+    {
+      "url": "http://diagnosis.invalid/s/sample-fictional-blue-orchard-pasadena",
+      "status": 200,
+      "source": "built worker",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/dm-sans.ttf",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\dm-sans.ttf"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/barlow-bold.ttf",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\barlow-bold.ttf"
+    },
+    {
+      "url": "http://diagnosis.invalid/site.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/portfolio-common.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\portfolio-common.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/showcase.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\showcase.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/owner-photo.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\owner-photo.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-components.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-components.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/cutaway.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\cutaway.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/design-variants.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\design-variants.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/leaflet.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\leaflet.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/hero-contact.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\hero-contact.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/site-polish.css?v=trade-options-v2",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site-polish.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/reviews.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\reviews.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/scroll-story.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\scroll-story.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/hero-timelapse.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\hero-timelapse.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/craft-story.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\craft-story.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trust.css?v=009",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trust.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/generated-site.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\generated-site.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/media-library.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\media-library.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/review-qa-polish.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\review-qa-polish.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/homeowner-polish.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\homeowner-polish.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-revisions.css?v=constitution-v1",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-revisions.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/design-studio.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\design-studio.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/neighborhood.css?v=experience-v3",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\neighborhood.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/site-styles.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site-styles.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/section-variants.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\section-variants.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/site-navigation-init.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site-navigation-init.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/service-showpiece/roofing-gutters-scope.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\service-showpiece\\roofing-gutters-scope.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/films/roofing-story.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\films\\roofing-story.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/craft-films/roofing-opening.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\craft-films\\roofing-opening.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/engagement.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\engagement.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-components.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-components.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/cutaway.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\cutaway.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/leaflet.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\leaflet.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/site.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/showcase.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\showcase.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/scroll-story.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\scroll-story.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/hero-timelapse.js?v=full-scroll-20260918",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\hero-timelapse.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/trust.js?v=009",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trust.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/media-library.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\media-library.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/homeowner-polish.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\homeowner-polish.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/design-personality.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\design-personality.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-revisions.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-revisions.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/review-marquee.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\review-marquee.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/neighborhood.js?v=experience-v3",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\neighborhood.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/reviews.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\reviews.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/site-navigation.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site-navigation.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/visitor-chat.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\visitor-chat.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/finished-roof.jpg",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\finished-roof.jpg"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/build-films/roofing-finished.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\build-films\\roofing-finished.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/api/public/sample-fictional-blue-orchard-pasadena/reviews",
+      "status": 200,
+      "source": "built worker",
+      "contentType": "application/json"
+    },
+    {
+      "url": "http://diagnosis.invalid/favicon.svg",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\favicon.svg"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/service-roof-repair-showpiece.png",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\service-roof-repair-showpiece.png"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/films/roofing-story.mp4",
+      "status": 200,
+      "requestRange": "bytes=0-",
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\films\\roofing-story.mp4"
+    },
+    {
+      "url": "http://diagnosis.invalid/s/sample-fictional-paper-lantern-temecula",
+      "status": 200,
+      "source": "built worker",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/dm-sans.ttf",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\dm-sans.ttf"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/barlow-bold.ttf",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\barlow-bold.ttf"
+    },
+    {
+      "url": "http://diagnosis.invalid/site.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/portfolio-common.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\portfolio-common.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/showcase.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\showcase.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/owner-photo.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\owner-photo.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-components.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-components.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/cutaway.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\cutaway.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/design-variants.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\design-variants.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/leaflet.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\leaflet.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/hero-contact.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\hero-contact.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/site-polish.css?v=trade-options-v2",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site-polish.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/reviews.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\reviews.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/scroll-story.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\scroll-story.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/hero-timelapse.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\hero-timelapse.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/craft-story.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\craft-story.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trust.css?v=009",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trust.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/generated-site.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\generated-site.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/media-library.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\media-library.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/review-qa-polish.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\review-qa-polish.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/homeowner-polish.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\homeowner-polish.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-revisions.css?v=constitution-v1",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-revisions.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/design-studio.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\design-studio.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/neighborhood.css?v=experience-v3",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\neighborhood.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/section-variants.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\section-variants.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/site-navigation-init.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site-navigation-init.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/craft-films/roofing-finished.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\craft-films\\roofing-finished.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/films/roofing-story.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\films\\roofing-story.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/craft-films/roofing-opening.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\craft-films\\roofing-opening.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/engagement.css",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\engagement.css"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-components.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-components.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/cutaway.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\cutaway.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/leaflet.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\leaflet.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/site.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/showcase.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\showcase.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/scroll-story.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\scroll-story.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/hero-timelapse.js?v=full-scroll-20260918",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\hero-timelapse.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/trust.js?v=009",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trust.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/media-library.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\media-library.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/homeowner-polish.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\homeowner-polish.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/design-personality.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\design-personality.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/trade-revisions.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\trade-revisions.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/review-marquee.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\review-marquee.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/neighborhood.js?v=experience-v3",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\neighborhood.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/site-navigation.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\site-navigation.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/visitor-chat.js",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\visitor-chat.js"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/finished-roof.jpg",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\finished-roof.jpg"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/service-showpiece/roofing-gutters-scope.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\service-showpiece\\roofing-gutters-scope.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/favicon.svg",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\favicon.svg"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/service-roof-replacement-showpiece.png",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\service-roof-replacement-showpiece.png"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/service-shingles.webp",
+      "status": 200,
+      "requestRange": null,
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\service-shingles.webp"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/films/roofing-story.mp4",
+      "status": 200,
+      "requestRange": "bytes=0-",
+      "source": "dist/client",
+      "file": "dist\\client\\assets\\films\\roofing-story.mp4"
+    }
+  ],
+  "console": [],
+  "pageErrors": [],
+  "blockedExternal": [],
+  "serverFetchAttempts": [],
+  "records": [],
+  "longNames": [],
+  "screenshots": [
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-copper-kite-ventura-round2b-after.png",
+      "sha256": "c4abd2039dccb47a6bc04abc838246cd6c8ceaab87cdfefa4acbdb2ec21add58",
+      "state": "Reduced-motion resting poster, current full homepage rendered from source"
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-blue-orchard-pasadena-round2b-after.png",
+      "sha256": "eee2159ab59b2de277b52ef1c9311f5f74cc8cbe2da6753e75d835320acf85f1",
+      "state": "Reduced-motion resting poster, current full homepage rendered from source"
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-paper-lantern-temecula-round2b-after.png",
+      "sha256": "f07b2932a4cc6c0d6a5abae55cbd847cbc128951de5dfe450c05803afec31873",
+      "state": "Reduced-motion resting poster, current full homepage rendered from source"
+    }
+  ],
+  "qaGateClear": false,
+  "original70Open": true,
+  "providerCalls": 0,
+  "credits": 0,
+  "cause": {
+    "quote": "The helper answered Range: bytes=0- with status 200 and no Content-Range/Accept-Ranges. Chrome buffered the full 15.041667 seconds but reported seekable [0,0], so requested timestamps were clamped to zero.",
+    "diagnosticEvidence": "checks/028F-B-round2b-capture-diagnosis.json",
+    "before": [
+      {
+        "percent": 0,
+        "requestedTime": 0,
+        "initial": 0,
+        "afterSeek": 0,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            0
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "pngSha256": "d86ee2c461fc510e2d6d39764b09abba92daf040e9bebd61e849dac19de8be51"
+      },
+      {
+        "percent": 25,
+        "requestedTime": 3.76041675,
+        "initial": 0,
+        "afterSeek": 0,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            0
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "pngSha256": "d86ee2c461fc510e2d6d39764b09abba92daf040e9bebd61e849dac19de8be51"
+      },
+      {
+        "percent": 50,
+        "requestedTime": 7.5208335,
+        "initial": 0,
+        "afterSeek": 0,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            0
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "pngSha256": "d86ee2c461fc510e2d6d39764b09abba92daf040e9bebd61e849dac19de8be51"
+      },
+      {
+        "percent": 75,
+        "requestedTime": 11.281250250000001,
+        "initial": 0,
+        "afterSeek": 0,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            0
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "pngSha256": "d86ee2c461fc510e2d6d39764b09abba92daf040e9bebd61e849dac19de8be51"
+      },
+      {
+        "percent": 100,
+        "requestedTime": 14.991667,
+        "initial": 0,
+        "afterSeek": 0,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            0
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "pngSha256": "d86ee2c461fc510e2d6d39764b09abba92daf040e9bebd61e849dac19de8be51"
+      }
+    ],
+    "fix": "Helper-only local MP4 range responses use exact requested bytes and standard 206, Content-Range, Accept-Ranges, Content-Length headers. No product, asset, readiness, detector or threshold edits."
+  },
+  "results": [
+    {
+      "slug": "sample-fictional-copper-kite-ventura",
+      "reference": {
+        "url": "/assets/films/roofing-story.mp4",
+        "poster": "/assets/films/roofing-story.webp"
+      },
+      "distinctFrames": 5,
+      "checks": [
+        {
+          "id": "clip-0",
+          "category": "video",
+          "key": "consistency",
+          "title": "Five-frame subject consistency",
+          "result": "Pass",
+          "page": "/s/sample-fictional-copper-kite-ventura",
+          "width": 960,
+          "selector": "#trade-film video",
+          "frame": "/assets/films/roofing-story.mp4",
+          "measured": {
+            "frames": [
+              {
+                "percent": 25,
+                "ssim": 0.145539,
+                "histogramDistance": 0.54834
+              },
+              {
+                "percent": 50,
+                "ssim": 0.223945,
+                "histogramDistance": 0.491699
+              },
+              {
+                "percent": 75,
+                "ssim": 0.184175,
+                "histogramDistance": 0.301107
+              },
+              {
+                "percent": 100,
+                "ssim": 0.094672,
+                "histogramDistance": 0.46875
+              }
+            ],
+            "morph": {
+              "interpolationResidual": 0.899981,
+              "endpointChange": {
+                "ssim": 0.094672,
+                "histogramDistance": 0.46875
+              }
+            }
+          },
+          "threshold": {
+            "passSsim": -0.05,
+            "failSsim": -0.15,
+            "passHistogram": 0.65,
+            "failHistogram": 0.8,
+            "morphFailResidual": 0.12,
+            "morphBorderlineResidual": 0.2,
+            "morphChangedSsim": 0.5,
+            "morphChangedHistogram": 0.1
+          },
+          "crop": "screenshots/028F-B/sample-fictional-copper-kite-ventura-round2b-frame-100.png"
+        },
+        {
+          "id": "clip-media-0",
+          "category": "media",
+          "key": "clip-load",
+          "title": "Video decodes, has a poster and fills its frame",
+          "result": "Pass",
+          "page": "/s/sample-fictional-copper-kite-ventura",
+          "width": 960,
+          "selector": "#trade-film video",
+          "frame": "/assets/films/roofing-story.mp4",
+          "measured": {
+            "duration": 15.041667,
+            "decodeError": null,
+            "boxes": [
+              {
+                "page": "/s/sample-fictional-copper-kite-ventura",
+                "width": 390,
+                "frameWidth": 349,
+                "frameHeight": 195.4375,
+                "objectFit": "cover",
+                "letterboxFraction": 0
+              },
+              {
+                "page": "/s/sample-fictional-copper-kite-ventura",
+                "width": 768,
+                "frameWidth": 689.21875,
+                "frameHeight": 386.796875,
+                "objectFit": "cover",
+                "letterboxFraction": 0
+              },
+              {
+                "page": "/s/sample-fictional-copper-kite-ventura",
+                "width": 1440,
+                "frameWidth": 748.734375,
+                "frameHeight": 420.28125,
+                "objectFit": "cover",
+                "letterboxFraction": 0
+              }
+            ]
+          },
+          "threshold": {
+            "letterboxFraction": 0.02,
+            "decodeErrors": 0,
+            "posterRequired": true
+          },
+          "crop": "screenshots/028F-B/sample-fictional-copper-kite-ventura-round2b-frame-0.png"
+        }
+      ]
+    },
+    {
+      "slug": "sample-fictional-blue-orchard-pasadena",
+      "reference": {
+        "url": "/assets/films/roofing-story.mp4",
+        "poster": "/assets/films/roofing-story.webp"
+      },
+      "distinctFrames": 5,
+      "checks": [
+        {
+          "id": "clip-0",
+          "category": "video",
+          "key": "consistency",
+          "title": "Five-frame subject consistency",
+          "result": "Pass",
+          "page": "/s/sample-fictional-blue-orchard-pasadena",
+          "width": 960,
+          "selector": "#trade-film video",
+          "frame": "/assets/films/roofing-story.mp4",
+          "measured": {
+            "frames": [
+              {
+                "percent": 25,
+                "ssim": 0.145539,
+                "histogramDistance": 0.54834
+              },
+              {
+                "percent": 50,
+                "ssim": 0.223945,
+                "histogramDistance": 0.491699
+              },
+              {
+                "percent": 75,
+                "ssim": 0.184175,
+                "histogramDistance": 0.301107
+              },
+              {
+                "percent": 100,
+                "ssim": 0.094672,
+                "histogramDistance": 0.46875
+              }
+            ],
+            "morph": {
+              "interpolationResidual": 0.899981,
+              "endpointChange": {
+                "ssim": 0.094672,
+                "histogramDistance": 0.46875
+              }
+            }
+          },
+          "threshold": {
+            "passSsim": -0.05,
+            "failSsim": -0.15,
+            "passHistogram": 0.65,
+            "failHistogram": 0.8,
+            "morphFailResidual": 0.12,
+            "morphBorderlineResidual": 0.2,
+            "morphChangedSsim": 0.5,
+            "morphChangedHistogram": 0.1
+          },
+          "crop": "screenshots/028F-B/sample-fictional-blue-orchard-pasadena-round2b-frame-100.png"
+        },
+        {
+          "id": "clip-media-0",
+          "category": "media",
+          "key": "clip-load",
+          "title": "Video decodes, has a poster and fills its frame",
+          "result": "Pass",
+          "page": "/s/sample-fictional-blue-orchard-pasadena",
+          "width": 960,
+          "selector": "#trade-film video",
+          "frame": "/assets/films/roofing-story.mp4",
+          "measured": {
+            "duration": 15.041667,
+            "decodeError": null,
+            "boxes": [
+              {
+                "page": "/s/sample-fictional-blue-orchard-pasadena",
+                "width": 390,
+                "frameWidth": 349,
+                "frameHeight": 195.4375,
+                "objectFit": "cover",
+                "letterboxFraction": 0
+              },
+              {
+                "page": "/s/sample-fictional-blue-orchard-pasadena",
+                "width": 768,
+                "frameWidth": 689.21875,
+                "frameHeight": 386.796875,
+                "objectFit": "cover",
+                "letterboxFraction": 0
+              },
+              {
+                "page": "/s/sample-fictional-blue-orchard-pasadena",
+                "width": 1440,
+                "frameWidth": 748.734375,
+                "frameHeight": 420.28125,
+                "objectFit": "cover",
+                "letterboxFraction": 0
+              }
+            ]
+          },
+          "threshold": {
+            "letterboxFraction": 0.02,
+            "decodeErrors": 0,
+            "posterRequired": true
+          },
+          "crop": "screenshots/028F-B/sample-fictional-blue-orchard-pasadena-round2b-frame-0.png"
+        }
+      ]
+    },
+    {
+      "slug": "sample-fictional-paper-lantern-temecula",
+      "reference": {
+        "url": "/assets/films/roofing-story.mp4",
+        "poster": "/assets/films/roofing-story.webp"
+      },
+      "distinctFrames": 5,
+      "checks": [
+        {
+          "id": "clip-0",
+          "category": "video",
+          "key": "consistency",
+          "title": "Five-frame subject consistency",
+          "result": "Pass",
+          "page": "/s/sample-fictional-paper-lantern-temecula",
+          "width": 960,
+          "selector": "#trade-film video",
+          "frame": "/assets/films/roofing-story.mp4",
+          "measured": {
+            "frames": [
+              {
+                "percent": 25,
+                "ssim": 0.145539,
+                "histogramDistance": 0.54834
+              },
+              {
+                "percent": 50,
+                "ssim": 0.223945,
+                "histogramDistance": 0.491699
+              },
+              {
+                "percent": 75,
+                "ssim": 0.184175,
+                "histogramDistance": 0.301107
+              },
+              {
+                "percent": 100,
+                "ssim": 0.094672,
+                "histogramDistance": 0.46875
+              }
+            ],
+            "morph": {
+              "interpolationResidual": 0.899981,
+              "endpointChange": {
+                "ssim": 0.094672,
+                "histogramDistance": 0.46875
+              }
+            }
+          },
+          "threshold": {
+            "passSsim": -0.05,
+            "failSsim": -0.15,
+            "passHistogram": 0.65,
+            "failHistogram": 0.8,
+            "morphFailResidual": 0.12,
+            "morphBorderlineResidual": 0.2,
+            "morphChangedSsim": 0.5,
+            "morphChangedHistogram": 0.1
+          },
+          "crop": "screenshots/028F-B/sample-fictional-paper-lantern-temecula-round2b-frame-100.png"
+        },
+        {
+          "id": "clip-media-0",
+          "category": "media",
+          "key": "clip-load",
+          "title": "Video decodes, has a poster and fills its frame",
+          "result": "Pass",
+          "page": "/s/sample-fictional-paper-lantern-temecula",
+          "width": 960,
+          "selector": "#trade-film video",
+          "frame": "/assets/films/roofing-story.mp4",
+          "measured": {
+            "duration": 15.041667,
+            "decodeError": null,
+            "boxes": [
+              {
+                "page": "/s/sample-fictional-paper-lantern-temecula",
+                "width": 390,
+                "frameWidth": 349,
+                "frameHeight": 195.4375,
+                "objectFit": "cover",
+                "letterboxFraction": 0
+              },
+              {
+                "page": "/s/sample-fictional-paper-lantern-temecula",
+                "width": 768,
+                "frameWidth": 689.21875,
+                "frameHeight": 386.796875,
+                "objectFit": "cover",
+                "letterboxFraction": 0
+              },
+              {
+                "page": "/s/sample-fictional-paper-lantern-temecula",
+                "width": 1440,
+                "frameWidth": 748.734375,
+                "frameHeight": 420.28125,
+                "objectFit": "cover",
+                "letterboxFraction": 0
+              }
+            ]
+          },
+          "threshold": {
+            "letterboxFraction": 0.02,
+            "decodeErrors": 0,
+            "posterRequired": true
+          },
+          "crop": "screenshots/028F-B/sample-fictional-paper-lantern-temecula-round2b-frame-0.png"
+        }
+      ]
+    }
+  ],
+  "chosen": {
+    "url": "/assets/films/roofing-story.mp4",
+    "sha256": "03cc70d5d02a9310216d91f58426260405cc833432fad7c0f9aa8f1486123dc4"
+  },
+  "mediaResponses": [
+    {
+      "url": "http://diagnosis.invalid/assets/films/roofing-story.mp4",
+      "requestRange": "bytes=0-",
+      "status": 206,
+      "contentRange": "bytes 0-1973650/1973651"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/films/roofing-story.mp4",
+      "requestRange": "bytes=0-",
+      "status": 206,
+      "contentRange": "bytes 0-1973650/1973651"
+    },
+    {
+      "url": "http://diagnosis.invalid/assets/films/roofing-story.mp4",
+      "requestRange": "bytes=0-",
+      "status": 206,
+      "contentRange": "bytes 0-1973650/1973651"
+    }
+  ],
+  "savedFrames": [
+    {
+      "slug": "sample-fictional-copper-kite-ventura",
+      "percent": 0,
+      "requestedTime": 0,
+      "actualTime": 0,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-copper-kite-ventura-round2b-frame-0.png",
+      "sha256": "d86ee2c461fc510e2d6d39764b09abba92daf040e9bebd61e849dac19de8be51",
+      "seekTrace": {
+        "requestedTime": 0,
+        "initial": 0,
+        "afterSeek": 0,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-copper-kite-ventura",
+      "percent": 25,
+      "requestedTime": 3.76041675,
+      "actualTime": 3.760416,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-copper-kite-ventura-round2b-frame-25.png",
+      "sha256": "cfe5cf06f0e067c2f0894a8ed67156874746ba97c61f430fbae714dc7727f54b",
+      "seekTrace": {
+        "requestedTime": 3.76041675,
+        "initial": 0,
+        "afterSeek": 3.760416,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-copper-kite-ventura",
+      "percent": 50,
+      "requestedTime": 7.5208335,
+      "actualTime": 7.520833,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-copper-kite-ventura-round2b-frame-50.png",
+      "sha256": "9d7d4fcbda8c0d87b8a1169c4c69772489c1e1d55dbae93a86588e2e74cb9a2c",
+      "seekTrace": {
+        "requestedTime": 7.5208335,
+        "initial": 3.760416,
+        "afterSeek": 7.520833,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-copper-kite-ventura",
+      "percent": 75,
+      "requestedTime": 11.281250250000001,
+      "actualTime": 11.28125,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-copper-kite-ventura-round2b-frame-75.png",
+      "sha256": "47b70bedb2c62517aca2571bb2bb3221651b20abeb825c6d6c2d0123fc42bdc1",
+      "seekTrace": {
+        "requestedTime": 11.281250250000001,
+        "initial": 7.520833,
+        "afterSeek": 11.28125,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-copper-kite-ventura",
+      "percent": 100,
+      "requestedTime": 14.991667,
+      "actualTime": 14.991667,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-copper-kite-ventura-round2b-frame-100.png",
+      "sha256": "9ede463d79268c37395b893a4b335a2e2319a28a4a4d68ca6308ba21ef01f5fa",
+      "seekTrace": {
+        "requestedTime": 14.991667,
+        "initial": 11.28125,
+        "afterSeek": 14.991667,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-blue-orchard-pasadena",
+      "percent": 0,
+      "requestedTime": 0,
+      "actualTime": 0,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-blue-orchard-pasadena-round2b-frame-0.png",
+      "sha256": "d86ee2c461fc510e2d6d39764b09abba92daf040e9bebd61e849dac19de8be51",
+      "seekTrace": {
+        "requestedTime": 0,
+        "initial": 0,
+        "afterSeek": 0,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-blue-orchard-pasadena",
+      "percent": 25,
+      "requestedTime": 3.76041675,
+      "actualTime": 3.760416,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-blue-orchard-pasadena-round2b-frame-25.png",
+      "sha256": "cfe5cf06f0e067c2f0894a8ed67156874746ba97c61f430fbae714dc7727f54b",
+      "seekTrace": {
+        "requestedTime": 3.76041675,
+        "initial": 0,
+        "afterSeek": 3.760416,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-blue-orchard-pasadena",
+      "percent": 50,
+      "requestedTime": 7.5208335,
+      "actualTime": 7.520833,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-blue-orchard-pasadena-round2b-frame-50.png",
+      "sha256": "9d7d4fcbda8c0d87b8a1169c4c69772489c1e1d55dbae93a86588e2e74cb9a2c",
+      "seekTrace": {
+        "requestedTime": 7.5208335,
+        "initial": 3.760416,
+        "afterSeek": 7.520833,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-blue-orchard-pasadena",
+      "percent": 75,
+      "requestedTime": 11.281250250000001,
+      "actualTime": 11.28125,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-blue-orchard-pasadena-round2b-frame-75.png",
+      "sha256": "47b70bedb2c62517aca2571bb2bb3221651b20abeb825c6d6c2d0123fc42bdc1",
+      "seekTrace": {
+        "requestedTime": 11.281250250000001,
+        "initial": 7.520833,
+        "afterSeek": 11.28125,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-blue-orchard-pasadena",
+      "percent": 100,
+      "requestedTime": 14.991667,
+      "actualTime": 14.991667,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-blue-orchard-pasadena-round2b-frame-100.png",
+      "sha256": "9ede463d79268c37395b893a4b335a2e2319a28a4a4d68ca6308ba21ef01f5fa",
+      "seekTrace": {
+        "requestedTime": 14.991667,
+        "initial": 11.28125,
+        "afterSeek": 14.991667,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-paper-lantern-temecula",
+      "percent": 0,
+      "requestedTime": 0,
+      "actualTime": 0,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-paper-lantern-temecula-round2b-frame-0.png",
+      "sha256": "d86ee2c461fc510e2d6d39764b09abba92daf040e9bebd61e849dac19de8be51",
+      "seekTrace": {
+        "requestedTime": 0,
+        "initial": 0,
+        "afterSeek": 0,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-paper-lantern-temecula",
+      "percent": 25,
+      "requestedTime": 3.76041675,
+      "actualTime": 3.760416,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-paper-lantern-temecula-round2b-frame-25.png",
+      "sha256": "cfe5cf06f0e067c2f0894a8ed67156874746ba97c61f430fbae714dc7727f54b",
+      "seekTrace": {
+        "requestedTime": 3.76041675,
+        "initial": 0,
+        "afterSeek": 3.760416,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-paper-lantern-temecula",
+      "percent": 50,
+      "requestedTime": 7.5208335,
+      "actualTime": 7.520833,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-paper-lantern-temecula-round2b-frame-50.png",
+      "sha256": "9d7d4fcbda8c0d87b8a1169c4c69772489c1e1d55dbae93a86588e2e74cb9a2c",
+      "seekTrace": {
+        "requestedTime": 7.5208335,
+        "initial": 3.760416,
+        "afterSeek": 7.520833,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-paper-lantern-temecula",
+      "percent": 75,
+      "requestedTime": 11.281250250000001,
+      "actualTime": 11.28125,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-paper-lantern-temecula-round2b-frame-75.png",
+      "sha256": "47b70bedb2c62517aca2571bb2bb3221651b20abeb825c6d6c2d0123fc42bdc1",
+      "seekTrace": {
+        "requestedTime": 11.281250250000001,
+        "initial": 7.520833,
+        "afterSeek": 11.28125,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "sample-fictional-paper-lantern-temecula",
+      "percent": 100,
+      "requestedTime": 14.991667,
+      "actualTime": 14.991667,
+      "path": "docs/build-evidence/028F/screenshots/028F-B/sample-fictional-paper-lantern-temecula-round2b-frame-100.png",
+      "sha256": "9ede463d79268c37395b893a4b335a2e2319a28a4a4d68ca6308ba21ef01f5fa",
+      "seekTrace": {
+        "requestedTime": 14.991667,
+        "initial": 11.28125,
+        "afterSeek": 14.991667,
+        "seeking": false,
+        "seekable": [
+          [
+            0,
+            15.041667
+          ]
+        ],
+        "buffered": [
+          [
+            0,
+            15.041667
+          ]
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "total": 3,
+    "qaGateClear": false,
+    "original70Open": true,
+    "providerCalls": 0,
+    "credits": 0
+  },
+  "completedAt": "2026-10-08T20:22:53.747Z",
+  "preservation": {
+    "held": 228,
+    "total": 228,
+    "allMatch": true,
+    "backlogSha256": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+    "original70RejectedOpen": true,
+    "qaGateClear": false
+  },
+  "helper": {
+    "path": "docs/build-evidence/028F/tools/028F-B-round2-video.mjs",
+    "sha256": "65a853059082ff05f567c43fa4114fad691ac04ce0f9d06510d833767f5f1b77",
+    "staged": false,
+    "reason": "Explicit commit scope excludes helper and standalone diagnosis JSON"
+  }
+}

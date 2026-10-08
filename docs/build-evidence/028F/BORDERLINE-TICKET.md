@@ -170,3 +170,76 @@ Next-batch proposal: Group A needs verification rather than another CSS patch; s
 ### Preservation and scope
 
 Held work **228/228 SHA-256 matches**; BUILD-BACKLOG.md unchanged. No site, video, test, QA, threshold, normalization, baseline or checksum edits; no Suite-102 run. No parallel worktree/port use, push, deploy, real provider call or credit usage. Only this appended section, the diagnostic probe/JSON and five screenshots are authorized commit contents.
+
+## Round 2 — Group B alternate film (2026-10-08)
+
+Only the three Group B homepage commercial-film references changed, in `src/trade-components.js`. Each exact homepage base selects the already-installed Roofing pricing/story film. The shared Roofing default, headers, copy, video bytes, QA code, thresholds, saved packets, baselines and checksums are unchanged.
+
+### Candidate and prior pass
+
+The only alternate Roofing video installed directly in `public/assets/films/` is **roofing-story.mp4** (1,973,651 bytes), SHA-256 `03cc70d5d02a9310216d91f58426260405cc833432fad7c0f9aa8f1486123dc4`. The two Roofing WebP files are still images, not film candidates. The most recent #028F video snapshot is round 8ab; this clip passed its unchanged five-frame consistency check as clip-2 on each sample’s pricing page:
+
+- [sample-fictional-copper-kite-ventura prior clip-2 Pass](checks/round8ab-samples/packets/sample-fictional-copper-kite-ventura/6dc55e1bd90785f669fda8f2fa3aa6a4d6c1d3529b306dbe60f7bbb36f732ce9/qa-report.json).
+- [sample-fictional-blue-orchard-pasadena prior clip-2 Pass](checks/round8ab-samples/packets/sample-fictional-blue-orchard-pasadena/2af53292692f8f834c0f81051f784b8c7383b466773d6807b4b500ca41deb7c5/qa-report.json).
+- [sample-fictional-paper-lantern-temecula prior clip-2 Pass](checks/round8ab-samples/packets/sample-fictional-paper-lantern-temecula/7fe45c63acae0f539055f4c546ae5a29d6c6815bf0a96167dde9c0d3ddcd21eb/qa-report.json).
+
+Old film: `public/assets/films/roofing-transformation.mp4`, SHA-256 `968e9fdfb507139b9a5516730d85bd8f435269f10e72813850c525babdb534a8`. New film: `public/assets/films/roofing-story.mp4`, SHA-256 `03cc70d5d02a9310216d91f58426260405cc833432fad7c0f9aa8f1486123dc4`; existing approved poster `/assets/films/roofing-story.webp`. Neither asset was edited.
+
+### New Group B check results — INCONCLUSIVE; stopped before commit
+
+Isolated local capture of current source bundled in memory, using the existing browser flags, 960×540 five-frame extraction at 0/25/50/75/100%, unchanged capture readiness and `captureClipQA`. No Suite-102 or full Sample QA rerun. Each homepage reference was verified on the rendered page; media geometry checked at 390/768/1440. No provider calls or credits.
+
+| Homepage | Five-frame consistency | Decode/poster/frame fill | Maximum histogram distance | Minimum SSIM | Morph residual |
+|---|---|---|---:|---:|---:|
+| sample-fictional-copper-kite-ventura | Pass | Pass | 0 | 1 | 1 |
+| sample-fictional-blue-orchard-pasadena | Pass | Pass | 0 | 1 | 1 |
+| sample-fictional-paper-lantern-temecula | Pass | Pass | 0 | 1 | 1 |
+
+Pass thresholds remain histogram ≤0.65 and SSIM ≥−0.05; morph thresholds unchanged. **The harness reported 3/3 Pass, but all extracted frames produced SSIM 1 and histogram distance 0 at every timestamp. This contradicts the varying-frame measurements in the prior pass for the same asset. These new results are INCONCLUSIVE, not verified passes. Stop: no retry or commit.** Full measurements and the isolated helper are saved locally in `checks/028F-B-round2-video.json` and `tools/028F-B-round2-video.mjs`; these are not staged in this narrowly specified commit.
+
+### After screenshots
+
+Screenshots show each homepage’s commercial section at 1440px, with the new resting poster under reduced motion.
+- [sample-fictional-copper-kite-ventura](screenshots/028F-B/sample-fictional-copper-kite-ventura-round2-after.png) — SHA-256 `c4abd2039dccb47a6bc04abc838246cd6c8ceaab87cdfefa4acbdb2ec21add58`.
+- [sample-fictional-blue-orchard-pasadena](screenshots/028F-B/sample-fictional-blue-orchard-pasadena-round2-after.png) — SHA-256 `eee2159ab59b2de277b52ef1c9311f5f74cc8cbe2da6753e75d835320acf85f1`.
+- [sample-fictional-paper-lantern-temecula](screenshots/028F-B/sample-fictional-paper-lantern-temecula-round2-after.png) — SHA-256 `f07b2932a4cc6c0d6a5abae55cbd847cbc128951de5dfe450c05803afec31873`.
+
+### Preservation and decisions
+
+Held work **228/228 SHA-256 matches**, including BUILD-BACKLOG.md. All **70 original IDs remain REJECTED/OPEN**, with no Accept, waiver, reclassification, deletion or re-baseline. **qaGateClear=false**. Three inconclusive captures do not establish verification of the product swap or close the original findings. No headers/text changes, Suite-102, push, deploy or provider calls.
+
+Verification stop: the extracted moving-video evidence is unexpectedly identical across timestamps. The selected candidate and three source references remain uncommitted. No second candidate was tried. The three after screenshots show the resting poster only.
+
+## Round 2b — valid Group B moving-video check (2026-10-08)
+
+### Identical-frame cause and helper-only fix
+
+Quote from the capture trace: **The helper answered `Range: bytes=0-` with `200` and no `Content-Range` / `Accept-Ranges`. Chrome buffered the full 15.041667 seconds but exposed a seekable range of `[0, 0]`; every requested timestamp was clamped back to zero.** At 25/50/75/100%, requested times were 3.76041675/7.5208335/11.28125025/14.991667 seconds; actual time remained 0, with one PNG SHA. This was a local helper HTTP-response bug, not repeated output writes or a product/video fault.
+
+Only the ticket helper was fixed: local MP4 requests now receive correct `206`, byte-range body, `Content-Range`, `Accept-Ranges` and `Content-Length`. It rejects an unreached timestamp or fewer than five distinct saved-frame SHAs. Product video bytes, existing QA/readiness functions, thresholds and baselines remain unchanged. Diagnosis: `checks/028F-B-round2b-capture-diagnosis.json` (local, not staged).
+
+### Selected existing asset
+
+`public/assets/films/roofing-story.mp4` — SHA-256 `03cc70d5d02a9310216d91f58426260405cc833432fad7c0f9aa8f1486123dc4`. Prior clip-2 passes are linked in Round 2 above. The three exact homepage references from Round 2 remain; no additional product edit was made in Round 2b. Other Roofing sites still select the existing shared default.
+
+### One verification run
+
+| Sample homepage | Video consistency | Decode/poster/frame fill | Distinct saved frames |
+|---|---|---|---:|
+| sample-fictional-copper-kite-ventura | Pass | Pass | 5/5 |
+| sample-fictional-blue-orchard-pasadena | Pass | Pass | 5/5 |
+| sample-fictional-paper-lantern-temecula | Pass | Pass | 5/5 |
+
+**3/3 Pass** with five genuinely different frames per clip. Maximum histogram distance **0.54834** (Pass ceiling 0.65); minimum SSIM **0.094672** (Pass floor −0.05); morph residual **0.899981**. Measurements exactly match the prior round-8ab story-film pass. Actual times: 0, 3.760416, 7.520833, 11.281250 and 14.991667 seconds. Local geometry checked at 390/768/1440; no letterboxing. Five same-timestamp frames are identical across the three samples because they use the same film, but all five timestamps within each sample differ.
+
+[Check JSON and all 15 saved-frame paths/SHAs](checks/028F-B-round2b-video.json). No Suite-102 was run.
+
+- [sample-fictional-copper-kite-ventura — after, resting poster at 1440px](screenshots/028F-B/sample-fictional-copper-kite-ventura-round2b-after.png).
+- [sample-fictional-blue-orchard-pasadena — after, resting poster at 1440px](screenshots/028F-B/sample-fictional-blue-orchard-pasadena-round2b-after.png).
+- [sample-fictional-paper-lantern-temecula — after, resting poster at 1440px](screenshots/028F-B/sample-fictional-paper-lantern-temecula-round2b-after.png).
+
+### Preservation and commit scope
+
+Held work **228/228 matches**, including BUILD-BACKLOG.md. All **70 original Borderlines stay REJECTED/OPEN**; no Accept, waiver, reclassification, deletion or re-baseline. **qaGateClear=false**. No header/text, QA source/test, detector, normalization, threshold, saved baseline/checksum or asset edits. No provider calls, credits, push or deploy.
+
+Commit scope: the three homepage references in `src/trade-components.js`, this ticket, the Round 2b check JSON, three after page screenshots and 15 new video-frame PNGs. The helper and separate diagnosis JSON remain local/untracked as required by the explicit staging list.
