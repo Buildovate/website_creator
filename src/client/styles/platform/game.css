@@ -108,3 +108,22 @@ body.bv-platform .bv-game-section-links h2{width:100%;font:600 16px var(--bv-san
 body.bv-platform .bv-game-section-links button{font-size:14px}
 body.bv-platform.bv-game-open:not(.bv-game-form-open) .platform-action-dock{display:none}
 @media(max-width:720px){body.bv-platform .bv-game-section-shell{padding:16px 16px 110px}body.bv-platform .bv-game-section-toolbar{gap:12px}body.bv-platform .bv-game-section-toolbar h1{font-size:24px}body.bv-platform.bv-game-form-open .platform-action-dock:not([hidden]){display:flex}}
+/* G-2b: inline tour, non-blocking confirmation and published-only preview. */
+body.bv-platform .bv-game-header{gap:16px}
+body.bv-platform .bv-game-tour{display:flex;align-items:center;gap:16px;margin:0 28px 20px;padding:20px;background:var(--bv-card);color:var(--bv-ink);border:1px solid var(--bv-line-strong);border-radius:var(--bv-r-md)}
+body.bv-platform .bv-game-tour>div{flex:1}
+body.bv-platform .bv-game-tour h2{font:600 24px/1.2 var(--bv-cond);color:var(--bv-navy);margin:4px 0}
+body.bv-platform .bv-game-tour small{color:var(--bv-ink-2)}
+body.bv-platform .bv-game-tour p{color:var(--bv-ink);max-width:880px}
+body.bv-platform [data-game-tour-target]{outline:2px solid var(--bv-sand-ink);outline-offset:4px}
+body.bv-platform .bv-game-confirmation{min-height:64px;padding:0 28px 12px;display:flex;align-items:center;gap:16px;color:var(--bv-ok-ink);background:var(--bv-bg)}
+body.bv-platform [data-game-tour-status]:not(:empty){display:block;margin:0 28px 12px;color:var(--bv-ink)}
+body.bv-platform .bv-game-preview{width:calc(100vw - 48px);max-width:1392px;height:calc(100dvh - 48px);max-height:calc(100dvh - 48px);padding:24px;border:1px solid var(--bv-line-strong);border-radius:var(--bv-r-md);background:var(--bv-card);color:var(--bv-ink);font:16px/1.45 var(--bv-sans)}
+body.bv-platform .bv-game-preview::backdrop{background:var(--bv-overlay)}
+body.bv-platform .bv-game-preview-top{display:flex;justify-content:space-between;align-items:center;gap:16px}
+body.bv-platform .bv-game-preview h2{font:600 28px var(--bv-cond);color:var(--bv-navy);margin:0}
+body.bv-platform .bv-game-preview p{color:var(--bv-ink)}
+body.bv-platform .bv-game-preview button{min-height:44px;opacity:1}
+body.bv-platform .bv-game-preview iframe{width:100%;height:calc(100% - 104px);border:1px solid var(--bv-line-strong);background:var(--bv-card)}
+@media(max-width:720px){body.bv-platform .bv-game-tour{margin:0 16px 16px;flex-wrap:wrap;padding:16px}body.bv-platform .bv-game-tour>div{flex-basis:100%}body.bv-platform .bv-game-confirmation{padding:0 16px 12px;min-height:96px}body.bv-platform .bv-game-preview{width:calc(100vw - 16px);height:calc(100dvh - 16px);max-height:calc(100dvh - 16px);padding:16px}}
+body.bv-platform .bv-game-section-open .bv-game-tour,body.bv-platform .bv-game-section-open .bv-game-confirmation{display:none}

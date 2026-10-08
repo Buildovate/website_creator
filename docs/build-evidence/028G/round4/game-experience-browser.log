@@ -1,0 +1,21 @@
+PASS first-run tour starts once on the real board without a second view
+PASS Skip saves once and returns to the board
+PASS skipped tour stays skipped after restart/reload, with settings unchanged
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.innerText: Error: strict mode violation: locator('dialog') resolved to 2 elements:
+    1) <dialog id="dialog" class="bv-dialog">…</dialog> aka locator('#dialog')
+    2) <dialog open="" class="bv-game-preview" aria-label="Published site preview">…</dialog> aka getByRole('dialog', { name: 'Published site preview' })
+
+Call log:
+  - waiting for locator('dialog')
+
+    at C:\Users\joe\wc-game\tests\game-experience-browser.mjs:51:222
+    at async check (C:\Users\joe\wc-game\tests\game-experience-browser.mjs:21:31)
+    at async file:///C:/Users/joe/wc-game/tests/game-experience-browser.mjs:51:2 {
+  log: [ "  - waiting for locator('dialog')" ]
+}
+
+Node.js v24.19.0

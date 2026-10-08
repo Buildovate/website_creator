@@ -1,0 +1,18 @@
+{
+  "dialogs": [
+    {
+      "id": "dialog",
+      "className": "bv-dialog",
+      "name": null,
+      "open": false
+    },
+    {
+      "id": "",
+      "className": "bv-game-preview bv-dialog",
+      "name": "Published site preview",
+      "open": true
+    }
+  ],
+  "scopedSelector": "dialog.bv-game-preview",
+  "count": 1
+}

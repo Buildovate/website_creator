@@ -100,3 +100,17 @@ Supersedes the previous two-view design. All 26 original section IDs are mapped 
 API 16/16; isolated build PASS; browser 21/21 with 13 captures; progress 40/40; milestones 16/16; header-logo 340 + 6; header-nav-fit 16,422; platform-look 467 selectors/7 font faces. Platform-mobile encountered only the approved BASE review-packet exception and is not claimed passing. Protected diff empty; legacy/components/tokens unchanged; shared files exactly +1/-0 each. Contrast passes all four states; caption remains 14.47:1. Notes/logs in NOTES.md and round3h.
 
 G-2a verified for its approved local commit. G-2b tour/preview/celebration remains next, not started. Zero provider calls/credits; no push/deploy/merge/Suite-102. G-1 missing-source limitations remain unchanged.
+
+## Round 4 — G-2b stopped, uncommitted
+
+Tour, published-only preview and non-blocking level confirmation are drafted in Game-owned modules. Existing API 16/16, new API/state checks 18/18, isolated build PASS. A missing brace in the new test adapter was corrected under standing syntax approval without changing assertions.
+
+Browser passed three checks (tour first run, Skip, persistence after reload), then stopped at tests/game-experience-browser.mjs:51: an unscoped dialog selector matches the existing shared dialog and Game's preview dialog. No selector fix/retry, no later browser checks, G-1 reruns or guards. Protected read-only audit is empty; legacy unchanged; four shared files still +1/-0. Two desktop screenshots saved, shown in the report. See NOTES.md and round4 logs.
+
+No G-2b commit; HEAD stays 802daa1b5cb9feaff634630b9ec1a48770ee3e72. G-3 not started. Zero credits/provider calls; no push/deploy/merge.
+
+## Round 4 selector resume — G-2b verified
+
+The approved test-only scope uses dialog.bv-game-preview. A read-only real-workspace preflight confirmed exactly one match; the shared closed dialog remains unchanged. Browser rerun once: 12/12, 11 screenshots, 7 contrast states/37 text instances at 4.5:1 or above, reduced motion and keyboard checks pass, no external requests. The initial API 16/16, new API/state 18/18 and isolated build pass remain valid with unchanged application code. G-1 reruns 40/40 and 16/16; header-logo 340 + 6; header-nav-fit 16,422; platform-look 489 selectors/7 font faces. Platform-mobile encounters only the permitted BASE review-packet exception and is not claimed passing. Protected diff empty, legacy/components/tokens unchanged, no new shared edits.
+
+G-2b tour, published-only preview and non-blocking level confirmation are verified for the approved local commit. G-3 next, not started. No push/deploy/provider calls; zero credits. See NOTES.md and round4/results.json.

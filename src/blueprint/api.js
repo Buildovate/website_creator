@@ -1,3 +1,4 @@
+import {experienceApi} from './experience.js';
 import {access,must} from '../core.js';
 import {readProgressSources} from './sources.js';
 import {evaluateProgress} from './progress.js';
@@ -5,6 +6,8 @@ import {evaluateProgress} from './progress.js';
 // Game is the only presentation. Old personal view records are left untouched.
 // This route is read-only; existing section routes still own every business write.
 export async function gameApi(req,env,url){
+ const experience=url.pathname.match(/^\/api\/game\/([^/]+)\/experience$/);
+ if(experience)return experienceApi(req,env,url,decodeURIComponent(experience[1]));
  const match=url.pathname.match(/^\/api\/game\/([^/]+)$/);
  must(match,'Game workspace not found.',404);
  must(req.method==='GET','Game is the only view. This endpoint is read-only.',405);

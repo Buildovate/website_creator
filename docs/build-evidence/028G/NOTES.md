@@ -534,3 +534,113 @@ Separate git diff BASE -- src/client/workspace/legacy-workspace.js src/client/st
 No extra shared switch-removal lines. All untracked paths are recognized Game code/evidence; no foreign edit observed. No provider calls, credits, push, deploy, merge or full Suite-102. G-2b next, not started.
 
 Documentation-only command correction: an inline Node command used Markdown backtick fences inside a template string and failed to parse before any file write. Replaced the documentation construction with an array of strings and tilde fences. No app/test code changed and no verification check was rerun.
+
+## Round 4 — G-2b drafted; stopped at preview test selector
+
+HEAD remains 802daa1b5cb9feaff634630b9ec1a48770ee3e72 on launch/028G-game. No G-2b commit or staging. G-3 not started.
+
+### Three features drafted (verification incomplete)
+
+- First-run tour: three inline steps covering progress, the current quest and badges. Text is never dimmed. Skip/Finish stores a personal, tenant-scoped game_experience receipt in workspace_records; normal refresh/restart does not reopen the tour. The tour remains static, including reduced motion.
+- Site preview: Preview site opens a native dialog. Only status=published plus a published snapshot and valid slug yields the real /s/:slug URL. Unpublished sites show an honest message with no iframe. Published HTML is fetched from the actual public route and shown in a sandboxed, script-free iframe; no draft preview or made-up site is used. The browser verification stopped before completing this behavior.
+- Celebration: a non-modal five-second level confirmation with Continue, while the next quest remains usable. The server derives completed levels from G-1 progress, records seen levels, and rejects client-submitted XP or completion. The reserved confirmation space avoids an automatic dismissal shifting the board. Positive browser fixture coverage was not reached.
+
+No new sections, Tabs switch, billing implementation, legacy form changes or provider integration. All additions are Game-owned files. GET /api/game/:tenant remains read-only; the owned /experience subroute writes personal presentation receipts only and checks tenant access plus same-origin POST. Viewer receipts do not grant business-edit rights.
+
+### Syntax correction permitted by standing approval
+
+The first invocation of tests/game-experience-api.mjs failed to parse at its original line 17 before any assertions ran: the SQLite DB adapter object was missing its final closing brace. The one-line object was rewritten as the same adapter on lines 17–27 with balanced braces. Before: missing outer object closure before semicolon. After: both DB and env objects close. No assertion was removed, weakened or changed. Original parse log and subsequent test log are both retained in round4.
+
+### Ordered checks and stop
+
+| Step | Result |
+|---|---|
+| Existing game-desktop-api.mjs | PASS 16/16, unchanged assertions |
+| New game-experience-api.mjs | PASS 18/18 after the permitted syntax-only correction |
+| Isolated game-guard-build.mjs | PASS; .data/028G/dist only |
+| game-experience-browser.mjs | Three checks passed; fourth stopped on ambiguous selector |
+| G-1 progress / milestones | Not rerun after stop |
+| header-logo / header-nav-fit / platform-look / platform-mobile | Not run after stop; BASE mobile exception not encountered this round |
+| Protected audit, read-only after stop | Empty; legacy unchanged; four existing shared files remain +1/-0 |
+
+The three browser passes cover first-run tour, Skip persistence, and absence after reload with tenant settings unchanged. The first tour also passed its 4.5:1 contrast/opacity and rendered-backing check.
+
+Failure at tests/game-experience-browser.mjs:51: the unpublished-preview assertion uses page.locator('dialog').innerText(), matching BOTH the pre-existing closed dialog#dialog.bv-dialog and Game's open dialog.bv-game-preview. The preceding wait for dialog[open] succeeded. This is a test selector ambiguity; no fix or retry was made because only syntax/typo corrections were authorized. Candidate follow-up, not applied: scope preview assertions to dialog.bv-game-preview or the Published site preview accessible dialog name. The shared dialog must stay unchanged.
+
+Published preview, the later tour steps, celebration, reduced-motion browser coverage, phone reflow and final browser-error checks remain unverified this round. No passing result is claimed for them.
+
+### Captures
+
+- screenshots/g2b-tour-progress.png — desktop 1440×900, first tour step.
+- screenshots/g2b-tour-skipped.png — desktop 1440×900, skipped tour.
+
+No preview or celebration screenshot was captured before the stop. Logs and failure JSON are in round4. The existing round3h API JSON was backed up before the unchanged API suite ran, copied into round4 as current evidence, then restored byte-for-byte. Other older evidence was not regenerated.
+
+### Protected proof
+
+Command (workdir C:\Users\joe\wc-game):
+
+~~~powershell
+git diff b2446730d551656067f2aaa15a9c27497dceb8f7 -- . ':(exclude)src/blueprint/**' ':(exclude)src/client/workspace/game/**' ':(exclude)src/client/styles/platform/game.css' ':(exclude)public/game-art/**' ':(exclude)tests/game-*.mjs' ':(exclude)docs/modules/game.md' ':(exclude)docs/design-reference/platform-2026-09-27/PLATFORM-DESIGN-GUIDE.md' ':(exclude)docs/product/design-reference/blueprint-v6/**' ':(exclude)docs/build-evidence/028G/**' ':(exclude)src/api.js' ':(exclude)src/client/workspace/index.ts' ':(exclude)src/client/workspace/shell.ts' ':(exclude)src/client/styles/platform/index.css'
+~~~
+
+Output (empty):
+
+~~~text
+~~~
+
+Separate BASE diff of src/client/workspace/legacy-workspace.js: empty. Shared numstat remains 1/0 for src/api.js, platform/index.css, workspace/index.ts and workspace/shell.ts. No new shared edits this round. No foreign edits observed. Zero provider calls/credits, no push, deploy, merge or Suite-102.
+
+## Round 4 selector resume — approved test-only scope
+
+Only source change in this resume: tests/game-experience-browser.mjs lines 51–61. Preview selectors now use dialog.bv-game-preview (including iframe/alert descendants) instead of unscoped dialog. The first preview assertion also requires count === 1. No assertion was weakened. No Game UI, shared dialog, components.css, tokens or legacy-workspace.js was edited during the resume.
+
+Before rerunning the browser suite, an isolated diagnostic opened the actual workspace on port 5183 and used the existing Preview site button. It found:
+- Shared dialog: id=dialog, class=bv-dialog, no accessible name, closed.
+- Game dialog: class=bv-game-preview bv-dialog, accessible name=Published site preview, open.
+- Scoped selector dialog.bv-game-preview: exactly 1.
+
+Proof: round4/dialog-selector-preflight.json. The diagnostic used the existing built code and did not modify either dialog. Only after this passed was the browser suite run once. Result: 12/12, 11 screenshots. All seven new-feature contrast states passed 4.5:1/full-opacity checks, with 37 text instances and matching rendered background samples. No external requests were attempted or forwarded, and no uncaught browser errors occurred.
+
+Original stopped browser evidence and the two screenshots were preserved under round4/selector-resume-prior before the run. Current captures remain in screenshots/g2b-*.png. The earlier API 16/16, new API/state 18/18 and isolated-build pass remain valid: application code did not change in this resume. They were not needlessly rerun.
+
+The published preview test serves a real local public page from an explicitly seeded published fixture. Level completion uses a clearly labeled fixture because the missing real source integrations in BASE still cannot earn those milestones. Neither fixture is a live publication, provider connection, or invented production progress.
+
+### Final G-2b verification and commit readiness
+
+| Check | Result |
+|---|---|
+| Existing API | 16/16, unchanged |
+| New API/state | 18/18 |
+| Isolated build | Pass |
+| Resumed browser suite | 12/12; 11 screenshots |
+| G-1 progress | 40/40 |
+| G-1 milestones | 16/16 |
+| Header-logo | 340 headers + 6 edge cases |
+| Header-nav-fit | 16,422 checks; 1,632 states; 8 widths |
+| Platform-look | 489 scoped selectors; 7 font faces; 5 stylesheet checks |
+| Platform-mobile | Exact permitted BASE HTTP 409 review-packet fixture exception; browser assertions not reached |
+| Protected diff | Empty; legacy, components and tokens unchanged |
+
+The protected BASE command printed in the Round 4 stop record above was repeated after the guards. Output:
+
+~~~text
+~~~
+
+The four pre-existing shared bridge additions remain exactly +1/-0 each. No new shared edits or foreign changes. Test commands use node --import file:///C:/Users/joe/wc-game/tests/game-guard-loader.mjs followed by the absolute C:\Users\joe\wc-game\tests\ script path (with --test for game-progress/game-milestones), GAME_EVIDENCE_ROUND=round4. Logs are in round4. No full Suite-102.
+
+Current screenshots (1440×900 except phone reflow at 390×844):
+
+- screenshots/g2b-tour-progress.png
+- screenshots/g2b-tour-skipped.png
+- screenshots/g2b-preview-unpublished.png
+- screenshots/g2b-preview-published.png
+- screenshots/g2b-preview-error.png
+- screenshots/g2b-tour-quest.png
+- screenshots/g2b-tour-badges.png
+- screenshots/g2b-celebration.png
+- screenshots/g2b-celebration-board.png
+- screenshots/g2b-reduced-motion.png
+- screenshots/g2b-phone-reflow.png
+
+Game remains the only view. All existing sections and forms remain unchanged. G-3 not started. No push, deploy, merge, provider calls or credits. Approved commit subject: 028G G-2b: tour, preview, and celebration. One-shot author: Joe <joe@buildovate.com>, no config changes.

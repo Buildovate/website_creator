@@ -1,36 +1,37 @@
 {
   "ticket": "028G",
-  "round": "3h",
-  "subticket": "G-2a",
-  "branch": "launch/028G-game",
-  "base": "b2446730d551656067f2aaa15a9c27497dceb8f7",
-  "parent": "4dde8d78be560b6410f6abd8c3dc6ca9da3be880",
-  "port": 5183,
+  "subticket": "G-2b",
+  "round": "4 selector resume",
   "status": "verified_with_approved_base_exception",
-  "gameApi": {
-    "passed": 16
+  "parent": "802daa1b5cb9feaff634630b9ec1a48770ee3e72",
+  "branch": "launch/028G-game",
+  "port": 5183,
+  "existingApi": {
+    "passed": 16,
+    "rerunDuringResume": false
   },
-  "build": {
-    "passed": true,
-    "output": ".data/028G/dist"
+  "newApi": {
+    "passed": 18,
+    "rerunDuringResume": false
   },
+  "isolatedBuild": "passed before selector-only resume",
   "browser": {
-    "passed": 21,
+    "passed": 12,
     "screenshots": [
-      "g2a-desktop-fresh.png",
-      "g2a-desktop-business.png",
-      "g2a-desktop-not-connected.png",
-      "g2a-desktop-locked.png",
-      "g2a-desktop-midway.png",
-      "g2a-desktop-done.png",
-      "g2a-desktop-badge-grid.png",
-      "g2a-desktop-reduced-motion.png",
-      "g2a-phone-reflow.png",
-      "g2a-desktop-read-only.png",
-      "g2a-desktop-loading.png",
-      "g2a-desktop-error.png",
-      "g2a-desktop-offline.png"
-    ]
+      "g2b-tour-progress.png",
+      "g2b-tour-skipped.png",
+      "g2b-preview-unpublished.png",
+      "g2b-preview-published.png",
+      "g2b-preview-error.png",
+      "g2b-tour-quest.png",
+      "g2b-tour-badges.png",
+      "g2b-celebration.png",
+      "g2b-celebration-board.png",
+      "g2b-reduced-motion.png",
+      "g2b-phone-reflow.png"
+    ],
+    "contrastStates": 7,
+    "textInstances": 37
   },
   "gameProgress": {
     "passed": 40
@@ -40,64 +41,35 @@
   },
   "guards": {
     "headerLogo": {
-      "renderedHeaders": 340,
-      "edgeCases": 6,
-      "passed": true
+      "passed": true,
+      "headers": 340,
+      "edgeCases": 6
     },
     "headerNavFit": {
+      "passed": true,
       "checks": 16422,
       "states": 1632,
-      "widths": 8,
-      "passed": true
+      "widths": 8
+    },
+    "platformLook": {
+      "passed": true,
+      "selectors": 489,
+      "fontFaces": 7,
+      "stylesheets": 5
     },
     "platformMobile": {
       "passed": false,
       "knownBaseException": true,
       "message": "Complete the review packet before approval.",
-      "status": 409,
+      "httpStatus": 409,
       "browserAssertionsReached": false
-    },
-    "platformLook": {
-      "passed": true,
-      "selectors": 467,
-      "fontFaces": 7,
-      "stylesheets": 5
     }
   },
-  "contrast": [
-    {
-      "state": "fresh",
-      "textCount": 137,
-      "problems": []
-    },
-    {
-      "state": "midway",
-      "textCount": 130,
-      "problems": []
-    },
-    {
-      "state": "locked",
-      "textCount": 131,
-      "problems": []
-    },
-    {
-      "state": "done",
-      "textCount": 120,
-      "problems": []
-    }
-  ],
-  "captionContrast": 14.469554792114943,
   "protectedDiff": "empty",
   "legacyDiff": "empty",
-  "sharedEdits": {
-    "src/api.js": "+1/-0",
-    "src/client/workspace/index.ts": "+1/-0",
-    "src/client/workspace/shell.ts": "+1/-0",
-    "src/client/styles/platform/index.css": "+1/-0"
-  },
-  "sectionCount": 26,
-  "ownerSectionCount": 25,
+  "sharedChangesThisRound": 0,
   "credits": 0,
   "providerCalls": 0,
-  "next": "G-2b (not started)"
+  "externalBrowserRequests": 0,
+  "next": "G-3, not started"
 }
