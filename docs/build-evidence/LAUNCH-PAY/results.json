@@ -1,12 +1,53 @@
 {
-  "ticket": "LAUNCH-PAY PAY-1",
+  "ticket": "LAUNCH-PAY",
   "base": "b2446730d551656067f2aaa15a9c27497dceb8f7",
-  "testCommand": "node --test tests/catalog.mjs",
-  "tests": 11,
-  "passed": 11,
-  "failed": 0,
-  "protectedDiffEmpty": true,
-  "fullSuite102Run": false,
-  "providerCalls": 0,
-  "credits": 0
+  "pay1": {
+    "tests": [
+      {
+        "file": "tests/catalog.mjs",
+        "passed": 11,
+        "failed": 0
+      }
+    ]
+  },
+  "pay2": {
+    "tests": [
+      {
+        "file": "tests/stripe-sync.mjs",
+        "passed": 6,
+        "failed": 0
+      },
+      {
+        "file": "tests/stripe-checkout.mjs",
+        "passed": 9,
+        "failed": 0
+      },
+      {
+        "file": "tests/stripe-no-key.mjs",
+        "passed": 2,
+        "failed": 0
+      },
+      {
+        "file": "tests/catalog.mjs",
+        "passed": 11,
+        "failed": 0
+      }
+    ],
+    "totalPassed": 28,
+    "totalFailed": 0,
+    "dryRun": {
+      "createdProducts": 0,
+      "updatedProducts": 0,
+      "createdPrices": 0,
+      "updatedPrices": 0,
+      "skipped": 75,
+      "inactive": 56,
+      "priceComingSoon": 19,
+      "fakeClientCalls": 0
+    },
+    "realProviderCalls": 0,
+    "credits": 0,
+    "fullSuite102Run": false,
+    "protectedDiffEmpty": true
+  }
 }

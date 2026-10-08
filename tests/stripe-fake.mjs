@@ -1,0 +1,36 @@
+export function makeFakeStripe() {
+  const productsStore = [];
+  const pricesStore = [];
+  const customersStore = [];
+  const sessionsStore = [];
+  const calls = { read:0, write:0, sessionCreates:0, customerCreates:0 };
+  const idempotentSessions = new Map();
+  const stripe = {
+    calls, productsStore, pricesStore, customersStore, sessionsStore,
+    snapshot: () => ({ products:structuredClone(productsStore), prices:structuredClone(pricesStore) }),
+    products: {
+      async list({ starting_after } = {}) { calls.read++; const start = starting_after ? productsStore.findIndex(item => item.id === starting_after)+1 : 0; return {data:structuredClone(productsStore.slice(start)),has_more:false}; },
+      async create(payload) { calls.write++; const product={id:`prod_fake_${productsStore.length+1}`,...structuredClone(payload)}; productsStore.push(product); return structuredClone(product); },
+      async update(id,payload) { calls.write++; const index=productsStore.findIndex(item=>item.id===id); if(index<0)throw Error('Unknown fake product'); Object.assign(productsStore[index],structuredClone(payload)); return structuredClone(productsStore[index]); }
+    },
+    prices: {
+      async list({lookup_keys} = {}) { calls.read++; const found=lookup_keys ? pricesStore.filter(item=>lookup_keys.includes(item.lookup_key)) : pricesStore; return {data:structuredClone(found),has_more:false}; },
+      async create(payload) { calls.write++; const price={id:`price_fake_${pricesStore.length+1}`,...structuredClone(payload)}; pricesStore.push(price); return structuredClone(price); },
+      async update(id,payload) { calls.write++; const index=pricesStore.findIndex(item=>item.id===id); if(index<0)throw Error('Unknown fake price'); Object.assign(pricesStore[index],structuredClone(payload)); return structuredClone(pricesStore[index]); }
+    },
+    customers: {
+      async search({query}) { calls.read++; const tenantId=query.match(/metadata\['tenantId'\]:'([^']+)'/)?.[1]; return {data:structuredClone(customersStore.filter(item=>item.metadata.tenantId===tenantId))}; },
+      async create(payload) { calls.write++; calls.customerCreates++; const customer={id:`cus_fake_${customersStore.length+1}`,...structuredClone(payload)}; customersStore.push(customer); return structuredClone(customer); }
+    },
+    checkout: { sessions: {
+      async create(payload,{idempotencyKey}) { if(idempotentSessions.has(idempotencyKey))return structuredClone(idempotentSessions.get(idempotencyKey)); calls.write++; calls.sessionCreates++; const session={id:`cs_test_fake_${sessionsStore.length+1}`,url:`https://checkout.stripe.test/fake/${sessionsStore.length+1}`,payload:structuredClone(payload),idempotencyKey}; sessionsStore.push(session); idempotentSessions.set(idempotencyKey,session); return structuredClone(session); }
+    }}
+  };
+  return stripe;
+}
+
+export const fakeTestEnv = Object.freeze({
+  STRIPE_SECRET_KEY:'sk_test_FAKE_FOR_OFFLINE_TESTS',
+  STRIPE_PUBLISHABLE_KEY:'pk_test_FAKE_FOR_OFFLINE_TESTS',
+  STRIPE_WEBHOOK_SECRET:'whsec_FAKE_FOR_OFFLINE_TESTS'
+});

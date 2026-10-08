@@ -19,3 +19,15 @@ git diff b2446730d551656067f2aaa15a9c27497dceb8f7 -- src/worker.js src/site-poli
 Output: empty. Exit code: 0.
 
 No file in `C:\Users\joe\website_creator` was accessed during this round. Port 5181 and local `.data` were not needed for these pure catalog tests.
+
+## PAY-2 changes and protected-file proof
+
+PAY-2 files: `scripts/stripe-sync.mjs`, `src/payments/checkout.ts`, `src/client/workspace/billing.ts`, `tests/stripe-fake.mjs`, `tests/stripe-sync.mjs`, `tests/stripe-checkout.mjs`, `tests/stripe-no-key.mjs`, `.env.example`, `NEEDS-KEYS.md`, and these evidence files.
+
+Command before PAY-2 commit:
+
+```powershell
+git diff b2446730d551656067f2aaa15a9c27497dceb8f7 -- src/worker.js src/site-polish.js src/website-pages.js src/blog.js src/pricing.js public/site-polish.css src/design-preview-pages.js public/design-preview-pages.css docs/modules/design.md src/qa-gate.js src/qa-page-action.js src/qa-video.js tests/header-logo.mjs tests/header-nav-fit.mjs dist public/templates public/trades 'tests/automatic-qa-*.mjs'
+```
+
+Output: empty; exit code 0. The proof command is rerun immediately before the commit.
