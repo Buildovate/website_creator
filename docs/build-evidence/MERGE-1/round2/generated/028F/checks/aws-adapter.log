@@ -1,0 +1,5 @@
+healthz database check failed database offline
+Request failed / Error
+Request failed /api/session Error
+LOCAL EGRESS MOCK: intercepted OpenAI /v1/models; local 401; providerCalls=0
+PASS: SQL translation, Postgres migrations, D1 adapter, S3 shim, MinIO client config, ALB/Cognito/dev auth, /healthz, static assets, OpenAI egress.

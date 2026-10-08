@@ -1,0 +1,16 @@
+{
+  "mockPath": "C:/Users/joe/website_creator/docs/build-evidence/057A/tools/no-provider-fetch.mjs",
+  "mockSha256": "5f98f8038365370cb6ed3147a2f590f10e67d23dd1beca4fa4146502be601125",
+  "interceptions": [
+    {
+      "url": "https://api.openai.com/v1/models",
+      "status": 401,
+      "body": "{\"error\":{\"message\":\"Local test: invalid credential\",\"type\":\"invalid_request_error\"}}",
+      "local": true
+    }
+  ],
+  "providerCalls": 0,
+  "recordBeforeSha256": "e27396f0041c46a11683c0b24b2f604d2d5e749b9641ba8e8314042b0ec667c9",
+  "recordAfterSha256": "e27396f0041c46a11683c0b24b2f604d2d5e749b9641ba8e8314042b0ec667c9",
+  "failure": null
+}
