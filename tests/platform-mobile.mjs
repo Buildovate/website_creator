@@ -5,16 +5,37 @@ import assert from 'node:assert/strict';
 import {createRuntime,listen} from '../src/aws/server.js';
 import worker from '../dist/server/index.js';
 import {roofingFixture} from './fixtures/roofing-journey.mjs';
-import {ROBLES} from '../src/core.js';
+import {createReviewCapture} from '../src/aws/review-capture.js';
 const require=createRequire(import.meta.url),{chromium}=require('C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const phase=process.argv.includes('--before')?'before':'after',out=process.env.PLATFORM_MOBILE_EVIDENCE||'C:/Users/joe/website_creator/docs/build-evidence/015A',base='http://127.0.0.1:8126';
 fs.mkdirSync(out+'/'+phase,{recursive:true});
-const runtime=await createRuntime({env:{APP_ENV:'local',NODE_ENV:'development',AUTH_MODE:'dev-header',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',MIGRATE_ON_BOOT:'1',WORKSPACE_OWNER_EMAIL:'mobile-admin@example.test',LISTEN_HOST:'127.0.0.1',PORT:'8126',APP_ORIGIN:base}});
+const runtime=await createRuntime({reviewCapture:createReviewCapture({browserModule:'C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright',executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'}),env:{APP_ENV:'local',NODE_ENV:'development',AUTH_MODE:'dev-header',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',MIGRATE_ON_BOOT:'1',WORKSPACE_OWNER_EMAIL:'mobile-admin@example.test',LISTEN_HOST:'127.0.0.1',PORT:'8126',APP_ORIGIN:base}});
 if(phase==='before'){const currentAssets=runtime.env.ASSETS;runtime.env.ASSETS={fetch:async request=>{const pathname=new URL(request.url).pathname;if(pathname==='/app.js'||pathname==='/app.css')return new Response(fs.readFileSync(out+'/.baseline-client'+pathname),{headers:{'content-type':pathname.endsWith('.css')?'text/css':'application/javascript'}});return currentAssets.fetch(request);}};}
 const headers={origin:base,'content-type':'application/json','oai-authenticated-user-id':'mobile-admin','oai-authenticated-user-email':'mobile-admin@example.test'};
 async function api(path,method='GET',value){const r=await worker.fetch(new Request(base+'/api'+path,{method,headers,body:value===undefined?undefined:JSON.stringify(value)}),runtime.env);assert.equal(r.status,200,await r.clone().text());return r.json()}
-await api('/setup','POST',{});const fixture=structuredClone(roofingFixture);fixture.slug='mobile-platform-qa';Object.assign(fixture.settings,{name:ROBLES.name,owner:ROBLES.owner,phone:ROBLES.phone});
-let {tenant}=await api('/tenants','POST',fixture);await api('/tenants/'+tenant.id+'/publish','POST',{version:tenant.version,approved:true});
+// Complete the ordinary staff review API flow before any fixture publication.
+// Browser evidence is real; contacts and decisions belong only to this ephemeral sample.
+async function completeStaffReview(id,target='website'){
+ const base='/tenants/'+id+'/review-packet',query='?target='+encodeURIComponent(target);
+ let review=await api(base+query);
+ await api(base+query,'POST',{versionHash:review.versionHash});
+ const deadline=Date.now()+1200000;
+ do{
+  review=await api(base+query);
+  assert.notEqual(review.packet?.status,'Capture failed',review.packet?.captureMessage);
+  if(review.packet?.status==='Complete')break;
+  assert.ok(Date.now()<deadline,'Staff review capture must finish');
+  await new Promise(resolve=>setTimeout(resolve,250));
+ }while(true);
+ assert.equal(review.qa.summary.blocking,0,JSON.stringify(review.qa.report?.checks.filter(c=>c.result==='Fail')));
+ for(const item of review.qa.report.checks.filter(c=>c.result==='Borderline')){
+  await api(base+'/qa-decision'+query,'POST',{versionHash:review.versionHash,manifestHash:review.manifestHash,reportHash:review.qa.report.reportHash,checkId:item.id,decision:'Accept',reason:'Staff review of clearly fictional #057A-T local test data only; never approval of a contractor or saved Sample packet.'});
+ }
+ await api(base+'/decision'+query,'POST',{versionHash:review.versionHash,decision:'approve',checkedItems:review.packet.checklist.map(item=>item.id)});
+ console.log('PASS staff review prerequisite',target,JSON.stringify({pages:review.packet.pages.length,clips:review.packet.clips.length,checklist:review.packet.checklist.length,blocking:review.qa.summary.blocking}));
+}
+await api('/setup','POST',{});const fixture=structuredClone(roofingFixture);fixture.slug='mobile-platform-qa';Object.assign(fixture.settings,{name:'Sample Fictional Test Roofing Co',owner:'Test Owner',phone:'(805) 555-0100',email:'roofing@example.com'});
+let {tenant}=await api('/tenants','POST',fixture);await completeStaffReview(tenant.id);await api('/tenants/'+tenant.id+'/publish','POST',{version:tenant.version,approved:true});
 const publicHome=await worker.fetch(new Request(base+'/s/'+tenant.slug),runtime.env);assert.equal(publicHome.status,200);assert.doesNotMatch(await publicHome.text(),/\(805\) 555-0123|tel:\+18055550123/,'Fixture phone must not reach published copy');
 await runtime.env.DB.prepare('INSERT INTO members (id,tenant_id,user_id,email,role,active,created_at) VALUES (?,?,?,?,?,1,?)').bind(crypto.randomUUID(),tenant.id,'mobile-owner','mobile-owner@example.test','owner',new Date().toISOString()).run();
 const server=await listen(runtime,8126),browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'}),results={phase,screens:[],errors:[]};
@@ -85,6 +106,7 @@ if(phase==='after'){
  await page.locator('[data-platform-screen]').selectOption('questionnaire');await page.locator('#questionnaire-form [name=owner]').fill('Questionnaire phone owner');await page.locator('.platform-action-dock button').filter({hasText:'Save questionnaire'}).click();await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('Questionnaire saved'));
  await page.reload();await page.waitForSelector('[data-platform-screen]');await page.locator('[data-platform-screen]').selectOption('questionnaire');assert.equal(await page.locator('#questionnaire-form [name=owner]').inputValue(),'Questionnaire phone owner');
  const popupEvent=page.waitForEvent('popup');await page.locator('a[href^="/preview/"]').click();const popup=await popupEvent;await popup.waitForLoadState();assert.ok(popup.url().includes('/preview/'));await popup.close();
+ await completeStaffReview(tenant.id);
  page.removeAllListeners('dialog');page.on('dialog',d=>d.accept());await page.locator('.platform-action-dock button').filter({hasText:'Publish changes'}).click();await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('published'),undefined,{timeout:1200000});
  detail=await api('/tenants/'+tenant.id);assert.equal(detail.tenant.published.owner,'Questionnaire phone owner');results.workflows={businessSave:true,questionnaireSaveReopen:true,publishedIsolation:true,privatePreview:true,explicitLocalPublish:true};
  await page.locator('[data-platform-screen]').selectOption('business');await page.locator('[data-action=upload]').click();await page.waitForSelector('dialog[open]');

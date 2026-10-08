@@ -137,3 +137,11 @@ CUSTOM_DOMAIN_APEX_IPS was set only in the capture process environment to the do
 - [Capture result](apex-capture.json).
 
 All 14 ticket source/test hashes match round 1e, held work and all 203 planning-document hashes match, BUILD-BACKLOG.md remains unchanged and excluded, and generated Roofing CSS still matches its pre-build backup. Only the 14 ticket files plus this folder’s small evidence, tools and nine screenshots are included in the local commit. No dist, dependencies, credentials, other-ticket evidence or held work is staged. 0 credits / 0 real provider calls / no push / no deployment.
+
+## #057A-T round 2 — pre-existing test issues resolved
+
+Both legacy tests now complete the normal staff review API flow using clearly fictional sample data and actual local browser evidence. The mobile test also re-reviews the changed questionnaire version immediately before its second UI publication. Application code, approval rules and original assertions are unchanged.
+
+Build and all six requested test commands passed: domain 77 checks, domain browser 23, header logo 340 + 6, nav-fit 16,422 checks / 1,632 states, mobile 210 states / zero layout failures or browser errors, and platform exit 0. The #057A-T / #057A-T2 entries above are historical and fixed in the tests.
+
+[Round 2 notes](057A-T2-notes.md) and [results/hash proof](057A-T2-results.json). Runtime captures, backups and full local logs are intentionally left untracked. Held work and BUILD-BACKLOG.md unchanged. 0 credits / 0 real provider calls / no push or deploy.
