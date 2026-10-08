@@ -1,3 +1,4 @@
+import {mountPhoneBoard} from './phone.js';
 import {sectionsForQuest,sectionLabels,stepTarget} from './sections.js';
 export const questCopy={
  onboarding:['Onboarding','A few details. A clear starting point.','Confirm the business details homeowners will see.',['Your business identity is ready for your website.','The Set up badge follows all three first-level quests.']],
@@ -26,9 +27,11 @@ export function renderGame(data,selected){
  <section id="bv-game-quest" class="bv-game-quest" role="tabpanel" aria-labelledby="bv-game-tab-${q.id}" tabindex="-1"><div class="bv-game-quest-heading"><span class="bv-game-step-total" aria-label="${stepsDone} of ${q.steps.length} steps complete">${stepsDone}/${q.steps.length}</span><div><p class="bv-game-overline">CURRENT QUEST · +${q.xpMax} XP</p><h1>${escape(copy[1])}</h1><p>${escape(copy[2])}</p></div></div>${locked?`<p class="bv-game-callout">Locked · Finish ${escape(p.levels[p.currentLevel-1].name)} first. You can read what is needed below.</p>`:''}<ol class="bv-game-steps">${q.steps.map((s,i)=>`<li class="${s.done?'done':s.id===first?'current':''}"><span class="bv-game-step-index" aria-hidden="true">${s.done?'✓':i+1}</span><div><h2>${escape(stepCopy[s.id]||s.id)}</h2><p>${s.done?'Confirmed in your saved records.':escape(s.reason)}</p></div>${`<button type="button" data-game-step="${s.id}" ${s.id===first&&!locked?'class="primary"':''} aria-label="${locked?'View requirements for':'Start'} ${escape(stepCopy[s.id]||s.id)}">${s.done?'Open':locked?'View':'Start'} <span aria-hidden="true">→</span></button>`}</li>`).join('')}</ol><div class="bv-game-section-links"><h2>Settings for this quest</h2>${sectionsForQuest(q.id,data.sections||[]).map(id=>`<button type="button" data-game-open="${id}" data-game-anchor="${q.id==='promotions'?'q-promotions':q.id==='financing'?'q-financing':''}">${escape(sectionLabels[id])}</button>`).join('')}</div><p class="bv-game-quest-foot">${q.xpEarned} of ${q.xpMax} XP earned. All steps must be complete for this quest to count.</p></section></div>
  <aside class="bv-game-aside" aria-label="Help and milestones"><section class="bv-game-power"><span class="bv-game-power-icon" aria-hidden="true">✦</span><p class="bv-game-overline">A LITTLE HELP</p><h2>Fill it out for me</h2><p>Find business facts for you to review. Your prices and decisions stay yours.</p><button type="button" disabled>Coming next</button><p class="bv-game-small">Nothing is searched or changed yet.</p></section><section class="bv-game-unlocks"><p class="bv-game-overline">FINISHING THIS UNLOCKS</p><h2>Your next advantage</h2><ul>${copy[3].map(t=>`<li><span aria-hidden="true">→</span>${escape(t)}</li>`).join('')}</ul></section><section class="bv-game-badges"><p class="bv-game-overline">BADGES · ${p.badges.filter(b=>b.earned).length} OF 8</p><h2>Progress worth keeping</h2><div class="bv-game-badge-grid">${p.badges.map((b,i)=>`<div class="bv-game-badge ${b.earned?'earned':''}" aria-label="${escape(b.label)}: ${b.earned?'earned':'not earned'}"><span aria-hidden="true">${b.earned?'✓':['◇','☆','◎','◆','◈','◉','▣','100'][i]}</span><strong>${escape(b.label)}</strong><small>${b.earned?'Earned':'Not earned'}</small></div>`).join('')}</div></section></aside></main></div>`;
 }
-export function mountGame(host,{data,selected:initial,onOpen=()=>{},onRefresh=()=>{},onRendered=()=>{}}){
+export function mountGame(host,{data,selected:initial,onOpen=()=>{},onRefresh=()=>{},onRendered=()=>{},phonePane:initialPane='quests'}){
+ let phone=null,phonePane=initialPane;const phoneMedia=matchMedia('(max-width:720px)');
  let selected=initial||data.progress.quests.find(q=>!q.done)?.id||'onboarding';
  function draw(focusId){
+  phone?.destroy();
   host.innerHTML=renderGame(data,selected);
   host.querySelector('[data-game-refresh]').onclick=onRefresh;
   const tabs=[...host.querySelectorAll('[data-game-quest]')];
@@ -36,7 +39,10 @@ export function mountGame(host,{data,selected:initial,onOpen=()=>{},onRefresh=()
   host.querySelectorAll('[data-game-step]').forEach(b=>b.onclick=()=>{const target=stepTarget(selected,b.dataset.gameStep,data.sections||[]);if(target.section)onOpen(target.section,target.anchor,b);else host.querySelector('[data-game-message]').textContent='Not available yet. This step has no editable section for your account.';});
   host.querySelectorAll('[data-game-open]').forEach(b=>b.onclick=()=>onOpen(b.dataset.gameOpen,b.dataset.gameAnchor||null,b));
   onRendered(host);
-  if(focusId)host.querySelector('[data-game-quest="'+focusId+'"]')?.focus();
+  phone=mountPhoneBoard(host,{data,selected,labels:questCopy,pane:phonePane,onPane:value=>phonePane=value,select:id=>{selected=id;phonePane='quests';draw(id);},onOpen});
+  if(focusId&&phone)phone.focusQuest(focusId);
+  else if(focusId)host.querySelector('[data-game-quest="'+focusId+'"]')?.focus();
  }
- draw();return {selected:()=>selected,update(next){data=next;draw();},destroy(){host.replaceChildren();}};
+ const resize=()=>draw();phoneMedia.addEventListener('change',resize);
+ draw();return {selected:()=>selected,phonePane:()=>phonePane,update(next){data=next;draw();},destroy(){phone?.destroy();phoneMedia.removeEventListener('change',resize);host.replaceChildren();}};
 }

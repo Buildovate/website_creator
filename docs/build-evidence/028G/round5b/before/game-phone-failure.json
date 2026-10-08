@@ -1,0 +1,57 @@
+{
+  "passed": false,
+  "completed": 0,
+  "checks": [],
+  "screenshots": [],
+  "readability": [
+    {
+      "state": "tour",
+      "problems": [
+        {
+          "text": "Needs you · 0/15 XP",
+          "ratio": 2.8040332067935174
+        },
+        {
+          "text": "Not connected · 0/15 XP",
+          "ratio": 2.8040332067935174
+        },
+        {
+          "text": "Locked · 0/20 XP",
+          "ratio": 2.8040332067935174
+        },
+        {
+          "text": "Locked · 0/5 XP",
+          "ratio": 2.8040332067935174
+        },
+        {
+          "text": "Locked · 0/10 XP",
+          "ratio": 2.8040332067935174
+        },
+        {
+          "text": "Locked · 0/10 XP",
+          "ratio": 2.8040332067935174
+        },
+        {
+          "text": "Locked · 0/10 XP",
+          "ratio": 2.8040332067935174
+        },
+        {
+          "text": "Locked · 0/5 XP",
+          "ratio": 2.8040332067935174
+        }
+      ],
+      "textCount": 86,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     ratio: 2.8040332067935174,\n+     text: 'Needs you · 0/15 XP'\n+   },\n+   {\n+     ratio: 2.8040332067935174,\n+     text: 'Not connected · 0/15 XP'\n+   },\n+   {\n+     ratio: 2.8040332067935174,\n+     text: 'Locked · 0/20 XP'\n+   },\n+   {\n+     ratio: 2.8040332067935174,\n+     text: 'Locked · 0/5 XP'\n+   },\n+   {\n+     ratio: 2.8040332067935174,\n+     text: 'Locked · 0/10 XP'\n+   },\n+   {\n+     ratio: 2.8040332067935174,\n+     text: 'Locked · 0/10 XP'\n+   },\n+   {\n+     ratio: 2.8040332067935174,\n+     text: 'Locked · 0/10 XP'\n+   },\n+   {\n+     ratio: 2.8040332067935174,\n+     text: 'Locked · 0/5 XP'\n+   }\n+ ]\n- []\n\n    at verifyPhone (file:///C:/Users/joe/wc-game/tests/game-phone.mjs:49:65)\n    at async file:///C:/Users/joe/wc-game/tests/game-phone.mjs:52:309\n    at async check (file:///C:/Users/joe/wc-game/tests/game-phone.mjs:21:31)\n    at async file:///C:/Users/joe/wc-game/tests/game-phone.mjs:52:2"
+}

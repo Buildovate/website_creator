@@ -5,6 +5,7 @@ const tourSteps=[
 ];
 // Presentation state is local to this mount; the server owns once-only receipts.
 export function createGameExperience({request,readPreview=async url=>{const response=await fetch(url,{credentials:'same-origin'});if(!response.ok)throw new Error('The published site could not load. It may have been unpublished.');return response.text();}}){
+ let previewListener=null;
  let host=null,tour=-1,celebration=[],timer=null,preview={state:'unpublished'},dialog=null,origin=null,disposed=false,pendingError='';
  function clearHighlight(){host?.querySelectorAll('[data-game-tour-target]').forEach(el=>el.removeAttribute('data-game-tour-target'));}
  function stopCelebration(){celebration=[];clearTimeout(timer);timer=null;paintCelebration();}
@@ -15,7 +16,7 @@ export function createGameExperience({request,readPreview=async url=>{const resp
   const button=document.createElement('button');button.type='button';button.textContent='Continue';button.onclick=stopCelebration;slot.append(text,button);
  }
  async function finishTour(action){
-  tour=-1;paintTour();host?.querySelector('[data-game-quest][aria-selected=true]')?.focus({preventScroll:true});
+  tour=-1;paintTour();(host?.querySelector('[data-game-chip][aria-selected=true]')||host?.querySelector('[data-game-quest][aria-selected=true]'))?.focus({preventScroll:true});
   try{await request(action);pendingError='';}catch{pendingError='Your tour choice could not sync. Your saved work is unchanged.';}
   const status=host?.querySelector('[data-game-tour-status]');if(status)status.textContent=pendingError;
  }
@@ -28,7 +29,7 @@ export function createGameExperience({request,readPreview=async url=>{const resp
   count.textContent='QUICK TOUR · '+(tour+1)+' OF 3';heading.textContent=title;text.textContent=copy;words.append(count,heading,text);
   const next=document.createElement('button');next.type='button';next.textContent=tour===2?'Finish tour':'Next';next.onclick=()=>{if(tour===2)finishTour('finish_tour');else{tour++;paintTour();host.querySelector('[data-game-tour] button')?.focus();}};
   const skip=document.createElement('button');skip.type='button';skip.textContent='Skip tour';skip.onclick=()=>finishTour('skip_tour');
-  panel.append(words,next,skip);host.querySelector(selector)?.setAttribute('data-game-tour-target','');
+  panel.append(words,next,skip);host.querySelector(selector)?.setAttribute('data-game-tour-target','');host.dispatchEvent(new CustomEvent('bv-game-tour-step',{detail:{index:tour}}));
  }
  function closePreview(){if(!dialog)return;dialog.close();dialog.remove();dialog=null;origin?.focus();}
  async function openPreview(button){
@@ -53,12 +54,13 @@ export function createGameExperience({request,readPreview=async url=>{const resp
    if(result.completedLevels?.length){celebration=result.completedLevels;clearTimeout(timer);timer=setTimeout(stopCelebration,5000);}
   },
   attach(element){
-   host=element;const header=host.querySelector('.bv-game-header');if(!header)return;
+   if(previewListener&&host)host.removeEventListener('bv-game-preview-open',previewListener);
+   host=element;previewListener=event=>openPreview(event.detail.trigger);host.addEventListener('bv-game-preview-open',previewListener);const header=host.querySelector('.bv-game-header');if(!header)return;
    const button=document.createElement('button');button.type='button';button.dataset.gamePreview='';button.textContent='Preview site';button.onclick=()=>openPreview(button);header.querySelector('[data-game-refresh]').after(button);
    const notice=host.querySelector('.bv-game-notice'),slot=document.createElement('div');slot.className='bv-game-confirmation';slot.dataset.gameCelebration='';slot.setAttribute('role','status');notice.after(slot);
    const status=document.createElement('span');status.dataset.gameTourStatus='';status.setAttribute('role','status');status.textContent=pendingError;slot.after(status);
    paintTour();paintCelebration();
   },
-  destroy(){disposed=true;clearTimeout(timer);clearHighlight();closePreview();host=null;}
+  destroy(){if(previewListener&&host)host.removeEventListener('bv-game-preview-open',previewListener);disposed=true;clearTimeout(timer);clearHighlight();closePreview();host=null;}
  };
 }

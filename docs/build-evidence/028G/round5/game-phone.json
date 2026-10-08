@@ -1,0 +1,239 @@
+{
+  "passed": true,
+  "count": 17,
+  "checks": [
+    "phone tour and board are readable immediately, with one Game view",
+    "tour reaches quest and badges on phone, then finishes",
+    "quest strip accepts touch swipes without scrolling the page sideways",
+    "All opens one reusable quest sheet with a keyboard focus loop",
+    "choosing a locked quest closes All and focuses its chip",
+    "Badges and Settings retain all allowed data and sections",
+    "Business uses its original form in a full-height phone sheet with Save reachable",
+    "phone form traps focus, preserves unsaved input, and returns to Settings",
+    "phone preview is honest before publication and returns focus",
+    "published site fits the phone preview sheet",
+    "midway phone board shows real rule totals and a usable current quest",
+    "level confirmation does not block navigation and expires without shifting the board",
+    "finished state keeps earned badges and all quests available",
+    "reduced motion is static with fully opaque tour and confirmation",
+    "360px and 430px retain readable text and no horizontal page scroll",
+    "returning to desktop restores its single rail without phone navigation",
+    "no external requests or uncaught browser errors"
+  ],
+  "screenshots": [
+    "g3-phone-tour-progress.png",
+    "g3-phone-tour-badges.png",
+    "g3-phone-fresh.png",
+    "g3-phone-not-connected.png",
+    "g3-phone-all-quests.png",
+    "g3-phone-locked.png",
+    "g3-phone-badges.png",
+    "g3-phone-settings.png",
+    "g3-phone-business.png",
+    "g3-phone-preview-unpublished.png",
+    "g3-phone-preview-published.png",
+    "g3-phone-midway.png",
+    "g3-phone-celebration.png",
+    "g3-phone-after-celebration.png",
+    "g3-phone-done.png",
+    "g3-phone-reduced-motion.png"
+  ],
+  "readability": [
+    {
+      "state": "tour",
+      "problems": [],
+      "textCount": 86,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "tour-badges",
+      "problems": [],
+      "textCount": 43,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "all-quests",
+      "problems": [],
+      "textCount": 54,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "locked",
+      "problems": [],
+      "textCount": 75,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "badges",
+      "problems": [],
+      "textCount": 38,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "preview-unpublished",
+      "problems": [],
+      "textCount": 3,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "preview-published",
+      "problems": [],
+      "textCount": 3,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "midway",
+      "problems": [],
+      "textCount": 72,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "celebration",
+      "problems": [],
+      "textCount": 74,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "finished",
+      "problems": [],
+      "textCount": 38,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "reduced-motion",
+      "problems": [],
+      "textCount": 79,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "width-360",
+      "problems": [],
+      "textCount": 79,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "width-430",
+      "problems": [],
+      "textCount": 79,
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    }
+  ],
+  "port": 5183
+}

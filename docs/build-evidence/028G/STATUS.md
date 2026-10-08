@@ -114,3 +114,29 @@ No G-2b commit; HEAD stays 802daa1b5cb9feaff634630b9ec1a48770ee3e72. G-3 not sta
 The approved test-only scope uses dialog.bv-game-preview. A read-only real-workspace preflight confirmed exactly one match; the shared closed dialog remains unchanged. Browser rerun once: 12/12, 11 screenshots, 7 contrast states/37 text instances at 4.5:1 or above, reduced motion and keyboard checks pass, no external requests. The initial API 16/16, new API/state 18/18 and isolated build pass remain valid with unchanged application code. G-1 reruns 40/40 and 16/16; header-logo 340 + 6; header-nav-fit 16,422; platform-look 489 selectors/7 font faces. Platform-mobile encounters only the permitted BASE review-packet exception and is not claimed passing. Protected diff empty, legacy/components/tokens unchanged, no new shared edits.
 
 G-2b tour, published-only preview and non-blocking level confirmation are verified for the approved local commit. G-3 next, not started. No push/deploy/provider calls; zero credits. See NOTES.md and round4/results.json.
+
+## G-3 — phone draft stopped on first contrast assertion
+
+G-3 phone presentation is drafted but uncommitted. Isolated build passed. The single phone run stopped at its first check (0/17 completed): eight quest-chip status captions reported 2.804033:1 contrast, below 4.5:1. Game's new small captions inherit the shared --bv-ink-3 foreground on Game's dark --bv-bp-deep background. No fix/retry or subsequent check was run. No G-3 screenshots saved because the first capture followed the failed assertion.
+
+Protected diff remains empty; legacy/components/tokens unchanged; four existing shared additions remain +1/-0. No staged files or commit. HEAD 2d6bae7454d12ac03600e12aaac7cefe1d0cb718, launch/028G-game, port 5183. Read NOTES.md and round5/game-phone-failure.json. G-3 requires a resumed contrast fix and verification. G-4 not started. No Tabs, Billing or provider work; zero credits.
+
+## G-3 caption resume — 17/17 phone checks pass; evidence review stop
+
+The approved Game-only caption color now uses --bv-bp-ink on --bv-bp-deep: 14.469555:1, full opacity. Unchanged phone suite rerun once: 17/17, 16 screenshots, 13 readability states/723 checked text instances. Isolated build PASS; progress 40/40; milestones 16/16; header-logo 340+6; header-nav-fit 16,422.
+
+Manual review of g3-phone-midway.png found a separate selected-quest label readability failure that the current phone assertions miss. Stopped without another fix/retry or commit. Platform-mobile/platform-look not run this resume. Protected diff empty; shared/legacy unchanged this round. See NOTES.md and round5b/results.json.
+
+HEAD remains 2d6bae7454d12ac03600e12aaac7cefe1d0cb718, branch launch/028G-game. G-3 remains uncommitted; G-4 not started. No providers, credits, push/deploy/merge.
+
+## G-3 selected-label diagnosis
+
+Virtual estimator already measures 13.531127:1 with --bv-navy on --bv-card, opacity 1. Existing evidence failure is clipping. No app change, tests or commit this round: the requested color-only correction cannot resolve it. Needs permission for Game-only selected-chip visibility/positioning correction. See NOTES.md and round5c/selected-label-diagnosis.json. HEAD remains 2d6bae7454d12ac03600e12aaac7cefe1d0cb718. G-4 not started.
+
+## G-3 positioning resume — verified for local commit
+
+The approved Game-only selected-chip fix now re-aligns after size/font changes without reacting to ordinary swipes. One focused midway review passed in both font-loading and loaded states, with full label visibility, unchanged 13.531127:1 contrast and opacity 1. Isolated build PASS. Remaining platform-look guard PASS (571 selectors/7 font faces). Platform-mobile reached only the approved BASE review-packet exception; not claimed passing.
+
+Prior G-3 phone 17/17, progress 40/40, milestones 16/16, header-logo 340+6 and header-nav-fit 16,422 remain recorded. Protected diff empty; shared/legacy/components/tokens unchanged this ticket. Sixteen phone screenshots saved; final midway capture includes existing local artwork and its predecessor is backed up. See NOTES.md, round5d/midway-review.json and round5d/results.json.
+
+G-3 verified for one local commit on launch/028G-game, author Joe <joe@buildovate.com>. G-4 not started. No providers, credits, push/deploy/merge or Suite-102.

@@ -127,3 +127,80 @@ body.bv-platform .bv-game-preview button{min-height:44px;opacity:1}
 body.bv-platform .bv-game-preview iframe{width:100%;height:calc(100% - 104px);border:1px solid var(--bv-line-strong);background:var(--bv-card)}
 @media(max-width:720px){body.bv-platform .bv-game-tour{margin:0 16px 16px;flex-wrap:wrap;padding:16px}body.bv-platform .bv-game-tour>div{flex-basis:100%}body.bv-platform .bv-game-confirmation{padding:0 16px 12px;min-height:96px}body.bv-platform .bv-game-preview{width:calc(100vw - 16px);height:calc(100dvh - 16px);max-height:calc(100dvh - 16px);padding:16px}}
 body.bv-platform .bv-game-section-open .bv-game-tour,body.bv-platform .bv-game-section-open .bv-game-confirmation{display:none}
+
+/* G-3 phone board. Desktop structure and all existing forms are reused. */
+body.bv-platform .bv-game-phone-quests,body.bv-platform .bv-game-phone-nav,body.bv-platform .bv-game-phone-settings{display:none}
+body.bv-platform dialog.bv-game-all{padding:0;border:1px solid var(--bv-line-strong);background:var(--bv-card);color:var(--bv-ink);font:16px/1.45 var(--bv-sans)}
+body.bv-platform dialog.bv-game-all::backdrop{background:var(--bv-overlay)}
+body.bv-platform .bv-game-all-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px;background:var(--bv-card);position:sticky;top:0;z-index:1;border-bottom:1px solid var(--bv-line)}
+body.bv-platform .bv-game-all-top h2{font:600 28px/1.2 var(--bv-cond);color:var(--bv-navy);margin:0}
+body.bv-platform .bv-game-all button{min-height:44px;opacity:1}
+@media(max-width:720px){
+ body.bv-platform .bv-game{padding-bottom:calc(80px + env(safe-area-inset-bottom));overflow-wrap:anywhere}
+ body.bv-platform .bv-game-header{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 12px;padding:12px 16px;min-height:0}
+ body.bv-platform .bv-game-header>button{display:none}
+ body.bv-platform .bv-game-company{max-width:none;text-align:right;font-size:14px}
+ body.bv-platform .bv-game-level{display:block;grid-column:1/-1;margin:0;font-size:14px}
+ body.bv-platform .bv-game-strength{grid-column:1/-1;width:100%;margin:0;gap:4px 8px}
+ body.bv-platform .bv-game-strength strong{font-size:16px}
+ body.bv-platform .bv-game-strength span{font-size:13px}
+ body.bv-platform .bv-game-notice{font-size:14px;padding:10px 16px!important;min-height:40px}
+ body.bv-platform .bv-game-confirmation{min-height:72px;padding:0 16px 12px;font-size:14px;gap:8px}
+ body.bv-platform .bv-game-confirmation strong{flex:1}
+ body.bv-platform .bv-game-confirmation button{flex-shrink:0}
+ body.bv-platform .bv-game-tour{padding:16px;margin:0 16px 16px;gap:12px;align-items:start}
+ body.bv-platform .bv-game-tour p{font-size:16px;line-height:1.45}
+ body.bv-platform .bv-game-tour button{flex:1}
+ body.bv-platform .bv-game-phone-quests{display:grid;grid-template-columns:56px minmax(0,1fr);gap:8px;padding:12px 0 12px 16px;margin-bottom:16px;background:var(--bv-bp-deep)}
+ body.bv-platform .bv-game-phone-quests>button{background:var(--bv-bp-deep);color:var(--bv-bp-ink);border-color:var(--bv-bp-line);font-size:16px;padding:8px}
+ body.bv-platform .bv-game-chips{display:flex;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;touch-action:pan-x;scrollbar-width:thin;padding:4px 16px 6px 4px;min-width:0}
+ body.bv-platform .bv-game-chips button{flex:0 0 auto;min-width:144px;max-width:216px;min-height:58px;text-align:left;background:var(--bv-bp-deep);color:var(--bv-bp-ink);border-color:var(--bv-bp-line);padding:9px 12px}
+ body.bv-platform .bv-game-chips strong{display:block;font-size:15px}
+ body.bv-platform .bv-game-chips small{display:block;font-size:12px;font-weight:400;line-height:1.4}
+ body.bv-platform .bv-game-chips button:not([aria-selected=true]) small{color:var(--bv-bp-ink)}
+ body.bv-platform .bv-game-chips button[aria-selected=true]{background:var(--bv-card);color:var(--bv-navy);border-color:var(--bv-navy)}
+ body.bv-platform .bv-game-layout{padding:0 16px 24px;gap:16px}
+ body.bv-platform .bv-game-layout>.bv-game-rail{display:none}
+ body.bv-platform .bv-game-house{height:206px;padding:16px}
+ body.bv-platform .bv-game-house>svg{width:88%;height:144px;right:-20px;top:37px}
+ body.bv-platform .bv-game-stamps{left:12px;right:12px;bottom:14px;gap:4px;justify-content:space-between}
+ body.bv-platform .bv-game-stamps span{font-size:11px;padding:6px 5px;letter-spacing:0}
+ body.bv-platform .bv-game-quest{margin-top:16px}
+ body.bv-platform .bv-game-steps p{font-size:15px;line-height:1.45}
+ body.bv-platform .bv-game-section-links button{font-size:15px}
+ body.bv-platform .bv-game-aside .bv-game-badges{display:none}
+ body.bv-platform .bv-game[data-game-phone-pane=badges] .bv-game-center,body.bv-platform .bv-game[data-game-phone-pane=badges] .bv-game-power,body.bv-platform .bv-game[data-game-phone-pane=badges] .bv-game-unlocks{display:none}
+ body.bv-platform .bv-game[data-game-phone-pane=badges] .bv-game-badges{display:block}
+ body.bv-platform .bv-game[data-game-phone-pane=badges] .bv-game-phone-quests,body.bv-platform .bv-game[data-game-phone-pane=settings] .bv-game-phone-quests{display:none}
+ body.bv-platform .bv-game[data-game-phone-pane=settings] .bv-game-center,body.bv-platform .bv-game[data-game-phone-pane=settings] .bv-game-aside{display:none}
+ body.bv-platform .bv-game[data-game-phone-pane=settings] .bv-game-phone-settings{display:block}
+ body.bv-platform .bv-game-badge-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+ body.bv-platform .bv-game-badge{font-size:15px}
+ body.bv-platform .bv-game-badge small{font-size:13px}
+ body.bv-platform .bv-game-phone-settings{background:var(--bv-card);color:var(--bv-ink);padding:18px;border:1px solid var(--bv-line);border-radius:var(--bv-r-md)}
+ body.bv-platform .bv-game-phone-settings h1{font:600 28px/1.15 var(--bv-cond);color:var(--bv-navy);margin:0 0 16px}
+ body.bv-platform .bv-game-phone-settings section{border-top:1px solid var(--bv-line);padding-top:16px;margin-top:16px}
+ body.bv-platform .bv-game-phone-settings h2{font:600 18px/1.3 var(--bv-sans);margin:0 0 12px}
+ body.bv-platform .bv-game-phone-settings section button{width:100%;text-align:left;margin-bottom:8px}
+ body.bv-platform .bv-game-phone-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;position:fixed;z-index:40;left:0;right:0;bottom:0;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--bv-card);border-top:1px solid var(--bv-line-strong)}
+ body.bv-platform .bv-game-phone-nav button{min-width:0;min-height:52px;padding:8px 4px;font-size:13px;line-height:1.2;border-color:var(--bv-transparent)}
+ body.bv-platform .bv-game-phone-nav button[aria-current=page]{background:var(--bv-navy);color:var(--bv-card);border-color:var(--bv-navy)}
+ body.bv-platform dialog.bv-game-all{margin:auto 0 0;width:100%;max-width:100%;height:85dvh;max-height:85dvh;border-radius:20px 20px 0 0;overflow-y:auto;overscroll-behavior:contain}
+ body.bv-platform .bv-game-all .bv-game-rail{display:block;padding:12px 16px 24px}
+ body.bv-platform .bv-game-all .bv-game-rail [role=tab]{border:1px solid var(--bv-line-strong);border-radius:var(--bv-r-sm);font:16px var(--bv-sans)}
+ body.bv-platform .bv-game-all .bv-game-rail [role=tab][aria-selected=true]{background:var(--bv-sand-soft);border-color:var(--bv-navy)}
+ body.bv-platform.bv-game-form-open{overflow:hidden}
+ body.bv-platform .bv-game-section-shell:not([hidden]){position:fixed;inset:0;z-index:60;width:100%;max-width:none;height:100dvh;overflow-y:auto;overscroll-behavior:contain;padding:0 16px 140px;background:var(--bv-bg)}
+ body.bv-platform .bv-game-section-toolbar{padding:12px 0;margin:0 0 16px;gap:8px}
+ body.bv-platform .bv-game-section-toolbar h1{font-size:24px}
+ body.bv-platform .bv-game-section-toolbar p:empty{display:none}
+ body.bv-platform .bv-game-section-shell input,body.bv-platform .bv-game-section-shell select,body.bv-platform .bv-game-section-shell textarea{font-size:16px}
+ body.bv-platform .bv-game-section-open .bv-game-phone-nav,body.bv-platform .bv-game-section-open .bv-game-phone-quests{display:none}
+ body.bv-platform dialog.bv-game-preview{inset:0;margin:0;width:100%;max-width:100%;height:100dvh;max-height:100dvh;padding:16px;border-radius:0;display:none;box-sizing:border-box}
+ body.bv-platform dialog.bv-game-preview[open]{display:flex;flex-direction:column;gap:12px}
+ body.bv-platform .bv-game-preview-top{align-items:start;gap:8px}
+ body.bv-platform .bv-game-preview h2{font-size:25px;flex:1}
+ body.bv-platform .bv-game-preview-top button{flex-shrink:0;max-width:124px;white-space:normal}
+ body.bv-platform .bv-game-preview p{margin:0;font-size:15px}
+ body.bv-platform .bv-game-preview iframe{flex:1;min-height:0;height:auto;width:100%;box-sizing:border-box}
+}

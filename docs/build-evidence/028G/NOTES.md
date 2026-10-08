@@ -644,3 +644,94 @@ Current screenshots (1440×900 except phone reflow at 390×844):
 - screenshots/g2b-phone-reflow.png
 
 Game remains the only view. All existing sections and forms remain unchanged. G-3 not started. No push, deploy, merge, provider calls or credits. Approved commit subject: 028G G-2b: tour, preview, and celebration. One-shot author: Joe <joe@buildovate.com>, no config changes.
+
+## G-3 phone layout — stopped at first phone assertion (2026-10-08)
+
+Starting and current HEAD: 2d6bae7454d12ac03600e12aaac7cefe1d0cb718, branch launch/028G-game, worktree C:\Users\joe\wc-game, port 5183.
+
+Drafted only G-3 presentation: swipeable quest chips, All-quests native sheet reusing the existing quest rail, bottom Quests / Badges / Preview site / Settings navigation, existing permitted section links, and full-height phone form sheets reusing the original form nodes and Save dock. The existing tour selects its phone pane, the existing published-only preview opens from bottom navigation, and the existing non-blocking level confirmation has reserved space. No old Tabs view, Billing implementation, provider integration or G-4 work.
+
+Files drafted: src/client/workspace/game/phone.js (new), view.js, index.js, experience.js, src/client/styles/platform/game.css, tests/game-phone.mjs (new). No shared-file changes this round.
+
+Verification ran once:
+- PASS isolated build: node --import file:///C:/Users/joe/wc-game/tests/game-guard-loader.mjs C:\Users\joe\wc-game\tests\game-guard-build.mjs
+- FAIL first phone check: node --import file:///C:/Users/joe/wc-game/tests/game-guard-loader.mjs C:\Users\joe\wc-game\tests\game-phone.mjs
+- GAME_EVIDENCE_ROUND=round5 for both. Browser fixture is authenticated, local-only and uses a memory database/bucket. Build output stays in .data/028G/dist. Existing evidence was not regenerated.
+- 0 of 17 phone checks completed; first check's readability assertion failed. Its scan examined 86 text instances and reported eight non-selected chip status captions at 2.804033:1 (required 4.5:1): Website pages, Reviews, Virtual estimator, Promotions, Financing, Leads & CRM, Domain & publish, Marketing & social.
+- Source inspection after stopping: phone.js creates the status as small; game.css:159 sets font sizing but no foreground override. Shared components.css:9 sets small to --bv-ink-3 (#5d6873), while the Game chip uses --bv-bp-deep (#0b2240). The button's light foreground does not override the child's explicit shared color. Shared CSS/tokens were not changed.
+- No fix, retry, further phone checks, G-1 reruns or guards after the failure. This is a G-3 contrast failure, not the permitted BASE platform-mobile exception.
+- No saved G-3 screenshot: the first assertion occurs before the first capture. The temporary in-memory screenshot used for pixel sampling was not written to disk. Earlier rounds' screenshots remain unchanged.
+- Logs: round5/isolated-build.log, round5/game-phone.log, round5/game-phone-failure.json. Previous root results retained verbatim in round5/g2b-results-before-g3.json.
+
+Read-only protected proof after stopping (command run from C:\Users\joe\wc-game):
+```powershell
+git diff b2446730d551656067f2aaa15a9c27497dceb8f7 -- . ':(exclude)src/blueprint/**' ':(exclude)src/client/workspace/game/**' ':(exclude)src/client/styles/platform/game.css' ':(exclude)public/game-art/**' ':(exclude)tests/game-*.mjs' ':(exclude)docs/modules/game.md' ':(exclude)docs/design-reference/platform-2026-09-27/PLATFORM-DESIGN-GUIDE.md' ':(exclude)docs/product/design-reference/blueprint-v6/**' ':(exclude)docs/build-evidence/028G/**' ':(exclude)src/api.js' ':(exclude)src/client/workspace/index.ts' ':(exclude)src/client/workspace/shell.ts' ':(exclude)src/client/styles/platform/index.css'
+```
+Output: empty (0 bytes).
+
+Separate BASE diff of legacy-workspace.js, components.css and tokens.css: empty. Four previously approved shared edits remain exactly +1/-0 each (src/api.js, src/client/workspace/index.ts, src/client/workspace/shell.ts, src/client/styles/platform/index.css); none added this round. Staging is empty.
+
+No commit. HEAD unchanged. G-3 remains an unverified draft. G-4 not started. Zero provider calls/credits; no push, deploy or merge.
+
+## G-3 caption resume — automated phone checks pass; evidence review stopped (2026-10-08)
+
+Only application change this resume: game.css:160 adds:
+```css
+body.bv-platform .bv-game-chips button:not([aria-selected=true]) small{color:var(--bv-bp-ink)}
+```
+This targets exactly the eight non-selected chip captions, using existing --bv-bp-ink (#e8f6ff) on --bv-bp-deep (#0b2240). Contrast is 14.469555:1, previously 2.804033:1. Selected-chip styling is unchanged. All text remains opacity 1. Shared components.css, tokens.css and legacy-workspace.js are unchanged. No test code or assertion was edited.
+
+Commands used the file:/// --import loader and absolute test paths under C:\Users\joe\wc-game, with GAME_EVIDENCE_ROUND=round5b. The unchanged phone test keeps its established round5/game-phone.json and screenshots/g3-*.png destinations. Previous failure evidence was copied to round5b/before/game-phone-failure.json before running; successful execution did not overwrite that original failure file. No previous screenshots existed for G-3.
+
+Checks:
+- Isolated build: PASS, one run.
+- game-phone.mjs: PASS 17/17, one rerun. 16 viewport screenshots; 13 readability states, 723 text instances, all checked contrast >=4.5:1 and opacity 1. Phone widths 390/360/430; full-height original Business form, original Save dock, focus trap/return, touch swipe, All sheet, all 25 permitted sections, unpublished/published-only preview, tour, non-blocking confirmation, reduced motion and desktop rail restoration.
+- game-progress.mjs: PASS 40/40.
+- game-milestones.mjs: PASS 16/16.
+- header-logo.mjs: PASS 340 headers + 6 edge cases.
+- header-nav-fit.mjs: PASS 16,422 checks, 1,632 states, 8 widths. This guard was already running during evidence review and completed successfully.
+- Manual evidence review: FAIL selected-quest label readability in screenshots/g3-phone-midway.png. The initial selected quest is not fully visible in its scrolling strip. This is separate from the fixed caption contrast; the current phone assertions do not detect it. No cause is claimed without further diagnosis.
+- STOP: no phone retry, no additional application fix, no platform-mobile or platform-look run, no staging or commit. G-4 not started.
+
+An ad-hoc reporting-only Node expression for contrast arithmetic contained an extra closing parenthesis. It was not a test/assertion and changed no files; the ratio above was calculated in the orchestration runtime. No verification suite was retried.
+
+Protected proof, run from C:\Users\joe\wc-game:
+```powershell
+git diff b2446730d551656067f2aaa15a9c27497dceb8f7 -- . ':(exclude)src/blueprint/**' ':(exclude)src/client/workspace/game/**' ':(exclude)src/client/styles/platform/game.css' ':(exclude)public/game-art/**' ':(exclude)tests/game-*.mjs' ':(exclude)docs/modules/game.md' ':(exclude)docs/design-reference/platform-2026-09-27/PLATFORM-DESIGN-GUIDE.md' ':(exclude)docs/product/design-reference/blueprint-v6/**' ':(exclude)docs/build-evidence/028G/**' ':(exclude)src/api.js' ':(exclude)src/client/workspace/index.ts' ':(exclude)src/client/workspace/shell.ts' ':(exclude)src/client/styles/platform/index.css'
+```
+Output: empty. Separate BASE diff for legacy-workspace.js, components.css and tokens.css: empty. The four existing shared edits remain +1/-0 each; zero new shared edits this resume.
+
+All 16 screenshots remain in docs/build-evidence/028G/screenshots/; exact inventory in round5/game-phone.json and round5b/results.json. Logs in round5b. HEAD remains 2d6bae7454d12ac03600e12aaac7cefe1d0cb718 on launch/028G-game. G-3 is still uncommitted pending the selected-quest readability issue. Zero credits/provider calls; no push/deploy/merge.
+
+## G-3 selected-label diagnosis — color-only scope cannot resolve the failure (2026-10-08)
+
+Read-only review of the existing midway capture identifies the failing selected label as "Virtual estimator", created by phone.js:13 and colored by game.css:161. It already uses the locked --bv-navy (#10304d) on --bv-card (#ffffff), at opacity 1 (the previous passing phone readability scan checks this). Direct PNG decoding of screenshots/g3-phone-midway.png, region x80/y316/w180/h54, found 106 exact foreground pixels and 8,353 exact background pixels. Their contrast is 13.531127:1, above 4.5:1. No new ratio is claimed: no color change was made.
+
+The prior manual evidence failure is selected-label clipping, not insufficient color contrast. Changing that label's color cannot fix the visibility failure. The current instruction restricts the correction to text color using an existing locked pair. A Game-only selected-chip visibility/scroll-position correction needs authorization; no positioning change was made and no unconfirmed root cause is asserted.
+
+Stopped after diagnosis. No post-fix review, browser rerun, remaining guards, staging or commit. The previous automated phone result remains 17/17; it was not rerun this round. Shared components.css, tokens and legacy-workspace.js untouched. Existing G-3 draft remains. HEAD 2d6bae7454d12ac03600e12aaac7cefe1d0cb718, branch launch/028G-game. No G-4, providers, credits, push/deploy/merge.
+
+## G-3 approved positioning resume — verified (2026-10-08)
+
+Approved Game-only change: phone.js now re-aligns the selected chip when chip/strip sizes change. The original initial scroll calculation ran once before font loading; font swaps can change widths after that scroll. The new ResizeObserver watches the strip and chip sizes, uses current viewport rectangles plus scrollLeft, and disconnects on unmount. It does not observe scroll events or reset a homeowner's ordinary swipe. No colors changed this round. Virtual estimator remains --bv-navy on --bv-card, 13.531127:1, opacity 1.
+
+Focused review: tests/game-phone-midway.mjs, one run, PASS. It deliberately holds local webfonts, checks the whole selected chip and every text line against strip boundaries, then releases fonts and checks again. Both loading and loaded font states pass at 390x844. Opacity is 1 throughout the ancestor chain, colors match the existing pair, no horizontal page scroll, no external requests or browser errors. Before fonts: selected chip left 88.3125 within strip starting x80. After fonts: left 87.609375. The original clipped capture was backed up to round5d/before/g3-phone-midway.png.
+
+Final screenshot: screenshots/g3-phone-midway.png. The first review's fixture omitted the existing logo/house SVG routes; its capture is preserved in round5d/before/review-capture-without-art.png. The fixture now serves those two exact local SVG paths, with assertions unchanged. A capture-only pass saved the final image with those existing assets. The review assertions were not rerun. No application artwork changed. Initial edit automation's exact-text safeguard made no changes because the source's line endings differed; the positioning edit was then applied without a test retry.
+
+Remaining guards, once each:
+- platform-mobile: approved pre-existing BASE exception only, HTTP 409 "Complete the review packet before approval." at fixture setup line 17. Browser assertions not reached; not claimed passing.
+- platform-look: PASS, 571 scoped selectors, 7 local font faces, 5 stylesheets, no new dependencies.
+- Isolated build PASS this round.
+- Retained prior G-3 results: phone 17/17; G-1 progress 40/40, milestones 16/16; header-logo 340 headers + 6 edge cases; header-nav-fit 16,422 checks across 1,632 states/8 widths. These were already green and were not repeated in this resume.
+
+Full G-3 scope now verified: swipeable quest chips, All sheet reusing the existing rail, bottom Game navigation (Quests/Badges/Preview site/Settings), all existing permitted sections, full-height phone forms using original nodes and Save dock, phone tour, real published-only preview, non-blocking level confirmation, reduced motion and focus return/trapping. No old Tabs view, Billing or G-4.
+
+Protected proof run from C:\Users\joe\wc-game:
+```powershell
+git diff b2446730d551656067f2aaa15a9c27497dceb8f7 -- . ':(exclude)src/blueprint/**' ':(exclude)src/client/workspace/game/**' ':(exclude)src/client/styles/platform/game.css' ':(exclude)public/game-art/**' ':(exclude)tests/game-*.mjs' ':(exclude)docs/modules/game.md' ':(exclude)docs/design-reference/platform-2026-09-27/PLATFORM-DESIGN-GUIDE.md' ':(exclude)docs/product/design-reference/blueprint-v6/**' ':(exclude)docs/build-evidence/028G/**' ':(exclude)src/api.js' ':(exclude)src/client/workspace/index.ts' ':(exclude)src/client/workspace/shell.ts' ':(exclude)src/client/styles/platform/index.css'
+```
+Output: empty.
+Separate BASE diff for legacy-workspace.js, components.css and tokens.css: empty. Four previously approved shared files remain +1/-0 each, with zero new shared edits in G-3.
+
+All 16 phone captures are listed in round5/game-phone.json; final midway capture replaces only that image with its earlier version retained. Own outputs remain in this worktree, own port 5183, own .data/028G. No main checkout or Pay worktree changes. No full Suite-102, provider calls, credits, push/deploy/merge. Verified for the one-shot Joe-authored local G-3 commit. G-4 not started.

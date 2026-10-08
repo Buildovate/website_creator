@@ -1,75 +1,87 @@
 {
   "ticket": "028G",
-  "subticket": "G-2b",
-  "round": "4 selector resume",
+  "subticket": "G-3",
+  "round": "selected-chip positioning",
   "status": "verified_with_approved_base_exception",
-  "parent": "802daa1b5cb9feaff634630b9ec1a48770ee3e72",
+  "parent": "2d6bae7454d12ac03600e12aaac7cefe1d0cb718",
   "branch": "launch/028G-game",
   "port": 5183,
-  "existingApi": {
+  "midwayReview": {
+    "passed": true,
+    "runs": 1,
+    "fontStates": 2,
+    "contrast": 13.531126952230803,
+    "opacity": 1,
+    "colorsChanged": false,
+    "evidence": "round5d/midway-review.json"
+  },
+  "phone": {
+    "passed": true,
+    "count": 17,
+    "rerunThisResume": false,
+    "evidence": "round5/game-phone.json"
+  },
+  "isolatedBuild": {
+    "passed": true
+  },
+  "progress": {
+    "passed": 40,
+    "rerunThisResume": false
+  },
+  "milestones": {
     "passed": 16,
-    "rerunDuringResume": false
+    "rerunThisResume": false
   },
-  "newApi": {
-    "passed": 18,
-    "rerunDuringResume": false
+  "headerLogo": {
+    "passed": true,
+    "headers": 340,
+    "edgeCases": 6,
+    "rerunThisResume": false
   },
-  "isolatedBuild": "passed before selector-only resume",
-  "browser": {
-    "passed": 12,
-    "screenshots": [
-      "g2b-tour-progress.png",
-      "g2b-tour-skipped.png",
-      "g2b-preview-unpublished.png",
-      "g2b-preview-published.png",
-      "g2b-preview-error.png",
-      "g2b-tour-quest.png",
-      "g2b-tour-badges.png",
-      "g2b-celebration.png",
-      "g2b-celebration-board.png",
-      "g2b-reduced-motion.png",
-      "g2b-phone-reflow.png"
-    ],
-    "contrastStates": 7,
-    "textInstances": 37
+  "headerNavFit": {
+    "passed": true,
+    "checks": 16422,
+    "states": 1632,
+    "widths": 8,
+    "rerunThisResume": false
   },
-  "gameProgress": {
-    "passed": 40
+  "platformLook": {
+    "passed": true,
+    "selectors": 571,
+    "fontFaces": 7,
+    "stylesheets": 5,
+    "runsThisResume": 1
   },
-  "gameMilestones": {
-    "passed": 16
-  },
-  "guards": {
-    "headerLogo": {
-      "passed": true,
-      "headers": 340,
-      "edgeCases": 6
-    },
-    "headerNavFit": {
-      "passed": true,
-      "checks": 16422,
-      "states": 1632,
-      "widths": 8
-    },
-    "platformLook": {
-      "passed": true,
-      "selectors": 489,
-      "fontFaces": 7,
-      "stylesheets": 5
-    },
-    "platformMobile": {
-      "passed": false,
-      "knownBaseException": true,
-      "message": "Complete the review packet before approval.",
-      "httpStatus": 409,
-      "browserAssertionsReached": false
-    }
+  "platformMobile": {
+    "passed": false,
+    "knownBaseException": true,
+    "message": "Complete the review packet before approval.",
+    "httpStatus": 409,
+    "browserAssertionsReached": false,
+    "runsThisResume": 1
   },
   "protectedDiff": "empty",
-  "legacyDiff": "empty",
-  "sharedChangesThisRound": 0,
+  "legacyComponentsTokensDiff": "empty",
+  "newSharedEdits": 0,
   "credits": 0,
   "providerCalls": 0,
-  "externalBrowserRequests": 0,
-  "next": "G-3, not started"
+  "next": "G-4, not started",
+  "screenshots": [
+    "g3-phone-tour-progress.png",
+    "g3-phone-tour-badges.png",
+    "g3-phone-fresh.png",
+    "g3-phone-not-connected.png",
+    "g3-phone-all-quests.png",
+    "g3-phone-locked.png",
+    "g3-phone-badges.png",
+    "g3-phone-settings.png",
+    "g3-phone-business.png",
+    "g3-phone-preview-unpublished.png",
+    "g3-phone-preview-published.png",
+    "g3-phone-midway.png",
+    "g3-phone-celebration.png",
+    "g3-phone-after-celebration.png",
+    "g3-phone-done.png",
+    "g3-phone-reduced-motion.png"
+  ]
 }
