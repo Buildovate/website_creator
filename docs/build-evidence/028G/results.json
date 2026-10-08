@@ -1,56 +1,49 @@
 {
   "ticket": "028G",
-  "subticket": "G-3",
-  "round": "selected-chip positioning",
+  "subticket": "G-4",
   "status": "verified_with_approved_base_exception",
-  "parent": "2d6bae7454d12ac03600e12aaac7cefe1d0cb718",
+  "parent": "7651c754b11cd0cfdfad837bc6097f47b9bf9e2b",
   "branch": "launch/028G-game",
   "port": 5183,
-  "midwayReview": {
-    "passed": true,
-    "runs": 1,
-    "fontStates": 2,
-    "contrast": 13.531126952230803,
-    "opacity": 1,
-    "colorsChanged": false,
-    "evidence": "round5d/midway-review.json"
+  "autofillApi": {
+    "passed": 21,
+    "runs": 1
   },
-  "phone": {
-    "passed": true,
-    "count": 17,
-    "rerunThisResume": false,
-    "evidence": "round5/game-phone.json"
+  "autofillBrowser": {
+    "passed": 12,
+    "runs": 1
   },
   "isolatedBuild": {
-    "passed": true
+    "passed": true,
+    "runs": 1
   },
   "progress": {
     "passed": 40,
-    "rerunThisResume": false
+    "runs": 1
   },
   "milestones": {
     "passed": 16,
-    "rerunThisResume": false
+    "runs": 1
   },
   "headerLogo": {
     "passed": true,
     "headers": 340,
     "edgeCases": 6,
-    "rerunThisResume": false
+    "runs": 1
   },
   "headerNavFit": {
     "passed": true,
     "checks": 16422,
     "states": 1632,
     "widths": 8,
-    "rerunThisResume": false
+    "runs": 1
   },
   "platformLook": {
     "passed": true,
-    "selectors": 571,
+    "selectors": 593,
     "fontFaces": 7,
     "stylesheets": 5,
-    "runsThisResume": 1
+    "runs": 1
   },
   "platformMobile": {
     "passed": false,
@@ -58,30 +51,24 @@
     "message": "Complete the review packet before approval.",
     "httpStatus": 409,
     "browserAssertionsReached": false,
-    "runsThisResume": 1
+    "runs": 1
   },
   "protectedDiff": "empty",
   "legacyComponentsTokensDiff": "empty",
   "newSharedEdits": 0,
   "credits": 0,
   "providerCalls": 0,
-  "next": "G-4, not started",
+  "next": "G-5, not started",
   "screenshots": [
-    "g3-phone-tour-progress.png",
-    "g3-phone-tour-badges.png",
-    "g3-phone-fresh.png",
-    "g3-phone-not-connected.png",
-    "g3-phone-all-quests.png",
-    "g3-phone-locked.png",
-    "g3-phone-badges.png",
-    "g3-phone-settings.png",
-    "g3-phone-business.png",
-    "g3-phone-preview-unpublished.png",
-    "g3-phone-preview-published.png",
-    "g3-phone-midway.png",
-    "g3-phone-celebration.png",
-    "g3-phone-after-celebration.png",
-    "g3-phone-done.png",
-    "g3-phone-reduced-motion.png"
+    "g4-desktop-ready.png",
+    "g4-desktop-review.png",
+    "g4-desktop-confirmed.png",
+    "g4-desktop-undo.png",
+    "g4-phone-offline.png",
+    "g4-phone-error.png",
+    "g4-phone-loading.png",
+    "g4-phone-empty.png",
+    "g4-phone-reduced-motion.png",
+    "g4-phone-readonly.png"
   ]
 }

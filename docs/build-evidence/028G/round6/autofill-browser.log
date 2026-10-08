@@ -1,0 +1,13 @@
+PASS Game power-up opens the existing questionnaire without a second view
+PASS saved proposals show real sources and leave form, settings and XP unchanged
+PASS Confirm adds only saved wording to empty fields, without confirming consent
+PASS Undo restores the exact form snapshot
+PASS intentional clears and later typed edits survive fill and Undo
+PASS phone offline state preserves the answers and existing Save dock
+PASS phone error state is honest and retry remains available
+PASS phone loading then empty state stays usable without creating data
+PASS keyboard access and reduced motion keep the autofill controls static
+PASS existing Save persists confirmed additions to draft only
+PASS viewer sees read-only autofill with no action buttons
+PASS no provider request or uncaught browser error
+12/12 passed; 10 screenshots

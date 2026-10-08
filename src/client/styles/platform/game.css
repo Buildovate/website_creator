@@ -204,3 +204,22 @@ body.bv-platform .bv-game-all button{min-height:44px;opacity:1}
  body.bv-platform .bv-game-preview p{margin:0;font-size:15px}
  body.bv-platform .bv-game-preview iframe{flex:1;min-height:0;height:auto;width:100%;box-sizing:border-box}
 }
+
+/* G-4 uses the existing locked platform pairs; no text opacity animation. */
+body.bv-platform .bv-game-autofill{background:var(--bv-card);color:var(--bv-ink);border:1px solid var(--bv-line-strong);border-radius:var(--bv-r-md);padding:20px;margin:16px 0;font:16px/1.45 var(--bv-sans);overflow-wrap:anywhere}
+body.bv-platform .bv-game-autofill h2{font:600 26px/1.2 var(--bv-cond);color:var(--bv-navy);margin:0 0 8px}
+body.bv-platform .bv-game-autofill p{margin:8px 0;color:inherit}
+body.bv-platform .bv-game-autofill [role=status]{min-height:48px}
+body.bv-platform .bv-game-autofill-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+body.bv-platform .bv-game-autofill button,body.bv-platform .bv-game-autofill summary{min-height:44px;opacity:1;color:var(--bv-navy);background:var(--bv-card);font:600 15px/1.3 var(--bv-sans);padding:10px 14px;border:1px solid var(--bv-line-strong);border-radius:var(--bv-r-sm);cursor:pointer}
+body.bv-platform .bv-game-autofill button:focus-visible,body.bv-platform .bv-game-autofill summary:focus-visible{outline:3px solid var(--bv-blue);outline-offset:3px}
+body.bv-platform .bv-game-autofill-row{padding:16px;border:1px solid var(--bv-line-strong);border-radius:var(--bv-r-sm);margin-top:12px}
+body.bv-platform .bv-game-autofill-row strong,body.bv-platform .bv-game-autofill-row span,body.bv-platform .bv-game-autofill-row small{display:block;color:inherit;opacity:1}
+body.bv-platform .bv-game-autofill-row small{font-size:14px}
+body.bv-platform .bv-game-autofill-found{background:var(--bv-ok-soft);color:var(--bv-ok-ink)}
+body.bv-platform .bv-game-autofill-missing{background:var(--bv-surface-3);color:var(--bv-ink-2)}
+body.bv-platform .bv-game-autofill-needs{background:var(--bv-warn-soft);color:var(--bv-warn-ink)}
+body.bv-platform .bv-game-autofill-connections{margin-top:12px}
+@media(max-width:720px){body.bv-platform .bv-game-autofill{padding:16px}body.bv-platform .bv-game-autofill-actions button{flex:1 1 130px;white-space:normal}body.bv-platform .bv-game-autofill h2{font-size:24px}}
+
+body.bv-platform .bv-game-autofill{scroll-margin-top:120px}

@@ -1,6 +1,6 @@
-# Module: Game onboarding (#028G G-1 and G-2a)
+# Module: Game onboarding (#028G G-1 through G-4)
 
-State: G-1 and G-2a verified. Game is the only site workspace per Round 3h. API 16 and browser 21 pass; G-1 remains 40 + 16. Header/logo/nav/platform-look pass; platform-mobile retains the approved BASE fixture exception. G-2b not started.
+State: G-1 through G-4 verified locally. Game is the only workspace; desktop, phone, tour, published-site preview, level confirmation and local saved-detail autofill are available. The platform-mobile guard retains its approved BASE fixture exception. G-5 not started.
 
 ## Contracts
 
@@ -15,7 +15,7 @@ State: G-1 and G-2a verified. Game is the only site workspace per Round 3h. API 
 
 Tenant settings and questionnaire fact confirmation supply the four business basics; authored page drafts and the manual `sales` owner-approval record supply website-page progress; saved offers and explicit financing None supply their decisions. The existing `chat_config.phoneVerified` gate plus enabled SMS alerts supplies Leads & CRM readiness. `tenants.status/published` supplies publication status, while paid-plan and live-domain evidence must come from their owners' contracts.
 
-Questionnaire factsConfirmed is conservative: prefilled or found-but-unconfirmed business values cannot count merely because they are saved. G-4 must map its future per-field confirmation into the same evidence shape. No arbitrary completion booleans from settings are consumed.
+Questionnaire factsConfirmed is conservative: prefilled or found-but-unconfirmed business values cannot count merely because they are saved. G-4 only proposes values already covered by that saved confirmation and never marks facts confirmed itself. No arbitrary completion booleans from settings are consumed.
 
 The sales approval is an existing manual staff-entered record of owner approval with a reference. It is not the staff-only review_approval QA packet and not paid-plan proof. Required drafts are home, About, FAQ, every selected service, and enabled authored city pages; no complete score is inferred from generated page URLs alone.
 
@@ -38,4 +38,13 @@ GET /api/game/:tenant returns real tenant name, role, view=game and evaluated sa
 
 The Game controller reads shell state through one event bridge and observes the existing content node. sections.js maps all 26 original section IDs to nine quests, filtered against actual permitted legacy navigation. It moves original #content/#status into a Game section frame and invokes the existing section handler. Forms, uploads, saves, dialogs, role gates and data sources stay intact. Back preserves the open form; switching forms retains legacy navigation behavior. Promotions/Financing open questionnaire anchors. Inventory: build-evidence/028G/NOTES.md. Legacy-workspace.js is unchanged.
 
-Initial loading/error states have visible recovery controls; failed refresh retains the last board with an honest message. Read-only access stays labeled. Caption uses --bv-bp-ink/--bv-bp-deep (14.47:1); all four desktop states pass opacity/contrast. Prototype activity is not enabled. Tours, finished-version display and celebration remain G-2b.
+Initial loading/error states have visible recovery controls; failed refresh retains the last board with an honest message. Read-only access stays labeled. Caption uses --bv-bp-ink/--bv-bp-deep (14.47:1); all four desktop states pass opacity/contrast. Prototype activity is not enabled. G-2b added the once-only tour, published-only site preview and non-blocking level confirmation; G-3 added the phone presentation.
+
+
+## Saved-detail autofill (G-4)
+
+GET /api/game/:tenant/autofill?form=business|questionnaire reuses existing write access and returns only confirmed saved tenant settings, their source labels, and the optimistic version. Viewer/foreign/anonymous access is rejected. The endpoint is read-only with no second save path. rules.js maps only existing inputs; no generated text, provider calls or credentials.
+
+The Game controller mounts autofill.js beside the original form. It tracks typed and intentionally cleared fields, requires confirmation before copying verbatim suggestions, and restores exact prior values on Undo while preserving later edits. Existing input events and Save handle confirmation and draft persistence. Prices, warranties, licenses, experience, areas, financing, photos and consent remain manual. Outside lookup/writing adapters show Not connected.
+
+New tests: game-autofill.mjs 21/21; game-autofill-browser.mjs 12/12, including original draft Save, read-only UI, tenant/role isolation, keyboard, reduced motion, phone readability and no provider requests. See docs/build-evidence/028G/round6/README.md.

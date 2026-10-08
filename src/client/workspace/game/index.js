@@ -1,3 +1,4 @@
+import {mountAutofill} from './autofill.js';
 import {createGameExperience} from './experience.js';
 import {api} from '../../shared/workspace-api.js';
 import {mountGame} from './view.js';
@@ -14,7 +15,7 @@ export function installGameNavigation(){
  const section=document.createElement('section');section.className='bv-game-section-shell';section.hidden=true;
  section.innerHTML='<div class="bv-game-section-toolbar"><button type="button" data-game-back>Back to board</button><h1 tabindex="-1" data-game-section-title id="bv-game-section-title"></h1><p role="status" data-game-section-status></p></div><div data-game-content></div>';
  host.append(board,section);document.body.append(host);
- let experience=null;
+ let experience=null,autofill=null,autofillForm=null;
  let activeId=null,data=null,view=null,sequence=0,scheduled=false,opened=null,trigger=null,boardScroll=0,requestAnchor=null;
  const context=()=>{let state;document.dispatchEvent(new CustomEvent('bv-game-context',{detail:s=>state=s}));return state;};
  const available=()=>[...content.querySelectorAll('nav[aria-label="Website settings"] [data-section]')].map(b=>b.dataset.section);
@@ -46,9 +47,9 @@ export function installGameNavigation(){
   button.click();
  }
  function sync(){scheduled=false;const state=context();if(!state?.user)return;const tenant=state.current?.tenant;
-  if(!tenant){if(activeId){sequence++;experience?.destroy();experience=null;activeId=null;data=null;view?.destroy();view=null;opened=null;returnContent();frame(false);show(false);}return;}
-  if(activeId!==tenant.id){experience?.destroy();const id=tenant.id;experience=createGameExperience({request:action=>api('/game/'+encodeURIComponent(id)+'/experience','POST',{action})});data=null;opened=null;frame(false);load(id);return;}
-  if(!section.hidden){const selected=content.querySelector('nav[aria-label="Website settings"] [data-section].selected');if(selected){opened=selected.dataset.section;section.querySelector('[data-game-section-title]').textContent=sectionLabels[opened]||selected.textContent;section.querySelector('[data-game-section-status]').textContent='';if(requestAnchor){const anchor=content.querySelector('#'+requestAnchor);if(anchor){anchor.tabIndex=-1;anchor.focus();anchor.scrollIntoView();requestAnchor=null;}}else if(!content.contains(document.activeElement)&&!section.querySelector('[data-game-back]').matches(':focus'))section.querySelector('[data-game-section-title]').focus();}}
+  if(!tenant){if(activeId){autofill?.destroy();autofill=null;autofillForm=null;sequence++;experience?.destroy();experience=null;activeId=null;data=null;view?.destroy();view=null;opened=null;returnContent();frame(false);show(false);}return;}
+  if(activeId!==tenant.id){autofill?.destroy();autofill=null;autofillForm=null;experience?.destroy();const id=tenant.id;experience=createGameExperience({request:action=>api('/game/'+encodeURIComponent(id)+'/experience','POST',{action})});data=null;opened=null;frame(false);load(id);return;}
+  if(!section.hidden){const form=content.querySelector('form[data-form="settings"],#questionnaire-form');if(form!==autofillForm){autofill?.destroy();autofillForm=form;autofill=form?mountAutofill(form,{tenantId:activeId,role:data?.role||state.current.role||'viewer',request:api}):null;}const selected=content.querySelector('nav[aria-label="Website settings"] [data-section].selected');if(selected){opened=selected.dataset.section;section.querySelector('[data-game-section-title]').textContent=sectionLabels[opened]||selected.textContent;section.querySelector('[data-game-section-status]').textContent='';if(requestAnchor){const anchor=content.querySelector('#'+requestAnchor);if(anchor){anchor.tabIndex=-1;anchor.focus();anchor.scrollIntoView();requestAnchor=null;}}else if(!content.contains(document.activeElement)&&!section.querySelector('[data-game-back]').matches(':focus'))section.querySelector('[data-game-section-title]').focus();}}
  }
  function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(sync);}}
  const observer=new MutationObserver(schedule);observer.observe(content,{childList:true,subtree:true});
@@ -58,6 +59,6 @@ export function installGameNavigation(){
  const resize=()=>frame(!section.hidden);phoneMedia.addEventListener('change',resize);
  // Existing intra-form links still use their original section action; mirror the active title.
  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!section.hidden&&!document.querySelector('dialog[open]')){event.preventDefault();back();}});
- schedule();return ()=>{observer.disconnect();document.removeEventListener('keydown',trap);phoneMedia.removeEventListener('change',resize);experience?.destroy();returnContent();view?.destroy();host.remove();document.body.classList.remove('bv-game-open','bv-game-form-open');const app=document.querySelector('.app-layout');if(app)app.inert=false;};
+ schedule();return ()=>{observer.disconnect();autofill?.destroy();document.removeEventListener('keydown',trap);phoneMedia.removeEventListener('change',resize);experience?.destroy();returnContent();view?.destroy();host.remove();document.body.classList.remove('bv-game-open','bv-game-form-open');const app=document.querySelector('.app-layout');if(app)app.inert=false;};
 }
 installGameNavigation();

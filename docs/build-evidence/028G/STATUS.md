@@ -140,3 +140,12 @@ The approved Game-only selected-chip fix now re-aligns after size/font changes w
 Prior G-3 phone 17/17, progress 40/40, milestones 16/16, header-logo 340+6 and header-nav-fit 16,422 remain recorded. Protected diff empty; shared/legacy/components/tokens unchanged this ticket. Sixteen phone screenshots saved; final midway capture includes existing local artwork and its predecessor is backed up. See NOTES.md, round5d/midway-review.json and round5d/results.json.
 
 G-3 verified for one local commit on launch/028G-game, author Joe <joe@buildovate.com>. G-4 not started. No providers, credits, push/deploy/merge or Suite-102.
+
+
+## G-4 — verified local autofill
+
+Existing Business and Questionnaire forms can reuse confirmed contractor details with source labels, explicit confirmation, editing and Undo. Typed answers and intentional clears survive. Original Save and draft/publish flow are unchanged; no persistence on proposal or confirmation. Read-only and tenant gates are enforced. Outside lookup/writing adapters remain Not connected. No invented fields, content, Tabs or Billing.
+
+New API/rules 21/21, browser 12/12 with ten screenshots, isolated build PASS, progress 40/40, milestones 16/16, header-logo 340+6, header-nav-fit 16,422, platform-look 593 selectors/7 font faces. Platform-mobile reached only the approved BASE review-packet exception; not claimed passing. Each check ran once. Protected/legacy/components/tokens diff empty; four existing shared additions stay +1/-0.
+
+See round6/README.md, logs and results.json. G-4 verified for a local commit on launch/028G-game. G-5 not started. Zero provider calls/credits; no push/deploy/merge/Suite-102.
