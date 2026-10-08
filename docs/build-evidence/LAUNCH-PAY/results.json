@@ -1,0 +1,12 @@
+{
+  "ticket": "LAUNCH-PAY PAY-1",
+  "base": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+  "testCommand": "node --test tests/catalog.mjs",
+  "tests": 11,
+  "passed": 11,
+  "failed": 0,
+  "protectedDiffEmpty": true,
+  "fullSuite102Run": false,
+  "providerCalls": 0,
+  "credits": 0
+}
