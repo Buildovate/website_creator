@@ -39,3 +39,15 @@ git diff b2446730d551656067f2aaa15a9c27497dceb8f7 -- src/worker.js src/site-poli
 ```
 
 Output: empty; exit code 0.
+
+## PAY-3 migration and protected-file proof
+
+`drizzle/0009_black_wolfpack.sql` was generated from the PAY schema block and trimmed to its 11 PAY statements because the BASE snapshot stops at 0005 while migrations 0006–0008 already create four other tables. The 0009 full-schema snapshot and journal entry remain generated. At merge time, regenerate or verify 0009 against the merged base.
+
+Command before PAY-3 commit:
+
+```powershell
+git diff b2446730d551656067f2aaa15a9c27497dceb8f7 -- src/worker.js src/site-polish.js src/website-pages.js src/blog.js src/pricing.js public/site-polish.css src/design-preview-pages.js public/design-preview-pages.css docs/modules/design.md src/qa-gate.js src/qa-page-action.js src/qa-video.js tests/header-logo.mjs tests/header-nav-fit.mjs dist public/templates public/trades 'tests/automatic-qa-*.mjs'
+```
+
+Output: empty; exit code 0. Offline signed-event tests: 11/11. Prior Pay tests: 28/28. No real Stripe keys or provider calls.

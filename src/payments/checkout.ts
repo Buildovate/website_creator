@@ -144,3 +144,15 @@ export async function createCheckout(request: CheckoutRequest): Promise<{url:str
   }
   return defaultService.createCheckout(request);
 }
+
+export type SettledPayment = {tenantId:string; sku:string; ledgerId:string; amountCents:number; periodStart:string; periodEnd:string};
+const settlementHandlers = new Map<string, Set<(payment:SettledPayment)=>void|Promise<void>>>();
+export function onSettled(sku:string, handler:(payment:SettledPayment)=>void|Promise<void>):()=>void {
+  if (!sku || typeof handler !== 'function') throw new Error('SKU and settlement handler are required.');
+  const handlers=settlementHandlers.get(sku) ?? new Set();
+  handlers.add(handler); settlementHandlers.set(sku,handlers);
+  return ()=>{handlers.delete(handler);if(!handlers.size)settlementHandlers.delete(sku);};
+}
+export async function dispatchSettled(payment:SettledPayment):Promise<void> {
+  for (const handler of settlementHandlers.get(payment.sku) ?? []) await handler(payment);
+}
