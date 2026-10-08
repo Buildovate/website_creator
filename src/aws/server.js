@@ -201,6 +201,7 @@ export async function createRuntime(options = {}) {
     executor,
     auth,
     handler: createHandler({ worker, env: runtimeEnv, db, auth }),
+    async maintainDomains(){await worker.scheduled?.({domainOnly:true},runtimeEnv);},
     async maintain(){await worker.scheduled?.({},runtimeEnv);},
     async close() { while(reviewJobs.size)await Promise.allSettled([...reviewJobs.values()]);await executor.close?.(); },
   };
@@ -242,10 +243,13 @@ async function main() {
   const maintenance=()=>runtime.maintain().catch(()=>console.error('Expense recurring maintenance failed; it will retry.'));
   await maintenance();
   const expenseTimer=setInterval(maintenance,60*60*1000);expenseTimer.unref();
+  // Domain checks have a separate cadence; expense billing keeps its hourly timer.
+  const domainTimer=setInterval(()=>runtime.maintainDomains().catch(()=>console.error('Domain check unavailable; next scheduled check will retry.')),180000);domainTimer.unref();
   const address = server.address();
   console.log(`website-creator listening on ${address.port} env=${runtime.env.APP_ENV} auth=${runtime.auth.mode} region=${runtime.env.AWS_REGION} bucket=${runtime.env.BUCKET.bucket || runtime.env.BUCKET.driver} openai=${OPENAI_API_ORIGIN}`);
   const shutdown = () => {
     clearInterval(expenseTimer);
+    clearInterval(domainTimer);
     server.close();
     runtime.close().catch(() => {});
   };

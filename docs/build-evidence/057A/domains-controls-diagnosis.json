@@ -1,0 +1,103 @@
+{
+  "states": [
+    {
+      "width": 1440,
+      "height": 900,
+      "controls": [
+        {
+          "outerHTML": "<button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"domains\">Domains</button>",
+          "parent": {
+            "tag": "NAV",
+            "id": "",
+            "className": "tabs bv-tabs",
+            "outerHTML": "<nav class=\"tabs bv-tabs\" aria-label=\"Website settings\"><button type=\"button\" class=\"selected bv-button\" data-action=\"section\" data-section=\"launchpad\">Launch Pad</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"questionnaire\">Questionnaire</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"hero\">Hero</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"editor\">Editor</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"pages\">Pages</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"business\">Business</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"ownerphoto\">Owner photo</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"templates\">Design templates</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"services\">Services</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"projects\">Projects</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"blog\">Blog</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"contacts\">Contacts</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"calendar\">Calendar</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"forms\">Forms &amp; submissions</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"inquiries\">Inquiries</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"chat\">Live chat</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"pricing\">Pricing</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"reviews\">Reviews</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"visibility\">Search visibility</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"plan\">Plan &amp; add-ons</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"readiness\">Readiness</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"followups\">Follow-ups</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"access\">Access</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"domains\">Domains</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"backups\">Backups</button></nav>"
+          },
+          "nav": "<nav class=\"tabs bv-tabs\" aria-label=\"Website settings\"><button type=\"button\" class=\"selected bv-button\" data-action=\"section\" data-section=\"launchpad\">Launch Pad</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"questionnaire\">Questionnaire</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"hero\">Hero</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"editor\">Editor</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"pages\">Pages</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"business\">Business</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"ownerphoto\">Owner photo</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"templates\">Design templates</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"services\">Services</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"projects\">Projects</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"blog\">Blog</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"contacts\">Contacts</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"calendar\">Calendar</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"forms\">Forms &amp; submissions</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"inquiries\">Inquiries</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"chat\">Live chat</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"pricing\">Pricing</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"reviews\">Reviews</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"visibility\">Search visibility</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"plan\">Plan &amp; add-ons</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"readiness\">Readiness</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"followups\">Follow-ups</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"access\">Access</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"domains\">Domains</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"backups\">Backups</button></nav>",
+          "visible": true,
+          "rect": {
+            "x": 448.078125,
+            "y": 395.625,
+            "width": 87.359375,
+            "height": 44,
+            "top": 395.625,
+            "right": 535.4375,
+            "bottom": 439.625,
+            "left": 448.078125
+          }
+        },
+        {
+          "outerHTML": "<button type=\"button\" class=\"secondary bv-button\" data-action=\"section\" data-section=\"domains\">Set up</button>",
+          "parent": {
+            "tag": "DIV",
+            "id": "",
+            "className": "record",
+            "outerHTML": "<div class=\"record\"><div><strong>07 · Domain ownership</strong><small>Verify ownership. Hosting activation remains separate.</small></div><button type=\"button\" class=\"secondary bv-button\" data-action=\"section\" data-section=\"domains\">Set up</button></div>"
+          },
+          "nav": null,
+          "visible": true,
+          "rect": {
+            "x": 1300.1875,
+            "y": 1138.953125,
+            "width": 78.8125,
+            "height": 44,
+            "top": 1138.953125,
+            "right": 1379,
+            "bottom": 1182.953125,
+            "left": 1300.1875
+          }
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "controls": [
+        {
+          "outerHTML": "<button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"domains\">Domains</button>",
+          "parent": {
+            "tag": "NAV",
+            "id": "",
+            "className": "tabs bv-tabs",
+            "outerHTML": "<nav class=\"tabs bv-tabs\" aria-label=\"Website settings\"><button type=\"button\" class=\"selected bv-button\" data-action=\"section\" data-section=\"launchpad\">Launch Pad</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"questionnaire\">Questionnaire</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"hero\">Hero</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"editor\">Editor</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"pages\">Pages</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"business\">Business</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"ownerphoto\">Owner photo</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"templates\">Design templates</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"services\">Services</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"projects\">Projects</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"blog\">Blog</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"contacts\">Contacts</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"calendar\">Calendar</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"forms\">Forms &amp; submissions</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"inquiries\">Inquiries</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"chat\">Live chat</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"pricing\">Pricing</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"reviews\">Reviews</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"visibility\">Search visibility</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"plan\">Plan &amp; add-ons</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"readiness\">Readiness</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"followups\">Follow-ups</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"access\">Access</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"domains\">Domains</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"backups\">Backups</button></nav>"
+          },
+          "nav": "<nav class=\"tabs bv-tabs\" aria-label=\"Website settings\"><button type=\"button\" class=\"selected bv-button\" data-action=\"section\" data-section=\"launchpad\">Launch Pad</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"questionnaire\">Questionnaire</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"hero\">Hero</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"editor\">Editor</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"pages\">Pages</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"business\">Business</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"ownerphoto\">Owner photo</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"templates\">Design templates</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"services\">Services</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"projects\">Projects</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"blog\">Blog</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"contacts\">Contacts</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"calendar\">Calendar</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"forms\">Forms &amp; submissions</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"inquiries\">Inquiries</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"chat\">Live chat</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"pricing\">Pricing</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"reviews\">Reviews</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"visibility\">Search visibility</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"plan\">Plan &amp; add-ons</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"readiness\">Readiness</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"followups\">Follow-ups</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"access\">Access</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"domains\">Domains</button><button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"backups\">Backups</button></nav>",
+          "visible": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "outerHTML": "<button type=\"button\" class=\"secondary bv-button\" data-action=\"section\" data-section=\"domains\">Set up</button>",
+          "parent": {
+            "tag": "DIV",
+            "id": "",
+            "className": "record",
+            "outerHTML": "<div class=\"record\"><div><strong>07 · Domain ownership</strong><small>Verify ownership. Hosting activation remains separate.</small></div><button type=\"button\" class=\"secondary bv-button\" data-action=\"section\" data-section=\"domains\">Set up</button></div>"
+          },
+          "nav": null,
+          "visible": true,
+          "rect": {
+            "x": 278.1875,
+            "y": 1542.609375,
+            "width": 78.8125,
+            "height": 44,
+            "top": 1542.609375,
+            "right": 357,
+            "bottom": 1586.609375,
+            "left": 278.1875
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "providerCalls": 0
+}

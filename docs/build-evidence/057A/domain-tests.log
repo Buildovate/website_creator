@@ -1,0 +1,370 @@
+ROUND 1B — node build.mjs
+PASS template asset integrity: 810 referenced files, 17 trade kits.
+ROUND 1B — node tests/domain-wizard.mjs
+QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: {"error":"Not found."}
+
+404 !== 200
+
+    at json (file:///C:/Users/joe/website_creator/tests/domain-wizard.mjs:35:96)
+    at async file:///C:/Users/joe/website_creator/tests/domain-wizard.mjs:53:53 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 404,
+  expected: 200,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+ROUND 1C — node build.mjs
+PASS template asset integrity: 810 referenced files, 17 trade kits.
+ROUND 1C — node tests/domain-wizard.mjs
+QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.
+PASS domain wizard: 77 checks; mocked DNS/HTTPS only, zero provider calls.
+ROUND 1C — node tests/domain-wizard-browser.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Error: strict mode violation: locator('[data-section=domains]') resolved to 2 elements:
+    1) <button class="" type="button" data-action="section" data-section="domains">Domains</button> aka getByRole('button', { name: 'Domains' })
+    2) <button type="button" class="secondary" data-action="section" data-section="domains">Set up</button> aka getByRole('button', { name: 'Set up' }).nth(5)
+
+Call log:
+  - waiting for locator('[data-section=domains]')
+
+    at C:\Users\joe\website_creator\tests\domain-wizard-browser.mjs:20:47 {
+  log: [ "  - waiting for locator('[data-section=domains]')" ]
+}
+
+Node.js v24.19.0
+ROUND 1E — node build.mjs
+PASS template asset integrity: 810 referenced files, 17 trade kits.
+ROUND 1E — node tests/domain-wizard.mjs
+QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.
+PASS domain wizard: 77 checks; mocked DNS/HTTPS only, zero provider calls.
+ROUND 1E — node tests/domain-wizard-browser.mjs
+PASS domain browser: 23 checks, 6 method screenshots + no-JS; zero provider calls.
+ROUND 1E — node tests/platform.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: POST /tenants/6358a4a6-e557-4931-b066-41d46c0d6cba/projects/91598431-41cb-4898-8785-9e9627c2f41a/publish: {"error":"Complete the review packet before approval."}
+    at api (file:///C:/Users/joe/website_creator/tests/platform.mjs:11:139)
+    at async file:///C:/Users/joe/website_creator/tests/platform.mjs:34:1 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+ROUND 1G — node tests/workspace.mjs
+QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.
+Review capture page robles-roofing /s/robles-roofing
+Review capture width /s/robles-roofing 1440
+Review capture width /s/robles-roofing 390
+Review capture width /s/robles-roofing 768
+Review capture page robles-roofing /s/robles-roofing/about
+Review capture width /s/robles-roofing/about 1440
+Review capture width /s/robles-roofing/about 390
+Review capture width /s/robles-roofing/about 768
+Review capture page robles-roofing /s/robles-roofing/areas
+Review capture width /s/robles-roofing/areas 1440
+Review capture width /s/robles-roofing/areas 390
+Review capture width /s/robles-roofing/areas 768
+Review capture page robles-roofing /s/robles-roofing/areas/oxnard
+Review capture width /s/robles-roofing/areas/oxnard 1440
+Review capture width /s/robles-roofing/areas/oxnard 390
+Review capture width /s/robles-roofing/areas/oxnard 768
+Review capture page robles-roofing /s/robles-roofing/blog
+Review capture width /s/robles-roofing/blog 1440
+Review capture width /s/robles-roofing/blog 390
+Review capture width /s/robles-roofing/blog 768
+Review capture page robles-roofing /s/robles-roofing/contact
+Review capture width /s/robles-roofing/contact 1440
+Review capture width /s/robles-roofing/contact 390
+Review capture width /s/robles-roofing/contact 768
+Review capture page robles-roofing /s/robles-roofing/faq
+Review capture width /s/robles-roofing/faq 1440
+Review capture width /s/robles-roofing/faq 390
+Review capture width /s/robles-roofing/faq 768
+Review capture page robles-roofing /s/robles-roofing/legal
+Review capture width /s/robles-roofing/legal 1440
+Review capture width /s/robles-roofing/legal 390
+Review capture width /s/robles-roofing/legal 768
+Review capture page robles-roofing /s/robles-roofing/legal/privacy
+Review capture width /s/robles-roofing/legal/privacy 1440
+Review capture width /s/robles-roofing/legal/privacy 390
+Review capture width /s/robles-roofing/legal/privacy 768
+Review capture page robles-roofing /s/robles-roofing/legal/terms
+Review capture width /s/robles-roofing/legal/terms 1440
+Review capture width /s/robles-roofing/legal/terms 390
+Review capture width /s/robles-roofing/legal/terms 768
+Review capture page robles-roofing /s/robles-roofing/pages/roof-care
+Review capture width /s/robles-roofing/pages/roof-care 1440
+Review capture width /s/robles-roofing/pages/roof-care 390
+Review capture width /s/robles-roofing/pages/roof-care 768
+Review capture page robles-roofing /s/robles-roofing/pricing
+Review capture width /s/robles-roofing/pricing 1440
+Review capture width /s/robles-roofing/pricing 390
+Review capture width /s/robles-roofing/pricing 768
+Review capture page robles-roofing /s/robles-roofing/services
+Review capture width /s/robles-roofing/services 1440
+Review capture width /s/robles-roofing/services 390
+Review capture width /s/robles-roofing/services 768
+Review capture page robles-roofing /s/robles-roofing/services/asphalt-shingle-install-repair
+Review capture width /s/robles-roofing/services/asphalt-shingle-install-repair 1440
+Review capture width /s/robles-roofing/services/asphalt-shingle-install-repair 390
+Review capture width /s/robles-roofing/services/asphalt-shingle-install-repair 768
+Review capture page robles-roofing /s/robles-roofing/services/flat-roofs
+Review capture width /s/robles-roofing/services/flat-roofs 1440
+Review capture width /s/robles-roofing/services/flat-roofs 390
+Review capture width /s/robles-roofing/services/flat-roofs 768
+Review capture page robles-roofing /s/robles-roofing/services/gutters
+Review capture width /s/robles-roofing/services/gutters 1440
+Review capture width /s/robles-roofing/services/gutters 390
+Review capture width /s/robles-roofing/services/gutters 768
+Review capture page robles-roofing /s/robles-roofing/services/inspections
+Review capture width /s/robles-roofing/services/inspections 1440
+Review capture width /s/robles-roofing/services/inspections 390
+Review capture width /s/robles-roofing/services/inspections 768
+Review capture page robles-roofing /s/robles-roofing/services/metal-roofing
+Review capture width /s/robles-roofing/services/metal-roofing 1440
+Review capture width /s/robles-roofing/services/metal-roofing 390
+Review capture width /s/robles-roofing/services/metal-roofing 768
+Review capture page robles-roofing /s/robles-roofing/services/roof-installation
+Review capture width /s/robles-roofing/services/roof-installation 1440
+Review capture width /s/robles-roofing/services/roof-installation 390
+Review capture width /s/robles-roofing/services/roof-installation 768
+Review capture page robles-roofing /s/robles-roofing/services/roof-maintenance
+Review capture width /s/robles-roofing/services/roof-maintenance 1440
+Review capture width /s/robles-roofing/services/roof-maintenance 390
+Review capture width /s/robles-roofing/services/roof-maintenance 768
+Review capture page robles-roofing /s/robles-roofing/services/roof-repair
+Review capture width /s/robles-roofing/services/roof-repair 1440
+Review capture width /s/robles-roofing/services/roof-repair 390
+Review capture width /s/robles-roofing/services/roof-repair 768
+Review capture page robles-roofing /s/robles-roofing/services/roof-replacement
+Review capture width /s/robles-roofing/services/roof-replacement 1440
+Review capture width /s/robles-roofing/services/roof-replacement 390
+Review capture width /s/robles-roofing/services/roof-replacement 768
+Review capture page robles-roofing /s/robles-roofing/services/roof-sealing
+Review capture width /s/robles-roofing/services/roof-sealing 1440
+Review capture width /s/robles-roofing/services/roof-sealing 390
+Review capture width /s/robles-roofing/services/roof-sealing 768
+Review capture page robles-roofing /s/robles-roofing/services/storm-damage
+Review capture width /s/robles-roofing/services/storm-damage 1440
+Review capture width /s/robles-roofing/services/storm-damage 390
+Review capture width /s/robles-roofing/services/storm-damage 768
+Review capture page robles-roofing /s/robles-roofing/thank-you
+Review capture width /s/robles-roofing/thank-you 1440
+Review capture width /s/robles-roofing/thank-you 390
+Review capture width /s/robles-roofing/thank-you 768
+Review capture clip /assets/build-films/roofing.mp4
+Review capture frame /assets/build-films/roofing.mp4 0
+Review capture frame /assets/build-films/roofing.mp4 25
+Review capture frame /assets/build-films/roofing.mp4 50
+Review capture frame /assets/build-films/roofing.mp4 75
+Review capture frame /assets/build-films/roofing.mp4 100
+Review capture clip /assets/films/roofing-transformation.mp4
+Review capture frame /assets/films/roofing-transformation.mp4 0
+Review capture frame /assets/films/roofing-transformation.mp4 25
+Review capture frame /assets/films/roofing-transformation.mp4 50
+Review capture frame /assets/films/roofing-transformation.mp4 75
+Review capture frame /assets/films/roofing-transformation.mp4 100
+Review capture clip /assets/craft-films/roofing.mp4
+Review capture frame /assets/craft-films/roofing.mp4 0
+Review capture frame /assets/craft-films/roofing.mp4 25
+Review capture frame /assets/craft-films/roofing.mp4 50
+Review capture frame /assets/craft-films/roofing.mp4 75
+Review capture frame /assets/craft-films/roofing.mp4 100
+Review capture clip /assets/films/roofing-story.mp4
+Review capture frame /assets/films/roofing-story.mp4 0
+Review capture frame /assets/films/roofing-story.mp4 25
+Review capture frame /assets/films/roofing-story.mp4 50
+Review capture frame /assets/films/roofing-story.mp4 75
+Review capture frame /assets/films/roofing-story.mp4 100
+REAL browser QA prerequisite: 0469a5d7-4741-455d-bff4-9c8d4bc002ae pages:56dd814d-842a-4393-8716-f3215d5b9c77 {"clear":false,"blocking":0,"pending":2,"passed":1131,"reason":"A staff reviewer must decide every Borderline item, with a reason."}
+Review capture page robles-roofing /s/robles-roofing
+Review capture width /s/robles-roofing 1440
+Review capture width /s/robles-roofing 390
+Review capture width /s/robles-roofing 768
+Review capture page robles-roofing /s/robles-roofing/about
+Review capture width /s/robles-roofing/about 1440
+Review capture width /s/robles-roofing/about 390
+Review capture width /s/robles-roofing/about 768
+Review capture page robles-roofing /s/robles-roofing/areas
+Review capture width /s/robles-roofing/areas 1440
+Review capture width /s/robles-roofing/areas 390
+Review capture width /s/robles-roofing/areas 768
+Review capture page robles-roofing /s/robles-roofing/areas/oxnard
+Review capture width /s/robles-roofing/areas/oxnard 1440
+Review capture width /s/robles-roofing/areas/oxnard 390
+Review capture width /s/robles-roofing/areas/oxnard 768
+Review capture page robles-roofing /s/robles-roofing/blog
+Review capture width /s/robles-roofing/blog 1440
+Review capture width /s/robles-roofing/blog 390
+Review capture width /s/robles-roofing/blog 768
+Review capture page robles-roofing /s/robles-roofing/contact
+Review capture width /s/robles-roofing/contact 1440
+Review capture width /s/robles-roofing/contact 390
+Review capture width /s/robles-roofing/contact 768
+Review capture page robles-roofing /s/robles-roofing/faq
+Review capture width /s/robles-roofing/faq 1440
+Review capture width /s/robles-roofing/faq 390
+Review capture width /s/robles-roofing/faq 768
+Review capture page robles-roofing /s/robles-roofing/forms/4d904579-8548-4a93-9c10-9db7eaf1305c
+Review capture width /s/robles-roofing/forms/4d904579-8548-4a93-9c10-9db7eaf1305c 1440
+Review capture width /s/robles-roofing/forms/4d904579-8548-4a93-9c10-9db7eaf1305c 390
+Review capture width /s/robles-roofing/forms/4d904579-8548-4a93-9c10-9db7eaf1305c 768
+Review capture page robles-roofing /s/robles-roofing/legal
+Review capture width /s/robles-roofing/legal 1440
+Review capture width /s/robles-roofing/legal 390
+Review capture width /s/robles-roofing/legal 768
+Review capture page robles-roofing /s/robles-roofing/legal/privacy
+Review capture width /s/robles-roofing/legal/privacy 1440
+Review capture width /s/robles-roofing/legal/privacy 390
+Review capture width /s/robles-roofing/legal/privacy 768
+Review capture page robles-roofing /s/robles-roofing/legal/terms
+Review capture width /s/robles-roofing/legal/terms 1440
+Review capture width /s/robles-roofing/legal/terms 390
+Review capture width /s/robles-roofing/legal/terms 768
+Review capture page robles-roofing /s/robles-roofing/pages/roof-care
+Review capture width /s/robles-roofing/pages/roof-care 1440
+Review capture width /s/robles-roofing/pages/roof-care 390
+Review capture width /s/robles-roofing/pages/roof-care 768
+Review capture page robles-roofing /s/robles-roofing/pricing
+Review capture width /s/robles-roofing/pricing 1440
+Review capture width /s/robles-roofing/pricing 390
+Review capture width /s/robles-roofing/pricing 768
+Review capture page robles-roofing /s/robles-roofing/services
+Review capture width /s/robles-roofing/services 1440
+Review capture width /s/robles-roofing/services 390
+Review capture width /s/robles-roofing/services 768
+Review capture page robles-roofing /s/robles-roofing/services/asphalt-shingle-install-repair
+Review capture width /s/robles-roofing/services/asphalt-shingle-install-repair 1440
+Review capture width /s/robles-roofing/services/asphalt-shingle-install-repair 390
+Review capture width /s/robles-roofing/services/asphalt-shingle-install-repair 768
+Review capture page robles-roofing /s/robles-roofing/services/flat-roofs
+Review capture width /s/robles-roofing/services/flat-roofs 1440
+Review capture width /s/robles-roofing/services/flat-roofs 390
+Review capture width /s/robles-roofing/services/flat-roofs 768
+Review capture page robles-roofing /s/robles-roofing/services/gutters
+Review capture width /s/robles-roofing/services/gutters 1440
+Review capture width /s/robles-roofing/services/gutters 390
+Review capture width /s/robles-roofing/services/gutters 768
+Review capture page robles-roofing /s/robles-roofing/services/inspections
+Review capture width /s/robles-roofing/services/inspections 1440
+Review capture width /s/robles-roofing/services/inspections 390
+Review capture width /s/robles-roofing/services/inspections 768
+Review capture page robles-roofing /s/robles-roofing/services/metal-roofing
+Review capture width /s/robles-roofing/services/metal-roofing 1440
+Review capture width /s/robles-roofing/services/metal-roofing 390
+Review capture width /s/robles-roofing/services/metal-roofing 768
+Review capture page robles-roofing /s/robles-roofing/services/roof-installation
+Review capture width /s/robles-roofing/services/roof-installation 1440
+Review capture width /s/robles-roofing/services/roof-installation 390
+Review capture width /s/robles-roofing/services/roof-installation 768
+Review capture page robles-roofing /s/robles-roofing/services/roof-maintenance
+Review capture width /s/robles-roofing/services/roof-maintenance 1440
+Review capture width /s/robles-roofing/services/roof-maintenance 390
+Review capture width /s/robles-roofing/services/roof-maintenance 768
+Review capture page robles-roofing /s/robles-roofing/services/roof-repair
+Review capture width /s/robles-roofing/services/roof-repair 1440
+Review capture width /s/robles-roofing/services/roof-repair 390
+Review capture width /s/robles-roofing/services/roof-repair 768
+Review capture page robles-roofing /s/robles-roofing/services/roof-replacement
+Review capture width /s/robles-roofing/services/roof-replacement 1440
+Review capture width /s/robles-roofing/services/roof-replacement 390
+Review capture width /s/robles-roofing/services/roof-replacement 768
+Review capture page robles-roofing /s/robles-roofing/services/roof-sealing
+Review capture width /s/robles-roofing/services/roof-sealing 1440
+Review capture width /s/robles-roofing/services/roof-sealing 390
+Review capture width /s/robles-roofing/services/roof-sealing 768
+Review capture page robles-roofing /s/robles-roofing/services/storm-damage
+Review capture width /s/robles-roofing/services/storm-damage 1440
+Review capture width /s/robles-roofing/services/storm-damage 390
+Review capture width /s/robles-roofing/services/storm-damage 768
+Review capture page robles-roofing /s/robles-roofing/thank-you
+Review capture width /s/robles-roofing/thank-you 1440
+Review capture width /s/robles-roofing/thank-you 390
+Review capture width /s/robles-roofing/thank-you 768
+Review capture clip /assets/build-films/roofing.mp4
+Review capture frame /assets/build-films/roofing.mp4 0
+Review capture frame /assets/build-films/roofing.mp4 25
+Review capture frame /assets/build-films/roofing.mp4 50
+Review capture frame /assets/build-films/roofing.mp4 75
+Review capture frame /assets/build-films/roofing.mp4 100
+Review capture clip /assets/films/roofing-transformation.mp4
+Review capture frame /assets/films/roofing-transformation.mp4 0
+Review capture frame /assets/films/roofing-transformation.mp4 25
+Review capture frame /assets/films/roofing-transformation.mp4 50
+Review capture frame /assets/films/roofing-transformation.mp4 75
+Review capture frame /assets/films/roofing-transformation.mp4 100
+Review capture clip /assets/craft-films/roofing.mp4
+Review capture frame /assets/craft-films/roofing.mp4 0
+Review capture frame /assets/craft-films/roofing.mp4 25
+Review capture frame /assets/craft-films/roofing.mp4 50
+Review capture frame /assets/craft-films/roofing.mp4 75
+Review capture frame /assets/craft-films/roofing.mp4 100
+Review capture clip /assets/films/roofing-story.mp4
+Review capture frame /assets/films/roofing-story.mp4 0
+Review capture frame /assets/films/roofing-story.mp4 25
+Review capture frame /assets/films/roofing-story.mp4 50
+Review capture frame /assets/films/roofing-story.mp4 75
+Review capture frame /assets/films/roofing-story.mp4 100
+REAL browser QA prerequisite: 0469a5d7-4741-455d-bff4-9c8d4bc002ae forms:4d904579-8548-4a93-9c10-9db7eaf1305c {"clear":false,"blocking":0,"pending":2,"passed":1176,"reason":"A staff reviewer must decide every Borderline item, with a reason."}
+PASS workspace: role isolation, audited admin access, draft/public separation, page escaping/uniqueness, form consent/submissions, server plan enforcement, AI setup gate, lead import dedup, proposal approvals/locking, payment URL validation, device preview auth, workspace backups, 8-card roof grid.
+PASS owner upload selection/private media and workspace page restoration with submissions retained.
+ROUND 1G — node --import ./docs/build-evidence/057A/tools/no-provider-fetch.mjs tests/aws-adapter.mjs
+healthz database check failed database offline
+Request failed / Error
+Request failed /api/session Error
+PASS: SQL translation, Postgres migrations, D1 adapter, S3 shim, MinIO client config, ALB/Cognito/dev auth, /healthz, static assets, OpenAI egress.
+ROUND 1G — node tests/platform-look.mjs
+{
+  "passed": true,
+  "selectors": 341,
+  "fontFaces": 7,
+  "checks": [
+    "components.css: no color literals; scoped components",
+    "domain.css: no color literals; scoped components",
+    "fonts.css: no color literals; scoped components",
+    "index.css: no color literals; scoped components",
+    "legacy.css: no color literals; scoped components"
+  ],
+  "newDependencies": 0
+}
+
+ROUND 1G — node tests/platform-mobile.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: {"error":"Complete the review packet before approval."}
+
+409 !== 200
+
+    at api (file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:15:194)
+    at async file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:17:51 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 409,
+  expected: 200,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+
+ROUND 1G — APEX_IPS env-only capture
+PASS APEX set capture: 6 checks; 1440 and 390 screenshots; zero provider calls.

@@ -1,0 +1,255 @@
+{
+  "ticket": "#057A round 1g",
+  "verification": {
+    "roundChanged": [],
+    "heldChanged": [],
+    "planningChanged": [],
+    "backlogMatch": true,
+    "temporaryWorktreeRemoved": true
+  },
+  "paths": [
+    "src/domain/guide.js",
+    "src/domain/state.js",
+    "src/domain/plan.js",
+    "src/domain/view.js",
+    "src/client/workspace/domain-wizard.js",
+    "src/client/styles/platform/domain.css",
+    "src/api.js",
+    "src/worker.js",
+    "src/aws/env.js",
+    "src/aws/server.js",
+    "src/client/workspace/legacy-workspace.js",
+    "src/client/styles/platform/index.css",
+    "tests/domain-wizard.mjs",
+    "tests/domain-wizard-browser.mjs",
+    "docs/build-evidence/057A/alias-1440.png",
+    "docs/build-evidence/057A/alias-390.png",
+    "docs/build-evidence/057A/apex-capture.json",
+    "docs/build-evidence/057A/aws-egress-mock.json",
+    "docs/build-evidence/057A/browser-results.json",
+    "docs/build-evidence/057A/domain-tests.json",
+    "docs/build-evidence/057A/domain-tests.log",
+    "docs/build-evidence/057A/domains-controls-diagnosis.json",
+    "docs/build-evidence/057A/flatten-1440.png",
+    "docs/build-evidence/057A/flatten-390.png",
+    "docs/build-evidence/057A/forward-1440.png",
+    "docs/build-evidence/057A/forward-390.png",
+    "docs/build-evidence/057A/no-js-390.png",
+    "docs/build-evidence/057A/README.md",
+    "docs/build-evidence/057A/results.json",
+    "docs/build-evidence/057A/round1f-baseline-build.log",
+    "docs/build-evidence/057A/round1f-baseline-platform.log",
+    "docs/build-evidence/057A/round1f-diagnosis.json",
+    "docs/build-evidence/057A/round1g-baseline-build.log",
+    "docs/build-evidence/057A/round1g-baseline-mobile.log",
+    "docs/build-evidence/057A/screenshots/apex-set-1440.png",
+    "docs/build-evidence/057A/screenshots/apex-set-390.png",
+    "docs/build-evidence/057A/tools/apex-set-capture.mjs",
+    "docs/build-evidence/057A/tools/domains-controls-diagnosis.mjs",
+    "docs/build-evidence/057A/tools/no-provider-fetch.mjs",
+    "docs/build-evidence/057A/round1g-commit-scope.json"
+  ],
+  "files": [
+    {
+      "path": "src/domain/guide.js",
+      "bytes": 3377,
+      "sha256": "49d1e3463f76b1901b07044c9803252b2e02dcdd931b2d6a441848ef9af9ffa4"
+    },
+    {
+      "path": "src/domain/state.js",
+      "bytes": 853,
+      "sha256": "88ae8082b92cdfe2b292ce0989178c2798d18d433e0fe193cdaae4ed006d74a6"
+    },
+    {
+      "path": "src/domain/plan.js",
+      "bytes": 6594,
+      "sha256": "d7579c010faa21e908c759e2d9c6373d256cb4f54691f4fba2092cea8380bacc"
+    },
+    {
+      "path": "src/domain/view.js",
+      "bytes": 2910,
+      "sha256": "da189e891c22604513c9fe5bfd3ec22e78a035cc6211fb7b604da55d66cc6537"
+    },
+    {
+      "path": "src/client/workspace/domain-wizard.js",
+      "bytes": 4820,
+      "sha256": "5f983e42f5e37502cb13085d735e9419c5c3e9609c60e10e6de40eb5a0500040"
+    },
+    {
+      "path": "src/client/styles/platform/domain.css",
+      "bytes": 2698,
+      "sha256": "0e20bf6a62b1d236728839f7da677c844b0c3dde3e3015c9de5e416089db0b43"
+    },
+    {
+      "path": "src/api.js",
+      "bytes": 24874,
+      "sha256": "1e738eec90aa0d7bb095bfe6634ded7d9e94c85e6ce159345c786c5106f72eda"
+    },
+    {
+      "path": "src/worker.js",
+      "bytes": 20092,
+      "sha256": "16a4e173cb81b9d57b8f97175d5d0370b68ebfd7591b6b7e078161bda8d7e421"
+    },
+    {
+      "path": "src/aws/env.js",
+      "bytes": 7038,
+      "sha256": "0d80654363b607da856791d4c5728a80fde334388afaad1b1843d68e508cf71d"
+    },
+    {
+      "path": "src/aws/server.js",
+      "bytes": 12929,
+      "sha256": "cd54fdd5591d176fa4bef8a5933a85cc26aaa57fbfad88af9f62d99e2443efa0"
+    },
+    {
+      "path": "src/client/workspace/legacy-workspace.js",
+      "bytes": 133040,
+      "sha256": "969c7bb041122cd532a1a6b45ae435a47ce06edb47fd2b2516f0b12610d15e93"
+    },
+    {
+      "path": "src/client/styles/platform/index.css",
+      "bytes": 124,
+      "sha256": "62ead1603d0f8c66625ce9d6e25cc1ebc0f641b867b39763c80152d151a54037"
+    },
+    {
+      "path": "tests/domain-wizard.mjs",
+      "bytes": 7469,
+      "sha256": "1576ca76e7c9426ccc05e98768041c68b782f2fbc77033a5b497e4b3795f8613"
+    },
+    {
+      "path": "tests/domain-wizard-browser.mjs",
+      "bytes": 5897,
+      "sha256": "afa6f1cfba9f9037b444e4acee8444c1a6a2e138047ab6b1b29db74205d3565e"
+    },
+    {
+      "path": "docs/build-evidence/057A/alias-1440.png",
+      "bytes": 251845,
+      "sha256": "90ba6b02cb5e274fbf0462a8cda4ff502f68947e9caa45baba33993edb4dbbdb"
+    },
+    {
+      "path": "docs/build-evidence/057A/alias-390.png",
+      "bytes": 230322,
+      "sha256": "ae4af994bfda7d747765ac4a2f8367eda21f43142459c6624e55e741867075a1"
+    },
+    {
+      "path": "docs/build-evidence/057A/apex-capture.json",
+      "bytes": 206,
+      "sha256": "bfbf1aabb5eb9934fb60676527fe9a0d8cbb909eaad89253c5dab3d2a673666d"
+    },
+    {
+      "path": "docs/build-evidence/057A/aws-egress-mock.json",
+      "bytes": 62,
+      "sha256": "e27396f0041c46a11683c0b24b2f604d2d5e749b9641ba8e8314042b0ec667c9"
+    },
+    {
+      "path": "docs/build-evidence/057A/browser-results.json",
+      "bytes": 250,
+      "sha256": "61d62a16eca66273b3c42f5dcf4074e39b02e46e00e935e531d92abe9de7246d"
+    },
+    {
+      "path": "docs/build-evidence/057A/domain-tests.json",
+      "bytes": 60,
+      "sha256": "3b435d5be37be9018fb7bc5a7c94ddfeb2489dd52f17808c07eb98d681b16b9b"
+    },
+    {
+      "path": "docs/build-evidence/057A/domain-tests.log",
+      "bytes": 21202,
+      "sha256": "81f3d07b18712afafa0effa8dbecb0ddeeaa0a1ba8a3329ca665488a930f3d79"
+    },
+    {
+      "path": "docs/build-evidence/057A/domains-controls-diagnosis.json",
+      "bytes": 14713,
+      "sha256": "4b15107d7e888cebd89a036f5b9dbbf5f7c8b5abf59839781d4f64fa5b2ece51"
+    },
+    {
+      "path": "docs/build-evidence/057A/flatten-1440.png",
+      "bytes": 263673,
+      "sha256": "1564a8e3e5030fc77d05cf31d7e27d8d5d5c0475250847e286a6f1e849438507"
+    },
+    {
+      "path": "docs/build-evidence/057A/flatten-390.png",
+      "bytes": 229887,
+      "sha256": "eb29966efd57cddd385357fbe22c5abf1f3127eaa7d6b0cd3f3cd4982d26b0ed"
+    },
+    {
+      "path": "docs/build-evidence/057A/forward-1440.png",
+      "bytes": 262260,
+      "sha256": "12ac11eecd792402f412b17995164fca7de814d9ef9c05029406d50a754c6a88"
+    },
+    {
+      "path": "docs/build-evidence/057A/forward-390.png",
+      "bytes": 228247,
+      "sha256": "d86e4c0abf83adbbf1a9c7d4a13aed59840ee33d8db763a7d45a379e0bc3f99a"
+    },
+    {
+      "path": "docs/build-evidence/057A/no-js-390.png",
+      "bytes": 72644,
+      "sha256": "7aef4fd860b05a60eef808d59720cf0b30a5e11a1193f3795e8ae103a75b2dba"
+    },
+    {
+      "path": "docs/build-evidence/057A/README.md",
+      "bytes": 11324,
+      "sha256": "15879426a871b2c4f7abe4282237c2b519fcc62e43f780579e5a2a2a0ee68f10"
+    },
+    {
+      "path": "docs/build-evidence/057A/results.json",
+      "bytes": 14940,
+      "sha256": "6ea2730b544f21395302179106d63a4aa5c5d11e069d177e976d2d617bda1619"
+    },
+    {
+      "path": "docs/build-evidence/057A/round1f-baseline-build.log",
+      "bytes": 69,
+      "sha256": "d831b3184eb3b3dfd2636e639852ea4d6b840c5db2eae80e1fb043cca2bc3fcc"
+    },
+    {
+      "path": "docs/build-evidence/057A/round1f-baseline-platform.log",
+      "bytes": 580,
+      "sha256": "74711e43fa3594d3fb2e630ec86c4a68cfbaea770189073252493c923bef55dc"
+    },
+    {
+      "path": "docs/build-evidence/057A/round1f-diagnosis.json",
+      "bytes": 1663,
+      "sha256": "9420c7167c223df94dcc1c7275d374703f0123672daf27f3bad12abfba2ace93"
+    },
+    {
+      "path": "docs/build-evidence/057A/round1g-baseline-build.log",
+      "bytes": 69,
+      "sha256": "d831b3184eb3b3dfd2636e639852ea4d6b840c5db2eae80e1fb043cca2bc3fcc"
+    },
+    {
+      "path": "docs/build-evidence/057A/round1g-baseline-mobile.log",
+      "bytes": 512,
+      "sha256": "3a067a188f3d75dabc1d8efa7cf431ff9f5576b025c3436c4fa700a3b5cc84e0"
+    },
+    {
+      "path": "docs/build-evidence/057A/screenshots/apex-set-1440.png",
+      "bytes": 273982,
+      "sha256": "27d40a0396942de7801d298dbd783b2feed64292beca23b6eef5a7b32c38ab40"
+    },
+    {
+      "path": "docs/build-evidence/057A/screenshots/apex-set-390.png",
+      "bytes": 250905,
+      "sha256": "fa4d2ec5ce99c5cbd84d969f6557d068867d004549ab18a0fcffd35a492a3113"
+    },
+    {
+      "path": "docs/build-evidence/057A/tools/apex-set-capture.mjs",
+      "bytes": 4791,
+      "sha256": "6bf739b9b2179d1b093931930187660d461b57280923cde7abb82ff330ae09fe"
+    },
+    {
+      "path": "docs/build-evidence/057A/tools/domains-controls-diagnosis.mjs",
+      "bytes": 4008,
+      "sha256": "20148c972deffb36486b82e4c3c689a90526cf68512f34c33684d77ba092af66"
+    },
+    {
+      "path": "docs/build-evidence/057A/tools/no-provider-fetch.mjs",
+      "bytes": 874,
+      "sha256": "5f98f8038365370cb6ed3147a2f590f10e67d23dd1beca4fa4146502be601125"
+    }
+  ],
+  "count": 40,
+  "totalBytesExcludingThisManifest": 2371803,
+  "heldWorkExcluded": true,
+  "backlogExcluded": true,
+  "providerCalls": 0,
+  "credits": 0
+}

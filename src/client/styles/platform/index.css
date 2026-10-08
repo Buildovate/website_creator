@@ -2,3 +2,5 @@
 @import "./fonts.css";
 @import "./components.css";
 @import "./legacy.css";
+
+@import "./domain.css";

@@ -1,0 +1,46 @@
+{
+  "state": "DIAGNOSED; PRE-EXISTING; no fix; no commit",
+  "branch": "feature/057A-domain-wizard",
+  "head": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+  "baselineHead": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+  "baselinePath": "C:/Users/joe/wc-baseline-check",
+  "baselineBuild": {
+    "command": "node build.mjs",
+    "result": "PASS",
+    "log": "round1f-baseline-build.log",
+    "assets": 810,
+    "kits": 17
+  },
+  "baselinePlatform": {
+    "command": "node tests/platform.mjs",
+    "executions": 1,
+    "result": "FAIL",
+    "exitCode": 1,
+    "line": 34,
+    "error": "Complete the review packet before approval.",
+    "log": "round1f-baseline-platform.log"
+  },
+  "sameErrorAsCurrent": true,
+  "rejectionCheck": {
+    "path": "src/review-packets.js",
+    "line": 114,
+    "expression": "must(packet.status==='Complete'&&packet.pages.length>0,'Complete the review packet before approval.',409)"
+  },
+  "automaticReview": {
+    "initialCommandDidNotExecute": true,
+    "initialReason": "Reviewer attributed an OpenAI /v1/models probe to tests/platform.mjs.",
+    "readOnlyProof": "platform.mjs has no global fetch calls and no /v1/models or OPENAI_API_ORIGIN reference; the probe is in tests/aws-adapter.mjs, which was not run. Platform only dispatches worker.fetch with env={DB,BUCKET}.",
+    "sameCommandApprovedOnReevaluation": true
+  },
+  "temporaryWorktreeRemoved": true,
+  "sourceChanges": [],
+  "heldChanges": [],
+  "planningChanges": [],
+  "backlogUnchanged": true,
+  "staged": "",
+  "proposedFix": null,
+  "reasonNoFix": "User requires pre-existing failure to remain outside #057A.",
+  "providerCalls": 0,
+  "credits": 0,
+  "commit": null
+}
