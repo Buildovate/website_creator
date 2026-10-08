@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "count": 8,
+  "checks": [
+    "Business Start opens the original shared form and real Save path",
+    "Questionnaire Save uses the same draft API and refreshes real progress while open",
+    "Publish step focuses the original action and preserves the real review gate",
+    "phone edits save through the original action and reopen with the saved value",
+    "offline save retains typed answers and cannot change the draft",
+    "stale version is rejected by the real server without replacing entered answers",
+    "viewer cannot save or publish through the real API or Game form",
+    "no provider requests, uncaught errors, new view or publication bypass"
+  ],
+  "screenshots": [
+    "g6-desktop-business-saved.png",
+    "g6-desktop-questionnaire-saved.png",
+    "g6-desktop-publish-gated.png",
+    "g6-phone-business-saved.png",
+    "g6-phone-offline.png",
+    "g6-phone-conflict.png",
+    "g6-phone-readonly.png"
+  ],
+  "port": 5183,
+  "providerCalls": 0,
+  "publishResult": "Real route returns 409 until required staff review; no approval bypass"
+}

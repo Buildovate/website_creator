@@ -16,7 +16,7 @@ export function installGameNavigation(){
  section.innerHTML='<div class="bv-game-section-toolbar"><button type="button" data-game-back>Back to board</button><h1 tabindex="-1" data-game-section-title id="bv-game-section-title"></h1><p role="status" data-game-section-status></p></div><div data-game-content></div>';
  host.append(board,section);document.body.append(host);
  let experience=null,autofill=null,autofillForm=null;
- let activeId=null,data=null,view=null,sequence=0,scheduled=false,opened=null,trigger=null,boardScroll=0,requestAnchor=null;
+ let activeId=null,data=null,view=null,sequence=0,scheduled=false,opened=null,trigger=null,boardScroll=0,requestAnchor=null,lastVersion=null,requestPublish=false;
  const context=()=>{let state;document.dispatchEvent(new CustomEvent('bv-game-context',{detail:s=>state=s}));return state;};
  const available=()=>[...content.querySelectorAll('nav[aria-label="Website settings"] [data-section]')].map(b=>b.dataset.section);
  function show(active){host.hidden=!active;document.body.classList.toggle('bv-game-open',active);const app=document.querySelector('.app-layout');if(app)app.inert=active;}
@@ -40,16 +40,18 @@ export function installGameNavigation(){
  function openSection(id,anchor,source){
   const button=content.querySelector('nav[aria-label="Website settings"] [data-section="'+CSS.escape(id||'')+'"]');
   if(!button){notice('This section is not available for your account.');return;}
-  trigger=source;boardScroll=window.scrollY;section.querySelector('[data-game-section-title]').textContent=sectionLabels[id]||button.textContent;
+  trigger=source;requestPublish=source?.dataset.gameStep==='published';boardScroll=window.scrollY;section.querySelector('[data-game-section-title]').textContent=sectionLabels[id]||button.textContent;
   const target=section.querySelector('[data-game-content]');if(status)target.append(status);target.append(content);frame(true);section.scrollTop=0;window.scrollTo(0,0);
-  if(opened===id){section.querySelector('[data-game-section-title]').focus();if(anchor)content.querySelector('#'+anchor)?.scrollIntoView();return;}
+  if(opened===id){section.querySelector('[data-game-section-title]').focus();if(anchor)content.querySelector('#'+anchor)?.scrollIntoView();focusPublish();return;}
   opened=id;requestAnchor=anchor;section.querySelector('[data-game-section-status]').textContent='Opening '+(sectionLabels[id]||id)+'…';
   button.click();
  }
+ function focusPublish(){if(!requestPublish)return;requestPublish=false;const action=content.querySelector('[data-action="publish"]');if(action){action.focus();action.scrollIntoView({block:'center'});}else section.querySelector('[data-game-section-status]').textContent='Publishing requires owner access. Your saved draft is unchanged.';}
  function sync(){scheduled=false;const state=context();if(!state?.user)return;const tenant=state.current?.tenant;
   if(!tenant){if(activeId){autofill?.destroy();autofill=null;autofillForm=null;sequence++;experience?.destroy();experience=null;activeId=null;data=null;view?.destroy();view=null;opened=null;returnContent();frame(false);show(false);}return;}
-  if(activeId!==tenant.id){autofill?.destroy();autofill=null;autofillForm=null;experience?.destroy();const id=tenant.id;experience=createGameExperience({request:action=>api('/game/'+encodeURIComponent(id)+'/experience','POST',{action})});data=null;opened=null;frame(false);load(id);return;}
-  if(!section.hidden){const form=content.querySelector('form[data-form="settings"],#questionnaire-form');if(form!==autofillForm){autofill?.destroy();autofillForm=form;autofill=form?mountAutofill(form,{tenantId:activeId,role:data?.role||state.current.role||'viewer',request:api}):null;}const selected=content.querySelector('nav[aria-label="Website settings"] [data-section].selected');if(selected){opened=selected.dataset.section;section.querySelector('[data-game-section-title]').textContent=sectionLabels[opened]||selected.textContent;section.querySelector('[data-game-section-status]').textContent='';if(requestAnchor){const anchor=content.querySelector('#'+requestAnchor);if(anchor){anchor.tabIndex=-1;anchor.focus();anchor.scrollIntoView();requestAnchor=null;}}else if(!content.contains(document.activeElement)&&!section.querySelector('[data-game-back]').matches(':focus'))section.querySelector('[data-game-section-title]').focus();}}
+  if(activeId!==tenant.id){lastVersion=tenant.version;autofill?.destroy();autofill=null;autofillForm=null;experience?.destroy();const id=tenant.id;experience=createGameExperience({request:action=>api('/game/'+encodeURIComponent(id)+'/experience','POST',{action})});data=null;opened=null;frame(false);load(id);return;}
+  if(lastVersion!==tenant.version){lastVersion=tenant.version;load(activeId);}
+  if(!section.hidden){const form=content.querySelector('form[data-form="settings"],#questionnaire-form');if(form!==autofillForm){autofill?.destroy();autofillForm=form;autofill=form?mountAutofill(form,{tenantId:activeId,role:data?.role||state.current.role||'viewer',request:api}):null;}const selected=content.querySelector('nav[aria-label="Website settings"] [data-section].selected');if(selected){opened=selected.dataset.section;section.querySelector('[data-game-section-title]').textContent=sectionLabels[opened]||selected.textContent;section.querySelector('[data-game-section-status]').textContent='';if(requestPublish){focusPublish();}else if(requestAnchor){const anchor=content.querySelector('#'+requestAnchor);if(anchor){anchor.tabIndex=-1;anchor.focus();anchor.scrollIntoView();requestAnchor=null;}}else if(!content.contains(document.activeElement)&&!section.querySelector('[data-game-back]').matches(':focus'))section.querySelector('[data-game-section-title]').focus();}}
  }
  function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(sync);}}
  const observer=new MutationObserver(schedule);observer.observe(content,{childList:true,subtree:true});

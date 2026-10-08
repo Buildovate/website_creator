@@ -161,3 +161,12 @@ Current user scope supersedes the older writing-tool feature. Four Game presenta
 The Save button remains #questionnaire-form .save-bar button[type=submit], named Save questionnaire. Test-only correction selects that original submit, checks one visible enabled match and its form binding. No app, shared form, style or behavior change during resume. Browser rerun once: 9/9, eight screenshots. Prior copy-only 7/7 and build PASS remain valid. Progress 40/40, milestones 16/16, header-logo 340+6, header-nav-fit 16,422, platform-look 593 selectors/7 fonts. Platform-mobile reached only the approved BASE review-packet exception; not claimed passing. Protected diff empty, four prior shared additions +1/-0. Prior evidence backed up in round7b/before.
 
 G-5 is the user-requested copy cleanup, not a new writing feature. G-6 not started. See round7/README.md. Zero credits/provider calls; no push/deploy/merge.
+
+
+## G-6 — Save/Publish wiring verified locally
+
+Reused all original form nodes, Save handlers and publication route. Publish step now opens Business details and focuses its real Publish button. Successful tenant-version updates refresh server progress while the form stays open. No new features, shared files, styles, APIs or storage.
+
+Mapping 4/4, isolated build PASS, browser 8/8 with seven screenshots, progress 40/40, milestones 16/16, header-logo 340+6, header-nav-fit 16,422, platform-look 593 selectors/7 fonts. Platform-mobile encountered only the approved BASE review-packet exception and is not claimed passing. All ran once. Protected diff empty; four existing shared additions +1/-0.
+
+Successful Business/Questionnaire saves and draft retention verified. Publish reached the real gate and correctly returned 409 without a review packet; successful publication not exercised or fabricated. Owner domain wizard absent; existing truthful Domain settings and adapters retained. No new Next workflow under the current no-new-features scope. See round8/README.md. No further ticket started; zero credits/provider calls, no push/deploy/merge.

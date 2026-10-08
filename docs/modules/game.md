@@ -1,6 +1,6 @@
-# Module: Game onboarding (#028G G-1 through G-5)
+# Module: Game onboarding (#028G G-1 through G-6)
 
-State: G-1 through G-5 verified locally. Game is the only workspace; desktop, phone, tour, published-site preview, level confirmation and local saved-detail autofill are available. The platform-mobile guard retains its approved BASE fixture exception. G-6 not started.
+State: G-1 through G-6 verified locally for each round’s approved scope. Game is the only workspace; desktop, phone, tour, published-site preview, level confirmation and local saved-detail autofill are available. The platform-mobile guard retains its approved BASE fixture exception. No further ticket started.
 
 ## Contracts
 
@@ -53,3 +53,10 @@ New tests: game-autofill.mjs 21/21; game-autofill-browser.mjs 12/12, including o
 ## Game copy cleanup (G-5, narrowed by Joe)
 
 Current request supersedes the older Fix my writing feature scope: copy-only improvements to quest headings, progress explanation, autofill confirmation/save helper text and tour/error messages. No new writing tool or behavior. Four Game-owned presentation files only; shared questionnaire and mobile helper stay unchanged. game-copy.mjs proves the exact text-only source substitutions against G-4. Browser check uses the original questionnaire Save submit rather than a responsive proxy. Copy 7/7, browser 9/9; see docs/build-evidence/028G/round7/README.md and the recorded BASE mobile fixture exception.
+
+
+## Real form Save/Publish wiring (G-6)
+
+Publish step resolves to existing Business details and focuses the original Publish changes action. No duplicate Save or Publish handler exists in Game. Tenant version changes in the shared context trigger a fresh server progress read while preserving the current form. Existing shared PUT saves and gated POST publication retain authorization, optimistic versions, draft isolation and backups. Only Game index.js and sections.js changed.
+
+Mapping 4/4 and browser 8/8 use real local saves, offline/conflict retention and viewer denial. The fixture Publish attempt correctly stops at the real review-packet prerequisite; no successful publication is claimed. The separate owner domain wizard is not installed on this branch. Current scope adds no new Next workflow. Evidence and all guard counts: docs/build-evidence/028G/round8/README.md.
