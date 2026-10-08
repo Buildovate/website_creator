@@ -1,0 +1,25 @@
+PASS desktop tour explains progress
+PASS all nine desktop quest headings remain readable
+PASS form helper distinguishes Confirm, Save and publish
+PASS suggestions and Undo preserve form values and saved data
+PASS phone board keeps readable headings with Game as the only view
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+0 !== 1
+
+    at file:///C:/Users/joe/wc-game/tests/game-copy-browser.mjs:80:10
+    at async check (file:///C:/Users/joe/wc-game/tests/game-copy-browser.mjs:22:31)
+    at async file:///C:/Users/joe/wc-game/tests/game-copy-browser.mjs:78:2 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: 1,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

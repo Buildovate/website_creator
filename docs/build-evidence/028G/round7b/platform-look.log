@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "selectors": 593,
+  "fontFaces": 7,
+  "checks": [
+    "components.css: no color literals; scoped components",
+    "fonts.css: no color literals; scoped components",
+    "game.css: no color literals; scoped components",
+    "index.css: no color literals; scoped components",
+    "legacy.css: no color literals; scoped components"
+  ],
+  "newDependencies": 0
+}

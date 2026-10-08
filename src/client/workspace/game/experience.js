@@ -1,7 +1,7 @@
 const tourSteps=[
- ['Your progress','.bv-game-strength','Your site strength comes from saved work and confirmed connections. Nothing earns points just because you open a form.'],
+ ['Your progress','.bv-game-strength','Your site strength is your setup progress out of 100. Complete every step in a quest to earn its points; opening a form earns none.'],
  ['Your current quest','#bv-game-quest','Choose Start to open your existing settings. Back to board returns you here without changing your saved work.'],
- ['Your badges','.bv-game-badges','Badges mark confirmed milestones. Unfinished and disconnected steps stay honest about what still needs you.']
+ ['Your badges','.bv-game-badges','Badges show completed milestones. A step marked Not connected or Not available yet earns no points.']
 ];
 // Presentation state is local to this mount; the server owns once-only receipts.
 export function createGameExperience({request,readPreview=async url=>{const response=await fetch(url,{credentials:'same-origin'});if(!response.ok)throw new Error('The published site could not load. It may have been unpublished.');return response.text();}}){
@@ -17,7 +17,7 @@ export function createGameExperience({request,readPreview=async url=>{const resp
  }
  async function finishTour(action){
   tour=-1;paintTour();(host?.querySelector('[data-game-chip][aria-selected=true]')||host?.querySelector('[data-game-quest][aria-selected=true]'))?.focus({preventScroll:true});
-  try{await request(action);pendingError='';}catch{pendingError='Your tour choice could not sync. Your saved work is unchanged.';}
+  try{await request(action);pendingError='';}catch{pendingError='We could not save your tour preference. Your website changes are unaffected.';}
   const status=host?.querySelector('[data-game-tour-status]');if(status)status.textContent=pendingError;
  }
  function paintTour(){
@@ -43,11 +43,11 @@ export function createGameExperience({request,readPreview=async url=>{const resp
   status.textContent='Loading your published site…';const active=dialog;
   try{
    const html=await readPreview(preview.url);if(dialog!==active||disposed)return;
-   status.textContent='The published version. Unpublished edits are not shown.';
+   status.textContent='This is your published website. Changes saved as drafts will appear after you publish.';
    const frame=document.createElement('iframe');frame.title='Your published website';frame.setAttribute('sandbox','');frame.dataset.gamePublishedUrl=preview.url;
    const base=document.createElement('base');base.href=new URL(preview.url,location.origin).href;
    frame.srcdoc=html.replace(/<head([^>]*)>/i,match=>match+base.outerHTML);active.append(frame);
-  }catch{if(dialog===active){status.setAttribute('role','alert');status.textContent='The published site could not load. Your board is unchanged. Close this preview and try again when your connection is ready.';}}
+  }catch{if(dialog===active){status.setAttribute('role','alert');status.textContent='Your published website could not load. Choose Back to board, check your connection, and try Preview site again.';}}
  }
  return {
   accept(result){preview=result.preview||preview;if(result.showTour)tour=0;

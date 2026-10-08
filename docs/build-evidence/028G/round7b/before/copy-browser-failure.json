@@ -1,0 +1,20 @@
+{
+  "passed": false,
+  "completed": 5,
+  "checks": [
+    "desktop tour explains progress",
+    "all nine desktop quest headings remain readable",
+    "form helper distinguishes Confirm, Save and publish",
+    "suggestions and Undo preserve form values and saved data",
+    "phone board keeps readable headings with Game as the only view"
+  ],
+  "screenshots": [
+    "g5-desktop-tour.png",
+    "g5-desktop-board.png",
+    "g5-desktop-form.png",
+    "g5-desktop-suggestions.png",
+    "g5-phone-board.png",
+    "g5-phone-form.png"
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at file:///C:/Users/joe/wc-game/tests/game-copy-browser.mjs:80:10\n    at async check (file:///C:/Users/joe/wc-game/tests/game-copy-browser.mjs:22:31)\n    at async file:///C:/Users/joe/wc-game/tests/game-copy-browser.mjs:78:2"
+}

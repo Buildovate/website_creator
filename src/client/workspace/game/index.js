@@ -26,13 +26,13 @@ export function installGameNavigation(){
  function notice(text){const el=board.querySelector('[data-game-message]');if(el)el.textContent=text;}
  function recovery(loading,error){
   const p=document.createElement('section');p.className='bv-game-recovery';p.setAttribute('aria-busy',String(loading));
-  const h=document.createElement('h1');h.textContent=loading?'Your next step, all in one place.':navigator.onLine?'Your progress couldn’t load':'You’re offline';
+  const h=document.createElement('h1');h.textContent=loading?'Opening your setup board':navigator.onLine?'Your progress couldn’t load':'You’re offline';
   const note=document.createElement('p');note.setAttribute('role',loading?'status':'alert');note.textContent=loading?'Loading your saved progress…':'Your saved work is unchanged. Reload the board when your connection is ready.';
   const retry=document.createElement('button');retry.type='button';retry.textContent=loading?'Reload board':'Try again';retry.className='primary';retry.onclick=()=>load(activeId);
   p.append(h,note,retry);board.replaceChildren(p);
  }
  async function load(id){if(!id)return;const token=++sequence;activeId=id;show(true);if(data)notice('Refreshing saved progress…');else recovery(true);
-  try{const next=await api('/game/'+encodeURIComponent(id));if(token!==sequence)return;data=next;let experienceError=false;try{const result=await api('/game/'+encodeURIComponent(id)+'/experience','POST',{action:'observe'});if(token!==sequence)return;experience?.accept(result);}catch{experienceError=true;}draw();notice(experienceError?'Saved progress loaded. Tour and milestone receipts could not sync. Refresh when your connection is ready.':(data.role==='viewer'?'Read-only website access. ':'')+'Saved progress is up to date.');}
+  try{const next=await api('/game/'+encodeURIComponent(id));if(token!==sequence)return;data=next;let experienceError=false;try{const result=await api('/game/'+encodeURIComponent(id)+'/experience','POST',{action:'observe'});if(token!==sequence)return;experience?.accept(result);}catch{experienceError=true;}draw();notice(experienceError?'Your progress is loaded, but we could not save your tour and milestone updates. Try Refresh progress when your connection is ready.':(data.role==='viewer'?'Read-only website access. ':'')+'Saved progress is up to date.');}
   catch(error){if(token!==sequence)return;if(data){draw();notice(navigator.onLine?'Progress could not refresh. Your last loaded board is still available. Use Refresh progress to try again.':'You’re offline. Your last loaded board and open section are still here.');}else recovery(false,error);}
  }
  function back(){frame(false);window.scrollTo(0,boardScroll);draw();const focus=trigger?.dataset.gameStep?board.querySelector('[data-game-step="'+CSS.escape(trigger.dataset.gameStep)+'"]'):trigger?.dataset.gameSetting?board.querySelector('[data-game-setting="'+CSS.escape(opened||'')+'"][data-game-setting-quest="'+CSS.escape(trigger.dataset.gameSettingQuest)+'"]'):board.querySelector('[data-game-open="'+CSS.escape(opened||'')+'"]');focus?.focus({preventScroll:true});load(activeId);}

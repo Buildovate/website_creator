@@ -4,8 +4,8 @@ export function mountAutofill(form,{tenantId,role,request}){
  const kind=form.id==='questionnaire-form'?'questionnaire':'business',dirty=new Set(),patches=new Map();
  let result=null,busy=false,disposed=false,applying=false,confirmBefore=null,confirmationTouched=false;
  const panel=el('section',null,'bv-game-autofill');panel.setAttribute('aria-label','Fill from saved details');
- panel.append(el('h2','Use what you’ve already told us'),el('p','Review saved details for empty fields. Your typed answers, prices and choices stay yours.'));
- const status=el('p','Nothing changes until you confirm a detail.');status.setAttribute('role','status');panel.append(status);
+ panel.append(el('h2','Reuse your saved business details'),el('p','Check suggested details before adding them to empty fields. Answers you have typed will stay unchanged.'));
+ const status=el('p','Confirm adds a detail to this form. Save stores your changes; it does not publish them.');status.setAttribute('role','status');panel.append(status);
  const controls=el('div',null,'bv-game-autofill-actions'),rows=el('div',null,'bv-game-autofill-rows');panel.append(controls,rows);form.before(panel);
  const values=()=>Object.fromEntries([...form.elements].filter(n=>n.name&&['INPUT','TEXTAREA','SELECT'].includes(n.tagName)).map(n=>[n.name,n.value]));
  const button=(text,fn,attr)=>{const b=el('button',text);b.type='button';if(attr)b.dataset[attr]='';b.onclick=fn;return b;};
@@ -19,7 +19,7 @@ export function mountAutofill(form,{tenantId,role,request}){
    if(!patches.size){const c=input('conversion-confirmed');confirmBefore=c?c.checked:null;confirmationTouched=false;}
    const before=n.value;if(change(row.field,row.value)){patches.set(row.field,{field:row.field,before,after:row.value});count++;}
   }
-  render();status.textContent=count+' saved '+(count===1?'detail added':'details added')+'. Review the form, then use its existing Save button.';status.focus({preventScroll:true});
+  render();status.textContent=count+' saved '+(count===1?'detail added':'details added')+'. Review the form, then choose Save to store your changes.';status.focus({preventScroll:true});
  }
  function undo(){
   const result=undoAutofill(values(),[...patches.values()]);
@@ -46,12 +46,12 @@ export function mountAutofill(form,{tenantId,role,request}){
   if(patches.size)controls.append(button('Undo autofill',undo,'gameAutofillUndo'));
   for(const row of list.filter(r=>r.status!=='kept'||patches.has(r.field))){
    const added=patches.has(row.field),card=el('article',null,'bv-game-autofill-row '+(added||row.status==='found'?'bv-game-autofill-found':'bv-game-autofill-missing'));card.dataset.autofillField=row.field;
-   card.append(el('strong',row.label),el('span',added?'Added · not saved':row.status==='found'?'Found · not final':'Not found'),el('p',row.value||'No confirmed saved value. This field stays empty.'),el('small',row.source));
+   card.append(el('strong',row.label),el('span',added?'Added · not saved':row.status==='found'?'Found · not final':'Not found'),el('p',row.value||'No saved detail is available to reuse. Enter this answer in the form.'),el('small',row.source));
    if(!added&&row.status==='found'){const actions=el('div',null,'bv-game-autofill-actions');actions.append(button('Confirm',()=>apply([row.field])),button('Edit in form',()=>{input(row.field)?.focus();input(row.field)?.scrollIntoView({block:'center'});}));card.append(actions);}
    rows.append(card);
   }
   const manual=el('div',null,'bv-game-autofill-row bv-game-autofill-needs');manual.append(el('strong','Needs you'),el('p','Prices, financing, warranties, service-area limits, licenses, experience and owner photos are never autofilled.'));rows.append(manual);
-  const connections=el('details',null,'bv-game-autofill-connections');connections.append(el('summary','Other sources · Not connected'));
+  const connections=el('details',null,'bv-game-autofill-connections');connections.append(el('summary','Online sources · Not connected'));
   for(const c of result.connections)connections.append(el('p',c.name+' — Not connected. '+c.reason));rows.append(connections);
  }
  const touched=e=>{if(applying)return;const name=e.target.name;if(name){dirty.add(name);if(name.startsWith('conversion-'))confirmationTouched=true;}};

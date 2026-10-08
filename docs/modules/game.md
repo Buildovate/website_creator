@@ -1,6 +1,6 @@
-# Module: Game onboarding (#028G G-1 through G-4)
+# Module: Game onboarding (#028G G-1 through G-5)
 
-State: G-1 through G-4 verified locally. Game is the only workspace; desktop, phone, tour, published-site preview, level confirmation and local saved-detail autofill are available. The platform-mobile guard retains its approved BASE fixture exception. G-5 not started.
+State: G-1 through G-5 verified locally. Game is the only workspace; desktop, phone, tour, published-site preview, level confirmation and local saved-detail autofill are available. The platform-mobile guard retains its approved BASE fixture exception. G-6 not started.
 
 ## Contracts
 
@@ -48,3 +48,8 @@ GET /api/game/:tenant/autofill?form=business|questionnaire reuses existing write
 The Game controller mounts autofill.js beside the original form. It tracks typed and intentionally cleared fields, requires confirmation before copying verbatim suggestions, and restores exact prior values on Undo while preserving later edits. Existing input events and Save handle confirmation and draft persistence. Prices, warranties, licenses, experience, areas, financing, photos and consent remain manual. Outside lookup/writing adapters show Not connected.
 
 New tests: game-autofill.mjs 21/21; game-autofill-browser.mjs 12/12, including original draft Save, read-only UI, tenant/role isolation, keyboard, reduced motion, phone readability and no provider requests. See docs/build-evidence/028G/round6/README.md.
+
+
+## Game copy cleanup (G-5, narrowed by Joe)
+
+Current request supersedes the older Fix my writing feature scope: copy-only improvements to quest headings, progress explanation, autofill confirmation/save helper text and tour/error messages. No new writing tool or behavior. Four Game-owned presentation files only; shared questionnaire and mobile helper stay unchanged. game-copy.mjs proves the exact text-only source substitutions against G-4. Browser check uses the original questionnaire Save submit rather than a responsive proxy. Copy 7/7, browser 9/9; see docs/build-evidence/028G/round7/README.md and the recorded BASE mobile fixture exception.

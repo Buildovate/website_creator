@@ -149,3 +149,15 @@ Existing Business and Questionnaire forms can reuse confirmed contractor details
 New API/rules 21/21, browser 12/12 with ten screenshots, isolated build PASS, progress 40/40, milestones 16/16, header-logo 340+6, header-nav-fit 16,422, platform-look 593 selectors/7 font faces. Platform-mobile reached only the approved BASE review-packet exception; not claimed passing. Each check ran once. Protected/legacy/components/tokens diff empty; four existing shared additions stay +1/-0.
 
 See round6/README.md, logs and results.json. G-4 verified for a local commit on launch/028G-game. G-5 not started. Zero provider calls/credits; no push/deploy/merge/Suite-102.
+
+
+## G-5 — copy-only draft stopped at phone Save-dock assertion
+
+Current user scope supersedes the older writing-tool feature. Four Game presentation files contain only label/helper-text substitutions. Copy checks 7/7 and isolated build PASS. Browser ran once: five passed, sixth failed at game-copy-browser.mjs:80 because the expected Save questionnaire button in .platform-action-dock had zero matches. Cause not diagnosed; no fix/retry, guards or commit. Six screenshots saved. Protected/legacy/components/tokens diff empty; no new shared edits. See round7/README.md and copy-browser-failure.json. HEAD remains db0f8ef22d019adadcefc25108b7c1326d342ec4. G-6 not started; no providers/credits/push/deploy.
+
+
+## G-5 approved selector resume — verified for local commit
+
+The Save button remains #questionnaire-form .save-bar button[type=submit], named Save questionnaire. Test-only correction selects that original submit, checks one visible enabled match and its form binding. No app, shared form, style or behavior change during resume. Browser rerun once: 9/9, eight screenshots. Prior copy-only 7/7 and build PASS remain valid. Progress 40/40, milestones 16/16, header-logo 340+6, header-nav-fit 16,422, platform-look 593 selectors/7 fonts. Platform-mobile reached only the approved BASE review-packet exception; not claimed passing. Protected diff empty, four prior shared additions +1/-0. Prior evidence backed up in round7b/before.
+
+G-5 is the user-requested copy cleanup, not a new writing feature. G-6 not started. See round7/README.md. Zero credits/provider calls; no push/deploy/merge.
