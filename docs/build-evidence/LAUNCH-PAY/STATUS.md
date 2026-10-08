@@ -45,3 +45,102 @@ No other Pack 3/4 source dollar amount was changed. Pack 4's explicit revisions 
 4. There is no live checkout command yet: PAY-3 must add webhook settlement, and later PAY-4/PAY-6 must mount the authenticated checkout UI/route. Do not infer payment or grant entitlements from a fake session or a manual Paid label.
 
 PAY-3 is next and was not started.
+
+## PAY-2b — approved Website price and sellable-row audit (Joe, 2026-10-07 11:57 PM PT)
+
+- LAUNCH-PAY Q1 status: **Website approved** at $50/month and $500/year (10× monthly). Growth and All-in prices remain unapproved and show “Price coming soon.” The source ticket was not edited.
+- Sellable catalog rows: `PLAN-WEBSITE-MONTH` $50/month, `PLAN-WEBSITE-YEAR` $500/year, `SITE-OWN` $1,500 once, `SITE-BUYOUT` $1,500 flat, `OWNER-HOSTING` $50/month. Active/priced here means catalog eligible; no real checkout or provider connection is enabled.
+- No other LAUNCH-PAY add-on is explicitly approved active at launch; Q5 remains open. Other unpriced add-ons retain their unresolved source values and are classified as inactive, not activated or assigned an invented price.
+
+| SKU | State | Reason |
+| --- | --- | --- |
+| `PLAN-GROWTH-MONTH` | Price coming soon | Growth/All-in price remains proposed; Q1 approval pending. |
+| `PLAN-GROWTH-YEAR` | Price coming soon | Growth/All-in price remains proposed; Q1 approval pending. |
+| `PLAN-ALL-IN-MONTH` | Price coming soon | Growth/All-in price remains proposed; Q1 approval pending. |
+| `PLAN-ALL-IN-YEAR` | Price coming soon | Growth/All-in price remains proposed; Q1 approval pending. |
+| `DOMAIN-CONNECT-FOR-ME` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `DOMAIN-COM-WEBSITE` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `DOMAIN-PREMIUM` | Inactive | Requires a live domain-cost quote plus $15 and Q5 activation. |
+| `DOMAIN-PROTECT` | Inactive | Q7 bundle price unresolved; Q5 activation pending. |
+| `SOCIAL-FULL-PACK` | Inactive | Q8 $97/month proposal unapproved; Q5 activation pending. |
+| `BRAND-KIT-BUSINESS-CARDS` | Inactive | Q6 markup, partner cost and proof flow unresolved; Q5 activation pending. |
+| `BRAND-KIT-DOOR-HANGERS` | Inactive | Q6 markup, partner cost and proof flow unresolved; Q5 activation pending. |
+| `BRAND-KIT-YARD-SIGNS` | Inactive | Q6 markup, partner cost and proof flow unresolved; Q5 activation pending. |
+| `BRAND-KIT-TRUCK-MAGNETS` | Inactive | Q6 markup, partner cost and proof flow unresolved; Q5 activation pending. |
+| `BRAND-KIT-EMBROIDERED-HATS` | Inactive | Q6 markup, partner cost and proof flow unresolved; Q5 activation pending. |
+| `ESTIMATOR-RUNS-100` | Inactive | Fair-use pack price remains proposed; Q5 activation pending. |
+| `SMS-500` | Inactive | Fair-use pack price remains proposed; Q5 activation pending. |
+| `VISUALIZER-RENDERS-50` | Inactive | Fair-use pack price remains proposed; Q5 activation pending. |
+| `AI-UGC-PACK` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `AI-UGC-PACK-PLUS` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `AI-UGC-EXTRA` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `AI-UGC-REFRESH` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `WEB+UGC-BUNDLE` | Inactive | Old $849 bundle conflicts with locked $1,500 ownership; revised scope/price pending. |
+| `AI-ABOUT-PORTRAIT` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `AI-PROMO-GRAPHICS-PACK` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `HIGGS-SHORT-CUSTOM` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `HIGGS-SHORT-ADS-3` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `AR-PREVIEW-PACK` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `CITY-PAGES-EXTRA-5` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `CITY-PAGES-EXTRA-10` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `TRUST-SETUP-DONE` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `PROMO-UNLOCK-PRO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `EBOOK-CUSTOM` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `RUSH-LAUNCH-48H` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `BRAND-KIT-EXPAND` | Inactive | Q6 markup, partner cost and proof flow unresolved; Q5 activation pending. |
+| `MONTHLY-CREATIVE` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `MEDIA-CONNECT` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `MEDIA-PUBLISH` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `JOBSITE-PUBLISH` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `DISTRIBUTE-UGC` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `CONTENT-MONTH` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `CONTENT-MONTH-PRO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `PRESENCE-BUNDLE` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `SEASONAL-DROP` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `SEASONAL-DROP-VIDEO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `SEASONAL-PASS` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `SEASONAL-PASS-PRO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `WEATHER-HOME-PRO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `STORM-COMPANION-PRO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `JOB-BINDER` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `JOB-BINDER-ANNUAL` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `REFERRAL-ENGINE` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `LANG-ES` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `CREW-QR-KIT` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `CREW-QR-EXTRA` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `HOA-PACKET` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `HOA-PACKET-SINGLE` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `COMPARE-PRO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `ANALYTICS-CONNECT` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `GROWTH-PLAN` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `GROWTH-PLAN-PRO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `ADS-CONNECT` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `ADS-CREATIVE-AUTO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `ADS-LAUNCH` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `ADS-MANAGE` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `ADS-MANAGE-PRO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `CRM-CONNECT-WEBSITE` | Inactive | Pack 3 $149 amount is owner-set proposal; approval and connector pending. |
+| `EMAIL-STARTER` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `EMAIL-GROWTH` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `EMAIL-PRO` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+| `EMAIL-DOMAIN-SETUP` | Inactive | Pack 3/4 or launch add-on; Q5 approval and fulfillment pending. |
+
+Audit: 70 skipped rows = 4 unapproved plan variants + 66 inactive add-ons.
+
+PAY-2b test correction approved 2026-10-08: before: `halfPriced` set active `PLAN-WEBSITE-YEAR.priceCents = null` and expected `/Annual price/`. After: the same active row expects `/Active SKU lacks a price/`; a separate inactive `PLAN-WEBSITE-YEAR` with a null price expects `/Annual price/`. The Website annual = 10× monthly check remains in the preceding catalog test. No catalog validation code or other assertion changed.
+
+PAY-2b stale preapproval sync-test updates (owner-approved; `tests/stripe-sync.mjs`):
+
+| Line before edit | Before | After |
+| ---: | --- | --- |
+| 20 | `assert.equal(result.createdProducts,4);` | `assert.equal(result.createdProducts,6);` |
+| 21 | `assert.equal(result.createdPrices,4);` | `assert.equal(result.createdPrices,6);` |
+| 24 | `assert.equal(result.skipped,71);` | `assert.equal(result.skipped,69);` |
+| 25 | `assert.deepEqual(stripe.pricesStore.map(price=>price.lookup_key),['PLAN-WEBSITE-MONTH@1','PLAN-WEBSITE-YEAR@1','SITE-BUYOUT@1','MEDIA-PUBLISH@1']);` | `assert.deepEqual(stripe.pricesStore.map(price=>price.lookup_key),['PLAN-WEBSITE-MONTH@1','PLAN-WEBSITE-YEAR@1','SITE-OWN@1','SITE-BUYOUT@1','OWNER-HOSTING@1','MEDIA-PUBLISH@1']);` |
+| 29 | `assert.deepEqual(stripe.pricesStore[3].recurring,{interval:'month'});` | `assert.deepEqual(stripe.pricesStore[5].recurring,{interval:'month'});` |
+| 52 | `assert.equal(result.createdProducts,4);` | `assert.equal(result.createdProducts,6);` |
+| 53 | `assert.equal(result.createdPrices,4);` | `assert.equal(result.createdPrices,6);` |
+| 54 | `assert.equal(result.skipped,71);` | `assert.equal(result.skipped,69);` |
+| 55 | `assert.match(output[0],/^DRY RUN — no Stripe calls: products created 4/);` | `assert.match(output[0],/^DRY RUN — no Stripe calls: products created 6/);` |
+
+PAY-2b verification: `tests/catalog.mjs` 11/11; `tests/stripe-sync.mjs` 6/6; `tests/stripe-checkout.mjs` 9/9; `tests/stripe-no-key.mjs` 2/2. Fake-backed dry run: Products create 5/update 0, Prices create 5/update 0, skipped 70 (66 inactive add-ons, 4 Growth/All-in variants). Fake client reads/writes: 0/0. Protected-file diff against BASE: empty. No provider calls or real keys.

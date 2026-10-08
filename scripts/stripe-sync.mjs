@@ -40,7 +40,7 @@ export async function syncCatalog({ stripe, secretKey, catalogData = catalog, dr
   const prices = snapshot?.prices ?? (dryRun ? [] : await listAll(params => stripe.prices.list(params)));
   const summary = { createdProducts: 0, updatedProducts: 0, createdPrices: 0, updatedPrices: 0, skipped: 0, skippedByReason: {}, actions: [] };
   for (const row of catalogData.products) {
-    const skipReason = row.priceCents === null ? 'price_coming_soon' : !row.active ? 'inactive' : null;
+    const skipReason = row.category === 'Website Plans' && row.priceCents === null ? 'price_coming_soon' : !row.active ? 'inactive' : row.priceCents === null ? 'price_coming_soon' : null;
     if (skipReason) {
       summary.skipped++;
       summary.skippedByReason[skipReason] = (summary.skippedByReason[skipReason] ?? 0) + 1;

@@ -28,7 +28,14 @@ test('all amounts are integer cents, proposed plan prices remain unavailable, an
     assert.ok(row.priceCents === null || Number.isSafeInteger(row.priceCents));
     assert.ok(row.proposedPriceCents === null || Number.isSafeInteger(row.proposedPriceCents));
   }
-  for (const [plan,monthly] of [['WEBSITE',5000],['GROWTH',27900],['ALL-IN',44900]]) {
+  for (const [sku,cents] of [['PLAN-WEBSITE-MONTH',5000],['PLAN-WEBSITE-YEAR',50000],['SITE-OWN',150000],['SITE-BUYOUT',150000],['OWNER-HOSTING',5000]]) {
+    const row=getProduct(sku);
+    assert.equal(row.priceCents,cents,sku);
+    assert.equal(row.active,true,sku);
+    assert.equal(purchaseEligibility(sku,true).allowed,true,sku);
+  }
+  assert.equal(getProduct('PLAN-WEBSITE-YEAR').priceCents,getProduct('PLAN-WEBSITE-MONTH').priceCents*10);
+  for (const [plan,monthly] of [['GROWTH',27900],['ALL-IN',44900]]) {
     const month = getProduct(`PLAN-${plan}-MONTH`), year = getProduct(`PLAN-${plan}-YEAR`);
     assert.equal(month.priceCents, null);
     assert.equal(year.priceCents, null);
@@ -36,6 +43,7 @@ test('all amounts are integer cents, proposed plan prices remain unavailable, an
     assert.equal(year.proposedPriceCents, monthly * 10);
     assert.equal(month.displayPrice, 'Price coming soon');
     assert.equal(year.displayPrice, 'Price coming soon');
+    assert.equal(month.active,false);
     assert.equal(purchaseEligibility(month.sku).allowed, false);
   }
   const invalid = clone();
@@ -145,6 +153,10 @@ test('unpriced active rows and mismatched annual rows fail catalog validation', 
   mismatched.products.find(row => row.sku === 'PLAN-WEBSITE-YEAR').proposedPriceCents = 40000;
   assert.throws(() => validateCatalog(mismatched), /annual price/);
   const halfPriced = clone();
-  halfPriced.products.find(row => row.sku === 'PLAN-WEBSITE-MONTH').priceCents = 5000;
-  assert.throws(() => validateCatalog(halfPriced), /Annual price/);
+  halfPriced.products.find(row => row.sku === 'PLAN-WEBSITE-YEAR').priceCents = null;
+  assert.throws(() => validateCatalog(halfPriced), /Active SKU lacks a price/);
+  const inactiveMismatch = clone();
+  inactiveMismatch.products.find(row => row.sku === 'PLAN-WEBSITE-YEAR').active = false;
+  inactiveMismatch.products.find(row => row.sku === 'PLAN-WEBSITE-YEAR').priceCents = null;
+  assert.throws(() => validateCatalog(inactiveMismatch), /Annual price/);
 });

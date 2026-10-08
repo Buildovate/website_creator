@@ -167,9 +167,8 @@
       "description": "Website monthly website rental",
       "category": "Website Plans",
       "planId": "website",
-      "priceCents": null,
-      "proposedPriceCents": 5000,
-      "displayPrice": "Price coming soon",
+      "priceCents": 5000,
+      "proposedPriceCents": null,
       "currency": "USD",
       "cadence": "month",
       "entitlementKeys": [
@@ -178,9 +177,9 @@
           "quantity": 1
         }
       ],
-      "active": false,
+      "active": true,
       "taxFlag": "requires_configuration",
-      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
+      "source": "Joe approval 2026-10-07 11:57 PM PT / LAUNCH-PAY.md Q1"
     },
     {
       "sku": "PLAN-WEBSITE-YEAR",
@@ -189,9 +188,8 @@
       "description": "Website annual prepaid website rental",
       "category": "Website Plans",
       "planId": "website",
-      "priceCents": null,
-      "proposedPriceCents": 50000,
-      "displayPrice": "Price coming soon",
+      "priceCents": 50000,
+      "proposedPriceCents": null,
       "currency": "USD",
       "cadence": "year",
       "entitlementKeys": [
@@ -200,9 +198,9 @@
           "quantity": 1
         }
       ],
-      "active": false,
+      "active": true,
       "taxFlag": "requires_configuration",
-      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
+      "source": "Joe approval 2026-10-07 11:57 PM PT / LAUNCH-PAY.md Q1"
     },
     {
       "sku": "PLAN-GROWTH-MONTH",
@@ -308,7 +306,7 @@
           "quantity": 1
         }
       ],
-      "active": false,
+      "active": true,
       "taxFlag": "requires_configuration",
       "source": "LAUNCH-PAY.md",
       "requiredCompanionSku": "OWNER-HOSTING"
@@ -329,7 +327,7 @@
           "quantity": 1
         }
       ],
-      "active": false,
+      "active": true,
       "taxFlag": "requires_configuration",
       "source": "LAUNCH-PAY.md",
       "requiredCompanionSku": "OWNER-HOSTING"
@@ -350,7 +348,7 @@
           "quantity": 1
         }
       ],
-      "active": false,
+      "active": true,
       "taxFlag": "requires_configuration",
       "source": "LAUNCH-PAY.md"
     },

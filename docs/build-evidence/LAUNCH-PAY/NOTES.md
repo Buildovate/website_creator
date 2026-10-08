@@ -31,3 +31,11 @@ git diff b2446730d551656067f2aaa15a9c27497dceb8f7 -- src/worker.js src/site-poli
 ```
 
 Output: empty; exit code 0. The proof command is rerun immediately before the commit.
+
+## PAY-2b protected-file proof
+
+```powershell
+git diff b2446730d551656067f2aaa15a9c27497dceb8f7 -- src/worker.js src/site-polish.js src/website-pages.js src/blog.js src/pricing.js public/site-polish.css src/design-preview-pages.js public/design-preview-pages.css docs/modules/design.md src/qa-gate.js src/qa-page-action.js src/qa-video.js tests/header-logo.mjs tests/header-nav-fit.mjs dist public/templates public/trades 'tests/automatic-qa-*.mjs'
+```
+
+Output: empty; exit code 0.
