@@ -1,0 +1,673 @@
+{
+  "ticket": "OWNER-DOWNLOAD",
+  "startedAt": "2026-10-08T21:52:32.402Z",
+  "checks": [
+    "monthly rental forbidden even with owner membership and forged draft flags",
+    "annual rental forbidden during prepaid term",
+    "anonymous download forbidden",
+    "cross-tenant download forbidden",
+    "unpublished owned site requires publication",
+    "unpublished owner has server-confirmed disabled state",
+    "one-time owner gets published static ZIP",
+    "ZIP download headers",
+    "ZIP local entries, central directory and end record present",
+    "published page included index.html",
+    "published page included services/index.html",
+    "published page included services/roof-repair/index.html",
+    "published page included areas/index.html",
+    "published page included areas/ventura/index.html",
+    "published page included about/index.html",
+    "published page included faq/index.html",
+    "published page included contact/index.html",
+    "published page included thank-you/index.html",
+    "published page included legal/index.html",
+    "local CSS and browser JS included",
+    "published owner photo included byte-for-byte",
+    "unpublished/private photo excluded",
+    "draft and private-media sentinels absent",
+    "no environment, credentials, server source, tests or dependencies",
+    "no Worker/API/package server files",
+    "exported page links use portable root paths",
+    "completed flat buyout gets ZIP",
+    "missing/malformed entitlement fails closed",
+    "owner-published shows download at 1440",
+    "owner-published enabled state at 1440",
+    "owner-published button label at 1440",
+    "owner-published fits 1440",
+    "browser download filename",
+    "browser owner download completes",
+    "owner-published shows download at 390",
+    "owner-published enabled state at 390",
+    "owner-published button label at 390",
+    "owner-published fits 390",
+    "owner-unpublished shows download at 1440",
+    "owner-unpublished enabled state at 1440",
+    "owner-unpublished button label at 1440",
+    "owner-unpublished fits 1440",
+    "owner-unpublished shows download at 390",
+    "owner-unpublished enabled state at 390",
+    "owner-unpublished button label at 390",
+    "owner-unpublished fits 390",
+    "renter hides download at 1440",
+    "renter fits 1440",
+    "renter hides download at 390",
+    "renter fits 390",
+    "protected file bytes unchanged"
+  ],
+  "screenshots": [
+    {
+      "state": "owner-published",
+      "width": 1440,
+      "path": "screenshots/owner-published-1440.png",
+      "sha256": "f25ed267997920ff031081a2455a24a7b757ef28c934e8f0d3b24e3b263a57dc"
+    },
+    {
+      "state": "owner-published",
+      "width": 390,
+      "path": "screenshots/owner-published-390.png",
+      "sha256": "4b4f84b7d062cea01d18a6a59e8b2df2d5197bf183545a60dbed9d6574b7a5f6"
+    },
+    {
+      "state": "owner-unpublished",
+      "width": 1440,
+      "path": "screenshots/owner-unpublished-1440.png",
+      "sha256": "0a06771109f28cf30933806a483f3e231c024b7d320f0e8bcdd7d8a3a17bb861"
+    },
+    {
+      "state": "owner-unpublished",
+      "width": 390,
+      "path": "screenshots/owner-unpublished-390.png",
+      "sha256": "113bd58816668fd9b3624b1fe0b6a93df54675001d2dfb652ea6e6461b7cffff"
+    },
+    {
+      "state": "renter",
+      "width": 1440,
+      "path": "screenshots/renter-1440.png",
+      "sha256": "0e2ee18edc4206b516858c7bd09f2a69f9b5609b67a1402fcb7e97f09db47fde"
+    },
+    {
+      "state": "renter",
+      "width": 390,
+      "path": "screenshots/renter-390.png",
+      "sha256": "a0f2b0cf2d74286793007d0afdf836a2414a20d317656ca373a638be47f5003a"
+    }
+  ],
+  "qaGateClear": false,
+  "original70RejectedOpen": true,
+  "providerCalls": 0,
+  "failures": [
+    {
+      "message": "protected git diff empty",
+      "stack": "AssertionError [ERR_ASSERTION]: protected git diff empty\n    at check (file:///C:/Users/joe/website_creator/tests/owner-download.mjs:11:36)\n    at file:///C:/Users/joe/website_creator/tests/owner-download.mjs:69:505"
+    }
+  ],
+  "zip": {
+    "bytes": 22883335,
+    "sha256": "ede9a53cda634e7da905be8cbaece6b6eeaacb8ff7830bf136069292d9ca40dc",
+    "entries": [
+      {
+        "name": "index.html",
+        "bytes": 27084,
+        "sha256": "3408e243e43425f2510d41d63d26fe76bafab16364d51a2aaaf3099dde567932"
+      },
+      {
+        "name": "about/index.html",
+        "bytes": 7183,
+        "sha256": "4991fdb190f7067d58b97d43378436178669996de4ca815f55f191c44ce67ebb"
+      },
+      {
+        "name": "areas/index.html",
+        "bytes": 6724,
+        "sha256": "40fbe5cff127f56dde076f81980689a9cd0ddb2d8e780879909ac3f2cd7147dc"
+      },
+      {
+        "name": "areas/ventura/index.html",
+        "bytes": 11543,
+        "sha256": "f1dc0f4000c4bae226919c75d5ba680380583d6f7b6254cecf6fc9a5f22cb1f7"
+      },
+      {
+        "name": "blog/index.html",
+        "bytes": 5954,
+        "sha256": "03e7a64ad4d9acecf77ab4dfe03e6ecbb36aeb0c3a947d9d9e35ade25d459e37"
+      },
+      {
+        "name": "contact/index.html",
+        "bytes": 7626,
+        "sha256": "f7716ffe22cdf6a1e49ffaa7bc4d7bef7d2186d6c58aca98782eccac9e92a20f"
+      },
+      {
+        "name": "faq/index.html",
+        "bytes": 12662,
+        "sha256": "dfe76a4c2d9e49d0713fe811f41ffab3172dc5c9b56c416635bcf39d2c9e2f2c"
+      },
+      {
+        "name": "legal/index.html",
+        "bytes": 7641,
+        "sha256": "902cc284ca7678432189f629dff5ed44ddecb75eea335db22cd5d25b7a697c32"
+      },
+      {
+        "name": "legal/privacy/index.html",
+        "bytes": 2133,
+        "sha256": "f31b9690831115c36f191426501ddcc99d612fbeb4389beb21bbdba71a299ab0"
+      },
+      {
+        "name": "legal/terms/index.html",
+        "bytes": 1597,
+        "sha256": "34f30a4b5313452e24042ca2b920fc5eaa6df228ec5685cb4e8b8855631ec355"
+      },
+      {
+        "name": "pricing/index.html",
+        "bytes": 9978,
+        "sha256": "334112189966e667fb9b5ba23ada6ae4fcb6828f7f90e0b9cde9bc027be51c35"
+      },
+      {
+        "name": "services/index.html",
+        "bytes": 7409,
+        "sha256": "bd0596bf1f62264f12fe4749b39b22c600d85a3fd2139f062cc54441abc5d580"
+      },
+      {
+        "name": "services/roof-repair/index.html",
+        "bytes": 13303,
+        "sha256": "54473294619e4b0260ee6b754665ae2c02af98c34d06b390a074a542829da263"
+      },
+      {
+        "name": "thank-you/index.html",
+        "bytes": 6983,
+        "sha256": "0f504eafef1f94cd3362e840065ed7c06d2375132d5c26a46cccbbd8d3a80343"
+      },
+      {
+        "name": "assets/leaflet.css",
+        "bytes": 14806,
+        "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+      },
+      {
+        "name": "cinematic.css",
+        "bytes": 19641,
+        "sha256": "05ef100250a28b2b3e62b359405b606592ab11e3c95efe464148dea7fbd74bf0"
+      },
+      {
+        "name": "cinematic-enhancements.css",
+        "bytes": 13924,
+        "sha256": "dbf87b0894ee0615163da811ceebfb0bcfe26be6304981f6d721edc1c5623b2c"
+      },
+      {
+        "name": "portfolio-theme.css",
+        "bytes": 8168,
+        "sha256": "8c49f39af21fd38f2aa34af9cc2ca0c2f7ea1fa2a2820591d47b2ceb6470398c"
+      },
+      {
+        "name": "owner-photo.css",
+        "bytes": 3906,
+        "sha256": "76fa88ddd3a2504ee5d07f139f863da037d5f240b9975262d3c13316b59eb129"
+      },
+      {
+        "name": "assets/leaflet.js",
+        "bytes": 147557,
+        "sha256": "3104b526504d0d61fd3099a4521e87f732ccc3174dec54e08de6ba8bde3e15ff"
+      },
+      {
+        "name": "cinematic.js",
+        "bytes": 8839,
+        "sha256": "50c40a74195ec263019af9aff1dcbc6a373cf6eca41ae7e68158ceb20fd3464c"
+      },
+      {
+        "name": "cinematic-controls.js",
+        "bytes": 8436,
+        "sha256": "f57a6e9e31f32b1f43c17153984d6a049b03e39eadccd17e7748e7b1f699a84e"
+      },
+      {
+        "name": "site.js",
+        "bytes": 11032,
+        "sha256": "8ef48ba049bf86ae648b431f7263f4bd11ecdf6abbb6a51c37e75c30b75b00b8"
+      },
+      {
+        "name": "hero-contact.css",
+        "bytes": 5277,
+        "sha256": "4e7dbfc823fcf12ddb6f3dcdc2340f7e07f2e027396ee727f32dd21e0a232508"
+      },
+      {
+        "name": "site-polish.css",
+        "bytes": 42160,
+        "sha256": "b8a00d12fd2473e793e4dc8203f5f85fae230f2aa2d8b281a6d365a82f07e2fc"
+      },
+      {
+        "name": "trade-components.css",
+        "bytes": 5887,
+        "sha256": "308f7b21b6b7a55af7f2258affebc3c39984651911efd35d5cf1fb7a00fe272d"
+      },
+      {
+        "name": "trade-components.js",
+        "bytes": 6258,
+        "sha256": "8c3f4c644c86f65d65e96c28076a79d587aa85dcd4f254be9836d649ca3fcb68"
+      },
+      {
+        "name": "scroll-story.css",
+        "bytes": 13194,
+        "sha256": "e3693487dbd68fc9a1c23d009275a6093bf388ce62ab13a75538dbe68964c3dd"
+      },
+      {
+        "name": "scroll-story.js",
+        "bytes": 3563,
+        "sha256": "3a1dea09c770bad4ca482ee52e05439994386de1bd5f4f2e3d67786cb33ff815"
+      },
+      {
+        "name": "hero-timelapse.css",
+        "bytes": 5207,
+        "sha256": "919bcdd12848e56092e692731d9eed1f5efcdd9f0aa183ed60ff297c29261b71"
+      },
+      {
+        "name": "hero-timelapse.js",
+        "bytes": 5802,
+        "sha256": "c60b7f94bccdea70f1562ef705eb4e1db92ba292246133c4b0db80d2757773d5"
+      },
+      {
+        "name": "craft-story.css",
+        "bytes": 7181,
+        "sha256": "4c6e43d56ecb278570fcfff2eb3cceaa7b48816ba5378000b01e7891fd4e3ff8"
+      },
+      {
+        "name": "reviews.css",
+        "bytes": 7225,
+        "sha256": "ab887c5626ccfe1e65a30ffa988756dda16f3c4ef34389eda8c7cc444f62932b"
+      },
+      {
+        "name": "review-qa-polish.css",
+        "bytes": 10945,
+        "sha256": "d2fe6575bbd49f0e31daf4b7c33ee7ad62c21095e54b7ad1c72078202d2b3a29"
+      },
+      {
+        "name": "homeowner-polish.css",
+        "bytes": 1564,
+        "sha256": "d55aac1442dfc2a17eebf204c58baeb27abab881ed384cf9e8dd7bc651c904dc"
+      },
+      {
+        "name": "homeowner-polish.js",
+        "bytes": 6542,
+        "sha256": "98182ddcb087441dfa972b321849fd881b5fd26f71458a29ba48de486861d8bb"
+      },
+      {
+        "name": "trade-revisions.css",
+        "bytes": 7416,
+        "sha256": "190b870803f4d9bf85e42b6009c59ffc132b863283eff837efac0e177632de58"
+      },
+      {
+        "name": "design-studio.css",
+        "bytes": 10148,
+        "sha256": "70ab7a3a535599215654cdf6d252f8473cb7f3c97e0979e16f3b0ecaa5698cb5"
+      },
+      {
+        "name": "design-personality.js",
+        "bytes": 855,
+        "sha256": "c13abcffccebbae1c59faf497bf40ee97452bcb975d3bd09bca5c848e292874d"
+      },
+      {
+        "name": "trade-revisions.js",
+        "bytes": 910,
+        "sha256": "98772616db14365eee5dc3823f75f01301ac5ce1f1bf1ccb531144ab73473a0e"
+      },
+      {
+        "name": "review-marquee.js",
+        "bytes": 2401,
+        "sha256": "6f4ab20681af58d7cd9ffa0cccdd1e0cbea10136615bce33c54a629bc6da0a6a"
+      },
+      {
+        "name": "neighborhood.css",
+        "bytes": 3454,
+        "sha256": "2a86abe21d24eda820c788ec2726f7a18182eeee0655bd247558a16a66eaf041"
+      },
+      {
+        "name": "neighborhood.js",
+        "bytes": 3444,
+        "sha256": "ffca8278fc996427829bf547e11d31865307a2dcd21bda8a69ba1d1e5304a7ec"
+      },
+      {
+        "name": "site-navigation-init.js",
+        "bytes": 55,
+        "sha256": "31277ce69ee532b653a9eb33100a819fd4b931cd88e56210b3d1e0573f96d8b2"
+      },
+      {
+        "name": "media/public-photo",
+        "bytes": 506529,
+        "sha256": "a8529d6b3ca21320db974d296273a5479a434e1b2ee438fbf490a13caa03746d"
+      },
+      {
+        "name": "assets/roofing.jpg",
+        "bytes": 506529,
+        "sha256": "a8529d6b3ca21320db974d296273a5479a434e1b2ee438fbf490a13caa03746d"
+      },
+      {
+        "name": "assets/films/roofing-poster.webp",
+        "bytes": 358496,
+        "sha256": "3489f46634c0746669bd76469bc0d4662803675e549ce9627a895dbd9c497f8f"
+      },
+      {
+        "name": "assets/films/roofing-transformation.mp4",
+        "bytes": 2223549,
+        "sha256": "968e9fdfb507139b9a5516730d85bd8f435269f10e72813850c525babdb534a8"
+      },
+      {
+        "name": "assets/service-repair.webp",
+        "bytes": 158804,
+        "sha256": "22f42ae6262237dcd409eb36794e90f7958ddf74913ce23073cf2563b363fab2"
+      },
+      {
+        "name": "assets/shingles.jpg",
+        "bytes": 207727,
+        "sha256": "16088d99ed7b969b15debb97c13a6d37fe61d2e3fa545e32434a274c537de4bb"
+      },
+      {
+        "name": "assets/finished-roof.jpg",
+        "bytes": 311558,
+        "sha256": "24d1bb4259a5b7fdc18d8bcc246726ace3a18dc98075876611fae7747b284102"
+      },
+      {
+        "name": "assets/underlayment.jpg",
+        "bytes": 506529,
+        "sha256": "a8529d6b3ca21320db974d296273a5479a434e1b2ee438fbf490a13caa03746d"
+      },
+      {
+        "name": "assets/flashing.jpg",
+        "bytes": 330509,
+        "sha256": "46dff3c363921046911bd88a7bc0b75216c1bb82cfc0439966613a2688ff5a4c"
+      },
+      {
+        "name": "assets/metal.jpg",
+        "bytes": 143245,
+        "sha256": "b0c8e8e5bfe0e8ec5497aca1cf542772469b5cd4229bad502dfa71efa576019c"
+      },
+      {
+        "name": "assets/craft-films/roofing-finished.webp",
+        "bytes": 84580,
+        "sha256": "b6841b189d2f01a08d09a84c36e346eeb9d401d17b90e0202ae5cf9e21fc5a30"
+      },
+      {
+        "name": "assets/craft-films/roofing-opening.webp",
+        "bytes": 48156,
+        "sha256": "7b06a59abad0586c4c5f591eb7397b3ba34aa41f309e573f8ef4dfe6f74d75c9"
+      },
+      {
+        "name": "assets/craft-films/roofing.mp4",
+        "bytes": 3144069,
+        "sha256": "63224f4150b33cd2fc1d96268e2b53cd0196f3e2b61198aa761cb8e3b619a7a5"
+      },
+      {
+        "name": "assets/trade-art/roofing-craft-banner.webp",
+        "bytes": 337902,
+        "sha256": "82661abdf9cb1c2ce5381874fb9cde55430f255a7897f336e8c3ef1e849c206a"
+      },
+      {
+        "name": "assets/roof-cutaway.webp",
+        "bytes": 224152,
+        "sha256": "3d57c5a6cf3e365a3d79751361e4d2ac8ab40fa5c281024883c857e09c0c736b"
+      },
+      {
+        "name": "assets/service-showpiece/roofing-roof-repair-process.webp",
+        "bytes": 260724,
+        "sha256": "72eda981c2b0353ca5f0359ba61d3b87ace5bbd71614db10138e5566fb8b2a20"
+      },
+      {
+        "name": "site-navigation.js",
+        "bytes": 6092,
+        "sha256": "2f11fd4adea9ba4013e11d40ec2c7fd5ed41a6a6187bdbf781f30c5f033b9f4a"
+      },
+      {
+        "name": "engagement.css",
+        "bytes": 5198,
+        "sha256": "f164633770919dba7f9d23faeb7667a4899e3aa77c76b0c3fe2a76aaa0f64df6"
+      },
+      {
+        "name": "visitor-chat.js",
+        "bytes": 3859,
+        "sha256": "3a52fa22e97e303d95ddffdc54ac4f5fa0448bf16d0248caf51b0dfc6eca5f90"
+      },
+      {
+        "name": "favicon.svg",
+        "bytes": 199,
+        "sha256": "3a561c90bedc392f463ff080239bd8082cc83616e4e28ce39b17238e1abe12bf"
+      },
+      {
+        "name": "core-site-pages.css",
+        "bytes": 12332,
+        "sha256": "b1edbaee8ff213f3c202474522967fe7ae6b6a0a26e1bdb355c797261aa523f0"
+      },
+      {
+        "name": "trade-backgrounds.css",
+        "bytes": 14977,
+        "sha256": "3f7c1bba7a16576d7f6f9ada1110eb08bfc7e20f3b4d9469e8d17c042cc30b8b"
+      },
+      {
+        "name": "assets/service-showpiece/roofing-roof-repair-scope.webp",
+        "bytes": 302774,
+        "sha256": "478460c6e8705f35fb9c822973f4cc1a31bd426ef3cc4dfa6a4de813edaa8ec2"
+      },
+      {
+        "name": "assets/service-roof-repair-showpiece.png",
+        "bytes": 1849186,
+        "sha256": "a96d6613f07d63912a94ba2c49967806c2d2a7cdad7a9ba8dc4c7b39c4ad9505"
+      },
+      {
+        "name": "assets/dm-sans.ttf",
+        "bytes": 48280,
+        "sha256": "b0ae3e89a7d3ef2b1838bb4b1ceb0b17cc3435af061eee809d76aa623ff116e9"
+      },
+      {
+        "name": "assets/barlow-bold.ttf",
+        "bytes": 87120,
+        "sha256": "7dde307fa887fc65ff5830cfada77a7decc5dae8d3c816c9d39ba3f1af1c4ed7"
+      },
+      {
+        "name": "roofing-city.css",
+        "bytes": 6615,
+        "sha256": "91eeb05b46668c0a7a326908696a98dd44c5e744e4a3ceffa131b4c250216b98"
+      },
+      {
+        "name": "roofing-city.js",
+        "bytes": 667,
+        "sha256": "510d19d8c00edb69231f6b556bf70c78af14ce8b6377fe35dcd8cff8ec48c42c"
+      },
+      {
+        "name": "assets/service-roof-replacement-showpiece.png",
+        "bytes": 1548809,
+        "sha256": "7160d58999c9f7dce8e61f2d48f99a52739d28f281f7c7ac5f85d51bcca6cd76"
+      },
+      {
+        "name": "assets/service-showpiece/roofing-roof-replacement-scope.webp",
+        "bytes": 259104,
+        "sha256": "955a0fdf3397af1a95f00e169bb008bdfca3b5005a7d7d70b0d569a5ad1c0650"
+      },
+      {
+        "name": "blog.css",
+        "bytes": 3740,
+        "sha256": "f66871132dc56ca31b4302d1eec69e7878095193a52c92b9cfaa1ddca546e08b"
+      },
+      {
+        "name": "blog.js",
+        "bytes": 632,
+        "sha256": "79324e2c68770afcf88d65ae353e69d5e5e1e04010d1ea295b899f25f0a4d43e"
+      },
+      {
+        "name": "app.css",
+        "bytes": 100558,
+        "sha256": "bafe8821df6b760196bf66ec5fc2131b3ea8c8c527dca694f27d8f65d005869e"
+      },
+      {
+        "name": "flow.css",
+        "bytes": 313,
+        "sha256": "cd4ef90fe4725bfd0165d50a63e4f67450c384b2d624205b1938db13cbbd85d2"
+      },
+      {
+        "name": "pricing.css",
+        "bytes": 5417,
+        "sha256": "c7f1452a790d06300c320d84b99dd58ac3acd556b221ffe0e42e4b9f850596ef"
+      },
+      {
+        "name": "pricing.js",
+        "bytes": 1054,
+        "sha256": "4e320f6ffdeba3a05e65c342000dde326861f254d52a353eda02a15ef4650b6a"
+      },
+      {
+        "name": "assets/films/roofing-story.webp",
+        "bytes": 44158,
+        "sha256": "3ba4b7ef2cef3a34dadddb6d59ea380f8d0a0a9c1d32802d4bea830a9bae1dc6"
+      },
+      {
+        "name": "assets/films/roofing-story.mp4",
+        "bytes": 1973651,
+        "sha256": "03cc70d5d02a9310216d91f58426260405cc833432fad7c0f9aa8f1486123dc4"
+      },
+      {
+        "name": "service-motion.css",
+        "bytes": 5021,
+        "sha256": "5ae54fb411b16ef1b0ad644c4ad6a6cf8fe98fd1dea3f2275178d9ff659e8548"
+      },
+      {
+        "name": "service-motion.js",
+        "bytes": 1436,
+        "sha256": "68c567090fe0e16c826feebbd580e311c1d36a815399abd4c74655d6ae44ddc2"
+      },
+      {
+        "name": "service-detail.css",
+        "bytes": 25343,
+        "sha256": "ebb8104288dfbfe3dc035ace1a16a9129ef84aa2893bde9156d5d81a10dc36e8"
+      },
+      {
+        "name": "trust.css",
+        "bytes": 4179,
+        "sha256": "d64bca103b4a7b76ba9c0d3c5d819ba16a0605d67a36f1971dd7c4b99aaa0d67"
+      },
+      {
+        "name": "trust.js",
+        "bytes": 1892,
+        "sha256": "242022307a52fa2dc395749f1848bb37ae0746ae0bd8a60a9fe0f5230860ae32"
+      },
+      {
+        "name": "finance-comparison.js",
+        "bytes": 10767,
+        "sha256": "1727c77b54c92cb6cbfc1af0f6c679d116b34f1d4797c2923ea61344b626a2a7"
+      },
+      {
+        "name": "trade-page.js",
+        "bytes": 3670,
+        "sha256": "b41122aec2ebe7da3e1a9aab62736e16c6c9b5010efd29376f6ce19c09378624"
+      },
+      {
+        "name": "service-showpiece.js",
+        "bytes": 1616,
+        "sha256": "a8462c6dc31787921dc9faebcf4dcc35c0a2fbdd1888dd9705efb3de455eba84"
+      },
+      {
+        "name": "assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+        "bytes": 320950,
+        "sha256": "5a9d48796bf9256dd55aa0912332750891f860f858ad0dfa6d4d9524f2ae6c20"
+      },
+      {
+        "name": "assets/service-showpiece/roofing-asphalt-shingle-install-repair-scope.webp",
+        "bytes": 350800,
+        "sha256": "933b7fdfd5a67de472691b75152d63a8104b0f1a81c6d272dd18420d4c6e3d24"
+      },
+      {
+        "name": "assets/service-showpiece/roofing-asphalt-shingle-install-repair-process.webp",
+        "bytes": 300440,
+        "sha256": "e83895c14c016977b177c653a409f244045f87bdb7baaeaea5d35b273efe8430"
+      },
+      {
+        "name": "assets/service-showpiece/roofing-roof-sealing-hero.webp",
+        "bytes": 313610,
+        "sha256": "0edd61b7532ff32fe53158e69b6d075eca6c3c6a2bef4d67bbf4c1648780f6ac"
+      },
+      {
+        "name": "assets/service-showpiece/roofing-roof-sealing-scope.webp",
+        "bytes": 321132,
+        "sha256": "27ee3e3823e3678e9ad2849a0f24962a4c399839bee5a4771e435dc0b9f00ca7"
+      },
+      {
+        "name": "assets/service-showpiece/roofing-roof-sealing-process.webp",
+        "bytes": 265888,
+        "sha256": "27c53208ee7e9d2f06d6992ee0f1e31dc8e2c9b4fd2f354d2ba2c73bca3a0352"
+      },
+      {
+        "name": "thank-you.js",
+        "bytes": 396,
+        "sha256": "c4e3a5ffe3e6805cddf07bcb6a91830e927e95080325053fae2e715508b8a47e"
+      },
+      {
+        "name": "assets/hero.mp4",
+        "bytes": 4802371,
+        "sha256": "a25d282fdc7ff9fec6eebc273ef3f511f6f6a03b84640aa70ad72070cf23e426"
+      },
+      {
+        "name": "README.txt",
+        "bytes": 312,
+        "sha256": "610214a8d814c5b87247ae54b598c7ce8dfd7fe81190d14261a9a6b9a93fd74e"
+      }
+    ],
+    "publishedPages": [
+      "index.html",
+      "about/index.html",
+      "areas/index.html",
+      "areas/ventura/index.html",
+      "blog/index.html",
+      "contact/index.html",
+      "faq/index.html",
+      "legal/index.html",
+      "legal/privacy/index.html",
+      "legal/terms/index.html",
+      "pricing/index.html",
+      "services/index.html",
+      "services/roof-repair/index.html",
+      "thank-you/index.html"
+    ],
+    "secretChecks": [
+      "forbidden names",
+      "draft sentinel",
+      "private-media sentinel",
+      "no source/package files"
+    ],
+    "localArtifact": "published-fixture.zip (not staged)"
+  },
+  "protected": {
+    "files": 1927,
+    "changed": [],
+    "diff": "diff --git a/docs/build-evidence/027A-part2/vite-out.log b/docs/build-evidence/027A-part2/vite-out.log\nindex ecceb41..884d403 100644\nBinary files a/docs/build-evidence/027A-part2/vite-out.log and b/docs/build-evidence/027A-part2/vite-out.log differ"
+  },
+  "status": "FAIL",
+  "count": 51,
+  "finalStop": {
+    "reason": "protected git diff empty",
+    "preExistingHeldDiff": "docs/build-evidence/027A-part2/vite-out.log",
+    "heldMatched": 228,
+    "heldTotal": 228,
+    "protectedChangedDuringRun": 0,
+    "stagedFiles": 0,
+    "committed": false,
+    "retried": false,
+    "head": "b76f98f6081d28b2fb17c57a64a24870a7a65da3",
+    "branch": "launch/integration"
+  },
+  "vendorException": {
+    "paths": [
+      "/assets/images/layers.png",
+      "/assets/images/layers-2x.png",
+      "/assets/images/marker-icon.png"
+    ],
+    "onlyFrom": "/assets/leaflet.css",
+    "onlyStatus": 404,
+    "directPageReferencesStillFail": true,
+    "inventory": "asset-inventory.json"
+  },
+  "ownerApprovedException": {
+    "approvedOn": "2026-10-08",
+    "check": "protected git diff empty",
+    "path": "docs/build-evidence/027A-part2/vite-out.log",
+    "reason": "Pre-existing held log only; all 1,927 protected file bytes remained unchanged during the run and held work matches 228/228.",
+    "decision": "Owner authorizes ticket commit without changing, staging or reverting the held log.",
+    "validation": {
+      "passed": 51,
+      "failed": 1,
+      "approvedHeldLogException": 1,
+      "unresolvedTicketFailures": 0
+    },
+    "qaGateClear": false,
+    "original70RejectedOpen": true
+  }
+}

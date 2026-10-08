@@ -1,0 +1,541 @@
+{
+  "capturedAt": "2026-10-08T21:52:03.776Z",
+  "pages": [
+    {
+      "url": "/s/download-owned",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/about",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/areas",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/areas/ventura",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/blog",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/contact",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/faq",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/legal",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/legal/privacy",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/legal/terms",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/pricing",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/services",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/services/roof-repair",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    },
+    {
+      "url": "/s/download-owned/thank-you",
+      "status": 200,
+      "layerControlMarkup": false,
+      "leafletImageReferences": []
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/leaflet.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/cinematic.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/cinematic-enhancements.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/portfolio-theme.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/owner-photo.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/assets/leaflet.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/cinematic.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/cinematic-controls.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/site.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/hero-contact.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/site-polish.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/trade-components.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/trade-components.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/scroll-story.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/scroll-story.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/hero-timelapse.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/hero-timelapse.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/craft-story.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/reviews.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/review-qa-polish.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/homeowner-polish.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/homeowner-polish.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/trade-revisions.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/design-studio.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/design-personality.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/trade-revisions.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/review-marquee.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/neighborhood.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/neighborhood.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/site-navigation-init.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/media/public-photo",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "/assets/roofing.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "/assets/films/roofing-poster.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/films/roofing-transformation.mp4",
+      "status": 200,
+      "type": "video/mp4"
+    },
+    {
+      "url": "/assets/service-repair.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/shingles.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "/assets/finished-roof.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "/assets/underlayment.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "/assets/flashing.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "/assets/metal.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "url": "/assets/craft-films/roofing-finished.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/craft-films/roofing-opening.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/craft-films/roofing.mp4",
+      "status": 200,
+      "type": "video/mp4"
+    },
+    {
+      "url": "/assets/trade-art/roofing-craft-banner.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/roof-cutaway.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-repair-process.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/site-navigation.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/engagement.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/visitor-chat.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/favicon.svg",
+      "status": 200,
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "/core-site-pages.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/trade-backgrounds.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/service-roof-repair-showpiece.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "url": "/assets/dm-sans.ttf",
+      "status": 200,
+      "type": "font/ttf"
+    },
+    {
+      "url": "/assets/barlow-bold.ttf",
+      "status": 200,
+      "type": "font/ttf"
+    },
+    {
+      "url": "/roofing-city.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/roofing-city.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/assets/service-roof-replacement-showpiece.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-replacement-scope.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/blog.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/blog.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/app.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/flow.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/pricing.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/pricing.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/assets/films/roofing-story.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/films/roofing-story.mp4",
+      "status": 200,
+      "type": "video/mp4"
+    },
+    {
+      "url": "/service-motion.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/service-motion.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/service-detail.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/trust.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "url": "/trust.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/finance-comparison.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/trade-page.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/service-showpiece.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-scope.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-process.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-sealing-hero.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-sealing-scope.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-sealing-process.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "/thank-you.js",
+      "status": 200,
+      "type": "application/javascript"
+    },
+    {
+      "url": "/assets/images/layers.png",
+      "status": 404,
+      "type": "text/plain;charset=UTF-8"
+    },
+    {
+      "url": "/assets/images/layers-2x.png",
+      "status": 404,
+      "type": "text/plain;charset=UTF-8"
+    },
+    {
+      "url": "/assets/images/marker-icon.png",
+      "status": 404,
+      "type": "text/plain;charset=UTF-8"
+    },
+    {
+      "url": "/assets/hero.mp4",
+      "status": 200,
+      "type": "video/mp4"
+    }
+  ],
+  "missing": [
+    {
+      "url": "/assets/images/layers.png",
+      "status": 404
+    },
+    {
+      "url": "/assets/images/layers-2x.png",
+      "status": 404
+    },
+    {
+      "url": "/assets/images/marker-icon.png",
+      "status": 404
+    }
+  ],
+  "providerCalls": 0
+}

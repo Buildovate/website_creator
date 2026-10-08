@@ -1,3 +1,4 @@
+import {configureStaticSiteFetch} from './static-site-export.js';
 import {domainGuidePage,maintainDomainPlans} from './domain/plan.js';
 import {reviewPacketView} from './review-packet-view.js';
 import {configureReviewRenderer,reviewPacketApi,prepareReviewPacket} from './review-packets.js';
@@ -80,6 +81,7 @@ const styledWorker={...baseWorker,async fetch(req,env){const response=await base
  const s=JSON.parse((preview?tenant.settings:tenant.published)||'{}'),markup=await response.text();return new Response(applySiteStyle(markup,s,{previewStyle,base:'/s/'+tenant.slug}),{status:response.status,headers:response.headers});}};
 
 configureReviewRenderer((req,env)=>styledWorker.fetch(req,env));
+configureStaticSiteFetch((req,env)=>styledWorker.fetch(req,env));
 export default {...styledWorker,async fetch(req,env){
  const response=await styledWorker.fetch(req,env);
  if(!env.REVIEW_ISOLATED&&response.ok&&['POST','PUT'].includes(req.method)){
