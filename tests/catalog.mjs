@@ -88,7 +88,7 @@ test('rental cancellation removes site, keeps domain, has no export, and holds d
   assert.throws(() => rentalCancellationTerms('2026-01-31T00:00:00.000Z','2026-01-30T00:00:00.000Z'), /precedes/);
 });
 
-test('Pack 4 scope and all add-on activation gates are retained', () => {
+test('Pack 4 scope and approved domain-only add-on activation gate are retained', () => {
   assert.match(getProduct('SEASONAL-DROP').scope, /3 ideas/);
   assert.match(getProduct('JOB-BINDER').scope, /Unlimited eligible/);
   assert.equal(getProduct('EMAIL-STARTER').priceCents, 4900);
@@ -102,7 +102,12 @@ test('Pack 4 scope and all add-on activation gates are retained', () => {
   assert.equal(getProduct('AI-UGC-EXTRA').priceCents, 7900);
   assert.equal(getProduct('DOMAIN-PREMIUM').markupCents, 1500);
   assert.equal(getProduct('SOCIAL-FULL-PACK').proposedPriceCents, 9700);
-  for (const row of catalog.products.filter(row => row.category === 'Website Add-ons')) {
+  const domainService=getProduct('DOMAIN-CONNECT-FOR-ME');
+  assert.equal(domainService.priceCents,1500);
+  assert.equal(domainService.active,true);
+  assert.equal(purchaseEligibility(domainService.sku,true).allowed,true);
+  assert.equal(purchaseEligibility(domainService.sku,false).allowed,false);
+  for (const row of catalog.products.filter(row => row.category === 'Website Add-ons' && row.sku !== domainService.sku)) {
     assert.equal(row.active, false, row.sku);
     assert.equal(purchaseEligibility(row.sku).allowed, false, row.sku);
   }

@@ -68,7 +68,9 @@ export function validateCatalog(config: Catalog): void {
     if (config.products.find(row => row.sku === sku)?.priceCents !== price) throw new Error(`Locked price mismatch: ${sku}`);
   }
   for (const sku of ['SITE-OWN','SITE-BUYOUT']) if (!config.products.find(row => row.sku === sku)?.entitlementKeys.some(item => item.key === 'site_owned' && item.quantity === 1)) throw new Error(`Ownership entitlement missing: ${sku}`);
-  for (const row of config.products.filter(row => row.category === 'Website Add-ons')) if (row.active) throw new Error(`Add-on activated without approval: ${row.sku}`);
+  for (const row of config.products.filter(row => row.category === 'Website Add-ons')) if (row.active && row.sku !== 'DOMAIN-CONNECT-FOR-ME') throw new Error(`Add-on activated without approval: ${row.sku}`);
+  const domainService = config.products.find(row => row.sku === 'DOMAIN-CONNECT-FOR-ME');
+  if (!domainService || domainService.priceCents !== 1500 || domainService.cadence !== 'one_time') throw new Error('Locked domain connection service price mismatch');
 }
 
 const parsed = JSON.parse(readFileSync(new URL('../../config/pricing.v1.json', import.meta.url), 'utf8')) as Catalog;

@@ -17,16 +17,16 @@ function approvedSample() {
 test('sync creates versioned Products and Prices with exact lookup keys',async()=>{
   const stripe=makeFakeStripe();
   const result=await syncCatalog({stripe,secretKey:fakeTestEnv.STRIPE_SECRET_KEY,catalogData:approvedSample()});
-  assert.equal(result.createdProducts,6);
-  assert.equal(result.createdPrices,6);
+  assert.equal(result.createdProducts,7);
+  assert.equal(result.createdPrices,7);
   assert.equal(result.updatedProducts,0);
   assert.equal(result.updatedPrices,0);
-  assert.equal(result.skipped,69);
-  assert.deepEqual(stripe.pricesStore.map(price=>price.lookup_key),['PLAN-WEBSITE-MONTH@1','PLAN-WEBSITE-YEAR@1','SITE-OWN@1','SITE-BUYOUT@1','OWNER-HOSTING@1','MEDIA-PUBLISH@1']);
+  assert.equal(result.skipped,68);
+  assert.deepEqual(stripe.pricesStore.map(price=>price.lookup_key),['PLAN-WEBSITE-MONTH@1','PLAN-WEBSITE-YEAR@1','SITE-OWN@1','SITE-BUYOUT@1','OWNER-HOSTING@1','DOMAIN-CONNECT-FOR-ME@1','MEDIA-PUBLISH@1']);
   assert.equal(stripe.pricesStore[0].unit_amount,5000);
   assert.equal(stripe.pricesStore[1].unit_amount,50000);
   assert.equal(stripe.pricesStore[2].unit_amount,150000);
-  assert.deepEqual(stripe.pricesStore[5].recurring,{interval:'month'});
+  assert.deepEqual(stripe.pricesStore[6].recurring,{interval:'month'});
 });
 
 test('second sync is idempotent; metadata updates do not mutate immutable price amounts',async()=>{
@@ -49,21 +49,21 @@ test('dry-run prints planned changes against a fake snapshot without invoking th
   const result=await runSyncCli({args:['--dry-run'],env:fakeTestEnv,stripe,catalogData:approvedSample(),snapshot:stripe.snapshot(),write:value=>output.push(value)});
   assert.equal(stripe.calls.read,0);
   assert.equal(stripe.calls.write,0);
-  assert.equal(result.createdProducts,6);
-  assert.equal(result.createdPrices,6);
-  assert.equal(result.skipped,69);
-  assert.match(output[0],/^DRY RUN — no Stripe calls: products created 6/);
+  assert.equal(result.createdProducts,7);
+  assert.equal(result.createdPrices,7);
+  assert.equal(result.skipped,68);
+  assert.match(output[0],/^DRY RUN — no Stripe calls: products created 7/);
   assert.equal(output[0],formatSummary(result,true));
 });
 
-test('current catalog plans five approved rows and skips unapproved plans and add-ons',async()=>{
+test('current catalog plans five approved rows plus one domain service',async()=>{
   const stripe=makeFakeStripe();
   const result=await syncCatalog({stripe,secretKey:fakeTestEnv.STRIPE_SECRET_KEY,catalogData:catalog,dryRun:true});
-  assert.equal(result.skipped,70);
-  assert.equal(result.createdProducts,5);
-  assert.equal(result.createdPrices,5);
+  assert.equal(result.skipped,69);
+  assert.equal(result.createdProducts,6);
+  assert.equal(result.createdPrices,6);
   assert.equal(result.skippedByReason.price_coming_soon,4);
-  assert.equal(result.skippedByReason.inactive,66);
+  assert.equal(result.skippedByReason.inactive,65);
   assert.equal(stripe.calls.read+stripe.calls.write,0);
   assert.ok(result.skippedByReason.price_coming_soon>=4);
   assert.ok(result.skippedByReason.inactive>0);
