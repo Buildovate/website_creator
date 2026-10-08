@@ -1,35 +1,56 @@
-# #028G round 1b — references complete
+# #028G round 2b — G-1 verification complete with known BASE exception
 
 Worktree: C:\Users\joe\wc-game
 Branch: launch/028G-game
 BASE: b2446730d551656067f2aaa15a9c27497dceb8f7
-Reserved port: 5183; no server started and no .data used.
+G-0 reference parent: b5e91a45a069fc375a7681454808c1800a1ba5c0; G-1 local commit follows this verification.
+Port: 5183 used by the isolated header-nav-fit browser suite; no persistent server was started.
 
-## Scope and status
+## Relabel and scope
 
-The owner explicitly narrowed this round to references only: no app code yet. This supersedes the original external ticket's G-1 progress-engine/adapters implementation for this round. This commit completes the authorized reference setup, not the original engine acceptance tests. Engine rules, 100-point arithmetic, dependency adapters and all production Game UI remain unbuilt. No live sources or connections are claimed.
+The previous reference-only commit b5e91a45 is **G-0 reference setup**, despite its historical commit subject saying G-1. The real G-1 is this round's progress engine, rules, 100-point arithmetic, milestones, preview helper, dependency adapters and real-record reader. G-2 Desktop Game view is next, NOT STARTED. No UI or shared-file edits.
 
-Round 1 stopped for the missing design guide and screenshot folder. Both owner-provided inputs now pass. The guide SHA-256 is exactly 0BC09CC5E29547A9099F15BA9D8B8C48CEA75899ADB4BA6ED6B3613A5A179ED1. The folder has exactly the requested 11 filenames. All copied PNGs match their originals. No foreign changes were found; the extra NOTES.md and results.json were our own round-1 evidence files.
+## G-1 implementation
 
-Saved the approved root prototype with curl: HTTP 200, 214,608 bytes. The HTML labels itself Game view v6; the owner identifies the root as v6.1. No explicit v6.1 marker is present, and the source was not relabeled or altered. No /v52.html request was made.
+Pure step rules, all-or-nothing quest XP, three levels, four stamps, eight badges, detached finished-house Preview, owner-contract adapters, and tenant-scoped saved-record reads. No persisted completion flags or parallel forms/storage. Existing route-level identity/membership checks are reused by the future progressForRequest boundary, but no route is mounted.
 
-Reference assets and per-file SHA-256 values: ../../product/design-reference/blueprint-v6/README.md and manifest.json.
+Tests were written before implementation and then executed once after implementation, honoring the stop-on-first-failure instruction: game-progress 40/40, game-milestones 16/16. Both use fictional local fixtures; no provider/network calls.
 
-## G-2 colors and fonts
+## Round 2 historical stop — resolved in round 2b
 
-Follow the guide's final “Blueprint layer (Joe, 2026-09-29)” section rather than its superseded bright blueprint palette. The prototype is visual reference only; sample data and controls do not ship.
+The first required guard invocation failed BEFORE the loader or header-logo test executed:
 
-- Light header, panels, forms, sheets, overlays, tour and How this works: existing --bv-bg (#f5f3ee), --bv-card (#ffffff), --bv-ink (#15212b), --bv-ink-2 (#4b5967), corrected --bv-ink-3 (#5d6873), --bv-navy (#10304d), --bv-sand (#eab97f), --bv-line-strong (#8a8375), and --bv-blue focus ring. Light status families: --bv-ok, --bv-warn, and neutral gray, always with text labels.
-- Dark canvas only: existing --bv-bp (#0f2c4d), --bv-bp-deep (#0b2240), --bv-bp-lift (#133a63), --bv-bp-ink (#e8f6ff), and --bv-bp-line (#bfe6ff). G-2 will expose the later approved status tints through scoped bv-blueprint-* / bv-game-* tokens: Done #86d7a9; Needs you / Waiting #f2c27d; accent #eab97f; Not connected #b4c0cc. Existing --bv-bp-done/need/off use older colors; do not silently reuse those values or edit shared tokens in this reference round. Check contrast on every actual surface before UI acceptance.
-- --bv-sans: local Barlow for UI/body; --bv-cond: local Barlow Condensed for headings. --bv-mono: IBM Plex Mono only for canvas labels/numbers/title block, never header, buttons, forms, panels or tour.
-- Existing 720px breakpoint, 44px minimum targets, 16px inputs, visible keyboard focus, opaque text throughout. Use --bv-t (120ms); UX-RULES' below-150ms limit overrides older 200/220ms guide examples. Reduced motion is static.
+`node --import C:\Users\joe\wc-game\tests\game-guard-loader.mjs C:\Users\joe\wc-game\tests\header-logo.mjs`
 
-## Verification and boundaries
+Node ERR_UNSUPPORTED_ESM_URL_SCHEME: on Windows an absolute --import path must be a valid file:// URL; it received protocol c:. This is our invocation error, NOT the known platform BASE exception. No retry or corrective edit after failure. header-nav-fit, platform-mobile, platform-look and the isolated runtime prerequisite build did not run. No commit or staging was performed.
 
-Only reference checks ran: input hash/inventory, branch/BASE/change allowlist, HTTP result, PNG identity, recorded asset hashes, unchanged guide and protected diff. No regression/browser suite, platform suite or Suite-102 ran. Prior npm ci succeeded in round 1; no reinstall or dependency edits were needed.
+Joe authorized continuation in round 2b with a command-only file-URL correction. The existing loader and isolated build now ran successfully; no tests or app code were edited.
 
-Known pre-existing BASE exceptions remain recorded, not rerun or fixed: platform.mjs and platform-mobile.mjs — “Complete the review packet before approval.” No check failures occurred this round.
+Round 2b re-observed exactly the approved platform-mobile.mjs BASE exception: “Complete the review packet before approval.” (#057A-T2). No fix or retry. platform.mjs was not run. No Suite-102.
 
-0 provider calls; 0 credits. No main-checkout or Dropbox writes. No app code, public templates, protected files, ledgers, database, deployment, push or merge changes.
+## Sources not yet available
 
-Next sub-ticket per Joe's round 1b instruction: G-2 Desktop Game view. Not started. The original G-1 engine remains unbuilt under the reference-only override above; do not imply otherwise when integrating later work.
+- Reviews: saved profiles/IDs/confirmation exist; successful live display is not persisted. Quest: Not connected, 0 XP, reason shown.
+- Estimator: no homeowner-field/consent record or contractor minimum-item price-book contract. Quest: Not available yet, 0 XP. No minimum is guessed from the separate Roofing CTA price book.
+- Promotion explicit No offer right now: no persisted choice yet; empty offers remain Needs you, 0 XP. An actual saved offer can satisfy the quest.
+- Financing connections: existing lender adapter is Not connected; saved links never qualify. Explicit saved None does qualify.
+- Leads: verified SMS alert configuration exists and qualifies; verified email alerts and real CRM connector do not yet exist. Neither is inferred from contact details.
+- Plan/domain owner modules are absent in BASE: Not connected, 0 launch XP even with a published snapshot. Adapters load owner contracts after merge; no owner file is created here.
+- Marketing/social: connected channels, explicit None and real social published-post records absent. Quest: Not available yet, 0 XP; First post unearned. Website blog publication is not social-post evidence.
+- New-review activity events absent: null count plus explanation. Real inquiries are counted only within the tenant.
+
+G-0 reference bundle and platform guide remain unchanged. G-2 must use the guide's final Blueprint layer: light platform chrome, Barlow/Barlow Condensed, IBM Plex Mono only on canvas labels/title block; dark canvas #0f2c4d and approved tints Done #86d7a9, Needs you/Waiting #f2c27d, accent #eab97f, Not connected #b4c0cc. Existing older bright blueprint tints must not silently substitute. UI remains unbuilt.
+
+0 credits; no provider calls, main-checkout/Dropbox writes, push, merge, deployment or protected-file changes.
+
+## Round 2b final result
+
+- header-logo: PASS, 340 headers + 6 edge cases.
+- header-nav-fit: PASS, 16,422 checks / 1,632 states / 8 widths.
+- platform-mobile: known BASE failure #057A-T2 during publish setup, expressly allowed to continue; not a passing mobile audit.
+- platform-look: PASS, 315 selectors / 7 font faces.
+- game-progress and game-milestones rerun once: 40/40 and 16/16 PASS.
+- Protected diffs versus BASE: empty, including after explicit staging.
+- No unexpected round 2b failures. No app/test edits in round 2b. No provider calls, credits, full suite, push, merge or deployment.
+
+Exact commands, source-rule table and evidence locations are in NOTES.md. The missing production sources listed above remain honestly unavailable; positive fixtures do not imply those integrations exist. G-1 is ready for the authorized local commit. G-2 Desktop Game view remains next, NOT STARTED.

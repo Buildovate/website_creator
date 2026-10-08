@@ -1,27 +1,57 @@
 {
   "ticket": "028G",
-  "round": "1b",
-  "scope": "references only; no app code",
-  "state": "reference_setup_complete",
-  "originalG1EngineBuilt": false,
+  "round": "2b",
+  "subticket": "G-1",
+  "state": "verified_with_known_base_exception",
   "worktree": "C:\\Users\\joe\\wc-game",
   "branch": "launch/028G-game",
   "base": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+  "referenceCommitRelabeledG0": "b5e91a45a069fc375a7681454808c1800a1ba5c0",
   "port": 5183,
-  "serverStarted": false,
-  "inputGuideHash": "matched",
-  "inputScreenshotCount": 11,
-  "copiedPngHashMatches": 11,
-  "manifestAssetHashes": 12,
-  "curl": {
-    "status": 200,
-    "bytes": 214608,
-    "url": "https://bv-blueprint-proto.vercel.app/"
+  "tests": {
+    "game-progress.mjs": {
+      "pass": 40,
+      "fail": 0
+    },
+    "game-milestones.mjs": {
+      "pass": 16,
+      "fail": 0
+    },
+    "header-logo.mjs": {
+      "state": "pass",
+      "renderedHeaders": 340,
+      "edgeCases": 6
+    },
+    "header-nav-fit.mjs": {
+      "state": "pass",
+      "checks": 16422,
+      "matrixStates": 1632,
+      "evidenceWidths": 8
+    },
+    "platform-mobile.mjs": {
+      "state": "known_base_failure",
+      "ticket": "057A-T2",
+      "error": "Complete the review packet before approval.",
+      "httpStatus": 409,
+      "browserCaptureStarted": false
+    },
+    "platform-look.mjs": {
+      "state": "pass",
+      "selectors": 315,
+      "fontFaces": 7,
+      "stylesheetChecks": 4
+    }
   },
+  "knownBaseExceptionObserved": true,
+  "arithmeticSubsetsChecked": 512,
   "protectedDiff": "empty",
-  "testSuitesRun": 0,
+  "retries": 0,
   "providerCalls": 0,
   "creditsUsed": 0,
-  "blocked": [],
-  "nextSubticket": "G-2 Desktop Game view"
+  "nextSubticket": "G-2 Desktop Game view",
+  "nextSubticketStarted": false,
+  "correctedCommand": "node --import file:///C:/Users/joe/wc-game/tests/game-guard-loader.mjs C:\\Users\\joe\\wc-game\\tests\\header-logo.mjs",
+  "commandOnlyCorrection": true,
+  "isolatedBuild": "passed; .data/028G/dist only",
+  "unexpectedFailuresThisRound": 0
 }
