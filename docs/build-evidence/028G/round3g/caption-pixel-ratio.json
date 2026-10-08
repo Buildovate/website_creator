@@ -1,0 +1,93 @@
+{
+  "source": "screenshots/g2a-desktop-fresh.png",
+  "crop": {
+    "x": 340,
+    "y": 239,
+    "width": 165,
+    "height": 18
+  },
+  "token": "--bv-bp-ink",
+  "foreground": [
+    232,
+    246,
+    255
+  ],
+  "background": [
+    11,
+    34,
+    64
+  ],
+  "matches": {
+    "foreground": [
+      {
+        "x": 358,
+        "y": 248
+      },
+      {
+        "x": 359,
+        "y": 248
+      },
+      {
+        "x": 360,
+        "y": 248
+      },
+      {
+        "x": 361,
+        "y": 248
+      },
+      {
+        "x": 379,
+        "y": 248
+      },
+      {
+        "x": 380,
+        "y": 248
+      },
+      {
+        "x": 381,
+        "y": 248
+      },
+      {
+        "x": 382,
+        "y": 248
+      }
+    ],
+    "background": [
+      {
+        "x": 340,
+        "y": 239
+      },
+      {
+        "x": 341,
+        "y": 239
+      },
+      {
+        "x": 342,
+        "y": 239
+      },
+      {
+        "x": 343,
+        "y": 239
+      },
+      {
+        "x": 344,
+        "y": 239
+      },
+      {
+        "x": 345,
+        "y": 239
+      },
+      {
+        "x": 346,
+        "y": 239
+      },
+      {
+        "x": 347,
+        "y": 239
+      }
+    ]
+  },
+  "ratio": 14.469554792114943,
+  "beforeRatio": 2.220056023167893,
+  "method": "Read-only sampling of the captured caption pixels; no browser suite rerun."
+}

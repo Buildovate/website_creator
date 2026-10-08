@@ -1,57 +1,103 @@
 {
   "ticket": "028G",
-  "round": "2b",
-  "subticket": "G-1",
-  "state": "verified_with_known_base_exception",
-  "worktree": "C:\\Users\\joe\\wc-game",
+  "round": "3h",
+  "subticket": "G-2a",
   "branch": "launch/028G-game",
   "base": "b2446730d551656067f2aaa15a9c27497dceb8f7",
-  "referenceCommitRelabeledG0": "b5e91a45a069fc375a7681454808c1800a1ba5c0",
+  "parent": "4dde8d78be560b6410f6abd8c3dc6ca9da3be880",
   "port": 5183,
-  "tests": {
-    "game-progress.mjs": {
-      "pass": 40,
-      "fail": 0
-    },
-    "game-milestones.mjs": {
-      "pass": 16,
-      "fail": 0
-    },
-    "header-logo.mjs": {
-      "state": "pass",
+  "status": "verified_with_approved_base_exception",
+  "gameApi": {
+    "passed": 16
+  },
+  "build": {
+    "passed": true,
+    "output": ".data/028G/dist"
+  },
+  "browser": {
+    "passed": 21,
+    "screenshots": [
+      "g2a-desktop-fresh.png",
+      "g2a-desktop-business.png",
+      "g2a-desktop-not-connected.png",
+      "g2a-desktop-locked.png",
+      "g2a-desktop-midway.png",
+      "g2a-desktop-done.png",
+      "g2a-desktop-badge-grid.png",
+      "g2a-desktop-reduced-motion.png",
+      "g2a-phone-reflow.png",
+      "g2a-desktop-read-only.png",
+      "g2a-desktop-loading.png",
+      "g2a-desktop-error.png",
+      "g2a-desktop-offline.png"
+    ]
+  },
+  "gameProgress": {
+    "passed": 40
+  },
+  "gameMilestones": {
+    "passed": 16
+  },
+  "guards": {
+    "headerLogo": {
       "renderedHeaders": 340,
-      "edgeCases": 6
+      "edgeCases": 6,
+      "passed": true
     },
-    "header-nav-fit.mjs": {
-      "state": "pass",
+    "headerNavFit": {
       "checks": 16422,
-      "matrixStates": 1632,
-      "evidenceWidths": 8
+      "states": 1632,
+      "widths": 8,
+      "passed": true
     },
-    "platform-mobile.mjs": {
-      "state": "known_base_failure",
-      "ticket": "057A-T2",
-      "error": "Complete the review packet before approval.",
-      "httpStatus": 409,
-      "browserCaptureStarted": false
+    "platformMobile": {
+      "passed": false,
+      "knownBaseException": true,
+      "message": "Complete the review packet before approval.",
+      "status": 409,
+      "browserAssertionsReached": false
     },
-    "platform-look.mjs": {
-      "state": "pass",
-      "selectors": 315,
+    "platformLook": {
+      "passed": true,
+      "selectors": 467,
       "fontFaces": 7,
-      "stylesheetChecks": 4
+      "stylesheets": 5
     }
   },
-  "knownBaseExceptionObserved": true,
-  "arithmeticSubsetsChecked": 512,
+  "contrast": [
+    {
+      "state": "fresh",
+      "textCount": 137,
+      "problems": []
+    },
+    {
+      "state": "midway",
+      "textCount": 130,
+      "problems": []
+    },
+    {
+      "state": "locked",
+      "textCount": 131,
+      "problems": []
+    },
+    {
+      "state": "done",
+      "textCount": 120,
+      "problems": []
+    }
+  ],
+  "captionContrast": 14.469554792114943,
   "protectedDiff": "empty",
-  "retries": 0,
+  "legacyDiff": "empty",
+  "sharedEdits": {
+    "src/api.js": "+1/-0",
+    "src/client/workspace/index.ts": "+1/-0",
+    "src/client/workspace/shell.ts": "+1/-0",
+    "src/client/styles/platform/index.css": "+1/-0"
+  },
+  "sectionCount": 26,
+  "ownerSectionCount": 25,
+  "credits": 0,
   "providerCalls": 0,
-  "creditsUsed": 0,
-  "nextSubticket": "G-2 Desktop Game view",
-  "nextSubticketStarted": false,
-  "correctedCommand": "node --import file:///C:/Users/joe/wc-game/tests/game-guard-loader.mjs C:\\Users\\joe\\wc-game\\tests\\header-logo.mjs",
-  "commandOnlyCorrection": true,
-  "isolatedBuild": "passed; .data/028G/dist only",
-  "unexpectedFailuresThisRound": 0
+  "next": "G-2b (not started)"
 }

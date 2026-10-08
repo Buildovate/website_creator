@@ -1,0 +1,62 @@
+PASS real contractor workspace defaults to Game and real saved tenant name
+PASS Tabs toggle reaches unchanged real business form
+PASS Tabs → Game → Tabs preserves unsaved form and all saved data
+PASS saved Tabs choice survives reload, then Game saves again
+PASS real not-connected reason, no inferred review completion
+PASS locked requirements remain readable, estimator unavailable is honest
+PASS keyboard selects quests with Enter, Space and arrows; panel traps and returns focus
+PASS contractor cannot award points through preference route
+PASS midway fixture: 40 XP, level 2, SET UP stamp and real rule badges
+PASS complete fixture: static four earned stamps and eight badges
+PASS no prototype company, fake activity, streak or demo controls
+PASS rendered pixels: text uses opaque AA backgrounds; full opacity and fixed controls
+PASS reduced motion: same visible finished state, no running animations
+PASS stable layout at rest and no animated text opacity
+PASS 390px reflow remains readable with no horizontal page scroll
+PASS read-only account is clearly labeled
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('[data-game-entry]')
+    - locator resolved to <button type="button" class="bv-button" data-game-entry="">Game view</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+    at C:\Users\joe\wc-game\tests\game-desktop.mjs:74:121
+    at check (C:\Users\joe\wc-game\tests\game-desktop.mjs:22:39)
+    at C:\Users\joe\wc-game\tests\game-desktop.mjs:74:8 {
+  log: [
+    "  - waiting for locator('[data-game-entry]')",
+    '    - locator resolved to <button type="button" class="bv-button" data-game-entry="">Game view</button>',
+    '  - attempting click action',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is not visible',
+    '    - retrying click action',
+    '    - waiting 20ms',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is not visible',
+    '    - retrying click action',
+    '      - waiting 100ms',
+    '    58 × waiting for element to be visible, enabled and stable',
+    '       - element is not visible',
+    '     - retrying click action',
+    '       - waiting 500ms'
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

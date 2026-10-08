@@ -5,7 +5,7 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import path from 'node:path';
 const root=fileURLToPath(new URL('../',import.meta.url)).replaceAll('\\','/').replace(/\/$/,'');
 const temporary=root+'/.data/028G/dist';
-const evidence=root+'/docs/build-evidence/028G/round2';
+const evidence=root+'/docs/build-evidence/028G/'+(process.env.GAME_EVIDENCE_ROUND||'round2');
 process.chdir(root);
 process.env.PLATFORM_MOBILE_EVIDENCE=evidence+'/platform-mobile';
 process.env.ROUND_NAV_EVIDENCE=evidence+'/header-nav-fit';
@@ -33,7 +33,7 @@ registerHooks({
   if(!url.startsWith(pathToFileURL(root+'/').href)||!url.endsWith('.mjs')&&!url.endsWith('.js'))return result;
   let source=typeof result.source==='string'?result.source:Buffer.from(result.source||'').toString();
   source=source.replaceAll('C:/Users/joe/website_creator',root);
-  if(url.endsWith('/tests/header-logo.mjs'))source=source.replace('/docs/build-evidence/028F/checks/round8h-header-logo-regression.json','/docs/build-evidence/028G/round2/header-logo.json');
+  if(url.endsWith('/tests/header-logo.mjs'))source=source.replace('/docs/build-evidence/028F/checks/round8h-header-logo-regression.json',evidence.slice(root.length)+'/header-logo.json');
   if(url.endsWith('/round8q-nav-capture.mjs'))source=source.replace("server.listen(0,'127.0.0.1'","server.listen(5183,'127.0.0.1'");
   if(url.endsWith('/tests/platform-mobile.mjs'))source=source.replaceAll('8126','5183');
   if(url.endsWith('/src/aws/server.js'))source=source.replaceAll("'dist/server/index.js'",JSON.stringify(temporary+'/server/index.js'));

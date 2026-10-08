@@ -1,0 +1,37 @@
+{
+  "passed": false,
+  "completed": 16,
+  "checks": [
+    "real contractor workspace defaults to Game and real saved tenant name",
+    "Tabs toggle reaches unchanged real business form",
+    "Tabs → Game → Tabs preserves unsaved form and all saved data",
+    "saved Tabs choice survives reload, then Game saves again",
+    "real not-connected reason, no inferred review completion",
+    "locked requirements remain readable, estimator unavailable is honest",
+    "keyboard selects quests with Enter, Space and arrows; panel traps and returns focus",
+    "contractor cannot award points through preference route",
+    "midway fixture: 40 XP, level 2, SET UP stamp and real rule badges",
+    "complete fixture: static four earned stamps and eight badges",
+    "no prototype company, fake activity, streak or demo controls",
+    "rendered pixels: text uses opaque AA backgrounds; full opacity and fixed controls",
+    "reduced motion: same visible finished state, no running animations",
+    "stable layout at rest and no animated text opacity",
+    "390px reflow remains readable with no horizontal page scroll",
+    "read-only account is clearly labeled"
+  ],
+  "screenshots": [
+    "g2a-desktop-fresh.png",
+    "g2a-desktop-tabs-view.png",
+    "g2a-desktop-game-after-toggle.png",
+    "g2a-desktop-not-connected.png",
+    "g2a-desktop-locked.png",
+    "g2a-desktop-quest-panel.png",
+    "g2a-desktop-midway.png",
+    "g2a-desktop-done.png",
+    "g2a-desktop-badge-grid.png",
+    "g2a-desktop-reduced-motion.png",
+    "g2a-phone-reflow.png",
+    "g2a-desktop-read-only.png"
+  ],
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-game-entry]')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"bv-button\" data-game-entry=\"\">Game view</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Users\\joe\\wc-game\\tests\\game-desktop.mjs:74:121\n    at check (C:\\Users\\joe\\wc-game\\tests\\game-desktop.mjs:22:39)\n    at C:\\Users\\joe\\wc-game\\tests\\game-desktop.mjs:74:8"
+}

@@ -4,3 +4,4 @@ import './legacy-workspace.js';
 import './mobile.js';
 
 import './platform-look.js';
+import './game/index.js';

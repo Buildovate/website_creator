@@ -1,0 +1,35 @@
+PASS real contractor workspace defaults to Game and real saved tenant name
+PASS Tabs toggle reaches unchanged real business form
+PASS Tabs → Game → Tabs preserves unsaved form and all saved data
+PASS saved Tabs choice survives reload, then Game saves again
+PASS real not-connected reason, no inferred review completion
+PASS locked requirements remain readable, estimator unavailable is honest
+PASS keyboard selects quests with Enter, Space and arrows; panel traps and returns focus
+PASS contractor cannot award points through preference route
+PASS midway fixture: 40 XP, level 2, SET UP stamp and real rule badges
+PASS complete fixture: static four earned stamps and eight badges
+PASS no prototype company, fake activity, streak or demo controls
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   'contrast 2.22 One clear step at a time.'
++ ]
+- []
+
+    at file:///C:/Users/joe/wc-game/tests/game-desktop.mjs:65:20
+    at async check (file:///C:/Users/joe/wc-game/tests/game-desktop.mjs:22:33)
+    at async file:///C:/Users/joe/wc-game/tests/game-desktop.mjs:50:2 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [ 'contrast 2.22 One clear step at a time.' ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

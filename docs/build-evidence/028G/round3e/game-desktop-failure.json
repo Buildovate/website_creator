@@ -1,0 +1,29 @@
+{
+  "passed": false,
+  "completed": 11,
+  "checks": [
+    "real contractor workspace defaults to Game and real saved tenant name",
+    "Tabs toggle reaches unchanged real business form",
+    "Tabs → Game → Tabs preserves unsaved form and all saved data",
+    "saved Tabs choice survives reload, then Game saves again",
+    "real not-connected reason, no inferred review completion",
+    "locked requirements remain readable, estimator unavailable is honest",
+    "keyboard selects quests with Enter, Space and arrows; panel traps and returns focus",
+    "contractor cannot award points through preference route",
+    "midway fixture: 40 XP, level 2, SET UP stamp and real rule badges",
+    "complete fixture: static four earned stamps and eight badges",
+    "no prototype company, fake activity, streak or demo controls"
+  ],
+  "screenshots": [
+    "g2a-desktop-fresh.png",
+    "g2a-desktop-tabs-view.png",
+    "g2a-desktop-game-after-toggle.png",
+    "g2a-desktop-not-connected.png",
+    "g2a-desktop-locked.png",
+    "g2a-desktop-quest-panel.png",
+    "g2a-desktop-midway.png",
+    "g2a-desktop-done.png",
+    "g2a-desktop-badge-grid.png"
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'contrast 2.22 One clear step at a time.'\n+ ]\n- []\n\n    at file:///C:/Users/joe/wc-game/tests/game-desktop.mjs:65:20\n    at async check (file:///C:/Users/joe/wc-game/tests/game-desktop.mjs:22:33)\n    at async file:///C:/Users/joe/wc-game/tests/game-desktop.mjs:50:2"
+}
