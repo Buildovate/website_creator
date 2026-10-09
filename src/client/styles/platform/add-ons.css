@@ -1,0 +1,13 @@
+body.bv-platform .bv-addons{max-width:var(--bv-w-wide);color:var(--bv-ink);font-size:var(--bv-fs-body);line-height:var(--bv-lh-body)}
+body.bv-platform .bv-addon-list{display:grid;gap:var(--bv-space-6)}
+body.bv-platform .bv-addon-card{display:flex;align-items:center;justify-content:space-between;gap:var(--bv-space-8)}
+body.bv-platform .bv-addon-price{font-weight:700;color:var(--bv-navy);font-variant-numeric:tabular-nums}
+body.bv-platform .bv-addon-buy{width:160px;min-width:160px;min-height:52px;font-size:16px}
+body.bv-platform .bv-addon-buy:focus-visible{outline:3px solid var(--bv-blue);outline-offset:3px}
+body.bv-platform .bv-addon-spinner:not([hidden]){display:block;width:20px;height:20px;border:3px solid var(--bv-card);border-right-color:var(--bv-sand);border-radius:50%;animation:bv-addon-spin .6s linear infinite}
+body.bv-platform .bv-addon-owned-list{list-style:none;padding:0}
+body.bv-platform .bv-addon-owned{display:flex;justify-content:space-between;gap:var(--bv-space-6);padding-block:var(--bv-space-5);border-bottom:1px solid var(--bv-line)}
+body.bv-platform .bv-addon-owned span{display:block}
+@keyframes bv-addon-spin{to{transform:rotate(360deg)}}
+@media(max-width:720px){body.bv-platform .bv-addon-card,body.bv-platform .bv-addon-owned{display:block}body.bv-platform .bv-addon-buy{margin-top:var(--bv-space-4)}}
+@media(prefers-reduced-motion:reduce){body.bv-platform .bv-addon-spinner{animation:none!important}}

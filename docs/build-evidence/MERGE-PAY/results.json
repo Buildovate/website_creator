@@ -1,0 +1,43 @@
+{
+  "source": "52a0b096733670a733868656f8d0f239281e4a9f",
+  "integrationParent": "cca241ade09269bc3cf0f39e2da4dc2829941713",
+  "tests": {
+    "catalog": 11,
+    "stripe-sync": 6,
+    "stripe-checkout": 9,
+    "stripe-no-key": 2,
+    "payments": 5,
+    "entitlements": 6,
+    "pay4a": 6,
+    "pay4b": 5,
+    "pay5": 5
+  },
+  "totalPassed": 55,
+  "totalFailed": 0,
+  "isolatedBuild": {
+    "clientOutputs": 13,
+    "styleOutputs": 3
+  },
+  "browser": {
+    "pay4a": 3,
+    "pay4b": 6,
+    "pay5": 6,
+    "externalRequests": 0
+  },
+  "guards": {
+    "headerLogo": 340,
+    "headerLogoEdgeCases": 6,
+    "headerNavFit": 16422
+  },
+  "heldFilesVerified": 229,
+  "originalPayScreenshotsRestored": 16,
+  "qaGateClear": false,
+  "borderlines": {
+    "count": 70,
+    "state": "REJECTED/OPEN"
+  },
+  "providerCalls": 0,
+  "gameMerged": false,
+  "fullWorkerBuildRun": false,
+  "platformMobileRun": false
+}

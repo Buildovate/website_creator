@@ -1,0 +1,2104 @@
+{
+  "catalogVersion": 1,
+  "currency": "USD",
+  "taxFlag": "requires_configuration",
+  "priceDisplayWhenUnapproved": "Price coming soon",
+  "rentalPolicy": {
+    "monthlyMinimumMonths": 3,
+    "annualMinimumMonths": 0,
+    "cancel": {
+      "siteComesDown": true,
+      "siteExport": false,
+      "contractorKeepsDomain": true,
+      "dataHoldDays": 90
+    },
+    "ownerHostingAfterBuyoutSku": "OWNER-HOSTING",
+    "ownerExport": {
+      "staticFiles": true,
+      "platformPiecesIncluded": false,
+      "implementationState": "not_built"
+    }
+  },
+  "plans": {
+    "website": {
+      "name": "Website",
+      "inherits": null,
+      "inclusions": [
+        {
+          "key": "site.base",
+          "quantity": 1
+        },
+        {
+          "key": "domain.custom",
+          "quantity": 1
+        },
+        {
+          "key": "hosting",
+          "quantity": 1
+        },
+        {
+          "key": "ssl",
+          "quantity": 1
+        },
+        {
+          "key": "reviews.display",
+          "quantity": 1
+        }
+      ]
+    },
+    "growth": {
+      "name": "Growth",
+      "inherits": "website",
+      "inclusions": [
+        {
+          "key": "media.exclusive_library",
+          "quantity": 1
+        },
+        {
+          "key": "hero.cinematic",
+          "quantity": 1
+        },
+        {
+          "key": "chat.ai",
+          "quantity": 1
+        },
+        {
+          "key": "estimator.virtual",
+          "quantity": 1
+        },
+        {
+          "key": "weather.offers",
+          "quantity": 1
+        },
+        {
+          "key": "language.spanish",
+          "quantity": 1
+        },
+        {
+          "key": "seo.area",
+          "quantity": 1
+        },
+        {
+          "key": "reviews.requests",
+          "quantity": 1
+        },
+        {
+          "key": "sms.missed_call",
+          "quantity": 1
+        },
+        {
+          "key": "sms.inbox",
+          "quantity": 1
+        },
+        {
+          "key": "financing.prequal",
+          "quantity": 1
+        },
+        {
+          "key": "promotions",
+          "quantity": 1
+        },
+        {
+          "key": "forms.multi_step",
+          "quantity": 1
+        },
+        {
+          "key": "social.posts.month",
+          "quantity": 12
+        },
+        {
+          "key": "domain.standard.included",
+          "quantity": 1
+        }
+      ]
+    },
+    "all_in": {
+      "name": "All-in",
+      "inherits": "growth",
+      "inclusions": [
+        {
+          "key": "estimator.voice",
+          "quantity": 1
+        },
+        {
+          "key": "ar.preview",
+          "quantity": 1
+        },
+        {
+          "key": "visualizer.photo",
+          "quantity": 1
+        },
+        {
+          "key": "work.map",
+          "quantity": 1
+        },
+        {
+          "key": "work.project_pages",
+          "quantity": 1
+        },
+        {
+          "key": "triage.photo",
+          "quantity": 1
+        },
+        {
+          "key": "maintenance.reminders",
+          "quantity": 1
+        },
+        {
+          "key": "nextdoor.drafts",
+          "quantity": 1
+        },
+        {
+          "key": "blog.seo",
+          "quantity": 1
+        },
+        {
+          "key": "social.posts.month",
+          "quantity": 20
+        }
+      ]
+    }
+  },
+  "products": [
+    {
+      "sku": "PLAN-WEBSITE-MONTH",
+      "version": 1,
+      "name": "Website monthly rental",
+      "description": "Website monthly website rental",
+      "category": "Website Plans",
+      "planId": "website",
+      "priceCents": 5000,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "plan.website",
+          "quantity": 1
+        }
+      ],
+      "active": true,
+      "taxFlag": "requires_configuration",
+      "source": "Joe approval 2026-10-07 11:57 PM PT / LAUNCH-PAY.md Q1"
+    },
+    {
+      "sku": "PLAN-WEBSITE-YEAR",
+      "version": 1,
+      "name": "Website annual rental",
+      "description": "Website annual prepaid website rental",
+      "category": "Website Plans",
+      "planId": "website",
+      "priceCents": 50000,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "year",
+      "entitlementKeys": [
+        {
+          "key": "plan.website",
+          "quantity": 1
+        }
+      ],
+      "active": true,
+      "taxFlag": "requires_configuration",
+      "source": "Joe approval 2026-10-07 11:57 PM PT / LAUNCH-PAY.md Q1"
+    },
+    {
+      "sku": "PLAN-GROWTH-MONTH",
+      "version": 1,
+      "name": "Growth monthly rental",
+      "description": "Growth monthly website rental",
+      "category": "Website Plans",
+      "planId": "growth",
+      "priceCents": null,
+      "proposedPriceCents": 27900,
+      "displayPrice": "Price coming soon",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "plan.growth",
+          "quantity": 1
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
+    },
+    {
+      "sku": "PLAN-GROWTH-YEAR",
+      "version": 1,
+      "name": "Growth annual rental",
+      "description": "Growth annual prepaid website rental",
+      "category": "Website Plans",
+      "planId": "growth",
+      "priceCents": null,
+      "proposedPriceCents": 279000,
+      "displayPrice": "Price coming soon",
+      "currency": "USD",
+      "cadence": "year",
+      "entitlementKeys": [
+        {
+          "key": "plan.growth",
+          "quantity": 1
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
+    },
+    {
+      "sku": "PLAN-ALL-IN-MONTH",
+      "version": 1,
+      "name": "All-in monthly rental",
+      "description": "All-in monthly website rental",
+      "category": "Website Plans",
+      "planId": "all_in",
+      "priceCents": null,
+      "proposedPriceCents": 44900,
+      "displayPrice": "Price coming soon",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "plan.all_in",
+          "quantity": 1
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
+    },
+    {
+      "sku": "PLAN-ALL-IN-YEAR",
+      "version": 1,
+      "name": "All-in annual rental",
+      "description": "All-in annual prepaid website rental",
+      "category": "Website Plans",
+      "planId": "all_in",
+      "priceCents": null,
+      "proposedPriceCents": 449000,
+      "displayPrice": "Price coming soon",
+      "currency": "USD",
+      "cadence": "year",
+      "entitlementKeys": [
+        {
+          "key": "plan.all_in",
+          "quantity": 1
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
+    },
+    {
+      "sku": "SITE-OWN",
+      "version": 1,
+      "name": "Own your site",
+      "description": "Base-site ownership purchased up front; owner hosting is $50 per month.",
+      "category": "Website Ownership",
+      "priceCents": 150000,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "site_owned",
+          "quantity": 1
+        }
+      ],
+      "active": true,
+      "taxFlag": "requires_configuration",
+      "source": "LAUNCH-PAY.md",
+      "requiredCompanionSku": "OWNER-HOSTING"
+    },
+    {
+      "sku": "SITE-BUYOUT",
+      "version": 1,
+      "name": "Buy out your rental",
+      "description": "Flat base-site ownership buyout at any month; no credit, floor or proration.",
+      "category": "Website Ownership",
+      "priceCents": 150000,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "site_owned",
+          "quantity": 1
+        }
+      ],
+      "active": true,
+      "taxFlag": "requires_configuration",
+      "source": "LAUNCH-PAY.md",
+      "requiredCompanionSku": "OWNER-HOSTING"
+    },
+    {
+      "sku": "OWNER-HOSTING",
+      "version": 1,
+      "name": "Owner hosting",
+      "description": "Monthly hosting for an owned base site.",
+      "category": "Website Ownership",
+      "priceCents": 5000,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "hosting.owner",
+          "quantity": 1
+        }
+      ],
+      "active": true,
+      "taxFlag": "requires_configuration",
+      "source": "LAUNCH-PAY.md"
+    },
+    {
+      "sku": "DOMAIN-CONNECT-FOR-ME",
+      "version": 1,
+      "name": "Buy and connect a domain for me",
+      "description": "Buy and connect a domain for me",
+      "category": "Website Add-ons",
+      "priceCents": 1500,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "domain.connect.service",
+          "quantity": 1
+        }
+      ],
+      "active": true,
+      "taxFlag": "requires_configuration",
+      "source": "LAUNCH-PAY.md"
+    },
+    {
+      "sku": "DOMAIN-COM-WEBSITE",
+      "version": 1,
+      "name": ".com domain for Website plan",
+      "description": ".com domain for Website plan",
+      "category": "Website Add-ons",
+      "priceCents": 2900,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "year",
+      "entitlementKeys": [
+        {
+          "key": "domain.com.registration",
+          "quantity": 1
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "source": "LAUNCH-PAY.md"
+    },
+    {
+      "sku": "DOMAIN-PREMIUM",
+      "version": 1,
+      "name": "Premium domain ending",
+      "description": "Premium domain ending",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "year",
+      "entitlementKeys": [
+        {
+          "key": "domain.premium.registration",
+          "quantity": 1
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "pricingModel": "provider_cost_plus_fixed",
+      "markupCents": 1500,
+      "source": "LAUNCH-PAY.md"
+    },
+    {
+      "sku": "DOMAIN-PROTECT",
+      "version": 1,
+      "name": ".net and misspelling protection bundle",
+      "description": ".net and misspelling protection bundle",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "year",
+      "entitlementKeys": [
+        {
+          "key": "domain.protection.bundle",
+          "quantity": null
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "displayPrice": "Price coming soon",
+      "source": "LAUNCH-PAY.md Q7"
+    },
+    {
+      "sku": "SOCIAL-FULL-PACK",
+      "version": 1,
+      "name": "Full 20-post social pack",
+      "description": "Full 20-post social pack",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": 9700,
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "social.posts.month",
+          "quantity": 20
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "displayPrice": "Price coming soon",
+      "source": "LAUNCH-PAY.md Q8"
+    },
+    {
+      "sku": "BRAND-KIT-BUSINESS-CARDS",
+      "version": 1,
+      "name": "Brand kit business cards",
+      "description": "Brand kit business cards",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "brand.kit.business.cards",
+          "quantity": null
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "pricingModel": "partner_cost_times_markup",
+      "markupBasisPoints": null,
+      "allowedMarkupBasisPoints": [
+        3000,
+        5000
+      ],
+      "proofRequired": true,
+      "source": "LAUNCH-PAY.md Q6",
+      "sort": 600
+    },
+    {
+      "sku": "BRAND-KIT-DOOR-HANGERS",
+      "version": 1,
+      "name": "Brand kit door hangers",
+      "description": "Brand kit door hangers",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "brand.kit.door.hangers",
+          "quantity": null
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "pricingModel": "partner_cost_times_markup",
+      "markupBasisPoints": null,
+      "allowedMarkupBasisPoints": [
+        3000,
+        5000
+      ],
+      "proofRequired": true,
+      "source": "LAUNCH-PAY.md Q6",
+      "sort": 601
+    },
+    {
+      "sku": "BRAND-KIT-YARD-SIGNS",
+      "version": 1,
+      "name": "Brand kit yard signs",
+      "description": "Brand kit yard signs",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "brand.kit.yard.signs",
+          "quantity": null
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "pricingModel": "partner_cost_times_markup",
+      "markupBasisPoints": null,
+      "allowedMarkupBasisPoints": [
+        3000,
+        5000
+      ],
+      "proofRequired": true,
+      "source": "LAUNCH-PAY.md Q6",
+      "sort": 602
+    },
+    {
+      "sku": "BRAND-KIT-TRUCK-MAGNETS",
+      "version": 1,
+      "name": "Brand kit truck magnets",
+      "description": "Brand kit truck magnets",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "brand.kit.truck.magnets",
+          "quantity": null
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "pricingModel": "partner_cost_times_markup",
+      "markupBasisPoints": null,
+      "allowedMarkupBasisPoints": [
+        3000,
+        5000
+      ],
+      "proofRequired": true,
+      "source": "LAUNCH-PAY.md Q6",
+      "sort": 603
+    },
+    {
+      "sku": "BRAND-KIT-EMBROIDERED-HATS",
+      "version": 1,
+      "name": "Brand kit embroidered hats",
+      "description": "Brand kit embroidered hats",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": null,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "brand.kit.embroidered.hats",
+          "quantity": null
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "pricingModel": "partner_cost_times_markup",
+      "markupBasisPoints": null,
+      "allowedMarkupBasisPoints": [
+        3000,
+        5000
+      ],
+      "proofRequired": true,
+      "source": "LAUNCH-PAY.md Q6",
+      "sort": 604
+    },
+    {
+      "sku": "ESTIMATOR-RUNS-100",
+      "version": 1,
+      "name": "100 additional estimator runs",
+      "description": "100 additional estimator runs",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": 3500,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "estimator.runs",
+          "quantity": 100
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "displayPrice": "Price coming soon",
+      "source": "LAUNCH-PAY.md #015H"
+    },
+    {
+      "sku": "SMS-500",
+      "version": 1,
+      "name": "500 additional SMS",
+      "description": "500 additional SMS",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": 2500,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "sms.messages",
+          "quantity": 500
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "displayPrice": "Price coming soon",
+      "source": "LAUNCH-PAY.md #015H"
+    },
+    {
+      "sku": "VISUALIZER-RENDERS-50",
+      "version": 1,
+      "name": "50 additional visualizer renders",
+      "description": "50 additional visualizer renders",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": 1500,
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "visualizer.renders",
+          "quantity": 50
+        }
+      ],
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "displayPrice": "Price coming soon",
+      "source": "LAUNCH-PAY.md #015H"
+    },
+    {
+      "sku": "AI-UGC-PACK",
+      "version": 1,
+      "name": "AI Spokesperson Video Pack",
+      "description": "AI Spokesperson Video Pack — explain two services with clearly labeled AI presenters.",
+      "category": "Website Add-ons",
+      "priceCents": 19700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 19700,
+      "sourcePriceLabel": "$197 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "video.pack.standard",
+          "quantity": 2
+        }
+      ],
+      "fulfillmentCode": "video.pack.standard",
+      "scope": "2 finished 15–30s videos, captions/posters/site placement, 1 owner-requested regeneration per video; no fictional customer endorsement.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 100,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": true
+    },
+    {
+      "sku": "AI-UGC-PACK-PLUS",
+      "version": 1,
+      "name": "Video Pack Plus",
+      "description": "Video Pack Plus — the same two videos with priority and more creative revision room.",
+      "category": "Website Add-ons",
+      "priceCents": 29700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 29700,
+      "sourcePriceLabel": "$297 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "video.pack.plus",
+          "quantity": 2
+        }
+      ],
+      "fulfillmentCode": "video.pack.plus",
+      "scope": "Standard entitlement plus 2 extra shared regenerations (4 total), one light polish pass, 24–48h target after complete inputs/approval; capacity-dependent target, not guaranteed delivery.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 101,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "AI-UGC-EXTRA",
+      "version": 1,
+      "name": "Add one more AI service explainer",
+      "description": "Add one more AI service explainer.",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79/video",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "video.extra",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "video.extra",
+      "scope": "One additional finished video; proposed 1 regeneration for that extra video. Requires a pack or existing eligible pack ownership. Real uploads need neither.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 102,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": true
+    },
+    {
+      "sku": "AI-UGC-REFRESH",
+      "version": 1,
+      "name": "Refresh the AI videos you already own for a new season",
+      "description": "Refresh the AI videos you already own for a new season.",
+      "category": "Website Add-ons",
+      "priceCents": 9700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 9700,
+      "sourcePriceLabel": "$97/order",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "video.refresh",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "video.refresh",
+      "scope": "Snapshot eligible owned AI slot IDs at purchase, replace each once with new script/seed, preserve old live version until approved. No extra slots or perpetual regeneration; normal cadence about 90 days. Hard operational ceiling 24 slots until a larger quote is approved.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 103,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "WEB+UGC-BUNDLE",
+      "version": 1,
+      "name": "Website + two AI service explainers in one package",
+      "description": "Website + two AI service explainers in one package.",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": 84900,
+      "sourcePriceCents": 84900,
+      "sourcePriceLabel": "$849 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "website.video.bundle",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "website.video.bundle",
+      "scope": "Contracted base website plus Standard video pack, not Plus. Separate component grants for reconciliation. Fixed price excluded from timer; $48 less than the supplied $700 + $197 comparison.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 104,
+      "timerEligibleIfApproved": false,
+      "source": "PACK3_PRICE_BOOK.md",
+      "blockedReason": "Locked ownership is $1,500; the old $849 website bundle is not an approved offer.",
+      "featured": true
+    },
+    {
+      "sku": "AI-ABOUT-PORTRAIT",
+      "version": 1,
+      "name": "An additional custom About portrait treatment that fits your brand",
+      "description": "An additional custom About portrait treatment that fits your brand.",
+      "category": "Website Add-ons",
+      "priceCents": 9900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 9900,
+      "sourcePriceLabel": "$99 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "creative.about.portrait",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "creative.about.portrait",
+      "scope": "Proposed 2 coordinated crops of one approved portrait concept + 1 regeneration; consenting real person or explicitly illustrative model, never a fictional employee identity. Additional to Pack 2 baseline.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 200,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "AI-PROMO-GRAPHICS-PACK",
+      "version": 1,
+      "name": "Make your next three offers look ready for the spotlight",
+      "description": "Make your next three offers look ready for the spotlight.",
+      "category": "Website Add-ons",
+      "priceCents": 12900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 12900,
+      "sourcePriceLabel": "$129/pack",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "creative.promo.three",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "creative.promo.three",
+      "scope": "3 distinct offer graphic sets with four variants each; one set is one credit, not four. Technical corrections included; no unlimited artistic revisions.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 201,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "HIGGS-SHORT-CUSTOM",
+      "version": 1,
+      "name": "A custom 13-second service story for your brand",
+      "description": "A custom 13-second service story for your brand.",
+      "category": "Website Add-ons",
+      "priceCents": 14900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 14900,
+      "sourcePriceLabel": "$149 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "creative.short.custom",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "creative.short.custom",
+      "scope": "1 original 13s concept, finished 16:9 and 9:16 reframes/captions, one consolidated edit round; beyond included template film.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 202,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "HIGGS-SHORT-ADS-3",
+      "version": 1,
+      "name": "Three concise service/offer films ready to review for ads",
+      "description": "Three concise service/offer films ready to review for ads.",
+      "category": "Website Add-ons",
+      "priceCents": 29700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 29700,
+      "sourcePriceLabel": "$297/pack",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "creative.short.ads3",
+          "quantity": 3
+        }
+      ],
+      "fulfillmentCode": "creative.short.ads3",
+      "scope": "3 distinct 13s films and platform exports; does not include publishing, campaign management, media spend or guaranteed ad approval.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 203,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "AR-PREVIEW-PACK",
+      "version": 1,
+      "name": "Help homeowners explore supported design options with AR",
+      "description": "Help homeowners explore supported design options with AR.",
+      "category": "Website Add-ons",
+      "priceCents": 17900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 17900,
+      "sourcePriceLabel": "$179 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "creative.ar.enable",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "creative.ar.enable",
+      "scope": "Actual compatible AR viewer and approved trade asset pack required; a video alone does not fulfill this. Inactive until supported devices, asset count and acceptance test are defined.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 204,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "CITY-PAGES-EXTRA-5",
+      "version": 1,
+      "name": "Build relevant pages for five additional service areas",
+      "description": "Build relevant pages for five additional service areas.",
+      "category": "Website Add-ons",
+      "priceCents": 9900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 9900,
+      "sourcePriceLabel": "$99/pack",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "pages.city.5",
+          "quantity": 5
+        }
+      ],
+      "fulfillmentCode": "pages.city.5",
+      "scope": "5 confirmed, differentiated city pages beyond the five base footer cities; footer stays at five selected links. No ranking promise.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 205,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "CITY-PAGES-EXTRA-10",
+      "version": 1,
+      "name": "Extend useful service-area coverage to ten more cities",
+      "description": "Extend useful service-area coverage to ten more cities.",
+      "category": "Website Add-ons",
+      "priceCents": 17900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 17900,
+      "sourcePriceLabel": "$179/pack",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "pages.city.10",
+          "quantity": 10
+        }
+      ],
+      "fulfillmentCode": "pages.city.10",
+      "scope": "10 additional city pages; same truth/uniqueness gates. No automatic claim the contractor serves every nearby city.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 206,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "TRUST-SETUP-DONE",
+      "version": 1,
+      "name": "Get your real credentials and review-profile links organized",
+      "description": "Get your real credentials and review-profile links organized.",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "trust.concierge",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "trust.concierge",
+      "scope": "One setup pass for supplied verifiable profile/credential links; no purchase of reviews, badge licensing or invented ratings.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 207,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "PROMO-UNLOCK-PRO",
+      "version": 1,
+      "name": "Give your earned offers a more polished reveal",
+      "description": "Give your earned offers a more polished reveal.",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "promo.unlock.pro",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "promo.unlock.pro",
+      "scope": "Premium themes and configured fixed-reward spin presentation; baseline unlock stays included. Pack 2 task/reward validation still applies.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 208,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "EBOOK-CUSTOM",
+      "version": 1,
+      "name": "A custom guide for your trade and offer",
+      "description": "A custom guide for your trade and offer.",
+      "category": "Website Add-ons",
+      "priceCents": 14900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 14900,
+      "sourcePriceLabel": "$149 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "creative.ebook.custom",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "creative.ebook.custom",
+      "scope": "Proposed one 8-page PDF, title/cover and one consolidated content revision; verified contractor facts, accessible export.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 209,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "RUSH-LAUNCH-48H",
+      "version": 1,
+      "name": "Move a ready project into the priority production queue",
+      "description": "Move a ready project into the priority production queue.",
+      "category": "Website Add-ons",
+      "priceCents": 15100,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 15100,
+      "sourcePriceLabel": "$151 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "operations.rush48",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "operations.rush48",
+      "scope": "48h target from confirmed complete inputs and available capacity; exclusions/clock stated at purchase. No approval, DNS or external review guarantee.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 210,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "BRAND-KIT-EXPAND",
+      "version": 1,
+      "name": "Give your next campaign more visual variety without losing the brand",
+      "description": "Give your next campaign more visual variety without losing the brand.",
+      "category": "Website Add-ons",
+      "priceCents": 9900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 9900,
+      "sourcePriceLabel": "$99 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "creative.brand.expand",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "creative.brand.expand",
+      "scope": "Proposed one alternate accessible palette, 2 patterns and 3 OG compositions; existing logo is preserved.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 211,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "MONTHLY-CREATIVE",
+      "version": 1,
+      "name": "Keep your creative current with a small monthly production allowance",
+      "description": "Keep your creative current with a small monthly production allowance.",
+      "category": "Website Add-ons",
+      "priceCents": 19700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 19700,
+      "sourcePriceLabel": "$197/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "creative.monthly",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "creative.monthly",
+      "scope": "1 offer graphic set + either 1 custom Short OR 1 refresh of eligible owned AI slots each paid month. Choose before dispatch; not both. Distribution separate.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 212,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "MEDIA-CONNECT",
+      "version": 1,
+      "name": "Connect the accounts and location your business actually uses",
+      "description": "Connect the accounts and location your business actually uses.",
+      "category": "Website Add-ons",
+      "priceCents": 14900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 14900,
+      "sourcePriceLabel": "$149 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "media.connect",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "media.connect",
+      "scope": "Proposed one business: one Facebook Page, Instagram professional account and GBP location; verify ownership/access and map destinations. Connection does not confer publishing subscription or platform approval. Additional businesses/locations quoted separately.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 300,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "MEDIA-PUBLISH",
+      "version": 1,
+      "name": "Approve your content and send it through a managed publishing queue",
+      "description": "Approve your content and send it through a managed publishing queue.",
+      "category": "Website Add-ons",
+      "priceCents": 9700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 9700,
+      "sourcePriceLabel": "$97/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "media.publish",
+          "quantity": 30
+        }
+      ],
+      "fulfillmentCode": "media.publish",
+      "scope": "Proposed up to 30 unique approved content units/month, up to the 3 connected v1 destinations each; crossposts and technical retries do not consume extra units. Existing eligible media, no new custom production included.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 301,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "JOBSITE-PUBLISH",
+      "version": 1,
+      "name": "Turn approved job photos into useful project-map stories and optional posts",
+      "description": "Turn approved job photos into useful project-map stories and optional posts.",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "media.jobsite",
+          "quantity": 20
+        }
+      ],
+      "fulfillmentCode": "media.jobsite",
+      "scope": "Proposed up to 20 selected projects/month, up to 10 photos each. Map drafting/publication and one optional social/GBP post per project included under this SKU's jobsite-only entitlement, so Media Publish is not double-required for these posts. External channels still need setup, permission and capability.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 302,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "DISTRIBUTE-UGC",
+      "version": 1,
+      "name": "Distribute an existing approved video pack once",
+      "description": "Distribute an existing approved video pack once.",
+      "category": "Website Add-ons",
+      "priceCents": 4900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 4900,
+      "sourcePriceLabel": "$49/batch",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "media.video.batch",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "media.video.batch",
+      "scope": "One identified pack of 2–6 videos, each to selected supported connected destinations once; actual platform suitability governs. No video generation or ongoing subscription. Duplicate retries free. Larger owned refresh sets are not automatically a six-video distribution pack.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 303,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "CONTENT-MONTH",
+      "version": 1,
+      "name": "A full month of ready-to-review local content",
+      "description": "A full month of ready-to-review local content.",
+      "category": "Website Add-ons",
+      "priceCents": 29700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 29700,
+      "sourcePriceLabel": "$297/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "content.month",
+          "quantity": 22
+        }
+      ],
+      "fulfillmentCode": "content.month",
+      "scope": "22 creative units: 14 feed posts + 4 GBP updates + 4 Story/Reel ideas, captions/alt/briefs/schedule. Feed/GBP units receive reusable approved imagery or finished still assets before marked ready; four ideas are scripts/shot lists, not completed videos. Export included, external publishing separate.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 304,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "CONTENT-MONTH-PRO",
+      "version": 1,
+      "name": "The monthly plan with four finished short videos",
+      "description": "The monthly plan with four finished short videos.",
+      "category": "Website Add-ons",
+      "priceCents": 49700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 49700,
+      "sourcePriceLabel": "$497/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "content.month.pro",
+          "quantity": 22
+        }
+      ],
+      "fulfillmentCode": "content.month.pro",
+      "scope": "Same 22 units, with the 4 ideas fulfilled as 4 finished Shorts/Reels; 4 GBP updates already included, not four extra duplicate posts. Light monthly results note; no guaranteed reach/leads. Provider credits budgeted by service, not assumed free through Ultra.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 305,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "PRESENCE-BUNDLE",
+      "version": 1,
+      "name": "Monthly content and publishing in one service",
+      "description": "Monthly content and publishing in one service.",
+      "category": "Website Add-ons",
+      "priceCents": 39700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 39700,
+      "sourcePriceLabel": "$397/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "presence.bundle",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "presence.bundle",
+      "scope": "Content Month + Media Publish entitlements; Connect $149 once separate unless explicitly waived in signed terms. Components total $394; do not claim this $397 price saves money. Convenience packaging, no invented bonus.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 306,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "featured": false
+    },
+    {
+      "sku": "SEASONAL-DROP",
+      "version": 1,
+      "name": "Choose a timely offer and receive the creative to present it",
+      "description": "Choose a timely offer and receive the creative to present it.",
+      "category": "Website Add-ons",
+      "priceCents": 12900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 12900,
+      "sourcePriceLabel": "$129/drop",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "seasonal.drop",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "seasonal.drop",
+      "scope": "3 ideas; one selected offer/graphic set/copy; date/terms/credit checks",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 400,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "SEASONAL-DROP-VIDEO",
+      "version": 1,
+      "name": "Add a 13-second film for that seasonal offer",
+      "description": "Add a 13-second film for that seasonal offer.",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79/attached video",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "seasonal.drop.video",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "seasonal.drop.video",
+      "scope": "One ~13s Short, measured render/rights/captions",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 401,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "SEASONAL-PASS",
+      "version": 1,
+      "name": "Plan a year's seasonal creative in advance",
+      "description": "Plan a year's seasonal creative in advance.",
+      "category": "Website Add-ons",
+      "priceCents": 49700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 49700,
+      "sourcePriceLabel": "$497/year",
+      "currency": "USD",
+      "cadence": "year",
+      "entitlementKeys": [
+        {
+          "key": "seasonal.pass",
+          "quantity": 8
+        }
+      ],
+      "fulfillmentCode": "seasonal.pass",
+      "scope": "8 selected drops per rolling 12-month period; no included video",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 402,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "SEASONAL-PASS-PRO",
+      "version": 1,
+      "name": "Pair each seasonal drop with a short film",
+      "description": "Pair each seasonal drop with a short film.",
+      "category": "Website Add-ons",
+      "priceCents": 79700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 79700,
+      "sourcePriceLabel": "$797/year",
+      "currency": "USD",
+      "cadence": "year",
+      "entitlementKeys": [
+        {
+          "key": "seasonal.pass.pro",
+          "quantity": 8
+        }
+      ],
+      "fulfillmentCode": "seasonal.pass.pro",
+      "scope": "8 drops + 8 videos; conditional distribution/email draft creation only",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 403,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "WEATHER-HOME-PRO",
+      "version": 1,
+      "name": "Configure service suggestions around relevant weather",
+      "description": "Configure service suggestions around relevant weather.",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "weather.rules.pro",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "weather.rules.pro",
+      "scope": "Multiple advanced rules/priority/history; verified provider/cache and safe fallback",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 500,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "STORM-COMPANION-PRO",
+      "version": 1,
+      "name": "Prepare a storm-response page and follow-up materials",
+      "description": "Prepare a storm-response page and follow-up materials.",
+      "category": "Website Add-ons",
+      "priceCents": 9900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 9900,
+      "sourcePriceLabel": "$99 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "storm.companion.pro",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "storm.companion.pro",
+      "scope": "One factual checklist PDF and draft follow-up sequence; sending separate",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 501,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "JOB-BINDER",
+      "version": 1,
+      "name": "Assemble completed-job information into a customer binder",
+      "description": "Assemble completed-job information into a customer binder.",
+      "category": "Website Add-ons",
+      "priceCents": 9700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 9700,
+      "sourcePriceLabel": "$97/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "job.binder.month",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "job.binder.month",
+      "scope": "Unlimited eligible completed-job binders under disclosed media/retention limits",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 502,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "JOB-BINDER-ANNUAL",
+      "version": 1,
+      "name": "Prepay the same binder service annually",
+      "description": "Prepay the same binder service annually.",
+      "category": "Website Add-ons",
+      "priceCents": 49700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 49700,
+      "sourcePriceLabel": "$497/year",
+      "currency": "USD",
+      "cadence": "year",
+      "entitlementKeys": [
+        {
+          "key": "job.binder.year",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "job.binder.year",
+      "scope": "Same service, annual alternative; not both grants; annual timer still excluded",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 503,
+      "timerEligibleIfApproved": false,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "REFERRAL-ENGINE",
+      "version": 1,
+      "name": "Track a clear customer referral program",
+      "description": "Track a clear customer referral program.",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "referral.engine",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "referral.engine",
+      "scope": "Funded-program tracking and drafts; rewards/CRM/delivery dependencies",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 504,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "LANG-ES",
+      "version": 1,
+      "name": "Make the base website and its forms useful in Spanish",
+      "description": "Make the base website and its forms useful in Spanish.",
+      "category": "Website Add-ons",
+      "priceCents": 14900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 14900,
+      "sourcePriceLabel": "$149 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "language.es",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "language.es",
+      "scope": "Contracted base website/forms translation; reviewed sensitive terms",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 505,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "CREW-QR-KIT",
+      "version": 1,
+      "name": "Give one crew or placement a useful scannable destination",
+      "description": "Give one crew or placement a useful scannable destination.",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "crew.qr.base",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "crew.qr.base",
+      "scope": "One persistent QR landing and print PDF; no physical printing",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 506,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "CREW-QR-EXTRA",
+      "version": 1,
+      "name": "Add another tracked QR destination",
+      "description": "Add another tracked QR destination.",
+      "category": "Website Add-ons",
+      "priceCents": 1900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 1900,
+      "sourcePriceLabel": "$19/unit",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "crew.qr.extra",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "crew.qr.extra",
+      "scope": "One additional code/landing/artwork variant; not a new subscription",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 507,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "HOA-PACKET",
+      "version": 1,
+      "name": "Organize repeat HOA/ARC submission packets",
+      "description": "Organize repeat HOA/ARC submission packets.",
+      "category": "Website Add-ons",
+      "priceCents": 14900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 14900,
+      "sourcePriceLabel": "$149/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "hoa.packet.month",
+          "quantity": 10
+        }
+      ],
+      "fulfillmentCode": "hoa.packet.month",
+      "scope": "Proposed 10 source-backed packets + one revision each; not professional certification",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 508,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "HOA-PACKET-SINGLE",
+      "version": 1,
+      "name": "Prepare one HOA/ARC submission packet",
+      "description": "Prepare one HOA/ARC submission packet.",
+      "category": "Website Add-ons",
+      "priceCents": 2900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 2900,
+      "sourcePriceLabel": "$29/packet",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "hoa.packet.single",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "hoa.packet.single",
+      "scope": "One packet + one revision; missing evidence blocks final",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 509,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "COMPARE-PRO",
+      "version": 1,
+      "name": "Explain your approach with a clear, fair comparison",
+      "description": "Explain your approach with a clear, fair comparison.",
+      "category": "Website Add-ons",
+      "priceCents": 4900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 4900,
+      "sourcePriceLabel": "$49 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "compare.pro",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "compare.pro",
+      "scope": "Reviewed copy + accessible motion; no invented comparison claims",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 510,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "ANALYTICS-CONNECT",
+      "version": 1,
+      "name": "Set up agreed measurement and a useful dashboard",
+      "description": "Set up agreed measurement and a useful dashboard.",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "analytics.connect",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "analytics.connect",
+      "scope": "Authorized GA property/reporting + collection/event checklist; owner owns GA",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 511,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "GROWTH-PLAN",
+      "version": 1,
+      "name": "Maintain a focused growth plan with monthly insights",
+      "description": "Maintain a focused growth plan with monthly insights.",
+      "category": "Website Add-ons",
+      "priceCents": 19700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 19700,
+      "sourcePriceLabel": "$197/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "growth.plan",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "growth.plan",
+      "scope": "Five moves, evidence, bounded draft automations, weekly explanation",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 512,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "GROWTH-PLAN-PRO",
+      "version": 1,
+      "name": "Coordinate the growth plan with your content and seasonal work",
+      "description": "Coordinate the growth plan with your content and seasonal work.",
+      "category": "Website Add-ons",
+      "priceCents": 39700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 39700,
+      "sourcePriceLabel": "$397/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "growth.plan.pro",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "growth.plan.pro",
+      "scope": "Above plus purchased-content coordination priority and one monthly insight video",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 513,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "ADS-CONNECT",
+      "version": 1,
+      "name": "Connect the ad accounts you own and verify the setup",
+      "description": "Connect the ad accounts you own and verify the setup.",
+      "category": "Website Add-ons",
+      "priceCents": 14900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 14900,
+      "sourcePriceLabel": "$149 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "ads.connect",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "ads.connect",
+      "scope": "Owned Meta/Google account setup and scoped tags; no ad spend",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 514,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "ADS-CREATIVE-AUTO",
+      "version": 1,
+      "name": "Adapt approved media into monthly ad variations",
+      "description": "Adapt approved media into monthly ad variations.",
+      "category": "Website Add-ons",
+      "priceCents": 9700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 9700,
+      "sourcePriceLabel": "$97/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "ads.creative",
+          "quantity": 6
+        }
+      ],
+      "fulfillmentCode": "ads.creative",
+      "scope": "Proposed six reviewed creative variants from permitted media",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 515,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "ADS-LAUNCH",
+      "version": 1,
+      "name": "Prepare one campaign for owner review",
+      "description": "Prepare one campaign for owner review.",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79/campaign",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "ads.campaign.draft",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "ads.campaign.draft",
+      "scope": "One paused campaign draft + QA; owner go-live/budget separate",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 516,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "ADS-MANAGE",
+      "version": 1,
+      "name": "Review and adjust campaigns within an approved budget",
+      "description": "Review and adjust campaigns within an approved budget.",
+      "category": "Website Add-ons",
+      "priceCents": 29700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 29700,
+      "sourcePriceLabel": "$297/month + client spend",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "ads.manage",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "ads.manage",
+      "scope": "Scoped approved management; native limits/guard/pause health",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 517,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "ADS-MANAGE-PRO",
+      "version": 1,
+      "name": "Coordinate managed ads with approved job and offer content",
+      "description": "Coordinate managed ads with approved job and offer content.",
+      "category": "Website Add-ons",
+      "priceCents": 49700,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 49700,
+      "sourcePriceLabel": "$497/month + client spend",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "ads.manage.pro",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "ads.manage.pro",
+      "scope": "Job/seasonal coordination + separately permitted offline conversion assistance",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 518,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "CRM-CONNECT-WEBSITE",
+      "version": 1,
+      "name": "Connect website leads and approved project proof with your existing CRM",
+      "description": "Connect website leads and approved project proof with your existing CRM.",
+      "category": "Website Add-ons",
+      "priceCents": null,
+      "proposedPriceCents": 14900,
+      "sourcePriceCents": 14900,
+      "sourcePriceLabel": "Proposed $149 once",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "crm.website.connect",
+          "quantity": null
+        }
+      ],
+      "fulfillmentCode": "crm.website.connect",
+      "scope": "Guide band $99–$249; final amount owner-set. Setup for one organization and two approved pipes; existing eligible CRM access required. Not a CRM subscription, not a license promise, not authorization to edit the separate CRM.",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 519,
+      "timerEligibleIfApproved": true,
+      "source": "PACK3_PRICE_BOOK.md",
+      "blockedReason": "Pack 3 marks the $149 CRM connection amount as owner-set and unapproved.",
+      "featured": false
+    },
+    {
+      "sku": "EMAIL-STARTER",
+      "version": 1,
+      "name": "Email Starter",
+      "description": "1,000 active eligible contacts, unlimited campaigns within disclosed safety limits; manual approval",
+      "category": "Website Add-ons",
+      "priceCents": 4900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 4900,
+      "sourcePriceLabel": "$49/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "email.starter",
+          "quantity": 1000
+        }
+      ],
+      "fulfillmentCode": "email.starter",
+      "scope": "1,000 active eligible contacts, unlimited campaigns within disclosed safety limits; manual approval",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 520,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "EMAIL-GROWTH",
+      "version": 1,
+      "name": "Email Growth",
+      "description": "5,000 active eligible contacts, triggered drafts, setup included",
+      "category": "Website Add-ons",
+      "priceCents": 9900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 9900,
+      "sourcePriceLabel": "$99/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "email.growth",
+          "quantity": 5000
+        },
+        {
+          "key": "email.domain.setup.included",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "email.growth",
+      "scope": "5,000 active eligible contacts, triggered drafts, setup included",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 521,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "EMAIL-PRO",
+      "version": 1,
+      "name": "Email Pro",
+      "description": "15,000 active eligible contacts, subject tests, Spanish email variants, setup included",
+      "category": "Website Add-ons",
+      "priceCents": 14900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 14900,
+      "sourcePriceLabel": "$149/month",
+      "currency": "USD",
+      "cadence": "month",
+      "entitlementKeys": [
+        {
+          "key": "email.pro",
+          "quantity": 15000
+        },
+        {
+          "key": "email.domain.setup.included",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "email.pro",
+      "scope": "15,000 active eligible contacts, subject tests, Spanish email variants, setup included",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 522,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    },
+    {
+      "sku": "EMAIL-DOMAIN-SETUP",
+      "version": 1,
+      "name": "Email Domain Setup",
+      "description": "One domain/setup-cleanup workflow; zero-charge entitlement on included tiers",
+      "category": "Website Add-ons",
+      "priceCents": 7900,
+      "proposedPriceCents": null,
+      "sourcePriceCents": 7900,
+      "sourcePriceLabel": "$79 Starter / included Growth and Pro",
+      "currency": "USD",
+      "cadence": "one_time",
+      "entitlementKeys": [
+        {
+          "key": "email.domain.setup",
+          "quantity": 1
+        }
+      ],
+      "fulfillmentCode": "email.domain.setup",
+      "scope": "One domain/setup-cleanup workflow; zero-charge entitlement on included tiers",
+      "active": false,
+      "taxFlag": "requires_configuration",
+      "sort": 523,
+      "timerEligibleIfApproved": true,
+      "source": "PACK4_CATALOG_DELTA.md",
+      "featured": false
+    }
+  ]
+}
