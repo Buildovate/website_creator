@@ -1,0 +1,19 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: {"error":"Complete the review packet before approval."}
+
+409 !== 200
+
+    at api (file:///C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3/baseline-check/snapshot/tests/design-styles-browser.mjs:12:198)
+    at async file:///C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3/baseline-check/snapshot/tests/design-styles-browser.mjs:17:197 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 409,
+  expected: 200,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

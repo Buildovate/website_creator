@@ -1,0 +1,16 @@
+[
+  {
+    "label": "isolated-worker-build",
+    "code": 0,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-build-gate-isolated-worker-build.log",
+    "ms": 803,
+    "supersedes": "earlier full-sweep invocation; final source verification"
+  },
+  {
+    "label": "typecheck",
+    "code": 0,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-build-gate-typecheck.log",
+    "ms": 840,
+    "supersedes": "earlier full-sweep invocation; final source verification"
+  }
+]

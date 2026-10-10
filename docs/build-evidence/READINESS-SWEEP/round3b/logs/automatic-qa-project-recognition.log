@@ -1,0 +1,2 @@
+PASS exact recognition lock: removing only registered entries restores round-4 SHA-256; generic detector, 2px, 60ms and per-state assertion unchanged.
+PASS project submit: 4 positive, 48 negative cases; frozen detector lock passes.

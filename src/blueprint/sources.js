@@ -9,7 +9,7 @@ const available=(dataSource,value)=>({state:'available',dataSource,...value});
  * at any future route boundary. Every query and owner contract is tenant-scoped.
  * No network, credentials, generation, writes, or invented persisted record kinds.
  */
-export async function readProgressSources(env,tenantId,{deps=createDependencies()}={}){
+export async function readProgressSources(env,tenantId,{deps=createDependencies({database:env.DB})}={}){
  if(!text(tenantId))throw new TypeError('A tenant ID is required.');
  const first=(sql,...args)=>env.DB.prepare(sql).bind(...args).first();
  const tenant=await first('SELECT id,settings,published,status FROM tenants WHERE id=?',tenantId);

@@ -1,5 +1,6 @@
 // Sequential fixtures only. Stop on the first assertion; no retries.
 import assert from 'node:assert/strict';
+import {adoptGeneration} from '../src/generation.js';
 import {DatabaseSync} from 'node:sqlite';
 import {isPostgresGameFixture,gameDatabaseFixture,seedGameTenant,seedGameMember,seedGameAdmin} from './helpers/game-database-fixture.mjs';
 import {build} from 'esbuild';
@@ -10,19 +11,14 @@ import {complete} from './game-fixtures.mjs';
 const root='C:/Users/joe/wc-game',out=root+'/docs/build-evidence/028G/round4';fs.mkdirSync(out,{recursive:true});
 await build({stdin:{contents:"export {gameApi} from './src/blueprint/api.js'; export {advanceExperience,emptyExperience,publishedPreview} from './src/blueprint/experience.js';",resolveDir:root},outfile:root+'/.data/028G/game-experience-api.js',bundle:true,format:'esm',platform:'node',loader:{'.html':'text','.pdf':'binary'},logLevel:'silent'});
 const {gameApi,advanceExperience,emptyExperience,publishedPreview}=await import(pathToFileURL(root+'/.data/028G/game-experience-api.js').href);
-const db=isPostgresGameFixture()?gameDatabaseFixture():new DatabaseSync(':memory:');
-if(isPostgresGameFixture()){
+const db=gameDatabaseFixture();
 
-for(const id of ['a','b'])seedGameTenant(db,id,'Game QA fixture');
+
+const initialSettings=JSON.stringify(adoptGeneration({},'a','game-fixture-a'));
+for(const id of ['a','b'])seedGameTenant(db,id,'Game QA fixture',{settings:id==='a'?initialSettings:JSON.stringify(adoptGeneration({},id,'game-fixture-'+id))});
 for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['b','other','owner']])seedGameMember(db,tenant,user,role);
 seedGameAdmin(db,'admin');
-}else{
 
-db.exec('CREATE TABLE admins(user_id TEXT,role TEXT); CREATE TABLE tenants(id TEXT,name TEXT,settings TEXT,published TEXT,status TEXT); CREATE TABLE members(tenant_id TEXT,user_id TEXT,role TEXT,active INT); CREATE TABLE sales(tenant_id TEXT,data TEXT); CREATE TABLE inquiries(tenant_id TEXT); CREATE TABLE workspace_records(id TEXT PRIMARY KEY,scope TEXT,kind TEXT,data TEXT,version INT,created_at TEXT,updated_at TEXT);');
-for(const id of ['a','b'])db.prepare('INSERT INTO tenants VALUES(?,?,?,?,?)').run(id,'Game QA fixture','{}',null,'draft');
-for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['b','other','owner']])db.prepare('INSERT INTO members VALUES(?,?,?,1)').run(tenant,user,role);
-db.prepare('INSERT INTO admins VALUES(?,?)').run('admin','admin');
-}
 const env={DB:{
  prepare(sql){
   let args=[];
@@ -43,7 +39,7 @@ try{
  await check('tour is claimed once and recorded per account',async()=>{const x=await call('owner','POST',{action:'observe'});assert.equal(x.showTour,true);assert.equal(x.state.tour,'started');assert.deepEqual(x.completedLevels,[]);assert.equal((await call('owner','POST',{action:'observe'})).showTour,false)});
  await check('skip persists without reopening tour',async()=>{await call('owner','POST',{action:'skip_tour'});assert.equal((await call()).state.tour,'skipped');assert.equal((await call('owner','POST',{action:'observe'})).showTour,false)});
  await check('repeat skip is idempotent',async()=>{const before=db.prepare('SELECT total_changes() n').get().n;await call('owner','POST',{action:'skip_tour'});assert.equal(db.prepare('SELECT total_changes() n').get().n,before)});
- await check('viewer gets a separate personal tour, not business write permission',async()=>{assert.equal((await call('viewer','POST',{action:'observe'})).showTour,true);await call('viewer','POST',{action:'finish_tour'});assert.equal((await call('viewer')).state.tour,'finished');assert.equal((await call()).state.tour,'skipped');assert.equal(db.prepare("SELECT settings FROM tenants WHERE id='a'").get().settings,'{}')});
+ await check('viewer gets a separate personal tour, not business write permission',async()=>{assert.equal((await call('viewer','POST',{action:'observe'})).showTour,true);await call('viewer','POST',{action:'finish_tour'});assert.equal((await call('viewer')).state.tour,'finished');assert.equal((await call()).state.tour,'skipped');assert.equal(db.prepare("SELECT settings FROM tenants WHERE id='a'").get().settings,initialSettings)});
  await check('finished tour survives later reads and observations',async()=>{assert.equal((await call('viewer','POST',{action:'observe'})).showTour,false);assert.equal((await call('viewer')).state.tour,'finished')});
  await check('anonymous denied',()=>denied(()=>call(null),401));
  await check('cross-tenant read denied',()=>denied(()=>call('other'),404));

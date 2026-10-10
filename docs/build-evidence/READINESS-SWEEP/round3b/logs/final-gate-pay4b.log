@@ -1,0 +1,13 @@
+✔ monthly renter quotes annual, confirms through fake, and changes only after signed $500 settlement (49.5146ms)
+✔ monthly cancellation before three-month end is refused and shows the date (52.7999ms)
+✔ monthly cancellation after minimum schedules period-end stop, with no export (34.8383ms)
+✔ annual cancellation keeps prepaid site until term end with no refund (26.2234ms)
+✔ owned site has no rental cancellation action (24.8274ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 200.6129

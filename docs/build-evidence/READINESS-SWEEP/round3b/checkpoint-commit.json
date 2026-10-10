@@ -1,0 +1,31 @@
+{
+  "sha": "2c6085709e8b35476d0ac9586b640842ab2a1b97",
+  "gatePassed": true,
+  "counts": {
+    "Game": 122,
+    "Pay": 44,
+    "catalog": 11,
+    "domain": 77,
+    "insertion": 16
+  },
+  "stagedCount": 489,
+  "supersedes": "da1e94fa0fb5a254b21087106ba7532398e3bfab",
+  "amendReason": "Include already approved pre-sweep unstaged Worker/asset-policy/Game test and 44px fixes; new batch A working bytes preserved",
+  "additionalPaths": [
+    "build.mjs",
+    "package-lock.json",
+    "package.json",
+    "scripts/check-template-assets.mjs",
+    "src/client/styles/platform/game.css",
+    "src/leaflet-asset-policy.js",
+    "src/platform/catalog.ts",
+    "src/static-site-export.js",
+    "tests/game-copy.mjs",
+    "tests/game-desktop.mjs",
+    "tests/game-forms.mjs",
+    "tests/game-guard-build.mjs",
+    "tests/game-phone.mjs",
+    "tests/leaflet-assets.mjs",
+    "wrangler.local.jsonc"
+  ]
+}

@@ -1,0 +1,40 @@
+(node:51796) ExperimentalWarning: Transform Types is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+X [ERROR] Could not resolve "node:fs"
+
+    src/platform/catalog.ts:1:29:
+      1 │ import { readFileSync } from 'node:fs';
+        ╵                              ~~~~~~~~~
+
+  The package "node:fs" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+X [ERROR] Could not resolve "node:crypto"
+
+    src/payments/webhook.js:1:52:
+      1 │ import {createHmac,timingSafeEqual,randomUUID} from 'node:crypto';
+        ╵                                                     ~~~~~~~~~~~~~
+
+  The package "node:crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+
+C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:1467
+  let error = new Error(text);
+              ^
+
+Error: Build failed with 2 errors:
+src/payments/webhook.js:1:52: ERROR: Could not resolve "node:crypto"
+src/platform/catalog.ts:1:29: ERROR: Could not resolve "node:fs"
+    at failureErrorWithLog (C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:926:25
+    at C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:878:52
+    at buildResponseToResult (C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:924:7)
+    at C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:951:16
+    at responseCallbacks.<computed> (C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12) {
+  errors: [Getter/Setter],
+  warnings: [Getter/Setter]
+}
+
+Node.js v24.19.0

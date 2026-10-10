@@ -133,16 +133,17 @@ export function createCheckoutService({ stripe, env = {}, catalogData = catalog,
   return { createCheckout, connectionState: () => stripeConnectionState(env,stripe) };
 }
 
-let defaultService: ReturnType<typeof createCheckoutService> | undefined;
-export async function createCheckout(request: CheckoutRequest): Promise<{url:string} | {state:'not_connected'; message:string}> {
-  if (!defaultService) {
-    const env = process.env;
-    assertTestEnvironment(env);
-    if (!env.STRIPE_SECRET_KEY || !env.STRIPE_PUBLISHABLE_KEY || !env.STRIPE_WEBHOOK_SECRET) return {state:'not_connected',message:'Payments not connected'};
+const runtimeServices = new WeakMap<StripeEnvironment, ReturnType<typeof createCheckoutService>>();
+export async function createCheckout(request: CheckoutRequest, env: StripeEnvironment = process.env): Promise<{url:string} | {state:'not_connected'; message:string}> {
+  assertTestEnvironment(env);
+  if (!env.STRIPE_SECRET_KEY || !env.STRIPE_PUBLISHABLE_KEY || !env.STRIPE_WEBHOOK_SECRET) return {state:'not_connected',message:'Payments not connected'};
+  let service=runtimeServices.get(env);
+  if (!service) {
     const { default: Stripe } = await import('stripe');
-    defaultService = createCheckoutService({stripe:new Stripe(env.STRIPE_SECRET_KEY) as unknown as StripeClient,env,baseUrl:env.APP_ORIGIN ?? 'http://localhost:5181'});
+    service = createCheckoutService({stripe:new Stripe(env.STRIPE_SECRET_KEY) as unknown as StripeClient,env,baseUrl:env.APP_ORIGIN || 'http://localhost:5181',taxConfigured:env.STRIPE_TAX_CONFIGURED==='1'});
+    runtimeServices.set(env,service);
   }
-  return defaultService.createCheckout(request);
+  return service.createCheckout(request);
 }
 
 export type SettledPayment = {tenantId:string; sku:string; ledgerId:string; amountCents:number; periodStart:string; periodEnd:string};

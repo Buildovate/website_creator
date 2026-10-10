@@ -1,0 +1,13 @@
+✔ only a correctly signed raw event can settle a payment (21.2362ms)
+✔ duplicate deliveries settle once and call onSettled once (12.0344ms)
+✔ invoice before checkout and subscription update settles after customer linkage (12.8797ms)
+✔ wrong amount and wrong tenant are rejected without entitlement grants (14.6253ms)
+✔ no webhook secret cannot process any payment (13.9611ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 95.0062

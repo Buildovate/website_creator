@@ -1,0 +1,83 @@
+QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.
+Review capture page part1-logo-check /s/part1-logo-check
+Review capture width /s/part1-logo-check 1440
+Review capture width /s/part1-logo-check 390
+Review capture width /s/part1-logo-check 768
+Review capture page part1-logo-check /s/part1-logo-check/about
+Review capture width /s/part1-logo-check/about 1440
+Review capture width /s/part1-logo-check/about 390
+Review capture width /s/part1-logo-check/about 768
+Review capture page part1-logo-check /s/part1-logo-check/areas
+Review capture width /s/part1-logo-check/areas 1440
+Review capture width /s/part1-logo-check/areas 390
+Review capture width /s/part1-logo-check/areas 768
+Review capture page part1-logo-check /s/part1-logo-check/areas/oxnard
+Review capture width /s/part1-logo-check/areas/oxnard 1440
+Review capture width /s/part1-logo-check/areas/oxnard 390
+Review capture width /s/part1-logo-check/areas/oxnard 768
+Review capture page part1-logo-check /s/part1-logo-check/blog
+Review capture width /s/part1-logo-check/blog 1440
+Review capture width /s/part1-logo-check/blog 390
+Review capture width /s/part1-logo-check/blog 768
+Review capture page part1-logo-check /s/part1-logo-check/contact
+Review capture width /s/part1-logo-check/contact 1440
+Review capture width /s/part1-logo-check/contact 390
+Review capture width /s/part1-logo-check/contact 768
+Review capture page part1-logo-check /s/part1-logo-check/faq
+Review capture width /s/part1-logo-check/faq 1440
+Review capture width /s/part1-logo-check/faq 390
+Review capture width /s/part1-logo-check/faq 768
+Review capture page part1-logo-check /s/part1-logo-check/legal
+Review capture width /s/part1-logo-check/legal 1440
+Review capture width /s/part1-logo-check/legal 390
+Review capture width /s/part1-logo-check/legal 768
+Review capture page part1-logo-check /s/part1-logo-check/legal/privacy
+Review capture width /s/part1-logo-check/legal/privacy 1440
+Review capture width /s/part1-logo-check/legal/privacy 390
+Review capture width /s/part1-logo-check/legal/privacy 768
+Review capture page part1-logo-check /s/part1-logo-check/legal/terms
+Review capture width /s/part1-logo-check/legal/terms 1440
+Review capture width /s/part1-logo-check/legal/terms 390
+Review capture width /s/part1-logo-check/legal/terms 768
+Review capture page part1-logo-check /s/part1-logo-check/pricing
+Review capture width /s/part1-logo-check/pricing 1440
+Review capture width /s/part1-logo-check/pricing 390
+Review capture width /s/part1-logo-check/pricing 768
+Review capture page part1-logo-check /s/part1-logo-check/services
+Review capture width /s/part1-logo-check/services 1440
+Review capture width /s/part1-logo-check/services 390
+Review capture width /s/part1-logo-check/services 768
+Review capture page part1-logo-check /s/part1-logo-check/services/roof-repair
+Review capture width /s/part1-logo-check/services/roof-repair 1440
+Review capture width /s/part1-logo-check/services/roof-repair 390
+Review capture width /s/part1-logo-check/services/roof-repair 768
+Review capture page part1-logo-check /s/part1-logo-check/thank-you
+Review capture width /s/part1-logo-check/thank-you 1440
+Review capture width /s/part1-logo-check/thank-you 390
+Review capture width /s/part1-logo-check/thank-you 768
+Review capture clip /assets/build-films/roofing.mp4
+Review capture frame /assets/build-films/roofing.mp4 0
+Review capture frame /assets/build-films/roofing.mp4 25
+Review capture frame /assets/build-films/roofing.mp4 50
+Review capture frame /assets/build-films/roofing.mp4 75
+Review capture frame /assets/build-films/roofing.mp4 100
+Review capture clip /assets/films/roofing-transformation.mp4
+Review capture frame /assets/films/roofing-transformation.mp4 0
+Review capture frame /assets/films/roofing-transformation.mp4 25
+Review capture frame /assets/films/roofing-transformation.mp4 50
+Review capture frame /assets/films/roofing-transformation.mp4 75
+Review capture frame /assets/films/roofing-transformation.mp4 100
+Review capture clip /assets/craft-films/roofing.mp4
+Review capture frame /assets/craft-films/roofing.mp4 0
+Review capture frame /assets/craft-films/roofing.mp4 25
+Review capture frame /assets/craft-films/roofing.mp4 50
+Review capture frame /assets/craft-films/roofing.mp4 75
+Review capture frame /assets/craft-films/roofing.mp4 100
+Review capture clip /assets/films/roofing-story.mp4
+Review capture frame /assets/films/roofing-story.mp4 0
+Review capture frame /assets/films/roofing-story.mp4 25
+Review capture frame /assets/films/roofing-story.mp4 50
+Review capture frame /assets/films/roofing-story.mp4 75
+Review capture frame /assets/films/roofing-story.mp4 100
+REAL browser QA prerequisite: ab927160-033f-4905-b5c9-80c4242d2790 website {"clear":false,"blocking":0,"pending":2,"passed":636,"reason":"A staff reviewer must decide every Borderline item, with a reason."}
+PASS 660 Part 1 regression checks; 158 additional rendered variants

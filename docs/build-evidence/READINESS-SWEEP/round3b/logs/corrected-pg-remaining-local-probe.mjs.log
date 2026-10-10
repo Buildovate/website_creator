@@ -1,0 +1,12 @@
+(node:67852) ExperimentalWarning: Transform Types is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS discovery search create and delete
+PASS pricing inquiry persistence and contact linkage
+PASS session issue uses transaction SQL
+PASS legacy service-page backfill both snapshots
+PASS owned blog photo validation
+PASS public form consented submission and contactKey limit
+PASS AI hourly limit prevents any provider request
+PASS legacy-format hosting settlement updates hosting status
+PASS add-on delivery transition on PostgreSQL
+{"pass":9,"fail":0}

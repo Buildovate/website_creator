@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-10T13:13:58.452Z",
+  "baseline": false,
+  "backend": "postgres",
+  "source": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/snapshot",
+  "fixture": "Fictional paid annual invoice with an unused-month credit; no provider call or actual charge",
+  "status": 400,
+  "body": "{\"error\":\"Payment amount does not match catalog: PLAN-WEBSITE-MONTH\"}",
+  "ledgerEntries": 0,
+  "accepted": false,
+  "providerCalls": 0,
+  "credits": 0
+}

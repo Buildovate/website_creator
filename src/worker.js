@@ -1,3 +1,4 @@
+import {paymentSiteAvailable} from './payments/site-availability.js';
 import {configureStaticSiteFetch} from './static-site-export.js';
 import {domainGuidePage,maintainDomainPlans} from './domain/plan.js';
 import {reviewPacketView} from './review-packet-view.js';
@@ -55,6 +56,15 @@ const html=(markup,status=200)=>{
  return new Response(data,{status,headers});
 };
 const baseWorker={async scheduled(_event,env){if(!_event.domainOnly)await postRecurringExpenses(env);await maintainDomainPlans(env)},async fetch(req,env){const url=new URL(req.url);try{
+ const publicSite=url.pathname.match(/^\/(?:s|api\/public)\/([^/]+)(?:\/|$)/);
+ if(publicSite){
+  const tenant=await env.DB.prepare('SELECT id FROM tenants WHERE slug=?').bind(publicSite[1]).first();
+  if(tenant&&!await paymentSiteAvailable(env,tenant.id)){
+   if(url.searchParams.get('preview')==='1')await access(req,env,tenant.id);
+   else must(false,'Website not available.',404);
+  }
+ }
+
 const domainGuideRoute=url.pathname.match(/^\/domain-guide\/([^/]+)$/);if(domainGuideRoute&&req.method==='GET')return new Response(await domainGuidePage(req,env,domainGuideRoute[1]),{headers:{'content-type':'text/html;charset=utf-8','cache-control':'no-store'}});
 if(url.pathname==='/sitemap.xml'){must(req.method==='GET','Method not allowed.',405);const tenants=await all(env,"SELECT slug FROM tenants WHERE status='published' AND published IS NOT NULL");return new Response('<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+tenants.map(tenant=>`<sitemap><loc>${url.origin}/s/${tenant.slug}/sitemap.xml</loc></sitemap>`).join('')+'</sitemapindex>',{headers:{'content-type':'application/xml; charset=utf-8','cache-control':'no-store'}})}
 const sitemap=url.pathname.match(/^\/s\/([^/]+)\/sitemap\.xml$/);if(sitemap){must(req.method==='GET','Method not allowed.',405);const tenant=await one(env,"SELECT * FROM tenants WHERE slug=? AND status='published' AND published IS NOT NULL",sitemap[1]);must(tenant,'Website not found.',404);const s=JSON.parse(tenant.published),base=url.origin+'/s/'+tenant.slug,projects=demoProjects(tenant,await all(env,'SELECT id,published FROM projects WHERE tenant_id=? AND published IS NOT NULL',tenant.id),false);const locations=[...coreSitemapPaths(s),...projects.map(project=>'/projects/'+project.id)].map(path=>base+path);return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+locations.map(location=>'<url><loc>'+location.replace(/&/g,'&amp;')+'</loc></url>').join('')+'</urlset>',{headers:{'content-type':'application/xml; charset=utf-8','cache-control':'no-store'}})}
@@ -84,6 +94,7 @@ configureReviewRenderer((req,env)=>styledWorker.fetch(req,env));
 configureStaticSiteFetch((req,env)=>styledWorker.fetch(req,env));
 export default {...styledWorker,async fetch(req,env){
  const response=await styledWorker.fetch(req,env);
+ if(response.ok){const site=new URL(req.url).pathname.match(/^\/s\/([^/]+)(?:\/|$)/);if(site){const t=await env.DB.prepare('SELECT id FROM tenants WHERE slug=?').bind(site[1]).first();if(t)response.headers.set('x-buildovate-tenant',t.id);}}
  if(!env.REVIEW_ISOLATED&&response.ok&&['POST','PUT'].includes(req.method)){
   const path=new URL(req.url).pathname,match=path.match(/^\/api\/tenants\/([^/]+)(?:\/(generation))?$/);
   if(match||path==='/api/tenants'){

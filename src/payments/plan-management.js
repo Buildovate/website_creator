@@ -1,3 +1,4 @@
+import {getBillingAdapter} from './billing-adapter.js';
 import {catalog,getProduct} from '../platform/catalog.ts';
 import {must,uid} from '../core.js';
 
@@ -21,7 +22,7 @@ export async function rentalDetails(env,tenantId,clock=Date.now()){
   return {kind:annual?'annual':'monthly',currentSku:ledger.sku,periodEnd,cancel,switchTargets:pricedWebsiteSkus.filter(sku=>sku!==ledger.sku).map(sku=>({sku,priceCents:getProduct(sku).priceCents,cadence:getProduct(sku).cadence}))};
 }
 
-function adapterFor(env){return env.PAYMENT_BILLING_ADAPTER??null;}
+const adapterFor=getBillingAdapter;
 function validateSwitch(details,targetSku){
   must(details.kind==='monthly'||details.kind==='annual','Only a renter can change plans.',409);
   must(details.cancel?.scheduled!==true,'Cancellation is already scheduled.',409);
@@ -40,7 +41,7 @@ function validateIdempotencyKey(key){must(typeof key==='string'&&/^[A-Za-z0-9_-]
 
 export async function quotePlanSwitch(env,tenantId,targetSku,clock=Date.now()){
   const details=await rentalDetails(env,tenantId,clock),target=validateSwitch(details,targetSku);
-  const adapter=adapterFor(env);
+  const adapter=await adapterFor(env);
   if(!adapter)return {state:'not_connected',message:'Payments not connected'};
   const subscriptionId=await subscriptionFor(env,tenantId);
   const quote=await adapter.previewSwitch({tenantId,subscriptionId,currentSku:details.currentSku,targetSku:target.sku,targetPriceCents:target.priceCents});
@@ -52,7 +53,7 @@ export async function confirmPlanSwitch(env,tenantId,{targetSku,quoteId,idempote
   validateIdempotencyKey(idempotencyKey);
   must(typeof quoteId==='string'&&quoteId.length<=120,'Choose a current payment quote.',400);
   const details=await rentalDetails(env,tenantId,clock),target=validateSwitch(details,targetSku);
-  const adapter=adapterFor(env);
+  const adapter=await adapterFor(env);
   if(!adapter)return {state:'not_connected',message:'Payments not connected'};
   const subscriptionId=await subscriptionFor(env,tenantId);
   const result=await adapter.confirmSwitch({tenantId,subscriptionId,currentSku:details.currentSku,targetSku:target.sku,targetPriceCents:target.priceCents,quoteId,idempotencyKey});
@@ -67,7 +68,7 @@ export async function requestRentalCancellation(env,tenantId,idempotencyKey,cloc
   must(details.kind==='monthly'||details.kind==='annual','Owned sites do not have a rental plan to cancel.',409);
   must(!details.cancel.scheduled,'Cancellation is already scheduled.',409);
   must(details.cancel.allowed,details.cancel.minimumEndsAt?`Monthly rental cannot be canceled before ${details.cancel.minimumEndsAt}.`:'Rental cannot be canceled now.',409);
-  const adapter=adapterFor(env);
+  const adapter=await adapterFor(env);
   if(!adapter)return {state:'not_connected',message:'Payments not connected'};
   const subscriptionId=await subscriptionFor(env,tenantId);
   const result=await adapter.scheduleCancellation({tenantId,subscriptionId,atPeriodEnd:true,periodEnd:details.periodEnd,idempotencyKey});

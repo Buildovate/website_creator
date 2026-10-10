@@ -53,9 +53,10 @@ async function settle(env,{tenantId,sku,amount,periodStart,periodEnd,reference,e
   const start=iso(periodStart??eventCreated),end=iso(periodEnd??'9999-12-31T23:59:59.999Z');
   const id=`${reference}:${sku}:${start}`;
   const inserted=await run(env,"INSERT OR IGNORE INTO payment_ledger(id,tenant_id,sku,amount_cents,period_start,period_end,reference,status,created_at) VALUES(?,?,?,?,?,?,?,'paid',?)",id,tenantId,sku,amount,start,end,reference,now());
-  if(!inserted.meta.changes)return false;
+  if(!inserted.meta.changes){const existing=await first(env,'SELECT tenant_id,sku,amount_cents,status FROM payment_ledger WHERE id=?',id);if(!existing||existing.tenant_id!==tenantId||existing.sku!==sku||existing.amount_cents!==amount||existing.status!=='paid')throw Error('Settlement ledger does not match event.');}
   const keys=row.planId?getPlanEntitlements(row.planId):row.entitlementKeys;
-  for(const item of keys)await run(env,"INSERT INTO payment_entitlements(id,ledger_id,tenant_id,key,quantity,used,period_end,source,status) VALUES(?,?,?,?,?,0,?,?,'active')",randomUUID(),id,tenantId,item.key,item.quantity,end,sku);
+  let repaired=false;
+  for(const item of keys){if(await first(env,'SELECT id FROM payment_entitlements WHERE ledger_id=? AND tenant_id=? AND key=?',id,tenantId,item.key))continue;repaired=true;await run(env,"INSERT INTO payment_entitlements(id,ledger_id,tenant_id,key,quantity,used,period_end,source,status) VALUES(?,?,?,?,?,0,?,?,'active')",id+':'+item.key,id,tenantId,item.key,item.quantity,end,sku);}
   if(row.planId){
     const previous=await stateFor(env,tenantId);
     if(!previous.site_owned){
@@ -70,7 +71,7 @@ async function settle(env,{tenantId,sku,amount,periodStart,periodEnd,reference,e
     await audit(env,tenantId,'site.owned',`${sku}:${id}; OWNER-HOSTING $50/month pending checkout`);
   }
   if(sku==='OWNER-HOSTING')await run(env,"UPDATE payment_state SET hosting_status='active',renews_at=? WHERE tenant_id=?",end,tenantId);
-  await dispatchSettled({tenantId,sku,ledgerId:id,amountCents:amount,periodStart:start,periodEnd:end});
+  if(inserted.meta.changes||repaired)await dispatchSettled({tenantId,sku,ledgerId:id,amountCents:amount,periodStart:start,periodEnd:end});
   return true;
 }
 
@@ -84,6 +85,14 @@ async function revoke(env,reference,action){
     await audit(env,ledger.tenant_id,action,ledger.id);
   }
   return true;
+}
+function invoiceSku(line,object){
+ const explicit=line.price?.metadata?.sku??line.price?.lookup_key?.split('@')[0]??line.metadata?.sku;
+ if(explicit)return explicit;
+ const raw=line.metadata?.skus??object.parent?.subscription_details?.metadata?.skus??object.subscription_details?.metadata?.skus;
+ const skus=String(raw??'').split(',').filter(Boolean);
+ if(skus.length===1)return skus[0];
+ throw new Error('Paid invoice line has no unambiguous SKU.');
 }
 async function processEvent(env,event){
   const object=event.data?.object??{};
@@ -112,9 +121,9 @@ async function processEvent(env,event){
   if(event.type==='invoice.paid'){
     const lines=object.lines?.data??[];
     if(!lines.length)throw new Error('Paid invoice has no lines.');
-    for(const line of lines){const sku=line.price?.metadata?.sku??line.price?.lookup_key?.split('@')[0]??line.metadata?.sku;if(!sku)throw new Error('Paid invoice line has no SKU.');priced(sku,line.amount);}
+    for(const line of lines){const sku=invoiceSku(line,object);if(!sku)throw new Error('Paid invoice line has no SKU.');priced(sku,line.amount);}
     for(const line of lines){
-      const sku=line.price?.metadata?.sku??line.price?.lookup_key?.split('@')[0]??line.metadata?.sku;
+      const sku=invoiceSku(line,object);
       if(!sku)throw new Error('Paid invoice line has no SKU.');
       await settle(env,{tenantId,sku,amount:line.amount,periodStart:line.period?.start??created,periodEnd:line.period?.end,reference:object.payment_intent??object.charge??object.id,eventId:event.id,eventCreated:created});
     }
@@ -147,7 +156,7 @@ export async function applyVerifiedEvent(env,event){
   if(!event?.id||!event?.type||!env.DB)throw new Error('Invalid verified payment event.');
   configureEntitlements(env.DB);
   const inserted=await run(env,'INSERT OR IGNORE INTO payment_events(id,type,payload,tenant_id,processed,created_at) VALUES(?,?,?,NULL,0,?)',event.id,event.type,JSON.stringify(event),now());
-  if(!inserted.meta.changes)return {duplicate:true,processed:0};
+  if(!inserted.meta.changes){const previous=await first(env,'SELECT payload,processed FROM payment_events WHERE id=?',event.id);if(previous.payload!==JSON.stringify(event))throw Error('Payment event ID has different contents.');if(previous.processed)return {duplicate:true,processed:0};}
   let processed=0;
   const pending=(await query(env,'SELECT id,payload FROM payment_events WHERE processed=0 ORDER BY created_at,id').all()).results;
   for(const item of pending){

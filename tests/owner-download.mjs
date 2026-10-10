@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {openGameSection} from './helpers/game-navigation.mjs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
@@ -59,7 +60,7 @@ try{
  for(const [id,label]of [['owned','owner-published'],['unpublished','owner-unpublished'],['monthly','renter']])for(const width of [1440,390]){
   const page=await browser.newPage({viewport:{width,height:width===390?844:900},reducedMotion:'reduce'});
   await page.route('**/*',async route=>{const request=route.request(),url=new URL(request.url());if(url.origin!==origin)return route.abort();const response=await worker.fetch(new Request(request.url(),{method:request.method(),headers:{...request.headers(),'oai-authenticated-user-id':user.id,'oai-authenticated-user-email':user.email},...(request.method()!=='GET'?{body:request.postDataBuffer()}: {})}),env);return route.fulfill({status:response.status,headers:Object.fromEntries(response.headers),body:Buffer.from(await response.arrayBuffer())});});
-  await page.goto(origin,{waitUntil:'networkidle',timeout:30000});await page.locator('[data-action=open][data-id="'+id+'"]').click();await page.waitForFunction(()=>document.querySelector('.page-heading h1')?.textContent==='Sample Fictional Zip Roofing',null,{timeout:15000});await page.evaluate(()=>document.fonts.ready);
+  await page.goto(origin,{waitUntil:'networkidle',timeout:30000});await page.locator('[data-action=open][data-id="'+id+'"]').click();await page.waitForFunction(()=>document.querySelector('.page-heading h1')?.textContent==='Sample Fictional Zip Roofing',null,{timeout:15000});await page.evaluate(()=>document.fonts.ready);await openGameSection(page,'business');
   const button=page.locator('[data-action=download-site]');if(id==='monthly')check(await button.count()===0,label+' hides download at '+width);else{check(await button.isVisible(),label+' shows download at '+width);check(await button.isDisabled()===(id==='unpublished'),label+' enabled state at '+width);check(await button.textContent()===(id==='unpublished'?'Publish first':'Download site'),label+' button label at '+width);}
   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),label+' fits '+width);
   const file='screenshots/'+label+'-'+width+'.png';await page.screenshot({path:out+'/'+file,animations:'disabled',timeout:15000});result.screenshots.push({state:label,width,path:file,sha256:hash(fs.readFileSync(out+'/'+file))});flush();

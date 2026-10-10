@@ -1,0 +1,3 @@
+PASS exact recognition lock: removing only registered entries restores round-4 SHA-256; generic detector, 2px, 60ms and per-state assertion unchanged.
+
+PASS-WITH-WARNING: passed, then hung at exit

@@ -1,3 +1,6 @@
+import {createDomainChecks} from './checks.js';
+const domainAdapters=new WeakMap();
+function checksFor(env){if(env.DOMAIN_CHECKS)return env.DOMAIN_CHECKS;if(env.DOMAIN_CHECKS_ENABLED!=='1')return null;if(!domainAdapters.has(env))domainAdapters.set(env,createDomainChecks());return domainAdapters.get(env);}
 import {one,all,run,db,uid,now,must,body,access,identity,log,e} from '../core.js';
 import {cleanDomain,domainGuide,detectProvider,PROVIDERS} from './guide.js';
 import {domainStatus,needsDomainHelp,RECHECK_MS} from './state.js';
@@ -8,8 +11,8 @@ function view(row,env){if(!row)return {plan:null,version:0};const plan=JSON.pars
 async function replace(env,row,data){const r=await run(env,'UPDATE workspace_records SET data=?,version=version+1,updated_at=? WHERE id=? AND version=?',JSON.stringify(data),now(),row.id,row.version);must(r.meta.changes,'Domain setup changed. Reload to review the latest records.',409);}
 export async function checkDomainPlan(env,row,time=Date.now()){
  const plan=JSON.parse(row.data),stamp=new Date(time).toISOString();let proof={connected:false,checkedAt:stamp};
- if(env.DOMAIN_CHECKS?.check){try{
- const result=await env.DOMAIN_CHECKS.check({hostname:plan.hostname,tenantId:plan.tenantId,token:plan.token,guide:domainGuide(plan,env)});
+ const checks=checksFor(env);if(checks?.check){try{
+ const result=await checks.check({hostname:plan.hostname,tenantId:plan.tenantId,token:plan.token,guide:domainGuide(plan,env)});
  proof={connected:true,checkedAt:stamp,www:result.www===true,bare:result.bare===true,ssl:result.ssl===true,site:result.site||{}};
  if(result.ownership==='verified')plan.ownership='verified';else plan.ownership='pending';
  await run(env,'UPDATE domains SET ownership=?,checked_at=? WHERE id=? AND tenant_id=?',plan.ownership,stamp,plan.domainId,plan.tenantId);
@@ -36,7 +39,7 @@ export async function domainPlanApi(req,env,tenantId,op=''){
  must(!op,'Not found.',404);let hostname;try{hostname=cleanDomain(v.hostname);}catch(error){must(false,error.message);}
  must(PROVIDERS.includes(v.provider),'Choose where your domain is managed.');
  let detectedProvider='Other',nameservers=[],detection='Not connected';
- if(env.DOMAIN_CHECKS?.nameservers){try{nameservers=await env.DOMAIN_CHECKS.nameservers(hostname);detectedProvider=detectProvider(nameservers);detection='Detected from nameservers';}catch{detection='Detection unavailable. Choose your provider below.';}}
+ const checks=checksFor(env);if(checks?.nameservers){try{nameservers=await checks.nameservers(hostname);detectedProvider=detectProvider(nameservers);detection='Detected from nameservers';}catch{detection='Detection unavailable. Choose your provider below.';}}
  const existing=await one(env,'SELECT * FROM domains WHERE hostname=?',hostname);must(!existing||existing.tenant_id===tenantId,'This domain is already assigned to another website.',409);
  const domain=existing||{id:uid(),token:'buildovate-'+uid(),ownership:'pending'};
  const previous=row?JSON.parse(row.data):null,unchanged=previous?.hostname===hostname&&previous?.provider===v.provider;

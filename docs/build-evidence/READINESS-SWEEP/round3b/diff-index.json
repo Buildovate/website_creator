@@ -1,0 +1,134 @@
+[
+  {
+    "file": "src/entitlements.js",
+    "created": false,
+    "beforeSha256": "84216bce2462bc27fc3b06b8d047227e840b537d25414cd4215f4f807185745a",
+    "afterSha256": "bf4e48d88c20a35a077312c7134ae60e5062d38ffd6f464ac5b3c4bd34aba428"
+  },
+  {
+    "file": "src/domain/state.js",
+    "created": false,
+    "beforeSha256": "88ae8082b92cdfe2b292ce0989178c2798d18d433e0fe193cdaae4ed006d74a6",
+    "afterSha256": "5f958f58e636e13a2cc197f3a4531b9cc0b07fd33d9afb0b1726188e506ac679"
+  },
+  {
+    "file": "src/blueprint/deps.js",
+    "created": false,
+    "beforeSha256": "9594897b05fa78a23c84dc18e05a0b8e4bfc02fc9cdfe8214aef65d682250e6b",
+    "afterSha256": "031a5bf690d7ca350d00bd67b0b4d0421cc39bcd1c612575127fb95100b7e92b"
+  },
+  {
+    "file": "src/blueprint/sources.js",
+    "created": false,
+    "beforeSha256": "6e4e5078a12608560da7818d8ad0d348bed9155ff23b81d13b4af4333f60d88c",
+    "afterSha256": "b843657f03dc407639814119bcb75b3196a206d261abb8f75c695029c92d7515"
+  },
+  {
+    "file": "src/aws/env.js",
+    "created": false,
+    "beforeSha256": "0d80654363b607da856791d4c5728a80fde334388afaad1b1843d68e508cf71d",
+    "afterSha256": "83756cd30adec9fb23b7eec9f8c573ea6c6f82437b3fef450cb3fff7e94fcb96"
+  },
+  {
+    "file": "src/payments/checkout.ts",
+    "created": false,
+    "beforeSha256": "515aadd8841e0b682c986d54dbe238e20f5c3c5793480dd87030a4968be4be00",
+    "afterSha256": "e7b37bb2e3993c993be9cba78236dd5f1890b8c6650e5b0ccff4692a2ab745a4"
+  },
+  {
+    "file": "src/payments/add-ons.js",
+    "created": false,
+    "beforeSha256": "c4491722e8202e7e0b6996e874288c6babc7276a9874c811a32582292261fbf4",
+    "afterSha256": "870b33eec282d83a93d91740b810ecffeb91023ad8abf0b817865d2f9b89f741"
+  },
+  {
+    "file": "src/static-site-export.js",
+    "created": false,
+    "beforeSha256": "6d3004dc875349a1ad4b1ec8849b6508a99c9bbafa7149dd68ac92b85d9a7281",
+    "afterSha256": "81996e40062fb9f3fd1e6ad98a2348b0dec557a5a850b514ff890749e787f142"
+  },
+  {
+    "file": "src/payments/site-availability.js",
+    "created": true,
+    "beforeSha256": null,
+    "afterSha256": "5e0e5f766dd552fdf315600fa975e276ec9568055f8079ade3acd25b7d2bcb1d"
+  },
+  {
+    "file": "src/worker.js",
+    "created": false,
+    "beforeSha256": "5dd7811c84d361c657bccffd9771774fdd41fdaf7f119779dca17f0ff78866be",
+    "afterSha256": "ece410d3168d903f5de46d684c1f26c70f1f7ce9bd4b37d3fa26ec9679adc7f0"
+  },
+  {
+    "file": "src/payments/webhook.js",
+    "created": false,
+    "beforeSha256": "ac1c5f611c16bb8bee193ac69fbb961eb4e4ddc2d26dab60180047d81ea576e8",
+    "afterSha256": "efd2666c2641485e53d47677423798c7faa03e215b918faeed5d1073a436a0fb"
+  },
+  {
+    "file": "src/domain/checks.js",
+    "created": true,
+    "beforeSha256": null,
+    "afterSha256": "92e9519f6484c772740f2462e18f7e76954db2ba2293c8f210c04c8cf446be79"
+  },
+  {
+    "file": "src/payments/billing-adapter.js",
+    "created": true,
+    "beforeSha256": null,
+    "afterSha256": "31e4fe06d860a3086ce57c8a6e5c9f801c8cb82b655e662db1e6310f2f62c836"
+  },
+  {
+    "file": "src/payments/plan-management.js",
+    "created": false,
+    "beforeSha256": "ccc2543260d8897eb0041ee533ca9d77733f9f70afd13a94f76e513eda475815",
+    "afterSha256": "60170c8032955211ca8ef865f04141221fc8bc6fdcae7ead104b676bf50407ac"
+  },
+  {
+    "file": "src/payments/billing.js",
+    "created": false,
+    "beforeSha256": "6730d21b4030b6bc1c623d8b6ddc6dd4d845ae30cf4f07f3e2a4376d73c9a684",
+    "afterSha256": "00baf784d08e9abf9bdd511c941f052dff2d41e46e303d47f661d78efe984401"
+  },
+  {
+    "file": "src/client/workspace/billing.ts",
+    "created": false,
+    "beforeSha256": "dac8b842438a16a7390aa233ebd343df6b63ffcfa7b52cedb4c26128e228399f",
+    "afterSha256": "c3efadd6238a86bd0b7c098d7b4dfa6e2a2dbbe35c6deb68055eabbe5f3d5ecc"
+  },
+  {
+    "file": "src/aws/server.js",
+    "created": false,
+    "beforeSha256": "cd54fdd5591d176fa4bef8a5933a85cc26aaa57fbfad88af9f62d99e2443efa0",
+    "afterSha256": "9190473ffdb7bb6b260e9e28fbbdbbc4c18eaa2f864fc9f74545307ce40fd4a2"
+  },
+  {
+    "file": "tests/game-desktop-api.mjs",
+    "created": false,
+    "beforeSha256": "fe2b5d82e5807b7ea559bcb6bb1d47e46af9634a5d3d87de1b15d64e04ee76b7",
+    "afterSha256": "440a95fdc64c809b43e6dde007ffa8123cc7e91e1ddb0411fb2c64ef1cb67aa4"
+  },
+  {
+    "file": "tests/game-experience-api.mjs",
+    "created": false,
+    "beforeSha256": "aef5213762b034c8d1aade27af26a286d6790c481b61dfac7b2215e80bab21d7",
+    "afterSha256": "09a6f0023275889d936707c2cef275771c8be9e377bcbbbec82bd5cff6ad7293"
+  },
+  {
+    "file": "tests/readiness-batch-a.mjs",
+    "created": true,
+    "beforeSha256": null,
+    "afterSha256": "21b5fac23a9831f7970d0f0bcc1c9743d5d76e73562e092331cee086d5c9a548"
+  },
+  {
+    "file": "src/domain/plan.js",
+    "created": false,
+    "beforeSha256": "d7579c010faa21e908c759e2d9c6373d256cb4f54691f4fba2092cea8380bacc",
+    "afterSha256": "5036f6ac6140cf149658ca06884f0650a5e7bff933fdd533769650eedafcd5af"
+  },
+  {
+    "file": "tests/owner-download.mjs",
+    "created": false,
+    "beforeSha256": "2500187e51b779d9bc2b4a4557e62c67943210b66687515d518508b57397bfad",
+    "afterSha256": "c6453e96ad0bfad1b7a23705733bd8459dd3f40cea1c266bd9a27da76612d3f7"
+  }
+]

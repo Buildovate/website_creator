@@ -1,0 +1,11 @@
+import fs from 'node:fs';import {spawn} from 'node:child_process';
+const out='C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b',root=out+'/snapshot';
+const labels=['full-build','isolated-worker-build','pay4a-isolated-build','typecheck','game-progress','game-milestones','game-desktop-api','game-experience-api','game-autofill','game-copy','game-forms','catalog','payments','stripe-sync','stripe-checkout','stripe-no-key','entitlements','pay4a','pay4b','pay5','domain-wizard','aws-adapter','insertion-order'];
+const rows=[],env={...process.env};for(const k of Object.keys(env))if(/API_KEY|TOKEN|SECRET|DATABASE_URL|^S3_|^AWS_|^ZOOM_|^TWILIO_|^STRIPE_|REVIEW_BROWSER/.test(k))delete env[k];
+Object.assign(env,{TEMP:out+'/tmp',TMP:out+'/tmp',APP_ENV:'local',AUTH_MODE:'dev-header',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',GIT_OPTIONAL_LOCKS:'0',GIT_WORK_TREE:root,BV_PG_PARALLEL:'1',NODE_OPTIONS:'--import=file:///'+out+'/host.mjs'});
+const argsFor=l=>l==='full-build'?[root+'/build.mjs']:l==='isolated-worker-build'?['--import=file:///'+root+'/tests/game-guard-loader.mjs',root+'/tests/game-guard-build.mjs']:l==='typecheck'?[root+'/node_modules/typescript/bin/tsc','-p',root+'/tsconfig.auth.json']:[root+'/tests/'+l+'.mjs'];
+async function run(label,args){const start=Date.now(),file=out+'/logs/checkpoint-'+label+'.log',log=fs.createWriteStream(file);console.log('START '+label);await new Promise(resolve=>{const p=spawn(process.execPath,args,{cwd:root,env:{...env,BV_CHECK_LABEL:'ROUND3B-'+label},windowsHide:true,stdio:['ignore','pipe','pipe']});p.stdout.pipe(log,{end:false});p.stderr.pipe(log,{end:false});p.on('close',code=>{log.end();rows.push({label,code,ms:Date.now()-start,log:file});fs.writeFileSync(out+'/checkpoint-results.json',JSON.stringify(rows,null,2));console.log('END '+label+' '+code);resolve()})});}
+for(const label of labels)await run(label,argsFor(label));
+for(const label of ['game-progress','game-desktop-api','game-experience-api','game-autofill','payments','domain-wizard'])await run('pg-'+label,['--import=file:///'+out+'/pg-fixture-loader.mjs',root+'/tests/'+label+'.mjs']);
+await run('sms-diagnostic',[out+'/pg-remaining-boundaries-probe.mjs']);
+console.log('CHECKPOINT CORE COMPLETE '+rows.length+' suites; '+rows.filter(x=>x.code!==0).length+' failing');

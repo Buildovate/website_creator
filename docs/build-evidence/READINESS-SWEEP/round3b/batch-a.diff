@@ -1,0 +1,682 @@
+
+# src/entitlements.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/entitlements.js b/C:/Users/joe/website_creator/src/entitlements.js
+index f86bef7..e35efc4 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/entitlements.js
++++ b/C:/Users/joe/website_creator/src/entitlements.js
+@@ -1,12 +1,12 @@
+ // The worker configures its database before using the shared read contract.
+ let database;
+ export function configureEntitlements(db){if(!db?.prepare)throw new Error('Payment database is required.');database=db;}
+-const store=()=>{if(!database)throw new Error('Payment database is not configured.');return database;};
++const store=(db=database)=>{if(!db)throw new Error('Payment database is not configured.');return db;};
+ const first=(sql,...args)=>store().prepare(sql).bind(...args).first();
+ const rows=async(sql,...args)=>(await store().prepare(sql).bind(...args).all()).results;
+ 
+-export async function getPlan(tenantId){
+-  const state=await first('SELECT plan,status,renews_at,minimum_ends_at FROM payment_state WHERE tenant_id=?',tenantId);
++export async function getPlan(tenantId,db){
++  const state=await store(db).prepare('SELECT plan,status,renews_at,minimum_ends_at FROM payment_state WHERE tenant_id=?').bind(tenantId).first();
+   return {plan:state?.plan??null,status:state?.status??'none',renewsAt:state?.renews_at??null,minimumEndsAt:state?.minimum_ends_at??null};
+ }
+ export async function listEntitlements(tenantId){
+@@ -14,7 +14,7 @@ export async function listEntitlements(tenantId){
+   const found=await rows("SELECT key,quantity,used,period_end,source FROM payment_entitlements WHERE tenant_id=? AND status='active' AND period_end>? ORDER BY key,period_end",tenantId,now);
+   return found.map(row=>({key:row.key,quantity:row.quantity,used:row.used,periodEnd:row.period_end,source:row.source}));
+ }
+-export async function hasEntitlement(tenantId,key){
+-  const row=await first("SELECT 1 AS allowed FROM payment_entitlements WHERE tenant_id=? AND key=? AND status='active' AND period_end>? AND (quantity IS NULL OR used<quantity) LIMIT 1",tenantId,key,new Date().toISOString());
++export async function hasEntitlement(tenantId,key,db){
++  const row=await store(db).prepare("SELECT 1 AS allowed FROM payment_entitlements WHERE tenant_id=? AND key=? AND status='active' AND period_end>? AND (quantity IS NULL OR used<quantity) LIMIT 1").bind(tenantId,key,new Date().toISOString()).first();
+   return !!row;
+ }
+
+# src/domain/state.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/domain/state.js b/C:/Users/joe/website_creator/src/domain/state.js
+index f680cfc..553fd2d 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/domain/state.js
++++ b/C:/Users/joe/website_creator/src/domain/state.js
+@@ -5,8 +5,17 @@ export function domainStatus(plan,proof={},time=Date.now()){
+  const loading=fresh&&site.ok===true&&site.tenantId===plan.tenantId&&site.url==='https://www.'+plan.hostname;
+  const checks={www:fresh&&proof.www===true,bare:fresh&&proof.bare===true,ssl:fresh&&proof.ssl===true,site:loading};
+  const live=plan.ownership==='verified'&&checks.www&&checks.bare&&checks.ssl&&checks.site;
+- return {checks,live,fresh,connected:proof.connected===true,message:proof.error||'',checkedAt:proof.checkedAt||null};
++ return {stage:live?'live':proof.error?'failed':plan.ownership==='verified'?(plan.switchApprovedAt?'connecting':'verified'):plan.addedAt?'verifying':'chosen',checks,live,fresh,connected:proof.connected===true,message:proof.error||'',checkedAt:proof.checkedAt||null};
+ }
+ export function needsDomainHelp(plan,status,time=Date.now()){
+  return !!plan.addedAt&&!status.live&&time-Date.parse(plan.addedAt)>=48*60*60*1000;
+ }
++
++// Shared read interface used by Game and the domain wizard; no network or writes.
++export async function getDomainStatus(tenantId,db){
++ if(!db)return {state:'not_connected'};
++ const row=await db.prepare("SELECT data FROM workspace_records WHERE id=? AND scope=? AND kind='domain_plan'").bind('domain-plan-'+tenantId,tenantId).first();
++ if(!row)return {stage:'none',live:false,connected:false};
++ const plan=JSON.parse(row.data);if(plan.tenantId!==tenantId)throw Error('Domain record tenant mismatch.');
++ return {...domainStatus(plan,plan.proof),hostname:plan.hostname};
++}
+
+# src/blueprint/deps.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/blueprint/deps.js b/C:/Users/joe/website_creator/src/blueprint/deps.js
+index f97c6a9..cc99270 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/blueprint/deps.js
++++ b/C:/Users/joe/website_creator/src/blueprint/deps.js
+@@ -1,17 +1,19 @@
++import * as payments from '../entitlements.js';
++import * as domain from '../domain/state.js';
+ // These files belong to LAUNCH-PAY / 057A. Never create substitutes for them.
+ const contracts={getPlan:['../entitlements.js',v=>v&&['active','past_due','canceled','none'].includes(v.status)],hasEntitlement:['../entitlements.js',v=>typeof v==='boolean'],getDomainStatus:['../domain/state.js',v=>v&&['none','chosen','verifying','verified','connecting','live','failed'].includes(v.stage)],getSiteScanFacts:['../domain/site-scan.js',v=>Array.isArray(v)||!!(v&&typeof v==='object'&&Array.isArray(v.facts))]};
+ const disconnected=()=>({state:'not_connected'});
+-export function createDependencies({load=url=>import(url.href)}={}){
++export function createDependencies({load,database}={}){
+  return Object.fromEntries(Object.entries(contracts).map(([name,[path,valid]])=>[name,async(...args)=>{
+   if(typeof args[0]!=='string'||!args[0].trim())throw new TypeError('A tenant ID is required.');
+-  const url=new URL(path,import.meta.url);let owner;
+-  try{owner=await load(url);}catch(error){
++  const url=load?new URL(path,import.meta.url):null;let owner;
++  try{owner=load?await load(url):path==='../entitlements.js'?payments:path==='../domain/state.js'?domain:{};}catch(error){
+    // Do not mask a syntax/runtime error or a missing dependency inside an owner.
+-   if(error.code==='ERR_MODULE_NOT_FOUND'&&error.url===url.href)return disconnected();
++   if(error.code==='ERR_MODULE_NOT_FOUND'&&url&&error.url===url.href)return disconnected();
+    throw error;
+   }
+   if(typeof owner?.[name]!=='function')return disconnected();
+-  const value=await owner[name](...args);
++  const value=await owner[name](...args,...(!load&&database?[database]:[]));
+   return valid(value)?value:disconnected();
+  }]));
+ }
+
+# src/blueprint/sources.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/blueprint/sources.js b/C:/Users/joe/website_creator/src/blueprint/sources.js
+index 4440ed8..28fb7bb 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/blueprint/sources.js
++++ b/C:/Users/joe/website_creator/src/blueprint/sources.js
+@@ -9,7 +9,7 @@ const available=(dataSource,value)=>({state:'available',dataSource,...value});
+  * at any future route boundary. Every query and owner contract is tenant-scoped.
+  * No network, credentials, generation, writes, or invented persisted record kinds.
+  */
+-export async function readProgressSources(env,tenantId,{deps=createDependencies()}={}){
++export async function readProgressSources(env,tenantId,{deps=createDependencies({database:env.DB})}={}){
+  if(!text(tenantId))throw new TypeError('A tenant ID is required.');
+  const first=(sql,...args)=>env.DB.prepare(sql).bind(...args).first();
+  const tenant=await first('SELECT id,settings,published,status FROM tenants WHERE id=?',tenantId);
+
+# src/aws/env.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/aws/env.js b/C:/Users/joe/website_creator/src/aws/env.js
+index 3505b31..c4da499 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/aws/env.js
++++ b/C:/Users/joe/website_creator/src/aws/env.js
+@@ -19,6 +19,8 @@ export const EB_ENVS = {
+ const PASSTHROUGH = [
+   'CF_MT_DISTRIBUTION_ID','CF_CONNECTION_GROUP_ID','CF_ROUTING_ENDPOINT','CUSTOM_DOMAIN_CNAME_TARGET','DOMAINS_ROLE_ARN','CF_TENANT_TAG_ENV','PLATFORM_HOSTS','CLOUDFRONT_ALIAS_ZONE_ID','CUSTOM_DOMAIN_APEX_IPS',
+   'EXPENSE_VAULT_KEY',
++  'STRIPE_SECRET_KEY','STRIPE_PUBLISHABLE_KEY','STRIPE_WEBHOOK_SECRET','STRIPE_TAX_CONFIGURED',
++  'REVIEW_BROWSER_MODULE','REVIEW_BROWSER_EXECUTABLE','DOMAIN_CHECKS_ENABLED',
+   'OPENAI_API_KEY',
+   'OPENAI_MODEL',
+   'OPENAI_CHAT_MODEL',
+
+# src/payments/checkout.ts
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/payments/checkout.ts b/C:/Users/joe/website_creator/src/payments/checkout.ts
+index 0ba9878..8922cf3 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/payments/checkout.ts
++++ b/C:/Users/joe/website_creator/src/payments/checkout.ts
+@@ -133,16 +133,17 @@ export function createCheckoutService({ stripe, env = {}, catalogData = catalog,
+   return { createCheckout, connectionState: () => stripeConnectionState(env,stripe) };
+ }
+ 
+-let defaultService: ReturnType<typeof createCheckoutService> | undefined;
+-export async function createCheckout(request: CheckoutRequest): Promise<{url:string} | {state:'not_connected'; message:string}> {
+-  if (!defaultService) {
+-    const env = process.env;
+-    assertTestEnvironment(env);
+-    if (!env.STRIPE_SECRET_KEY || !env.STRIPE_PUBLISHABLE_KEY || !env.STRIPE_WEBHOOK_SECRET) return {state:'not_connected',message:'Payments not connected'};
++const runtimeServices = new WeakMap<StripeEnvironment, ReturnType<typeof createCheckoutService>>();
++export async function createCheckout(request: CheckoutRequest, env: StripeEnvironment = process.env): Promise<{url:string} | {state:'not_connected'; message:string}> {
++  assertTestEnvironment(env);
++  if (!env.STRIPE_SECRET_KEY || !env.STRIPE_PUBLISHABLE_KEY || !env.STRIPE_WEBHOOK_SECRET) return {state:'not_connected',message:'Payments not connected'};
++  let service=runtimeServices.get(env);
++  if (!service) {
+     const { default: Stripe } = await import('stripe');
+-    defaultService = createCheckoutService({stripe:new Stripe(env.STRIPE_SECRET_KEY) as unknown as StripeClient,env,baseUrl:env.APP_ORIGIN ?? 'http://localhost:5181'});
++    service = createCheckoutService({stripe:new Stripe(env.STRIPE_SECRET_KEY) as unknown as StripeClient,env,baseUrl:env.APP_ORIGIN || 'http://localhost:5181',taxConfigured:env.STRIPE_TAX_CONFIGURED==='1'});
++    runtimeServices.set(env,service);
+   }
+-  return defaultService.createCheckout(request);
++  return service.createCheckout(request);
+ }
+ 
+ export type SettledPayment = {tenantId:string; sku:string; ledgerId:string; amountCents:number; periodStart:string; periodEnd:string};
+
+# src/payments/add-ons.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/payments/add-ons.js b/C:/Users/joe/website_creator/src/payments/add-ons.js
+index 6e988b1..e98e636 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/payments/add-ons.js
++++ b/C:/Users/joe/website_creator/src/payments/add-ons.js
+@@ -52,7 +52,7 @@ export async function requestAddOnCheckout(env,tenantId,input){
+   must(addOn(row)&&row.active&&row.priceCents!==null,'Add-on is not available.',409);
+   must(!await first(env,"SELECT id FROM payment_ledger WHERE tenant_id=? AND sku=? AND status='paid' LIMIT 1",tenantId,input.sku),'This add-on is already owned.',409);
+   const checkout=env.PAYMENT_CHECKOUT_SERVICE?.createCheckout??createCheckout;
+-  return checkout({tenantId,items:[{sku:input.sku,quantity:1}],returnPath:'/',idempotencyKey:input.idempotencyKey});
++  return checkout({tenantId,items:[{sku:input.sku,quantity:1}],returnPath:'/',idempotencyKey:input.idempotencyKey},env);
+ }
+ 
+ export async function addOnApi(req,env,url){
+
+# src/static-site-export.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/static-site-export.js b/C:/Users/joe/website_creator/src/static-site-export.js
+index 45069d1..31a6754 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/static-site-export.js
++++ b/C:/Users/joe/website_creator/src/static-site-export.js
+@@ -6,7 +6,9 @@ let render;
+ export const configureStaticSiteFetch=fn=>{render=fn};
+ export async function siteDownloadState(env,tenant){
+  const row=await one(env,"SELECT data FROM workspace_records WHERE scope=? AND kind='site_ownership' AND id=?",tenant.id,'site-ownership-'+tenant.id);let d={};try{d=JSON.parse(row?.data||'{}')}catch{}
+- const owned=d.schemaVersion===1&&d.state==='owned'&&['one_time_purchase','buyout'].includes(d.source)&&d.paymentStatus==='paid'&&d.currency==='USD'&&d.amountCents===150000&&typeof d.paymentReference==='string'&&!!d.paymentReference.trim();
++ const payment=await env.DB.prepare('SELECT site_owned,status,site_available FROM payment_state WHERE tenant_id=?').bind(tenant.id).first();
++ const paidOwnership=payment?await env.DB.prepare("SELECT id FROM payment_ledger WHERE tenant_id=? AND sku IN ('SITE-OWN','SITE-BUYOUT') AND status='paid' LIMIT 1").bind(tenant.id).first():null;
++ const owned=payment?payment.site_owned===1&&!!paidOwnership:d.schemaVersion===1&&d.state==='owned'&&['one_time_purchase','buyout'].includes(d.source)&&d.paymentStatus==='paid'&&d.currency==='USD'&&d.amountCents===150000&&typeof d.paymentReference==='string'&&!!d.paymentReference.trim();
+  return {owned,published:tenant.status==='published'&&!!tenant.published};
+ }
+ const assetExtensions=/\.(?:css|js|json|png|jpe?g|webp|avif|gif|svg|ico|woff2?|ttf|otf|mp4|webm|pdf)$/i;
+
+# src/payments/site-availability.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/empty-created.txt b/C:/Users/joe/website_creator/src/payments/site-availability.js
+index e69de29..3a6bc31 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/empty-created.txt
++++ b/C:/Users/joe/website_creator/src/payments/site-availability.js
+@@ -0,0 +1,5 @@
++// Payment state controls canceled rentals, never pending past-due policy or legacy sites.
++export async function paymentSiteAvailable(env,tenantId){
++ const row=await env.DB.prepare('SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=?').bind(tenantId).first();
++ return !row||row.site_owned===1||row.status!=='canceled'||row.site_available!==0;
++}
+
+# src/worker.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/worker.js b/C:/Users/joe/website_creator/src/worker.js
+index e8be491..eaafd84 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/worker.js
++++ b/C:/Users/joe/website_creator/src/worker.js
+@@ -1,3 +1,4 @@
++import {paymentSiteAvailable} from './payments/site-availability.js';
+ import {configureStaticSiteFetch} from './static-site-export.js';
+ import {domainGuidePage,maintainDomainPlans} from './domain/plan.js';
+ import {reviewPacketView} from './review-packet-view.js';
+@@ -55,6 +56,15 @@ const html=(markup,status=200)=>{
+  return new Response(data,{status,headers});
+ };
+ const baseWorker={async scheduled(_event,env){if(!_event.domainOnly)await postRecurringExpenses(env);await maintainDomainPlans(env)},async fetch(req,env){const url=new URL(req.url);try{
++ const publicSite=url.pathname.match(/^\/(?:s|api\/public)\/([^/]+)(?:\/|$)/);
++ if(publicSite){
++  const tenant=await env.DB.prepare('SELECT id FROM tenants WHERE slug=?').bind(publicSite[1]).first();
++  if(tenant&&!await paymentSiteAvailable(env,tenant.id)){
++   if(url.searchParams.get('preview')==='1')await access(req,env,tenant.id);
++   else must(false,'Website not available.',404);
++  }
++ }
++
+ const domainGuideRoute=url.pathname.match(/^\/domain-guide\/([^/]+)$/);if(domainGuideRoute&&req.method==='GET')return new Response(await domainGuidePage(req,env,domainGuideRoute[1]),{headers:{'content-type':'text/html;charset=utf-8','cache-control':'no-store'}});
+ if(url.pathname==='/sitemap.xml'){must(req.method==='GET','Method not allowed.',405);const tenants=await all(env,"SELECT slug FROM tenants WHERE status='published' AND published IS NOT NULL");return new Response('<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+tenants.map(tenant=>`<sitemap><loc>${url.origin}/s/${tenant.slug}/sitemap.xml</loc></sitemap>`).join('')+'</sitemapindex>',{headers:{'content-type':'application/xml; charset=utf-8','cache-control':'no-store'}})}
+ const sitemap=url.pathname.match(/^\/s\/([^/]+)\/sitemap\.xml$/);if(sitemap){must(req.method==='GET','Method not allowed.',405);const tenant=await one(env,"SELECT * FROM tenants WHERE slug=? AND status='published' AND published IS NOT NULL",sitemap[1]);must(tenant,'Website not found.',404);const s=JSON.parse(tenant.published),base=url.origin+'/s/'+tenant.slug,projects=demoProjects(tenant,await all(env,'SELECT id,published FROM projects WHERE tenant_id=? AND published IS NOT NULL',tenant.id),false);const locations=[...coreSitemapPaths(s),...projects.map(project=>'/projects/'+project.id)].map(path=>base+path);return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+locations.map(location=>'<url><loc>'+location.replace(/&/g,'&amp;')+'</loc></url>').join('')+'</urlset>',{headers:{'content-type':'application/xml; charset=utf-8','cache-control':'no-store'}})}
+@@ -84,6 +94,7 @@ configureReviewRenderer((req,env)=>styledWorker.fetch(req,env));
+ configureStaticSiteFetch((req,env)=>styledWorker.fetch(req,env));
+ export default {...styledWorker,async fetch(req,env){
+  const response=await styledWorker.fetch(req,env);
++ if(response.ok){const site=new URL(req.url).pathname.match(/^\/s\/([^/]+)(?:\/|$)/);if(site){const t=await env.DB.prepare('SELECT id FROM tenants WHERE slug=?').bind(site[1]).first();if(t)response.headers.set('x-buildovate-tenant',t.id);}}
+  if(!env.REVIEW_ISOLATED&&response.ok&&['POST','PUT'].includes(req.method)){
+   const path=new URL(req.url).pathname,match=path.match(/^\/api\/tenants\/([^/]+)(?:\/(generation))?$/);
+   if(match||path==='/api/tenants'){
+
+# src/payments/webhook.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/payments/webhook.js b/C:/Users/joe/website_creator/src/payments/webhook.js
+index f015582..53f1e62 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/payments/webhook.js
++++ b/C:/Users/joe/website_creator/src/payments/webhook.js
+@@ -53,9 +53,10 @@ async function settle(env,{tenantId,sku,amount,periodStart,periodEnd,reference,e
+   const start=iso(periodStart??eventCreated),end=iso(periodEnd??'9999-12-31T23:59:59.999Z');
+   const id=`${reference}:${sku}:${start}`;
+   const inserted=await run(env,"INSERT OR IGNORE INTO payment_ledger(id,tenant_id,sku,amount_cents,period_start,period_end,reference,status,created_at) VALUES(?,?,?,?,?,?,?,'paid',?)",id,tenantId,sku,amount,start,end,reference,now());
+-  if(!inserted.meta.changes)return false;
++  if(!inserted.meta.changes){const existing=await first(env,'SELECT tenant_id,sku,amount_cents,status FROM payment_ledger WHERE id=?',id);if(!existing||existing.tenant_id!==tenantId||existing.sku!==sku||existing.amount_cents!==amount||existing.status!=='paid')throw Error('Settlement ledger does not match event.');}
+   const keys=row.planId?getPlanEntitlements(row.planId):row.entitlementKeys;
+-  for(const item of keys)await run(env,"INSERT INTO payment_entitlements(id,ledger_id,tenant_id,key,quantity,used,period_end,source,status) VALUES(?,?,?,?,?,0,?,?,'active')",randomUUID(),id,tenantId,item.key,item.quantity,end,sku);
++  let repaired=false;
++  for(const item of keys){if(await first(env,'SELECT id FROM payment_entitlements WHERE ledger_id=? AND tenant_id=? AND key=?',id,tenantId,item.key))continue;repaired=true;await run(env,"INSERT INTO payment_entitlements(id,ledger_id,tenant_id,key,quantity,used,period_end,source,status) VALUES(?,?,?,?,?,0,?,?,'active')",id+':'+item.key,id,tenantId,item.key,item.quantity,end,sku);}
+   if(row.planId){
+     const previous=await stateFor(env,tenantId);
+     if(!previous.site_owned){
+@@ -70,7 +71,7 @@ async function settle(env,{tenantId,sku,amount,periodStart,periodEnd,reference,e
+     await audit(env,tenantId,'site.owned',`${sku}:${id}; OWNER-HOSTING $50/month pending checkout`);
+   }
+   if(sku==='OWNER-HOSTING')await run(env,"UPDATE payment_state SET hosting_status='active',renews_at=? WHERE tenant_id=?",end,tenantId);
+-  await dispatchSettled({tenantId,sku,ledgerId:id,amountCents:amount,periodStart:start,periodEnd:end});
++  if(inserted.meta.changes||repaired)await dispatchSettled({tenantId,sku,ledgerId:id,amountCents:amount,periodStart:start,periodEnd:end});
+   return true;
+ }
+ 
+@@ -85,6 +86,14 @@ async function revoke(env,reference,action){
+   }
+   return true;
+ }
++function invoiceSku(line,object){
++ const explicit=line.price?.metadata?.sku??line.price?.lookup_key?.split('@')[0]??line.metadata?.sku;
++ if(explicit)return explicit;
++ const raw=line.metadata?.skus??object.parent?.subscription_details?.metadata?.skus??object.subscription_details?.metadata?.skus;
++ const skus=String(raw??'').split(',').filter(Boolean);
++ if(skus.length===1)return skus[0];
++ throw new Error('Paid invoice line has no unambiguous SKU.');
++}
+ async function processEvent(env,event){
+   const object=event.data?.object??{};
+   if(!accepted.has(event.type))return true;
+@@ -112,9 +121,9 @@ async function processEvent(env,event){
+   if(event.type==='invoice.paid'){
+     const lines=object.lines?.data??[];
+     if(!lines.length)throw new Error('Paid invoice has no lines.');
+-    for(const line of lines){const sku=line.price?.metadata?.sku??line.price?.lookup_key?.split('@')[0]??line.metadata?.sku;if(!sku)throw new Error('Paid invoice line has no SKU.');priced(sku,line.amount);}
++    for(const line of lines){const sku=invoiceSku(line,object);if(!sku)throw new Error('Paid invoice line has no SKU.');priced(sku,line.amount);}
+     for(const line of lines){
+-      const sku=line.price?.metadata?.sku??line.price?.lookup_key?.split('@')[0]??line.metadata?.sku;
++      const sku=invoiceSku(line,object);
+       if(!sku)throw new Error('Paid invoice line has no SKU.');
+       await settle(env,{tenantId,sku,amount:line.amount,periodStart:line.period?.start??created,periodEnd:line.period?.end,reference:object.payment_intent??object.charge??object.id,eventId:event.id,eventCreated:created});
+     }
+@@ -147,7 +156,7 @@ export async function applyVerifiedEvent(env,event){
+   if(!event?.id||!event?.type||!env.DB)throw new Error('Invalid verified payment event.');
+   configureEntitlements(env.DB);
+   const inserted=await run(env,'INSERT OR IGNORE INTO payment_events(id,type,payload,tenant_id,processed,created_at) VALUES(?,?,?,NULL,0,?)',event.id,event.type,JSON.stringify(event),now());
+-  if(!inserted.meta.changes)return {duplicate:true,processed:0};
++  if(!inserted.meta.changes){const previous=await first(env,'SELECT payload,processed FROM payment_events WHERE id=?',event.id);if(previous.payload!==JSON.stringify(event))throw Error('Payment event ID has different contents.');if(previous.processed)return {duplicate:true,processed:0};}
+   let processed=0;
+   const pending=(await query(env,'SELECT id,payload FROM payment_events WHERE processed=0 ORDER BY created_at,id').all()).results;
+   for(const item of pending){
+
+# src/domain/checks.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/empty-created.txt b/C:/Users/joe/website_creator/src/domain/checks.js
+index e69de29..0d41896 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/empty-created.txt
++++ b/C:/Users/joe/website_creator/src/domain/checks.js
+@@ -0,0 +1,21 @@
++import {cleanDomain} from './guide.js';
++// Inert until explicitly enabled. Tests inject every DNS/HTTPS response locally.
++export function createDomainChecks({fetcher=fetch}={}){
++ const request=(url,options={})=>fetcher(url,{...options,signal:AbortSignal.timeout(7000)});
++ async function dns(name,type){const u=new URL('https://cloudflare-dns.com/dns-query');u.searchParams.set('name',name);u.searchParams.set('type',type);const r=await request(u.href,{headers:{accept:'application/dns-json'}});if(!r.ok)throw Error('DNS check unavailable.');const body=await r.json();if(body.Status!==0)return [];return (body.Answer||[]).filter(a=>a.type===({A:1,CNAME:5,TXT:16,NS:2}[type])).map(a=>String(a.data));}
++ const normal=v=>v.toLowerCase().replace(/\.$/,'');
++ function publicIPv4(ip){const a=ip.split('.').map(Number);return a.length===4&&a.every(n=>Number.isInteger(n)&&n>=0&&n<=255)&&![0,10,127].includes(a[0])&&!(a[0]===169&&a[1]===254)&&!(a[0]===172&&a[1]>=16&&a[1]<=31)&&!(a[0]===192&&a[1]===168)&&!(a[0]===100&&a[1]>=64&&a[1]<=127)&&a[0]<224;}
++ async function safeHost(host){const ips=await dns(host,'A');return ips.length>0&&ips.every(publicIPv4);}
++ return {
++  nameservers:async hostname=>dns(cleanDomain(hostname),'NS'),
++  async check({hostname,tenantId,token,guide}){
++   hostname=cleanDomain(hostname);if(!guide.configured)throw Error('Hosting target not connected.');
++   const [txt,cname,wwwSafe,bareSafe]=await Promise.all([dns('_buildovate.'+hostname,'TXT'),dns('www.'+hostname,'CNAME'),safeHost('www.'+hostname),safeHost(hostname)]);
++   const ownership=txt.some(v=>v.replaceAll('"','')===token)?'verified':'pending',www=wwwSafe&&cname.some(v=>normal(v)===normal(guide.target));
++   let ssl=false,site={ok:false,tenantId,url:'https://www.'+hostname},bare=false;
++   if(www){const r=await request(site.url,{redirect:'manual'});ssl=true;site={...site,ok:r.ok&&r.headers.get('x-buildovate-tenant')===tenantId};}
++   if(bareSafe){const r=await request('https://'+hostname,{redirect:'manual'});const location=r.headers.get('location');if(location){const u=new URL(location,'https://'+hostname);bare=[301,308].includes(r.status)&&u.protocol==='https:'&&u.hostname==='www.'+hostname;}else bare=r.ok&&r.headers.get('x-buildovate-tenant')===tenantId;}
++   return {ownership,www,bare,ssl,site};
++  }
++ };
++}
+
+# src/payments/billing-adapter.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/empty-created.txt b/C:/Users/joe/website_creator/src/payments/billing-adapter.js
+index e69de29..cf4f3c3 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/empty-created.txt
++++ b/C:/Users/joe/website_creator/src/payments/billing-adapter.js
+@@ -0,0 +1,21 @@
++import {assertTestEnvironment} from './checkout.ts';
++import {getProduct} from '../platform/catalog.ts';
++const instances=new WeakMap();
++export function billingConnectionConfigured(env){assertTestEnvironment(env);return !!(env.STRIPE_SECRET_KEY&&env.STRIPE_PUBLISHABLE_KEY&&env.STRIPE_WEBHOOK_SECRET);}
++export function createBillingAdapter({stripe,env}){
++ assertTestEnvironment(env);const quotes=new Map();
++ async function subscription(input){const s=await stripe.subscriptions.retrieve(input.subscriptionId);if(s.metadata?.tenantId!==input.tenantId)throw Error('Subscription tenant mismatch.');if(s.items?.data?.length!==1)throw Error('Subscription has unsupported items.');return s;}
++ async function price(sku){const row=getProduct(sku),found=await stripe.prices.list({lookup_keys:[sku+'@'+row.version],limit:1}),p=found.data[0];if(!row.active||p?.active!==true||p.lookup_key!==sku+'@'+row.version||p.unit_amount!==row.priceCents||p.currency!=='usd'||p.metadata?.sku!==sku||p.metadata?.version!==String(row.version)||p.recurring?.interval!==row.cadence)throw Error('Stripe TEST price is not synced to catalog.');return p;}
++ return {
++  async portal({customerId,returnUrl}){const r=await stripe.billingPortal.sessions.create({customer:customerId,return_url:returnUrl});return {url:r.url};},
++  async previewSwitch(input){const s=await subscription(input),p=await price(input.targetSku),time=Math.floor(Date.now()/1000),item={id:s.items.data[0].id,price:p.id};const invoice=await stripe.invoices.createPreview({subscription:s.id,subscription_details:{items:[item],proration_date:time}});if(!Number.isSafeInteger(invoice.amount_due)||invoice.amount_due<0)throw Error('Payment quote unavailable.');const id=crypto.randomUUID();quotes.set(id,{...input,item,time,expires:Date.now()+300000});return {id,amountDueCents:invoice.amount_due,effectiveAt:new Date(time*1000).toISOString()};},
++  async confirmSwitch(input){const q=quotes.get(input.quoteId);if(!q||q.expires<Date.now()||q.tenantId!==input.tenantId||q.subscriptionId!==input.subscriptionId||q.targetSku!==input.targetSku)throw Error('Payment quote expired. Review the switch again.');await subscription(input);await stripe.subscriptions.update(input.subscriptionId,{items:[q.item],proration_date:q.time,proration_behavior:'always_invoice',payment_behavior:'pending_if_incomplete',metadata:{tenantId:input.tenantId,skus:input.targetSku,catalogVersion:String(getProduct(input.targetSku).version)}},{idempotencyKey:input.idempotencyKey});return {accepted:true};},
++  async scheduleCancellation(input){await subscription(input);await stripe.subscriptions.update(input.subscriptionId,{cancel_at_period_end:true},{idempotencyKey:input.idempotencyKey});return {accepted:true};}
++ };
++}
++export async function getBillingAdapter(env){
++ if(env.PAYMENT_BILLING_ADAPTER)return env.PAYMENT_BILLING_ADAPTER;
++ if(!billingConnectionConfigured(env))return null;
++ if(!instances.has(env)){const {default:Stripe}=await import('stripe');instances.set(env,createBillingAdapter({stripe:new Stripe(env.STRIPE_SECRET_KEY),env}));}
++ return instances.get(env);
++}
+
+# src/payments/plan-management.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/payments/plan-management.js b/C:/Users/joe/website_creator/src/payments/plan-management.js
+index 7378606..3894e09 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/payments/plan-management.js
++++ b/C:/Users/joe/website_creator/src/payments/plan-management.js
+@@ -1,3 +1,4 @@
++import {getBillingAdapter} from './billing-adapter.js';
+ import {catalog,getProduct} from '../platform/catalog.ts';
+ import {must,uid} from '../core.js';
+ 
+@@ -21,7 +22,7 @@ export async function rentalDetails(env,tenantId,clock=Date.now()){
+   return {kind:annual?'annual':'monthly',currentSku:ledger.sku,periodEnd,cancel,switchTargets:pricedWebsiteSkus.filter(sku=>sku!==ledger.sku).map(sku=>({sku,priceCents:getProduct(sku).priceCents,cadence:getProduct(sku).cadence}))};
+ }
+ 
+-function adapterFor(env){return env.PAYMENT_BILLING_ADAPTER??null;}
++const adapterFor=getBillingAdapter;
+ function validateSwitch(details,targetSku){
+   must(details.kind==='monthly'||details.kind==='annual','Only a renter can change plans.',409);
+   must(details.cancel?.scheduled!==true,'Cancellation is already scheduled.',409);
+@@ -40,7 +41,7 @@ function validateIdempotencyKey(key){must(typeof key==='string'&&/^[A-Za-z0-9_-]
+ 
+ export async function quotePlanSwitch(env,tenantId,targetSku,clock=Date.now()){
+   const details=await rentalDetails(env,tenantId,clock),target=validateSwitch(details,targetSku);
+-  const adapter=adapterFor(env);
++  const adapter=await adapterFor(env);
+   if(!adapter)return {state:'not_connected',message:'Payments not connected'};
+   const subscriptionId=await subscriptionFor(env,tenantId);
+   const quote=await adapter.previewSwitch({tenantId,subscriptionId,currentSku:details.currentSku,targetSku:target.sku,targetPriceCents:target.priceCents});
+@@ -52,7 +53,7 @@ export async function confirmPlanSwitch(env,tenantId,{targetSku,quoteId,idempote
+   validateIdempotencyKey(idempotencyKey);
+   must(typeof quoteId==='string'&&quoteId.length<=120,'Choose a current payment quote.',400);
+   const details=await rentalDetails(env,tenantId,clock),target=validateSwitch(details,targetSku);
+-  const adapter=adapterFor(env);
++  const adapter=await adapterFor(env);
+   if(!adapter)return {state:'not_connected',message:'Payments not connected'};
+   const subscriptionId=await subscriptionFor(env,tenantId);
+   const result=await adapter.confirmSwitch({tenantId,subscriptionId,currentSku:details.currentSku,targetSku:target.sku,targetPriceCents:target.priceCents,quoteId,idempotencyKey});
+@@ -67,7 +68,7 @@ export async function requestRentalCancellation(env,tenantId,idempotencyKey,cloc
+   must(details.kind==='monthly'||details.kind==='annual','Owned sites do not have a rental plan to cancel.',409);
+   must(!details.cancel.scheduled,'Cancellation is already scheduled.',409);
+   must(details.cancel.allowed,details.cancel.minimumEndsAt?`Monthly rental cannot be canceled before ${details.cancel.minimumEndsAt}.`:'Rental cannot be canceled now.',409);
+-  const adapter=adapterFor(env);
++  const adapter=await adapterFor(env);
+   if(!adapter)return {state:'not_connected',message:'Payments not connected'};
+   const subscriptionId=await subscriptionFor(env,tenantId);
+   const result=await adapter.scheduleCancellation({tenantId,subscriptionId,atPeriodEnd:true,periodEnd:details.periodEnd,idempotencyKey});
+
+# src/payments/billing.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/payments/billing.js b/C:/Users/joe/website_creator/src/payments/billing.js
+index 39a0c2d..8685e26 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/payments/billing.js
++++ b/C:/Users/joe/website_creator/src/payments/billing.js
+@@ -1,3 +1,4 @@
++import {getBillingAdapter,billingConnectionConfigured} from './billing-adapter.js';
+ import {identity,must,body} from '../core.js';
+ import {catalog,getProduct} from '../platform/catalog.ts';
+ import {WORKSPACE_FEATURES,paidFeatureEnabled} from './gating.js';
+@@ -28,20 +29,26 @@ export async function billingSummary(env,tenantId){
+   const receipts=ledger.map(item=>({sku:item.sku,amountCents:item.amount_cents,currency:'USD',paidAt:item.created_at,status:item.status,invoiceUrl:links.get(item.reference)?.invoiceUrl??null,receiptUrl:links.get(item.reference)?.receiptUrl??null}));
+   const activeRow=state?.site_owned?ledger.find(item=>item.sku==='OWNER-HOSTING'&&item.status==='paid'):ledger.find(item=>item.sku.startsWith('PLAN-')&&item.status==='paid');
+   const renewalAmountCents=state?.status==='canceled'?null:activeRow?getProduct(activeRow.sku)?.priceCents??null:null;
+-  const connected=!!(env.STRIPE_SECRET_KEY&&env.STRIPE_PUBLISHABLE_KEY&&env.STRIPE_WEBHOOK_SECRET);
++  const connected=billingConnectionConfigured(env);
+   const rental=await rentalDetails(env,tenantId);
+   const access={};
+   for(const [feature,rule] of Object.entries(WORKSPACE_FEATURES))access[feature]={allowed:await paidFeatureEnabled(env,tenantId,feature),plan:rule.plan};
+-  return {tenantId,plan:state?.site_owned?'Owner':state?.plan??null,status:state?.status??'none',renewsAt:state?.renews_at??null,renewalAmountCents,minimumMonths:catalog.rentalPolicy.monthlyMinimumMonths,minimumEndsAt:state?.minimum_ends_at??null,buyoutAmountCents:getProduct('SITE-BUYOUT').priceCents,hosting:state?.site_owned?{sku:'OWNER-HOSTING',amountCents:5000,status:state.hosting_status??'pending_checkout'}:null,paymentMethod:connected?'Manage in Stripe Portal':'Payments not connected',portalState:connected?'pending_configuration':'not_connected',receipts,access,connectionState:connected?'test_configured':'not_connected',actionsAvailable:!!env.PAYMENT_BILLING_ADAPTER,rental};
++  return {tenantId,plan:state?.site_owned?'Owner':state?.plan??null,status:state?.status??'none',renewsAt:state?.renews_at??null,renewalAmountCents,minimumMonths:catalog.rentalPolicy.monthlyMinimumMonths,minimumEndsAt:state?.minimum_ends_at??null,buyoutAmountCents:getProduct('SITE-BUYOUT').priceCents,hosting:state?.site_owned?{sku:'OWNER-HOSTING',amountCents:5000,status:state.hosting_status??'pending_checkout'}:null,paymentMethod:connected?'Manage in Stripe Portal':'Payments not connected',portalState:(connected||env.PAYMENT_BILLING_ADAPTER?.portal)&&state?.customer_id?'ready':'not_connected',receipts,access,connectionState:connected?'test_configured':'not_connected',actionsAvailable:!!env.PAYMENT_BILLING_ADAPTER||connected,rental};
+ }
+ export async function billingApi(req,env,url){
+-  const match=url.pathname.match(/^\/api\/payments\/tenants\/([A-Za-z0-9_-]+)\/billing(?:\/(switch-quote|switch|cancel))?$/);
++  const match=url.pathname.match(/^\/api\/payments\/tenants\/([A-Za-z0-9_-]+)\/billing(?:\/(switch-quote|switch|cancel|portal))?$/);
+   must(match,'Not found.',404);
+   const action=match[2];
+   must(action?req.method==='POST':req.method==='GET','Method not supported.',405);
+   await authorizedTenant(req,env,match[1],!!action);
+   if(!action)return billingSummary(env,match[1]);
+   const input=await body(req);
++  if(action==='portal'){
++    const adapter=await getBillingAdapter(env),state=await first(env,'SELECT customer_id FROM payment_state WHERE tenant_id=?',match[1]);
++    if(!adapter?.portal||!state?.customer_id)return {state:'not_connected',message:'Payments not connected'};
++    const result=await adapter.portal({customerId:state.customer_id,returnUrl:url.origin+'/'});
++    const target=stripeUrl(result?.url);must(target,'Payment portal unavailable.',503);return {state:'ready',url:target};
++  }
+   if(action==='switch-quote')return quotePlanSwitch(env,match[1],input.targetSku);
+   if(action==='switch')return confirmPlanSwitch(env,match[1],input);
+   return requestRentalCancellation(env,match[1],input.idempotencyKey);
+
+# src/client/workspace/billing.ts
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/client/workspace/billing.ts b/C:/Users/joe/website_creator/src/client/workspace/billing.ts
+index 8f937cd..bb2ec59 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/client/workspace/billing.ts
++++ b/C:/Users/joe/website_creator/src/client/workspace/billing.ts
+@@ -37,7 +37,7 @@ export function renderBillingSummary(data:BillingSummary):string{
+   const ownership=owned?'':`<article class="bv-card"><h3>Own your website</h3><p>One-time ownership buyout: <strong>${money(data.buyoutAmountCents)}</strong>. This is a flat price, with no credit for rental months paid.</p><p>Ownership ordering is coming later. No charge starts here.</p></article>`;
+   const locked=Object.entries(data.access).find(([,entry])=>!entry.allowed&&['growth','all_in'].includes(entry.plan));
+   const offer=locked?renderLockedUpsellCard({tenantId:'billing',feature:locked[0],plan:locked[1].plan,currentPlan:data.plan}):'';
+-  return `<section class="bv-billing" data-bv-billing-tenant="${escapeHtml(data.tenantId)}" aria-labelledby="bv-billing-title"><p class="eyebrow">YOUR ACCOUNT</p><h2 id="bv-billing-title">Billing</h2>${renderPaymentStatus(data.status)}${data.connectionState==='not_connected'?'<p class="bv-callout bv-callout-warning" role="status">Payments not connected. You can review your plan here; no charge can start.</p>':''}<div class="bv-billing-grid"><article class="bv-card"><h3>Current plan</h3><p class="bv-billing-value">${escapeHtml(plan)}</p><p>${owned?'Owned website':'Rental website'}</p><dl><div><dt>Status</dt><dd>${escapeHtml(data.status.replace('_',' '))}</dd></div><div><dt>Next charge</dt><dd>${date(data.renewsAt)} · ${renewal}</dd></div>${minimum}</dl>${data.hosting?`<p>Owner hosting: ${money(data.hosting.amountCents)} per month · ${escapeHtml(data.hosting.status.replace('_',' '))}</p>`:''}</article><article class="bv-card"><h3>Payment method</h3><p>${escapeHtml(data.paymentMethod)}</p><p>Card updates and invoices use the secure Stripe Customer Portal when it is connected.</p>${data.portalState==='not_connected'?'<button type="button" disabled aria-describedby="bv-portal-state">Manage payment method</button><p id="bv-portal-state">Payments not connected</p>':'<button type="button" disabled aria-describedby="bv-portal-state">Manage payment method</button><p id="bv-portal-state">Portal setup pending</p>'}</article></div>${renderRentalControls(data)}${ownership}<section class="bv-card"><h3>Other plans</h3><p>Growth: Price coming soon</p><p>All-in: Price coming soon</p></section>${offer}<section class="bv-card"><h3>Receipts</h3><p>Only payments confirmed by the payment provider appear here.</p><ul class="bv-billing-receipts">${receipts}</ul></section></section>`;
++  return `<section class="bv-billing" data-bv-billing-tenant="${escapeHtml(data.tenantId)}" aria-labelledby="bv-billing-title"><p class="eyebrow">YOUR ACCOUNT</p><h2 id="bv-billing-title">Billing</h2>${renderPaymentStatus(data.status)}${data.connectionState==='not_connected'?'<p class="bv-callout bv-callout-warning" role="status">Payments not connected. You can review your plan here; no charge can start.</p>':''}<div class="bv-billing-grid"><article class="bv-card"><h3>Current plan</h3><p class="bv-billing-value">${escapeHtml(plan)}</p><p>${owned?'Owned website':'Rental website'}</p><dl><div><dt>Status</dt><dd>${escapeHtml(data.status.replace('_',' '))}</dd></div><div><dt>Next charge</dt><dd>${date(data.renewsAt)} · ${renewal}</dd></div>${minimum}</dl>${data.hosting?`<p>Owner hosting: ${money(data.hosting.amountCents)} per month · ${escapeHtml(data.hosting.status.replace('_',' '))}</p>`:''}</article><article class="bv-card"><h3>Payment method</h3><p>${escapeHtml(data.paymentMethod)}</p><p>Card updates and invoices use the secure Stripe Customer Portal when it is connected.</p>${data.portalState!=='ready'?'<button type="button" disabled aria-describedby="bv-portal-state">Manage payment method</button><p id="bv-portal-state">Payments not connected</p>':'<button type="button" data-bv-portal>Manage payment method</button><p id="bv-portal-state" role="status"></p>'}</article></div>${renderRentalControls(data)}${ownership}<section class="bv-card"><h3>Other plans</h3><p>Growth: Price coming soon</p><p>All-in: Price coming soon</p></section>${offer}<section class="bv-card"><h3>Receipts</h3><p>Only payments confirmed by the payment provider appear here.</p><ul class="bv-billing-receipts">${receipts}</ul></section></section>`;
+ }
+ 
+ function renderRentalControls(data:BillingSummary):string{
+@@ -55,10 +55,14 @@ const billingActionsInstalled=new WeakSet<EventTarget>();
+ export function installBillingActions(root:Document=document):void{
+   if(billingActionsInstalled.has(root))return;billingActionsInstalled.add(root);
+   root.addEventListener('click',async event=>{
+-    const button=(event.target as Element)?.closest?.('[data-bv-switch-quote],[data-bv-switch-confirm],[data-bv-cancel-review],[data-bv-cancel-confirm]') as HTMLButtonElement|null;
++    const button=(event.target as Element)?.closest?.('[data-bv-portal],[data-bv-switch-quote],[data-bv-switch-confirm],[data-bv-cancel-review],[data-bv-cancel-confirm]') as HTMLButtonElement|null;
+     if(!button||button.disabled)return;
+     const section=button.closest<HTMLElement>('[data-bv-billing-tenant]'),tenantId=section?.dataset.bvBillingTenant;
+     if(!section||!tenantId)return;
++    if(button.hasAttribute('data-bv-portal')){
++      const status=section.querySelector<HTMLElement>('#bv-portal-state');button.disabled=true;if(status)status.textContent='Opening payment settings…';
++      try{const {api}=await import('../shared/workspace-api.js');const value=await api('/payments/tenants/'+encodeURIComponent(tenantId)+'/billing/portal','POST',{});if(value.state==='ready'){const target=new URL(value.url);if(target.protocol!=='https:'||!(target.hostname==='stripe.com'||target.hostname.endsWith('.stripe.com')))throw Error('Payment portal unavailable.');location.assign(target.href)}else if(status)status.textContent=value.message;}catch(error){if(status)status.textContent=error instanceof Error?error.message:'Unable to open payment settings.';}finally{button.disabled=false;}return;
++    }
+     const controls=button.closest<HTMLElement>('.bv-billing-actions');if(!controls)return;
+     const isSwitch=button.hasAttribute('data-bv-switch-quote')||button.hasAttribute('data-bv-switch-confirm');
+     const result=controls.querySelector<HTMLElement>(isSwitch?'[data-bv-switch-result]':'[data-bv-cancel-result]');if(!result)return;
+
+# src/aws/server.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/aws/server.js b/C:/Users/joe/website_creator/src/aws/server.js
+index a567ab8..711f8fd 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/aws/server.js
++++ b/C:/Users/joe/website_creator/src/aws/server.js
+@@ -1,3 +1,4 @@
++import {createDomainChecks} from '../domain/checks.js';
+ import {createGeoLookup} from './geoip.js';
+ import { createServer } from 'node:http';
+ import { existsSync } from 'node:fs';
+@@ -189,6 +190,8 @@ export async function createRuntime(options = {}) {
+   const bucket = options.bucket || await createBucket(env);
+   const assetsRoot = env.ASSETS_ROOT || (existsSync('dist/client') ? 'dist/client' : 'public');
+   const runtimeEnv = { ...env, GEOIP_LOOKUP:await createGeoLookup(env), DB: db, BUCKET: bucket, ASSETS: createAssets(path.resolve(assetsRoot)) };
++  if(options.domainChecks)runtimeEnv.DOMAIN_CHECKS=options.domainChecks;
++  else if(runtimeEnv.DOMAIN_CHECKS_ENABLED==='1')runtimeEnv.DOMAIN_CHECKS=createDomainChecks();
+   const worker = options.worker || await loadWorker();
+   const reviewJobs=new Map();let reviewCaptureTail=Promise.resolve();
+   runtimeEnv.REVIEW_QUEUE=(key,task)=>{if(reviewJobs.has(key))return reviewJobs.get(key);const job=Promise.resolve().then(task).catch(error=>console.error('Review capture failed',error.message)).finally(()=>reviewJobs.delete(key));reviewJobs.set(key,job);return job};
+
+# tests/game-desktop-api.mjs
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/tests/game-desktop-api.mjs b/C:/Users/joe/website_creator/tests/game-desktop-api.mjs
+index eb8f6b4..07fd7c2 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/tests/game-desktop-api.mjs
++++ b/C:/Users/joe/website_creator/tests/game-desktop-api.mjs
+@@ -1,5 +1,6 @@
+ // Sequential assertions: first unexpected failure stops the process, with no retries.
+ import assert from 'node:assert/strict';
++import {adoptGeneration} from '../src/generation.js';
+ import {DatabaseSync} from 'node:sqlite';
+ import {isPostgresGameFixture,gameDatabaseFixture,seedGameTenant,seedGameMember,seedGameAdmin} from './helpers/game-database-fixture.mjs';
+ import {build} from 'esbuild';
+@@ -8,19 +9,14 @@ import {pathToFileURL} from 'node:url';
+ const root='C:/Users/joe/wc-game',out=root+'/docs/build-evidence/028G/round3h';fs.mkdirSync(out,{recursive:true});
+ await build({entryPoints:[root+'/src/blueprint/api.js'],outfile:root+'/.data/028G/game-api.js',bundle:true,format:'esm',platform:'node',loader:{'.html':'text','.pdf':'binary'},logLevel:'silent'});
+ const {gameApi}=await import(pathToFileURL(root+'/.data/028G/game-api.js').href);
+-const db=isPostgresGameFixture()?gameDatabaseFixture():new DatabaseSync(':memory:');
+-if(isPostgresGameFixture()){
++const db=gameDatabaseFixture();
+ 
+-for(const id of ['a','b'])seedGameTenant(db,id,'Harbor Roofing — QA fixture');
++
++const initialSettings=JSON.stringify(adoptGeneration({},'a','game-fixture-a'));
++for(const id of ['a','b'])seedGameTenant(db,id,'Harbor Roofing — QA fixture',{settings:id==='a'?initialSettings:JSON.stringify(adoptGeneration({},id,'game-fixture-'+id))});
+ for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['b','other','owner']])seedGameMember(db,tenant,user,role);
+ seedGameAdmin(db,'admin');
+-}else{
+ 
+-db.exec(`CREATE TABLE admins(user_id TEXT,role TEXT); CREATE TABLE tenants(id TEXT,name TEXT,settings TEXT,published TEXT,status TEXT); CREATE TABLE members(tenant_id TEXT,user_id TEXT,role TEXT,active INT); CREATE TABLE sales(tenant_id TEXT,data TEXT); CREATE TABLE inquiries(tenant_id TEXT); CREATE TABLE workspace_records(id TEXT PRIMARY KEY,scope TEXT,kind TEXT,data TEXT,version INT,created_at TEXT,updated_at TEXT);`);
+-for(const id of ['a','b'])db.prepare('INSERT INTO tenants VALUES(?,?,?,?,?)').run(id,'Harbor Roofing — QA fixture','{}',null,'draft');
+-for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['b','other','owner']])db.prepare('INSERT INTO members VALUES(?,?,?,1)').run(tenant,user,role);
+-db.prepare('INSERT INTO admins VALUES(?,?)').run('admin','admin');
+-}
+ const env={DB:{prepare(sql){let args=[];return {bind(...values){args=values;return this},async first(){return db.prepare(sql).get(...args)||null},async all(){return {results:db.prepare(sql).all(...args)}},async run(){return {meta:{changes:Number(db.prepare(sql).run(...args).changes)}}}}}}};
+ const base='http://127.0.0.1:5183';
+ function call(user='owner',method='GET',value,tenant='a',origin=base){const headers={'content-type':'application/json',origin};if(user)headers['oai-authenticated-user-id']=user;const req=new Request(base+'/api/game/'+tenant,{method,headers,body:value===undefined?undefined:JSON.stringify(value)});return gameApi(req,env,new URL(req.url));}
+@@ -42,6 +38,6 @@ try{
+  await check('old Tabs preference ignored and preserved',async()=>{db.prepare('INSERT INTO workspace_records(id,scope,kind,data,version,created_at,updated_at) VALUES(?,?,?,?,?,?,?)').run('old','a','game_preferences','{"view":"tabs"}',1,'old','old');assert.equal((await call()).view,'game');assert.equal(db.prepare('SELECT data FROM workspace_records WHERE id=?').get('old').data,'{"view":"tabs"}')});
+  await check('GET never changes saved records',async()=>{const before=db.prepare('SELECT total_changes() n').get().n;await call();await call();assert.equal(db.prepare('SELECT total_changes() n').get().n,before)});
+  await check('invalid obsolete preference cannot block board',async()=>{db.prepare('UPDATE workspace_records SET data=?').run('invalid obsolete preference');assert.equal((await call()).view,'game')});
+- await check('all original sections mapped, without inventing permissions',async()=>{const {questSections,sectionLabels,sectionsForQuest}=await import('../src/client/workspace/game/sections.js');assert.equal(Object.keys(sectionLabels).length,28);const originalSections=["launchpad","questionnaire","hero","editor","pages","business","ownerphoto","templates","services","projects","blog","contacts","calendar","forms","inquiries","chat","pricing","reviews","visibility","plan","readiness","followups","access","domains","backups","sales"];assert.deepEqual(Object.keys(sectionLabels).filter(id=>!originalSections.includes(id)).sort(),['add-ons','billing']);assert.ok(originalSections.every(id=>Object.hasOwn(sectionLabels,id)));assert.equal(sectionLabels.billing,'Billing');assert.equal(sectionLabels['add-ons'],'Add-ons');assert.deepEqual([...new Set(Object.values(questSections).flat())].sort(),Object.keys(sectionLabels).sort());assert.deepEqual(sectionsForQuest('onboarding',['business']),['business']);assert.equal(db.prepare('SELECT settings FROM tenants WHERE id=?').get('a').settings,'{}')});
++ await check('all original sections mapped, without inventing permissions',async()=>{const {questSections,sectionLabels,sectionsForQuest}=await import('../src/client/workspace/game/sections.js');assert.equal(Object.keys(sectionLabels).length,28);const originalSections=["launchpad","questionnaire","hero","editor","pages","business","ownerphoto","templates","services","projects","blog","contacts","calendar","forms","inquiries","chat","pricing","reviews","visibility","plan","readiness","followups","access","domains","backups","sales"];assert.deepEqual(Object.keys(sectionLabels).filter(id=>!originalSections.includes(id)).sort(),['add-ons','billing']);assert.ok(originalSections.every(id=>Object.hasOwn(sectionLabels,id)));assert.equal(sectionLabels.billing,'Billing');assert.equal(sectionLabels['add-ons'],'Add-ons');assert.deepEqual([...new Set(Object.values(questSections).flat())].sort(),Object.keys(sectionLabels).sort());assert.deepEqual(sectionsForQuest('onboarding',['business']),['business']);assert.equal(db.prepare('SELECT settings FROM tenants WHERE id=?').get('a').settings,initialSettings)});
+  fs.writeFileSync(out+'/game-desktop-api.json',JSON.stringify({passed:true,count:results.length,checks:results},null,2));console.log(results.length+'/'+results.length+' passed');
+ }finally{db.close()}
+
+# tests/game-experience-api.mjs
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/tests/game-experience-api.mjs b/C:/Users/joe/website_creator/tests/game-experience-api.mjs
+index a3cc157..7869677 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/tests/game-experience-api.mjs
++++ b/C:/Users/joe/website_creator/tests/game-experience-api.mjs
+@@ -1,5 +1,6 @@
+ // Sequential fixtures only. Stop on the first assertion; no retries.
+ import assert from 'node:assert/strict';
++import {adoptGeneration} from '../src/generation.js';
+ import {DatabaseSync} from 'node:sqlite';
+ import {isPostgresGameFixture,gameDatabaseFixture,seedGameTenant,seedGameMember,seedGameAdmin} from './helpers/game-database-fixture.mjs';
+ import {build} from 'esbuild';
+@@ -10,19 +11,14 @@ import {complete} from './game-fixtures.mjs';
+ const root='C:/Users/joe/wc-game',out=root+'/docs/build-evidence/028G/round4';fs.mkdirSync(out,{recursive:true});
+ await build({stdin:{contents:"export {gameApi} from './src/blueprint/api.js'; export {advanceExperience,emptyExperience,publishedPreview} from './src/blueprint/experience.js';",resolveDir:root},outfile:root+'/.data/028G/game-experience-api.js',bundle:true,format:'esm',platform:'node',loader:{'.html':'text','.pdf':'binary'},logLevel:'silent'});
+ const {gameApi,advanceExperience,emptyExperience,publishedPreview}=await import(pathToFileURL(root+'/.data/028G/game-experience-api.js').href);
+-const db=isPostgresGameFixture()?gameDatabaseFixture():new DatabaseSync(':memory:');
+-if(isPostgresGameFixture()){
++const db=gameDatabaseFixture();
+ 
+-for(const id of ['a','b'])seedGameTenant(db,id,'Game QA fixture');
++
++const initialSettings=JSON.stringify(adoptGeneration({},'a','game-fixture-a'));
++for(const id of ['a','b'])seedGameTenant(db,id,'Game QA fixture',{settings:id==='a'?initialSettings:JSON.stringify(adoptGeneration({},id,'game-fixture-'+id))});
+ for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['b','other','owner']])seedGameMember(db,tenant,user,role);
+ seedGameAdmin(db,'admin');
+-}else{
+ 
+-db.exec('CREATE TABLE admins(user_id TEXT,role TEXT); CREATE TABLE tenants(id TEXT,name TEXT,settings TEXT,published TEXT,status TEXT); CREATE TABLE members(tenant_id TEXT,user_id TEXT,role TEXT,active INT); CREATE TABLE sales(tenant_id TEXT,data TEXT); CREATE TABLE inquiries(tenant_id TEXT); CREATE TABLE workspace_records(id TEXT PRIMARY KEY,scope TEXT,kind TEXT,data TEXT,version INT,created_at TEXT,updated_at TEXT);');
+-for(const id of ['a','b'])db.prepare('INSERT INTO tenants VALUES(?,?,?,?,?)').run(id,'Game QA fixture','{}',null,'draft');
+-for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['b','other','owner']])db.prepare('INSERT INTO members VALUES(?,?,?,1)').run(tenant,user,role);
+-db.prepare('INSERT INTO admins VALUES(?,?)').run('admin','admin');
+-}
+ const env={DB:{
+  prepare(sql){
+   let args=[];
+@@ -43,7 +39,7 @@ try{
+  await check('tour is claimed once and recorded per account',async()=>{const x=await call('owner','POST',{action:'observe'});assert.equal(x.showTour,true);assert.equal(x.state.tour,'started');assert.deepEqual(x.completedLevels,[]);assert.equal((await call('owner','POST',{action:'observe'})).showTour,false)});
+  await check('skip persists without reopening tour',async()=>{await call('owner','POST',{action:'skip_tour'});assert.equal((await call()).state.tour,'skipped');assert.equal((await call('owner','POST',{action:'observe'})).showTour,false)});
+  await check('repeat skip is idempotent',async()=>{const before=db.prepare('SELECT total_changes() n').get().n;await call('owner','POST',{action:'skip_tour'});assert.equal(db.prepare('SELECT total_changes() n').get().n,before)});
+- await check('viewer gets a separate personal tour, not business write permission',async()=>{assert.equal((await call('viewer','POST',{action:'observe'})).showTour,true);await call('viewer','POST',{action:'finish_tour'});assert.equal((await call('viewer')).state.tour,'finished');assert.equal((await call()).state.tour,'skipped');assert.equal(db.prepare("SELECT settings FROM tenants WHERE id='a'").get().settings,'{}')});
++ await check('viewer gets a separate personal tour, not business write permission',async()=>{assert.equal((await call('viewer','POST',{action:'observe'})).showTour,true);await call('viewer','POST',{action:'finish_tour'});assert.equal((await call('viewer')).state.tour,'finished');assert.equal((await call()).state.tour,'skipped');assert.equal(db.prepare("SELECT settings FROM tenants WHERE id='a'").get().settings,initialSettings)});
+  await check('finished tour survives later reads and observations',async()=>{assert.equal((await call('viewer','POST',{action:'observe'})).showTour,false);assert.equal((await call('viewer')).state.tour,'finished')});
+  await check('anonymous denied',()=>denied(()=>call(null),401));
+  await check('cross-tenant read denied',()=>denied(()=>call('other'),404));
+
+# tests/readiness-batch-a.mjs
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/empty-created.txt b/C:/Users/joe/website_creator/tests/readiness-batch-a.mjs
+index e69de29..682a38a 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/empty-created.txt
++++ b/C:/Users/joe/website_creator/tests/readiness-batch-a.mjs
+@@ -0,0 +1,42 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {build} from 'esbuild';
++import fs from 'node:fs';
++import {DEFAULT} from '../src/core.js';
++import {paymentHarness} from './helpers/payments-fixture.mjs';
++import {createDependencies} from '../src/blueprint/deps.js';
++import {getDomainStatus,domainStatus} from '../src/domain/state.js';
++import {createDomainChecks} from '../src/domain/checks.js';
++import {loadEnv} from '../src/aws/env.js';
++import {siteDownloadState} from '../src/static-site-export.js';
++import {paymentSiteAvailable} from '../src/payments/site-availability.js';
++import {billingApi,billingSummary} from '../src/payments/billing.js';
++import {createBillingAdapter,getBillingAdapter} from '../src/payments/billing-adapter.js';
++import {createCheckoutService} from '../src/payments/checkout.ts';
++import {onSettled} from '../src/payments/checkout.ts';
++import {renderBillingSummary} from '../src/client/workspace/billing.ts';
++const root='C:/Users/joe/website_creator',file=root+'/.data/readiness-batch-a-worker.mjs';
++await build({entryPoints:[root+'/src/worker.js'],outfile:file,bundle:true,format:'esm',platform:'neutral',conditions:['workerd','worker'],mainFields:['module','main'],loader:{'.html':'text','.pdf':'binary'},external:['node:*','cloudflare:workers'],logLevel:'silent'});
++const worker=(await import('data:text/javascript;base64,'+fs.readFileSync(file).toString('base64'))).default;
++const stamp='2026-01-01T00:00:00.000Z',base='http://127.0.0.1:5183';
++function member(h,user,role){h.sql.prepare('INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)').run(user,'tenant_123',user,user+'@example.test',role,stamp);}
++function request(path,user='owner',method='GET',data){return new Request(base+path,{method,headers:{origin:base,'content-type':'application/json','oai-authenticated-user-id':user},body:data===undefined?undefined:JSON.stringify(data)});}
++test('B04 compiled Game reads this request payment DB, not an unbundled dynamic file',async()=>{const h=paymentHarness();try{h.sql.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify({...DEFAULT,trade:'Roofing',name:'Readiness Roofing QA'}),'tenant_123');member(h,'owner','owner');await h.send(h.event('active','invoice.paid',h.invoice('ready','PLAN-WEBSITE-MONTH',5000,stamp,'2099-01-01T00:00:00Z')));const r=await worker.fetch(request('/api/game/tenant_123'),h.env);assert.equal(r.status,200,await r.clone().text());const q=(await r.json()).progress.quests.find(q=>q.id==='launch');assert.equal(q.steps.find(s=>s.id==='paid-plan').done,true);}finally{h.close();}});
++test('B04 adapters isolate two payment databases',async()=>{const a=paymentHarness(),b=paymentHarness();try{await a.send(a.event('a','invoice.paid',a.invoice('a')));assert.equal((await createDependencies({database:a.DB}).getPlan('tenant_123')).status,'active');assert.equal((await createDependencies({database:b.DB}).getPlan('tenant_123')).status,'none');}finally{a.close();b.close();}});
++test('B05 Game and domain wizard use the same fresh tenant-bound live proof',async()=>{const h=paymentHarness();try{const plan={tenantId:'tenant_123',hostname:'roof.example.com',ownership:'verified',proof:{connected:true,checkedAt:new Date().toISOString(),www:true,bare:true,ssl:true,site:{ok:true,tenantId:'tenant_123',url:'https://www.roof.example.com'}}};h.sql.prepare("INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) VALUES(?,?,'domain_plan',?,?,?)").run('domain-plan-tenant_123','tenant_123',JSON.stringify(plan),stamp,stamp);assert.equal((await getDomainStatus('tenant_123',h.DB)).stage,'live');assert.equal((await createDependencies({database:h.DB}).getDomainStatus('tenant_123')).stage,domainStatus(plan,plan.proof).stage);assert.equal((await getDomainStatus('tenant_456',h.DB)).stage,'none');}finally{h.close();}});
++test('B05 stale or foreign proof never awards live status',()=>{const p={tenantId:'a',hostname:'roof.example.com',ownership:'verified'},proof={checkedAt:stamp,www:true,bare:true,ssl:true,site:{ok:true,tenantId:'b',url:'https://www.roof.example.com'}};assert.notEqual(domainStatus(p,proof).stage,'live');});
++test('B07/B08/B11 runtime settings survive loadEnv, without defaults or secrets',()=>{const input={STRIPE_SECRET_KEY:'sk_test_fixture',STRIPE_PUBLISHABLE_KEY:'pk_test_fixture',STRIPE_WEBHOOK_SECRET:'whsec_fixture',STRIPE_TAX_CONFIGURED:'1',REVIEW_BROWSER_MODULE:'local-fixture',REVIEW_BROWSER_EXECUTABLE:'local-chrome'};const env=loadEnv(input);for(const key of Object.keys(input))assert.equal(env[key],input[key]);const empty=loadEnv({});for(const key of Object.keys(input))assert.equal(empty[key],undefined);});
++test('B11 checkout remains disconnected with no keys and tax remains explicit',async()=>{const service=createCheckoutService({env:loadEnv({}),baseUrl:base,taxConfigured:false});assert.equal((await service.createCheckout({tenantId:'tenant_123',items:[{sku:'PLAN-WEBSITE-MONTH',quantity:1}],returnPath:'/',idempotencyKey:'fixture_key_1'})).state,'not_connected');});
++test('B09 live check adapter uses injected DNS and HTTPS and verifies tenant identity',async()=>{const calls=[],fetcher=async value=>{const u=new URL(value);calls.push(u.href);if(u.hostname==='cloudflare-dns.com'){const type=u.searchParams.get('type'),data={TXT:['token'],CNAME:['hosting.example.com.'],A:['8.8.8.8'],NS:['ns.example.com.']}[type];return Response.json({Status:0,Answer:data.map(data=>({type:{TXT:16,CNAME:5,A:1,NS:2}[type],data}))});}return u.hostname.startsWith('www.')?new Response('fixture',{headers:{'x-buildovate-tenant':'tenant_123'}}):new Response(null,{status:308,headers:{location:'https://www.roof.example.com'}});};const checks=createDomainChecks({fetcher});const result=await checks.check({hostname:'roof.example.com',tenantId:'tenant_123',token:'token',guide:{configured:true,target:'hosting.example.com'}});assert.equal(result.ownership,'verified');assert.equal(result.site.ok,true);assert.equal(result.bare,true);assert.ok(calls.length>=6);});
++test('B09 private addresses block HTTP and wrong tenant never proves live',async()=>{let http=0;const checks=createDomainChecks({fetcher:async value=>{const u=new URL(value);if(u.hostname!=='cloudflare-dns.com'){http++;throw Error('Private address must not be fetched');}const t=u.searchParams.get('type');return Response.json({Status:0,Answer:[{type:{A:1,TXT:16,CNAME:5}[t],data:t==='A'?'127.0.0.1':t==='TXT'?'token':'hosting.example.com'}]});}});const result=await checks.check({hostname:'roof.example.com',tenantId:'tenant_123',token:'token',guide:{configured:true,target:'hosting.example.com'}});assert.equal(http,0);assert.equal(result.site.ok,false);});
++test('B10 no key means honest Not connected and no portal call',async()=>{const h=paymentHarness();try{assert.equal(await getBillingAdapter({DB:h.DB}),null);assert.equal((await billingSummary(h.env,'tenant_123')).portalState,'not_connected');}finally{h.close();}});
++test('B10 owner portal uses saved customer and canonical return; viewer denied',async()=>{const h=paymentHarness();try{member(h,'owner','owner');member(h,'viewer','viewer');h.sql.prepare("INSERT INTO payment_state(tenant_id,customer_id,status) VALUES('tenant_123','cus_fixture','active')").run();let calls=0;h.env.PAYMENT_BILLING_ADAPTER={portal:async input=>{calls++;assert.deepEqual(input,{customerId:'cus_fixture',returnUrl:base+'/'});return {url:'https://billing.stripe.com/p/fixture'}}};const req=request('/api/payments/tenants/tenant_123/billing/portal','owner','POST',{});assert.equal((await billingApi(req,h.env,new URL(req.url))).state,'ready');assert.equal(calls,1);await assert.rejects(()=>billingApi(request(new URL(req.url).pathname,'viewer','POST',{}),h.env,new URL(req.url)),e=>e.status===404);assert.match(renderBillingSummary(await billingSummary(h.env,'tenant_123')),/data-bv-portal/);}finally{h.close();}});
++test('B10 portal refuses a provider response outside Stripe',async()=>{const h=paymentHarness();try{member(h,'owner','owner');h.sql.prepare("INSERT INTO payment_state(tenant_id,customer_id,status) VALUES('tenant_123','cus_fixture','active')").run();h.env.PAYMENT_BILLING_ADAPTER={portal:async()=>({url:'https://evil.example.com'})};const req=request('/api/payments/tenants/tenant_123/billing/portal','owner','POST',{});await assert.rejects(()=>billingApi(req,h.env,new URL(req.url)),e=>e.status===503);}finally{h.close();}});
++test('B10 live keys are refused before SDK construction',()=>assert.throws(()=>createBillingAdapter({env:{STRIPE_SECRET_KEY:'sk_live_forbidden'},stripe:{}}),/Live Stripe key refused/));
++test('B23 settled ownership enables download and refund overrides old ownership',async()=>{const h=paymentHarness();try{const tenant={id:'tenant_123',status:'published',published:'{}'};await h.send(h.event('own','checkout.session.completed',h.session('SITE-OWN',150000,'pi_ownership')));assert.equal((await siteDownloadState(h.env,tenant)).owned,true);h.sql.prepare("UPDATE payment_state SET status='canceled',hosting_status='canceled' WHERE tenant_id='tenant_123'").run();assert.equal((await siteDownloadState(h.env,tenant)).owned,true,'Hosting status does not change paid ownership');assert.equal(await paymentSiteAvailable(h.env,'tenant_123'),true,'Owner-hosting availability policy stays unchanged');h.sql.prepare("INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) VALUES(?,?,'site_ownership',?,?,?)").run('site-ownership-tenant_123','tenant_123',JSON.stringify({schemaVersion:1,state:'owned',source:'one_time_purchase',paymentStatus:'paid',currency:'USD',amountCents:150000,paymentReference:'old'}),stamp,stamp);await h.send(h.event('refund','charge.refunded',{id:'charge_fixture',payment_intent:'pi_ownership'}));assert.equal((await siteDownloadState(h.env,tenant)).owned,false);}finally{h.close();}});
++test('B23 another tenant and a renter do not inherit ownership',async()=>{const h=paymentHarness();try{await h.send(h.event('own','checkout.session.completed',h.session('SITE-OWN',150000)));assert.equal((await siteDownloadState(h.env,{id:'tenant_456'})).owned,false);}finally{h.close();}});
++test('B24 expired canceled rental is hidden while data and 90-day hold remain',async()=>{const h=paymentHarness();try{h.sql.prepare("UPDATE tenants SET settings=?,published=?,status='published' WHERE id='tenant_123'").run(JSON.stringify({...DEFAULT,name:'Rental QA Roofing'}),JSON.stringify({...DEFAULT,name:'Rental QA Roofing'}));member(h,'owner','owner');await h.send(h.event('rent','invoice.paid',h.invoice('rent','PLAN-WEBSITE-MONTH',5000,stamp,'2026-02-01T00:00:00Z')));await h.send(h.event('cancel','customer.subscription.deleted',{id:'sub_fixture',customer:'cus_test_1',metadata:{tenantId:'tenant_123'},current_period_end:Math.floor(Date.parse('2026-02-01')/1000)}));assert.equal(await paymentSiteAvailable(h.env,'tenant_123'),false);for(const path of ['/s/pay-test','/s/pay-test/about','/api/public/pay-test/inquiries'])assert.equal((await worker.fetch(request(path),h.env)).status,404);for(const path of ['/s/pay-test?preview=1','/api/public/pay-test/inquiries?preview=1'])assert.equal((await worker.fetch(new Request(base+path),h.env)).status,401,'Anonymous query parameters do not bypass takedown');assert.equal((await worker.fetch(request('/s/pay-test?preview=1'),h.env)).status,200,'Authorized owner retains private preview');const state=h.sql.prepare("SELECT data_hold_until FROM payment_state WHERE tenant_id='tenant_123'").get();assert.equal(state.data_hold_until,'2026-05-02T00:00:00.000Z');assert.ok(h.sql.prepare("SELECT published FROM tenants WHERE id='tenant_123'").get().published);}finally{h.close();}});
++test('B24 paid term and undecided past-due policy retain public availability',async()=>{const h=paymentHarness();try{h.sql.prepare("INSERT INTO payment_state(tenant_id,status,site_available) VALUES('tenant_123','canceled',1)").run();assert.equal(await paymentSiteAvailable(h.env,'tenant_123'),true);h.sql.prepare("UPDATE payment_state SET status='past_due',site_available=0").run();assert.equal(await paymentSiteAvailable(h.env,'tenant_123'),true);const plain=await worker.fetch(new Request(base+'/api/public/pay-test/inquiries'),h.env),preview=await worker.fetch(new Request(base+'/api/public/pay-test/inquiries?preview=1'),h.env);assert.equal(preview.status,plain.status,'Available-site public API behavior remains unchanged');}finally{h.close();}});
++test('B25 exact replay repairs interrupted grant without a second ledger or callback',async()=>{const h=paymentHarness();let callbacks=0;const unsubscribe=onSettled('SITE-OWN',()=>callbacks++);try{const db=h.DB;let fail=true;h.env.DB={...db,prepare(sql){const s=db.prepare(sql);return {bind(...args){s.bind(...args);return this},first:()=>s.first(),all:()=>s.all(),run:()=>{if(fail&&sql.startsWith('INSERT INTO payment_entitlements')){fail=false;throw Error('Injected grant interruption');}return s.run();}}}};const e=h.event('repair','checkout.session.completed',h.session('SITE-OWN',150000));assert.equal((await h.send(e)).status,400);assert.equal((await h.send(e)).status,200);assert.equal(h.sql.prepare('SELECT COUNT(*) n FROM payment_ledger').get().n,1);assert.equal(h.sql.prepare("SELECT site_owned FROM payment_state WHERE tenant_id='tenant_123'").get().site_owned,1);assert.equal(callbacks,1);assert.deepEqual(await (await h.send(e)).json(),{duplicate:true,processed:0});assert.equal(callbacks,1);const second={...e,id:'other-event-same-payment'};assert.equal((await h.send(second)).status,200);assert.equal(callbacks,1);}finally{unsubscribe();h.close();}});
++test('B25 different payload with same event ID is rejected',async()=>{const h=paymentHarness();try{const e=h.event('same','checkout.session.completed',h.session('SITE-OWN',150000));await h.send(e);assert.equal((await h.send({...e,data:{object:{...e.data.object,amount_total:1}}})).status,400);}finally{h.close();}});
++test('B27 installed SDK invoice shape settles only explicit single-SKU metadata',async()=>{const h=paymentHarness();try{const metadata={tenantId:'tenant_123',catalogVersion:'1',skus:'PLAN-WEBSITE-MONTH'},invoice={id:'sdk23',customer:'cus_test_1',parent:{subscription_details:{metadata}},lines:{data:[{amount:5000,quantity:1,currency:'usd',metadata,period:{start:Math.floor(Date.parse(stamp)/1000),end:Math.floor(Date.parse('2099-01-01')/1000)},pricing:{type:'price_details',price_details:{price:'price_fixture'}}}]}};assert.equal((await h.send(h.event('sdk23','invoice.paid',invoice))).status,200);assert.equal((await createDependencies({database:h.DB}).getPlan('tenant_123')).status,'active');invoice.lines.data[0].metadata={...metadata,skus:'PLAN-WEBSITE-MONTH,PLAN-WEBSITE-YEAR'};invoice.parent.subscription_details.metadata=invoice.lines.data[0].metadata;assert.equal((await h.send(h.event('ambiguous','invoice.paid',invoice))).status,400);}finally{h.close();}});
+
+# src/domain/plan.js
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/domain/plan.js b/C:/Users/joe/website_creator/src/domain/plan.js
+index d363422..acd0dc9 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/src/domain/plan.js
++++ b/C:/Users/joe/website_creator/src/domain/plan.js
+@@ -1,3 +1,6 @@
++import {createDomainChecks} from './checks.js';
++const domainAdapters=new WeakMap();
++function checksFor(env){if(env.DOMAIN_CHECKS)return env.DOMAIN_CHECKS;if(env.DOMAIN_CHECKS_ENABLED!=='1')return null;if(!domainAdapters.has(env))domainAdapters.set(env,createDomainChecks());return domainAdapters.get(env);}
+ import {one,all,run,db,uid,now,must,body,access,identity,log,e} from '../core.js';
+ import {cleanDomain,domainGuide,detectProvider,PROVIDERS} from './guide.js';
+ import {domainStatus,needsDomainHelp,RECHECK_MS} from './state.js';
+@@ -8,8 +11,8 @@ function view(row,env){if(!row)return {plan:null,version:0};const plan=JSON.pars
+ async function replace(env,row,data){const r=await run(env,'UPDATE workspace_records SET data=?,version=version+1,updated_at=? WHERE id=? AND version=?',JSON.stringify(data),now(),row.id,row.version);must(r.meta.changes,'Domain setup changed. Reload to review the latest records.',409);}
+ export async function checkDomainPlan(env,row,time=Date.now()){
+  const plan=JSON.parse(row.data),stamp=new Date(time).toISOString();let proof={connected:false,checkedAt:stamp};
+- if(env.DOMAIN_CHECKS?.check){try{
+- const result=await env.DOMAIN_CHECKS.check({hostname:plan.hostname,tenantId:plan.tenantId,token:plan.token,guide:domainGuide(plan,env)});
++ const checks=checksFor(env);if(checks?.check){try{
++ const result=await checks.check({hostname:plan.hostname,tenantId:plan.tenantId,token:plan.token,guide:domainGuide(plan,env)});
+  proof={connected:true,checkedAt:stamp,www:result.www===true,bare:result.bare===true,ssl:result.ssl===true,site:result.site||{}};
+  if(result.ownership==='verified')plan.ownership='verified';else plan.ownership='pending';
+  await run(env,'UPDATE domains SET ownership=?,checked_at=? WHERE id=? AND tenant_id=?',plan.ownership,stamp,plan.domainId,plan.tenantId);
+@@ -36,7 +39,7 @@ export async function domainPlanApi(req,env,tenantId,op=''){
+  must(!op,'Not found.',404);let hostname;try{hostname=cleanDomain(v.hostname);}catch(error){must(false,error.message);}
+  must(PROVIDERS.includes(v.provider),'Choose where your domain is managed.');
+  let detectedProvider='Other',nameservers=[],detection='Not connected';
+- if(env.DOMAIN_CHECKS?.nameservers){try{nameservers=await env.DOMAIN_CHECKS.nameservers(hostname);detectedProvider=detectProvider(nameservers);detection='Detected from nameservers';}catch{detection='Detection unavailable. Choose your provider below.';}}
++ const checks=checksFor(env);if(checks?.nameservers){try{nameservers=await checks.nameservers(hostname);detectedProvider=detectProvider(nameservers);detection='Detected from nameservers';}catch{detection='Detection unavailable. Choose your provider below.';}}
+  const existing=await one(env,'SELECT * FROM domains WHERE hostname=?',hostname);must(!existing||existing.tenant_id===tenantId,'This domain is already assigned to another website.',409);
+  const domain=existing||{id:uid(),token:'buildovate-'+uid(),ownership:'pending'};
+  const previous=row?JSON.parse(row.data):null,unchanged=previous?.hostname===hostname&&previous?.provider===v.provider;
+
+# tests/owner-download.mjs
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/tests/owner-download.mjs b/C:/Users/joe/website_creator/tests/owner-download.mjs
+index ddd329c..454afa5 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-product/tests/owner-download.mjs
++++ b/C:/Users/joe/website_creator/tests/owner-download.mjs
+@@ -1,4 +1,5 @@
+ import fs from 'node:fs';
++import {openGameSection} from './helpers/game-navigation.mjs';
+ import path from 'node:path';
+ import crypto from 'node:crypto';
+ import assert from 'node:assert/strict';
+@@ -59,7 +60,7 @@ try{
+  for(const [id,label]of [['owned','owner-published'],['unpublished','owner-unpublished'],['monthly','renter']])for(const width of [1440,390]){
+   const page=await browser.newPage({viewport:{width,height:width===390?844:900},reducedMotion:'reduce'});
+   await page.route('**/*',async route=>{const request=route.request(),url=new URL(request.url());if(url.origin!==origin)return route.abort();const response=await worker.fetch(new Request(request.url(),{method:request.method(),headers:{...request.headers(),'oai-authenticated-user-id':user.id,'oai-authenticated-user-email':user.email},...(request.method()!=='GET'?{body:request.postDataBuffer()}: {})}),env);return route.fulfill({status:response.status,headers:Object.fromEntries(response.headers),body:Buffer.from(await response.arrayBuffer())});});
+-  await page.goto(origin,{waitUntil:'networkidle',timeout:30000});await page.locator('[data-action=open][data-id="'+id+'"]').click();await page.waitForFunction(()=>document.querySelector('.page-heading h1')?.textContent==='Sample Fictional Zip Roofing',null,{timeout:15000});await page.evaluate(()=>document.fonts.ready);
++  await page.goto(origin,{waitUntil:'networkidle',timeout:30000});await page.locator('[data-action=open][data-id="'+id+'"]').click();await page.waitForFunction(()=>document.querySelector('.page-heading h1')?.textContent==='Sample Fictional Zip Roofing',null,{timeout:15000});await page.evaluate(()=>document.fonts.ready);await openGameSection(page,'business');
+   const button=page.locator('[data-action=download-site]');if(id==='monthly')check(await button.count()===0,label+' hides download at '+width);else{check(await button.isVisible(),label+' shows download at '+width);check(await button.isDisabled()===(id==='unpublished'),label+' enabled state at '+width);check(await button.textContent()===(id==='unpublished'?'Publish first':'Download site'),label+' button label at '+width);}
+   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),label+' fits '+width);
+   const file='screenshots/'+label+'-'+width+'.png';await page.screenshot({path:out+'/'+file,animations:'disabled',timeout:15000});result.screenshots.push({state:label,width,path:file,sha256:hash(fs.readFileSync(out+'/'+file))});flush();

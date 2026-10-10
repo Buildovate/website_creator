@@ -1,3 +1,4 @@
+import {createDomainChecks} from '../domain/checks.js';
 import {createGeoLookup} from './geoip.js';
 import { createServer } from 'node:http';
 import { existsSync } from 'node:fs';
@@ -189,6 +190,8 @@ export async function createRuntime(options = {}) {
   const bucket = options.bucket || await createBucket(env);
   const assetsRoot = env.ASSETS_ROOT || (existsSync('dist/client') ? 'dist/client' : 'public');
   const runtimeEnv = { ...env, GEOIP_LOOKUP:await createGeoLookup(env), DB: db, BUCKET: bucket, ASSETS: createAssets(path.resolve(assetsRoot)) };
+  if(options.domainChecks)runtimeEnv.DOMAIN_CHECKS=options.domainChecks;
+  else if(runtimeEnv.DOMAIN_CHECKS_ENABLED==='1')runtimeEnv.DOMAIN_CHECKS=createDomainChecks();
   const worker = options.worker || await loadWorker();
   const reviewJobs=new Map();let reviewCaptureTail=Promise.resolve();
   runtimeEnv.REVIEW_QUEUE=(key,task)=>{if(reviewJobs.has(key))return reviewJobs.get(key);const job=Promise.resolve().then(task).catch(error=>console.error('Review capture failed',error.message)).finally(()=>reviewJobs.delete(key));reviewJobs.set(key,job);return job};

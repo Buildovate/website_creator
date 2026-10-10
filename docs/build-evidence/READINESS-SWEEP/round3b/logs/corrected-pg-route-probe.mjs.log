@@ -1,0 +1,15 @@
+(node:25328) ExperimentalWarning: Transform Types is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS health POST and GET
+PASS generation history read
+PASS invite accept and replay denial
+PASS access list and member revoke
+PASS unused invite revoke
+PASS staff invite accept list and revoke
+PASS unused staff invite revoke
+PASS domain registration and list without DNS call
+PASS contact duplicate updates activity
+PASS session issue rotate revoke
+FAIL project/photo draft backup restore
+PASS site unpublish
+{"pass":11,"fail":1}

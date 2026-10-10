@@ -52,7 +52,7 @@ export async function requestAddOnCheckout(env,tenantId,input){
   must(addOn(row)&&row.active&&row.priceCents!==null,'Add-on is not available.',409);
   must(!await first(env,"SELECT id FROM payment_ledger WHERE tenant_id=? AND sku=? AND status='paid' LIMIT 1",tenantId,input.sku),'This add-on is already owned.',409);
   const checkout=env.PAYMENT_CHECKOUT_SERVICE?.createCheckout??createCheckout;
-  return checkout({tenantId,items:[{sku:input.sku,quantity:1}],returnPath:'/',idempotencyKey:input.idempotencyKey});
+  return checkout({tenantId,items:[{sku:input.sku,quantity:1}],returnPath:'/',idempotencyKey:input.idempotencyKey},env);
 }
 
 export async function addOnApi(req,env,url){

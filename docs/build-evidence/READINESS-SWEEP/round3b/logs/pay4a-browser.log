@@ -1,0 +1,3 @@
+PASS browser billing-desktop: 1440x900, Billing tab and existing tabs, no page errors or external requests
+PASS browser billing-mobile: 390x844, Billing tab and existing tabs, no page errors or external requests
+PASS browser owned-site: 1440x900, Billing tab and existing tabs, no page errors or external requests

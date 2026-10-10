@@ -1,0 +1,21 @@
+{
+  "injectedFault": "One local entitlement write throws before executing; all other SQL uses the real PostgreSQL adapter",
+  "ledgerRowsAfterFailure": 1,
+  "replay": {
+    "duplicate": false,
+    "processed": 1
+  },
+  "entitlements": [
+    {
+      "key": "site_owned"
+    }
+  ],
+  "paymentState": {
+    "site_owned": 1,
+    "status": "active"
+  },
+  "event": {
+    "processed": 1
+  },
+  "providerCalls": 0
+}
