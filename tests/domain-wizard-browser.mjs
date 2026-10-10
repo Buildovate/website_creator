@@ -1,3 +1,4 @@
+import {openGameSection,mockGameBoard} from './helpers/game-navigation.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
@@ -17,12 +18,12 @@ try{
  await context.route('**/*',route=>{if(!route.request().url().startsWith(base)){external.push(route.request().url());return route.abort();}return route.continue();});
  await context.request.post(base+'/auth/local-session',{headers:{origin:base},data:{userId:'domain-owner',email:'owner@example.test'}});
  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));await page.goto(base,{waitUntil:'domcontentloaded',timeout:30000});
- await page.locator('nav.tabs.bv-tabs [data-section=domains]').waitFor({state:'visible',timeout:20000});await page.locator('nav.tabs.bv-tabs [data-section=domains]').click();
+ await openGameSection(page,'domains');
  await page.locator('[data-domain-form]').waitFor();await page.locator('[data-domain-form] [name=hostname]').fill('contractor.example');
  for(const [provider,method] of [['Route 53','alias'],['Cloudflare','flatten'],['GoDaddy','forward']]){
  await page.locator('[data-domain-form] [name=provider]').selectOption(provider);await page.locator('[data-domain-form] button').click();await page.locator('.bv-domain-instructions h2').filter({hasText:provider}).waitFor();
  for(const width of [1440,390]){
- await page.setViewportSize({width,height:width===390?844:900});if(width===390){await page.locator('[data-platform-screen]').selectOption('launchpad');await page.locator('div.record [data-section=domains]').click();await page.locator('.bv-domain-instructions').waitFor({state:'visible'});}await page.locator('.bv-domain-instructions').scrollIntoViewIfNeeded();await page.screenshot({path:out+'/'+method+'-'+width+'.png',fullPage:true});screens.push(method+'-'+width+'.png');
+ await page.setViewportSize({width,height:width===390?844:900});if(width===390){await openGameSection(page,'launchpad');await openGameSection(page,'domains');await page.locator('.bv-domain-instructions').waitFor({state:'visible'});}await page.locator('.bv-domain-instructions').scrollIntoViewIfNeeded();await page.screenshot({path:out+'/'+method+'-'+width+'.png',fullPage:true});screens.push(method+'-'+width+'.png');
  check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),method+' no overflow '+width);
  const targets=await page.locator('.bv-domain button').evaluateAll(nodes=>nodes.filter(x=>x.getBoundingClientRect().width>0).every(x=>x.getBoundingClientRect().height>=44));check(targets,method+' touch targets '+width);
  check(!/\bA records?\b/.test(await page.locator('.bv-domain-instructions').innerText()),'no A text '+width);

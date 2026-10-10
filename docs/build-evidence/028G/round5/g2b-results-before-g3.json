@@ -1,0 +1,75 @@
+{
+  "ticket": "028G",
+  "subticket": "G-2b",
+  "round": "4 selector resume",
+  "status": "verified_with_approved_base_exception",
+  "parent": "802daa1b5cb9feaff634630b9ec1a48770ee3e72",
+  "branch": "launch/028G-game",
+  "port": 5183,
+  "existingApi": {
+    "passed": 16,
+    "rerunDuringResume": false
+  },
+  "newApi": {
+    "passed": 18,
+    "rerunDuringResume": false
+  },
+  "isolatedBuild": "passed before selector-only resume",
+  "browser": {
+    "passed": 12,
+    "screenshots": [
+      "g2b-tour-progress.png",
+      "g2b-tour-skipped.png",
+      "g2b-preview-unpublished.png",
+      "g2b-preview-published.png",
+      "g2b-preview-error.png",
+      "g2b-tour-quest.png",
+      "g2b-tour-badges.png",
+      "g2b-celebration.png",
+      "g2b-celebration-board.png",
+      "g2b-reduced-motion.png",
+      "g2b-phone-reflow.png"
+    ],
+    "contrastStates": 7,
+    "textInstances": 37
+  },
+  "gameProgress": {
+    "passed": 40
+  },
+  "gameMilestones": {
+    "passed": 16
+  },
+  "guards": {
+    "headerLogo": {
+      "passed": true,
+      "headers": 340,
+      "edgeCases": 6
+    },
+    "headerNavFit": {
+      "passed": true,
+      "checks": 16422,
+      "states": 1632,
+      "widths": 8
+    },
+    "platformLook": {
+      "passed": true,
+      "selectors": 489,
+      "fontFaces": 7,
+      "stylesheets": 5
+    },
+    "platformMobile": {
+      "passed": false,
+      "knownBaseException": true,
+      "message": "Complete the review packet before approval.",
+      "httpStatus": 409,
+      "browserAssertionsReached": false
+    }
+  },
+  "protectedDiff": "empty",
+  "legacyDiff": "empty",
+  "sharedChangesThisRound": 0,
+  "credits": 0,
+  "providerCalls": 0,
+  "externalBrowserRequests": 0,
+  "next": "G-3, not started"
+}

@@ -1,3 +1,4 @@
+import {openGameSection,mockGameBoard} from './helpers/game-navigation.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createRequire} from 'node:module';
@@ -21,8 +22,8 @@ try{
  for(const [kind,viewport] of [['phone',{width:390,height:844}],['desktop',{width:1440,height:900}]]){
   const context=await browser.newContext({viewport,hasTouch:kind==='phone'}),page=await context.newPage();page.on('pageerror',error=>results.errors.push(error.message));
   await context.request.post(base+'/auth/local-session',{headers:{origin:base},data:{userId:'callback-owner',email:'callback-owner@example.test'}});
-  await page.goto(base);await page.waitForSelector('[data-platform-screen]',{state:'attached'});
-  if(kind==='phone')await page.locator('[data-platform-screen]').selectOption('contacts');else await page.locator('nav.tabs [data-section=contacts]').click();
+  await page.goto(base);await page.locator('.bv-game').waitFor();
+  if(kind==='phone')await openGameSection(page,'contacts');else await openGameSection(page,'contacts');
   await page.waitForSelector(`[data-contact-card="${contact.id}"]`,{state:"attached"});await frame(page,kind==='phone'?'#crm-contact-slot':'.contact-desktop-table');
   const state=results[kind];state.viewport=viewport;
   const record=kind==='phone'?page.locator(`[data-contact-card="${contact.id}"]`):page.locator('.crm-table tbody tr').filter({has:page.locator(`[data-detail="${contact.id}"]`)}).first();
@@ -53,7 +54,7 @@ try{
   state.detail=await capture(page,kind+'-contact-detail');
   await page.locator('#detail-callback').click();await page.waitForSelector('#callback-editor');await page.locator('#dialog .dialog-close').click();
   await record.locator('[data-book-appt]').click();await page.waitForSelector('#appointment-editor');assert.equal(await page.locator('#appointment-editor [name="contactId"]').inputValue(),contact.id);await page.locator('#dialog .dialog-close').click();
-  if(kind==='phone')await page.locator('[data-platform-screen]').selectOption('calendar');else await page.locator('nav.tabs [data-section=calendar]').click();
+  if(kind==='phone')await openGameSection(page,'calendar');else await openGameSection(page,'calendar');
   await page.waitForSelector('#cal-view');await frame(page,'#crm-calendar-slot');await page.locator('#status').evaluate(el=>el.textContent='');
   if(kind==='phone'){
    assert.equal(await page.locator('#cal-view').inputValue(),'upcoming');assert.equal(await page.locator('.calendar-upcoming').isVisible(),true);

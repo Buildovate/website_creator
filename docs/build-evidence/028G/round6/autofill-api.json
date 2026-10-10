@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "count": 21,
+  "checks": [
+    "confirmed contractor values are copied verbatim with source labels",
+    "unconfirmed saved or generated defaults never become suggestions",
+    "only real Business and Questionnaire fields are mapped",
+    "prices, licenses, experience, financing, area and owner photos are excluded",
+    "questionnaire headline and introduction reuse the saved wording without generation",
+    "missing and invalid source values stay blank",
+    "nonexistent form controls are never created",
+    "empty unedited fields are proposals only",
+    "typed values and intentionally cleared fields are always kept",
+    "numeric-looking typed answers are not treated as empty",
+    "Undo restores the exact prior value without changing its input",
+    "Undo keeps edits made after autofill",
+    "all outside adapters honestly remain Not connected",
+    "owner gets only their real saved source and optimistic version",
+    "admin and existing editor roles reuse existing write access",
+    "viewer cannot invoke autofill",
+    "anonymous access is denied",
+    "tenant isolation rejects both foreign directions",
+    "autofill has no write method or second save path",
+    "unknown form type is rejected",
+    "repeated proposals never write or confirm stored business facts"
+  ],
+  "providerCalls": 0
+}

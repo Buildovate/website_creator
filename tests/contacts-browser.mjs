@@ -1,3 +1,4 @@
+import {openGameSection,mockGameBoard} from './helpers/game-navigation.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createRequire} from 'node:module';
@@ -26,7 +27,7 @@ try{
   const context=await browser.newContext({viewport,hasTouch:kind==='phone',acceptDownloads:true,reducedMotion:'reduce'}),page=await context.newPage();
   page.on('pageerror',error=>results.errors.push(kind+': '+error.message));page.on('dialog',dialog=>dialog.accept());
   await context.request.post(base+'/auth/local-session',{headers:{origin:base},data:{userId:'contacts-owner',email:'contacts-owner@example.test'}});
-  await page.goto(base);await page.waitForSelector('[data-platform-screen]',{state:'attached'});if(kind==='phone')await page.locator('[data-platform-screen]').selectOption('contacts');else await page.locator('nav.tabs [data-section=contacts]').click();await page.waitForSelector('[data-contact-card]',{state:'attached'});await frame(page);
+  await page.goto(base);await page.locator('.bv-game').waitFor();if(kind==='phone')await openGameSection(page,'contacts');else await openGameSection(page,'contacts');await page.waitForSelector('[data-contact-card]',{state:'attached'});await frame(page);
   const state=results[kind];state.viewport=viewport;
   if(kind==='phone'){
    assert.equal(await page.locator('#contact-filters-open').isVisible(),true);assert.equal(await page.locator('.smartlists').isVisible(),false);
@@ -39,7 +40,7 @@ try{
    await page.locator('#contact-filters-open').click();await page.locator('#filter-outcome').selectOption('');await page.locator('#filter-done').click();
    const note=page.locator(`[data-contact-card="${a.id}"]`);await note.locator('summary').click();await note.locator('textarea').fill('Roof inspection booked for review.');await note.locator('[data-save-note]').click();await page.waitForFunction(id=>document.querySelector(`[data-contact-card="${id}"] .note-status`)?.textContent==='Saved',a.id);state.notes=await capture(page,'phone-inline-notes');
    await page.locator('#status').evaluate(el=>el.textContent='');await frame(page);await tap(page,`[data-contact-card="${a.id}"] [data-select-contact]`);assert.equal(await page.locator('#contact-bulk-bar').isVisible(),true);state.bulk=await capture(page,'phone-bulk-select');
-   await page.locator('#clear-selection').click();const formula=await api(scope+'/contacts','POST',{data:{company:'=HYPERLINK("https://example.test","fixture")',name:'Formula Test',phone:'8055550103',email:'formula@fixture.test',trade:'Roofing',stage:'New'}});await page.reload();await page.waitForSelector('[data-platform-screen]');await page.locator('[data-platform-screen]').selectOption('contacts');await page.locator(`[data-contact-card="${formula.id}"] [data-select-contact]`).check();const downloadEvent=page.waitForEvent('download');await page.locator('[data-bulk=export]').click();const download=await downloadEvent;const csv=fs.readFileSync(await download.path(),'utf8');assert.ok(csv.startsWith('\ufeff'));assert.match(csv,/"'=HYPERLINK/);state.exportGuard=true;const formulaRecord=(await api(scope+'/contacts/'+formula.id)).record;await api(scope+'/contacts/'+formula.id,'DELETE',{version:formulaRecord.version});
+   await page.locator('#clear-selection').click();const formula=await api(scope+'/contacts','POST',{data:{company:'=HYPERLINK("https://example.test","fixture")',name:'Formula Test',phone:'8055550103',email:'formula@fixture.test',trade:'Roofing',stage:'New'}});await page.reload();await page.locator('.bv-game').waitFor();await openGameSection(page,'contacts');await page.locator(`[data-contact-card="${formula.id}"] [data-select-contact]`).check();const downloadEvent=page.waitForEvent('download');await page.locator('[data-bulk=export]').click();const download=await downloadEvent;const csv=fs.readFileSync(await download.path(),'utf8');assert.ok(csv.startsWith('\ufeff'));assert.match(csv,/"'=HYPERLINK/);state.exportGuard=true;const formulaRecord=(await api(scope+'/contacts/'+formula.id)).record;await api(scope+'/contacts/'+formula.id,'DELETE',{version:formulaRecord.version});
   }else{
    assert.equal(await page.locator('#contact-outcome').isVisible(),true);state.contacts=await capture(page,'desktop-contacts');
    await page.locator('#contacts-select-page').check();assert.equal(await page.locator('#contact-bulk-bar').isVisible(),true);state.bulk=await capture(page,'desktop-bulk-select');await page.locator('#clear-selection').click();
@@ -47,7 +48,7 @@ try{
    const note=page.locator('.crm-table tbody tr').filter({has:page.locator(`[data-detail="${a.id}"]`)}).first();await note.locator('[data-column=notes]').scrollIntoViewIfNeeded();assert.equal(await note.locator('[data-column=notes] textarea').inputValue(),'Roof inspection booked for review.');state.notes=await capture(page,'desktop-inline-notes');
    await page.locator('#contact-stage').selectOption('New');state.filters=await capture(page,'desktop-inline-filters');await page.locator('#contact-stage').selectOption('');
   }
-  if(kind==='phone')await page.locator('[data-platform-screen]').selectOption('business');else await page.locator('nav.tabs [data-section=business]').click();await page.locator('[data-action=upload]').click();await page.waitForSelector('#dialog[open]');
+  if(kind==='phone')await openGameSection(page,'business');else await openGameSection(page,'business');await page.locator('[data-action=upload]').click();await page.waitForSelector('#dialog[open]');
   if(kind==='phone'){await page.waitForSelector('#dialog .choose-photo',{state:'visible'});assert.equal(await page.locator('#dialog .choose-photo').isVisible(),true);assert.equal(await page.locator('#dialog input[name=files]').evaluate(el=>getComputedStyle(el).opacity),'0');assert.equal(await page.locator('#dialog .platform-action-dock button').filter({hasText:'Upload photographs'}).count(),1)}
   state.picker=await capture(page,kind+'-photo-picker');await context.close();
  }

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "count": 7,
+  "checks": [
+    "src/client/workspace/game/view.js: only recorded copy changes",
+    "src/client/workspace/game/autofill.js: only recorded copy changes",
+    "src/client/workspace/game/experience.js: only recorded copy changes",
+    "src/client/workspace/game/index.js: only recorded copy changes",
+    "all nine quests retain their IDs and plain task headings",
+    "fresh: copy leaves progress and controls unchanged",
+    "complete: copy leaves progress and controls unchanged"
+  ]
+}

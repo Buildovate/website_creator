@@ -1,0 +1,75 @@
+{
+  "ticket": "028G",
+  "subticket": "G-6",
+  "scope": "existing_save_publish_wiring",
+  "status": "verified_with_approved_base_exception",
+  "parent": "fa4b0089ebcb6e47b0c1a43ee7c3e1dc1ca4364c",
+  "branch": "launch/028G-game",
+  "port": 5183,
+  "mapping": {
+    "passed": 4,
+    "runs": 1
+  },
+  "build": {
+    "passed": true,
+    "runs": 1
+  },
+  "browser": {
+    "passed": 8,
+    "runs": 1
+  },
+  "progress": {
+    "passed": 40,
+    "runs": 1
+  },
+  "milestones": {
+    "passed": 16,
+    "runs": 1
+  },
+  "headerLogo": {
+    "passed": true,
+    "headers": 340,
+    "edgeCases": 6,
+    "runs": 1
+  },
+  "headerNavFit": {
+    "passed": true,
+    "checks": 16422,
+    "states": 1632,
+    "widths": 8,
+    "runs": 1
+  },
+  "platformLook": {
+    "passed": true,
+    "selectors": 593,
+    "fontFaces": 7,
+    "runs": 1
+  },
+  "platformMobile": {
+    "passed": false,
+    "knownBaseException": true,
+    "message": "Complete the review packet before approval.",
+    "httpStatus": 409,
+    "runs": 1
+  },
+  "publish": {
+    "realRouteExercised": true,
+    "reviewGatePreserved": true,
+    "successfulPublicationExercised": false
+  },
+  "domainWizard": "owner module absent; existing truthful settings retained",
+  "protectedDiff": "empty",
+  "newSharedEdits": 0,
+  "providerCalls": 0,
+  "credits": 0,
+  "next": "No further ticket started",
+  "screenshots": [
+    "g6-desktop-business-saved.png",
+    "g6-desktop-questionnaire-saved.png",
+    "g6-desktop-publish-gated.png",
+    "g6-phone-business-saved.png",
+    "g6-phone-offline.png",
+    "g6-phone-conflict.png",
+    "g6-phone-readonly.png"
+  ]
+}

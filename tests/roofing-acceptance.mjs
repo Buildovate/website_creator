@@ -1,3 +1,4 @@
+import {openGameSection,mockGameBoard} from './helpers/game-navigation.mjs';
 // #028 Roofing homeowner acceptance is exercised against an isolated local runtime.
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
@@ -112,7 +113,7 @@ try{
     const auth=await context.request.post(base+'/auth/local-session',{headers:{origin:base},data:{userId:'acceptance-owner',email:'owner-acceptance@example.test'}});
     check(auth.status()===200,'local owner session '+device+' '+auth.status());
     await page.goto(base);await page.waitForSelector('[data-section=templates]',{state:'attached'});
-    if(device==='desktop')await page.locator('nav.tabs [data-section=templates]').click();else await page.locator('[data-platform-screen]').selectOption('templates');
+    if(device==='desktop')await openGameSection(page,'templates');else await openGameSection(page,'templates');
     await page.waitForSelector('#generation-panel[data-state=ready]');
     const status=await page.locator('#generation-status').innerText();check(status.includes('Your current ones stay in place.'),'plain-language status '+device+' '+status);
     await page.locator('#generation-panel').evaluate(el=>scrollTo({top:el.getBoundingClientRect().top+scrollY-14,behavior:'instant'}));await page.waitForTimeout(150);

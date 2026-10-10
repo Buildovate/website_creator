@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "count": 12,
+  "checks": [
+    "Game power-up opens the existing questionnaire without a second view",
+    "saved proposals show real sources and leave form, settings and XP unchanged",
+    "Confirm adds only saved wording to empty fields, without confirming consent",
+    "Undo restores the exact form snapshot",
+    "intentional clears and later typed edits survive fill and Undo",
+    "phone offline state preserves the answers and existing Save dock",
+    "phone error state is honest and retry remains available",
+    "phone loading then empty state stays usable without creating data",
+    "keyboard access and reduced motion keep the autofill controls static",
+    "existing Save persists confirmed additions to draft only",
+    "viewer sees read-only autofill with no action buttons",
+    "no provider request or uncaught browser error"
+  ],
+  "screenshots": [
+    "g4-desktop-ready.png",
+    "g4-desktop-review.png",
+    "g4-desktop-confirmed.png",
+    "g4-desktop-undo.png",
+    "g4-phone-offline.png",
+    "g4-phone-error.png",
+    "g4-phone-loading.png",
+    "g4-phone-empty.png",
+    "g4-phone-reduced-motion.png",
+    "g4-phone-readonly.png"
+  ],
+  "port": 5183,
+  "providerCalls": 0
+}

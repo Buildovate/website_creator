@@ -1,0 +1,31 @@
+{
+  "ticket": "028G",
+  "subticket": "G-3",
+  "status": "blocked_color_only_scope",
+  "text": "Virtual estimator",
+  "foreground": {
+    "token": "--bv-navy",
+    "hex": "#10304d",
+    "exactPngPixels": 106
+  },
+  "background": {
+    "token": "--bv-card",
+    "hex": "#ffffff",
+    "exactPngPixels": 8353
+  },
+  "contrast": 13.531126952230803,
+  "opacity": 1,
+  "opacityEvidence": "Previous passing round5/game-phone.json; no opacity change this round.",
+  "image": "screenshots/g3-phone-midway.png",
+  "sampleRegion": {
+    "x": 80,
+    "y": 316,
+    "width": 180,
+    "height": 54
+  },
+  "failure": "Selected label clipping; contrast already passes.",
+  "appChangesThisRound": 0,
+  "testsRerun": 0,
+  "committed": false,
+  "head": "2d6bae7454d12ac03600e12aaac7cefe1d0cb718"
+}

@@ -51,7 +51,8 @@ assert.ok(tables.indexOf('projects') < tables.indexOf('photos'));
 assert.ok(tables.indexOf('chat_threads') < tables.indexOf('chat_messages'));
 assert.ok(ordered.findIndex(entry => /CREATE\s+TABLE/i.test(entry.sql)) < ordered.findIndex(entry => /ALTER\s+TABLE/i.test(entry.sql)));
 assert.ok(ordered.findIndex(entry => /ALTER\s+TABLE/i.test(entry.sql)) < ordered.findIndex(entry => /CREATE\s+(UNIQUE\s+)?INDEX/i.test(entry.sql)));
-assert.ok(ordered.at(-1).sql.startsWith('INSERT'));
+assert.equal(ordered.at(-1).file, '0010_insertion_order.sql');
+assert.equal(ordered.at(-1).sql, 'SELECT 1'); // PostgreSQL identity replaces the final SQLite sequence trigger.
 assert.equal(ordered.some(entry => entry.sql.includes('randomblob') || entry.sql.includes('`')), false);
 
 const previewErrors = assertRuntimeConfig({

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "count": 9,
+  "checks": [
+    "desktop tour explains progress",
+    "all nine desktop quest headings remain readable",
+    "form helper distinguishes Confirm, Save and publish",
+    "suggestions and Undo preserve form values and saved data",
+    "phone board keeps readable headings with Game as the only view",
+    "phone form has clear helper text and the original Save action",
+    "keyboard and reduced motion preserve readable phone suggestions",
+    "unpublished phone preview stays honest",
+    "copy changes do not change data or XP or call providers"
+  ],
+  "screenshots": [
+    "g5-desktop-tour.png",
+    "g5-desktop-board.png",
+    "g5-desktop-form.png",
+    "g5-desktop-suggestions.png",
+    "g5-phone-board.png",
+    "g5-phone-form.png",
+    "g5-phone-suggestions.png",
+    "g5-phone-preview-unpublished.png"
+  ],
+  "port": 5183,
+  "providerCalls": 0
+}

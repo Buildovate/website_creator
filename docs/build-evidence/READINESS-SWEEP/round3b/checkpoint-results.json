@@ -1,0 +1,182 @@
+[
+  {
+    "label": "full-build",
+    "code": 0,
+    "ms": 2323,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-full-build.log"
+  },
+  {
+    "label": "isolated-worker-build",
+    "code": 0,
+    "ms": 626,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-isolated-worker-build.log"
+  },
+  {
+    "label": "pay4a-isolated-build",
+    "code": 0,
+    "ms": 458,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-pay4a-isolated-build.log"
+  },
+  {
+    "label": "typecheck",
+    "code": 0,
+    "ms": 641,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-typecheck.log"
+  },
+  {
+    "label": "game-progress",
+    "code": 0,
+    "ms": 529,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-game-progress.log"
+  },
+  {
+    "label": "game-milestones",
+    "code": 0,
+    "ms": 377,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-game-milestones.log"
+  },
+  {
+    "label": "game-desktop-api",
+    "code": 0,
+    "ms": 662,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-game-desktop-api.log"
+  },
+  {
+    "label": "game-experience-api",
+    "code": 0,
+    "ms": 775,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-game-experience-api.log"
+  },
+  {
+    "label": "game-autofill",
+    "code": 0,
+    "ms": 660,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-game-autofill.log"
+  },
+  {
+    "label": "game-copy",
+    "code": 0,
+    "ms": 762,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-game-copy.log"
+  },
+  {
+    "label": "game-forms",
+    "code": 0,
+    "ms": 436,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-game-forms.log"
+  },
+  {
+    "label": "catalog",
+    "code": 0,
+    "ms": 501,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-catalog.log"
+  },
+  {
+    "label": "payments",
+    "code": 0,
+    "ms": 571,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-payments.log"
+  },
+  {
+    "label": "stripe-sync",
+    "code": 0,
+    "ms": 481,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-stripe-sync.log"
+  },
+  {
+    "label": "stripe-checkout",
+    "code": 0,
+    "ms": 580,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-stripe-checkout.log"
+  },
+  {
+    "label": "stripe-no-key",
+    "code": 0,
+    "ms": 432,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-stripe-no-key.log"
+  },
+  {
+    "label": "entitlements",
+    "code": 0,
+    "ms": 530,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-entitlements.log"
+  },
+  {
+    "label": "pay4a",
+    "code": 0,
+    "ms": 647,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-pay4a.log"
+  },
+  {
+    "label": "pay4b",
+    "code": 0,
+    "ms": 685,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-pay4b.log"
+  },
+  {
+    "label": "pay5",
+    "code": 0,
+    "ms": 710,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-pay5.log"
+  },
+  {
+    "label": "domain-wizard",
+    "code": 0,
+    "ms": 1124,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-domain-wizard.log"
+  },
+  {
+    "label": "aws-adapter",
+    "code": 0,
+    "ms": 4866,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-aws-adapter.log"
+  },
+  {
+    "label": "insertion-order",
+    "code": 0,
+    "ms": 2151,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-insertion-order.log"
+  },
+  {
+    "label": "pg-game-progress",
+    "code": 0,
+    "ms": 12825,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-pg-game-progress.log"
+  },
+  {
+    "label": "pg-game-desktop-api",
+    "code": 1,
+    "ms": 2892,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-pg-game-desktop-api.log"
+  },
+  {
+    "label": "pg-game-experience-api",
+    "code": 1,
+    "ms": 2892,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-pg-game-experience-api.log"
+  },
+  {
+    "label": "pg-game-autofill",
+    "code": 0,
+    "ms": 2835,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-pg-game-autofill.log"
+  },
+  {
+    "label": "pg-payments",
+    "code": 0,
+    "ms": 12742,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-pg-payments.log"
+  },
+  {
+    "label": "pg-domain-wizard",
+    "code": 0,
+    "ms": 5631,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-pg-domain-wizard.log"
+  },
+  {
+    "label": "sms-diagnostic",
+    "code": 0,
+    "ms": 2541,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/checkpoint-sms-diagnostic.log"
+  }
+]

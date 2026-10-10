@@ -9,7 +9,7 @@ import{originalRows,variantSettings,styles,variants,mixedReviews}from'./fixtures
 const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028D',base='http://127.0.0.1:'+(process.argv.includes('--current-final')?'8200':process.argv.includes('--smoke')?'8199':'8198'),smoke=process.argv.includes('--smoke'),captures=process.argv.includes('--captures'),allProcess=false,motionOnly=process.argv.includes('--motion-only'),mediaOnly=process.argv.includes('--media-only');
 const finalCurrent=process.argv.includes('--current-final');
 const{chromium}=createRequire(import.meta.url)('C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
-const bundle=await build({entryPoints:[root+'/src/worker.js'],bundle:true,format:'esm',platform:'browser',target:'es2022',write:false,loader:{'.html':'text','.pdf':'binary'},external:['cloudflare:workers']});
+const bundle=await build({entryPoints:[root+'/src/worker.js'],bundle:true,format:'esm',platform:'neutral',conditions:['workerd','worker'],mainFields:['module','main'],target:'es2022',write:false,loader:{'.html':'text','.pdf':'binary'},external:['cloudflare:workers','node:*']});
 const worker=(await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'))).default;
 const runtime=await createRuntime({worker,env:{APP_ENV:'local',NODE_ENV:'development',AUTH_MODE:'dev-header',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',MIGRATE_ON_BOOT:'1',WORKSPACE_OWNER_EMAIL:'variant-browser@example.test',APP_ORIGIN:base,LISTEN_HOST:'127.0.0.1',PORT:new URL(base).port}});
 Object.assign(runtime.env,{GOOGLE_PLACES_API_KEY:'test-only-mocked'});

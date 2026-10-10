@@ -18,7 +18,7 @@ const DB={prepare(query){let args=[];const s={bind(...values){args=values;return
 let browser;const oldFetch=globalThis.fetch;globalThis.fetch=async()=>{result.providerCalls++;throw Error('Provider call forbidden')};
 try{
  const esbuild=require(root+'/node_modules/esbuild');
- const built=await esbuild.build({absWorkingDir:root,stdin:{contents:"export {default as worker} from './src/worker.js';export {DEFAULT,settings} from './src/core.js';",resolveDir:root},bundle:true,write:false,format:'esm',platform:'browser',loader:{'.html':'text','.pdf':'binary'},external:['cloudflare:workers']});
+ const built=await esbuild.build({absWorkingDir:root,stdin:{contents:"export {default as worker} from './src/worker.js';export {DEFAULT,settings} from './src/core.js';",resolveDir:root},bundle:true,write:false,format:'esm',platform:'neutral',conditions:['workerd','worker'],mainFields:['module','main'],loader:{'.html':'text','.pdf':'binary'},external:['cloudflare:workers','node:*']});
  const {worker,DEFAULT,settings}=await import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].contents).toString('base64'));
  const client=await esbuild.build({absWorkingDir:root,entryPoints:['src/client/workspace/index.ts'],bundle:true,write:false,format:'iife',platform:'browser'});
  const types={'.css':'text/css','.js':'application/javascript','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.woff2':'font/woff2','.ttf':'font/ttf','.mp4':'video/mp4','.ico':'image/x-icon','.pdf':'application/pdf'};

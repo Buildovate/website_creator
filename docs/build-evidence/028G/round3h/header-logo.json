@@ -1,0 +1,1710 @@
+{
+  "passed": true,
+  "renderedHeaders": 340,
+  "kits": 17,
+  "looks": 4,
+  "templates": 5,
+  "edgeCases": 6,
+  "checks": [
+    {
+      "kit": "roofing",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "roofing",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "roofing",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "roofing",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "roofing",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "roofing",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "roofing",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "roofing",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "roofing",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "roofing",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "roofing",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "roofing",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "roofing",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "roofing",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "roofing",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "roofing",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "roofing",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "roofing",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "roofing",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "roofing",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "patios",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "patios",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "patios",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "patios",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "patios",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "patios",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "patios",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "patios",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "patios",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "patios",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "patios",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "patios",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "patios",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "patios",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "patios",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "patios",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "patios",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "patios",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "patios",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "patios",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "plumbing",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "plumbing",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "plumbing",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "plumbing",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "plumbing",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "plumbing",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "plumbing",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "plumbing",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "plumbing",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "plumbing",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "plumbing",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "plumbing",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "plumbing",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "plumbing",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "plumbing",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "plumbing",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "plumbing",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "plumbing",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "plumbing",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "plumbing",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "hvac",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "hvac",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "hvac",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "hvac",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "hvac",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "hvac",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "hvac",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "hvac",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "hvac",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "hvac",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "hvac",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "hvac",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "hvac",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "hvac",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "hvac",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "hvac",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "hvac",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "hvac",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "hvac",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "hvac",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "electrical",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "electrical",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "electrical",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "electrical",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "electrical",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "electrical",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "electrical",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "electrical",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "electrical",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "electrical",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "electrical",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "electrical",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "electrical",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "electrical",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "electrical",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "electrical",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "electrical",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "electrical",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "electrical",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "electrical",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "landscaping",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "landscaping",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "landscaping",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "landscaping",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "landscaping",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "landscaping",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "landscaping",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "landscaping",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "landscaping",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "landscaping",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "landscaping",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "landscaping",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "landscaping",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "landscaping",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "landscaping",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "landscaping",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "landscaping",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "landscaping",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "landscaping",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "landscaping",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "general-contractors",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "flooring",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "flooring",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "flooring",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "flooring",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "flooring",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "flooring",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "flooring",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "flooring",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "flooring",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "flooring",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "flooring",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "flooring",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "flooring",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "flooring",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "flooring",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "flooring",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "flooring",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "flooring",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "flooring",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "flooring",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "painting",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "painting",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "painting",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "painting",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "painting",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "painting",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "painting",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "painting",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "painting",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "painting",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "painting",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "painting",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "painting",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "painting",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "painting",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "painting",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "painting",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "painting",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "painting",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "painting",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "fencing",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "fencing",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "fencing",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "fencing",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "fencing",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "fencing",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "fencing",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "fencing",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "fencing",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "fencing",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "fencing",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "fencing",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "fencing",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "fencing",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "fencing",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "fencing",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "fencing",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "fencing",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "fencing",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "fencing",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "garage-doors",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "pest-control",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "pest-control",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "pest-control",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "pest-control",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "pest-control",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "pest-control",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "pest-control",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "pest-control",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "pest-control",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "pest-control",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "pest-control",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "pest-control",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "pest-control",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "pest-control",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "pest-control",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "pest-control",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "pest-control",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "pest-control",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "pest-control",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "pest-control",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "windows-doors",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "solar",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "solar",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "solar",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "solar",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "solar",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "solar",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "solar",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "solar",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "solar",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "solar",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "solar",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "solar",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "solar",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "solar",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "solar",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "solar",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "solar",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "solar",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "solar",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "solar",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "concrete",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "concrete",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "concrete",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "concrete",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "concrete",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "concrete",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "concrete",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "concrete",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "concrete",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "concrete",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "concrete",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "concrete",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "concrete",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "concrete",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "concrete",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "concrete",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "concrete",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "concrete",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "concrete",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "concrete",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "pools",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "pools",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "pools",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "pools",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "pools",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "pools",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "pools",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "pools",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "pools",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "pools",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "pools",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "pools",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "pools",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "pools",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "pools",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "pools",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "pools",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "pools",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "pools",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "pools",
+      "look": "classic",
+      "template": "blueprint"
+    },
+    {
+      "kit": "locksmith",
+      "look": "current",
+      "template": "craft"
+    },
+    {
+      "kit": "locksmith",
+      "look": "current",
+      "template": "cinematic"
+    },
+    {
+      "kit": "locksmith",
+      "look": "current",
+      "template": "clean"
+    },
+    {
+      "kit": "locksmith",
+      "look": "current",
+      "template": "editorial"
+    },
+    {
+      "kit": "locksmith",
+      "look": "current",
+      "template": "blueprint"
+    },
+    {
+      "kit": "locksmith",
+      "look": "bold",
+      "template": "craft"
+    },
+    {
+      "kit": "locksmith",
+      "look": "bold",
+      "template": "cinematic"
+    },
+    {
+      "kit": "locksmith",
+      "look": "bold",
+      "template": "clean"
+    },
+    {
+      "kit": "locksmith",
+      "look": "bold",
+      "template": "editorial"
+    },
+    {
+      "kit": "locksmith",
+      "look": "bold",
+      "template": "blueprint"
+    },
+    {
+      "kit": "locksmith",
+      "look": "fresh",
+      "template": "craft"
+    },
+    {
+      "kit": "locksmith",
+      "look": "fresh",
+      "template": "cinematic"
+    },
+    {
+      "kit": "locksmith",
+      "look": "fresh",
+      "template": "clean"
+    },
+    {
+      "kit": "locksmith",
+      "look": "fresh",
+      "template": "editorial"
+    },
+    {
+      "kit": "locksmith",
+      "look": "fresh",
+      "template": "blueprint"
+    },
+    {
+      "kit": "locksmith",
+      "look": "classic",
+      "template": "craft"
+    },
+    {
+      "kit": "locksmith",
+      "look": "classic",
+      "template": "cinematic"
+    },
+    {
+      "kit": "locksmith",
+      "look": "classic",
+      "template": "clean"
+    },
+    {
+      "kit": "locksmith",
+      "look": "classic",
+      "template": "editorial"
+    },
+    {
+      "kit": "locksmith",
+      "look": "classic",
+      "template": "blueprint"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+PASS first-run tour starts once on the real board without a second view
+PASS Skip saves once and returns to the board
+PASS skipped tour stays skipped after restart/reload, with settings unchanged
+PASS unpublished preview tells the truth and loads no fake site
+PASS preview renders the actual published route, isolated from draft edits
+PASS published preview error preserves the board and has a keyboard exit
+PASS three-step tour works by keyboard and finishes for a separate account
+PASS level confirmation is brief, non-blocking and automatically returns to board
+PASS Continue dismisses confirmation immediately without changing progress
+PASS reduced motion has the same tour and celebration with no movement or opacity animation
+PASS new controls remain readable at 390px without horizontal scroll
+PASS no uncaught browser errors; external requests are never forwarded
+12/12 passed; 11 screenshots

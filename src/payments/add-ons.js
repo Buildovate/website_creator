@@ -17,7 +17,7 @@ async function authorizedTenant(req,env,tenantId,change){
 }
 
 async function deliveryMap(env,tenantId){
-  const audit=await rows(env,"SELECT action,detail FROM payment_audit WHERE tenant_id=? AND action IN ('addon.delivery.in_progress','addon.delivery.delivered') ORDER BY rowid",tenantId);
+  const audit=await rows(env,"SELECT action,detail FROM payment_audit WHERE tenant_id=? AND action IN ('addon.delivery.in_progress','addon.delivery.delivered') ORDER BY insertion_seq,id",tenantId);
   const status=new Map();
   for(const item of audit)status.set(item.detail,item.action.endsWith('delivered')?'Delivered':'In progress');
   return status;

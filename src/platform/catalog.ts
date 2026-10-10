@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import pricingConfig from '../../config/pricing.v1.json' with { type: 'json' };
 
 export type Cadence = 'one_time' | 'month' | 'year';
 export type Entitlement = { key: string; quantity: number | null };
@@ -73,7 +73,7 @@ export function validateCatalog(config: Catalog): void {
   if (!domainService || domainService.priceCents !== 1500 || domainService.cadence !== 'one_time') throw new Error('Locked domain connection service price mismatch');
 }
 
-const parsed = JSON.parse(readFileSync(new URL('../../config/pricing.v1.json', import.meta.url), 'utf8')) as Catalog;
+const parsed = pricingConfig as Catalog;
 validateCatalog(parsed);
 export const catalog: Readonly<Catalog> = deepFreeze(parsed);
 

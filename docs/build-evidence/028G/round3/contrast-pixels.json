@@ -1,0 +1,51 @@
+{
+  "problems": [],
+  "textCount": 117,
+  "samples": [
+    {
+      "selector": ".bv-game-house",
+      "actual": [
+        11,
+        34,
+        64
+      ],
+      "expected": [
+        11,
+        34,
+        64
+      ]
+    },
+    {
+      "selector": ".bv-game-quest",
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "selector": ".bv-game-power",
+      "actual": [
+        251,
+        240,
+        225
+      ],
+      "expected": [
+        251,
+        240,
+        225
+      ]
+    }
+  ],
+  "borders": [
+    {
+      "label": "Coming next",
+      "height": 44
+    }
+  ]
+}

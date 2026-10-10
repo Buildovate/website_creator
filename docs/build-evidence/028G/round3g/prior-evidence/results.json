@@ -1,0 +1,59 @@
+{
+  "ticket": "028G",
+  "round": "3f",
+  "subticket": "G-2a",
+  "state": "stopped_shared_color_source_per_instruction",
+  "worktree": "C:\\Users\\joe\\wc-game",
+  "branch": "launch/028G-game",
+  "head": "4dde8d78be560b6410f6abd8c3dc6ca9da3be880",
+  "base": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+  "port": 5183,
+  "diagnosis": {
+    "fontSize": "14px",
+    "threshold": 4.5,
+    "colorSource": "src/client/styles/platform/components.css:8",
+    "renderer": "src/client/workspace/game/view.js:25",
+    "background": "#0b2240",
+    "fontWeight": 400,
+    "scanned": {
+      "done": 127,
+      "locked": 127,
+      "midway": 126,
+      "fresh": 131
+    },
+    "allAncestorOpacity": 1,
+    "otherFailures": [],
+    "foreground": "#4b5967",
+    "allAncestorFilters": "none",
+    "element": ".bv-game-house-caption p",
+    "backgroundSource": "src/client/styles/platform/game.css:48",
+    "ratio": 2.220056023167893
+  },
+  "fixes": [],
+  "tests": {
+    "guards": "not_run",
+    "build": "not_run",
+    "api": "not_run",
+    "gameMilestones": "not_run",
+    "browser": "not_run",
+    "gameProgress": "not_run"
+  },
+  "diagnosticScreenshots": [
+    "round3f/diagnosis-fresh.png",
+    "round3f/diagnosis-midway.png",
+    "round3f/diagnosis-locked.png",
+    "round3f/diagnosis-done.png"
+  ],
+  "protectedDiff": {
+    "allowedSharedAdditions": 4,
+    "empty": true,
+    "legacyWorkspaceUnchanged": true,
+    "sharedColorSourcesUnchanged": true,
+    "sharedDeletions": 0
+  },
+  "providerCalls": 0,
+  "credits": 0,
+  "commit": null,
+  "next": "Explicit Game-local override approval needed under shared-color stop clause; G-2b not started",
+  "previousResults": "round3f/previous-results.json"
+}

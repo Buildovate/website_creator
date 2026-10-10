@@ -1,0 +1,74 @@
+{
+  "ticket": "028G",
+  "subticket": "G-4",
+  "status": "verified_with_approved_base_exception",
+  "parent": "7651c754b11cd0cfdfad837bc6097f47b9bf9e2b",
+  "branch": "launch/028G-game",
+  "port": 5183,
+  "autofillApi": {
+    "passed": 21,
+    "runs": 1
+  },
+  "autofillBrowser": {
+    "passed": 12,
+    "runs": 1
+  },
+  "isolatedBuild": {
+    "passed": true,
+    "runs": 1
+  },
+  "progress": {
+    "passed": 40,
+    "runs": 1
+  },
+  "milestones": {
+    "passed": 16,
+    "runs": 1
+  },
+  "headerLogo": {
+    "passed": true,
+    "headers": 340,
+    "edgeCases": 6,
+    "runs": 1
+  },
+  "headerNavFit": {
+    "passed": true,
+    "checks": 16422,
+    "states": 1632,
+    "widths": 8,
+    "runs": 1
+  },
+  "platformLook": {
+    "passed": true,
+    "selectors": 593,
+    "fontFaces": 7,
+    "stylesheets": 5,
+    "runs": 1
+  },
+  "platformMobile": {
+    "passed": false,
+    "knownBaseException": true,
+    "message": "Complete the review packet before approval.",
+    "httpStatus": 409,
+    "browserAssertionsReached": false,
+    "runs": 1
+  },
+  "protectedDiff": "empty",
+  "legacyComponentsTokensDiff": "empty",
+  "newSharedEdits": 0,
+  "credits": 0,
+  "providerCalls": 0,
+  "next": "G-5, not started",
+  "screenshots": [
+    "g4-desktop-ready.png",
+    "g4-desktop-review.png",
+    "g4-desktop-confirmed.png",
+    "g4-desktop-undo.png",
+    "g4-phone-offline.png",
+    "g4-phone-error.png",
+    "g4-phone-loading.png",
+    "g4-phone-empty.png",
+    "g4-phone-reduced-motion.png",
+    "g4-phone-readonly.png"
+  ]
+}

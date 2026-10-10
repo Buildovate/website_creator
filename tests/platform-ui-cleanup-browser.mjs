@@ -1,3 +1,4 @@
+import {openGameSection,mockGameBoard} from './helpers/game-navigation.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createRequire} from 'node:module';
@@ -25,7 +26,7 @@ const server=await listen(runtime,8146);
 const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
 const results={phase,checks:[],errors:[]};
 async function capture(page,name){const file=name+'.png';await page.screenshot({path:out+'/'+file,fullPage:false});return phase+'/'+file}
-async function nav(page,name){await page.locator(`[data-action="nav"][data-view="${name}"]`).first().click();await page.waitForFunction(name=>document.querySelector(`[data-action="nav"][data-view="${name}"]`)?.classList.contains('active'),name)}
+async function nav(page,name){if(await page.locator('.bv-game-section-shell').isVisible())await page.locator('[data-game-back]').click();if(await page.locator('.bv-game').isVisible()){await page.getByRole('link',{name:'Buildovate workspace',exact:true}).click();await page.locator('[data-action="nav"][data-view="'+name+'"]').first().waitFor({state:'visible'});}await page.locator(`[data-action="nav"][data-view="${name}"]`).first().click();await page.waitForFunction(name=>document.querySelector(`[data-action="nav"][data-view="${name}"]`)?.classList.contains('active'),name)}
 try{
  for(const [device,viewport] of [['desktop',{width:1440,height:900}],['phone',{width:390,height:844}],['desktop-1280',{width:1280,height:900}]]){
   const context=await browser.newContext({viewport,hasTouch:device==='phone',reducedMotion:'reduce'});
@@ -61,7 +62,7 @@ try{
   await nav(page,'websites');
   await page.locator(`[data-action="open"][data-id="${site.id}"]`).first().click();
   await page.waitForSelector('[data-section="templates"]',{state:'attached'});
-  await page.locator('[data-section="templates"]').first().evaluate(el=>el.click());
+  await openGameSection(page,'templates');
   await page.getByRole('button',{name:'Creative direction',exact:true}).click();await page.waitForSelector('#kit-settings');await page.locator('#content .eyebrow').filter({hasText:'YOUR ACTIVE DESIGN KIT'}).first().scrollIntoViewIfNeeded();await capture(page,device+'-template-detail');
   if(phase==='after')assert.ok((await page.locator('#content').textContent()).includes('Ridgeline (Roofing)'));
   await nav(page,'contacts');await page.waitForSelector('.contact-workspace');

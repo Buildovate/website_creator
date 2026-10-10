@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "count": 12,
+  "checks": [
+    "first-run tour starts once on the real board without a second view",
+    "Skip saves once and returns to the board",
+    "skipped tour stays skipped after restart/reload, with settings unchanged",
+    "unpublished preview tells the truth and loads no fake site",
+    "preview renders the actual published route, isolated from draft edits",
+    "published preview error preserves the board and has a keyboard exit",
+    "three-step tour works by keyboard and finishes for a separate account",
+    "level confirmation is brief, non-blocking and automatically returns to board",
+    "Continue dismisses confirmation immediately without changing progress",
+    "reduced motion has the same tour and celebration with no movement or opacity animation",
+    "new controls remain readable at 390px without horizontal scroll",
+    "no uncaught browser errors; external requests are never forwarded"
+  ],
+  "screenshots": [
+    "g2b-tour-progress.png",
+    "g2b-tour-skipped.png",
+    "g2b-preview-unpublished.png",
+    "g2b-preview-published.png",
+    "g2b-preview-error.png",
+    "g2b-tour-quest.png",
+    "g2b-tour-badges.png",
+    "g2b-celebration.png",
+    "g2b-celebration-board.png",
+    "g2b-reduced-motion.png",
+    "g2b-phone-reflow.png"
+  ],
+  "contrast": [
+    {
+      "state": "tour-progress",
+      "count": 6,
+      "failures": [],
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "unpublished",
+      "count": 4,
+      "failures": [],
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "published",
+      "count": 4,
+      "failures": [],
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "tour-quest",
+      "count": 6,
+      "failures": [],
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "tour-badges",
+      "count": 6,
+      "failures": [],
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "state": "celebration",
+      "count": 3,
+      "failures": [],
+      "actual": [
+        245,
+        243,
+        238
+      ],
+      "expected": [
+        245,
+        243,
+        238
+      ]
+    },
+    {
+      "state": "reduced-motion",
+      "count": 8,
+      "failures": [],
+      "actual": [
+        255,
+        255,
+        255
+      ],
+      "expected": [
+        255,
+        255,
+        255
+      ]
+    }
+  ],
+  "blockedExternalRequests": [],
+  "port": 5183
+}

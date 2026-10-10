@@ -1,3 +1,4 @@
+import {seedWorkspaceEntitlements} from './helpers/workspace-payment-fixture.mjs';
 import {screenshotDiagnosticStore,snapshotScreenshotEvidence,preserveScreenshotEqualityFailure} from './helpers/replay-diagnostics.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -48,6 +49,7 @@ try{
  for(const [label,change]of controlled){const changed=structuredClone(settings);change(changed);delete changed.generationManifest;Object.assign(changed,adoptGeneration(changed,id,id));await runtime.env.DB.prepare('UPDATE tenants SET settings=? WHERE id=?').bind(JSON.stringify(changed),id).run();const changedState=await status();check(changedState.versionHash!==current.versionHash&&!changedState.decision,'Approval invalidated by '+label);await runtime.env.DB.prepare('UPDATE tenants SET settings=? WHERE id=?').bind(JSON.stringify(settings),id).run()}
  const pngPath=current.packet.files.find(x=>x.path.endsWith('.png')).path,key='review-packets/'+id+'/'+current.versionHash+'/'+pngPath;await runtime.env.BUCKET.put(key,'damaged');check((await req('/api/tenants/'+id+'/publish','POST',{version:row.version+1,approved:true})).status===409,'Tampered evidence blocks publishing');await capture();
  check((await req('/api/tenants/'+id+'/review-packet/file?version='+current.versionHash+'&path=../../secret')).status===400,'Evidence path traversal rejected');
+ await seedWorkspaceEntitlements(runtime.env.DB,id);
  // Independent publication actions must bind the evidence to that specific action.
  for(const kind of ['pages','forms','blog','visibility']){
   const rid='review-'+kind,data={title:'Sample '+kind,name:'Sample '+kind,slug:'sample-'+kind,body:'Sample saved body',excerpt:'Sample saved excerpt',category:'Planning',active:true,reviewed:true,description:'Sample business',sameAs:'',fields:[]};

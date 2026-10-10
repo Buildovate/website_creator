@@ -1,0 +1,8 @@
+{
+  "selector": "#questionnaire-form .save-bar button[type=submit]",
+  "text": "Save questionnaire",
+  "form": "questionnaire-form",
+  "type": "submit",
+  "visible": true,
+  "html": "<button type=\"submit\" class=\"primary bv-button bv-button-primary\">Save questionnaire</button>"
+}

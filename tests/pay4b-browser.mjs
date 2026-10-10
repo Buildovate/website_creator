@@ -1,3 +1,4 @@
+import {openGameSection,mockGameBoard} from './helpers/game-navigation.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,mkdir} from 'node:fs/promises';
@@ -65,9 +66,9 @@ try{
     const page=await browser.newPage({viewport:{width,height},reducedMotion:'reduce'}),errors=[],external=[];
     page.on('pageerror',error=>errors.push(error.message));
     await page.route('**/*',route=>{if(new URL(route.request().url()).origin!==base){external.push(route.request().url());return route.abort();}return route.continue();});
-    await page.goto(`${base}/?case=${scenario}`);
-    if(width===390){await page.locator('[data-platform-screen]').waitFor();await page.locator('[data-platform-screen]').selectOption('billing');}
-    else{await page.locator('nav.tabs [data-section="billing"]').waitFor();await page.locator('nav.tabs [data-section="billing"]').click();}
+    await mockGameBoard(page,base,tenant);await page.goto(`${base}/?case=${scenario}`);
+    if(width===390){await openGameSection(page,'billing');}
+    else{await openGameSection(page,'billing');}
     await page.locator('#bv-billing-title').waitFor();
     assert.equal(await page.locator('nav.tabs [data-section="billing"]').count(),1);
     if(scenario==='switch'){

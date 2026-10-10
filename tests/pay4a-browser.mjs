@@ -1,3 +1,4 @@
+import {openGameSection,mockGameBoard} from './helpers/game-navigation.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,mkdir} from 'node:fs/promises';
@@ -55,9 +56,9 @@ try{
     const page=await browser.newPage({viewport:{width,height},reducedMotion:'reduce'}),errors=[],external=[];
     page.on('pageerror',error=>errors.push(error.message));
     await page.route('**/*',route=>{if(new URL(route.request().url()).origin!==base){external.push(route.request().url());return route.abort();}return route.continue();});
-    await page.goto(`${base}/?case=${scenario}`);
-    if(width===390){await page.locator('[data-platform-screen]').waitFor();await page.locator('[data-platform-screen]').selectOption('billing');}
-    else{await page.locator('nav.tabs [data-section="billing"]').waitFor();await page.locator('nav.tabs [data-section="billing"]').click();}
+    await mockGameBoard(page,base,tenant);await page.goto(`${base}/?case=${scenario}`);
+    if(width===390){await openGameSection(page,'billing');}
+    else{await openGameSection(page,'billing');}
     await page.locator('#bv-billing-title').waitFor();
     assert.equal(await page.locator('nav.tabs [data-section="billing"]').count(),1);
     if(scenario==='owned')assert.match(await page.locator('.bv-billing').innerText(),/Owned website[\s\S]*Owner hosting: \$50\.00/);
@@ -66,8 +67,8 @@ try{
     await page.screenshot({path:resolve(shots,`pay4a-${name}.png`)});
     if(name==='billing-desktop'){
       await page.locator('.bv-offer').scrollIntoViewIfNeeded();await page.screenshot({path:resolve(shots,'pay4a-locked-feature.png')});
-      await page.locator('nav.tabs [data-section="plan"]').click();assert.match(await page.locator('#content').innerText(),/Plan & add-ons/);
-      await page.locator('nav.tabs [data-section="business"]').click();assert.match(await page.locator('#content').innerText(),/Business profile/);
+      await openGameSection(page,'plan');assert.match(await page.locator('#content').innerText(),/Plan & add-ons/);
+      await openGameSection(page,'business');assert.match(await page.locator('#content').innerText(),/Business profile/);
     }
     await page.close();console.log(`PASS browser ${name}: ${width}x${height}, Billing tab and existing tabs, no page errors or external requests`);
   }

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240">
+ <defs>
+  <symbol id="outline" viewBox="0 0 720 240"><g fill="none" stroke="var(--bv-bp-line,#bfe6ff)" stroke-width="1.5"><path d="M55 209H670M120 219H600M196 191V98L360 28 524 98V191ZM174 99 360 17 546 99M196 108H524M220 135H285V177H220ZM435 135H500V177H435ZM329 124H391V191"/><path d="M30 57H140M70 41H178M566 55H666M582 68H694" stroke-dasharray="3 6"/><path d="M172 210V110M548 210V110M169 204H551" stroke-dasharray="4 5"/></g></symbol>
+  <symbol id="walls" viewBox="0 0 720 240"><path fill="var(--bv-sand,#eab97f)" d="M198 110H522V190H198Z"/><path fill="var(--bv-bp-deep,#0b2240)" d="M217 132H288V179H217ZM432 132H503V179H432ZM329 123H391V190H329Z"/><path fill="none" stroke="var(--bv-card,#fff)" stroke-width="3" d="M253 133V178M218 155H286M467 133V178M433 155H501"/></symbol>
+  <symbol id="roof" viewBox="0 0 720 240"><path fill="var(--bv-bp-lift,#133a63)" stroke="var(--bv-sand,#eab97f)" stroke-width="3" d="M183 101 360 22 537 101Z"/><g stroke="var(--bv-bp-line,#bfe6ff)" stroke-width="1"><path d="M217 87H503M247 73H474M279 59H441M311 45H409"/></g></symbol>
+  <symbol id="finished" viewBox="0 0 720 240"><path fill="var(--bv-game-done,#86d7a9)" d="M111 205V184L139 151 167 184V205ZM561 205V172L589 137 618 172V205Z"/><path fill="var(--bv-sand,#eab97f)" d="M339 135H381V190H339ZM224 138H280V172H224ZM439 138H495V172H439Z"/><path stroke="var(--bv-bp-deep,#0b2240)" stroke-width="3" d="M252 138V172M224 155H280M467 138V172M439 155H495"/><path fill="var(--bv-bp-line,#bfe6ff)" d="M321 194H399V200H321Z"/></symbol>
+ </defs>
+</svg>

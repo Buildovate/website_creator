@@ -1,3 +1,6 @@
+import {after} from 'node:test';
+import {closePreviewFixture} from './preview-fixture.mjs';
+after(closePreviewFixture);
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {worker,env,admin} from './preview-fixture.mjs';

@@ -1,0 +1,22 @@
+{
+  "ticket": "028G",
+  "round": 4,
+  "subticket": "G-2b",
+  "status": "stopped_uncommitted",
+  "head": "802daa1b5cb9feaff634630b9ec1a48770ee3e72",
+  "existingApi": 16,
+  "newApi": 18,
+  "build": "passed",
+  "browserPassed": 3,
+  "browserFailedCheck": 4,
+  "reason": "Unscoped dialog selector matches shared and Game preview dialogs",
+  "laterChecks": "not run",
+  "protectedDiff": "empty",
+  "legacyDiff": "empty",
+  "screenshots": [
+    "g2b-tour-progress.png",
+    "g2b-tour-skipped.png"
+  ],
+  "credits": 0,
+  "providerCalls": 0
+}

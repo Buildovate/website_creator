@@ -1,0 +1,24 @@
+✔ fresh has no stamps or badges; first level at 0 with next threshold 40 (3.2514ms)
+✔ complete has 100 XP, all four stamps and exactly eight named badges (1.0956ms)
+✔ level progression depends on member quests, not out-of-order XP (0.4065ms)
+✔ SET UP requires every listed quest (0.4187ms)
+✔ SELLING requires every listed quest (0.1998ms)
+✔ LIVE requires every listed quest (0.2094ms)
+✔ GROWING requires every listed quest (0.2331ms)
+✔ Set up cannot bypass its rule (0.2149ms)
+✔ Reviews live cannot bypass its rule (0.1461ms)
+✔ Leads ready cannot bypass its rule (0.233ms)
+✔ Selling cannot bypass its rule (0.8547ms)
+✔ Go live cannot bypass its rule (0.0984ms)
+✔ Financing cannot bypass its rule (0.1119ms)
+✔ 100 XP cannot bypass its rule (0.3306ms)
+✔ First post requires actual published social record, not blog, draft, sample, or connection alone (0.6552ms)
+✔ finished preview is labeled, detached and never alters real score, steps, badges or stored input (1.3704ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17.9943

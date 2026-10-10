@@ -28,6 +28,7 @@ import {siteDownloadState,downloadStaticSite} from './static-site-export.js';
 import {domainPlanApi} from './domain/plan.js';
 export async function api(req,env,url){const path=url.pathname,method=req.method;
 if(path==='/api/payments/webhook')return (await import('./payments/webhook.js')).handleWebhook(req,env);
+if(path.startsWith('/api/game/'))return (await import('./blueprint/api.js')).gameApi(req,env,url);
 if(method!=='GET')must(req.headers.get('origin')===url.origin,'Request must originate from this website.',403);
 if(path.startsWith('/api/payments/tenants/')&&path.includes('/add-ons'))return (await import('./payments/add-ons.js')).addOnApi(req,env,url);
 if(path.startsWith('/api/payments/tenants/'))return (await import('./payments/billing.js')).billingApi(req,env,url);

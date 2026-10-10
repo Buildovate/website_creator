@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "completed": 3,
+  "checks": [
+    "first-run tour starts once on the real board without a second view",
+    "Skip saves once and returns to the board",
+    "skipped tour stays skipped after restart/reload, with settings unchanged"
+  ],
+  "screenshots": [
+    "g2b-tour-progress.png",
+    "g2b-tour-skipped.png"
+  ],
+  "error": "locator.innerText: Error: strict mode violation: locator('dialog') resolved to 2 elements:\n    1) <dialog id=\"dialog\" class=\"bv-dialog\">…</dialog> aka locator('#dialog')\n    2) <dialog open=\"\" class=\"bv-game-preview\" aria-label=\"Published site preview\">…</dialog> aka getByRole('dialog', { name: 'Published site preview' })\n\nCall log:\n\u001b[2m  - waiting for locator('dialog')\u001b[22m\n\n    at C:\\Users\\joe\\wc-game\\tests\\game-experience-browser.mjs:51:222\n    at async check (C:\\Users\\joe\\wc-game\\tests\\game-experience-browser.mjs:21:31)\n    at async file:///C:/Users/joe/wc-game/tests/game-experience-browser.mjs:51:2"
+}

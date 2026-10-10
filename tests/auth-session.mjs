@@ -1,3 +1,4 @@
+import {realReviewPrerequisite} from './helpers/review-approval-fixture.mjs';
 import assert from 'node:assert/strict';
 import { randomUUID, generateKeyPairSync, sign } from 'node:crypto';
 import { DatabaseSync } from 'node:sqlite';
@@ -98,6 +99,7 @@ try {
   assert.equal((await request('/api/tenants/'+first.id+'/publish','POST',{approved:true,version:first.version},editor.headers)).status,403);
   const rendered=await read(await request('/api/tenants/'+first.id+'/render','POST',{settings:first.settings},editor.headers));assert.ok(rendered.html);
   assert.equal((await request('/s/auth-one')).status,404);
+  await realReviewPrerequisite(runtime.env,first.id,'website',base);
   await read(await request('/api/tenants/'+first.id+'/publish','POST',{approved:true,version:first.version},owner.headers));
   const publicPage=await request('/s/auth-one');assert.equal(publicPage.status,200);assert.equal(publicPage.headers.get('x-frame-options'),null);assert.equal(publicPage.headers.get('content-security-policy'),null);
   assert.equal((await request('/s/auth-one?preview=1')).status,303);

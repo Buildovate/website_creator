@@ -1,0 +1,19 @@
+{
+  "heldCount": 229,
+  "heldChanged": [],
+  "unexpectedTrackedChanges": [],
+  "borderlines": {
+    "count": 70,
+    "results": {
+      "Borderline": 70
+    },
+    "ticket": "docs/build-evidence/028F/BORDERLINE-TICKET.md",
+    "qaGateClear": false,
+    "disposition": "All 70 remain REJECTED/OPEN; no change to original records."
+  },
+  "head": "972a218550fdd34457593310a1ac950e62fd25aa",
+  "mergeHead": "1b56dc70183eaf7610a5217c8c6eacdfea4dfefd",
+  "branch": "launch/integration",
+  "providerCalls": 0,
+  "credits": 0
+}

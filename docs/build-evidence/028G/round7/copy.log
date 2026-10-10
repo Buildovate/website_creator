@@ -1,0 +1,8 @@
+PASS src/client/workspace/game/view.js: only recorded copy changes
+PASS src/client/workspace/game/autofill.js: only recorded copy changes
+PASS src/client/workspace/game/experience.js: only recorded copy changes
+PASS src/client/workspace/game/index.js: only recorded copy changes
+PASS all nine quests retain their IDs and plain task headings
+PASS fresh: copy leaves progress and controls unchanged
+PASS complete: copy leaves progress and controls unchanged
+7/7 passed

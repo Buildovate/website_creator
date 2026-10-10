@@ -1,3 +1,4 @@
+import {seedWorkspaceEntitlements} from './helpers/workspace-payment-fixture.mjs';
 
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync,readdirSync} from 'node:fs';
@@ -14,6 +15,7 @@ async function api(path,method='GET',value,user=admin){const r=await request('/a
 
 await api('/setup','POST',{});
 let tenant=(await api('/tenants','POST',{preset:'robles',slug:'robles-roofing'})).tenant;
+await seedWorkspaceEntitlements(DB,tenant.id);
 // Bootstrap-only fallback approved by Joe: these module tests require an
 // existing public baseline, not approval of this fixture. Assert the real gate
 // blocks, then seed test data. No packet, QA report or approval is inserted.
@@ -32,3 +34,5 @@ for(const [city,service,lat,lng] of [['Oxnard','Roof repair',34.1975,-119.1771],
 }
 console.log('QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.');
 export {worker,env,admin};
+
+export function closePreviewFixture(){objects.clear();sql.close();}

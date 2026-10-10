@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "count": 16,
+  "checks": [
+    "fresh owner defaults to Game, zero XP and real tenant name",
+    "anonymous denied",
+    "unrelated tenant hidden",
+    "owner cannot cross tenant boundary",
+    "admin can read, without awarding XP",
+    "invalid origin denied server-side",
+    "progress writes rejected",
+    "unknown view rejected",
+    "invalid body rejected",
+    "owner view stored in workspace_records only",
+    "preference survives new GET; stale update rejected",
+    "viewer can save personal view without business writes",
+    "each account has its own preference",
+    "same record is updated with optimistic version",
+    "GET never modifies progress or preference",
+    "corrupt preference fails honestly"
+  ]
+}

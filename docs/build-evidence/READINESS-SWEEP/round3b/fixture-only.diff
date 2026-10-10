@@ -1,0 +1,146 @@
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-files/tests/game-progress.mjs b/C:/Users/joe/website_creator/tests/game-progress.mjs
+index 4ef060e..29ce160 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-files/tests/game-progress.mjs
++++ b/C:/Users/joe/website_creator/tests/game-progress.mjs
+@@ -1,6 +1,7 @@
+ import test from 'node:test';
+ import assert from 'node:assert/strict';
+ import {DatabaseSync} from 'node:sqlite';
++import {isPostgresGameFixture,gameDatabaseFixture,seedGameTenant,seedGameMember,seedGameAdmin} from './helpers/game-database-fixture.mjs';
+ import {evaluateProgress} from '../src/blueprint/progress.js';
+ import {createDependencies} from '../src/blueprint/deps.js';
+ import {readProgressSources} from '../src/blueprint/sources.js';
+@@ -68,11 +69,18 @@ test('deps: owner module contracts are used and arguments retain scope',async()=
+ test('deps: missing exports and invalid contracts fail closed; internal errors are not hidden',async()=>{const d=createDependencies({load:async()=>({getPlan:()=>({status:'pretend'}),hasEntitlement:()=>({truthy:true})})});assert.deepEqual(await d.getPlan('t'),{state:'not_connected'});assert.deepEqual(await d.hasEntitlement('t','x'),{state:'not_connected'});assert.deepEqual(await d.getDomainStatus('t'),{state:'not_connected'});const broken=createDependencies({load:async()=>{throw Error('broken owner module')}});await assert.rejects(()=>broken.getPlan('t'),/broken owner/);});
+ 
+ function dbFixture(){
++ if(isPostgresGameFixture())return postgresDbFixture();
+  const db=new DatabaseSync(':memory:');db.exec('CREATE TABLE tenants(id TEXT,settings TEXT,published TEXT,status TEXT); CREATE TABLE sales(tenant_id TEXT,data TEXT); CREATE TABLE workspace_records(id TEXT,scope TEXT,kind TEXT,data TEXT); CREATE TABLE inquiries(id TEXT,tenant_id TEXT);');
+  const sql={prepare(query){let args=[];return{bind(...a){args=a;return this;},async first(){return db.prepare(query).get(...args)||null;},async all(){return {results:db.prepare(query).all(...args)};}};}};
+  const s={name:'Fictional Roofing',phone:'+18055550198',trade:'Roofing',area:'Ventura',hero:'Roof help',intro:'Roofing work',services:[{name:'Repair'}],platform:{questionnaire:{factsConfirmed:true},financing:{selection:'none'},promotions:{offers:[{id:'offer',title:'Owner offer',reward:'Owner supplied'}]}},websitePages:{pages:[{id:'repair',kind:'service',serviceName:'Repair',enabled:true,title:'Repair',intro:'Repair guidance'},{id:'about',kind:'about',enabled:true,title:'About',intro:'Business background'},{id:'faq',kind:'faq',enabled:true,title:'Questions',intro:'Roof questions'}]}};
+  db.prepare('INSERT INTO tenants VALUES(?,?,?,?)').run('a',JSON.stringify(s),JSON.stringify(s),'published');db.prepare('INSERT INTO tenants VALUES(?,?,?,?)').run('b','{}',null,'draft');db.prepare('INSERT INTO sales VALUES(?,?)').run('a',JSON.stringify({ownerApproved:true,approvalNote:'Saved owner preview approval'}));db.prepare('INSERT INTO workspace_records VALUES(?,?,?,?)').run('chat-a','a','chat_config',JSON.stringify({enabled:true,smsEnabled:true,phone:'+18055550198',phoneVerified:true}));db.prepare('INSERT INTO inquiries VALUES(?,?)').run('lead-a','a');return {db,env:{DB:sql},s};
+ }
++function postgresDbFixture(){
++ const db=gameDatabaseFixture();
++ const sql={prepare(query){let args=[];return{bind(...a){args=a;return this;},async first(){return db.prepare(query).get(...args)||null;},async all(){return {results:db.prepare(query).all(...args)};}};}};
++ const s={name:'Fictional Roofing',phone:'+18055550198',trade:'Roofing',area:'Ventura',hero:'Roof help',intro:'Roofing work',services:[{name:'Repair'}],platform:{questionnaire:{factsConfirmed:true},financing:{selection:'none'},promotions:{offers:[{id:'offer',title:'Owner offer',reward:'Owner supplied'}]}},websitePages:{pages:[{id:'repair',kind:'service',serviceName:'Repair',enabled:true,title:'Repair',intro:'Repair guidance'},{id:'about',kind:'about',enabled:true,title:'About',intro:'Business background'},{id:'faq',kind:'faq',enabled:true,title:'Questions',intro:'Roof questions'}]}};
++ seedGameTenant(db,'a',s.name,{settings:JSON.stringify(s),published:JSON.stringify(s),status:'published'});seedGameTenant(db,'b','Other fixture');db.prepare("INSERT INTO sales(tenant_id,data,updated_at) VALUES(?,?,'2026-01-01')").run('a',JSON.stringify({ownerApproved:true,approvalNote:'Saved owner preview approval'}));db.prepare("INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) VALUES(?,?,?,?,'2026-01-01','2026-01-01')").run('chat-a','a','chat_config',JSON.stringify({enabled:true,smsEnabled:true,phone:'+18055550198',phoneVerified:true}));db.prepare("INSERT INTO inquiries(id,tenant_id,name,phone,message,created_at) VALUES(?,?,'QA visitor','5550123','Fixture inquiry','2026-01-01')").run('lead-a','a');return {db,env:{DB:sql},s};
++}
+ const offline=createDependencies({load:async()=>({})});
+ test('sources read tenant, sales approval, saved pages, offers, None and verified alerts; missing integrations stay honest',async()=>{const {db,env}=dbFixture();try{const s=await readProgressSources(env,'a',{deps:offline});const p=evaluateProgress(s);assert.equal(p.totalXp,50);assert.equal(quest(s,'pages').done,true);assert.equal(s.estimator.state,'not_available');assert.equal(s.reviews.state,'not_connected');assert.equal(s.marketing.state,'not_available');assert.equal(s.activity.inquiries,1);assert.equal(s.activity.newReviews,null);assert.equal(s.launch.published,true);}finally{db.close();}});
+ test('sources isolate tenants, do not write, and observe the same saved values as Tabs',async()=>{const {db,env,s}=dbFixture();try{const before=db.prepare('SELECT total_changes() AS n').get().n;const a=await readProgressSources(env,'a',{deps:offline});const b=await readProgressSources(env,'b',{deps:offline});assert.equal(evaluateProgress(b).totalXp,0);assert.equal(b.activity.inquiries,0);assert.equal(db.prepare('SELECT total_changes() AS n').get().n,before);s.phone='';db.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify(s),'a');assert.equal(quest(await readProgressSources(env,'a',{deps:offline}),'onboarding').xpEarned,0);assert.equal(quest(a,'onboarding').xpEarned,10);await assert.rejects(()=>readProgressSources(env,'missing',{deps:offline}),/Website not found/);}finally{db.close();}});
+
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-files/tests/game-desktop-api.mjs b/C:/Users/joe/website_creator/tests/game-desktop-api.mjs
+index 55abe06..eb8f6b4 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-files/tests/game-desktop-api.mjs
++++ b/C:/Users/joe/website_creator/tests/game-desktop-api.mjs
+@@ -1,17 +1,26 @@
+ // Sequential assertions: first unexpected failure stops the process, with no retries.
+ import assert from 'node:assert/strict';
+ import {DatabaseSync} from 'node:sqlite';
++import {isPostgresGameFixture,gameDatabaseFixture,seedGameTenant,seedGameMember,seedGameAdmin} from './helpers/game-database-fixture.mjs';
+ import {build} from 'esbuild';
+ import fs from 'node:fs';
+ import {pathToFileURL} from 'node:url';
+ const root='C:/Users/joe/wc-game',out=root+'/docs/build-evidence/028G/round3h';fs.mkdirSync(out,{recursive:true});
+ await build({entryPoints:[root+'/src/blueprint/api.js'],outfile:root+'/.data/028G/game-api.js',bundle:true,format:'esm',platform:'node',loader:{'.html':'text','.pdf':'binary'},logLevel:'silent'});
+ const {gameApi}=await import(pathToFileURL(root+'/.data/028G/game-api.js').href);
+-const db=new DatabaseSync(':memory:');
++const db=isPostgresGameFixture()?gameDatabaseFixture():new DatabaseSync(':memory:');
++if(isPostgresGameFixture()){
++
++for(const id of ['a','b'])seedGameTenant(db,id,'Harbor Roofing — QA fixture');
++for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['b','other','owner']])seedGameMember(db,tenant,user,role);
++seedGameAdmin(db,'admin');
++}else{
++
+ db.exec(`CREATE TABLE admins(user_id TEXT,role TEXT); CREATE TABLE tenants(id TEXT,name TEXT,settings TEXT,published TEXT,status TEXT); CREATE TABLE members(tenant_id TEXT,user_id TEXT,role TEXT,active INT); CREATE TABLE sales(tenant_id TEXT,data TEXT); CREATE TABLE inquiries(tenant_id TEXT); CREATE TABLE workspace_records(id TEXT PRIMARY KEY,scope TEXT,kind TEXT,data TEXT,version INT,created_at TEXT,updated_at TEXT);`);
+ for(const id of ['a','b'])db.prepare('INSERT INTO tenants VALUES(?,?,?,?,?)').run(id,'Harbor Roofing — QA fixture','{}',null,'draft');
+ for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['b','other','owner']])db.prepare('INSERT INTO members VALUES(?,?,?,1)').run(tenant,user,role);
+ db.prepare('INSERT INTO admins VALUES(?,?)').run('admin','admin');
++}
+ const env={DB:{prepare(sql){let args=[];return {bind(...values){args=values;return this},async first(){return db.prepare(sql).get(...args)||null},async all(){return {results:db.prepare(sql).all(...args)}},async run(){return {meta:{changes:Number(db.prepare(sql).run(...args).changes)}}}}}}};
+ const base='http://127.0.0.1:5183';
+ function call(user='owner',method='GET',value,tenant='a',origin=base){const headers={'content-type':'application/json',origin};if(user)headers['oai-authenticated-user-id']=user;const req=new Request(base+'/api/game/'+tenant,{method,headers,body:value===undefined?undefined:JSON.stringify(value)});return gameApi(req,env,new URL(req.url));}
+@@ -30,7 +39,7 @@ try{
+  await check('DELETE rejected',()=>denied(()=>call('owner','DELETE'),405));
+  await check('viewer cannot write preferences',()=>denied(()=>call('viewer','PUT',{view:'game'}),405));
+  await check('admin cannot award progress',()=>denied(()=>call('admin','PUT',{totalXp:100}),405));
+- await check('old Tabs preference ignored and preserved',async()=>{db.prepare('INSERT INTO workspace_records VALUES(?,?,?,?,?,?,?)').run('old','a','game_preferences','{"view":"tabs"}',1,'old','old');assert.equal((await call()).view,'game');assert.equal(db.prepare('SELECT data FROM workspace_records WHERE id=?').get('old').data,'{"view":"tabs"}')});
++ await check('old Tabs preference ignored and preserved',async()=>{db.prepare('INSERT INTO workspace_records(id,scope,kind,data,version,created_at,updated_at) VALUES(?,?,?,?,?,?,?)').run('old','a','game_preferences','{"view":"tabs"}',1,'old','old');assert.equal((await call()).view,'game');assert.equal(db.prepare('SELECT data FROM workspace_records WHERE id=?').get('old').data,'{"view":"tabs"}')});
+  await check('GET never changes saved records',async()=>{const before=db.prepare('SELECT total_changes() n').get().n;await call();await call();assert.equal(db.prepare('SELECT total_changes() n').get().n,before)});
+  await check('invalid obsolete preference cannot block board',async()=>{db.prepare('UPDATE workspace_records SET data=?').run('invalid obsolete preference');assert.equal((await call()).view,'game')});
+  await check('all original sections mapped, without inventing permissions',async()=>{const {questSections,sectionLabels,sectionsForQuest}=await import('../src/client/workspace/game/sections.js');assert.equal(Object.keys(sectionLabels).length,28);const originalSections=["launchpad","questionnaire","hero","editor","pages","business","ownerphoto","templates","services","projects","blog","contacts","calendar","forms","inquiries","chat","pricing","reviews","visibility","plan","readiness","followups","access","domains","backups","sales"];assert.deepEqual(Object.keys(sectionLabels).filter(id=>!originalSections.includes(id)).sort(),['add-ons','billing']);assert.ok(originalSections.every(id=>Object.hasOwn(sectionLabels,id)));assert.equal(sectionLabels.billing,'Billing');assert.equal(sectionLabels['add-ons'],'Add-ons');assert.deepEqual([...new Set(Object.values(questSections).flat())].sort(),Object.keys(sectionLabels).sort());assert.deepEqual(sectionsForQuest('onboarding',['business']),['business']);assert.equal(db.prepare('SELECT settings FROM tenants WHERE id=?').get('a').settings,'{}')});
+
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-files/tests/game-experience-api.mjs b/C:/Users/joe/website_creator/tests/game-experience-api.mjs
+index b2af364..a3cc157 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-files/tests/game-experience-api.mjs
++++ b/C:/Users/joe/website_creator/tests/game-experience-api.mjs
+@@ -1,6 +1,7 @@
+ // Sequential fixtures only. Stop on the first assertion; no retries.
+ import assert from 'node:assert/strict';
+ import {DatabaseSync} from 'node:sqlite';
++import {isPostgresGameFixture,gameDatabaseFixture,seedGameTenant,seedGameMember,seedGameAdmin} from './helpers/game-database-fixture.mjs';
+ import {build} from 'esbuild';
+ import fs from 'node:fs';
+ import {pathToFileURL} from 'node:url';
+@@ -9,11 +10,19 @@ import {complete} from './game-fixtures.mjs';
+ const root='C:/Users/joe/wc-game',out=root+'/docs/build-evidence/028G/round4';fs.mkdirSync(out,{recursive:true});
+ await build({stdin:{contents:"export {gameApi} from './src/blueprint/api.js'; export {advanceExperience,emptyExperience,publishedPreview} from './src/blueprint/experience.js';",resolveDir:root},outfile:root+'/.data/028G/game-experience-api.js',bundle:true,format:'esm',platform:'node',loader:{'.html':'text','.pdf':'binary'},logLevel:'silent'});
+ const {gameApi,advanceExperience,emptyExperience,publishedPreview}=await import(pathToFileURL(root+'/.data/028G/game-experience-api.js').href);
+-const db=new DatabaseSync(':memory:');
++const db=isPostgresGameFixture()?gameDatabaseFixture():new DatabaseSync(':memory:');
++if(isPostgresGameFixture()){
++
++for(const id of ['a','b'])seedGameTenant(db,id,'Game QA fixture');
++for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['b','other','owner']])seedGameMember(db,tenant,user,role);
++seedGameAdmin(db,'admin');
++}else{
++
+ db.exec('CREATE TABLE admins(user_id TEXT,role TEXT); CREATE TABLE tenants(id TEXT,name TEXT,settings TEXT,published TEXT,status TEXT); CREATE TABLE members(tenant_id TEXT,user_id TEXT,role TEXT,active INT); CREATE TABLE sales(tenant_id TEXT,data TEXT); CREATE TABLE inquiries(tenant_id TEXT); CREATE TABLE workspace_records(id TEXT PRIMARY KEY,scope TEXT,kind TEXT,data TEXT,version INT,created_at TEXT,updated_at TEXT);');
+ for(const id of ['a','b'])db.prepare('INSERT INTO tenants VALUES(?,?,?,?,?)').run(id,'Game QA fixture','{}',null,'draft');
+ for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['b','other','owner']])db.prepare('INSERT INTO members VALUES(?,?,?,1)').run(tenant,user,role);
+ db.prepare('INSERT INTO admins VALUES(?,?)').run('admin','admin');
++}
+ const env={DB:{
+  prepare(sql){
+   let args=[];
+
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-files/tests/game-autofill.mjs b/C:/Users/joe/website_creator/tests/game-autofill.mjs
+index ff3a36e..8d5c744 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/before-files/tests/game-autofill.mjs
++++ b/C:/Users/joe/website_creator/tests/game-autofill.mjs
+@@ -1,6 +1,7 @@
+ import assert from 'node:assert/strict';
+ import fs from 'node:fs';
+ import {DatabaseSync} from 'node:sqlite';
++import {isPostgresGameFixture,gameDatabaseFixture,seedGameTenant,seedGameMember,seedGameAdmin} from './helpers/game-database-fixture.mjs';
+ import {build} from 'esbuild';
+ import {pathToFileURL} from 'node:url';
+ import {savedSuggestions,planAutofill,undoAutofill} from '../src/blueprint/autofill/rules.js';
+@@ -8,13 +9,22 @@ const root='C:/Users/joe/wc-game',out=root+'/docs/build-evidence/028G/round6';
+ fs.mkdirSync(out,{recursive:true});
+ await build({entryPoints:[root+'/src/blueprint/api.js'],outfile:root+'/.data/028G/game-autofill-api.js',bundle:true,format:'esm',platform:'node',loader:{'.html':'text','.pdf':'binary'},logLevel:'silent'});
+ const {gameApi}=await import(pathToFileURL(root+'/.data/028G/game-autofill-api.js').href);
+-const db=new DatabaseSync(':memory:');
+-db.exec('CREATE TABLE admins(user_id TEXT,role TEXT);CREATE TABLE tenants(id TEXT,name TEXT,settings TEXT,version INT);CREATE TABLE members(tenant_id TEXT,user_id TEXT,role TEXT,active INT);');
+ const saved={name:'Harbor Roofing · QA fixture',owner:'QA owner',phone:'(805) 555-0123',email:'qa@example.test',address:'',hours:'By appointment',hero:'Talk through your roof repair',intro:'We explain the repair scope before work begins.',license:'DO NOT COPY',area:'Owner choice',price:99,experience:'DO NOT COPY',platform:{questionnaire:{factsConfirmed:true}}};
++const db=isPostgresGameFixture()?gameDatabaseFixture():new DatabaseSync(':memory:');
++if(isPostgresGameFixture()){
++
++seedGameTenant(db,'a',saved.name,{settings:JSON.stringify(saved),version:4});
++seedGameTenant(db,'b','Other tenant',{settings:JSON.stringify({...saved,name:'Other tenant'}),version:2});
++for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['a','editor','editor'],['b','other','owner']])seedGameMember(db,tenant,user,role);
++seedGameAdmin(db,'admin');
++}else{
++
++db.exec('CREATE TABLE admins(user_id TEXT,role TEXT);CREATE TABLE tenants(id TEXT,name TEXT,settings TEXT,version INT);CREATE TABLE members(tenant_id TEXT,user_id TEXT,role TEXT,active INT);');
+ db.prepare('INSERT INTO tenants VALUES(?,?,?,?)').run('a',saved.name,JSON.stringify(saved),4);
+ db.prepare('INSERT INTO tenants VALUES(?,?,?,?)').run('b','Other tenant',JSON.stringify({...saved,name:'Other tenant'}),2);
+ for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['a','editor','editor'],['b','other','owner']])db.prepare('INSERT INTO members VALUES(?,?,?,1)').run(tenant,user,role);
+ db.prepare('INSERT INTO admins VALUES(?,?)').run('admin','admin');
++}
+ const env={DB:{prepare(sql){
+  let args=[];
+  return {
+

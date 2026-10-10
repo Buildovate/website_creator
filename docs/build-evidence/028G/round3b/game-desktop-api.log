@@ -1,0 +1,17 @@
+PASS fresh owner defaults to Game, zero XP and real tenant name
+PASS anonymous denied
+PASS unrelated tenant hidden
+PASS owner cannot cross tenant boundary
+PASS admin can read, without awarding XP
+PASS invalid origin denied server-side
+PASS progress writes rejected
+PASS unknown view rejected
+PASS invalid body rejected
+PASS owner view stored in workspace_records only
+PASS preference survives new GET; stale update rejected
+PASS viewer can save personal view without business writes
+PASS each account has its own preference
+PASS same record is updated with optimistic version
+PASS GET never modifies progress or preference
+PASS corrupt preference fails honestly
+16/16 passed

@@ -1,0 +1,65 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   {
++     ratio: 2.8040332067935174,
++     text: 'Needs you · 0/15 XP'
++   },
++   {
++     ratio: 2.8040332067935174,
++     text: 'Not connected · 0/15 XP'
++   },
++   {
++     ratio: 2.8040332067935174,
++     text: 'Locked · 0/20 XP'
++   },
++   {
++     ratio: 2.8040332067935174,
++     text: 'Locked · 0/5 XP'
++   },
++   {
++     ratio: 2.8040332067935174,
++     text: 'Locked · 0/10 XP'
++   },
++   {
++     ratio: 2.8040332067935174,
++     text: 'Locked · 0/10 XP'
++   },
++   {
++     ratio: 2.8040332067935174,
++     text: 'Locked · 0/10 XP'
++   },
++   {
++     ratio: 2.8040332067935174,
++     text: 'Locked · 0/5 XP'
++   }
++ ]
+- []
+
+    at verifyPhone (file:///C:/Users/joe/wc-game/tests/game-phone.mjs:49:65)
+    at async file:///C:/Users/joe/wc-game/tests/game-phone.mjs:52:309
+    at async check (file:///C:/Users/joe/wc-game/tests/game-phone.mjs:21:31)
+    at async file:///C:/Users/joe/wc-game/tests/game-phone.mjs:52:2 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    { text: 'Needs you · 0/15 XP', ratio: 2.8040332067935174 },
+    { text: 'Not connected · 0/15 XP', ratio: 2.8040332067935174 },
+    { text: 'Locked · 0/20 XP', ratio: 2.8040332067935174 },
+    { text: 'Locked · 0/5 XP', ratio: 2.8040332067935174 },
+    { text: 'Locked · 0/10 XP', ratio: 2.8040332067935174 },
+    { text: 'Locked · 0/10 XP', ratio: 2.8040332067935174 },
+    { text: 'Locked · 0/10 XP', ratio: 2.8040332067935174 },
+    { text: 'Locked · 0/5 XP', ratio: 2.8040332067935174 }
+  ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

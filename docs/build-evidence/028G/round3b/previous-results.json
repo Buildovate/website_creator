@@ -1,0 +1,31 @@
+{
+  "ticket": "028G",
+  "round": "3",
+  "subticket": "G-2a",
+  "state": "blocked_first_failure_uncommitted",
+  "worktree": "C:\\Users\\joe\\wc-game",
+  "branch": "launch/028G-game",
+  "head": "4dde8d78be560b6410f6abd8c3dc6ca9da3be880",
+  "base": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+  "port": 5183,
+  "splitBeforeCoding": true,
+  "tests": {
+    "game-desktop-api.mjs": {"state":"parse_failure", "assertionsExecuted":0, "error":"SyntaxError: Unexpected token ';' at line 15", "exitCode":1},
+    "game-desktop.mjs": {"state":"not_run"},
+    "game-guard-build.mjs": {"state":"not_run"},
+    "header-logo.mjs": {"state":"not_run"},
+    "header-nav-fit.mjs": {"state":"not_run"},
+    "platform-mobile.mjs": {"state":"not_run"},
+    "platform-look.mjs": {"state":"not_run"},
+    "game-progress.mjs": {"state":"not_rerun"},
+    "game-milestones.mjs": {"state":"not_rerun"}
+  },
+  "protectedDiff": {"empty":true,"allowedSharedAdditions":4,"sharedDeletions":0},
+  "screenshots": [],
+  "retries": 0,
+  "providerCalls": 0,
+  "credits": 0,
+  "commit": null,
+  "next": "Resume G-2a to correct the fixture and verify; G-2b not started",
+  "previousResults": "round3/previous-results.json"
+}

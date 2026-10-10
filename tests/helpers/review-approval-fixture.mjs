@@ -35,9 +35,10 @@ export async function realReviewPrerequisite(env,id,target='website',origin='htt
  }
 }
 worker.fetch=async(req,env)=>{
- const retry=req.clone(),url=new URL(req.url),site=url.pathname.match(/^\/api\/tenants\/([^/]+)\/(?:projects\/([^/]+)\/)?publish$/),record=url.pathname.match(/^\/api\/workspace\/([^/]+)\/(pages|forms|blog|visibility)\/([^/]+)\/publish$/);
+ const url=new URL(req.url),site=url.pathname.match(/^\/api\/tenants\/([^/]+)\/(?:projects\/([^/]+)\/)?publish$/),record=url.pathname.match(/^\/api\/workspace\/([^/]+)\/(pages|forms|blog|visibility)\/([^/]+)\/publish$/);
+ const retry=req.method==='POST'&&(site||record)?req.clone():null;
  const response=await fetchWithoutReviewPrerequisite(req,env);
- if(req.method!=='POST'||(!site&&!record)||response.status!==409)return response;
+ if(!retry||response.status!==409){void retry?.body?.cancel();return response;}
  const error=(await response.clone().json().catch(()=>({}))).error;
  if(error==='Resolve the blocking QA failures before approval.'){
   const id=site?.[1]||record[1],target=site?(site[2]?'project:'+site[2]:'website'):record[2]+':'+record[3],staff=await env.DB.prepare('SELECT user_id,email FROM admins ORDER BY created_at LIMIT 1').first();
@@ -46,8 +47,10 @@ worker.fetch=async(req,env)=>{
   for(const file of ['packet.json','source.json','qa-report.json',...current.packet.pages.map(p=>p.file),...failures.map(c=>c.crop)]){const object=await env.BUCKET.get('review-packets/'+id+'/'+current.versionHash+'/'+file);if(object){fs.mkdirSync(folder+'/'+file.split('/').slice(0,-1).join('/'),{recursive:true});fs.writeFileSync(folder+'/'+file,Buffer.from(await new Response(object.body).arrayBuffer()));}}
   console.error('REAL blocking QA details (publication stays blocked):',JSON.stringify(failures));
  }
- if(!['Complete the review packet before approval.','Staff must approve the review packet for this exact version before publishing.','Capture the automatic QA report before approval.','A staff reviewer must decide every Borderline item, with a reason.'].includes(error))return response;
+ if(!['Complete the review packet before approval.','Staff must approve the review packet for this exact version before publishing.','Capture the automatic QA report before approval.','A staff reviewer must decide every Borderline item, with a reason.'].includes(error)){void retry.body?.cancel();return response;}
  const id=site?.[1]||record[1],target=site?(site[2]?'project:'+site[2]:'website'):record[2]+':'+record[3];
  await realReviewPrerequisite(env,id,target,url.origin);
+ // The denied response is discarded on retry; close its cloned body stream.
+ await response.body?.cancel();
  return fetchWithoutReviewPrerequisite(retry,env);
 };

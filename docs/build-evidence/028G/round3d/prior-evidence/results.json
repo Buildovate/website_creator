@@ -1,0 +1,31 @@
+{
+  "ticket":"028G",
+  "round":"3b",
+  "subticket":"G-2a",
+  "state":"blocked_first_non_syntax_failure_uncommitted",
+  "worktree":"C:\\Users\\joe\\wc-game",
+  "branch":"launch/028G-game",
+  "head":"4dde8d78be560b6410f6abd8c3dc6ca9da3be880",
+  "base":"b2446730d551656067f2aaa15a9c27497dceb8f7",
+  "port":5183,
+  "fixes":[{"file":"tests/game-desktop-api.mjs","line":15,"change":"Added missing closing brace for fixture environment object","assertionsChanged":false}],
+  "tests":{
+    "game-desktop-api.mjs":{"state":"pass","passed":16,"failed":0},
+    "game-guard-build.mjs":{"state":"pass"},
+    "game-desktop.mjs":{"state":"stopped","completed":1,"failedCheck":2,"error":"Strict mode violation: [data-section=business] matches Business and Review buttons","line":31},
+    "header-logo.mjs":{"state":"not_run"},
+    "header-nav-fit.mjs":{"state":"not_run"},
+    "platform-mobile.mjs":{"state":"not_run"},
+    "platform-look.mjs":{"state":"not_run"},
+    "game-progress.mjs":{"state":"not_rerun"},
+    "game-milestones.mjs":{"state":"not_rerun"}
+  },
+  "screenshots":["screenshots/g2a-desktop-fresh.png"],
+  "protectedDiff":{"empty":true,"allowedSharedAdditions":4,"sharedDeletions":0},
+  "retries":0,
+  "providerCalls":0,
+  "credits":0,
+  "commit":null,
+  "next":"Resume G-2a; G-2b not started",
+  "previousResults":"round3b/previous-results.json"
+}
