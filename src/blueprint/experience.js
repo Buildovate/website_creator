@@ -21,7 +21,7 @@ export function publishedPreview(tenant){
   :{state:'unpublished',reason:'Your site isn’t published yet. Publish it when you’re ready, then view it here.'};
 }
 export async function experienceApi(req,env,url,tenantId){
- const {user,tenant}=await access(req,env,tenantId,'read');
+ const {user,tenant}=await access(req,env,tenantId,'read',{readOnly:true});
  must(req.method==='GET'||req.method==='POST','Method not supported.',405);
  const id='game-experience:'+encodeURIComponent(tenantId)+':'+encodeURIComponent(user.id);
  const row=await one(env,"SELECT * FROM workspace_records WHERE id=? AND scope=? AND kind='game_experience'",id,tenantId);

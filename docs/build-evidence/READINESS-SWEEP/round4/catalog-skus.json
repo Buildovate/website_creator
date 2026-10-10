@@ -1,0 +1,452 @@
+[
+  {
+    "sku": "PLAN-WEBSITE-MONTH",
+    "category": "Website Plans",
+    "active": true,
+    "priceCents": 5000
+  },
+  {
+    "sku": "PLAN-WEBSITE-YEAR",
+    "category": "Website Plans",
+    "active": true,
+    "priceCents": 50000
+  },
+  {
+    "sku": "PLAN-GROWTH-MONTH",
+    "category": "Website Plans",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "PLAN-GROWTH-YEAR",
+    "category": "Website Plans",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "PLAN-ALL-IN-MONTH",
+    "category": "Website Plans",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "PLAN-ALL-IN-YEAR",
+    "category": "Website Plans",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "SITE-OWN",
+    "category": "Website Ownership",
+    "active": true,
+    "priceCents": 150000
+  },
+  {
+    "sku": "SITE-BUYOUT",
+    "category": "Website Ownership",
+    "active": true,
+    "priceCents": 150000
+  },
+  {
+    "sku": "OWNER-HOSTING",
+    "category": "Website Ownership",
+    "active": true,
+    "priceCents": 5000
+  },
+  {
+    "sku": "DOMAIN-CONNECT-FOR-ME",
+    "category": "Website Add-ons",
+    "active": true,
+    "priceCents": 1500
+  },
+  {
+    "sku": "DOMAIN-COM-WEBSITE",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 2900
+  },
+  {
+    "sku": "DOMAIN-PREMIUM",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "DOMAIN-PROTECT",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "SOCIAL-FULL-PACK",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "BRAND-KIT-BUSINESS-CARDS",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "BRAND-KIT-DOOR-HANGERS",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "BRAND-KIT-YARD-SIGNS",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "BRAND-KIT-TRUCK-MAGNETS",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "BRAND-KIT-EMBROIDERED-HATS",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "ESTIMATOR-RUNS-100",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "SMS-500",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "VISUALIZER-RENDERS-50",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "AI-UGC-PACK",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 19700
+  },
+  {
+    "sku": "AI-UGC-PACK-PLUS",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 29700
+  },
+  {
+    "sku": "AI-UGC-EXTRA",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  },
+  {
+    "sku": "AI-UGC-REFRESH",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 9700
+  },
+  {
+    "sku": "WEB+UGC-BUNDLE",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "AI-ABOUT-PORTRAIT",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 9900
+  },
+  {
+    "sku": "AI-PROMO-GRAPHICS-PACK",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 12900
+  },
+  {
+    "sku": "HIGGS-SHORT-CUSTOM",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 14900
+  },
+  {
+    "sku": "HIGGS-SHORT-ADS-3",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 29700
+  },
+  {
+    "sku": "AR-PREVIEW-PACK",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 17900
+  },
+  {
+    "sku": "CITY-PAGES-EXTRA-5",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 9900
+  },
+  {
+    "sku": "CITY-PAGES-EXTRA-10",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 17900
+  },
+  {
+    "sku": "TRUST-SETUP-DONE",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  },
+  {
+    "sku": "PROMO-UNLOCK-PRO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  },
+  {
+    "sku": "EBOOK-CUSTOM",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 14900
+  },
+  {
+    "sku": "RUSH-LAUNCH-48H",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 15100
+  },
+  {
+    "sku": "BRAND-KIT-EXPAND",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 9900
+  },
+  {
+    "sku": "MONTHLY-CREATIVE",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 19700
+  },
+  {
+    "sku": "MEDIA-CONNECT",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 14900
+  },
+  {
+    "sku": "MEDIA-PUBLISH",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 9700
+  },
+  {
+    "sku": "JOBSITE-PUBLISH",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  },
+  {
+    "sku": "DISTRIBUTE-UGC",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 4900
+  },
+  {
+    "sku": "CONTENT-MONTH",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 29700
+  },
+  {
+    "sku": "CONTENT-MONTH-PRO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 49700
+  },
+  {
+    "sku": "PRESENCE-BUNDLE",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 39700
+  },
+  {
+    "sku": "SEASONAL-DROP",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 12900
+  },
+  {
+    "sku": "SEASONAL-DROP-VIDEO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  },
+  {
+    "sku": "SEASONAL-PASS",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 49700
+  },
+  {
+    "sku": "SEASONAL-PASS-PRO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 79700
+  },
+  {
+    "sku": "WEATHER-HOME-PRO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  },
+  {
+    "sku": "STORM-COMPANION-PRO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 9900
+  },
+  {
+    "sku": "JOB-BINDER",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 9700
+  },
+  {
+    "sku": "JOB-BINDER-ANNUAL",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 49700
+  },
+  {
+    "sku": "REFERRAL-ENGINE",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  },
+  {
+    "sku": "LANG-ES",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 14900
+  },
+  {
+    "sku": "CREW-QR-KIT",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  },
+  {
+    "sku": "CREW-QR-EXTRA",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 1900
+  },
+  {
+    "sku": "HOA-PACKET",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 14900
+  },
+  {
+    "sku": "HOA-PACKET-SINGLE",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 2900
+  },
+  {
+    "sku": "COMPARE-PRO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 4900
+  },
+  {
+    "sku": "ANALYTICS-CONNECT",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  },
+  {
+    "sku": "GROWTH-PLAN",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 19700
+  },
+  {
+    "sku": "GROWTH-PLAN-PRO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 39700
+  },
+  {
+    "sku": "ADS-CONNECT",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 14900
+  },
+  {
+    "sku": "ADS-CREATIVE-AUTO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 9700
+  },
+  {
+    "sku": "ADS-LAUNCH",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  },
+  {
+    "sku": "ADS-MANAGE",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 29700
+  },
+  {
+    "sku": "ADS-MANAGE-PRO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 49700
+  },
+  {
+    "sku": "CRM-CONNECT-WEBSITE",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": null
+  },
+  {
+    "sku": "EMAIL-STARTER",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 4900
+  },
+  {
+    "sku": "EMAIL-GROWTH",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 9900
+  },
+  {
+    "sku": "EMAIL-PRO",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 14900
+  },
+  {
+    "sku": "EMAIL-DOMAIN-SETUP",
+    "category": "Website Add-ons",
+    "active": false,
+    "priceCents": 7900
+  }
+]

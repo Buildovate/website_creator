@@ -29,5 +29,7 @@ try{
  const concurrent=await Promise.all(races.map(t=>api('/tenants/'+t.id+'/generation','POST',{version:t.version,action:'regenerate',overrides:{seed:443}})));
  ok(concurrent[0].tenant.settings.mediaPicks.slots.hero.assetId!==concurrent[1].tenant.settings.mediaPicks.slots.hero.assetId,'Concurrent same-seed generations reserve different available hero media');
  ok(providerCalls===0,'No provider calls');
- fs.writeFileSync(out+'/checks/media-api.json',JSON.stringify({passed:true,count:checks.length,cases:68,providerCalls,checks},null,2));console.log('PASS '+checks.length+' media API checks');
+ fs.writeFileSync(out+'/checks/media-api.json',JSON.stringify({passed:true,count:checks.length,cases:68,providerCalls,checks},null,2));
 }finally{globalThis.fetch=nativeFetch;await runtime.close()}
+
+console.log('PASS '+checks.length+' API checks; database pool and queued jobs closed');

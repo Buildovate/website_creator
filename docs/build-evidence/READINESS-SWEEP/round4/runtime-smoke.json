@@ -1,0 +1,73 @@
+{
+  "results": [
+    {
+      "path": "/api/setup",
+      "method": "POST",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "path": "/api/tenants",
+      "method": "POST",
+      "status": 200,
+      "body": "{\"tenant\":{\"id\":\"60eace00-605f-4cac-878e-9013e626d573\",\"slug\":\"readiness-roofing-qa\",\"name\":\"Harbor Roofing · QA fixture\",\"settings\":{\"ebook\":{\"enabled\":false,\"reviewedRevision\":\"\"},\"trust\":{\"version\":1,\"enabled\":false,\"layout\":\"auto\",\"placements\":[\"below-hero\"],\"showRatings\":false,\"networks\":[]},\"businessTrust\":{\"years\":null,\"licenseNumber\":\"\",\"licenseState\":\"\",\"insured\":null,\"crewSize\":null,\"warrantyYears\":null,\"certifications\":[],\"googleRating\":null,\"googleReviewCount\":null,\"googleUrl\":\"\",\"jobsCompleted\":null,\"confirmed\":{\"years\":false,\"license\":false,\"insured\":false,\"crewSize\":false,\"warranty\":false,\"certifications\":false,\"google\":false,\"jobsCompleted\":false}},\"websitePages\":{\"version\":1,\"pages\":[{\"id\":\"service-roof-repair\",\"kind\":\"service\",\"slug\":\"roof-repair\",\"enabled\":true,\"title\":\"Roof repair\",\"serviceName\":\"Roof repair\",\"intro\":\"\",\"seoTitle\":\"\",\"seoDescription\":\"\",\"headline\":\"\",\"scope\":\"\",\"process\":[],\"materials\":[],\"questions\":[],\"typicalPriceRange\":null,\"media\":{\"hero\":null,\"bannerOne\":null,\"bannerTwo\":null,\"thumbnail\":null}},{\"id\":\"service-roof-replacement\",\"kind\":\"service\",\"slug\":\"roof-replacement\",\"enabled\":true,\"title\":\"Roof replacement\",\"serviceName\":\"Roof replacement\",\"intro\":\"\",\"seoTitle\":\"\",\"seoDescription\":\"\",\"headline\":\"\",\"scope\":\"\",\"process\":[],\"materials\":[],\"questions\":[],\"typicalPriceRange\":null,\"media\":{\"hero\":null,\"bannerOne\":null,\"bannerTwo\":null,\"thumbnail\":null}},{\"id\":\"service-roof-maintenance\",\"kind\":\"service\",\"slug\":\"roof-maintenance\",\"enabled\":true,\"title\":\"Roof maintenance\",\"serviceName\":\"Roof maintenance\",\"intro\":\"\",\"seoTitle\":\"\",\"seoDescription\":\"\",\"headline\":\"\",\"scope\":\"\",\"process\":[],\"materials\":[],\"questions\":[],\"typicalPriceRange\":null,\"media\":{\"hero\":null,\"bannerOne\":null,\"bannerTwo\":null,\"thumbnail\":null}},{\"id\":\"service-gutters\",\"kind\":\"service\",\"slug\":\"gutters\",\"enabled\":true,\"title\":\"Gutters\",\"serviceName\":\"Gutters\",\"intro\":\"\",\"seoTitle\":\"\",\"seoDescription\":\"\",\"headline\":\"\",\"scope\":\"\",\"process\":[],\"materials\":[],\"questio"
+    },
+    {
+      "path": "/healthz",
+      "status": 200,
+      "body": "{\"ok\":true,\"service\":\"website-creator\",\"environment\":\"local\",\"region\":\"us-west-1\",\"bucket\":\"memory\",\"authMode\":\"dev-header\",\"database\":{\"ok\":true,\"ms\":2},\"openai\":{\"origin\":\"https://api.openai.com\",\"configured\":false}}"
+    },
+    {
+      "path": "/api/payments/tenants/60eace00-605f-4cac-878e-9013e626d573/billing",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"tenantId\":\"60eace00-605f-4cac-878e-9013e626d573\",\"plan\":null,\"status\":\"none\",\"renewsAt\":null,\"renewalAmountCents\":null,\"minimumMonths\":3,\"minimumEndsAt\":null,\"buyoutAmountCents\":150000,\"hosting\":null,\"paymentMethod\":\"Payments not connected\",\"portalState\":\"not_connected\",\"receipts\":[],\"access\":{\"pages\":{\"allowed\":false,\"plan\":\"all_in\"},\"forms\":{\"allowed\":false,\"plan\":\"growth\"},\"followups\":{\"allowed\":false,\"plan\":\"growth\"},\"visibility\":{\"allowed\":false,\"plan\":\"growth\"},\"blog\":{\"allowed\":false,\"plan\":\"all_in\"},\"ai\":{\"allowed\":false,\"plan\":\"website\"}},\"connectionState\":\"not_connected\",\"actionsAvailable\":false,\"rental\":{\"kind\":\"none\",\"currentSku\":null,\"periodEnd\":null,\"cancel\":null,\"switchTargets\":[]}}"
+    },
+    {
+      "path": "/api/payments/tenants/60eace00-605f-4cac-878e-9013e626d573/add-ons",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"tenantId\":\"60eace00-605f-4cac-878e-9013e626d573\",\"available\":[{\"sku\":\"DOMAIN-CONNECT-FOR-ME\",\"name\":\"Buy and connect a domain for me\",\"description\":\"Buy and connect a domain for me\",\"priceCents\":1500,\"cadence\":\"one_time\"}],\"owned\":[],\"checkoutState\":\"not_connected\"}"
+    },
+    {
+      "path": "/api/payments/tenants/60eace00-605f-4cac-878e-9013e626d573/add-ons/checkout",
+      "method": "POST",
+      "status": 200,
+      "body": "{\"state\":\"not_connected\",\"message\":\"Payments not connected\"}"
+    },
+    {
+      "path": "/api/payments/webhook",
+      "method": "POST",
+      "status": 503,
+      "body": "Payments not connected"
+    },
+    {
+      "path": "/api/payments/webhook",
+      "method": "POST",
+      "status": 400,
+      "body": "Invalid Stripe signature"
+    },
+    {
+      "path": "/s/readiness-roofing-qa/pricing?preview=1",
+      "method": "GET",
+      "status": 200,
+      "body": "<!doctype html><html lang=\"en\"><head><link rel=\"preload\" href=\"/assets/dm-sans.ttf\" as=\"font\" type=\"font/ttf\" crossorigin><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"robots\" content=\"noindex,nofollow\"><title>Roofing pricing & project estimates | Harbor Roofing · QA fixture</title><meta name=\"description\" content=\"Discuss your roofing project and request a tailored estimate from Harbor Roofing · QA fixture.\"><link rel=\"icon\" href=\"/favicon.svg\"><link rel=\"stylesheet\" href=\"/trade-components.css\"><link rel=\"stylesheet\" href=\"/pricing.css\"><link rel=\"stylesheet\" href=\"/site-polish.css?v=constitution-v1\"><link rel=\"stylesheet\" href=\"/scroll-story.css\"><script defer src=\"/trade-components.js\"></script><script defer src=\"/pricing.js\"></script><link rel=\"stylesheet\" href=\"/review-qa-polish.css\"><link rel=\"stylesheet\" href=\"/homeowner-polish.css\"><script defer src=\"/homeowner-polish.js\"></script><link rel=\"stylesheet\" href=\"/trade-revisions.css?v=constitution-v1\"><link rel=\"stylesheet\" href=\"/design-studio.css\"><script defer src=\"/design-personality.js\"></script><script defer src=\"/trade-revisions.js\"></script><script defer src=\"/review-marquee.js\"></script><link rel=\"stylesheet\" href=\"/neighborhood.css?v=experience-v3\"><script defer src=\"/neighborhood.js?v=experience-v3\"></script><link rel=\"stylesheet\" href=\"/site-styles.css\"><style>body[data-site-style]{--look-heading:LookBody, Arial, sans-serif;--look-body:LookBody, Arial, sans-serif;--look-background:#f5f8fa;--look-surface:#ffffff;--look-text:#182c38;--look-muted:#455b68;--look-accent:#824013;--look-cta:#824013;--look-cta-text:#ffffff;--look-deep:#142c3a;--look-deep-text:#ffffff;--look-line:#758b96;--look-radius:16px;--look-section:clamp(72px,8vw,120px);--look-gap:32px;}</style></head><body data-site-style=\"fresh\" class=\"pricing-page\"  style=\"--accent:#b8dc65\"><div class=\"pricing-preview\">DRAFT PREVIEW · No inquiries are sent</div><script src=\"/site-navigation-ini"
+    },
+    {
+      "path": "/api/tenants/60eace00-605f-4cac-878e-9013e626d573",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"tenant\":{\"id\":\"60eace00-605f-4cac-878e-9013e626d573\",\"slug\":\"readiness-roofing-qa\",\"name\":\"Harbor Roofing · QA fixture\",\"settings\":{\"ebook\":{\"enabled\":false,\"reviewedRevision\":\"\"},\"trust\":{\"version\":1,\"enabled\":false,\"layout\":\"auto\",\"placements\":[\"below-hero\"],\"showRatings\":false,\"networks\":[]},\"businessTrust\":{\"years\":null,\"licenseNumber\":\"\",\"licenseState\":\"\",\"insured\":null,\"crewSize\":null,\"warrantyYears\":null,\"certifications\":[],\"googleRating\":null,\"googleReviewCount\":null,\"googleUrl\":\"\",\"jobsCompleted\":null,\"confirmed\":{\"years\":false,\"license\":false,\"insured\":false,\"crewSize\":false,\"warranty\":false,\"certifications\":false,\"google\":false,\"jobsCompleted\":false}},\"websitePages\":{\"version\":1,\"pages\":[{\"id\":\"service-roof-repair\",\"kind\":\"service\",\"slug\":\"roof-repair\",\"enabled\":true,\"title\":\"Roof repair\",\"serviceName\":\"Roof repair\",\"intro\":\"\",\"seoTitle\":\"\",\"seoDescription\":\"\",\"headline\":\"\",\"scope\":\"\",\"process\":[],\"materials\":[],\"questions\":[],\"typicalPriceRange\":null,\"media\":{\"hero\":null,\"bannerOne\":null,\"bannerTwo\":null,\"thumbnail\":null}},{\"id\":\"service-roof-replacement\",\"kind\":\"service\",\"slug\":\"roof-replacement\",\"enabled\":true,\"title\":\"Roof replacement\",\"serviceName\":\"Roof replacement\",\"intro\":\"\",\"seoTitle\":\"\",\"seoDescription\":\"\",\"headline\":\"\",\"scope\":\"\",\"process\":[],\"materials\":[],\"questions\":[],\"typicalPriceRange\":null,\"media\":{\"hero\":null,\"bannerOne\":null,\"bannerTwo\":null,\"thumbnail\":null}},{\"id\":\"service-roof-maintenance\",\"kind\":\"service\",\"slug\":\"roof-maintenance\",\"enabled\":true,\"title\":\"Roof maintenance\",\"serviceName\":\"Roof maintenance\",\"intro\":\"\",\"seoTitle\":\"\",\"seoDescription\":\"\",\"headline\":\"\",\"scope\":\"\",\"process\":[],\"materials\":[],\"questions\":[],\"typicalPriceRange\":null,\"media\":{\"hero\":null,\"bannerOne\":null,\"bannerTwo\":null,\"thumbnail\":null}},{\"id\":\"service-gutters\",\"kind\":\"service\",\"slug\":\"gutters\",\"enabled\":true,\"title\":\"Gutters\",\"serviceName\":\"Gutters\",\"intro\":\"\",\"seoTitle\":\"\",\"seoDescription\":\"\",\"headline\":\"\",\"scope\":\"\",\"process\":[],\"materials\":[],\"questio"
+    },
+    {
+      "path": "/api/game/60eace00-605f-4cac-878e-9013e626d573",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"tenant\":{\"id\":\"60eace00-605f-4cac-878e-9013e626d573\",\"name\":\"Harbor Roofing · QA fixture\"},\"role\":\"admin\",\"view\":\"game\",\"progress\":{\"quests\":[{\"id\":\"onboarding\",\"level\":1,\"xpEarned\":0,\"xpMax\":10,\"done\":false,\"steps\":[{\"id\":\"name\",\"done\":false,\"reason\":\"Save and confirm your business name.\"},{\"id\":\"phone\",\"done\":false,\"reason\":\"Save and confirm your valid phone number.\"},{\"id\":\"trade\",\"done\":false,\"reason\":\"Save and confirm your trade.\"},{\"id\":\"area\",\"done\":false,\"reason\":\"Save and confirm your service area.\"}],\"dataSource\":\"tenants.settings + platform.questionnaire.factsConfirmed\",\"status\":\"Needs you\"},{\"id\":\"pages\",\"level\":1,\"xpEarned\":0,\"xpMax\":15,\"done\":false,\"steps\":[{\"id\":\"drafts\",\"done\":false,\"reason\":\"Save a draft for every required website page.\"},{\"id\":\"approval\",\"done\":false,\"reason\":\"Record the contractor’s approval of the website preview.\"}],\"dataSource\":\"tenants.settings.websitePages + sales.data.ownerApproved/approvalNote\",\"status\":\"Needs you\"},{\"id\":\"reviews\",\"level\":1,\"xpEarned\":0,\"xpMax\":15,\"done\":false,\"steps\":[{\"id\":\"matched\",\"done\":false,\"reason\":\"Not connected. Load real reviews for this confirmed profile; saved links or a captured Sample do not count.\"},{\"id\":\"confirmed\",\"done\":false,\"reason\":\"Not connected. Load real reviews for this confirmed profile; saved links or a captured Sample do not count.\"},{\"id\":\"showing\",\"done\":false,\"reason\":\"Not connected. Load real reviews for this confirmed profile; saved links or a captured Sample do not count.\"}],\"dataSource\":\"confirmed review profile + provider response receipt\",\"status\":\"Not connected\"},{\"id\":\"estimator\",\"level\":2,\"xpEarned\":0,\"xpMax\":20,\"done\":false,\"steps\":[{\"id\":\"fields\",\"done\":false,\"reason\":\"Not available yet\",\"xpMax\":5},{\"id\":\"price-book\",\"done\":false,\"reason\":\"Not available yet\",\"xpMax\":10},{\"id\":\"consent\",\"done\":false,\"reason\":\"Not available yet\",\"xpMax\":5}],\"dataSource\":\"No estimator field/consent configuration or minimum-item price book in BASE\",\"status\":\"Not available yet\"},{\"i"
+    }
+  ],
+  "screens": [],
+  "errors": [],
+  "providerCalls": 0,
+  "runner": "existing src/aws/server.js Node adapter with built Worker and ephemeral PostgreSQL/PGlite"
+}

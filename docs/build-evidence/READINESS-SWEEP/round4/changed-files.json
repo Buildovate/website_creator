@@ -1,0 +1,18 @@
+[
+  "src/core.js",
+  "src/blueprint/api.js",
+  "src/blueprint/sources.js",
+  "src/blueprint/autofill/api.js",
+  "src/blueprint/experience.js",
+  "tests/automatic-qa-brand-recognition.mjs",
+  "tests/media-api.mjs",
+  "tests/uniqueness-api.mjs",
+  "tests/readiness-batch-b.mjs",
+  "tests/readiness-paid-publish.mjs",
+  "src/api.js",
+  "tests/readiness-chat-sql.mjs",
+  "tests/generation.mjs",
+  "src/blueprint/review-evidence.js",
+  "src/reviews.js",
+  "tests/readiness-review-evidence.mjs"
+]

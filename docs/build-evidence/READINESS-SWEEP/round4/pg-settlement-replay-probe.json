@@ -1,0 +1,10 @@
+{
+  "results": [
+    {
+      "name": "Transient entitlement write failure remains recoverable on webhook replay",
+      "pass": true
+    }
+  ],
+  "providerCalls": 0,
+  "fixture": "ephemeral PostgreSQL adapter; original built Worker"
+}

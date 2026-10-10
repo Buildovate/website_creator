@@ -1,0 +1,35 @@
+{
+  "reason": "Existing review adapter regressions rerun after the added receipt; no test or assertion changes.",
+  "rows": [
+    {
+      "label": "review-rating-filter",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-review-review-rating-filter.log",
+      "ms": 4162
+    },
+    {
+      "label": "review-lookup",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-review-review-lookup.log",
+      "ms": 1398
+    },
+    {
+      "label": "engagement-providers",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-review-engagement-providers.log",
+      "ms": 1749
+    },
+    {
+      "label": "trade-upgrade",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-review-trade-upgrade.log",
+      "ms": 1431
+    },
+    {
+      "label": "automatic-qa-contract",
+      "code": 1,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-review-automatic-qa-contract.log",
+      "ms": 5631
+    }
+  ]
+}

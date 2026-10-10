@@ -1,0 +1,83 @@
+QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.
+Review capture page story-control-test /s/story-control-test
+Review capture width /s/story-control-test 1440
+Review capture width /s/story-control-test 390
+Review capture width /s/story-control-test 768
+Review capture page story-control-test /s/story-control-test/about
+Review capture width /s/story-control-test/about 1440
+Review capture width /s/story-control-test/about 390
+Review capture width /s/story-control-test/about 768
+Review capture page story-control-test /s/story-control-test/areas
+Review capture width /s/story-control-test/areas 1440
+Review capture width /s/story-control-test/areas 390
+Review capture width /s/story-control-test/areas 768
+Review capture page story-control-test /s/story-control-test/areas/oxnard
+Review capture width /s/story-control-test/areas/oxnard 1440
+Review capture width /s/story-control-test/areas/oxnard 390
+Review capture width /s/story-control-test/areas/oxnard 768
+Review capture page story-control-test /s/story-control-test/blog
+Review capture width /s/story-control-test/blog 1440
+Review capture width /s/story-control-test/blog 390
+Review capture width /s/story-control-test/blog 768
+Review capture page story-control-test /s/story-control-test/contact
+Review capture width /s/story-control-test/contact 1440
+Review capture width /s/story-control-test/contact 390
+Review capture width /s/story-control-test/contact 768
+Review capture page story-control-test /s/story-control-test/faq
+Review capture width /s/story-control-test/faq 1440
+Review capture width /s/story-control-test/faq 390
+Review capture width /s/story-control-test/faq 768
+Review capture page story-control-test /s/story-control-test/legal
+Review capture width /s/story-control-test/legal 1440
+Review capture width /s/story-control-test/legal 390
+Review capture width /s/story-control-test/legal 768
+Review capture page story-control-test /s/story-control-test/legal/privacy
+Review capture width /s/story-control-test/legal/privacy 1440
+Review capture width /s/story-control-test/legal/privacy 390
+Review capture width /s/story-control-test/legal/privacy 768
+Review capture page story-control-test /s/story-control-test/legal/terms
+Review capture width /s/story-control-test/legal/terms 1440
+Review capture width /s/story-control-test/legal/terms 390
+Review capture width /s/story-control-test/legal/terms 768
+Review capture page story-control-test /s/story-control-test/pricing
+Review capture width /s/story-control-test/pricing 1440
+Review capture width /s/story-control-test/pricing 390
+Review capture width /s/story-control-test/pricing 768
+Review capture page story-control-test /s/story-control-test/services
+Review capture width /s/story-control-test/services 1440
+Review capture width /s/story-control-test/services 390
+Review capture width /s/story-control-test/services 768
+Review capture page story-control-test /s/story-control-test/services/roof-repair
+Review capture width /s/story-control-test/services/roof-repair 1440
+Review capture width /s/story-control-test/services/roof-repair 390
+Review capture width /s/story-control-test/services/roof-repair 768
+Review capture page story-control-test /s/story-control-test/thank-you
+Review capture width /s/story-control-test/thank-you 1440
+Review capture width /s/story-control-test/thank-you 390
+Review capture width /s/story-control-test/thank-you 768
+Review capture clip /assets/build-films/roofing.mp4
+Review capture frame /assets/build-films/roofing.mp4 0
+Review capture frame /assets/build-films/roofing.mp4 25
+Review capture frame /assets/build-films/roofing.mp4 50
+Review capture frame /assets/build-films/roofing.mp4 75
+Review capture frame /assets/build-films/roofing.mp4 100
+Review capture clip /assets/films/roofing-transformation.mp4
+Review capture frame /assets/films/roofing-transformation.mp4 0
+Review capture frame /assets/films/roofing-transformation.mp4 25
+Review capture frame /assets/films/roofing-transformation.mp4 50
+Review capture frame /assets/films/roofing-transformation.mp4 75
+Review capture frame /assets/films/roofing-transformation.mp4 100
+Review capture clip /assets/craft-films/roofing.mp4
+Review capture frame /assets/craft-films/roofing.mp4 0
+Review capture frame /assets/craft-films/roofing.mp4 25
+Review capture frame /assets/craft-films/roofing.mp4 50
+Review capture frame /assets/craft-films/roofing.mp4 75
+Review capture frame /assets/craft-films/roofing.mp4 100
+Review capture clip /assets/films/roofing-story.mp4
+Review capture frame /assets/films/roofing-story.mp4 0
+Review capture frame /assets/films/roofing-story.mp4 25
+Review capture frame /assets/films/roofing-story.mp4 50
+Review capture frame /assets/films/roofing-story.mp4 75
+Review capture frame /assets/films/roofing-story.mp4 100
+REAL browser QA prerequisite: 9d1be960-48b6-4ecd-84d6-1f0f3c1052cc website {"clear":false,"blocking":0,"pending":2,"passed":636,"reason":"A staff reviewer must decide every Borderline item, with a reason."}
+PASS: 12 trades × 3 layouts; hero/direct-form link; original craft films; detail scene; persisted captions/toggle; legacy chapter mode; proof gating; website media restoration scope.

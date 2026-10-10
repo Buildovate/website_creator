@@ -1,0 +1,3 @@
+PASS exact recognition lock: removing only registered entries restores round-4 SHA-256; generic detector, 2px, 60ms and per-state assertion unchanged.
+RUN brand recognition: 420 checks; imported lock check is not a final suite verdict
+PASS brand recognition 420 cases; browser contexts closed

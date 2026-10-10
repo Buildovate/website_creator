@@ -1,0 +1,10 @@
+{
+  "results": [
+    {
+      "name": "Canceled expired rental must not serve the published site",
+      "pass": true
+    }
+  ],
+  "providerCalls": 0,
+  "fixture": "ephemeral PostgreSQL adapter; original built Worker"
+}

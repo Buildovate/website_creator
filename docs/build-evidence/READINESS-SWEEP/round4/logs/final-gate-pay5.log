@@ -1,0 +1,13 @@
+✔ only the approved $15 domain service is available; no-key Buy explains why it cannot charge (37.7357ms)
+✔ fake Stripe checkout is server priced, payment mode, one session per click, and tenant bound (31.6008ms)
+✔ only signed settlement puts add-on in Owned; delivery advances Pending to In progress to Delivered (26.2885ms)
+✔ refund removes Owned and returns the domain service to Available (18.8323ms)
+✔ tenant owner can request checkout; viewer sees read-only store and cannot buy (15.3218ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 138.1663

@@ -1,0 +1,21 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import worker from '../dist/server/index.js';import {paymentHarness} from './helpers/payments-fixture.mjs';
+import {createAssets,createMemoryBucket} from '../src/aws/s3.js';import {mediaSamples} from './fixtures/media-library.mjs';
+import {realReviewPrerequisite} from './helpers/review-approval-fixture.mjs';
+const root='C:/Users/joe/website_creator',origin='http://127.0.0.1:5185',id='tenant_123',stamp='2026-01-01T00:00:00.000Z';
+async function fixture(mode){const h=paymentHarness();h.DB.batch=async list=>{h.sql.exec('BEGIN');try{const r=await Promise.all(list.map(s=>s.run()));h.sql.exec('COMMIT');return r;}catch(e){h.sql.exec('ROLLBACK');throw e;}};
+Object.assign(h.env,{ASSETS:createAssets(root+'/dist/client'),BUCKET:createMemoryBucket(),WORKSPACE_OWNER_EMAIL:'staff@example.test'});
+h.sql.prepare('INSERT INTO admins(user_id,email,role,created_at) VALUES(?,?,?,?)').run('staff','staff@example.test','admin',stamp);h.sql.prepare('INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)').run('owner',id,'owner','owner@example.test','owner',stamp);
+const req=(path,method='GET',data,user='owner')=>worker.fetch(new Request(origin+path,{method,headers:{origin,'content-type':'application/json',...(user?{'oai-authenticated-user-id':user,'oai-authenticated-user-email':user+'@example.test'}:{})},body:data===undefined?undefined:JSON.stringify(data)}),h.env);
+const api=async(path,method='GET',data,user='owner')=>{const r=await req(path,method,data,user);assert.equal(r.status,200,await r.clone().text());return r.json();};
+try{const s=structuredClone(mediaSamples()[0].settings);delete s.generationManifest;s.name='Sample Fictional Paid Publish QA';s.phone='8055550123';s.claimsReviewed=true;
+h.sql.prepare('UPDATE tenants SET settings=?,published=NULL,status=? WHERE id=?').run(JSON.stringify(s),'draft',id);
+assert.equal((await h.send(mode==='rental'?h.event('paid','invoice.paid',h.invoice('paid','PLAN-WEBSITE-MONTH',5000,stamp,'2099-01-01T00:00:00Z')):h.event('owned','checkout.session.completed',h.session('SITE-OWN',150000,'pi_owned')))).status,200);
+const {tenant}=await api('/api/tenants/'+id);const saved=(await api('/api/tenants/'+id,'PUT',{version:tenant.version,settings:{...tenant.settings,owner:'QA owner'}})).tenant;
+assert.equal(saved.status,'draft');assert.equal((await req('/s/pay-test','GET',undefined,null)).status,404);
+await realReviewPrerequisite(h.env,id,'website',origin);
+await api('/api/tenants/'+id+'/publish','POST',{version:saved.version,approved:true});
+const live=await req('/s/pay-test','GET',undefined,null);assert.equal(live.status,200);assert.match(await live.text(),/Fictional Paid Publish QA/);
+return {...h,api,req};}catch(e){h.close();throw e;}}
+test('B15 paid rental → real owner save → staff browser review → publish → live → expiry/cancel → public 404',async()=>{const h=await fixture('rental');try{assert.equal((await h.send(h.event('cancel','customer.subscription.deleted',{id:'sub_fixture',customer:'cus_test_1',metadata:{tenantId:id},current_period_end:Math.floor(Date.parse('2026-02-01')/1000)}))).status,200);assert.equal((await h.req('/s/pay-test','GET',undefined,null)).status,404);assert.ok(h.sql.prepare('SELECT published FROM tenants WHERE id=?').get(id).published);assert.ok(h.sql.prepare('SELECT data_hold_until FROM payment_state WHERE tenant_id=?').get(id).data_hold_until);}finally{h.close();}});
+test('B15 paid owner → real reviewed publication → ZIP available → refund → ZIP denied',async()=>{const h=await fixture('owner');try{const before=await h.req('/api/tenants/'+id+'/download');assert.equal(before.status,200);assert.match(before.headers.get('content-type'),/zip/);assert.ok((await before.arrayBuffer()).byteLength>0);assert.equal((await h.send(h.event('refund','charge.refunded',{id:'charge_fixture',payment_intent:'pi_owned'}))).status,200);assert.equal((await h.req('/api/tenants/'+id+'/download')).status,403);}finally{h.close();}});

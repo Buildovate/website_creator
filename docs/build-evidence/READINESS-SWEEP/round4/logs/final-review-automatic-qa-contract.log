@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Real packet has no failures and requires actual Borderline decisions
+    at check (file:///C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/snapshot/tests/automatic-qa-contract.mjs:5:496)
+    at file:///C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/snapshot/tests/automatic-qa-contract.mjs:7:457 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

@@ -1,0 +1,14 @@
+{
+  "results": [
+    {
+      "name": "Pay SITE-OWN settlement to owner-download contract",
+      "pass": true
+    },
+    {
+      "name": "Pay refund to legacy owner-download contract",
+      "pass": true
+    }
+  ],
+  "providerCalls": 0,
+  "fixture": "ephemeral PostgreSQL adapter; original built Worker"
+}

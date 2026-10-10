@@ -1,0 +1,13 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const repo='C:/Users/joe/website_creator',out=repo+'/docs/build-evidence/READINESS-SWEEP/round4';
+const files=[],index=[];fs.mkdirSync(out+'/log-excerpts',{recursive:true});
+for(const name of fs.readdirSync(out+'/logs')){const source=out+'/logs/'+name;if(!fs.statSync(source).isFile())continue;const bytes=fs.readFileSync(source),sha256=crypto.createHash('sha256').update(bytes).digest('hex');let artifact='logs/'+name;if(bytes.length>500000){artifact='log-excerpts/'+name;const beginning=bytes.subarray(0,60000).toString(),ending=bytes.subarray(Math.max(60000,bytes.length-180000)).toString();fs.writeFileSync(out+'/'+artifact,'[Excerpt: full local log '+bytes.length+' bytes; SHA-256 '+sha256+'. Beginning and end retained; middle omitted. Original left untouched in logs/'+name+']\n'+beginning+'\n[... middle omitted ...]\n'+ending)}index.push({original:'logs/'+name,artifact,bytes:bytes.length,sha256,excerpt:artifact!==('logs/'+name)});files.push('docs/build-evidence/READINESS-SWEEP/round4/'+artifact)}
+fs.writeFileSync(out+'/log-index.json',JSON.stringify(index,null,2));
+const exclusions=/^(?:probe-worker\.mjs|pg-(?:trace|fixture-trace)-.*\.jsonl|static-audit\.json|worker-metafile\.json)$/;
+for(const name of fs.readdirSync(out)){const p=out+'/'+name;if(fs.statSync(p).isFile()&&!exclusions.test(name))files.push('docs/build-evidence/READINESS-SWEEP/round4/'+name)}
+function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(x=>x.isDirectory()?walk(dir+'/'+x.name):[dir+'/'+x.name])}
+for(const sub of ['screenshots','before-product'])if(fs.existsSync(out+'/'+sub))for(const p of walk(out+'/'+sub))files.push('docs/build-evidence/READINESS-SWEEP/round4/'+path.relative(out,p).replaceAll('\\','/'));
+// Complete audit facts are retained as their own compact report; no trace/compiled bundle is staged.
+const audit=JSON.parse(fs.readFileSync(out+'/static-audit.json'));fs.writeFileSync(out+'/static-audit-summary.json',JSON.stringify({...audit,dbCalls:undefined},null,2));files.push('docs/build-evidence/READINESS-SWEEP/round4/static-audit-summary.json');
+const source=JSON.parse(fs.readFileSync(out+'/changed-files.json'));const selected=[...new Set([...source,'docs/build-evidence/READINESS-SWEEP/README.md','docs/build-evidence/READINESS-SWEEP/KNOWN-FAILURES.md',...files])];
+fs.writeFileSync(out+'/stage-paths.json',JSON.stringify(selected,null,2));console.log(JSON.stringify({source:source.length,evidence:selected.length-source.length,logs:index.length,excerpts:index.filter(x=>x.excerpt).length}));

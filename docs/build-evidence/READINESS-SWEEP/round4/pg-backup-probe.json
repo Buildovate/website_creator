@@ -1,0 +1,10 @@
+{
+  "results": [
+    {
+      "name": "project/photo draft backup restore",
+      "pass": true
+    }
+  ],
+  "providerCalls": 0,
+  "fixture": "ephemeral PostgreSQL adapter; original built Worker"
+}

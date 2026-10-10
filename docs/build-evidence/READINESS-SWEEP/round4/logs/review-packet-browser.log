@@ -1,0 +1,36 @@
+Staff body: Back to workspace
+STAFF REVIEW
+
+WEBSITE REVIEW
+
+Review this version
+
+Check the saved pages, clip frames and claims before approving publication.
+
+This version needs a review packet.
+
+Publication to review
+Website settings and generated pages
+
+GENERATED VERSION
+
+63cca913a6f606ec58d79c657eaedf7d93e51d7253bb2c3297929bfcc8fb54d8
+
+Capture review packet
+
+Local browser capture is not connected. Publishing stays blocked until the evidence is complete.
+Diagnostics: []
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-approve]') to be visible[22m
+
+    at C:\Users\joe\website_creator\docs\build-evidence\READINESS-SWEEP\round4\snapshot\tests\review-packet-browser.mjs:22:189 {
+  log: [ "  - waiting for locator('[data-approve]') to be visible" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

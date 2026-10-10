@@ -1,0 +1,13 @@
+QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.
+✔ Roofing owner sample is marked in site data and media readiness (8.0271ms)
+✔ a saved upload replaces the sample and removes its overlay (2.6289ms)
+✔ the existing brand-image upload and owner selection remove the sample from a draft preview (218.1993ms)
+✔ Roofing owner statement remains editable (1.0851ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 236.1559

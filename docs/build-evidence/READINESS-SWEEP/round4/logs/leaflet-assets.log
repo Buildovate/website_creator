@@ -1,0 +1,15 @@
+PASS template asset integrity: 3 referenced files, 0 trade kits.
+✔ same exact three CSS-only missing images are allowed by exporter and build (24.3978ms)
+✔ any direct page reference to an optional sprite still fails (39.7953ms)
+✔ another source cannot use the optional sprites without actual files (25.7159ms)
+✔ no fourth Leaflet image receives an exception (10.0158ms)
+✔ empty existing sprites are invalid rather than silently omitted (10.8989ms)
+✔ ordinary missing assets still fail (28.0392ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 145.6378

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {build} from 'esbuild';
 import {worker,env,admin} from './preview-fixture.mjs';
 const out='docs/build-evidence/023';fs.mkdirSync(out,{recursive:true});
-const bundle=await build({stdin:{contents:"export * from './src/generation.js';export * from './src/platform/generation.ts';export {sitePage} from './src/views.js';export {renderUniversalServicePage} from './src/service-detail.js';export {visibleServicePages} from './src/service-registry.js';",resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false,loader:{'.html':'text','.pdf':'binary'}});
+const bundle=await build({stdin:{contents:"export {access} from './src/core.js';export * from './src/generation.js';export * from './src/platform/generation.ts';export {sitePage} from './src/views.js';export {renderUniversalServicePage} from './src/service-detail.js';export {visibleServicePages} from './src/service-registry.js';",resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false,loader:{'.html':'text','.pdf':'binary'}});
 const mod=await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'));
 const kits=JSON.parse(fs.readFileSync('public/design-kits.json')),library=JSON.parse(fs.readFileSync('public/trade-library.json')),checks=[],migration=[];
 const check=(value,msg)=>{assert.ok(value,msg);checks.push(msg)};
@@ -18,6 +18,8 @@ for(const [id,kit]of Object.entries(kits)){
  const legacy=structuredClone(created.settings);delete legacy.generationManifest;const before=render(legacy,created.slug),s=mod.adoptGeneration(legacy,created.id,created.slug),after=render(s,created.slug);assert.equal(after,before);check(true,id+' legacy homepage HTML identical');
  const services=[];for(const p of mod.visibleServicePages(legacy)){assert.equal(mod.renderUniversalServicePage(legacy,p,{slug:created.slug}),mod.renderUniversalServicePage(s,p,{slug:created.slug}));services.push(p.slug)}check(true,id+' legacy service pages identical');
  await env.DB.prepare('UPDATE tenants SET settings=?,published=?,status=\'published\' WHERE id=?').bind(JSON.stringify(legacy),JSON.stringify(legacy),created.id).run();
+ const read=(await api('/tenants/'+created.id)).tenant;assert.equal(read.settings.generationManifest,undefined);assert.equal(read.published.generationManifest,undefined);
+ await mod.access(new Request(origin+'/api/tenants/'+created.id,{headers:{'oai-authenticated-user-id':admin.id,'oai-authenticated-user-email':admin.email}}),env,created.id,'write');
  const migrated=(await api('/tenants/'+created.id)).tenant;check(!!migrated.settings.generationManifest&&!!migrated.published.generationManifest,id+' old draft and published snapshots adopted');assert.equal(render(migrated.settings,created.slug),before);check(true,id+' persisted adoption has no visual change');
  const url='/s/'+created.slug;const html=await(await req(url)).text();check(html===await(await req(url)).text(),id+' repeated rendered output identical');const a=await api('/tenants/'+created.id),b=await api('/tenants/'+created.id);assert.deepEqual(a.tenant.settings.generationManifest,b.tenant.settings.generationManifest);check(true,id+' reload keeps generation ID');
  const saved=(await api('/tenants/'+created.id,'PUT',{version:migrated.version,settings:migrated.settings})).tenant;assert.equal(render(saved.settings,created.slug),before);check(true,id+' normal save does not reroll');

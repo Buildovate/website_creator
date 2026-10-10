@@ -1,0 +1,5 @@
+{
+  "script": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/runtime-smoke.mjs",
+  "runAfter": "finished.json",
+  "evaluatedCoordinatorNeedsSeparateInvocation": true
+}

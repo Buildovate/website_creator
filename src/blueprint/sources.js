@@ -1,3 +1,4 @@
+import {readReviewResponse} from './review-evidence.js';
 import {createDependencies} from './deps.js';
 import {evaluateProgress} from './progress.js';
 const parse=value=>typeof value==='string'?JSON.parse(value):value||{};
@@ -33,7 +34,7 @@ export async function readProgressSources(env,tenantId,{deps=createDependencies(
  return {
   onboarding:available('tenants.settings + platform.questionnaire.factsConfirmed',{fields}),
   pages:available('tenants.settings.websitePages + sales.data.ownerApproved/approvalNote',{required,drafts,approval:{approved:approval.ownerApproved===true,reference:approval.approvalNote||''}}),
-  reviews:unavailable('tenants.settings.reviews; src/reviews.js does not persist provider display success',review.confirmed?'Not connected. A profile is confirmed, but successful live review display is not recorded.':'Not connected. Match and confirm a review profile; live display evidence is not recorded.','not_connected'),
+  reviews:await readReviewResponse(env,tenantId,s),
   estimator:unavailable('No estimator field/consent configuration or minimum-item price book in BASE','Not available yet'),
   promotions:available('tenants.settings.platform.promotions.offers',{offers:platform.promotions?.offers||[],choice:null}),
   financing:available('tenants.settings.platform.financing + src/platform/lender-adapter.ts',{selection:fin.selection||null,lenders:(fin.lenders||[]).map(l=>({id:l.id,selected:l.enabled===true,connection:'not_connected'}))}),
@@ -46,6 +47,6 @@ export async function readProgressSources(env,tenantId,{deps=createDependencies(
 /** Read-only route boundary for G-2/G-6; reuse existing identity/membership checks. */
 export async function progressForRequest(req,env,tenantId){
  const {access}=await import('../core.js');
- await access(req,env,tenantId,'read');
+ await access(req,env,tenantId,'read',{readOnly:true});
  return evaluateProgress(await readProgressSources(env,tenantId));
 }

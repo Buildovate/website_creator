@@ -14,6 +14,6 @@ export async function gameApi(req,env,url){
  const match=url.pathname.match(/^\/api\/game\/([^/]+)$/);
  must(match,'Game workspace not found.',404);
  must(req.method==='GET','Game is the only view. This endpoint is read-only.',405);
- const {tenant,role}=await access(req,env,decodeURIComponent(match[1]),'read');
+ const {tenant,role}=await access(req,env,decodeURIComponent(match[1]),'read',{readOnly:true});
  return {tenant:{id:tenant.id,name:tenant.name},role,view:'game',progress:evaluateProgress(await readProgressSources(env,tenant.id))};
 }

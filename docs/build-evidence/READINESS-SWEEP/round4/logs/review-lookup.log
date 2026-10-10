@@ -1,0 +1,2 @@
+QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.
+PASS review lookup: profile-form compatibility, Google/Yelp business search, missing-key fallback, invalid profile/origin/auth rejection, empty matches, upstream failure, draft/publish isolation and shared hourly limit. All external responses mocked; no live connections or messages.

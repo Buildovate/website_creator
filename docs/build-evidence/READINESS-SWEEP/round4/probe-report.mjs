@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const base='C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP',out=base+'/round4';
+const executions=JSON.parse(fs.readFileSync(out+'/probe-results.json'));
+const rows=executions.map(r=>{const file=r.name.replace(/^probe-/,'').replace(/\.mjs$/,'.json'),data=JSON.parse(fs.readFileSync(out+'/'+file)),checks=(data.results||[]).filter(x=>typeof x.pass==='boolean');return {...r,file,checks,passed:checks.filter(x=>x.pass).length,failed:checks.filter(x=>!x.pass).length,errors:data.errors||[]};});
+const runtime=JSON.parse(fs.readFileSync(out+'/runtime-smoke.json'));
+const summary={probes:rows.length,passedChecks:rows.reduce((n,r)=>n+r.passed,0),failedChecks:rows.reduce((n,r)=>n+r.failed,0),processFailures:rows.filter(r=>r.code!==0).length,runtimeErrors:runtime.errors,runner:runtime.runner,providerCalls:0};
+fs.writeFileSync(out+'/probe-summary.json',JSON.stringify({summary,rows,runtime:runtime.results.map(x=>({path:x.path,status:x.status}))},null,2));
+const safe=x=>String(x).replaceAll('|','/').replaceAll('\n',' ');
+const md='# PostgreSQL probes and local runtime smoke — Round 4\n\nThese are additional route probes, not extra Suite-102 suites. Worker execution uses the existing Node AWS adapter, not an actual workerd runtime. No provider traffic.\n\n| Probe | Checks passed | Checks failed | Process exit | Evidence |\n|---|---:|---:|---:|---|\n'+rows.map(r=>`| ${r.name} | ${r.passed} | ${r.failed} | ${r.code} | [JSON](${r.file}) |`).join('\n')+'\n\n'+rows.flatMap(r=>r.checks.filter(x=>!x.pass).map(x=>'- '+safe(r.name+': '+x.name+' — '+(x.error||x.stack||'failed')))).join('\n')+'\n\n| Runtime request | HTTP status |\n|---|---:|\n'+runtime.results.map(r=>'| '+safe(r.path)+' | '+r.status+' |').join('\n')+'\n\nNo-key checkout is an honest Not connected response, not a successful provider checkout. Webhook without a key is unavailable; a configured local synthetic secret with no signature is rejected. Full responses and any errors are retained in runtime-smoke.json.\n';
+fs.writeFileSync(out+'/probes.md',md);
+for(const file of [base+'/README.md',out+'/README.md']){const link=file===base+'/README.md'?'round4/probes.md':'probes.md';fs.appendFileSync(file,'\nAdditional PostgreSQL probes: '+summary.passedChecks+' passed / '+summary.failedChecks+' failed checks across '+summary.probes+' executions; '+summary.processFailures+' process failures. Runtime smoke errors: '+summary.runtimeErrors.length+'. [All probe results]('+link+').\n');}
+console.log(JSON.stringify(summary));

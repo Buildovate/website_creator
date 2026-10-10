@@ -1,0 +1,321 @@
+{
+  "summary": {
+    "probes": 8,
+    "passedChecks": 40,
+    "failedChecks": 0,
+    "processFailures": 0,
+    "runtimeErrors": [],
+    "runner": "existing src/aws/server.js Node adapter with built Worker and ephemeral PostgreSQL/PGlite",
+    "providerCalls": 0
+  },
+  "rows": [
+    {
+      "name": "probe-pg-route-probe.mjs",
+      "code": 0,
+      "ms": 4219,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/probe-pg-route-probe.mjs.log",
+      "file": "pg-route-probe.json",
+      "checks": [
+        {
+          "name": "health POST and GET",
+          "pass": true
+        },
+        {
+          "name": "generation history read",
+          "pass": true
+        },
+        {
+          "name": "invite accept and replay denial",
+          "pass": true
+        },
+        {
+          "name": "access list and member revoke",
+          "pass": true
+        },
+        {
+          "name": "unused invite revoke",
+          "pass": true
+        },
+        {
+          "name": "staff invite accept list and revoke",
+          "pass": true
+        },
+        {
+          "name": "unused staff invite revoke",
+          "pass": true
+        },
+        {
+          "name": "domain registration and list without DNS call",
+          "pass": true
+        },
+        {
+          "name": "contact duplicate updates activity",
+          "pass": true
+        },
+        {
+          "name": "session issue rotate revoke",
+          "pass": true
+        },
+        {
+          "name": "invalid project coordinates are rejected before any project write",
+          "pass": true
+        },
+        {
+          "name": "project/photo draft backup restore",
+          "pass": true
+        },
+        {
+          "name": "site unpublish",
+          "pass": true
+        }
+      ],
+      "passed": 13,
+      "failed": 0,
+      "errors": []
+    },
+    {
+      "name": "probe-pg-remaining-boundaries-probe.mjs",
+      "code": 0,
+      "ms": 3458,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/probe-pg-remaining-boundaries-probe.mjs.log",
+      "file": "pg-remaining-boundaries-probe.json",
+      "checks": [
+        {
+          "name": "legacy domain verify query with synthetic DNS fixture",
+          "pass": true,
+          "mockDnsCalls": 1,
+          "actualProviderCalls": 0
+        },
+        {
+          "name": "chat SMS daily limit SQL prevents sending",
+          "pass": true,
+          "notification": "daily_limit",
+          "smsCalls": 0,
+          "endpointStatus": 200,
+          "dailyLimitPreventedSend": true
+        }
+      ],
+      "passed": 2,
+      "failed": 0,
+      "errors": []
+    },
+    {
+      "name": "probe-pg-engagement-route-probe.mjs",
+      "code": 0,
+      "ms": 3561,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/probe-pg-engagement-route-probe.mjs.log",
+      "file": "pg-engagement-route-probe.json",
+      "checks": [
+        {
+          "name": "chat configuration create and read",
+          "pass": true
+        },
+        {
+          "name": "chat ordinary message uses PostgreSQL",
+          "pass": true
+        },
+        {
+          "name": "chat team handoff uses PostgreSQL",
+          "pass": true
+        },
+        {
+          "name": "admin chat thread list",
+          "pass": true
+        },
+        {
+          "name": "admin chat detail uses PostgreSQL",
+          "pass": true
+        },
+        {
+          "name": "admin chat takeover",
+          "pass": true
+        },
+        {
+          "name": "admin chat reply local-only",
+          "pass": true
+        },
+        {
+          "name": "confirm phone consumes synthetic verification record",
+          "pass": true
+        },
+        {
+          "name": "inbound synthetic SMS is local-only and idempotent",
+          "pass": true
+        },
+        {
+          "name": "admin chat close",
+          "pass": true
+        },
+        {
+          "name": "root sitemap published-slug query",
+          "pass": true
+        }
+      ],
+      "passed": 11,
+      "failed": 0,
+      "errors": []
+    },
+    {
+      "name": "probe-pg-remaining-local-probe.mjs",
+      "code": 0,
+      "ms": 3710,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/probe-pg-remaining-local-probe.mjs.log",
+      "file": "pg-remaining-local-probe.json",
+      "checks": [
+        {
+          "name": "discovery search create and delete",
+          "pass": true
+        },
+        {
+          "name": "pricing inquiry persistence and contact linkage",
+          "pass": true
+        },
+        {
+          "name": "session issue uses transaction SQL",
+          "pass": true
+        },
+        {
+          "name": "legacy service-page backfill both snapshots",
+          "pass": true
+        },
+        {
+          "name": "owned blog photo validation",
+          "pass": true
+        },
+        {
+          "name": "public form consented submission and contactKey limit",
+          "pass": true
+        },
+        {
+          "name": "AI hourly limit prevents any provider request",
+          "pass": true
+        },
+        {
+          "name": "legacy-format hosting settlement updates hosting status",
+          "pass": true
+        },
+        {
+          "name": "add-on delivery transition on PostgreSQL",
+          "pass": true
+        }
+      ],
+      "passed": 9,
+      "failed": 0,
+      "errors": []
+    },
+    {
+      "name": "probe-pg-backup-probe.mjs",
+      "code": 0,
+      "ms": 3839,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/probe-pg-backup-probe.mjs.log",
+      "file": "pg-backup-probe.json",
+      "checks": [
+        {
+          "name": "project/photo draft backup restore",
+          "pass": true
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "errors": []
+    },
+    {
+      "name": "probe-pg-cancel-site-probe.mjs",
+      "code": 0,
+      "ms": 3401,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/probe-pg-cancel-site-probe.mjs.log",
+      "file": "pg-cancel-site-probe.json",
+      "checks": [
+        {
+          "name": "Canceled expired rental must not serve the published site",
+          "pass": true
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "errors": []
+    },
+    {
+      "name": "probe-pg-owner-settlement-probe.mjs",
+      "code": 0,
+      "ms": 4505,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/probe-pg-owner-settlement-probe.mjs.log",
+      "file": "pg-owner-settlement-probe.json",
+      "checks": [
+        {
+          "name": "Pay SITE-OWN settlement to owner-download contract",
+          "pass": true
+        },
+        {
+          "name": "Pay refund to legacy owner-download contract",
+          "pass": true
+        }
+      ],
+      "passed": 2,
+      "failed": 0,
+      "errors": []
+    },
+    {
+      "name": "probe-pg-settlement-replay-probe.mjs",
+      "code": 0,
+      "ms": 3525,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/probe-pg-settlement-replay-probe.mjs.log",
+      "file": "pg-settlement-replay-probe.json",
+      "checks": [
+        {
+          "name": "Transient entitlement write failure remains recoverable on webhook replay",
+          "pass": true
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "errors": []
+    }
+  ],
+  "runtime": [
+    {
+      "path": "/api/setup",
+      "status": 200
+    },
+    {
+      "path": "/api/tenants",
+      "status": 200
+    },
+    {
+      "path": "/healthz",
+      "status": 200
+    },
+    {
+      "path": "/api/payments/tenants/60eace00-605f-4cac-878e-9013e626d573/billing",
+      "status": 200
+    },
+    {
+      "path": "/api/payments/tenants/60eace00-605f-4cac-878e-9013e626d573/add-ons",
+      "status": 200
+    },
+    {
+      "path": "/api/payments/tenants/60eace00-605f-4cac-878e-9013e626d573/add-ons/checkout",
+      "status": 200
+    },
+    {
+      "path": "/api/payments/webhook",
+      "status": 503
+    },
+    {
+      "path": "/api/payments/webhook",
+      "status": 400
+    },
+    {
+      "path": "/s/readiness-roofing-qa/pricing?preview=1",
+      "status": 200
+    },
+    {
+      "path": "/api/tenants/60eace00-605f-4cac-878e-9013e626d573",
+      "status": 200
+    },
+    {
+      "path": "/api/game/60eace00-605f-4cac-878e-9013e626d573",
+      "status": 200
+    }
+  ]
+}

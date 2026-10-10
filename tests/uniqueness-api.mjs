@@ -39,6 +39,8 @@ const races=[];for(let n=0;n<2;n++){const {row}=originalRows.find(({row})=>JSON.
 const concurrent=await Promise.all(races.map(t=>api('/tenants/'+t.id+'/generation','POST',{version:t.version,action:'regenerate',overrides:{seed:222}})));
 const picks=concurrent.map(x=>({style:x.tenant.settings.uniqueness.style,...x.tenant.settings.sectionVariants}));ok(pickDistance(...picks)>=3,'concurrent same-seed sites reserve different combinations');
 ok(providerCalls===0,'zero provider calls');
-console.log('PASS '+checks.length+' API checks across 68 trade/style cases');
+
 fs.writeFileSync(out+'/checks/uniqueness-api.json',JSON.stringify({passed:true,count:checks.length,cases:68,providerCalls,checks},null,2));
 }finally{globalThis.fetch=nativeFetch;await runtime.close()}
+
+console.log('PASS '+checks.length+' API checks; database pool and queued jobs closed');

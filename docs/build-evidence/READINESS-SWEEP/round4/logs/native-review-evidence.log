@@ -1,0 +1,14 @@
+✔ B06 actual filtered provider response earns Reviews XP with metadata only (38.3996ms)
+✔ B06 empty/filtered-out or failed provider response never earns reviews XP (25.1566ms)
+✔ B06 isolated QA snapshots do not become review evidence (18.0069ms)
+✔ B06 changed profile/filter, removed key, stale or future receipt invalidates XP (28.1637ms)
+✔ B06 response evidence is tenant isolated and reads do not update it (22.1282ms)
+✔ B06 removing required provider policy links invalidates prior response (16.2108ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 159.7563
