@@ -1,0 +1,176 @@
+name: Deploy preview (website-creator-preview)
+
+# Builds the same Elastic Beanstalk source bundle that preview was released with
+# by hand (Dockerfile + Dockerrun.aws.json v1, EB builds the image on the instance),
+# then deploys it to EB env website-creator-preview (us-west-1) only.
+#
+# AWS access is GitHub OIDC -> IAM role buildovate-wc-gha-preview-deploy, whose trust
+# policy only accepts repo:Buildovate/website_creator:ref:refs/heads/staging.
+# No AWS keys are stored in GitHub. Production is never touched by this workflow.
+
+on:
+  push:
+    branches: [staging]
+  workflow_dispatch: {}   # re-deploy staging HEAD manually (the role only trusts refs/heads/staging)
+
+permissions:
+  contents: read
+  id-token: write   # needed for the OIDC token exchange
+
+concurrency:
+  group: deploy-website-creator-preview
+  cancel-in-progress: false   # never cancel an EB deployment mid-flight
+
+env:
+  AWS_REGION: us-west-1
+  AWS_ROLE_ARN: arn:aws:iam::846588355042:role/buildovate-wc-gha-preview-deploy
+  EB_APP: buildovate-website-creator-preview
+  EB_ENV: website-creator-preview
+  EB_BUCKET: elasticbeanstalk-us-west-1-846588355042
+  EB_PREFIX: website-creator/preview
+  HEALTH_URL: https://preview.website.buildovate.com/healthz
+
+jobs:
+  deploy:
+    if: github.repository == 'Buildovate/website_creator' && github.ref == 'refs/heads/staging'
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the tree is deployable
+        id: guard
+        run: |
+          missing=""
+          for f in Dockerfile package.json package-lock.json src/aws/server.js; do
+            [ -f "$f" ] || missing="$missing $f"
+          done
+          if [ -n "$missing" ]; then
+            echo "deployable=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Skipping preview deploy: missing$missing. Preview keeps its current version."
+          else
+            echo "deployable=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.guard.outputs.deployable == 'true'
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Build and test (same gate as ci.yml)
+        if: steps.guard.outputs.deployable == 'true'
+        run: |
+          npm ci
+          npm run build
+          npm run test:aws
+
+      - name: Package EB source bundle
+        if: steps.guard.outputs.deployable == 'true'
+        run: |
+          set -euo pipefail
+          label="staging-${GITHUB_SHA::7}-$(date -u +%Y%m%d-%H%M%S)-r${GITHUB_RUN_ATTEMPT}"
+          stage="$RUNNER_TEMP/bundle"
+          rm -rf "$stage" && mkdir -p "$stage"
+          # Committed files only: never local env files, node_modules or dist.
+          git archive --format=tar HEAD | tar -x -C "$stage"
+          cd "$stage"
+          # Not runtime inputs (the Dockerfile/.dockerignore drop them anyway). .ebextensions is
+          # left out on purpose, as in the hand-made bundles, so a deploy is a pure app-version
+          # change and never an EB configuration/CloudFormation change.
+          rm -rf docs tests .github .claude .ebextensions .platform node_modules dist
+          find . -maxdepth 1 -type f -name '*.md' -delete
+          printf '%s\n' '{"AWSEBDockerrunVersion": "1", "Ports": [{"ContainerPort": "8080", "HostPort": "80"}]}' > Dockerrun.aws.json
+          zip -qr -X "$RUNNER_TEMP/$label.zip" .
+          bytes=$(stat -c %s "$RUNNER_TEMP/$label.zip")
+          echo "Bundle $label.zip: $bytes bytes"
+          if [ "$bytes" -gt 500000000 ]; then echo "::error::Bundle exceeds the 500 MB EB source-bundle limit"; exit 1; fi
+          echo "LABEL=$label" >> "$GITHUB_ENV"
+          echo "BUNDLE=$RUNNER_TEMP/$label.zip" >> "$GITHUB_ENV"
+          echo "BUNDLE_SHA256=$(sha256sum "$RUNNER_TEMP/$label.zip" | cut -d' ' -f1)" >> "$GITHUB_ENV"
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        if: steps.guard.outputs.deployable == 'true'
+        with:
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          role-session-name: gha-preview-${{ github.run_id }}-${{ github.run_attempt }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Wait for env to be Ready and record the current version
+        if: steps.guard.outputs.deployable == 'true'
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 60); do
+            status=$(aws elasticbeanstalk describe-environments --environment-names "$EB_ENV" --query 'Environments[0].Status' --output text)
+            [ "$status" = "Ready" ] && break
+            echo "env status=$status, waiting"; sleep 20
+          done
+          [ "$status" = "Ready" ] || { echo "::error::$EB_ENV not Ready (status=$status)"; exit 1; }
+          prev=$(aws elasticbeanstalk describe-environments --environment-names "$EB_ENV" --query 'Environments[0].VersionLabel' --output text)
+          echo "PREV_LABEL=$prev" >> "$GITHUB_ENV"
+          echo "Current version: $prev"
+
+      - name: Upload bundle and create application version
+        if: steps.guard.outputs.deployable == 'true'
+        run: |
+          set -euo pipefail
+          key="$EB_PREFIX/$LABEL.zip"
+          aws s3 cp "$BUNDLE" "s3://$EB_BUCKET/$key" --only-show-errors
+          aws elasticbeanstalk create-application-version \
+            --application-name "$EB_APP" \
+            --version-label "$LABEL" \
+            --description "staging ${GITHUB_SHA} run ${GITHUB_RUN_ID}; sha256 ${BUNDLE_SHA256}" \
+            --source-bundle "S3Bucket=$EB_BUCKET,S3Key=$key" \
+            --query 'ApplicationVersion.VersionLabel' --output text
+
+      - name: Deploy to website-creator-preview
+        if: steps.guard.outputs.deployable == 'true'
+        run: |
+          set -euo pipefail
+          started=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          aws elasticbeanstalk update-environment --environment-name "$EB_ENV" --version-label "$LABEL" \
+            --query '[Status,VersionLabel]' --output text
+          # The EB command timeout on this env is 1200 s; allow a little more.
+          for i in $(seq 1 90); do
+            sleep 15
+            read -r status health label < <(aws elasticbeanstalk describe-environments --environment-names "$EB_ENV" \
+              --query 'Environments[0].[Status,Health,VersionLabel]' --output text)
+            echo "$(date -u +%H:%M:%S) status=$status health=$health version=$label"
+            [ "$status" = "Ready" ] && break
+          done
+          aws elasticbeanstalk describe-events --environment-name "$EB_ENV" --start-time "$started" \
+            --query 'Events[].[EventDate,Severity,Message]' --output text || true
+          if [ "$status" != "Ready" ]; then echo "::error::Deployment did not finish in time (status=$status)"; exit 1; fi
+          if [ "$label" != "$LABEL" ]; then echo "::error::EB did not keep $LABEL (now $label); see events above"; exit 1; fi
+          errors=$(aws elasticbeanstalk describe-events --environment-name "$EB_ENV" --start-time "$started" --severity ERROR \
+            --query 'length(Events)' --output text)
+          if [ "$errors" != "0" ]; then echo "::error::$errors ERROR event(s) during deployment"; exit 1; fi
+
+      - name: Check /healthz
+        if: steps.guard.outputs.deployable == 'true'
+        run: |
+          set -uo pipefail
+          for i in $(seq 1 12); do
+            code=$(curl -sS -o /tmp/healthz.json -w '%{http_code}' --max-time 10 "$HEALTH_URL" || echo 000)
+            if [ "$code" = "200" ] && grep -q '"ok":true' /tmp/healthz.json; then
+              echo "healthz 200: $(cat /tmp/healthz.json)"; exit 0
+            fi
+            echo "healthz attempt $i: HTTP $code"; sleep 10
+          done
+          echo "::error::$HEALTH_URL did not return 200 with ok:true"; exit 1
+
+      - name: Summary and rollback hint
+        if: always() && steps.guard.outputs.deployable == 'true'
+        run: |
+          {
+            echo "### Preview deploy"
+            echo "- Commit: \`${GITHUB_SHA}\`"
+            echo "- New version: \`${LABEL:-n/a}\`"
+            echo "- Previous version: \`${PREV_LABEL:-n/a}\`"
+            echo "- Health URL: ${HEALTH_URL}"
+            echo ""
+            echo "Rollback (run by someone with EB access):"
+            echo "\`aws elasticbeanstalk update-environment --region ${AWS_REGION} --environment-name ${EB_ENV} --version-label ${PREV_LABEL:-<previous label>}\`"
+            echo ""
+            echo "Note: rolling back the app does not undo database migrations (MIGRATE_ON_BOOT)."
+          } >> "$GITHUB_STEP_SUMMARY"
