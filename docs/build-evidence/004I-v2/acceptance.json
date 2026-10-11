@@ -1,0 +1,99 @@
+{
+  "motionGzipBytes": 35676,
+  "lighthouse": [
+    {
+      "name": "bold-industrial-1",
+      "performance": 97,
+      "accessibility": 100,
+      "cls": 0.009518248055071028
+    },
+    {
+      "name": "clean-modern-1",
+      "performance": 98,
+      "accessibility": 100,
+      "cls": 0.009518248055071028
+    },
+    {
+      "name": "bold-industrial-2",
+      "performance": 100,
+      "accessibility": 100,
+      "cls": 0.009527600897569
+    },
+    {
+      "name": "clean-modern-2",
+      "performance": 100,
+      "accessibility": 100,
+      "cls": 0.009527600897569
+    },
+    {
+      "name": "bold-industrial-3",
+      "performance": 100,
+      "accessibility": 100,
+      "cls": 0.009527600897569
+    },
+    {
+      "name": "clean-modern-3",
+      "performance": 100,
+      "accessibility": 100,
+      "cls": 0.009527600897569
+    }
+  ],
+  "contrast": [
+    {
+      "file": "finish-attempt-1-bold-industrial-1.report.json",
+      "score": 1
+    },
+    {
+      "file": "finish-attempt-2-clean-modern-1.report.json",
+      "score": 1
+    },
+    {
+      "file": "finish-attempt-3-bold-industrial-2.report.json",
+      "score": 1
+    },
+    {
+      "file": "finish-attempt-4-clean-modern-2.report.json",
+      "score": 1
+    },
+    {
+      "file": "finish-attempt-5-bold-industrial-3.report.json",
+      "score": 1
+    },
+    {
+      "file": "finish-attempt-6-clean-modern-3.report.json",
+      "score": 1
+    }
+  ],
+  "profiles": 12,
+  "regressions": 43,
+  "recordings": [
+    {
+      "view": "desktop",
+      "width": 1440,
+      "height": 900,
+      "frames": 1087,
+      "bytes": 3244577,
+      "file": "desktop-down-up-down.webm"
+    },
+    {
+      "view": "mobile",
+      "width": 390,
+      "height": 844,
+      "frames": 1088,
+      "bytes": 2560836,
+      "file": "mobile-down-up-down.webm"
+    }
+  ],
+  "droneHeroFunctionUnchanged": true,
+  "droneMediaAndControllerUnchanged": true,
+  "fixtureStatsShown": [
+    "years",
+    "jobsCompleted",
+    "rating",
+    "reviews",
+    "license"
+  ],
+  "fixtureStatsHidden": [
+    "warranty"
+  ]
+}

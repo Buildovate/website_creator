@@ -1,0 +1,33 @@
+PASS confirmed contractor values are copied verbatim with source labels
+PASS unconfirmed saved or generated defaults never become suggestions
+PASS only real Business and Questionnaire fields are mapped
+PASS prices, licenses, experience, financing, area and owner photos are excluded
+PASS questionnaire headline and introduction reuse the saved wording without generation
+PASS missing and invalid source values stay blank
+PASS nonexistent form controls are never created
+PASS empty unedited fields are proposals only
+PASS typed values and intentionally cleared fields are always kept
+PASS numeric-looking typed answers are not treated as empty
+PASS Undo restores the exact prior value without changing its input
+PASS Undo keeps edits made after autofill
+PASS all outside adapters honestly remain Not connected
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+Error: no such table: payment_state
+    at Object.first (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/game-autofill.mjs:32:27)
+    at first (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/.data/028G/game-autofill-api.js:35001:64)
+    at paymentAvailability (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/.data/028G/game-autofill-api.js:34954:19)
+    at access (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/.data/028G/game-autofill-api.js:35050:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async autofillApi (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/.data/028G/game-autofill-api.js:35171:22)
+    at async file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/game-autofill.mjs:57:97
+    at async check (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/game-autofill.mjs:38:47)
+    at async file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/game-autofill.mjs:57:2 {
+  code: 'ERR_SQLITE_ERROR',
+  errcode: 1,
+  errstr: 'SQL logic error'
+}
+
+Node.js v24.19.0

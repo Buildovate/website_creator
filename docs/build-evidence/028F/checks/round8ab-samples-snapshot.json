@@ -1,0 +1,1760 @@
+{
+  "state": "Completed",
+  "pass": 3492,
+  "borderline": 3,
+  "fail": 0,
+  "qaGateClear": false,
+  "packets": [
+    {
+      "id": "sample-fictional-copper-kite-ventura",
+      "versionHash": "6dc55e1bd90785f669fda8f2fa3aa6a4d6c1d3529b306dbe60f7bbb36f732ce9",
+      "pages": 16,
+      "clips": 3,
+      "qa": {
+        "clear": false,
+        "blocking": 0,
+        "pending": 1,
+        "passed": 725,
+        "reason": "A staff reviewer must decide every Borderline item, with a reason."
+      }
+    },
+    {
+      "id": "sample-fictional-blue-orchard-pasadena",
+      "versionHash": "2af53292692f8f834c0f81051f784b8c7383b466773d6807b4b500ca41deb7c5",
+      "pages": 16,
+      "clips": 3,
+      "qa": {
+        "clear": false,
+        "blocking": 0,
+        "pending": 1,
+        "passed": 725,
+        "reason": "A staff reviewer must decide every Borderline item, with a reason."
+      }
+    },
+    {
+      "id": "sample-fictional-paper-lantern-temecula",
+      "versionHash": "7fe45c63acae0f539055f4c546ae5a29d6c6815bf0a96167dde9c0d3ddcd21eb",
+      "pages": 15,
+      "clips": 3,
+      "qa": {
+        "clear": false,
+        "blocking": 0,
+        "pending": 1,
+        "passed": 680,
+        "reason": "A staff reviewer must decide every Borderline item, with a reason."
+      }
+    },
+    {
+      "id": "sample-fictional-cobalt-heron-irvine",
+      "versionHash": "e8100c3d3b9abf5866dc7b296abfd1e6a887ed0739a923d49ce4d24d67ddf9d3",
+      "pages": 15,
+      "clips": 3,
+      "qa": {
+        "clear": true,
+        "blocking": 0,
+        "pending": 0,
+        "passed": 681,
+        "reason": "Automatic QA is clear for this exact version."
+      }
+    },
+    {
+      "id": "sample-fictional-ochre-willow-riverside",
+      "versionHash": "580d996481662558d3ad492a279b10ef5232553aeba4d5ecc555849318f81d3a",
+      "pages": 15,
+      "clips": 3,
+      "qa": {
+        "clear": true,
+        "blocking": 0,
+        "pending": 0,
+        "passed": 681,
+        "reason": "Automatic QA is clear for this exact version."
+      }
+    }
+  ],
+  "newFindings": [],
+  "noLongerDetected": [
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-001-390-2.png",
+      "id": "page-001-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-002-390-2.png",
+      "id": "page-002-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/about",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-003-390-2.png",
+      "id": "page-003-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/areas",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-004-390-2.png",
+      "id": "page-004-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/areas/ventura",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-005-390-2.png",
+      "id": "page-005-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/blog",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-006-390-2.png",
+      "id": "page-006-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/contact",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-007-390-2.png",
+      "id": "page-007-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/faq",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-008-390-2.png",
+      "id": "page-008-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/legal",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-011-390-2.png",
+      "id": "page-011-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/pricing",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-012-390-2.png",
+      "id": "page-012-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/reviews",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-013-390-2.png",
+      "id": "page-013-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/services",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-014-390-2.png",
+      "id": "page-014-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/services/roof-installation",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-015-390-2.png",
+      "id": "page-015-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/services/roof-repair",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-copper-kite-ventura",
+      "category": "layout",
+      "crop": "qa-crops/page-016-390-2.png",
+      "id": "page-016-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura/thank-you",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-001-390-2.png",
+      "id": "page-001-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-002-390-2.png",
+      "id": "page-002-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/about",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-003-390-2.png",
+      "id": "page-003-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/areas",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-004-390-2.png",
+      "id": "page-004-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/areas/pasadena",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-005-390-2.png",
+      "id": "page-005-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/blog",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-006-390-2.png",
+      "id": "page-006-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/contact",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-007-390-2.png",
+      "id": "page-007-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/faq",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-008-390-2.png",
+      "id": "page-008-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/legal",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-011-390-2.png",
+      "id": "page-011-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/pricing",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-012-390-2.png",
+      "id": "page-012-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/reviews",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-013-390-2.png",
+      "id": "page-013-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/services",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-014-390-2.png",
+      "id": "page-014-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/services/roof-repair",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-015-390-2.png",
+      "id": "page-015-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/services/roof-replacement",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-blue-orchard-pasadena",
+      "category": "layout",
+      "crop": "qa-crops/page-016-390-2.png",
+      "id": "page-016-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Blue Orchard Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-blue-orchard-pasadena/thank-you",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-001-390-2.png",
+      "id": "page-001-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-002-390-2.png",
+      "id": "page-002-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/about",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-003-390-2.png",
+      "id": "page-003-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/areas",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-004-390-2.png",
+      "id": "page-004-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/areas/temecula",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-005-390-2.png",
+      "id": "page-005-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/blog",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-006-390-2.png",
+      "id": "page-006-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/contact",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-007-390-2.png",
+      "id": "page-007-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/faq",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-008-390-2.png",
+      "id": "page-008-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/legal",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-011-390-2.png",
+      "id": "page-011-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/pricing",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-012-390-2.png",
+      "id": "page-012-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/services",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-013-390-2.png",
+      "id": "page-013-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/services/asphalt-shingles",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-014-390-2.png",
+      "id": "page-014-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/services/roof-replacement",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-paper-lantern-temecula",
+      "category": "layout",
+      "crop": "qa-crops/page-015-390-2.png",
+      "id": "page-015-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Paper Lantern Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-paper-lantern-temecula/thank-you",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-001-390-2.png",
+      "id": "page-001-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-002-390-2.png",
+      "id": "page-002-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/about",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-003-390-2.png",
+      "id": "page-003-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/areas",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-004-390-2.png",
+      "id": "page-004-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/areas/irvine",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-005-390-2.png",
+      "id": "page-005-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/blog",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-006-390-2.png",
+      "id": "page-006-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/contact",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-007-390-2.png",
+      "id": "page-007-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/faq",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-008-390-2.png",
+      "id": "page-008-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/legal",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-011-390-2.png",
+      "id": "page-011-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/pricing",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-012-390-2.png",
+      "id": "page-012-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/services",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-013-390-2.png",
+      "id": "page-013-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/services/air-conditioning-installation",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-014-390-2.png",
+      "id": "page-014-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/services/air-conditioning-repair",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-cobalt-heron-irvine",
+      "category": "layout",
+      "crop": "qa-crops/page-015-390-2.png",
+      "id": "page-015-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Cobalt Heron HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-cobalt-heron-irvine/thank-you",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-001-390-2.png",
+      "id": "page-001-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-002-390-2.png",
+      "id": "page-002-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/about",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-003-390-2.png",
+      "id": "page-003-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/areas",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-004-390-2.png",
+      "id": "page-004-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/areas/riverside",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-005-390-2.png",
+      "id": "page-005-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/blog",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-006-390-2.png",
+      "id": "page-006-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/contact",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-007-390-2.png",
+      "id": "page-007-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/faq",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-008-390-2.png",
+      "id": "page-008-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/legal",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-011-390-2.png",
+      "id": "page-011-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/pricing",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-012-390-2.png",
+      "id": "page-012-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/services",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-013-390-2.png",
+      "id": "page-013-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/services/heating-installation",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-014-390-2.png",
+      "id": "page-014-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/services/heating-repair",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "sample": "sample-fictional-ochre-willow-riverside",
+      "category": "layout",
+      "crop": "qa-crops/page-015-390-2.png",
+      "id": "page-015-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Ochre Willow HVAC"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-ochre-willow-riverside/thank-you",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(2)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    }
+  ],
+  "original70ReviewDecisions": "Untouched; still open. No Accept, waiver or reclassification recorded.",
+  "decisionsRecorded": 0,
+  "originalSamplesPreservation": {
+    "checkedFiles": 29039,
+    "changed": [],
+    "byteIdentical": true,
+    "freshEvidence": "checks/round8ab-samples/"
+  }
+}

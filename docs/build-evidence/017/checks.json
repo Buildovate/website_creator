@@ -1,0 +1,307 @@
+[
+  {
+    "label": "build",
+    "status": 0,
+    "ms": 1819
+  },
+  {
+    "label": "typecheck",
+    "status": 0,
+    "ms": 368
+  },
+  {
+    "label": "auth-session",
+    "status": 0,
+    "ms": 3063
+  },
+  {
+    "label": "aws-adapter",
+    "status": 0,
+    "ms": 3628
+  },
+  {
+    "label": "builder",
+    "status": 0,
+    "ms": 217
+  },
+  {
+    "label": "callback-restore",
+    "status": 0,
+    "ms": 179
+  },
+  {
+    "label": "cinematic-films",
+    "status": 0,
+    "ms": 205
+  },
+  {
+    "label": "client-modules",
+    "status": 0,
+    "ms": 195
+  },
+  {
+    "label": "constitution",
+    "status": 0,
+    "ms": 434
+  },
+  {
+    "label": "contact-linkage",
+    "status": 0,
+    "ms": 211
+  },
+  {
+    "label": "contacts-restore",
+    "status": 0,
+    "ms": 214
+  },
+  {
+    "label": "control",
+    "status": 0,
+    "ms": 301
+  },
+  {
+    "label": "conversion-references",
+    "status": 0,
+    "ms": 390
+  },
+  {
+    "label": "core-site-pages",
+    "status": 0,
+    "ms": 440
+  },
+  {
+    "label": "crm-next",
+    "status": 0,
+    "ms": 292
+  },
+  {
+    "label": "crm",
+    "status": 0,
+    "ms": 251
+  },
+  {
+    "label": "design-kits",
+    "status": 0,
+    "ms": 383
+  },
+  {
+    "label": "engagement-providers",
+    "status": 0,
+    "ms": 220
+  },
+  {
+    "label": "engagement",
+    "status": 0,
+    "ms": 252
+  },
+  {
+    "label": "expense-metering",
+    "status": 0,
+    "ms": 331
+  },
+  {
+    "label": "expense-polish",
+    "status": 0,
+    "ms": 287
+  },
+  {
+    "label": "expenses",
+    "status": 0,
+    "ms": 342
+  },
+  {
+    "label": "financing-comparison",
+    "status": 0,
+    "ms": 421
+  },
+  {
+    "label": "financing-states",
+    "status": 0,
+    "ms": 369
+  },
+  {
+    "label": "footer-policy",
+    "status": 0,
+    "ms": 306
+  },
+  {
+    "label": "legacy-scroll-video",
+    "status": 0,
+    "ms": 89
+  },
+  {
+    "label": "legal-policy",
+    "status": 0,
+    "ms": 290
+  },
+  {
+    "label": "media-ranges",
+    "status": 0,
+    "ms": 143
+  },
+  {
+    "label": "motion-v2",
+    "status": 0,
+    "ms": 169
+  },
+  {
+    "label": "neighborhood",
+    "status": 0,
+    "ms": 332
+  },
+  {
+    "label": "owner-photo",
+    "status": 0,
+    "ms": 305
+  },
+  {
+    "label": "planning-motion",
+    "status": 0,
+    "ms": 132
+  },
+  {
+    "label": "platform",
+    "status": 0,
+    "ms": 216
+  },
+  {
+    "label": "premium-service",
+    "status": 0,
+    "ms": 281
+  },
+  {
+    "label": "presentation",
+    "status": 0,
+    "ms": 279
+  },
+  {
+    "label": "project-experience",
+    "status": 0,
+    "ms": 246
+  },
+  {
+    "label": "promotion-unlocks",
+    "status": 0,
+    "ms": 290
+  },
+  {
+    "label": "reference-proof",
+    "status": 0,
+    "ms": 291
+  },
+  {
+    "label": "review-lookup",
+    "status": 0,
+    "ms": 197
+  },
+  {
+    "label": "sales-ops",
+    "status": 0,
+    "ms": 203
+  },
+  {
+    "label": "saved-designs",
+    "status": 0,
+    "ms": 216
+  },
+  {
+    "label": "scroll-media",
+    "status": 0,
+    "ms": 13374
+  },
+  {
+    "label": "scroll-story",
+    "status": 0,
+    "ms": 307
+  },
+  {
+    "label": "scroll-video-controller",
+    "status": 0,
+    "ms": 109
+  },
+  {
+    "label": "service-content",
+    "status": 0,
+    "ms": 219
+  },
+  {
+    "label": "service-pages-all-trades",
+    "status": 0,
+    "ms": 365
+  },
+  {
+    "label": "service-playbook",
+    "status": 0,
+    "ms": 301
+  },
+  {
+    "label": "showpiece-media",
+    "status": 0,
+    "ms": 228
+  },
+  {
+    "label": "showpiece-v4",
+    "status": 0,
+    "ms": 391
+  },
+  {
+    "label": "template-name",
+    "status": 0,
+    "ms": 99
+  },
+  {
+    "label": "trade-enablement",
+    "status": 0,
+    "ms": 277
+  },
+  {
+    "label": "trade-revisions",
+    "status": 0,
+    "ms": 391
+  },
+  {
+    "label": "trade-upgrade",
+    "status": 0,
+    "ms": 332
+  },
+  {
+    "label": "trade-visual-correctness",
+    "status": 0,
+    "ms": 1067
+  },
+  {
+    "label": "trades-financing",
+    "status": 0,
+    "ms": 292
+  },
+  {
+    "label": "trust",
+    "status": 0,
+    "ms": 384
+  },
+  {
+    "label": "website-pages",
+    "status": 0,
+    "ms": 696
+  },
+  {
+    "label": "workspace-owner",
+    "status": 0,
+    "ms": 2275
+  },
+  {
+    "label": "workspace",
+    "status": 0,
+    "ms": 299
+  },
+  {
+    "label": "zoom",
+    "status": 0,
+    "ms": 216
+  },
+  {
+    "label": "template-assets",
+    "status": 0,
+    "ms": 190
+  }
+]

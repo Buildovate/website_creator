@@ -1,0 +1,42 @@
+{
+  "base": "82b666afa6c4ccfdc9d247477cff004865b19779",
+  "unchangedUnrelatedFiles": 262,
+  "restoredEvidenceFiles": 1338,
+  "allHashesMatch": true,
+  "unchangedProtectedFiles": [
+    "public/trade-page.js",
+    "src/promotion-evidence.js",
+    "src/worker.js",
+    "tests/promotion-unlocks.mjs",
+    "tests/promotion-unlocks-browser.mjs",
+    "src/expenses.js",
+    "src/expenses-math.js",
+    "src/expenses-history.json",
+    "src/expense-plans.js",
+    "src/client/workspace/expenses.js",
+    "src/client/workspace/expense-charts.js",
+    "public/expenses-admin.css",
+    "tests/expenses.mjs",
+    "tests/expense-metering.mjs",
+    "tests/expenses-browser.mjs",
+    "tests/expense-polish.mjs",
+    "tests/expense-polish-browser.mjs",
+    "src/platform/lender-adapter.ts",
+    "src/platform/constitution.ts",
+    "src/service-financing.js",
+    "src/service-conversion.js",
+    "src/constitution-pages.js",
+    "src/client/site/constitution.ts",
+    "public/constitution.css",
+    "tests/financing-states.mjs",
+    "tests/financing-states-browser.mjs",
+    "src/roofing-performance.js"
+  ],
+  "regeneratedExtrasMoved": [
+    "docs/build-evidence/015A/after/admin-expenses.png",
+    "docs/build-evidence/015A/after/desktop-admin-expenses.png",
+    "docs/build-evidence/015A/after/desktop-questionnaire-q-roofing-cta.png",
+    "docs/build-evidence/015A/after/questionnaire-q-roofing-cta.png"
+  ],
+  "backupDirectory": "C:/Users/joe/OneDrive/Documents/ChatGPT/Buildovate - Website Design/018-backup"
+}

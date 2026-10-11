@@ -1,0 +1,7 @@
+{
+  "suite": "planning-scroll-browser.mjs",
+  "status": 0,
+  "assertions": 155,
+  "screenshots": 60,
+  "reason": "Finalized suite rerun after adding layout-shift source diagnostics; original full-run pass had 153 assertions."
+}

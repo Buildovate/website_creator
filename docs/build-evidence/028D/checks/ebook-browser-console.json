@@ -1,0 +1,163 @@
+[
+  {
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8158/favicon.ico",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof#guide-pages",
+    "platform": false,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "method": "POST",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/ebook-browser.mjs:14:42"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "method": "POST",
+      "status": 503
+    }
+  },
+  {
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "location": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof#guide-pages",
+    "platform": false,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "method": "POST",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/ebook-browser.mjs:14:42"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "method": "POST",
+      "status": 503
+    }
+  },
+  {
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "location": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  }
+]

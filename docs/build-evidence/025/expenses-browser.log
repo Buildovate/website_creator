@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: UI vendor creation persists
+    at check (file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:10:237)
+    at file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:16:585 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

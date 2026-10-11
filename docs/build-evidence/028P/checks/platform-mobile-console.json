@@ -1,0 +1,163 @@
+[
+  {
+    "state": "legacy-editor",
+    "type": "warning",
+    "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+    "location": {
+      "url": "http://127.0.0.1:8126/s/mobile-platform-qa?preview=1",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "pre-existing-editor-frame"
+  },
+  {
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/photos?stage=brand&caption=",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/photos?stage=brand&caption=",
+      "method": "POST",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:91:61"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/photos?stage=brand&caption=",
+      "method": "POST",
+      "status": 503
+    }
+  },
+  {
+    "state": "permission-editor",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "location": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "method": "GET",
+      "status": 403,
+      "state": "permission-editor",
+      "source": "at file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:95:23",
+      "kind": "permission-state",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "method": "GET",
+      "status": 403
+    }
+  },
+  {
+    "state": "legacy-editor",
+    "type": "warning",
+    "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+    "location": {
+      "url": "http://127.0.0.1:8126/s/mobile-platform-qa?preview=1",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "pre-existing-editor-frame"
+  },
+  {
+    "state": "permission-viewer",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "location": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "method": "GET",
+      "status": 403,
+      "state": "permission-viewer",
+      "source": "at file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:95:23",
+      "kind": "permission-state",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "method": "GET",
+      "status": 403
+    }
+  },
+  {
+    "state": "legacy-editor",
+    "type": "warning",
+    "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+    "location": {
+      "url": "http://127.0.0.1:8126/s/mobile-platform-qa?preview=1",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "pre-existing-editor-frame"
+  }
+]

@@ -1,0 +1,712 @@
+[
+  {
+    "label": "build",
+    "kind": "build",
+    "command": "node C:/Users/joe/website_creator/build.mjs",
+    "status": 0,
+    "ms": 2019
+  },
+  {
+    "label": "typecheck",
+    "kind": "typecheck",
+    "command": "node C:/Users/joe/website_creator/node_modules/typescript/bin/tsc -p C:/Users/joe/website_creator/tsconfig.auth.json",
+    "status": 0,
+    "ms": 565
+  },
+  {
+    "label": "auth-session",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/auth-session.mjs",
+    "status": 0,
+    "ms": 3353
+  },
+  {
+    "label": "aws-adapter",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/aws-adapter.mjs",
+    "status": 0,
+    "ms": 4014
+  },
+  {
+    "label": "builder",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/builder.mjs",
+    "status": 0,
+    "ms": 694
+  },
+  {
+    "label": "callback-restore",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/callback-restore.mjs",
+    "status": 0,
+    "ms": 605
+  },
+  {
+    "label": "cinematic-films",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/cinematic-films.mjs",
+    "status": 0,
+    "ms": 498
+  },
+  {
+    "label": "client-modules",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/client-modules.mjs",
+    "status": 0,
+    "ms": 367
+  },
+  {
+    "label": "constitution",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/constitution.mjs",
+    "status": 0,
+    "ms": 1010
+  },
+  {
+    "label": "contact-linkage",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/contact-linkage.mjs",
+    "status": 0,
+    "ms": 538
+  },
+  {
+    "label": "contacts-restore",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/contacts-restore.mjs",
+    "status": 0,
+    "ms": 498
+  },
+  {
+    "label": "control",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/control.mjs",
+    "status": 0,
+    "ms": 662
+  },
+  {
+    "label": "conversion-references",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/conversion-references.mjs",
+    "status": 0,
+    "ms": 1030
+  },
+  {
+    "label": "core-site-pages",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/core-site-pages.mjs",
+    "status": 0,
+    "ms": 1049
+  },
+  {
+    "label": "crm-next",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/crm-next.mjs",
+    "status": 0,
+    "ms": 544
+  },
+  {
+    "label": "crm",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/crm.mjs",
+    "status": 0,
+    "ms": 588
+  },
+  {
+    "label": "design-kits",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/design-kits.mjs",
+    "status": 0,
+    "ms": 789
+  },
+  {
+    "label": "ebook",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/ebook.mjs",
+    "status": 0,
+    "ms": 700
+  },
+  {
+    "label": "engagement-providers",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/engagement-providers.mjs",
+    "status": 0,
+    "ms": 641
+  },
+  {
+    "label": "engagement",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/engagement.mjs",
+    "status": 0,
+    "ms": 748
+  },
+  {
+    "label": "expense-metering",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/expense-metering.mjs",
+    "status": 0,
+    "ms": 740
+  },
+  {
+    "label": "expense-polish",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/expense-polish.mjs",
+    "status": 0,
+    "ms": 723
+  },
+  {
+    "label": "expenses",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/expenses.mjs",
+    "status": 0,
+    "ms": 700
+  },
+  {
+    "label": "financing-comparison",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/financing-comparison.mjs",
+    "status": 0,
+    "ms": 1331
+  },
+  {
+    "label": "financing-states",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/financing-states.mjs",
+    "status": 0,
+    "ms": 1055
+  },
+  {
+    "label": "footer-policy",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/footer-policy.mjs",
+    "status": 0,
+    "ms": 897
+  },
+  {
+    "label": "generation",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/generation.mjs",
+    "status": 0,
+    "ms": 5902
+  },
+  {
+    "label": "hero-editor",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/hero-editor.mjs",
+    "status": 0,
+    "ms": 5203
+  },
+  {
+    "label": "legacy-scroll-video",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/legacy-scroll-video.mjs",
+    "status": 0,
+    "ms": 323
+  },
+  {
+    "label": "legal-policy",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/legal-policy.mjs",
+    "status": 0,
+    "ms": 668
+  },
+  {
+    "label": "media-ranges",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/media-ranges.mjs",
+    "status": 0,
+    "ms": 327
+  },
+  {
+    "label": "motion-v2",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/motion-v2.mjs",
+    "status": 0,
+    "ms": 465
+  },
+  {
+    "label": "neighborhood",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/neighborhood.mjs",
+    "status": 0,
+    "ms": 787
+  },
+  {
+    "label": "owner-photo",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/owner-photo.mjs",
+    "status": 0,
+    "ms": 790
+  },
+  {
+    "label": "planning-ambient",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/planning-ambient.mjs",
+    "status": 0,
+    "ms": 2228
+  },
+  {
+    "label": "planning-motion",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/planning-motion.mjs",
+    "status": 0,
+    "ms": 419
+  },
+  {
+    "label": "planning-scroll",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/planning-scroll.mjs",
+    "status": 0,
+    "ms": 2147
+  },
+  {
+    "label": "platform",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/platform.mjs",
+    "status": 0,
+    "ms": 688
+  },
+  {
+    "label": "premium-service",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/premium-service.mjs",
+    "status": 0,
+    "ms": 923
+  },
+  {
+    "label": "presentation",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/presentation.mjs",
+    "status": 0,
+    "ms": 766
+  },
+  {
+    "label": "project-experience",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/project-experience.mjs",
+    "status": 0,
+    "ms": 725
+  },
+  {
+    "label": "promotion-unlocks",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/promotion-unlocks.mjs",
+    "status": 0,
+    "ms": 751
+  },
+  {
+    "label": "reference-proof",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/reference-proof.mjs",
+    "status": 0,
+    "ms": 912
+  },
+  {
+    "label": "review-lookup",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/review-lookup.mjs",
+    "status": 0,
+    "ms": 685
+  },
+  {
+    "label": "roofing-cities",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-cities.mjs",
+    "status": 0,
+    "ms": 881
+  },
+  {
+    "label": "roofing-cta",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-cta.mjs",
+    "status": 0,
+    "ms": 817
+  },
+  {
+    "label": "roofing-story",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-story.mjs",
+    "status": 0,
+    "ms": 846
+  },
+  {
+    "label": "sales-ops",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/sales-ops.mjs",
+    "status": 0,
+    "ms": 659
+  },
+  {
+    "label": "saved-designs",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/saved-designs.mjs",
+    "status": 0,
+    "ms": 661
+  },
+  {
+    "label": "scroll-media",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/scroll-media.mjs",
+    "status": 0,
+    "ms": 13437
+  },
+  {
+    "label": "scroll-story",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/scroll-story.mjs",
+    "status": 0,
+    "ms": 667
+  },
+  {
+    "label": "scroll-video-controller",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/scroll-video-controller.mjs",
+    "status": 0,
+    "ms": 339
+  },
+  {
+    "label": "service-content",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/service-content.mjs",
+    "status": 0,
+    "ms": 447
+  },
+  {
+    "label": "service-motion",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/service-motion.mjs",
+    "status": 0,
+    "ms": 762
+  },
+  {
+    "label": "service-pages-all-trades",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs",
+    "status": 0,
+    "ms": 792
+  },
+  {
+    "label": "service-playbook",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/service-playbook.mjs",
+    "status": 0,
+    "ms": 744
+  },
+  {
+    "label": "showpiece-media",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/showpiece-media.mjs",
+    "status": 0,
+    "ms": 460
+  },
+  {
+    "label": "showpiece-v4",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/showpiece-v4.mjs",
+    "status": 0,
+    "ms": 697
+  },
+  {
+    "label": "template-name",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/template-name.mjs",
+    "status": 0,
+    "ms": 315
+  },
+  {
+    "label": "trade-enablement",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trade-enablement.mjs",
+    "status": 0,
+    "ms": 549
+  },
+  {
+    "label": "trade-revisions",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trade-revisions.mjs",
+    "status": 0,
+    "ms": 749
+  },
+  {
+    "label": "trade-upgrade",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trade-upgrade.mjs",
+    "status": 0,
+    "ms": 626
+  },
+  {
+    "label": "trade-visual-correctness",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trade-visual-correctness.mjs",
+    "status": 0,
+    "ms": 1880
+  },
+  {
+    "label": "trades-financing",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trades-financing.mjs",
+    "status": 0,
+    "ms": 723
+  },
+  {
+    "label": "trust",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trust.mjs",
+    "status": 0,
+    "ms": 999
+  },
+  {
+    "label": "website-pages",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/website-pages.mjs",
+    "status": 0,
+    "ms": 2772
+  },
+  {
+    "label": "workspace-owner",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/workspace-owner.mjs",
+    "status": 0,
+    "ms": 2280
+  },
+  {
+    "label": "workspace",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/workspace.mjs",
+    "status": 0,
+    "ms": 684
+  },
+  {
+    "label": "zoom",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/zoom.mjs",
+    "status": 0,
+    "ms": 526
+  },
+  {
+    "label": "template-assets",
+    "kind": "assets",
+    "command": "node C:/Users/joe/website_creator/scripts/check-template-assets.mjs",
+    "status": 0,
+    "ms": 432
+  },
+  {
+    "label": "platform-mobile",
+    "kind": "platform",
+    "command": "node C:/Users/joe/website_creator/tests/platform-mobile.mjs",
+    "status": 0,
+    "ms": 88373
+  },
+  {
+    "label": "callback-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/docs/build-evidence/clips-phase2/callback-calendar-clock.mjs",
+    "status": 0,
+    "ms": 11990
+  },
+  {
+    "label": "contact-linkage-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/contact-linkage-browser.mjs",
+    "status": 0,
+    "ms": 9089
+  },
+  {
+    "label": "contacts-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/contacts-browser.mjs",
+    "status": 0,
+    "ms": 7564
+  },
+  {
+    "label": "ebook-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/ebook-browser.mjs",
+    "status": 0,
+    "ms": 16195
+  },
+  {
+    "label": "expense-polish-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/expense-polish-browser.mjs",
+    "status": 0,
+    "ms": 8991
+  },
+  {
+    "label": "expenses-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/expenses-browser.mjs",
+    "status": 0,
+    "ms": 14599
+  },
+  {
+    "label": "financing-states-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/financing-states-browser.mjs",
+    "status": 0,
+    "ms": 25318
+  },
+  {
+    "label": "generation-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/generation-browser.mjs",
+    "status": 0,
+    "ms": 12055
+  },
+  {
+    "label": "hero-editor-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/hero-editor-browser.mjs",
+    "status": 0,
+    "ms": 41673
+  },
+  {
+    "label": "planning-ambient-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/planning-ambient-browser.mjs",
+    "status": 0,
+    "ms": 23188
+  },
+  {
+    "label": "planning-scroll-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/planning-scroll-browser.mjs",
+    "status": 0,
+    "ms": 36084
+  },
+  {
+    "label": "platform-ui-cleanup-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/platform-ui-cleanup-browser.mjs",
+    "status": 0,
+    "ms": 9218
+  },
+  {
+    "label": "promotion-unlocks-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs",
+    "status": 0,
+    "ms": 21855
+  },
+  {
+    "label": "roofing-cities-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-cities-browser.mjs",
+    "status": 0,
+    "ms": 23523
+  },
+  {
+    "label": "roofing-cta-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-cta-browser.mjs",
+    "status": 0,
+    "ms": 27815
+  },
+  {
+    "label": "roofing-story-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-story-browser.mjs",
+    "status": 0,
+    "ms": 16132
+  },
+  {
+    "label": "service-motion-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/service-motion-browser.mjs",
+    "status": 0,
+    "ms": 24284
+  },
+  {
+    "label": "trade-enablement-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/trade-enablement-browser.mjs",
+    "status": 0,
+    "ms": 49714
+  },
+  {
+    "label": "trade-visual-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/trade-visual-browser.mjs",
+    "status": 0,
+    "ms": 42305
+  },
+  {
+    "label": "clips-phase2",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/clips-phase2.mjs",
+    "status": 0,
+    "ms": 881
+  },
+  {
+    "label": "clips-phase2-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/clips-phase2-browser.mjs",
+    "status": 0,
+    "ms": 24480
+  },
+  {
+    "label": "roofing-polish-part1",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1.mjs",
+    "status": 0,
+    "ms": 3171
+  },
+  {
+    "label": "roofing-polish-part1-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1-browser.mjs",
+    "status": 0,
+    "ms": 50343
+  },
+  {
+    "label": "roofing-polish-part2",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part2.mjs",
+    "status": 0,
+    "ms": 5830
+  },
+  {
+    "label": "roofing-polish-part2-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part2-browser.mjs",
+    "status": 0,
+    "ms": 48296
+  },
+  {
+    "label": "roofing-acceptance",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-acceptance.mjs",
+    "status": 0,
+    "ms": 104043
+  },
+  {
+    "label": "design-styles",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/design-styles.mjs",
+    "status": 0,
+    "ms": 2610
+  },
+  {
+    "label": "promotions-ambient",
+    "command": "node C:/Users/joe/website_creator/tests/promotions-ambient.mjs",
+    "status": 0,
+    "ms": 1874
+  },
+  {
+    "label": "promotions-scroll",
+    "command": "node C:/Users/joe/website_creator/tests/promotions-scroll.mjs",
+    "status": 0,
+    "ms": 1925
+  },
+  {
+    "label": "promotions-ambient-browser",
+    "command": "node C:/Users/joe/website_creator/tests/promotions-ambient-browser.mjs",
+    "status": 0,
+    "ms": 34315
+  },
+  {
+    "label": "promotions-scroll-browser",
+    "command": "node C:/Users/joe/website_creator/tests/promotions-scroll-browser.mjs",
+    "status": 0,
+    "ms": 37264
+  }
+]

@@ -1,0 +1,10 @@
+docker-compose.yml text eol=lf
+docker-compose.dev.yml text eol=lf
+Dockerfile text eol=lf
+Dockerfile.dev text eol=lf
+aws/env/*.example text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+
+# Preserve the exact frozen #028F detector bytes used by its SHA-256 lock.
+src/aws/qa-browser.js -text -eol

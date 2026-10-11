@@ -1,0 +1,416 @@
+{
+  "passed": true,
+  "checks": 3287,
+  "cases": [
+    {
+      "trade": "Roofing",
+      "style": "current",
+      "hero": "still-6957ad8b626e937f",
+      "kind": "still"
+    },
+    {
+      "trade": "Roofing",
+      "style": "bold",
+      "hero": "still-e83895c14c016977",
+      "kind": "still"
+    },
+    {
+      "trade": "Roofing",
+      "style": "fresh",
+      "hero": "still-478460c6e8705f35",
+      "kind": "still"
+    },
+    {
+      "trade": "Roofing",
+      "style": "classic",
+      "hero": "still-72eda981c2b0353c",
+      "kind": "still"
+    },
+    {
+      "trade": "Patios",
+      "style": "current",
+      "hero": "patios-trade-craft-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Patios",
+      "style": "bold",
+      "hero": "patios-trade-build-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Patios",
+      "style": "fresh",
+      "hero": "patios-trade-craft-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Patios",
+      "style": "classic",
+      "hero": "patios-trade-build-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Plumbing",
+      "style": "current",
+      "hero": "plumbing-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Plumbing",
+      "style": "bold",
+      "hero": "plumbing-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Plumbing",
+      "style": "fresh",
+      "hero": "still-c4548ed71edcd1a1",
+      "kind": "still"
+    },
+    {
+      "trade": "Plumbing",
+      "style": "classic",
+      "hero": "still-c4548ed71edcd1a1",
+      "kind": "still"
+    },
+    {
+      "trade": "HVAC",
+      "style": "current",
+      "hero": "hvac-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "HVAC",
+      "style": "bold",
+      "hero": "hvac-trade-craft-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "HVAC",
+      "style": "fresh",
+      "hero": "still-a4779e366baf829f",
+      "kind": "still"
+    },
+    {
+      "trade": "HVAC",
+      "style": "classic",
+      "hero": "still-caa2bf273a4f103e",
+      "kind": "still"
+    },
+    {
+      "trade": "Electrical",
+      "style": "current",
+      "hero": "electrical-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Electrical",
+      "style": "bold",
+      "hero": "electrical-trade-craft-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Electrical",
+      "style": "fresh",
+      "hero": "electrical-trade-craft-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Electrical",
+      "style": "classic",
+      "hero": "electrical-trade-craft-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Landscaping",
+      "style": "current",
+      "hero": "landscaping-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Landscaping",
+      "style": "bold",
+      "hero": "landscaping-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Landscaping",
+      "style": "fresh",
+      "hero": "landscaping-trade-craft-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Landscaping",
+      "style": "classic",
+      "hero": "landscaping-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "General Contractors",
+      "style": "current",
+      "hero": "general-contractors-trade-craft-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "General Contractors",
+      "style": "bold",
+      "hero": "general-contractors-trade-craft-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "General Contractors",
+      "style": "fresh",
+      "hero": "general-contractors-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "General Contractors",
+      "style": "classic",
+      "hero": "general-contractors-trade-craft-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Flooring",
+      "style": "current",
+      "hero": "flooring-trade-craft-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Flooring",
+      "style": "bold",
+      "hero": "flooring-trade-build-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Flooring",
+      "style": "fresh",
+      "hero": "flooring-trade-build-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Flooring",
+      "style": "classic",
+      "hero": "flooring-trade-build-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Painting",
+      "style": "current",
+      "hero": "still-99dcd2e8d566bd27",
+      "kind": "still"
+    },
+    {
+      "trade": "Painting",
+      "style": "bold",
+      "hero": "still-3d089bb169820441",
+      "kind": "still"
+    },
+    {
+      "trade": "Painting",
+      "style": "fresh",
+      "hero": "painting-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Painting",
+      "style": "classic",
+      "hero": "still-3d089bb169820441",
+      "kind": "still"
+    },
+    {
+      "trade": "Fencing",
+      "style": "current",
+      "hero": "still-4295b91f6778f483",
+      "kind": "still"
+    },
+    {
+      "trade": "Fencing",
+      "style": "bold",
+      "hero": "still-5fd704ba9f77b6a3",
+      "kind": "still"
+    },
+    {
+      "trade": "Fencing",
+      "style": "fresh",
+      "hero": "still-40c390a7157b9601",
+      "kind": "still"
+    },
+    {
+      "trade": "Fencing",
+      "style": "classic",
+      "hero": "still-73ff5ee372f6acea",
+      "kind": "still"
+    },
+    {
+      "trade": "Garage Doors",
+      "style": "current",
+      "hero": "garage-doors-trade-build-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Garage Doors",
+      "style": "bold",
+      "hero": "garage-doors-trade-craft-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Garage Doors",
+      "style": "fresh",
+      "hero": "garage-doors-trade-build-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Garage Doors",
+      "style": "classic",
+      "hero": "garage-doors-trade-craft-films",
+      "kind": "clip"
+    },
+    {
+      "trade": "Pest Control",
+      "style": "current",
+      "hero": "still-085cddcfbe859ba6",
+      "kind": "still"
+    },
+    {
+      "trade": "Pest Control",
+      "style": "bold",
+      "hero": "still-085cddcfbe859ba6",
+      "kind": "still"
+    },
+    {
+      "trade": "Pest Control",
+      "style": "fresh",
+      "hero": "still-e6ffe75665bfc9c3",
+      "kind": "still"
+    },
+    {
+      "trade": "Pest Control",
+      "style": "classic",
+      "hero": "still-e6ffe75665bfc9c3",
+      "kind": "still"
+    },
+    {
+      "trade": "Windows/Doors",
+      "style": "current",
+      "hero": "general-contractors-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Windows/Doors",
+      "style": "bold",
+      "hero": "painting-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Windows/Doors",
+      "style": "fresh",
+      "hero": "painting-trade-build-films-poster",
+      "kind": "still"
+    },
+    {
+      "trade": "Windows/Doors",
+      "style": "classic",
+      "hero": "still-31dbf25619640aa7",
+      "kind": "still"
+    },
+    {
+      "trade": "Solar",
+      "style": "current",
+      "hero": "still-0600cec3fb96b86b",
+      "kind": "still"
+    },
+    {
+      "trade": "Solar",
+      "style": "bold",
+      "hero": "still-0600cec3fb96b86b",
+      "kind": "still"
+    },
+    {
+      "trade": "Solar",
+      "style": "fresh",
+      "hero": "still-0600cec3fb96b86b",
+      "kind": "still"
+    },
+    {
+      "trade": "Solar",
+      "style": "classic",
+      "hero": "still-0600cec3fb96b86b",
+      "kind": "still"
+    },
+    {
+      "trade": "Concrete",
+      "style": "current",
+      "hero": "still-647a2aadd5308d7f",
+      "kind": "still"
+    },
+    {
+      "trade": "Concrete",
+      "style": "bold",
+      "hero": "still-647a2aadd5308d7f",
+      "kind": "still"
+    },
+    {
+      "trade": "Concrete",
+      "style": "fresh",
+      "hero": "still-15c8cbd00b4e3c83",
+      "kind": "still"
+    },
+    {
+      "trade": "Concrete",
+      "style": "classic",
+      "hero": "still-15c8cbd00b4e3c83",
+      "kind": "still"
+    },
+    {
+      "trade": "Pools",
+      "style": "current",
+      "hero": "still-edbc16ea294a9d75",
+      "kind": "still"
+    },
+    {
+      "trade": "Pools",
+      "style": "bold",
+      "hero": "still-94ffde4bffa973e7",
+      "kind": "still"
+    },
+    {
+      "trade": "Pools",
+      "style": "fresh",
+      "hero": "still-94ffde4bffa973e7",
+      "kind": "still"
+    },
+    {
+      "trade": "Pools",
+      "style": "classic",
+      "hero": "still-edbc16ea294a9d75",
+      "kind": "still"
+    },
+    {
+      "trade": "Locksmith",
+      "style": "current",
+      "hero": "still-91993a995477e94f",
+      "kind": "still"
+    },
+    {
+      "trade": "Locksmith",
+      "style": "bold",
+      "hero": "still-31dbf25619640aa7",
+      "kind": "still"
+    },
+    {
+      "trade": "Locksmith",
+      "style": "fresh",
+      "hero": "still-91993a995477e94f",
+      "kind": "still"
+    },
+    {
+      "trade": "Locksmith",
+      "style": "classic",
+      "hero": "still-91993a995477e94f",
+      "kind": "still"
+    }
+  ],
+  "providerCalls": 0,
+  "creditsUsed": 0
+}

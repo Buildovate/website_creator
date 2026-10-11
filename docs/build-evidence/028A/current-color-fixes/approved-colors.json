@@ -1,0 +1,41 @@
+{
+  "approval": "Joe explicitly approved only these minimal color-only corrections; no layout, fonts, spacing or other Current colors changed in this approval pass.",
+  "colors": [
+    {
+      "spot": "Patios service text",
+      "old": "#6e735f",
+      "new": "#6d725e",
+      "property": "color",
+      "oldRatio": 4.486,
+      "newRatio": 4.552
+    },
+    {
+      "spot": "Windows/Doors, Solar, Concrete, Pools, Locksmith hero buttons",
+      "old": "#bb704c",
+      "new": "#a65e3a",
+      "property": "background-color",
+      "oldRatio": 3.794,
+      "newRatio": 4.902
+    },
+    {
+      "spot": "Roofing Blog label",
+      "old": "#737c70",
+      "new": "#626d60",
+      "property": "color",
+      "oldRatio": 3.913,
+      "newRatio": 4.892
+    },
+    {
+      "spot": "Policy footer caption",
+      "old": "#64748b",
+      "new": "#617187",
+      "property": "color",
+      "oldRatio": 4.437,
+      "newRatio": 4.64
+    }
+  ],
+  "files": [
+    "public/design-studio.css",
+    "public/flow.css"
+  ]
+}

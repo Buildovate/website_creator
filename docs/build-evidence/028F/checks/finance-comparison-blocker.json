@@ -1,0 +1,868 @@
+{
+  "records": [
+    {
+      "width": 1440,
+      "path": "/s/finance-comparison/services/asphalt-shingle-install-repair",
+      "checks": [
+        {
+          "category": "layout",
+          "key": "overflow",
+          "title": "Horizontal overflow",
+          "result": "Pass",
+          "selector": "body",
+          "measured": {
+            "pageOverflow": 0,
+            "violations": []
+          },
+          "threshold": {
+            "maximumPx": 1
+          },
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 10571.671875
+          }
+        },
+        {
+          "category": "layout",
+          "key": "clipped-text",
+          "title": "Clipped text",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+          "measured": {
+            "failures": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              },
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              },
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              },
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              }
+            ],
+            "ellipsis": []
+          },
+          "threshold": {
+            "maximumPx": 2
+          },
+          "box": {
+            "x": 86.390625,
+            "y": 6452.171875,
+            "width": 1,
+            "height": 1
+          }
+        }
+      ],
+      "info": {
+        "status": {
+          "tag": "P",
+          "class": "tp-sr-only",
+          "rect": {
+            "x": 86.390625,
+            "y": 6452.171875,
+            "width": 1,
+            "height": 1,
+            "top": 6452.171875,
+            "right": 87.390625,
+            "bottom": 6453.171875,
+            "left": 86.390625
+          },
+          "scrollWidth": 39,
+          "clientWidth": 1,
+          "display": "block",
+          "overflowX": "hidden",
+          "clip": "rect(0px, 0px, 0px, 0px)",
+          "clipPath": "none",
+          "position": "absolute",
+          "whiteSpace": "normal",
+          "text": "Enter a valid cost.",
+          "role": "status",
+          "ariaLive": "polite",
+          "outerHTML": "<p class=\"tp-sr-only\" data-finance-status=\"\" role=\"status\" aria-live=\"polite\">Enter a valid cost.</p>"
+        },
+        "cards": [
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 86.390625,
+              "y": 5724.15625,
+              "width": 303.296875,
+              "height": 449.96875,
+              "top": 5724.15625,
+              "right": 389.6875,
+              "bottom": 6174.125,
+              "left": 86.390625
+            },
+            "scrollWidth": 301,
+            "clientWidth": 301,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 01SelectedPlan longWisetack\n \n —/mo9.99% APR  /  132 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 86.390625,
+                "y": 5704.15625,
+                "width": 1267.21875,
+                "height": 489.96875,
+                "top": 5704.15625,
+                "right": 1353.609375,
+                "bottom": 6194.125,
+                "left": 86.390625
+              },
+              "scrollWidth": 1267,
+              "clientWidth": 1267,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 0
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 407.6875,
+              "y": 5724.15625,
+              "width": 303.3125,
+              "height": 449.96875,
+              "top": 5724.15625,
+              "right": 711,
+              "bottom": 6174.125,
+              "left": 407.6875
+            },
+            "scrollWidth": 301,
+            "clientWidth": 301,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 02SelectedPlan balancedWisetack\n \n —/mo7.99% APR  /  73 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 86.390625,
+                "y": 5704.15625,
+                "width": 1267.21875,
+                "height": 489.96875,
+                "top": 5704.15625,
+                "right": 1353.609375,
+                "bottom": 6194.125,
+                "left": 86.390625
+              },
+              "scrollWidth": 1267,
+              "clientWidth": 1267,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 0
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 729,
+              "y": 5724.15625,
+              "width": 303.296875,
+              "height": 449.96875,
+              "top": 5724.15625,
+              "right": 1032.296875,
+              "bottom": 6174.125,
+              "left": 729
+            },
+            "scrollWidth": 301,
+            "clientWidth": 301,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 03SelectedPlan shortWisetack\n \n —/mo5.99% APR  /  58 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 86.390625,
+                "y": 5704.15625,
+                "width": 1267.21875,
+                "height": 489.96875,
+                "top": 5704.15625,
+                "right": 1353.609375,
+                "bottom": 6194.125,
+                "left": 86.390625
+              },
+              "scrollWidth": 1267,
+              "clientWidth": 1267,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 0
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 1050.296875,
+              "y": 5724.15625,
+              "width": 303.3125,
+              "height": 449.96875,
+              "top": 5724.15625,
+              "right": 1353.609375,
+              "bottom": 6174.125,
+              "left": 1050.296875
+            },
+            "scrollWidth": 301,
+            "clientWidth": 301,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 04SelectedPlan zeroWisetack\n \n —/mo0% APR  /  18 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 86.390625,
+                "y": 5704.15625,
+                "width": 1267.21875,
+                "height": 489.96875,
+                "top": 5704.15625,
+                "right": 1353.609375,
+                "bottom": 6194.125,
+                "left": 86.390625
+              },
+              "scrollWidth": 1267,
+              "clientWidth": 1267,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 0
+          }
+        ]
+      },
+      "screenshot": "finance-comparison-blocker/1440.png"
+    },
+    {
+      "width": 768,
+      "path": "/s/finance-comparison/services/asphalt-shingle-install-repair",
+      "checks": [
+        {
+          "category": "layout",
+          "key": "overflow",
+          "title": "Horizontal overflow",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+          "measured": {
+            "pageOverflow": 0,
+            "violations": [
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+            ]
+          },
+          "threshold": {
+            "maximumPx": 1
+          },
+          "box": {
+            "x": 582.078125,
+            "y": 6501.515625,
+            "width": 250,
+            "height": 444.59375
+          }
+        },
+        {
+          "category": "layout",
+          "key": "clipped-text",
+          "title": "Clipped text",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+          "measured": {
+            "failures": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              },
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              },
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              },
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              }
+            ],
+            "ellipsis": []
+          },
+          "threshold": {
+            "maximumPx": 2
+          },
+          "box": {
+            "x": 46.078125,
+            "y": 7218.78125,
+            "width": 1,
+            "height": 1
+          }
+        }
+      ],
+      "info": {
+        "status": {
+          "tag": "P",
+          "class": "tp-sr-only",
+          "rect": {
+            "x": 46.078125,
+            "y": 7218.78125,
+            "width": 1,
+            "height": 1,
+            "top": 7218.78125,
+            "right": 47.078125,
+            "bottom": 7219.78125,
+            "left": 46.078125
+          },
+          "scrollWidth": 39,
+          "clientWidth": 1,
+          "display": "block",
+          "overflowX": "hidden",
+          "clip": "rect(0px, 0px, 0px, 0px)",
+          "clipPath": "none",
+          "position": "absolute",
+          "whiteSpace": "normal",
+          "text": "Enter a valid cost.",
+          "role": "status",
+          "ariaLive": "polite",
+          "outerHTML": "<p class=\"tp-sr-only\" data-finance-status=\"\" role=\"status\" aria-live=\"polite\">Enter a valid cost.</p>"
+        },
+        "cards": [
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 46.078125,
+              "y": 6501.515625,
+              "width": 250,
+              "height": 444.59375,
+              "top": 6501.515625,
+              "right": 296.078125,
+              "bottom": 6946.109375,
+              "left": 46.078125
+            },
+            "scrollWidth": 248,
+            "clientWidth": 248,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 01SelectedPlan longWisetack\n \n —/mo9.99% APR  /  132 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 46.078125,
+                "y": 6481.515625,
+                "width": 675.84375,
+                "height": 484.59375,
+                "top": 6481.515625,
+                "right": 721.921875,
+                "bottom": 6966.109375,
+                "left": 46.078125
+              },
+              "scrollWidth": 1054,
+              "clientWidth": 676,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 0
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 314.078125,
+              "y": 6501.515625,
+              "width": 250,
+              "height": 444.59375,
+              "top": 6501.515625,
+              "right": 564.078125,
+              "bottom": 6946.109375,
+              "left": 314.078125
+            },
+            "scrollWidth": 248,
+            "clientWidth": 248,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 02SelectedPlan balancedWisetack\n \n —/mo7.99% APR  /  73 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 46.078125,
+                "y": 6481.515625,
+                "width": 675.84375,
+                "height": 484.59375,
+                "top": 6481.515625,
+                "right": 721.921875,
+                "bottom": 6966.109375,
+                "left": 46.078125
+              },
+              "scrollWidth": 1054,
+              "clientWidth": 676,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 0
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 582.078125,
+              "y": 6501.515625,
+              "width": 250,
+              "height": 444.59375,
+              "top": 6501.515625,
+              "right": 832.078125,
+              "bottom": 6946.109375,
+              "left": 582.078125
+            },
+            "scrollWidth": 248,
+            "clientWidth": 248,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 03SelectedPlan shortWisetack\n \n —/mo5.99% APR  /  58 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 46.078125,
+                "y": 6481.515625,
+                "width": 675.84375,
+                "height": 484.59375,
+                "top": 6481.515625,
+                "right": 721.921875,
+                "bottom": 6966.109375,
+                "left": 46.078125
+              },
+              "scrollWidth": 1054,
+              "clientWidth": 676,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 64.078125
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 850.078125,
+              "y": 6501.515625,
+              "width": 250,
+              "height": 444.59375,
+              "top": 6501.515625,
+              "right": 1100.078125,
+              "bottom": 6946.109375,
+              "left": 850.078125
+            },
+            "scrollWidth": 248,
+            "clientWidth": 248,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 04SelectedPlan zeroWisetack\n \n —/mo0% APR  /  18 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 46.078125,
+                "y": 6481.515625,
+                "width": 675.84375,
+                "height": 484.59375,
+                "top": 6481.515625,
+                "right": 721.921875,
+                "bottom": 6966.109375,
+                "left": 46.078125
+              },
+              "scrollWidth": 1054,
+              "clientWidth": 676,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 332.078125
+          }
+        ]
+      },
+      "screenshot": "finance-comparison-blocker/768.png"
+    },
+    {
+      "width": 390,
+      "path": "/s/finance-comparison/services/asphalt-shingle-install-repair",
+      "checks": [
+        {
+          "category": "layout",
+          "key": "overflow",
+          "title": "Horizontal overflow",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+          "measured": {
+            "pageOverflow": 0,
+            "violations": [
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+              "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+            ]
+          },
+          "threshold": {
+            "maximumPx": 1
+          },
+          "box": {
+            "x": 350.28125,
+            "y": 6791.09375,
+            "width": 308.890625,
+            "height": 444.59375
+          }
+        },
+        {
+          "category": "layout",
+          "key": "clipped-text",
+          "title": "Clipped text",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+          "measured": {
+            "failures": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              },
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              },
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              },
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+                "text": "Enter a valid cost."
+              }
+            ],
+            "ellipsis": []
+          },
+          "threshold": {
+            "maximumPx": 2
+          },
+          "box": {
+            "x": 23.390625,
+            "y": 7508.359375,
+            "width": 1,
+            "height": 1
+          }
+        }
+      ],
+      "info": {
+        "status": {
+          "tag": "P",
+          "class": "tp-sr-only",
+          "rect": {
+            "x": 23.390625,
+            "y": 7508.359375,
+            "width": 1,
+            "height": 1,
+            "top": 7508.359375,
+            "right": 24.390625,
+            "bottom": 7509.359375,
+            "left": 23.390625
+          },
+          "scrollWidth": 39,
+          "clientWidth": 1,
+          "display": "block",
+          "overflowX": "hidden",
+          "clip": "rect(0px, 0px, 0px, 0px)",
+          "clipPath": "none",
+          "position": "absolute",
+          "whiteSpace": "normal",
+          "text": "Enter a valid cost.",
+          "role": "status",
+          "ariaLive": "polite",
+          "outerHTML": "<p class=\"tp-sr-only\" data-finance-status=\"\" role=\"status\" aria-live=\"polite\">Enter a valid cost.</p>"
+        },
+        "cards": [
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 23.390625,
+              "y": 6791.09375,
+              "width": 308.890625,
+              "height": 444.59375,
+              "top": 6791.09375,
+              "right": 332.28125,
+              "bottom": 7235.6875,
+              "left": 23.390625
+            },
+            "scrollWidth": 307,
+            "clientWidth": 307,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 01SelectedPlan longWisetack\n \n —/mo9.99% APR  /  132 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 23.390625,
+                "y": 6771.09375,
+                "width": 343.21875,
+                "height": 484.59375,
+                "top": 6771.09375,
+                "right": 366.609375,
+                "bottom": 7255.6875,
+                "left": 23.390625
+              },
+              "scrollWidth": 1290,
+              "clientWidth": 343,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 0
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 350.28125,
+              "y": 6791.09375,
+              "width": 308.890625,
+              "height": 444.59375,
+              "top": 6791.09375,
+              "right": 659.171875,
+              "bottom": 7235.6875,
+              "left": 350.28125
+            },
+            "scrollWidth": 307,
+            "clientWidth": 307,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 02SelectedPlan balancedWisetack\n \n —/mo7.99% APR  /  73 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 23.390625,
+                "y": 6771.09375,
+                "width": 343.21875,
+                "height": 484.59375,
+                "top": 6771.09375,
+                "right": 366.609375,
+                "bottom": 7255.6875,
+                "left": 23.390625
+              },
+              "scrollWidth": 1290,
+              "clientWidth": 343,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 269.171875
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 677.171875,
+              "y": 6791.09375,
+              "width": 308.890625,
+              "height": 444.59375,
+              "top": 6791.09375,
+              "right": 986.0625,
+              "bottom": 7235.6875,
+              "left": 677.171875
+            },
+            "scrollWidth": 307,
+            "clientWidth": 307,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 03SelectedPlan shortWisetack\n \n —/mo5.99% APR  /  58 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 23.390625,
+                "y": 6771.09375,
+                "width": 343.21875,
+                "height": 484.59375,
+                "top": 6771.09375,
+                "right": 366.609375,
+                "bottom": 7255.6875,
+                "left": 23.390625
+              },
+              "scrollWidth": 1290,
+              "clientWidth": 343,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 596.0625
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tp-plan-card ",
+            "rect": {
+              "x": 1004.0625,
+              "y": 6791.09375,
+              "width": 308.890625,
+              "height": 444.59375,
+              "top": 6791.09375,
+              "right": 1312.953125,
+              "bottom": 7235.6875,
+              "left": 1004.0625
+            },
+            "scrollWidth": 307,
+            "clientWidth": 307,
+            "display": "block",
+            "overflowX": "visible",
+            "clip": "auto",
+            "clipPath": "none",
+            "position": "static",
+            "whiteSpace": "normal",
+            "text": "\n 04SelectedPlan zeroWisetack\n \n —/mo0% APR  /  18 months— down payment\n \n Total cost —Includes down payment + loan paymentsChoose this plan ",
+            "container": {
+              "tag": "DIV",
+              "class": "tp-plan-cards",
+              "rect": {
+                "x": 23.390625,
+                "y": 6771.09375,
+                "width": 343.21875,
+                "height": 484.59375,
+                "top": 6771.09375,
+                "right": 366.609375,
+                "bottom": 7255.6875,
+                "left": 23.390625
+              },
+              "scrollWidth": 1290,
+              "clientWidth": 343,
+              "display": "flex",
+              "overflowX": "auto",
+              "clip": "auto",
+              "clipPath": "none",
+              "position": "static",
+              "whiteSpace": "normal"
+            },
+            "outsideViewportPx": 922.953125
+          }
+        ]
+      },
+      "screenshot": "finance-comparison-blocker/390.png"
+    }
+  ],
+  "diagnosticBaselineOnly": true,
+  "approvalRecords": 0,
+  "qaReports": 0,
+  "providerCalls": 0
+}

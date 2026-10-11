@@ -1,0 +1,17 @@
+PASS configuration safety, locked values and calculator math
+PASS tenant roles, draft/publication isolation, shared footers, feature gates and promotion unlock/expiry
+PASS 84 trade/layout legal-preview links and their access controls
+✔ tests\constitution.mjs (267.075ms)
+PASS reference proof: published project map, unpublished isolation, owner visibility, logo privacy/publish, connected review placement, no-key fallback and mocked provider attribution/filtering.
+✔ tests\reference-proof.mjs (209.4419ms)
+✔ network contract: bounded HTTPS fields, supported networks, stable order and explicit clear (4.2008ms)
+✔ publication and render-time evidence gates: approval, freshness, counts and license support (1.137ms)
+✔ actual API: draft/snapshot separation, old-client preservation, validation, publish recheck and permissions (29.9731ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 306.6372

@@ -1,0 +1,3805 @@
+[
+  {
+    "state": "billing-own-desktop",
+    "text": [
+      {
+        "label": "Local QA test fixture · no live payments or business claims",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "Upgrades charge the prorated difference now. Downgrades start at your next renew",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Cancel rental",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "The site stays up until Jan 1, 2099.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Review cancellation",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "The site comes down at the paid period end with no export. Your domain stays you",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "One-time ownership buyout: $1,500.00. This is a flat price, with no credit for r",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$1,500.00",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your site, $1,500",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "$50 per month owner hosting starts on your next cycle. No credit for rental mont",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Other plans",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$50/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$500/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Growth",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$150/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$1,500/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "All-in",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$300/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$3,000/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Annual prepay covers twelve months for the price of ten. No setup fee.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "pricing-desktop",
+    "text": [
+      {
+        "label": "Local QA test fixture · no live payments or business claims",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "Upgrades charge the prorated difference now. Downgrades start at your next renew",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Cancel rental",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "The site stays up until Jan 1, 2099.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Review cancellation",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "The site comes down at the paid period end with no export. Your domain stays you",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "One-time ownership buyout: $1,500.00. This is a flat price, with no credit for r",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$1,500.00",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your site, $1,500",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "$50 per month owner hosting starts on your next cycle. No credit for rental mont",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Other plans",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$50/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$500/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Growth",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$150/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$1,500/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "All-in",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$300/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$3,000/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Annual prepay covers twelve months for the price of ten. No setup fee.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "billing-stop-hosting-desktop",
+    "text": [
+      {
+        "label": "Local QA test fixture · no live payments or business claims",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "YOUR ACCOUNT",
+        "color": "rgb(93, 104, 115)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 5.127738080158962,
+        "threshold": 4.5
+      },
+      {
+        "label": "Billing",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 12.202074935958075,
+        "threshold": 4.5
+      },
+      {
+        "label": "Payments not connected. You can review your plan here; no charge can start.",
+        "color": "rgb(109, 66, 0)",
+        "background": [
+          255,
+          243,
+          220
+        ],
+        "ratio": 7.86395515832347,
+        "threshold": 4.5
+      },
+      {
+        "label": "Current plan",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Owner",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 3
+      },
+      {
+        "label": "Owned website",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Status",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "active",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Next charge",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Jan 1, 2099 · Not scheduled",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Owner hosting: $50.00 per month · scheduled · starts Jan 1, 2099",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Stop hosting",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "Hosting ends at the paid period end. Keep your static-file download; no refunds ",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Payment method",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Payments not connected",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Card updates and invoices use the secure Stripe Customer Portal when it is conne",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Update payment",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          247,
+          245,
+          241
+        ],
+        "ratio": 15.016575246086322,
+        "threshold": 4.5
+      },
+      {
+        "label": "Payments not connected",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Other plans",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "Growth",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "All-in",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "game-100-desktop",
+    "text": [
+      {
+        "label": "Local QA test fixture · no live payments or business claims",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "buildovate",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 3
+      },
+      {
+        "label": "Local QA Roofing — test fixture",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Refresh progress",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "Level 3 · Launch & Grow",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Your site, 100% built",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Final level",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "100%",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          228,
+          223,
+          213
+        ],
+        "ratio": 12.313740460515788,
+        "threshold": 4.5
+      },
+      {
+        "label": "Your progress comes from saved work and confirmed connections.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "Level 1 · Get Set Up",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "3/3",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 12.202074935958075,
+        "threshold": 4.5
+      },
+      {
+        "label": "Onboarding",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "10/10+10 XP",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "+10 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 12.202074935958075,
+        "threshold": 4.5
+      },
+      {
+        "label": "Website pages",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "15/15+15 XP",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "+15 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 12.202074935958075,
+        "threshold": 4.5
+      },
+      {
+        "label": "Reviews",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "15/15+15 XP",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "+15 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "Level 2 · Win More Jobs",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "4/4",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "Virtual estimator",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "20/20+20 XP",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "+20 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 12.202074935958075,
+        "threshold": 4.5
+      },
+      {
+        "label": "Promotions",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "5/5+5 XP",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "+5 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 12.202074935958075,
+        "threshold": 4.5
+      },
+      {
+        "label": "Financing",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "10/10+10 XP",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "+10 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 12.202074935958075,
+        "threshold": 4.5
+      },
+      {
+        "label": "Leads & CRM",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "10/10+10 XP",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "+10 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "Level 3 · Launch & Grow",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "2/2",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 12.202074935958075,
+        "threshold": 4.5
+      },
+      {
+        "label": "Domain & publish",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "10/10+10 XP",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "+10 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 12.202074935958075,
+        "threshold": 4.5
+      },
+      {
+        "label": "Marketing & social",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "5/5+5 XP",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 14.74512440241165,
+        "threshold": 4.5
+      },
+      {
+        "label": "+5 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "YOUR SITE",
+        "color": "rgb(180, 192, 204)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 8.619443554203894,
+        "threshold": 4.5
+      },
+      {
+        "label": "100 / 100 XP",
+        "color": "rgb(234, 185, 127)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 8.917141339200517,
+        "threshold": 3
+      },
+      {
+        "label": "/ 100 XP",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "One clear step at a time.",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓ SET UP",
+        "color": "rgb(134, 215, 169)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 9.344016162881394,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓ SELLING",
+        "color": "rgb(134, 215, 169)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 9.344016162881394,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓ LIVE",
+        "color": "rgb(134, 215, 169)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 9.344016162881394,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓ GROWING",
+        "color": "rgb(134, 215, 169)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 9.344016162881394,
+        "threshold": 4.5
+      },
+      {
+        "label": "1/1",
+        "color": "rgb(138, 79, 18)",
+        "background": [
+          251,
+          240,
+          225
+        ],
+        "ratio": 5.81496160586443,
+        "threshold": 4.5
+      },
+      {
+        "label": "CURRENT QUEST · +20 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Save a service price range.",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 3
+      },
+      {
+        "label": "Enter a price range on at least one service page. Homeowners can then see your e",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(21, 92, 57)",
+        "background": [
+          229,
+          244,
+          236
+        ],
+        "ratio": 7.049706064104396,
+        "threshold": 4.5
+      },
+      {
+        "label": "Save a service price range",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "This step is complete based on your saved information.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Open →",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          16,
+          48,
+          77
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "→",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          16,
+          48,
+          77
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "Settings for this quest",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "Website pages",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "20 of 20 XP earned. All steps must be complete for this quest to count.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "✦",
+        "color": "rgb(138, 79, 18)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 6.546579329781809,
+        "threshold": 3
+      },
+      {
+        "label": "A LITTLE HELP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          251,
+          240,
+          225
+        ],
+        "ratio": 6.379369383984308,
+        "threshold": 4.5
+      },
+      {
+        "label": "Fill it out for me",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          251,
+          240,
+          225
+        ],
+        "ratio": 12.018946040011086,
+        "threshold": 4.5
+      },
+      {
+        "label": "Review saved business details for empty form fields. Autofill keeps answers you ",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          251,
+          240,
+          225
+        ],
+        "ratio": 6.379369383984308,
+        "threshold": 4.5
+      },
+      {
+        "label": "Use saved details",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "You review every change before saving.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          251,
+          240,
+          225
+        ],
+        "ratio": 6.379369383984308,
+        "threshold": 4.5
+      },
+      {
+        "label": "WHEN THIS QUEST IS COMPLETE",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "What this means for your business",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "→Homeowners can share the details needed for an estimate.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "→",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "→Complete Leads & CRM too to earn SELLING.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "→",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "BADGES · 7 OF 8",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Your badges",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(21, 92, 57)",
+        "background": [
+          229,
+          244,
+          236
+        ],
+        "ratio": 7.049706064104396,
+        "threshold": 4.5
+      },
+      {
+        "label": "Set up",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(21, 92, 57)",
+        "background": [
+          229,
+          244,
+          236
+        ],
+        "ratio": 7.049706064104396,
+        "threshold": 4.5
+      },
+      {
+        "label": "Reviews live",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(21, 92, 57)",
+        "background": [
+          229,
+          244,
+          236
+        ],
+        "ratio": 7.049706064104396,
+        "threshold": 4.5
+      },
+      {
+        "label": "Leads ready",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(21, 92, 57)",
+        "background": [
+          229,
+          244,
+          236
+        ],
+        "ratio": 7.049706064104396,
+        "threshold": 4.5
+      },
+      {
+        "label": "Selling",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-game-quest",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "editor-locked-desktop",
+    "text": [
+      {
+        "label": "Local QA test fixture · no live payments or business claims",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "Update payment to unlock your editor",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Your saved work is still here. Open Billing to update your payment method.",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Update payment",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          16,
+          48,
+          77
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-game-payment-lock",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "billing-own-phone",
+    "text": [
+      {
+        "label": "Local QA test fixture · no live payments or business claims",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "The site stays up until Jan 1, 2099.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Review cancellation",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "The site comes down at the paid period end with no export. Your domain stays you",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "One-time ownership buyout: $1,500.00. This is a flat price, with no credit for r",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$1,500.00",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your site, $1,500",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "$50 per month owner hosting starts on your next cycle. No credit for rental mont",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Other plans",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$50/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$500/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "pricing-phone",
+    "text": [
+      {
+        "label": "Local QA test fixture · no live payments or business claims",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "One-time ownership buyout: $1,500.00. This is a flat price, with no credit for r",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$1,500.00",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your site, $1,500",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "$50 per month owner hosting starts on your next cycle. No credit for rental mont",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Other plans",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$50/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$500/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Growth",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$150/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$1,500/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "All-in",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$300/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$3,000/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "billing-stop-hosting-phone",
+    "text": [
+      {
+        "label": "Local QA test fixture · no live payments or business claims",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "YOUR ACCOUNT",
+        "color": "rgb(93, 104, 115)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 5.127738080158962,
+        "threshold": 4.5
+      },
+      {
+        "label": "Billing",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 12.202074935958075,
+        "threshold": 4.5
+      },
+      {
+        "label": "Payments not connected. You can review your plan here; no charge can start.",
+        "color": "rgb(109, 66, 0)",
+        "background": [
+          255,
+          243,
+          220
+        ],
+        "ratio": 7.86395515832347,
+        "threshold": 4.5
+      },
+      {
+        "label": "Current plan",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Owner",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 3
+      },
+      {
+        "label": "Owned website",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Status",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "active",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Next charge",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Jan 1, 2099 · Not scheduled",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Owner hosting: $50.00 per month · scheduled · starts Jan 1, 2099",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Stop hosting",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "Hosting ends at the paid period end. Keep your static-file download; no refunds ",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "game-100-phone",
+    "text": [
+      {
+        "label": "Local QA test fixture · no live payments or business claims",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "buildovate",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 3
+      },
+      {
+        "label": "Local QA Roofing — test fixture",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Level 3 · Launch & Grow",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Your site, 100% built",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Final level",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "100%",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          228,
+          223,
+          213
+        ],
+        "ratio": 12.313740460515788,
+        "threshold": 4.5
+      },
+      {
+        "label": "Your progress comes from saved work and confirmed connections.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          245,
+          243,
+          238
+        ],
+        "ratio": 6.476569826372349,
+        "threshold": 4.5
+      },
+      {
+        "label": "All",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Onboarding",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done · 10/10 XP",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Website pages",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done · 15/15 XP",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Reviews",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done · 15/15 XP",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Virtual estimator",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done · 20/20 XP",
+        "color": "rgb(93, 104, 115)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 5.686252158307313,
+        "threshold": 4.5
+      },
+      {
+        "label": "Promotions",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done · 5/5 XP",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Financing",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done · 10/10 XP",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Leads & CRM",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done · 10/10 XP",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Domain & publish",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done · 10/10 XP",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Marketing & social",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "Done · 5/5 XP",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "YOUR SITE",
+        "color": "rgb(180, 192, 204)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 8.619443554203894,
+        "threshold": 4.5
+      },
+      {
+        "label": "100 / 100 XP",
+        "color": "rgb(234, 185, 127)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 8.917141339200517,
+        "threshold": 3
+      },
+      {
+        "label": "/ 100 XP",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "One clear step at a time.",
+        "color": "rgb(232, 246, 255)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 14.469554792114943,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓ SET UP",
+        "color": "rgb(134, 215, 169)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 9.344016162881394,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓ SELLING",
+        "color": "rgb(134, 215, 169)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 9.344016162881394,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓ LIVE",
+        "color": "rgb(134, 215, 169)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 9.344016162881394,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓ GROWING",
+        "color": "rgb(134, 215, 169)",
+        "background": [
+          11,
+          34,
+          64
+        ],
+        "ratio": 9.344016162881394,
+        "threshold": 4.5
+      },
+      {
+        "label": "1/1",
+        "color": "rgb(138, 79, 18)",
+        "background": [
+          251,
+          240,
+          225
+        ],
+        "ratio": 5.81496160586443,
+        "threshold": 4.5
+      },
+      {
+        "label": "CURRENT QUEST · +20 XP",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Save a service price range.",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 3
+      },
+      {
+        "label": "Enter a price range on at least one service page. Homeowners can then see your e",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "✓",
+        "color": "rgb(21, 92, 57)",
+        "background": [
+          229,
+          244,
+          236
+        ],
+        "ratio": 7.049706064104396,
+        "threshold": 4.5
+      },
+      {
+        "label": "Save a service price range",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "This step is complete based on your saved information.",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Quests",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          16,
+          48,
+          77
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "Badges",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "Preview site",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "Settings",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-game-quest",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "editor-locked-phone",
+    "text": [
+      {
+        "label": "Local QA test fixture · no live payments or business claims",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "Update payment to unlock your editor",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Your saved work is still here. Open Billing to update your payment method.",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Update payment",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          16,
+          48,
+          77
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-game-payment-lock",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "paused-site-desktop",
+    "text": [
+      {
+        "label": "This website is temporarily unavailable",
+        "color": "rgb(23, 45, 71)",
+        "background": [
+          244,
+          247,
+          251
+        ],
+        "ratio": 13.005249308491925,
+        "threshold": 3
+      },
+      {
+        "label": "Please check back later.",
+        "color": "rgb(23, 45, 71)",
+        "background": [
+          244,
+          247,
+          251
+        ],
+        "ratio": 13.005249308491925,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [],
+    "issues": []
+  },
+  {
+    "state": "paused-site-phone",
+    "text": [
+      {
+        "label": "This website is temporarily unavailable",
+        "color": "rgb(23, 45, 71)",
+        "background": [
+          244,
+          247,
+          251
+        ],
+        "ratio": 13.005249308491925,
+        "threshold": 3
+      },
+      {
+        "label": "Please check back later.",
+        "color": "rgb(23, 45, 71)",
+        "background": [
+          244,
+          247,
+          251
+        ],
+        "ratio": 13.005249308491925,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [],
+    "issues": []
+  }
+]

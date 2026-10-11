@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {pathToFileURL} from 'node:url';
+import {createHash} from 'node:crypto';
+const root='C:/Users/joe/website_creator',checks=root+'/docs/build-evidence/028F/checks';process.chdir(root);
+const {env,admin}=await import(pathToFileURL(root+'/tests/preview-fixture.mjs'));
+const {normalizePart2HTML}=await import(pathToFileURL(root+'/tests/part2-html-normalize.mjs'));
+const {beforePart1}=await import(pathToFileURL(root+'/tests/review-part1-html-normalize.mjs'));
+const currentWorker=fs.readFileSync(root+'/src/worker.js','utf8');
+const currentName="name:kit.id==='roofing'?'Ridgeline Roofing':'Your '+kit.trade+' Company'";
+assert.ok(currentWorker.includes(currentName));
+const priorWorker=currentWorker.replace(currentName,"name:'Your '+kit.trade+' Company'");
+const priorHeader=fs.readFileSync(checks+'/round8k-before/src/site-polish.js','utf8');
+// Diagnostic-only virtual inputs: no source or built artifact is written.
+const bundle=await build({entryPoints:[root+'/src/worker.js'],bundle:true,format:'esm',platform:'browser',target:'es2022',write:false,loader:{'.html':'text','.pdf':'binary'},external:['cloudflare:workers'],plugins:[{name:'diagnose-prior-preview',setup(api){api.onLoad({filter:/[\\/]src[\\/]worker\.js$/},()=>({contents:priorWorker,loader:'js',resolveDir:root+'/src'}));api.onLoad({filter:/[\\/]src[\\/]site-polish\.js$/},()=>({contents:priorHeader,loader:'js',resolveDir:root+'/src'}));}}]});
+const prior=(await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'))).default;
+const response=await prior.fetch(new Request('https://test.local/design-preview/roofing/immersive',{headers:{'oai-authenticated-user-id':admin.id,'oai-authenticated-user-email':admin.email}}),env),html=await response.text();
+const normalized=normalizePart2HTML(beforePart1(html),true),expected=fs.readFileSync(checks+'/round8m-immersive-expected.txt','utf8'),sha=x=>createHash('sha256').update(x).digest('hex');
+fs.writeFileSync(checks+'/round8m-virtual-prior-response.txt',normalized);
+const proof={status:response.status,virtualOverrides:['Revert only Roofing preview name in current worker to Your Roofing Company','Use byte-exact round8k site-polish.js snapshot for preview navigation'],sourceFilesModified:false,builtArtifactsModified:false,restoredResponseMatchesBaseline:normalized===expected,expectedNormalizedSha256:sha(expected),restoredNormalizedSha256:sha(normalized),cause:'After 8k, preview-route work changed the Roofing sample name and sample-site navigation; the rebuilt worker used those changes in 8l. The approved one-file source-lock lookup did not cause this response change.'};
+fs.writeFileSync(checks+'/round8m-cause-proof.json',JSON.stringify(proof,null,2));console.log(JSON.stringify(proof,null,2));

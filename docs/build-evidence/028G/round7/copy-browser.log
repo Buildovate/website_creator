@@ -1,0 +1,10 @@
+PASS desktop tour explains progress
+PASS all nine desktop quest headings remain readable
+PASS form helper distinguishes Confirm, Save and publish
+PASS suggestions and Undo preserve form values and saved data
+PASS phone board keeps readable headings with Game as the only view
+PASS phone form has clear helper text and the original Save action
+PASS keyboard and reduced motion preserve readable phone suggestions
+PASS unpublished phone preview stays honest
+PASS copy changes do not change data or XP or call providers
+9/9 passed; 8 screenshots

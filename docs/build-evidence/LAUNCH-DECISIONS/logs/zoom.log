@@ -1,0 +1,2 @@
+QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.
+PASS Zoom: explicit disconnected state, automatic creation, saved participant link only, repeat-save deduplication, reschedule update, uncertain-request duplicate prevention. No real Zoom API calls made.

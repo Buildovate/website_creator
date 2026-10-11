@@ -1,0 +1,184 @@
+{
+  "head": "cd31c4db0cbb51625ee36458f17e99a052bc4929",
+  "records": [
+    {
+      "path": "src/expenses-history.json",
+      "beforeSha256": "a9fd0d198f459be1e2c1e6d469971518cb1a0060c873b0c23752f9dc2118317c",
+      "currentSha256": "a9fd0d198f459be1e2c1e6d469971518cb1a0060c873b0c23752f9dc2118317c",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [],
+      "existingApprovedLookup": false
+    },
+    {
+      "path": "src/expenses.js",
+      "beforeSha256": "04fd41f875e8219aba22b71d77649167a9c629af3c22aef0bdf895e224324c59",
+      "currentSha256": "a1aa585f5682b9825ba75d8c8d655ac398ae0e6d84f8f2bf8906dac8089f1890",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [],
+      "existingApprovedLookup": false
+    },
+    {
+      "path": "src/expenses-math.js",
+      "beforeSha256": "0dcc809c84e39d22c58a649163351df50456864b61e8b84cf7c9f5293691c74c",
+      "currentSha256": "0dcc809c84e39d22c58a649163351df50456864b61e8b84cf7c9f5293691c74c",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [],
+      "existingApprovedLookup": false
+    },
+    {
+      "path": "src/client/site/ambient-video.js",
+      "beforeSha256": "b0be5277536422b17448c196564d407ceac9c5d05a1c611457bf5212416a42b7",
+      "currentSha256": "b0be5277536422b17448c196564d407ceac9c5d05a1c611457bf5212416a42b7",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [],
+      "existingApprovedLookup": false
+    },
+    {
+      "path": "src/planning-video-sources.js",
+      "beforeSha256": "7f32de39a30ebb9874a1f80339ea92a0cb7885a02ee25e1029d09a3e7ce5433d",
+      "currentSha256": "7f32de39a30ebb9874a1f80339ea92a0cb7885a02ee25e1029d09a3e7ce5433d",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [],
+      "existingApprovedLookup": false
+    },
+    {
+      "path": "src/planning-ambient.js",
+      "beforeSha256": "4a77e08f32bf95fa850928f5fc63d9184149d97731c5c5082e4053c6d67f971f",
+      "currentSha256": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "unchanged": false,
+      "posterOnly": true,
+      "posterAdditions": [
+        " poster=\"'+e(film.poster)+'\""
+      ],
+      "existingApprovedLookup": true,
+      "existingSnapshotExact": true,
+      "existingPinExact": true,
+      "diff": "checks/round8p-source-lock-planning-ambient.js.txt"
+    },
+    {
+      "path": "src/planning-scroll.js",
+      "beforeSha256": "9ad3048360ff833034f1d392fd054eea94df50c9c46ec494f9f5b2be0084ae80",
+      "currentSha256": "9ad3048360ff833034f1d392fd054eea94df50c9c46ec494f9f5b2be0084ae80",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [],
+      "existingApprovedLookup": false
+    },
+    {
+      "path": "src/promotions-scroll.js",
+      "beforeSha256": "2c237323b6573e549a1630b479e252f8b888cc9358b9cab21c3ffa2bf020bfc1",
+      "currentSha256": "9b460b8d8c348287addf094fc297448e5698b87a8257dd77d2dd5d96dceea43e",
+      "unchanged": false,
+      "posterOnly": true,
+      "posterAdditions": [
+        " poster=\"'+e(film.poster)+'\""
+      ],
+      "existingApprovedLookup": false,
+      "diff": "checks/round8p-source-lock-promotions-scroll.js.txt",
+      "snapshot": "docs/build-evidence/028F/source-locks/promotions-scroll.js",
+      "snapshotByteExact": true,
+      "pin": "9b460b8d8c348287addf094fc297448e5698b87a8257dd77d2dd5d96dceea43e"
+    },
+    {
+      "path": "src/promotions-ambient.js",
+      "beforeSha256": "e84158d5722b6f677d8753c17ea76ef916ee93294031716b40efbac0b48d8870",
+      "currentSha256": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4",
+      "unchanged": false,
+      "posterOnly": true,
+      "posterAdditions": [
+        " poster=\"'+e(film.poster)+'\""
+      ],
+      "existingApprovedLookup": false,
+      "diff": "checks/round8p-source-lock-promotions-ambient.js.txt",
+      "snapshot": "docs/build-evidence/028F/source-locks/promotions-ambient.js",
+      "snapshotByteExact": true,
+      "pin": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4"
+    },
+    {
+      "path": "src/hero-timelapse.js",
+      "beforeSha256": "8e5fc9d3cc8a47cfd674304d5016fce71e68e6f273e4f8355131e3c822a44dc7",
+      "currentSha256": "e6ad0ed9b0beceb530135abd20f42501ebc57c562f0837a1a0e41f4c8bd50b5c",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [
+        " poster=\"${e(film.openingPoster)}\""
+      ],
+      "existingApprovedLookup": false
+    },
+    {
+      "path": "src/scroll-config.js",
+      "beforeSha256": "5aa7eb34a9ff185f3ca79319c8eadef6ffc840e7b3ff68e883ee936faf46edf1",
+      "currentSha256": "0429ad83a1e27de899208dfa9d4cbc98e6d753eec7b93fafaa69caa9972fe19c",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [],
+      "existingApprovedLookup": false
+    },
+    {
+      "path": "public/planning-films.json",
+      "beforeSha256": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "currentSha256": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [],
+      "existingApprovedLookup": false
+    },
+    {
+      "path": "public/service-media.json",
+      "beforeSha256": "5b0ba4c6606e2313a4451884aab304939dadc6d0e41102dd7c0375bb52f4fd92",
+      "currentSha256": "5b0ba4c6606e2313a4451884aab304939dadc6d0e41102dd7c0375bb52f4fd92",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [],
+      "existingApprovedLookup": false
+    },
+    {
+      "path": "public/service-art.json",
+      "beforeSha256": "6a56b3c2662a244c22416e68f8fc6d2d82da46c2869a7cefafc462b087ec19b5",
+      "currentSha256": "6a56b3c2662a244c22416e68f8fc6d2d82da46c2869a7cefafc462b087ec19b5",
+      "unchanged": true,
+      "posterOnly": false,
+      "posterAdditions": [],
+      "existingApprovedLookup": false
+    }
+  ],
+  "nonPosterDiffs": [],
+  "added": [
+    {
+      "path": "src/promotions-scroll.js",
+      "beforeSha256": "2c237323b6573e549a1630b479e252f8b888cc9358b9cab21c3ffa2bf020bfc1",
+      "currentSha256": "9b460b8d8c348287addf094fc297448e5698b87a8257dd77d2dd5d96dceea43e",
+      "unchanged": false,
+      "posterOnly": true,
+      "posterAdditions": [
+        " poster=\"'+e(film.poster)+'\""
+      ],
+      "existingApprovedLookup": false,
+      "diff": "checks/round8p-source-lock-promotions-scroll.js.txt",
+      "snapshot": "docs/build-evidence/028F/source-locks/promotions-scroll.js",
+      "snapshotByteExact": true,
+      "pin": "9b460b8d8c348287addf094fc297448e5698b87a8257dd77d2dd5d96dceea43e"
+    },
+    {
+      "path": "src/promotions-ambient.js",
+      "beforeSha256": "e84158d5722b6f677d8753c17ea76ef916ee93294031716b40efbac0b48d8870",
+      "currentSha256": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4",
+      "unchanged": false,
+      "posterOnly": true,
+      "posterAdditions": [
+        " poster=\"'+e(film.poster)+'\""
+      ],
+      "existingApprovedLookup": false,
+      "diff": "checks/round8p-source-lock-promotions-ambient.js.txt",
+      "snapshot": "docs/build-evidence/028F/source-locks/promotions-ambient.js",
+      "snapshotByteExact": true,
+      "pin": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4"
+    }
+  ],
+  "passed": true
+}

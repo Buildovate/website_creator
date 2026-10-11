@@ -1,0 +1,26 @@
+[
+  {
+    "style": "bold-industrial",
+    "viewport": "390x844",
+    "realTouchEvents": true,
+    "verticalLensScrollDelta": 95,
+    "toggleTaps": [
+      "Before storm",
+      "After storm",
+      "After repair"
+    ],
+    "passed": true
+  },
+  {
+    "style": "clean-modern",
+    "viewport": "390x844",
+    "realTouchEvents": true,
+    "verticalLensScrollDelta": 95,
+    "toggleTaps": [
+      "Before storm",
+      "After storm",
+      "After repair"
+    ],
+    "passed": true
+  }
+]

@@ -1,0 +1,26 @@
+# Website Design — BUILD mode
+
+The user switched this project to BUILD mode on 2026-09-24. This instruction supersedes the earlier requirement to reread all packs/Pack 0 each session and the earlier blanket no-commit default for completed tickets.
+
+1. Start with `BUILD-BACKLOG.md`: execute **one numbered ticket per session**. Read only that ticket and its referenced pack section(s), plus necessary source files and owning module guidance. The five source packs are the blueprint; do not reread or resummarize them in full.
+2. Use `BUILD-STATUS.md` as the implementation ledger. Code and executed evidence win over old specifications/roadmaps. Never mark a ticket Done until it runs and the user is shown a screenshot or test output. Stub completion is not live integration completion.
+3. Check that ticket’s dependency IDs in `NEEDS-KEYS.md`. Missing keys/access require a clearly labeled Not connected/Pending/Manual export stub and an open live ticket. Never invent successful integrations, offers, sends, payments, metrics, assets or credentials. Never print secrets or ask for them in chat.
+4. After acceptance, update the ticket state and `BUILD-STATUS.md`, then **commit that ticket’s changes**. The user authorizes these future ticket commits. Preserve unrelated pre-existing dirty work; review/stage only the ticket delta. No automatic push, merge, deployment, production or separate Contractor CRM change is authorized.
+5. Stop after the ticket and tell the user the evidence, commit and **next ticket number**. If a ticket exceeds one day, split before coding; if blocked, state the blocker and next unblocked ticket without starting another in this session.
+6. Implement only in `C:/Users/joe/website_creator`. Never edit `Buildovate/buildovate` (`crm-backend`, `crm-frontend`, CRM backoffice) or push/deploy staging from these tickets. Forms → CRM Leads and CRM jobsite photos → Project Map use #156–#158 adapters against a documented sandbox API. If CRM code itself must change, stop and tell Joe: separate branch/PR for Louie to merge.
+7. SendGrid only with per-contractor subusers (K17); no SES, no Resend delivery, no cold email. Consent and suppression checks precede every send.
+8. Finish Roofing #001–#028 before #029+ trade rollouts. Missing Higgsfield K02 means tested, clearly labeled stubs for #024–#027 and live film gates recorded; still finish #028. Do not block the selling site on films.
+
+Read `CLAUDE.md` for repository conventions and only the owning `docs/modules/*.md` needed by the ticket. For design/copy tickets, apply the relevant guidance in `docs/product/CONVERSION_DESIGN_PRINCIPLES.md`. User instructions override conflicting local guidance. This repo is Website Design, not the separate Contractor CRM. Source files remain under `docs/product/00-CONSTITUTION.md` through `04-GROWTH-ADS-EMAIL-AB-AF.md`; section pointers are in each ticket.
+
+Standing design direction: Roofing first; preserve the 14 trade kits (including Windows/Doors and Solar), purposeful imagery, existing good Higgsfield videos/scroll heroes, sticky accessible navigation, contractor-selected services, uploaded logos, genuine review sources and approved Project Map. Use clear homeowner-intent copy and truthful CTAs; no fake evidence or urgency. Financing is calculator-first with “Get Financing Options →”; lender identity belongs in the subsequent choice/handoff, not a public marketing showcase. Confirmed application links are not live offers. Joe has not connected financing providers yet.
+
+Homeowner pages never expose rep/CRM sales language. Paid generation, external messages, social posts and ad spend require their specified approval and actual capabilities. AI presenters must not fabricate customer endorsements. Pricing follows the specifically referenced catalog rows, including Pack 4 corrections; preserve existing facts and permissions during regeneration.
+
+Read the authoritative current/next ticket state in BUILD-BACKLOG and BUILD-STATUS. The initial Step 1 audit did not execute a feature ticket; keep those ledgers current after each ticket.
+
+Premium trade-page standard: all new trade detail pages must reuse [docs/TRADE_DESIGN_SYSTEM.md](docs/TRADE_DESIGN_SYSTEM.md), public/trade-page.css and public/trade-page.js; use trade-specific generated media and truthful contractor data. #004B establishes this standard without starting later trade rollouts.
+
+## Platform look for future screens
+
+All new contractor and staff platform screens—including Blueprint/town, price book, domain wizard and setup rail, questionnaire v2, and staff views—must use the `bv-` tokens and components in `src/client/styles/platform/`. Match [the approved platform references](docs/design-reference/platform-2026-09-27/PLATFORM-DESIGN-GUIDE.md), with the guide taking precedence over prototypes. See [PLATFORM-LOOK.md](docs/product/PLATFORM-LOOK.md) for component examples. Load `/platform.css` only through a platform shell with `body.bv-platform`; never restyle public trade pages through `/app.css`. Keep one visual primary action, a 720px phone breakpoint, AA text and 3:1 control boundaries, local fonts, keyboard focus, reduced motion, and honest data. The future dark canvas uses `bv-blueprint-*` names; the existing trade presentation template named `blueprint` is unrelated and protected.

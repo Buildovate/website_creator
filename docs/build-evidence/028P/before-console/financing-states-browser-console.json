@@ -1,0 +1,407 @@
+{
+  "label": "financing-states-browser",
+  "records": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "location": {
+        "url": "http://127.0.0.1:8153/api/tenants/c84f1284-c374-4790-b256-003ef2ce8dc9",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8153/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "state": {
+        "section": "questionnaire",
+        "view": "websites"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+      "location": {
+        "url": "http://127.0.0.1:8153/api/session",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8153/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "state": {
+        "section": "questionnaire",
+        "view": "websites"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "location": {
+        "url": "http://127.0.0.1:8153/api/tenants/c84f1284-c374-4790-b256-003ef2ce8dc9",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8153/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": {
+        "section": "questionnaire",
+        "view": "websites"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+      "location": {
+        "url": "http://127.0.0.1:8153/api/session",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8153/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": {
+        "section": "questionnaire",
+        "view": "websites"
+      }
+    }
+  ],
+  "states": [
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-admin-not-connected-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-contractor-not-connected-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-partial-link-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-saving-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-saved-link-only-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-error-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-offline-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-none-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-supplied-program-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-other-lender-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-connected-link-and-terms-fixture-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/preview-not-connected-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/s/finance-not-connected/financing?preview=1"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/preview-supplied-terms-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/financing?preview=1"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-not-connected-service-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/s/finance-not-connected/services/roof-repair"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-supplied-terms-empty-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/financing"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-supplied-payment-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/financing"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-application-handoff-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/financing"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-service-terms-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/services/roof-repair"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/preview-service-terms-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/services/roof-repair?preview=1"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-no-js-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/financing"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-admin-not-connected-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-contractor-not-connected-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-partial-link-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-saving-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-saved-link-only-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-error-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-offline-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-none-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-supplied-program-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-other-lender-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/settings-connected-link-and-terms-fixture-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/preview-not-connected-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/s/finance-not-connected/financing?preview=1"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/preview-supplied-terms-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/financing?preview=1"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-not-connected-service-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/s/finance-not-connected/services/roof-repair"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-supplied-terms-empty-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/financing"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-supplied-payment-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/financing"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-application-handoff-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/financing"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-service-terms-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/services/roof-repair"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/preview-service-terms-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/services/roof-repair?preview=1"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/017/published-no-js-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8153/s/finance-supplied/financing"
+    }
+  ]
+}

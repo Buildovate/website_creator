@@ -1,0 +1,24 @@
+Review approval test prerequisite: e1aad805-0669-42d4-9080-67e3f7f87eaa website
+Review approval test prerequisite: e1aad805-0669-42d4-9080-67e3f7f87eaa project:63b834f1-9b56-4f94-86f0-b61654839c78
+Review approval test prerequisite: e1aad805-0669-42d4-9080-67e3f7f87eaa project:d6b7ea29-2158-4893-9b6f-6ca0b1edd74f
+✔ network contract: bounded HTTPS fields, supported networks, stable order and explicit clear (2.2145ms)
+✔ publication and render-time evidence gates: approval, freshness, counts and license support (0.8687ms)
+Review approval test prerequisite: e1aad805-0669-42d4-9080-67e3f7f87eaa website
+Review approval test prerequisite: e1aad805-0669-42d4-9080-67e3f7f87eaa website
+✔ actual API: draft/snapshot separation, old-client preservation, validation, publish recheck and permissions (445.8204ms)
+✔ #009 strip renders only approved selections with source links, no assumed marks or ratings (4.3866ms)
+Review approval test prerequisite: e1aad805-0669-42d4-9080-67e3f7f87eaa website
+Review approval test prerequisite: e1aad805-0669-42d4-9080-67e3f7f87eaa website
+✔ #009 public/preview rendering preserves selected network snapshot and source privacy (339.6988ms)
+Review approval test prerequisite: e1aad805-0669-42d4-9080-67e3f7f87eaa website
+Review approval test prerequisite: e1aad805-0669-42d4-9080-67e3f7f87eaa website
+✔ #009 selected placement hooks work on both Roofing homepages and the service page (307.3192ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1105.8726
+

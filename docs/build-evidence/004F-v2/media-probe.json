@@ -1,0 +1,112 @@
+{
+  "inputs": {
+    "16x9": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "duration": "7.541992",
+          "nb_read_frames": "181"
+        }
+      ],
+      "format": {
+        "duration": "7.542000",
+        "size": "19637639"
+      }
+    },
+    "9x16": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1080,
+          "height": 1920,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "duration": "5.041992",
+          "nb_read_frames": "121"
+        }
+      ],
+      "format": {
+        "duration": "5.042000",
+        "size": "10947993"
+      }
+    }
+  },
+  "outputs": {
+    "roofing-drone-dive-16x9.mp4": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "duration": "7.541992",
+          "nb_read_frames": "181"
+        }
+      ],
+      "format": {
+        "duration": "7.542000",
+        "size": "3043291"
+      }
+    },
+    "roofing-drone-dive-16x9.webm": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "vp9",
+          "width": 1440,
+          "height": 810,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_read_frames": "181"
+        }
+      ],
+      "format": {
+        "duration": "7.542000",
+        "size": "4225862"
+      }
+    },
+    "roofing-drone-dive-9x16.mp4": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1080,
+          "height": 1920,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "duration": "5.041992",
+          "nb_read_frames": "121"
+        }
+      ],
+      "format": {
+        "duration": "5.042000",
+        "size": "1358304"
+      }
+    },
+    "roofing-drone-dive-9x16.webm": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "vp9",
+          "width": 720,
+          "height": 1280,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "nb_read_frames": "121"
+        }
+      ],
+      "format": {
+        "duration": "5.042000",
+        "size": "1072050"
+      }
+    }
+  }
+}

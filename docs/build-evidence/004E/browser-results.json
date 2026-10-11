@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "viewport": {
+    "desktop": [
+      1440,
+      1000
+    ],
+    "mobile": [
+      390,
+      844
+    ]
+  },
+  "checks": [
+    "forward/reverse camera",
+    "4 roof anchors and anatomy link",
+    "X-ray toggle",
+    "age/damage meter",
+    "pause/resume",
+    "live reduced-motion switch",
+    "mobile short loop",
+    "desktop/mobile overflow",
+    "keyboard disclosure",
+    "missing video fallback",
+    "labeled sample review pause",
+    "no page errors",
+    "configured video seeks forward and backward",
+    "reduced motion unloads configured video",
+    "configured image sequence changes frame"
+  ],
+  "recordedFrames": 706
+}

@@ -1,0 +1,21 @@
+{
+  "results": [
+    {
+      "name": "legacy domain verify query with synthetic DNS fixture",
+      "pass": true,
+      "mockDnsCalls": 1,
+      "actualProviderCalls": 0
+    },
+    {
+      "name": "chat SMS daily limit SQL prevents sending",
+      "pass": true,
+      "notification": "daily_limit",
+      "smsCalls": 0,
+      "endpointStatus": 200,
+      "dailyLimitPreventedSend": true
+    }
+  ],
+  "mockDnsCalls": 1,
+  "smsCalls": 0,
+  "providerCalls": 0
+}

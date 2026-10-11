@@ -1,0 +1,6 @@
+PASS #016 promotion evidence: 64 checks
+Request failed /api/public/quiz-rate-limit/promotion-unlock Error: QA simulated completion write failure
+    at Object.prepare (file:///C:/Users/joe/website_creator/tests/promotion-unlocks.mjs:27:209)
+    at completePromotionQuiz (file:///C:/Users/joe/website_creator/dist/server/index.js:17779:14)
+    at async Object.fetch (file:///C:/Users/joe/website_creator/dist/server/index.js:20170:22)
+    at async file:///C:/Users/joe/website_creator/tests/promotion-unlocks.mjs:27:296

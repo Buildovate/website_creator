@@ -1,0 +1,24 @@
+{
+  "passed": 16,
+  "failed": 0,
+  "checks": [
+    "100 XP derives from real scoped records",
+    "Own action enabled and 44px desktop",
+    "Approved prices desktop",
+    "Stop hosting enabled and 44px desktop",
+    "Real 100 XP desktop",
+    "Editor lock and keyboard payment action desktop",
+    "No horizontal scroll desktop",
+    "Own action enabled and 44px phone",
+    "Approved prices phone",
+    "Stop hosting enabled and 44px phone",
+    "Real 100 XP phone",
+    "Editor lock and keyboard payment action phone",
+    "No horizontal scroll phone",
+    "Readable paused page desktop",
+    "Readable paused page phone",
+    "Full-opacity AA text and rendered background pixels in all twelve captures"
+  ],
+  "providerCalls": 0,
+  "syntheticFixture": true
+}

@@ -1,0 +1,66 @@
+
+> node build.mjs
+PASS template asset integrity: 271 referenced files, 14 trade kits.
+
+EXIT 0
+
+> node node_modules/typescript/bin/tsc -p tsconfig.auth.json
+
+EXIT 0
+
+> node tests/premium-service.mjs
+PASS premium service: generated hero, four image cards/steps, editable escaped headline, draft/publish isolation, sourced/confirmed/empty trust fields, no invented reviews, paired-photo privacy and brand contrast.
+PASS premium interactions: scroll reveal enhancement, visible reduced-motion fallback, comparison input and accessible value.
+
+EXIT 0
+
+> node tests/service-playbook.mjs
+PASS #004C: authenticated draft-only samples, publish/query isolation, no hidden promo codes, sample unlock auth/origin/answer, configured finance terms/disclosure and math, no lender exits, service/date promotion filters, real unlock validation and empty-review suppression.
+PASS #004C browser transport: sample quiz preserves session CSRF and feeds the same preview inquiry.
+
+EXIT 0
+
+> node tests/financing-comparison.mjs
+PASS #004D payment math: amortization, zero APR, cents rounding, down-payment totals, computed badges/ties and invalid input.
+PASS #004D configuration: every confirmed program, legacy migration/explicit clear, missing gates hide, invalid terms/ranges, required card details, deferred-interest labels and four isolated samples.
+PASS #004D browser/API: live slider/input/down changes, reduced motion, invalid-input clearing, selected-plan prefill, updated estimates, same inquiry persistence, reset and preview-send suppression.
+
+EXIT 0
+
+> node tests/website-pages.mjs
+✔ typed records round-trip; IDs/slugs survive edits and reordering (3.458ms)
+✔ malformed records, duplicate URLs, broken city links and limits are rejected (2.2699ms)
+✔ media uses bounded photo IDs and alt text, never arbitrary URLs (0.6124ms)
+▶ real tenant API: draft/published isolation, ownership and permissions
+  ✔ editor saves all four page types without changing public snapshot (3.1314ms)
+  ✔ render validates page data and has no save/publish side effects (13.294ms)
+  ✔ foreign/missing media are rejected at save/create without side effects (11.8483ms)
+  ✔ malformed contracts return HTTP 400; access/origin/concurrency stay enforced (6.2944ms)
+  ✔ old editors omit the field safely; owner publishes a frozen snapshot (13.3079ms)
+  ✔ publish rechecks ownership even if a stored draft is stale or forged (5.3572ms)
+  ✔ explicit deletion remains draft until publish; backups retain page records (11.0838ms)
+✔ real tenant API: draft/published isolation, ownership and permissions (77.3942ms)
+✔ #004 service detail: published snapshot, preview membership, media and inquiry (33.3481ms)
+✔ #004 shared browser handler preserves service context and suppresses preview sends (64.3958ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 187.2239
+
+EXIT 0
+
+> node tests/conversion-references.mjs
+PASS conversion references: 3 journeys × 3 layouts, draft isolation, claim approval/escaping, inquiry persistence, preview auth, anchor integrity, one H1, effects, and legacy CTA corrections.
+PASS service checklist: custom names, descriptions, deduplication, selection limits, full service rendering and draft isolation.
+PASS Roofing #002: repair/replacement copy matches selected services, direct call/inquiry paths, both inquiry intents persisted, one preserved hero film, repair-only/static fallback and published isolation. Local fixture only.
+
+EXIT 0
+
+> node tests/scroll-story.mjs
+PASS: 12 trades × 3 layouts; hero/direct-form link; original craft films; detail scene; persisted captions/toggle; legacy chapter mode; proof gating; website media restoration scope.
+
+EXIT 0

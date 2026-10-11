@@ -1,0 +1,82 @@
+[
+  {
+    "file": "src/core.js",
+    "sha256": "bb0f5531a769a36a0a7b1a0856f154323d0712edc4eb89155b38ef6db64b734c",
+    "before": "88076794c88e22844e77ae094e1296069a6b4afbcd24e9d5f44cab5d85bf7a30"
+  },
+  {
+    "file": "src/blueprint/api.js",
+    "sha256": "37d89d4abf2d214ff4957ac8c78d1e39b997af3b9bd6140aefff50b42fffe2a1",
+    "before": "36f8b40db52d1bb97dfd103cb1bcfe1ef055a27c015b5b2a216089a5d3f62b09"
+  },
+  {
+    "file": "src/blueprint/sources.js",
+    "sha256": "9d0a10061b8f1e644a8a9727d62bc996c4dccca819204c215ff85748b0d7d03b",
+    "before": "b843657f03dc407639814119bcb75b3196a206d261abb8f75c695029c92d7515"
+  },
+  {
+    "file": "src/blueprint/autofill/api.js",
+    "sha256": "b9b0f6999de2f5564912baa8e8335202fff8579847e79c258e2c8759a319db83",
+    "before": "45905d848d6f88a2c737e641afd83f8e7751b2e4a49045140d933e0426f4de59"
+  },
+  {
+    "file": "src/blueprint/experience.js",
+    "sha256": "ddfec215be751a2a40031876b7975aa54d0d5e2c92d695ab1bbfce7a46226364",
+    "before": "060efba74d3a27910d622600509da316757c2fbdf53012daa8ca46f0dbb086f5"
+  },
+  {
+    "file": "tests/automatic-qa-brand-recognition.mjs",
+    "sha256": "34d071faf907113d8c22a18e2def40c721a1b9000720a0c5c638b689f7383046",
+    "before": "0dcaab3cb3690904da52dc145bf39bab7b44c84ef394152785527fd5372d8498"
+  },
+  {
+    "file": "tests/media-api.mjs",
+    "sha256": "607c20dff5024d80e9496a6d3d385c5985c284e9dc83cfda6896099a57743e73",
+    "before": "fad70cc955be0b3980073132549a2bc21d6aa3f0a330ae99b754fad3326c9367"
+  },
+  {
+    "file": "tests/uniqueness-api.mjs",
+    "sha256": "7595260b2a55d7929124f8910043df0c3226f893ba64b5916c81a9c68d9ae48f",
+    "before": "fa2d6d02dd1367ed5728d09a70c7bb2a9a017d0a58d8e5c93cd6b39bef92e51b"
+  },
+  {
+    "file": "tests/readiness-batch-b.mjs",
+    "sha256": "c62964d3372dbe2722d07a6e3dc719d88ac109558ed95d1f4c0b602c32607eca",
+    "before": null
+  },
+  {
+    "file": "tests/readiness-paid-publish.mjs",
+    "sha256": "cf7d21a846e35e0d694355321297a30dc461c4ff096e2fc41bc5150770345f47",
+    "before": null
+  },
+  {
+    "file": "src/api.js",
+    "sha256": "5ed51097066b606a0a2ce0bbc3a8649704fc50015811a72f0b8a99dda0bde8b2",
+    "before": "41dd83588ca9328b5b57416c9e84e287a3da1150ed81eb3fea69f5c55f84e62a"
+  },
+  {
+    "file": "tests/readiness-chat-sql.mjs",
+    "sha256": "66ba844bb279c89b558fb15634707952f0ec5e459a7d29149013a350c12fa108",
+    "before": null
+  },
+  {
+    "file": "tests/generation.mjs",
+    "sha256": "2f7fca9d920450f15d555db45f0ec223856cdd14d080cae5e793f718d7981313",
+    "before": "c41756f1a6aebb398f7d95d926e10bd3d5e9a19e395a983d0f9f946dff2bbd4c"
+  },
+  {
+    "file": "src/blueprint/review-evidence.js",
+    "sha256": "ea3376b0235fc212ff5558b763020ba4b69780499e6e47548ade1cfa78639a5c",
+    "before": null
+  },
+  {
+    "file": "src/reviews.js",
+    "sha256": "55999def670d69397b5854e1df5af5602d065d5e2027cc2729b78eb52275384d",
+    "before": "a9459bc88947eb1d40f1b8ea44394210bc0e5d9223c98e45d90574100e5322c1"
+  },
+  {
+    "file": "tests/readiness-review-evidence.mjs",
+    "sha256": "7acfc07c5c3dcfcbc5361223da4e82b58ea5b5bd0d331b69314ac48800a77d59",
+    "before": null
+  }
+]

@@ -1,0 +1,848 @@
+[
+  {
+    "label": "roofing-cta",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-cta.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 146122
+  },
+  {
+    "label": "roofing-cities",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-cities.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 223174
+  },
+  {
+    "label": "reference-proof",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/reference-proof.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 230836
+  },
+  {
+    "label": "roofing-story",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-story.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 145426
+  },
+  {
+    "label": "service-motion",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/service-motion.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 198875
+  },
+  {
+    "label": "financing-comparison",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/financing-comparison.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 185620
+  },
+  {
+    "label": "ebook",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/ebook.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 342489
+  },
+  {
+    "label": "service-pages-all-trades",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/service-pages-all-trades.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 570511
+  },
+  {
+    "label": "footer-policy",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/footer-policy.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 391855
+  },
+  {
+    "label": "financing-states",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/financing-states.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 801814
+  },
+  {
+    "label": "typecheck",
+    "kind": "typecheck",
+    "command": "node C:/Users/joe/website_creator/node_modules/typescript/bin/tsc -p C:/Users/joe/website_creator/tsconfig.auth.json",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1233
+  },
+  {
+    "label": "auth-session",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/auth-session.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 176712
+  },
+  {
+    "label": "aws-adapter",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/aws-adapter.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 5265
+  },
+  {
+    "label": "builder",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/builder.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1151
+  },
+  {
+    "label": "callback-restore",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/callback-restore.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 931
+  },
+  {
+    "label": "cinematic-films",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/cinematic-films.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 907
+  },
+  {
+    "label": "client-modules",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/client-modules.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 814
+  },
+  {
+    "label": "contact-linkage",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/contact-linkage.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 978
+  },
+  {
+    "label": "contacts-restore",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/contacts-restore.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1023
+  },
+  {
+    "label": "control",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/control.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 988
+  },
+  {
+    "label": "conversion-references",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/conversion-references.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 307490
+  },
+  {
+    "label": "core-site-pages",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/core-site-pages.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1508
+  },
+  {
+    "label": "crm-next",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/crm-next.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 910
+  },
+  {
+    "label": "constitution",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/constitution.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1468946
+  },
+  {
+    "label": "design-kits",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/design-kits.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 2878
+  },
+  {
+    "label": "engagement-providers",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/engagement-providers.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1008
+  },
+  {
+    "label": "engagement",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/engagement.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1582
+  },
+  {
+    "label": "expense-metering",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/expense-metering.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1128
+  },
+  {
+    "label": "expense-polish",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/expense-polish.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 989
+  },
+  {
+    "label": "expenses",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/expenses.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1170
+  },
+  {
+    "label": "crm",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/crm.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 338019
+  },
+  {
+    "label": "legacy-scroll-video",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/legacy-scroll-video.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 595
+  },
+  {
+    "label": "legal-policy",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/legal-policy.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 177933
+  },
+  {
+    "label": "media-ranges",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/media-ranges.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 785
+  },
+  {
+    "label": "motion-v2",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/motion-v2.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 912
+  },
+  {
+    "label": "hero-editor",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/hero-editor.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 322114
+  },
+  {
+    "label": "owner-photo",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/owner-photo.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1264
+  },
+  {
+    "label": "planning-ambient",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/planning-ambient.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 107987
+  },
+  {
+    "label": "planning-motion",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/planning-motion.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 845
+  },
+  {
+    "label": "neighborhood",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/neighborhood.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 168627
+  },
+  {
+    "label": "planning-scroll",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/planning-scroll.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 109488
+  },
+  {
+    "label": "generation",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/generation.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1618755
+  },
+  {
+    "label": "presentation",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/presentation.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 979
+  },
+  {
+    "label": "platform",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/platform.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 348020
+  },
+  {
+    "label": "project-experience",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/project-experience.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 173117
+  },
+  {
+    "label": "review-lookup",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/review-lookup.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 827
+  },
+  {
+    "label": "sales-ops",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/sales-ops.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 189524
+  },
+  {
+    "label": "saved-designs",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/saved-designs.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1343
+  },
+  {
+    "label": "scroll-media",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/scroll-media.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 14903
+  },
+  {
+    "label": "promotion-unlocks",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/promotion-unlocks.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 324780
+  },
+  {
+    "label": "scroll-video-controller",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/scroll-video-controller.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 552
+  },
+  {
+    "label": "service-content",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/service-content.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 645
+  },
+  {
+    "label": "scroll-story",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/scroll-story.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 95700
+  },
+  {
+    "label": "showpiece-media",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/showpiece-media.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 581
+  },
+  {
+    "label": "showpiece-v4",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/showpiece-v4.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1006
+  },
+  {
+    "label": "template-name",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/template-name.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 555
+  },
+  {
+    "label": "trade-enablement",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trade-enablement.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 704
+  },
+  {
+    "label": "trade-revisions",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trade-revisions.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1146
+  },
+  {
+    "label": "trade-upgrade",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trade-upgrade.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 918
+  },
+  {
+    "label": "trade-visual-correctness",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trade-visual-correctness.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 10052
+  },
+  {
+    "label": "premium-service",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/premium-service.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 928413
+  },
+  {
+    "label": "service-playbook",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/service-playbook.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 416980
+  },
+  {
+    "label": "trades-financing",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trades-financing.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 544909
+  },
+  {
+    "label": "workspace-owner",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/workspace-owner.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 2516
+  },
+  {
+    "label": "workspace",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/workspace.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 388733
+  },
+  {
+    "label": "zoom",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/zoom.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1028
+  },
+  {
+    "label": "template-assets",
+    "kind": "assets",
+    "command": "node C:/Users/joe/website_creator/scripts/check-template-assets.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 688
+  },
+  {
+    "label": "platform-mobile",
+    "kind": "platform",
+    "command": "node C:/Users/joe/website_creator/tests/platform-mobile.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 304042
+  },
+  {
+    "label": "callback-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/docs/build-evidence/clips-phase2/callback-calendar-clock.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 13478
+  },
+  {
+    "label": "contact-linkage-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/contact-linkage-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 9770
+  },
+  {
+    "label": "contacts-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/contacts-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 8002
+  },
+  {
+    "label": "trust",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/trust.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 1089061
+  },
+  {
+    "label": "ebook-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/ebook-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 203455
+  },
+  {
+    "label": "expense-polish-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/expense-polish-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 201965
+  },
+  {
+    "label": "expenses-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/expenses-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 204479
+  },
+  {
+    "label": "financing-states-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/financing-states-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 234660
+  },
+  {
+    "label": "generation-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/generation-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 129712
+  },
+  {
+    "label": "planning-ambient-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/planning-ambient-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 132594
+  },
+  {
+    "label": "planning-scroll-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/planning-scroll-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 142844
+  },
+  {
+    "label": "platform-ui-cleanup-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/platform-ui-cleanup-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 11584
+  },
+  {
+    "label": "hero-editor-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/hero-editor-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 418897
+  },
+  {
+    "label": "roofing-cities-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-cities-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 167851
+  },
+  {
+    "label": "website-pages",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/website-pages.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 2142937
+  },
+  {
+    "label": "promotion-unlocks-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 489599
+  },
+  {
+    "label": "roofing-cta-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-cta-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 219983
+  },
+  {
+    "label": "trade-enablement-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/trade-enablement-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 59423
+  },
+  {
+    "label": "roofing-story-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-story-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 197452
+  },
+  {
+    "label": "trade-visual-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/trade-visual-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 57259
+  },
+  {
+    "label": "clips-phase2-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/clips-phase2-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 154478
+  },
+  {
+    "label": "clips-phase2",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/clips-phase2.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 251912
+  },
+  {
+    "label": "roofing-polish-part1",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 101040
+  },
+  {
+    "label": "roofing-polish-part2",
+    "kind": "regression",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part2.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 30950
+  },
+  {
+    "label": "service-motion-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/service-motion-browser.mjs",
+    "status": 0,
+    "outcome": "PASS",
+    "signal": null,
+    "ms": 497134
+  },
+  {
+    "label": "roofing-polish-part1-browser",
+    "kind": "browser",
+    "command": "node C:/Users/joe/website_creator/tests/roofing-polish-part1-browser.mjs",
+    "status": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 164804
+  }
+]

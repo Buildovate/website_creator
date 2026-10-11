@@ -1,0 +1,54 @@
+{
+  "images": [
+    {
+      "name": "billing-not-connected-1440.png",
+      "state": "billing-not-connected",
+      "width": 1440,
+      "path": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/screenshots/billing-not-connected-1440.png"
+    },
+    {
+      "name": "billing-not-connected-390.png",
+      "state": "billing-not-connected",
+      "width": 390,
+      "path": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/screenshots/billing-not-connected-390.png"
+    },
+    {
+      "name": "billing-portal-ready-1440.png",
+      "state": "billing-portal-ready",
+      "width": 1440,
+      "path": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/screenshots/billing-portal-ready-1440.png"
+    },
+    {
+      "name": "owner-download-paid-1440.png",
+      "state": "owner-download-paid",
+      "width": 1440,
+      "path": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/screenshots/owner-download-paid-1440.png"
+    },
+    {
+      "name": "billing-portal-ready-390.png",
+      "state": "billing-portal-ready",
+      "width": 390,
+      "path": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/screenshots/billing-portal-ready-390.png"
+    },
+    {
+      "name": "owner-download-paid-390.png",
+      "state": "owner-download-paid",
+      "width": 390,
+      "path": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/screenshots/owner-download-paid-390.png"
+    },
+    {
+      "name": "owner-download-refunded-1440.png",
+      "state": "owner-download-refunded",
+      "width": 1440,
+      "path": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/screenshots/owner-download-refunded-1440.png"
+    },
+    {
+      "name": "owner-download-refunded-390.png",
+      "state": "owner-download-refunded",
+      "width": 390,
+      "path": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/screenshots/owner-download-refunded-390.png"
+    }
+  ],
+  "fixture": "Fictional local PostgreSQL tenant; no actual purchase, refund, provider calls or outbound navigation.",
+  "providerCalls": 0
+}

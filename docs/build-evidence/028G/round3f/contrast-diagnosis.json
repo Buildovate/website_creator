@@ -1,0 +1,720 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "states": {
+    "fresh": {
+      "textCount": 131,
+      "failures": [
+        {
+          "text": "One clear step at a time.",
+          "element": "p",
+          "className": "",
+          "computedColor": "rgb(75, 89, 103)",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "pixelForeground": [
+            75,
+            89,
+            103
+          ],
+          "pixelBackground": [
+            11,
+            34,
+            64
+          ],
+          "computedInkOnPixelBackgroundRatio": 2.220056023167893,
+          "sampledRatio": 2.220056023167893,
+          "threshold": 4.5,
+          "ancestors": [
+            {
+              "selector": "p",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(11, 34, 64)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game-house-caption",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "section.bv-game-house",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(11, 34, 64)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game-center",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "main.bv-game-layout",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(245, 243, 238)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div#fixture",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "body.bv-platform",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(245, 243, 238)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "html",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            }
+          ]
+        }
+      ],
+      "caption": {
+        "text": "One clear step at a time.",
+        "element": "p",
+        "className": "",
+        "computedColor": "rgb(75, 89, 103)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "pixelForeground": [
+          75,
+          89,
+          103
+        ],
+        "pixelBackground": [
+          11,
+          34,
+          64
+        ],
+        "computedInkOnPixelBackgroundRatio": 2.220056023167893,
+        "sampledRatio": 2.220056023167893,
+        "threshold": 4.5,
+        "ancestors": [
+          {
+            "selector": "p",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(11, 34, 64)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game-house-caption",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "section.bv-game-house",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(11, 34, 64)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game-center",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "main.bv-game-layout",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(245, 243, 238)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div#fixture",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "body.bv-platform",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(245, 243, 238)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "html",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          }
+        ]
+      },
+      "captionRules": []
+    },
+    "midway": {
+      "textCount": 126,
+      "failures": [
+        {
+          "text": "One clear step at a time.",
+          "element": "p",
+          "className": "",
+          "computedColor": "rgb(75, 89, 103)",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "pixelForeground": [
+            75,
+            89,
+            103
+          ],
+          "pixelBackground": [
+            11,
+            34,
+            64
+          ],
+          "computedInkOnPixelBackgroundRatio": 2.220056023167893,
+          "sampledRatio": 2.220056023167893,
+          "threshold": 4.5,
+          "ancestors": [
+            {
+              "selector": "p",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(11, 34, 64)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game-house-caption",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "section.bv-game-house",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(11, 34, 64)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game-center",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "main.bv-game-layout",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(245, 243, 238)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div#fixture",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "body.bv-platform",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(245, 243, 238)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "html",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            }
+          ]
+        }
+      ],
+      "caption": {
+        "text": "One clear step at a time.",
+        "element": "p",
+        "className": "",
+        "computedColor": "rgb(75, 89, 103)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "pixelForeground": [
+          75,
+          89,
+          103
+        ],
+        "pixelBackground": [
+          11,
+          34,
+          64
+        ],
+        "computedInkOnPixelBackgroundRatio": 2.220056023167893,
+        "sampledRatio": 2.220056023167893,
+        "threshold": 4.5,
+        "ancestors": [
+          {
+            "selector": "p",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(11, 34, 64)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game-house-caption",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "section.bv-game-house",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(11, 34, 64)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game-center",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "main.bv-game-layout",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(245, 243, 238)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div#fixture",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "body.bv-platform",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(245, 243, 238)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "html",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          }
+        ]
+      },
+      "captionRules": []
+    },
+    "locked": {
+      "textCount": 127,
+      "failures": [
+        {
+          "text": "One clear step at a time.",
+          "element": "p",
+          "className": "",
+          "computedColor": "rgb(75, 89, 103)",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "pixelForeground": [
+            75,
+            89,
+            103
+          ],
+          "pixelBackground": [
+            11,
+            34,
+            64
+          ],
+          "computedInkOnPixelBackgroundRatio": 2.220056023167893,
+          "sampledRatio": 2.220056023167893,
+          "threshold": 4.5,
+          "ancestors": [
+            {
+              "selector": "p",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(11, 34, 64)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game-house-caption",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "section.bv-game-house",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(11, 34, 64)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game-center",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "main.bv-game-layout",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(245, 243, 238)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div#fixture",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "body.bv-platform",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(245, 243, 238)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "html",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            }
+          ]
+        }
+      ],
+      "caption": {
+        "text": "One clear step at a time.",
+        "element": "p",
+        "className": "",
+        "computedColor": "rgb(75, 89, 103)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "pixelForeground": [
+          75,
+          89,
+          103
+        ],
+        "pixelBackground": [
+          11,
+          34,
+          64
+        ],
+        "computedInkOnPixelBackgroundRatio": 2.220056023167893,
+        "sampledRatio": 2.220056023167893,
+        "threshold": 4.5,
+        "ancestors": [
+          {
+            "selector": "p",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(11, 34, 64)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game-house-caption",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "section.bv-game-house",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(11, 34, 64)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game-center",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "main.bv-game-layout",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(245, 243, 238)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div#fixture",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "body.bv-platform",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(245, 243, 238)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "html",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          }
+        ]
+      },
+      "captionRules": []
+    },
+    "done": {
+      "textCount": 127,
+      "failures": [
+        {
+          "text": "One clear step at a time.",
+          "element": "p",
+          "className": "",
+          "computedColor": "rgb(75, 89, 103)",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "pixelForeground": [
+            75,
+            89,
+            103
+          ],
+          "pixelBackground": [
+            11,
+            34,
+            64
+          ],
+          "computedInkOnPixelBackgroundRatio": 2.220056023167893,
+          "sampledRatio": 2.220056023167893,
+          "threshold": 4.5,
+          "ancestors": [
+            {
+              "selector": "p",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(11, 34, 64)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game-house-caption",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "section.bv-game-house",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(11, 34, 64)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game-center",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "main.bv-game-layout",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div.bv-game",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(245, 243, 238)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "div#fixture",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "body.bv-platform",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgb(245, 243, 238)",
+              "backgroundImage": "none"
+            },
+            {
+              "selector": "html",
+              "opacity": "1",
+              "filter": "none",
+              "background": "rgba(0, 0, 0, 0)",
+              "backgroundImage": "none"
+            }
+          ]
+        }
+      ],
+      "caption": {
+        "text": "One clear step at a time.",
+        "element": "p",
+        "className": "",
+        "computedColor": "rgb(75, 89, 103)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "pixelForeground": [
+          75,
+          89,
+          103
+        ],
+        "pixelBackground": [
+          11,
+          34,
+          64
+        ],
+        "computedInkOnPixelBackgroundRatio": 2.220056023167893,
+        "sampledRatio": 2.220056023167893,
+        "threshold": 4.5,
+        "ancestors": [
+          {
+            "selector": "p",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(11, 34, 64)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game-house-caption",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "section.bv-game-house",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(11, 34, 64)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game-center",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "main.bv-game-layout",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div.bv-game",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(245, 243, 238)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "div#fixture",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "body.bv-platform",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgb(245, 243, 238)",
+            "backgroundImage": "none"
+          },
+          {
+            "selector": "html",
+            "opacity": "1",
+            "filter": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "backgroundImage": "none"
+          }
+        ]
+      },
+      "captionRules": []
+    }
+  }
+}

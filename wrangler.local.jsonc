@@ -1,0 +1,8 @@
+// Local Worker builds only. No account, routes, secrets, or deployment configuration.
+{
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-10-09",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}

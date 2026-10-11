@@ -1,0 +1,2362 @@
+{
+  "checks": [
+    "media slot roofing-financing-ambient Ready",
+    "poster available roofing-financing-ambient",
+    "media slot roofing-financing-scroll Pending",
+    "poster available roofing-financing-scroll",
+    "media slot roofing-promotions-ambient Ready",
+    "poster available roofing-promotions-ambient",
+    "media slot roofing-promotions-scroll Ready",
+    "poster available roofing-promotions-scroll",
+    "eight offered Roofing service pages discovered",
+    "three service-area city pages discovered",
+    "HTTP 200 home-desktop-normal",
+    "one H1 home-desktop-normal",
+    "one submit per form home-desktop-normal [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1},{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow home-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /assets/roofing-fast/hero-720.avif home-desktop-normal",
+    "asset /assets/roofing-fast/hero-1440.avif home-desktop-normal",
+    "asset /roofing-motion-home.css?v=004I-v2 home-desktop-normal",
+    "asset /reviews.css home-desktop-normal",
+    "asset /engagement.css home-desktop-normal",
+    "asset /assets/roofing-fast/hero-720.webp home-desktop-normal",
+    "asset /assets/roofing-fast/hero-1440.webp home-desktop-normal",
+    "asset /assets/build-films/roofing.mp4 home-desktop-normal",
+    "asset /assets/service-showpiece/roofing-roof-installation-process.webp home-desktop-normal",
+    "asset /assets/service-roof-repair-showpiece.png home-desktop-normal",
+    "asset /assets/service-roof-replacement-showpiece.png home-desktop-normal",
+    "asset /assets/service-shingles.webp home-desktop-normal",
+    "asset /assets/service-metal.webp home-desktop-normal",
+    "asset /assets/service-flat.webp home-desktop-normal",
+    "asset /assets/service-maintenance.webp home-desktop-normal",
+    "asset /assets/service-gutters.webp home-desktop-normal",
+    "asset /assets/cutaway-roofing.webp home-desktop-normal",
+    "asset /assets/service-showpiece/roofing-roof-repair-scope.webp home-desktop-normal",
+    "asset /assets/premium-roofing/flashing.png home-desktop-normal",
+    "asset /assets/premium-roofing/after.png home-desktop-normal",
+    "asset /assets/premium-roofing/before.png home-desktop-normal",
+    "asset /assets/service-showpiece/roofing-roof-installation-scope.webp home-desktop-normal",
+    "asset /neighborhood.js home-desktop-normal",
+    "asset /trust.js?v=009 home-desktop-normal",
+    "asset /trade-motion.js?v=004H home-desktop-normal",
+    "asset /trade-motion-v2.js?v=004I-v4 home-desktop-normal",
+    "asset /site.js home-desktop-normal",
+    "asset /cutaway.js home-desktop-normal",
+    "asset /hero-timelapse.js?v=reference-v6 home-desktop-normal",
+    "asset /conversion.js?v=reference-v6 home-desktop-normal",
+    "asset /visitor-chat.js home-desktop-normal",
+    "asset /site-navigation.js home-desktop-normal",
+    "CLS <= .05 home-desktop-normal",
+    "HTTP 200 services-desktop-normal",
+    "one H1 services-desktop-normal",
+    "one submit per form services-desktop-normal []",
+    "no overflow services-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /site-polish.css?v=constitution-v1 services-desktop-normal",
+    "asset /core-site-pages.css services-desktop-normal",
+    "asset /trade-backgrounds.css services-desktop-normal",
+    "asset /service-motion.css services-desktop-normal",
+    "asset /service-motion.js services-desktop-normal",
+    "asset /trade-revisions.css?v=constitution-v1 services-desktop-normal",
+    "asset /design-studio.css services-desktop-normal",
+    "asset /design-personality.js services-desktop-normal",
+    "asset /trade-revisions.js services-desktop-normal",
+    "asset /review-marquee.js services-desktop-normal",
+    "asset /neighborhood.css?v=experience-v3 services-desktop-normal",
+    "asset /neighborhood.js?v=experience-v3 services-desktop-normal",
+    "asset /site-navigation-init.js services-desktop-normal",
+    "asset /assets/service-installation.webp services-desktop-normal",
+    "asset /assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp services-desktop-normal",
+    "asset /assets/service-showpiece/roofing-roof-replacement-scope.webp services-desktop-normal",
+    "asset /assets/service-showpiece/roofing-asphalt-shingles-scope.webp services-desktop-normal",
+    "asset /assets/service-showpiece/roofing-metal-roofing-scope.webp services-desktop-normal",
+    "asset /assets/service-showpiece/roofing-flat-roofs-scope.webp services-desktop-normal",
+    "asset /assets/service-showpiece/roofing-roof-maintenance-scope.webp services-desktop-normal",
+    "asset /assets/service-showpiece/roofing-gutters-scope.webp services-desktop-normal",
+    "CLS <= .05 services-desktop-normal",
+    "HTTP 200 services-roof-installation-desktop-normal",
+    "one H1 services-roof-installation-desktop-normal",
+    "one submit per form services-roof-installation-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-installation-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /service-detail.css services-roof-installation-desktop-normal",
+    "asset /trust.css?v=009 services-roof-installation-desktop-normal",
+    "asset /finance-comparison.js services-roof-installation-desktop-normal",
+    "asset /trade-page.js services-roof-installation-desktop-normal",
+    "asset /service-showpiece.js services-roof-installation-desktop-normal",
+    "asset /assets/service-showpiece/roofing-asphalt-shingle-install-repair-scope.webp services-roof-installation-desktop-normal",
+    "asset /assets/service-showpiece/roofing-asphalt-shingle-install-repair-process.webp services-roof-installation-desktop-normal",
+    "asset /assets/service-showpiece/roofing-roof-sealing-hero.webp services-roof-installation-desktop-normal",
+    "asset /assets/service-showpiece/roofing-roof-sealing-scope.webp services-roof-installation-desktop-normal",
+    "asset /assets/service-showpiece/roofing-roof-sealing-process.webp services-roof-installation-desktop-normal",
+    "CLS <= .05 services-roof-installation-desktop-normal",
+    "HTTP 200 services-roof-repair-desktop-normal",
+    "one H1 services-roof-repair-desktop-normal",
+    "one submit per form services-roof-repair-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-repair-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /assets/service-showpiece/roofing-roof-repair-process.webp services-roof-repair-desktop-normal",
+    "CLS <= .05 services-roof-repair-desktop-normal",
+    "HTTP 200 services-roof-replacement-desktop-normal",
+    "one H1 services-roof-replacement-desktop-normal",
+    "one submit per form services-roof-replacement-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-replacement-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /assets/service-showpiece/roofing-roof-replacement-process.webp services-roof-replacement-desktop-normal",
+    "CLS <= .05 services-roof-replacement-desktop-normal",
+    "HTTP 200 services-asphalt-shingles-desktop-normal",
+    "one H1 services-asphalt-shingles-desktop-normal",
+    "one submit per form services-asphalt-shingles-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-asphalt-shingles-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /assets/service-showpiece/roofing-asphalt-shingles-process.webp services-asphalt-shingles-desktop-normal",
+    "CLS <= .05 services-asphalt-shingles-desktop-normal",
+    "HTTP 200 services-metal-roofing-desktop-normal",
+    "one H1 services-metal-roofing-desktop-normal",
+    "one submit per form services-metal-roofing-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-metal-roofing-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /assets/service-showpiece/roofing-metal-roofing-process.webp services-metal-roofing-desktop-normal",
+    "CLS <= .05 services-metal-roofing-desktop-normal",
+    "HTTP 200 services-flat-roofs-desktop-normal",
+    "one H1 services-flat-roofs-desktop-normal",
+    "one submit per form services-flat-roofs-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-flat-roofs-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /assets/service-showpiece/roofing-flat-roofs-process.webp services-flat-roofs-desktop-normal",
+    "CLS <= .05 services-flat-roofs-desktop-normal",
+    "HTTP 200 services-roof-maintenance-desktop-normal",
+    "one H1 services-roof-maintenance-desktop-normal",
+    "one submit per form services-roof-maintenance-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-maintenance-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /assets/service-showpiece/roofing-roof-maintenance-process.webp services-roof-maintenance-desktop-normal",
+    "CLS <= .05 services-roof-maintenance-desktop-normal",
+    "HTTP 200 services-gutters-desktop-normal",
+    "one H1 services-gutters-desktop-normal",
+    "one submit per form services-gutters-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-gutters-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /assets/service-showpiece/roofing-gutters-process.webp services-gutters-desktop-normal",
+    "CLS <= .05 services-gutters-desktop-normal",
+    "HTTP 200 areas-desktop-normal",
+    "one H1 areas-desktop-normal",
+    "one submit per form areas-desktop-normal []",
+    "no overflow areas-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-desktop-normal",
+    "HTTP 200 areas-ventura-desktop-normal",
+    "one H1 areas-ventura-desktop-normal",
+    "one submit per form areas-ventura-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-ventura-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /roofing-city.css areas-ventura-desktop-normal",
+    "asset /roofing-city.js areas-ventura-desktop-normal",
+    "CLS <= .05 areas-ventura-desktop-normal",
+    "HTTP 200 areas-oxnard-desktop-normal",
+    "one H1 areas-oxnard-desktop-normal",
+    "one submit per form areas-oxnard-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-oxnard-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-oxnard-desktop-normal",
+    "HTTP 200 areas-camarillo-desktop-normal",
+    "one H1 areas-camarillo-desktop-normal",
+    "one submit per form areas-camarillo-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-camarillo-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-camarillo-desktop-normal",
+    "HTTP 200 faq-desktop-normal",
+    "one H1 faq-desktop-normal",
+    "one submit per form faq-desktop-normal []",
+    "no overflow faq-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 faq-desktop-normal",
+    "HTTP 200 about-desktop-normal",
+    "one H1 about-desktop-normal",
+    "one submit per form about-desktop-normal []",
+    "no overflow about-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 about-desktop-normal",
+    "HTTP 200 promotions-desktop-normal",
+    "one H1 promotions-desktop-normal",
+    "one submit per form promotions-desktop-normal [{\"id\":\"\",\"actions\":1}]",
+    "no overflow promotions-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /constitution.css?v=offers-v7 promotions-desktop-normal",
+    "asset /constitution.js?v=offers-v7 promotions-desktop-normal",
+    "asset /promotions-planning.css promotions-desktop-normal",
+    "asset /showpiece-financing.css promotions-desktop-normal",
+    "asset /assets/planning/roofing-promotions-ambient-1280.webp promotions-desktop-normal",
+    "asset /assets/planning/roofing-promotions-ambient-720.webp promotions-desktop-normal",
+    "asset /assets/planning/roofing-promotions-scroll-1280.webp promotions-desktop-normal",
+    "asset /assets/planning/roofing-promotions-scroll-720.webp promotions-desktop-normal",
+    "CLS <= .05 promotions-desktop-normal",
+    "HTTP 200 financing-desktop-normal",
+    "one H1 financing-desktop-normal",
+    "one submit per form financing-desktop-normal [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1}]",
+    "no overflow financing-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /planning-ambient.css financing-desktop-normal",
+    "asset /planning-scroll.css financing-desktop-normal",
+    "asset /assets/planning/027A-part1/financing-poster-1280.webp financing-desktop-normal",
+    "asset /assets/planning/027A-part1/financing-poster-720.webp financing-desktop-normal",
+    "CLS <= .05 financing-desktop-normal",
+    "HTTP 200 contact-desktop-normal",
+    "one H1 contact-desktop-normal",
+    "one submit per form contact-desktop-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow contact-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 contact-desktop-normal",
+    "HTTP 200 legal-desktop-normal",
+    "one H1 legal-desktop-normal",
+    "one submit per form legal-desktop-normal []",
+    "no overflow legal-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 legal-desktop-normal",
+    "HTTP 200 resources-before-you-decide-on-your-roof-desktop-normal",
+    "one H1 resources-before-you-decide-on-your-roof-desktop-normal",
+    "one submit per form resources-before-you-decide-on-your-roof-desktop-normal [{\"id\":\"ebook-request\",\"actions\":1}]",
+    "no overflow resources-before-you-decide-on-your-roof-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /site-polish.css resources-before-you-decide-on-your-roof-desktop-normal",
+    "asset /ebook.css resources-before-you-decide-on-your-roof-desktop-normal",
+    "asset /ebook.js resources-before-you-decide-on-your-roof-desktop-normal",
+    "CLS <= .05 resources-before-you-decide-on-your-roof-desktop-normal",
+    "HTTP 200 thank-you-desktop-normal",
+    "one H1 thank-you-desktop-normal",
+    "one submit per form thank-you-desktop-normal []",
+    "no overflow thank-you-desktop-normal {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "asset /thank-you.js thank-you-desktop-normal",
+    "CLS <= .05 thank-you-desktop-normal",
+    "footer link Blog & project guides desktop",
+    "footer link Our services desktop",
+    "footer link Service areas desktop",
+    "footer link About desktop",
+    "footer link FAQ desktop",
+    "footer link Contact desktop",
+    "footer link Pricing & your project desktop",
+    "footer link Journal & guides desktop",
+    "footer link Financing desktop",
+    "footer link Ventura desktop",
+    "footer link Oxnard desktop",
+    "footer link Camarillo desktop",
+    "footer link Legal desktop",
+    "footer link Privacy policy desktop",
+    "footer link Website terms desktop",
+    "footer link Accessibility assistance desktop",
+    "WCAG AA full-contrast Roofing cards desktop",
+    "light header Expertise matches links desktop {\"font\":\"13px\",\"linkFont\":\"13px\",\"weight\":\"600\",\"linkWeight\":\"600\",\"center\":45,\"linkCenter\":45}",
+    "one inquiry form desktop",
+    "one form save action desktop",
+    "saved inquiry confirmation desktop",
+    "real local inquiry saved desktop",
+    "local owner session desktop 200",
+    "plain-language status desktop Revision 1 saved. New photos and videos aren't available yet. Your current ones stay in place.",
+    "HTTP 200 home-desktop-nojs",
+    "one H1 home-desktop-nojs",
+    "one submit per form home-desktop-nojs [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1},{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow home-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 home-desktop-nojs",
+    "no-JS content home-desktop-nojs",
+    "HTTP 200 services-desktop-nojs",
+    "one H1 services-desktop-nojs",
+    "one submit per form services-desktop-nojs []",
+    "no overflow services-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-desktop-nojs",
+    "no-JS content services-desktop-nojs",
+    "HTTP 200 services-roof-installation-desktop-nojs",
+    "one H1 services-roof-installation-desktop-nojs",
+    "one submit per form services-roof-installation-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-installation-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-roof-installation-desktop-nojs",
+    "no-JS content services-roof-installation-desktop-nojs",
+    "HTTP 200 services-roof-repair-desktop-nojs",
+    "one H1 services-roof-repair-desktop-nojs",
+    "one submit per form services-roof-repair-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-repair-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-roof-repair-desktop-nojs",
+    "no-JS content services-roof-repair-desktop-nojs",
+    "HTTP 200 services-roof-replacement-desktop-nojs",
+    "one H1 services-roof-replacement-desktop-nojs",
+    "one submit per form services-roof-replacement-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-replacement-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-roof-replacement-desktop-nojs",
+    "no-JS content services-roof-replacement-desktop-nojs",
+    "HTTP 200 services-asphalt-shingles-desktop-nojs",
+    "one H1 services-asphalt-shingles-desktop-nojs",
+    "one submit per form services-asphalt-shingles-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-asphalt-shingles-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-asphalt-shingles-desktop-nojs",
+    "no-JS content services-asphalt-shingles-desktop-nojs",
+    "HTTP 200 services-metal-roofing-desktop-nojs",
+    "one H1 services-metal-roofing-desktop-nojs",
+    "one submit per form services-metal-roofing-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-metal-roofing-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-metal-roofing-desktop-nojs",
+    "no-JS content services-metal-roofing-desktop-nojs",
+    "HTTP 200 services-flat-roofs-desktop-nojs",
+    "one H1 services-flat-roofs-desktop-nojs",
+    "one submit per form services-flat-roofs-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-flat-roofs-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-flat-roofs-desktop-nojs",
+    "no-JS content services-flat-roofs-desktop-nojs",
+    "HTTP 200 services-roof-maintenance-desktop-nojs",
+    "one H1 services-roof-maintenance-desktop-nojs",
+    "one submit per form services-roof-maintenance-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-maintenance-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-roof-maintenance-desktop-nojs",
+    "no-JS content services-roof-maintenance-desktop-nojs",
+    "HTTP 200 services-gutters-desktop-nojs",
+    "one H1 services-gutters-desktop-nojs",
+    "one submit per form services-gutters-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-gutters-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-gutters-desktop-nojs",
+    "no-JS content services-gutters-desktop-nojs",
+    "HTTP 200 areas-desktop-nojs",
+    "one H1 areas-desktop-nojs",
+    "one submit per form areas-desktop-nojs []",
+    "no overflow areas-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-desktop-nojs",
+    "no-JS content areas-desktop-nojs",
+    "HTTP 200 areas-ventura-desktop-nojs",
+    "one H1 areas-ventura-desktop-nojs",
+    "one submit per form areas-ventura-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-ventura-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-ventura-desktop-nojs",
+    "no-JS content areas-ventura-desktop-nojs",
+    "HTTP 200 areas-oxnard-desktop-nojs",
+    "one H1 areas-oxnard-desktop-nojs",
+    "one submit per form areas-oxnard-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-oxnard-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-oxnard-desktop-nojs",
+    "no-JS content areas-oxnard-desktop-nojs",
+    "HTTP 200 areas-camarillo-desktop-nojs",
+    "one H1 areas-camarillo-desktop-nojs",
+    "one submit per form areas-camarillo-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-camarillo-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-camarillo-desktop-nojs",
+    "no-JS content areas-camarillo-desktop-nojs",
+    "HTTP 200 faq-desktop-nojs",
+    "one H1 faq-desktop-nojs",
+    "one submit per form faq-desktop-nojs []",
+    "no overflow faq-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 faq-desktop-nojs",
+    "no-JS content faq-desktop-nojs",
+    "HTTP 200 about-desktop-nojs",
+    "one H1 about-desktop-nojs",
+    "one submit per form about-desktop-nojs []",
+    "no overflow about-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 about-desktop-nojs",
+    "no-JS content about-desktop-nojs",
+    "HTTP 200 promotions-desktop-nojs",
+    "one H1 promotions-desktop-nojs",
+    "one submit per form promotions-desktop-nojs [{\"id\":\"\",\"actions\":1}]",
+    "no overflow promotions-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 promotions-desktop-nojs",
+    "no-JS content promotions-desktop-nojs",
+    "HTTP 200 financing-desktop-nojs",
+    "one H1 financing-desktop-nojs",
+    "one submit per form financing-desktop-nojs [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1}]",
+    "no overflow financing-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 financing-desktop-nojs",
+    "no-JS content financing-desktop-nojs",
+    "HTTP 200 contact-desktop-nojs",
+    "one H1 contact-desktop-nojs",
+    "one submit per form contact-desktop-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow contact-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 contact-desktop-nojs",
+    "no-JS content contact-desktop-nojs",
+    "HTTP 200 legal-desktop-nojs",
+    "one H1 legal-desktop-nojs",
+    "one submit per form legal-desktop-nojs []",
+    "no overflow legal-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 legal-desktop-nojs",
+    "no-JS content legal-desktop-nojs",
+    "HTTP 200 resources-before-you-decide-on-your-roof-desktop-nojs",
+    "one H1 resources-before-you-decide-on-your-roof-desktop-nojs",
+    "one submit per form resources-before-you-decide-on-your-roof-desktop-nojs [{\"id\":\"ebook-request\",\"actions\":1}]",
+    "no overflow resources-before-you-decide-on-your-roof-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 resources-before-you-decide-on-your-roof-desktop-nojs",
+    "no-JS content resources-before-you-decide-on-your-roof-desktop-nojs",
+    "HTTP 200 thank-you-desktop-nojs",
+    "one H1 thank-you-desktop-nojs",
+    "one submit per form thank-you-desktop-nojs []",
+    "no overflow thank-you-desktop-nojs {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 thank-you-desktop-nojs",
+    "no-JS content thank-you-desktop-nojs",
+    "HTTP 200 home-desktop-reduced",
+    "one H1 home-desktop-reduced",
+    "one submit per form home-desktop-reduced [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1},{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow home-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 home-desktop-reduced",
+    "reduced motion static home-desktop-reduced",
+    "HTTP 200 services-desktop-reduced",
+    "one H1 services-desktop-reduced",
+    "one submit per form services-desktop-reduced []",
+    "no overflow services-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-desktop-reduced",
+    "reduced motion static services-desktop-reduced",
+    "HTTP 200 services-roof-installation-desktop-reduced",
+    "one H1 services-roof-installation-desktop-reduced",
+    "one submit per form services-roof-installation-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-installation-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-roof-installation-desktop-reduced",
+    "reduced motion static services-roof-installation-desktop-reduced",
+    "HTTP 200 services-roof-repair-desktop-reduced",
+    "one H1 services-roof-repair-desktop-reduced",
+    "one submit per form services-roof-repair-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-repair-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-roof-repair-desktop-reduced",
+    "reduced motion static services-roof-repair-desktop-reduced",
+    "HTTP 200 services-roof-replacement-desktop-reduced",
+    "one H1 services-roof-replacement-desktop-reduced",
+    "one submit per form services-roof-replacement-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-replacement-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-roof-replacement-desktop-reduced",
+    "reduced motion static services-roof-replacement-desktop-reduced",
+    "HTTP 200 services-asphalt-shingles-desktop-reduced",
+    "one H1 services-asphalt-shingles-desktop-reduced",
+    "one submit per form services-asphalt-shingles-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-asphalt-shingles-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-asphalt-shingles-desktop-reduced",
+    "reduced motion static services-asphalt-shingles-desktop-reduced",
+    "HTTP 200 services-metal-roofing-desktop-reduced",
+    "one H1 services-metal-roofing-desktop-reduced",
+    "one submit per form services-metal-roofing-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-metal-roofing-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-metal-roofing-desktop-reduced",
+    "reduced motion static services-metal-roofing-desktop-reduced",
+    "HTTP 200 services-flat-roofs-desktop-reduced",
+    "one H1 services-flat-roofs-desktop-reduced",
+    "one submit per form services-flat-roofs-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-flat-roofs-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-flat-roofs-desktop-reduced",
+    "reduced motion static services-flat-roofs-desktop-reduced",
+    "HTTP 200 services-roof-maintenance-desktop-reduced",
+    "one H1 services-roof-maintenance-desktop-reduced",
+    "one submit per form services-roof-maintenance-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-maintenance-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-roof-maintenance-desktop-reduced",
+    "reduced motion static services-roof-maintenance-desktop-reduced",
+    "HTTP 200 services-gutters-desktop-reduced",
+    "one H1 services-gutters-desktop-reduced",
+    "one submit per form services-gutters-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-gutters-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 services-gutters-desktop-reduced",
+    "reduced motion static services-gutters-desktop-reduced",
+    "HTTP 200 areas-desktop-reduced",
+    "one H1 areas-desktop-reduced",
+    "one submit per form areas-desktop-reduced []",
+    "no overflow areas-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-desktop-reduced",
+    "reduced motion static areas-desktop-reduced",
+    "HTTP 200 areas-ventura-desktop-reduced",
+    "one H1 areas-ventura-desktop-reduced",
+    "one submit per form areas-ventura-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-ventura-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-ventura-desktop-reduced",
+    "reduced motion static areas-ventura-desktop-reduced",
+    "HTTP 200 areas-oxnard-desktop-reduced",
+    "one H1 areas-oxnard-desktop-reduced",
+    "one submit per form areas-oxnard-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-oxnard-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-oxnard-desktop-reduced",
+    "reduced motion static areas-oxnard-desktop-reduced",
+    "HTTP 200 areas-camarillo-desktop-reduced",
+    "one H1 areas-camarillo-desktop-reduced",
+    "one submit per form areas-camarillo-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-camarillo-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 areas-camarillo-desktop-reduced",
+    "reduced motion static areas-camarillo-desktop-reduced",
+    "HTTP 200 faq-desktop-reduced",
+    "one H1 faq-desktop-reduced",
+    "one submit per form faq-desktop-reduced []",
+    "no overflow faq-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 faq-desktop-reduced",
+    "reduced motion static faq-desktop-reduced",
+    "HTTP 200 about-desktop-reduced",
+    "one H1 about-desktop-reduced",
+    "one submit per form about-desktop-reduced []",
+    "no overflow about-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 about-desktop-reduced",
+    "reduced motion static about-desktop-reduced",
+    "HTTP 200 promotions-desktop-reduced",
+    "one H1 promotions-desktop-reduced",
+    "one submit per form promotions-desktop-reduced [{\"id\":\"\",\"actions\":1}]",
+    "no overflow promotions-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 promotions-desktop-reduced",
+    "reduced motion static promotions-desktop-reduced",
+    "HTTP 200 financing-desktop-reduced",
+    "one H1 financing-desktop-reduced",
+    "one submit per form financing-desktop-reduced [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1}]",
+    "no overflow financing-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 financing-desktop-reduced",
+    "reduced motion static financing-desktop-reduced",
+    "HTTP 200 contact-desktop-reduced",
+    "one H1 contact-desktop-reduced",
+    "one submit per form contact-desktop-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow contact-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 contact-desktop-reduced",
+    "reduced motion static contact-desktop-reduced",
+    "HTTP 200 legal-desktop-reduced",
+    "one H1 legal-desktop-reduced",
+    "one submit per form legal-desktop-reduced []",
+    "no overflow legal-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 legal-desktop-reduced",
+    "reduced motion static legal-desktop-reduced",
+    "HTTP 200 resources-before-you-decide-on-your-roof-desktop-reduced",
+    "one H1 resources-before-you-decide-on-your-roof-desktop-reduced",
+    "one submit per form resources-before-you-decide-on-your-roof-desktop-reduced [{\"id\":\"ebook-request\",\"actions\":1}]",
+    "no overflow resources-before-you-decide-on-your-roof-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 resources-before-you-decide-on-your-roof-desktop-reduced",
+    "reduced motion static resources-before-you-decide-on-your-roof-desktop-reduced",
+    "HTTP 200 thank-you-desktop-reduced",
+    "one H1 thank-you-desktop-reduced",
+    "one submit per form thank-you-desktop-reduced []",
+    "no overflow thank-you-desktop-reduced {\"window\":1440,\"scroll\":1440,\"items\":[]}",
+    "CLS <= .05 thank-you-desktop-reduced",
+    "reduced motion static thank-you-desktop-reduced",
+    "HTTP 200 home-phone-normal",
+    "one H1 home-phone-normal",
+    "one submit per form home-phone-normal [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1},{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow home-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 home-phone-normal",
+    "HTTP 200 services-phone-normal",
+    "one H1 services-phone-normal",
+    "one submit per form services-phone-normal []",
+    "no overflow services-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-phone-normal",
+    "HTTP 200 services-roof-installation-phone-normal",
+    "one H1 services-roof-installation-phone-normal",
+    "one submit per form services-roof-installation-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-installation-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-installation-phone-normal",
+    "HTTP 200 services-roof-repair-phone-normal",
+    "one H1 services-roof-repair-phone-normal",
+    "one submit per form services-roof-repair-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-repair-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-repair-phone-normal",
+    "HTTP 200 services-roof-replacement-phone-normal",
+    "one H1 services-roof-replacement-phone-normal",
+    "one submit per form services-roof-replacement-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-replacement-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-replacement-phone-normal",
+    "HTTP 200 services-asphalt-shingles-phone-normal",
+    "one H1 services-asphalt-shingles-phone-normal",
+    "one submit per form services-asphalt-shingles-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-asphalt-shingles-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-asphalt-shingles-phone-normal",
+    "HTTP 200 services-metal-roofing-phone-normal",
+    "one H1 services-metal-roofing-phone-normal",
+    "one submit per form services-metal-roofing-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-metal-roofing-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-metal-roofing-phone-normal",
+    "HTTP 200 services-flat-roofs-phone-normal",
+    "one H1 services-flat-roofs-phone-normal",
+    "one submit per form services-flat-roofs-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-flat-roofs-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-flat-roofs-phone-normal",
+    "HTTP 200 services-roof-maintenance-phone-normal",
+    "one H1 services-roof-maintenance-phone-normal",
+    "one submit per form services-roof-maintenance-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-maintenance-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-maintenance-phone-normal",
+    "HTTP 200 services-gutters-phone-normal",
+    "one H1 services-gutters-phone-normal",
+    "one submit per form services-gutters-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-gutters-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-gutters-phone-normal",
+    "HTTP 200 areas-phone-normal",
+    "one H1 areas-phone-normal",
+    "one submit per form areas-phone-normal []",
+    "no overflow areas-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-phone-normal",
+    "HTTP 200 areas-ventura-phone-normal",
+    "one H1 areas-ventura-phone-normal",
+    "one submit per form areas-ventura-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-ventura-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-ventura-phone-normal",
+    "HTTP 200 areas-oxnard-phone-normal",
+    "one H1 areas-oxnard-phone-normal",
+    "one submit per form areas-oxnard-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-oxnard-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-oxnard-phone-normal",
+    "HTTP 200 areas-camarillo-phone-normal",
+    "one H1 areas-camarillo-phone-normal",
+    "one submit per form areas-camarillo-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-camarillo-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-camarillo-phone-normal",
+    "HTTP 200 faq-phone-normal",
+    "one H1 faq-phone-normal",
+    "one submit per form faq-phone-normal []",
+    "no overflow faq-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 faq-phone-normal",
+    "HTTP 200 about-phone-normal",
+    "one H1 about-phone-normal",
+    "one submit per form about-phone-normal []",
+    "no overflow about-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 about-phone-normal",
+    "HTTP 200 promotions-phone-normal",
+    "one H1 promotions-phone-normal",
+    "one submit per form promotions-phone-normal [{\"id\":\"\",\"actions\":1}]",
+    "no overflow promotions-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 promotions-phone-normal",
+    "HTTP 200 financing-phone-normal",
+    "one H1 financing-phone-normal",
+    "one submit per form financing-phone-normal [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1}]",
+    "no overflow financing-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 financing-phone-normal",
+    "HTTP 200 contact-phone-normal",
+    "one H1 contact-phone-normal",
+    "one submit per form contact-phone-normal [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow contact-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 contact-phone-normal",
+    "HTTP 200 legal-phone-normal",
+    "one H1 legal-phone-normal",
+    "one submit per form legal-phone-normal []",
+    "no overflow legal-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 legal-phone-normal",
+    "HTTP 200 resources-before-you-decide-on-your-roof-phone-normal",
+    "one H1 resources-before-you-decide-on-your-roof-phone-normal",
+    "one submit per form resources-before-you-decide-on-your-roof-phone-normal [{\"id\":\"ebook-request\",\"actions\":1}]",
+    "no overflow resources-before-you-decide-on-your-roof-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 resources-before-you-decide-on-your-roof-phone-normal",
+    "HTTP 200 thank-you-phone-normal",
+    "one H1 thank-you-phone-normal",
+    "one submit per form thank-you-phone-normal []",
+    "no overflow thank-you-phone-normal {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 thank-you-phone-normal",
+    "footer link Blog & project guides phone",
+    "footer link Our services phone",
+    "footer link Service areas phone",
+    "footer link About phone",
+    "footer link FAQ phone",
+    "footer link Contact phone",
+    "footer link Pricing & your project phone",
+    "footer link Journal & guides phone",
+    "footer link Financing phone",
+    "footer link Ventura phone",
+    "footer link Oxnard phone",
+    "footer link Camarillo phone",
+    "footer link Legal phone",
+    "footer link Privacy policy phone",
+    "footer link Website terms phone",
+    "footer link Accessibility assistance phone",
+    "WCAG AA full-contrast Roofing cards phone",
+    "one inquiry form phone",
+    "one form save action phone",
+    "saved inquiry confirmation phone",
+    "real local inquiry saved phone",
+    "local owner session phone 200",
+    "plain-language status phone Revision 1 saved. New photos and videos aren't available yet. Your current ones stay in place.",
+    "HTTP 200 home-phone-nojs",
+    "one H1 home-phone-nojs",
+    "one submit per form home-phone-nojs [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1},{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow home-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 home-phone-nojs",
+    "no-JS content home-phone-nojs",
+    "HTTP 200 services-phone-nojs",
+    "one H1 services-phone-nojs",
+    "one submit per form services-phone-nojs []",
+    "no overflow services-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-phone-nojs",
+    "no-JS content services-phone-nojs",
+    "HTTP 200 services-roof-installation-phone-nojs",
+    "one H1 services-roof-installation-phone-nojs",
+    "one submit per form services-roof-installation-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-installation-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-installation-phone-nojs",
+    "no-JS content services-roof-installation-phone-nojs",
+    "HTTP 200 services-roof-repair-phone-nojs",
+    "one H1 services-roof-repair-phone-nojs",
+    "one submit per form services-roof-repair-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-repair-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-repair-phone-nojs",
+    "no-JS content services-roof-repair-phone-nojs",
+    "HTTP 200 services-roof-replacement-phone-nojs",
+    "one H1 services-roof-replacement-phone-nojs",
+    "one submit per form services-roof-replacement-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-replacement-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-replacement-phone-nojs",
+    "no-JS content services-roof-replacement-phone-nojs",
+    "HTTP 200 services-asphalt-shingles-phone-nojs",
+    "one H1 services-asphalt-shingles-phone-nojs",
+    "one submit per form services-asphalt-shingles-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-asphalt-shingles-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-asphalt-shingles-phone-nojs",
+    "no-JS content services-asphalt-shingles-phone-nojs",
+    "HTTP 200 services-metal-roofing-phone-nojs",
+    "one H1 services-metal-roofing-phone-nojs",
+    "one submit per form services-metal-roofing-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-metal-roofing-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-metal-roofing-phone-nojs",
+    "no-JS content services-metal-roofing-phone-nojs",
+    "HTTP 200 services-flat-roofs-phone-nojs",
+    "one H1 services-flat-roofs-phone-nojs",
+    "one submit per form services-flat-roofs-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-flat-roofs-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-flat-roofs-phone-nojs",
+    "no-JS content services-flat-roofs-phone-nojs",
+    "HTTP 200 services-roof-maintenance-phone-nojs",
+    "one H1 services-roof-maintenance-phone-nojs",
+    "one submit per form services-roof-maintenance-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-maintenance-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-maintenance-phone-nojs",
+    "no-JS content services-roof-maintenance-phone-nojs",
+    "HTTP 200 services-gutters-phone-nojs",
+    "one H1 services-gutters-phone-nojs",
+    "one submit per form services-gutters-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-gutters-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-gutters-phone-nojs",
+    "no-JS content services-gutters-phone-nojs",
+    "HTTP 200 areas-phone-nojs",
+    "one H1 areas-phone-nojs",
+    "one submit per form areas-phone-nojs []",
+    "no overflow areas-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-phone-nojs",
+    "no-JS content areas-phone-nojs",
+    "HTTP 200 areas-ventura-phone-nojs",
+    "one H1 areas-ventura-phone-nojs",
+    "one submit per form areas-ventura-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-ventura-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-ventura-phone-nojs",
+    "no-JS content areas-ventura-phone-nojs",
+    "HTTP 200 areas-oxnard-phone-nojs",
+    "one H1 areas-oxnard-phone-nojs",
+    "one submit per form areas-oxnard-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-oxnard-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-oxnard-phone-nojs",
+    "no-JS content areas-oxnard-phone-nojs",
+    "HTTP 200 areas-camarillo-phone-nojs",
+    "one H1 areas-camarillo-phone-nojs",
+    "one submit per form areas-camarillo-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-camarillo-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-camarillo-phone-nojs",
+    "no-JS content areas-camarillo-phone-nojs",
+    "HTTP 200 faq-phone-nojs",
+    "one H1 faq-phone-nojs",
+    "one submit per form faq-phone-nojs []",
+    "no overflow faq-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 faq-phone-nojs",
+    "no-JS content faq-phone-nojs",
+    "HTTP 200 about-phone-nojs",
+    "one H1 about-phone-nojs",
+    "one submit per form about-phone-nojs []",
+    "no overflow about-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 about-phone-nojs",
+    "no-JS content about-phone-nojs",
+    "HTTP 200 promotions-phone-nojs",
+    "one H1 promotions-phone-nojs",
+    "one submit per form promotions-phone-nojs [{\"id\":\"\",\"actions\":1}]",
+    "no overflow promotions-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 promotions-phone-nojs",
+    "no-JS content promotions-phone-nojs",
+    "HTTP 200 financing-phone-nojs",
+    "one H1 financing-phone-nojs",
+    "one submit per form financing-phone-nojs [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1}]",
+    "no overflow financing-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 financing-phone-nojs",
+    "no-JS content financing-phone-nojs",
+    "HTTP 200 contact-phone-nojs",
+    "one H1 contact-phone-nojs",
+    "one submit per form contact-phone-nojs [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow contact-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 contact-phone-nojs",
+    "no-JS content contact-phone-nojs",
+    "HTTP 200 legal-phone-nojs",
+    "one H1 legal-phone-nojs",
+    "one submit per form legal-phone-nojs []",
+    "no overflow legal-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 legal-phone-nojs",
+    "no-JS content legal-phone-nojs",
+    "HTTP 200 resources-before-you-decide-on-your-roof-phone-nojs",
+    "one H1 resources-before-you-decide-on-your-roof-phone-nojs",
+    "one submit per form resources-before-you-decide-on-your-roof-phone-nojs [{\"id\":\"ebook-request\",\"actions\":1}]",
+    "no overflow resources-before-you-decide-on-your-roof-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 resources-before-you-decide-on-your-roof-phone-nojs",
+    "no-JS content resources-before-you-decide-on-your-roof-phone-nojs",
+    "HTTP 200 thank-you-phone-nojs",
+    "one H1 thank-you-phone-nojs",
+    "one submit per form thank-you-phone-nojs []",
+    "no overflow thank-you-phone-nojs {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 thank-you-phone-nojs",
+    "no-JS content thank-you-phone-nojs",
+    "HTTP 200 home-phone-reduced",
+    "one H1 home-phone-reduced",
+    "one submit per form home-phone-reduced [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1},{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow home-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 home-phone-reduced",
+    "reduced motion static home-phone-reduced",
+    "HTTP 200 services-phone-reduced",
+    "one H1 services-phone-reduced",
+    "one submit per form services-phone-reduced []",
+    "no overflow services-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-phone-reduced",
+    "reduced motion static services-phone-reduced",
+    "HTTP 200 services-roof-installation-phone-reduced",
+    "one H1 services-roof-installation-phone-reduced",
+    "one submit per form services-roof-installation-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-installation-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-installation-phone-reduced",
+    "reduced motion static services-roof-installation-phone-reduced",
+    "HTTP 200 services-roof-repair-phone-reduced",
+    "one H1 services-roof-repair-phone-reduced",
+    "one submit per form services-roof-repair-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-repair-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-repair-phone-reduced",
+    "reduced motion static services-roof-repair-phone-reduced",
+    "HTTP 200 services-roof-replacement-phone-reduced",
+    "one H1 services-roof-replacement-phone-reduced",
+    "one submit per form services-roof-replacement-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-replacement-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-replacement-phone-reduced",
+    "reduced motion static services-roof-replacement-phone-reduced",
+    "HTTP 200 services-asphalt-shingles-phone-reduced",
+    "one H1 services-asphalt-shingles-phone-reduced",
+    "one submit per form services-asphalt-shingles-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-asphalt-shingles-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-asphalt-shingles-phone-reduced",
+    "reduced motion static services-asphalt-shingles-phone-reduced",
+    "HTTP 200 services-metal-roofing-phone-reduced",
+    "one H1 services-metal-roofing-phone-reduced",
+    "one submit per form services-metal-roofing-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-metal-roofing-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-metal-roofing-phone-reduced",
+    "reduced motion static services-metal-roofing-phone-reduced",
+    "HTTP 200 services-flat-roofs-phone-reduced",
+    "one H1 services-flat-roofs-phone-reduced",
+    "one submit per form services-flat-roofs-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-flat-roofs-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-flat-roofs-phone-reduced",
+    "reduced motion static services-flat-roofs-phone-reduced",
+    "HTTP 200 services-roof-maintenance-phone-reduced",
+    "one H1 services-roof-maintenance-phone-reduced",
+    "one submit per form services-roof-maintenance-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-roof-maintenance-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-roof-maintenance-phone-reduced",
+    "reduced motion static services-roof-maintenance-phone-reduced",
+    "HTTP 200 services-gutters-phone-reduced",
+    "one H1 services-gutters-phone-reduced",
+    "one submit per form services-gutters-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow services-gutters-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 services-gutters-phone-reduced",
+    "reduced motion static services-gutters-phone-reduced",
+    "HTTP 200 areas-phone-reduced",
+    "one H1 areas-phone-reduced",
+    "one submit per form areas-phone-reduced []",
+    "no overflow areas-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-phone-reduced",
+    "reduced motion static areas-phone-reduced",
+    "HTTP 200 areas-ventura-phone-reduced",
+    "one H1 areas-ventura-phone-reduced",
+    "one submit per form areas-ventura-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-ventura-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-ventura-phone-reduced",
+    "reduced motion static areas-ventura-phone-reduced",
+    "HTTP 200 areas-oxnard-phone-reduced",
+    "one H1 areas-oxnard-phone-reduced",
+    "one submit per form areas-oxnard-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-oxnard-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-oxnard-phone-reduced",
+    "reduced motion static areas-oxnard-phone-reduced",
+    "HTTP 200 areas-camarillo-phone-reduced",
+    "one H1 areas-camarillo-phone-reduced",
+    "one submit per form areas-camarillo-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow areas-camarillo-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 areas-camarillo-phone-reduced",
+    "reduced motion static areas-camarillo-phone-reduced",
+    "HTTP 200 faq-phone-reduced",
+    "one H1 faq-phone-reduced",
+    "one submit per form faq-phone-reduced []",
+    "no overflow faq-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 faq-phone-reduced",
+    "reduced motion static faq-phone-reduced",
+    "HTTP 200 about-phone-reduced",
+    "one H1 about-phone-reduced",
+    "one submit per form about-phone-reduced []",
+    "no overflow about-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 about-phone-reduced",
+    "reduced motion static about-phone-reduced",
+    "HTTP 200 promotions-phone-reduced",
+    "one H1 promotions-phone-reduced",
+    "one submit per form promotions-phone-reduced [{\"id\":\"\",\"actions\":1}]",
+    "no overflow promotions-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 promotions-phone-reduced",
+    "reduced motion static promotions-phone-reduced",
+    "HTTP 200 financing-phone-reduced",
+    "one H1 financing-phone-reduced",
+    "one submit per form financing-phone-reduced [{\"id\":\"\",\"actions\":1},{\"id\":\"\",\"actions\":1}]",
+    "no overflow financing-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 financing-phone-reduced",
+    "reduced motion static financing-phone-reduced",
+    "HTTP 200 contact-phone-reduced",
+    "one H1 contact-phone-reduced",
+    "one submit per form contact-phone-reduced [{\"id\":\"lead-form\",\"actions\":1}]",
+    "no overflow contact-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 contact-phone-reduced",
+    "reduced motion static contact-phone-reduced",
+    "HTTP 200 legal-phone-reduced",
+    "one H1 legal-phone-reduced",
+    "one submit per form legal-phone-reduced []",
+    "no overflow legal-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 legal-phone-reduced",
+    "reduced motion static legal-phone-reduced",
+    "HTTP 200 resources-before-you-decide-on-your-roof-phone-reduced",
+    "one H1 resources-before-you-decide-on-your-roof-phone-reduced",
+    "one submit per form resources-before-you-decide-on-your-roof-phone-reduced [{\"id\":\"ebook-request\",\"actions\":1}]",
+    "no overflow resources-before-you-decide-on-your-roof-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 resources-before-you-decide-on-your-roof-phone-reduced",
+    "reduced motion static resources-before-you-decide-on-your-roof-phone-reduced",
+    "HTTP 200 thank-you-phone-reduced",
+    "one H1 thank-you-phone-reduced",
+    "one submit per form thank-you-phone-reduced []",
+    "no overflow thank-you-phone-reduced {\"window\":390,\"scroll\":390,\"items\":[]}",
+    "CLS <= .05 thank-you-phone-reduced",
+    "reduced motion static thank-you-phone-reduced",
+    "Expertise alignment ambient-baseline-roofing {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-patios {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-plumbing {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-hvac {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-electrical {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-landscaping {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-general-contractors {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-flooring {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-painting {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-fencing {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-garage-doors {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-pest-control {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-windows-doors {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-solar {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-concrete {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-pools {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "Expertise alignment ambient-baseline-locksmith {\"summary\":\"11px 600\",\"link\":\"11px 600\",\"baseline\":0}",
+    "zero browser exceptions"
+  ],
+  "pages": [
+    {
+      "path": "/s/roofing-acceptance-028",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "A roof concern.\nA clear next step.\nA roof concern.\nA clear next step.",
+      "cls": 0.004872698581104253
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Find the roofing help you need.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-installation",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "A roof made for home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-repair",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Stop the leak at its source",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-replacement",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Make the next roof count",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/asphalt-shingles",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Find the right shingle fit",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/metal-roofing",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Shape a lasting metal roof",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/flat-roofs",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Give low slopes a plan",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-maintenance",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Catch wear before rain returns",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/gutters",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Move rain away from home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Find your neighborhood.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/ventura",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Ventura roofing.\nPlan around the whole roofline.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/oxnard",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Roofing in Oxnard.\nStart at the exposed edges.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/camarillo",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Camarillo roofing.\nChoose the scope before the finish.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/faq",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Good questions deserve clear answers.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/about",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Meet QA Owner.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/promotions",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Roof work.\nA thoughtful next step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/financing",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Plan the work.\nUnderstand the payments.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/contact",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Tell us what you have in mind.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/legal",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "The details behind this website.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/resources/before-you-decide-on-your-roof",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "Before you decide on your roof.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/thank-you",
+      "device": "desktop",
+      "mode": "normal",
+      "h1": "You’ve taken the first step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "A roof concern.\nA clear next step.\nA roof concern.\nA clear next step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Find the roofing help you need.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-installation",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "A roof made for home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-repair",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Stop the leak at its source",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-replacement",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Make the next roof count",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/asphalt-shingles",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Find the right shingle fit",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/metal-roofing",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Shape a lasting metal roof",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/flat-roofs",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Give low slopes a plan",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-maintenance",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Catch wear before rain returns",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/gutters",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Move rain away from home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Find your neighborhood.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/ventura",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Ventura roofing.\nPlan around the whole roofline.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/oxnard",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Roofing in Oxnard.\nStart at the exposed edges.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/camarillo",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Camarillo roofing.\nChoose the scope before the finish.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/faq",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Good questions deserve clear answers.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/about",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Meet QA Owner.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/promotions",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Roof work.\nA thoughtful next step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/financing",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Plan the work.\nUnderstand the payments.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/contact",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Tell us what you have in mind.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/legal",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "The details behind this website.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/resources/before-you-decide-on-your-roof",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "Before you decide on your roof.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/thank-you",
+      "device": "desktop",
+      "mode": "nojs",
+      "h1": "You’ve taken the first step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "A roof concern.\nA clear next step.\nA roof concern.\nA clear next step.",
+      "cls": 0.0030065913782525294
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Find the roofing help you need.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-installation",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "A roof made for home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-repair",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Stop the leak at its source",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-replacement",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Make the next roof count",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/asphalt-shingles",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Find the right shingle fit",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/metal-roofing",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Shape a lasting metal roof",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/flat-roofs",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Give low slopes a plan",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-maintenance",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Catch wear before rain returns",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/gutters",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Move rain away from home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Find your neighborhood.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/ventura",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Ventura roofing.\nPlan around the whole roofline.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/oxnard",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Roofing in Oxnard.\nStart at the exposed edges.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/camarillo",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Camarillo roofing.\nChoose the scope before the finish.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/faq",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Good questions deserve clear answers.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/about",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Meet QA Owner.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/promotions",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Roof work.\nA thoughtful next step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/financing",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Plan the work.\nUnderstand the payments.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/contact",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Tell us what you have in mind.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/legal",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "The details behind this website.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/resources/before-you-decide-on-your-roof",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "Before you decide on your roof.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/thank-you",
+      "device": "desktop",
+      "mode": "reduced",
+      "h1": "You’ve taken the first step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "A roof concern.\nA clear next step.\nA roof concern.\nA clear next step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Find the roofing help you need.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-installation",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "A roof made for home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-repair",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Stop the leak at its source",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-replacement",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Make the next roof count",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/asphalt-shingles",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Find the right shingle fit",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/metal-roofing",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Shape a lasting metal roof",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/flat-roofs",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Give low slopes a plan",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-maintenance",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Catch wear before rain returns",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/gutters",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Move rain away from home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Find your neighborhood.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/ventura",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Ventura roofing.\nPlan around the whole roofline.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/oxnard",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Roofing in Oxnard.\nStart at the exposed edges.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/camarillo",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Camarillo roofing.\nChoose the scope before the finish.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/faq",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Good questions deserve clear answers.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/about",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Meet QA Owner.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/promotions",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Roof work.\nA thoughtful next step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/financing",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Plan the work.\nUnderstand the payments.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/contact",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Tell us what you have in mind.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/legal",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "The details behind this website.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/resources/before-you-decide-on-your-roof",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "Before you decide on your roof.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/thank-you",
+      "device": "phone",
+      "mode": "normal",
+      "h1": "You’ve taken the first step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "A roof concern.\nA clear next step.\nA roof concern.\nA clear next step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Find the roofing help you need.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-installation",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "A roof made for home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-repair",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Stop the leak at its source",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-replacement",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Make the next roof count",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/asphalt-shingles",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Find the right shingle fit",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/metal-roofing",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Shape a lasting metal roof",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/flat-roofs",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Give low slopes a plan",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-maintenance",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Catch wear before rain returns",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/gutters",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Move rain away from home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Find your neighborhood.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/ventura",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Ventura roofing.\nPlan around the whole roofline.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/oxnard",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Roofing in Oxnard.\nStart at the exposed edges.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/camarillo",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Camarillo roofing.\nChoose the scope before the finish.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/faq",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Good questions deserve clear answers.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/about",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Meet QA Owner.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/promotions",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Roof work.\nA thoughtful next step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/financing",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Plan the work.\nUnderstand the payments.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/contact",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Tell us what you have in mind.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/legal",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "The details behind this website.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/resources/before-you-decide-on-your-roof",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "Before you decide on your roof.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/thank-you",
+      "device": "phone",
+      "mode": "nojs",
+      "h1": "You’ve taken the first step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "A roof concern.\nA clear next step.\nA roof concern.\nA clear next step.",
+      "cls": 0.025238161881543653
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Find the roofing help you need.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-installation",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "A roof made for home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-repair",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Stop the leak at its source",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-replacement",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Make the next roof count",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/asphalt-shingles",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Find the right shingle fit",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/metal-roofing",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Shape a lasting metal roof",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/flat-roofs",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Give low slopes a plan",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/roof-maintenance",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Catch wear before rain returns",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/services/gutters",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Move rain away from home",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Find your neighborhood.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/ventura",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Ventura roofing.\nPlan around the whole roofline.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/oxnard",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Roofing in Oxnard.\nStart at the exposed edges.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/areas/camarillo",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Camarillo roofing.\nChoose the scope before the finish.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/faq",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Good questions deserve clear answers.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/about",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Meet QA Owner.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/promotions",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Roof work.\nA thoughtful next step.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/financing",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Plan the work.\nUnderstand the payments.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/contact",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Tell us what you have in mind.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/legal",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "The details behind this website.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/resources/before-you-decide-on-your-roof",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "Before you decide on your roof.",
+      "cls": 0
+    },
+    {
+      "path": "/s/roofing-acceptance-028/thank-you",
+      "device": "phone",
+      "mode": "reduced",
+      "h1": "You’ve taken the first step.",
+      "cls": 0
+    }
+  ],
+  "screenshots": [
+    "screenshots/home-desktop-normal.jpg",
+    "screenshots/services-desktop-normal.jpg",
+    "screenshots/services-roof-installation-desktop-normal.jpg",
+    "screenshots/services-roof-repair-desktop-normal.jpg",
+    "screenshots/services-roof-replacement-desktop-normal.jpg",
+    "screenshots/services-asphalt-shingles-desktop-normal.jpg",
+    "screenshots/services-metal-roofing-desktop-normal.jpg",
+    "screenshots/services-flat-roofs-desktop-normal.jpg",
+    "screenshots/services-roof-maintenance-desktop-normal.jpg",
+    "screenshots/services-gutters-desktop-normal.jpg",
+    "screenshots/areas-desktop-normal.jpg",
+    "screenshots/areas-ventura-desktop-normal.jpg",
+    "screenshots/areas-oxnard-desktop-normal.jpg",
+    "screenshots/areas-camarillo-desktop-normal.jpg",
+    "screenshots/faq-desktop-normal.jpg",
+    "screenshots/about-desktop-normal.jpg",
+    "screenshots/promotions-desktop-normal.jpg",
+    "screenshots/financing-desktop-normal.jpg",
+    "screenshots/contact-desktop-normal.jpg",
+    "screenshots/legal-desktop-normal.jpg",
+    "screenshots/resources-before-you-decide-on-your-roof-desktop-normal.jpg",
+    "screenshots/thank-you-desktop-normal.jpg",
+    "screenshots/polish-service-cards-after-desktop.jpg",
+    "screenshots/polish-header-after-desktop.jpg",
+    "screenshots/saved-inquiry-confirmation-desktop.jpg",
+    "screenshots/polish-design-locks-after-desktop.jpg",
+    "screenshots/home-phone-normal.jpg",
+    "screenshots/services-phone-normal.jpg",
+    "screenshots/services-roof-installation-phone-normal.jpg",
+    "screenshots/services-roof-repair-phone-normal.jpg",
+    "screenshots/services-roof-replacement-phone-normal.jpg",
+    "screenshots/services-asphalt-shingles-phone-normal.jpg",
+    "screenshots/services-metal-roofing-phone-normal.jpg",
+    "screenshots/services-flat-roofs-phone-normal.jpg",
+    "screenshots/services-roof-maintenance-phone-normal.jpg",
+    "screenshots/services-gutters-phone-normal.jpg",
+    "screenshots/areas-phone-normal.jpg",
+    "screenshots/areas-ventura-phone-normal.jpg",
+    "screenshots/areas-oxnard-phone-normal.jpg",
+    "screenshots/areas-camarillo-phone-normal.jpg",
+    "screenshots/faq-phone-normal.jpg",
+    "screenshots/about-phone-normal.jpg",
+    "screenshots/promotions-phone-normal.jpg",
+    "screenshots/financing-phone-normal.jpg",
+    "screenshots/contact-phone-normal.jpg",
+    "screenshots/legal-phone-normal.jpg",
+    "screenshots/resources-before-you-decide-on-your-roof-phone-normal.jpg",
+    "screenshots/thank-you-phone-normal.jpg",
+    "screenshots/polish-service-cards-after-phone.jpg",
+    "screenshots/polish-header-after-phone.jpg",
+    "screenshots/saved-inquiry-confirmation-phone.jpg",
+    "screenshots/polish-design-locks-after-phone.jpg"
+  ],
+  "failures": [],
+  "browserErrors": [],
+  "assets": [
+    {
+      "url": "/assets/roofing-fast/hero-720.avif",
+      "status": 200
+    },
+    {
+      "url": "/assets/roofing-fast/hero-1440.avif",
+      "status": 200
+    },
+    {
+      "url": "/roofing-motion-home.css",
+      "status": 200
+    },
+    {
+      "url": "/reviews.css",
+      "status": 200
+    },
+    {
+      "url": "/engagement.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/roofing-fast/hero-720.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/roofing-fast/hero-1440.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/build-films/roofing.mp4",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-installation-process.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-roof-repair-showpiece.png",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-roof-replacement-showpiece.png",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-shingles.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-metal.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-flat.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-maintenance.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-gutters.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/cutaway-roofing.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/premium-roofing/flashing.png",
+      "status": 200
+    },
+    {
+      "url": "/assets/premium-roofing/after.png",
+      "status": 200
+    },
+    {
+      "url": "/assets/premium-roofing/before.png",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-installation-scope.webp",
+      "status": 200
+    },
+    {
+      "url": "/neighborhood.js",
+      "status": 200
+    },
+    {
+      "url": "/trust.js",
+      "status": 200
+    },
+    {
+      "url": "/trade-motion.js",
+      "status": 200
+    },
+    {
+      "url": "/trade-motion-v2.js",
+      "status": 200
+    },
+    {
+      "url": "/site.js",
+      "status": 200
+    },
+    {
+      "url": "/cutaway.js",
+      "status": 200
+    },
+    {
+      "url": "/hero-timelapse.js",
+      "status": 200
+    },
+    {
+      "url": "/conversion.js",
+      "status": 200
+    },
+    {
+      "url": "/visitor-chat.js",
+      "status": 200
+    },
+    {
+      "url": "/site-navigation.js",
+      "status": 200
+    },
+    {
+      "url": "/site-polish.css",
+      "status": 200
+    },
+    {
+      "url": "/core-site-pages.css",
+      "status": 200
+    },
+    {
+      "url": "/trade-backgrounds.css",
+      "status": 200
+    },
+    {
+      "url": "/service-motion.css",
+      "status": 200
+    },
+    {
+      "url": "/service-motion.js",
+      "status": 200
+    },
+    {
+      "url": "/trade-revisions.css",
+      "status": 200
+    },
+    {
+      "url": "/design-studio.css",
+      "status": 200
+    },
+    {
+      "url": "/design-personality.js",
+      "status": 200
+    },
+    {
+      "url": "/trade-revisions.js",
+      "status": 200
+    },
+    {
+      "url": "/review-marquee.js",
+      "status": 200
+    },
+    {
+      "url": "/neighborhood.css",
+      "status": 200
+    },
+    {
+      "url": "/neighborhood.js",
+      "status": 200
+    },
+    {
+      "url": "/site-navigation-init.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-installation.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-replacement-scope.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingles-scope.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-metal-roofing-scope.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-flat-roofs-scope.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-maintenance-scope.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-gutters-scope.webp",
+      "status": 200
+    },
+    {
+      "url": "/service-detail.css",
+      "status": 200
+    },
+    {
+      "url": "/trust.css",
+      "status": 200
+    },
+    {
+      "url": "/finance-comparison.js",
+      "status": 200
+    },
+    {
+      "url": "/trade-page.js",
+      "status": 200
+    },
+    {
+      "url": "/service-showpiece.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-scope.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-process.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-sealing-hero.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-sealing-scope.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-sealing-process.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-repair-process.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-replacement-process.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-asphalt-shingles-process.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-metal-roofing-process.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-flat-roofs-process.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-roof-maintenance-process.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/service-showpiece/roofing-gutters-process.webp",
+      "status": 200
+    },
+    {
+      "url": "/roofing-city.css",
+      "status": 200
+    },
+    {
+      "url": "/roofing-city.js",
+      "status": 200
+    },
+    {
+      "url": "/constitution.css",
+      "status": 200
+    },
+    {
+      "url": "/constitution.js",
+      "status": 200
+    },
+    {
+      "url": "/promotions-planning.css",
+      "status": 200
+    },
+    {
+      "url": "/showpiece-financing.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/planning/roofing-promotions-ambient-1280.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/planning/roofing-promotions-ambient-720.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/planning/roofing-promotions-scroll-1280.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/planning/roofing-promotions-scroll-720.webp",
+      "status": 200
+    },
+    {
+      "url": "/planning-ambient.css",
+      "status": 200
+    },
+    {
+      "url": "/planning-scroll.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/planning/027A-part1/financing-poster-1280.webp",
+      "status": 200
+    },
+    {
+      "url": "/assets/planning/027A-part1/financing-poster-720.webp",
+      "status": 200
+    },
+    {
+      "url": "/site-polish.css",
+      "status": 200
+    },
+    {
+      "url": "/ebook.css",
+      "status": 200
+    },
+    {
+      "url": "/ebook.js",
+      "status": 200
+    },
+    {
+      "url": "/thank-you.js",
+      "status": 200
+    }
+  ],
+  "headers": [
+    {
+      "kit": "ambient-baseline-roofing",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-patios",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-plumbing",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-hvac",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-electrical",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-landscaping",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-general-contractors",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-flooring",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-painting",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-fencing",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-garage-doors",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-pest-control",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-windows-doors",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-solar",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-concrete",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-pools",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    },
+    {
+      "kit": "ambient-baseline-locksmith",
+      "summary": "11px 600",
+      "link": "11px 600",
+      "baseline": 0
+    }
+  ],
+  "inquiry": {
+    "count": 2,
+    "phones": [
+      "8055550929",
+      "8055550928"
+    ]
+  }
+}

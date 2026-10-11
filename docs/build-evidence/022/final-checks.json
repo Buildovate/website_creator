@@ -1,0 +1,19 @@
+[
+  {
+    "label": "regression-run",
+    "status": 0,
+    "ms": 43049
+  },
+  {
+    "label": "platform-mobile",
+    "status": 0,
+    "ms": 52461
+  },
+  {
+    "label": "browser-run",
+    "status": 0,
+    "ms": 281756,
+    "initialStatus": 1,
+    "resolution": "Ebook browser test now chooses desktop tabs or the phone select; ebook-browser-retry.log verifies the corrected test."
+  }
+]

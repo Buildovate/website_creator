@@ -1,0 +1,3368 @@
+[
+  {
+    "url": "/s/ambient-baseline-roofing",
+    "kit": "roofing",
+    "before": "586d1e6ff9f351a154262c44dc8f2f52a6dbb1dd2215d6d548a41591fba7fb80",
+    "after": "d3c39e8ef4b078c511ee54c2cee664fadfaf2171898d1fd587222a8e0f09e775",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/services",
+    "kit": "roofing",
+    "before": "90a10a99b7fe4421b9356b88014034c0bb252fc3790b2275fa8824b702789fe3",
+    "after": "41732b6e77629412489a7783fcf6555fe154a01f3be9be47e86afba29401011b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/areas",
+    "kit": "roofing",
+    "before": "6b471cc93a1160e516c8200e2349e398ffba6ae361dddcf0ff07e924e8f5b7f6",
+    "after": "2e4c87131e1cd472b69bb1cc21c33acb846afa56b7b53d0f21402e6b5ed6b4ad",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/areas/oxnard",
+    "kit": "roofing",
+    "before": "d98027556455b77082aa4a63a860d4bf4992de005429e0b95a94afb65956bd3a",
+    "after": "65f37dd51dc0684956535b2d17e446380a4b483931acf636281e97a2bbb0fce0",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/areas/ventura",
+    "kit": "roofing",
+    "before": "be68ec4735066aef8a1e7d3ec62a47322d52e00aea91a32ca33a10b7cf3a1908",
+    "after": "05acb1cd7213ac8a8da5f5380dcdad4bf993466274237e1bedad6698823190ed",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/about",
+    "kit": "roofing",
+    "before": "3f734b4a3f7b6f88d15c75669b4cb4c40153ae7e4e8c74d0cbbdc36f889c6792",
+    "after": "696d0a05dadb20fce254d6c34c0407eed19c19b73516cfdb07437e2ff7bbae4a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/faq",
+    "kit": "roofing",
+    "before": "9054cd755dd40885435d6dc97b773b8614cecde97e8cad53750e46a4c7f9a435",
+    "after": "cbf7aeceac9423805c35a26621bfb60942a6be4fef3becd38595b54e48d9295a",
+    "identical": false,
+    "scope": "Roofing items 2–5",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/legal",
+    "kit": "roofing",
+    "before": "e32deb129a71230062f42cf0760efd8c99e6f6374cd62f31b7ca4dd7ed3277c5",
+    "after": "cc4c7617247d871b14f3c6e693cd7319f1e691f36d03a299a0afd1079ff2aab1",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/services/roof-installation",
+    "kit": "roofing",
+    "before": "3414eee05cafd926c1dc6d121abd400725962eb129b7b9e7ae4e92466d9de31c",
+    "after": "9a4580989cc75e6c91450da3335c43bc8b330b329f9fcf88b14fe84d97a5d616",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/services/roof-repair",
+    "kit": "roofing",
+    "before": "7603a44d3ac3fddb42b5993206f5f959fda13a714a291b8cee84b1927a68d817",
+    "after": "d577bafc3c5cd098f9321502d0ed788635b98256f74c7afbdac4a6296f86b981",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/services/roof-replacement",
+    "kit": "roofing",
+    "before": "12b542046eb80ef2877dbf06ec64525d7e47bba94d38b663cbc578b83bb4fd54",
+    "after": "8f0a0863ad3e8eac2d942b53eed8775a3138c54cad9176d4619a8bc76a82a6ab",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/services/asphalt-shingles",
+    "kit": "roofing",
+    "before": "83272a86dfb1f9975d7dcbcf3dca598be9f8049843622a2762e3a3d2942b2aba",
+    "after": "4fc91d2a6216a3cdbbe4fb67594559e5b970823c7c843f893c30faf3305143f4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/services/metal-roofing",
+    "kit": "roofing",
+    "before": "19396ba7f437976b6ed505c7f0a5809c62993b4a84911268c9e46063c3786f0d",
+    "after": "23efee404a52923288dcf0d6a5aa86c5acf863e7dca635a4f629345aad696f8b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/services/flat-roofs",
+    "kit": "roofing",
+    "before": "17e9f5c15ec22518ad276a4c3c761766aa9122a18b7e6cc490ec9d86abb43a4f",
+    "after": "466fb774542a6b3e2d7cfc3f37c84ec99b97c485c6d3d648822814b6ae325b46",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/services/roof-maintenance",
+    "kit": "roofing",
+    "before": "d282d530ca7a500083936a20d83552340855e07d8a7827ecf10d9b6952f47eb9",
+    "after": "8e3f4ef993d4010e3bd6d0249ee1218cffb70159acca1c2b39dd39fdcb520ef8",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/services/gutters",
+    "kit": "roofing",
+    "before": "0db769b968f31e84d5a3c9f909f5ecab1a0128e95f6461fb1f553cec1e957c6a",
+    "after": "b2c873025f2ac87ba6193831c74997e22b506c150b77e8e22cde8749f0c578e4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/financing?preview=1",
+    "kit": "roofing",
+    "before": "a92be0ebfd52e19e140e6cae4d4feae83e3f38f5a3e96d462c276de8f58390a5",
+    "after": "7378cbe1c5900b5b4c093d844e045ed95cd4fc3ebbfa9307705c21e1df5e23a8",
+    "identical": false,
+    "scope": "Roofing items 2–5",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/promotions?preview=1",
+    "kit": "roofing",
+    "before": "61bced22f940b45070e3436ff07ab58efb2585c6e0aff1a98945117e5c3ccd8c",
+    "after": "eb338f60d545eb039d0ee0c78975ed518f32ddbfa17682fa4406bf65a9f96dec",
+    "identical": false,
+    "scope": "Roofing items 2–5",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-roofing/faq?preview=1",
+    "kit": "roofing",
+    "before": "c8e7276d7afa72094114853cb5c912aa7d170bedd0f08e1d8b840320457dbecc",
+    "after": "0f8c38abb6791064ad9c50f826751c6edcae264e76916de58bc8eb91f43d6f6c",
+    "identical": false,
+    "scope": "Roofing items 2–5",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/roofing/immersive",
+    "kit": "roofing",
+    "before": "65283e557eac12cef6450ad3517155c061120ffe339fbe8f43216d24d945295a",
+    "after": "4c0d05d85081fbfe7c13ad26c4113a7066b6fd0f05172330a01d43510f53843a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/roofing/editorial",
+    "kit": "roofing",
+    "before": "608ae388d6dd35b476da5736206ca083dfaf9dbd28bd60067f7912cd8acb8204",
+    "after": "1dc61423feff7d5c37af2ef78a48ece7c6669c1b9abf2bb4d29364229e7e5691",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/roofing/studio",
+    "kit": "roofing",
+    "before": "e1a88c04cb3b0ba5d35fa0d3c5ff896e4588c1f16d125352485b229522858233",
+    "after": "cb541bd39e3c0c92c1c42076f16bd58fcc9b800449510e2bf4e9b285af11b243",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios",
+    "kit": "patios",
+    "before": "3baab04a1f8f02bd2f0fafb20439bf8d35e7af4a725fbd52a1618d8f367102cc",
+    "after": "49feb8e824aa6d7d9284d7ddb2260dc9dc2aa6465a368db75bd9ebce6d3a2b1d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/services",
+    "kit": "patios",
+    "before": "0a5c1800fcd4c6a58c96011589151005820505246c2c1fcf5c92e5c3bfea47bf",
+    "after": "8f8458e1644055838bf5224e2c7b2f373831359cfff1a9bf05a99ef382274134",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/areas",
+    "kit": "patios",
+    "before": "f90ef7c57d114f7e6f4cd5602d6aa651361dfcb07b24cf98c387631a7fc27da4",
+    "after": "fcad42b27a2dd49775f2723f84da78f9e96dc59f6b0bc2b88e91a57d1167a596",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/areas/oxnard",
+    "kit": "patios",
+    "before": "5f528aa9b2db4cb42a0385e69e8302e5e59a293650f69a102836028ec0aa003d",
+    "after": "3ba23457e695afc7f47d77086ff8e19520363bce83725eb0b7555c2df1ac0343",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/areas/ventura",
+    "kit": "patios",
+    "before": "00b2c0140c325019256727a81722343671b627b48924c9160664c8068533e024",
+    "after": "942fc05f5cd8527e3b789271f80514e8251f38df4723ab429f2880eaa2850184",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/about",
+    "kit": "patios",
+    "before": "705d2a2d53dc18b2bb70940c9697454608a63edd73733945d73add3210ea2600",
+    "after": "2cdcb0bd01e88fe73bb5bf1df199210defca1dd0fc252aec675d4c5f70ffb59e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/faq",
+    "kit": "patios",
+    "before": "163c08ddb4f338955c842e1bd59533f779d948b33481af04a56c1380491bfbe9",
+    "after": "fe710c2447d9500fe09b0e9b20601f44199c4215d848d96ecf9858bf7dac9e23",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/legal",
+    "kit": "patios",
+    "before": "89ef9dad407cfd462e13ec32d137a845eb7ea6421f867335b11c8a422e1eed5f",
+    "after": "71a9267be3c9785618a7edb52f85bdb101e4b1e745ad7034b6900700763562c1",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/promotions?preview=1",
+    "kit": "patios",
+    "before": "ce21054315fe72b3805eeeca2dfc14fbd0a826e242b34687c9cc0852fd8ea088",
+    "after": "396edf55b1476ed8a164454b2a34724f456b90168af73d4897101be67e8a232e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/financing?preview=1",
+    "kit": "patios",
+    "before": "8345437ca14f27739f2ecf56920f6dad1f98902e1c5da894dc3a34d390650b6b",
+    "after": "a1f3faffc17e00b73ad670c40113955867a9e118a93223e82ce98722b4b01f52",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/services/patio-covers",
+    "kit": "patios",
+    "before": "72c2a0bdb718b37438a32634ebbe99288786f80967c33c9695d788d6d663f820",
+    "after": "4ae041455a430920b406963daab362df5dc3d8f66a3a109048681b676c7d73e9",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/services/motorized-pergolas",
+    "kit": "patios",
+    "before": "6a03e6dd8517af18c99af9edf0789cbcabc0d0e536dce5bfeafbe88c6d1a9142",
+    "after": "18e87f2aa6856d5a74d56cd012900846740b931faf98484ae3534998d427defe",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/services/louvered-roofs",
+    "kit": "patios",
+    "before": "4cfa3387082ff2348c23933a0c54259d8f9b75daebc3c38cc97d6335649516c1",
+    "after": "3685cf3d3455731a38f599e23684cbbf0fb28daf9337e785b060e6db4d0604da",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/services/aluminum-patio-covers",
+    "kit": "patios",
+    "before": "e6784f989b03bda13041cde7e901c9a98491624c13cea156d6b2f665a68db116",
+    "after": "12c420efe49ce5accfd3f87b458471ac321f06987c759d9d0ce7460facf3ede0",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/services/wood-pergolas",
+    "kit": "patios",
+    "before": "6c29182a0df7b37c1e6bb78914522fff2c8ab7560b65acc53a8a09a026889116",
+    "after": "dd4994d24c9ef964086d89784be10236833a55e31a0da5013de60f48fcf18aad",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/services/outdoor-living-spaces",
+    "kit": "patios",
+    "before": "3108fc1e6b09bbbff7814492219bf794667e612faed32f2378ba775b8e8731a1",
+    "after": "c708f26ef08211b50ef63b1f111e5280c0cd42021c18dd1cb5760d99b5a79126",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/services/patio-enclosures",
+    "kit": "patios",
+    "before": "c0a0a0b2e4bfa43d41c3076e606ffc3770ddba930deca6a36fdcfe7042de34fc",
+    "after": "7f222bd678a11185f5938e3ad06a803be7e1f34bfafd5179c598fc0b88e0eead",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/services/patio-repair",
+    "kit": "patios",
+    "before": "e008e839691f3b13161114d56f78db1cc40554d33182d63687432cae89266531",
+    "after": "f7dccd1ed4a203218647bffe6086b53670a6b2877e5c2877302c39dc2e56e1ad",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-patios/faq?preview=1",
+    "kit": "patios",
+    "before": "a3e6674bf1dd8d6f079e2797a71ae7bb52714c8bbdb0233b475c68575521393e",
+    "after": "8674e3eff58368f9265a38aa96178ec2aa20ee2d313455f2a2d01795ebc7a0a3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/patios/immersive",
+    "kit": "patios",
+    "before": "3bdd94a205672d120041a0d29b150d9256d0e9d31c20d1bfee0fcc3e6b50f75a",
+    "after": "ea05d4905311301bae81b1db34fa7af806b8a7bd7a665bbc3cb48ca57a2d1320",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/patios/editorial",
+    "kit": "patios",
+    "before": "067be892623d2b56fb3c76f7d856e81bfdb75d410e1ab050f58d1e3203656fe8",
+    "after": "535fd2d35eed3ac6f0faf20e519da1d7e9b06e5c54559f1942800e528d9ab4bc",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/patios/studio",
+    "kit": "patios",
+    "before": "876438b27cf58a4a7debe8f87785941dfefaa00f6642cad94686800405dfccc5",
+    "after": "c9c8a92d8ff034bf25591d980ce607884632685cd57859853060b71f5c3f7e95",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing",
+    "kit": "plumbing",
+    "before": "d0d4fb0314043ce8b260d3bffd385b53bcd91dd357766f28697c1c46683e22cd",
+    "after": "698df185f593df610b6384066d6aa4261e5fd165d31754a0a9859818d3c052b1",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/services",
+    "kit": "plumbing",
+    "before": "5b548b11a06b6e278a41b53035c338412872148146aa980d7ef5846738c687d1",
+    "after": "1420cfef5cc3c527b063f5bc1f2a23fad0c33325cdc5184df3b1fe4c121b679e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/areas",
+    "kit": "plumbing",
+    "before": "9ad854fd1c44445694559a8fcd36066015a996a96e8dc9f42d85e0ba2f93358a",
+    "after": "9f9902cd2f1faec006d66ee10aaa05a6484e3ad018fc32cdf232e2fa90d764bb",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/areas/oxnard",
+    "kit": "plumbing",
+    "before": "37e21d9f5402dc8b0aa8664a2b74385c120f512ce94a9da6d93cce8ca33c0282",
+    "after": "a761e6b366abbb5556dcf65d3c6b3b9dfdf20067f0cb5ab75fe90a3d50f94373",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/areas/ventura",
+    "kit": "plumbing",
+    "before": "14bebfce25d04480147294d6cfdca21bf9b997d8891fdcb7cddab902ca8356f5",
+    "after": "fc66b769bba5492e9733d93585bba75040ddd22b5bb7d4e5eec13972f3c6816d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/about",
+    "kit": "plumbing",
+    "before": "b0953bd6ae037115917c3043c595535b57ca243452f3f08ca169404c8a3f4d0e",
+    "after": "16540afa6442f8d724beb6c8cbf542f556ccdb268a146867d04ad0a774134b00",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/faq",
+    "kit": "plumbing",
+    "before": "b9afa3f6663525a017678392e6ce0b39c72c05ce444b620b5c46c886f7cf9b80",
+    "after": "1ede3ab995d36ece5fcee5472e2b4c590ba13696af3953ec47096cb9aaf74882",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/legal",
+    "kit": "plumbing",
+    "before": "88db9d553796b8c8597ef00cd5b1887e5cf16573eb1f56a94860565e59043cd8",
+    "after": "61f795903fdc632c67c220f01fb7551f946807f00fba8dbb2e3a70ed531c2646",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/promotions?preview=1",
+    "kit": "plumbing",
+    "before": "0f2ad56cb16f1ebf603aa953363689bf0c7a3fec8a0c9e6a3d0ce3bac3ef8c4b",
+    "after": "19de88c9643fa758d34c8761cd001baeab6b4ea7a9afdd8043de5e84a6505f74",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/financing?preview=1",
+    "kit": "plumbing",
+    "before": "ae8673b92d3376549b7a7b489da0c00aa3b2db886c9686c3b144c2a878a49074",
+    "after": "4262f0e1cb54c9a2084cdc68307f7a16c966762fb1595aeb84558f9847ded97d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/services/leak-detection",
+    "kit": "plumbing",
+    "before": "1965c24620d1c60a4cc27215e62a99aee74a7dd6179f7ab228901f4d15d9af60",
+    "after": "d0c328f2b6a19c9827b3c5c864304bf9aa3a621168ba9a0472ba6cebf98b51bc",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/services/drain-cleaning",
+    "kit": "plumbing",
+    "before": "2c41478f847ea7e2d010c451b84d8753fd3f31bc7ce4d51414cfa013f054ec56",
+    "after": "95d68fb26213731be2c8eea3d8d4c48893c992cd464d79bc8fdd54919ca2929f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/services/water-heaters",
+    "kit": "plumbing",
+    "before": "ae4679e687fbc8ecf48e6383f82c691ec80b0d3158fc733bd7f914b3817fac05",
+    "after": "2aa6c8a538a3f2b46b16291df0af75a3b9f7e674cba15cbd8d73148f9444e301",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/services/sewer-lines",
+    "kit": "plumbing",
+    "before": "13122ac329c0b76b72718f6ef8280ed9906b4ad80a9f4e53e005575bdfb51034",
+    "after": "f81f6e9da14f8fb406ca9847db7a966c9ab67a35b68f3650783e11d604a92987",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/services/repiping",
+    "kit": "plumbing",
+    "before": "65b14078dcc4eb1114e646572b848bafc3b8599eddd1d597f84da1d1cd028984",
+    "after": "77bd59fc81d04435be2ce1de13e8050b950ed8ded4c3f37553962fc2ccd90f0f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/services/fixture-installation",
+    "kit": "plumbing",
+    "before": "909102415b7c707bc88d6d1e79fefa64e57915f656658d4a750859626c65a533",
+    "after": "8607b8f317dcb7b4329eddfad88c5775e47c53d8a7b05789c1a6d87176b8d07d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/services/water-filtration",
+    "kit": "plumbing",
+    "before": "4f67dd74aa20f4a4a3f7265b3f98f2a89b91f7c5157ca7c9a77a5d5bf533411b",
+    "after": "119dcdb8d3082d9abac536499308a26e79841ca0eea1f4d48694eeadcf2ca8d3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/services/plumbing-repair",
+    "kit": "plumbing",
+    "before": "b8e4095fa63217481cf7c821cc344e3bdbf3416865086965b1e08874c91bf0f4",
+    "after": "a285e2aa1dc496052f9674e8ee2f5713f832a4552f0e27882b80cd3cfb63ec07",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-plumbing/faq?preview=1",
+    "kit": "plumbing",
+    "before": "83160c12d9a71b163a5582c7838b9efab1044eaa286d78ca3006e0da18afbccf",
+    "after": "8afbe0aaa8081a09a03325f28bf75afb06c0ea874d16d91e33301cb3668ac41c",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/plumbing/immersive",
+    "kit": "plumbing",
+    "before": "41d1a8749965298af3356d5e8a28effd9c3bf85d74baf03e5befe9aed664d8c6",
+    "after": "9d7f43c3005285d9e755c0025b2231a5907edd98cb07c7ec8155dd3db7f36d69",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/plumbing/editorial",
+    "kit": "plumbing",
+    "before": "e39b343a42ab9263ced06fb7e4df4b29490be3cdf9ad0f496e6be8cbb490fdc9",
+    "after": "c54447e9f1a814cd184e63008134162be347523a94701ef6039ed17ac54c478e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/plumbing/studio",
+    "kit": "plumbing",
+    "before": "62ab5fdfb4b70003f19cd8d17400623b16b058786dd5e0c9fd8ca4ed051dd1d8",
+    "after": "4ac874689c2f49bbf461ff485d4ae0d7fc13939cbd363798e981d2a2bdbadc25",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac",
+    "kit": "hvac",
+    "before": "d34033eb72e7b706a4f2ca39f045b0c172c9ef1f634d53821fbfe485a6174b92",
+    "after": "1643754f9f233ef6db617aadbf8f8b973e61a74e8e2dd33282aadeb31ac18479",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/services",
+    "kit": "hvac",
+    "before": "d784af21a500205a314d4c9c4749ab5b63a9795cd6cedc25e9e37c1542116e1e",
+    "after": "dacd46fcd8e6fb2977e8e1b23bc195a6aaaa354f70bf30202e747b4db6482b43",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/areas",
+    "kit": "hvac",
+    "before": "db07faf74f6a1a0c26cb6374041846f3f761fca96619495efdf64b577a3c315a",
+    "after": "879473bbb64480d8ed7fb38f4c4c734e3423115883423c030e6ce8befb11c6a9",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/areas/oxnard",
+    "kit": "hvac",
+    "before": "53ad0a9dd947aef266d40167cf6ab7bea98ae1c46dc1973bb6659e2689573d23",
+    "after": "256142d0385a129acf984bfc63bc0a13682fa9c98efa05fbe7ff737af5359bed",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/areas/ventura",
+    "kit": "hvac",
+    "before": "1a59ed82b19f21045163386ae5340868fc5b8c2a8312ae1682647cff703bb5aa",
+    "after": "a7db386e2b4565246225b847aeca639015f792769fe2afdf2d6f18b5ad0e5107",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/about",
+    "kit": "hvac",
+    "before": "810c171d234258e316740ccaf9e4aa3a25715896524eba33c77b68f3206e42a9",
+    "after": "e17e3ececa3c5c07b88fbfc233de9f9c854fd0783806750d55f6357024d3d027",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/faq",
+    "kit": "hvac",
+    "before": "7af32c4d358f448c55130787774d435b6809da64cc657ec388b0b70d4d8e5875",
+    "after": "92382db6995ee978f35ed563d5e03b03d6dad966f656ac953dcd6816547fab32",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/legal",
+    "kit": "hvac",
+    "before": "5f213f34230d0da2d3edb351d1459bae4b0f199e88621c2026ce66025dd93ec7",
+    "after": "c7fe42e4ba914b28d3581de202157d8b1a54735579a39bf81da358610d58c336",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/promotions?preview=1",
+    "kit": "hvac",
+    "before": "74b49e5892bb3cdfc0fafb44b4955b8cead8e58a480d106bfb1b88222dc97f71",
+    "after": "4d695d074bb29180a830934d52e9e507285599eb7bf32e7c881ac3aded10d91f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/financing?preview=1",
+    "kit": "hvac",
+    "before": "a3a8335e8094154228a68ed640f80c6db31892ebf1d706d35ac4b7376c16dee8",
+    "after": "bb64b8c22f6f3668665a7ada80ededfd0b7dbe084d30445517e1a21da119f627",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/services/air-conditioning-installation",
+    "kit": "hvac",
+    "before": "dceb48a451b762a639b1cd87f27b9677d9bc5fffe07954658003af735d6497df",
+    "after": "581d8d84058ae9198ccf4f4cbcc7a5c0277a9e3ef9d23c6772d8426c5746d2d6",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/services/air-conditioning-repair",
+    "kit": "hvac",
+    "before": "77818e26944716dac0b18cf370f9c9c9702f1da4bc2076bc6fd78f96eb6420e2",
+    "after": "e682633632d8cc2f42bbeb39b1104719932fe39723b6b9522a89ef2f831a235b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/services/heating-installation",
+    "kit": "hvac",
+    "before": "9835bef85fd85676e8302da739ef1264a7e4971fd6f6701d29199fce5275ab6f",
+    "after": "60bb990433cb51136bf8400a65fea271f6548f97523a2e38ce724a80934326e4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/services/heating-repair",
+    "kit": "hvac",
+    "before": "41c8bb1d738ba044617d777fbf54350f08182e48069eacba27fb923a4e382ef6",
+    "after": "5b6f4fc47b76cb73d09e19efd2ee1deef0faf0a4a26bd081be5849d5c70a4e98",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/services/heat-pumps",
+    "kit": "hvac",
+    "before": "c60e74835d1f91c5ba1c089126349eda975473093a3ead7940c7d55e13a27847",
+    "after": "c00ab371ca74ca54a55ad82e2f4961d1dd9005df9c8cf946a249a73a0dd7a378",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/services/ductwork",
+    "kit": "hvac",
+    "before": "dc7e01d45df408df63f3c9672ab6fe2c2716d18f6b3f741b884bc848b83455c9",
+    "after": "cbed40746b3a085b6ba45bc02b226a283a8d97c989fb65282b4dd266b60b1924",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/services/indoor-air-quality",
+    "kit": "hvac",
+    "before": "ead68787a625305250502451da150ef1154013c6aa06ed77fc57d944a85c657b",
+    "after": "58b5ebce7a9acf79083d88808f0405e426a09233ce7157f431d216f708225e93",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/services/system-maintenance",
+    "kit": "hvac",
+    "before": "dd875cdcb9a1a17fcb4685371a7e0160b571e251ae29c8c47ace63531049c6dc",
+    "after": "dc9985303fb039ad0e78f40389d1083d504c2e78673e714f30d24593a005e65d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-hvac/faq?preview=1",
+    "kit": "hvac",
+    "before": "80f524dda17ecfc1acb9de772b90f5261543324aee4ff7dfb3edf97d3eb3b4a2",
+    "after": "ff592985c727f34b68df1d63e4300c44ca804a5a020e867a99945964a80a9edd",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/hvac/immersive",
+    "kit": "hvac",
+    "before": "c40b6e508e9efaed68cffdc5f821e686ea28906d0226bd7e8a6f4d80ca685555",
+    "after": "ad207502f44764b6ae9c908a0612eb767cb52a021dcbcedbdac3ff9aa829665f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/hvac/editorial",
+    "kit": "hvac",
+    "before": "ab4ef0b408124f9a564521c9222131e5aff4801d38e122c7c0447b0c10126685",
+    "after": "2d10d9babcdc601dce9308e9a587b21f5a3d58fff7e7654e550054263689972f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/hvac/studio",
+    "kit": "hvac",
+    "before": "3725ddee6cbafa5fcc0da365805601460bc3f5917d944aebfbf794b01d406bd3",
+    "after": "30b68cad6b5ce19adb946bf1922eac1d5020b984e21a79615f744d916ce29a8a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical",
+    "kit": "electrical",
+    "before": "64c42e0825e38a94b28badee0d2dc8359e76bf2564cba8e0c6f5bca29e7d376e",
+    "after": "01131cc371542558704851c2a1902eb731e100171e64ffdc3b85e064915f4672",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/services",
+    "kit": "electrical",
+    "before": "75dbdb6785ffe0de25ddf04fde69106b44015adcbe1a9b108d0d47eee5d57ebb",
+    "after": "afd7568377b11f94304413546406d2edb817abcce27add3abac8c8d60b8a535f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/areas",
+    "kit": "electrical",
+    "before": "48b29ed028cee27394f6d9f17af279259eaf274a730e92804fc801b7b2d83243",
+    "after": "f9dcb3a8018726d275fd9196c3edf4fc562107728605ce32e1e8c3e0ec2dd501",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/areas/oxnard",
+    "kit": "electrical",
+    "before": "5a9ee048c3b6967fc76bd0aee758a8e95f22534e692d3723d43a67bda7064b76",
+    "after": "c0f6fb65c230911171d770d9bc0a101b648ab502546d94dfd1b490b7f610e5c5",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/areas/ventura",
+    "kit": "electrical",
+    "before": "6517d50498553eb76faa9fa3f622b69195717d808b7dc1bf5444a8c667015f7e",
+    "after": "5f0c0dc4409302a89b95860f9e8e3301b35c1dd262ec68063997682cca693229",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/about",
+    "kit": "electrical",
+    "before": "405b9d4653b52e9acf8ad82961862c6839e3b1759af993d8a5618e68658b9d76",
+    "after": "a3c2e315705e4973e23e0df832a006dc13dfc26401df88c06a8b00c27e72ee95",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/faq",
+    "kit": "electrical",
+    "before": "eb2cf2f1ec7004794a10105c88cb8528618c5788bc4a0b072eb17f550b3587a0",
+    "after": "c02b56efec5c6c2e39d911b56d8d2ca790a59155fe9d708ee943e3405a6a550e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/legal",
+    "kit": "electrical",
+    "before": "63d493aad8f780b533c77a1f3ad88d1faa7445afa322ce65e814b45d1e4a97bc",
+    "after": "55ea382d4bd0de2bdf847eb6999a4662e5ba821acf5fdfaad0285af2123d90f3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/promotions?preview=1",
+    "kit": "electrical",
+    "before": "af0a7f5047a88d3e09be299be9a11e2eb8151e4ce5c11a646c27b192dbe1a010",
+    "after": "9b3c37e4ede918222e32b064bfc2f40300622effda47268944086cf44d564d13",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/financing?preview=1",
+    "kit": "electrical",
+    "before": "c49c1ed28464ae7b6f0914fd3dfceb5593241a8e1b7367d7d8cae3c03090c4b2",
+    "after": "9f2f8432487f342449828ffebd26858c362c5519f4028c83a32cd2b2f3485f5e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/services/electrical-repairs",
+    "kit": "electrical",
+    "before": "ed7cde4694a5c633b4e79a7e032cf1421477d08bfa0acc132abc305c42326dd8",
+    "after": "c8482590b3f9ec47dbeab9c8f87a9ac86d8f0d119a121b16a47d55124da55a86",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/services/panel-upgrades",
+    "kit": "electrical",
+    "before": "615a1a5b903b8c8fee59df88ee58eb6c2292bba90df46427c8abe1ca2087b01c",
+    "after": "a58847da645f520ed205f8f79b94b63418dd7e23392c6009864ba9e74b8917d4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/services/ev-chargers",
+    "kit": "electrical",
+    "before": "bc89a3b57875424817312d4669dfc2e30a9ea5cbc8ae3db174a8e112c3ac1e7c",
+    "after": "c1a160da1694d0101d491f8c40d0b9ac92cd52f2a32d650eefab6fb7b4db3099",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/services/lighting-installation",
+    "kit": "electrical",
+    "before": "03fb9f918a44e0a339dd249072e07350af92dddbc147f437519676d96a5237d7",
+    "after": "b3683f4435b5c8a90aa63ee552d3b6e3849275538cc32760b6e25733f1bb5a40",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/services/rewiring",
+    "kit": "electrical",
+    "before": "a7535da357c867c1cc90450e06cb556a02462e16e4a25000c3e41af1c6a92a52",
+    "after": "156af2f4c222ec0a2f8e1866138ed470cd3e5a24d30f825bb3db97b67f4ca180",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/services/outlets-and-switches",
+    "kit": "electrical",
+    "before": "105cccac8e5a0ff4fe738d36374b90f7afa67aa329caac7fc9e59d3eb3d00a6b",
+    "after": "0fa8a16f1a8bdc053adf2e93c52f406e031ee62f29dcbd6616bd5f34f0e8cbf4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/services/backup-generators",
+    "kit": "electrical",
+    "before": "7e98ee5b77c84dcdeefae2c1bbbb770869b94190648cb157d440ed44014d4229",
+    "after": "8a0a8bbad24e0ca37da48ece6102a17a9935a4226de6055c72ff2fdd2269a9a1",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/services/electrical-inspections",
+    "kit": "electrical",
+    "before": "6ecba1f7366caf2f593bd69c049e36c6534bc24907eb28e998b26febaf8b30d4",
+    "after": "5d7d4050e6d21f9d6c823505e2adf058bda91473a62f020228f3ac3cdd091bb4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-electrical/faq?preview=1",
+    "kit": "electrical",
+    "before": "d63afb702bf576e935bc113acdf7144051f5e2365517604069b8c14318ce6181",
+    "after": "0abaeb28a9757652bd9e6ba36c937caefac77d217034c2b1183a3042f6e02715",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/electrical/immersive",
+    "kit": "electrical",
+    "before": "70082bc6e240ae70d1ebcf358019f68f50e875ff5b82663ab48a5a6bd31e3730",
+    "after": "79504a8ba79a0654355eecc2f699febedc78c78abed3ffb31dbf0d671ac2bb14",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/electrical/editorial",
+    "kit": "electrical",
+    "before": "7fbede924af19cf9496b723863389c976b8058161ba7146366cf6eb94c5eef0b",
+    "after": "a65636658afd1884fa8ff785db132bebda4a8ca56a0836a38c6959323aef1a3f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/electrical/studio",
+    "kit": "electrical",
+    "before": "5ec0afc54a99f10047e499056c62e1c09a3a89a9493b052ae0cd5f382e4fd5dd",
+    "after": "43a41d2ba8dd12186d44bd60e1a436e4048fe08d7db381ef6f1b6b18365c7d50",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping",
+    "kit": "landscaping",
+    "before": "8f79f5b21c93989b63a5ed5690987c24fe02ee0e5a83e4010faff31281a3fcd8",
+    "after": "6a96efbe0a0d65cdcc4289293215b332aef502a53e6643a9cf3c22ac5d1447f0",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/services",
+    "kit": "landscaping",
+    "before": "6d7647f61cb2604f6e65ed95a618f60645fd78dd5c15bd9cc68c43170b1e932f",
+    "after": "c1a94e1e076bc608f5dca8c78573fa703714a687807a254359cf02c6cdf6491c",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/areas",
+    "kit": "landscaping",
+    "before": "6afc6571e79763aff3e198918129ef11eb4571ae88e6da490590525d23bb86a2",
+    "after": "2292d2854f0520ac310aaaf41afce1175d6f59ed65e62be7114d64520d1443ce",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/areas/oxnard",
+    "kit": "landscaping",
+    "before": "dcf35bc9b3bad773e3fcd4a41ebc981dc52c7549bf8fec636bb4117eecb494dc",
+    "after": "1dc014de00428c566d12bae2bb40f7edfb2cabc582466a69d6e6439c8f0fef91",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/areas/ventura",
+    "kit": "landscaping",
+    "before": "fb526d158dd022b9e6fe5f5208d69a8294a5ab7359917c41e121db306458f4f4",
+    "after": "07af2f7d3d716d24ff042ba6a984ed447b7e3e929d3df8ab95eb9a5998ad7690",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/about",
+    "kit": "landscaping",
+    "before": "694a69eb47897aa43f3ed5e5fc0b2d2493d5b6a087c268ae2d2bd4f0cd7268d7",
+    "after": "77a1f6b2be596030cb9ab07ced8fbdfc3761bbff3d41186785a369e0efbb6b69",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/faq",
+    "kit": "landscaping",
+    "before": "72a0d37698b5bd92aab007dd219609dc5e89dbe6be3e4b909e6be060b81ade3b",
+    "after": "6f7c9b35b8b0321d5aaf91517f6cbf30dce8499fb11f10cd026db41696821df2",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/legal",
+    "kit": "landscaping",
+    "before": "9a8ed5136d374745a6f013d117d17dab63b83bd7acf757ceb41758ef2e5bcc99",
+    "after": "b9ef662f92e2f322a449a0ee05b927a0d3d500f87a6fca719f4896e7865e8348",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/promotions?preview=1",
+    "kit": "landscaping",
+    "before": "0d89e296902f673fd55588c5183dcdfa749a6809cc44b40b742cce35f188f46b",
+    "after": "6c78e62179e8b3a4030bbba388c4a3f5fe4813c970ca51a79a41794cb60ff9cf",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/financing?preview=1",
+    "kit": "landscaping",
+    "before": "4e6fab90b9edcc3ffe225c287d26507988521cbd2e64bb1720be33dedb188ad6",
+    "after": "676791c9f069d05c8fe2154a85194199c942a7dc5d79eb99d3029cb7b428c912",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/services/landscape-design",
+    "kit": "landscaping",
+    "before": "a0c68540cff9a9f4bcf68978a46894249a0bdefe5749ff108afbf423528a056d",
+    "after": "69a4a1dab54a49ef7ace2ab7edcd802836c76709469fde90205eedc31263b4c9",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/services/landscape-installation",
+    "kit": "landscaping",
+    "before": "c8f3bad110306f38b0a9bbe91f8f8f1b6a4422905016bbd0792298fd491f7a92",
+    "after": "a29e7f6b354c24f84c7093df908c7876608f5febe3e6f4ceba7b05348bf7a163",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/services/irrigation",
+    "kit": "landscaping",
+    "before": "d253ae093361d3f3310353176c8d2ba3d57a0cdb1dab23ecce0b4efc927f8008",
+    "after": "449898fb24e1020869da89299688f6ebd70d94299bec461ea7e2116095fd30d3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/services/lawn-care",
+    "kit": "landscaping",
+    "before": "398198a1497ca7cc6f53c509e87db9c80494e635ae9bdae824dda961b44930f1",
+    "after": "a7a980dba1395982b576318103b0c3cd16cad279406b0ff68a2fc272777993be",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/services/artificial-turf",
+    "kit": "landscaping",
+    "before": "99079171fd249693dcbcff438a355efc4ce6df5fedc5fa41a5196448d2a99af7",
+    "after": "e4e3f71f6ea4bdfbce5e6e2bebc3f1065d60fcd227352832c6f39d894af40d41",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/services/hardscaping",
+    "kit": "landscaping",
+    "before": "1d86a80ad007993b485cb2430d5f99928bea368c0e506472716d85ead61f946b",
+    "after": "b02f65df932d3be671c06d82e1a1ce6012150cb777592049a4d70f0740627d40",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/services/landscape-lighting",
+    "kit": "landscaping",
+    "before": "b0aadda37d5a02a98dabf7a1499ed469bbf0d4dccce4700ba7eaab1d857c8591",
+    "after": "52ec80fb9b88a76cf5e234b9a2f8fe3609dd4b5de353b262d8d2ec8189f31a78",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/services/seasonal-maintenance",
+    "kit": "landscaping",
+    "before": "014bd2e3809087d234b4cc5d81ba190385915048aa4f31f3436bea196251ae59",
+    "after": "058ca1f510345c6a4e6763e464f32381ae9ad5435a3abbbbe836b4a2f639440e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-landscaping/faq?preview=1",
+    "kit": "landscaping",
+    "before": "74d3fa32f7be5f6061080bed213343b098d8075428f7ea1ca52539d81406fa07",
+    "after": "9a27a144875d8d798a99a6195b1ac0fc9e676f1cb62451eebe7817690700a6ce",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/landscaping/immersive",
+    "kit": "landscaping",
+    "before": "dd4647b82b9b1a34d8f4e4fae70bff5104cc88ed56ab40e369859d831533ef5a",
+    "after": "cd3b9275f8436c42de9201aabd282788b8742b3e3baffe50598afb1b4dbfb952",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/landscaping/editorial",
+    "kit": "landscaping",
+    "before": "4e67789d5f441fe83b251aa8e3bee13ab29542ac9ae0fa3190ecab4c7dc2f706",
+    "after": "0062e590abf175048a23eee9ee5e41eff44a3c26f64a9d091a329fb1ac898142",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/landscaping/studio",
+    "kit": "landscaping",
+    "before": "d6eaa74df9c7c09bf27307d430f34e36c2898dbba1cb7e33d38225b70b627e04",
+    "after": "e2a2199a0713ec3799f2d75307befb7a63ed47786aa2feab0b2a9c637250e017",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors",
+    "kit": "general-contractors",
+    "before": "b9771176da3c7de57b0276fa63bfc1caabd94aeb0775f680deda6a62926bf6bc",
+    "after": "b43755e82e9cca3c1219aa1d7f3a7eef2656d858b50dcca294fa342083609ef1",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/services",
+    "kit": "general-contractors",
+    "before": "af7becb414ed6aa6305bd6af56752b3e47904aa2e11ef90d3a9e6e8c1db6220d",
+    "after": "807bd888eca87466024704dfd21f02e2180c39bc1b0f0df4e1670b571d41dd54",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/areas",
+    "kit": "general-contractors",
+    "before": "4d92ddd7911bde740a5e4649af6b3f665845eb9f8a4753ed7956d48bebfd3fc0",
+    "after": "69173fac5fed55e8e8e20a38e949d230a985dcd377e4358448d4c14b3f5d9d48",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/areas/oxnard",
+    "kit": "general-contractors",
+    "before": "835c9ecda310f4dea464ba5f659105159df77ba912a771c5cc36deb3c5e4422b",
+    "after": "1a2404db14dd2387f10f5dc4848483780097948f810504ba113ef2f207bfb9c4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/areas/ventura",
+    "kit": "general-contractors",
+    "before": "b630e94002f0943303711bd1e0b015fd67e1cdde8b3f07478d4f0106e1b2bf04",
+    "after": "db9736b3e5dd7c9a3f3d71d65d4031c95caa111dd0d8fdb98cffff9c76ae814a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/about",
+    "kit": "general-contractors",
+    "before": "c90626adad2be0bb79421ba300c10ee99afd94bd2cb99bbfdf3fb37b43624530",
+    "after": "f12f8cfe4eab67f466408979c8a7f7abe6354d70b731bc703b8f911ff848e702",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/faq",
+    "kit": "general-contractors",
+    "before": "08c782443fcf41fbb5c0b6854fd47b9e7a0d9728c9a09b2733aa0202a53731c3",
+    "after": "d05dc4d1f4b9603100c3e28d91a8b88dc331ff52ede3d40c0b80ff4a8bd47ffa",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/legal",
+    "kit": "general-contractors",
+    "before": "1f4a4bff99a596d83b5bed7586e38c4e88f3a08c1bace260d4d34982e451d2f5",
+    "after": "0c76f423587dda2fc6e089e1df2aab6daffbb92850f11ce4cc7524714023d890",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/promotions?preview=1",
+    "kit": "general-contractors",
+    "before": "26c1ae046d76cd58dde8d95bf35e0cf3b588f8f941d711182c9fd3d4d47a9f0a",
+    "after": "a057461a26bb18cb4d86763c5bf72932609fb7d799a80cbbaee7359a920b3317",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/financing?preview=1",
+    "kit": "general-contractors",
+    "before": "51bf5997c6e3821b3cd15fea09acef17a513251d2c46b07e319ebe9cd8819b11",
+    "after": "0375e4c2a9d771ef57413739da275e8af9f160e4535371d594f60eb2bc6eb613",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/services/home-remodeling",
+    "kit": "general-contractors",
+    "before": "917992e85ccf242b3dc506afb3fe192c171a38823c607463e7fa901de94dfa91",
+    "after": "d2b180f12091b2d0999df120e413926bc8ca8441269f58b8bead5ce17b342426",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/services/kitchen-remodeling",
+    "kit": "general-contractors",
+    "before": "55d62ee81aa9ad646403522373e41ff1f2dfb59c5116df50cc6452039e503892",
+    "after": "af1bf292860040b101da570613cb4b156ceb591eef261cb7842aaa4760eb7f08",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/services/bathroom-remodeling",
+    "kit": "general-contractors",
+    "before": "def343d02e4bf40a0f515e84eb72d99fa01309f050f6cedbdc13595ef1a44656",
+    "after": "48e58948f8d3e1f327d8989238b465c98cd14aef0bca4db5cfddb0e9cab88d0f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/services/room-additions",
+    "kit": "general-contractors",
+    "before": "9cbacb8c6e056b2e5f94d5f7222bcf0897d52ade20a365e38dbf162d23e6226d",
+    "after": "c947effefa8a1609a85f010821d6e38cce261065c1774ab863285e9c0f6d3992",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/services/adus",
+    "kit": "general-contractors",
+    "before": "acba26d868ce76acc3f0a560b9bd98e1c0a6a075cc148fbf8ba8bc77ad7afbaf",
+    "after": "35855a37a1d5d7644179c9ffed65407b06adf9ab6ceefa96a8b7a9ef63a60904",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/services/new-construction",
+    "kit": "general-contractors",
+    "before": "36ac026d17ea74629a318bf5c578a3c4184424521e0ce4b88395aa3bb8592f3b",
+    "after": "769466df23a613bb5deafdd3a289c65b02b765b8521bd67279fe48d06e9768d3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/services/commercial-improvements",
+    "kit": "general-contractors",
+    "before": "ee2fcd459b4da6c47a56fcc43f577c4e0a0bcb8c604cbdc16103268e1129db80",
+    "after": "026bfc950e41a4fcd9c60e9a982e9e636e39413199b8ca76302496eec3051e3c",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/services/whole-home-renovation",
+    "kit": "general-contractors",
+    "before": "a2ddcbacee843abb74eda8b0489daf37c3727fd3e2482ae646c5286770a8547a",
+    "after": "1424a212f13080c0316808688d4145e25eac76ca1cdbb4cf6253423707b07ccb",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-general-contractors/faq?preview=1",
+    "kit": "general-contractors",
+    "before": "fe38fc2d45870570e3bbe08616a512d589781ebef0113cd666455ba9df8d4210",
+    "after": "6394ede983dfc47b957e1910e05209207d1a703dcfb8256af5387013ccdb36cb",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/general-contractors/immersive",
+    "kit": "general-contractors",
+    "before": "6072f60263131e0ac6473b9fa2da7f36761a17455d52698857ff30e8c0d8ca40",
+    "after": "92dbe39b4a75ab34ff19e842d1debbdf55bbefcda6e4152c520213b986c35f08",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/general-contractors/editorial",
+    "kit": "general-contractors",
+    "before": "479edfb911b05a582a0fd9c4264275d50f9671191c731ab729ceb0dba6f1cce9",
+    "after": "da0e7440867ed31de4d67fc48e41c0b8c8e8b26e71bada7d245de99c260a881f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/general-contractors/studio",
+    "kit": "general-contractors",
+    "before": "e2d3e4825f947adf7c8cb57001195a72660395f95dbb73ba97b174783a45e1a5",
+    "after": "ebbab18c95893ad3dc7321ac5c3447afccdad665004c3d7861187634d0c69145",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring",
+    "kit": "flooring",
+    "before": "8bb2c0d38e813a718351667791605989c1bb011fc629b914d68f19724eea5d0a",
+    "after": "3f9a9a6e6605bbb765b0f8c23d4e7c7e1aee012e28e2c8a3d002fc69702684e9",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/services",
+    "kit": "flooring",
+    "before": "925c62e288a6b88b266381afd31458c1f6bcd89b465d1c22e81ced32c3edc366",
+    "after": "306d9b9190a19f2705934421c431a08fee31d18ee3267cca13529885403ca097",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/areas",
+    "kit": "flooring",
+    "before": "ac1233d59f3d6e09d6a32e6ff4137eb7d300f50857c6aea3b1c68137de708cd0",
+    "after": "289599c45affa08af8840cb57b7afada32d20dd15b4d459f78c0fc5317b71ef3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/areas/oxnard",
+    "kit": "flooring",
+    "before": "cd093c82571d4db63db42186aa1b4ee4978cd2fef6b3314b1dc7c2443171624e",
+    "after": "7724b0fb5312dd98b9b720ac5fb89bd987db78e3569a42807c8fca40c2f48a6d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/areas/ventura",
+    "kit": "flooring",
+    "before": "47704cc59b52fd72c042f43a25cfbf82b9d10feb78dc2e1052c535c8b3077bf3",
+    "after": "25905358acb59f30006cd4a63cacd1ca2e54fc4980b732ea8894a4a76cc25916",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/about",
+    "kit": "flooring",
+    "before": "c884ebd66e2c5e0f1d473474847d42e91e3c0dc58ba5de6286e6ac341e0269e5",
+    "after": "082999fb7dfb380bd78eec76c26f73a11b184865cfc9f859f07618d1334d1354",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/faq",
+    "kit": "flooring",
+    "before": "e03b8eab8a012019f354255d6eddc79b00d5b0c0fe8eb0b2b46209aa625446c7",
+    "after": "8409df1513c7dafcbf09b5c6ad6d8f63d141cf016a7968719b9ab9d8b79b7703",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/legal",
+    "kit": "flooring",
+    "before": "74bfff78ca82920e487aea5999b6b2f6d88c49a7ea4298f86b70a15c7b5a889b",
+    "after": "726045e0791d630db5223464e1789d70329229bc9ab03e71c7146bc4aac51caa",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/promotions?preview=1",
+    "kit": "flooring",
+    "before": "8799dcc27061d823747d88a5f1b6f98f51dce878a3b36d0c14fc7976df23f600",
+    "after": "1b85d6c6166ae040734177317a0a67f0654413780e53095148cdc1a9218a219e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/financing?preview=1",
+    "kit": "flooring",
+    "before": "a2cf369edd7ab30424c45eeb67c846a5a8c696e8da6b681ecbe6510520a5fdde",
+    "after": "189c28fda1bb21a066ed576a2664b5fc3362ac1db21da437db081b750860e1e3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/services/hardwood-flooring",
+    "kit": "flooring",
+    "before": "8b95b10c91765b34396d5d06bf049793f69ecc764d8075b101d4c9c66eeaaa68",
+    "after": "33e768cc5dff8cf524c9cc87e46e57e5e6c74a43b491e615c8d245b6a7d5067c",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/services/luxury-vinyl-flooring",
+    "kit": "flooring",
+    "before": "aa9936ab6a5648d2fac1b7a7e5245c6af6a5213696a026dbc119fdf8ea8ad436",
+    "after": "7b86b6d10e7add1001bcf32bd0e038f0eab0fb1caa52d5d8bb9621f9e35b2e4e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/services/laminate-flooring",
+    "kit": "flooring",
+    "before": "036a697157bdbde3463acf8e7b9fd87bef36a82dbc7626cfeb9a00f49c8ce4b9",
+    "after": "883d17e69041e20b29916953d9cb3db865ff9795642bb110bbed671a19ce584e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/services/tile-flooring",
+    "kit": "flooring",
+    "before": "3b5106ed073ba292b328be6d354c2fec18b4f6729e376cb40191363ea5a977cc",
+    "after": "95f282a239d1ddb26bbd0b038b478054fd310d4fb59afeabe011017e9b586478",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/services/floor-refinishing",
+    "kit": "flooring",
+    "before": "792075216b4c2833f56fc8ea7e5e6c1187d1eea283abf6361ee6bdc2d2165141",
+    "after": "a6e81f67def702e1672dee3b1cc967d3ec98958667139059aa9c49d5290f404e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/services/floor-repair",
+    "kit": "flooring",
+    "before": "0aa6d732f7453c476fc279c242858c8506d4b7a9f882237131b38aacd7442c6c",
+    "after": "d100504b30ba6169098b2ff4655352414f08dc6974fe45523cc2b894c3769e3b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/services/subfloor-preparation",
+    "kit": "flooring",
+    "before": "bbf0fd0e54e6809a426dcd94afd2f65d94bf85e9f370f6a15f7229d6e272a042",
+    "after": "0d4e697c1e24017c21798add830d7a01e66cc85160a9a5c9044418c54cd312fc",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/services/commercial-flooring",
+    "kit": "flooring",
+    "before": "a2c560dc5b9a78b9ddbf24ee191fc013b8b7d10d03989f1f95704f4db7eedabb",
+    "after": "555d306c8b715b44030673ad77fe2c71d4113447a92e439dfeead8ceeb62760e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-flooring/faq?preview=1",
+    "kit": "flooring",
+    "before": "375e17705c6d0cfb0f570059e28cb7d79a925ca3e85a3fce0868ea7182104cf7",
+    "after": "dec27b1fda0d258aa3897cd6562560e1a3744764ac2b66bde08b1695a4eb296d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/flooring/immersive",
+    "kit": "flooring",
+    "before": "c855eaeebbb9d610297ed54bcb558198ecaf4fb8033be66cdf482fd470c9584f",
+    "after": "bc024dd524bc16503bab02280f410fc863099017be0bc744b8bfbd996facb7ed",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/flooring/editorial",
+    "kit": "flooring",
+    "before": "c4a4d782179ae28b4f28ef8179dd583b19d2e06868c4a1dcd677b6e002205678",
+    "after": "c739c66c5950170547fd762e3674d40b6c9b7e3429d1566e29efa0bb0c2a0f08",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/flooring/studio",
+    "kit": "flooring",
+    "before": "3ae59e12e3a074c530eff21f43359331fd14bdbb8109b37f0cd834e266fad9e2",
+    "after": "f73409dca7426d15a8f00e879b3e65eeb9d9b72b4a7b79a2a93dd0b01f1a75cc",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting",
+    "kit": "painting",
+    "before": "22e528c56c6624c4692c51b5e5be3a9f6516115feca09a8726a30612508b1980",
+    "after": "f7bf822b4dc0a2a56062fa6ba71f0165eee113b6178aab0913118ba2af0dccc6",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/services",
+    "kit": "painting",
+    "before": "3f45248dd44e6e73a0d58d53f5cab69ca7670da6203e18cf5b42e9930f380f47",
+    "after": "82ddb69992ea86fe89de09ba5d6470fbcb0b9e011ea18ae953910309b60cdc56",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/areas",
+    "kit": "painting",
+    "before": "280333bd3e7f2c47aade8ed6c4f884a24e3d34f48cc1c8e23cded472e91c73e9",
+    "after": "6850a666de20441a10809c465307b8aaef4d7d4dad99a7ae6e1006b9fbda3f0b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/areas/oxnard",
+    "kit": "painting",
+    "before": "21f3f3821d2678700456fd3dec0bf640699f35fce234b147a5c13fdde6d643e4",
+    "after": "2cd5e7dc3181fd5ce947ffb07a1a0f4e7f77fd6bcdcab7d7c13449c60b8acaa2",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/areas/ventura",
+    "kit": "painting",
+    "before": "8f0f5b4274d2eb90254d5bf9c856f980e66a7d2bd4800d8ce21904fee1feac90",
+    "after": "327430fa538c8ca4a785a9404345bf77ce038e2d1ac09039e15d9cc47e6b7c29",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/about",
+    "kit": "painting",
+    "before": "453fa037f803298f848f48b84ae199e56edf31b368c40c29037b550a590b94b2",
+    "after": "637ce94b22cfd592dfcd0eefe1ca6f86a3d5ffff46731104944e8bf6b3568222",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/faq",
+    "kit": "painting",
+    "before": "18cbb50a7eecd9b55847eadffd284fed3f002a577d01d6a627885a95592e82dd",
+    "after": "7709efe08322a11569f79c7eb4fb12a8eda61ae2da8c4fa6e204b74075cff77a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/legal",
+    "kit": "painting",
+    "before": "5fd636bc78a052b67948e81ef08fcf5b006065b4de1b4e3aa95bd381bf9b5ac8",
+    "after": "85dde65a75bcaacb708d219877fa90bcf4acdff24f6fe1ee2828c4adee83b4e3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/promotions?preview=1",
+    "kit": "painting",
+    "before": "89874e7790280b755b45d7063469170a8d2b85b8082d2d98f518a4239217c40a",
+    "after": "3291cddcedd57b3f4b8928d65927709817ec2ff9d5b19006a4e0cff7bac6e651",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/financing?preview=1",
+    "kit": "painting",
+    "before": "8d453653b619033b09a3d38c37c15bade02a021557e23ab73fcf1077f8c20612",
+    "after": "2d1805cb11b5648d9ba9e768f3ecae59c942dff56d1ae22af2416e871add4da5",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/services/interior-painting",
+    "kit": "painting",
+    "before": "f02749e777161eb84477fad8081a81e2e57395746c4a1724a72624c44fced7e7",
+    "after": "bb2a2c536e3372ac4d954d2c04517605572fcd20574e0567e0b7a7518a34fa5b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/services/exterior-painting",
+    "kit": "painting",
+    "before": "0ea424e43ea822ca6f72fe59838d271ef67d017db80c0f2b33bcc977a279bae6",
+    "after": "2988112f76b0e2294f78b1da6fcb7843aaa8010ced6fb6af92c3903b78f383c1",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/services/cabinet-painting",
+    "kit": "painting",
+    "before": "34799cd03eeb3f1f0bfd2f30505867ec7bd411a08c5bfbf1fbc2d2957d6bd06a",
+    "after": "a2bb597fb3e51ff2246c683e1ab3ef8ffa882a0f14771d8d347a6efc834d1d89",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/services/deck-and-fence-staining",
+    "kit": "painting",
+    "before": "bb32909027ac5e51dfd3792856298b77f6139cfc91878edccd2aff4e2e3d41fe",
+    "after": "7ada871624f398884a612c66051e7ff72019257de85559c878fbd1e4e7e63e02",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/services/surface-preparation",
+    "kit": "painting",
+    "before": "d4ef8648e53ab5628627daa65bc2a7d87fc7f40856643ef517f4f0cc675b8433",
+    "after": "95babe189f6d477457343f414c48e49667a7ab5f7bb0ee4f8970d4788e663e63",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/services/drywall-repair",
+    "kit": "painting",
+    "before": "344bfc3478d3f16278ffaa9dd97db3ff2d74bff64c1d0bbd3bbbeb9a9ccb34b5",
+    "after": "5654a4cb25e14884ca170b97fbc3dfad7246486291f27205f2b7739cb5c1d998",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/services/decorative-finishes",
+    "kit": "painting",
+    "before": "812af96000a56c0b760fa9c8a20e988e4da323e6c16502930c58395424a31a38",
+    "after": "4c02e4704f8ae4cde362385b27fb120bd516b0995883deeeaf63449a44591be7",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/services/commercial-painting",
+    "kit": "painting",
+    "before": "e39dabd7ee6c9e139036a52968e0d69611c40440578ae1489ac3713c926f6040",
+    "after": "8821bcd587635bdd2c26e72b4c34101b7d080cfb3a543071326eca705237f5fe",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-painting/faq?preview=1",
+    "kit": "painting",
+    "before": "05f1d302b481a971b0f40967246b03438bf0b0eacb5362ec26249f45cf0688fb",
+    "after": "3dc4f5b4b32c5147b41f0a7d80bbb0a7f07cb03ce8a9e776d6f48dd7f2446999",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/painting/immersive",
+    "kit": "painting",
+    "before": "fced25a2ea7000b8dee995d5521bb23e7cadbf8ba8a4684b15079ae9c1876cb1",
+    "after": "eeb18583f22114930e33d0bb30d04152e56c13197ac6970580b5fa53760eef89",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/painting/editorial",
+    "kit": "painting",
+    "before": "4845026f568b7a1a1cc1a56d7bcd1924bf037646004e98c65f227fe73b19096d",
+    "after": "389661af6358d45ad4eed3373b1f96919fd6294ba4ae189551da066ae3dde5b3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/painting/studio",
+    "kit": "painting",
+    "before": "5b539621a588571449af8d877d92012a4c8b6d66bf94f4d0c296e534b01fa948",
+    "after": "8274789143808d62eae0a9b7f95bfc21d98c99e7156e43d0b46394a1e4c74cb9",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing",
+    "kit": "fencing",
+    "before": "1c039a6b5dc80cb04df39a49ad3e1e5b6939dec8e52b2aacbc1c544c285442c8",
+    "after": "e569abfc99fbb9c45d965ae878ed64f3b10ab4865995357f9dc3627eb95e1fc8",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/services",
+    "kit": "fencing",
+    "before": "4c83bb844ea27c9b5e5b7a794e258637eacdd978b723c38cb59f94175206b673",
+    "after": "66c0689aa1dee248d95060cb442865f78649af3ddbc8977dee9fa1cfdf9f252f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/areas",
+    "kit": "fencing",
+    "before": "6e2b27f9fa185664f4f5917ad8483caef65cc27f3cbb2b852e6c72a47e7e69ae",
+    "after": "af774c5243b870d45e8bffba8b419a3f67082907bbafa337c7447d73a75a9844",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/areas/oxnard",
+    "kit": "fencing",
+    "before": "710fc60963609d75db2de28936284a1410f70b75b23cafe108fa160b1300d98a",
+    "after": "ead4e10309c050bff813e33e3e65867ee760db45ace2b41f8adc291fe8c83c32",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/areas/ventura",
+    "kit": "fencing",
+    "before": "7d0665e938d7e12936c1a7e615a4f1b65108e7bbde84fc1df15d4c1f54882607",
+    "after": "29030ad546cd92341af523776cd04fb0879df24a1443ff1171b174f5d8e48ae3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/about",
+    "kit": "fencing",
+    "before": "46dec7662e81c2f1fa96c8397a501f7996c906957d3fbbcf5da8e8614f87b280",
+    "after": "8bed9b43f505704d80ff23d7fae8dca8918dab00645df4a225374830e67895ca",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/faq",
+    "kit": "fencing",
+    "before": "b7b60bbf03c88e9d086c274b9e631289dee5e4d197a6ed2ef50fb2e8be4c9447",
+    "after": "7a2f000ced23a0be6b767ae22627616ff91d85dcbe2232d2dcf8d6b0f32a1b94",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/legal",
+    "kit": "fencing",
+    "before": "e7c041c49dcbaad44d75de1da4e8764718b69cd7ba11a58e9a4fe14a12a5ee82",
+    "after": "078cc5e997dac9214e12aac1d82e30427b9fcbd5d5cbe3f82cdc3304389eb7ef",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/promotions?preview=1",
+    "kit": "fencing",
+    "before": "0314edbffc658448638541480f78862d5cf4699567f19fa84ff12936dcd6b23b",
+    "after": "f3108a4f34070c2056e6420b0898fba3b2f7ac2dba9ca1f439a77e23a1f2d57a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/financing?preview=1",
+    "kit": "fencing",
+    "before": "1f64769985b960a6a1837ec5fe65cc4bfb22034c78a40bb4d0773ab01d77a369",
+    "after": "faf5656b97c629f8268bc261a9fe51d72125ba87f1f24f21f342c9b2f3a8b90e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/services/wood-fencing",
+    "kit": "fencing",
+    "before": "7d22c016eb4fbbeb4a215d437330da1677723aba69ed4c786cfe90aada5e97e9",
+    "after": "c6c62e6a2bdf9f8117b2903a8218dbdf346f4029e23ca6bba44f7d3044fc1e99",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/services/vinyl-fencing",
+    "kit": "fencing",
+    "before": "3b4c849acf20e991884b0224e56242b84475807ef47a1fdfe29c376c82acfa4c",
+    "after": "4ae7b50086b17e54870bd96a1bf28cf931b64a53c35bed9df01da4ac5cd35c16",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/services/metal-fencing",
+    "kit": "fencing",
+    "before": "461369ae0f3275fe4a1b63f8312efd32bddd9bef8d57f3bf7fad19a9ea60f72c",
+    "after": "8ff99fbf66a25d0865faf826665381584a182122243899e3b2c471b06bce1586",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/services/privacy-fencing",
+    "kit": "fencing",
+    "before": "c8bc3ecb441d49941547a6e1a317f81169a7260262ba8b6324c49e9886db390f",
+    "after": "88b29f1c1cb21ccf27f882b69af5877f179dff72e1af13d394e64618729a69ef",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/services/gates",
+    "kit": "fencing",
+    "before": "29ce53d73f4a2d785bcd89f551c992162cf75fdec1d34805b6e0d6666e0cdcfa",
+    "after": "9beebcd525eb33f05c7b679262c7bdda5078c9301b6df58d5a553e265c734135",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/services/fence-repair",
+    "kit": "fencing",
+    "before": "c791f6585c0853c0a5c4f7200c835520695e94f97ecb1d2acb6b8832cee52867",
+    "after": "d985914cca2e41defe7c360d89f452ccdc3f1bf4fd55217a336cb31911b94abc",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/services/pool-fencing",
+    "kit": "fencing",
+    "before": "b77734325d2b7ebe1279113fe669757a1a7764ffefb515f000c767e6c86ca077",
+    "after": "01ef8205ef6d88091b4e1de312765c625fe6c5b73a2e17903c8fcfc0eb60c762",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/services/commercial-fencing",
+    "kit": "fencing",
+    "before": "2feb838a48b145943b6bad548cdf2cc3ce54c8ef2b99f9092163f7d247c39ce9",
+    "after": "3a77673fefc4871d9c985819aa038fe21df1d87a2b0d38536a3a5b0267cf6cf2",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-fencing/faq?preview=1",
+    "kit": "fencing",
+    "before": "1fa2c63ced3d95318f9a9e76dd982c58c0dd038cbf3880a7d2ee0224fbd06b28",
+    "after": "c6e6a3f12316c48e0808bb9fe249ae39e7039d0903c7f394953dd356b8c8d35d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/fencing/immersive",
+    "kit": "fencing",
+    "before": "5d23a7f301443f7ae37db8bedb592d2a09217c62db290e15c90865d6d2d62a0d",
+    "after": "d51d38b679ca2275ee526b23e7e8ce8a7a105756dcf8bf80cd71deaed198a5f3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/fencing/editorial",
+    "kit": "fencing",
+    "before": "09ee062c4f02beb22453ace6a7b0e88d40537c01fb18d89bb5826bd4d30a8bd2",
+    "after": "1f0d11786f8452721bce730d502c6e6833ea0e6d71e6287c5e1061afdb691891",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/fencing/studio",
+    "kit": "fencing",
+    "before": "52f42592eb50b6e9d757d4a41c0771f486194c6c81052b4b6f753e926985e14b",
+    "after": "a24a47f8c9f5aec9a92636d8513c66581bcc0f1ec332d3d6b428f479bcaed43c",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors",
+    "kit": "garage-doors",
+    "before": "d3db7f8361429b87a0dc2018d886fe9cd431db20fa98e93c485834a738d13432",
+    "after": "011fd70b032d85a898582ba6d1d7e904043db1bb11876ae10142cd331a18c02e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/services",
+    "kit": "garage-doors",
+    "before": "fd6f298aa82ec6b3bd5b6debef136fb47292f4307521ff6d40f7e46b36227619",
+    "after": "a7216799a7c5498c23cb0295516433fa029d183406d9d7b886d0b0eb2ee3c984",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/areas",
+    "kit": "garage-doors",
+    "before": "5da94763fdd6152bc23e547bc14ee2d7e7ef5041e3e661a33940f042704b65b7",
+    "after": "1338c66f7989cfd70402cbbb49a106f88b020d8c5e3e94c6cb1491888bcdf42c",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/areas/oxnard",
+    "kit": "garage-doors",
+    "before": "5ba8fc4a2484c53e55adbdfe5ccf618c9302647b9e1dcd30d99ad64a5e74423a",
+    "after": "cd42c82aacbef096f4d4827f0424344d9e5edaac510437fc0d441b2eef97d21c",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/areas/ventura",
+    "kit": "garage-doors",
+    "before": "3194d000175783ec32e3c5a1cc0c8129235e93b0e8a549dd5e838c88c925af85",
+    "after": "62d48bfceacda6e79ee963b21daacc883fbeac8d0f7de228b8ce10bcd9c4aa69",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/about",
+    "kit": "garage-doors",
+    "before": "5bf20a0c8a3efcddcd7c6080a954b494869d40a2f5a244929ac4e8a11bc17321",
+    "after": "ba7aa45cb8293e852f49eb3a648462201e183e59fe889046e302c25709fad5a4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/faq",
+    "kit": "garage-doors",
+    "before": "de7a35cbae099f00b9a9e6d24ec92ba26e20a4a1a4171f59b6bcf64b99d05e5c",
+    "after": "9b85ef7dfadde43fbb3bbb018552463e83fe53536c946b45eec12a9315dada8b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/legal",
+    "kit": "garage-doors",
+    "before": "ea914b93dff6f8a71b9cfc8d7a8c492a499e570d8dbef25b52135d1118545c32",
+    "after": "402c214c8ac8bdbf1abcc037c178d7835803d23d35df3337b9b864212faf0749",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/promotions?preview=1",
+    "kit": "garage-doors",
+    "before": "7df87c9eeb8e0dc2b689fffb86962daad74675c96781f3b353db5035e81db191",
+    "after": "974c59db05c61f3fd9a914397d188113bb755b76b1fdce0f75b6c71094980d33",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/financing?preview=1",
+    "kit": "garage-doors",
+    "before": "70f5e1475abefbe60894f169dcbbfbc22e4d1dc439ee5af156a352205367f017",
+    "after": "de8def82f73c03ad115a0eb345987002da83d9b8f63dc21a381fd560fd7caf32",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/services/garage-door-installation",
+    "kit": "garage-doors",
+    "before": "a9b828d9c324fc15b72531c89b12f3dde507cd767948bbfb37f71391bbd48935",
+    "after": "f9bea1c4fab0ff3592204e2e559e6b7b781bbc6f41a7f1fd35c9027f5ff44301",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/services/garage-door-repair",
+    "kit": "garage-doors",
+    "before": "e854a5b0af8d2826bdaa184768c529175d6e180b66915240b71c9ee792c7d55c",
+    "after": "4e4a27152ebf275ee39e3b1f9911b61be0ae7ea83ad181844568322a78f8ba12",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/services/spring-replacement",
+    "kit": "garage-doors",
+    "before": "ee87cee96b9a1e2cee38316a83a2bbe1fd4bc4f56c8dfd7a9c7520448e0757f2",
+    "after": "92c9a62d6f0bd98214ccde32781d7a69db851d3e493dd2dac55555a5fea50bc6",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/services/opener-installation",
+    "kit": "garage-doors",
+    "before": "1d5108a0cdbc9b979df15d991b67de3b47b692f814062ad28d16a16fef1b2fcb",
+    "after": "c0cb07c3f3e2950cb00c33b808a9ac374eb9bb83029e9ac1682cac2bb3a1ef60",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/services/opener-repair",
+    "kit": "garage-doors",
+    "before": "72547889f0003f9f7f851e5af1e79d5a938efa11d7e21c513abb28a74ad40dd1",
+    "after": "fe91b360350c1a7deb1b51d676486f5d39482c769eb55ee32c980c91bdac5cfc",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/services/panel-replacement",
+    "kit": "garage-doors",
+    "before": "6106a608dd89d45cae5be1b0e1342cfb6951b9f618170460607e01353390c62e",
+    "after": "a9f1da2d1ea67755174d538f8e2380d5d73b62cc3566120b86a69bd4d2a9854e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/services/weather-sealing",
+    "kit": "garage-doors",
+    "before": "130c17a0fecda5ceda572a5dc59e4ec00c343d81297349a603daa5fd385e7520",
+    "after": "adb4705e1b678dab4bb332dcabef0be2dfdd3cbec6f51c5fa5d0052ab6da1967",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/services/garage-door-maintenance",
+    "kit": "garage-doors",
+    "before": "5030f43694ed3cd72e7772a6a8ae1d86a24cd6df31c5172b72a5c6fe860bdff0",
+    "after": "801b293064ab948661c4e765890833b3900f88629a1fa1a753cbb2d6b2a0e579",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-garage-doors/faq?preview=1",
+    "kit": "garage-doors",
+    "before": "a8c292b1ca99d852118659e50fdf3753b2678b68dd6517c7c5d0ee0b610f37cc",
+    "after": "7114350c7bb893cdc0ca030d77b3b4925efa0d56506c92b4833e7612177a2ccc",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/garage-doors/immersive",
+    "kit": "garage-doors",
+    "before": "657e814abdf287ccfb821dc4d9f39002ec9b8ca8229c37ca9e8f7cf82e4fa388",
+    "after": "92099b5043d288ec2a1a5ae2ccd8c0c8ef07336265cea01472754c79a7e320a1",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/garage-doors/editorial",
+    "kit": "garage-doors",
+    "before": "2fc230f4f6b48774a1ab0d5b405d621320cdea871de4023c772a548060ce2af6",
+    "after": "8db74fc4561b670076148757c687ccca88ce9f8e54ab74068c8910f00c1321cd",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/garage-doors/studio",
+    "kit": "garage-doors",
+    "before": "439a5b5bfca7f3a0286cb1d4ca4b23308f75e601e0a1fc5296af9457dcf649ca",
+    "after": "247fd46b99fc7c733622658f39bd9f8b1cf9611c77318567ea60d10489dba203",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control",
+    "kit": "pest-control",
+    "before": "74f8abc1a48e071cdf7ff523fb7f9213879fac008b6dea5075c780da53683584",
+    "after": "66c0ba5fac07790bceebdaa9c7be3af91fd555fbb2f28a8497c81fc27932587d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/services",
+    "kit": "pest-control",
+    "before": "dac7347f9cd1c75be9be54809ab7552dfdbbd583e1fb73b87655e163486450f3",
+    "after": "aae75adca1ceb56efd50929367f576e8e42fb0447426141f545ba7b439516bdf",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/areas",
+    "kit": "pest-control",
+    "before": "f7ae518fb15bbcfa3a4cbfd8ca709b2f3c1acafa531f742dd79ba5496a7a0663",
+    "after": "a10bb51c28412c7196c0e6a265420022b4cbae8967953ae073d2507fb15f9f3b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/areas/oxnard",
+    "kit": "pest-control",
+    "before": "cd74b19faa55b105417d91b03c096d5adf80c7b7f1b2e3aa221ea4d03d1e92b4",
+    "after": "2b275757ff06865b0efc8408705ebd8041b355e844839b9678ad7bda88833cc5",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/areas/ventura",
+    "kit": "pest-control",
+    "before": "dacfecb6a1f1bd2015ff6817796b2dfd007b01acf73b386d4afb514b7e5d6366",
+    "after": "3f80779e0281e89c07e8931252a933d13700d3dcbe6f13d5d3bce713b8cc2967",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/about",
+    "kit": "pest-control",
+    "before": "1ed2b366904f3639ac13919703ed918fab6664440ba66f4d0452aaed3d5a5e77",
+    "after": "6fd15215329f1ee7450a997e85685046ef6baa25121bcf1ee2fcb616614c55aa",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/faq",
+    "kit": "pest-control",
+    "before": "2b5761c87ef9bc0100ee4a0b6138c4224930ea355226628e8f6231836b784397",
+    "after": "288416027cfb8ea6136245144d2c1e5bb4f85abf1e214d3bbc3bf36c684e7d29",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/legal",
+    "kit": "pest-control",
+    "before": "38cfc74a10722cb1ebdac886ccc19ab88fb3cb7ed499e5fc335629b7beb0fa1d",
+    "after": "5306e64c817f0a3a74b606c1a140d5a6cdeae7376e7167de21d81cc590a82660",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/promotions?preview=1",
+    "kit": "pest-control",
+    "before": "a6827167d58f75d287a8c5b14d576e39318f1c4e6930e8ce96fe38f3cda988f7",
+    "after": "a5fc761998316b811a28f83e06e3ca4f444411fd2324751a8483683e624e85af",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/financing?preview=1",
+    "kit": "pest-control",
+    "before": "37c4c76cac981d8baebb025fc2329b5c3df477d36c4440215ffa83403c84262b",
+    "after": "03530590903f77731be93d23b30c9c342ef974c68b322ab4aad2dbb2af80890e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/services/pest-inspections",
+    "kit": "pest-control",
+    "before": "82709f7669485c31a40c153ec396038420148b4b0dce97334aa85cfcdeb74630",
+    "after": "675d26dd776c7ac803254786130b0ac3a5122d4ad75195ad44ccabda335dfc5e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/services/ant-control",
+    "kit": "pest-control",
+    "before": "5ed9cdf098c4e61c88dd83b32a181c2823fe5b6cd0331edcf61fc0922d317207",
+    "after": "24f318c22a8595c3002b664d04b4384714c3dc89cc6b7d68777cd69f5b01d2d5",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/services/rodent-control",
+    "kit": "pest-control",
+    "before": "769240df3226dfff71da9ce3393c7c8d84f65c84286b1e77af2bffd814ac7093",
+    "after": "baf42ce46e521862bd251514698b1164378189c820441ff4f7151b9ab081a065",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/services/termite-inspections",
+    "kit": "pest-control",
+    "before": "53b8ba57299c4b6661c51b768d8642721931f6c33cb5b14a7d4bf9ed91ab7b87",
+    "after": "57f642a55def47dca38b878367150a40132649361a41cf739718b6de3ec792e0",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/services/cockroach-control",
+    "kit": "pest-control",
+    "before": "31b98f0a5c32738176eba44e14c14b857bb6c9bec9a54b03a27b5624585b5117",
+    "after": "b6748eaad6a86d5734c5da0589e0ff7474b6c63618704b6dcc3dba19d19cc8c7",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/services/spider-control",
+    "kit": "pest-control",
+    "before": "2727c2475a1fe38e187b30c01f52936887a8f93ef45997ef3c77905b3df64337",
+    "after": "509ad90d3d9ab38091175909ff2e7dacb8e095f158ecdfd70e055e1f68e76c62",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/services/mosquito-control",
+    "kit": "pest-control",
+    "before": "a8b1f2e4ff9db3555e13d812683f6c34c8275aa29772101d06d8ce186cea1e9e",
+    "after": "0e4a3dd579cb9ccb6e761530ebe135c1a94499c5765094dcfdf477524afc1cc3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/services/preventive-maintenance",
+    "kit": "pest-control",
+    "before": "26f0a3ac3941b7ce886c950b6f4eb6aef735f570c0b405754f314afaf703502b",
+    "after": "b6d789868b19db092392dd9b138a2caef3c34f2a3387ff2ea0b068c9aff7f3ce",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pest-control/faq?preview=1",
+    "kit": "pest-control",
+    "before": "64139b17c3e0afebed5054382fb3f0df9d843a192315f5b62fc8d4691ea21fd2",
+    "after": "b85dc1af029cb801657c38e57de8c0e579b39d67730665a906d58fce2fd3c462",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/pest-control/immersive",
+    "kit": "pest-control",
+    "before": "2a1c723551f07dde532ac197f0178f655b1444d6b0b709af2c131d1ab2fbc96d",
+    "after": "f674f448db4f5c8738ff65190e60e122a4125380b025c72e88caa51600ab931d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/pest-control/editorial",
+    "kit": "pest-control",
+    "before": "79b954169a05749edfd9cfd203eeb7f17521fab3a25d7cb312d6eb4b1ac5c7aa",
+    "after": "d1f8a6f77cafe3ea788b3b97793b68008d3d7551e3658dcb69997f5f847ab72d",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/pest-control/studio",
+    "kit": "pest-control",
+    "before": "419170597c5c8214eeb913ed6474f2df6450fed846d8676b9651955664a813ef",
+    "after": "52dab783757a5226ccea9dad545967597bbae35e5de913444840f1d68f7023a0",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors",
+    "kit": "windows-doors",
+    "before": "769593ff30c634e8c41dd183a9bd469f222e3522e70c7a6222c2fcac45855152",
+    "after": "d324bac621edb151f08b5d8067fcd6fefa64d8602ec22b9e4a81fd23bef4277a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/services",
+    "kit": "windows-doors",
+    "before": "d7bea7e040bc91e8ac332b8dba5efdaa4c6b05a1fe0238cdd54d87fab0841709",
+    "after": "b257e196ad9ee1bd831834942605bce88111ebe61b257addaf903b042e96e18e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/areas",
+    "kit": "windows-doors",
+    "before": "2f40e6ecc9edcf6d9acfa2b833ee4355ec26edfe254855314489df395d574f32",
+    "after": "b957c679ecffe0b284ba9b03c43223e0685386fa3f7bbc9b082124c48cbfb3bd",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/areas/oxnard",
+    "kit": "windows-doors",
+    "before": "940c751773e82fa468fad098d0296c241f459bb28ed1d6fadcf49918d10a3c15",
+    "after": "55b7533c7c9033943fb28b8ddbba14a884ef47a176ccb64d01fc563feb985e17",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/areas/ventura",
+    "kit": "windows-doors",
+    "before": "700023529de0eaae674af333718dbf04f987b5b53f056d598a84319102b16e91",
+    "after": "ae2cd6f8e5baf9587fbcfee954fa50e134b56149b90f507d49cc8bf39103de09",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/about",
+    "kit": "windows-doors",
+    "before": "c2c90e64ad3dcd817422dfa107574c9e2b4a10e5d5fe8df4a6e2cca210e759b0",
+    "after": "6f82626ee2dc78b70326c92f4919c9fbbb8e9b433029dd3a52aa22df5af271ac",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/faq",
+    "kit": "windows-doors",
+    "before": "39a08a837b86cfa95482ea892be6c3fcb41ca5db7bb4cc6f913afc4870dbc3fe",
+    "after": "0dd1f078427d66364ad1010aa282461126903dccda366379f8cd957f80779606",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/legal",
+    "kit": "windows-doors",
+    "before": "efa4caa9628616f3dc96e9a35c3125a7a65f17f253aa9d770d56cf71e4e368a8",
+    "after": "9d8374e7d634a313a3f960cb5bccc113ae887f09a185b859397f4a5863b41e63",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/promotions?preview=1",
+    "kit": "windows-doors",
+    "before": "a15121b2f1bf379afde2ebedeb521d2f9b63940c21e4ee258fca2f44c350d5db",
+    "after": "0d1ee8fadc7b66a194890e3211f83ae638d0e3744d0a90c5218a27917dcfd7ec",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/financing?preview=1",
+    "kit": "windows-doors",
+    "before": "1e03d6b874b288d3e8a3d3958807b74caf6a5dcf4a9f74721fb236af4a7eb220",
+    "after": "4cb931cd4f76cc290164c76e5b52512b06886d26b77f9b71417687140f296984",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/services/window-replacement",
+    "kit": "windows-doors",
+    "before": "73bac0545d1077d4b23cf69c597db3868ea57704293659951bf4438cf22be0d5",
+    "after": "ee7f7a72d3afc55daf9f28a9a12caac4f6e28545bf30b0ce30777e2eb8d97ec6",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/services/window-installation",
+    "kit": "windows-doors",
+    "before": "5a3ce5cccbc9480889f09c1d8ef231cefea9c4e336f11a7d5da11a25d04ac326",
+    "after": "d2e6723278df46eeb1cf6fcc1c9f6c0b76a9781ca071fd21c47bfd11fe0f7e02",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/services/energy-efficient-windows",
+    "kit": "windows-doors",
+    "before": "6c9e38186a8ec852073a76fd7d110201b8c591455c4f1c0c5fe67357310a5b21",
+    "after": "de51c94ecee547c9e150ee5fdf2bc6e5113e3b6b38477094536224c89c5e1e94",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/services/entry-doors",
+    "kit": "windows-doors",
+    "before": "aa112201936c1ef75a4def94d67210bc983770e7081e40cf284a22b1b718a211",
+    "after": "418fdd8464e266a497d5d40d7454cc96706fba70b10ac067967958a356d384e5",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/services/patio-doors",
+    "kit": "windows-doors",
+    "before": "6fbac82d5eea55077f64bf3fec3c8aea0f239c4055d4c8944bc9cc7707e574b2",
+    "after": "686e616ef431595e50f75b0b2c50fb59aad334960bd72e8f14913c89cdc609cf",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/services/sliding-glass-doors",
+    "kit": "windows-doors",
+    "before": "2c960e5583fe4aac49b7bcfafc3ac61f7200f0741d8fc00eb5c8dd26300d782a",
+    "after": "eb4a5a87f4d47c9b7e198043a9f78a3edf6d0c378efcb232fe96e66bed1a6cb9",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/services/french-doors",
+    "kit": "windows-doors",
+    "before": "cbed10fac683d8d5121a60e09fe5962497ab7e93aebd11b17b3f98acb2768f7e",
+    "after": "e2dae4d9d9ad8b82a223726b7411352bceb4da0b6b098de1daa0b85208996bd9",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/services/window-and-door-repair",
+    "kit": "windows-doors",
+    "before": "6174d44e011d67064407de4c108a206eeb5035a1417ab4fe1bb6f5b606142715",
+    "after": "6264ab9e068b9aa3c26f02521a218d4a2e39a2ff3421ea96099e33216a51a812",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-windows-doors/faq?preview=1",
+    "kit": "windows-doors",
+    "before": "6a550557e1503e024274c79470dce10be383d72a1c959bc270daae4ff9875927",
+    "after": "c1e9c7e4c4051630613036d7465bd77a249891c58c3f1ad65ddbd83ea9f66183",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/windows-doors/immersive",
+    "kit": "windows-doors",
+    "before": "c7e3afc7343cbb562f6ffd0fcd5c2d4b9853ded0b0b0d1d85fe0b75622102563",
+    "after": "1b23784d09b99b1c11559768dfc01f2c12e76d5033e02c7a6d382f797938c00b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/windows-doors/editorial",
+    "kit": "windows-doors",
+    "before": "d19675491d697008e76b609e2fce7fa0007e0db9c357ad21390d68f86b7a3c5a",
+    "after": "9f0829a7a3e141b4de522ccfc66edcb101f3877df00261d2bed0d5b1ea5e614c",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/windows-doors/studio",
+    "kit": "windows-doors",
+    "before": "f79aa9ba5b141b43b9e84b6e941a038b78c6a40a64217ffe0b99fcd011c0dc10",
+    "after": "f0cc751e71c52ae0592986727c8d837806f846b8c00f6ae79a88c2efc39dbeda",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar",
+    "kit": "solar",
+    "before": "623f22edbb78f9cc12c0f713ed4ca12546b0acd54fb1db2f132ddd8d04a4270c",
+    "after": "fe974029f4566799fceffa9b6a61793eb08c51c6e691afdb33f591ad2cccf6a1",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/services",
+    "kit": "solar",
+    "before": "3b99540ce911e5576f1c726ce3ade4d7b21d0f3ecc473f7e108471b848106f29",
+    "after": "40a80ecfffa4786805320ad8f6807dd6b1e39225312ab4f352cd001751994d8b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/areas",
+    "kit": "solar",
+    "before": "1f93dc377c0e1d0e0ace4dab0c6ac4ab5769063ed3fcbb58b7b2f046d98c76d9",
+    "after": "4d7ce7fcfc67cc5111ec1823340517e58f6db3ffeeb14df1084d7d3cd874330e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/areas/oxnard",
+    "kit": "solar",
+    "before": "00446a73ba4ca5e6c3c98bc50079167a1f3d06569ad5966b63f36853240fa8ea",
+    "after": "066b579922eefd333cb8067d10ee5b04ce0992aaea453afee28067acdccf69c3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/areas/ventura",
+    "kit": "solar",
+    "before": "40e00e150c126916d3fa42f7b0702362aa3fc87240fc1500a055a56b4c3e3c41",
+    "after": "3dfa3717d69dac1ab8d48270ae6d126cae4e50bd09f74bfb680c091f8f4e361e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/about",
+    "kit": "solar",
+    "before": "e41de60bdae2070864d3a87b4892e1646e4ec25c2434d13f718f881b9eecc483",
+    "after": "bf45fe3fcf3f498914ba465ec0106140fff52302d7e31349707b9a7f9858a8b9",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/faq",
+    "kit": "solar",
+    "before": "c89a0b6415d205cb1ef6c018b6bf3856828a88c2a2400e555d305ad20ac2adb5",
+    "after": "960a4838ef099714673abc4957107ec0dd45c0316925621bd3a8ea4d9c81a047",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/legal",
+    "kit": "solar",
+    "before": "ffe4f0a57f7911eb506dfd9641007a365f652b737ee9f0357fa53bf6c773a72d",
+    "after": "3c23a1596cd2f7952268cbf866596f54c3f83740f30383d322485442400d49fd",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/promotions?preview=1",
+    "kit": "solar",
+    "before": "0303089d080cf5a853883a0c0dc24e2ddfbf860dd8fa77d3ef38a8d54ade5a3a",
+    "after": "f7fe6bfa7a4bd4d1f4bbbc17f938466d6502303c8f31218f3e06ca0e3cf22f96",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/financing?preview=1",
+    "kit": "solar",
+    "before": "c7abd352746356eb7d9d13729a2e27d9cd67d5108dce49e4a217224826221fbd",
+    "after": "310567af4d47a5cc2c5a0c7f3cd60ed333a48380ae711813f076e788ffa55009",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/services/solar-panel-installation",
+    "kit": "solar",
+    "before": "4ebb392591279b5e61b570d74487f79ce1e1ec193535edb67f8c840c94fca693",
+    "after": "678214ae5bc1373c896f1024ac8c69a0792fbbedcd6e10aad10d147ad1c5a9b6",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/services/solar-battery-storage",
+    "kit": "solar",
+    "before": "7c0244b39ffbb4cafab03cc8909c6c1b945d3e432ad57503b890e93a5e934bd7",
+    "after": "9092bc4488d34f06504b28d1c8349eaaa7d41322af8c8a3418b93318b7953d1f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/services/solar-system-design",
+    "kit": "solar",
+    "before": "244edbe31f9ac9a2cea195071153d13b96770dacbf7adf7efd5b080079882e2a",
+    "after": "c87f4ce4a8fc5d4ab701cdc341b57919dbbd154504d78dd4d8b5445642b23a3f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/services/solar-panel-maintenance",
+    "kit": "solar",
+    "before": "8f0d8e0c8f885875d90059a327e9e8804677a9c7d799422b7c4e1798b8cdf773",
+    "after": "377fd80c4401b8b5d6bb8053cc4ad776f940184f7e54bb40bc8ca3154ca54161",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/services/solar-panel-cleaning",
+    "kit": "solar",
+    "before": "3124981f799eb8cf2d6593cde2204ea9bb993db672331da6457551811be370fa",
+    "after": "04f432f581bea0fd0f4111db8d4376e4f02c65753b831f24cb8ae65c52bd7763",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/services/solar-inverter-replacement",
+    "kit": "solar",
+    "before": "6b3ef504d0f026160a2dc6da24e05bc64a59a3d67f82a80025996ec14098580d",
+    "after": "ea8007bf7be3473430c703d0969a2ea3487a1cfd9a5ea7e58d198dd9379f0fc1",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/services/solar-removal-and-reinstallation",
+    "kit": "solar",
+    "before": "630e01fe9cbc0a8bc590014375b5c11276e38a950acc05a14083fa741d3eb87b",
+    "after": "74075b513b0e7e6449e447cc69c07612444793d62e1c739002791ca47c74023c",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/services/solar-system-monitoring",
+    "kit": "solar",
+    "before": "f47705a70857f88cf070ea81688100e503a67b97b46f3d8c684f127d35af2585",
+    "after": "ac7475e9ed1c4328059d1a9cd16a34a48c8ba95c68582260f896d87fe19396f4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-solar/faq?preview=1",
+    "kit": "solar",
+    "before": "f82a62ae4e1985a5c0d020bdfd9463e0fb2187136519df8659c36ed0cf6fae25",
+    "after": "10272eb876b9304f46566e2b6a8494e6adae303e3a52bbef8388fb2443c7c127",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/solar/immersive",
+    "kit": "solar",
+    "before": "f29534d69e825725e4bf995dc0fe48d1b0a13728e90c1994f7ea732ff05830fa",
+    "after": "eba780c686a2def76c17f3ab359eff1e5bbf58e2d3a15e952846f4e1800bbc96",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/solar/editorial",
+    "kit": "solar",
+    "before": "ab0234d01449130d7203c983b9d1e660ca56af3a019aa1a00abf483db1560d88",
+    "after": "a6ec8b83c2fd876afb7f0d9e2297ef3c773b0769e06b0cd0912e5ca83c082004",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/solar/studio",
+    "kit": "solar",
+    "before": "0cb028a568f22737a665af85f4a321ee1672d2e949605f8dcdf4ac3cff10c5e1",
+    "after": "eb7807ef27cfde7ccd34a661bf9e9785c3a4aed5eb52f6d3f9cb992d850449a4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete",
+    "kit": "concrete",
+    "before": "49723863cd7d03c95a510814a61f54fccae7451ee8ab1111df0638e109af7d44",
+    "after": "bb4da4d3024b8d996be60f28ffadcc6c72280185ac64ca99552fe3e8362d8ed4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/services",
+    "kit": "concrete",
+    "before": "3e667521ef0fc80c666fe3bc8c6ca42e74d84a5d9f528ce3cce6cf52337578b3",
+    "after": "d3aa2ff39bb5c8f593a48ef9e0ebd4339cf4ecd7737df1098b1980cdf3f9cbb4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/areas",
+    "kit": "concrete",
+    "before": "2bc629e576a641871ebdb3d1ce47656873952d00feaf8000c6b3ad6a46097ccb",
+    "after": "2aa3551d9b75490d292faeee8c7e723e355f16d349b8eb313a2d1b550a264f8a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/areas/oxnard",
+    "kit": "concrete",
+    "before": "e3d61dfad3531ed4e25ac3d02c6d6143fa3a5fdf636c5f5905667e6ea7f2b060",
+    "after": "170eaf10bb3d9ad469147de28f42b4b3fab7e5e2f330b7474c07584e395078f7",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/areas/ventura",
+    "kit": "concrete",
+    "before": "c1371575d49857516f134ac2bedd1567a7515a4036dc94bc23ca96100b69d2fe",
+    "after": "3bc862abb9ba6f73909ad466e1115b58b10862e5c1ef88436eec4af32da28827",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/about",
+    "kit": "concrete",
+    "before": "6c7121d7399bdc4c4c85ca8f27b45ea1c970082bb8ce0b466aefeab0ed555876",
+    "after": "be961e66e16a77f0e54674b53b72d039791d1a930b98d1572b70939b45e959e9",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/faq",
+    "kit": "concrete",
+    "before": "90c6a9fca3a1d34a8692094bffa0f87025525911d573f07d9fe33e6806eaacfd",
+    "after": "6fd6f842781405d365886234f73410a64d404533ad992795fd9608bd2215ea27",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/legal",
+    "kit": "concrete",
+    "before": "cea49e00bf85229fbe27505d9ab35ab3a6884e55d3a9a3c00ab549462ae8e443",
+    "after": "a0453747a9f1d6b68f563951b11174290de49df48840c03f2be6f03c0244f6dc",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/promotions?preview=1",
+    "kit": "concrete",
+    "before": "17c5b2025ccfa98f339ab279b50c10ac5b5c0f097299f8aff571dd21368808de",
+    "after": "95970f2c7bca18f28cac63abf1f1fec1a1088bee8cf73509a0a50fedc455389c",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/financing?preview=1",
+    "kit": "concrete",
+    "before": "81b5f0a4b850889f1ffce59c18de571d7ab00a07c3f4573c6c0e527545ce2a0b",
+    "after": "bb5209cd68da33cf3b492640cad36da7aecdbb8c41f0b9ffdb7d33329d9a05b2",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/services/concrete-driveways",
+    "kit": "concrete",
+    "before": "fce3535fcde4276f65e75c3d1039b8e997e0c1d27cef04b4a60c95bc05574279",
+    "after": "2cbd4e937db3c9a6b086afc02cc02a34e01208228149ecf476dbaea33a34b69f",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/services/concrete-patios",
+    "kit": "concrete",
+    "before": "f2db7559e3239c55721894fd1e4a17c91484c97578f2b74cd1c40f290a576ac6",
+    "after": "55e3cc13eefbd2986b71b1eb19200b5b9786f4f7bc54c87e9c246ad2db8bef97",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/services/stamped-concrete",
+    "kit": "concrete",
+    "before": "c7c4add07eb27457a30d78e3c493cacc3c891ff9104bb9bbb66c7eb2e2233dfd",
+    "after": "2bb5d55b248b78b256c1ea62382ef607517957e94c387509f9d07cdeb66a8e67",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/services/concrete-walkways",
+    "kit": "concrete",
+    "before": "cb3e32cf5cc51e7529802f5303fcf256d93f870661ebdd3fb4fc90d1e8f3d093",
+    "after": "f23326e739f24b22b8908fc6a682eb7345bbdffdb284ac3bdfb9fce552ae05af",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/services/concrete-foundations",
+    "kit": "concrete",
+    "before": "f6b2fc50a7fccd84a2b1a38fcf5cd6ae0700a45d64e57b63fb964c659c6522ac",
+    "after": "11e40f62b9883ab54347b21f93fd1372e42ee5ce0e83087a6e9f4e0fded1cbb9",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/services/concrete-slabs",
+    "kit": "concrete",
+    "before": "eb94d341fce919717ccb1d778e87b7ec49047b4b04881dead266f4e8b18b7a18",
+    "after": "82073fb1d045b12ab5227967d7ba5de81be4c8769c56b8dde9561df6d41a910a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/services/concrete-repair",
+    "kit": "concrete",
+    "before": "cc6edc40d9f21bba5a8c039ab8cf836c1f489689da3c25ac5d80f0bb61ae16d5",
+    "after": "537351c29cd72566ae02dca41ca5e8822f82b4d0dc8440757d948533ea15b5ba",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/services/decorative-concrete",
+    "kit": "concrete",
+    "before": "90fdaa39f55505a5ba87f1747f0b4e81113ac349c7cf90eba8e06a264319b4cd",
+    "after": "0978d7d28d04f9150be2227fad20832779d36e3ddbab7cc3b95fbb09a7f47e34",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-concrete/faq?preview=1",
+    "kit": "concrete",
+    "before": "a62f9f1b8b6aca5cea7561a8c9142e243d0792580fb932d74e3e91cc83b1254f",
+    "after": "a276ef48d197ece9f8f8b8c0146813b75c8ecffa63d22ac224aaefc724fa0f68",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/concrete/immersive",
+    "kit": "concrete",
+    "before": "a0a28eff7a8503ca9fbe5ab35afb68bd3042e073ee7f78ee8787ed36e3785b5c",
+    "after": "0f6bb8beb27a51145741195522497f443b00834ded344dda9940bc2bb8d7abde",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/concrete/editorial",
+    "kit": "concrete",
+    "before": "c79d9f8b26ebc57e5a4d3aa83ca9bacca8fa6e214b30e7fced933bdc54c0f08d",
+    "after": "dc40b915f98b088e0d2aa1868fcf3341be6f1d358ca06482ed43a89d7ad155bb",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/concrete/studio",
+    "kit": "concrete",
+    "before": "6e4056a73acffdf21383108096f1254f5b695f7cb2c586b744b6be40fbadcb6e",
+    "after": "3786db14431be33f8609d109282ae68dae86256e719032b2e36b9e81ab7e263a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools",
+    "kit": "pools",
+    "before": "e1816c39d6e7bd93f5a2d36b6f02684415abc979164d1f35426a671f060d59fd",
+    "after": "6d992eddb6eb1191afcd39cdb33e7a449814e72ef5f0b6667cbfda4eb9d77efe",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/services",
+    "kit": "pools",
+    "before": "aec220d66ebd02fd5274aa5b4c0269ce980244c9c56e49fd8ef262ca624601e9",
+    "after": "3c574df08e4cec7748f22e22c152ad48f65e17b7788036c2b3ec2c4a3391644a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/areas",
+    "kit": "pools",
+    "before": "48cd28a375a0a3f20cbd23a98f58d6c374252990850dabef878720a460397a27",
+    "after": "88ee83fb8a80efbc1f63568226e6ab4197f4452bc31a1241845a5703fbbc0e0a",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/areas/oxnard",
+    "kit": "pools",
+    "before": "3584c13a6947f75a0e7c3062c08260946590d517e149041a61931324ee261be8",
+    "after": "79f894d02c666199735e07631e963fa6b12ab764e52d1bd8a7cbf9ad8b2ec0a2",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/areas/ventura",
+    "kit": "pools",
+    "before": "83f395296de8177569b29ed043a4a6a844adcffe5e989eb7cc5ff8eeda984ba3",
+    "after": "20f701d0babdcf4fe3e880aba4ddbec0be237be0de8a1685abc81f244cd9eeee",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/about",
+    "kit": "pools",
+    "before": "b13a9cfc409358bdb5d1b9f5d4931924aadce6b91104638d2bd0eed3bacb7901",
+    "after": "bf5f75d8493309e282fecc4e1c8d428801a3217328694bbf4795fc692e329b04",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/faq",
+    "kit": "pools",
+    "before": "b1b3be402f29933cc82d53f02cdae7e22d0fc8d6291cdcfd8f6b454c45ff5795",
+    "after": "ec50f22aa5ebce506b434c4ad585940c928dafcf379e72c7afab25f92fe29c06",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/legal",
+    "kit": "pools",
+    "before": "2b950303abdc085ef67619e3de1f37992389c78a0558dbaa7873312b3025d1d9",
+    "after": "3617bd6fc79eec1ca997cfaa9f9010f523a0c05692b0733ea1ddacf9f3910c25",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/promotions?preview=1",
+    "kit": "pools",
+    "before": "a62d4254660e0d121c2a4d0974a860a6d3a94d5938fa921d2a951c94a3c3ffad",
+    "after": "c8f8cb7659dac475e165d16f5a50a36229d6fab20d34a8b379d2969a9470e5d0",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/financing?preview=1",
+    "kit": "pools",
+    "before": "e5e804487ac5e52a42b7cdf81d52818a10b38600cada4b933c3e7a42191debdf",
+    "after": "8a750dd416bba1b34bc9d08ee3f80e70f9020e263b935a6a55f486d9830b12c3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/services/pool-design",
+    "kit": "pools",
+    "before": "0c052014d0f8d1697e24ee58a4af8dff95622b5aa863311b98747f87c0dac07f",
+    "after": "d0619ea66e01d6c6448c8fcf5d98ec96222feaa3a105a7ee9dc4fffb325b48b8",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/services/pool-construction",
+    "kit": "pools",
+    "before": "e521346094813f025a2289f936997ae06d9f8c872f876411df52b76b1ccfd376",
+    "after": "ab9affad08b1be3007f6928f7e966da0486b068e1eb670e0274bb1e39cc86d40",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/services/pool-remodeling",
+    "kit": "pools",
+    "before": "1d82d2c0f04c0c720ebf82f62efd5ba80ab0754307501cb0f1357507edd9819c",
+    "after": "01289342e6b6b1b63d9723dac61ec96188ebd31e08899acfaa2512e63d1ccfd7",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/services/pool-resurfacing",
+    "kit": "pools",
+    "before": "689c608d05a45e4403685b4e554f7794d05a47ce27813b4a2f03ee746b3139e7",
+    "after": "5749d78a660703e033df13e2ea10ac412da18b9331f1d586d6e46162228ac113",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/services/pool-equipment",
+    "kit": "pools",
+    "before": "58670131021d57a9d9c45aed9d0f48217ae21d235e349f6734344429922985d7",
+    "after": "8ec0ae4d03e4120d69908e2e55363de3fa233cd9f99fe68c5acde6df0250a910",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/services/pool-tile-and-coping",
+    "kit": "pools",
+    "before": "dd9bd375c5553c71f288d53d3cfd8c3d38764064354d4bf9f924d848e8564026",
+    "after": "5bad71a04c51e0668ac38cf408458578a959cc0c48d7177c89234b3bc63159f7",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/services/pool-decking",
+    "kit": "pools",
+    "before": "da3f785c248aab39499dd55c16894f8f94334ecb8aedcd84e43c5467aeacdebc",
+    "after": "ccc4dd66c22fcafb7b6dbd5c049c7bd2351d4524098eaa5c0b71155b54a62281",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/services/pool-maintenance",
+    "kit": "pools",
+    "before": "0a0e5f8a3cb5a83775276ea754d99c46ed24253789a7558a90d930313b2f3289",
+    "after": "08870af7601cf0bc5b735b227a5e008ff0af185e3065d3411fbc1f2098a00ef7",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-pools/faq?preview=1",
+    "kit": "pools",
+    "before": "6f9b28a5362389f162109c1e9f9ea673e5fc613b122c33aca0a11ab9de324a3e",
+    "after": "545f2d60ce65d0286d3c50f7a11102a826e7181f7f4181859ae9c0b62a6e8a37",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/pools/immersive",
+    "kit": "pools",
+    "before": "099f389bf1cb09be8471b8a38800c17f0b27d3330e67279d757f6efef221b5d1",
+    "after": "52876804663863e860e5932b322895529d357cd7f7d41afdffb87e67316bc2c6",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/pools/editorial",
+    "kit": "pools",
+    "before": "4e78fe306409c6a1828026b15496f730e67594ee2416a8c9b925eb34aae90d5e",
+    "after": "5cfd218a259c7ff8007874f9e3362279abf87ab425176a9fb408a7e71cce3716",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/pools/studio",
+    "kit": "pools",
+    "before": "39ba663a2506e67ec01f944ddaf8b8cd9e60c19771cf3a6a034250902ff2d155",
+    "after": "4b29d1490ea6ed9d96bcbff4cb15411859038c18f350f2765429bdf3ddb13f23",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith",
+    "kit": "locksmith",
+    "before": "e88bd2b4baae8b5b398a73125e86ba302cbb3a084f60c0a6b21db85d8fa94c27",
+    "after": "2e54324e680f6a22bacc179e57e92c20fee96cc7debb96563bb91ca892eb77d6",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/services",
+    "kit": "locksmith",
+    "before": "3aa0cbe48a0f1c26bf046fbf3ef1b05f8bdc581f7affe91385bc554bd092818b",
+    "after": "9b440a75ab5a6cff8c4386c664477cbfdcce4df660cd1174f9af161ffd47e991",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/areas",
+    "kit": "locksmith",
+    "before": "2b77b8e8b2065df3551fce923309891fd205776a470650e6d2925901c905245f",
+    "after": "58e96de435c71e5e4eee0802e53417a29ec136a245adfc1fc1443a9e352ad17e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/areas/oxnard",
+    "kit": "locksmith",
+    "before": "3a79afde06b06a556bf408fd36424fc1e1a2cee8390b49d76981fe261adf1c1f",
+    "after": "b09c8a3321773ce53d292c3bed38616a8b833d792ed8ea235107282a95dd1ce8",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/areas/ventura",
+    "kit": "locksmith",
+    "before": "c4d032a1c39f0f143b8b3458ebccf3bcbadeb126a20bb15e4b2b90b2bb4a3cfd",
+    "after": "60d1f57a7ea936794ad14e31b058b0ff48a67421457b919690ea26d16f1f6233",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/about",
+    "kit": "locksmith",
+    "before": "835a10717f2f899ed47f0b3509f6635300955eaa51bb760cd5a6b920c02f125b",
+    "after": "46e1a7fd7fa52b929e962d4a933405f77a002bf96f6f3bbe12ec1a17d731cc6e",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/faq",
+    "kit": "locksmith",
+    "before": "f60c8fc9a66b7210218ff339806dd7d818709e14c743a72239efbe1998005e6c",
+    "after": "f6f496d94fafb59109da88dbd0ba6faa38fac86b67b127e87084a6cb88e8a0d5",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/legal",
+    "kit": "locksmith",
+    "before": "08bf25343d54ca025845b71ddf5e16be7d93424199529d9eb97d5dd7c65209cf",
+    "after": "940b159ec80ec0193836ba35405a818f7800c86a5cbb1e44b4fdca220fb9e4b1",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/promotions?preview=1",
+    "kit": "locksmith",
+    "before": "31c219a4228ac4688e7cf7d6ee64141f495bedb8175aa9c62ed102e139b79038",
+    "after": "1e0ac1efaba03fbebaca68bea6c73aeeee66534d28ea45d99e48170c17d80f76",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/financing?preview=1",
+    "kit": "locksmith",
+    "before": "73f9f85d927f91f7c4055ad851c247215b370fea102f2ab5a6b2c6843a741e6f",
+    "after": "48a1061721cf9ad8c37e2ef549124532d0b3619be8f08ec615bc1e095056b5d3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/services/residential-lockout",
+    "kit": "locksmith",
+    "before": "9eaf64bc1a71c0976d3726072cb5ee93a8257bb05d89da6f84e0e817ddaaadcb",
+    "after": "7ef07ed1f49866d26e18865ed596d101949229fd8bdd1695795de1dc260f156b",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/services/rekeying",
+    "kit": "locksmith",
+    "before": "4e354ef48b16c858b29e080405dd975471b691eb95c138877610c7e88b6efbd4",
+    "after": "916578cb0fd8416a196e6d43ee553ef31296432990f9e2c1bb6390d142de2ddb",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/services/lock-installation",
+    "kit": "locksmith",
+    "before": "c8e535ba040d562d82b961aaa9418a073327a59dbfc23b833aa055cbf08bf5f4",
+    "after": "77cfdf219217ff986ddb1b30bc6daa32630601275a21f6af464c9516f6f604d4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/services/smart-locks",
+    "kit": "locksmith",
+    "before": "691ebbe4fcea2212a727b14cb6c56cd0a96f00738b4d8fa37f79832a3af96b1e",
+    "after": "330f754ecfbc8b8a1dc6ac0bc3f1ed0cd0b544e29628e8f8f8cfafe3571bf043",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/services/automotive-lockout",
+    "kit": "locksmith",
+    "before": "9bb3992fd6c276c53df47f7b25a169b65ba552a7c509d6e3b7fd4c3d12ba205e",
+    "after": "a61803905dbf73f091973fcba29cf02ed0f481069bf4769ae950e43dcf7f55e3",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/services/commercial-access-control",
+    "kit": "locksmith",
+    "before": "15ce5daf30ac66f1c6f48c2f79a8033545e0a9fb24435c74dbc9eab4dc489bfa",
+    "after": "06d1a89523946de7448308dc763ab77d1cdbd3a760f1761d1e77e3da16d3e108",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/services/safe-servicing",
+    "kit": "locksmith",
+    "before": "7a20b95a9b809d92f82f12e67183aa5a5dfae4e2bc127e39d1c037499e065169",
+    "after": "6c86193a49c2064961a5b303ee31fae768349e8fdec318acd57eca2d0532b9bc",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/services/key-duplication",
+    "kit": "locksmith",
+    "before": "ee5d6295365d6893cdaffb898e68b12e2437022873ddc84494c01f9ad50ea72d",
+    "after": "771e41177871af93d587fc552c6f4e25dba76d5e04aa9a94783280523f5c4f38",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/s/ambient-baseline-locksmith/faq?preview=1",
+    "kit": "locksmith",
+    "before": "9e683cd6f34c36d2144e0830aedc92d1fa7de840bf469232d021ce5d9a8cc608",
+    "after": "eda2bb3b485f1f6955cb997ef49d0e509aa51ee344a766e659e185ef88889593",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/locksmith/immersive",
+    "kit": "locksmith",
+    "before": "1424fd2dca1404778b911b598e83eaae2ced5427e987ee891370da7c45271ecc",
+    "after": "0ffc0c108c3ea2cba89901cbf8634880302a6453e3d3a45056a333dbd2cf2ff4",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/locksmith/editorial",
+    "kit": "locksmith",
+    "before": "430a14ae77f80f4e5a7bbad039f332a88cf4b003b098e067c18b00906a995fa0",
+    "after": "4a75d37e6407fd262349b9019bf46d1c441a36240b2bee8f8f779cf3adf86b67",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  },
+  {
+    "url": "/design-preview/locksmith/studio",
+    "kit": "locksmith",
+    "before": "564a550e6762ac6aa02846aa5e07b93c0f26f2b502e48ecd927a135570529b8e",
+    "after": "9192163594794b3d9ec2c7967c6b33b28211e43e5d9bbdb9275d8837ba293621",
+    "identical": false,
+    "scope": "Global items 1, 6, 7",
+    "allowed": true
+  }
+]

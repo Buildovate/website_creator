@@ -1,0 +1,47 @@
+[
+  {
+    "url": "http://127.0.0.1:5173/s/robles-roofing/services/roof-repair",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/showpiece-roofing/services/roof-replacement",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/robles-roofing/services/roof-installation",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/showpiece-hvac/services/air-conditioning-installation",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/showpiece-plumbing/services/leak-detection",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/showpiece-roofing/services",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/showpiece-roofing/areas/oxnard",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/showpiece-roofing/areas/ventura",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/showpiece-roofing/financing?preview=1",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/showpiece-roofing/about",
+    "status": 200
+  },
+  {
+    "url": "http://127.0.0.1:5173/s/showpiece-roofing/financing",
+    "status": 404,
+    "expected": 404
+  }
+]

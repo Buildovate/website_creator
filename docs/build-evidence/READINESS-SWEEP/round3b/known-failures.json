@@ -1,0 +1,114 @@
+[
+  {
+    "name": "review-packet-browser",
+    "classification": "UNVERIFIED — exact baseline assertion not established",
+    "id": "B15 / fixture prerequisites",
+    "owner": "test — product cause not yet established",
+    "location": "tests/review-packet-browser.mjs:22",
+    "cause": "The old capture fixture stops before a working review-browser capture/receipt; runtime settings now pass through. Its fixture/approved-publish coverage remains incomplete. [log](round3b/logs/review-packet-browser.log)."
+  },
+  {
+    "name": "review-packet-contract",
+    "classification": "UNVERIFIED — exact baseline assertion not established",
+    "id": "B15 / fixture prerequisites",
+    "owner": "test — product cause not yet established",
+    "location": "tests/review-packet-contract.mjs:47",
+    "cause": "The regenerated review receipt differs from the saved replay/expected packet contract before the remaining paid publication/race paths. [log](round3b/logs/review-packet-contract.log)."
+  },
+  {
+    "name": "automatic-qa-frame-sample-replay",
+    "classification": "UNVERIFIED — exact baseline prerequisite blocked",
+    "id": "QA protected",
+    "owner": "QA gate",
+    "location": "tests/automatic-qa-frame-sample-replay.mjs:19; tests/automatic-qa-frame-sample-replay.mjs:32",
+    "cause": "The recorded exact saved-version PNG differs; no protected reference or checksum is changed. [log](round3b/logs/automatic-qa-frame-sample-replay.log)."
+  },
+  {
+    "name": "automatic-qa-rail-colors",
+    "classification": "UNVERIFIED — exact baseline prerequisite blocked",
+    "id": "QA protected",
+    "owner": "QA gate",
+    "location": "tests/automatic-qa-rail-colors.mjs:5",
+    "cause": "The chapter rail is not visible for scrollIntoView; the protected browser check times out. [log](round3b/logs/automatic-qa-rail-colors.log)."
+  },
+  {
+    "name": "automatic-qa-replay",
+    "classification": "UNVERIFIED — exact baseline prerequisite blocked",
+    "id": "QA protected",
+    "owner": "QA gate",
+    "location": "tests/helpers/replay-alternate-assertions.mjs:104; tests/automatic-qa-replay.mjs:8",
+    "cause": "The regenerated packet file set differs from the existing replay expectation. Protected replay assertions and references are unchanged. [log](round3b/logs/automatic-qa-replay.log)."
+  },
+  {
+    "name": "design-styles-browser",
+    "classification": "UNVERIFIED — exact baseline prerequisite blocked",
+    "id": "QA protected",
+    "owner": "QA gate",
+    "location": "tests/design-styles-browser.mjs:68",
+    "cause": "Rendered style findings remain in the protected audit. Every failed check is retained in style-findings.json. [log](round3b/logs/design-styles-browser.log)."
+  },
+  {
+    "name": "website-pages",
+    "classification": "UNVERIFIED — exact baseline prerequisite blocked",
+    "id": "QA protected",
+    "owner": "QA gate",
+    "location": "tests/helpers/review-approval-fixture.mjs:27; tests/helpers/review-approval-fixture.mjs:52; tests/website-pages.mjs:91; tests/website-pages.mjs:473; tests/website-pages.mjs:439",
+    "cause": "The project-detail strong text overlaps the fixed aside button at desktop by 98.66 × 11.14 px. The real review prerequisite refuses publication. Exact baseline comparison stops earlier; its classification remains unverified. [log](round3b/logs/website-pages.log)."
+  },
+  {
+    "name": "automatic-qa-brand-recognition exit hang",
+    "classification": "PRE-EXISTING",
+    "id": "B22",
+    "owner": "test",
+    "location": "tests/automatic-qa-brand-recognition.mjs:1",
+    "cause": "Assertions pass, but the existing hang guard terminates the process at exit. This is a warning, not a clean teardown pass. [log](round3b/logs/automatic-qa-brand-recognition.log)."
+  },
+  {
+    "name": "media-api exit hang",
+    "classification": "PRE-EXISTING",
+    "id": "B22",
+    "owner": "test",
+    "location": "tests/media-api.mjs:1",
+    "cause": "Assertions pass, but the existing hang guard terminates the process at exit. This is a warning, not a clean teardown pass. [log](round3b/logs/media-api.log)."
+  },
+  {
+    "name": "uniqueness-api exit hang",
+    "classification": "PRE-EXISTING",
+    "id": "B22",
+    "owner": "test",
+    "location": "tests/uniqueness-api.mjs:1",
+    "cause": "Assertions pass, but the existing hang guard terminates the process at exit. This is a warning, not a clean teardown pass. [log](round3b/logs/uniqueness-api.log)."
+  },
+  {
+    "name": "project/photo draft backup restore",
+    "classification": "PRE-EXISTING",
+    "id": "B16",
+    "owner": "test",
+    "location": "round3b/pg-route-probe.mjs:13; round3b/pg-route-probe.mjs:27",
+    "cause": "Invalid approximate coordinates correctly return 400; the old probe expects 200. Reproduced on unchanged 972a218. [probe](round3b/pg-route-probe.json)."
+  },
+  {
+    "name": "Prorated invoice credit settlement",
+    "classification": "PRE-EXISTING",
+    "id": "B10 / B27 — DEFERRED pricing/accounting boundary",
+    "owner": "product",
+    "location": "src/payments/webhook.js:46; src/payments/webhook.js:124; src/payments/billing-adapter.js:11",
+    "cause": "The local SDK-shaped annual invoice plus unused-month credit returns 400 with zero ledger entries on current native, PostgreSQL and unchanged 972a218 native code. The existing guard requires full catalog amounts and rejects credits. Accepting/allocating them changes pricing/accounting rules, so that portion is deferred. Adapter and SKU metadata fixes remain implemented. [current](round3b/proration-current-native.json), [baseline](round3b/proration-baseline-native.json), [PostgreSQL](round3b/proration-current-postgres.json)."
+  },
+  {
+    "name": "First-access manifest / Game read-only contract",
+    "classification": "INTRODUCED Game route; existing core migration side effect",
+    "id": "B16",
+    "owner": "product",
+    "location": "src/core.js:30; tests/game-desktop-api.mjs:12; tests/game-experience-api.mjs:14",
+    "cause": "Part 1 production-schema raw fixtures exposed core.one adopting a missing manifest during a read. Related batch A fixtures pre-adopt the existing manifest before testing subsequent read stability; the assertions remain. The first-access product contract was not changed or claimed fixed. [checkpoint results](round3b/checkpoint-results.json)."
+  },
+  {
+    "name": "Real 100-XP records not attainable",
+    "classification": "INTRODUCED Game integration gap",
+    "id": "B06 — DEFERRED",
+    "owner": "product",
+    "location": "src/blueprint/sources.js:36; src/blueprint/sources.js:37; src/blueprint/sources.js:43",
+    "cause": "No owning review-display, estimator minimum-item/field/consent, or connected/explicit-none marketing records exist to seed honestly. Empty rows cannot satisfy locked rules; inventing completion is forbidden. Owning feature/contract work is deferred; unsupported steps stay zero. [per-item explanation](round3b/PRODUCT-FIXES.md)."
+  }
+]

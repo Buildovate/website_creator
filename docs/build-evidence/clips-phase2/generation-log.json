@@ -1,0 +1,399 @@
+{
+  "datePT": "2026-09-27",
+  "balanceBefore": 2513.8,
+  "hardCap": 896,
+  "project": {
+    "project_id": "425ead3f-a109-483c-a56a-460f51ef6766",
+    "default_folder_id": "425ead3f-a109-483c-a56a-460f51ef6766",
+    "workspace_id": "87f68d14-2c36-4c0d-bf87-20a955be9662",
+    "name": "Roofing clips Phase 2 — 024–027"
+  },
+  "generations": [
+    {
+      "ticket": "024",
+      "retake": false,
+      "params": {
+        "model": "cinematic_studio_3_0",
+        "prompt": "Ultra — Cinema Studio Video 3.0, calm cinematic still-life realism. Make an 8-second silent 16:9 seamless ambient loop for a roofing Financing page. A pale oak planning table with a small unbranded roofing material sample, a blank open notebook, a closed pen and a softly out-of-focus home window behind it. Cooler morning light than the Promotions film; restrained blue-gray palette. Locked camera, extremely subtle light and curtain-shadow movement returning to the initial state. The emotion is thoughtful planning and comparison, not wealth, instant relief or approval. Keep the notebook and sample within the middle crop-safe zone, with quiet empty space around them. New customer variant changes table material, sample arrangement, window geometry and light direction. No people, hands, readable writing, calculator display, calendar numbers, cash, credit cards, rates, lender marks, phone numbers or sound. 1080p, generate_audio=false.",
+        "duration": 8,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "genre": "auto",
+        "count": 1,
+        "folder_id": "425ead3f-a109-483c-a56a-460f51ef6766"
+      },
+      "estimate": {
+        "cost": {
+          "credits": 80,
+          "credits_exact": 80
+        }
+      },
+      "job": {
+        "id": "dd20c98b-5c74-4c2f-b51e-a45c6b7a4cb0",
+        "type": "video",
+        "status": "completed",
+        "model": "cinematic_studio_3_0",
+        "params": {
+          "prompt": "Ultra — Cinema Studio Video 3.0, calm cinematic still-life realism. Make an 8-second silent 16:9 seamless ambient loop for a roofing Financing page. A pale oak planning table with a small unbranded roofing material sample, a blank open notebook, a closed pen and a softly out-of-focus home window behind it. Cooler morning light than the Promotions film; restrained blue-gray palette. Locked camera, extremely subtle light and curtain-shadow movement returning to the initial state. The emotion is thoughtful planning and comparison, not wealth, instant relief or approval. Keep the notebook and sample within the middle crop-safe zone, with quiet empty space around them. New customer variant changes table material, sample arrangement, window geometry and light direction. No people, hands, readable writing, calculator display, calendar numbers, cash, credit cards, rates, lender marks, phone numbers or sound. 1080p, generate_audio=false.",
+          "aspect_ratio": "16:9",
+          "duration": 8,
+          "resolution": "1080p",
+          "generate_audio": false,
+          "genre": "auto"
+        }
+      },
+      "balanceAfter": 2433.8,
+      "masterUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_145046_dd20c98b-5c74-4c2f-b51e-a45c6b7a4cb0.mp4",
+      "localMaster": "024-take1/master.mp4",
+      "quality": {
+        "result": "Ready",
+        "checks": [
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass — extracted poster",
+          "Pass — 0.5s blend",
+          "N/A",
+          "Pass"
+        ],
+        "notes": "Stable blue-gray tabletop, no people or markings. Opening extracted frame matches the delivered film and is a better poster than the unrelated installed golden roof photograph."
+      }
+    },
+    {
+      "ticket": "025",
+      "retake": false,
+      "params": {
+        "model": "seedance_2_5",
+        "prompt": "Ultra — Seedance 2.5, reference-driven cinematic planning narrative. Produce a 12-second silent 16:9 film about understanding payment choices for a roofing project. Maintain one refined tabletop/home visual world. 0–3 seconds: a roof material sample and closed blank project folder, suggesting the project needs definition. 3–6 seconds: a gentle camera move reveals three separate neutral blank document folders arranged for comparison, with no lender marks or financial figures. 6–9 seconds: an overhead view organizes the folders beside a blank calendar and project sample, suggesting careful reading and timing rather than automatic approval. 9–12 seconds: camera settles on the orderly planning composition with the home visible softly beyond the window, a considered next step without a celebratory payoff. Keep transitions smooth and architecture stable; hold the first and last half-second. Center important props for mobile crop; leave lower space for real DOM captions. New customer variant changes tabletop, folder geometry, roof sample and camera arc. No readable text, prices, APRs, money rain, credit cards, fake charts, signatures, handshake, distressed homeowner, lender branding or audio. 1080p, approved reference mode if supplied, generate_audio=false.",
+        "mode": "omni_reference",
+        "duration": 12,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "bitrate_mode": "high",
+        "count": 1,
+        "folder_id": "425ead3f-a109-483c-a56a-460f51ef6766",
+        "medias": [
+          {
+            "role": "image",
+            "value": "556d28ab-2def-4794-b5b4-fa4f26df7d01"
+          }
+        ]
+      },
+      "estimate": {
+        "cost": {
+          "credits": 144,
+          "credits_exact": 144
+        },
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "image",
+            "used": "image_references",
+            "reason": "Seedance 2.5 backend expects schema-key media roles"
+          }
+        }
+      },
+      "job": {
+        "id": "b6c94b54-b0c3-40b4-a5b8-ffd0426f1f21",
+        "type": "video",
+        "status": "completed",
+        "model": "seedance_2_5",
+        "params": {
+          "prompt": "Ultra — Seedance 2.5, reference-driven cinematic planning narrative. Produce a 12-second silent 16:9 film about understanding payment choices for a roofing project. Maintain one refined tabletop/home visual world. 0–3 seconds: a roof material sample and closed blank project folder, suggesting the project needs definition. 3–6 seconds: a gentle camera move reveals three separate neutral blank document folders arranged for comparison, with no lender marks or financial figures. 6–9 seconds: an overhead view organizes the folders beside a blank calendar and project sample, suggesting careful reading and timing rather than automatic approval. 9–12 seconds: camera settles on the orderly planning composition with the home visible softly beyond the window, a considered next step without a celebratory payoff. Keep transitions smooth and architecture stable; hold the first and last half-second. Center important props for mobile crop; leave lower space for real DOM captions. New customer variant changes tabletop, folder geometry, roof sample and camera arc. No readable text, prices, APRs, money rain, credit cards, fake charts, signatures, handshake, distressed homeowner, lender branding or audio. 1080p, approved reference mode if supplied, generate_audio=false.",
+          "aspect_ratio": "16:9",
+          "duration": 12,
+          "reference_images": [
+            "556d28ab-2def-4794-b5b4-fa4f26df7d01"
+          ],
+          "mode": "omni_reference",
+          "resolution": "1080p",
+          "generate_audio": false,
+          "bitrate_mode": "high"
+        }
+      },
+      "balanceAfter": 2289.8,
+      "masterUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_145329_b6c94b54-b0c3-40b4-a5b8-ffd0426f1f21.mp4",
+      "localMaster": "025-take1/master.mp4",
+      "quality": {
+        "result": "Rejected",
+        "checks": [
+          "Pass",
+          "Fail",
+          "Fail — harness not verifiable",
+          "Pass",
+          "N/A",
+          "Pass",
+          "Pass"
+        ],
+        "notes": "Calendar numbers/text at 50%, 75%, 100%. Background roof worker at the closing frame is too blurred to verify the harness. Retake was triggered by check 2."
+      }
+    },
+    {
+      "ticket": "026",
+      "retake": false,
+      "params": {
+        "model": "cinematic_studio_3_0",
+        "prompt": "Ultra — Cinema Studio Video 3.0, cinematic photoreal architectural detail. Create an 8-second silent 16:9 ambient loop for a Roofing Promotions planning chapter. A slate roof edge with refined copper flashing beside a stone gable, in warm late-afternoon light. A quiet garden and window suggest an occupied home and everyday routines, without people or a claimed customer project. Locked composition with an almost imperceptible lateral drift returning to its opening position; a soft branch shadow moves gently over the material. Keep the main roof detail central for the phone crop. Match the opening and closing light and shadow; no cuts, renovation transformation or urgency. New customer variation changes roof geometry, flashing detail, garden and light direction. No text, logos, offer badge, price, discount, percentage, deadline, countdown, branded tools, unsafe work, customer testimonial or audio. 1080p, generate_audio=false.",
+        "duration": 8,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "genre": "auto",
+        "count": 1,
+        "folder_id": "425ead3f-a109-483c-a56a-460f51ef6766"
+      },
+      "estimate": {
+        "cost": {
+          "credits": 80,
+          "credits_exact": 80
+        }
+      },
+      "job": {
+        "id": "6d8a3d73-b928-4a17-be6d-d2c4f829b0bb",
+        "type": "video",
+        "status": "completed",
+        "model": "cinematic_studio_3_0",
+        "params": {
+          "prompt": "Ultra — Cinema Studio Video 3.0, cinematic photoreal architectural detail. Create an 8-second silent 16:9 ambient loop for a Roofing Promotions planning chapter. A slate roof edge with refined copper flashing beside a stone gable, in warm late-afternoon light. A quiet garden and window suggest an occupied home and everyday routines, without people or a claimed customer project. Locked composition with an almost imperceptible lateral drift returning to its opening position; a soft branch shadow moves gently over the material. Keep the main roof detail central for the phone crop. Match the opening and closing light and shadow; no cuts, renovation transformation or urgency. New customer variation changes roof geometry, flashing detail, garden and light direction. No text, logos, offer badge, price, discount, percentage, deadline, countdown, branded tools, unsafe work, customer testimonial or audio. 1080p, generate_audio=false.",
+          "aspect_ratio": "16:9",
+          "duration": 8,
+          "resolution": "1080p",
+          "generate_audio": false,
+          "genre": "auto"
+        }
+      },
+      "balanceAfter": 2209.8,
+      "masterUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_145331_6d8a3d73-b928-4a17-be6d-d2c4f829b0bb.mp4",
+      "localMaster": "promotions-take1/026/master.mp4",
+      "quality": {
+        "result": "Ready",
+        "checks": [
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass — 0.5s blend",
+          "N/A",
+          "Pass"
+        ],
+        "notes": "Stable slate/copper detail, warm afternoon palette and no people. Existing poster retained."
+      }
+    },
+    {
+      "ticket": "027",
+      "retake": false,
+      "params": {
+        "model": "seedance_2_5",
+        "prompt": "Ultra — Seedance 2.5, reference-driven premium roofing planning narrative. Create a 12-second silent 16:9 film in one coherent architectural and tabletop setting. 0–3 seconds: a residential roof detail and a homeowner's blank project folder resting on a nearby table. 3–6 seconds: a smooth camera move across unbranded shingle and flashing samples beside a blank sheet, showing the work being defined. 6–9 seconds: a second plain sheet aligns with the first, suggesting an offer being reconciled with a written estimate, without readable text, figures or signatures. 9–12 seconds: settle on the tidy folder and selected material detail with the same home softly visible beyond. Show a considered planning conversation, never an automatic discount, approval or completed customer job. Preserve home geometry, camera direction and prop continuity; restrained transitions, stable first and last half-second. Keep essential details in the central phone-safe crop and leave room for separate readable DOM copy. New customer variant changes roof geometry, sample textures, table dressing and camera arc. No visible text, numbers, prices, discount badges, percentages, countdowns, deadlines, lenders, brand marks, testimonial actors, unsafe work or audio. 1080p, approved reference mode if available, generate_audio=false.",
+        "mode": "omni_reference",
+        "duration": 12,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "bitrate_mode": "high",
+        "count": 1,
+        "folder_id": "425ead3f-a109-483c-a56a-460f51ef6766",
+        "medias": [
+          {
+            "role": "image",
+            "value": "12be74b7-4cd6-4179-b0d2-76ed07677683"
+          }
+        ]
+      },
+      "estimate": {
+        "cost": {
+          "credits": 144,
+          "credits_exact": 144
+        },
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "image",
+            "used": "image_references",
+            "reason": "Seedance 2.5 backend expects schema-key media roles"
+          }
+        }
+      },
+      "job": {
+        "id": "268ad343-3fe1-4185-8bf4-21b5c6de8310",
+        "type": "video",
+        "status": "completed",
+        "model": "seedance_2_5",
+        "params": {
+          "prompt": "Ultra — Seedance 2.5, reference-driven premium roofing planning narrative. Create a 12-second silent 16:9 film in one coherent architectural and tabletop setting. 0–3 seconds: a residential roof detail and a homeowner's blank project folder resting on a nearby table. 3–6 seconds: a smooth camera move across unbranded shingle and flashing samples beside a blank sheet, showing the work being defined. 6–9 seconds: a second plain sheet aligns with the first, suggesting an offer being reconciled with a written estimate, without readable text, figures or signatures. 9–12 seconds: settle on the tidy folder and selected material detail with the same home softly visible beyond. Show a considered planning conversation, never an automatic discount, approval or completed customer job. Preserve home geometry, camera direction and prop continuity; restrained transitions, stable first and last half-second. Keep essential details in the central phone-safe crop and leave room for separate readable DOM copy. New customer variant changes roof geometry, sample textures, table dressing and camera arc. No visible text, numbers, prices, discount badges, percentages, countdowns, deadlines, lenders, brand marks, testimonial actors, unsafe work or audio. 1080p, approved reference mode if available, generate_audio=false.",
+          "aspect_ratio": "16:9",
+          "duration": 12,
+          "reference_images": [
+            "12be74b7-4cd6-4179-b0d2-76ed07677683"
+          ],
+          "mode": "omni_reference",
+          "resolution": "1080p",
+          "generate_audio": false,
+          "bitrate_mode": "high"
+        }
+      },
+      "balanceAfter": 2065.8,
+      "masterUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_145450_268ad343-3fe1-4185-8bf4-21b5c6de8310.mp4",
+      "localMaster": "promotions-take1/027/master.mp4",
+      "quality": {
+        "result": "Rejected",
+        "checks": [
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "N/A",
+          "Fail",
+          "Pass"
+        ],
+        "notes": "Folder exits the composition; the 9–12s closing folder/material beat is missing. Retake triggered by check 6."
+      }
+    },
+    {
+      "ticket": "025",
+      "retake": true,
+      "reason": "Readable text and calendar numbers in take 1",
+      "params": {
+        "model": "seedance_2_5",
+        "prompt": "Ultra — Seedance 2.5, reference-driven cinematic planning narrative. Produce a 12-second silent 16:9 film about understanding payment choices for a roofing project. Maintain one refined tabletop/home visual world. 0–3 seconds: a roof material sample and closed blank project folder, suggesting the project needs definition. 3–6 seconds: a gentle camera move reveals three separate neutral blank document folders arranged for comparison, with no lender marks or financial figures. 6–9 seconds: an overhead view organizes the folders beside a blank calendar and project sample, suggesting careful reading and timing rather than automatic approval. 9–12 seconds: camera settles on the orderly planning composition with the home visible softly beyond the window, a considered next step without a celebratory payoff. Keep transitions smooth and architecture stable; hold the first and last half-second. Center important props for mobile crop; leave lower space for real DOM captions. New customer variant changes tabletop, folder geometry, roof sample and camera arc. No readable text, prices, APRs, money rain, credit cards, fake charts, signatures, handshake, distressed homeowner, lender branding or audio. 1080p, approved reference mode if supplied, generate_audio=false.",
+        "mode": "omni_reference",
+        "duration": 12,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "bitrate_mode": "high",
+        "count": 1,
+        "folder_id": "425ead3f-a109-483c-a56a-460f51ef6766",
+        "medias": [
+          {
+            "role": "image",
+            "value": "556d28ab-2def-4794-b5b4-fa4f26df7d01"
+          }
+        ]
+      },
+      "estimate": {
+        "cost": {
+          "credits": 144,
+          "credits_exact": 144
+        },
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "image",
+            "used": "image_references",
+            "reason": "Seedance 2.5 backend expects schema-key media roles"
+          }
+        }
+      },
+      "job": {
+        "id": "119d1dc2-5ffe-42b4-9d03-39a38762740b",
+        "type": "video",
+        "status": "completed",
+        "model": "seedance_2_5",
+        "params": {
+          "prompt": "Ultra — Seedance 2.5, reference-driven cinematic planning narrative. Produce a 12-second silent 16:9 film about understanding payment choices for a roofing project. Maintain one refined tabletop/home visual world. 0–3 seconds: a roof material sample and closed blank project folder, suggesting the project needs definition. 3–6 seconds: a gentle camera move reveals three separate neutral blank document folders arranged for comparison, with no lender marks or financial figures. 6–9 seconds: an overhead view organizes the folders beside a blank calendar and project sample, suggesting careful reading and timing rather than automatic approval. 9–12 seconds: camera settles on the orderly planning composition with the home visible softly beyond the window, a considered next step without a celebratory payoff. Keep transitions smooth and architecture stable; hold the first and last half-second. Center important props for mobile crop; leave lower space for real DOM captions. New customer variant changes tabletop, folder geometry, roof sample and camera arc. No readable text, prices, APRs, money rain, credit cards, fake charts, signatures, handshake, distressed homeowner, lender branding or audio. 1080p, approved reference mode if supplied, generate_audio=false.",
+          "aspect_ratio": "16:9",
+          "duration": 12,
+          "reference_images": [
+            "556d28ab-2def-4794-b5b4-fa4f26df7d01"
+          ],
+          "mode": "omni_reference",
+          "resolution": "1080p",
+          "generate_audio": false,
+          "bitrate_mode": "high"
+        }
+      },
+      "balanceAfter": 1921.8,
+      "masterUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_150713_119d1dc2-5ffe-42b4-9d03-39a38762740b.mp4",
+      "localMaster": "025-take2/master.mp4",
+      "quality": {
+        "result": "Pending after retake",
+        "checks": [
+          "Pass",
+          "Fail",
+          "Pass",
+          "Pass",
+          "N/A",
+          "Fail",
+          "Fail"
+        ],
+        "notes": "Calendar digits/markings remain at 75% and 100%; requested 6–9s overhead organizing view is missing. Wide ending arrangement puts sample/calendar toward opposite frame edges. Keep installed poster; no further retake."
+      }
+    },
+    {
+      "ticket": "027",
+      "retake": true,
+      "reason": "Closing folder/material story beat missing in take 1",
+      "params": {
+        "model": "seedance_2_5",
+        "prompt": "Ultra — Seedance 2.5, reference-driven premium roofing planning narrative. Create a 12-second silent 16:9 film in one coherent architectural and tabletop setting. 0–3 seconds: a residential roof detail and a homeowner's blank project folder resting on a nearby table. 3–6 seconds: a smooth camera move across unbranded shingle and flashing samples beside a blank sheet, showing the work being defined. 6–9 seconds: a second plain sheet aligns with the first, suggesting an offer being reconciled with a written estimate, without readable text, figures or signatures. 9–12 seconds: settle on the tidy folder and selected material detail with the same home softly visible beyond. Show a considered planning conversation, never an automatic discount, approval or completed customer job. Preserve home geometry, camera direction and prop continuity; restrained transitions, stable first and last half-second. Keep essential details in the central phone-safe crop and leave room for separate readable DOM copy. New customer variant changes roof geometry, sample textures, table dressing and camera arc. No visible text, numbers, prices, discount badges, percentages, countdowns, deadlines, lenders, brand marks, testimonial actors, unsafe work or audio. 1080p, approved reference mode if available, generate_audio=false.",
+        "mode": "omni_reference",
+        "duration": 12,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "generate_audio": false,
+        "bitrate_mode": "high",
+        "count": 1,
+        "folder_id": "425ead3f-a109-483c-a56a-460f51ef6766",
+        "medias": [
+          {
+            "role": "image",
+            "value": "12be74b7-4cd6-4179-b0d2-76ed07677683"
+          }
+        ]
+      },
+      "estimate": {
+        "cost": {
+          "credits": 144,
+          "credits_exact": 144
+        },
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "image",
+            "used": "image_references",
+            "reason": "Seedance 2.5 backend expects schema-key media roles"
+          }
+        }
+      },
+      "job": {
+        "id": "47d7d2f2-a629-4318-aefa-fbf596f9bd82",
+        "type": "video",
+        "status": "completed",
+        "model": "seedance_2_5",
+        "params": {
+          "prompt": "Ultra — Seedance 2.5, reference-driven premium roofing planning narrative. Create a 12-second silent 16:9 film in one coherent architectural and tabletop setting. 0–3 seconds: a residential roof detail and a homeowner's blank project folder resting on a nearby table. 3–6 seconds: a smooth camera move across unbranded shingle and flashing samples beside a blank sheet, showing the work being defined. 6–9 seconds: a second plain sheet aligns with the first, suggesting an offer being reconciled with a written estimate, without readable text, figures or signatures. 9–12 seconds: settle on the tidy folder and selected material detail with the same home softly visible beyond. Show a considered planning conversation, never an automatic discount, approval or completed customer job. Preserve home geometry, camera direction and prop continuity; restrained transitions, stable first and last half-second. Keep essential details in the central phone-safe crop and leave room for separate readable DOM copy. New customer variant changes roof geometry, sample textures, table dressing and camera arc. No visible text, numbers, prices, discount badges, percentages, countdowns, deadlines, lenders, brand marks, testimonial actors, unsafe work or audio. 1080p, approved reference mode if available, generate_audio=false.",
+          "aspect_ratio": "16:9",
+          "duration": 12,
+          "reference_images": [
+            "12be74b7-4cd6-4179-b0d2-76ed07677683"
+          ],
+          "mode": "omni_reference",
+          "resolution": "1080p",
+          "generate_audio": false,
+          "bitrate_mode": "high"
+        }
+      },
+      "balanceAfter": 1777.8,
+      "masterUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3EKdicrb7ie1MOvZcdshyrsP3nu/hf_20260927_151742_47d7d2f2-a629-4318-aefa-fbf596f9bd82.mp4",
+      "localMaster": "027-take2/master.mp4",
+      "quality": {
+        "result": "Ready",
+        "checks": [
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "N/A",
+          "Pass",
+          "Pass"
+        ],
+        "notes": "Roof detail to folder/sample to paired blank sheets, then settled folder/material composition. No people or text. Existing warm terracotta roof poster retained; extracted macro frame is less descriptive."
+      }
+    }
+  ],
+  "totalCredits": 736,
+  "balanceAfter": 1777.8,
+  "pending": [
+    "025"
+  ],
+  "unspentCap": 160
+}

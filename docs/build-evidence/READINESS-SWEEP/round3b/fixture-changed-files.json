@@ -1,0 +1,7 @@
+[
+  "tests/game-progress.mjs",
+  "tests/game-desktop-api.mjs",
+  "tests/game-experience-api.mjs",
+  "tests/game-autofill.mjs",
+  "tests/helpers/game-database-fixture.mjs"
+]

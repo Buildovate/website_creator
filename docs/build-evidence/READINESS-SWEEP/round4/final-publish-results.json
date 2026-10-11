@@ -1,0 +1,11 @@
+{
+  "reason": "Own E2E fixture restored the existing Sample Fictional marker after QA correctly rejected its fictional phone as real content; approval and publication assertions unchanged.",
+  "rows": [
+    {
+      "label": "readiness-paid-publish",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-publish-readiness-paid-publish.log",
+      "ms": 197576
+    }
+  ]
+}

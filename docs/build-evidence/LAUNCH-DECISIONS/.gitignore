@@ -1,0 +1,10 @@
+snapshot/
+tmp/
+before-product/
+before.json
+failed-prerequisite/
+pg-fixture-trace-*.jsonl
+pg-trace-*.jsonl
+empty-file
+changed-files.json
+pg-parallel.mjs

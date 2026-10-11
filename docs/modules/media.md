@@ -1,0 +1,77 @@
+# Module: media
+
+## Purpose
+Stores contractor JPEG uploads and backup copies. Public kit images and films under `public/assets/` are static files, not objects in this bucket. See `design.md` for those.
+
+Roofing's owner-section fallback is a local, responsive WebP sample under `public/assets/owner-roofing/`. `src/core.js` marks it `ownerPhoto.isSample: true` until an owner image is selected through the existing upload flow. `src/design-personality.js` renders the sample label only in that state; `src/builder.js` flags the missing real portrait in readiness. Provenance and replacement notes are in [`MEDIA-CREDITS.md`](../product/MEDIA-CREDITS.md).
+
+## Server
+- **Routes**:
+  - `POST /api/tenants/:id/photos` — `write`. Query: `projectId`, `stage`, `caption`. Body is the JPEG bytes (not JSON).
+  - `GET /media/:photoId` — `src/worker.js`. Serves `image/jpeg` from the bucket. Public when the photo is the published logo, owner photo, hero, a published project's listed photo, or a published blog cover. Otherwise requires `access` on the tenant.
+  - `GET|POST /api/tenants/:id/backups` — owner. `POST` takes a manual snapshot.
+  - `POST /api/tenants/:id/backups/:backupId/restore` — owner, body `confirm: true`, plus the tenant `version` (`src/api.js` → `restore` in `src/operations.js`).
+  - `GET /api/tenants/:id/backups/:backupId/download` — owner. JSON snapshot, not embedded media (`OPERATIONS.md`).
+  - `POST /api/control/profile-photo` and `GET /api/control/avatar/:userId` — staff profile JPEG under `profiles/{userId}/…` (`src/control.js`).
+- **Tables**: `photos` (`tenant_id`, `project_id` nullable, `object_key`, `caption`, `stage`, `bytes`). `backups` (`object_key`, `reason`, `bytes`, `checksum`).
+- **Code**: `src/aws/s3.js` (`get`, `put`, `head`, `delete`), `src/core.js` `jpeg()`, `src/operations.js` `snapshot`, `src/api.js` photo and backup tails.
+- **Auth**: upload is tenant `write`. Public `GET /media/:id` is the exception above. Backup and restore are owner. Profile photos are staff-only.
+
+### Object storage
+The Worker calls `env.BUCKET`. Bindings:
+
+| Runtime | Bucket |
+|---|---|
+| ChatGPT Sites | R2 binding `BUCKET` |
+| AWS preview | S3 `buildovate-website-creator-preview` |
+| AWS production | S3 `buildovate-website-creator-production` |
+| Compose local | MinIO bucket `website-creator-local` via `S3_ENDPOINT` |
+| Quick local | `BUCKET_DRIVER=memory` (lost when the process exits) |
+
+`createS3Bucket` uses the AWS SDK credential chain (instance role on Elastic Beanstalk). Static keys are refused unless `APP_ENV=local`. With `S3_ENDPOINT` set, the client uses path-style URLs and checksums only when required (MinIO). Preview and production do not set an endpoint. LocalStack is not used.
+
+`env.ASSETS` reads built files from `dist/client` (fallback `public/`) and rejects paths that escape that directory. That is the static tree, not uploaded photos.
+
+Upload key shape: `photos/{tenantId}/{id}.jpg`. Backup media: `backups/{tenantId}/{backupId}/media/{photoId}.jpg`. Profile: `profiles/{userId}/{id}.jpg`.
+
+`jpeg()` in `src/core.js` requires SOI/EOI markers and strips APP0–APP15 and comment segments (metadata). Non-JPEG is rejected. Photo `POST` limit is 2MB (`bytes(req, 2*1024*1024)`). Cap is 60 photos per tenant. Project stages: `before`, `during`, `after`. Without a project, stage must be `brand`.
+
+`snapshot` copies every tenant photo into new keys, then stores a SHA-256 JSON snapshot (settings, projects, photos, inquiries, and workspace records — see `src/operations.js`). A missing object fails the backup; it does not mark a partial backup complete. Publish takes a snapshot with reason `Before website publish` before flipping status.
+
+## Browser
+- **Pages**: images in `/s/:slug` and the editor use `/media/:id`. MinIO console on the local stack is `http://localhost:9001` (`docs/ENVIRONMENTS.md`).
+- **Scripts / data**: upload UI in `src/client/workspace/legacy-workspace.js`. No separate media app.
+- **Calls**: `POST /api/tenants/:id/photos`, `GET /media/:id`.
+
+## Business rules
+- Draft and private project photos are not public. Cross-tenant cover and photo-order changes are rejected (`README.md` verification notes).
+- `OPERATIONS.md` says photos are resized to 1600px. The server checks JPEG structure and the 2MB cap. A resize step, if any, is in the browser uploader — confirm in `src/client/workspace/legacy-workspace.js` before claiming the server resizes.
+- Backups are in-platform copies. The JSON download does not embed media (`OPERATIONS.md`). There is no scheduled backup job in this repo.
+- Staff profile photos are served only to signed-in staff (`CRM-RELEASE.md`).
+
+## Gotchas
+- Memory bucket and pglite are disposable. Compose volumes survive `docker compose down` and die on `docker compose down -v`.
+- `POST /api/health` (admin) probes database and object storage together. `GET /healthz` probes only the database (`docs/AWS_MIGRATION.md`).
+- S3 bucket names are enforced at boot for preview and production (`src/aws/env.js`). A wrong bucket refuses to start.
+- Unknown: whether preview or production instances have actually written objects. `docs/AWS_MIGRATION.md` says tests have not sent traffic to the real buckets.
+
+## Related modules
+`infra` (bucket names and MinIO), `sites` (who may upload and when `/media` is public), `workspace` (blog cover id must be a photo on that tenant).
+
+## Sources
+`src/aws/s3.js`, `src/aws/env.js`, `src/core.js`, `src/api.js`, `src/operations.js`, `src/worker.js`, `src/control.js`, `db/schema.ts`, `docker-compose.yml`, `docs/AWS_MIGRATION.md`, `docs/ENVIRONMENTS.md`, `OPERATIONS.md`, `README.md`, `CRM-RELEASE.md`.
+
+
+## Pack 3 creative and distribution specification — local documentation, 2026-09-23
+
+[Pack 3 U–AA](../product/PACK3_UPSELLS_MEDIA_CRM_SPEC.md) proposes promo-art jobs, video ingest and consent, owner-approved social publishing, content calendars and permission-aware CRM photo import. This is future behavior, not an extension of the current JPEG endpoint. [Trade briefs](../product/PACK3_CREATIVE_BRIEFS.md) contain 36 image directions and 24 clearly labeled AI service-explainer scripts; AI presenters never substitute for genuine customer proof. [Calendars](../product/PACK3_CONTENT_CALENDARS.md) and [private education videos](../product/PACK3_SALES_CRM_VIDEO_BRIEFS.md) are production briefs only. No assets were generated, accounts connected, posts sent or website/CRM code changed.
+
+
+## About portrait publication — ticket #007
+
+The /media/:photoId handler additionally permits the photo explicitly referenced by an enabled published Roofing About record with portraitMode=uploaded_photo (publicAboutPhoto in src/website-pages.js). It checks against the snapshot of the photo's own tenant; rendering also checks ownership. Disabled/unpublished/hidden/AI-mode and draft-only references grant no public access. About hero/banner/thumbnail slots grant no access. A portrait may be an owned project photo, but does not publish its parent project or sibling photos. Existing independent logo/project/media grants remain unchanged. [Executed coverage](../build-evidence/007/README.md).
+
+
+## Platform camera selection — #015A
+
+The workspace mobile helper adds a separate image input with capture=environment beside existing image upload fields. Take a photo transfers the selected FileList to the original input and dispatches its change event; the gallery picker remains available. Object-URL thumbnails are revoked when replaced or removed. Cancellation preserves the previous selection and offers retry/gallery guidance. The existing client decoder/resizer and authenticated JPEG API remain authoritative; this does not add HEIC server support, publish an image automatically, or change media access rules. Browser file injection verifies the upload path only; real iPhone/Safari capture acceptance is recorded separately in [#015A evidence](../build-evidence/015A/README.md).

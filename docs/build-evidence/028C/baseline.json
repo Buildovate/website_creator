@@ -1,0 +1,9 @@
+{
+  "commit": "4880c3bdd3fc9d474c14497210e958789ecae184",
+  "branch": "feature/local-environment-setup",
+  "protectedBaseline": "docs/build-evidence/028B/baseline-sites.json",
+  "archivedResponses": "docs/build-evidence/028A/outside-scope-responses.json",
+  "platformCssSha256": "50b60cc6bd3eda2e69d735b9071a70d5a6544e5487055037beae8201f909d09c",
+  "freeRamGiB": 21.28,
+  "platformCssHashSource": "Accepted 028B baseline, verified unchanged against final served platform.css"
+}

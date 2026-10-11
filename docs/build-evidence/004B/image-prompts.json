@@ -1,0 +1,44 @@
+[
+  {
+    "name": "hero",
+    "prompt": "Use case: ads-marketing. Create a cinematic photorealistic generated image for a premium roofing repair website hero, landscape 16:9. Low aerial close view of a beautiful charcoal asphalt shingle roof, crisp ridge lines sweeping diagonally toward the right, California foothills and warm late afternoon light, dramatic deep shadows, tactile roof texture, sophisticated architectural editorial photography. Left half darker quiet roof plane for white website headline overlay. No people, no text, no logos, no watermarks. This is conceptual AI imagery, not a real contractor project.",
+    "source": "C:\\Users\\joe\\.codex\\generated_images\\01a0d283-67ee-76b1-bccc-1af9b8812293\\exec-ac77aaf8-fbf3-4e1d-b517-4eaf7389ba45.png"
+  },
+  {
+    "name": "shingles",
+    "prompt": "Use case: photorealistic-natural. Landscape 4:3 editorial close-up generated image of curled and cracked charcoal asphalt roof shingles, warm natural side lighting, realistic subtle wear, premium architectural detail photograph for a roofing warning-sign card. No people, text, brands or dramatic disaster.",
+    "source": "C:\\Users\\joe\\.codex\\generated_images\\01a0d283-67ee-76b1-bccc-1af9b8812293\\exec-c5afa0d8-7716-442d-b734-2b02f9cafb15.png"
+  },
+  {
+    "name": "stain",
+    "prompt": "Use case: photorealistic-natural. Landscape 4:3 editorial generated image of a subtle brown water ring on white interior ceiling near a wall, warm soft daylight, premium minimal architectural photography, close detail, tasteful and realistic. Roofing leak warning-sign card. No text, people or logos.",
+    "source": "C:\\Users\\joe\\.codex\\generated_images\\01a0d283-67ee-76b1-bccc-1af9b8812293\\exec-8fea936e-4518-422a-8dc5-c2940be2bcab.png"
+  },
+  {
+    "name": "flashing",
+    "prompt": "Use case: photorealistic-natural. Landscape 4:3 editorial generated image of weathered metal flashing around a brick chimney on a charcoal shingle roof, small separation at the seam visible, warm late afternoon light, tactile detail, premium roofing website card. No people, text or logos.",
+    "source": "C:\\Users\\joe\\.codex\\generated_images\\01a0d283-67ee-76b1-bccc-1af9b8812293\\exec-537d817b-dce4-42b7-84c8-1d6351ce3943.png"
+  },
+  {
+    "name": "gutter",
+    "prompt": "Use case: photorealistic-natural. Landscape 4:3 editorial generated close-up of asphalt shingle granules collected in a metal rain gutter at roof edge, shallow depth of field, natural warm sunlight, accurate small mineral grit and leaves, premium roofing warning-sign card. No text, people or logos.",
+    "source": "C:\\Users\\joe\\.codex\\generated_images\\01a0d283-67ee-76b1-bccc-1af9b8812293\\exec-2fbc8698-3541-40e7-b68a-828c320cd8de.png"
+  },
+  {
+    "name": "before",
+    "prompt": "Use case: photorealistic-natural. Landscape 16:9 generated roofing repair demonstration image. Fixed eye-level close view across a single rectangular charcoal asphalt-shingle roof plane, a small white chimney at upper right, trees blurred behind at sunset. Center roof area shows several visibly cracked and lifted shingles. Straight realistic architecture. No people, text or logos. Conceptual before image for an explicitly labeled AI repair example slider, not customer work.",
+    "source": "C:\\Users\\joe\\.codex\\generated_images\\01a0d283-67ee-76b1-bccc-1af9b8812293\\exec-d993aece-fe1d-41a6-a86c-fd620cb268e3.png"
+  },
+  {
+    "name": "after",
+    "prompt": "Use case: precise-object-edit. Edit target image: generated damaged roof demonstration. Replace only the central cracked/lifted/missing shingles with neatly repaired matching charcoal asphalt shingles. Preserve exactly the camera position, roof geometry, framing, white chimney, trees, sunset, all lighting and color, resolution/aspect ratio. No other changes, no text, no people. This is the AFTER counterpart for a matched before-after slider, so background and perspective must align.",
+    "source": "C:/Users/joe/.codex/generated_images/01a0d283-67ee-76b1-bccc-1af9b8812293/exec-4a9fb13c-f3de-439d-95b1-ae76742d0d24.png",
+    "editOf": "before.png"
+  },
+  {
+    "name": "gutter-final",
+    "prompt": "Edit this image: remove the entire artificial warning sign/card and its printed roof icon from the gutter. Fill its former area naturally with the gutter surface and a few ordinary fallen leaves. Preserve the same photographic framing, light, roof, granules and all other details. No symbols, icons, logos, text or added props.",
+    "source": "C:/Users/joe/.codex/generated_images/01a0d283-67ee-76b1-bccc-1af9b8812293/exec-5c9aabf8-c6dd-47db-a17a-c7e13ed87e71.png",
+    "output": "gutter.png"
+  }
+]

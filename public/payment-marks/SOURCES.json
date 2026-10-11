@@ -1,0 +1,18 @@
+{
+  "source": "https://stripe.com/payments/payment-methods",
+  "retrievedAt": "2026-10-11T02:42:26.950Z",
+  "assets": [
+    {
+      "file": "klarna.svg",
+      "sha256": "d1f6ad78f3045900d37ebf86eba507326371184fe9a249a62c98d995cc4a94aa",
+      "sourceElement": "PaymentMethodCard[data-id=\"Klarna\"] svg",
+      "changes": "None: original SVG copied from Stripe’s public payment-method page."
+    },
+    {
+      "file": "affirm.svg",
+      "sha256": "de5ead63c136a52d06325bc6181c8b46b0cbd483e2836f9c99a8a77216266215",
+      "sourceElement": "PaymentMethodCard[data-id=\"Affirm\"] svg",
+      "changes": "None: original SVG copied from Stripe’s public payment-method page."
+    }
+  ]
+}

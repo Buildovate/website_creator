@@ -1,0 +1,18 @@
+import fs from 'node:fs';import cp from 'node:child_process';
+const repo='C:/Users/joe/website_creator',out=repo+'/docs/build-evidence/READINESS-SWEEP/round4',scratch='C:/Users/joe/OneDrive/Documents/ChatGPT/Buildovate - Website Design';
+const run=JSON.parse(fs.readFileSync(out+'/results.json'));
+if(run.rows.length!==239||!fs.existsSync(out+'/complete.json')||!fs.existsSync(out+'/pg-coordinator-correction.json'))throw Error('PG sweep not finished');
+const complete=JSON.parse(fs.readFileSync(out+'/complete.json')),correction=JSON.parse(fs.readFileSync(out+'/pg-coordinator-correction.json'));
+if(!complete.planningRestored||correction.code!==0)throw Error('Sweep completion/preservation failure');
+if(!fs.existsSync(out+'/startup-finished.json'))fs.copyFileSync(out+'/finished.json',out+'/startup-finished.json');
+fs.writeFileSync(out+'/finished.json',JSON.stringify({at:new Date().toISOString(),rows:run.rows.length,native:196,postgres:43,lateNativeReviewCases:6,probes:8,coordinatorCorrection:correction,planningRestored:true,runtimeSmoke:'runtime-smoke.json'},null,2));
+if(!fs.existsSync(out+'/before-report-README.md'))fs.copyFileSync(repo+'/docs/build-evidence/READINESS-SWEEP/README.md',out+'/before-report-README.md');
+const env={...process.env};delete env.NODE_OPTIONS;
+for(const file of [out+'/postgres-coverage.mjs',scratch+'/round4-report.mjs',scratch+'/round4-probe-report.mjs'])process.stdout.write(cp.execFileSync(process.execPath,[file],{cwd:repo,env,encoding:'utf8',maxBuffer:20e6}));
+const comparison=JSON.parse(fs.readFileSync(out+'/comparison.json'));
+const find=label=>comparison.rows.find(r=>r.label===label)?.round4;
+const states=['readiness-batch-b','readiness-paid-publish','readiness-chat-sql','readiness-review-evidence'];
+const lines=states.map(n=>{const a=find(n),b=find('pg-'+n);return '| '+n+' | '+a.pass+'/'+(a.pass+a.fail)+' ('+a.outcome+') | '+b.pass+'/'+(b.pass+b.fail)+' ('+b.outcome+') |'});
+fs.appendFileSync(out+'/PRODUCT-FIXES.md','\n## Final recorded verification\n\n| New regression | Native | PostgreSQL |\n|---|---|---|\n'+lines.join('\n')+'\n\nAll four focused files total 19 cases on each database. [Per-item diff links](change-index.md), [coverage scope and unmatched texts](postgres-coverage.json), [every suite and initial/rerun provenance](comparison.json). Existing teardown checks are 420 brand, 481 media and 418 uniqueness; all finish cleanly.\n');
+for(const name of ['round4-report.mjs','round4-probe-report.mjs'])fs.copyFileSync(scratch+'/'+name,out+'/'+name.replace('round4-',''));
+console.log('Final evidence report generated; no staging or commit performed.');

@@ -1,0 +1,823 @@
+[
+  {
+    "label": "build",
+    "kind": "build",
+    "status": 0,
+    "signal": null,
+    "ms": 4866,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "typecheck",
+    "kind": "typecheck",
+    "status": 0,
+    "signal": null,
+    "ms": 392,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "auth-session",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 3792,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "aws-adapter",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 4425,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "builder",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 335,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "callback-restore",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 285,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "cinematic-films",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 265,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "client-modules",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 152,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "constitution",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 760,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "contact-linkage",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 313,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "contacts-restore",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 288,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "control",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 389,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "conversion-references",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 616,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "core-site-pages",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 664,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "crm-next",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 273,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "crm",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 350,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "design-kits",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 564,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "ebook",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 421,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "engagement-providers",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 327,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "engagement",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 351,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "expense-metering",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 363,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "expense-polish",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 331,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "expenses",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 353,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "financing-comparison",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 498,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "financing-states",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 518,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "footer-policy",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 403,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "generation",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 4477,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "hero-editor",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 4118,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "legacy-scroll-video",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 57,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "legal-policy",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 354,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "media-ranges",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 86,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "motion-v2",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 125,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "neighborhood",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 380,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "owner-photo",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 347,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "planning-motion",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 90,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "platform",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 302,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "premium-service",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 409,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "presentation",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 312,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "project-experience",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 316,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "promotion-unlocks",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 328,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "reference-proof",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 435,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "review-lookup",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 281,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "roofing-cities",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 367,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "roofing-cta",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 360,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "roofing-story",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 349,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "sales-ops",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 261,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "saved-designs",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 273,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "scroll-media",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 12370,
+    "fixture": "Phase 2 catalog",
+    "attempts": [
+      {
+        "status": 1,
+        "ms": 58,
+        "log": "checks/scroll-media.log"
+      }
+    ],
+    "log": "checks/scroll-media-final.log"
+  },
+  {
+    "label": "scroll-story",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 376,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "scroll-video-controller",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 75,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "service-content",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 171,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "service-motion",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 407,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "service-pages-all-trades",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 435,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "service-playbook",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 389,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "showpiece-media",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 168,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "showpiece-v4",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 587,
+    "fixture": "Phase 2 catalog",
+    "attempts": [
+      {
+        "status": 1,
+        "ms": 442,
+        "log": "checks/showpiece-v4.log"
+      }
+    ],
+    "log": "checks/showpiece-v4-final.log"
+  },
+  {
+    "label": "template-name",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 56,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "trade-enablement",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 259,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "trade-revisions",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 431,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "trade-upgrade",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 320,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "trade-visual-correctness",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 1231,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "trades-financing",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 387,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "trust",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 569,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "website-pages",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 1653,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "workspace-owner",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 1935,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "workspace",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 392,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "zoom",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 278,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "template-assets",
+    "kind": "assets",
+    "status": 0,
+    "signal": null,
+    "ms": 160,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "platform-mobile",
+    "kind": "platform",
+    "status": 0,
+    "signal": null,
+    "ms": 52543,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "callback-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 5751,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "contact-linkage-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 7057,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "contacts-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 5844,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "ebook-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 13342,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "expense-polish-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 6352,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "expenses-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 9574,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "financing-states-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 17555,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "generation-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 9786,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "hero-editor-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 32619,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "platform-ui-cleanup-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 6949,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "promotion-unlocks-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 18014,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "roofing-cities-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 20575,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "roofing-cta-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 24485,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "roofing-story-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 13147,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "service-motion-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 19102,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "trade-enablement-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 39029,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "trade-visual-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 31383,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "legacy-fixture-build",
+    "kind": "build",
+    "status": 0,
+    "signal": null,
+    "ms": 1883,
+    "fixture": "Phase 1 Pending catalog fixture"
+  },
+  {
+    "label": "planning-ambient",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 1273,
+    "fixture": "Phase 1 Pending catalog fixture; current player and renderer source"
+  },
+  {
+    "label": "planning-scroll",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 1133,
+    "fixture": "Phase 1 Pending catalog fixture; current player and renderer source"
+  },
+  {
+    "label": "promotions-ambient",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 1124,
+    "fixture": "Phase 1 Pending catalog fixture; current player and renderer source"
+  },
+  {
+    "label": "promotions-scroll",
+    "kind": "regression",
+    "status": 0,
+    "signal": null,
+    "ms": 1118,
+    "fixture": "Phase 1 Pending catalog fixture; current player and renderer source"
+  },
+  {
+    "label": "planning-ambient-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 22531,
+    "fixture": "Phase 1 Pending catalog fixture; current player and renderer source"
+  },
+  {
+    "label": "planning-scroll-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 33535,
+    "fixture": "Phase 1 Pending catalog fixture; current player and renderer source"
+  },
+  {
+    "label": "promotions-ambient-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 33744,
+    "fixture": "Phase 1 Pending catalog fixture; current player and renderer source"
+  },
+  {
+    "label": "promotions-scroll-browser",
+    "kind": "browser",
+    "status": 0,
+    "signal": null,
+    "ms": 35668,
+    "fixture": "Phase 1 Pending catalog fixture; current player and renderer source"
+  },
+  {
+    "label": "restore-phase2-build",
+    "kind": "build",
+    "status": 0,
+    "signal": null,
+    "ms": 1629,
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "new-video-decode",
+    "kind": "assets",
+    "status": 0,
+    "files": 12,
+    "frames": 2688
+  },
+  {
+    "label": "clips-phase2",
+    "kind": "regression",
+    "status": 0,
+    "ms": 520,
+    "log": "checks/clips-phase2-final.log",
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "clips-phase2-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 27890,
+    "log": "checks/clips-phase2-browser-final.log",
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "outside-scope",
+    "kind": "regression",
+    "status": 0,
+    "ms": 907,
+    "log": "checks/outside-scope-final.log",
+    "fixture": "Phase 2 catalog"
+  },
+  {
+    "label": "vite-qa-urls",
+    "kind": "http",
+    "status": 0,
+    "count": 27
+  }
+]

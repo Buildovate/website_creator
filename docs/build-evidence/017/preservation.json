@@ -1,0 +1,31 @@
+{
+  "base": "2f273d60585e5814f17746041198338da7ad4ecb",
+  "unchangedUnrelatedFiles": 262,
+  "restoredEvidenceFiles": 1202,
+  "allHashesMatch": true,
+  "unchangedProtectedFiles": [
+    "src/conversion-page.js",
+    "public/trade-page.js",
+    "src/promotion-evidence.js",
+    "src/worker.js",
+    "tests/promotion-unlocks.mjs",
+    "tests/promotion-unlocks-browser.mjs",
+    "src/expenses.js",
+    "src/expenses-math.js",
+    "src/expenses-history.json",
+    "src/expense-plans.js",
+    "src/client/workspace/expenses.js",
+    "src/client/workspace/expense-charts.js",
+    "public/expenses-admin.css",
+    "tests/expenses.mjs",
+    "tests/expense-metering.mjs",
+    "tests/expenses-browser.mjs",
+    "tests/expense-polish.mjs",
+    "tests/expense-polish-browser.mjs"
+  ],
+  "regeneratedExtrasMoved": [
+    "docs/build-evidence/015A/after/admin-expenses.png",
+    "docs/build-evidence/015A/after/desktop-admin-expenses.png"
+  ],
+  "backupDirectory": "C:/Users/joe/OneDrive/Documents/ChatGPT/Buildovate - Website Design/017-backup"
+}

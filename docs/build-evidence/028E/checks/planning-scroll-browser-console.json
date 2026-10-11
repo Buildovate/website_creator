@@ -1,0 +1,40 @@
+[
+  {
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8165/assets/films/roofing-story.mp4",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8165/s/roofing-scroll-025/financing?qa=installed",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8165/assets/films/roofing-story.mp4",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8165/s/roofing-scroll-025/financing?qa=installed",
+    "platform": false,
+    "allowed": false
+  }
+]

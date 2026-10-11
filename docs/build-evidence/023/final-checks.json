@@ -1,0 +1,20 @@
+[
+  {
+    "label": "regression-run",
+    "status": 0,
+    "ms": 48038,
+    "finalRerun": "All 64 regression scripts plus build/typecheck/asset integrity rerun after compatibility fix; checks.json is the final run."
+  },
+  {
+    "label": "platform-mobile",
+    "status": 0,
+    "ms": 55143
+  },
+  {
+    "label": "browser-run",
+    "status": 0,
+    "ms": 264208,
+    "initialStatus": 1,
+    "resolution": "All 16 suites pass; trade-enablement-browser passed its unchanged 258 checks on the targeted retry. Generation browser added composer coverage and passed 51 assertions."
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "suite": "expenses-browser.mjs",
+  "status": 0,
+  "ms": 10081,
+  "reason": "Existing vendor-row assertion ran immediately after editor dismissal. Test and Expenses module source unchanged for rerun."
+}

@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "reviews": 1,
+  "fontStates": [
+    {
+      "name": "before webfonts finish",
+      "text": "Virtual estimator",
+      "selected": "true",
+      "chip": {
+        "left": 88.3125,
+        "right": 304.3125,
+        "top": 310.921875,
+        "bottom": 369.921875
+      },
+      "clip": {
+        "left": 80,
+        "right": 390,
+        "top": 306.921875,
+        "bottom": 375.921875
+      },
+      "textBoxes": [
+        {
+          "left": 101.3125,
+          "right": 151.703125,
+          "top": 319.921875,
+          "bottom": 339.921875
+        },
+        {
+          "left": 101.3125,
+          "right": 172.8125,
+          "top": 339.421875,
+          "bottom": 359.421875
+        }
+      ],
+      "foreground": "rgb(16, 48, 77)",
+      "background": "rgb(255, 255, 255)",
+      "opacities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fonts": "loading",
+      "scrollLeft": 623,
+      "pageWidth": 390,
+      "viewport": 390
+    },
+    {
+      "name": "after webfonts finish",
+      "text": "Virtual estimator",
+      "selected": "true",
+      "chip": {
+        "left": 87.609375,
+        "right": 303.609375,
+        "top": 310.921875,
+        "bottom": 369.921875
+      },
+      "clip": {
+        "left": 80,
+        "right": 390,
+        "top": 306.921875,
+        "bottom": 375.921875
+      },
+      "textBoxes": [
+        {
+          "left": 100.609375,
+          "right": 145.0625,
+          "top": 320.921875,
+          "bottom": 338.921875
+        },
+        {
+          "left": 100.609375,
+          "right": 165.71875,
+          "top": 340.421875,
+          "bottom": 358.421875
+        }
+      ],
+      "foreground": "rgb(16, 48, 77)",
+      "background": "rgb(255, 255, 255)",
+      "opacities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fonts": "loaded",
+      "scrollLeft": 581,
+      "pageWidth": 390,
+      "viewport": 390
+    }
+  ],
+  "contrast": 13.531126952230803,
+  "colorsUnchanged": true,
+  "screenshot": "screenshots/g3-phone-midway.png",
+  "port": 5183,
+  "externalRequests": []
+}

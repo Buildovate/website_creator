@@ -1,0 +1,12 @@
+PASS configuration safety, locked values and calculator math
+PASS tenant roles, draft/publication isolation, shared footers, feature gates and promotion unlock/expiry
+PASS 84 trade/layout legal-preview links and their access controls
+PASS promotion display fixture: current
+PASS promotion display fixture: upcoming
+PASS promotion display fixture: expired
+PASS promotion display fixture: none
+PASS promotion display fixture: disabledOffer
+PASS promotion display fixture: mixed
+PASS start-inclusive/end-exclusive boundaries across daylight-saving offsets
+PASS draft/publication isolation and homepage/page switch
+PASS 8 promotion display scenarios

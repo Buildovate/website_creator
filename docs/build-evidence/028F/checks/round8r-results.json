@@ -1,0 +1,1065 @@
+{
+  "round": "8r-retry2",
+  "state": "Awaiting catalog-fixture clarification before Suite-102; all four standalones PASS",
+  "cause": "Unused fit More was a hidden direct flex child, producing a zero top in the unchanged all-children one-line check. Part1 still targeted legacy More details.",
+  "fix": "Detach unused fit More; reinsert before CTA for each fit measurement and retain it only for overflow. Preserve full-brand/font/resize measurement. Expose no-JS fallback as a plain link list. Retarget only part1 More checks, testing behavior at a measured overflow width without changing one-line math.",
+  "standalone": [
+    {
+      "name": "roofing-polish-part1-browser",
+      "status": "PASS",
+      "final": [
+        "PASS 201 Part 1 browser checks"
+      ],
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8r-roofing-polish-part1-browser.log",
+      "firstError": null
+    },
+    {
+      "name": "header-nav-fit",
+      "status": "PASS",
+      "final": [
+        "PASS header nav fit: 16422 checks; 8 evidence widths; 1632 trade/Look/name states; painted-name geometry, keyboard and resize"
+      ],
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8r-header-nav-fit.log",
+      "firstError": null
+    },
+    {
+      "name": "header-logo",
+      "status": "PASS",
+      "final": [
+        "PASS header logo: 340 rendered headers, 6 edge cases"
+      ],
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8r-header-logo.log",
+      "firstError": null
+    },
+    {
+      "name": "roofing-polish-part2",
+      "status": "PASS",
+      "final": [
+        "PASS 7633 Part 2 regression assertions; 374 response contracts; 2987 installed photo instances"
+      ],
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8r-roofing-polish-part2.log",
+      "firstError": null
+    }
+  ],
+  "suite102": {
+    "state": "Not run",
+    "pass": 0,
+    "passWithWarning": 0,
+    "fail": 0,
+    "incomplete": 102
+  },
+  "samples": {
+    "state": "Not run",
+    "historical": {
+      "pass": 3425,
+      "borderline": 70,
+      "fail": 0
+    },
+    "qaGateClear": false,
+    "original70Open": true,
+    "decisionsRecorded": 0
+  },
+  "baselineScan": {
+    "checked": 1596,
+    "counts": {
+      "identical": 1596,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "a+c": 0,
+      "other": 0
+    },
+    "updated": []
+  },
+  "preservation": [
+    {
+      "path": "public/planning-films.json",
+      "sha256": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part1.mjs",
+      "sha256": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "after": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/qa-browser.js",
+      "sha256": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "tests/part2-html-normalize.mjs",
+      "sha256": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "after": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "unchanged": true
+    },
+    {
+      "path": "tests/review-part1-html-normalize.mjs",
+      "sha256": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "after": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/parallel-suite.mjs",
+      "sha256": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "after": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/child-hang-guard.mjs",
+      "sha256": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "after": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "unchanged": true
+    },
+    {
+      "path": "BUILD-BACKLOG.md",
+      "sha256": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+      "after": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+      "unchanged": true
+    },
+    {
+      "path": "BUILD-STATUS.md",
+      "sha256": "6f1b9bcc2d8f53bb1e18dfb1c8575d56cd8b098010ff9384bccc2244c6591cc8",
+      "after": "6f1b9bcc2d8f53bb1e18dfb1c8575d56cd8b098010ff9384bccc2244c6591cc8",
+      "unchanged": true
+    },
+    {
+      "path": "src/expenses-history.json",
+      "sha256": "a9fd0d198f459be1e2c1e6d469971518cb1a0060c873b0c23752f9dc2118317c",
+      "after": "a9fd0d198f459be1e2c1e6d469971518cb1a0060c873b0c23752f9dc2118317c",
+      "unchanged": true
+    },
+    {
+      "path": "src/expenses.js",
+      "sha256": "a1aa585f5682b9825ba75d8c8d655ac398ae0e6d84f8f2bf8906dac8089f1890",
+      "after": "a1aa585f5682b9825ba75d8c8d655ac398ae0e6d84f8f2bf8906dac8089f1890",
+      "unchanged": true
+    },
+    {
+      "path": "src/expenses-math.js",
+      "sha256": "0dcc809c84e39d22c58a649163351df50456864b61e8b84cf7c9f5293691c74c",
+      "after": "0dcc809c84e39d22c58a649163351df50456864b61e8b84cf7c9f5293691c74c",
+      "unchanged": true
+    },
+    {
+      "path": "src/client/site/ambient-video.js",
+      "sha256": "b0be5277536422b17448c196564d407ceac9c5d05a1c611457bf5212416a42b7",
+      "after": "b0be5277536422b17448c196564d407ceac9c5d05a1c611457bf5212416a42b7",
+      "unchanged": true
+    },
+    {
+      "path": "src/planning-video-sources.js",
+      "sha256": "7f32de39a30ebb9874a1f80339ea92a0cb7885a02ee25e1029d09a3e7ce5433d",
+      "after": "7f32de39a30ebb9874a1f80339ea92a0cb7885a02ee25e1029d09a3e7ce5433d",
+      "unchanged": true
+    },
+    {
+      "path": "src/planning-ambient.js",
+      "sha256": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "after": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "unchanged": true
+    },
+    {
+      "path": "src/planning-scroll.js",
+      "sha256": "9ad3048360ff833034f1d392fd054eea94df50c9c46ec494f9f5b2be0084ae80",
+      "after": "9ad3048360ff833034f1d392fd054eea94df50c9c46ec494f9f5b2be0084ae80",
+      "unchanged": true
+    },
+    {
+      "path": "src/promotions-scroll.js",
+      "sha256": "9b460b8d8c348287addf094fc297448e5698b87a8257dd77d2dd5d96dceea43e",
+      "after": "9b460b8d8c348287addf094fc297448e5698b87a8257dd77d2dd5d96dceea43e",
+      "unchanged": true
+    },
+    {
+      "path": "src/promotions-ambient.js",
+      "sha256": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4",
+      "after": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4",
+      "unchanged": true
+    },
+    {
+      "path": "src/hero-timelapse.js",
+      "sha256": "e6ad0ed9b0beceb530135abd20f42501ebc57c562f0837a1a0e41f4c8bd50b5c",
+      "after": "e6ad0ed9b0beceb530135abd20f42501ebc57c562f0837a1a0e41f4c8bd50b5c",
+      "unchanged": true
+    },
+    {
+      "path": "src/scroll-config.js",
+      "sha256": "0429ad83a1e27de899208dfa9d4cbc98e6d753eec7b93fafaa69caa9972fe19c",
+      "after": "0429ad83a1e27de899208dfa9d4cbc98e6d753eec7b93fafaa69caa9972fe19c",
+      "unchanged": true
+    },
+    {
+      "path": "public/service-media.json",
+      "sha256": "5b0ba4c6606e2313a4451884aab304939dadc6d0e41102dd7c0375bb52f4fd92",
+      "after": "5b0ba4c6606e2313a4451884aab304939dadc6d0e41102dd7c0375bb52f4fd92",
+      "unchanged": true
+    },
+    {
+      "path": "public/service-art.json",
+      "sha256": "6a56b3c2662a244c22416e68f8fc6d2d82da46c2869a7cefafc462b087ec19b5",
+      "after": "6a56b3c2662a244c22416e68f8fc6d2d82da46c2869a7cefafc462b087ec19b5",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part2.mjs",
+      "sha256": "5c1879c093bd852237881a2063c13327d3ae2cc970e787cf98b5885adb419697",
+      "after": "5c1879c093bd852237881a2063c13327d3ae2cc970e787cf98b5885adb419697",
+      "unchanged": true
+    }
+  ],
+  "geometry": {
+    "phase": "after",
+    "rows": [
+      {
+        "width": 1280,
+        "mode": "desktop",
+        "children": [
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Services",
+            "rect": {
+              "x": 543.28125,
+              "y": 60.140625,
+              "width": 55.234375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 598.515625,
+              "bottom": 104.140625,
+              "left": 543.28125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Areas",
+            "rect": {
+              "x": 606.515625,
+              "y": 60.140625,
+              "width": 39.75,
+              "height": 44,
+              "top": 60.140625,
+              "right": 646.265625,
+              "bottom": 104.140625,
+              "left": 606.515625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Pricing",
+            "rect": {
+              "x": 654.265625,
+              "y": 60.140625,
+              "width": 47.890625,
+              "height": 44,
+              "top": 60.140625,
+              "right": 702.15625,
+              "bottom": 104.140625,
+              "left": 654.265625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Financing",
+            "rect": {
+              "x": 710.15625,
+              "y": 60.140625,
+              "width": 63.375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 773.53125,
+              "bottom": 104.140625,
+              "left": 710.15625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Projects",
+            "rect": {
+              "x": 781.53125,
+              "y": 60.140625,
+              "width": 59.21875,
+              "height": 44,
+              "top": 60.140625,
+              "right": 840.75,
+              "bottom": 104.140625,
+              "left": 781.53125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Reviews",
+            "rect": {
+              "x": 848.75,
+              "y": 60.140625,
+              "width": 51.75,
+              "height": 44,
+              "top": 60.140625,
+              "right": 900.5,
+              "bottom": 104.140625,
+              "left": 848.75
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Blog",
+            "rect": {
+              "x": 908.5,
+              "y": 60.140625,
+              "width": 34.578125,
+              "height": 44,
+              "top": 60.140625,
+              "right": 943.078125,
+              "bottom": 104.140625,
+              "left": 908.5
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "FAQ",
+            "rect": {
+              "x": 951.078125,
+              "y": 60.140625,
+              "width": 26.484375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 977.5625,
+              "bottom": 104.140625,
+              "left": 951.078125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "About",
+            "rect": {
+              "x": 985.5625,
+              "y": 60.140625,
+              "width": 41.828125,
+              "height": 44,
+              "top": 60.140625,
+              "right": 1027.390625,
+              "bottom": 104.140625,
+              "left": 985.5625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Promotions",
+            "rect": {
+              "x": 1035.390625,
+              "y": 60.140625,
+              "width": 76.046875,
+              "height": 44,
+              "top": 60.140625,
+              "right": 1111.4375,
+              "bottom": 104.140625,
+              "left": 1035.390625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Contact Us",
+            "rect": {
+              "x": 1123.4375,
+              "y": 60.140625,
+              "width": 92.5625,
+              "height": 44,
+              "top": 60.140625,
+              "right": 1216,
+              "bottom": 104.140625,
+              "left": 1123.4375
+            }
+          }
+        ],
+        "topSpread": 0,
+        "scrollWidth": 825,
+        "clientWidth": 825,
+        "overflowPresent": false,
+        "moreVisible": false,
+        "noJsLinks": [],
+        "js": true,
+        "screenshot": "financing-1280-js.png"
+      },
+      {
+        "width": 1440,
+        "mode": "desktop",
+        "children": [
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Services",
+            "rect": {
+              "x": 695.28125,
+              "y": 60.140625,
+              "width": 55.234375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 750.515625,
+              "bottom": 104.140625,
+              "left": 695.28125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Areas",
+            "rect": {
+              "x": 758.515625,
+              "y": 60.140625,
+              "width": 39.75,
+              "height": 44,
+              "top": 60.140625,
+              "right": 798.265625,
+              "bottom": 104.140625,
+              "left": 758.515625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Pricing",
+            "rect": {
+              "x": 806.265625,
+              "y": 60.140625,
+              "width": 47.890625,
+              "height": 44,
+              "top": 60.140625,
+              "right": 854.15625,
+              "bottom": 104.140625,
+              "left": 806.265625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Financing",
+            "rect": {
+              "x": 862.15625,
+              "y": 60.140625,
+              "width": 63.375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 925.53125,
+              "bottom": 104.140625,
+              "left": 862.15625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Projects",
+            "rect": {
+              "x": 933.53125,
+              "y": 60.140625,
+              "width": 59.21875,
+              "height": 44,
+              "top": 60.140625,
+              "right": 992.75,
+              "bottom": 104.140625,
+              "left": 933.53125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Reviews",
+            "rect": {
+              "x": 1000.75,
+              "y": 60.140625,
+              "width": 51.75,
+              "height": 44,
+              "top": 60.140625,
+              "right": 1052.5,
+              "bottom": 104.140625,
+              "left": 1000.75
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Blog",
+            "rect": {
+              "x": 1060.5,
+              "y": 60.140625,
+              "width": 34.578125,
+              "height": 44,
+              "top": 60.140625,
+              "right": 1095.078125,
+              "bottom": 104.140625,
+              "left": 1060.5
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "FAQ",
+            "rect": {
+              "x": 1103.078125,
+              "y": 60.140625,
+              "width": 26.484375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 1129.5625,
+              "bottom": 104.140625,
+              "left": 1103.078125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "About",
+            "rect": {
+              "x": 1137.5625,
+              "y": 60.140625,
+              "width": 41.828125,
+              "height": 44,
+              "top": 60.140625,
+              "right": 1179.390625,
+              "bottom": 104.140625,
+              "left": 1137.5625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Promotions",
+            "rect": {
+              "x": 1187.390625,
+              "y": 60.140625,
+              "width": 76.046875,
+              "height": 44,
+              "top": 60.140625,
+              "right": 1263.4375,
+              "bottom": 104.140625,
+              "left": 1187.390625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Contact Us",
+            "rect": {
+              "x": 1275.4375,
+              "y": 60.140625,
+              "width": 92.5625,
+              "height": 44,
+              "top": 60.140625,
+              "right": 1368,
+              "bottom": 104.140625,
+              "left": 1275.4375
+            }
+          }
+        ],
+        "topSpread": 0,
+        "scrollWidth": 950,
+        "clientWidth": 950,
+        "overflowPresent": false,
+        "moreVisible": false,
+        "noJsLinks": [],
+        "js": true,
+        "screenshot": "financing-1440-js.png"
+      },
+      {
+        "width": 1024,
+        "mode": "desktop",
+        "children": [
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Services",
+            "rect": {
+              "x": 350.3125,
+              "y": 60.140625,
+              "width": 55.234375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 405.546875,
+              "bottom": 104.140625,
+              "left": 350.3125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Areas",
+            "rect": {
+              "x": 413.546875,
+              "y": 60.140625,
+              "width": 39.75,
+              "height": 44,
+              "top": 60.140625,
+              "right": 453.296875,
+              "bottom": 104.140625,
+              "left": 413.546875
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Pricing",
+            "rect": {
+              "x": 461.296875,
+              "y": 60.140625,
+              "width": 47.890625,
+              "height": 44,
+              "top": 60.140625,
+              "right": 509.1875,
+              "bottom": 104.140625,
+              "left": 461.296875
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Financing",
+            "rect": {
+              "x": 517.1875,
+              "y": 60.140625,
+              "width": 63.375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 580.5625,
+              "bottom": 104.140625,
+              "left": 517.1875
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Projects",
+            "rect": {
+              "x": 588.5625,
+              "y": 60.140625,
+              "width": 59.21875,
+              "height": 44,
+              "top": 60.140625,
+              "right": 647.78125,
+              "bottom": 104.140625,
+              "left": 588.5625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Reviews",
+            "rect": {
+              "x": 655.78125,
+              "y": 60.140625,
+              "width": 51.75,
+              "height": 44,
+              "top": 60.140625,
+              "right": 707.53125,
+              "bottom": 104.140625,
+              "left": 655.78125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Blog",
+            "rect": {
+              "x": 715.53125,
+              "y": 60.140625,
+              "width": 34.578125,
+              "height": 44,
+              "top": 60.140625,
+              "right": 750.109375,
+              "bottom": 104.140625,
+              "left": 715.53125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "FAQ",
+            "rect": {
+              "x": 758.109375,
+              "y": 60.140625,
+              "width": 26.484375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 784.59375,
+              "bottom": 104.140625,
+              "left": 758.109375
+            }
+          },
+          {
+            "tag": "DIV",
+            "className": "site-fit-overflow",
+            "hidden": false,
+            "display": "block",
+            "text": "MoreAboutPromotions",
+            "rect": {
+              "x": 792.59375,
+              "y": 60.140625,
+              "width": 75.65625,
+              "height": 44,
+              "top": 60.140625,
+              "right": 868.25,
+              "bottom": 104.140625,
+              "left": 792.59375
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Contact Us",
+            "rect": {
+              "x": 880.25,
+              "y": 60.140625,
+              "width": 92.5625,
+              "height": 44,
+              "top": 60.140625,
+              "right": 972.8125,
+              "bottom": 104.140625,
+              "left": 880.25
+            }
+          }
+        ],
+        "topSpread": 0,
+        "scrollWidth": 648,
+        "clientWidth": 648,
+        "overflowPresent": true,
+        "moreVisible": true,
+        "noJsLinks": [],
+        "js": true,
+        "screenshot": "financing-1024-js.png"
+      },
+      {
+        "width": 900,
+        "mode": "desktop",
+        "children": [
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Services",
+            "rect": {
+              "x": 369.3125,
+              "y": 60.140625,
+              "width": 55.234375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 424.546875,
+              "bottom": 104.140625,
+              "left": 369.3125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Areas",
+            "rect": {
+              "x": 432.546875,
+              "y": 60.140625,
+              "width": 39.75,
+              "height": 44,
+              "top": 60.140625,
+              "right": 472.296875,
+              "bottom": 104.140625,
+              "left": 432.546875
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Pricing",
+            "rect": {
+              "x": 480.296875,
+              "y": 60.140625,
+              "width": 47.890625,
+              "height": 44,
+              "top": 60.140625,
+              "right": 528.1875,
+              "bottom": 104.140625,
+              "left": 480.296875
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Financing",
+            "rect": {
+              "x": 536.1875,
+              "y": 60.140625,
+              "width": 63.375,
+              "height": 44,
+              "top": 60.140625,
+              "right": 599.5625,
+              "bottom": 104.140625,
+              "left": 536.1875
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Projects",
+            "rect": {
+              "x": 607.5625,
+              "y": 60.140625,
+              "width": 59.21875,
+              "height": 44,
+              "top": 60.140625,
+              "right": 666.78125,
+              "bottom": 104.140625,
+              "left": 607.5625
+            }
+          },
+          {
+            "tag": "DIV",
+            "className": "site-fit-overflow",
+            "hidden": false,
+            "display": "block",
+            "text": "MoreReviewsBlogFAQAboutPromotions",
+            "rect": {
+              "x": 674.78125,
+              "y": 60.140625,
+              "width": 75.65625,
+              "height": 44,
+              "top": 60.140625,
+              "right": 750.4375,
+              "bottom": 104.140625,
+              "left": 674.78125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Contact Us",
+            "rect": {
+              "x": 762.4375,
+              "y": 60.140625,
+              "width": 92.5625,
+              "height": 44,
+              "top": 60.140625,
+              "right": 855,
+              "bottom": 104.140625,
+              "left": 762.4375
+            }
+          }
+        ],
+        "topSpread": 0,
+        "scrollWidth": 542,
+        "clientWidth": 542,
+        "overflowPresent": true,
+        "moreVisible": true,
+        "noJsLinks": [],
+        "js": true,
+        "screenshot": "financing-900-js.png"
+      },
+      {
+        "width": 820,
+        "mode": "desktop",
+        "children": [
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Services",
+            "rect": {
+              "x": 431.90625,
+              "y": 56.140625,
+              "width": 55.234375,
+              "height": 44,
+              "top": 56.140625,
+              "right": 487.140625,
+              "bottom": 100.140625,
+              "left": 431.90625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Areas",
+            "rect": {
+              "x": 495.140625,
+              "y": 56.140625,
+              "width": 39.75,
+              "height": 44,
+              "top": 56.140625,
+              "right": 534.890625,
+              "bottom": 100.140625,
+              "left": 495.140625
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Pricing",
+            "rect": {
+              "x": 542.890625,
+              "y": 56.140625,
+              "width": 47.890625,
+              "height": 44,
+              "top": 56.140625,
+              "right": 590.78125,
+              "bottom": 100.140625,
+              "left": 542.890625
+            }
+          },
+          {
+            "tag": "DIV",
+            "className": "site-fit-overflow",
+            "hidden": false,
+            "display": "block",
+            "text": "MoreFinancingProjectsReviewsBlogFAQAboutPromotions",
+            "rect": {
+              "x": 598.78125,
+              "y": 56.140625,
+              "width": 75.65625,
+              "height": 44,
+              "top": 56.140625,
+              "right": 674.4375,
+              "bottom": 100.140625,
+              "left": 598.78125
+            }
+          },
+          {
+            "tag": "A",
+            "className": "",
+            "hidden": false,
+            "display": "flex",
+            "text": "Contact Us",
+            "rect": {
+              "x": 686.4375,
+              "y": 56.140625,
+              "width": 92.5625,
+              "height": 44,
+              "top": 56.140625,
+              "right": 779,
+              "bottom": 100.140625,
+              "left": 686.4375
+            }
+          }
+        ],
+        "topSpread": 0,
+        "scrollWidth": 405,
+        "clientWidth": 405,
+        "overflowPresent": true,
+        "moreVisible": true,
+        "noJsLinks": [],
+        "js": true,
+        "screenshot": "financing-820-js.png"
+      }
+    ],
+    "errors": [],
+    "noJsCapture": "Skipped by Joe; part1 still checks the real no-JS fallback."
+  },
+  "noJsEvidence": "Before/after helper no-JS phase explicitly skipped by Joe; actual part1 no-JS assertion remains required.",
+  "servicePageWrap": "Existing body .shared-site-header>nav[data-nav-fit] flex-wrap:nowrap!important already overrides service-detail.css flex-wrap:wrap; no service-detail.css edit.",
+  "criticalCss": {
+    "before": "651bc19c239480b2f08ac427915d7544aab170665513dc8d34f06c278202cca1",
+    "after": "651bc19c239480b2f08ac427915d7544aab170665513dc8d34f06c278202cca1",
+    "normalBuildUsed": true
+  },
+  "filesChanged": [
+    "public/site-navigation.js",
+    "public/site-polish.css",
+    "tests/roofing-polish-part1-browser.mjs",
+    "docs/build-evidence/028F/tools/round8q-nav-capture.mjs (detached More observer and evidence destination only)",
+    "docs/build-evidence/028F/tools/round8r-*",
+    "docs/build-evidence/028F/checks/round8r-*"
+  ],
+  "commit": null,
+  "staged": false,
+  "credits": 0,
+  "providerCalls": 0,
+  "openBorderlineDecisions": 70,
+  "pendingClarification": {
+    "source": "Latest user hard lock: do not touch public/planning-films.json",
+    "existingRunner": "docs/build-evidence/028F/tools/parallel-suite.mjs:12-13",
+    "reason": "The existing runner saves the catalog, temporarily writes four promotions fixture slots, runs those commands, then restores exact bytes in finally. No run or catalog write started while this clarification is pending.",
+    "question": "Allow the existing temporary fixture setup with byte-identical restoration, or stop before Suite-102?"
+  }
+}

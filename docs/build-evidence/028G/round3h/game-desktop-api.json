@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "count": 16,
+  "checks": [
+    "fresh owner: Game is the only view, zero XP, real name",
+    "anonymous denied",
+    "unrelated tenant hidden",
+    "owner cannot cross tenant boundary",
+    "admin reads actual progress",
+    "viewer reads the same single view",
+    "old Tabs preference cannot be written",
+    "fabricated progress cannot be written",
+    "POST rejected",
+    "DELETE rejected",
+    "viewer cannot write preferences",
+    "admin cannot award progress",
+    "old Tabs preference ignored and preserved",
+    "GET never changes saved records",
+    "invalid obsolete preference cannot block board",
+    "all original sections mapped, without inventing permissions"
+  ]
+}

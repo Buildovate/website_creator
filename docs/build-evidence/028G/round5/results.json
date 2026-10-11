@@ -1,0 +1,35 @@
+{
+  "ticket": "028G",
+  "subticket": "G-3",
+  "status": "stopped_first_phone_failure",
+  "head": "2d6bae7454d12ac03600e12aaac7cefe1d0cb718",
+  "branch": "launch/028G-game",
+  "port": 5183,
+  "isolatedBuild": {
+    "passed": true,
+    "runs": 1
+  },
+  "phone": {
+    "passed": false,
+    "runs": 1,
+    "completed": 0,
+    "planned": 17,
+    "failingCheck": 1,
+    "reason": "Eight quest-chip status captions have 2.804033:1 contrast; required >=4.5:1.",
+    "textInstancesScanned": 86,
+    "screenshots": []
+  },
+  "remainingChecks": "Not run after first failure; no retries.",
+  "protectedDiff": "empty",
+  "legacyComponentsTokensDiff": "empty",
+  "sharedFiles": {
+    "count": 4,
+    "each": "+1/-0 vs BASE",
+    "newChanges": 0
+  },
+  "committed": false,
+  "providerCalls": 0,
+  "credits": 0,
+  "next": "Resume G-3 only; G-4 not started.",
+  "previousResults": "round5/g2b-results-before-g3.json"
+}

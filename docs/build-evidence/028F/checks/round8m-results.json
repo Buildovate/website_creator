@@ -1,0 +1,193 @@
+{
+  "round": "8m",
+  "state": "Stopped: immersive normalized content/navigation/service-card differences are outside the standing rule",
+  "cause": "The rebuilt worker consumed separate uncommitted preview changes: Roofing sample renaming, expanded sample navigation, and service-card links; the approved source-lock lookup did not alter the rendered response.",
+  "target": {
+    "url": "/design-preview/roofing/immersive",
+    "baseline": "roofing-19.html",
+    "httpStatus": 200,
+    "expectedNormalizedSha256": "734a356fe549eda598adad07cc56c3f98cad8c15a4fe720e8260eb505de525a9",
+    "actualNormalizedSha256": "cbe776c373837cce83f27bcac795c691b3e14d84d88582761e0b54174cb409db",
+    "firstDifference": 180,
+    "diff": "checks/round8m-immersive-diff.txt",
+    "allowedDiffType": null,
+    "differences": [
+      "Your Roofing Company becomes Ridgeline Roofing in title and public text",
+      "Expanded preview desktop and phone navigation with service dropdown and page links",
+      "Eight service-card CTA links and labels change from Ask about/#contact to Explore//services/..."
+    ]
+  },
+  "since8k": {
+    "headerSnapshotComparison": "checks/round8m-site-polish-since8k.diff.txt",
+    "workerComparisonAgainstHEAD": "checks/round8m-worker-working-tree.diff.txt",
+    "normalizersAndPlanningAmbientUnchanged": true,
+    "workerAndDistNotBackedUpIn8k": true,
+    "actorNotEstablished": true,
+    "observedFiles": [
+      {
+        "path": "src/site-polish.js",
+        "sha256": "3fc88444fc147e42706082a89062a5240c244485a7cda049d2250a5d1176c712",
+        "lastWriteTimeUtc": "2026-10-06T14:42:28.6314658Z"
+      },
+      {
+        "path": "src/worker.js",
+        "sha256": "98d8df9575ee534c6cd52b5813ee673342528b631aee747e0e8941f8fb64f5ac",
+        "lastWriteTimeUtc": "2026-10-06T14:42:28.6933319Z"
+      },
+      {
+        "path": "src/design-preview-pages.js",
+        "sha256": "8bd91ccecaaaa40941c724519af36b22fee0be3f58da8fafb7388350f7e6d1a3",
+        "lastWriteTimeUtc": "2026-10-06T14:52:12.9611928Z"
+      },
+      {
+        "path": "dist/server/index.js",
+        "sha256": "03973716e0339dce8d8e54d1a6d07489463881d8abf619093f2081ae8f255d67",
+        "lastWriteTimeUtc": "2026-10-06T14:52:26.7560173Z"
+      }
+    ],
+    "virtualDiagnosticMatchesBaseline": false,
+    "virtualDiagnosticResidual": "Service-card link/label changes remain when only the name and header are virtually restored",
+    "virtualDiagnostic": "checks/round8m-cause-proof.json",
+    "header8kBackupLastWriteTimeUtc": "2026-10-06T05:47:51.8624388Z"
+  },
+  "baselinesUpdated": [],
+  "rescan": {
+    "state": "Not run: target diff triggers mandatory stop",
+    "compared": 1,
+    "identical": 0,
+    "outsideStandingRule": 1,
+    "remainingNotScanned": 373
+  },
+  "standalone": {
+    "roofingPolishPart2": "Not run in 8m after out-of-scope diagnosis",
+    "headerLogo": "Not run"
+  },
+  "suite102": {
+    "state": "Not run",
+    "pass": 0,
+    "passWithWarning": 0,
+    "fail": 0,
+    "incomplete": 102,
+    "log": "checks/round8m-suite102.log"
+  },
+  "preservation": [
+    {
+      "path": "dist/server/index.js",
+      "before": "03973716e0339dce8d8e54d1a6d07489463881d8abf619093f2081ae8f255d67",
+      "after": "03973716e0339dce8d8e54d1a6d07489463881d8abf619093f2081ae8f255d67",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/027A-part2/before-responses.json",
+      "before": "4e8d541210f00fdd3eeead20204ff0d0885a7173caa67fa903d46850078f2f27",
+      "after": "4e8d541210f00fdd3eeead20204ff0d0885a7173caa67fa903d46850078f2f27",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/027A-part2/preserve-state.json",
+      "before": "9d868c8845752e0c0caf54203077005d843fd88fa0966e777548a6bf2df3f3d6",
+      "after": "9d868c8845752e0c0caf54203077005d843fd88fa0966e777548a6bf2df3f3d6",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/full-checks.json",
+      "before": "dc9b680c8db5723bcf336e23d73a733d12053237ec8f9b14338a89d5cd8d9485",
+      "after": "dc9b680c8db5723bcf336e23d73a733d12053237ec8f9b14338a89d5cd8d9485",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/source-locks/planning-ambient.js",
+      "before": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "after": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "unchanged": true
+    },
+    {
+      "path": "public/planning-films.json",
+      "before": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true
+    },
+    {
+      "path": "src/planning-ambient.js",
+      "before": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "after": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b",
+      "unchanged": true
+    },
+    {
+      "path": "src/site-polish.js",
+      "before": "3fc88444fc147e42706082a89062a5240c244485a7cda049d2250a5d1176c712",
+      "after": "3fc88444fc147e42706082a89062a5240c244485a7cda049d2250a5d1176c712",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/qa-browser.js",
+      "before": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "tests/part2-html-normalize.mjs",
+      "before": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "after": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "unchanged": true
+    },
+    {
+      "path": "tests/preview-fixture.mjs",
+      "before": "b1c6399ab5b14803b64eee891903a21adda99f4bf83189d0b561954fefc7806d",
+      "after": "b1c6399ab5b14803b64eee891903a21adda99f4bf83189d0b561954fefc7806d",
+      "unchanged": true
+    },
+    {
+      "path": "tests/review-part1-html-normalize.mjs",
+      "before": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "after": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part1.mjs",
+      "before": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "after": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part2.mjs",
+      "before": "5be8453a083a8070d02761b4232c703e02638d0a819823eb67fda1a926e256ce",
+      "after": "5be8453a083a8070d02761b4232c703e02638d0a819823eb67fda1a926e256ce",
+      "unchanged": true
+    }
+  ],
+  "samples": {
+    "pass": 3425,
+    "borderline": 70,
+    "fail": 0,
+    "qaGateClear": false,
+    "state": "Prior accepted snapshot; not rerun",
+    "all70Open": true,
+    "decisionsRecorded": 0
+  },
+  "sourceFilesChangedIn8m": [],
+  "temporaryInputs": "Virtual in-memory overrides only; app sources, built worker and test inputs unchanged",
+  "commit": null,
+  "staged": false,
+  "credits": 0,
+  "providerCalls": 0,
+  "filesChanged": [
+    "docs/build-evidence/028F/checks/round8m-cause-proof.json",
+    "docs/build-evidence/028F/checks/round8m-cause-proof.log",
+    "docs/build-evidence/028F/checks/round8m-immersive-actual.txt",
+    "docs/build-evidence/028F/checks/round8m-immersive-cause.txt",
+    "docs/build-evidence/028F/checks/round8m-immersive-diagnosis.json",
+    "docs/build-evidence/028F/checks/round8m-immersive-diagnosis.log",
+    "docs/build-evidence/028F/checks/round8m-immersive-diff.txt",
+    "docs/build-evidence/028F/checks/round8m-immersive-expected.txt",
+    "docs/build-evidence/028F/checks/round8m-notes.md",
+    "docs/build-evidence/028F/checks/round8m-results.json",
+    "docs/build-evidence/028F/checks/round8m-site-polish-since8k.diff.txt",
+    "docs/build-evidence/028F/checks/round8m-suite102.log",
+    "docs/build-evidence/028F/checks/round8m-virtual-prior-response.txt",
+    "docs/build-evidence/028F/checks/round8m-worker-working-tree.diff.txt",
+    "docs/build-evidence/028F/tools/round8m-cause-proof.mjs",
+    "docs/build-evidence/028F/tools/round8m-immersive-diagnosis.mjs",
+    "docs/build-evidence/028F/checks/round8m-before/ (14 preservation copies)"
+  ]
+}

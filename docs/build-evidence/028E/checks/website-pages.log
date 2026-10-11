@@ -1,0 +1,64 @@
+Review approval test prerequisite: e9e20380-abff-4857-a64b-3ad830324855 website
+Review approval test prerequisite: e9e20380-abff-4857-a64b-3ad830324855 project:7fbc1c44-dfc7-407c-8ac2-e782d2a16718
+Review approval test prerequisite: e9e20380-abff-4857-a64b-3ad830324855 project:16bfc9c1-559f-4af8-9d1a-988f50e1f627
+✔ typed records round-trip; IDs/slugs survive edits and reordering (2.3606ms)
+✔ malformed records, duplicate URLs, broken city links and limits are rejected (1.7399ms)
+✔ media uses bounded photo IDs and alt text, never arbitrary URLs (0.4682ms)
+▶ real tenant API: draft/published isolation, ownership and permissions
+  ✔ editor saves all four page types without changing public snapshot (144.1619ms)
+  ✔ render validates page data and has no save/publish side effects (19.5733ms)
+  ✔ foreign/missing media are rejected at save/create without side effects (129.4752ms)
+  ✔ malformed contracts return HTTP 400; access/origin/concurrency stay enforced (36.2044ms)
+Review approval test prerequisite: e9e20380-abff-4857-a64b-3ad830324855 website
+  ✔ old editors omit the field safely; owner publishes a frozen snapshot (158.129ms)
+  ✔ publish rechecks ownership even if a stored draft is stale or forged (8.4862ms)
+Review approval test prerequisite: e9e20380-abff-4857-a64b-3ad830324855 website
+  ✔ explicit deletion remains draft until publish; backups retain page records (163.4394ms)
+✔ real tenant API: draft/published isolation, ownership and permissions (793.0251ms)
+Review approval test prerequisite: 2f397d62-9676-44a8-a27b-e3d77478cd44 website
+Review approval test prerequisite: 2f397d62-9676-44a8-a27b-e3d77478cd44 website
+Review approval test prerequisite: 2f397d62-9676-44a8-a27b-e3d77478cd44 website
+✔ #004 service detail: published snapshot, preview membership, media and inquiry (440.6932ms)
+✔ #004 shared browser handler preserves service context and suppresses preview sends (470.8128ms)
+Review approval test prerequisite: a0bebf7a-a3c0-4458-9d33-5305ec4d2fcc website
+Review approval test prerequisite: a0bebf7a-a3c0-4458-9d33-5305ec4d2fcc website
+Review approval test prerequisite: 90ca64e1-5174-4540-9c99-a2c10d719a87 website
+Review approval test prerequisite: 90ca64e1-5174-4540-9c99-a2c10d719a87 website
+✔ #005 selected service grids: eight offerings, stable links, draft isolation and safe fallbacks (590.4995ms)
+Review approval test prerequisite: 27045032-9036-4c9e-a2d0-d69c8db5b04b website
+Review approval test prerequisite: 27045032-9036-4c9e-a2d0-d69c8db5b04b website
+Review approval test prerequisite: 27045032-9036-4c9e-a2d0-d69c8db5b04b website
+✔ #006 FAQ: published snapshots, feature gating, schema, escaping and route access (783.4045ms)
+Review approval test prerequisite: 2da9b42c-8ea2-4f1d-b84c-684fcd787092 website
+Review approval test prerequisite: 2da9b42c-8ea2-4f1d-b84c-684fcd787092 website
+Review approval test prerequisite: 2da9b42c-8ea2-4f1d-b84c-684fcd787092 website
+✔ #007 About route: confirmed copy, publication, owned portrait/logo and safe fallback (694.5549ms)
+Review approval test prerequisite: 499c61cb-cfce-40d8-8e4f-aefd0b520f20 website
+Review approval test prerequisite: 499c61cb-cfce-40d8-8e4f-aefd0b520f20 website
+Review approval test prerequisite: 499c61cb-cfce-40d8-8e4f-aefd0b520f20 project:cc2eaa50-178c-45e4-a4dd-27737c6d87c0
+✔ #007A confirmed trust facts, concise story, owner hero and published project tiles (514.9808ms)
+▶ #014 inquiry context and public submission boundaries
+  ✔ unpublished tenants cannot accept inquiries (0.67ms)
+Review approval test prerequisite: 25377a65-ba0d-4171-a5d5-c100bb378a79 website
+  ✔ service/city/source/timing and notes reach only the route tenant (8.035ms)
+  ✔ city-only forms retain context without a selected service (7.298ms)
+  ✔ published city context supports a hidden city field without inventing a route renderer (7.9804ms)
+  ✔ published settings win over later draft changes (67.8439ms)
+  ✔ origin, consent, input validation and honeypot remain enforced (18.0475ms)
+  ✔ preview and foreign source attribution are rejected server-side (25.0431ms)
+Review approval test prerequisite: 67a483c1-993d-4dff-8556-60fa5ea4fa02 website
+  ✔ project attribution uses only an owned published project snapshot (23.4779ms)
+  ✔ context is bounded and survives long notes (8.2897ms)
+  ✔ three-per-phone limit cannot be bypassed with different context (7.1163ms)
+  ✔ contact capture does not enroll marketing or schedule delivery (0.3836ms)
+✔ #014 inquiry context and public submission boundaries (309.2817ms)
+✔ #014 browser captures source/city independently and suppresses draft paths (3.4186ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4610.1571
+

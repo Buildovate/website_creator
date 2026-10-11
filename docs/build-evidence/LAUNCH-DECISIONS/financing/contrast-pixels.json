@@ -1,0 +1,561 @@
+[
+  {
+    "state": "ownership-financing-desktop",
+    "text": [
+      {
+        "label": "Local QA fixture · no live checkout",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "Upgrades charge the prorated difference now. Downgrades start at your next renew",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Cancel rental",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Monthly cancellation is unavailable until Jan 1, 2027. The three-month minimum a",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Cancel plan",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          247,
+          245,
+          241
+        ],
+        "ratio": 15.016575246086322,
+        "threshold": 4.5
+      },
+      {
+        "label": "The site comes down at the paid period end with no export. Your domain stays you",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "One-time ownership buyout: $1,500.00. This is a flat price, with no credit for r",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$1,500.00",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Or pay over time with Klarna or Affirm, subject to approval.",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your site, $1,500",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "$50 per month owner hosting starts on your next cycle. No credit for rental mont",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Other plans",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$50/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$500/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Growth",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$150/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$1,500/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "All-in",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      },
+      {
+        "label": "$300/month",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$3,000/year",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "state": "ownership-financing-phone",
+    "text": [
+      {
+        "label": "Local QA fixture · no live checkout",
+        "color": "rgb(255, 255, 255)",
+        "background": [
+          23,
+          45,
+          71
+        ],
+        "ratio": 13.974170389368458,
+        "threshold": 4.5
+      },
+      {
+        "label": "Cancel plan",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          247,
+          245,
+          241
+        ],
+        "ratio": 15.016575246086322,
+        "threshold": 4.5
+      },
+      {
+        "label": "The site comes down at the paid period end with no export. Your domain stays you",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "One-time ownership buyout: $1,500.00. This is a flat price, with no credit for r",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "$1,500.00",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Or pay over time with Klarna or Affirm, subject to approval.",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Own your site, $1,500",
+        "color": "rgb(16, 48, 77)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531126952230803,
+        "threshold": 4.5
+      },
+      {
+        "label": "$50 per month owner hosting starts on your next cycle. No credit for rental mont",
+        "color": "rgb(75, 89, 103)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 7.1819988809756286,
+        "threshold": 4.5
+      },
+      {
+        "label": "Other plans",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 4.5
+      },
+      {
+        "label": "Website",
+        "color": "rgb(21, 33, 43)",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 16.351165786362444,
+        "threshold": 3
+      }
+    ],
+    "pixels": [
+      {
+        "selector": "fixture",
+        "expected": [
+          23,
+          45,
+          71
+        ],
+        "actual": [
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ],
+          [
+            23,
+            45,
+            71
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      },
+      {
+        "selector": "bv-card",
+        "expected": [
+          255,
+          255,
+          255
+        ],
+        "actual": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ]
+        ]
+      }
+    ],
+    "issues": []
+  }
+]

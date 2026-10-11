@@ -1,0 +1,18 @@
+[
+  {
+    "file": "src/ebook/guide.pdf",
+    "pages": 8,
+    "bytes": 2621810,
+    "sampleOnEveryPage": false,
+    "selectableText": true,
+    "visuallyReviewed": true
+  },
+  {
+    "file": "src/ebook/sample-guide.pdf",
+    "pages": 8,
+    "bytes": 2622115,
+    "sampleOnEveryPage": true,
+    "selectableText": true,
+    "visuallyReviewed": true
+  }
+]

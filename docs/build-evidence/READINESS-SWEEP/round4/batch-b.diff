@@ -1,0 +1,284 @@
+diff --git a/src/api.js b/src/api.js
+index 824809e..597fcc0 100644
+--- a/src/api.js
++++ b/src/api.js
+@@ -41,7 +41,7 @@ if(path==='/api/tenants'&&method==='POST'){must(user.admin,'Buildovate administr
+ if(path==='/api/pipeline'&&method==='GET'){must(user.admin,'Administrator access required.',403);return {records:(await all(env,'SELECT tenants.id,tenants.name,tenants.slug,tenants.status,sales.data,sales.version,sales.updated_at FROM tenants LEFT JOIN sales ON sales.tenant_id=tenants.id ORDER BY tenants.created_at DESC')).map(r=>({...r,data:r.data?JSON.parse(r.data):{stage:'Prospect',amount:750},version:r.version||0}))}}
+ if(path==='/api/health'){must(user.admin,'Administrator access required.',403);if(method==='POST')return {check:await checkHealth(env)};return {checks:(await all(env,'SELECT * FROM health ORDER BY created_at DESC LIMIT 20')).map(h=>({...JSON.parse(h.data),id:h.id})),errors:await all(env,"SELECT * FROM audit WHERE action='system.error' ORDER BY created_at DESC LIMIT 30")}}
+ if(path==='/api/audit'&&method==='GET'){must(user.admin,'Administrator access required.',403);return {events:await all(env,'SELECT audit.*,tenants.name AS tenant_name FROM audit LEFT JOIN tenants ON tenants.id=audit.tenant_id ORDER BY audit.created_at DESC LIMIT 150')}}
+-const route=path.match(/^\/api\/tenants\/([^/]+)(?:\/(.*))?$/);must(route,'Not found.',404);const tenantId=route[1],tail=route[2]||'',auth=await access(req,env,tenantId),tenant=auth.tenant;const requireRole=permission=>access(req,env,tenantId,permission);
++const route=path.match(/^\/api\/tenants\/([^/]+)(?:\/(.*))?$/);must(route,'Not found.',404);const tenantId=route[1],tail=route[2]||'',auth=await access(req,env,tenantId,'read',{readOnly:method==='GET'&&!tail}),tenant=auth.tenant;const requireRole=permission=>access(req,env,tenantId,permission);
+ const domainPlanRoute=tail.match(/^domain-plan(?:\/(added|check))?$/);if(domainPlanRoute)return domainPlanApi(req,env,tenantId,domainPlanRoute[1]||'');
+ if(tail==='generation'){
+  if(method==='GET'){const s=JSON.parse(tenant.settings);await recordGeneration(env,s);return {canReview:user.staff===true,manifest:s.generationManifest,published:tenant.published?JSON.parse(tenant.published).generationManifest:null,canEdit:['admin','owner'].includes(auth.role),history:(await all(env,"SELECT data FROM generation_manifests WHERE tenant_id=? ORDER BY created_at DESC LIMIT 30",tenantId)).map(r=>JSON.parse(r.data))}}
+diff --git a/src/blueprint/api.js b/src/blueprint/api.js
+index 0a8b590..bd04ef6 100644
+--- a/src/blueprint/api.js
++++ b/src/blueprint/api.js
+@@ -14,6 +14,6 @@ export async function gameApi(req,env,url){
+  const match=url.pathname.match(/^\/api\/game\/([^/]+)$/);
+  must(match,'Game workspace not found.',404);
+  must(req.method==='GET','Game is the only view. This endpoint is read-only.',405);
+- const {tenant,role}=await access(req,env,decodeURIComponent(match[1]),'read');
++ const {tenant,role}=await access(req,env,decodeURIComponent(match[1]),'read',{readOnly:true});
+  return {tenant:{id:tenant.id,name:tenant.name},role,view:'game',progress:evaluateProgress(await readProgressSources(env,tenant.id))};
+ }
+diff --git a/src/blueprint/autofill/api.js b/src/blueprint/autofill/api.js
+index e41fb30..7389017 100644
+--- a/src/blueprint/autofill/api.js
++++ b/src/blueprint/autofill/api.js
+@@ -2,7 +2,7 @@ import {access,must} from '../../core.js';
+ import {savedSuggestions} from './rules.js';
+ // No writes, provider calls, credentials, generated copy, or cross-tenant lookups.
+ export async function autofillApi(req,env,url,tenantId){
+- const {tenant}=await access(req,env,tenantId,'write');
++ const {tenant}=await access(req,env,tenantId,'write',{readOnly:true});
+  must(req.method==='GET','Saved-detail suggestions are read-only.',405);
+  const form=url.searchParams.get('form');
+  must(['business','questionnaire'].includes(form),'Choose an existing Business or Questionnaire form.',400);
+diff --git a/src/blueprint/experience.js b/src/blueprint/experience.js
+index 1f53120..4d6e94b 100644
+--- a/src/blueprint/experience.js
++++ b/src/blueprint/experience.js
+@@ -21,7 +21,7 @@ export function publishedPreview(tenant){
+   :{state:'unpublished',reason:'Your site isn’t published yet. Publish it when you’re ready, then view it here.'};
+ }
+ export async function experienceApi(req,env,url,tenantId){
+- const {user,tenant}=await access(req,env,tenantId,'read');
++ const {user,tenant}=await access(req,env,tenantId,'read',{readOnly:true});
+  must(req.method==='GET'||req.method==='POST','Method not supported.',405);
+  const id='game-experience:'+encodeURIComponent(tenantId)+':'+encodeURIComponent(user.id);
+  const row=await one(env,"SELECT * FROM workspace_records WHERE id=? AND scope=? AND kind='game_experience'",id,tenantId);
+diff --git a/src/blueprint/sources.js b/src/blueprint/sources.js
+index 28fb7bb..df04c7d 100644
+--- a/src/blueprint/sources.js
++++ b/src/blueprint/sources.js
+@@ -1,3 +1,4 @@
++import {readReviewResponse} from './review-evidence.js';
+ import {createDependencies} from './deps.js';
+ import {evaluateProgress} from './progress.js';
+ const parse=value=>typeof value==='string'?JSON.parse(value):value||{};
+@@ -33,7 +34,7 @@ export async function readProgressSources(env,tenantId,{deps=createDependencies(
+  return {
+   onboarding:available('tenants.settings + platform.questionnaire.factsConfirmed',{fields}),
+   pages:available('tenants.settings.websitePages + sales.data.ownerApproved/approvalNote',{required,drafts,approval:{approved:approval.ownerApproved===true,reference:approval.approvalNote||''}}),
+-  reviews:unavailable('tenants.settings.reviews; src/reviews.js does not persist provider display success',review.confirmed?'Not connected. A profile is confirmed, but successful live review display is not recorded.':'Not connected. Match and confirm a review profile; live display evidence is not recorded.','not_connected'),
++  reviews:await readReviewResponse(env,tenantId,s),
+   estimator:unavailable('No estimator field/consent configuration or minimum-item price book in BASE','Not available yet'),
+   promotions:available('tenants.settings.platform.promotions.offers',{offers:platform.promotions?.offers||[],choice:null}),
+   financing:available('tenants.settings.platform.financing + src/platform/lender-adapter.ts',{selection:fin.selection||null,lenders:(fin.lenders||[]).map(l=>({id:l.id,selected:l.enabled===true,connection:'not_connected'}))}),
+@@ -46,6 +47,6 @@ export async function readProgressSources(env,tenantId,{deps=createDependencies(
+ /** Read-only route boundary for G-2/G-6; reuse existing identity/membership checks. */
+ export async function progressForRequest(req,env,tenantId){
+  const {access}=await import('../core.js');
+- await access(req,env,tenantId,'read');
++ await access(req,env,tenantId,'read',{readOnly:true});
+  return evaluateProgress(await readProgressSources(env,tenantId));
+ }
+diff --git a/src/core.js b/src/core.js
+index 618f556..79c9668 100644
+--- a/src/core.js
++++ b/src/core.js
+@@ -28,6 +28,8 @@ export class Fault extends Error{constructor(message,status=400){super(message);
+ export const must=(condition,message,status=400)=>{if(!condition)throw new Fault(message,status)};
+ export const db=env=>{must(env.DB,'Database unavailable. Please retry.',503);return env.DB};
+ export const one=async(env,sql,...args)=>{let row=await db(env).prepare(sql).bind(...args).first();if(row?.slug&&row?.id&&row?.settings){try{const draft=JSON.parse(row.settings),pub=row.published?JSON.parse(row.published):null;assertGeneration(draft,row.id,row.slug);if(pub)assertGeneration(pub,row.id,row.slug);if(!draft.generationManifest||pub&&!pub.generationManifest){const saved=JSON.stringify(adoptGeneration(draft,row.id,row.slug)),published=pub?JSON.stringify(adoptGeneration(pub,row.id,row.slug)):null;const r=await db(env).prepare("UPDATE tenants SET settings=?,published=? WHERE id=? AND settings=? AND COALESCE(published,'')=COALESCE(?,'')").bind(saved,published,row.id,row.settings,row.published||null).run();if(r.meta.changes)row={...row,settings:saved,published};else{row=await db(env).prepare(sql).bind(...args).first();if(row){assertGeneration(JSON.parse(row.settings),row.id,row.slug);if(row.published)assertGeneration(JSON.parse(row.published),row.id,row.slug)}}}await recordGeneration(env,JSON.parse(row.settings));if(row.published)await recordGeneration(env,JSON.parse(row.published));}catch(error){throw new Fault(error.message,400)}}return row;};
++/** Validation-only lookup for read paths. Migration remains on explicit ensure/write access. */
++export const readOne=async(env,sql,...args)=>{const row=await db(env).prepare(sql).bind(...args).first();if(row?.slug&&row?.id&&row?.settings){try{assertGeneration(JSON.parse(row.settings),row.id,row.slug);if(row.published)assertGeneration(JSON.parse(row.published),row.id,row.slug)}catch(error){throw new Fault(error.message,400)}}return row;};
+ export const all=async(env,sql,...args)=>(await db(env).prepare(sql).bind(...args).all()).results;
+ export const run=(env,sql,...args)=>db(env).prepare(sql).bind(...args).run();
+ export async function hash(value){return [...new Uint8Array(await crypto.subtle.digest('SHA-256',typeof value==='string'?new TextEncoder().encode(value):value))].map(v=>v.toString(16).padStart(2,'0')).join('')}
+@@ -36,7 +38,7 @@ export async function body(req){try{return JSON.parse(new TextDecoder().decode(a
+ export const person=req=>{const id=req.headers.get('oai-authenticated-user-id'),email=req.headers.get('oai-authenticated-user-email');return id?{id,email:(email||'').toLowerCase()}:null};
+ export const workspaceOwnerEmail=env=>(env.WORKSPACE_OWNER_EMAIL||'yoelengel18@gmail.com').trim().toLowerCase();
+ export async function identity(req,env){const p=person(req);must(p,'Sign in to continue.',401);const row=await one(env,'SELECT role FROM admins WHERE user_id=?',p.id);return {...p,owner:p.email===workspaceOwnerEmail(env),admin:row?.role==='admin',staff:!!row,platformRole:row?.role||null}}
+-export async function access(req,env,tenantId,permission='read'){const user=await identity(req,env),tenant=await one(env,'SELECT * FROM tenants WHERE id=?',tenantId);must(tenant,'Website not found.',404);let role='admin';if(!user.admin){const m=await one(env,'SELECT role FROM members WHERE tenant_id=? AND user_id=? AND active=1',tenantId,user.id);must(m,'Website not found.',404);role=m.role}if(permission==='write')must(['admin','owner','editor'].includes(role),'Your role has read-only access.',403);if(permission==='owner')must(['admin','owner'].includes(role),'Owner access required.',403);if(permission==='admin')must(user.admin,'Buildovate administrator access required.',403);return {user,tenant,role}}
++export async function access(req,env,tenantId,permission='read',{readOnly=false}={}){const user=await identity(req,env),tenant=await (readOnly?readOne:one)(env,'SELECT * FROM tenants WHERE id=?',tenantId);must(tenant,'Website not found.',404);let role='admin';if(!user.admin){const m=await one(env,'SELECT role FROM members WHERE tenant_id=? AND user_id=? AND active=1',tenantId,user.id);must(m,'Website not found.',404);role=m.role}if(permission==='write')must(['admin','owner','editor'].includes(role),'Your role has read-only access.',403);if(permission==='owner')must(['admin','owner'].includes(role),'Owner access required.',403);if(permission==='admin')must(user.admin,'Buildovate administrator access required.',403);return {user,tenant,role}}
+ export const log=(env,user,tenant,action,detail='')=>run(env,'INSERT INTO audit (id,tenant_id,actor,action,detail,created_at) VALUES (?,?,?,?,?,?)',uid(),tenant,user.email||user.id,action,text(detail,500),now());
+ export const TRADES=Object.keys(tradeLibrary);
+ export const ROOFING_OWNER_SAMPLE={src:'/assets/owner-roofing/owner-sample-960.webp',isSample:true};
+diff --git a/src/reviews.js b/src/reviews.js
+index 7a8713a..f780287 100644
+--- a/src/reviews.js
++++ b/src/reviews.js
+@@ -1,3 +1,4 @@
++import {recordReviewResponse} from './blueprint/review-evidence.js';
+ import {filterReviewResult} from './review-filter.js';
+ import {applyReviewVariant} from './section-variants.js';
+ import {sectionChoice} from './section-choices.js';
+@@ -9,7 +10,7 @@ function originalReviewSection(s,slug,preview){const c=s.reviews;if(!c||(!c.goog
+ const safeUrl=x=>{try{const u=new URL(x);return u.protocol==='https:'&&!u.username&&!u.password?u.href:''}catch{return ''}};
+ export async function reviewsApi(req,env,url){const match=url.pathname.match(/^\/api\/public\/([^/]+)\/reviews$/);if(!match)return reviewLookup(req,env,url);must(req.method==='GET','Method not supported.',405);const preview=url.searchParams.get('preview')==='1';const t=await one(env,'SELECT * FROM tenants WHERE slug=?',match[1]);must(t,'Website unavailable.',404);if(preview)await access(req,env,t.id);else must(t.status==='published'&&t.published,'Website unavailable.',404);const s=JSON.parse(preview?t.settings:t.published),c=s.reviews;must(c?.confirmed,'Review profiles need owner confirmation.',409);const count=await one(env,"SELECT COUNT(*) AS n FROM audit WHERE tenant_id=? AND action='reviews.requested' AND created_at>?",t.id,new Date(Date.now()-86400000).toISOString());must(count.n<100,'Daily review request limit reached. Read reviews at the source links.',429);if(!env.REVIEW_ISOLATED)await run(env,'INSERT INTO audit(id,tenant_id,actor,action,detail,created_at) VALUES(?,?,?,?,?,?)',uid(),t.id,'website-visitor','reviews.requested','Provider content is not stored',now());const result={providers:[],minimum:c.minimum};
+ if(c.googleUrl){if(!env.GOOGLE_PLACES_API_KEY||!c.googlePlaceId||!c.privacyUrl||!c.termsUrl)result.providers.push({provider:'Google Maps',status:'Live Google reviews need a Places API connection, Place ID, and public policy links.',url:c.googleUrl});else{try{const r=await expenseFetch(env,'https://places.googleapis.com/v1/places/'+encodeURIComponent(c.googlePlaceId),{headers:{'X-Goog-Api-Key':env.GOOGLE_PLACES_API_KEY,'X-Goog-FieldMask':'displayName,rating,userRatingCount,reviews,googleMapsUri,attributions'},signal:AbortSignal.timeout(10000)},{siteId:t.id,productId:'website',preview});if(!r.ok)throw Error();const d=await r.json();result.providers.push({provider:'Google Maps',name:d.displayName?.text||'',rating:d.rating,count:d.userRatingCount,url:safeUrl(d.googleMapsUri)||c.googleUrl,privacyUrl:c.privacyUrl,termsUrl:c.termsUrl,attributions:(d.attributions||[]).map(a=>({name:text(a.provider,250),url:safeUrl(a.providerUri)})),reviews:(d.reviews||[]).filter(r=>s.minReviewRating!==undefined||r.rating>=c.minimum).map(r=>({rating:r.rating,text:r.text?.text||r.originalText?.text||'',author:r.authorAttribution?.displayName||'Google Maps reviewer',authorUrl:safeUrl(r.authorAttribution?.uri),avatar:safeUrl(r.authorAttribution?.photoUri),url:safeUrl(r.googleMapsUri)||c.googleUrl,date:r.relativePublishTimeDescription||'',visitDate:r.visitDate||null}))})}catch{result.providers.push({provider:'Google Maps',url:c.googleUrl,status:'Google reviews are temporarily unavailable. Read them at the source.'})}}}
+-if(c.yelpUrl){if(!env.YELP_API_KEY||!c.yelpBusinessId)result.providers.push({provider:'Yelp',url:c.yelpUrl,status:'Live Yelp ratings need a Yelp API connection and business ID.'});else{try{const r=await fetch('https://api.yelp.com/v3/businesses/'+encodeURIComponent(c.yelpBusinessId),{headers:{authorization:'Bearer '+env.YELP_API_KEY},signal:AbortSignal.timeout(10000)});if(!r.ok)throw Error();const d=await r.json();result.providers.push({provider:'Yelp',name:d.name,rating:d.rating,count:d.review_count,url:safeUrl(d.url)||c.yelpUrl,reviews:await yelpExcerpts(env,c.yelpBusinessId)})}catch{result.providers.push({provider:'Yelp',url:c.yelpUrl,status:'Yelp ratings are temporarily unavailable. Read them at the source.'})}}}return filterReviewResult(result,s.minReviewRating)}
++if(c.yelpUrl){if(!env.YELP_API_KEY||!c.yelpBusinessId)result.providers.push({provider:'Yelp',url:c.yelpUrl,status:'Live Yelp ratings need a Yelp API connection and business ID.'});else{try{const r=await fetch('https://api.yelp.com/v3/businesses/'+encodeURIComponent(c.yelpBusinessId),{headers:{authorization:'Bearer '+env.YELP_API_KEY},signal:AbortSignal.timeout(10000)});if(!r.ok)throw Error();const d=await r.json();result.providers.push({provider:'Yelp',name:d.name,rating:d.rating,count:d.review_count,url:safeUrl(d.url)||c.yelpUrl,reviews:await yelpExcerpts(env,c.yelpBusinessId)})}catch{result.providers.push({provider:'Yelp',url:c.yelpUrl,status:'Yelp ratings are temporarily unavailable. Read them at the source.'})}}}const filtered=filterReviewResult(result,s.minReviewRating);await recordReviewResponse(env,t,s,filtered,preview);return filtered}
+ 
+ async function yelpExcerpts(env,id){try{const r=await fetch('https://api.yelp.com/v3/businesses/'+encodeURIComponent(id)+'/reviews',{headers:{authorization:'Bearer '+env.YELP_API_KEY},signal:AbortSignal.timeout(10000)});if(!r.ok)return [];const d=await r.json();return (d.reviews||[]).slice(0,3).map(x=>({rating:x.rating,text:text(x.text,2000),author:text(x.user?.name,150),authorUrl:safeUrl(x.user?.profile_url),avatar:safeUrl(x.user?.image_url),url:safeUrl(x.url),date:text(x.time_created,50)}))}catch{return []}}
+ export async function reviewLookup(req,env,url){
+diff --git a/tests/automatic-qa-brand-recognition.mjs b/tests/automatic-qa-brand-recognition.mjs
+index 2016ed7..b7d3f5f 100644
+--- a/tests/automatic-qa-brand-recognition.mjs
++++ b/tests/automatic-qa-brand-recognition.mjs
+@@ -1,5 +1,8 @@
+ import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';import {inspectPage} from '../src/aws/qa-browser.js';import './automatic-qa-recognition-lock.mjs';
+ const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028F',origin='http://brand-recognition.local',results=[];const {chromium}=createRequire(import.meta.url)('C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'),browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
++console.log('RUN brand recognition: 420 checks; imported lock check is not a final suite verdict');
+ const kinds=[['service-footer','/services/repair','service-detail','sd-footer','','data-trade="Roofing"'],['home','','conversion-site','cx-header','cx-brand',''],['core','/about','core-page','kit-header shared-site-header','kit-brand','data-core-page="about" data-trade="Roofing"'],['city','/areas/oxnard','core-page rc-page','kit-header shared-site-header','kit-brand','data-core-page="areas" data-trade="Roofing"'],['service','/services/repair','service-detail','kit-header shared-site-header','kit-brand','data-trade="Roofing"'],['pricing','/pricing','pricing-page','kit-header shared-site-header','kit-brand',''],['blog','/blog','','kit-header shared-site-header','kit-brand','']];
+ const cases=['positive','missing-name','empty-name','wrong-name','hidden-name','zero-name','aria-hidden-name','wrong-asset','wrong-link','wrong-page','wrong-header','not-adjacent','extra-content','missing-alt','missing-record'];
+-try{const page=await browser.newPage();await page.route('**/*',r=>r.fulfill({contentType:'text/html',body:'<body></body>'}));for(const width of [1440,1280,768,390])for(const [kind,path,body,header,link,attrs] of kinds)for(const id of cases){await page.setViewportSize({width,height:900});await page.goto(origin+'/s/fixture'+(id==='wrong-page'?'/unrelated':path));await page.setContent('<body class="'+body+'" '+attrs+'><header class="'+header+'"><a class="'+link+'" href="/s/fixture"><img class="site-brand-logo" src="/media/logo" alt="" width="120" height="44"><span class="site-brand-name">Fictional Brand</span></a></header><main><section class="blog-intro"><h1>Example</h1></section></main></body>');if(kind==='service-footer')await page.evaluate(()=>{const h=document.querySelector('header'),f=document.createElement('footer');f.className=h.className;f.innerHTML=h.innerHTML;h.replaceWith(f)});await page.evaluate(id=>{const img=document.querySelector('img'),name=img.nextElementSibling;if(id==='missing-name')name.remove();if(id==='empty-name')name.textContent='';if(id==='wrong-name')name.textContent='Wrong';if(id==='hidden-name')name.hidden=true;if(id==='zero-name')name.style.cssText='display:inline-block;width:0;height:0;overflow:hidden';if(id==='aria-hidden-name')name.setAttribute('aria-hidden','true');if(id==='wrong-asset')img.src='/media/unrecorded';if(id==='wrong-link')img.parentElement.href='/elsewhere';if(id==='wrong-header')img.closest('header,footer').className='other';if(id==='not-adjacent')img.parentElement.prepend(name);if(id==='extra-content')img.parentElement.append(document.createElement('b'));if(id==='missing-alt')img.removeAttribute('alt');},id);const check=(await page.evaluate(inspectPage,{settings:{name:'Fictional Brand',logoId:id==='missing-record'?'':'logo'},sample:true})).find(x=>x.key==='alt');assert.equal(check.result,id==='positive'?'Pass':'Fail',kind+' '+id+' '+width);const crop='recognition/brand-'+kind+'-'+id+'-'+width+'.png';await page.screenshot({path:out+'/'+crop});results.push({kind,id,width,check,crop});}fs.writeFileSync(out+'/checks/brand-recognition.json',JSON.stringify({passed:true,positive:results.filter(x=>x.id==='positive').length,negative:results.filter(x=>x.id!=='positive').length,results},null,2));console.log('PASS brand recognition '+results.length+' cases');}finally{await browser.close()}
++try{const page=await browser.newPage();await page.route('**/*',r=>r.fulfill({contentType:'text/html',body:'<body></body>'}));for(const width of [1440,1280,768,390])for(const [kind,path,body,header,link,attrs] of kinds)for(const id of cases){await page.setViewportSize({width,height:900});await page.goto(origin+'/s/fixture'+(id==='wrong-page'?'/unrelated':path));await page.setContent('<body class="'+body+'" '+attrs+'><header class="'+header+'"><a class="'+link+'" href="/s/fixture"><img class="site-brand-logo" src="/media/logo" alt="" width="120" height="44"><span class="site-brand-name">Fictional Brand</span></a></header><main><section class="blog-intro"><h1>Example</h1></section></main></body>');if(kind==='service-footer')await page.evaluate(()=>{const h=document.querySelector('header'),f=document.createElement('footer');f.className=h.className;f.innerHTML=h.innerHTML;h.replaceWith(f)});await page.evaluate(id=>{const img=document.querySelector('img'),name=img.nextElementSibling;if(id==='missing-name')name.remove();if(id==='empty-name')name.textContent='';if(id==='wrong-name')name.textContent='Wrong';if(id==='hidden-name')name.hidden=true;if(id==='zero-name')name.style.cssText='display:inline-block;width:0;height:0;overflow:hidden';if(id==='aria-hidden-name')name.setAttribute('aria-hidden','true');if(id==='wrong-asset')img.src='/media/unrecorded';if(id==='wrong-link')img.parentElement.href='/elsewhere';if(id==='wrong-header')img.closest('header,footer').className='other';if(id==='not-adjacent')img.parentElement.prepend(name);if(id==='extra-content')img.parentElement.append(document.createElement('b'));if(id==='missing-alt')img.removeAttribute('alt');},id);const check=(await page.evaluate(inspectPage,{settings:{name:'Fictional Brand',logoId:id==='missing-record'?'':'logo'},sample:true})).find(x=>x.key==='alt');assert.equal(check.result,id==='positive'?'Pass':'Fail',kind+' '+id+' '+width);const crop='recognition/brand-'+kind+'-'+id+'-'+width+'.png';await page.screenshot({path:out+'/'+crop});results.push({kind,id,width,check,crop});}fs.writeFileSync(out+'/checks/brand-recognition.json',JSON.stringify({passed:true,positive:results.filter(x=>x.id==='positive').length,negative:results.filter(x=>x.id!=='positive').length,results},null,2));}finally{await Promise.all(browser.contexts().map(context=>context.close()));await browser.close()}
++
++console.log('PASS brand recognition '+results.length+' cases; browser contexts closed');
+diff --git a/tests/generation.mjs b/tests/generation.mjs
+index c9f4113..845d977 100644
+--- a/tests/generation.mjs
++++ b/tests/generation.mjs
+@@ -4,7 +4,7 @@ import fs from 'node:fs';
+ import {build} from 'esbuild';
+ import {worker,env,admin} from './preview-fixture.mjs';
+ const out='docs/build-evidence/023';fs.mkdirSync(out,{recursive:true});
+-const bundle=await build({stdin:{contents:"export * from './src/generation.js';export * from './src/platform/generation.ts';export {sitePage} from './src/views.js';export {renderUniversalServicePage} from './src/service-detail.js';export {visibleServicePages} from './src/service-registry.js';",resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false,loader:{'.html':'text','.pdf':'binary'}});
++const bundle=await build({stdin:{contents:"export {access} from './src/core.js';export * from './src/generation.js';export * from './src/platform/generation.ts';export {sitePage} from './src/views.js';export {renderUniversalServicePage} from './src/service-detail.js';export {visibleServicePages} from './src/service-registry.js';",resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false,loader:{'.html':'text','.pdf':'binary'}});
+ const mod=await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'));
+ const kits=JSON.parse(fs.readFileSync('public/design-kits.json')),library=JSON.parse(fs.readFileSync('public/trade-library.json')),checks=[],migration=[];
+ const check=(value,msg)=>{assert.ok(value,msg);checks.push(msg)};
+@@ -18,6 +18,8 @@ for(const [id,kit]of Object.entries(kits)){
+  const legacy=structuredClone(created.settings);delete legacy.generationManifest;const before=render(legacy,created.slug),s=mod.adoptGeneration(legacy,created.id,created.slug),after=render(s,created.slug);assert.equal(after,before);check(true,id+' legacy homepage HTML identical');
+  const services=[];for(const p of mod.visibleServicePages(legacy)){assert.equal(mod.renderUniversalServicePage(legacy,p,{slug:created.slug}),mod.renderUniversalServicePage(s,p,{slug:created.slug}));services.push(p.slug)}check(true,id+' legacy service pages identical');
+  await env.DB.prepare('UPDATE tenants SET settings=?,published=?,status=\'published\' WHERE id=?').bind(JSON.stringify(legacy),JSON.stringify(legacy),created.id).run();
++ const read=(await api('/tenants/'+created.id)).tenant;assert.equal(read.settings.generationManifest,undefined);assert.equal(read.published.generationManifest,undefined);
++ await mod.access(new Request(origin+'/api/tenants/'+created.id,{headers:{'oai-authenticated-user-id':admin.id,'oai-authenticated-user-email':admin.email}}),env,created.id,'write');
+  const migrated=(await api('/tenants/'+created.id)).tenant;check(!!migrated.settings.generationManifest&&!!migrated.published.generationManifest,id+' old draft and published snapshots adopted');assert.equal(render(migrated.settings,created.slug),before);check(true,id+' persisted adoption has no visual change');
+  const url='/s/'+created.slug;const html=await(await req(url)).text();check(html===await(await req(url)).text(),id+' repeated rendered output identical');const a=await api('/tenants/'+created.id),b=await api('/tenants/'+created.id);assert.deepEqual(a.tenant.settings.generationManifest,b.tenant.settings.generationManifest);check(true,id+' reload keeps generation ID');
+  const saved=(await api('/tenants/'+created.id,'PUT',{version:migrated.version,settings:migrated.settings})).tenant;assert.equal(render(saved.settings,created.slug),before);check(true,id+' normal save does not reroll');
+diff --git a/tests/media-api.mjs b/tests/media-api.mjs
+index c347b0d..5e1d133 100644
+--- a/tests/media-api.mjs
++++ b/tests/media-api.mjs
+@@ -29,5 +29,7 @@ try{
+  const concurrent=await Promise.all(races.map(t=>api('/tenants/'+t.id+'/generation','POST',{version:t.version,action:'regenerate',overrides:{seed:443}})));
+  ok(concurrent[0].tenant.settings.mediaPicks.slots.hero.assetId!==concurrent[1].tenant.settings.mediaPicks.slots.hero.assetId,'Concurrent same-seed generations reserve different available hero media');
+  ok(providerCalls===0,'No provider calls');
+- fs.writeFileSync(out+'/checks/media-api.json',JSON.stringify({passed:true,count:checks.length,cases:68,providerCalls,checks},null,2));console.log('PASS '+checks.length+' media API checks');
++ fs.writeFileSync(out+'/checks/media-api.json',JSON.stringify({passed:true,count:checks.length,cases:68,providerCalls,checks},null,2));
+ }finally{globalThis.fetch=nativeFetch;await runtime.close()}
++
++console.log('PASS '+checks.length+' API checks; database pool and queued jobs closed');
+diff --git a/tests/uniqueness-api.mjs b/tests/uniqueness-api.mjs
+index 5d6f8ac..ff43f36 100644
+--- a/tests/uniqueness-api.mjs
++++ b/tests/uniqueness-api.mjs
+@@ -39,6 +39,8 @@ const races=[];for(let n=0;n<2;n++){const {row}=originalRows.find(({row})=>JSON.
+ const concurrent=await Promise.all(races.map(t=>api('/tenants/'+t.id+'/generation','POST',{version:t.version,action:'regenerate',overrides:{seed:222}})));
+ const picks=concurrent.map(x=>({style:x.tenant.settings.uniqueness.style,...x.tenant.settings.sectionVariants}));ok(pickDistance(...picks)>=3,'concurrent same-seed sites reserve different combinations');
+ ok(providerCalls===0,'zero provider calls');
+-console.log('PASS '+checks.length+' API checks across 68 trade/style cases');
++
+ fs.writeFileSync(out+'/checks/uniqueness-api.json',JSON.stringify({passed:true,count:checks.length,cases:68,providerCalls,checks},null,2));
+ }finally{globalThis.fetch=nativeFetch;await runtime.close()}
++
++console.log('PASS '+checks.length+' API checks; database pool and queued jobs closed');
+
+--- /dev/null
++++ tests/readiness-batch-b.mjs
++import worker from '../dist/server/index.js';
++import test from 'node:test';import assert from 'node:assert/strict';
++import {paymentHarness} from './helpers/payments-fixture.mjs';
++import {gameApi} from '../src/blueprint/api.js';import {progressForRequest,readProgressSources} from '../src/blueprint/sources.js';
++import {access,DEFAULT} from '../src/core.js';import {evaluateProgress} from '../src/blueprint/progress.js';
++const stamp='2026-01-01T00:00:00.000Z',origin='http://127.0.0.1:5184',id='tenant_123';
++const req=(suffix='',method='GET',user='owner',data)=>new Request(origin+'/api/game/'+id+suffix,{method,headers:{origin,'content-type':'application/json','oai-authenticated-user-id':user},body:data===undefined?undefined:JSON.stringify(data)});
++function fixture(){const h=paymentHarness();h.sql.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify({...DEFAULT,name:'Round 4 QA Roofing'}),id);for(const [user,role]of [['owner','owner'],['viewer','viewer']])h.sql.prepare('INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)').run(user,id,user,user+'@example.test',role,stamp);return h;}
++const snapshot=h=>({tenants:h.sql.prepare('SELECT * FROM tenants ORDER BY id').all(),manifests:h.sql.prepare('SELECT * FROM generation_manifests ORDER BY id').all(),records:h.sql.prepare('SELECT * FROM workspace_records ORDER BY id').all()});
++for(const suffix of ['', '/experience','/autofill?form=business'])test('first Game GET '+suffix+' leaves legacy draft/public manifest and history untouched',async()=>{const h=fixture();try{h.sql.prepare("UPDATE tenants SET published=settings,status='published' WHERE id=?").run(id);const before=snapshot(h);await gameApi(req(suffix),h.env,new URL(req(suffix).url));assert.deepEqual(snapshot(h),before);}finally{h.close();}});
++test('progress request authorization is side-effect free',async()=>{const h=fixture();try{const before=snapshot(h);await progressForRequest(req(),h.env,id);assert.deepEqual(snapshot(h),before);}finally{h.close();}});
++test('viewer read is pure; stranger denied without writes',async()=>{const h=fixture();try{const before=snapshot(h);await gameApi(req('','GET','viewer'),h.env,new URL(req().url));await assert.rejects(()=>gameApi(req('','GET','stranger'),h.env,new URL(req().url)),e=>e.status===404);assert.deepEqual(snapshot(h),before);}finally{h.close();}});
++test('explicit authorized write access retains existing manifest ensure and stable generation',async()=>{const h=fixture();try{await access(req(),h.env,id,'write');const first=snapshot(h);assert.ok(JSON.parse(first.tenants.find(x=>x.id===id).settings).generationManifest);await gameApi(req(),h.env,new URL(req().url));assert.deepEqual(snapshot(h),first);}finally{h.close();}});
++test('read validates corrupt existing manifests without repairing them',async()=>{const h=fixture();try{h.sql.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify({...DEFAULT,generationManifest:{version:999}}),id);const before=snapshot(h);await assert.rejects(()=>gameApi(req(),h.env,new URL(req().url)),e=>e.status===400);assert.deepEqual(snapshot(h),before);}finally{h.close();}});
++test('B06 supported quests derive 60 XP from their actual saved business, approval, offer, alert, payment and domain records',async()=>{const h=fixture();try{const settings={...DEFAULT,name:'Local QA Roofing',phone:'8055550123',trade:'Roofing',area:'Oxnard',hero:'Discuss your roofing needs',intro:'A local fixture for progress records.',services:[{name:'Roof repair'}],websitePages:{pages:[{kind:'about',title:'About',intro:'Owner-entered about draft'},{kind:'faq',title:'Questions',intro:'Owner-entered answers'},{kind:'service',serviceName:'Roof repair',title:'Repair',intro:'Owner-entered repair draft'}]},platform:{questionnaire:{factsConfirmed:true},promotions:{offers:[{id:'offer',title:'Contractor offer',reward:'Contractor-entered service'}]},financing:{selection:'none'}}};h.sql.prepare("UPDATE tenants SET settings=?,published=?,status='published' WHERE id=?").run(JSON.stringify(settings),JSON.stringify(settings),id);
++h.sql.prepare('INSERT INTO sales(tenant_id,data,updated_at) VALUES(?,?,?)').run(id,JSON.stringify({ownerApproved:true,approvalNote:'Owner reviewed the saved preview'}),stamp);
++for(const [key,kind,data]of [['chat-'+id,'chat_config',{enabled:true,smsEnabled:true,phone:'8055550123',phoneVerified:true}],['domain-plan-'+id,'domain_plan',{tenantId:id,hostname:'roof.example.test',ownership:'verified',proof:{connected:true,checkedAt:new Date().toISOString(),www:true,bare:true,ssl:true,site:{ok:true,tenantId:id,url:'https://www.roof.example.test'}}}]])h.sql.prepare('INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) VALUES(?,?,?,?,?,?)').run(key,id,kind,JSON.stringify(data),stamp,stamp);
++assert.equal((await h.send(h.event('paid','invoice.paid',h.invoice('paid','PLAN-WEBSITE-MONTH',5000,stamp,'2099-01-01T00:00:00Z')))).status,200);
++const before=snapshot(h),p=evaluateProgress(await readProgressSources(h.env,id));assert.equal(p.totalXp,60);for(const q of ['onboarding','pages','promotions','financing','leads','launch'])assert.equal(p.quests.find(x=>x.id===q).done,true,q);for(const q of ['reviews','estimator','marketing']){assert.equal(p.quests.find(x=>x.id===q).xpEarned,0);assert.ok(p.quests.find(x=>x.id===q).steps.every(x=>x.reason));}assert.deepEqual(snapshot(h),before);
++}finally{h.close();}});
++test('B06 saved review URLs, public estimate form and social URLs never fabricate completion',async()=>{const h=fixture();try{h.sql.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify({...DEFAULT,reviews:{confirmed:true,googlePlaceId:'qa',googleUrl:'https://maps.google.com/?cid=qa'},pricing:{approved:true},platform:{footer:{socials:{facebook:{enabled:true,url:'https://example.test'}}}}}),id);const p=evaluateProgress(await readProgressSources(h.env,id));for(const q of ['reviews','estimator','marketing'])assert.equal(p.quests.find(x=>x.id===q).xpEarned,0);}finally{h.close();}});
++
++test('legacy form load inside Game is read-only on first tenant access',async()=>{const h=fixture();try{const before=snapshot(h),r=await worker.fetch(new Request(origin+'/api/tenants/'+id,{headers:{'oai-authenticated-user-id':'owner'}}),h.env);assert.equal(r.status,200,await r.clone().text());assert.deepEqual(snapshot(h),before);}finally{h.close();}});
++
+
+--- /dev/null
++++ tests/readiness-paid-publish.mjs
++import test from 'node:test';import assert from 'node:assert/strict';
++import worker from '../dist/server/index.js';import {paymentHarness} from './helpers/payments-fixture.mjs';
++import {createAssets,createMemoryBucket} from '../src/aws/s3.js';import {mediaSamples} from './fixtures/media-library.mjs';
++import {realReviewPrerequisite} from './helpers/review-approval-fixture.mjs';
++const root='C:/Users/joe/website_creator',origin='http://127.0.0.1:5185',id='tenant_123',stamp='2026-01-01T00:00:00.000Z';
++async function fixture(mode){const h=paymentHarness();h.DB.batch=async list=>{h.sql.exec('BEGIN');try{const r=await Promise.all(list.map(s=>s.run()));h.sql.exec('COMMIT');return r;}catch(e){h.sql.exec('ROLLBACK');throw e;}};
++Object.assign(h.env,{ASSETS:createAssets(root+'/dist/client'),BUCKET:createMemoryBucket(),WORKSPACE_OWNER_EMAIL:'staff@example.test'});
++h.sql.prepare('INSERT INTO admins(user_id,email,role,created_at) VALUES(?,?,?,?)').run('staff','staff@example.test','admin',stamp);h.sql.prepare('INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)').run('owner',id,'owner','owner@example.test','owner',stamp);
++const req=(path,method='GET',data,user='owner')=>worker.fetch(new Request(origin+path,{method,headers:{origin,'content-type':'application/json',...(user?{'oai-authenticated-user-id':user,'oai-authenticated-user-email':user+'@example.test'}:{})},body:data===undefined?undefined:JSON.stringify(data)}),h.env);
++const api=async(path,method='GET',data,user='owner')=>{const r=await req(path,method,data,user);assert.equal(r.status,200,await r.clone().text());return r.json();};
++try{const s=structuredClone(mediaSamples()[0].settings);delete s.generationManifest;s.name='Sample Fictional Paid Publish QA';s.phone='8055550123';s.claimsReviewed=true;
++h.sql.prepare('UPDATE tenants SET settings=?,published=NULL,status=? WHERE id=?').run(JSON.stringify(s),'draft',id);
++assert.equal((await h.send(mode==='rental'?h.event('paid','invoice.paid',h.invoice('paid','PLAN-WEBSITE-MONTH',5000,stamp,'2099-01-01T00:00:00Z')):h.event('owned','checkout.session.completed',h.session('SITE-OWN',150000,'pi_owned')))).status,200);
++const {tenant}=await api('/api/tenants/'+id);const saved=(await api('/api/tenants/'+id,'PUT',{version:tenant.version,settings:{...tenant.settings,owner:'QA owner'}})).tenant;
++assert.equal(saved.status,'draft');assert.equal((await req('/s/pay-test','GET',undefined,null)).status,404);
++await realReviewPrerequisite(h.env,id,'website',origin);
++await api('/api/tenants/'+id+'/publish','POST',{version:saved.version,approved:true});
++const live=await req('/s/pay-test','GET',undefined,null);assert.equal(live.status,200);assert.match(await live.text(),/Fictional Paid Publish QA/);
++return {...h,api,req};}catch(e){h.close();throw e;}}
++test('B15 paid rental → real owner save → staff browser review → publish → live → expiry/cancel → public 404',async()=>{const h=await fixture('rental');try{assert.equal((await h.send(h.event('cancel','customer.subscription.deleted',{id:'sub_fixture',customer:'cus_test_1',metadata:{tenantId:id},current_period_end:Math.floor(Date.parse('2026-02-01')/1000)}))).status,200);assert.equal((await h.req('/s/pay-test','GET',undefined,null)).status,404);assert.ok(h.sql.prepare('SELECT published FROM tenants WHERE id=?').get(id).published);assert.ok(h.sql.prepare('SELECT data_hold_until FROM payment_state WHERE tenant_id=?').get(id).data_hold_until);}finally{h.close();}});
++test('B15 paid owner → real reviewed publication → ZIP available → refund → ZIP denied',async()=>{const h=await fixture('owner');try{const before=await h.req('/api/tenants/'+id+'/download');assert.equal(before.status,200);assert.match(before.headers.get('content-type'),/zip/);assert.ok((await before.arrayBuffer()).byteLength>0);assert.equal((await h.send(h.event('refund','charge.refunded',{id:'charge_fixture',payment_intent:'pi_owned'}))).status,200);assert.equal((await h.req('/api/tenants/'+id+'/download')).status,403);}finally{h.close();}});
++
+
+--- /dev/null
++++ tests/readiness-chat-sql.mjs
++import test from 'node:test';import assert from 'node:assert/strict';import worker from '../dist/server/index.js';import {paymentHarness} from './helpers/payments-fixture.mjs';import {DEFAULT} from '../src/core.js';
++const stamp='2026-01-01T00:00:00.000Z',origin='http://127.0.0.1:5186';
++test('B16 grounded assistant completion and lock release persist on the production schema',async()=>{const h=paymentHarness(),prior=globalThis.fetch;let intercepted=0;try{h.sql.prepare("UPDATE tenants SET settings=?,published=?,status='published' WHERE id='tenant_123'").run(JSON.stringify({...DEFAULT,name:'Fictional Chat QA',phone:'8055550123'}),JSON.stringify({...DEFAULT,name:'Fictional Chat QA',phone:'8055550123'}));h.sql.prepare('INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) VALUES(?,?,?,?,?,?)').run('chat-tenant_123','tenant_123','chat_config',JSON.stringify({enabled:true,aiEnabled:true,smsEnabled:false,welcome:'Local fixture',knowledge:''}),stamp,stamp);
++h.env.OPENAI_API_KEY='offline_fixture_not_a_key';globalThis.fetch=async(input)=>{assert.equal(new URL(typeof input==='string'?input:input.url).href,'https://api.openai.com/v1/responses');intercepted++;return Response.json({output:[{content:[{type:'output_text',text:'LOCAL TEST RESPONSE: What roofing concern would you like to discuss?'}]}],usage:{input_tokens:1,output_tokens:1}});};
++const request=(part,body,cookie='')=>worker.fetch(new Request(origin+'/api/public/pay-test/chat/'+part,{method:'POST',headers:{origin,'content-type':'application/json',cookie},body:JSON.stringify(body)}),h.env);
++const start=await request('start',{name:'QA visitor',consent:true});assert.equal(start.status,200);const cookie=start.headers.get('set-cookie').split(';')[0];await start.text();const response=await request('message',{message:'Roof repair question'},cookie);assert.equal(response.status,200,await response.clone().text());await response.text();const t=h.sql.prepare("SELECT * FROM chat_threads WHERE tenant_id='tenant_123'").get();assert.equal(t.lock_until,'');assert.equal(intercepted,1);assert.ok(h.sql.prepare("SELECT id FROM chat_messages WHERE thread_id=? AND sender='assistant' AND body LIKE 'LOCAL TEST RESPONSE:%'").get(t.id));
++}finally{globalThis.fetch=prior;h.close();}});
++
+
+--- /dev/null
++++ src/blueprint/review-evidence.js
++import {hash,now} from '../core.js';
++const DAY=86400000;
++const configuration=s=>JSON.stringify([s.reviews?.googlePlaceId||'',s.reviews?.yelpBusinessId||'',s.reviews?.googleUrl||'',s.reviews?.yelpUrl||'',s.reviews?.confirmed===true,s.reviews?.minimum??null,s.minReviewRating??null,s.showReviews!==false,s.reviews?.privacyUrl||'',s.reviews?.termsUrl||'']);
++/** Provider-response metadata only: no excerpts, names, ratings, counts, XP or completion flags. */
++export async function recordReviewResponse(env,tenant,s,result,preview){
++ if(env.REVIEW_ISOLATED)return; // Captured QA/sample snapshots never become live evidence.
++ const providers=(s.showReviews===false?[]:result.providers||[]).filter(p=>!p.status&&Array.isArray(p.reviews)&&p.reviews.some(r=>typeof r.text==='string'&&r.text.trim())).map(p=>p.provider==='Google Maps'?{provider:'google',profileId:s.reviews?.googlePlaceId}:p.provider==='Yelp'?{provider:'yelp',profileId:s.reviews?.yelpBusinessId}:null).filter(p=>p?.profileId);
++ const time=now(),mode=preview?'draft':'published',data={version:1,configurationHash:await hash(configuration(s)),receivedAt:time,mode,providers};
++ await env.DB.prepare("INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) VALUES(?,?,'review_response',?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,version=workspace_records.version+1,updated_at=excluded.updated_at WHERE workspace_records.scope=excluded.scope AND workspace_records.kind=excluded.kind").bind('review-response:'+mode+':'+tenant.id,tenant.id,JSON.stringify(data),time,time).run();
++}
++export async function readReviewResponse(env,tenantId,s){
++ const expected=await hash(configuration(s));
++ for(const mode of ['draft','published']){
++  const row=await env.DB.prepare("SELECT data FROM workspace_records WHERE id=? AND scope=? AND kind='review_response'").bind('review-response:'+mode+':'+tenantId,tenantId).first();
++  if(!row)continue;const data=JSON.parse(row.data),age=Date.now()-Date.parse(data.receivedAt);
++  if(data.version!==1||data.configurationHash!==expected||!Number.isFinite(age)||age<0||age>DAY||!s.reviews?.confirmed||s.showReviews===false||!Array.isArray(data.providers))continue;
++  const p=data.providers.find(p=>p.provider==='google'&&p.profileId===s.reviews.googlePlaceId&&s.reviews.privacyUrl&&s.reviews.termsUrl&&env.GOOGLE_PLACES_API_KEY||p.provider==='yelp'&&p.profileId===s.reviews.yelpBusinessId&&env.YELP_API_KEY);
++  if(p)return {state:'available',dataSource:'workspace_records.review_response from filtered real provider API response',provider:p.provider,profileId:p.profileId,matched:true,confirmed:true,showing:true};
++ }
++ return {state:'not_connected',dataSource:'confirmed review profile + provider response receipt',reason:'Not connected. Load real reviews for this confirmed profile; saved links or a captured Sample do not count.'};
++}
++
+
+--- /dev/null
++++ tests/readiness-review-evidence.mjs
++import test from 'node:test';import assert from 'node:assert/strict';import {paymentHarness} from './helpers/payments-fixture.mjs';import {reviewsApi} from '../src/reviews.js';import {readProgressSources} from '../src/blueprint/sources.js';import {evaluateProgress} from '../src/blueprint/progress.js';import {DEFAULT} from '../src/core.js';
++const origin='http://127.0.0.1:5187',id='tenant_123';
++function fixture(){const h=paymentHarness();const s={...DEFAULT,name:'Review contract QA',phone:'8055550123',reviews:{confirmed:true,minimum:4,googleUrl:'https://maps.google.com/?cid=qa',googlePlaceId:'qa_provider',privacyUrl:'https://example.test/privacy',termsUrl:'https://example.test/terms'}};h.sql.prepare("UPDATE tenants SET settings=?,published=?,status='published' WHERE id=?").run(JSON.stringify(s),JSON.stringify(s),id);h.env.GOOGLE_PLACES_API_KEY='offline_fixture_not_a_key';return h;}
++async function response(h,{rating=5,failed=false,isolated=false}={}){const previous=globalThis.fetch;globalThis.fetch=async u=>{assert.match(String(u),/^https:\/\/places.googleapis.com\/v1\/places\/qa_provider/);return failed?new Response('',{status:503}):Response.json({displayName:{text:'Fictional QA provider'},reviews:[{rating,text:{text:'LOCAL TEST RESPONSE — not customer testimony.'},authorAttribution:{displayName:'QA fixture'},googleMapsUri:'https://example.test/qa'}]});};if(isolated)h.env.REVIEW_ISOLATED=true;try{const url=new URL(origin+'/api/public/pay-test/reviews');return await reviewsApi(new Request(url),h.env,url);}finally{globalThis.fetch=previous;delete h.env.REVIEW_ISOLATED;}}
++const review=async h=>(await readProgressSources(h.env,id)).reviews;
++test('B06 actual filtered provider response earns Reviews XP with metadata only',async()=>{const h=fixture();try{await response(h);assert.equal(evaluateProgress(await readProgressSources(h.env,id)).quests.find(x=>x.id==='reviews').xpEarned,15);const row=h.sql.prepare("SELECT data FROM workspace_records WHERE kind='review_response'").get();assert.ok(row);for(const forbidden of ['LOCAL TEST RESPONSE','QA fixture','rating','count','xpEarned','done'])assert.ok(!row.data.includes(forbidden),forbidden);}finally{h.close();}});
++test('B06 empty/filtered-out or failed provider response never earns reviews XP',async()=>{const h=fixture();try{await response(h,{rating:2});assert.equal((await review(h)).state,'not_connected');await response(h);assert.equal((await review(h)).state,'available');await response(h,{failed:true});assert.equal((await review(h)).state,'not_connected');}finally{h.close();}});
++test('B06 isolated QA snapshots do not become review evidence',async()=>{const h=fixture();try{await response(h,{isolated:true});assert.equal(h.sql.prepare("SELECT COUNT(*) n FROM workspace_records WHERE kind='review_response'").get().n,0);assert.equal((await review(h)).state,'not_connected');}finally{h.close();}});
++test('B06 changed profile/filter, removed key, stale or future receipt invalidates XP',async()=>{const h=fixture();try{await response(h);const row=h.sql.prepare("SELECT id,data FROM workspace_records WHERE kind='review_response'").get(),settings=JSON.parse(h.sql.prepare('SELECT settings FROM tenants WHERE id=?').get(id).settings);delete h.env.GOOGLE_PLACES_API_KEY;assert.equal((await review(h)).state,'not_connected');h.env.GOOGLE_PLACES_API_KEY='offline_fixture_not_a_key';settings.minReviewRating=5;h.sql.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify(settings),id);assert.equal((await review(h)).state,'not_connected');delete settings.minReviewRating;h.sql.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify(settings),id);for(const time of ['2000-01-01T00:00:00Z','2099-01-01T00:00:00Z']){h.sql.prepare('UPDATE workspace_records SET data=? WHERE id=?').run(JSON.stringify({...JSON.parse(row.data),receivedAt:time}),row.id);assert.equal((await review(h)).state,'not_connected');}}finally{h.close();}});
++test('B06 response evidence is tenant isolated and reads do not update it',async()=>{const h=fixture();try{await response(h);const before=h.sql.prepare('SELECT * FROM workspace_records ORDER BY id').all();await review(h);assert.equal((await readProgressSources(h.env,'tenant_456')).reviews.state,'not_connected');assert.deepEqual(h.sql.prepare('SELECT * FROM workspace_records ORDER BY id').all(),before);}finally{h.close();}});
++
++test('B06 removing required provider policy links invalidates prior response',async()=>{const h=fixture();try{await response(h);const s=JSON.parse(h.sql.prepare('SELECT settings FROM tenants WHERE id=?').get(id).settings);delete s.reviews.privacyUrl;h.sql.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify(s),id);assert.equal((await review(h)).state,'not_connected');}finally{h.close();}});
++

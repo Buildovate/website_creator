@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "count": 4,
+  "checks": [
+    "Publish step opens an existing form with the real Publish action",
+    "domain and paid-plan destinations stay with their existing owners",
+    "every quest step resolves to an existing permitted form without creating a section",
+    "no permitted sections gives no target; existing anchored forms are retained"
+  ]
+}

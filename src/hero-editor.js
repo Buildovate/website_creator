@@ -1,0 +1,8 @@
+import {stable} from './platform/generation.ts';
+import {must,all} from './core.js';
+export function heroChanged(a,b){return stable(a.scrollStory)!==stable(b.scrollStory)||a.effects?.scrollStory!==b.effects?.scrollStory||a.design?.storyIntensity!==b.design?.storyIntensity||a.design?.storyTreatment!==b.design?.storyTreatment;}
+export function authorizeHeroEdit(old,next,role){if(!heroChanged(old,next))return;must(['admin','owner'].includes(role),'Only the website owner or an administrator can edit the hero.',403);must(!old.generationManifest?.locks.scrollStory,'Unlock Scroll Story in the saved design before editing the hero.',409);}
+export function heroPhotoIds(s){const c=s.scrollStory||{};return [...new Set([c.posterId,c.beforeId,c.afterId,...(c.chapters||[]).map(x=>x.mediaId)].filter(Boolean))];}
+export async function validateHeroMedia(env,id,s){const ids=heroPhotoIds(s);if(!ids.length)return;const photos=await all(env,'SELECT id,project_id,stage FROM photos WHERE tenant_id=?',id);for(const ref of ids)must(photos.some(p=>p.id===ref),'Choose hero media belonging to this website.');const c=s.scrollStory;if(c.pairApproved){const before=photos.find(p=>p.id===c.beforeId),after=photos.find(p=>p.id===c.afterId);must(before&&after&&before.project_id&&before.project_id===after.project_id&&before.stage==='before'&&after.stage==='after','Choose an approved before and after pair from the same project.');}}
+// Only the published snapshot grants access; selecting draft media grants nothing.
+export function publicHeroPhoto(s,photo){return s.effects?.scrollStory!==false&&s.scrollStory?.enabled!==false&&heroPhotoIds(s).includes(photo.id);}

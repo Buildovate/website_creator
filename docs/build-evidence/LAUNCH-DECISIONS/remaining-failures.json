@@ -1,0 +1,141 @@
+[
+  {
+    "label": "owner-download",
+    "group": "standalone",
+    "status": 0,
+    "code": 0,
+    "outcome": "PASS-WITH-WARNING",
+    "reason": "passed, then hung at exit",
+    "signal": null,
+    "ms": 41035,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/owner-download.log",
+    "pass": null,
+    "fail": 0,
+    "countKind": "whole-suite outcome",
+    "locations": [],
+    "failures": []
+  },
+  {
+    "label": "review-packet-browser",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 34769,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/review-packet-browser.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/review-packet-browser.mjs:22"
+    ],
+    "failures": [
+      "locator.waitFor: Timeout 30000ms exceeded.",
+      "  name: 'TimeoutError'"
+    ]
+  },
+  {
+    "label": "automatic-qa-frame-sample-replay",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 19231,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/automatic-qa-frame-sample-replay.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/automatic-qa-frame-sample-replay.mjs:19",
+      "tests/automatic-qa-frame-sample-replay.mjs:32"
+    ],
+    "failures": [
+      "Review capture failed sample-fictional-copper-kite-ventura AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png",
+      "AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png",
+      "  code: 'ERR_ASSERTION',"
+    ]
+  },
+  {
+    "label": "automatic-qa-rail-colors",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 35321,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/automatic-qa-rail-colors.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/automatic-qa-rail-colors.mjs:5"
+    ],
+    "failures": [
+      "locator.scrollIntoViewIfNeeded: Timeout 29964.781ms exceeded.",
+      "  name: 'TimeoutError'"
+    ]
+  },
+  {
+    "label": "automatic-qa-replay",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 108273,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/automatic-qa-replay.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/helpers/replay-alternate-assertions.mjs:38",
+      "tests/automatic-qa-replay.mjs:8"
+    ],
+    "failures": [
+      "AssertionError [ERR_ASSERTION]: Saved replay must contain 143 files",
+      "  code: 'ERR_ASSERTION',"
+    ]
+  },
+  {
+    "label": "automatic-qa-staff-browser",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 8169,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/automatic-qa-staff-browser.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/automatic-qa-staff-browser.mjs:8"
+    ],
+    "failures": [
+      "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:",
+      "  code: 'ERR_ASSERTION',"
+    ]
+  },
+  {
+    "label": "design-styles-browser",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 3085176,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/design-styles-browser.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/design-styles-browser.mjs:68"
+    ],
+    "failures": [
+      "AssertionError [ERR_ASSERTION]: [{\"label\":\"header centers <= 1px roofing-complete-current-services-roof-installation-desktop-normal\",\"detail\":{\"spread\":649.375,\"items\":[{\"text\":\"Expertise\",\"center\":78.625,\"height\":44,\"textCenter\":78.46875,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Areas\",\"center\":147.625,\"height\":44,\"textCenter\":147.53125,\"fontFami",
+      "  code: 'ERR_ASSERTION',"
+    ]
+  }
+]

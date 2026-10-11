@@ -1,0 +1,476 @@
+[
+  {
+    "file": "C:/Users/joe/website_creator/docs/build-evidence/023/screen-phone.png",
+    "primary": false,
+    "phase": "start",
+    "contrasts": [
+      {
+        "tag": "A",
+        "cls": "",
+        "parent": "",
+        "text": "Open private preview",
+        "fg": "rgb(30, 91, 184)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 6.474,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "bv-button",
+        "parent": "",
+        "text": "Regenerate unlocked choices",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button",
+        "parent": "platform-action-dock",
+        "text": "Save design locks",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          247,
+          245,
+          241
+        ],
+        "ratio": 12.427,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button",
+        "parent": "platform-action-dock",
+        "text": "Publish changes",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      }
+    ],
+    "styles": [
+      {
+        "text": "Save design locks",
+        "color": "rgb(16, 48, 77)",
+        "background": "rgb(247, 245, 241)",
+        "transition": "box-shadow"
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/joe/website_creator/docs/build-evidence/023/screen-phone.png",
+    "primary": false,
+    "phase": "mid-60ms",
+    "contrasts": [
+      {
+        "tag": "A",
+        "cls": "",
+        "parent": "",
+        "text": "Open private preview",
+        "fg": "rgb(30, 91, 184)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 6.474,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "bv-button",
+        "parent": "",
+        "text": "Regenerate unlocked choices",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button",
+        "parent": "platform-action-dock",
+        "text": "Save design locks",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          247,
+          245,
+          241
+        ],
+        "ratio": 12.427,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button",
+        "parent": "platform-action-dock",
+        "text": "Publish changes",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      }
+    ],
+    "styles": [
+      {
+        "text": "Save design locks",
+        "color": "rgb(16, 48, 77)",
+        "background": "rgb(247, 245, 241)",
+        "transition": "box-shadow"
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/joe/website_creator/docs/build-evidence/023/screen-phone.png",
+    "primary": false,
+    "phase": "settled-180ms",
+    "contrasts": [
+      {
+        "tag": "A",
+        "cls": "",
+        "parent": "",
+        "text": "Open private preview",
+        "fg": "rgb(30, 91, 184)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 6.474,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "bv-button",
+        "parent": "",
+        "text": "Regenerate unlocked choices",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button",
+        "parent": "platform-action-dock",
+        "text": "Save design locks",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          247,
+          245,
+          241
+        ],
+        "ratio": 12.427,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button",
+        "parent": "platform-action-dock",
+        "text": "Publish changes",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      }
+    ],
+    "styles": [
+      {
+        "text": "Save design locks",
+        "color": "rgb(16, 48, 77)",
+        "background": "rgb(247, 245, 241)",
+        "transition": "box-shadow"
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/joe/website_creator/docs/build-evidence/023/screen-phone.png",
+    "primary": true,
+    "phase": "start",
+    "contrasts": [
+      {
+        "tag": "A",
+        "cls": "",
+        "parent": "",
+        "text": "Open private preview",
+        "fg": "rgb(30, 91, 184)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 6.474,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "bv-button",
+        "parent": "",
+        "text": "Regenerate unlocked choices",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button bv-button-primary",
+        "parent": "platform-action-dock",
+        "text": "Save design locks",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          27,
+          68,
+          104
+        ],
+        "ratio": 10.129,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button",
+        "parent": "platform-action-dock",
+        "text": "Publish changes",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      }
+    ],
+    "styles": [
+      {
+        "text": "Save design locks",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(27, 68, 104)",
+        "transition": "box-shadow"
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/joe/website_creator/docs/build-evidence/023/screen-phone.png",
+    "primary": true,
+    "phase": "mid-60ms",
+    "contrasts": [
+      {
+        "tag": "A",
+        "cls": "",
+        "parent": "",
+        "text": "Open private preview",
+        "fg": "rgb(30, 91, 184)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 6.474,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "bv-button",
+        "parent": "",
+        "text": "Regenerate unlocked choices",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button bv-button-primary",
+        "parent": "platform-action-dock",
+        "text": "Save design locks",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          27,
+          68,
+          104
+        ],
+        "ratio": 10.129,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button",
+        "parent": "platform-action-dock",
+        "text": "Publish changes",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      }
+    ],
+    "styles": [
+      {
+        "text": "Save design locks",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(27, 68, 104)",
+        "transition": "box-shadow"
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/joe/website_creator/docs/build-evidence/023/screen-phone.png",
+    "primary": true,
+    "phase": "settled-180ms",
+    "contrasts": [
+      {
+        "tag": "A",
+        "cls": "",
+        "parent": "",
+        "text": "Open private preview",
+        "fg": "rgb(30, 91, 184)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 6.474,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "bv-button",
+        "parent": "",
+        "text": "Regenerate unlocked choices",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button bv-button-primary",
+        "parent": "platform-action-dock",
+        "text": "Save design locks",
+        "fg": "rgb(255, 255, 255)",
+        "bg": [
+          27,
+          68,
+          104
+        ],
+        "ratio": 10.129,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      },
+      {
+        "tag": "BUTTON",
+        "cls": "primary bv-button",
+        "parent": "platform-action-dock",
+        "text": "Publish changes",
+        "fg": "rgb(16, 48, 77)",
+        "bg": [
+          255,
+          255,
+          255
+        ],
+        "ratio": 13.531,
+        "minimum": 4.5,
+        "font": 16,
+        "pass": true
+      }
+    ],
+    "styles": [
+      {
+        "text": "Save design locks",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(27, 68, 104)",
+        "transition": "box-shadow"
+      }
+    ]
+  }
+]

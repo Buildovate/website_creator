@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "count": 46,
+  "packets": [
+    {
+      "id": "sample-fictional-copper-kite-ventura",
+      "versionHash": "decb89a5e79f9d410af831443391d877bf92abd8d79f4430ebd1d3e444ba58cd",
+      "pages": 16,
+      "clips": 3,
+      "claims": 129
+    },
+    {
+      "id": "sample-fictional-blue-orchard-pasadena",
+      "versionHash": "98fc16f006782e2d5bb807832fc83539b4f1d77b2314bc21fbda46c4018f397e",
+      "pages": 16,
+      "clips": 3,
+      "claims": 130
+    },
+    {
+      "id": "sample-fictional-paper-lantern-temecula",
+      "versionHash": "aa033c7ff45c61fb1ade1fd6fd5a12f41e08da670eea57d16641a8fddf6f2277",
+      "pages": 15,
+      "clips": 3,
+      "claims": 125
+    },
+    {
+      "id": "sample-fictional-cobalt-heron-irvine",
+      "versionHash": "67b93339fcca892ea3330ae71cd64aaa69837d225978881446d241eae2cd9d6c",
+      "pages": 15,
+      "clips": 3,
+      "claims": 125
+    },
+    {
+      "id": "sample-fictional-ochre-willow-riverside",
+      "versionHash": "e024c40942f670cc2193da7c02180e9d1f177224116ea839f7e7983935942c50",
+      "pages": 15,
+      "clips": 3,
+      "claims": 125
+    }
+  ],
+  "results": [
+    "Publishing without packet denied: sample-fictional-copper-kite-ventura",
+    "Every enabled page captured: sample-fictional-copper-kite-ventura",
+    "Both widths: sample-fictional-copper-kite-ventura",
+    "Five frames per clip: sample-fictional-copper-kite-ventura",
+    "Consent text captured: sample-fictional-copper-kite-ventura",
+    "Financing text captured: sample-fictional-copper-kite-ventura",
+    "Same version packet replay is byte-identical",
+    "Approved exact version publishes: sample-fictional-copper-kite-ventura",
+    "Content change loses approval: sample-fictional-copper-kite-ventura",
+    "Old packet cannot approve changed version: sample-fictional-copper-kite-ventura",
+    "Publishing without packet denied: sample-fictional-blue-orchard-pasadena",
+    "Every enabled page captured: sample-fictional-blue-orchard-pasadena",
+    "Both widths: sample-fictional-blue-orchard-pasadena",
+    "Five frames per clip: sample-fictional-blue-orchard-pasadena",
+    "Consent text captured: sample-fictional-blue-orchard-pasadena",
+    "Financing text captured: sample-fictional-blue-orchard-pasadena",
+    "Approved exact version publishes: sample-fictional-blue-orchard-pasadena",
+    "Content change loses approval: sample-fictional-blue-orchard-pasadena",
+    "Old packet cannot approve changed version: sample-fictional-blue-orchard-pasadena",
+    "Publishing without packet denied: sample-fictional-paper-lantern-temecula",
+    "Every enabled page captured: sample-fictional-paper-lantern-temecula",
+    "Both widths: sample-fictional-paper-lantern-temecula",
+    "Five frames per clip: sample-fictional-paper-lantern-temecula",
+    "Consent text captured: sample-fictional-paper-lantern-temecula",
+    "Financing text captured: sample-fictional-paper-lantern-temecula",
+    "Approved exact version publishes: sample-fictional-paper-lantern-temecula",
+    "Content change loses approval: sample-fictional-paper-lantern-temecula",
+    "Old packet cannot approve changed version: sample-fictional-paper-lantern-temecula",
+    "Publishing without packet denied: sample-fictional-cobalt-heron-irvine",
+    "Every enabled page captured: sample-fictional-cobalt-heron-irvine",
+    "Both widths: sample-fictional-cobalt-heron-irvine",
+    "Five frames per clip: sample-fictional-cobalt-heron-irvine",
+    "Consent text captured: sample-fictional-cobalt-heron-irvine",
+    "Financing text captured: sample-fictional-cobalt-heron-irvine",
+    "Approved exact version publishes: sample-fictional-cobalt-heron-irvine",
+    "Content change loses approval: sample-fictional-cobalt-heron-irvine",
+    "Old packet cannot approve changed version: sample-fictional-cobalt-heron-irvine",
+    "Publishing without packet denied: sample-fictional-ochre-willow-riverside",
+    "Every enabled page captured: sample-fictional-ochre-willow-riverside",
+    "Both widths: sample-fictional-ochre-willow-riverside",
+    "Five frames per clip: sample-fictional-ochre-willow-riverside",
+    "Consent text captured: sample-fictional-ochre-willow-riverside",
+    "Financing text captured: sample-fictional-ochre-willow-riverside",
+    "Approved exact version publishes: sample-fictional-ochre-willow-riverside",
+    "Content change loses approval: sample-fictional-ochre-willow-riverside",
+    "Old packet cannot approve changed version: sample-fictional-ochre-willow-riverside"
+  ]
+}

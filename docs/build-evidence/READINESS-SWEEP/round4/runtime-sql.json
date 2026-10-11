@@ -1,0 +1,1014 @@
+[
+  {
+    "sql": "CREATE TABLE IF NOT EXISTS schema_migrations (\n    id text PRIMARY KEY,\n    applied_at timestamptz NOT NULL DEFAULT now()\n  )",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM schema_migrations",
+    "ok": true
+  },
+  {
+    "sql": "-- SQLite helpers used by the existing Worker SQL. Applied before Drizzle migrations.\r\n-- Statements are separated by `-- statement-break` because function bodies contain semicolons.\r\n-- json_extract returns text so the D1 adapter can compare path values the way the app already does.\r\n-- Multi-segment paths (`$.a.b`) are supported. INSERT OR IGNORE is rewritten in the query adapter, not here.\r\n\r\nCREATE OR REPLACE FUNCTION json_extract(doc text, path text)\r\nRETURNS text\r\nLANGUAGE sql\r\nSTABLE\r\nAS $$\r\n  SELECT CASE\r\n    WHEN doc IS NULL OR path IS NULL OR btrim(doc) = '' THEN NULL\r\n    ELSE (\r\n      SELECT CASE\r\n        WHEN j IS NULL OR jsonb_typeof(j) = 'null' THEN NULL\r\n        WHEN jsonb_typeof(j) = 'string' THEN j #>> '{}'\r\n        WHEN jsonb_typeof(j) = 'boolean' THEN CASE WHEN j = 'true'::jsonb THEN '1' ELSE '0' END\r\n        ELSE j #>> '{}'\r\n      END\r\n      FROM (\r\n        SELECT jsonb_extract_path(doc::jsonb, VARIADIC string_to_array(substring(path from 3), '.')) AS j\r\n      ) extracted\r\n    )\r\n  END\r\n$$",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE OR REPLACE FUNCTION json_set(doc text, path text, val text)\r\nRETURNS text\r\nLANGUAGE sql\r\nSTABLE\r\nAS $$\r\n  SELECT jsonb_set(\r\n    CASE WHEN doc IS NULL OR btrim(doc) = '' THEN '{}'::jsonb ELSE doc::jsonb END,\r\n    string_to_array(substring(path from 3), '.'),\r\n    to_jsonb(val),\r\n    true\r\n  )::text\r\n$$",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE admins (\r\n\tuser_id text PRIMARY KEY NOT NULL,\r\n\temail text NOT NULL,\r\n\tcreated_at text NOT NULL\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE audit (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text,\r\n\tactor text NOT NULL,\r\n\taction text NOT NULL,\r\n\tdetail text NOT NULL,\r\n\tcreated_at text NOT NULL\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE health (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\tdata text NOT NULL,\r\n\tcreated_at text NOT NULL\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE tenants (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\tslug text NOT NULL,\r\n\tname text NOT NULL,\r\n\tsettings text NOT NULL,\r\n\tpublished text,\r\n\tversion integer DEFAULT 1 NOT NULL,\r\n\tstatus text DEFAULT 'draft' NOT NULL,\r\n\tcreated_at text NOT NULL,\r\n\tupdated_at text NOT NULL\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE backups (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\tobject_key text NOT NULL,\r\n\treason text NOT NULL,\r\n\tbytes integer NOT NULL,\r\n\tchecksum text NOT NULL,\r\n\tcreated_at text NOT NULL,\r\n\tFOREIGN KEY (tenant_id) REFERENCES tenants(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE domains (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\thostname text NOT NULL,\r\n\ttoken text NOT NULL,\r\n\townership text DEFAULT 'pending' NOT NULL,\r\n\tchecked_at text,\r\n\tcreated_at text NOT NULL,\r\n\tFOREIGN KEY (tenant_id) REFERENCES tenants(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE inquiries (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\tproject_id text,\r\n\tname text NOT NULL,\r\n\tphone text NOT NULL,\r\n\tmessage text NOT NULL,\r\n\tcreated_at text NOT NULL,\r\n\tFOREIGN KEY (tenant_id) REFERENCES tenants(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE invites (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\temail text NOT NULL,\r\n\trole text NOT NULL,\r\n\ttoken_hash text NOT NULL,\r\n\texpires_at text NOT NULL,\r\n\tused_at text,\r\n\trevoked integer DEFAULT 0 NOT NULL,\r\n\tcreated_at text NOT NULL,\r\n\tFOREIGN KEY (tenant_id) REFERENCES tenants(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE members (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\tuser_id text NOT NULL,\r\n\temail text NOT NULL,\r\n\trole text NOT NULL,\r\n\tactive integer DEFAULT 1 NOT NULL,\r\n\tcreated_at text NOT NULL,\r\n\tFOREIGN KEY (tenant_id) REFERENCES tenants(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE projects (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\tdata text NOT NULL,\r\n\tpublished text,\r\n\tversion integer DEFAULT 1 NOT NULL,\r\n\tcreated_at text NOT NULL,\r\n\tupdated_at text NOT NULL,\r\n\tFOREIGN KEY (tenant_id) REFERENCES tenants(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE photos (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\tproject_id text,\r\n\tobject_key text NOT NULL,\r\n\tcaption text DEFAULT '' NOT NULL,\r\n\tstage text NOT NULL,\r\n\tbytes integer NOT NULL,\r\n\tcreated_at text NOT NULL,\r\n\tFOREIGN KEY (tenant_id) REFERENCES tenants(id) ON UPDATE no action ON DELETE no action,\r\n\tFOREIGN KEY (project_id) REFERENCES projects(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE sales (\r\n\ttenant_id text PRIMARY KEY NOT NULL,\r\n\tdata text NOT NULL,\r\n\tversion integer DEFAULT 1 NOT NULL,\r\n\tupdated_at text NOT NULL,\r\n\tFOREIGN KEY (tenant_id) REFERENCES tenants(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE workspace_records (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\tscope text NOT NULL,\r\n\tkind text NOT NULL,\r\n\tdata text NOT NULL,\r\n\tpublished text,\r\n\tversion integer DEFAULT 1 NOT NULL,\r\n\tcreated_at text NOT NULL,\r\n\tupdated_at text NOT NULL\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE chat_threads (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\ttoken_hash text NOT NULL,\r\n\treference text NOT NULL,\r\n\tname text NOT NULL,\r\n\tphone text DEFAULT '' NOT NULL,\r\n\temail text DEFAULT '' NOT NULL,\r\n\tstatus text DEFAULT 'open' NOT NULL,\r\n\thuman integer DEFAULT 0 NOT NULL,\r\n\tmessage_count integer DEFAULT 0 NOT NULL,\r\n\tip_hash text NOT NULL,\r\n\tnotification text DEFAULT 'not_requested' NOT NULL,\r\n\tlock_until text DEFAULT '' NOT NULL,\r\n\texpires_at text NOT NULL,\r\n\tcreated_at text NOT NULL,\r\n\tupdated_at text NOT NULL,\r\n\tFOREIGN KEY (tenant_id) REFERENCES tenants(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE chat_messages (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\tthread_id text NOT NULL,\r\n\tsender text NOT NULL,\r\n\tbody text NOT NULL,\r\n\tprovider_id text,\r\n\tcreated_at text NOT NULL,\r\n\tFOREIGN KEY (thread_id) REFERENCES chat_threads(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE auth_sessions (\n\ttoken_hash text PRIMARY KEY NOT NULL,\n\tuser_id text NOT NULL,\n\temail text NOT NULL,\n\tmode text NOT NULL,\n\tcsrf_token text NOT NULL,\n\tcreated_at text NOT NULL,\n\texpires_at text NOT NULL\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE promotion_completions (\n id text PRIMARY KEY NOT NULL,\n tenant_id text NOT NULL REFERENCES tenants(id),\n offer_id text NOT NULL,\n offer_revision text NOT NULL,\n visitor_hash text NOT NULL,\n evidence text NOT NULL,\n completed_at text NOT NULL,\n expires_at text NOT NULL\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE promotion_unlock_limits (id text PRIMARY KEY NOT NULL,attempts integer NOT NULL,expires_at text NOT NULL)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE ebook_receipts (\n id text PRIMARY KEY NOT NULL, tenant_id text NOT NULL REFERENCES tenants(id),\n revision text NOT NULL, mode text NOT NULL, visitor_hash text NOT NULL,\n payload_hash text NOT NULL, email_hash text NOT NULL, evidence text NOT NULL,\n inquiry_id text NOT NULL, created_at text NOT NULL\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE generation_manifests (id TEXT PRIMARY KEY NOT NULL, tenant_id TEXT NOT NULL REFERENCES tenants(id) ON DELETE CASCADE, data TEXT NOT NULL, created_at TEXT NOT NULL)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE payment_audit (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\taction text NOT NULL,\r\n\tdetail text NOT NULL,\r\n\tcreated_at text NOT NULL\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE payment_events (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttype text NOT NULL,\r\n\tpayload text NOT NULL,\r\n\ttenant_id text,\r\n\tprocessed integer DEFAULT 0 NOT NULL,\r\n\tcreated_at text NOT NULL\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE payment_ledger (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\tsku text NOT NULL,\r\n\tamount_cents integer NOT NULL,\r\n\tperiod_start text NOT NULL,\r\n\tperiod_end text NOT NULL,\r\n\treference text NOT NULL,\r\n\tstatus text NOT NULL,\r\n\tcreated_at text NOT NULL\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE payment_entitlements (\r\n\tid text PRIMARY KEY NOT NULL,\r\n\tledger_id text NOT NULL,\r\n\ttenant_id text NOT NULL,\r\n\tkey text NOT NULL,\r\n\tquantity integer,\r\n\tused integer DEFAULT 0 NOT NULL,\r\n\tperiod_end text NOT NULL,\r\n\tsource text NOT NULL,\r\n\tstatus text DEFAULT 'active' NOT NULL,\r\n\tFOREIGN KEY (ledger_id) REFERENCES payment_ledger(id) ON UPDATE no action ON DELETE no action\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE payment_state (\r\n\ttenant_id text PRIMARY KEY NOT NULL,\r\n\tcustomer_id text,\r\n\tsubscription_id text,\r\n\tplan text,\r\n\tstatus text DEFAULT 'none' NOT NULL,\r\n\trenews_at text,\r\n\tminimum_ends_at text,\r\n\tstarted_at text,\r\n\tstatus_event_at integer DEFAULT 0 NOT NULL,\r\n\tsite_owned integer DEFAULT 0 NOT NULL,\r\n\thosting_sku text,\r\n\thosting_amount_cents integer,\r\n\thosting_status text,\r\n\tsite_available integer DEFAULT 1 NOT NULL,\r\n\tdomain_retained integer DEFAULT 1 NOT NULL,\r\n\tdata_hold_until text\r\n)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE TABLE insertion_sequences (table_name TEXT PRIMARY KEY NOT NULL, value INTEGER NOT NULL)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "ALTER TABLE admins ADD COLUMN role text DEFAULT 'admin' NOT NULL",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "ALTER TABLE payment_audit ADD COLUMN insertion_seq BIGINT GENERATED BY DEFAULT AS IDENTITY",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "ALTER TABLE chat_messages ADD COLUMN insertion_seq BIGINT GENERATED BY DEFAULT AS IDENTITY",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX audit_tenant ON audit (tenant_id,created_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX domains_hostname_unique ON domains (hostname)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX inquiries_tenant ON inquiries (tenant_id)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX invites_token_hash_unique ON invites (token_hash)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX members_identity ON members (tenant_id,user_id)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX photos_tenant ON photos (tenant_id)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX projects_tenant ON projects (tenant_id)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX tenants_slug_unique ON tenants (slug)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX workspace_scope_kind ON workspace_records (scope,kind)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX chat_messages_provider_id_unique ON chat_messages (provider_id)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX chat_thread_created ON chat_messages (thread_id,created_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX chat_threads_reference_unique ON chat_threads (reference)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX chat_tenant_updated ON chat_threads (tenant_id,updated_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX chat_tenant_ip_created ON chat_threads (tenant_id,ip_hash,created_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX auth_sessions_expiry ON auth_sessions (expires_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX promotion_completion_scope ON promotion_completions (tenant_id,offer_id,offer_revision,visitor_hash)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX promotion_completion_tenant ON promotion_completions (tenant_id,completed_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX promotion_unlock_limit_expiry ON promotion_unlock_limits (expires_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX ebook_receipt_scope ON ebook_receipts(tenant_id,revision,mode,visitor_hash)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX ebook_receipt_tenant ON ebook_receipts(tenant_id,created_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX generation_manifests_tenant ON generation_manifests(tenant_id,created_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX payment_audit_tenant ON payment_audit (tenant_id,created_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX payment_entitlements_ledger_key ON payment_entitlements (ledger_id,key)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX payment_entitlements_tenant ON payment_entitlements (tenant_id,key)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX payment_events_pending ON payment_events (processed,created_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX payment_ledger_tenant ON payment_ledger (tenant_id,created_at)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE INDEX payment_ledger_reference ON payment_ledger (reference)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX payment_audit_insertion_seq_unique ON payment_audit (insertion_seq)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "CREATE UNIQUE INDEX chat_messages_insertion_seq_unique ON chat_messages (insertion_seq)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) SELECT md5(gen_random_uuid()::text),id,'blog','{\"title\":\"Before your first project conversation\",\"slug\":\"before-your-first-project-conversation\",\"category\":\"Planning\",\"excerpt\":\"A little preparation can make your first conversation clearer and more useful.\",\"body\":\"Start with what you want to accomplish. Write down what you have noticed, which areas concern you, and the result you would like to achieve. You do not need to diagnose the problem before asking for help.\\n\\nGather any photos you can take safely from the ground, existing project paperwork, and questions about timing or access. Avoid putting yourself at risk to collect more information.\\n\\nDuring the conversation, ask what the next step involves, what information is still needed, and how you will receive the proposed scope. Keep notes so you can compare options and follow up on unanswered questions.\\n\\nThis is a general planning guide. Recommendations for a specific property depend on an assessment and the agreed scope.\",\"coverPhotoId\":\"\"}',to_char((clock_timestamp() AT TIME ZONE 'UTC'), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"'),to_char((clock_timestamp() AT TIME ZONE 'UTC'), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"') FROM tenants WHERE slug='robles-roofing' AND NOT EXISTS(SELECT 1 FROM workspace_records WHERE scope=tenants.id AND kind='blog' AND json_extract(data,'$.slug')='before-your-first-project-conversation')",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) SELECT md5(gen_random_uuid()::text),id,'blog','{\"title\":\"Questions to ask when reviewing an estimate\",\"slug\":\"questions-to-ask-when-reviewing-an-estimate\",\"category\":\"Estimates\",\"excerpt\":\"Look beyond the total and understand what is included in the proposed work.\",\"body\":\"An estimate is easier to discuss when the scope is clear. Ask which areas, materials, preparation, and cleanup are included. If something matters to you, make sure it is addressed in the written scope.\\n\\nDiscuss the proposed timeline and what could affect it. Ask how changes or newly discovered conditions would be documented and approved before additional work proceeds.\\n\\nIf you are comparing proposals, compare the descriptions of the work as well as the totals. Note any unanswered questions and request clarification before making a decision.\\n\\nKeep the estimate and related correspondence together. These documents help everyone stay aligned on the agreed next steps.\",\"coverPhotoId\":\"\"}',to_char((clock_timestamp() AT TIME ZONE 'UTC'), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"'),to_char((clock_timestamp() AT TIME ZONE 'UTC'), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"') FROM tenants WHERE slug='robles-roofing' AND NOT EXISTS(SELECT 1 FROM workspace_records WHERE scope=tenants.id AND kind='blog' AND json_extract(data,'$.slug')='questions-to-ask-when-reviewing-an-estimate')",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) SELECT md5(gen_random_uuid()::text),id,'blog','{\"title\":\"Keep a simple record of your property projects\",\"slug\":\"keep-a-record-of-your-property-projects\",\"category\":\"Maintenance\",\"excerpt\":\"Organized photos and paperwork make future project conversations easier.\",\"body\":\"Keep a folder for each property project. Save the agreed scope, invoices, material information, and any care instructions you receive. Label photos with the date and the part of the property they show.\\n\\nAfter the work, note any follow-up items and the person to contact with questions. When written care instructions are supplied, keep them with the project records rather than relying on memory.\\n\\nIf you notice a change later, document what you can observe safely and contact an appropriate professional. A clear record can help explain what changed and when it was first noticed.\\n\\nThis guide concerns organization and communication; it does not replace property-specific inspection or maintenance advice.\",\"coverPhotoId\":\"\"}',to_char((clock_timestamp() AT TIME ZONE 'UTC'), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"'),to_char((clock_timestamp() AT TIME ZONE 'UTC'), 'YYYY-MM-DD\"T\"HH24:MI:SS.MS\"Z\"') FROM tenants WHERE slug='robles-roofing' AND NOT EXISTS(SELECT 1 FROM workspace_records WHERE scope=tenants.id AND kind='blog' AND json_extract(data,'$.slug')='keep-a-record-of-your-property-projects')",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO insertion_sequences (table_name,value) SELECT 'payment_audit', COALESCE(MAX(insertion_seq),0) FROM payment_audit",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO insertion_sequences (table_name,value) SELECT 'chat_messages', COALESCE(MAX(insertion_seq),0) FROM chat_messages",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO schema_migrations (id) VALUES ($1)",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,settings,published FROM tenants",
+    "ok": true
+  },
+  {
+    "sql": "SELECT user_id FROM admins WHERE user_id<>$1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO admins (user_id,email,created_at) VALUES ($1,$2,$3) ON CONFLICT DO NOTHING",
+    "ok": true
+  },
+  {
+    "sql": "SELECT role FROM admins WHERE user_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,data FROM workspace_records WHERE scope='global' AND kind='designs'",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM tenants WHERE slug=$1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO tenants (id,slug,name,settings,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6)",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO audit (id,tenant_id,actor,action,detail,created_at) VALUES ($1,$2,$3,$4,$5,$6)",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM tenants WHERE id=$1",
+    "ok": true
+  },
+  {
+    "sql": "UPDATE tenants SET settings=$1,published=$2 WHERE id=$3 AND settings=$4 AND COALESCE(published,'')=COALESCE($5,'')",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO generation_manifests(id,tenant_id,data,created_at) VALUES($1,$2,$3,$4) ON CONFLICT DO NOTHING",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM tenants WHERE id=$1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES($1,$2,$3,$4,$5,1,$6)",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,data,published,version FROM projects WHERE tenant_id=$1 ORDER BY id",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,project_id,object_key,caption,stage,bytes FROM photos WHERE tenant_id=$1 ORDER BY id",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,kind,data,published,version FROM workspace_records WHERE scope=$1 AND kind IN ('pages','forms','blog','chat_config','visibility','plan') ORDER BY id",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM projects WHERE tenant_id=$1 AND published IS NOT NULL ORDER BY created_at DESC",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,project_id,caption,stage FROM photos WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM workspace_records WHERE id=$1 AND scope=$2 AND kind='chat_config'",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM workspace_records WHERE scope=$1 AND kind=$2 ORDER BY updated_at DESC LIMIT 500",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM workspace_records WHERE scope=$1 AND kind=$2 ORDER BY updated_at DESC LIMIT 500",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1 AS \"allowed\" FROM payment_entitlements WHERE tenant_id=$1 AND key=$2 AND status='active' AND period_end>$3 AND (quantity IS NULL OR used<quantity) LIMIT 1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM workspace_records WHERE scope=$1 AND kind=$2 ORDER BY updated_at DESC LIMIT 500",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1 AS \"allowed\" FROM payment_entitlements WHERE tenant_id=$1 AND key=$2 AND status='active' AND period_end>$3 AND (quantity IS NULL OR used<quantity) LIMIT 1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM workspace_records WHERE scope=$1 AND kind=$2 ORDER BY updated_at DESC LIMIT 500",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT data FROM workspace_records WHERE scope=$1 AND kind='plan'",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM workspace_records WHERE scope=$1 AND kind='blog' ORDER BY updated_at DESC LIMIT 100",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM workspace_records WHERE id=$1 AND scope=$2 AND kind='chat_config'",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM photos WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL ORDER BY created_at DESC",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM photos WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL ORDER BY created_at DESC",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM photos WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL ORDER BY created_at DESC",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM photos WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL ORDER BY created_at DESC",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,published FROM projects WHERE tenant_id=$1 AND published IS NOT NULL",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1 AS \"ok\"",
+    "ok": true
+  },
+  {
+    "sql": "SELECT role FROM admins WHERE user_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM tenants WHERE id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,sku,amount_cents,period_start,period_end,reference,status,created_at FROM payment_ledger WHERE tenant_id=$1 ORDER BY period_start DESC,created_at DESC,id DESC LIMIT 100",
+    "ok": true
+  },
+  {
+    "sql": "SELECT type,payload FROM payment_events WHERE processed=1 AND type IN ('invoice.paid','checkout.session.completed') ORDER BY created_at DESC LIMIT 500",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1 AS \"allowed\" FROM payment_entitlements WHERE tenant_id=$1 AND key=$2 AND status='active' AND period_end>$3 AND (quantity IS NULL OR used<quantity) LIMIT 1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1 AS \"allowed\" FROM payment_entitlements WHERE tenant_id=$1 AND key=$2 AND status='active' AND period_end>$3 AND (quantity IS NULL OR used<quantity) LIMIT 1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1 AS \"allowed\" FROM payment_entitlements WHERE tenant_id=$1 AND key=$2 AND status='active' AND period_end>$3 AND (quantity IS NULL OR used<quantity) LIMIT 1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1 AS \"allowed\" FROM payment_entitlements WHERE tenant_id=$1 AND key=$2 AND status='active' AND period_end>$3 AND (quantity IS NULL OR used<quantity) LIMIT 1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1 AS \"allowed\" FROM payment_entitlements WHERE tenant_id=$1 AND key=$2 AND status='active' AND period_end>$3 AND (quantity IS NULL OR used<quantity) LIMIT 1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT 1 AS \"allowed\" FROM payment_entitlements WHERE tenant_id=$1 AND key=$2 AND status='active' AND period_end>$3 AND (quantity IS NULL OR used<quantity) LIMIT 1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT role FROM admins WHERE user_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM tenants WHERE id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,sku,amount_cents,created_at FROM payment_ledger WHERE tenant_id=$1 AND status='paid' ORDER BY created_at DESC,id DESC",
+    "ok": true
+  },
+  {
+    "sql": "SELECT action,detail FROM payment_audit WHERE tenant_id=$1 AND action IN ('addon.delivery.in_progress','addon.delivery.delivered') ORDER BY insertion_seq,id",
+    "ok": true
+  },
+  {
+    "sql": "SELECT role FROM admins WHERE user_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM tenants WHERE id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM payment_ledger WHERE tenant_id=$1 AND sku=$2 AND status='paid' LIMIT 1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM tenants WHERE slug=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM tenants WHERE slug=$1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO generation_manifests(id,tenant_id,data,created_at) VALUES($1,$2,$3,$4) ON CONFLICT DO NOTHING",
+    "ok": true
+  },
+  {
+    "sql": "SELECT role FROM admins WHERE user_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM tenants WHERE id=$1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO generation_manifests(id,tenant_id,data,created_at) VALUES($1,$2,$3,$4) ON CONFLICT DO NOTHING",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM workspace_records WHERE id=$1 AND scope=$2 AND kind='chat_config'",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM tenants WHERE slug=$1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO generation_manifests(id,tenant_id,data,created_at) VALUES($1,$2,$3,$4) ON CONFLICT DO NOTHING",
+    "ok": true
+  },
+  {
+    "sql": "SELECT role FROM admins WHERE user_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM tenants WHERE id=$1",
+    "ok": true
+  },
+  {
+    "sql": "INSERT INTO generation_manifests(id,tenant_id,data,created_at) VALUES($1,$2,$3,$4) ON CONFLICT DO NOTHING",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id FROM tenants WHERE slug=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT role FROM admins WHERE user_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT role FROM admins WHERE user_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM tenants WHERE id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT data FROM workspace_records WHERE scope=$1 AND kind='site_ownership' AND id=$2",
+    "ok": true
+  },
+  {
+    "sql": "SELECT site_owned,status,site_available FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM projects WHERE tenant_id=$1 ORDER BY updated_at DESC",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,project_id,caption,stage,bytes,created_at FROM photos WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM inquiries WHERE tenant_id=$1 ORDER BY created_at DESC LIMIT 150",
+    "ok": true
+  },
+  {
+    "sql": "SELECT role FROM admins WHERE user_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT * FROM tenants WHERE id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT id,settings,published,status FROM tenants WHERE id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT data FROM sales WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT data FROM workspace_records WHERE id=$1 AND scope=$2 AND kind='chat_config'",
+    "ok": true
+  },
+  {
+    "sql": "SELECT COUNT(*) AS \"n\" FROM inquiries WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT plan,status,renews_at,minimum_ends_at FROM payment_state WHERE tenant_id=$1",
+    "ok": true
+  },
+  {
+    "sql": "SELECT data FROM workspace_records WHERE id=$1 AND scope=$2 AND kind='domain_plan'",
+    "ok": true
+  },
+  {
+    "sql": "SELECT data FROM workspace_records WHERE id=$1 AND scope=$2 AND kind='review_response'",
+    "ok": true
+  },
+  {
+    "sql": "SELECT data FROM workspace_records WHERE id=$1 AND scope=$2 AND kind='review_response'",
+    "ok": true
+  }
+]

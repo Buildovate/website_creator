@@ -1,0 +1,104 @@
+{
+  "captureAssertionsPassed": true,
+  "qaGateClear": false,
+  "count": 30,
+  "packets": [
+    {
+      "id": "sample-fictional-copper-kite-ventura",
+      "versionHash": "a35ed837f44eec598f1c60c4eb322970be2b3d4bd0e7bb57855c762952bc03bd",
+      "pages": 16,
+      "clips": 3,
+      "qa": {
+        "clear": false,
+        "blocking": 0,
+        "pending": 15,
+        "passed": 711,
+        "reason": "A staff reviewer must decide every Borderline item, with a reason."
+      }
+    },
+    {
+      "id": "sample-fictional-blue-orchard-pasadena",
+      "versionHash": "1dd15fb09645854454af3566b2b7a1a797a8971ade62ebdc220f29c60fa28949",
+      "pages": 16,
+      "clips": 3,
+      "qa": {
+        "clear": false,
+        "blocking": 0,
+        "pending": 15,
+        "passed": 711,
+        "reason": "A staff reviewer must decide every Borderline item, with a reason."
+      }
+    },
+    {
+      "id": "sample-fictional-paper-lantern-temecula",
+      "versionHash": "e5a161ae3b67bba0622073aad38cb6bc98d61ecba6c24c231255c9f1a6ca0538",
+      "pages": 15,
+      "clips": 3,
+      "qa": {
+        "clear": false,
+        "blocking": 0,
+        "pending": 14,
+        "passed": 667,
+        "reason": "A staff reviewer must decide every Borderline item, with a reason."
+      }
+    },
+    {
+      "id": "sample-fictional-cobalt-heron-irvine",
+      "versionHash": "cead95696b25c06e80995d00ce08a4c3825f7ce03b06cdd0f64d2e63bdfbcbb4",
+      "pages": 15,
+      "clips": 3,
+      "qa": {
+        "clear": false,
+        "blocking": 0,
+        "pending": 13,
+        "passed": 668,
+        "reason": "A staff reviewer must decide every Borderline item, with a reason."
+      }
+    },
+    {
+      "id": "sample-fictional-ochre-willow-riverside",
+      "versionHash": "d883e285a00c55e3bb4bcd9a98598a199cbe0e0be35bc0bb53bf3c0cce9eab7b",
+      "pages": 15,
+      "clips": 3,
+      "qa": {
+        "clear": false,
+        "blocking": 0,
+        "pending": 13,
+        "passed": 668,
+        "reason": "A staff reviewer must decide every Borderline item, with a reason."
+      }
+    }
+  ],
+  "results": [
+    "Publishing without packet denied: sample-fictional-copper-kite-ventura",
+    "Every enabled page captured: sample-fictional-copper-kite-ventura",
+    "Both widths: sample-fictional-copper-kite-ventura",
+    "Five frames per clip: sample-fictional-copper-kite-ventura",
+    "Consent text captured: sample-fictional-copper-kite-ventura",
+    "Financing text captured: sample-fictional-copper-kite-ventura",
+    "Publishing without packet denied: sample-fictional-blue-orchard-pasadena",
+    "Every enabled page captured: sample-fictional-blue-orchard-pasadena",
+    "Both widths: sample-fictional-blue-orchard-pasadena",
+    "Five frames per clip: sample-fictional-blue-orchard-pasadena",
+    "Consent text captured: sample-fictional-blue-orchard-pasadena",
+    "Financing text captured: sample-fictional-blue-orchard-pasadena",
+    "Publishing without packet denied: sample-fictional-paper-lantern-temecula",
+    "Every enabled page captured: sample-fictional-paper-lantern-temecula",
+    "Both widths: sample-fictional-paper-lantern-temecula",
+    "Five frames per clip: sample-fictional-paper-lantern-temecula",
+    "Consent text captured: sample-fictional-paper-lantern-temecula",
+    "Financing text captured: sample-fictional-paper-lantern-temecula",
+    "Publishing without packet denied: sample-fictional-cobalt-heron-irvine",
+    "Every enabled page captured: sample-fictional-cobalt-heron-irvine",
+    "Both widths: sample-fictional-cobalt-heron-irvine",
+    "Five frames per clip: sample-fictional-cobalt-heron-irvine",
+    "Consent text captured: sample-fictional-cobalt-heron-irvine",
+    "Financing text captured: sample-fictional-cobalt-heron-irvine",
+    "Publishing without packet denied: sample-fictional-ochre-willow-riverside",
+    "Every enabled page captured: sample-fictional-ochre-willow-riverside",
+    "Both widths: sample-fictional-ochre-willow-riverside",
+    "Five frames per clip: sample-fictional-ochre-willow-riverside",
+    "Consent text captured: sample-fictional-ochre-willow-riverside",
+    "Financing text captured: sample-fictional-ochre-willow-riverside"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "detectorSha256": "8e8d6666c77767a07fd1b1156403ea5b11cdf04c762084264063cbdb36732ee8",
+  "perStateAssertion": "assert.deepEqual(overlaps,[],f.style+' '+mode+' '+width+' clearance');",
+  "thresholdPx": 2,
+  "sampleMs": 60
+}

@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root=path.resolve('C:/Users/joe/website_creator/docs/build-evidence/028A');
+const inside=p=>{const x=path.resolve(p);if(!x.startsWith(root+path.sep))throw Error('Unsafe evidence cleanup target '+x);return x};
+const read=p=>JSON.parse(fs.readFileSync(inside(path.join(root,p))));
+const finalScreens=new Set([...read('style-browser-results-bold-fresh-classic.json').screenshots,...read('style-browser-results-current.json').screenshots].filter(x=>x.startsWith('screenshots/')));
+const keptDirs=new Set(['caption-pixels','checks','headers-after','headers-before','picker','current-color-fixes','tools']);
+const keptTop=new Set(['final-verification.json','aa-final-run.json','preserve-state.json','README.md','acceptance-results.json','contrast-results-bold-fresh-classic.json','contrast-results-current.json','critical-probe.json','final-checks.json','focus-results.json','full-checks.json','header-alignment-bold-fresh-classic.json','header-alignment-current.json','headers-before.json','light-header-before.json','outside-scope-responses.json','palette-contrast.json','pending-fixture-checks.json','photo-caption-contrast.json','preservation.json','qa-current-urls.json','retest-checks.json','roofing-style-comparison.jpg','review-contact.jpg','review-financing.jpg','review-services-roof-repair.jpg','style-browser-results-bold-fresh-classic.json','style-browser-results-current.json','style-unit-results.json']);
+function files(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(path.join(dir,e.name)):[inside(path.join(dir,e.name))]);}
+const all=files(root),remove=all.filter(p=>{const rel=path.relative(root,p).replaceAll('\\','/'),parts=rel.split('/');if(parts.length===1)return !keptTop.has(rel);if(parts[0]==='screenshots')return !finalScreens.has(rel);return !keptDirs.has(parts[0])});
+const bytes=remove.reduce((n,p)=>n+fs.statSync(p).size,0);
+console.log(JSON.stringify({total:all.length,remove:remove.length,removeMB:+(bytes/1048576).toFixed(2),requiredScreens:finalScreens.size,missingScreens:[...finalScreens].filter(p=>!fs.existsSync(inside(path.join(root,p))))}));
+if(process.argv[2]==='apply'){if([...finalScreens].some(p=>!fs.existsSync(inside(path.join(root,p)))))throw Error('Missing required screenshot');for(const p of remove)fs.unlinkSync(inside(p));for(const dir of fs.readdirSync(root,{withFileTypes:true}).filter(e=>e.isDirectory()).map(e=>inside(path.join(root,e.name)))){if(!fs.readdirSync(dir).length)fs.rmdirSync(dir)}console.log('Removed only redundant #028A evidence files');}

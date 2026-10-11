@@ -1,0 +1,53 @@
+PASS monthly rental forbidden even with owner membership and forged draft flags
+PASS annual rental forbidden during prepaid term
+PASS anonymous download forbidden
+PASS cross-tenant download forbidden
+PASS unpublished owned site requires publication
+PASS unpublished owner has server-confirmed disabled state
+PASS one-time owner gets published static ZIP
+PASS ZIP download headers
+PASS ZIP local entries, central directory and end record present
+PASS published page included index.html
+PASS published page included services/index.html
+PASS published page included services/roof-repair/index.html
+PASS published page included areas/index.html
+PASS published page included areas/ventura/index.html
+PASS published page included about/index.html
+PASS published page included faq/index.html
+PASS published page included contact/index.html
+PASS published page included thank-you/index.html
+PASS published page included legal/index.html
+PASS local CSS and browser JS included
+PASS published owner photo included byte-for-byte
+PASS unpublished/private photo excluded
+PASS draft and private-media sentinels absent
+PASS no environment, credentials, server source, tests or dependencies
+PASS no Worker/API/package server files
+PASS exported page links use portable root paths
+PASS completed flat buyout gets ZIP
+PASS missing/malformed entitlement fails closed
+PASS owner-published shows download at 1440
+PASS owner-published enabled state at 1440
+PASS owner-published button label at 1440
+PASS owner-published fits 1440
+PASS browser download filename
+PASS browser owner download completes
+PASS owner-published shows download at 390
+PASS owner-published enabled state at 390
+PASS owner-published button label at 390
+PASS owner-published fits 390
+PASS owner-unpublished shows download at 1440
+PASS owner-unpublished enabled state at 1440
+PASS owner-unpublished button label at 1440
+PASS owner-unpublished fits 1440
+PASS owner-unpublished shows download at 390
+PASS owner-unpublished enabled state at 390
+PASS owner-unpublished button label at 390
+PASS owner-unpublished fits 390
+PASS renter hides download at 1440
+PASS renter fits 1440
+PASS renter hides download at 390
+PASS renter fits 390
+PASS protected file bytes unchanged
+
+PASS-WITH-WARNING: passed, then hung at exit

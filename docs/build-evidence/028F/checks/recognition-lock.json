@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "round4Sha256": "8e8d6666c77767a07fd1b1156403ea5b11cdf04c762084264063cbdb36732ee8",
+  "currentSha256": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+  "removingOnlyRegisteredRecognitionEntriesRestoresRound4": "8e8d6666c77767a07fd1b1156403ea5b11cdf04c762084264063cbdb36732ee8",
+  "floatingDetectorSha256": "ec663767bb46d5748a8cb89d4408904cda292f6058de3e7f6b09340602315d47",
+  "thresholdPx": 2,
+  "samplingMs": 60,
+  "perStateAssertion": "assert.deepEqual(overlaps,[],f.style+' '+mode+' '+width+' clearance');",
+  "entries": [
+    "guide-download consent and primary",
+    "public workspace-page Call primary",
+    "public workspace-form Send inquiry primary",
+    "legacy clean final submit",
+    "article Call the team",
+    "conversion site footer",
+    "verified Roofing 1px screen-reader status",
+    "Camarillo city inquiry permission",
+    "service financing screen-reader status",
+    "existing Legal page policy facts and exact footer link"
+  ],
+  "genericChecksUnchanged": true
+}

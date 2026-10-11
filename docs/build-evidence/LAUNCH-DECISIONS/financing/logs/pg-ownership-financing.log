@@ -1,0 +1,36 @@
+✔ only the single one-time ownership purchase uses card/Klarna/Affirm configuration (8.5947ms)
+✔ PLAN-WEBSITE-MONTH stays card-only (2.5367ms)
+✔ PLAN-WEBSITE-YEAR stays card-only (2.0124ms)
+✔ PLAN-GROWTH-MONTH stays card-only (1.6259ms)
+✔ PLAN-ALL-IN-MONTH stays card-only (1.4295ms)
+✔ OWNER-HOSTING stays card-only (1.5283ms)
+✔ AI-UGC-PACK stays card-only (1.8573ms)
+✔ MEDIA-PUBLISH stays card-only (1.7607ms)
+✔ SITE-OWN stays card-only (1.9317ms)
+✔ mixed ownership/add-on cart cannot acquire financing methods (2.4912ms)
+✔ missing payment configuration is Not connected without any provider call (4.7794ms)
+✔ configuration rejects extra method (2.5322ms)
+✔ configuration rejects live configuration (1.5027ms)
+✔ configuration rejects unavailable Affirm (1.4688ms)
+✔ configuration rejects same configuration (1.3985ms)
+✔ repeat checkout click reuses one fake session and one server price (1.7822ms)
+✔ klarna pending completion does not change ownership, rental or hosting (3857.8171ms)
+✔ klarna verified async success grants ownership exactly once after pending (3908.2025ms)
+✔ klarna declined async payment leaves rental and ownership unchanged (3532.8794ms)
+✔ affirm pending completion does not change ownership, rental or hosting (3742.2698ms)
+✔ affirm verified async success grants ownership exactly once after pending (5841.8718ms)
+✔ affirm declined async payment leaves rental and ownership unchanged (4781.6064ms)
+✔ unpaid async success cannot bypass the paid status guard (4774.5693ms)
+✔ invalid signature cannot grant financing ownership (4366.779ms)
+✔ financing still rejects a payment amount different from $1500 (3680.6973ms)
+✔ Billing uses approval-qualified copy and local official marks, without invented terms (4728.9898ms)
+✔ runtime forwards both Dashboard configuration IDs unchanged (0.6349ms)
+✔ next-cycle owner hosting subscription accepts card only, never the financed buyout method (2.4852ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 43329.4186

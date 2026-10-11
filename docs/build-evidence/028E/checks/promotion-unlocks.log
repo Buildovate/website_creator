@@ -1,0 +1,16 @@
+Review approval test prerequisite: 856b1512-25db-4508-8a5e-dee2bb0413a8 website
+Review approval test prerequisite: 856b1512-25db-4508-8a5e-dee2bb0413a8 project:187187c3-f4a3-43e6-a8db-9634b710f646
+Review approval test prerequisite: 856b1512-25db-4508-8a5e-dee2bb0413a8 project:5d2754e3-8fed-44fa-975d-28a82f7fe679
+Review approval test prerequisite: 8014d4c2-5744-418b-a9dc-2a1fd84b4772 website
+Review approval test prerequisite: b0341ca7-fe45-4621-ae56-5f3fc06538b4 website
+Review approval test prerequisite: 50bb4299-6c5f-472f-8779-8f014cf5a4fe website
+PASS #016 promotion evidence: 64 checks
+
+Request failed /api/public/quiz-rate-limit/promotion-unlock Error: QA simulated completion write failure
+    at Object.prepare (file:///C:/Users/joe/website_creator/tests/promotion-unlocks.mjs:27:209)
+    at completePromotionQuiz (file:///C:/Users/joe/website_creator/dist/server/index.js:54741:14)
+    at async Object.fetch (file:///C:/Users/joe/website_creator/dist/server/index.js:57053:22)
+    at async Object.fetch (file:///C:/Users/joe/website_creator/dist/server/index.js:57170:20)
+    at async Object.fetch (file:///C:/Users/joe/website_creator/dist/server/index.js:57190:20)
+    at async worker.fetch (file:///C:/Users/joe/website_creator/tests/helpers/review-approval-fixture.mjs:12:17)
+    at async file:///C:/Users/joe/website_creator/tests/promotion-unlocks.mjs:27:296

@@ -1,0 +1,55 @@
+{
+  "round": "8y",
+  "state": "Stopped: unchanged standalone failed before browser startup",
+  "recordedAt": "2026-10-07T11:09:43.617Z",
+  "standalone": {
+    "command": "node tests/roofing-polish-part2-browser.mjs",
+    "status": 1,
+    "outcome": "FAILED",
+    "code": 1,
+    "signal": null,
+    "ms": 353,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8y-diagnose-roofing-polish-part2-browser.log"
+  },
+  "stop": {
+    "file": "C:/Users/joe/website_creator/dist/server/index.js",
+    "error": "ERR_MODULE_NOT_FOUND: dist/server/index.js imported by tests/helpers/review-approval-fixture.mjs",
+    "phase": "Step 1; publish path was never exercised"
+  },
+  "publishObservations": {
+    "heroEditorState": null,
+    "publishApiResponse": null,
+    "liveH1": null,
+    "reason": "Browser and test runtime did not start"
+  },
+  "testLineChanged": false,
+  "testLineDiff": "None",
+  "sourceChanges": [],
+  "suite": {
+    "state": "Not run",
+    "pass": 0,
+    "passWithWarning": 0,
+    "failed": 0,
+    "incomplete": 102
+  },
+  "planningFilms": {
+    "before": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+    "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+    "matches": true
+  },
+  "samples": {
+    "state": "Not run",
+    "reason": "Standalone did not pass"
+  },
+  "original70Borderlines": {
+    "open": 70,
+    "accepted": 0,
+    "waived": 0,
+    "reclassified": 0
+  },
+  "qaGateClear": false,
+  "credits": 0,
+  "providerCalls": 0,
+  "commit": null,
+  "staged": false
+}

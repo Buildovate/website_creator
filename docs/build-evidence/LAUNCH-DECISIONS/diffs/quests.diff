@@ -1,0 +1,112 @@
+diff --git a/docs/modules/workspace.md b/docs/modules/workspace.md
+index 008f9b1..94ea34a 100644
+--- a/docs/modules/workspace.md
++++ b/docs/modules/workspace.md
+@@ -147,3 +147,7 @@ The Questionnaire retains incomplete lender selections, supports the five named
+ The contractor's Design settings switcher adds Look of your site alongside Design locks and Creative direction. `src/client/workspace/site-look.js` renders four real homepage hero previews in script-disabled iframes, sized to their cards. Each Preview link opens the authorized full-site preview. One Save look action uses the existing tenant draft API; the existing Publish action remains separate. Editors can save a look; viewers can inspect previews but cannot save; only existing owner/admin permissions allow publication. Offline, failed and stale saves retain the selected option.
+ 
+ Design-lock status uses ordinary draft/live wording, and its heading reads “Choices to keep when we refresh your site.” Existing lock and regeneration behavior is retained. The mobile platform dock remains the only visible Save action on its screen.
++
++## Launch decisions — 2026-10-10
++
++Game's Estimator quest reads a saved, offered service's price range; Marketing reads a saved GBP/review link or a tenant-scoped connected social account. No completion or XP rows are fabricated. Billing uses /api/payments/tenants/:id/billing with owner/admin POST actions own and stop-hosting, plus the existing switch/cancel/portal paths. Same-cadence upgrades settle a guarded prorated difference; downgrades start next renewal. Ownership costs $1,500 with no paid-rent credit. Connected owner hosting is $50/month at the confirmed next paid cycle. If no future paid cycle exists, scheduling stays Pending instead of charging immediately. Live Stripe keys remain rejected; see docs/build-evidence/LAUNCH-DECISIONS/README.md.
+diff --git a/src/blueprint/progress.js b/src/blueprint/progress.js
+index c0b49d3..97afb20 100644
+--- a/src/blueprint/progress.js
++++ b/src/blueprint/progress.js
+@@ -24,11 +24,7 @@ const definitions=[
+   step('confirmed',s.confirmed===true,'Confirm that the review profile belongs to this business.'),
+   step('showing',s.showing===true,'Not connected. Real reviews must be showing before this is complete.')
+  ]},
+- {id:'estimator',level:2,xpMax:20,rules:s=>{
+-  const book=s.priceBook||{},items=list(book.items),minimum=book.minimumItems;
+-  const priceBookReady=Number.isInteger(minimum)&&minimum>0&&items.length>=minimum&&new Set(items.map(x=>x.id)).size===items.length&&items.every(x=>text(x.id)&&x.enteredBy==='contractor'&&x.confirmed===true&&typeof x.amount==='number'&&Number.isFinite(x.amount)&&x.amount>=0);
+-  return [step('fields',s.fieldsSaved===true&&list(s.requiredFields).length>0&&s.requiredFields.every(f=>list(s.fields).includes(f)),'Choose and save the required homeowner fields.',{xpMax:5}),step('price-book',priceBookReady,'Enter and confirm the required price-book items yourself.',{xpMax:10}),step('consent',s.consent===true,'Turn on the homeowner consent checkbox.',{xpMax:5})];
+- }},
++ {id:'estimator',level:2,xpMax:20,rules:s=>[step('service-price-range',list(s.serviceRanges).some(x=>text(x.service)&&Number.isFinite(x.min)&&Number.isFinite(x.max)&&x.min>=0&&x.max>=x.min),'Save a price range on at least one offered service page.')]},
+  {id:'promotions',level:2,xpMax:5,rules:s=>[step('offer-or-none',s.choice==='none'||list(s.offers).some(o=>text(o.id)&&text(o.title)&&text(o.reward)),'Save an offer or choose “No offer right now.”')]},
+  {id:'financing',level:2,xpMax:10,rules:s=>[step('connected-or-none',s.selection==='none'||(s.selection==='lenders'&&list(s.lenders).some(l=>l.selected===true&&text(l.id)&&l.connection==='connected')),'Not connected. Connect a selected lender or explicitly choose None; a saved application link is not a connection.')]},
+  {id:'leads',level:2,xpMax:10,rules:s=>{
+@@ -40,7 +36,7 @@ const definitions=[
+   step('live-domain',s.domain?.stage==='live',s.domain?.state==='not_connected'?'Not connected. Domain and SSL verification are not available yet.':'Finish connecting the domain; ownership verification alone does not mean the site is live.'),
+   step('published',s.published===true,'Publish the website when it is ready.')
+  ]},
+- {id:'marketing',level:3,xpMax:5,rules:s=>[step('connected-or-none',s.choice==='none'||(s.choice==='channels'&&list(s.channels).length>0&&s.channels.every(c=>text(c.id)&&c.connection==='connected')),'Not connected. Connect every chosen marketing channel or explicitly choose none.')]}
++ {id:'marketing',level:3,xpMax:5,rules:s=>[step('marketing-link-or-account',s.ready===true,'Save your Google Business Profile or review link, or connect a social account.')]}
+ ];
+ const levelDefinitions=[{id:1,name:'Get Set Up',questIds:['onboarding','pages','reviews'],xpMax:40},{id:2,name:'Win More Jobs',questIds:['estimator','promotions','financing','leads'],xpMax:45},{id:3,name:'Launch & Grow',questIds:['launch','marketing'],xpMax:15}];
+ export function evaluateProgress(sources={}){
+diff --git a/src/blueprint/sources.js b/src/blueprint/sources.js
+index df04c7d..94f8ba1 100644
+--- a/src/blueprint/sources.js
++++ b/src/blueprint/sources.js
+@@ -31,16 +31,21 @@ export async function readProgressSources(env,tenantId,{deps=createDependencies(
+  if(!(s.services||[]).length)required.push('service:choose-a-service');
+  const approval=sales?parse(sales.data):{},alerts=chat?parse(chat.data):{},fin=platform.financing||{};
+  const review=s.reviews||{};
++ const serviceRanges=authored.filter(p=>p.kind==='service'&&(s.services||[]).some(x=>x.name===p.serviceName)&&p.typicalPriceRange&&Number.isFinite(p.typicalPriceRange.min)&&Number.isFinite(p.typicalPriceRange.max)&&p.typicalPriceRange.min>=0&&p.typicalPriceRange.max>=p.typicalPriceRange.min).map(p=>({service:p.serviceName,min:p.typicalPriceRange.min,max:p.typicalPriceRange.max}));
++ const connections=(await env.DB.prepare("SELECT data FROM workspace_records WHERE scope=? AND kind='social_connection' ORDER BY id").bind(tenantId).all()).results.map(x=>parse(x.data)).filter(x=>x.state==='connected'&&text(x.provider)&&text(x.accountId));
++ const link=v=>{try{return text(v)&&new URL(v).protocol==='https:'}catch{return false}};
++ const gbp=platform.footer?.socials?.googleBusiness;
++ const marketingReady=(gbp?.enabled===true&&link(gbp.url))||link(review.googleUrl)||link(review.yelpUrl)||connections.length>0;
+  return {
+   onboarding:available('tenants.settings + platform.questionnaire.factsConfirmed',{fields}),
+   pages:available('tenants.settings.websitePages + sales.data.ownerApproved/approvalNote',{required,drafts,approval:{approved:approval.ownerApproved===true,reference:approval.approvalNote||''}}),
+   reviews:await readReviewResponse(env,tenantId,s),
+-  estimator:unavailable('No estimator field/consent configuration or minimum-item price book in BASE','Not available yet'),
++  estimator:available('tenants.settings.websitePages service typicalPriceRange',{serviceRanges}),
+   promotions:available('tenants.settings.platform.promotions.offers',{offers:platform.promotions?.offers||[],choice:null}),
+   financing:available('tenants.settings.platform.financing + src/platform/lender-adapter.ts',{selection:fin.selection||null,lenders:(fin.lenders||[]).map(l=>({id:l.id,selected:l.enabled===true,connection:'not_connected'}))}),
+   leads:available('workspace_records: chat_config phone verification (src/engagement.js)',{alerts:{enabled:alerts.enabled===true&&alerts.smsEnabled===true,phone:alerts.phone||'',phoneVerified:alerts.phoneVerified===true},crm:{state:'not_connected'}}),
+   launch:available('src/entitlements.js + src/domain/state.js + tenants published snapshot',{plan,domain,published:tenant.status==='published'&&!!tenant.published}),
+-  marketing:unavailable('No connected social-channel, explicit-none or social-publication records in BASE','Not available yet. Saved social links are not connected accounts.'),
++  marketing:available('tenants.settings.platform.footer GBP / reviews links + tenant social_connection records',{ready:marketingReady,posts:[]}),
+   activity:{inquiries:Number(inquiries?.n||0),newReviews:null,reason:'New review events are not recorded; a public rating count is not a new-review count.'}
+  };
+ }
+diff --git a/src/client/workspace/game/sections.js b/src/client/workspace/game/sections.js
+index 799086f..e1ff99e 100644
+--- a/src/client/workspace/game/sections.js
++++ b/src/client/workspace/game/sections.js
+@@ -3,16 +3,16 @@ export const questSections={
+  onboarding:['business','questionnaire','ownerphoto','access'],
+  pages:['pages','hero','editor','templates','services','projects','backups'],
+  reviews:['reviews'],
+- estimator:['pricing','forms'],
++ estimator:['pages','pricing','forms'],
+  promotions:['questionnaire'],
+  financing:['questionnaire'],
+  leads:['inquiries','contacts','calendar','chat','followups'],
+  launch:['launchpad','domains','readiness','plan','billing','add-ons','sales'],
+- marketing:['blog','visibility']
++ marketing:['reviews','questionnaire','blog','visibility']
+ };
+ export const sectionLabels={launchpad:'Setup checklist',questionnaire:'Business questionnaire',hero:'Hero editor',editor:'Website editor',pages:'Website pages',business:'Business details',ownerphoto:'Owner photo',templates:'Design and generation settings',services:'Services',projects:'Project stories',blog:'Blog',contacts:'Contacts',calendar:'Calendar',forms:'Forms and submissions',inquiries:'Inquiry inbox',chat:'Live chat and alerts',pricing:'Pricing and estimate requests',reviews:'Review profiles',visibility:'Search visibility',plan:'Plan and features',billing:'Billing','add-ons':'Add-ons',readiness:'Publish readiness',followups:'Follow-up',access:'Team access',domains:'Domain settings',backups:'Backups',sales:'Sales and approval'};
+ export function sectionsForQuest(quest,available){return (questSections[quest]||[]).filter(id=>available.includes(id))}
+ export function stepTarget(quest,step,available){
+- const desired={onboarding:'business',pages:step==='approval'?'editor':'pages',reviews:'reviews',estimator:step==='price-book'?'pricing':'forms',promotions:'questionnaire',financing:'questionnaire',leads:'chat',launch:step==='paid-plan'?'plan':step==='live-domain'?'domains':'business',marketing:'visibility'}[quest];
++ const desired={onboarding:'business',pages:step==='approval'?'editor':'pages',reviews:'reviews',estimator:step==='service-price-range'?'pages':'forms',promotions:'questionnaire',financing:'questionnaire',leads:'chat',launch:step==='paid-plan'?'plan':step==='live-domain'?'domains':'business',marketing:'reviews'}[quest];
+  return {section:available.includes(desired)?desired:sectionsForQuest(quest,available)[0],anchor:quest==='promotions'?'q-promotions':quest==='financing'?'q-financing':null};
+ }
+diff --git a/src/client/workspace/game/view.js b/src/client/workspace/game/view.js
+index c3d0815..9bd85bf 100644
+--- a/src/client/workspace/game/view.js
++++ b/src/client/workspace/game/view.js
+@@ -4,14 +4,14 @@ export const questCopy={
+  onboarding:['Onboarding','Confirm your business details.','Confirm the business details homeowners will see.',['Your business identity is ready for your website.','The Set up badge follows all three first-level quests.']],
+  pages:['Website pages','Review the pages homeowners will see.','Save each required page, then approve your website preview.',['Your saved pages are ready for your review.','Your website stays private until you publish.']],
+  reviews:['Reviews','Connect your customer reviews.','Find your business profile and confirm it belongs to you before showing reviews.',['Homeowners can read feedback from its original source.','Earn the Reviews live badge when real reviews are showing.']],
+- estimator:['Virtual estimator','Set up your estimate request.','Choose what homeowners need to tell you, enter your prices, and require consent.',['Homeowners can share the details needed for an estimate.','Complete Leads & CRM too to earn SELLING.']],
++ estimator:['Virtual estimator','Save a service price range.','Enter a price range on at least one service page. Homeowners can then see your estimate starting point.',['Homeowners can share the details needed for an estimate.','Complete Leads & CRM too to earn SELLING.']],
+  promotions:['Promotions','Choose whether to offer a promotion.','Add your own offer, or choose not to run one.',['Your choice is recorded without creating an offer for you.','Only your saved offer can appear on your website.']],
+  financing:['Financing','Choose your financing options.','Connect a lender you use, or choose None if you do not offer financing.',['A confirmed application link is not a live lender connection.','Earn the Financing badge with a connection or your None choice.']],
+  leads:['Leads & CRM','Choose where new inquiries reach you.','Verify your phone or email for lead alerts, or connect your customer management system (CRM).',['A verified destination makes the next conversation easier.','Complete the estimator too to earn SELLING.']],
+  launch:['Domain & publish','Get your website ready to publish.','This quest needs an active paid plan, a working secure web address, and a published website.',['The LIVE stamp needs real domain and publication evidence.','Earn the Go live badge when all three checks pass.']],
+- marketing:['Marketing & social','Choose your marketing channels.','Connect the channels you want to use, or choose none.',['Earn GROWING when your site is live and this quest is complete.','First post needs an actual published social post.']]
++ marketing:['Marketing & social','Add a way to find you.','Save your Google Business Profile or review link, or connect a social account.',['Earn GROWING when your site is live and this quest is complete.','First post needs an actual published social post.']]
+ };
+-export const stepCopy={name:'Confirm your business name',phone:'Confirm your phone number',trade:'Confirm your trade',area:'Confirm your service area',drafts:'Save your required page drafts',approval:'Review and approve your preview',matched:'Match the business profile',confirmed:'Confirm the review source',showing:'Show real reviews',fields:'Choose homeowner fields','price-book':'Enter your price-book items',consent:'Turn on homeowner consent','offer-or-none':'Save an offer or choose no offer','connected-or-none':'Confirm your connection or your choice','verified-alerts-or-crm':'Verify alerts or connect your CRM','paid-plan':'Activate your paid plan','live-domain':'Connect a live, secure web address',published:'Publish your website'};
++export const stepCopy={name:'Confirm your business name',phone:'Confirm your phone number',trade:'Confirm your trade',area:'Confirm your service area',drafts:'Save your required page drafts',approval:'Review and approve your preview',matched:'Match the business profile',confirmed:'Confirm the review source',showing:'Show real reviews','service-price-range':'Save a service price range','marketing-link-or-account':'Add a profile or review link',fields:'Choose homeowner fields','price-book':'Enter your price-book items',consent:'Turn on homeowner consent','offer-or-none':'Save an offer or choose no offer','connected-or-none':'Confirm your connection or your choice','verified-alerts-or-crm':'Verify alerts or connect your CRM','paid-plan':'Activate your paid plan','live-domain':'Connect a live, secure web address',published:'Publish your website'};
+ const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const palettes='--bv-game-done:#86d7a9;--bv-game-need:#f2c27d;--bv-game-off:#b4c0cc';
+ function navState(q,p){return q.done?'Done':q.level>p.currentLevel?'Locked':q.status;}

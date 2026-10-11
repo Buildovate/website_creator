@@ -1,0 +1,8 @@
+{
+  "finishedAt": "2026-10-11T02:12:37.326Z",
+  "native": 199,
+  "postgres": 44,
+  "temporaryPlanningRestored": true,
+  "planningHash": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+  "note": "Late launch edge-case fixes were applied during the sweep. Affected gate suites and both builds are verified again against final source; initial outcomes stay recorded."
+}

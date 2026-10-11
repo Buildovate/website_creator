@@ -1,0 +1,46 @@
+✔ approved price PLAN-WEBSITE-MONTH (1.1604ms)
+✔ approved price PLAN-WEBSITE-YEAR (0.1627ms)
+✔ approved price PLAN-GROWTH-MONTH (0.0736ms)
+✔ approved price PLAN-GROWTH-YEAR (0.0621ms)
+✔ approved price PLAN-ALL-IN-MONTH (0.0805ms)
+✔ approved price PLAN-ALL-IN-YEAR (0.0851ms)
+✔ past-due day 0 (30.3717ms)
+✔ past-due day 7 (27.1604ms)
+✔ past-due day 8 (23.0742ms)
+✔ past-due day 29 (23.726ms)
+✔ past-due day 30 (21.0779ms)
+✔ day-10 payment recovery restores public/editor immediately without fees (20.1449ms)
+✔ retry failures preserve start; reminder jobs are local and unique (20.2253ms)
+✔ server blocks editor writes at day 8 but read and payment recovery remain reachable (22.1429ms)
+✔ upgrade quote and signed prorated net settlement keep amount guard (27.5702ms)
+✔ downgrade waits for renewal, charges zero now and provides no credit (22.4304ms)
+✔ cross-cadence change has an honest deferred reason and no charge (16.0738ms)
+✔ buyout is always $1500 during minimum; rental ends and hosting starts next cycle (21.0436ms)
+✔ stop hosting retains ownership/export, no refund and stops at paid end (23.282ms)
+✔ ownership without connection is honest, no simulated charge (21.063ms)
+✔ real quest evidence empty (22.2056ms)
+✔ real quest evidence range (16.2527ms)
+✔ real quest evidence GBP (15.9763ms)
+✔ real quest evidence review (13.9138ms)
+✔ real quest evidence social (14.7704ms)
+✔ connected social account, scoped to tenant, counts; disconnected and other tenant do not (17.4692ms)
+✔ all nine real evidence contracts reach 100 XP without mutating saved choices (23.0987ms)
+✔ proration wrong net, wrong tenant, wrong subscription and negative totals all fail closed (25.6468ms)
+✔ exact signed proration replay settles once, including old-plan adjustment lines (19.0149ms)
+✔ payment after day 30 cannot resurrect a cancelled delinquent rental (23.1511ms)
+✔ stop hosting does not block the existing owner export authorization (18.921ms)
+✔ real SDK adapter upgrades with immediate invoice and stored change metadata (0.9193ms)
+✔ real SDK adapter schedules downgrade with no proration or credit (0.4574ms)
+✔ real SDK owner conversion cancels rental without proration and starts next-cycle hosting (0.5993ms)
+✔ settled proration metadata cannot break the next full-price renewal (21.7042ms)
+✔ day-30 data hold remains 90 days after repeated maintenance (15.8771ms)
+✔ admin price seeds match the approved catalog without changing recorded costs (0.26ms)
+✔ actual public Worker serves 503 during pause, restores at day 10, then serves 404 on day 30 (64.7477ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 644.6934

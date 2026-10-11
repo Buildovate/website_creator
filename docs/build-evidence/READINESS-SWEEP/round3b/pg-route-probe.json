@@ -1,0 +1,56 @@
+{
+  "results": [
+    {
+      "name": "health POST and GET",
+      "pass": true
+    },
+    {
+      "name": "generation history read",
+      "pass": true
+    },
+    {
+      "name": "invite accept and replay denial",
+      "pass": true
+    },
+    {
+      "name": "access list and member revoke",
+      "pass": true
+    },
+    {
+      "name": "unused invite revoke",
+      "pass": true
+    },
+    {
+      "name": "staff invite accept list and revoke",
+      "pass": true
+    },
+    {
+      "name": "unused staff invite revoke",
+      "pass": true
+    },
+    {
+      "name": "domain registration and list without DNS call",
+      "pass": true
+    },
+    {
+      "name": "contact duplicate updates activity",
+      "pass": true
+    },
+    {
+      "name": "session issue rotate revoke",
+      "pass": true
+    },
+    {
+      "name": "project/photo draft backup restore",
+      "pass": false,
+      "error": "{\"error\":\"Enter valid approximate city coordinates.\"}\n\n400 !== 200\n",
+      "stack": "AssertionError [ERR_ASSERTION]: {\"error\":\"Enter valid approximate city coordinates.\"}\n\n400 !== 200\n\n    at ok (file:///C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/pg-route-probe.mjs:13:102)\n    at async file:///C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/pg-route-probe.mjs:27:74\n    at async check (file:///C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/pg-route-probe.mjs:14:35)\n    at async file:///C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/pg-route-probe.mjs:27:1"
+    },
+    {
+      "name": "site unpublish",
+      "pass": true
+    }
+  ],
+  "providerCalls": 0,
+  "fixture": "ephemeral PostgreSQL adapter; original built Worker"
+}

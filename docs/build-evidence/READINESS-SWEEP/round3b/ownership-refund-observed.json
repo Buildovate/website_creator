@@ -1,0 +1,11 @@
+{
+  "paymentState": {
+    "site_owned": 0,
+    "status": "canceled"
+  },
+  "downloadState": {
+    "owned": false,
+    "published": true
+  },
+  "fixture": "Legacy ownership record plus offline refund; no provider call"
+}

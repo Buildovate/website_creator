@@ -1,0 +1,48 @@
+{
+  "eligible": true,
+  "failed": [],
+  "badCounts": [],
+  "missing": [],
+  "counts": {
+    "Game": {
+      "pass": 122,
+      "expected": 122
+    },
+    "Pay": {
+      "pass": 44,
+      "expected": 44
+    },
+    "catalog": {
+      "pass": 11,
+      "expected": 11
+    },
+    "domain": {
+      "pass": 77,
+      "expected": 77
+    },
+    "ordering": {
+      "pass": 16,
+      "expected": 16
+    },
+    "financingNative": {
+      "pass": 28,
+      "expected": 28
+    },
+    "financingPostgreSQL": {
+      "pass": 28,
+      "expected": 28
+    },
+    "launchDecisionsNative": {
+      "pass": 52,
+      "expected": 52
+    },
+    "launchDecisionsPostgreSQL": {
+      "pass": 52,
+      "expected": 52
+    },
+    "browser": {
+      "pass": 16,
+      "expected": 16
+    }
+  }
+}

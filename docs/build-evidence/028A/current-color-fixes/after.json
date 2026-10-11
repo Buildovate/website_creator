@@ -1,0 +1,526 @@
+[
+  {
+    "key": "patios-service-text",
+    "device": "desktop",
+    "selector": ".kit-services article:first-child :is(.service-index,p)",
+    "values": [
+      {
+        "text": "01",
+        "trade": "Patios",
+        "color": "rgb(109, 114, 94)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "layout": {
+          "width": 260.34375,
+          "height": 21.4375,
+          "fontFamily": "DM, Arial, sans-serif",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "lineHeight": "21.45px",
+          "letterSpacing": "normal",
+          "padding": "0px",
+          "margin": "0px 0px 32px",
+          "borderRadius": "0px",
+          "display": "block"
+        }
+      },
+      {
+        "text": "Too much sun over the seating area? Find the right shade footprint.",
+        "trade": "Patios",
+        "color": "rgb(109, 114, 94)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "layout": {
+          "width": 260.34375,
+          "height": 47.59375,
+          "fontFamily": "DM, Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "23.8px",
+          "letterSpacing": "normal",
+          "padding": "0px",
+          "margin": "0px 0px 20px",
+          "borderRadius": "0px",
+          "display": "block"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/patios-service-text-desktop-after.png"
+  },
+  {
+    "key": "windows-doors-hero-button",
+    "device": "desktop",
+    "selector": ".story-primary",
+    "values": [
+      {
+        "text": "Request an estimate",
+        "trade": "Windows/Doors",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(166, 94, 58)",
+        "layout": {
+          "width": 231.609375,
+          "height": 56.390625,
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "lineHeight": "22.4px",
+          "letterSpacing": "normal",
+          "padding": "16px 25px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/windows-doors-hero-button-desktop-after.png"
+  },
+  {
+    "key": "solar-hero-button",
+    "device": "desktop",
+    "selector": ".story-primary",
+    "values": [
+      {
+        "text": "Request an estimate",
+        "trade": "Solar",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(166, 94, 58)",
+        "layout": {
+          "width": 231.609375,
+          "height": 56.390625,
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "lineHeight": "22.4px",
+          "letterSpacing": "normal",
+          "padding": "16px 25px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/solar-hero-button-desktop-after.png"
+  },
+  {
+    "key": "concrete-hero-button",
+    "device": "desktop",
+    "selector": ".story-primary",
+    "values": [
+      {
+        "text": "Request an estimate",
+        "trade": "Concrete",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(166, 94, 58)",
+        "layout": {
+          "width": 231.609375,
+          "height": 56.390625,
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "lineHeight": "22.4px",
+          "letterSpacing": "normal",
+          "padding": "16px 25px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/concrete-hero-button-desktop-after.png"
+  },
+  {
+    "key": "pools-hero-button",
+    "device": "desktop",
+    "selector": ".story-primary",
+    "values": [
+      {
+        "text": "Request an estimate",
+        "trade": "Pools",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(166, 94, 58)",
+        "layout": {
+          "width": 231.609375,
+          "height": 56.390625,
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "lineHeight": "22.4px",
+          "letterSpacing": "normal",
+          "padding": "16px 25px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/pools-hero-button-desktop-after.png"
+  },
+  {
+    "key": "locksmith-hero-button",
+    "device": "desktop",
+    "selector": ".story-primary",
+    "values": [
+      {
+        "text": "Request an estimate",
+        "trade": "Locksmith",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(166, 94, 58)",
+        "layout": {
+          "width": 231.609375,
+          "height": 56.390625,
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "lineHeight": "22.4px",
+          "letterSpacing": "normal",
+          "padding": "16px 25px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/locksmith-hero-button-desktop-after.png"
+  },
+  {
+    "key": "roofing-blog-label",
+    "device": "desktop",
+    "selector": ".blog-tools label",
+    "values": [
+      {
+        "text": "Search articles",
+        "trade": null,
+        "color": "rgb(98, 109, 96)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "layout": {
+          "width": 240,
+          "height": 58.234375,
+          "fontFamily": "DM, Arial, sans-serif",
+          "fontSize": "11px",
+          "fontWeight": "400",
+          "lineHeight": "18.15px",
+          "letterSpacing": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "block"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/roofing-blog-label-desktop-after.png"
+  },
+  {
+    "key": "policy-privacy-caption",
+    "device": "desktop",
+    "selector": ".welcome-card>small",
+    "values": [
+      {
+        "text": "Powered by Buildovate",
+        "trade": null,
+        "color": "rgb(97, 113, 135)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "layout": {
+          "width": 136.109375,
+          "height": 17,
+          "fontFamily": "DM, Arial, sans-serif",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "lineHeight": "20.15px",
+          "letterSpacing": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "inline"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/policy-privacy-caption-desktop-after.png"
+  },
+  {
+    "key": "policy-terms-caption",
+    "device": "desktop",
+    "selector": ".welcome-card>small",
+    "values": [
+      {
+        "text": "Powered by Buildovate",
+        "trade": null,
+        "color": "rgb(97, 113, 135)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "layout": {
+          "width": 136.109375,
+          "height": 17,
+          "fontFamily": "DM, Arial, sans-serif",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "lineHeight": "20.15px",
+          "letterSpacing": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "inline"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/policy-terms-caption-desktop-after.png"
+  },
+  {
+    "key": "patios-service-text",
+    "device": "phone",
+    "selector": ".kit-services article:first-child :is(.service-index,p)",
+    "values": [
+      {
+        "text": "01",
+        "trade": "Patios",
+        "color": "rgb(109, 114, 94)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "layout": {
+          "width": 301,
+          "height": 21.4375,
+          "fontFamily": "DM, Arial, sans-serif",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "lineHeight": "21.45px",
+          "letterSpacing": "normal",
+          "padding": "0px",
+          "margin": "0px 0px 32px",
+          "borderRadius": "0px",
+          "display": "block"
+        }
+      },
+      {
+        "text": "Too much sun over the seating area? Find the right shade footprint.",
+        "trade": "Patios",
+        "color": "rgb(109, 114, 94)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "layout": {
+          "width": 301,
+          "height": 47.59375,
+          "fontFamily": "DM, Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "23.8px",
+          "letterSpacing": "normal",
+          "padding": "0px",
+          "margin": "0px 0px 20px",
+          "borderRadius": "0px",
+          "display": "block"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/patios-service-text-phone-after.png"
+  },
+  {
+    "key": "windows-doors-hero-button",
+    "device": "phone",
+    "selector": ".story-primary",
+    "values": [
+      {
+        "text": "Request an estimate",
+        "trade": "Windows/Doors",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(166, 94, 58)",
+        "layout": {
+          "width": 198.171875,
+          "height": 49.59375,
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "19.6px",
+          "letterSpacing": "normal",
+          "padding": "14px 18px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/windows-doors-hero-button-phone-after.png"
+  },
+  {
+    "key": "solar-hero-button",
+    "device": "phone",
+    "selector": ".story-primary",
+    "values": [
+      {
+        "text": "Request an estimate",
+        "trade": "Solar",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(166, 94, 58)",
+        "layout": {
+          "width": 198.171875,
+          "height": 49.59375,
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "19.6px",
+          "letterSpacing": "normal",
+          "padding": "14px 18px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/solar-hero-button-phone-after.png"
+  },
+  {
+    "key": "concrete-hero-button",
+    "device": "phone",
+    "selector": ".story-primary",
+    "values": [
+      {
+        "text": "Request an estimate",
+        "trade": "Concrete",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(166, 94, 58)",
+        "layout": {
+          "width": 198.171875,
+          "height": 49.59375,
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "19.6px",
+          "letterSpacing": "normal",
+          "padding": "14px 18px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/concrete-hero-button-phone-after.png"
+  },
+  {
+    "key": "pools-hero-button",
+    "device": "phone",
+    "selector": ".story-primary",
+    "values": [
+      {
+        "text": "Request an estimate",
+        "trade": "Pools",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(166, 94, 58)",
+        "layout": {
+          "width": 198.171875,
+          "height": 49.59375,
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "19.6px",
+          "letterSpacing": "normal",
+          "padding": "14px 18px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/pools-hero-button-phone-after.png"
+  },
+  {
+    "key": "locksmith-hero-button",
+    "device": "phone",
+    "selector": ".story-primary",
+    "values": [
+      {
+        "text": "Request an estimate",
+        "trade": "Locksmith",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(166, 94, 58)",
+        "layout": {
+          "width": 198.171875,
+          "height": 49.59375,
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "lineHeight": "19.6px",
+          "letterSpacing": "normal",
+          "padding": "14px 18px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "flex"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/locksmith-hero-button-phone-after.png"
+  },
+  {
+    "key": "roofing-blog-label",
+    "device": "phone",
+    "selector": ".blog-tools label",
+    "values": [
+      {
+        "text": "Search articles",
+        "trade": null,
+        "color": "rgb(98, 109, 96)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "layout": {
+          "width": 350,
+          "height": 58.234375,
+          "fontFamily": "DM, Arial, sans-serif",
+          "fontSize": "11px",
+          "fontWeight": "400",
+          "lineHeight": "18.15px",
+          "letterSpacing": "normal",
+          "padding": "0px",
+          "margin": "25px 0px 0px",
+          "borderRadius": "0px",
+          "display": "block"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/roofing-blog-label-phone-after.png"
+  },
+  {
+    "key": "policy-privacy-caption",
+    "device": "phone",
+    "selector": ".welcome-card>small",
+    "values": [
+      {
+        "text": "Powered by Buildovate",
+        "trade": null,
+        "color": "rgb(97, 113, 135)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "layout": {
+          "width": 136.109375,
+          "height": 17,
+          "fontFamily": "DM, Arial, sans-serif",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "lineHeight": "20.15px",
+          "letterSpacing": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "inline"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/policy-privacy-caption-phone-after.png"
+  },
+  {
+    "key": "policy-terms-caption",
+    "device": "phone",
+    "selector": ".welcome-card>small",
+    "values": [
+      {
+        "text": "Powered by Buildovate",
+        "trade": null,
+        "color": "rgb(97, 113, 135)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "layout": {
+          "width": 136.109375,
+          "height": 17,
+          "fontFamily": "DM, Arial, sans-serif",
+          "fontSize": "13px",
+          "fontWeight": "400",
+          "lineHeight": "20.15px",
+          "letterSpacing": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "borderRadius": "0px",
+          "display": "inline"
+        }
+      }
+    ],
+    "screenshot": "current-color-fixes/policy-terms-caption-phone-after.png"
+  }
+]

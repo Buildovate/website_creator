@@ -1,0 +1,25 @@
+# Next-step storyboards — #027A queue
+
+Planning only. Each trade has two distinct choices for the section that explains what happens after a request. The site variation seed selects a repeatable combination of **layout, artwork and one primary motion**; neighboring sections may not repeat an effect. Artwork is made for that trade, not shared generic trade art. All promises (response time, appointment availability, approvals and outcomes) come from confirmed contractor settings. Static, no-JS and reduced-motion states must convey all steps. In full preview, unsupplied assets and facts carry `Sample` and are stripped or hidden at publish.
+
+| Trade | Storyboard A — visual sequence | Storyboard B — alternate composition |
+| --- | --- | --- |
+| Roofing | Roof-plane sketch opens at the reported leak, then the inspection path traces ridge, flashing and gutter; checklist reveals each finding. | Four photo frames move from homeowner note to inspection, written scope and chosen next step; a roof cross-section swaps at each frame. |
+| HVAC | Room heat map identifies uneven comfort, then technician checks airflow, equipment and options; ducts light up one at a time. | Thermostat dial becomes a four-stop timeline: describe, diagnose, compare, schedule; equipment cutaway changes at each stop. |
+| Patios | Yard outline accepts a dimension, cover silhouette drops into place, then shade moves across the seating area. | Material samples slide beside a measured plan, followed by site visit, design choice and build timeline cards. |
+| Plumbing | Water route highlights the reported fixture, then an isolation path moves from supply to diagnosis to repair scope. | Pipe cutaway unfolds into four stacked panels: tell us, locate, explain, restore; each remains readable when pinned. |
+| Electrical | Circuit diagram follows one issue from switch to panel; test points illuminate before options appear. | A service-panel drawer reveals assessment, safety review, written plan and scheduling on separate labeled rows. |
+| Landscaping | Yard plan fills in with use zones, irrigation and planting after the homeowner marks priorities. | Season strip shows the same property through survey, design, selections and installation, with a single changing focal image. |
+| General Contractors / Remodel | Floor-plan layers peel from existing room to measured scope, coordinated trades and finish walk-through. | A project-board route moves from idea to site visit, plans and build stages, with room-specific detail on each board. |
+| Flooring | Floor sample follows the room footprint, then subfloor, layout and finish layers reveal in order. | Plank pattern expands over a room photograph while four compact steps explain measure, prep, lay and review. |
+| Painting | Color swatch changes one wall; prep mask reveals protection, surface work, coats and final walk. | A vertical brush path crosses four artboards: inspiration, surface check, color choice and finish inspection. |
+| Fencing | Boundary line traces posts, gates and material choice before the completed run appears. | A top-down lot drawing switches between survey, options, layout and installation with a pinned gate detail. |
+| Garage Doors | Door elevation lifts to reveal opening measurement, style, hardware and operating check. | Three door skins sit beside a four-stop service rail: describe issue, inspect, approve work, test operation. |
+| Pest Control | House section shows entry points being found, sealed and monitored; never implies a guaranteed elimination. | Evidence cards move from signs seen to inspection, treatment proposal and follow-up plan, with an area map. |
+| Windows / Doors | Thermal overlay pinpoints a draft, then frame, glass and installation layers appear. | Window elevation swaps among measure, material selection, installation and finish checks in a split layout. |
+| Solar | Roof plane maps usable area and shade, then layout and equipment route appear before a verified proposal. | Sun path anchors a four-stage plan: utility review, site survey, design and installation coordination. |
+| Concrete | Site plane shows grade and formwork before pour, finish and curing guidance. | A concrete sample slab separates into four process slices: measure, prepare, place and finish. |
+| Pools | Yard plan traces shell, plumbing, decking and water-fill stages with a single measured view. | Pool section advances through site visit, design, permits and build milestones with a fixed homeowner perspective. |
+| Locksmith | Key-and-cylinder cutaway moves from the immediate issue to verified arrival window, diagnosis and upfront choice. | Emergency-first phone layout pins Call now while a lock diagram opens into identify, quote, authorize and test; no invented ETA or price. |
+
+Acceptance for #027A: choose two storyboards per trade from this document; demonstrate seeded layout/motion variation, one motion per section, no adjacent repeat, 390px and 1440px readability, keyboard/touch and reduced-motion/no-JS equivalence. Record which factual steps are hidden when settings are missing, and avoid claims of response time or availability without evidence.

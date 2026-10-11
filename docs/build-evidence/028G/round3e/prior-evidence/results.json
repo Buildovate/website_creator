@@ -1,0 +1,31 @@
+{
+  "ticket":"028G",
+  "round":"3d",
+  "subticket":"G-2a",
+  "state":"blocked_first_visibility_failure_uncommitted",
+  "worktree":"C:\\Users\\joe\\wc-game",
+  "branch":"launch/028G-game",
+  "head":"4dde8d78be560b6410f6abd8c3dc6ca9da3be880",
+  "base":"b2446730d551656067f2aaa15a9c27497dceb8f7",
+  "port":5183,
+  "selectorChange":{"file":"tests/game-desktop.mjs","line":31,"before":"[data-section=business]","after":"nav[aria-label=\"Website settings\"] [data-section=\"business\"]","matched":1},
+  "tests":{
+    "game-desktop-api.mjs":{"state":"pass","passed":16,"failed":0},
+    "game-guard-build.mjs":{"state":"pass"},
+    "game-desktop.mjs":{"state":"stopped","completed":1,"failedCheck":2,"error":"Timeout 30000ms: uniquely resolved Business button is not visible"},
+    "game-progress.mjs":{"state":"not_rerun"},
+    "game-milestones.mjs":{"state":"not_rerun"},
+    "header-logo.mjs":{"state":"not_run"},
+    "header-nav-fit.mjs":{"state":"not_run"},
+    "platform-mobile.mjs":{"state":"not_run"},
+    "platform-look.mjs":{"state":"not_run"}
+  },
+  "screenshots":["screenshots/g2a-desktop-fresh.png"],
+  "protectedDiff":{"empty":true,"legacyWorkspaceUnchanged":true,"allowedSharedAdditions":4,"sharedDeletions":0},
+  "suiteRetries":0,
+  "providerCalls":0,
+  "credits":0,
+  "commit":null,
+  "next":"G-2a still needs visibility diagnosis; G-2b not started",
+  "previousResults":"round3d/prior-evidence/results.json"
+}

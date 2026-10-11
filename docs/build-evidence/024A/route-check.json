@@ -1,0 +1,39 @@
+{
+  "command": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5173",
+  "tenantId": "8e09f11d-7c9c-49f6-84f0-ad927da08d4f",
+  "emptyTenantId": "e5075aad-03f6-4f48-b975-673065be3dac",
+  "results": [
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-ambient-024a/financing",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-ambient-024a/financing?preview=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-ambient-empty-024a/financing?preview=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/tenants/8e09f11d-7c9c-49f6-84f0-ad927da08d4f/generation",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/planning-films.json",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/planning-ambient.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/assets/planning/roofing-financing-720.webp",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/assets/planning/roofing-financing-1280.webp",
+      "status": 200
+    }
+  ]
+}

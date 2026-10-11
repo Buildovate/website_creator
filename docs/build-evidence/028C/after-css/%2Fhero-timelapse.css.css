@@ -1,0 +1,29 @@
+/* Transformation hero: persistent business copy, three short scene captions. */
+@font-face{font-family:BuildStory;src:url('/assets/barlow-bold.ttf') format('truetype');font-weight:700;font-display:swap}
+.build-timelapse{height:250svh;--story-rust:var(--accent,#b46945)}
+.build-timelapse .story-stage{padding:30px 5vw 20px}
+.build-timelapse .story-shade{background:linear-gradient(90deg,#0d1514cf,#0d151469 48%,#0d151414 85%),linear-gradient(0deg,#0b1514f2,transparent 55%,#0b15145c)}
+.build-film,.story-finished,.story-opening{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.story-finished{z-index:0}.story-opening{z-index:1}.build-film{z-index:2;opacity:0;transition:opacity .25s}
+.build-timelapse.film-ready .build-film{opacity:1}
+.build-timelapse .story-content{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;max-width:none;margin:auto 0;padding:32px 0}
+.build-copy{max-width:800px;min-width:0}.build-copy h1{font:700 clamp(48px,6.4vw,104px)/.98 BuildStory,'Arial Narrow',sans-serif;letter-spacing:-.022em;text-transform:uppercase;color:#fff;margin:0;max-width:800px;text-wrap:balance;overflow-wrap:normal}
+.build-timelapse .story-kicker{font-size:13px;letter-spacing:.15em;margin:0 0 20px;color:#efbd99}
+.build-timelapse .story-description{max-width:530px;font-size:16px;line-height:1.6;margin:20px 0 15px}
+.build-timelapse .story-proof{font-size:13px;line-height:1.5;gap:10px;margin:15px 0}.build-timelapse .story-proof span:first-child{padding-left:0;border:0}
+.build-timelapse .story-actions{margin-top:22px;gap:18px 28px}.build-timelapse .story-primary{background:#ad5c36;color:white;min-height:52px}
+.story-contact-jump{display:inline-flex;gap:22px;align-items:center;min-height:44px;color:#f5c6a5!important;font:500 14px/1.5 Arial,sans-serif;text-decoration:none;margin-top:4px}
+.build-caption{flex:0 1 260px;border-left:1px solid #f2c6a86b;padding:8px 0 8px 24px;margin-bottom:10px;color:#f6dbc2}
+.build-caption-index{font:500 13px/1.4 Arial,sans-serif;letter-spacing:.14em}.build-caption p{font:700 clamp(26px,3vw,44px)/1.1 BuildStory,Arial,sans-serif;margin:12px 0;color:white}.build-caption-detail{font:400 12px/1.5 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;display:none}
+.build-timelapse .story-bottom{width:100%;max-width:none}.build-progress{height:1px;background:#ffffff40}.build-progress span{display:block;background:#e5a777;height:2px;transform:scaleX(0);transform-origin:left center;will-change:transform}
+.build-timelapse .story-chapters{grid-template-columns:repeat(3,minmax(0,1fr));max-width:none;gap:30px}.build-timelapse .story-chapters button{border:0;padding-top:14px;min-height:48px;font-size:14px}.build-timelapse .story-chapters button[aria-pressed=true]{color:#f5c6a5}.build-timelapse .story-discover{max-width:none;margin-top:0}.build-timelapse .story-accessible{font-size:12px}
+.build-timelapse.static-story{height:auto;min-height:0}.build-timelapse.static-story .story-stage{position:relative;height:auto;min-height:85svh}.build-timelapse.static-story .story-content{margin:50px 0}.build-timelapse.static-story :is(.story-opening,.build-film,.story-chapters,.build-progress){display:none}
+@media(max-width:1000px){.build-caption{display:none}.build-copy{max-width:740px}.build-copy h1{font-size:clamp(48px,7.8vw,86px)}}
+@media(max-width:600px){
+ .shared-site-header nav{display:flex!important;overflow-x:auto!important;justify-content:flex-start!important;gap:21px!important;padding-bottom:2px!important}.shared-site-header nav a{font-size:12px!important;flex:none}.shared-site-header nav a:last-child{position:absolute}
+ .build-timelapse{height:205svh}.build-timelapse .story-stage{padding:20px 6vw 132px;min-height:720px}.build-timelapse .story-topline{font-size:11px;gap:12px}.build-timelapse .story-topline>span{max-width:62%}
+ .build-timelapse .story-content{padding:24px 0 14px;margin:auto 0 8px}.build-copy h1{font-size:clamp(43px,10.6vw,62px);line-height:1.02}.build-timelapse .story-kicker{font-size:12px;margin-bottom:15px}.build-timelapse .story-description{font-size:16px;line-height:1.5;margin:16px 0 12px}.build-timelapse .story-proof{font-size:12px;margin:8px 0}.build-timelapse .story-actions{font-size:14px;gap:8px 18px;margin-top:14px}.build-timelapse .story-actions a{min-height:44px}.story-contact-jump{font-size:13px;margin-top:0}
+ .build-timelapse .story-chapters{gap:12px}.build-timelapse .story-chapters button{font-size:12px;line-height:1.4;min-height:58px;gap:4px;padding-top:12px}.build-timelapse .story-discover{font-size:12px;flex-wrap:nowrap;gap:8px}.build-timelapse .story-accessible{font-size:12px}
+}
+@media(max-height:700px) and (min-width:601px){.build-timelapse .story-stage{min-height:700px}.build-copy h1{font-size:clamp(44px,5.5vw,76px)}.build-timelapse .story-content{padding:20px 0}}
+@media(prefers-reduced-motion:reduce){.build-timelapse{height:auto;min-height:0}.build-timelapse .story-stage{position:relative;height:auto;min-height:85svh}.build-timelapse .story-content{margin:50px 0}.build-timelapse :is(.story-opening,.build-film,.story-chapters,.build-progress){display:none}.build-film{transition:none}}

@@ -1,0 +1,1918 @@
+[
+  {
+    "path": "src/about-page.js",
+    "sha256": "c6f58bde6acd731fe167afd5edf10f58c90b43946576b7c793fbd36ceb74b050"
+  },
+  {
+    "path": "src/api.js",
+    "sha256": "db552aa50a6aff1cf6d309701dd3a25914b6eefee86d87ddaccd47813260c277"
+  },
+  {
+    "path": "src/auth/http.ts",
+    "sha256": "cbebae7d1c3ef0b6b4c30aed17a69aee504478b354fbc72c51214e9f9b93a39d"
+  },
+  {
+    "path": "src/auth/index.ts",
+    "sha256": "fad5e5e68289972717758e5b4f3826399c138aa34f3d54f719187d647b624063"
+  },
+  {
+    "path": "src/auth/request-policy.ts",
+    "sha256": "4cd855b633f45818b0af95c5986640da9e6110cc1492fda33c52bcac1e8f76ad"
+  },
+  {
+    "path": "src/auth/response-policy.ts",
+    "sha256": "6a2ea8c0260d02224e86e0d6cc8b33fef96c1989e8d9c3d985d41fccf204b786"
+  },
+  {
+    "path": "src/auth/session-store.ts",
+    "sha256": "bef501d47e1c500a3e2ad809bb74e26cef24ade5afeb0ef6aad135e31ad96ee2"
+  },
+  {
+    "path": "src/auth/views.ts",
+    "sha256": "9b42a054ea764f557cd469bab6579289bcccce24c550ccc5c640e57a6441b4b0"
+  },
+  {
+    "path": "src/aws/auth.js",
+    "sha256": "3bbae3bbd978e859b3448482af037d79d33eccb50be8fe52838d05996fec418b"
+  },
+  {
+    "path": "src/aws/d1.js",
+    "sha256": "a62dc3bd5d79d500f835153d197100c40c21b893be00ec92d425eb459ec6225f"
+  },
+  {
+    "path": "src/aws/ddl.js",
+    "sha256": "ff941a0a0a4e08d495f795decd21163d3cfca0b1d0cdf9663ee944ca927ff1f0"
+  },
+  {
+    "path": "src/aws/env.js",
+    "sha256": "0bc1af259cf3b4a1d95b711d255b71529d77ec4557643168ac7eccf6d0e83d4b"
+  },
+  {
+    "path": "src/aws/geoip.js",
+    "sha256": "46283ffd90caf2259300865df833a111b1e6138f8d876887a54c34f6ba711584"
+  },
+  {
+    "path": "src/aws/migrate.js",
+    "sha256": "0fdc6bef4a22a5a1ecad825e74ddf66cf17d22d8c1f9f1ce320341ce6fc07bfa"
+  },
+  {
+    "path": "src/aws/pg.js",
+    "sha256": "8502079f242dd897fe950a0566cf751c8950703b582b2431d4b2fdab391d7f15"
+  },
+  {
+    "path": "src/aws/pglite.js",
+    "sha256": "424dbebd560e7a874d64d6e6c093a288c834fd5727db942973c40436e1de95c1"
+  },
+  {
+    "path": "src/aws/qa-browser.js",
+    "sha256": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24"
+  },
+  {
+    "path": "src/aws/qa-capture.js",
+    "sha256": "ef819d7a48fa13ae7d701794b1968ede289adf91b39dd60a30956a69f8715e13"
+  },
+  {
+    "path": "src/aws/review-capture-diagnostics.js",
+    "sha256": "6c3a99442bfb5948bc850616ddc3c98b569b8246775edfda932c3e343baa9bd1"
+  },
+  {
+    "path": "src/aws/review-capture-readiness.js",
+    "sha256": "66ab75100a164e7b3e00f730233a2e1a42a3fbb87cc831e173a11c12ef5c7812"
+  },
+  {
+    "path": "src/aws/review-capture.js",
+    "sha256": "9fbb82f4e974781a3d324a50c191ddcdddc129bfeb8955b0e84bd56fa786ce48"
+  },
+  {
+    "path": "src/aws/review-map-fixture.js",
+    "sha256": "a675cf0b32f849283f25ddc2800144ecddb8d97d67deeaedffda2da07df52a1f"
+  },
+  {
+    "path": "src/aws/s3.js",
+    "sha256": "293dbaf74da7215d0ad9d5c31eac0e68cfa613b79f51c920b0f3f91a1422b377"
+  },
+  {
+    "path": "src/aws/server.js",
+    "sha256": "2a5e3deb4fd85c92ff3b937382f9f6c7005e2dda772b47879237db951454f07a"
+  },
+  {
+    "path": "src/aws/sql.js",
+    "sha256": "e0e95f117c3f77162580cd4142b62d6068353e483c8da8630667b3a42d2ded73"
+  },
+  {
+    "path": "src/blog-starters.js",
+    "sha256": "35b7e1318a9edeed87c704db2bb2c60f67059e9872305d32f36f15ade67bc54b"
+  },
+  {
+    "path": "src/blog.js",
+    "sha256": "50c3e2afa6399ef194db760b0fd7743f948d10938436f81e6af3e8aece567f82"
+  },
+  {
+    "path": "src/builder.js",
+    "sha256": "73a255ca2657d26d9bc653ee6e1ca7960cdd0f524865a09e8e4d5c7700c388bf"
+  },
+  {
+    "path": "src/cinematic.html",
+    "sha256": "41884f8a7e833be04b4ba830e5d19a1c668462a00660f06ec80d2ea98b84a29a"
+  },
+  {
+    "path": "src/cinematic.js",
+    "sha256": "e81655567d6f319d142d54c5d119087908574138a0e067c63bfdf547d6cc484a"
+  },
+  {
+    "path": "src/city-editorial.js",
+    "sha256": "eb3a6901000cac81ade73a1036b866b76fce9bee89f968e77c5256fcafbe813d"
+  },
+  {
+    "path": "src/client/auth/bridge.ts",
+    "sha256": "668f35c6011c4659bce423780021e771ae4833f48695dad608d68123b05c6625"
+  },
+  {
+    "path": "src/client/auth/login.ts",
+    "sha256": "90ff607b26e669e436ed517fe758d6597a6b1f50ce84f66e4930255b29c7da31"
+  },
+  {
+    "path": "src/client/editor/visual-editor.js",
+    "sha256": "c15789e3739c1b2a68888b61c9050954116bd7bb81c3f2df15efeec3393a1fc1"
+  },
+  {
+    "path": "src/client/shared/api.ts",
+    "sha256": "40507c5ea70c662d22bf1d6244822cc0e77ebfa4463c34db0ff26ab38831d938"
+  },
+  {
+    "path": "src/client/shared/confirm.ts",
+    "sha256": "bc6cf4c162f0723c64402d6dc6611caebc11c1178782b8bd13297dc4e7b6f51a"
+  },
+  {
+    "path": "src/client/shared/forms.ts",
+    "sha256": "a78217c72630e898c1ca55c288598ea898981311a70b7250ed3778df665f1a37"
+  },
+  {
+    "path": "src/client/shared/html.ts",
+    "sha256": "204afd4640495c79fa86039322535656fe5c10100ef2f5703604550a89983289"
+  },
+  {
+    "path": "src/client/shared/session.ts",
+    "sha256": "c42fce9a0cd133a5efd13c885bac4479b8e06c6636ba690ed4c05b41de150e7c"
+  },
+  {
+    "path": "src/client/shared/workspace-api.ts",
+    "sha256": "2f8d4c3616c6e665a310b06b2d712537d7317f0031cd0a539022556309d010c2"
+  },
+  {
+    "path": "src/client/site/ambient-video.js",
+    "sha256": "b0be5277536422b17448c196564d407ceac9c5d05a1c611457bf5212416a42b7"
+  },
+  {
+    "path": "src/client/site/cinematic-controls.js",
+    "sha256": "00a4f78bb378975fb0e377349b5aa9d786d63a3693663e25b2f7a398ae4a305b"
+  },
+  {
+    "path": "src/client/site/cinematic.js",
+    "sha256": "a190af6002a9061a508b546e1d84ffcf6fffd5b3136cc3e8c9f028c048ecee62"
+  },
+  {
+    "path": "src/client/site/constitution.ts",
+    "sha256": "115f2492c938f965184546ce9ca9dfcbe96b2b9cdb0beef5596c8050773f461f"
+  },
+  {
+    "path": "src/client/site/conversion.ts",
+    "sha256": "db97f2a2c180375f5c5ff88bb9fd710aed80635fb9d0e425894466ee6e8987c6"
+  },
+  {
+    "path": "src/client/site/cutaway.js",
+    "sha256": "f9709fbd3fa4ba29df318a72cad3d1a43dfe1979beb8f681e9f1a25e7d3d353f"
+  },
+  {
+    "path": "src/client/site/finance-comparison.ts",
+    "sha256": "931873d3ba2013b5b33efebc217e42589170592cecaf68aa6110553cf6377796"
+  },
+  {
+    "path": "src/client/site/index.ts",
+    "sha256": "1d7059ec9844fe2ecc80884103fdbb347c222d854dd452ed19c780608dbac60e"
+  },
+  {
+    "path": "src/client/site/inquiries.ts",
+    "sha256": "38bd4ed934a5594a159566d7d1bbc7451dd3851f5d555d9eac55e3fc73ccbecd"
+  },
+  {
+    "path": "src/client/site/neighborhood.ts",
+    "sha256": "2d519d23b4aa5eb1dce559e1ac9589cb0e309f9e5477521fd44fe1f369bb840d"
+  },
+  {
+    "path": "src/client/site/portfolio.js",
+    "sha256": "fd343ddf0a5c9cc7d25c7448ea997a797f73c82333c139b0077a101a81e2b865"
+  },
+  {
+    "path": "src/client/site/roofing-next-steps.js",
+    "sha256": "67a50f034feadc0e41408b58bb6302a7511c03e923a5304fd1f4ab8cbb5d13f7"
+  },
+  {
+    "path": "src/client/site/service-motion.ts",
+    "sha256": "c912ad99e20f7ef46c910170ffb9c96ac9548932d2a7a86e5065c8c938b7fbda"
+  },
+  {
+    "path": "src/client/site/showcase.js",
+    "sha256": "2d2968409196fd8178b4c5b6d8f62510ce37ac4e37a0a16da199aee68ddfac31"
+  },
+  {
+    "path": "src/client/site/trade-components.js",
+    "sha256": "1769bd51b7225c897921e8d605aab86225bb8691a5794b7cc9a90a0d07f5e196"
+  },
+  {
+    "path": "src/client/styles/app.css",
+    "sha256": "429e4ab38f55366ba683a3d2405e56e0c9d8bb3cda33ceae9c7805c072671019"
+  },
+  {
+    "path": "src/client/styles/contacts-restored.css",
+    "sha256": "5c4ac87a22b7585f33d6525bf51a35f83fa1c2b1e7e37bae071b816a18a60f5a"
+  },
+  {
+    "path": "src/client/styles/design-library.css",
+    "sha256": "505ace3ff8b1e93222e20a15e6481d0080d9d242cd695d3ce1514e03b8cf1c22"
+  },
+  {
+    "path": "src/client/styles/editor.css",
+    "sha256": "d636ba892742f31c182e6ac3e1529d526b5de80c751be17d84ae0ccc5091a985"
+  },
+  {
+    "path": "src/client/styles/feedback.css",
+    "sha256": "33066531d972b696d2cf5af3c0268a709a82901ed6ad20cc5b661f619f8d5ac5"
+  },
+  {
+    "path": "src/client/styles/foundation.css",
+    "sha256": "39036f93cc48316fa4c58d7ab286e9ae927bd0667ffe58f644984859bde2ba4d"
+  },
+  {
+    "path": "src/client/styles/integrations.css",
+    "sha256": "0ee3e79069bef91eb10a11b7f62b94f3e2b9628bb6dc1017e072efe919c256eb"
+  },
+  {
+    "path": "src/client/styles/platform/components.css",
+    "sha256": "c4d1b95ab6003aedb866c7c47a93004c9a74311227c44378a20ce2a762724773"
+  },
+  {
+    "path": "src/client/styles/platform/fonts.css",
+    "sha256": "b534b79f9d4e87cd385ed20d4005c41f2a14fbc613a34d0ce55f147f66718572"
+  },
+  {
+    "path": "src/client/styles/platform/index.css",
+    "sha256": "2d5c397193bbcde7ffcb18c42f8b2a377b7cdc7401f286b303f13a8d137bbf62"
+  },
+  {
+    "path": "src/client/styles/platform/legacy.css",
+    "sha256": "0c64ca4347f2425829848316d38de074c41062d6b4b7230c4ab671418767f3dd"
+  },
+  {
+    "path": "src/client/styles/platform/tokens.css",
+    "sha256": "0bd1fd7eacc5cc7e0716fc8071a44c6f41f9ae9be459389014bdff00da2ddc38"
+  },
+  {
+    "path": "src/client/styles/platform-mobile.css",
+    "sha256": "f21d90a7139d1f14c873f031dd72c6fe07403d311b5ea03e295cfd94bb58cb98"
+  },
+  {
+    "path": "src/client/styles/questionnaire.css",
+    "sha256": "3bfd4013c53068515ae0022c6b7eaeb15f01913dcf353691a6d10aa733c5d555"
+  },
+  {
+    "path": "src/client/styles/responsive.css",
+    "sha256": "c54e54987ad7708a1a4bff6db3a521051151382039b8cddd0fee916b113581c9"
+  },
+  {
+    "path": "src/client/styles/roofing-motion-home.css",
+    "sha256": "4ad1579a510060b3012ead0cb5dc50938463ed9e95cdfe3e8b5582f984ce8ba1"
+  },
+  {
+    "path": "src/client/styles/workspace-overrides.css",
+    "sha256": "f8b2b9e892dfc237b199ccc65353686c22d1d2b83a09579ad49341aa0648e2f7"
+  },
+  {
+    "path": "src/client/styles/workspace.css",
+    "sha256": "057257d2464c9c349fe4b2e1352afe5510f1adde8d9fedd403ae149247e16fc3"
+  },
+  {
+    "path": "src/client/workspace/business-trust.ts",
+    "sha256": "bc2704630947ebac93a7df6729b1584a6fb3be90e359296c6d7998c05e6d93c2"
+  },
+  {
+    "path": "src/client/workspace/expense-charts.js",
+    "sha256": "a9124cc5ac6226a8127a5e88e1ad2a88a1ee6aed68af52f93b64a208fd80ceb0"
+  },
+  {
+    "path": "src/client/workspace/expenses.js",
+    "sha256": "18ec907ee4f35d572df096c172f347518d7402872f536cc759bb9d51b0b4cad3"
+  },
+  {
+    "path": "src/client/workspace/generation.js",
+    "sha256": "6a3cf458e460a9a7dfa90d8cd9f9f61977ff7f19dd1dc199eb9fabe246b6cec2"
+  },
+  {
+    "path": "src/client/workspace/hero-editor.js",
+    "sha256": "9710a2262d1ae9dd014c6be3ec3cde6163c70a1776edf8d0847e9333c59e2c14"
+  },
+  {
+    "path": "src/client/workspace/index.ts",
+    "sha256": "d323dcf0cd67b418a6fdae555efc8433ef5604d3f7ac2e7329ca3cb7ab0c3037"
+  },
+  {
+    "path": "src/client/workspace/legacy-workspace.js",
+    "sha256": "31598e72d0b2007da424341e287ffb43cc2a1ed454a10bd72b6c0c6df8bdf5b0"
+  },
+  {
+    "path": "src/client/workspace/legal-policy-fields.ts",
+    "sha256": "b66c5e26cc4b347f6646918e3f4255644dc3b3a09c7c005ca2f46794f052d4e3"
+  },
+  {
+    "path": "src/client/workspace/mobile.ts",
+    "sha256": "1e8d353a01745af90af56f964573075a3947095ec2e72ba4b1c268a57481c9d4"
+  },
+  {
+    "path": "src/client/workspace/platform-look.ts",
+    "sha256": "df5fa38ef531bd7ee8f5ea42480a95be35789f5fdbff8efd6c1191d0a06d81e9"
+  },
+  {
+    "path": "src/client/workspace/questionnaire.ts",
+    "sha256": "3545a86619ad667234671aceae9bffe8ef7ed0113165e2bcf2f4cf7c87fb6ae1"
+  },
+  {
+    "path": "src/client/workspace/roofing-cta-fields.ts",
+    "sha256": "02bd9b7de583c03d64ad2dfb6617c3038a01422eca9a0389c27a560d17fc5458"
+  },
+  {
+    "path": "src/client/workspace/service-selection.ts",
+    "sha256": "0388052cdf0d48e1f974968af78fa2ac3b7e77133a307435f93a3cf9a7a36cae"
+  },
+  {
+    "path": "src/client/workspace/shell.ts",
+    "sha256": "78547ac58a8f79768b97cbdee27ab74f9aa5a41b688284b4a63edcb316e8ba34"
+  },
+  {
+    "path": "src/client/workspace/site-look.js",
+    "sha256": "89fe2b99bbc98f2d0f603751cfdcf5b399651be71209b47d9e1b71c90b21844f"
+  },
+  {
+    "path": "src/client/workspace/startup.ts",
+    "sha256": "11a512c8ba9f26a795294176d29ffa86d10b1cebe1bdd47935b65bf03308d886"
+  },
+  {
+    "path": "src/client/workspace/template-name.js",
+    "sha256": "3f88dd16c73dd821a090cb908b39290f7b746a83d630d90d2e15d02780b1ed04"
+  },
+  {
+    "path": "src/client/workspace/thumbnail-motion-fields.ts",
+    "sha256": "84d445b79788188de91cbbd3e9872a196c9c132af2456faba0f8deedd9446d87"
+  },
+  {
+    "path": "src/constitution-pages.js",
+    "sha256": "1ab61e596a80543628760f50aa8c6ed736f3ea38e8a8fcc981be270893f075ad"
+  },
+  {
+    "path": "src/control.js",
+    "sha256": "146ed2b48d8eb93082cd40a0689fb0107ff108ae9cc6800060823c788f382885"
+  },
+  {
+    "path": "src/conversion-page.js",
+    "sha256": "674beb6b8954b3fa1dbbfb015983a38620e4d14a06f03a935c0c964e6f2086ea"
+  },
+  {
+    "path": "src/core-site-pages.js",
+    "sha256": "d42bcb83a86dad40a496b8839be33a78ea4788da77c474d16283a80399e9e3c9"
+  },
+  {
+    "path": "src/core.js",
+    "sha256": "88076794c88e22844e77ae094e1296069a6b4afbcd24e9d5f44cab5d85bf7a30"
+  },
+  {
+    "path": "src/craft-story.js",
+    "sha256": "538282239d31feff677cbd9eee526f67e839f8d01109ca7aefd66391a0b80b8a"
+  },
+  {
+    "path": "src/crm-next.js",
+    "sha256": "55e1b08cfc10be01bad57d7b5a63680ab158d94f265cb7b9d46bd75129eb5ec7"
+  },
+  {
+    "path": "src/crm.js",
+    "sha256": "b5eab8b382ae5acdf3be1d6e9cb96d484c1fdf3c80dd397bf2f6ba3d651db591"
+  },
+  {
+    "path": "src/cutaway.js",
+    "sha256": "229975d2a8a6a0b082c9163fb34b47ede18a381d50701d1e4860999b811e33f8"
+  },
+  {
+    "path": "src/design-kits.js",
+    "sha256": "eb998ae8d9a661341cb2c3142fbba2c0894f348cbb2c90bb65754620e33e01b5"
+  },
+  {
+    "path": "src/design-personality.js",
+    "sha256": "5f6ef48d9d59f72a4a5578712ef5b60dc6a103411c8a633c2e229c0548f04be6"
+  },
+  {
+    "path": "src/design-preview-pages.js",
+    "sha256": "8bd91ccecaaaa40941c724519af36b22fee0be3f58da8fafb7388350f7e6d1a3"
+  },
+  {
+    "path": "src/design-styles.js",
+    "sha256": "27a5bdad821a4fdb6869f0b7cf4b1f5d355bc47abdc7583108435c72cb6273e3"
+  },
+  {
+    "path": "src/design-variant.js",
+    "sha256": "51dc0e5429e94c1db8db8a1717e55ea0d0275a3901deadc7f194e55c8a6cd2bb"
+  },
+  {
+    "path": "src/display-format.js",
+    "sha256": "ef80c95fc7832f47717a1a58eced9b8a983fa29b2d820cc902579e47c58eee50"
+  },
+  {
+    "path": "src/ebook/guide.json",
+    "sha256": "ea377725b7436111975a7ce0f71ea565ba27eb5dfb1a2fb1e1eea432e36dea16"
+  },
+  {
+    "path": "src/ebook/settings.js",
+    "sha256": "5b0312034e862df12ab903bbd61e65b930e4ebc19ff643a842da641b93de30d6"
+  },
+  {
+    "path": "src/ebook.js",
+    "sha256": "30b47f2504656576194bfda0a5574ec2fe81549a180d5c3db18880526b356f60"
+  },
+  {
+    "path": "src/engagement.js",
+    "sha256": "1ae473a2a2abda5f4bd171cd209bc24d53f7b377fbf65d42b7204ad1bb41c5b4"
+  },
+  {
+    "path": "src/excel-reader.js",
+    "sha256": "a9c4c9beee451b0f1e051ac1c5ad255dce528c2839b5e6a2da30397f88644e7b"
+  },
+  {
+    "path": "src/expense-plans.js",
+    "sha256": "4cc497b72486ce1b59af5a9019a70a5f689ddd499403d08a285d9f74ee08852c"
+  },
+  {
+    "path": "src/expenses-history.json",
+    "sha256": "a9fd0d198f459be1e2c1e6d469971518cb1a0060c873b0c23752f9dc2118317c"
+  },
+  {
+    "path": "src/expenses-math.js",
+    "sha256": "0dcc809c84e39d22c58a649163351df50456864b61e8b84cf7c9f5293691c74c"
+  },
+  {
+    "path": "src/expenses.js",
+    "sha256": "a1aa585f5682b9825ba75d8c8d655ac398ae0e6d84f8f2bf8906dac8089f1890"
+  },
+  {
+    "path": "src/form-fields.js",
+    "sha256": "9420623a558fd4c12e2e643ca2c4a03395813eb08502b7362f1bf18b38dc7b3a"
+  },
+  {
+    "path": "src/generated-copy-render.js",
+    "sha256": "d0e5f3005bc69743b842ff649fd263438d8c6c5a5d9364cd84144889d00ce135"
+  },
+  {
+    "path": "src/generation-copy.js",
+    "sha256": "865a009b4dc537686ab714fba5ef7554ead1c80633a02c5ffd40fbeca8adea0d"
+  },
+  {
+    "path": "src/generation.js",
+    "sha256": "b4b671fbb56c1d8905cf5cfdc8f2fa88e8294c98cda383ca463916ea6dde0884"
+  },
+  {
+    "path": "src/hero-contact.js",
+    "sha256": "449d79be06d550bb4fe6408f83f25e939dc88ee0d14c19c93bd129afacf1fb0c"
+  },
+  {
+    "path": "src/hero-editor.js",
+    "sha256": "aba0ff68e920495a1cdea965aa508afe3a326a13cf1b5b4b759dfae939814965"
+  },
+  {
+    "path": "src/hero-timelapse.js",
+    "sha256": "e6ad0ed9b0beceb530135abd20f42501ebc57c562f0837a1a0e41f4c8bd50b5c"
+  },
+  {
+    "path": "src/homeowner-polish.js",
+    "sha256": "ecdf2970e691b7f44dec08d51cf0299561ff9408b2cb94e5c96d1b9630b619cf"
+  },
+  {
+    "path": "src/installed-page-images.json",
+    "sha256": "27dcdb41f726c6555ced71b672d9c8fa3dcba9bdd470bb4339123578d842bb3b"
+  },
+  {
+    "path": "src/media-description.js",
+    "sha256": "6e6365c4c6cd10658dee81e96268ca4c79b3234e13096036dd6f06d122506daa"
+  },
+  {
+    "path": "src/media-library-render.js",
+    "sha256": "1d170a32ae445923c1f7fece8aaf4bdae9465cab4149b8d7ee5de4190ca67ccd"
+  },
+  {
+    "path": "src/media-library.js",
+    "sha256": "17e36e80bb4d8c5e0cd347f8153a7ea4d9a9e45bc88fc9ebbb19fff09b8d8926"
+  },
+  {
+    "path": "src/neighborhood.js",
+    "sha256": "adeee2057d3308c87c9af5c71665b39b790c4156112c383213ce0991f323d3b2"
+  },
+  {
+    "path": "src/operations.js",
+    "sha256": "93b00f8ffee4cf0d71a937eb99d54a44715b3c5c83eb7e12273adb4ae17cd15d"
+  },
+  {
+    "path": "src/page-images.js",
+    "sha256": "6aa636165af64a1849084db6af591e75a43061311316ea2b1d64a81d6b0d03cb"
+  },
+  {
+    "path": "src/planning-ambient.js",
+    "sha256": "4eca1d6f91e1bcb2ac85864acfb715ead221cc58edfa2c30105eca59376ded4b"
+  },
+  {
+    "path": "src/planning-scroll.js",
+    "sha256": "9ad3048360ff833034f1d392fd054eea94df50c9c46ec494f9f5b2be0084ae80"
+  },
+  {
+    "path": "src/planning-video-sources.js",
+    "sha256": "7f32de39a30ebb9874a1f80339ea92a0cb7885a02ee25e1029d09a3e7ce5433d"
+  },
+  {
+    "path": "src/platform/business-trust.ts",
+    "sha256": "b3bb3ca483b23baf2f3da5992ed781072c18885c85b2249a6c71c0b393552ec6"
+  },
+  {
+    "path": "src/platform/constitution.ts",
+    "sha256": "10be7f318da7717d708704bcb12f5fc2aed5a34b8806681ce1195111119b496d"
+  },
+  {
+    "path": "src/platform/conversion.ts",
+    "sha256": "e488b59bb740ab9191c3ea237787cc3bdb826f6314171fe89532f9c53e0f7825"
+  },
+  {
+    "path": "src/platform/financing-plans.ts",
+    "sha256": "71b01fe786f0955a399a29b9a959502c820252423a32535a6df0049a02a539a9"
+  },
+  {
+    "path": "src/platform/generation.ts",
+    "sha256": "b505c3c02df391d7437e99b3cc8d985b2edafd7b9cea56185244e3a9691dff9e"
+  },
+  {
+    "path": "src/platform/legal-policy.ts",
+    "sha256": "84759046b359e7e5163ab0d8876aa92205de3b4862370a7a321657de80e71696"
+  },
+  {
+    "path": "src/platform/lender-adapter.ts",
+    "sha256": "9c482573baacd28f072cf20a558c83b87a54ac533073db6fbbcbcdff83390b23"
+  },
+  {
+    "path": "src/platform/neighborhood.ts",
+    "sha256": "adaf5589d926da73e5e9dd3ece2c7e4497059bfe93e844dfec15931d39b4355d"
+  },
+  {
+    "path": "src/platform/planning-films.ts",
+    "sha256": "a114b9f76dd87c738e013012c4b9a65bff3807d4b59510b3a5fc34c2a44cbb65"
+  },
+  {
+    "path": "src/platform/premium.ts",
+    "sha256": "bff27586b26a9e65e4d8ee162981d8858ddb99efbf2bc739cdccef63510b750e"
+  },
+  {
+    "path": "src/platform/roofing-cta.ts",
+    "sha256": "b92c7d4bcbb5163d085b945d9eb20ae60c9b993ff748a705c0ebfab4b1f43f74"
+  },
+  {
+    "path": "src/platform/thumbnail-motion.ts",
+    "sha256": "c055d39e1107bd5b7461158dedceba691eb2c1d26f0b090b17c5ba14c00682b1"
+  },
+  {
+    "path": "src/platform/trust.ts",
+    "sha256": "bc2327b73fb6ccf737918f8cd62ba6a82e48817607297df46c1007881e04b6f5"
+  },
+  {
+    "path": "src/platform/website-pages.ts",
+    "sha256": "39eb1e8cd478f48d7c30ea2aeb325cfcb5925cd2efd1a3855ae77d052b0f3f37"
+  },
+  {
+    "path": "src/pricing.js",
+    "sha256": "47f7ba3ce523bf2190ff32a34d4de308307c35cbba6d9452475a1bffce09bf09"
+  },
+  {
+    "path": "src/project-map.js",
+    "sha256": "10013a36aaa49cfaa140c2461bb23e9ca3de200affd9e7482107a74c1325f843"
+  },
+  {
+    "path": "src/project-story.js",
+    "sha256": "87de16b306a1362bdb7d2458f83b06f281eb3ae83f7a44fa3e563c86b179f4f9"
+  },
+  {
+    "path": "src/promotion-evidence.js",
+    "sha256": "1ba8c5a92f101dd574d1fa67d2dc7374bd8a04083ce48e6d2cc5559738bb1fda"
+  },
+  {
+    "path": "src/promotions-ambient.js",
+    "sha256": "43c2fe8d4d1a4e3febe3f4ebdf4b6bf9ba977560cd7cc79ac9aff4cde5e099f4"
+  },
+  {
+    "path": "src/promotions-scroll.js",
+    "sha256": "9b460b8d8c348287addf094fc297448e5698b87a8257dd77d2dd5d96dceea43e"
+  },
+  {
+    "path": "src/qa-gate.js",
+    "sha256": "d4c5f065ea41700050dd86e56d163aad3effd93e1c10ee672a4303712331c315"
+  },
+  {
+    "path": "src/qa-page-action.js",
+    "sha256": "c5caee1a60121131d21bc4ae155bb69ae0247dc1671ff38e76f60fad06cd5706"
+  },
+  {
+    "path": "src/qa-video.js",
+    "sha256": "409bbd561ee0f45928da95d418a4dbe730a5b2ac9225a873a604058afb613182"
+  },
+  {
+    "path": "src/review-filter.js",
+    "sha256": "fd1d1b0d03a7231512226a0157888bded56798a51b90eb0414798c0cb3e87f7b"
+  },
+  {
+    "path": "src/review-packet-utils.js",
+    "sha256": "3fda4372eb70cbaa98f1763317b3146e3d77d37c2de1f8383cb8cd927ea534a1"
+  },
+  {
+    "path": "src/review-packet-view.js",
+    "sha256": "7e79247810d3a534e580e1c7b8475f675f558c614da9167da96cf98392c40b93"
+  },
+  {
+    "path": "src/review-packets.js",
+    "sha256": "c5701e4cda82993d79e6a1ca932a0dc266dd676628a33422a063455f1f688434"
+  },
+  {
+    "path": "src/reviews.js",
+    "sha256": "a9459bc88947eb1d40f1b8ea44394210bc0e5d9223c98e45d90574100e5322c1"
+  },
+  {
+    "path": "src/roofing-critical-css.js",
+    "sha256": "651bc19c239480b2f08ac427915d7544aab170665513dc8d34f06c278202cca1"
+  },
+  {
+    "path": "src/roofing-cta.js",
+    "sha256": "b8876a08cf2613cd1895c2bfc3f30cc36da945fe172116377a2281523581614c"
+  },
+  {
+    "path": "src/roofing-next-steps.js",
+    "sha256": "7aca496ba7db3b2bffd582099603aa114fd5382b4e7c552cf4086deb014608eb"
+  },
+  {
+    "path": "src/roofing-performance.js",
+    "sha256": "ce4d612e92acd0c14d713ebe56d09b260bbf9a3aff783e996bde9e98f583ae3d"
+  },
+  {
+    "path": "src/roofing-story.js",
+    "sha256": "17f235d984680a14e4e8a9013fb60a5221a5a0701e3297af6ce241ec1677b7c0"
+  },
+  {
+    "path": "src/sales-flow.js",
+    "sha256": "a4fdd79b884115f6825831dd069ff67acb3ebb7bedab8a648a8ca6708da4c68e"
+  },
+  {
+    "path": "src/sample-story.js",
+    "sha256": "284ec69dcadb46bf3b556b2b83749d786994e69a52d88709e03eec8587749ff0"
+  },
+  {
+    "path": "src/saved-designs.js",
+    "sha256": "0b2813858c83b948e1352c32a5b3d79b565dbf65037324819c25f4219b979012"
+  },
+  {
+    "path": "src/scroll-config.js",
+    "sha256": "0429ad83a1e27de899208dfa9d4cbc98e6d753eec7b93fafaa69caa9972fe19c"
+  },
+  {
+    "path": "src/scroll-story.js",
+    "sha256": "954756bf7c4c7de58adf79737d55eb2806be22ae56e149c79466a77ed6b22838"
+  },
+  {
+    "path": "src/section-choices.js",
+    "sha256": "d22052aced29653128a2a4a19f7d2217d00da7d7a3976bad3960086e50133a43"
+  },
+  {
+    "path": "src/section-variants.js",
+    "sha256": "8d2e959368f4e6fa1f907120107a3943aa802cfb01dd9858e7dc6ae8e5e0bd40"
+  },
+  {
+    "path": "src/service-backfill.js",
+    "sha256": "606d7f1ef9b7e8b4a0dbbb29e77644f18f40e474db9a75cc329527cd2269aa01"
+  },
+  {
+    "path": "src/service-content.js",
+    "sha256": "b68da1839c744a42f9313d2df9d0c8b247e5ab340a55a5f4072fc9efa6d5e31a"
+  },
+  {
+    "path": "src/service-conversion.js",
+    "sha256": "52d274796330c3335c8aedbd65af8d3bfb443e655552dc33647d9acca45960db"
+  },
+  {
+    "path": "src/service-detail.js",
+    "sha256": "0f3e8b10aa3b20e593a1808b3dbb138f0ef159d4bce7b6aab3fff596d3cdf8b5"
+  },
+  {
+    "path": "src/service-financing.js",
+    "sha256": "b6803ed7b860b0418442ea303e331d03b7469943feb634ee959b3b8d7a011a18"
+  },
+  {
+    "path": "src/service-registry.js",
+    "sha256": "e6adb65c05dd4beb989103644e05e88d314207933f9dc33063c2a3404640b1b2"
+  },
+  {
+    "path": "src/service-showpiece.js",
+    "sha256": "c94a98d4060415dd9c4bb8c0f5cd6d529d8ebdbff037bd5aa02deeaa9df42ba1"
+  },
+  {
+    "path": "src/showcase.js",
+    "sha256": "16f1c3ed13a86daac619a428364be54d7eeb2dc09f76e8bc5de6eebc46293a95"
+  },
+  {
+    "path": "src/site-polish.js",
+    "sha256": "7ce236cdd31774deef4e9debc36a203a6879d304d92ac210e1fd9557453ec8a0"
+  },
+  {
+    "path": "src/site-style-render.js",
+    "sha256": "22bb3ec6ea536513473ad03d15c9be8bd234db927f652b74bfab11408f3325f8"
+  },
+  {
+    "path": "src/social-icons.js",
+    "sha256": "da9b736db6eed2562aef9410209a17673319d6747df0e7574e58e625ce78d9b8"
+  },
+  {
+    "path": "src/trade-components.js",
+    "sha256": "cb25aa8786b865a1292061a260459ac735e24cfc22497b83a0e78ee68036cf70"
+  },
+  {
+    "path": "src/trade-motion-config.js",
+    "sha256": "366e5e7aea7b609514479519c54c6d79ce85b83774f12a26627b38470898fed7"
+  },
+  {
+    "path": "src/trade-motion-v2.js",
+    "sha256": "fc6ada10310b366051fad38a59f5453b9f5d68f05ee6107d43b868305bd66564"
+  },
+  {
+    "path": "src/trade-motion.js",
+    "sha256": "b6088c6be73606635ca58f24668ac13cdfa1f05918b297d9d39ddb1d8e82d69a"
+  },
+  {
+    "path": "src/trade-visuals.js",
+    "sha256": "cf9cc06e49f0701500b6a9f06d436dd79563e4ce467344b1c82db2271670a6ab"
+  },
+  {
+    "path": "src/trust.js",
+    "sha256": "ac7a32ddb4c3b70af95a38c3637bd6aa6cfa6c6019f63e433047f6eeeebf3e22"
+  },
+  {
+    "path": "src/uniqueness.js",
+    "sha256": "ce5f326401713303adeb0b924e9e215b79b88110272b9145d5e05ea5108e8226"
+  },
+  {
+    "path": "src/views.js",
+    "sha256": "7c347b793de93f5d6eb75a35e0337fd385496623616cdafce75b5d87aa405e55"
+  },
+  {
+    "path": "src/website-pages.js",
+    "sha256": "075713b9b73c769be27faa25bab240d27b7ceb24414d13d6c55918149c66f330"
+  },
+  {
+    "path": "src/worker.js",
+    "sha256": "98d8df9575ee534c6cd52b5813ee673342528b631aee747e0e8941f8fb64f5ac"
+  },
+  {
+    "path": "src/workspace.js",
+    "sha256": "0c1d91d6942bfd4d542ff347dfd3e752d379f1c512c1d43bc8daa0e1d5dad3c8"
+  },
+  {
+    "path": "src/zoom.js",
+    "sha256": "2c590db66b00cff56095dea58cf6281f4b4554b5b3e227589e857c3a0bdc7aaa"
+  },
+  {
+    "path": "public/about-trust.css",
+    "sha256": "c840be42166ae5b89e2c3e8ec2dd7fdd6ea1d94b918ad13117527e69105686a8"
+  },
+  {
+    "path": "public/about-trust.js",
+    "sha256": "e45a805419de26ad6de8ebe0769910e515aa035a80a81e947d276fd1cad9bddf"
+  },
+  {
+    "path": "public/auth.css",
+    "sha256": "f31eaf305dde8a89e1c048b27af39ab7a8e7c309dbfec54a8475d87301671d43"
+  },
+  {
+    "path": "public/blog.css",
+    "sha256": "f66871132dc56ca31b4302d1eec69e7878095193a52c92b9cfaa1ddca546e08b"
+  },
+  {
+    "path": "public/blog.js",
+    "sha256": "79324e2c68770afcf88d65ae353e69d5e5e1e04010d1ea295b899f25f0a4d43e"
+  },
+  {
+    "path": "public/cinematic-enhancements.css",
+    "sha256": "dbf87b0894ee0615163da811ceebfb0bcfe26be6304981f6d721edc1c5623b2c"
+  },
+  {
+    "path": "public/cinematic.css",
+    "sha256": "05ef100250a28b2b3e62b359405b606592ab11e3c95efe464148dea7fbd74bf0"
+  },
+  {
+    "path": "public/constitution.css",
+    "sha256": "81fa4cb7419f9fcb51ecff8e70d884eba904d2040238b77d6461f496b68b6e12"
+  },
+  {
+    "path": "public/control-ui.js",
+    "sha256": "e0b0e35ad3903e65434d1599b19021ad587303119478ab7df1f7ea7810fb004a"
+  },
+  {
+    "path": "public/conversion.css",
+    "sha256": "ecf2fb3b5945139f31af0cef69dc1a8a5cc2e168c8eefe5c318fc7947dfe9041"
+  },
+  {
+    "path": "public/core-site-pages.css",
+    "sha256": "b1edbaee8ff213f3c202474522967fe7ae6b6a0a26e1bdb355c797261aa523f0"
+  },
+  {
+    "path": "public/craft-story.css",
+    "sha256": "4c6e43d56ecb278570fcfff2eb3cceaa7b48816ba5378000b01e7891fd4e3ff8"
+  },
+  {
+    "path": "public/crm-enhancements.js",
+    "sha256": "8de590ac1edd3abbb6a8a054363430f6a7e5964c07a0185d5cbda314d9c5e7af"
+  },
+  {
+    "path": "public/cutaway.css",
+    "sha256": "666b3933f149822d6739c2d39f90f67ad35af584d25c2b335279b59fd401eee5"
+  },
+  {
+    "path": "public/cutaways.json",
+    "sha256": "5d29628cd2a9ba21f9d9aa9f0c7d4557634b95698ef1c44b710f7a29f14cf4c1"
+  },
+  {
+    "path": "public/design-kits.json",
+    "sha256": "f24f90d515adb61eb5af57c2f934271dff94d4a09f4ad2ea112d662cffda097b"
+  },
+  {
+    "path": "public/design-personality.js",
+    "sha256": "c13abcffccebbae1c59faf497bf40ee97452bcb975d3bd09bca5c848e292874d"
+  },
+  {
+    "path": "public/design-preview-pages.css",
+    "sha256": "0cc794446ce7d3def07a1d5e249de3665ecf255acd1d4e6077cecbc57a42778a"
+  },
+  {
+    "path": "public/design-recipes.json",
+    "sha256": "12ecb2cfca223c776d3cbe5da7bddd8b31bf93d02ca7ddc0c10895ff045c9cec"
+  },
+  {
+    "path": "public/design-studio.css",
+    "sha256": "70ab7a3a535599215654cdf6d252f8473cb7f3c97e0979e16f3b0ecaa5698cb5"
+  },
+  {
+    "path": "public/design-variants.css",
+    "sha256": "ea63f5cf6e406f2bc3dfb2cf929227fbe4ec20451339ea65027a42e2f66c9f6a"
+  },
+  {
+    "path": "public/ebook.css",
+    "sha256": "1c2c87279fbf5ff561e5352f99d9a3e53e75518fd54f751fdc4fd4fb5dc0980c"
+  },
+  {
+    "path": "public/ebook.js",
+    "sha256": "56f469ae4e90132788dbc2e6a57f814cc673bcbc647fba392393676a7fff358f"
+  },
+  {
+    "path": "public/engagement-ui.js",
+    "sha256": "bbe0e3dd6cef1039148bbf14adbe74fd610f21b65682d8c06a01455049ee1cbc"
+  },
+  {
+    "path": "public/engagement.css",
+    "sha256": "f164633770919dba7f9d23faeb7667a4899e3aa77c76b0c3fe2a76aaa0f64df6"
+  },
+  {
+    "path": "public/expenses-admin.css",
+    "sha256": "e382fd3b51d7b7be51d5e1f95942dc6699203d8d41830899c88ac1d04497af5a"
+  },
+  {
+    "path": "public/faq-content.json",
+    "sha256": "3cf3c13dd9e4fd62b51fb3f2ae9812e52f996fec729728c7fa854ca31e474cf6"
+  },
+  {
+    "path": "public/flow.css",
+    "sha256": "cd4ef90fe4725bfd0165d50a63e4f67450c384b2d624205b1938db13cbbd85d2"
+  },
+  {
+    "path": "public/generated-site.css",
+    "sha256": "a8f0576a0474fec93897709dd534a9ee24ef75508b61cddda8ba04641101798b"
+  },
+  {
+    "path": "public/hero-contact.css",
+    "sha256": "4e7dbfc823fcf12ddb6f3dcdc2340f7e07f2e027396ee727f32dd21e0a232508"
+  },
+  {
+    "path": "public/hero-timelapse.css",
+    "sha256": "919bcdd12848e56092e692731d9eed1f5efcdd9f0aa183ed60ff297c29261b71"
+  },
+  {
+    "path": "public/hero-timelapse.js",
+    "sha256": "c60b7f94bccdea70f1562ef705eb4e1db92ba292246133c4b0db80d2757773d5"
+  },
+  {
+    "path": "public/homeowner-polish.css",
+    "sha256": "d55aac1442dfc2a17eebf204c58baeb27abab881ed384cf9e8dd7bc651c904dc"
+  },
+  {
+    "path": "public/homeowner-polish.js",
+    "sha256": "98182ddcb087441dfa972b321849fd881b5fd26f71458a29ba48de486861d8bb"
+  },
+  {
+    "path": "public/media-library.css",
+    "sha256": "4e4a9ef112d84ae90cb335e07954e083826a969da32598bd311fa61b4798d16c"
+  },
+  {
+    "path": "public/media-library.js",
+    "sha256": "a83fd7c785a913fce4e3fdc112d6d4365daf2aefa91e65ec82cc87d8106cc640"
+  },
+  {
+    "path": "public/neighborhood.css",
+    "sha256": "2a86abe21d24eda820c788ec2726f7a18182eeee0655bd247558a16a66eaf041"
+  },
+  {
+    "path": "public/owner-photo.css",
+    "sha256": "76fa88ddd3a2504ee5d07f139f863da037d5f240b9975262d3c13316b59eb129"
+  },
+  {
+    "path": "public/phone-format.js",
+    "sha256": "d38e5a6134d60da76d95b819428efe1fd8e1e0dd0d6f61a23e240e2fc0222a0c"
+  },
+  {
+    "path": "public/planning-ambient.css",
+    "sha256": "5066d20afeae8ee84b7eb3c18f74bdd674661de2f1bcbe1c67cde5334bb1805a"
+  },
+  {
+    "path": "public/planning-films.json",
+    "sha256": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145"
+  },
+  {
+    "path": "public/planning-scroll.css",
+    "sha256": "35c1a5d79e1bb576e1eb521d8a5c9d22c0e804ce7e4345f9d58df9ad1e3d3597"
+  },
+  {
+    "path": "public/portfolio-common.css",
+    "sha256": "7d03a8b442fb5af8a493294d269acc78a790f405505e872efc8cc09aed624f3d"
+  },
+  {
+    "path": "public/portfolio-theme.css",
+    "sha256": "8c49f39af21fd38f2aa34af9cc2ca0c2f7ea1fa2a2820591d47b2ceb6470398c"
+  },
+  {
+    "path": "public/pricing-films.json",
+    "sha256": "fb05d42a5577e1d9944966744d3d1c075af44b1887ebd90475e472d1ea3dde36"
+  },
+  {
+    "path": "public/pricing.css",
+    "sha256": "c7f1452a790d06300c320d84b99dd58ac3acd556b221ffe0e42e4b9f850596ef"
+  },
+  {
+    "path": "public/pricing.js",
+    "sha256": "4e320f6ffdeba3a05e65c342000dde326861f254d52a353eda02a15ef4650b6a"
+  },
+  {
+    "path": "public/project-story.css",
+    "sha256": "6acee8f1f88eb2c34fd98f840398e317aea1b3af1a1395d4c3aeaae169c25cbd"
+  },
+  {
+    "path": "public/project-story.js",
+    "sha256": "ade250c980c0c064b2982b4d243f5a148cbf62d12639f47987b01bc47c4fec19"
+  },
+  {
+    "path": "public/promotions-planning.css",
+    "sha256": "b8efd56974a298a9a46b639060d1add1fc1fa0614b44783dee2f37eca7c6acbf"
+  },
+  {
+    "path": "public/review-marquee.js",
+    "sha256": "6f4ab20681af58d7cd9ffa0cccdd1e0cbea10136615bce33c54a629bc6da0a6a"
+  },
+  {
+    "path": "public/review-packets.css",
+    "sha256": "762b9704272d661776e64b94eea46f34a55596d856cb19f5db3d118ee4aa1d4c"
+  },
+  {
+    "path": "public/review-packets.js",
+    "sha256": "e8a5b39db9fbbd70e822b12ffaa5965552c231eff49be96f7ec152c40250104c"
+  },
+  {
+    "path": "public/review-qa-polish.css",
+    "sha256": "d2fe6575bbd49f0e31daf4b7c33ee7ad62c21095e54b7ad1c72078202d2b3a29"
+  },
+  {
+    "path": "public/review-qa.css",
+    "sha256": "b39afebae86452d1f410119fffd26e8795f60938e04f814363805d6f4e24ff7a"
+  },
+  {
+    "path": "public/reviews.css",
+    "sha256": "ab887c5626ccfe1e65a30ffa988756dda16f3c4ef34389eda8c7cc444f62932b"
+  },
+  {
+    "path": "public/reviews.js",
+    "sha256": "8108c793a57173bab077cc6215da834036b1996875d01311dae288a695adda7a"
+  },
+  {
+    "path": "public/roofing-city.css",
+    "sha256": "91eeb05b46668c0a7a326908696a98dd44c5e744e4a3ceffa131b4c250216b98"
+  },
+  {
+    "path": "public/roofing-city.js",
+    "sha256": "510d19d8c00edb69231f6b556bf70c78af14ce8b6377fe35dcd8cff8ec48c42c"
+  },
+  {
+    "path": "public/scroll-story.css",
+    "sha256": "e3693487dbd68fc9a1c23d009275a6093bf388ce62ab13a75538dbe68964c3dd"
+  },
+  {
+    "path": "public/scroll-story.js",
+    "sha256": "3a1dea09c770bad4ca482ee52e05439994386de1bd5f4f2e3d67786cb33ff815"
+  },
+  {
+    "path": "public/section-variants.css",
+    "sha256": "c495b08b18a3e781dfacd4bf969d1fc4d36017212cd6b0151abb9f7ca201f132"
+  },
+  {
+    "path": "public/service-art.json",
+    "sha256": "6a56b3c2662a244c22416e68f8fc6d2d82da46c2869a7cefafc462b087ec19b5"
+  },
+  {
+    "path": "public/service-content.json",
+    "sha256": "6bc89d3a97823a3157366a988f211d1f2f3b57171db40e4b57ce06977159679c"
+  },
+  {
+    "path": "public/service-copy.json",
+    "sha256": "e21050d498519e477e58102fc5271606852c7e153301cd5f542550ab2c110c4f"
+  },
+  {
+    "path": "public/service-detail.css",
+    "sha256": "ebb8104288dfbfe3dc035ace1a16a9129ef84aa2893bde9156d5d81a10dc36e8"
+  },
+  {
+    "path": "public/service-media.json",
+    "sha256": "5b0ba4c6606e2313a4451884aab304939dadc6d0e41102dd7c0375bb52f4fd92"
+  },
+  {
+    "path": "public/service-motion.css",
+    "sha256": "5ae54fb411b16ef1b0ad644c4ad6a6cf8fe98fd1dea3f2275178d9ff659e8548"
+  },
+  {
+    "path": "public/service-showpiece.js",
+    "sha256": "a8462c6dc31787921dc9faebcf4dcc35c0a2fbdd1888dd9705efb3de455eba84"
+  },
+  {
+    "path": "public/showcase.css",
+    "sha256": "a2c0426c92e1f46356a7e8a3d4e6deeb029f7d1ce319f522c68b1021151b264a"
+  },
+  {
+    "path": "public/showpiece-financing.css",
+    "sha256": "fb85e4230f885759fec8dccbea5f061db11947c644cb0d2a31b23499d7107fc3"
+  },
+  {
+    "path": "public/site-navigation-init.js",
+    "sha256": "31277ce69ee532b653a9eb33100a819fd4b931cd88e56210b3d1e0573f96d8b2"
+  },
+  {
+    "path": "public/site-navigation.js",
+    "sha256": "2f11fd4adea9ba4013e11d40ec2c7fd5ed41a6a6187bdbf781f30c5f033b9f4a"
+  },
+  {
+    "path": "public/site-polish.css",
+    "sha256": "d0887cfa4685166f1e3980c1d5d5c0552a3370f996af8dded9405da7623138be"
+  },
+  {
+    "path": "public/site-styles.css",
+    "sha256": "166ac3bd1a60723a5abf43b215d31a872f421b807491d0f110f8fa90c90b0b92"
+  },
+  {
+    "path": "public/site.css",
+    "sha256": "e1eb28ac71d1212d2692521b26a5f156e89a095a8b2f44adfee5c9df6ad15369"
+  },
+  {
+    "path": "public/thank-you.js",
+    "sha256": "c4e3a5ffe3e6805cddf07bcb6a91830e927e95080325053fae2e715508b8a47e"
+  },
+  {
+    "path": "public/trade-art.json",
+    "sha256": "97796375d8522847161dc012622834757112466bfa4568f49e58b73d8d41f8f7"
+  },
+  {
+    "path": "public/trade-backgrounds.css",
+    "sha256": "3f7c1bba7a16576d7f6f9ada1110eb08bfc7e20f3b4d9469e8d17c042cc30b8b"
+  },
+  {
+    "path": "public/trade-build-films.json",
+    "sha256": "f2059d1d470bed446986b521ea16fb0cdb0a9956028a85a532f05044e8e07356"
+  },
+  {
+    "path": "public/trade-components.css",
+    "sha256": "308f7b21b6b7a55af7f2258affebc3c39984651911efd35d5cf1fb7a00fe272d"
+  },
+  {
+    "path": "public/trade-craft-films.json",
+    "sha256": "c22662ee52157d85b8af2a49a3b3fa225bb61425a69324cdd78e50e7544f017e"
+  },
+  {
+    "path": "public/trade-films.json",
+    "sha256": "9ec2979a83138040687ee2b9142213b400db20411169d25a1c366781dde43dfb"
+  },
+  {
+    "path": "public/trade-library.json",
+    "sha256": "5dfe0f7f114449f812f92552b59d5c49e48c79f0b02d87b699587197f06b93de"
+  },
+  {
+    "path": "public/trade-media-library.json",
+    "sha256": "eba006ecd18141c45e62e2f732dbddf7a355db7d1c36c82b27ee95ec224d9da5"
+  },
+  {
+    "path": "public/trade-motion-v2-interactions.js",
+    "sha256": "cbffd6bea8eb36dc944c160e7d94d5bfd586fd707d260bcd9d0654531c585d9e"
+  },
+  {
+    "path": "public/trade-motion-v2.css",
+    "sha256": "a8c239c95774c9a4fd2f08f81480015fab9e4b13d70a45a5a41198bcf3cd1bc2"
+  },
+  {
+    "path": "public/trade-motion-v2.js",
+    "sha256": "63d10492c908cbf991f6be49ff2d7dd17bf1a55435bedd963766bb11f1eb9f7d"
+  },
+  {
+    "path": "public/trade-motion.css",
+    "sha256": "9e4335b418b33571f5792796a4760fe9c82aa0e687890e42265142983212b25d"
+  },
+  {
+    "path": "public/trade-motion.js",
+    "sha256": "d78d3e1ee5b4384ddd50879e95be1e10eda90613e78268427c796ba4d58e90cf"
+  },
+  {
+    "path": "public/trade-page.css",
+    "sha256": "6c290ec9b1ef7cbfd03dc62ca584cf794d1104f9e42b8fba67a4a80e9690a932"
+  },
+  {
+    "path": "public/trade-page.js",
+    "sha256": "b41122aec2ebe7da3e1a9aab62736e16c6c9b5010efd29376f6ce19c09378624"
+  },
+  {
+    "path": "public/trade-revisions.css",
+    "sha256": "190b870803f4d9bf85e42b6009c59ffc132b863283eff837efac0e177632de58"
+  },
+  {
+    "path": "public/trade-revisions.js",
+    "sha256": "98772616db14365eee5dc3823f75f01301ac5ce1f1bf1ccb531144ab73473a0e"
+  },
+  {
+    "path": "public/trust.css",
+    "sha256": "d64bca103b4a7b76ba9c0d3c5d819ba16a0605d67a36f1971dd7c4b99aaa0d67"
+  },
+  {
+    "path": "public/trust.js",
+    "sha256": "242022307a52fa2dc395749f1848bb37ae0746ae0bd8a60a9fe0f5230860ae32"
+  },
+  {
+    "path": "public/visitor-chat.js",
+    "sha256": "3a52fa22e97e303d95ddffdc54ac4f5fa0448bf16d0248caf51b0dfc6eca5f90"
+  },
+  {
+    "path": "public/website-pages.css",
+    "sha256": "93610145e5d2e18724ac530dc5da7357eadeec9593b6df7668fa4c540a1df58d"
+  },
+  {
+    "path": "public/workspace-public.js",
+    "sha256": "e2befd1a35691457aa0331ca27ee44035eff3fede29e5f89ec1cbbe46c27e498"
+  },
+  {
+    "path": "tests/auth-session.mjs",
+    "sha256": "e440581ef66cfabf6540a23d480758f0b4cc4617b55ffc999f6447ae237c1be5"
+  },
+  {
+    "path": "tests/automatic-qa-blog-phone-links.mjs",
+    "sha256": "e6bf37f1e76382654c3e7b3869b0fe3371d3ee2b52ed7b26eec3fa01d92d7ee5"
+  },
+  {
+    "path": "tests/automatic-qa-brand-recognition.mjs",
+    "sha256": "0dcaab3cb3690904da52dc145bf39bab7b44c84ef394152785527fd5372d8498"
+  },
+  {
+    "path": "tests/automatic-qa-camarillo-consent.mjs",
+    "sha256": "012ee8bda9bc69373ac041e6ba4a7dd25f4c99cf1b7d9ba6cd69c986ab2568a3"
+  },
+  {
+    "path": "tests/automatic-qa-capture-diagnostics.mjs",
+    "sha256": "314cafb25ca2890584a8b48d058b6306f4b445f9329fb568c4ec1986673a4646"
+  },
+  {
+    "path": "tests/automatic-qa-capture-readiness.mjs",
+    "sha256": "9bc23c527bd096d7b5afd1232bca0bc1b35240d9a500a18448c05cab031d97e5"
+  },
+  {
+    "path": "tests/automatic-qa-contract.mjs",
+    "sha256": "7e28b115bb4c81bc740bf195a7982f76525d2c056bad760f502b31daae2a8566"
+  },
+  {
+    "path": "tests/automatic-qa-craft-recognition.mjs",
+    "sha256": "b59be3095bf0ff7494964ebfff93936276e526c7454732429e8a8ac8527e06fd"
+  },
+  {
+    "path": "tests/automatic-qa-finance-cards.mjs",
+    "sha256": "81259f0951fba674dc5e1d75fc6a56caaad8f51cb088130e33507d3d30309cf8"
+  },
+  {
+    "path": "tests/automatic-qa-frame-initialization.mjs",
+    "sha256": "21edf468c063308e55e6459f03637971ad11bc6be099b5d8788c3140642f56a0"
+  },
+  {
+    "path": "tests/automatic-qa-frame-sample-replay.mjs",
+    "sha256": "3adc8d609f3ba2ae15a722405814d6e2520d2e46dd3cc69e772e47aa427a861b"
+  },
+  {
+    "path": "tests/automatic-qa-frame-source-lock.mjs",
+    "sha256": "dafe81c33eba3c223bca3f21217bbab11dde287dbacd5231455fe6df78498888"
+  },
+  {
+    "path": "tests/automatic-qa-guide-browser.mjs",
+    "sha256": "d75f9012d2f457d936f43f34ab6cc31e7ac6a94bcd4283e2d9de50e4814f932a"
+  },
+  {
+    "path": "tests/automatic-qa-legacy-recognition.mjs",
+    "sha256": "5c75beff358e1e1bdc84ced264fd11a8ae50af5cb03ec31bcb4ef66b56afb8bf"
+  },
+  {
+    "path": "tests/automatic-qa-legal-policy-recognition.mjs",
+    "sha256": "fe5ff308a6a2eb14ccfd496acacefe472098075b071bcaf8d5b38d3dea8f473a"
+  },
+  {
+    "path": "tests/automatic-qa-negative-browser.mjs",
+    "sha256": "4598b6850833756ff28efdc02ebe8ce51bd7b2ddfc50bd486d274c072f3a8808"
+  },
+  {
+    "path": "tests/automatic-qa-normalizer.mjs",
+    "sha256": "4178a8b81e26fc86e70780a4867f51c8aea4544065bc187cf604ae3077427779"
+  },
+  {
+    "path": "tests/automatic-qa-packets.mjs",
+    "sha256": "36f58d0a82fdaf815de1cd18ba12eba57a7f64ee29acdb83d274ce647752f1ae"
+  },
+  {
+    "path": "tests/automatic-qa-page-action-colors.mjs",
+    "sha256": "0fe0d98a7ad1752bc967bab8b37e07fe4c70e6249da48703405464624990bbdc"
+  },
+  {
+    "path": "tests/automatic-qa-polish-browser.mjs",
+    "sha256": "7c9c7351af73c651e3182fa9cc97e0644f248bc305bf3e99263b7ead21dc5195"
+  },
+  {
+    "path": "tests/automatic-qa-project-media.mjs",
+    "sha256": "dc1b7d57abbca6984258e980665ff06fb23cfba825f9f86aaca41fbd957cb081"
+  },
+  {
+    "path": "tests/automatic-qa-project-recognition.mjs",
+    "sha256": "b476ae97ba7bbe716faf5f2fabf5674769b6471ee02f143b0e0732da68f632b6"
+  },
+  {
+    "path": "tests/automatic-qa-rail-colors.mjs",
+    "sha256": "e20e56c52f929346e15003c88ee714e9b00211b8f4d30cfb3d04431964ecce22"
+  },
+  {
+    "path": "tests/automatic-qa-recognition-lock.mjs",
+    "sha256": "5cc6cf6296b6123aeb94f30386eadaa5a69ec644dc557d9160cfca43b1e4b940"
+  },
+  {
+    "path": "tests/automatic-qa-replay-diagnostics.mjs",
+    "sha256": "e15ab874c6f6343dcc9177323544d5bdaa96649c887858188576f93e072a8c06"
+  },
+  {
+    "path": "tests/automatic-qa-replay.mjs",
+    "sha256": "b06cb0266b73a20c2dd4709ec566563126027423065c68c204a74834ba0bdafe"
+  },
+  {
+    "path": "tests/automatic-qa-staff-browser.mjs",
+    "sha256": "4b4ade7424eed81d38d892c616085c2e85a253c630f97c6441cec6baf79f425f"
+  },
+  {
+    "path": "tests/automatic-qa-status-recognition.mjs",
+    "sha256": "c7bb1581e8173bb4b2fb5d02675479476b519401e15d74d52a9c8a28c08f7d81"
+  },
+  {
+    "path": "tests/automatic-qa-thousand-oaks-consent.mjs",
+    "sha256": "5203c4e13ed0d3d6e9834ca390f7648928ccd1a27f21b3dc728025eb341d4b57"
+  },
+  {
+    "path": "tests/automatic-qa-unused-preload.mjs",
+    "sha256": "96ed3800b335884f9753fd1aa0d51c659365ee22c752b4c9988200b84e41e9be"
+  },
+  {
+    "path": "tests/automatic-qa-workspace-form-recognition.mjs",
+    "sha256": "303e55e6e53953e210a700b68663f7c4613fe7c61bc42d278742a98b906d7d2f"
+  },
+  {
+    "path": "tests/automatic-qa-workspace-phone-links.mjs",
+    "sha256": "a799264b539980750af491312b55e8be1123052137f88327dd6696e25463be08"
+  },
+  {
+    "path": "tests/automatic-qa-workspace-recognition.mjs",
+    "sha256": "b8333950dab28659a72c7a79bfcf046a8fafea1f0ac28fcede8a42563527a401"
+  },
+  {
+    "path": "tests/aws-adapter.mjs",
+    "sha256": "82acbc48db16569ffce6e3ccc229e4e1584f1ad9440235b9321c8c7641a5e9b2"
+  },
+  {
+    "path": "tests/builder.mjs",
+    "sha256": "45c8ce62b4ee6543bff3ec389172289c81f232782b946a6b5b4f92bc9141f516"
+  },
+  {
+    "path": "tests/callback-browser.mjs",
+    "sha256": "a304b16e52056a3c36a22b1dc556bc5d4495be42c0d431f91a3159110d1f8c9e"
+  },
+  {
+    "path": "tests/callback-restore.mjs",
+    "sha256": "b4dad268e488699537637da67a9916234d23dfb4ad2cda7674345debd9b79cb1"
+  },
+  {
+    "path": "tests/cinematic-films.mjs",
+    "sha256": "0836cfe1954073d24939f36f09dd40b939a887ac8e974309e31931fc72a9b5c2"
+  },
+  {
+    "path": "tests/client-modules.mjs",
+    "sha256": "19dcde21ab59826029516d3f9c15e34366bc7b6eeefb0f23ef00d79c7f2cbd92"
+  },
+  {
+    "path": "tests/clips-phase2-browser.mjs",
+    "sha256": "70951dc02cd4c08157abec58c1936c95db1dec901624dfc340775575240f0d38"
+  },
+  {
+    "path": "tests/clips-phase2.mjs",
+    "sha256": "69323adf545899d1734293972222be287fffba331d05ca5219185a918b152c73"
+  },
+  {
+    "path": "tests/constitution.mjs",
+    "sha256": "8be695cf4b3ae44c91abac44ae720c7b135b2b6d496b83dc2cffaf4f814b60ed"
+  },
+  {
+    "path": "tests/contact-linkage-browser.mjs",
+    "sha256": "fe367565661da52c01348d79ec96ae1d1473451ec780513435110c126585edb4"
+  },
+  {
+    "path": "tests/contact-linkage.mjs",
+    "sha256": "3869c16b281eed8e0889a584b59a86c188d49e083406dca44504125a42a323cb"
+  },
+  {
+    "path": "tests/contacts-browser.mjs",
+    "sha256": "d6d682a7d21abec2c61c8c7bd52b6eca0843a7dd29d77b43d870d36ac9c19c4e"
+  },
+  {
+    "path": "tests/contacts-restore.mjs",
+    "sha256": "665e7f547d62fe2af3605ede064cd001cbd77dabf055dc75a325ed53e934f67e"
+  },
+  {
+    "path": "tests/control.mjs",
+    "sha256": "72a94fff6e67e37c57123f0dd788362b09f8c5beae9896a20f4ec77cfff5e8d9"
+  },
+  {
+    "path": "tests/conversion-references.mjs",
+    "sha256": "9b642ad42f2dd980349bb85c83f4fdfe033c09a45d343d0a0b195f04de771629"
+  },
+  {
+    "path": "tests/coordinator-hang-guard.mjs",
+    "sha256": "58b6547e1e15e1afc740fd04d3645f38c5635c747b268c1ba946a647751e51d0"
+  },
+  {
+    "path": "tests/core-site-pages.mjs",
+    "sha256": "172e631870984c7f4d92d07ce6ca8037b4f18b6dc6f4da55198ee0d3a02a658a"
+  },
+  {
+    "path": "tests/crm-next.mjs",
+    "sha256": "80a354fe432f4fa106b7ded84407823f311dc4a7a61b118122ee7560b49a6294"
+  },
+  {
+    "path": "tests/crm.mjs",
+    "sha256": "1fa5e9ee5469012a472b7e5b63c2cb97ab229819dce4fbab46dc9fc537d208bb"
+  },
+  {
+    "path": "tests/design-kits.mjs",
+    "sha256": "317c6b10cdfaefdd3ba76620127cc21ea5d9afc120843cbb0f3431c40916a2c1"
+  },
+  {
+    "path": "tests/design-styles-browser.mjs",
+    "sha256": "b2a8859c14b683bc06eac2d1941bd6198a94f4dd69002e83c1e4dec2b3dbfbee"
+  },
+  {
+    "path": "tests/design-styles.mjs",
+    "sha256": "0d670f2dcb2b3c9b4e7f0a408a4340b6541413ee05636d66f45b0c6614cb17e0"
+  },
+  {
+    "path": "tests/ebook-browser.mjs",
+    "sha256": "4622e1aff38d0f64b3184665d8d53494125b492a6fc7f39ed7c142b02ac90189"
+  },
+  {
+    "path": "tests/ebook.mjs",
+    "sha256": "b49404f2d92f46d773701c6ae3115e410a69953fd75a879fe8f882b0a7343468"
+  },
+  {
+    "path": "tests/engagement-providers.mjs",
+    "sha256": "d6383f5929f0f72cd920c488a44cb343c78c05b4b44e97f633ca8ef44711e707"
+  },
+  {
+    "path": "tests/engagement.mjs",
+    "sha256": "45bfab300a69a38761fdff91d312f34ecda4fa81e25df2b3a37d1e4f803a1c2e"
+  },
+  {
+    "path": "tests/expense-metering.mjs",
+    "sha256": "660ef117004b989c051bb9f671c2ae2b75c1f1d67ea0fa8892c7d124aab12d09"
+  },
+  {
+    "path": "tests/expense-polish-browser.mjs",
+    "sha256": "1fdc03919826e94fff916d90d8edc222963c031d7b646b2d2eae03d1f323cff7"
+  },
+  {
+    "path": "tests/expense-polish.mjs",
+    "sha256": "48db9d1af98d087dd75c9fa127174b64c2f8a17f4912aa9db6c058fd09b26c49"
+  },
+  {
+    "path": "tests/expenses-browser.mjs",
+    "sha256": "6e0754608d6dd34f4c2f93ee0c5d2e572d70819130e3d1cdeade4a411ceeeda2"
+  },
+  {
+    "path": "tests/expenses.mjs",
+    "sha256": "3406c24c9a6551ae8ac9817b8aef55f2c99ee7d55e485d3a025f0aaab884ff1e"
+  },
+  {
+    "path": "tests/financing-comparison.mjs",
+    "sha256": "00e3b8a355480a5ae0451438084dadd3d5c341ca5597c5718d327cce8c426ad1"
+  },
+  {
+    "path": "tests/financing-states-browser.mjs",
+    "sha256": "b1c2895c90805c935fae56a48aed4e2d5ed940445d1aaddd83ab315e184f910c"
+  },
+  {
+    "path": "tests/financing-states.mjs",
+    "sha256": "fc244ed9a4411eeb3bf0c6d69328bda171d5d6b1ff0e9aa81d5958501c111625"
+  },
+  {
+    "path": "tests/fixtures/business-trust.mjs",
+    "sha256": "733892f8622dc67ae6529f3f60edb3e289a6404ee2bd8db2db76ae321bb1a30b"
+  },
+  {
+    "path": "tests/fixtures/footer.mjs",
+    "sha256": "75b3b73a5ef025e172273c05f77ca1e73d1ba4c83d22a0d8f3ea5443deacddf4"
+  },
+  {
+    "path": "tests/fixtures/legal-policy.mjs",
+    "sha256": "00e8cea7a6a9a7494bd6dcb690559c9dc737eafd224f34339a050786ee64a3b9"
+  },
+  {
+    "path": "tests/fixtures/media-library.mjs",
+    "sha256": "fc7654195e294c74a40dafcdacf41c959356f0cddc43dffd607ed409b1f11780"
+  },
+  {
+    "path": "tests/fixtures/qa-recognition-entries.json",
+    "sha256": "0a1b3698da9fbee109db4b2fd4299d4a0458d48a3a3c1f65d3883d1be6ef7dff"
+  },
+  {
+    "path": "tests/fixtures/roofing-about.mjs",
+    "sha256": "dff6f72fd42551806ef0c435b1fca1a95af5a4498522b2698b3664133b6ca24d"
+  },
+  {
+    "path": "tests/fixtures/roofing-faq.mjs",
+    "sha256": "0e40b9f552c549e4c0f50a55b9ba6f915d07d0f6f9703164144cae7c9d728e8b"
+  },
+  {
+    "path": "tests/fixtures/roofing-journey.mjs",
+    "sha256": "1f614af70bc06f895d6e8e2b6fd7d2df1326f4310e70c2c972f9700f7dc6abb2"
+  },
+  {
+    "path": "tests/fixtures/roofing-promotions.mjs",
+    "sha256": "d1c761d55755f1cbf8f7d2233801726da5626d34d81260bbf43fbb688f533f34"
+  },
+  {
+    "path": "tests/fixtures/section-variants.mjs",
+    "sha256": "53d555c05eb2b98d9080f8d63d6139822a0b141eaed01c09c63d1d393af31e95"
+  },
+  {
+    "path": "tests/fixtures/trust-sites.mjs",
+    "sha256": "e25a7846983c778391c2056d4878520e82367227eed7b870e97bfe9e6355cc50"
+  },
+  {
+    "path": "tests/fixtures/uniqueness.mjs",
+    "sha256": "86264d3d0843172b11004e6534d2bbaf96cacc9fd6829764ee1d4736d8d0fad3"
+  },
+  {
+    "path": "tests/footer-policy.mjs",
+    "sha256": "cca6004d81c6e4e78bc92674f60d32810b5f01e5bcb05be229fe27b6a7e3f836"
+  },
+  {
+    "path": "tests/generation-browser.mjs",
+    "sha256": "0e85453364c5466c9a86b86892ff3e93ecc9aaa8716198f5a3c5815789bf479b"
+  },
+  {
+    "path": "tests/generation.mjs",
+    "sha256": "b5362e25b2772cc18bace8408de65e27f527cb7f2a3cf891f454c11124fe7e34"
+  },
+  {
+    "path": "tests/header-logo.mjs",
+    "sha256": "fbe28b38a634fc27ad4e74bfb5ec78d283ac11f0f34d54c7e55d6ecf5a42a729"
+  },
+  {
+    "path": "tests/header-nav-fit.mjs",
+    "sha256": "1cfcdcba5b6932633966c291550bd0d26b1013fc8ea3cb1540baadf92a0b682a"
+  },
+  {
+    "path": "tests/helpers/frame-initialization-proof.mjs",
+    "sha256": "a8d5ec9a1c28f02902c8d564cfdd76f287b2b41d163b5f4da30d0ef8a11cd724"
+  },
+  {
+    "path": "tests/helpers/frame-source-lock.mjs",
+    "sha256": "3bfe685daf5b4b391e45a742ebdad1c8a90bdd85017969767a2f109d4368b906"
+  },
+  {
+    "path": "tests/helpers/platform-console.mjs",
+    "sha256": "7dbecda09944a746994aecaa09ce7029a23a1b4b05ca8a73a0966a19de5b86dc"
+  },
+  {
+    "path": "tests/helpers/platform-inspection.mjs",
+    "sha256": "2f65829fce1f4bf05be3c621b3db8aa70acf27d41183c8aff315c0957eff17fb"
+  },
+  {
+    "path": "tests/helpers/qa-source-worker.mjs",
+    "sha256": "585be284da1f88ed1d3f28a5c0448c5e5affc12b4d42c495068ebae17a25d8ae"
+  },
+  {
+    "path": "tests/helpers/replay-alternate-assertions.mjs",
+    "sha256": "548235be2d799b96e5b2b331803350499c9871220e6f014cec276a0f7c392546"
+  },
+  {
+    "path": "tests/helpers/replay-alternate-registry.cjs",
+    "sha256": "c117d44e78e90a123c17d522a362dd72fc0812a707189e0d9e2a1922a61cfdb0"
+  },
+  {
+    "path": "tests/helpers/replay-diagnostics.mjs",
+    "sha256": "76ffc9f706584d04d406431d9d9367af355e3f081b72ae611c82e5404ab4dd91"
+  },
+  {
+    "path": "tests/helpers/replay-request-guard.mjs",
+    "sha256": "754ec6a680a7cbb63628ded788edba12e8d5529c4c2a10b991610e594e11e259"
+  },
+  {
+    "path": "tests/helpers/review-approval-fixture.mjs",
+    "sha256": "e0b8ddf197084ec475bdb721fe1737788d051cc2ea3e864c83b5a170a3af8a98"
+  },
+  {
+    "path": "tests/helpers/review-filter-fixture.mjs",
+    "sha256": "91c5b694e0ca412a34bd796b526fd1ee83b93d42feb2b0c2046f15e6c6f63ce7"
+  },
+  {
+    "path": "tests/helpers/section-patterns.mjs",
+    "sha256": "8feb35f1772ddf3a5817810250ce88b79b34281965ce817cb0edd5a8f7308fad"
+  },
+  {
+    "path": "tests/helpers/style-inspection.mjs",
+    "sha256": "9c2d7419e14fda3969e857b30a6ac06e451fff508b6507a2c7ca70c77876dbb1"
+  },
+  {
+    "path": "tests/hero-editor-browser.mjs",
+    "sha256": "42fd647038f732c5def40be91e8160cc3cd9913bddd49f53df5694c02683b1bb"
+  },
+  {
+    "path": "tests/hero-editor.mjs",
+    "sha256": "38a968135860d2f790f4425f20c0e8ace913e6411539404a9e863fc62eb30505"
+  },
+  {
+    "path": "tests/legacy-scroll-video.mjs",
+    "sha256": "9a3bfc1f98eb212d6233b912a9a3639f7cfcb3b28d36ba74caf0ad7d429011fc"
+  },
+  {
+    "path": "tests/legal-policy.mjs",
+    "sha256": "eec77add37d887332b12bf5829a0c03ee55d582a15e878c93f990f87480d99d4"
+  },
+  {
+    "path": "tests/media-api.mjs",
+    "sha256": "fad70cc955be0b3980073132549a2bc21d6aa3f0a330ae99b754fad3326c9367"
+  },
+  {
+    "path": "tests/media-inventory.mjs",
+    "sha256": "5653dd1f6340a90549bb8e6101cac3bcea68b20c5f73ed4f339ae51875e11886"
+  },
+  {
+    "path": "tests/media-library-browser.mjs",
+    "sha256": "6749beb31caa11de1bdaa88eb2befc485b206a79914db622f61679cc37697537"
+  },
+  {
+    "path": "tests/media-library.mjs",
+    "sha256": "675e0d4dfbc26cb5add44e75ac8d70deb3e249ef8f82f58ae964104089f34533"
+  },
+  {
+    "path": "tests/media-ranges.mjs",
+    "sha256": "f5b02ea8e77c3c8f003073942dfa598669b5bbea028df60c9098fc30e453fe3c"
+  },
+  {
+    "path": "tests/motion-v2.mjs",
+    "sha256": "9d0fe3085e4bef0aa65e2b97efb6bf66e9c0653f84c2448abca4bc46eeec6855"
+  },
+  {
+    "path": "tests/neighborhood.mjs",
+    "sha256": "f087b1d6ec2582a92cca9571f515d24e5cc433d8979e5643ec103d5bfb250ed6"
+  },
+  {
+    "path": "tests/owner-photo.mjs",
+    "sha256": "bea3c57c333e337aeaecb2751a6d657af43f80db77d5c904572a4d0aa5f07564"
+  },
+  {
+    "path": "tests/part1-html-normalize.mjs",
+    "sha256": "24f3aadafb0fbca001652682a35502ef0ddf08367eb76a7732dd8fc55d95a1b3"
+  },
+  {
+    "path": "tests/part2-html-normalize.mjs",
+    "sha256": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766"
+  },
+  {
+    "path": "tests/planning-ambient-browser.mjs",
+    "sha256": "66a44ad9fa6698b68108b10c92a016e466270409259b02b292f9d6b66c5a002b"
+  },
+  {
+    "path": "tests/planning-ambient.mjs",
+    "sha256": "f75447b5309a2f05aeb835fe71d62f65c8b5ab9d786d79d054168dedb7b8663d"
+  },
+  {
+    "path": "tests/planning-motion.mjs",
+    "sha256": "a74448119f3f5a6ec5ee075477abd3398a497cd3dcf11ebed1f3260a4cd0fe3b"
+  },
+  {
+    "path": "tests/planning-scroll-browser.mjs",
+    "sha256": "c33bda3fc1523c9be2b2bf6829c123720570283f1a8751540acf7205ac03cab1"
+  },
+  {
+    "path": "tests/planning-scroll.mjs",
+    "sha256": "dbd713be5334eeae5efcd9439a6fc4f35c31aabde9536822da95320a965b1e31"
+  },
+  {
+    "path": "tests/platform-console.mjs",
+    "sha256": "f184204c888f11b42933dd625da05b2a188d7b9de7bbc7fed0a970fd9b4c4b4f"
+  },
+  {
+    "path": "tests/platform-look.mjs",
+    "sha256": "ab09d811d4a1d74818c4ce424a6c02f76516f323cfbc59b3d5efd3fe465e177c"
+  },
+  {
+    "path": "tests/platform-mobile.mjs",
+    "sha256": "986593e16858b6a0c547bd40d029b5a34194141fc1b42f5afc601791d2a3f543"
+  },
+  {
+    "path": "tests/platform-ui-cleanup-browser.mjs",
+    "sha256": "bf52345f5be1c9b6671fbb1db0a55969a1e99cacea8fc38b7eef7210b5190714"
+  },
+  {
+    "path": "tests/platform.mjs",
+    "sha256": "357501489ffd73ef95f388bd20d59f11b45ee88ccaafa9aac26cec0295639744"
+  },
+  {
+    "path": "tests/premium-service.mjs",
+    "sha256": "f7d487441c0cdb8c193f38091621787dd25b4d7c24de1f697bed323e2643b06c"
+  },
+  {
+    "path": "tests/presentation.mjs",
+    "sha256": "0ac9c11fbc94bda5aa7ca8f921718f35a8ddbba126bc25cdd4c50aba4c226e9e"
+  },
+  {
+    "path": "tests/preview-fixture.mjs",
+    "sha256": "b1c6399ab5b14803b64eee891903a21adda99f4bf83189d0b561954fefc7806d"
+  },
+  {
+    "path": "tests/project-experience.mjs",
+    "sha256": "a7c1038d066feca4a80354d0eb8ee8e534ee5a229968588d71853c6f190383ef"
+  },
+  {
+    "path": "tests/promotion-unlocks-browser.mjs",
+    "sha256": "e3ecd1ed0a52cdc2c60009d7223670adf0a381474174b72305d6512baf84c88b"
+  },
+  {
+    "path": "tests/promotion-unlocks.mjs",
+    "sha256": "e1cd892b64cbfd7055f31363c87d5c95711b3758baa8e3fec71c67957eb3b8eb"
+  },
+  {
+    "path": "tests/promotions-ambient-browser.mjs",
+    "sha256": "8770a7492998db940936812d52bd4d2e62063a391934d728324f5942130846af"
+  },
+  {
+    "path": "tests/promotions-ambient.mjs",
+    "sha256": "ab60c40ab2dcc3d04b35d169dda57c159a8899eae8ec4f9dc406e997b6b6e739"
+  },
+  {
+    "path": "tests/promotions-scroll-browser.mjs",
+    "sha256": "db40974b01c284ead789274ee11dff28922c7697d6f927443df7913d1266afb7"
+  },
+  {
+    "path": "tests/promotions-scroll.mjs",
+    "sha256": "a4a76860df4dfb1ccb1c49cabda076cc196e680c1b41bbee8e69df6f5a36fefb"
+  },
+  {
+    "path": "tests/reference-proof.mjs",
+    "sha256": "f8b7373325baa70148b3fb7bc1c27266e82873daaed06d302ea0cbd65fa398dd"
+  },
+  {
+    "path": "tests/replay-alternate-registry.mjs",
+    "sha256": "62980b3563abfec457c9a72a015e801791ed07d7fb0c84ba67616c5ac056a69c"
+  },
+  {
+    "path": "tests/review-lookup.mjs",
+    "sha256": "c03cc753a4ab3a6205e495aa3a60b8d02efe59b0bcd6193f9d5e9efbc3d09155"
+  },
+  {
+    "path": "tests/review-packet-browser.mjs",
+    "sha256": "91d992f0d660944817689953812cbf18fb79dcec3dd4210efa5b0b85794e7fba"
+  },
+  {
+    "path": "tests/review-packet-contract.mjs",
+    "sha256": "3e5d977d8b4b98b49a0ba71329fa695f85cbabed81639222b44b0e976c3b11f3"
+  },
+  {
+    "path": "tests/review-packets.mjs",
+    "sha256": "d3d43b69d41be17be3e7481d0b8cdfad41d5b0b6e6ce110a0ed6880b2dc2c083"
+  },
+  {
+    "path": "tests/review-part1-html-normalize.mjs",
+    "sha256": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7"
+  },
+  {
+    "path": "tests/review-polish.mjs",
+    "sha256": "e7bf3de912313fab059d901bc0842bf02a275ec7e3b5cf840dd970f1422f18d3"
+  },
+  {
+    "path": "tests/review-rating-filter.mjs",
+    "sha256": "3ba35c47b281441411d50fbd452db2adf47050bc23abb2e9bf0236036f8f712e"
+  },
+  {
+    "path": "tests/roofing-acceptance.mjs",
+    "sha256": "3f106115b5106bd774e565fda50b83d274b435afbea8612d78c47bdc48297389"
+  },
+  {
+    "path": "tests/roofing-cities-browser.mjs",
+    "sha256": "f01f29740a362b6aa1ddbd86617f9b14135590b30409ee85e28f5356e9e2f699"
+  },
+  {
+    "path": "tests/roofing-cities.mjs",
+    "sha256": "20cfb966c899fbd71ed0b6f35a3292289d84e4ed58e70a787a1968da441fa26a"
+  },
+  {
+    "path": "tests/roofing-cta-browser.mjs",
+    "sha256": "bc427012a14be47ead6841db59bfe95c4fb2de11242e8172080e62df144ae371"
+  },
+  {
+    "path": "tests/roofing-cta.mjs",
+    "sha256": "b97f6191a10251a1a940481bf5b9a485770ead020a374e26dd26d5c68855b332"
+  },
+  {
+    "path": "tests/roofing-polish-part1-browser.mjs",
+    "sha256": "b68d8ae1dbd91d719077750f806b7b9851b3c0944bf198f62dfb438ce01b5b41"
+  },
+  {
+    "path": "tests/roofing-polish-part1.mjs",
+    "sha256": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f"
+  },
+  {
+    "path": "tests/roofing-polish-part2-browser.mjs",
+    "sha256": "a0e5949bf1026624c3a19cadfe40e7af1c183ccb9e1536c2342ee8356a40ba7d"
+  },
+  {
+    "path": "tests/roofing-polish-part2.mjs",
+    "sha256": "5c1879c093bd852237881a2063c13327d3ae2cc970e787cf98b5885adb419697"
+  },
+  {
+    "path": "tests/roofing-story-browser.mjs",
+    "sha256": "3d583e03a1a7337d5325bd57cd34d6f88ca0e98b48cc467396436107119814a2"
+  },
+  {
+    "path": "tests/roofing-story.mjs",
+    "sha256": "bb7e3cf2bee498658bc436de7c409e07d761e5326a7805ee69eaeeb5dc9506b9"
+  },
+  {
+    "path": "tests/sales-ops.mjs",
+    "sha256": "544cb9c374d18fd627ab45a7420dceafbd96a9ee95fdfd6366722a26a5e2d94f"
+  },
+  {
+    "path": "tests/saved-designs.mjs",
+    "sha256": "bb4867b8de2ae1f4b538dc356808c6d07aafce0bbc17b97d8cbf4c6b42ff6339"
+  },
+  {
+    "path": "tests/scroll-media.mjs",
+    "sha256": "dde4e9427129d15b69877f3ce4ca4363533d090f52c500328faf4a562c9b79cc"
+  },
+  {
+    "path": "tests/scroll-story.mjs",
+    "sha256": "33655a4e36b4c3627800dfcdfcb04e085a5b66bb484b2e4049ed8095c08c7b59"
+  },
+  {
+    "path": "tests/scroll-video-controller.mjs",
+    "sha256": "c6ebcbebb2b4af04a5befc18d014f6216c78265a176c9e07e7552e7ca37964e3"
+  },
+  {
+    "path": "tests/section-content-parity.mjs",
+    "sha256": "63ab9b89ee4a8c780c9910f479bac64c04ca4bafe9a1d94fe8495d59a4eec923"
+  },
+  {
+    "path": "tests/section-variants-browser.mjs",
+    "sha256": "860cdba17ba064628bfaee6bf0149a168bec590b65210ec29e12c1773d3dd0c9"
+  },
+  {
+    "path": "tests/section-variants-fallbacks.mjs",
+    "sha256": "28367b1be4bd6800c24c761cba6354763720168e209cc4bee1ce805a85ba0e91"
+  },
+  {
+    "path": "tests/section-variants.mjs",
+    "sha256": "b946f61509ba788343655807fd04d3a2d1bbfed97f307c59d2c78b359130786f"
+  },
+  {
+    "path": "tests/service-content.mjs",
+    "sha256": "0f7c03b89b0feaee29afb7ee01d17d0ee330d3f063ea903d38e961a41db39f01"
+  },
+  {
+    "path": "tests/service-motion-browser.mjs",
+    "sha256": "594e74f9229e85e0c7f6883618c4da60a7690619be157101be233ec2e2bce235"
+  },
+  {
+    "path": "tests/service-motion.mjs",
+    "sha256": "614585bef65a3ab2809ef37d57ff6ecd15ff34711b1d5ef1fc3d4ad8f7693548"
+  },
+  {
+    "path": "tests/service-pages-all-trades.mjs",
+    "sha256": "cd63d599453a5ef7b0852a29938b395505a934442cb9f3e0e9441a1338de9b50"
+  },
+  {
+    "path": "tests/service-playbook.mjs",
+    "sha256": "71c65190c280f6f0da18f72dcc86604dc6ee7c43fe2e7188f7c53d1c8c95e27f"
+  },
+  {
+    "path": "tests/showpiece-media.mjs",
+    "sha256": "832d901042f3dd5b1ba5618f6d07159920802568b444bc6a8ef57d05f0c93acc"
+  },
+  {
+    "path": "tests/showpiece-v4.mjs",
+    "sha256": "081688d10580b1754001c401ccb9038475be455a0d5a1058f49ab15b310e160a"
+  },
+  {
+    "path": "tests/template-name.mjs",
+    "sha256": "cc5ab61a2b2486055a316f26a2013f9994d9ff0720050090a6cd4703923f15e4"
+  },
+  {
+    "path": "tests/trade-enablement-browser.mjs",
+    "sha256": "47863138ad6c22d57deb8ab677d9e7c8f644f8598641e929d2e62feb8fe4cb6e"
+  },
+  {
+    "path": "tests/trade-enablement.mjs",
+    "sha256": "4d1a20ba0f8403125a5385203961924624263291ba57807f29d719b0f38a8ade"
+  },
+  {
+    "path": "tests/trade-revisions.mjs",
+    "sha256": "c76921ef1483ad80c3408060eefbc0c57f70321551682573a7b386a323727f54"
+  },
+  {
+    "path": "tests/trade-upgrade.mjs",
+    "sha256": "82120cc012fb1131f2b976b023e636e020dca76b8e487f1be97142966aa9e193"
+  },
+  {
+    "path": "tests/trade-visual-browser.mjs",
+    "sha256": "c57fd7288fb16dfde328f9cb017ec220b934313722ad5d2cbd4b07d3bc50abab"
+  },
+  {
+    "path": "tests/trade-visual-correctness.mjs",
+    "sha256": "80b664f1cd38b2672803ad461cb7517de2074656278dd12d3842ee1b5e1fd819"
+  },
+  {
+    "path": "tests/trades-financing.mjs",
+    "sha256": "e77937a27909376e736c8129ccb8f7337af6f010892e6ed28b398749654f6cfa"
+  },
+  {
+    "path": "tests/trust.mjs",
+    "sha256": "a353bcbc70dbc36842061fa6c5200cfcf19349196cbd25f01f2989adebd387f3"
+  },
+  {
+    "path": "tests/uniqueness-api.mjs",
+    "sha256": "fa2d6d02dd1367ed5728d09a70c7bb2a9a017d0a58d8e5c93cd6b39bef92e51b"
+  },
+  {
+    "path": "tests/uniqueness-browser.mjs",
+    "sha256": "c3d540bb3778257f3a6651311f8526a382cf14d5f14e2df9a5ce3bb7212c2c62"
+  },
+  {
+    "path": "tests/uniqueness-content-parity.mjs",
+    "sha256": "5a0d232b681d0c2b50ecc7449e6ab5760aae111b46155357aea2931d258553d0"
+  },
+  {
+    "path": "tests/uniqueness.mjs",
+    "sha256": "e4d9c58f7b4498baadf1588203fd9bc18d59adadfdf5e9c36c63537757246174"
+  },
+  {
+    "path": "tests/website-pages.mjs",
+    "sha256": "b075e0a133e0abf862fe3819728a6a06342ff599c25f5badf53c3248a3fde893"
+  },
+  {
+    "path": "tests/workspace-owner.mjs",
+    "sha256": "1bfca02bfd124d63aa8702d381bb4a6e5196fca2a8ffee6472194aef63a2d08f"
+  },
+  {
+    "path": "tests/workspace.mjs",
+    "sha256": "06721c277a5ae744533f8e33e88f1c81a076b87787817ad8fe7be5fa33c95d84"
+  },
+  {
+    "path": "tests/zoom.mjs",
+    "sha256": "9842b4dda5c8b7708bd48f865539004c69aa7978eb13ba223611a7f35c21e66f"
+  }
+]

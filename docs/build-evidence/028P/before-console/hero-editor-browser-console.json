@@ -1,0 +1,294 @@
+{
+  "label": "hero-editor-browser",
+  "records": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+      "location": {
+        "url": "http://127.0.0.1:8162/api/session",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8162/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "state": {
+        "section": "hero",
+        "view": "websites",
+        "hero": "error"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "location": {
+        "url": "http://127.0.0.1:8162/api/tenants/34045ca3-5a34-441e-b5e1-74c8a80195f3",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8162/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "state": {
+        "section": "hero",
+        "view": "websites",
+        "hero": "error"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "http://127.0.0.1:8162/api/tenants/34045ca3-5a34-441e-b5e1-74c8a80195f3/domains",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8162/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "state": {
+        "section": "launchpad",
+        "view": "websites"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "location": {
+        "url": "http://127.0.0.1:8162/api/tenants/03a04681-5098-4610-a7f6-30f647db26c2",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8162/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": {
+        "section": "hero",
+        "view": "websites",
+        "hero": "error"
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "http://127.0.0.1:8162/api/tenants/03a04681-5098-4610-a7f6-30f647db26c2/domains",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "url": "http://127.0.0.1:8162/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": {
+        "section": "launchpad",
+        "view": "websites"
+      }
+    }
+  ],
+  "states": [
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/published-before-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/s/hero-editor-desktop"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/empty-locked-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/editing-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/offline-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/error-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/loading-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/success-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/published-after-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/s/hero-editor-desktop"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/reduced-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/read-only-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/published-no-js-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:8162/s/hero-editor-desktop"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/published-before-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/s/hero-editor-phone"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/empty-locked-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/editing-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/live-preview-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/offline-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/error-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/loading-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/success-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/published-after-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/s/hero-editor-phone"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/reduced-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/read-only-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/"
+    },
+    {
+      "name": "C:/Users/joe/website_creator-028P-baseline-49b032e/docs/build-evidence/023A/published-no-js-phone.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:8162/s/hero-editor-phone"
+    }
+  ]
+}

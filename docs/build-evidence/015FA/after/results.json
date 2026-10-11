@@ -1,0 +1,13 @@
+{
+  "phase": "after",
+  "checks": [
+    "desktop desktop single-row actions and More → Details",
+    "desktop template list formatting",
+    "desktop create linked draft works",
+    "phone template list formatting",
+    "phone compact prepare dialog and single submit",
+    "phone create linked draft works",
+    "desktop-1280 desktop single-row actions and More → Details"
+  ],
+  "errors": []
+}

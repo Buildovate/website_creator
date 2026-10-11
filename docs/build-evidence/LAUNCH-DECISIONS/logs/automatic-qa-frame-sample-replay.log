@@ -1,0 +1,35 @@
+Review capture page sample-fictional-copper-kite-ventura /s/sample-fictional-copper-kite-ventura
+Review capture failed sample-fictional-copper-kite-ventura AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png
++ actual - expected
+
++ undefined
+- true
+
+    at onScreenshot (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/automatic-qa-frame-sample-replay.mjs:19:9)
+    at screenshotWithDiagnostics (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/src/aws/review-capture-diagnostics.js:23:8)
+    at async capture (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/src/aws/review-capture.js:47:68)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png
++ actual - expected
+
++ undefined
+- true
+
++ actual - expected
+
++ 'Capture failed'
+- 'Complete'
+
+    at file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/automatic-qa-frame-sample-replay.mjs:32:9 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'Capture failed',
+  expected: 'Complete',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

@@ -1,0 +1,556 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "before": {
+    "bodyClass": "bv-platform bv-game-open",
+    "gameHidden": false,
+    "message": "Your progress comes from saved work and confirmed connections.",
+    "nodes": {
+      "nav": {
+        "exists": true,
+        "selector": "nav.tabs.bv-tabs",
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": false
+      },
+      "business": {
+        "exists": true,
+        "selector": "button.bv-button",
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": false
+      }
+    },
+    "hidingAncestors": [
+      {
+        "of": "nav",
+        "exists": true,
+        "selector": "div.app-layout",
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": true
+      },
+      {
+        "of": "business",
+        "exists": true,
+        "selector": "div.app-layout",
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": true
+      }
+    ],
+    "matchingRules": []
+  },
+  "immediate": {
+    "bodyClass": "bv-platform bv-game-open",
+    "gameHidden": false,
+    "message": "Saving your view…",
+    "nodes": {
+      "nav": {
+        "exists": true,
+        "selector": "nav.tabs.bv-tabs",
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": false
+      },
+      "business": {
+        "exists": true,
+        "selector": "button.bv-button",
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": false
+      }
+    },
+    "hidingAncestors": [
+      {
+        "of": "nav",
+        "exists": true,
+        "selector": "div.app-layout",
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": true
+      },
+      {
+        "of": "business",
+        "exists": true,
+        "selector": "div.app-layout",
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": true
+      }
+    ],
+    "matchingRules": []
+  },
+  "after": {
+    "bodyClass": "bv-platform bv-game-open",
+    "gameHidden": false,
+    "message": "Your view couldn’t save. Reload before trying again.",
+    "nodes": {
+      "nav": {
+        "exists": true,
+        "selector": "nav.tabs.bv-tabs",
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": false
+      },
+      "business": {
+        "exists": true,
+        "selector": "button.bv-button",
+        "display": "flex",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": false
+      }
+    },
+    "hidingAncestors": [
+      {
+        "of": "nav",
+        "exists": true,
+        "selector": "div.app-layout",
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": true
+      },
+      {
+        "of": "business",
+        "exists": true,
+        "selector": "div.app-layout",
+        "display": "none",
+        "visibility": "visible",
+        "opacity": "1",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hidden": null,
+        "ariaHidden": null,
+        "inert": true
+      }
+    ],
+    "matchingRules": []
+  },
+  "events": [
+    {
+      "method": "GET",
+      "status": 200,
+      "body": {
+        "tenant": {
+          "id": "07587135-42e1-4654-b72d-4d30cd54b482",
+          "name": "Harbor Roofing · QA fixture"
+        },
+        "role": "owner",
+        "preference": {
+          "view": "game",
+          "version": 0
+        },
+        "progress": {
+          "quests": [
+            {
+              "id": "onboarding",
+              "level": 1,
+              "xpEarned": 0,
+              "xpMax": 10,
+              "done": false,
+              "steps": [
+                {
+                  "id": "name",
+                  "done": false,
+                  "reason": "Save and confirm your business name."
+                },
+                {
+                  "id": "phone",
+                  "done": false,
+                  "reason": "Save and confirm your valid phone number."
+                },
+                {
+                  "id": "trade",
+                  "done": false,
+                  "reason": "Save and confirm your trade."
+                },
+                {
+                  "id": "area",
+                  "done": false,
+                  "reason": "Save and confirm your service area."
+                }
+              ],
+              "dataSource": "tenants.settings + platform.questionnaire.factsConfirmed",
+              "status": "Needs you"
+            },
+            {
+              "id": "pages",
+              "level": 1,
+              "xpEarned": 0,
+              "xpMax": 15,
+              "done": false,
+              "steps": [
+                {
+                  "id": "drafts",
+                  "done": false,
+                  "reason": "Save a draft for every required website page."
+                },
+                {
+                  "id": "approval",
+                  "done": false,
+                  "reason": "Record the contractor’s approval of the website preview."
+                }
+              ],
+              "dataSource": "tenants.settings.websitePages + sales.data.ownerApproved/approvalNote",
+              "status": "Needs you"
+            },
+            {
+              "id": "reviews",
+              "level": 1,
+              "xpEarned": 0,
+              "xpMax": 15,
+              "done": false,
+              "steps": [
+                {
+                  "id": "matched",
+                  "done": false,
+                  "reason": "Not connected. Match and confirm a review profile; live display evidence is not recorded."
+                },
+                {
+                  "id": "confirmed",
+                  "done": false,
+                  "reason": "Not connected. Match and confirm a review profile; live display evidence is not recorded."
+                },
+                {
+                  "id": "showing",
+                  "done": false,
+                  "reason": "Not connected. Match and confirm a review profile; live display evidence is not recorded."
+                }
+              ],
+              "dataSource": "tenants.settings.reviews; src/reviews.js does not persist provider display success",
+              "status": "Not connected"
+            },
+            {
+              "id": "estimator",
+              "level": 2,
+              "xpEarned": 0,
+              "xpMax": 20,
+              "done": false,
+              "steps": [
+                {
+                  "id": "fields",
+                  "done": false,
+                  "reason": "Not available yet",
+                  "xpMax": 5
+                },
+                {
+                  "id": "price-book",
+                  "done": false,
+                  "reason": "Not available yet",
+                  "xpMax": 10
+                },
+                {
+                  "id": "consent",
+                  "done": false,
+                  "reason": "Not available yet",
+                  "xpMax": 5
+                }
+              ],
+              "dataSource": "No estimator field/consent configuration or minimum-item price book in BASE",
+              "status": "Not available yet"
+            },
+            {
+              "id": "promotions",
+              "level": 2,
+              "xpEarned": 0,
+              "xpMax": 5,
+              "done": false,
+              "steps": [
+                {
+                  "id": "offer-or-none",
+                  "done": false,
+                  "reason": "Save an offer or choose “No offer right now.”"
+                }
+              ],
+              "dataSource": "tenants.settings.platform.promotions.offers",
+              "status": "Needs you"
+            },
+            {
+              "id": "financing",
+              "level": 2,
+              "xpEarned": 0,
+              "xpMax": 10,
+              "done": false,
+              "steps": [
+                {
+                  "id": "connected-or-none",
+                  "done": false,
+                  "reason": "Not connected. Connect a selected lender or explicitly choose None; a saved application link is not a connection."
+                }
+              ],
+              "dataSource": "tenants.settings.platform.financing + src/platform/lender-adapter.ts",
+              "status": "Needs you"
+            },
+            {
+              "id": "leads",
+              "level": 2,
+              "xpEarned": 0,
+              "xpMax": 10,
+              "done": false,
+              "steps": [
+                {
+                  "id": "verified-alerts-or-crm",
+                  "done": false,
+                  "reason": "Not connected. Enable alerts to a verified phone or email, or connect your CRM."
+                }
+              ],
+              "dataSource": "workspace_records: chat_config phone verification (src/engagement.js)",
+              "status": "Needs you"
+            },
+            {
+              "id": "launch",
+              "level": 3,
+              "xpEarned": 0,
+              "xpMax": 10,
+              "done": false,
+              "steps": [
+                {
+                  "id": "paid-plan",
+                  "done": false,
+                  "reason": "Not connected. Paid-plan verification is not available yet."
+                },
+                {
+                  "id": "live-domain",
+                  "done": false,
+                  "reason": "Not connected. Domain and SSL verification are not available yet."
+                },
+                {
+                  "id": "published",
+                  "done": false,
+                  "reason": "Publish the website when it is ready."
+                }
+              ],
+              "dataSource": "src/entitlements.js + src/domain/state.js + tenants published snapshot",
+              "status": "Needs you"
+            },
+            {
+              "id": "marketing",
+              "level": 3,
+              "xpEarned": 0,
+              "xpMax": 5,
+              "done": false,
+              "steps": [
+                {
+                  "id": "connected-or-none",
+                  "done": false,
+                  "reason": "Not available yet. Saved social links are not connected accounts."
+                }
+              ],
+              "dataSource": "No connected social-channel, explicit-none or social-publication records in BASE",
+              "status": "Not available yet"
+            }
+          ],
+          "levels": [
+            {
+              "id": 1,
+              "name": "Get Set Up",
+              "questIds": [
+                "onboarding",
+                "pages",
+                "reviews"
+              ],
+              "xpMax": 40,
+              "done": false,
+              "xpEarned": 0
+            },
+            {
+              "id": 2,
+              "name": "Win More Jobs",
+              "questIds": [
+                "estimator",
+                "promotions",
+                "financing",
+                "leads"
+              ],
+              "xpMax": 45,
+              "done": false,
+              "xpEarned": 0
+            },
+            {
+              "id": 3,
+              "name": "Launch & Grow",
+              "questIds": [
+                "launch",
+                "marketing"
+              ],
+              "xpMax": 15,
+              "done": false,
+              "xpEarned": 0
+            }
+          ],
+          "totalXp": 0,
+          "siteStrength": 0,
+          "xpMax": 100,
+          "currentLevel": 1,
+          "nextLevelAt": 40,
+          "stamps": [
+            {
+              "label": "SET UP",
+              "earned": false
+            },
+            {
+              "label": "SELLING",
+              "earned": false
+            },
+            {
+              "label": "LIVE",
+              "earned": false
+            },
+            {
+              "label": "GROWING",
+              "earned": false
+            }
+          ],
+          "badges": [
+            {
+              "label": "Set up",
+              "earned": false
+            },
+            {
+              "label": "Reviews live",
+              "earned": false
+            },
+            {
+              "label": "Leads ready",
+              "earned": false
+            },
+            {
+              "label": "Selling",
+              "earned": false
+            },
+            {
+              "label": "Go live",
+              "earned": false
+            },
+            {
+              "label": "First post",
+              "earned": false
+            },
+            {
+              "label": "Financing",
+              "earned": false
+            },
+            {
+              "label": "100 XP",
+              "earned": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "method": "PUT",
+      "status": 403,
+      "body": {
+        "error": "Refresh your session before saving. Your form has not been cleared."
+      }
+    }
+  ],
+  "errors": [],
+  "external": []
+}

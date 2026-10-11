@@ -1,0 +1,12 @@
+PASS chat configuration create and read
+PASS chat ordinary message uses PostgreSQL
+PASS chat team handoff uses PostgreSQL
+PASS admin chat thread list
+PASS admin chat detail uses PostgreSQL
+PASS admin chat takeover
+PASS admin chat reply local-only
+PASS confirm phone consumes synthetic verification record
+PASS inbound synthetic SMS is local-only and idempotent
+PASS admin chat close
+PASS root sitemap published-slug query
+{"pass":11,"fail":0}

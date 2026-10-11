@@ -1,0 +1,477 @@
+{
+  "ticket": "#057A round 1",
+  "state": "VALIDATED for local commit; two proven pre-existing test failures excluded",
+  "branch": "feature/057A-domain-wizard",
+  "baseHead": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+  "build": {
+    "command": "node build.mjs",
+    "result": "PASS",
+    "log": "../057A-build.log"
+  },
+  "generatedRoofingCss": {
+    "sha256": "651bc19c239480b2f08ac427915d7544aab170665513dc8d34f06c278202cca1",
+    "backupMatches": true
+  },
+  "stop": {
+    "command": "node tests/domain-wizard.mjs *> C:\\Users\\joe\\website_creator\\docs\\build-evidence\\057A\\domain-tests.log",
+    "stage": "PowerShell log redirection; Node test was not started",
+    "error": "Could not find a part of the path C:\\Users\\joe\\website_creator\\docs\\build-evidence\\057A\\domain-tests.log",
+    "reason": "Evidence directory was not created before redirecting output",
+    "retried": false
+  },
+  "tests": {
+    "domain": {
+      "result": "PASS",
+      "checks": 77,
+      "round": "1e"
+    },
+    "browser": {
+      "result": "PASS",
+      "checks": 23,
+      "round": "1e"
+    },
+    "workspace": {
+      "result": "PASS",
+      "exitCode": 0,
+      "round": "1g"
+    },
+    "awsAdapter": {
+      "result": "PASS",
+      "exitCode": 0,
+      "egress": "mocked 401; not a live egress verification",
+      "round": "1g"
+    },
+    "platformLook": {
+      "result": "PASS",
+      "selectors": 341,
+      "fontFaces": 7,
+      "round": "1g"
+    },
+    "platform": {
+      "result": "SKIPPED",
+      "issue": "#057A-T",
+      "baseline": "round1f"
+    },
+    "platformMobile": {
+      "result": "PRE-EXISTING FAIL; excluded",
+      "issue": "#057A-T2",
+      "baseline": "round1g"
+    }
+  },
+  "screenshots": [
+    {
+      "path": "alias-1440.png",
+      "bytes": 251845,
+      "sha256": "90ba6b02cb5e274fbf0462a8cda4ff502f68947e9caa45baba33993edb4dbbdb"
+    },
+    {
+      "path": "alias-390.png",
+      "bytes": 230322,
+      "sha256": "ae4af994bfda7d747765ac4a2f8367eda21f43142459c6624e55e741867075a1"
+    },
+    {
+      "path": "flatten-1440.png",
+      "bytes": 263673,
+      "sha256": "1564a8e3e5030fc77d05cf31d7e27d8d5d5c0475250847e286a6f1e849438507"
+    },
+    {
+      "path": "flatten-390.png",
+      "bytes": 229887,
+      "sha256": "eb29966efd57cddd385357fbe22c5abf1f3127eaa7d6b0cd3f3cd4982d26b0ed"
+    },
+    {
+      "path": "forward-1440.png",
+      "bytes": 262260,
+      "sha256": "12ac11eecd792402f412b17995164fca7de814d9ef9c05029406d50a754c6a88"
+    },
+    {
+      "path": "forward-390.png",
+      "bytes": 228247,
+      "sha256": "d86e4c0abf83adbbf1a9c7d4a13aed59840ee33d8db763a7d45a379e0bc3f99a"
+    },
+    {
+      "path": "no-js-390.png",
+      "bytes": 72644,
+      "sha256": "7aef4fd860b05a60eef808d59720cf0b30a5e11a1193f3795e8ae103a75b2dba"
+    },
+    {
+      "path": "screenshots/apex-set-1440.png",
+      "bytes": 273982,
+      "sha256": "27d40a0396942de7801d298dbd783b2feed64292beca23b6eef5a7b32c38ab40"
+    },
+    {
+      "path": "screenshots/apex-set-390.png",
+      "bytes": 250905,
+      "sha256": "fa4d2ec5ce99c5cbd84d969f6557d068867d004549ab18a0fcffd35a492a3113"
+    }
+  ],
+  "files": [
+    {
+      "path": "src/domain/guide.js",
+      "sha256": "49d1e3463f76b1901b07044c9803252b2e02dcdd931b2d6a441848ef9af9ffa4"
+    },
+    {
+      "path": "src/domain/state.js",
+      "sha256": "88ae8082b92cdfe2b292ce0989178c2798d18d433e0fe193cdaae4ed006d74a6"
+    },
+    {
+      "path": "src/domain/plan.js",
+      "sha256": "d7579c010faa21e908c759e2d9c6373d256cb4f54691f4fba2092cea8380bacc"
+    },
+    {
+      "path": "src/domain/view.js",
+      "sha256": "da189e891c22604513c9fe5bfd3ec22e78a035cc6211fb7b604da55d66cc6537"
+    },
+    {
+      "path": "src/client/workspace/domain-wizard.js",
+      "sha256": "5f983e42f5e37502cb13085d735e9419c5c3e9609c60e10e6de40eb5a0500040"
+    },
+    {
+      "path": "src/client/styles/platform/domain.css",
+      "sha256": "0e20bf6a62b1d236728839f7da677c844b0c3dde3e3015c9de5e416089db0b43"
+    },
+    {
+      "path": "src/api.js",
+      "sha256": "1e738eec90aa0d7bb095bfe6634ded7d9e94c85e6ce159345c786c5106f72eda"
+    },
+    {
+      "path": "src/worker.js",
+      "sha256": "16a4e173cb81b9d57b8f97175d5d0370b68ebfd7591b6b7e078161bda8d7e421"
+    },
+    {
+      "path": "src/aws/env.js",
+      "sha256": "0d80654363b607da856791d4c5728a80fde334388afaad1b1843d68e508cf71d"
+    },
+    {
+      "path": "src/aws/server.js",
+      "sha256": "cd54fdd5591d176fa4bef8a5933a85cc26aaa57fbfad88af9f62d99e2443efa0"
+    },
+    {
+      "path": "src/client/workspace/legacy-workspace.js",
+      "sha256": "969c7bb041122cd532a1a6b45ae435a47ce06edb47fd2b2516f0b12610d15e93"
+    },
+    {
+      "path": "src/client/styles/platform/index.css",
+      "sha256": "62ead1603d0f8c66625ce9d6e25cc1ebc0f641b867b39763c80152d151a54037"
+    },
+    {
+      "path": "tests/domain-wizard.mjs",
+      "sha256": "1576ca76e7c9426ccc05e98768041c68b782f2fbc77033a5b497e4b3795f8613"
+    },
+    {
+      "path": "tests/domain-wizard-browser.mjs",
+      "sha256": "afa6f1cfba9f9037b444e4acee8444c1a6a2e138047ab6b1b29db74205d3565e"
+    }
+  ],
+  "heldChanges": [],
+  "backlogUnchanged": true,
+  "providerCalls": 0,
+  "credits": 0,
+  "push": false,
+  "deploy": false,
+  "round1b": {
+    "state": "STOPPED at first test failure; no retry; no commit",
+    "directoryCreatedBeforeCommands": true,
+    "branch": "feature/057A-domain-wizard",
+    "baseHead": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+    "build": {
+      "result": "PASS",
+      "assetCount": 810,
+      "tradeKits": 17,
+      "generatedSourceBackupMatch": true
+    },
+    "domain": {
+      "result": "FAIL",
+      "exitCode": 1,
+      "line": 53,
+      "error": "AssertionError: {\"error\":\"Not found.\"}; 404 !== 200",
+      "failedCheck": "json() GET after scheduled maintenance",
+      "diagnosis": "json() called without its required tail argument; req concatenates undefined onto domain-plan, producing /domain-planundefined. No fix applied."
+    },
+    "suiteCounts": {
+      "testCommandsPassed": 0,
+      "testCommandsFailed": 1,
+      "remaining": "NOT RUN"
+    },
+    "existingTests": "NOT RUN",
+    "screenshots": [],
+    "roundChanged": [],
+    "heldChanged": [],
+    "backlogUnchanged": true,
+    "staged": "",
+    "log": "domain-tests.log",
+    "providerCalls": 0,
+    "credits": 0,
+    "commit": null
+  },
+  "round1c": {
+    "state": "STOPPED at first failure; no retry; no commit",
+    "build": {
+      "result": "PASS",
+      "assets": 810,
+      "kits": 17
+    },
+    "domainTests": {
+      "result": "PASS",
+      "checks": 77
+    },
+    "browserTests": {
+      "result": "FAIL",
+      "exitCode": 1,
+      "line": 20,
+      "error": "strict mode violation: locator('[data-section=domains]') resolved to 2 elements: Domains tab and Launch Pad Set up button",
+      "checksCompleted": 0
+    },
+    "existingTests": "NOT RUN",
+    "screenshots": [],
+    "helperFix": {
+      "path": "tests/domain-wizard.mjs",
+      "lines": [
+        53,
+        57
+      ],
+      "change": "await json() -> await json('')",
+      "beforeSha256": "8f332007c3f59565c2374fe453c5fa6cf408fd27eb80e46977aeb7d111af5810",
+      "afterSha256": "1576ca76e7c9426ccc05e98768041c68b782f2fbc77033a5b497e4b3795f8613",
+      "onlyApprovedChanges": true
+    },
+    "roundOtherChanges": [],
+    "heldChanges": [],
+    "backlogUnchanged": true,
+    "generatedSourceBackupMatch": true,
+    "log": "domain-tests.log",
+    "providerCalls": 0,
+    "credits": 0,
+    "commit": null
+  },
+  "round1d": {
+    "state": "Awaiting Joe decision on existing Launch Pad shortcut; no app/test edits",
+    "diagnosis": "Neither a nor b literally: one nav entry plus pre-existing Launch Pad action, both present at b2446730.",
+    "states": [
+      {
+        "width": 1440,
+        "controls": [
+          {
+            "outerHTML": "<button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"domains\">Domains</button>",
+            "parent": "NAV.tabs bv-tabs",
+            "visible": true
+          },
+          {
+            "outerHTML": "<button type=\"button\" class=\"secondary bv-button\" data-action=\"section\" data-section=\"domains\">Set up</button>",
+            "parent": "DIV.record",
+            "visible": true
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "controls": [
+          {
+            "outerHTML": "<button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"domains\">Domains</button>",
+            "parent": "NAV.tabs bv-tabs",
+            "visible": false
+          },
+          {
+            "outerHTML": "<button type=\"button\" class=\"secondary bv-button\" data-action=\"section\" data-section=\"domains\">Set up</button>",
+            "parent": "DIV.record",
+            "visible": true
+          }
+        ]
+      }
+    ],
+    "providerCalls": 0,
+    "credits": 0,
+    "commit": null
+  },
+  "round1e": {
+    "state": "STOPPED first existing regression failure; no retry; no commit",
+    "selectorFix": {
+      "path": "tests/domain-wizard-browser.mjs",
+      "beforeSha256": "2fe57586913346c2b6cec018ca318fe7bad70454e978514930eb2b0336c4726e",
+      "afterSha256": "afa6f1cfba9f9037b444e4acee8444c1a6a2e138047ab6b1b29db74205d3565e",
+      "desktop": "nav.tabs.bv-tabs [data-section=domains]",
+      "phone": "Launch Pad div.record [data-section=domains]",
+      "assertionsChanged": false
+    },
+    "build": {
+      "result": "PASS",
+      "assets": 810,
+      "kits": 17
+    },
+    "domainTests": {
+      "result": "PASS",
+      "checks": 77
+    },
+    "browserTests": {
+      "result": "PASS",
+      "checks": 23,
+      "screens": [
+        "alias-1440.png",
+        "alias-390.png",
+        "flatten-1440.png",
+        "flatten-390.png",
+        "forward-1440.png",
+        "forward-390.png"
+      ],
+      "errors": [],
+      "external": [],
+      "providerCalls": 0
+    },
+    "platformTests": {
+      "result": "FAIL",
+      "exitCode": 1,
+      "line": 34,
+      "error": "POST project publish: Complete the review packet before approval."
+    },
+    "testCommandTotals": {
+      "pass": 2,
+      "fail": 1
+    },
+    "remainingTests": "NOT RUN; first-failure stop",
+    "awsAdapter": {
+      "result": "NOT RUN",
+      "restriction": "Existing test ends with real OpenAI /v1/models egress request. Requires a mocked execution path to comply with zero provider calls."
+    },
+    "screenshots": [
+      {
+        "path": "alias-1440.png",
+        "bytes": 251845,
+        "sha256": "90ba6b02cb5e274fbf0462a8cda4ff502f68947e9caa45baba33993edb4dbbdb"
+      },
+      {
+        "path": "alias-390.png",
+        "bytes": 230322,
+        "sha256": "ae4af994bfda7d747765ac4a2f8367eda21f43142459c6624e55e741867075a1"
+      },
+      {
+        "path": "flatten-1440.png",
+        "bytes": 263673,
+        "sha256": "1564a8e3e5030fc77d05cf31d7e27d8d5d5c0475250847e286a6f1e849438507"
+      },
+      {
+        "path": "flatten-390.png",
+        "bytes": 229887,
+        "sha256": "eb29966efd57cddd385357fbe22c5abf1f3127eaa7d6b0cd3f3cd4982d26b0ed"
+      },
+      {
+        "path": "forward-1440.png",
+        "bytes": 262260,
+        "sha256": "12ac11eecd792402f412b17995164fca7de814d9ef9c05029406d50a754c6a88"
+      },
+      {
+        "path": "forward-390.png",
+        "bytes": 228247,
+        "sha256": "d86e4c0abf83adbbf1a9c7d4a13aed59840ee33d8db763a7d45a379e0bc3f99a"
+      },
+      {
+        "path": "no-js-390.png",
+        "bytes": 72644,
+        "sha256": "7aef4fd860b05a60eef808d59720cf0b30a5e11a1193f3795e8ae103a75b2dba"
+      }
+    ],
+    "apexSetScreenshots": "NOT RUN; first-failure stop",
+    "otherChanges": [],
+    "heldChanges": [],
+    "backlogUnchanged": true,
+    "generatedSourceBackupMatch": true,
+    "providerCalls": 0,
+    "credits": 0,
+    "commit": null
+  },
+  "round1f": {
+    "state": "DIAGNOSED; PRE-EXISTING; no fix; no commit",
+    "branch": "feature/057A-domain-wizard",
+    "head": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+    "baselineHead": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+    "baselinePath": "C:/Users/joe/wc-baseline-check",
+    "baselineBuild": {
+      "command": "node build.mjs",
+      "result": "PASS",
+      "log": "round1f-baseline-build.log",
+      "assets": 810,
+      "kits": 17
+    },
+    "baselinePlatform": {
+      "command": "node tests/platform.mjs",
+      "executions": 1,
+      "result": "FAIL",
+      "exitCode": 1,
+      "line": 34,
+      "error": "Complete the review packet before approval.",
+      "log": "round1f-baseline-platform.log"
+    },
+    "sameErrorAsCurrent": true,
+    "rejectionCheck": {
+      "path": "src/review-packets.js",
+      "line": 114,
+      "expression": "must(packet.status==='Complete'&&packet.pages.length>0,'Complete the review packet before approval.',409)"
+    },
+    "automaticReview": {
+      "initialCommandDidNotExecute": true,
+      "initialReason": "Reviewer attributed an OpenAI /v1/models probe to tests/platform.mjs.",
+      "readOnlyProof": "platform.mjs has no global fetch calls and no /v1/models or OPENAI_API_ORIGIN reference; the probe is in tests/aws-adapter.mjs, which was not run. Platform only dispatches worker.fetch with env={DB,BUCKET}.",
+      "sameCommandApprovedOnReevaluation": true
+    },
+    "temporaryWorktreeRemoved": true,
+    "sourceChanges": [],
+    "heldChanges": [],
+    "planningChanges": [],
+    "backlogUnchanged": true,
+    "staged": "",
+    "proposedFix": null,
+    "reasonNoFix": "User requires pre-existing failure to remain outside #057A.",
+    "providerCalls": 0,
+    "credits": 0,
+    "commit": null
+  },
+  "round1g": {
+    "state": "VALIDATED; ready for authorized local commit",
+    "testCommandTotals": {
+      "pass": 5,
+      "newFailures": 0,
+      "preExistingFailuresExcluded": 2
+    },
+    "apexCapture": {
+      "result": "PASS",
+      "checks": 6,
+      "ip": "192.0.2.10",
+      "source": "environment only",
+      "screenshots": [
+        "screenshots/apex-set-1440.png",
+        "screenshots/apex-set-390.png"
+      ]
+    },
+    "knownIssues": [
+      {
+        "id": "#057A-T",
+        "test": "tests/platform.mjs:34",
+        "message": "Complete the review packet before approval.",
+        "baseline": "round1f-baseline-platform.log",
+        "skipped": true
+      },
+      {
+        "id": "#057A-T2",
+        "test": "tests/platform-mobile.mjs:17",
+        "message": "Complete the review packet before approval.",
+        "currentExit": 1,
+        "baselineExit": 1,
+        "baselineHead": "b2446730d551656067f2aaa15a9c27497dceb8f7",
+        "baselineBuild": "PASS",
+        "baselineLog": "round1g-baseline-mobile.log",
+        "excludedAsPreExisting": true
+      }
+    ],
+    "verification": {
+      "roundChanged": [],
+      "heldChanged": [],
+      "planningChanged": [],
+      "backlogMatch": true,
+      "temporaryWorktreeRemoved": true
+    },
+    "providerCalls": 0,
+    "credits": 0,
+    "appOrTestEditsThisRound": [],
+    "log": "domain-tests.log",
+    "commit": "Recorded by the commit containing this file"
+  }
+}

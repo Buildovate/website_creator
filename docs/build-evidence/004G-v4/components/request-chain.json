@@ -1,0 +1,535 @@
+[
+  {
+    "name": "home",
+    "reduced": false,
+    "lcp": [
+      {
+        "time": 556,
+        "element": "story-finished",
+        "url": "http://127.0.0.1:8118/assets/roofing-fast/hero-720.avif"
+      }
+    ],
+    "cls": 0.00772608019825274,
+    "hero": "http://127.0.0.1:8118/assets/roofing-fast/hero-720.avif",
+    "paintGate": 588.8000000119209,
+    "requests": [
+      {
+        "url": "http://127.0.0.1:8118/assets/roofing-fast/hero-720.avif",
+        "start": 25.900000005960464,
+        "bytes": 11493
+      },
+      {
+        "url": "http://127.0.0.1:8118/favicon.svg",
+        "start": 145.30000001192093,
+        "bytes": 499
+      },
+      {
+        "url": "http://127.0.0.1:8118/roofing-motion-home.css?v=004H-finish",
+        "start": 589.8000000119209,
+        "bytes": 89823
+      },
+      {
+        "url": "http://127.0.0.1:8118/reviews.css",
+        "start": 590.1000000089407,
+        "bytes": 7525
+      },
+      {
+        "url": "http://127.0.0.1:8118/engagement.css",
+        "start": 590.2000000029802,
+        "bytes": 5498
+      },
+      {
+        "url": "http://127.0.0.1:8118/neighborhood.js",
+        "start": 590.5,
+        "bytes": 3744
+      },
+      {
+        "url": "http://127.0.0.1:8118/trust.js?v=009",
+        "start": 604.7000000029802,
+        "bytes": 2192
+      },
+      {
+        "url": "http://127.0.0.1:8118/assets/barlow-bold.ttf",
+        "start": 611.3000000119209,
+        "bytes": 87420
+      },
+      {
+        "url": "http://127.0.0.1:8118/trade-motion.js?v=004H",
+        "start": 668.4000000059605,
+        "bytes": 11317
+      },
+      {
+        "url": "http://127.0.0.1:8118/trade-motion-v2.js?v=004H",
+        "start": 672.9000000059605,
+        "bytes": 1379
+      },
+      {
+        "url": "http://127.0.0.1:8118/site.js",
+        "start": 678.8000000119209,
+        "bytes": 9915
+      },
+      {
+        "url": "http://127.0.0.1:8118/cutaway.js",
+        "start": 683,
+        "bytes": 1175
+      },
+      {
+        "url": "http://127.0.0.1:8118/hero-timelapse.js?v=reference-v6",
+        "start": 686.1000000089407,
+        "bytes": 6102
+      },
+      {
+        "url": "http://127.0.0.1:8118/conversion.js?v=reference-v6",
+        "start": 693.6000000089407,
+        "bytes": 2212
+      },
+      {
+        "url": "http://127.0.0.1:8118/visitor-chat.js",
+        "start": 698.9000000059605,
+        "bytes": 4159
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "name": "home",
+    "reduced": true,
+    "lcp": [
+      {
+        "time": 168,
+        "element": "story-finished",
+        "url": "http://127.0.0.1:8118/assets/roofing-fast/hero-720.avif"
+      }
+    ],
+    "cls": 0.03939188632046444,
+    "hero": "http://127.0.0.1:8118/assets/roofing-fast/hero-720.avif",
+    "paintGate": 201.20000000298023,
+    "requests": [
+      {
+        "url": "http://127.0.0.1:8118/assets/roofing-fast/hero-720.avif",
+        "start": 20.600000008940697,
+        "bytes": 11493
+      },
+      {
+        "url": "http://127.0.0.1:8118/assets/service-repair.webp",
+        "start": 140.29999999701977,
+        "bytes": 159104
+      },
+      {
+        "url": "http://127.0.0.1:8118/favicon.svg",
+        "start": 142.90000000596046,
+        "bytes": 499
+      },
+      {
+        "url": "http://127.0.0.1:8118/roofing-motion-home.css?v=004H-finish",
+        "start": 202.40000000596046,
+        "bytes": 89823
+      },
+      {
+        "url": "http://127.0.0.1:8118/reviews.css",
+        "start": 202.79999999701977,
+        "bytes": 7525
+      },
+      {
+        "url": "http://127.0.0.1:8118/engagement.css",
+        "start": 203.1000000089407,
+        "bytes": 5498
+      },
+      {
+        "url": "http://127.0.0.1:8118/neighborhood.js",
+        "start": 203.6000000089407,
+        "bytes": 3744
+      },
+      {
+        "url": "http://127.0.0.1:8118/trust.js?v=009",
+        "start": 212.20000000298023,
+        "bytes": 2192
+      },
+      {
+        "url": "http://127.0.0.1:8118/trade-motion.js?v=004H",
+        "start": 214.90000000596046,
+        "bytes": 11317
+      },
+      {
+        "url": "http://127.0.0.1:8118/trade-motion-v2.js?v=004H",
+        "start": 217.6000000089407,
+        "bytes": 1379
+      },
+      {
+        "url": "http://127.0.0.1:8118/assets/barlow-bold.ttf",
+        "start": 223,
+        "bytes": 87420
+      },
+      {
+        "url": "http://127.0.0.1:8118/site.js",
+        "start": 276.79999999701977,
+        "bytes": 9915
+      },
+      {
+        "url": "http://127.0.0.1:8118/cutaway.js",
+        "start": 281,
+        "bytes": 1175
+      },
+      {
+        "url": "http://127.0.0.1:8118/hero-timelapse.js?v=reference-v6",
+        "start": 286.40000000596046,
+        "bytes": 6102
+      },
+      {
+        "url": "http://127.0.0.1:8118/conversion.js?v=reference-v6",
+        "start": 290.70000000298023,
+        "bytes": 2212
+      },
+      {
+        "url": "http://127.0.0.1:8118/visitor-chat.js",
+        "start": 294,
+        "bytes": 4159
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "name": "service",
+    "reduced": false,
+    "lcp": [
+      {
+        "time": 204,
+        "element": "tm-poster",
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/000.webp"
+      }
+    ],
+    "cls": 0.28115391670539797,
+    "hero": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/000.webp",
+    "paintGate": 237.5,
+    "requests": [
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/000.webp",
+        "start": 12,
+        "bytes": 43374
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile-still.webp",
+        "start": 12.299999997019768,
+        "bytes": 36020
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/barlow-bold.ttf",
+        "start": 31,
+        "bytes": 87420
+      },
+      {
+        "url": "http://127.0.0.1:8117/favicon.ico",
+        "start": 139.09999999403954,
+        "bytes": 309
+      },
+      {
+        "url": "http://127.0.0.1:8117/roofing-service.css?v=004H-finish",
+        "start": 238.3999999910593,
+        "bytes": 68612
+      },
+      {
+        "url": "http://127.0.0.1:8117/trust.css?v=009",
+        "start": 238.5,
+        "bytes": 3724
+      },
+      {
+        "url": "http://127.0.0.1:8117/trust.js?v=009",
+        "start": 238.8999999910593,
+        "bytes": 2192
+      },
+      {
+        "url": "http://127.0.0.1:8117/trade-motion.js?v=004H-finish",
+        "start": 242.5,
+        "bytes": 11317
+      },
+      {
+        "url": "http://127.0.0.1:8117/site.js",
+        "start": 246.20000000298023,
+        "bytes": 9915
+      },
+      {
+        "url": "http://127.0.0.1:8117/trade-page.js?v=004D2",
+        "start": 251.70000000298023,
+        "bytes": 3526
+      },
+      {
+        "url": "http://127.0.0.1:8117/finance-comparison.js?v=004D2",
+        "start": 254,
+        "bytes": 10534
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/000.webp",
+        "start": 307.3999999910593,
+        "bytes": 0
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/001.webp",
+        "start": 307.5,
+        "bytes": 39634
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/002.webp",
+        "start": 354.20000000298023,
+        "bytes": 38778
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/003.webp",
+        "start": 354.3999999910593,
+        "bytes": 37856
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/004.webp",
+        "start": 399.5,
+        "bytes": 37448
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/005.webp",
+        "start": 399.8999999910593,
+        "bytes": 38102
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/006.webp",
+        "start": 446,
+        "bytes": 38536
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/007.webp",
+        "start": 446.20000000298023,
+        "bytes": 40332
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/008.webp",
+        "start": 488.3999999910593,
+        "bytes": 38310
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/009.webp",
+        "start": 488.5,
+        "bytes": 39234
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/010.webp",
+        "start": 538.5,
+        "bytes": 39014
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/011.webp",
+        "start": 538.7999999970198,
+        "bytes": 39274
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/012.webp",
+        "start": 586.3999999910593,
+        "bytes": 38436
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/013.webp",
+        "start": 586.5999999940395,
+        "bytes": 37034
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/014.webp",
+        "start": 633,
+        "bytes": 34782
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/015.webp",
+        "start": 633.2000000029802,
+        "bytes": 35214
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/016.webp",
+        "start": 679.0999999940395,
+        "bytes": 34150
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/017.webp",
+        "start": 679.5,
+        "bytes": 33708
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/018.webp",
+        "start": 721.7000000029802,
+        "bytes": 31532
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/019.webp",
+        "start": 722,
+        "bytes": 30100
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/020.webp",
+        "start": 771.3999999910593,
+        "bytes": 28856
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/021.webp",
+        "start": 771.7000000029802,
+        "bytes": 26136
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/022.webp",
+        "start": 819.8999999910593,
+        "bytes": 24886
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/023.webp",
+        "start": 820.2000000029802,
+        "bytes": 24358
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/024.webp",
+        "start": 866.7000000029802,
+        "bytes": 24300
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/025.webp",
+        "start": 866.8999999910593,
+        "bytes": 24510
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/026.webp",
+        "start": 912.8999999910593,
+        "bytes": 24304
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/027.webp",
+        "start": 913.0999999940395,
+        "bytes": 23572
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/028.webp",
+        "start": 954.3999999910593,
+        "bytes": 23768
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/029.webp",
+        "start": 954.8999999910593,
+        "bytes": 25506
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/030.webp",
+        "start": 1004.3999999910593,
+        "bytes": 27594
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/031.webp",
+        "start": 1004.5999999940395,
+        "bytes": 27570
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/032.webp",
+        "start": 1052.0999999940395,
+        "bytes": 27492
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/033.webp",
+        "start": 1052.3999999910593,
+        "bytes": 27492
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/034.webp",
+        "start": 1099.2000000029802,
+        "bytes": 27546
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/035.webp",
+        "start": 1099.5999999940395,
+        "bytes": 27382
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/036.webp",
+        "start": 1146.8999999910593,
+        "bytes": 27340
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/037.webp",
+        "start": 1147,
+        "bytes": 27300
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile/038.webp",
+        "start": 1187.5,
+        "bytes": 27908
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile-still.webp",
+        "start": 1187.7000000029802,
+        "bytes": 0
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "name": "service",
+    "reduced": true,
+    "lcp": [
+      {
+        "time": 168,
+        "element": "tm-poster",
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile-still.webp"
+      }
+    ],
+    "cls": 0.0008713404622076934,
+    "hero": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile-still.webp",
+    "paintGate": 198.40000000596046,
+    "requests": [
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v4/mobile-still.webp",
+        "start": 12.900000005960464,
+        "bytes": 36020
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/barlow-bold.ttf",
+        "start": 29.100000008940697,
+        "bytes": 87420
+      },
+      {
+        "url": "http://127.0.0.1:8117/roofing-service.css?v=004H-finish",
+        "start": 199.1000000089407,
+        "bytes": 68612
+      },
+      {
+        "url": "http://127.0.0.1:8117/trust.css?v=009",
+        "start": 199.30000001192093,
+        "bytes": 3724
+      },
+      {
+        "url": "http://127.0.0.1:8117/trust.js?v=009",
+        "start": 199.70000000298023,
+        "bytes": 2192
+      },
+      {
+        "url": "http://127.0.0.1:8117/trade-motion.js?v=004H-finish",
+        "start": 206.1000000089407,
+        "bytes": 11317
+      },
+      {
+        "url": "http://127.0.0.1:8117/site.js",
+        "start": 209.6000000089407,
+        "bytes": 9915
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/v3/desktop-still.webp",
+        "start": 217,
+        "bytes": 144238
+      },
+      {
+        "url": "http://127.0.0.1:8117/assets/trade-motion/roofing-house-cutout.webp",
+        "start": 217.1000000089407,
+        "bytes": 292388
+      },
+      {
+        "url": "http://127.0.0.1:8117/trade-page.js?v=004D2",
+        "start": 259.70000000298023,
+        "bytes": 3526
+      },
+      {
+        "url": "http://127.0.0.1:8117/finance-comparison.js?v=004D2",
+        "start": 264.5,
+        "bytes": 10534
+      }
+    ],
+    "overflow": false
+  }
+]

@@ -1,0 +1,722 @@
+{
+  "states": [
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "current",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "current",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "bold",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "bold",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "fresh",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "fresh",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "classic",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "classic",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "current",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "current",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "bold",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "bold",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "fresh",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "fresh",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "classic",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "classic",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "current",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "current",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "bold",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "bold",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "fresh",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "fresh",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "classic",
+      "variant": "b",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "classic",
+      "variant": "c",
+      "width": 1440
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "current",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "current",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "bold",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "bold",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "fresh",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "fresh",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "classic",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "classic",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "current",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "current",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "bold",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "bold",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "fresh",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "fresh",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "classic",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "classic",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "current",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "current",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "bold",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "bold",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "fresh",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "fresh",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "classic",
+      "variant": "b",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "classic",
+      "variant": "c",
+      "width": 768
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "current",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "current",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "bold",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "bold",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "fresh",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "fresh",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "classic",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "roofing",
+      "style": "classic",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "current",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "current",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "bold",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "bold",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "fresh",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "fresh",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "classic",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "patios",
+      "style": "classic",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "current",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "current",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "bold",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "bold",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "fresh",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "fresh",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "classic",
+      "variant": "b",
+      "width": 390
+    },
+    {
+      "kind": "no-js",
+      "kit": "hvac",
+      "style": "classic",
+      "variant": "c",
+      "width": 390
+    },
+    {
+      "kind": "filter",
+      "variant": "a",
+      "minimum": "all",
+      "displayed": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "a",
+      "minimum": 3,
+      "displayed": [
+        3,
+        4,
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "a",
+      "minimum": 4,
+      "displayed": [
+        4,
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "a",
+      "minimum": 5,
+      "displayed": [
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "b",
+      "minimum": "all",
+      "displayed": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "b",
+      "minimum": 3,
+      "displayed": [
+        3,
+        4,
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "b",
+      "minimum": 4,
+      "displayed": [
+        4,
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "b",
+      "minimum": 5,
+      "displayed": [
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "c",
+      "minimum": "all",
+      "displayed": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "c",
+      "minimum": 3,
+      "displayed": [
+        3,
+        4,
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "c",
+      "minimum": 4,
+      "displayed": [
+        4,
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "filter",
+      "variant": "c",
+      "minimum": 5,
+      "displayed": [
+        5
+      ],
+      "average": 3.5,
+      "totalCount": 4
+    },
+    {
+      "kind": "zero-filter",
+      "variant": "a"
+    },
+    {
+      "kind": "zero-filter",
+      "variant": "b"
+    },
+    {
+      "kind": "zero-filter",
+      "variant": "c"
+    },
+    {
+      "kind": "calculator",
+      "variant": "b"
+    },
+    {
+      "kind": "calculator",
+      "variant": "c"
+    },
+    {
+      "kind": "inquiry-submit",
+      "variant": "b"
+    },
+    {
+      "kind": "inquiry-submit",
+      "variant": "c"
+    },
+    {
+      "kind": "pending-film",
+      "variant": "a"
+    },
+    {
+      "kind": "pending-film",
+      "variant": "b"
+    },
+    {
+      "kind": "pending-film",
+      "variant": "c"
+    }
+  ],
+  "screenshots": [
+    {
+      "kit": "roofing",
+      "width": 1440,
+      "file": "after/roofing-mixed-home-1440.png"
+    },
+    {
+      "kit": "patios",
+      "width": 1440,
+      "file": "after/patios-mixed-home-1440.png"
+    },
+    {
+      "kit": "hvac",
+      "width": 1440,
+      "file": "after/hvac-mixed-home-1440.png"
+    },
+    {
+      "kit": "roofing",
+      "width": 390,
+      "file": "after/roofing-mixed-home-390.png"
+    },
+    {
+      "kit": "patios",
+      "width": 390,
+      "file": "after/patios-mixed-home-390.png"
+    },
+    {
+      "kit": "hvac",
+      "width": 390,
+      "file": "after/hvac-mixed-home-390.png"
+    }
+  ],
+  "checks": 608,
+  "mockedProviderCalls": 29,
+  "actualProviderCalls": 0,
+  "passed": true
+}

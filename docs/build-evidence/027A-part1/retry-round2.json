@@ -1,0 +1,43 @@
+[
+  {
+    "label": "planning-ambient",
+    "kind": "regression",
+    "status": 1,
+    "ms": 298,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Part 1 current source and installed catalog"
+  },
+  {
+    "label": "planning-scroll",
+    "kind": "regression",
+    "status": 1,
+    "ms": 266,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Part 1 current source and installed catalog"
+  },
+  {
+    "label": "website-pages",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1877,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Part 1 current source and installed catalog"
+  },
+  {
+    "label": "planning-ambient-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 24101,
+    "fixture": "Part 1 current source and installed catalog"
+  },
+  {
+    "label": "planning-scroll-browser",
+    "kind": "browser",
+    "status": 1,
+    "ms": 46029,
+    "fixture": "Part 1 current source and installed catalog"
+  }
+]

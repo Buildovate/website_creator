@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "count": 18,
+  "checks": [
+    "fresh GET is read-only and unpublished is honest",
+    "tour is claimed once and recorded per account",
+    "skip persists without reopening tour",
+    "repeat skip is idempotent",
+    "viewer gets a separate personal tour, not business write permission",
+    "finished tour survives later reads and observations",
+    "anonymous denied",
+    "cross-tenant read denied",
+    "cross-tenant personal write denied",
+    "foreign origin write denied",
+    "clients cannot submit completion or XP",
+    "unknown actions rejected",
+    "published preview requires status AND snapshot AND safe slug",
+    "fresh observations never celebrate",
+    "a completed level celebrates exactly once without changing progress",
+    "later levels and regress/recomplete do not repeat old celebrations",
+    "state transition is pure",
+    "corrupt stored receipts fail honestly"
+  ]
+}

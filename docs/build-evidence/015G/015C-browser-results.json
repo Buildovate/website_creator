@@ -1,0 +1,28 @@
+{
+  "phone": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "contacts": "phone-contacts.png",
+    "filters": "phone-filters-sheet.png",
+    "outcome": "phone-call-outcome.png",
+    "notes": "phone-inline-notes.png",
+    "bulk": "phone-bulk-select.png",
+    "exportGuard": true,
+    "picker": "phone-photo-picker.png"
+  },
+  "desktop": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "contacts": "desktop-contacts.png",
+    "bulk": "desktop-bulk-select.png",
+    "outcome": "desktop-call-outcome.png",
+    "notes": "desktop-inline-notes.png",
+    "filters": "desktop-inline-filters.png",
+    "picker": "desktop-photo-picker.png"
+  },
+  "errors": []
+}

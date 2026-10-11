@@ -1,0 +1,41 @@
+{
+  "command": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5173",
+  "results": [
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-promotions-027/promotions",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-promotions-027/promotions?preview=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-promotions-027-empty/promotions",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roofing-promotions-027-empty/promotions?preview=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/tenants/ec1ffa86-4411-4947-a4a9-e1c3b707850d/generation",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/planning-films.json",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/promotions-planning.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/assets/planning/roofing-promotions-scroll-720.webp",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/assets/planning/roofing-promotions-scroll-1280.webp",
+      "status": 200
+    }
+  ]
+}

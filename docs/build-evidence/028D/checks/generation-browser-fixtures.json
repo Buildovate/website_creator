@@ -1,0 +1,36 @@
+[
+  {
+    "url": "http://127.0.0.1:8159/api/tenants/879ec4df-6ad7-4e72-ba0d-3b9f620050ff/generation",
+    "method": "POST",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:18:72"
+  },
+  {
+    "url": "http://127.0.0.1:8159/api/tenants/879ec4df-6ad7-4e72-ba0d-3b9f620050ff/domains",
+    "method": "GET",
+    "status": 403,
+    "state": "generation-viewer-desktop",
+    "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:27:107",
+    "kind": "permission-state",
+    "active": true
+  },
+  {
+    "url": "http://127.0.0.1:8159/api/tenants/879ec4df-6ad7-4e72-ba0d-3b9f620050ff/generation",
+    "method": "POST",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:18:72"
+  },
+  {
+    "url": "http://127.0.0.1:8159/api/tenants/879ec4df-6ad7-4e72-ba0d-3b9f620050ff/domains",
+    "method": "GET",
+    "status": 403,
+    "state": "generation-viewer-phone",
+    "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:27:107",
+    "kind": "permission-state",
+    "active": true
+  }
+]

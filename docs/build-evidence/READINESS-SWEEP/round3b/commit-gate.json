@@ -1,0 +1,63 @@
+{
+  "eligible": true,
+  "missing": [],
+  "buildGate": [
+    {
+      "label": "build",
+      "group": "Suite-102",
+      "status": 0,
+      "code": 0,
+      "outcome": "PASS",
+      "signal": null,
+      "ms": 7109,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/build.log",
+      "pass": null,
+      "fail": 0,
+      "countKind": "whole-suite outcome",
+      "locations": [],
+      "failures": []
+    },
+    {
+      "label": "isolated-worker-build",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-build-gate-isolated-worker-build.log",
+      "ms": 803,
+      "supersedes": "earlier full-sweep invocation; final source verification",
+      "pass": null,
+      "fail": 0,
+      "countKind": "whole-suite outcome",
+      "locations": [],
+      "failures": []
+    },
+    {
+      "label": "typecheck",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-build-gate-typecheck.log",
+      "ms": 840,
+      "supersedes": "earlier full-sweep invocation; final source verification",
+      "pass": null,
+      "fail": 0,
+      "countKind": "whole-suite outcome",
+      "locations": [],
+      "failures": []
+    }
+  ],
+  "counts": {
+    "Game": 122,
+    "Pay": 44,
+    "catalog": 11,
+    "domain": 77,
+    "insertion": 16
+  },
+  "newBatchA": {
+    "label": "readiness-batch-a",
+    "code": 0,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/readiness-batch-a-final-rental.log",
+    "pass": 19,
+    "fail": 0,
+    "countKind": "test cases",
+    "locations": [],
+    "failures": []
+  },
+  "providerCalls": 0
+}

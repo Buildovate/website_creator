@@ -1,0 +1,41 @@
+{
+  "mainStates": 1177,
+  "normalAndNoJsStates": 12,
+  "aaMeasurements": 98186,
+  "aaFailures": 0,
+  "controlBorders": 3048,
+  "borderFailures": 0,
+  "focusChecks": 29191,
+  "geometryChecks": 1868,
+  "geometryFailures": 0,
+  "overflowFailures": 0,
+  "maxCLS": 0.023765146531260717,
+  "pageExceptions": 0,
+  "styles": {
+    "current": {
+      "measurements": 24857,
+      "failures": 0
+    },
+    "bold": {
+      "measurements": 23843,
+      "failures": 0
+    },
+    "fresh": {
+      "measurements": 23821,
+      "failures": 0
+    },
+    "classic": {
+      "measurements": 24277,
+      "failures": 0
+    }
+  },
+  "platformLegacyAudit": {
+    "screenshottedStates": 383,
+    "textMeasurements": 33609,
+    "borderMeasurements": 66834,
+    "failures": 0,
+    "nonAllowlistedPlatformDiagnostics": 0,
+    "acceptedExceptions": 29,
+    "publicLegacyDiagnosticsOutsidePlatformGate": 31
+  }
+}

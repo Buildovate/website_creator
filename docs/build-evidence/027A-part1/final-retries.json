@@ -1,0 +1,110 @@
+[
+  {
+    "label": "conversion-references",
+    "kind": "regression",
+    "status": 0,
+    "ms": 822,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 1
+  },
+  {
+    "label": "crm",
+    "kind": "regression",
+    "status": 0,
+    "ms": 393,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 1
+  },
+  {
+    "label": "sales-ops",
+    "kind": "regression",
+    "status": 0,
+    "ms": 291,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 1
+  },
+  {
+    "label": "saved-designs",
+    "kind": "regression",
+    "status": 0,
+    "ms": 291,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 1
+  },
+  {
+    "label": "premium-service",
+    "kind": "regression",
+    "status": 0,
+    "ms": 469,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0
+  },
+  {
+    "label": "service-content",
+    "kind": "regression",
+    "status": 0,
+    "ms": 189,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0
+  },
+  {
+    "label": "service-pages-all-trades",
+    "kind": "regression",
+    "status": 0,
+    "ms": 467,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0
+  },
+  {
+    "label": "showpiece-media",
+    "kind": "regression",
+    "status": 0,
+    "ms": 231,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0
+  },
+  {
+    "label": "showpiece-v4",
+    "kind": "regression",
+    "status": 0,
+    "ms": 446,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked.",
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0
+  },
+  {
+    "label": "roofing-polish-part1",
+    "kind": "regression",
+    "status": 0,
+    "ms": 3095,
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked."
+  },
+  {
+    "label": "roofing-polish-part1-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 54980,
+    "fixture": "Final Part 1 source and installed catalog",
+    "priorStatus": 0,
+    "verificationNote": "Final source; obsolete caption assertions aligned to Part 1, whole-money service formatting and expanded visual evidence checked."
+  }
+]

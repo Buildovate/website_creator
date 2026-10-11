@@ -1,0 +1,501 @@
+[
+  {
+    "label": "review-packet-browser",
+    "before": {
+      "code": 0,
+      "pass": null,
+      "fail": 0,
+      "countKind": "suite result; assertions not individually counted"
+    },
+    "round1": {
+      "label": "review-packet-browser",
+      "status": 1,
+      "outcome": "FAILED",
+      "code": 1,
+      "signal": null,
+      "ms": 34743,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round1/logs/corrected-review-packet-browser.log",
+      "hostCorrection": true,
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/review-packet-browser.mjs:22"
+      ],
+      "failures": [
+        "locator.waitFor: Timeout 30000ms exceeded."
+      ],
+      "reported": {}
+    },
+    "round2": {
+      "label": "review-packet-browser",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 35253,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round2/logs/review-packet-browser.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/review-packet-browser.mjs:22"
+      ],
+      "failures": [
+        "locator.waitFor: Timeout 30000ms exceeded."
+      ]
+    },
+    "after": {
+      "label": "review-packet-browser",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 35273,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/review-packet-browser.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/review-packet-browser.mjs:22"
+      ],
+      "failures": [
+        "locator.waitFor: Timeout 30000ms exceeded."
+      ]
+    }
+  },
+  {
+    "label": "review-packet-contract",
+    "before": {
+      "code": 1,
+      "pass": null,
+      "fail": 1,
+      "countKind": "suite result; assertions not individually counted"
+    },
+    "round1": {
+      "label": "review-packet-contract",
+      "status": 1,
+      "outcome": "FAILED",
+      "code": 1,
+      "signal": null,
+      "ms": 232997,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round1/logs/corrected-review-packet-contract.log",
+      "hostCorrection": true,
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/review-packet-contract.mjs:47"
+      ],
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:",
+        "  code: 'ERR_ASSERTION',"
+      ],
+      "reported": {}
+    },
+    "round2": {
+      "label": "review-packet-contract",
+      "group": "standalone",
+      "status": 0,
+      "code": 0,
+      "outcome": "PASS",
+      "signal": null,
+      "ms": 1108930,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round2/logs/review-packet-contract.log",
+      "pass": 48,
+      "fail": 0,
+      "countKind": "reported checks",
+      "locations": [],
+      "failures": []
+    },
+    "after": {
+      "label": "review-packet-contract",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 237909,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/review-packet-contract.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/review-packet-contract.mjs:47"
+      ],
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:",
+        "  code: 'ERR_ASSERTION',"
+      ]
+    }
+  },
+  {
+    "label": "automatic-qa-frame-sample-replay",
+    "before": {
+      "code": 1,
+      "pass": null,
+      "fail": 1,
+      "countKind": "suite result; assertions not individually counted"
+    },
+    "round1": {
+      "label": "automatic-qa-frame-sample-replay",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 23177,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round1/logs/automatic-qa-frame-sample-replay.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/automatic-qa-frame-sample-replay.mjs:19",
+        "tests/automatic-qa-frame-sample-replay.mjs:32"
+      ],
+      "failures": [
+        "Review capture failed sample-fictional-copper-kite-ventura AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png",
+        "AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png",
+        "  code: 'ERR_ASSERTION',"
+      ],
+      "reported": {}
+    },
+    "round2": {
+      "label": "automatic-qa-frame-sample-replay",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 13043,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round2/logs/automatic-qa-frame-sample-replay.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/automatic-qa-frame-sample-replay.mjs:19",
+        "tests/automatic-qa-frame-sample-replay.mjs:32"
+      ],
+      "failures": [
+        "Review capture failed sample-fictional-copper-kite-ventura AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png",
+        "AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png",
+        "  code: 'ERR_ASSERTION',"
+      ]
+    },
+    "after": {
+      "label": "automatic-qa-frame-sample-replay",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 17037,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/automatic-qa-frame-sample-replay.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/automatic-qa-frame-sample-replay.mjs:19",
+        "tests/automatic-qa-frame-sample-replay.mjs:32"
+      ],
+      "failures": [
+        "Review capture failed sample-fictional-copper-kite-ventura AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png",
+        "AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png",
+        "  code: 'ERR_ASSERTION',"
+      ]
+    }
+  },
+  {
+    "label": "automatic-qa-rail-colors",
+    "before": {
+      "code": 1,
+      "pass": null,
+      "fail": 1,
+      "countKind": "suite result; assertions not individually counted"
+    },
+    "round1": {
+      "label": "automatic-qa-rail-colors",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 37367,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round1/logs/automatic-qa-rail-colors.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/automatic-qa-rail-colors.mjs:5"
+      ],
+      "failures": [
+        "locator.scrollIntoViewIfNeeded: Timeout 29956.256999999998ms exceeded."
+      ],
+      "reported": {}
+    },
+    "round2": {
+      "label": "automatic-qa-rail-colors",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 35449,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round2/logs/automatic-qa-rail-colors.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/automatic-qa-rail-colors.mjs:5"
+      ],
+      "failures": [
+        "locator.scrollIntoViewIfNeeded: Timeout 29955.505999999998ms exceeded."
+      ]
+    },
+    "after": {
+      "label": "automatic-qa-rail-colors",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 36958,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/automatic-qa-rail-colors.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/automatic-qa-rail-colors.mjs:5"
+      ],
+      "failures": [
+        "locator.scrollIntoViewIfNeeded: Timeout 29956.701ms exceeded."
+      ]
+    }
+  },
+  {
+    "label": "automatic-qa-replay",
+    "before": {
+      "code": 1,
+      "pass": null,
+      "fail": 1,
+      "countKind": "suite result; assertions not individually counted"
+    },
+    "round1": {
+      "label": "automatic-qa-replay",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 112429,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round1/logs/automatic-qa-replay.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/helpers/replay-alternate-assertions.mjs:38",
+        "tests/automatic-qa-replay.mjs:8"
+      ],
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: Saved replay must contain 143 files",
+        "  code: 'ERR_ASSERTION',"
+      ],
+      "reported": {}
+    },
+    "round2": {
+      "label": "automatic-qa-replay",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 101636,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round2/logs/automatic-qa-replay.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/helpers/replay-alternate-assertions.mjs:38",
+        "tests/automatic-qa-replay.mjs:8"
+      ],
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: Saved replay must contain 143 files",
+        "  code: 'ERR_ASSERTION',"
+      ]
+    },
+    "after": {
+      "label": "automatic-qa-replay",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 117391,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/automatic-qa-replay.log",
+      "pass": null,
+      "fail": 1,
+      "countKind": "whole-suite outcome",
+      "locations": [
+        "tests/helpers/replay-alternate-assertions.mjs:104",
+        "tests/automatic-qa-replay.mjs:8"
+      ],
+      "failures": [
+        "Error: Exact replay failed: {\"path\":\"screenshots/page-001-1440.png\",\"reason\":\"Unregistered screenshot SHA: screenshots/page-001-1440.png 9ed1b585e1064f83b002d6d2f7064b2ee0fb086b7ce96e386a07e6ed6d0cba40\",\"savedSha256\":\"0c150015f9d0457e2e531baeeab3aeb57cdfb25cd917820ae797e62bdccb3ed9\",\"actualSha256\":\"9ed1b585e1064f83b002d6d2f7064b2ee0fb086b7ce96e386a07e6ed6d0cba40\"}"
+      ]
+    }
+  },
+  {
+    "label": "design-styles-browser",
+    "before": {
+      "code": 1,
+      "pass": null,
+      "fail": 1,
+      "countKind": "suite result; assertions not individually counted"
+    },
+    "round1": {
+      "label": "design-styles-browser",
+      "status": 1,
+      "outcome": "FAILED",
+      "code": 1,
+      "signal": null,
+      "ms": 2857287,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round1/logs/corrected-design-styles-browser.log",
+      "hostCorrection": true,
+      "pass": 9407,
+      "fail": 131,
+      "countKind": "recorded audit checks",
+      "locations": [
+        "tests/design-styles-browser.mjs:68"
+      ],
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: [{\"label\":\"header centers <= 1px roofing-complete-current-services-roof-installation-desktop-normal\",\"detail\":{\"spread\":649.375,\"items\":[{\"text\":\"Expertise\",\"center\":78.625,\"height\":44,\"textCenter\":78.46875,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Areas\",\"center\":147.625,\"height\":44,\"textCenter\":147.53125,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Pricing\",\"center\":216.625,\"height\":44,\"textCenter\":216.53125,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Financing\",\"center\":285.625,\"height\":44,\"textCenter\":285.53125,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Projects\",\"center\":354.625,\"height\":44,\"textCenter\":354.",
+        "  code: 'ERR_ASSERTION',"
+      ],
+      "reported": {
+        "checks": 9538,
+        "failures": 131
+      }
+    },
+    "round2": {
+      "label": "design-styles-browser",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 2703828,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round2/logs/design-styles-browser.log",
+      "pass": 9407,
+      "fail": 131,
+      "countKind": "recorded audit checks",
+      "locations": [
+        "tests/design-styles-browser.mjs:68"
+      ],
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: [{\"label\":\"header centers <= 1px roofing-complete-current-services-roof-installation-desktop-normal\",\"detail\":{\"spread\":649.375,\"items\":[{\"text\":\"Expertise\",\"center\":78.625,\"height\":44,\"textCenter\":78.46875,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Areas\",\"center\":147.625,\"height\":44,\"textCenter\":147.53125,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Pricing\",\"center\":216.625,\"height\":44,\"textCenter\":216.53125,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Financing\",\"center\":285.625,\"height\":44,\"textCenter\":285.53125,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Projects\",\"center\":354.625,\"height\":44,\"textCenter\":354.",
+        "  code: 'ERR_ASSERTION',"
+      ]
+    },
+    "after": {
+      "label": "design-styles-browser",
+      "group": "standalone",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 2954327,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/design-styles-browser.log",
+      "pass": 9407,
+      "fail": 131,
+      "countKind": "recorded audit checks",
+      "locations": [
+        "tests/design-styles-browser.mjs:68"
+      ],
+      "failures": [
+        "AssertionError [ERR_ASSERTION]: [{\"label\":\"header centers <= 1px roofing-complete-current-services-roof-installation-desktop-normal\",\"detail\":{\"spread\":649.375,\"items\":[{\"text\":\"Expertise\",\"center\":78.625,\"height\":44,\"textCenter\":78.46875,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Areas\",\"center\":147.625,\"height\":44,\"textCenter\":147.53125,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Pricing\",\"center\":216.625,\"height\":44,\"textCenter\":216.53125,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Financing\",\"",
+        "  code: 'ERR_ASSERTION',"
+      ]
+    }
+  },
+  {
+    "label": "website-pages",
+    "before": {
+      "code": 0,
+      "pass": 30,
+      "fail": 0,
+      "countKind": "test cases"
+    },
+    "round1": {
+      "label": "website-pages",
+      "group": "Suite-102",
+      "status": 0,
+      "code": 0,
+      "outcome": "PASS",
+      "signal": null,
+      "ms": 2395061,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round1/logs/website-pages.log",
+      "pass": 30,
+      "fail": 0,
+      "countKind": "test cases",
+      "locations": [],
+      "failures": [],
+      "reported": {}
+    },
+    "round2": {
+      "label": "website-pages",
+      "group": "Suite-102",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 2222620,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round2/logs/website-pages.log",
+      "pass": 29,
+      "fail": 1,
+      "countKind": "test cases",
+      "locations": [
+        "tests/helpers/review-approval-fixture.mjs:27",
+        "tests/helpers/review-approval-fixture.mjs:52",
+        "tests/website-pages.mjs:91",
+        "tests/website-pages.mjs:473",
+        "tests/website-pages.mjs:439"
+      ],
+      "failures": [
+        "✖ #007A confirmed trust facts, concise story, owner hero and published project tiles (282772.8554ms)",
+        "✖ failing tests:",
+        "✖ #007A confirmed trust facts, concise story, owner hero and published project tiles (282772.8554ms)",
+        "  AssertionError [ERR_ASSERTION]: [{\"category\":\"layout\",\"crop\":\"qa-crops/page-011-1440-2.png\",\"id\":\"page-011-1440-overlapping-text\",\"key\":\"overlapping-text\",\"measured\":{\"failures\":[{\"first\":\"body>main:nth-child(3)>article:nth-child(1)>div:nth-child(1)>div:nth-child(3)>aside:nth-child(2)>div:nth-child(4)>div:nth-child(2)>strong:nth-child(1)\",\"intersectionPx\":[98.66,11.14],\"second\":\"body>aside:nth-child(9)>button:nth-child(1)\"}],\"violations\":1},\"page\":\"/s/trust-seven-a/projects/106648c6-b298-421c-bdc6-1fbcc5ebae01\",\"result\":\"Fail\",\"selector\":\"body>main:nth-child(3)>article:nth-child(1)>div:nth-child(1)>div:nth-child(3)>aside:nth-child(2)>div:nt",
+        "    code: 'ERR_ASSERTION',"
+      ]
+    },
+    "after": {
+      "label": "website-pages",
+      "group": "Suite-102",
+      "status": 1,
+      "code": 1,
+      "outcome": "FAILED",
+      "signal": null,
+      "ms": 2359104,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/website-pages.log",
+      "pass": 29,
+      "fail": 1,
+      "countKind": "test cases",
+      "locations": [
+        "tests/helpers/review-approval-fixture.mjs:27",
+        "tests/helpers/review-approval-fixture.mjs:52",
+        "tests/website-pages.mjs:91",
+        "tests/website-pages.mjs:473",
+        "tests/website-pages.mjs:439"
+      ],
+      "failures": [
+        "✖ #007A confirmed trust facts, concise story, owner hero and published project tiles (292881.8325ms)",
+        "✖ failing tests:",
+        "✖ #007A confirmed trust facts, concise story, owner hero and published project tiles (292881.8325ms)",
+        "  AssertionError [ERR_ASSERTION]: [{\"category\":\"layout\",\"crop\":\"qa-crops/page-011-1440-2.png\",\"id\":\"page-011-1440-overlapping-text\",\"key\":\"overlapping-text\",\"measured\":{\"failures\":[{\"first\":\"body>main:nth-child(3)>article:nth-child(1)>div:nth-child(1)>div:nth-child(3)>aside:nth-child(2)>div:nth-child(4)>div:nth-child(2)>strong:nth-child(1)\",\"intersectionPx\":[98.66,11.14],\"second\":\"body>aside:nth-child(9)>button:nth-child(1)\"}],\"violations\":1},\"page\":\"/s/trust-seven-a/projects/a56f4ea0-e066-457f-",
+        "    code: 'ERR_ASSERTION',"
+      ]
+    }
+  }
+]

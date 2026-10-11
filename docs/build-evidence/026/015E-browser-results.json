@@ -1,0 +1,67 @@
+{
+  "phone": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "overview": "phone-walkthrough-prep-overview.png",
+    "websiteTable": "phone-website-customer-link.png",
+    "customerPortal": "phone-customer-portal-action.png",
+    "actions": "phone-contact-card-actions.png",
+    "more": "phone-contact-more-open.png",
+    "link": "phone-linked-contact-detail.png",
+    "prepare": "phone-prepare-design.png",
+    "calendarControls": "phone-calendar-controls.png",
+    "today": "phone-calendar-today-month.png",
+    "controls": [
+      {
+        "id": "cal-prev",
+        "top": -1732.390625,
+        "right": 77,
+        "bottom": -1688.390625
+      },
+      {
+        "id": "cal-today",
+        "top": -1732.390625,
+        "right": 136.546875,
+        "bottom": -1688.390625
+      },
+      {
+        "id": "cal-next",
+        "top": -1732.390625,
+        "right": 183.546875,
+        "bottom": -1688.390625
+      },
+      {
+        "id": "cal-add",
+        "top": -1732.390625,
+        "right": 305,
+        "bottom": -1688.390625
+      },
+      {
+        "id": "cal-settings",
+        "top": -1732.390625,
+        "right": 357,
+        "bottom": -1688.390625
+      }
+    ],
+    "appointment": "phone-appointment-prep.png"
+  },
+  "desktop": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "overview": "desktop-walkthrough-prep-overview.png",
+    "websiteTable": "desktop-website-customer-link.png",
+    "customerPortal": "desktop-customer-portal-action.png",
+    "actions": "desktop-contact-row-actions.png",
+    "more": "desktop-contact-more-open.png",
+    "link": "desktop-linked-contact-detail.png",
+    "prepare": "desktop-prepare-design.png",
+    "today": "desktop-calendar-today-month.png",
+    "todayWeek": "desktop-calendar-today-week.png",
+    "appointment": "desktop-appointment-prep.png"
+  },
+  "errors": []
+}

@@ -1,0 +1,143 @@
+{
+  "reason": "Reviews evidence was added after the initial build/core suites. Final source verification replaces no initial sweep outcome.",
+  "rows": [
+    {
+      "label": "full-build",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-full-build.log",
+      "ms": 3480
+    },
+    {
+      "label": "isolated-worker-build",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-isolated-worker-build.log",
+      "ms": 833
+    },
+    {
+      "label": "typecheck",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-typecheck.log",
+      "ms": 907
+    },
+    {
+      "label": "game-progress",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-game-progress.log",
+      "ms": 688
+    },
+    {
+      "label": "game-milestones",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-game-milestones.log",
+      "ms": 403
+    },
+    {
+      "label": "game-desktop-api",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-game-desktop-api.log",
+      "ms": 1043
+    },
+    {
+      "label": "game-experience-api",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-game-experience-api.log",
+      "ms": 822
+    },
+    {
+      "label": "game-autofill",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-game-autofill.log",
+      "ms": 712
+    },
+    {
+      "label": "game-copy",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-game-copy.log",
+      "ms": 867
+    },
+    {
+      "label": "game-forms",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-game-forms.log",
+      "ms": 569
+    },
+    {
+      "label": "payments",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-payments.log",
+      "ms": 612
+    },
+    {
+      "label": "stripe-sync",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-stripe-sync.log",
+      "ms": 464
+    },
+    {
+      "label": "stripe-checkout",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-stripe-checkout.log",
+      "ms": 535
+    },
+    {
+      "label": "stripe-no-key",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-stripe-no-key.log",
+      "ms": 526
+    },
+    {
+      "label": "entitlements",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-entitlements.log",
+      "ms": 703
+    },
+    {
+      "label": "pay4a",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-pay4a.log",
+      "ms": 819
+    },
+    {
+      "label": "pay4b",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-pay4b.log",
+      "ms": 653
+    },
+    {
+      "label": "pay5",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-pay5.log",
+      "ms": 801
+    },
+    {
+      "label": "catalog",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-catalog.log",
+      "ms": 558
+    },
+    {
+      "label": "domain-wizard",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-domain-wizard.log",
+      "ms": 1127
+    },
+    {
+      "label": "insertion-order",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-insertion-order.log",
+      "ms": 3030
+    },
+    {
+      "label": "readiness-batch-a",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-readiness-batch-a.log",
+      "ms": 2328
+    },
+    {
+      "label": "pg-readiness-batch-a",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-gate-pg-readiness-batch-a.log",
+      "ms": 56206
+    }
+  ]
+}

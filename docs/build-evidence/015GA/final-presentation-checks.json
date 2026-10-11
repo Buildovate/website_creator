@@ -1,0 +1,32 @@
+[
+  {
+    "label": "build",
+    "status": 0,
+    "ms": 1535
+  },
+  {
+    "label": "typecheck",
+    "status": 0,
+    "ms": 252
+  },
+  {
+    "label": "expense-polish",
+    "status": 0,
+    "ms": 207
+  },
+  {
+    "label": "expenses-browser",
+    "status": 0,
+    "ms": 10159
+  },
+  {
+    "label": "expense-polish-browser",
+    "status": 0,
+    "ms": 6291
+  },
+  {
+    "label": "platform-mobile",
+    "status": 0,
+    "ms": 51831
+  }
+]

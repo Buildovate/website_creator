@@ -1,0 +1,31 @@
+{
+  "states": 760,
+  "aaMeasurements": 50104,
+  "aaFailures": 0,
+  "focusChecks": 20644,
+  "geometryChecks": 1528,
+  "geometryFailures": 0,
+  "overflowFailures": 0,
+  "maxCLS": 0.023765146531260717,
+  "minimumRailGap": 44.75,
+  "processMediaChecks": 616,
+  "railChecks": 296,
+  "styles": {
+    "current": {
+      "measurements": 12526,
+      "failures": 0
+    },
+    "bold": {
+      "measurements": 12526,
+      "failures": 0
+    },
+    "fresh": {
+      "measurements": 12526,
+      "failures": 0
+    },
+    "classic": {
+      "measurements": 12526,
+      "failures": 0
+    }
+  }
+}

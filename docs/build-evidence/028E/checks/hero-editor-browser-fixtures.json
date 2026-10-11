@@ -1,0 +1,54 @@
+[
+  {
+    "url": "http://127.0.0.1:8162/api/session",
+    "method": "GET",
+    "status": "offline",
+    "state": "hero-offline-desktop",
+    "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:15:19",
+    "kind": "offline-injection",
+    "active": true
+  },
+  {
+    "url": "http://127.0.0.1:8162/api/tenants/a45b4832-66db-439d-b6be-38c5767a7a58",
+    "method": "PUT",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:16:109"
+  },
+  {
+    "url": "http://127.0.0.1:8162/api/tenants/a45b4832-66db-439d-b6be-38c5767a7a58/domains",
+    "method": "GET",
+    "status": 403,
+    "state": "hero-viewer-desktop",
+    "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:21:89",
+    "kind": "permission-state",
+    "active": true
+  },
+  {
+    "url": "http://127.0.0.1:8162/api/session",
+    "method": "GET",
+    "status": "offline",
+    "state": "hero-offline-phone",
+    "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:15:19",
+    "kind": "offline-injection",
+    "active": true
+  },
+  {
+    "url": "http://127.0.0.1:8162/api/tenants/fc4d30f4-faf9-452a-95d2-b4b80c794bf7",
+    "method": "PUT",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:16:109"
+  },
+  {
+    "url": "http://127.0.0.1:8162/api/tenants/fc4d30f4-faf9-452a-95d2-b4b80c794bf7/domains",
+    "method": "GET",
+    "status": 403,
+    "state": "hero-viewer-phone",
+    "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:21:89",
+    "kind": "permission-state",
+    "active": true
+  }
+]

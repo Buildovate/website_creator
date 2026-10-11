@@ -1,0 +1,81 @@
+{
+  "round": 5,
+  "totals": {
+    "Pass": 3425,
+    "Borderline": 70,
+    "Fail": 0
+  },
+  "packets": [
+    {
+      "id": "sample-fictional-copper-kite-ventura",
+      "versionHash": "2ff7273ca3668b6aa159614c9b5d7beccdb3e8634324d8449b2d11e2b4386d09",
+      "counts": {
+        "Pass": 711,
+        "Borderline": 15,
+        "Fail": 0
+      },
+      "borderlineByCheck": {
+        "clipped-text": 14,
+        "consistency": 1
+      },
+      "qaGateClear": false
+    },
+    {
+      "id": "sample-fictional-blue-orchard-pasadena",
+      "versionHash": "fc1a0cd8df710bc903005200e65e788a5f1c6ef98c79fedefbec00d06fc559c1",
+      "counts": {
+        "Pass": 711,
+        "Borderline": 15,
+        "Fail": 0
+      },
+      "borderlineByCheck": {
+        "clipped-text": 14,
+        "consistency": 1
+      },
+      "qaGateClear": false
+    },
+    {
+      "id": "sample-fictional-paper-lantern-temecula",
+      "versionHash": "d0a80961f866a85fc6fc71136f75373fbe11aa487824349faecc2cf6b5a03c1f",
+      "counts": {
+        "Pass": 667,
+        "Borderline": 14,
+        "Fail": 0
+      },
+      "borderlineByCheck": {
+        "clipped-text": 13,
+        "consistency": 1
+      },
+      "qaGateClear": false
+    },
+    {
+      "id": "sample-fictional-cobalt-heron-irvine",
+      "versionHash": "51197608ada5964d9222ad47f2f5725720f0757b9fa2ed6cdb5c1e648b367bc0",
+      "counts": {
+        "Pass": 668,
+        "Borderline": 13,
+        "Fail": 0
+      },
+      "borderlineByCheck": {
+        "clipped-text": 13
+      },
+      "qaGateClear": false
+    },
+    {
+      "id": "sample-fictional-ochre-willow-riverside",
+      "versionHash": "30bfb538dc8c83e6322106f3b95b53b99c7106c77a2d9678b4c3364247fd16fb",
+      "counts": {
+        "Pass": 668,
+        "Borderline": 13,
+        "Fail": 0
+      },
+      "borderlineByCheck": {
+        "clipped-text": 13
+      },
+      "qaGateClear": false
+    }
+  ],
+  "allBorderlinesOpen": true,
+  "providerCalls": 0,
+  "credits": 0
+}

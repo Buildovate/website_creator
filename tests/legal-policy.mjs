@@ -1,0 +1,45 @@
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {legalFixture} from './fixtures/legal-policy.mjs';
+import {worker,env,admin} from './preview-fixture.mjs';
+const compiled=await build({entryPoints:['src/platform/legal-policy.ts'],bundle:true,write:false,format:'esm',platform:'node'});
+const {normalizeLegal,assessLegalPolicy,validateLegalPublication,publicLegalSettings}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const facts={trade:'Roofing',license:'QA-LICENSE-001',platform:{legal:structuredClone(legalFixture),footer:{bonded:true,insured:true,visible:{license:false},locations:[{id:'office',bonded:true,insured:true}]}}};
+assert.equal(assessLegalPolicy({}).label,'Needs review');assert.equal(validateLegalPublication({}).reviewed,false);
+for(const referenceUrl of ['javascript:alert(1)','http://example.test','https://u:p@example.test'])assert.throws(()=>normalizeLegal({policy:{...legalFixture.policy,referenceUrl}}),/HTTPS/);
+assert.throws(()=>normalizeLegal({policy:{status:'reviewed'}}),/reviewed policy needs/);
+assert.throws(()=>normalizeLegal({licenseState:'CAL'}),/invalid|long/);
+assert.equal(assessLegalPolicy(facts).requiredLicense,true,'Required disclosure is independent of the visibility toggle');
+assert.throws(()=>validateLegalPublication({...facts,license:''}),/license number/);
+assert.throws(()=>validateLegalPublication({...facts,platform:{...facts.platform,legal:{...legalFixture,licenseState:''}}}),/license state/);
+assert.throws(()=>validateLegalPublication({...facts,trade:'Plumbing'}),/match/);
+assert.throws(()=>validateLegalPublication({...facts,platform:{...facts.platform,legal:{...legalFixture,jurisdiction:'different'}}}),/match/);
+assert.throws(()=>validateLegalPublication(facts,Date.parse('2100-01-01')),/current/);
+assert.throws(()=>validateLegalPublication(facts,Date.parse('2025-01-01')),/current/);
+const shown=publicLegalSettings(facts);assert.equal(shown.platform.footer.bonded,false);assert.equal(shown.platform.footer.insured,true);assert.equal(shown.platform.footer.locations[0].bonded,false);assert.equal(facts.platform.footer.bonded,true,'Rendering does not mutate saved attestations');
+assert.equal(publicLegalSettings(facts,Date.parse('2100-01-01')).platform.footer.insured,false);
+assert.equal(publicLegalSettings({...facts,platform:{...facts.platform,legal:{}}}).platform.footer.insured,false);
+console.log('PASS policy normalization, missing Needs review, review scope/dates, required facts, current allowed attested claims and render-time expiry');
+const origin='https://test.local',owner={id:'legal-owner',email:'legal-owner@example.test'};
+async function request(path,method='GET',value,user=admin){return worker.fetch(new Request(origin+path,{method,headers:{origin,'content-type':'application/json',...(user?{'oai-authenticated-user-id':user.id,'oai-authenticated-user-email':user.email}:{})},body:value===undefined?undefined:JSON.stringify(value)}),env);}
+async function api(path,method='GET',value,user=admin){const r=await request('/api'+path,method,value,user);assert.equal(r.status,200,await r.clone().text());return r.json();}
+let t=(await api('/tenants','POST',{slug:'legal-policy-qa',designKit:'roofing',settings:{name:'Sample Fictional Legal policy QA',phone:'8055550123',area:'Ventura',services:[{name:'Roof repair'}],license:'',platform:{footer:{bonded:true,insured:true}}}})).tenant;
+const path='/tenants/'+t.id;
+await env.DB.prepare('INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)').bind(crypto.randomUUID(),t.id,owner.id,owner.email,'owner',new Date().toISOString()).run();
+async function reload(){t=(await api(path)).tenant;}async function save(settings,user=admin){t=(await api(path,'PUT',{version:t.version,settings},user)).tenant;}
+await api(path+'/publish','POST',{version:t.version,approved:true});await reload();
+let readiness=(await api(path+'/readiness')).checks;assert.ok(readiness.some(x=>x.label==='Needs review'&&!x.ready&&!x.required));
+let html=await (await request('/s/'+t.slug,'GET',undefined,null)).text();let footer=html.match(/<footer[\s\S]*?<\/footer>/)[0];assert.doesNotMatch(footer,/>Bonded<|>Insured</);
+const priorSnapshot=structuredClone(t.published);
+await save({...t.settings,platform:{...t.settings.platform,legal:structuredClone(legalFixture)}});
+const failed=await request('/api'+path+'/publish','POST',{version:t.version,approved:true},owner);assert.equal(failed.status,400);assert.match(await failed.text(),/license number/);await reload();assert.deepEqual(t.published,priorSnapshot);
+for(const policy of [null,{...legalFixture.policy,requireLicense:false}])assert.equal((await request('/api'+path,'PUT',{version:t.version,settings:{...t.settings,platform:{...t.settings.platform,legal:{...legalFixture,policy}}}},owner)).status,403);
+const olderClient=structuredClone(t.settings);delete olderClient.platform.legal;await save({...olderClient,license:'QA-LICENSE-001'},owner);assert.equal(t.settings.platform.legal.policy.id,legalFixture.policy.id);
+await api(path+'/publish','POST',{version:t.version,approved:true},owner);await reload();
+html=await (await request('/s/'+t.slug,'GET',undefined,null)).text();footer=html.match(/<footer[\s\S]*?<\/footer>/)[0];assert.match(footer,/>Insured</);assert.doesNotMatch(footer,/>Bonded</);
+await save({...t.settings,platform:{...t.settings.platform,legal:{...legalFixture,jurisdiction:'DIFFERENT'}}},owner);assert.equal((await request('/api'+path+'/publish','POST',{version:t.version,approved:true},owner)).status,400);
+await save({...t.settings,platform:{...t.settings.platform,legal:structuredClone(legalFixture)}});
+const backup=await api(path+'/backups','POST',{});const backups=(await api(path+'/backups')).backups;const backupId=backup.id||backups[0].id;
+await save({...t.settings,platform:{...t.settings.platform,legal:{...legalFixture,policy:{...legalFixture.policy,status:'needs-review'}}}});
+await api(path+'/backups/'+backupId+'/restore','POST',{version:t.version,confirm:true},owner);await reload();assert.equal(t.settings.platform.legal.policy.status,'needs-review');assert.equal(t.published,null);assert.equal((await request('/api'+path+'/publish','POST',{version:t.version,approved:true},owner)).status,400);
+console.log('PASS actual API: missing-policy warning, required-fact publish block, snapshot isolation, admin-only review edits, old-client preservation, allowed/withheld claims, scope recheck and restore preserves withdrawn review');

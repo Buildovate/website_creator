@@ -1,0 +1,107 @@
+{
+  "baselineCommit": "856ec47",
+  "baselineProfiles": 12,
+  "baselineViolations": [
+    "stage-gap",
+    "blank-stage",
+    "empty-pinned-tabs",
+    "card-height"
+  ],
+  "sampledProfiles": 12,
+  "sampledFrames": 9756,
+  "minimumSampleHz": 60.093133269273416,
+  "maximumSampleGapMs": 17.899999999999636,
+  "stackStatsProfiles": 12,
+  "existingMotionProfiles": 12,
+  "staticFallbackProfiles": 12,
+  "uniqueMidTransitionCaptures": 12,
+  "regressionCommands": 43,
+  "motionGzipBytes": 37282,
+  "droneUnchanged": true,
+  "lighthouse": [
+    {
+      "attempt": 1,
+      "name": "bold-industrial-1",
+      "url": "http://127.0.0.1:8123/s/motion-bold-industrial-a",
+      "performance": 100,
+      "accessibility": 100,
+      "cls": 0.009518248055071028,
+      "lcpMs": 1204.6597142335058,
+      "tbtMs": 79,
+      "version": "13.5.0"
+    },
+    {
+      "attempt": 2,
+      "name": "clean-modern-1",
+      "url": "http://127.0.0.1:8123/s/motion-clean-modern-a",
+      "performance": 100,
+      "accessibility": 100,
+      "cls": 0.009518248055071028,
+      "lcpMs": 1203.373875414899,
+      "tbtMs": 66,
+      "version": "13.5.0"
+    },
+    {
+      "attempt": 3,
+      "name": "bold-industrial-2",
+      "url": "http://127.0.0.1:8123/s/motion-bold-industrial-a",
+      "performance": 97,
+      "accessibility": 100,
+      "cls": 0.009518248055071028,
+      "lcpMs": 1203.760964743177,
+      "tbtMs": 184,
+      "version": "13.5.0"
+    },
+    {
+      "attempt": 4,
+      "name": "clean-modern-2",
+      "url": "http://127.0.0.1:8123/s/motion-clean-modern-a",
+      "performance": 100,
+      "accessibility": 100,
+      "cls": 0.009527600897569,
+      "lcpMs": 1204.352993997382,
+      "tbtMs": 70,
+      "version": "13.5.0"
+    },
+    {
+      "attempt": 5,
+      "name": "bold-industrial-3",
+      "url": "http://127.0.0.1:8123/s/motion-bold-industrial-a",
+      "performance": 99,
+      "accessibility": 100,
+      "cls": 0.009527600897569,
+      "lcpMs": 1205.203814759565,
+      "tbtMs": 121.5,
+      "version": "13.5.0"
+    },
+    {
+      "attempt": 6,
+      "name": "clean-modern-3",
+      "url": "http://127.0.0.1:8123/s/motion-clean-modern-a",
+      "performance": 100,
+      "accessibility": 100,
+      "cls": 0.009518248055071028,
+      "lcpMs": 1204.802349753854,
+      "tbtMs": 45.700587438463344,
+      "version": "13.5.0"
+    }
+  ],
+  "recordings": [
+    {
+      "view": "desktop",
+      "width": 1440,
+      "height": 900,
+      "frames": 1088,
+      "bytes": 3304786,
+      "file": "desktop-down-up-down.webm"
+    },
+    {
+      "view": "mobile",
+      "width": 390,
+      "height": 844,
+      "frames": 1087,
+      "bytes": 2843744,
+      "file": "mobile-down-up-down.webm"
+    }
+  ]
+}

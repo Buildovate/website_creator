@@ -1,0 +1,1 @@
+PASS insertion-order: 16 checks; PostgreSQL identity upgrade and identical-timestamp ordering, SQLite exact rowid backfill, monotonic inserts after delete, idempotent PostgreSQL migration.

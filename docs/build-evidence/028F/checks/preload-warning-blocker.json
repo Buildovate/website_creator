@@ -1,0 +1,55 @@
+{
+  "count": 2,
+  "records": [
+    {
+      "state": "legacy-workspace",
+      "type": "warning",
+      "text": "The resource http://review.local/assets/roofing-fast/hero-1440.avif was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+      "location": {
+        "url": "http://review.local/s/hero-edit-qa",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 960,
+        "height": 540
+      },
+      "pageUrl": "http://review.local/s/hero-edit-qa",
+      "platform": false,
+      "allowed": false,
+      "suite": "hero-editor"
+    },
+    {
+      "state": "legacy-workspace",
+      "type": "warning",
+      "text": "The resource http://review.local/assets/roofing-fast/hero-1440.avif was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+      "location": {
+        "url": "http://review.local/s/hero-edit-qa",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 960,
+        "height": 540
+      },
+      "pageUrl": "http://review.local/s/hero-edit-qa",
+      "platform": false,
+      "allowed": false,
+      "suite": "hero-editor"
+    }
+  ],
+  "causeEvidence": {
+    "context": "960 x 540 video frame extraction; normal page-QA widths are 1440, 390 and 768",
+    "source": "src/aws/review-capture.js",
+    "initialization": "framePage.goto(origin+pages[0].path)",
+    "replacement": "framePage.setContent replaces the homepage with a video-only document",
+    "interpretation": "Both warnings come from the frame-extraction context. Loading the homepage queues its hero preload, then the video-only document does not use that image."
+  },
+  "changesMade": false,
+  "allowlisted": false,
+  "requiredDecision": "Approval for a narrowly scoped frame-extraction initialization fix; capture setup is currently frozen."
+}

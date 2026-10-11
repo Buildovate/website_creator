@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: POST /tenants/e0779489-e4cb-4766-9611-83252df1a7cf/projects/05cbde88-97e5-463c-bf34-b7453fa1db31/publish: {"error":"Complete the review packet before approval."}
+    at api (file:///C:/Users/joe/wc-baseline-check/tests/platform.mjs:11:139)
+    at async file:///C:/Users/joe/wc-baseline-check/tests/platform.mjs:34:1 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

@@ -1,0 +1,55 @@
+{
+  "metadataSource": "https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500&display=swap",
+  "runtime": "All font URLs are local project assets; no runtime Google Fonts request.",
+  "fonts": [
+    {
+      "family": "Barlow",
+      "weight": "400",
+      "file": "public/assets/platform/fonts/barlow-400.woff2",
+      "bytes": 22196,
+      "source": "https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5.woff2"
+    },
+    {
+      "family": "Barlow",
+      "weight": "500",
+      "file": "public/assets/platform/fonts/barlow-500.woff2",
+      "bytes": 22008,
+      "source": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3_-gs51os.woff2"
+    },
+    {
+      "family": "Barlow",
+      "weight": "600",
+      "file": "public/assets/platform/fonts/barlow-600.woff2",
+      "bytes": 22772,
+      "source": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E30-8s51os.woff2"
+    },
+    {
+      "family": "Barlow",
+      "weight": "700",
+      "file": "public/assets/platform/fonts/barlow-700.woff2",
+      "bytes": 22788,
+      "source": "https://fonts.gstatic.com/s/barlow/v13/7cHqv4kjgoGqM7E3t-4s51os.woff2"
+    },
+    {
+      "family": "Barlow Condensed",
+      "weight": "600",
+      "file": "public/assets/platform/fonts/barlow-condensed-600.woff2",
+      "bytes": 22308,
+      "source": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuQ.woff2"
+    },
+    {
+      "family": "Barlow Condensed",
+      "weight": "700",
+      "file": "public/assets/platform/fonts/barlow-condensed-700.woff2",
+      "bytes": 22444,
+      "source": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuQ.woff2"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "weight": "500",
+      "file": "public/assets/platform/fonts/ibm-plex-mono-500.woff2",
+      "bytes": 14888,
+      "source": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgg.woff2"
+    }
+  ]
+}

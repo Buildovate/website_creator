@@ -68,5 +68,85 @@
     "new construction": "Bring a new building concept into a coordinated scope of work.",
     "commercial improvements": "Plan changes that support the way a commercial space is used.",
     "whole-home renovation": "Coordinate rooms, systems and finishes across a larger home renovation."
+  },
+  "Flooring": {
+    "hardwood flooring": "Explore wood species, plank formats and installation for your space.",
+    "luxury vinyl flooring": "Discuss durable vinyl plank and tile options for daily life.",
+    "laminate flooring": "Compare laminate looks, finishes and installation requirements.",
+    "tile flooring": "Plan tile sizes, patterns and details for a considered finish.",
+    "floor refinishing": "Discuss restoring the finish on an existing wood floor.",
+    "floor repair": "Assess worn, damaged or uneven areas and the repair options.",
+    "subfloor preparation": "Start with the surface underneath for an informed installation plan.",
+    "commercial flooring": "Plan flooring around traffic, use and your business schedule."
+  },
+  "Painting": {
+    "interior painting": "Bring a new palette to living rooms, bedrooms and everyday spaces.",
+    "exterior painting": "Refresh exterior surfaces with a plan tailored to your property.",
+    "cabinet painting": "Explore a new finish for existing cabinetry.",
+    "deck and fence staining": "Discuss protection and color for exterior wood surfaces.",
+    "surface preparation": "Plan the cleaning, sanding and preparation the surface needs.",
+    "drywall repair": "Address holes, seams and surface damage before the finish.",
+    "decorative finishes": "Explore specialty textures and finishes with a considered color palette.",
+    "commercial painting": "Plan a fresh finish around your business and its operating hours."
+  },
+  "Fencing": {
+    "wood fencing": "Explore natural wood styles, heights and finishing details.",
+    "vinyl fencing": "Compare vinyl profiles and configurations for your property.",
+    "metal fencing": "Discuss metal fence styles, finishes and property boundaries.",
+    "privacy fencing": "Create a more private outdoor setting with a considered fence plan.",
+    "gates": "Plan access, hardware and gates that complement the fence.",
+    "fence repair": "Assess damaged sections, posts and hardware for targeted repair.",
+    "pool fencing": "Discuss a pool enclosure suited to your property and applicable requirements.",
+    "commercial fencing": "Plan access and boundaries for your commercial property."
+  },
+  "Garage Doors": {
+    "garage door installation": "Choose a door style and operating system for your home.",
+    "garage door repair": "Discuss unusual noise, damage or trouble opening and closing.",
+    "spring replacement": "Have a trained professional assess and replace worn door springs.",
+    "opener installation": "Explore opener options and compatibility with your door.",
+    "opener repair": "Get help diagnosing an opener that is not working as expected.",
+    "panel replacement": "Discuss replacing damaged panels and matching the existing door.",
+    "weather sealing": "Address gaps around the door and discuss sealing options.",
+    "garage door maintenance": "Arrange an assessment of moving parts, balance and operation."
+  },
+  "Pest Control": {
+    "pest inspections": "Start with an inspection to understand activity and possible entry points.",
+    "ant control": "Discuss ant activity and treatment options for your property.",
+    "rodent control": "Assess signs of rodents and possible exclusion measures.",
+    "termite inspections": "Arrange a professional inspection of suspected termite activity.",
+    "cockroach control": "Discuss observed activity and an appropriate control approach.",
+    "spider control": "Assess spider activity around your home and available options.",
+    "mosquito control": "Explore ways to manage mosquito activity around outdoor areas.",
+    "preventive maintenance": "Plan recurring assessments and prevention suited to your property."
+  },
+  "Windows/Doors": {
+    "window replacement": "Explore frame styles, glazing choices and the scope of replacing existing windows.",
+    "window installation": "Plan openings, measurements and installation details for your project.",
+    "energy-efficient windows": "Discuss glazing and frame options suited to your home; performance depends on the selected product and installation.",
+    "entry doors": "Compare materials, finishes and entry-door styles for the way you come home.",
+    "patio doors": "Explore sliding or hinged doors that connect your home and outdoor space.",
+    "sliding glass doors": "Plan sightlines, access and a properly fitted sliding glass door.",
+    "french doors": "Discuss paired-door layouts, swing clearance and finishing details.",
+    "window and door repair": "Describe sticking, worn seals or damaged components so the contractor can assess repair options."
+  },
+  "Solar": {
+    "solar panel installation": "Discuss your roof, electricity use and a proposed panel layout before choosing a system.",
+    "solar battery storage": "Explore storage capacity, compatibility and which loads a proposed system could support.",
+    "solar system design": "Plan equipment and layout around the property, utility requirements and your priorities.",
+    "solar panel maintenance": "Discuss condition checks, access and care appropriate for the installed equipment.",
+    "solar panel cleaning": "Ask about safe access and a cleaning approach suited to the panels and manufacturer guidance.",
+    "solar inverter replacement": "Review the existing equipment and compatible replacement options.",
+    "solar removal and reinstallation": "Coordinate system removal and reinstallation when roof work is planned.",
+    "solar system monitoring": "Understand the available monitoring tools and how to review system performance."
+  },
+  "Locksmith": {
+    "residential lockout": "Locked outside with the keys indoors? Explain the door and lock so the technician can discuss an appropriate way to help.",
+    "rekeying": "Moving in or changing who has a key? A compatible cylinder can be reset without replacing every piece of door hardware.",
+    "lock installation": "A new deadbolt or handle needs more than a matching finish. Door thickness, bore spacing and strike alignment determine the fit.",
+    "smart locks": "Keypad entry can simplify coming and going. Start with door compatibility, battery access and a backup way in before choosing connected features.",
+    "automotive lockout": "Keys left in a locked vehicle need help suited to that vehicle. Share the make, model and year before arranging an access visit.",
+    "commercial access control": "Manage staff entry around the doors your business uses. Readers, credentials and exit hardware need a coordinated plan, not disconnected devices.",
+    "safe servicing": "A reluctant handle, worn keypad or forgotten combination calls for a careful assessment of the safe, its condition and the owner access needs.",
+    "key duplication": "A useful spare starts with the right blank and a sound original. Check the key profile before cutting, then test it in the intended lock."
   }
 }

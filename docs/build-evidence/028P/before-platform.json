@@ -1,0 +1,1789 @@
+{
+  "phase": "before",
+  "screens": [
+    {
+      "name": "desktop-admin-overview",
+      "file": "before/desktop-admin-overview.png",
+      "overflow": 0,
+      "title": "Your websites, under one roof.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-contacts",
+      "file": "before/desktop-admin-contacts.png",
+      "overflow": 0,
+      "title": "Contacts",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-modal",
+      "file": "before/desktop-modal.png",
+      "overflow": 0,
+      "title": "Contacts",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contact-drawer",
+      "file": "before/desktop-contact-drawer.png",
+      "overflow": 0,
+      "title": "Contacts",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-customers",
+      "file": "before/desktop-admin-customers.png",
+      "overflow": 0,
+      "title": "Customers & growth",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-pipeline",
+      "file": "before/desktop-admin-pipeline.png",
+      "overflow": 0,
+      "title": "Sales pipeline",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-calendar",
+      "file": "before/desktop-admin-calendar.png",
+      "overflow": 0,
+      "title": "Your time, well spent.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-followupCenter",
+      "file": "before/desktop-admin-followupCenter.png",
+      "overflow": 0,
+      "title": "Every conversation deserves a follow-up.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-leadGen",
+      "file": "before/desktop-admin-leadGen.png",
+      "overflow": 0,
+      "title": "Find the next “I need a website.”",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-commissions",
+      "file": "before/desktop-admin-commissions.png",
+      "overflow": 0,
+      "title": "Sales & commissions",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-payments",
+      "file": "before/desktop-admin-payments.png",
+      "overflow": 0,
+      "title": "Financials",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-expenses",
+      "file": "before/desktop-admin-expenses.png",
+      "overflow": 0,
+      "title": "Expenses & Margin",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-websites",
+      "file": "before/desktop-admin-websites.png",
+      "overflow": 0,
+      "title": "Contractor websites",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-tradeLibrary",
+      "file": "before/desktop-admin-tradeLibrary.png",
+      "overflow": 0,
+      "title": "Designs worth showing off.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-templateLibrary",
+      "file": "before/desktop-admin-templateLibrary.png",
+      "overflow": 0,
+      "title": "Your saved design collection.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-settings",
+      "file": "before/desktop-admin-settings.png",
+      "overflow": 0,
+      "title": "Settings",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-profile",
+      "file": "before/desktop-admin-profile.png",
+      "overflow": 0,
+      "title": "Your profile",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-launch",
+      "file": "before/desktop-admin-launch.png",
+      "overflow": 0,
+      "title": "Launch readiness",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-team",
+      "file": "before/desktop-admin-team.png",
+      "overflow": 0,
+      "title": "Buildovate team",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-monitoring",
+      "file": "before/desktop-admin-monitoring.png",
+      "overflow": 0,
+      "title": "Operational monitoring",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-admin-audit",
+      "file": "before/desktop-admin-audit.png",
+      "overflow": 0,
+      "title": "Activity log",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-expenses-admin",
+      "file": "before/desktop-expenses-admin.png",
+      "overflow": 0,
+      "title": "Expenses & Margin",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-launchpad",
+      "file": "before/desktop-contractor-launchpad.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-questionnaire",
+      "file": "before/desktop-contractor-questionnaire.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-questionnaire-first",
+      "file": "before/desktop-questionnaire-first.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-questionnaire-midway",
+      "file": "before/desktop-questionnaire-midway.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-hero",
+      "file": "before/desktop-contractor-hero.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-editor",
+      "file": "before/desktop-contractor-editor.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-pages",
+      "file": "before/desktop-contractor-pages.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-empty-state",
+      "file": "before/desktop-empty-state.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-business",
+      "file": "before/desktop-contractor-business.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-ownerphoto",
+      "file": "before/desktop-contractor-ownerphoto.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-templates",
+      "file": "before/desktop-contractor-templates.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-look-picker",
+      "file": "before/desktop-look-picker.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-services",
+      "file": "before/desktop-contractor-services.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-projects",
+      "file": "before/desktop-contractor-projects.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-blog",
+      "file": "before/desktop-contractor-blog.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-contacts",
+      "file": "before/desktop-contractor-contacts.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-calendar",
+      "file": "before/desktop-contractor-calendar.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-forms",
+      "file": "before/desktop-contractor-forms.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-inquiries",
+      "file": "before/desktop-contractor-inquiries.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-chat",
+      "file": "before/desktop-contractor-chat.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-pricing",
+      "file": "before/desktop-contractor-pricing.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-reviews",
+      "file": "before/desktop-contractor-reviews.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-visibility",
+      "file": "before/desktop-contractor-visibility.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-plan",
+      "file": "before/desktop-contractor-plan.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-readiness",
+      "file": "before/desktop-contractor-readiness.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-followups",
+      "file": "before/desktop-contractor-followups.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-access",
+      "file": "before/desktop-contractor-access.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-domains",
+      "file": "before/desktop-contractor-domains.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-contractor-backups",
+      "file": "before/desktop-contractor-backups.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-preview-chrome",
+      "file": "before/desktop-preview-chrome.png",
+      "overflow": 0,
+      "title": "",
+      "bodyClass": "device-preview",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-sign-in",
+      "file": "before/desktop-sign-in.png",
+      "overflow": 0,
+      "title": "You’re signed out",
+      "bodyClass": "auth-page",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-error-state",
+      "file": "before/desktop-error-state.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "desktop-1280-admin-overview",
+      "file": "before/desktop-1280-admin-overview.png",
+      "overflow": 0,
+      "title": "Your websites, under one roof.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-contacts",
+      "file": "before/desktop-1280-admin-contacts.png",
+      "overflow": 72,
+      "title": "Contacts",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-modal",
+      "file": "before/desktop-1280-modal.png",
+      "overflow": 72,
+      "title": "Contacts",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contact-drawer",
+      "file": "before/desktop-1280-contact-drawer.png",
+      "overflow": 72,
+      "title": "Contacts",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-customers",
+      "file": "before/desktop-1280-admin-customers.png",
+      "overflow": 0,
+      "title": "Customers & growth",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-pipeline",
+      "file": "before/desktop-1280-admin-pipeline.png",
+      "overflow": 0,
+      "title": "Sales pipeline",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-calendar",
+      "file": "before/desktop-1280-admin-calendar.png",
+      "overflow": 0,
+      "title": "Your time, well spent.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-followupCenter",
+      "file": "before/desktop-1280-admin-followupCenter.png",
+      "overflow": 0,
+      "title": "Every conversation deserves a follow-up.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-leadGen",
+      "file": "before/desktop-1280-admin-leadGen.png",
+      "overflow": 0,
+      "title": "Find the next “I need a website.”",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-commissions",
+      "file": "before/desktop-1280-admin-commissions.png",
+      "overflow": 0,
+      "title": "Sales & commissions",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-payments",
+      "file": "before/desktop-1280-admin-payments.png",
+      "overflow": 0,
+      "title": "Financials",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-expenses",
+      "file": "before/desktop-1280-admin-expenses.png",
+      "overflow": 0,
+      "title": "Expenses & Margin",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-websites",
+      "file": "before/desktop-1280-admin-websites.png",
+      "overflow": 0,
+      "title": "Contractor websites",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-tradeLibrary",
+      "file": "before/desktop-1280-admin-tradeLibrary.png",
+      "overflow": 0,
+      "title": "Designs worth showing off.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-templateLibrary",
+      "file": "before/desktop-1280-admin-templateLibrary.png",
+      "overflow": 0,
+      "title": "Your saved design collection.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-settings",
+      "file": "before/desktop-1280-admin-settings.png",
+      "overflow": 0,
+      "title": "Settings",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-profile",
+      "file": "before/desktop-1280-admin-profile.png",
+      "overflow": 0,
+      "title": "Your profile",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-launch",
+      "file": "before/desktop-1280-admin-launch.png",
+      "overflow": 0,
+      "title": "Launch readiness",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-team",
+      "file": "before/desktop-1280-admin-team.png",
+      "overflow": 0,
+      "title": "Buildovate team",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-monitoring",
+      "file": "before/desktop-1280-admin-monitoring.png",
+      "overflow": 0,
+      "title": "Operational monitoring",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-admin-audit",
+      "file": "before/desktop-1280-admin-audit.png",
+      "overflow": 0,
+      "title": "Activity log",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-expenses-admin",
+      "file": "before/desktop-1280-expenses-admin.png",
+      "overflow": 0,
+      "title": "Expenses & Margin",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-launchpad",
+      "file": "before/desktop-1280-contractor-launchpad.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-questionnaire",
+      "file": "before/desktop-1280-contractor-questionnaire.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-questionnaire-first",
+      "file": "before/desktop-1280-questionnaire-first.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-questionnaire-midway",
+      "file": "before/desktop-1280-questionnaire-midway.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-hero",
+      "file": "before/desktop-1280-contractor-hero.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-editor",
+      "file": "before/desktop-1280-contractor-editor.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-pages",
+      "file": "before/desktop-1280-contractor-pages.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-empty-state",
+      "file": "before/desktop-1280-empty-state.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-business",
+      "file": "before/desktop-1280-contractor-business.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-ownerphoto",
+      "file": "before/desktop-1280-contractor-ownerphoto.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-templates",
+      "file": "before/desktop-1280-contractor-templates.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-look-picker",
+      "file": "before/desktop-1280-look-picker.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-services",
+      "file": "before/desktop-1280-contractor-services.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-projects",
+      "file": "before/desktop-1280-contractor-projects.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-blog",
+      "file": "before/desktop-1280-contractor-blog.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-contacts",
+      "file": "before/desktop-1280-contractor-contacts.png",
+      "overflow": 72,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-calendar",
+      "file": "before/desktop-1280-contractor-calendar.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-forms",
+      "file": "before/desktop-1280-contractor-forms.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-inquiries",
+      "file": "before/desktop-1280-contractor-inquiries.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-chat",
+      "file": "before/desktop-1280-contractor-chat.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-pricing",
+      "file": "before/desktop-1280-contractor-pricing.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-reviews",
+      "file": "before/desktop-1280-contractor-reviews.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-visibility",
+      "file": "before/desktop-1280-contractor-visibility.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-plan",
+      "file": "before/desktop-1280-contractor-plan.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-readiness",
+      "file": "before/desktop-1280-contractor-readiness.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-followups",
+      "file": "before/desktop-1280-contractor-followups.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-access",
+      "file": "before/desktop-1280-contractor-access.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-domains",
+      "file": "before/desktop-1280-contractor-domains.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-contractor-backups",
+      "file": "before/desktop-1280-contractor-backups.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-preview-chrome",
+      "file": "before/desktop-1280-preview-chrome.png",
+      "overflow": 0,
+      "title": "",
+      "bodyClass": "device-preview",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-sign-in",
+      "file": "before/desktop-1280-sign-in.png",
+      "overflow": 0,
+      "title": "You’re signed out",
+      "bodyClass": "auth-page",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "desktop-1280-error-state",
+      "file": "before/desktop-1280-error-state.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "phone-admin-overview",
+      "file": "before/phone-admin-overview.png",
+      "overflow": 0,
+      "title": "Your websites, under one roof.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-contacts",
+      "file": "before/phone-admin-contacts.png",
+      "overflow": 0,
+      "title": "Contacts",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-modal",
+      "file": "before/phone-modal.png",
+      "overflow": 0,
+      "title": "Contacts",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contact-drawer",
+      "file": "before/phone-contact-drawer.png",
+      "overflow": 0,
+      "title": "Contacts",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-customers",
+      "file": "before/phone-admin-customers.png",
+      "overflow": 0,
+      "title": "Customers & growth",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-pipeline",
+      "file": "before/phone-admin-pipeline.png",
+      "overflow": 0,
+      "title": "Sales pipeline",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-calendar",
+      "file": "before/phone-admin-calendar.png",
+      "overflow": 0,
+      "title": "Your time, well spent.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-followupCenter",
+      "file": "before/phone-admin-followupCenter.png",
+      "overflow": 0,
+      "title": "Every conversation deserves a follow-up.",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-leadGen",
+      "file": "before/phone-admin-leadGen.png",
+      "overflow": 0,
+      "title": "Find the next “I need a website.”",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-commissions",
+      "file": "before/phone-admin-commissions.png",
+      "overflow": 0,
+      "title": "Sales & commissions",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-payments",
+      "file": "before/phone-admin-payments.png",
+      "overflow": 0,
+      "title": "Financials",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-expenses",
+      "file": "before/phone-admin-expenses.png",
+      "overflow": 0,
+      "title": "Expenses & Margin",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-websites",
+      "file": "before/phone-admin-websites.png",
+      "overflow": 0,
+      "title": "Contractor websites",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-tradeLibrary",
+      "file": "before/phone-admin-tradeLibrary.png",
+      "overflow": 0,
+      "title": "Designs worth showing off.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-templateLibrary",
+      "file": "before/phone-admin-templateLibrary.png",
+      "overflow": 0,
+      "title": "Your saved design collection.",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-settings",
+      "file": "before/phone-admin-settings.png",
+      "overflow": 0,
+      "title": "Settings",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-profile",
+      "file": "before/phone-admin-profile.png",
+      "overflow": 0,
+      "title": "Your profile",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-launch",
+      "file": "before/phone-admin-launch.png",
+      "overflow": 0,
+      "title": "Launch readiness",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-team",
+      "file": "before/phone-admin-team.png",
+      "overflow": 0,
+      "title": "Buildovate team",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-monitoring",
+      "file": "before/phone-admin-monitoring.png",
+      "overflow": 0,
+      "title": "Operational monitoring",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-admin-audit",
+      "file": "before/phone-admin-audit.png",
+      "overflow": 0,
+      "title": "Activity log",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-expenses-admin",
+      "file": "before/phone-expenses-admin.png",
+      "overflow": 0,
+      "title": "Expenses & Margin",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-launchpad",
+      "file": "before/phone-contractor-launchpad.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-questionnaire",
+      "file": "before/phone-contractor-questionnaire.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-questionnaire-first",
+      "file": "before/phone-questionnaire-first.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-questionnaire-midway",
+      "file": "before/phone-questionnaire-midway.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-hero",
+      "file": "before/phone-contractor-hero.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-editor",
+      "file": "before/phone-contractor-editor.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-pages",
+      "file": "before/phone-contractor-pages.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-empty-state",
+      "file": "before/phone-empty-state.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-business",
+      "file": "before/phone-contractor-business.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-ownerphoto",
+      "file": "before/phone-contractor-ownerphoto.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-templates",
+      "file": "before/phone-contractor-templates.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-look-picker",
+      "file": "before/phone-look-picker.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-services",
+      "file": "before/phone-contractor-services.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-projects",
+      "file": "before/phone-contractor-projects.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-blog",
+      "file": "before/phone-contractor-blog.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-contacts",
+      "file": "before/phone-contractor-contacts.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-calendar",
+      "file": "before/phone-contractor-calendar.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-forms",
+      "file": "before/phone-contractor-forms.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-inquiries",
+      "file": "before/phone-contractor-inquiries.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-chat",
+      "file": "before/phone-contractor-chat.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-pricing",
+      "file": "before/phone-contractor-pricing.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-reviews",
+      "file": "before/phone-contractor-reviews.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-visibility",
+      "file": "before/phone-contractor-visibility.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-plan",
+      "file": "before/phone-contractor-plan.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-readiness",
+      "file": "before/phone-contractor-readiness.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-followups",
+      "file": "before/phone-contractor-followups.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-access",
+      "file": "before/phone-contractor-access.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-domains",
+      "file": "before/phone-contractor-domains.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-contractor-backups",
+      "file": "before/phone-contractor-backups.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-preview-chrome",
+      "file": "before/phone-preview-chrome.png",
+      "overflow": 0,
+      "title": "",
+      "bodyClass": "device-preview",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-sign-in",
+      "file": "before/phone-sign-in.png",
+      "overflow": 0,
+      "title": "You’re signed out",
+      "bodyClass": "auth-page",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "phone-error-state",
+      "file": "before/phone-error-state.png",
+      "overflow": 0,
+      "title": "QA Roofing Platform",
+      "bodyClass": "has-platform-dock",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "errors": [],
+  "fontRequests": []
+}

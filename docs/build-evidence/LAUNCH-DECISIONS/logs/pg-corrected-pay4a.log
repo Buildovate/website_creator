@@ -1,0 +1,14 @@
+✔ verified settlement enables a Website feature (5877.2795ms)
+✔ unpaid Growth and All-in features stay locked even with a paid Website plan (5911.8698ms)
+✔ missing entitlement uses a locked default; manual Paid does not unlock it (5279.946ms)
+✔ monthly Billing shows rental minimum, ledger charge, ownership option, and coming-soon plans (4811.6501ms)
+✔ annual Billing shows the $500 ledger charge without a monthly minimum (5045.1847ms)
+✔ owned Billing shows owner hosting and no rental buyout (4965.7437ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31978.687

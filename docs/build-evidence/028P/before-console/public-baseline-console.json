@@ -1,0 +1,765 @@
+{
+  "commit": "49b032eefdda23a7e7a66f9031c4f3d4f26c7271",
+  "commands": [
+    {
+      "suite": "ebook-browser",
+      "exitCode": 0,
+      "seconds": 13
+    },
+    {
+      "suite": "planning-ambient-browser",
+      "exitCode": 0,
+      "seconds": 19
+    },
+    {
+      "suite": "planning-scroll-browser",
+      "exitCode": 0,
+      "seconds": 31
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "exitCode": 0,
+      "seconds": 17
+    },
+    {
+      "suite": "roofing-acceptance",
+      "exitCode": 0,
+      "seconds": 99
+    },
+    {
+      "suite": "roofing-cities-browser",
+      "exitCode": 0,
+      "seconds": 19
+    },
+    {
+      "suite": "roofing-polish-part2-browser",
+      "exitCode": 0,
+      "seconds": 43
+    },
+    {
+      "suite": "roofing-story-browser",
+      "exitCode": 0,
+      "seconds": 13
+    },
+    {
+      "suite": "service-motion-browser",
+      "exitCode": 0,
+      "seconds": 19
+    },
+    {
+      "suite": "promotions-ambient-browser",
+      "exitCode": 0,
+      "seconds": 31
+    },
+    {
+      "suite": "promotions-scroll-browser",
+      "exitCode": 0,
+      "seconds": 35
+    }
+  ],
+  "records": [
+    {
+      "suite": "ebook-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "status": "404",
+      "url": "http://127.0.0.1:8158/favicon.ico",
+      "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof",
+      "location": {
+        "url": "http://127.0.0.1:8158/favicon.ico",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "ebook-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "status": "503",
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof#guide-pages",
+      "location": {
+        "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "ebook-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "status": "404",
+      "url": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+      "pageUrl": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+      "location": {
+        "url": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "ebook-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+      "status": "429",
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof",
+      "location": {
+        "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "ebook-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "status": "503",
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof#guide-pages",
+      "location": {
+        "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "ebook-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "status": "404",
+      "url": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+      "pageUrl": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+      "location": {
+        "url": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "ebook-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+      "status": "429",
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof",
+      "location": {
+        "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "planning-ambient-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8164/assets/films/roofing-story.mp4",
+      "pageUrl": "http://127.0.0.1:8164/s/roofing-ambient-024/financing?qa=installed",
+      "location": {
+        "url": "http://127.0.0.1:8164/assets/films/roofing-story.mp4",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "planning-ambient-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8164/assets/films/roofing-story.mp4",
+      "pageUrl": "http://127.0.0.1:8164/s/roofing-ambient-024/financing?qa=installed",
+      "location": {
+        "url": "http://127.0.0.1:8164/assets/films/roofing-story.mp4",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "planning-scroll-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8165/assets/films/roofing-story.mp4",
+      "pageUrl": "http://127.0.0.1:8165/s/roofing-scroll-025/financing?qa=installed",
+      "location": {
+        "url": "http://127.0.0.1:8165/assets/films/roofing-story.mp4",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "planning-scroll-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8165/assets/films/roofing-story.mp4",
+      "pageUrl": "http://127.0.0.1:8165/s/roofing-scroll-025/financing?qa=installed",
+      "location": {
+        "url": "http://127.0.0.1:8165/assets/films/roofing-story.mp4",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "status": "400",
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-desktop/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "status": "503",
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-desktop/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+      "status": "ERR_INTERNET_DISCONNECTED",
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-desktop/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+      "status": "429",
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-desktop/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "status": "404",
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-desktop/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "status": "400",
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-phone/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "status": "503",
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-phone/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+      "status": "ERR_INTERNET_DISCONNECTED",
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-phone/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+      "status": "429",
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-phone/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "status": "404",
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-phone/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "promotion-unlocks-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8152/api/public/quiz-lost-response/promotion-unlock",
+      "pageUrl": "http://127.0.0.1:8152/s/quiz-lost-response/promotions",
+      "location": {
+        "url": "http://127.0.0.1:8152/api/public/quiz-lost-response/promotion-unlock",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "roofing-acceptance",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "status": "404",
+      "url": "http://127.0.0.1:8181/favicon.ico",
+      "pageUrl": "http://127.0.0.1:8181/s/roofing-acceptance-028/resources/before-you-decide-on-your-roof",
+      "location": {
+        "url": "http://127.0.0.1:8181/favicon.ico",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "roofing-cities-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8157/assets/service-roof-repair-showpiece.png",
+      "pageUrl": "http://127.0.0.1:8157/s/roof-cities-021/areas/oxnard",
+      "location": {
+        "url": "http://127.0.0.1:8157/assets/service-roof-repair-showpiece.png",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "roofing-cities-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8157/assets/service-roof-repair-showpiece.png",
+      "pageUrl": "http://127.0.0.1:8157/s/roof-cities-021/areas/oxnard",
+      "location": {
+        "url": "http://127.0.0.1:8157/assets/service-roof-repair-showpiece.png",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "roofing-polish-part2-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "status": "404",
+      "url": "http://127.0.0.1:8172/s/roofing-part2/financing",
+      "pageUrl": "http://127.0.0.1:8172/s/roofing-part2/financing",
+      "location": {
+        "url": "http://127.0.0.1:8172/s/roofing-part2/financing",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "roofing-polish-part2-browser",
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "status": "404",
+      "url": "http://127.0.0.1:8172/s/roofing-part2/financing",
+      "pageUrl": "http://127.0.0.1:8172/s/roofing-part2/financing",
+      "location": {
+        "url": "http://127.0.0.1:8172/s/roofing-part2/financing",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "roofing-story-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8156/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "pageUrl": "http://127.0.0.1:8156/s/roof-story-020",
+      "location": {
+        "url": "http://127.0.0.1:8156/assets/service-showpiece/roofing-roof-repair-scope.webp",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "roofing-story-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8156/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "pageUrl": "http://127.0.0.1:8156/s/roof-story-020",
+      "location": {
+        "url": "http://127.0.0.1:8156/assets/service-showpiece/roofing-roof-repair-scope.webp",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "service-motion-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "pageUrl": "http://127.0.0.1:8155/s/thumb-flip-3d/services",
+      "location": {
+        "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-roof-repair-scope.webp",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "service-motion-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+      "pageUrl": "http://127.0.0.1:8155/s/thumb-flip-3d/services",
+      "location": {
+        "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "service-motion-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "pageUrl": "http://127.0.0.1:8155/s/thumb-flip-3d/services",
+      "location": {
+        "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-roof-repair-scope.webp",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "service-motion-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+      "pageUrl": "http://127.0.0.1:8155/s/thumb-flip-3d/services",
+      "location": {
+        "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "promotions-ambient-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8166/assets/films/roofing-story.mp4?qa=026",
+      "pageUrl": "http://127.0.0.1:8166/s/roofing-ambient-024/promotions?qa=installed",
+      "location": {
+        "url": "http://127.0.0.1:8166/assets/films/roofing-story.mp4?qa=026",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "promotions-ambient-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8166/assets/films/roofing-story.mp4?qa=026",
+      "pageUrl": "http://127.0.0.1:8166/s/roofing-ambient-024/promotions?qa=installed",
+      "location": {
+        "url": "http://127.0.0.1:8166/assets/films/roofing-story.mp4?qa=026",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "suite": "promotions-scroll-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8167/assets/films/roofing-story.mp4",
+      "pageUrl": "http://127.0.0.1:8167/s/roofing-promo-story-027/promotions?qa=installed",
+      "location": {
+        "url": "http://127.0.0.1:8167/assets/films/roofing-story.mp4",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "suite": "promotions-scroll-browser",
+      "type": "error",
+      "message": "Failed to load resource: net::ERR_FAILED",
+      "status": "ERR_FAILED",
+      "url": "http://127.0.0.1:8167/assets/films/roofing-story.mp4",
+      "pageUrl": "http://127.0.0.1:8167/s/roofing-promo-story-027/promotions?qa=installed",
+      "location": {
+        "url": "http://127.0.0.1:8167/assets/films/roofing-story.mp4",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ]
+}

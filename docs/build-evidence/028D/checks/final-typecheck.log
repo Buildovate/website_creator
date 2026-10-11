@@ -1,0 +1,4 @@
+
+> buildovate-sites@1.0.0 typecheck:client
+> tsc -p tsconfig.auth.json
+

@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028A';
+const read=n=>JSON.parse(fs.readFileSync(out+'/'+n));
+const all=[read('style-browser-results-bold-fresh-classic.json'),read('style-browser-results-current.json')];
+assert.ok(all.every(r=>r.failures.length===0));
+const contrast=[...read('contrast-results-bold-fresh-classic.json'),...read('contrast-results-current.json')],pages=all.flatMap(r=>r.pages);
+const perStyle=['current','bold','fresh','classic'].map(style=>{const rows=contrast.filter(r=>r.style===style),measurements=rows.flatMap(r=>r.measurements);return{style,pageStates:pages.filter(p=>p.style===style).length,contrastPageStates:rows.length,textMeasurements:measurements.length,contrastFailures:measurements.filter(m=>!m.pass).length}});
+assert.ok(perStyle.every(r=>r.contrastFailures===0));
+const md=fs.readFileSync(out+'/README.md','utf8'),links=[...md.matchAll(/\]\(([^)]+)\)/g)].map(m=>m[1]).filter(s=>!/^https?:/.test(s));
+const missing=links.filter(p=>!fs.existsSync(path.resolve(out,p.split('#')[0])));assert.deepEqual(missing,[]);
+const images=[...new Set(all.flatMap(r=>r.screenshots).filter(p=>p.startsWith('screenshots/')))];assert.ok(images.every(p=>fs.existsSync(out+'/'+p)));
+const geometry=read('current-color-fixes/comparison.json');assert.equal(geometry.length,18);assert.ok(geometry.every(r=>r.layoutIdentical));
+const result={perStyle,linkedEvidence:links.length,missingLinks:missing,requiredScreenshots:images.length,colorCapturePairs:geometry.length,creditsUsed:0};
+fs.writeFileSync(out+'/final-verification.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));

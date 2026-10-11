@@ -1,0 +1,10 @@
+PASS monthly rental forbidden even with owner membership and forged draft flags
+PASS annual rental forbidden during prepaid term
+PASS anonymous download forbidden
+PASS cross-tenant download forbidden
+PASS unpublished owned site requires publication
+PASS unpublished owner has server-confirmed disabled state
+AssertionError [ERR_ASSERTION]: one-time owner gets published static ZIP
+    at check (file:///C:/Users/joe/website_creator/tests/owner-download.mjs:11:36)
+    at file:///C:/Users/joe/website_creator/tests/owner-download.mjs:48:43
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

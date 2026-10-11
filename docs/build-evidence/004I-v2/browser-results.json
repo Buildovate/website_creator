@@ -1,0 +1,275 @@
+{
+  "profiles": [
+    {
+      "name": "desktop-bold-industrial-A",
+      "width": 1440,
+      "height": 900,
+      "pinnedChecks": 165,
+      "mobileFitChecks": 0,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop-bold-industrial-B",
+      "width": 1440,
+      "height": 900,
+      "pinnedChecks": 165,
+      "mobileFitChecks": 0,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop-bold-industrial-C",
+      "width": 1440,
+      "height": 900,
+      "pinnedChecks": 165,
+      "mobileFitChecks": 0,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-A",
+      "width": 1440,
+      "height": 900,
+      "pinnedChecks": 165,
+      "mobileFitChecks": 0,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-B",
+      "width": 1440,
+      "height": 900,
+      "pinnedChecks": 165,
+      "mobileFitChecks": 0,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-C",
+      "width": 1440,
+      "height": 900,
+      "pinnedChecks": 165,
+      "mobileFitChecks": 0,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-A",
+      "width": 390,
+      "height": 844,
+      "pinnedChecks": 94,
+      "mobileFitChecks": 94,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-B",
+      "width": 390,
+      "height": 844,
+      "pinnedChecks": 94,
+      "mobileFitChecks": 94,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-C",
+      "width": 390,
+      "height": 844,
+      "pinnedChecks": 94,
+      "mobileFitChecks": 94,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-A",
+      "width": 390,
+      "height": 844,
+      "pinnedChecks": 94,
+      "mobileFitChecks": 94,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-B",
+      "width": 390,
+      "height": 844,
+      "pinnedChecks": 94,
+      "mobileFitChecks": 94,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-C",
+      "width": 390,
+      "height": 844,
+      "pinnedChecks": 94,
+      "mobileFitChecks": 94,
+      "firstCountSamples": 53,
+      "counterReplayMutations": 0,
+      "statsShown": [
+        "years",
+        "jobsCompleted",
+        "rating",
+        "reviews",
+        "license"
+      ],
+      "hidden": [
+        "warranty"
+      ],
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "mobile-bold-industrial-A-card1-next-enters.png",
+    "mobile-bold-industrial-A-card2-next-enters.png",
+    "mobile-bold-industrial-A-card3-finished.png",
+    "mobile-bold-industrial-B-card1-next-enters.png",
+    "mobile-bold-industrial-B-card2-next-enters.png",
+    "mobile-bold-industrial-B-card3-finished.png",
+    "mobile-bold-industrial-C-card1-next-enters.png",
+    "mobile-bold-industrial-C-card2-next-enters.png",
+    "mobile-bold-industrial-C-card3-finished.png",
+    "mobile-clean-modern-A-card1-next-enters.png",
+    "mobile-clean-modern-A-card2-next-enters.png",
+    "mobile-clean-modern-A-card3-finished.png",
+    "mobile-clean-modern-B-card1-next-enters.png",
+    "mobile-clean-modern-B-card2-next-enters.png",
+    "mobile-clean-modern-B-card3-finished.png",
+    "mobile-clean-modern-C-card1-next-enters.png",
+    "mobile-clean-modern-C-card2-next-enters.png",
+    "mobile-clean-modern-C-card3-finished.png"
+  ],
+  "fallbacks": [
+    {
+      "view": "desktop",
+      "noJS": true
+    },
+    {
+      "view": "mobile",
+      "noJS": true
+    }
+  ],
+  "errors": []
+}

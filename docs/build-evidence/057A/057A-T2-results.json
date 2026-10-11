@@ -1,0 +1,186 @@
+{
+  "ticket": "#057A-T round 2",
+  "state": "PASS; authorized for local commit",
+  "baseHead": "b8f6c3823df44411bc856705396980403ae08429",
+  "branch": "feature/057A-domain-wizard",
+  "change": "Add completeStaffReview(tenant.id) immediately before the second UI publish after questionnaire edits; retain the round-1 explicit review flow and fictional data.",
+  "build": {
+    "result": "PASS",
+    "assets": 810,
+    "kits": 17
+  },
+  "testTotals": {
+    "pass": 6,
+    "fail": 0,
+    "notRun": 0
+  },
+  "tests": {
+    "platform": {
+      "result": "PASS",
+      "exitCode": 0,
+      "prerequisites": [
+        {
+          "target": "project:66a41e53-c85a-4bcd-900e-e71a80de8ce2",
+          "pages": 25,
+          "clips": 4,
+          "checklist": 24,
+          "blocking": 0
+        },
+        {
+          "target": "website",
+          "pages": 25,
+          "clips": 4,
+          "checklist": 24,
+          "blocking": 0
+        }
+      ]
+    },
+    "platformMobile": {
+      "result": "PASS",
+      "exitCode": 0,
+      "screenStates": 210,
+      "layoutFailures": [],
+      "browserErrors": [],
+      "workflows": {
+        "businessSave": true,
+        "questionnaireSaveReopen": true,
+        "publishedIsolation": true,
+        "privatePreview": true,
+        "explicitLocalPublish": true,
+        "fileSelectionPreviewUploadRetry": true,
+        "cameraCancelHandler": true,
+        "realCamera": "PENDING iPhone/Safari",
+        "editorViewerRoleChecks": true
+      },
+      "prerequisites": [
+        {
+          "target": "website",
+          "pages": 17,
+          "clips": 2,
+          "checklist": 24,
+          "blocking": 0
+        },
+        {
+          "target": "website",
+          "pages": 17,
+          "clips": 2,
+          "checklist": 24,
+          "blocking": 0
+        }
+      ]
+    },
+    "domainWizard": {
+      "result": "PASS",
+      "checks": 77
+    },
+    "domainBrowser": {
+      "result": "PASS",
+      "checks": 23
+    },
+    "headerLogo": {
+      "result": "PASS",
+      "renderedHeaders": 340,
+      "edgeCases": 6
+    },
+    "headerNavFit": {
+      "result": "PASS",
+      "checks": 16422,
+      "states": 1632,
+      "widths": 8
+    }
+  },
+  "assertionProof": [
+    {
+      "path": "tests/platform.mjs",
+      "oldAssertionLines": 30,
+      "allOriginalAssertionLinesRetained": true,
+      "sha256": "ee6a7f4d360f1ed304171eec2d0eb90fde3461480d8dd7e95e12c3982a2fdae3"
+    },
+    {
+      "path": "tests/platform-mobile.mjs",
+      "oldAssertionLines": 14,
+      "allOriginalAssertionLinesRetained": true,
+      "sha256": "399ae12a1873ca368002a7df5b6423bb5a5d089ec1b15bef6074a5eb1e645711"
+    }
+  ],
+  "verification": {
+    "branch": "feature/057A-domain-wizard",
+    "head": "b8f6c3823df44411bc856705396980403ae08429",
+    "heldChanged": [],
+    "planningChanged": [],
+    "domainChanged": [],
+    "backlogMatch": true,
+    "regeneratedFiles": [
+      {
+        "path": "src/roofing-critical-css.js",
+        "sha256": "651bc19c239480b2f08ac427915d7544aab170665513dc8d34f06c278202cca1",
+        "matchesBefore": true
+      },
+      {
+        "path": "docs/build-evidence/028F/checks/round8h-header-logo-regression.json",
+        "sha256": "0eed489d7d2e8851756116d37ef6c4074872de08ef0d0574a9967ce4ff4993c4",
+        "matchesBefore": true
+      },
+      {
+        "path": "docs/build-evidence/057A/alias-1440.png",
+        "sha256": "90ba6b02cb5e274fbf0462a8cda4ff502f68947e9caa45baba33993edb4dbbdb",
+        "matchesBefore": true
+      },
+      {
+        "path": "docs/build-evidence/057A/alias-390.png",
+        "sha256": "ae4af994bfda7d747765ac4a2f8367eda21f43142459c6624e55e741867075a1",
+        "matchesBefore": true
+      },
+      {
+        "path": "docs/build-evidence/057A/flatten-1440.png",
+        "sha256": "1564a8e3e5030fc77d05cf31d7e27d8d5d5c0475250847e286a6f1e849438507",
+        "matchesBefore": true
+      },
+      {
+        "path": "docs/build-evidence/057A/flatten-390.png",
+        "sha256": "eb29966efd57cddd385357fbe22c5abf1f3127eaa7d6b0cd3f3cd4982d26b0ed",
+        "matchesBefore": true
+      },
+      {
+        "path": "docs/build-evidence/057A/forward-1440.png",
+        "sha256": "12ac11eecd792402f412b17995164fca7de814d9ef9c05029406d50a754c6a88",
+        "matchesBefore": true
+      },
+      {
+        "path": "docs/build-evidence/057A/forward-390.png",
+        "sha256": "d86e4c0abf83adbbf1a9c7d4a13aed59840ee33d8db763a7d45a379e0bc3f99a",
+        "matchesBefore": true
+      },
+      {
+        "path": "docs/build-evidence/057A/no-js-390.png",
+        "sha256": "7aef4fd860b05a60eef808d59720cf0b30a5e11a1193f3795e8ae103a75b2dba",
+        "matchesBefore": true
+      },
+      {
+        "path": "docs/build-evidence/057A/browser-results.json",
+        "sha256": "61d62a16eca66273b3c42f5dcf4074e39b02e46e00e935e531d92abe9de7246d",
+        "matchesBefore": true
+      },
+      {
+        "path": "docs/build-evidence/057A/domain-tests.json",
+        "sha256": "3b435d5be37be9018fb7bc5a7c94ddfeb2489dd52f17808c07eb98d681b16b9b",
+        "matchesBefore": true
+      }
+    ],
+    "indexEmpty": true
+  },
+  "appCodeChanged": false,
+  "approvalRuleChanged": false,
+  "detectorChanged": false,
+  "providerCalls": 0,
+  "credits": 0,
+  "push": false,
+  "deploy": false,
+  "commit": "The commit containing this file",
+  "localOnlyEvidence": [
+    "057A-T2-*.log",
+    "T2-mobile/",
+    "T2-nav/",
+    "T2-backups/"
+  ]
+}

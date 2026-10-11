@@ -1,0 +1,30 @@
+{
+  "command": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5173",
+  "tenantId": "019c152b-4ebd-4145-b164-e22e812cb040",
+  "results": [
+    {
+      "url": "http://127.0.0.1:5173/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/tenants/019c152b-4ebd-4145-b164-e22e812cb040",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/tenants/019c152b-4ebd-4145-b164-e22e812cb040/generation",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/hero-editor-023a",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/hero-editor-023a?preview=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/hero-editor-023a/services/roof-repair",
+      "status": 200
+    }
+  ]
+}

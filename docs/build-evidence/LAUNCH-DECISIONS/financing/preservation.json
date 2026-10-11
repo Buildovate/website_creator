@@ -1,0 +1,20 @@
+{
+  "startingHead": "ab45f069bc7e61c6697954d6625df13bede119e0",
+  "branch": "launch/integration",
+  "heldCount": 229,
+  "heldChanged": [],
+  "unexpectedTrackedChanges": [],
+  "checkedTracked": 19640,
+  "protectedDiff": "",
+  "borderlines": {
+    "count": 70,
+    "qaGateClear": false,
+    "findingsUnchanged": true,
+    "ticketUnchanged": true,
+    "disposition": "REJECTED/OPEN"
+  },
+  "paymentProviderCalls": 0,
+  "credits": 0,
+  "noPush": true,
+  "noDeploy": true
+}

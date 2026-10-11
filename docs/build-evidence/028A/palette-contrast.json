@@ -1,0 +1,4592 @@
+[
+  {
+    "kit": "roofing",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#f0b987",
+    "ratio": 9.395,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#824013",
+    "ratio": 7.801,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#824013",
+    "ratio": 7.801,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "roofing",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#cedf9b",
+    "ratio": 11.477,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#466021",
+    "ratio": 7.105,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#466021",
+    "ratio": 7.105,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "patios",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#96dcec",
+    "ratio": 10.766,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#176373",
+    "ratio": 6.843,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#176373",
+    "ratio": 6.843,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "plumbing",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#a8d6ff",
+    "ratio": 10.752,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#215a85",
+    "ratio": 7.328,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#215a85",
+    "ratio": 7.328,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "hvac",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#f3d779",
+    "ratio": 11.598,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#725510",
+    "ratio": 6.948,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#725510",
+    "ratio": 6.948,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "electrical",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#b9dea8",
+    "ratio": 11.026,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#346229",
+    "ratio": 7.179,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#346229",
+    "ratio": 7.179,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "landscaping",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#e9c399",
+    "ratio": 9.972,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#765126",
+    "ratio": 7.058,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#765126",
+    "ratio": 7.058,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "general-contractors",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#e6c19a",
+    "ratio": 9.759,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#74502e",
+    "ratio": 7.168,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#74502e",
+    "ratio": 7.168,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "flooring",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#d8bbef",
+    "ratio": 9.614,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#69467e",
+    "ratio": 7.559,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#69467e",
+    "ratio": 7.559,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "painting",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#b7d4bb",
+    "ratio": 10.299,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#3e6244",
+    "ratio": 6.918,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#3e6244",
+    "ratio": 6.918,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "fencing",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#bdcfdd",
+    "ratio": 10.287,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#425d70",
+    "ratio": 6.928,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#425d70",
+    "ratio": 6.928,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "garage-doors",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#c3dda2",
+    "ratio": 11.111,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#456027",
+    "ratio": 7.105,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#456027",
+    "ratio": 7.105,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pest-control",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#add9e1",
+    "ratio": 10.801,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#2e626a",
+    "ratio": 6.837,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#2e626a",
+    "ratio": 6.837,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "windows-doors",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#f4d179",
+    "ratio": 11.156,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#765516",
+    "ratio": 6.815,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#765516",
+    "ratio": 6.815,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "solar",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#c4d2dc",
+    "ratio": 10.652,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#465f70",
+    "ratio": 6.707,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#465f70",
+    "ratio": 6.707,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "concrete",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#95deda",
+    "ratio": 10.761,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#216863",
+    "ratio": 6.512,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#216863",
+    "ratio": 6.512,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "pools",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "bold",
+    "role": "body",
+    "fg": "#f7f5ee",
+    "bg": "#111e24",
+    "ratio": 15.587,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "bold",
+    "role": "surface text",
+    "fg": "#f7f5ee",
+    "bg": "#1b2c34",
+    "ratio": 13.217,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "bold",
+    "role": "muted",
+    "fg": "#c4d1d5",
+    "bg": "#111e24",
+    "ratio": 10.873,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "bold",
+    "role": "muted on cards",
+    "fg": "#c4d1d5",
+    "bg": "#1b2c34",
+    "ratio": 9.22,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "bold",
+    "role": "CTA",
+    "fg": "#12212a",
+    "bg": "#b9d8dc",
+    "ratio": 10.902,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "bold",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#0b161d",
+    "ratio": 18.313,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "bold",
+    "role": "field edge",
+    "fg": "#82949c",
+    "bg": "#1b2c34",
+    "ratio": 4.576,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "bold",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "bold",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "fresh",
+    "role": "body",
+    "fg": "#182c38",
+    "bg": "#f5f8fa",
+    "ratio": 13.521,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "fresh",
+    "role": "surface text",
+    "fg": "#182c38",
+    "bg": "#ffffff",
+    "ratio": 14.421,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "fresh",
+    "role": "muted",
+    "fg": "#455b68",
+    "bg": "#f5f8fa",
+    "ratio": 6.676,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "fresh",
+    "role": "muted on cards",
+    "fg": "#455b68",
+    "bg": "#ffffff",
+    "ratio": 7.12,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "fresh",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#315d65",
+    "ratio": 7.281,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "fresh",
+    "role": "deep panel",
+    "fg": "#ffffff",
+    "bg": "#142c3a",
+    "ratio": 14.472,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "fresh",
+    "role": "field edge",
+    "fg": "#758b96",
+    "bg": "#ffffff",
+    "ratio": 3.565,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "fresh",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "fresh",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "classic",
+    "role": "body",
+    "fg": "#302c24",
+    "bg": "#f5f0e5",
+    "ratio": 12.226,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "classic",
+    "role": "surface text",
+    "fg": "#302c24",
+    "bg": "#fffcf5",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "classic",
+    "role": "muted",
+    "fg": "#645748",
+    "bg": "#f5f0e5",
+    "ratio": 6.162,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "classic",
+    "role": "muted on cards",
+    "fg": "#645748",
+    "bg": "#fffcf5",
+    "ratio": 6.834,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "classic",
+    "role": "CTA",
+    "fg": "#ffffff",
+    "bg": "#315d65",
+    "ratio": 7.281,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "classic",
+    "role": "deep panel",
+    "fg": "#fffcf5",
+    "bg": "#302c24",
+    "ratio": 13.56,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "classic",
+    "role": "field edge",
+    "fg": "#928570",
+    "bg": "#fffcf5",
+    "ratio": 3.527,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "classic",
+    "role": "dark uploaded logo",
+    "fg": "#000000",
+    "bg": "#767676",
+    "ratio": 4.623,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "kit": "locksmith",
+    "style": "classic",
+    "role": "white uploaded logo",
+    "fg": "#ffffff",
+    "bg": "#767676",
+    "ratio": 4.542,
+    "minimum": 4.5,
+    "pass": true
+  }
+]

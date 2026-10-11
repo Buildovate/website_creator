@@ -1,0 +1,692 @@
+{
+  "startedAt": "2026-10-07T06:17:18.963Z",
+  "hardCapMs": 1200000,
+  "workerCapacity": 3,
+  "runnerSha256": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+  "elapsedMs": 600930,
+  "stopReason": "Two phone CLS reproductions captured",
+  "reproduced": 2,
+  "runs": [
+    {
+      "run": 1,
+      "outcome": "FAILED",
+      "phoneCLS": 0.024368549324929635,
+      "reproduced": true,
+      "storySource": false,
+      "trace": "checks/round8x-trace-run1.json",
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8x-planning-scroll-run1.log"
+    },
+    {
+      "run": 2,
+      "outcome": "PASS",
+      "phoneCLS": 0,
+      "reproduced": false,
+      "storySource": false,
+      "trace": "checks/round8x-trace-run2.json",
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8x-planning-scroll-run2.log"
+    },
+    {
+      "run": 3,
+      "outcome": "PASS",
+      "phoneCLS": 0,
+      "reproduced": false,
+      "storySource": false,
+      "trace": "checks/round8x-trace-run3.json",
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8x-planning-scroll-run3.log"
+    },
+    {
+      "run": 4,
+      "outcome": "PASS",
+      "phoneCLS": 0,
+      "reproduced": false,
+      "storySource": false,
+      "trace": "checks/round8x-trace-run4.json",
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8x-planning-scroll-run4.log"
+    },
+    {
+      "run": 5,
+      "outcome": "FAILED",
+      "phoneCLS": 0.024368549324929635,
+      "reproduced": true,
+      "storySource": false,
+      "trace": "checks/round8x-trace-run5.json",
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8x-planning-scroll-run5.log"
+    }
+  ],
+  "backgrounds": [
+    {
+      "label": "hero-editor-browser",
+      "status": 0,
+      "outcome": "PASS",
+      "code": 0,
+      "signal": null,
+      "killed": false,
+      "ms": 339091,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8x-hero-editor-browser-load1.log"
+    },
+    {
+      "label": "website-pages",
+      "status": 1,
+      "outcome": "FAILED",
+      "code": 1,
+      "signal": null,
+      "killed": true,
+      "ms": 600839,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8x-website-pages-load1.log"
+    },
+    {
+      "label": "hero-editor-browser",
+      "status": 1,
+      "outcome": "FAILED",
+      "code": 1,
+      "signal": null,
+      "killed": true,
+      "ms": 261811,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8x-hero-editor-browser-load2.log"
+    }
+  ],
+  "memory": [
+    {
+      "at": "2026-10-07T06:17:23.980Z",
+      "freeGB": 32.02631378173828,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:17:28.994Z",
+      "freeGB": 32.3634147644043,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:17:33.997Z",
+      "freeGB": 32.729305267333984,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:17:39.003Z",
+      "freeGB": 32.75468063354492,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:17:44.017Z",
+      "freeGB": 32.5256233215332,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:17:49.025Z",
+      "freeGB": 32.54625701904297,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:17:54.025Z",
+      "freeGB": 32.58521270751953,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:17:59.034Z",
+      "freeGB": 32.53741455078125,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:04.036Z",
+      "freeGB": 32.192203521728516,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:09.042Z",
+      "freeGB": 32.438392639160156,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:14.051Z",
+      "freeGB": 32.35164260864258,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:19.066Z",
+      "freeGB": 32.51389694213867,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:24.079Z",
+      "freeGB": 32.27587890625,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:29.088Z",
+      "freeGB": 32.3118896484375,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:34.101Z",
+      "freeGB": 32.50712966918945,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:39.111Z",
+      "freeGB": 32.433013916015625,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:44.118Z",
+      "freeGB": 32.02788543701172,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:49.132Z",
+      "freeGB": 31.84524917602539,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:54.146Z",
+      "freeGB": 31.17658233642578,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:18:59.160Z",
+      "freeGB": 31.399391174316406,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:04.162Z",
+      "freeGB": 31.234752655029297,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:09.165Z",
+      "freeGB": 31.507129669189453,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:14.175Z",
+      "freeGB": 32.471473693847656,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:19.186Z",
+      "freeGB": 31.880027770996094,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:24.192Z",
+      "freeGB": 32.127052307128906,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:29.192Z",
+      "freeGB": 32.202491760253906,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:34.197Z",
+      "freeGB": 32.059444427490234,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:39.203Z",
+      "freeGB": 31.97254180908203,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:44.214Z",
+      "freeGB": 31.873001098632812,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:49.222Z",
+      "freeGB": 31.55224609375,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:54.223Z",
+      "freeGB": 31.913558959960938,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:19:59.231Z",
+      "freeGB": 32.06709671020508,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:04.238Z",
+      "freeGB": 31.979373931884766,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:09.253Z",
+      "freeGB": 31.90753173828125,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:14.255Z",
+      "freeGB": 31.837432861328125,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:19.265Z",
+      "freeGB": 31.933483123779297,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:24.276Z",
+      "freeGB": 32.01238250732422,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:29.292Z",
+      "freeGB": 32.12664031982422,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:34.304Z",
+      "freeGB": 32.14116287231445,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:39.310Z",
+      "freeGB": 31.856616973876953,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:44.325Z",
+      "freeGB": 31.587711334228516,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:49.339Z",
+      "freeGB": 31.481243133544922,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:54.341Z",
+      "freeGB": 31.586196899414062,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:20:59.346Z",
+      "freeGB": 31.310104370117188,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:04.348Z",
+      "freeGB": 31.272174835205078,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:09.351Z",
+      "freeGB": 31.399181365966797,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:14.355Z",
+      "freeGB": 31.403324127197266,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:19.364Z",
+      "freeGB": 31.709659576416016,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:24.368Z",
+      "freeGB": 31.546676635742188,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:29.369Z",
+      "freeGB": 31.856231689453125,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:34.380Z",
+      "freeGB": 31.832454681396484,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:39.386Z",
+      "freeGB": 31.45238494873047,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:44.396Z",
+      "freeGB": 31.410316467285156,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:49.406Z",
+      "freeGB": 31.292362213134766,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:54.417Z",
+      "freeGB": 31.39867401123047,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:21:59.425Z",
+      "freeGB": 31.60926055908203,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:04.427Z",
+      "freeGB": 31.40203094482422,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:09.437Z",
+      "freeGB": 31.37407684326172,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:14.446Z",
+      "freeGB": 31.271408081054688,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:19.456Z",
+      "freeGB": 31.420604705810547,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:24.467Z",
+      "freeGB": 31.661163330078125,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:29.475Z",
+      "freeGB": 31.241031646728516,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:34.485Z",
+      "freeGB": 31.30957794189453,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:39.499Z",
+      "freeGB": 31.094066619873047,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:44.506Z",
+      "freeGB": 31.085689544677734,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:49.516Z",
+      "freeGB": 30.850135803222656,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:54.523Z",
+      "freeGB": 31.040298461914062,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:22:59.531Z",
+      "freeGB": 32.01645278930664,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:04.538Z",
+      "freeGB": 31.472557067871094,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:09.541Z",
+      "freeGB": 31.463111877441406,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:14.543Z",
+      "freeGB": 31.712406158447266,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:19.546Z",
+      "freeGB": 32.50063705444336,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:24.549Z",
+      "freeGB": 32.04069137573242,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:29.556Z",
+      "freeGB": 32.24338150024414,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:34.564Z",
+      "freeGB": 32.158878326416016,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:39.564Z",
+      "freeGB": 32.00740051269531,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:44.579Z",
+      "freeGB": 31.976451873779297,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:49.582Z",
+      "freeGB": 32.23434829711914,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:54.591Z",
+      "freeGB": 32.052146911621094,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:23:59.594Z",
+      "freeGB": 32.123374938964844,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:04.608Z",
+      "freeGB": 32.16447448730469,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:09.612Z",
+      "freeGB": 32.106842041015625,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:14.625Z",
+      "freeGB": 31.980228424072266,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:19.631Z",
+      "freeGB": 31.811431884765625,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:24.633Z",
+      "freeGB": 31.79849624633789,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:29.646Z",
+      "freeGB": 31.724979400634766,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:34.657Z",
+      "freeGB": 31.199234008789062,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:39.667Z",
+      "freeGB": 31.070056915283203,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:44.679Z",
+      "freeGB": 30.977691650390625,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:49.681Z",
+      "freeGB": 31.329845428466797,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:54.690Z",
+      "freeGB": 31.101070404052734,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:24:59.695Z",
+      "freeGB": 30.83652114868164,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:04.702Z",
+      "freeGB": 30.890419006347656,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:09.712Z",
+      "freeGB": 31.05181121826172,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:14.723Z",
+      "freeGB": 31.029056549072266,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:19.725Z",
+      "freeGB": 30.944778442382812,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:24.729Z",
+      "freeGB": 31.704769134521484,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:29.741Z",
+      "freeGB": 31.269886016845703,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:34.746Z",
+      "freeGB": 31.418899536132812,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:39.759Z",
+      "freeGB": 31.624706268310547,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:44.774Z",
+      "freeGB": 31.532947540283203,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:49.775Z",
+      "freeGB": 31.597461700439453,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:54.783Z",
+      "freeGB": 31.602596282958984,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:25:59.792Z",
+      "freeGB": 31.132705688476562,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:04.793Z",
+      "freeGB": 31.35651397705078,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:09.803Z",
+      "freeGB": 31.54477310180664,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:14.809Z",
+      "freeGB": 31.378276824951172,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:19.817Z",
+      "freeGB": 31.491252899169922,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:24.823Z",
+      "freeGB": 31.56011199951172,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:29.826Z",
+      "freeGB": 31.492469787597656,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:34.827Z",
+      "freeGB": 31.762405395507812,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:39.838Z",
+      "freeGB": 31.57989501953125,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:44.841Z",
+      "freeGB": 31.483158111572266,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:49.855Z",
+      "freeGB": 31.24245834350586,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:54.870Z",
+      "freeGB": 31.225372314453125,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:26:59.879Z",
+      "freeGB": 30.86292266845703,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:27:04.886Z",
+      "freeGB": 30.90341567993164,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:27:09.897Z",
+      "freeGB": 30.783279418945312,
+      "activeWorkers": 3
+    },
+    {
+      "at": "2026-10-07T06:27:14.900Z",
+      "freeGB": 30.776813507080078,
+      "activeWorkers": 3
+    }
+  ],
+  "planningFilms": {
+    "before": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+    "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+    "matches": true
+  },
+  "credits": 0,
+  "providerCalls": 0
+}

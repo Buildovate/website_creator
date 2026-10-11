@@ -1,0 +1,18 @@
+✔ first Game GET  leaves legacy draft/public manifest and history untouched (31.5189ms)
+✔ first Game GET /experience leaves legacy draft/public manifest and history untouched (23.2683ms)
+✔ first Game GET /autofill?form=business leaves legacy draft/public manifest and history untouched (17.1972ms)
+✔ progress request authorization is side-effect free (18.9834ms)
+✔ viewer read is pure; stranger denied without writes (20.2278ms)
+✔ explicit authorized write access retains existing manifest ensure and stable generation (26.6565ms)
+✔ read validates corrupt existing manifests without repairing them (28.4285ms)
+✔ B06 supported quests derive 60 XP from their actual saved business, approval, offer, alert, payment and domain records (30.2791ms)
+✔ B06 saved review URLs, public estimate form and social URLs never fabricate completion (25.4456ms)
+✔ legacy form load inside Game is read-only on first tenant access (31.8691ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 262.0371

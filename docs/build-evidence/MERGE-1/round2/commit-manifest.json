@@ -1,0 +1,612 @@
+{
+  "files": [
+    {
+      "path": "docs/build-evidence/MERGE-1/STATUS.md",
+      "bytes": 2509,
+      "sha256": "5b683ed25fd6fd66a2daae398184a06bca9feb997c93f53826094bcaffd70bb2"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/results.json",
+      "bytes": 136312,
+      "sha256": "18c4829f69859473f4637e8ed120c3bf375f18e8afec7c67f9c626e08be8e120"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/aws-mock-proof.log",
+      "bytes": 338,
+      "sha256": "184a4709ae52ce3f793f91b5da76d57c238cde6b24ffa5baf819053bb0c40868"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/mock-proof.json",
+      "bytes": 650,
+      "sha256": "86d94409edd85173aef870e24591086d206e735ce08de31ffaee2e17befa3e7e"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/build.log",
+      "bytes": 69,
+      "sha256": "d831b3184eb3b3dfd2636e639852ea4d6b840c5db2eae80e1fb043cca2bc3fcc"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/preservation-before.json",
+      "bytes": 39607,
+      "sha256": "5345155a86b3e41d56a8523613d4ae775f02511e2cbc827c89ad96703d5785cc"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/preservation-after.json",
+      "bytes": 67405,
+      "sha256": "e24e14d361ee6e5a807242ec09961b2dace2818a769573e68f322c04b2436136"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/provider-preflight.json",
+      "bytes": 1080,
+      "sha256": "74c82edb8fe7bb92ce5eba7dc62e364df7ecfd962322613a350184e9eb606b3b"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/suite102.log",
+      "bytes": 4926,
+      "sha256": "811ae5fd27d7f1ba4f7298d9fbd613b96d8b4385d7eded1b78b73df303224cbc"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/suite102-error.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/supervisor.json",
+      "bytes": 78,
+      "sha256": "284f8721c9eb3cb19640a1e96d8bd355f253561465a1a7fd93f0bc029ce55779"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/suite102-totals.json",
+      "bytes": 136,
+      "sha256": "2ea8df88a6e9fdcf4a4ecdbdf5a9baa27ba2a78f2e91fedb6c7133d0e5ddca31"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/tools/aws-mock-proof.mjs",
+      "bytes": 1522,
+      "sha256": "ee386766a6a36fa77deecf6ee3bf1ae297dfebd49fcd1a364cbc27e7016a8e78"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/tools/preserve-and-mock.mjs",
+      "bytes": 4893,
+      "sha256": "b74854da17cac8af08520038a1c8f1d07dc35cdf652304753e17d867950a4360"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/tools/run-suite.ps1",
+      "bytes": 3199,
+      "sha256": "601c95e43cf4e7ccd04d6a5442e3653f72aa114d72835c593c99245e001ffc27"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/full-checks.json",
+      "bytes": 22539,
+      "sha256": "3e7a08b68fd47f5e8ac481347564fe21f00047be96db136cb4560e9f56979eef"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/legacy/aws-adapter/057A/aws-egress-mock.json",
+      "bytes": 62,
+      "sha256": "e27396f0041c46a11683c0b24b2f604d2d5e749b9641ba8e8314042b0ec667c9"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/auth-session.log",
+      "bytes": 6895,
+      "sha256": "6bd80f93ea4bf369f32f52f83d93de50009e43cd8f4d310c27bf5aa5c3aef5c1"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/aws-adapter.log",
+      "bytes": 329,
+      "sha256": "eda14e2f43fe611afa650e07b7b0184cea0c54419242849ebf28677771ec3432"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/build.log",
+      "bytes": 68,
+      "sha256": "72e984615115f0c9f3aaf9aaff49f0b5020ebc58dba08512947507167cc85202"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/builder.log",
+      "bytes": 391,
+      "sha256": "b784d6441dbf2114ee70771d45bd1b70ecfb424efbff6b3624a2311ea6e6b37c"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/callback-browser.log",
+      "bytes": 129,
+      "sha256": "ee5d7a58b24756c8fad7574b407edec09a9625af8f9279c6d6c6690e8eaede35"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/callback-restore.log",
+      "bytes": 296,
+      "sha256": "9cfbc6d07aeaaeb332b9024836bca44c215ad6c44b2b4bf3bb153eecb13c7337"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/cinematic-films.log",
+      "bytes": 368,
+      "sha256": "5d0c338cfd8c98be0c21ed0aa48019a02d59253fb11043b53fa6f81a4566b354"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/client-modules.log",
+      "bytes": 229,
+      "sha256": "75a1c61fc6d62a9186ec220ac8a3f7dc92233a999281926fc22e1b933d5e5db6"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/clips-phase2-browser.log",
+      "bytes": 6835,
+      "sha256": "33b97f2c91faab6215ac4c7d079be229a03ac2d682608f3a8e5162733466b22c"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/clips-phase2.log",
+      "bytes": 13761,
+      "sha256": "d9f98d19133036ccc47e8fb9f53e23973df089530ae08475456b0d5189b317bb"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/constitution.log",
+      "bytes": 87127,
+      "sha256": "68bbc670942b267508148400a95d29b537e47292b3765f22fa48598910da0b58"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/contact-linkage-browser.log",
+      "bytes": 159,
+      "sha256": "6a62e3e477269732a497c7ae3a08f44d0692b82bd33030b284a4a9aa76c4f833"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/contact-linkage.log",
+      "bytes": 398,
+      "sha256": "6292275c6d44a4e397046815268a9afe6a94b35549b63c7653d453245a97d372"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/contacts-browser.log",
+      "bytes": 168,
+      "sha256": "cebd169a2508ebef026dcbcddeed27aa96b69b1030cde572e3fde10b4b96e609"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/contacts-restore.log",
+      "bytes": 316,
+      "sha256": "ed3011af854bbea62604a68c070c5cb8923dead7d69be2241c3e041acfe4a40b"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/control.log",
+      "bytes": 454,
+      "sha256": "122f82514a4c3d32c6939d5fcdb68972bd5cb078d1b85e2ffd3d9717d0fcb19c"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/conversion-references.log",
+      "bytes": 18308,
+      "sha256": "2344c1f186365cd90eebe8bb35215bbf78e808d5cfe0f3781202a98f83a81264"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/core-site-pages.log",
+      "bytes": 375,
+      "sha256": "1ee60349264a9888b83f86768015f684b9652653eac9863577a1cdf64cc160c6"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/crm-next.log",
+      "bytes": 483,
+      "sha256": "397ac49e573ca0ffd03e91ad5e4afb23ee8edebc012004b4ecf86503382368fc"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/crm.log",
+      "bytes": 15663,
+      "sha256": "638b9248ef159ca8ce18588aa6c4d162cf6b67e0c6657240767b583287711cdd"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/design-kits.log",
+      "bytes": 371,
+      "sha256": "507b0347c8f008ab9f243ab0aa2b09e43609aafb5959b4d28bd110dd3d3c9990"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/design-styles.log",
+      "bytes": 8761,
+      "sha256": "5cdfed53ddbd1b1fb30f2f86cb626415c2ccda2ae6921168ccc14f0a334d7358"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/ebook-browser.log",
+      "bytes": 9814,
+      "sha256": "5e11cef807dbf393416f597f97c9108137a2e225b1775935c12fffb12ee65c64"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/ebook.log",
+      "bytes": 18407,
+      "sha256": "4400e60165d5b0eb7bf7a0aa6fa7ba6071a7a7192b7474f19a14afb2111129f5"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/engagement-providers.log",
+      "bytes": 432,
+      "sha256": "fde722ff2ca30173b2f3fecb4fc51ba4894d1817b777a1e0fca22ad42294edd6"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/engagement.log",
+      "bytes": 432,
+      "sha256": "cd0fb4611740f20e66f882b81a3c69e26fa131abb4e0d22bc6e96cf0dc2c649b"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/expense-metering.log",
+      "bytes": 232,
+      "sha256": "c14e5d4f5bcc47181440f2db6dc4bd835d1b8dc8fbafe8e2df620a4a0326366b"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/expense-polish-browser.log",
+      "bytes": 7130,
+      "sha256": "ddfcfaae08e106f77fdb05facec32a2cf82fe41907c920af278664b1ffa8b8e4"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/expense-polish.log",
+      "bytes": 193,
+      "sha256": "da66dd82b3d1a5570f2c10633cb14ce71e1dad5de36463a14b543d30508483f9"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/expenses-browser.log",
+      "bytes": 7129,
+      "sha256": "b6f8eef8ade76657817301b34db93a91a58dbdbefd2aea3b6ed948783f7a6bdd"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/expenses.log",
+      "bytes": 318,
+      "sha256": "47d3961ba2e99f74707a5049b11d810490a68c7404eafb6fa39831c7e0a931a9"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/financing-comparison.log",
+      "bytes": 9281,
+      "sha256": "13f7cad1b77fcb58bc1cc5aa3d717394e7acc80d863d3dc8bab3d1bc57ab62fd"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/financing-states-browser.log",
+      "bytes": 10614,
+      "sha256": "2d4abd8839a2a598692d509c99897969ed7c32b9da46400881f220c0b0264c30"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/financing-states.log",
+      "bytes": 45868,
+      "sha256": "f70ba2fb637ef28ec3a49fbb258ed132b100a0d38e506e978274771ec1f4225a"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/footer-policy.log",
+      "bytes": 20329,
+      "sha256": "4d2d3f663d82aea362492f199cb793c25e9c4e6274fa73d7c78db2cdf0ebaf32"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/generation-browser.log",
+      "bytes": 5037,
+      "sha256": "ccc905a3f8bfe9f01653b9d5cf9ab862c299cd7681c4c26a88b228e2ce153584"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/generation.log",
+      "bytes": 89750,
+      "sha256": "18d4d0d21d99f5f106311e6d58034936b30768494e72b0d09c9969b9549f931e"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/hero-editor-browser.log",
+      "bytes": 18143,
+      "sha256": "fc977c156f1c93142bff685e5cb849a6781e5d49155f1cdaf5ffb870bf6bcc9e"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/hero-editor.log",
+      "bytes": 24617,
+      "sha256": "8856e9bb637502eb487666d5bf27b93b61994586b8c8f4e8fb750e775bb054f5"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/legacy-scroll-video.log",
+      "bytes": 110,
+      "sha256": "aea199c34756fa4a2b9f639a26b6f4bc0fc18e4682cdb27cf262a77f417ecbf7"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/legal-policy.log",
+      "bytes": 10098,
+      "sha256": "6453218edbf50a5886be619143c89de014c64c27021411a39e98cde9e6273865"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/media-ranges.log",
+      "bytes": 91,
+      "sha256": "f2983531efa03ebba6ae795a2828fdd8a35bfd32d7f67204d9db2bdec2bfead0"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/motion-v2.log",
+      "bytes": 613,
+      "sha256": "4550327f76aaf7afbf3e95e82d812d15a1314eaffd025d6f0965674ebd74c477"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/neighborhood.log",
+      "bytes": 9861,
+      "sha256": "bb10ea97fa49cdcad367d9d3c49e120693ad921bf98ad07edc93f83e48f31dcf"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/owner-photo.log",
+      "bytes": 592,
+      "sha256": "a7e07dc9e37a765f9035c6ab84c8ac8610c0625125f1093893604390fbc671b8"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/planning-ambient-browser.log",
+      "bytes": 5715,
+      "sha256": "d197ace67021bcf99fe758c4a54d7a84e796f66f69e9df359fcdda745106d250"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/planning-ambient.log",
+      "bytes": 5180,
+      "sha256": "4ca87e45473ca5bf3454ae9bb201f3352b7cf787855e04ad8f4669161d0c0342"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/planning-motion.log",
+      "bytes": 106,
+      "sha256": "922c0b02505720e546f81ad819421dffdb550440d5e74dea9fe4adecbd6f17be"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/planning-scroll-browser.log",
+      "bytes": 5640,
+      "sha256": "8497f0bbf2fe7a7e387ecd38893e8c84262618139094df6bb10ba811f828e6e1"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/planning-scroll.log",
+      "bytes": 5104,
+      "sha256": "b66ba232e8bcc6e5749dc004a98ffe41342c69d947c2cbee04b1fa153957e653"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/platform-mobile.log",
+      "bytes": 28005,
+      "sha256": "f78965d53fb215f6f14849db85e7da26c6487d5563c31defeb494ca5c737f7d6"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/platform-ui-cleanup-browser.log",
+      "bytes": 47,
+      "sha256": "6434b118082eb8a8f9950e06cc9cfcb713d9c0e99fde1c58b619ebc71124b8a4"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/platform.log",
+      "bytes": 30138,
+      "sha256": "1bc3fcefe54eade38831f7137c9d7faccce988e26c8e75645158fd7f8f60fe55"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/premium-service.log",
+      "bytes": 37349,
+      "sha256": "3cae7ba7b5017ffb05c36ae82b554a3ba531a9f643e8064e6f5acf776fcad34e"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/presentation.log",
+      "bytes": 449,
+      "sha256": "1e2779b85d7ca28dab199b4a641b1bc6e0fdb77b45ac925573faa305042e5019"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/project-experience.log",
+      "bytes": 7859,
+      "sha256": "1d01df44e36c806dbed2390b8f1cc16f19e1bb1b0b407b11c06c4534f1a72520"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/promotion-unlocks-browser.log",
+      "bytes": 22632,
+      "sha256": "0615631566a1aacfa08a7f5743442d2489123b9faf38e34c9074cd01671f682b"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/promotion-unlocks.log",
+      "bytes": 18208,
+      "sha256": "2e577ebb2cdd2906fedf64a3e8165b334d7716a4e416b3a25a14e238f52cbd66"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/promotions-ambient-browser.log",
+      "bytes": 10689,
+      "sha256": "4da0d5769cd27ccfb5c523d58164cf2b4ae3345bdcd26855c2cd0f9d351f1212"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/promotions-ambient.log",
+      "bytes": 9705,
+      "sha256": "2b35296dc7ae48d1c759cca646548e0eb863f3071042d4bf0f64b5fba7662849"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/promotions-scroll-browser.log",
+      "bytes": 11138,
+      "sha256": "75a5cfa3efea8016541c84cbcbc46fe73cf7d3612d21da89a7d3c0776c98d391"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/promotions-scroll.log",
+      "bytes": 9704,
+      "sha256": "33f67a74a45f1ff1d04574960b6e011585fd37da51bae6843e53e6e73927b916"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/reference-proof.log",
+      "bytes": 11285,
+      "sha256": "44e891c21a42d5e5cb6f43b89b159c2fa642fa4f86ac5dcdcfdb4b66cd597746"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/review-lookup.log",
+      "bytes": 447,
+      "sha256": "e69846876078b37d2308aedd424ce4b3ff4862b4d253a5560e380b431398189a"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-acceptance.log",
+      "bytes": 9486,
+      "sha256": "607e6a34576f1953ac66a116c74326c31725479b244f578d4d2584bbe7c13f4c"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-cities-browser.log",
+      "bytes": 6601,
+      "sha256": "2a9e3e3771c80f8f25343859c673ebc570d405b0de879567e5eef043f6b8cd4b"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-cities.log",
+      "bytes": 11123,
+      "sha256": "1b77f239c6b30e34422f736cad08cade2cf650fc1661ada33f1753e4b11d570d"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-cta-browser.log",
+      "bytes": 8542,
+      "sha256": "126d798926df167c7c97936f1157df78aa3f9120283dae7d8fe392cc9872ce2f"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-cta.log",
+      "bytes": 7206,
+      "sha256": "16dc03f3d0f0f427700d48a9176f6ed7a7f8aad2966e3ec79a189aef800441bf"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-polish-part1-browser.log",
+      "bytes": 6774,
+      "sha256": "9f3efe10b1f49d12393f3bfd9414fe7b6391cfd90bc72d8f157e3aee05716a12"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-polish-part1.log",
+      "bytes": 5010,
+      "sha256": "9bab568ae110461850291271c5f89b23eafa8a739b25408e9637052b4a7e386d"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-polish-part2-browser.log",
+      "bytes": 54398,
+      "sha256": "1f2e956a3aacffd517085901c0c2b4e86c2b48c8875134157b3fb0a6787b310c"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-polish-part2.log",
+      "bytes": 258,
+      "sha256": "69caf5e14d4243e7381be2c56711a6064cbe55bc978a1b8cb94a24c9ebfa56a0"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-story-browser.log",
+      "bytes": 8620,
+      "sha256": "98ce3acec8d5bfe6d9dc904e17f904ef75f70a403e3a58e5ddd5b5fc6fcddc6f"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/roofing-story.log",
+      "bytes": 7334,
+      "sha256": "7ebd145d995044d97e9d0e994d9551837c6bf7f619343a4e54613cb38e50d0f2"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/sales-ops.log",
+      "bytes": 8192,
+      "sha256": "bcdd7bbd5d8565f16a32574eef9164e76c5837af1ae570b4c1291edd95b7e0d2"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/saved-designs.log",
+      "bytes": 367,
+      "sha256": "8bdf3da72f2158df5a9e9846c0b32cce3dfa4561c0afd82bede9222858862ad8"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/scroll-media.log",
+      "bytes": 75,
+      "sha256": "478fd0cea2a47482c9446bb31aec6d320551768dc18c2c1dade098e4e4c49860"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/scroll-story.log",
+      "bytes": 5266,
+      "sha256": "cfdc438a57f9a66bbe8beac97e77b8d5e0e57a73619b4beca3bf3ca65ad8b6d2"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/scroll-video-controller.log",
+      "bytes": 808,
+      "sha256": "a4c45f9e0dfc33491fe855d708413008a328033386e50c6f6ada69f4a1ff6e50"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/service-content.log",
+      "bytes": 398,
+      "sha256": "0db4e6c6c18e1d21d8147c88e860995dce7e977bf4b9980499e02c5a89a220c5"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/service-motion-browser.log",
+      "bytes": 20992,
+      "sha256": "0f7f938550367e7ea98c2cca10ac4d5410ffd6ac0d6f94735e3db6de0fb46118"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/service-motion.log",
+      "bytes": 9953,
+      "sha256": "c91bab88b049a8b73dec37125cec29c7a06a4f476d436e5cb7dd583a8e7ced53"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/service-pages-all-trades.log",
+      "bytes": 32892,
+      "sha256": "699ae51b67840f1e8d074520bfb43052debdf41e1b85145f1df9f36be8c118b2"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/service-playbook.log",
+      "bytes": 16915,
+      "sha256": "8c49cf8999886d5c242c48b4c992d4b45ece38e03db9c1ae21db8e69b5860cb0"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/showpiece-media.log",
+      "bytes": 411,
+      "sha256": "de2623292b7733366bff0bd0aae167bee451d887aad18048132138a1c2dd3576"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/showpiece-v4.log",
+      "bytes": 731,
+      "sha256": "80c4b8ea9b7e668ebd94ba535172022beadef3b6a8370f953838ef78a7fa1109"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/template-assets.log",
+      "bytes": 68,
+      "sha256": "72e984615115f0c9f3aaf9aaff49f0b5020ebc58dba08512947507167cc85202"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/template-name.log",
+      "bytes": 43,
+      "sha256": "8c52b7269b505c0e49a34d0bad0490b8c28b6ad8b5845b2b13b52ab6cef392c9"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/trade-enablement-browser.log",
+      "bytes": 56,
+      "sha256": "3b1b144d731ce758e211878dd86f4f040d0b1cf14c8d1957814614ebaccfb208"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/trade-enablement.log",
+      "bytes": 649,
+      "sha256": "3a732776a0c3d2dad8d8ec7d6713518db3902d9acd26c284b102a56520c2287b"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/trade-revisions.log",
+      "bytes": 323,
+      "sha256": "ebb25593b02cc8759c2f4c7dc1d5b381484a2cb24d1c038bb1d0fcb1b6f41b41"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/trade-upgrade.log",
+      "bytes": 346,
+      "sha256": "529a78b346be538c2f449b8c93f52ab98de1f2b4f18b532d53d7bbcba4d75ee6"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/trade-visual-browser.log",
+      "bytes": 44,
+      "sha256": "96a8aa46afdfc1f5c8a7c04970398849c8b4086f41128ba75f3bd03473bdfaff"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/trade-visual-correctness.log",
+      "bytes": 786,
+      "sha256": "72dea8e0595cccf3908cebe82e027f4921784aa5ae1fa4067752084903227483"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/trades-financing.log",
+      "bytes": 29114,
+      "sha256": "38ce47dfff0724abce034d45e8aa4e25f57c0eb5715cbed01304ac8048f5802c"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/trust.log",
+      "bytes": 43456,
+      "sha256": "bd0e0072010467b19a58bbf96965882e8ffd86d021b4fed261ae49f934f8cfae"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/typecheck.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/website-pages.log",
+      "bytes": 104936,
+      "sha256": "19c25cafa773aa86383712cc25f6cb8c07f29ba8e354cbc966347fc28688d225"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/workspace-owner.log",
+      "bytes": 118,
+      "sha256": "84968741ac5ab3013bb15b84ef47f708c54fcb919230f63f4597ff79819fd03d"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/workspace.log",
+      "bytes": 16374,
+      "sha256": "7bcc65a8176200f98d939d4579061bd93ece653043c3535064b26341018018b9"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/zoom.log",
+      "bytes": 367,
+      "sha256": "9d999c74055ca2bc92ca2fe5285564f326e9604db6701c7007c60e0fa6d571d1"
+    }
+  ],
+  "bytes": 1374732,
+  "count": 119,
+  "rawEvidenceExcluded": true,
+  "excludedRawLogs": [
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/pending-fixture-build.log",
+      "reason": "Extra blank line at EOF in unchanged raw runner output; build result preserved in suite/supervisor summaries"
+    },
+    {
+      "path": "docs/build-evidence/MERGE-1/round2/generated/028F/checks/restored-build.log",
+      "reason": "Extra blank line at EOF in unchanged raw runner output; build result preserved in suite/supervisor summaries"
+    }
+  ]
+}

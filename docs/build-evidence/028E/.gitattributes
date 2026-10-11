@@ -1,0 +1,4 @@
+# Preserve captured response and packet bytes through Windows checkouts.
+packets/** -text
+after-html/** -text
+after-css/** -text

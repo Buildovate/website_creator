@@ -1,0 +1,122 @@
+[
+  {
+    "suite": "callback-browser",
+    "states": 10,
+    "textMeasurements": 648,
+    "textFailures": [],
+    "borderMeasurements": 581,
+    "borderFailures": []
+  },
+  {
+    "suite": "contact-linkage-browser",
+    "states": 20,
+    "textMeasurements": 1497,
+    "textFailures": [],
+    "borderMeasurements": 3166,
+    "borderFailures": []
+  },
+  {
+    "suite": "contacts-browser",
+    "states": 12,
+    "textMeasurements": 746,
+    "textFailures": [],
+    "borderMeasurements": 915,
+    "borderFailures": []
+  },
+  {
+    "suite": "expense-polish-browser",
+    "states": 16,
+    "textMeasurements": 2015,
+    "textFailures": [],
+    "borderMeasurements": 1012,
+    "borderFailures": []
+  },
+  {
+    "suite": "expenses-browser",
+    "states": 27,
+    "textMeasurements": 2865,
+    "textFailures": [],
+    "borderMeasurements": 1770,
+    "borderFailures": []
+  },
+  {
+    "suite": "financing-states-browser",
+    "states": 22,
+    "textMeasurements": 1086,
+    "textFailures": [],
+    "borderMeasurements": 14227,
+    "borderFailures": []
+  },
+  {
+    "suite": "generation-browser",
+    "states": 1,
+    "textMeasurements": 18,
+    "textFailures": [],
+    "borderMeasurements": 44,
+    "borderFailures": []
+  },
+  {
+    "suite": "hero-editor-browser",
+    "states": 17,
+    "textMeasurements": 529,
+    "textFailures": [],
+    "borderMeasurements": 877,
+    "borderFailures": []
+  },
+  {
+    "suite": "platform-mobile",
+    "states": 210,
+    "textMeasurements": 18782,
+    "textFailures": [],
+    "borderMeasurements": 32451,
+    "borderFailures": []
+  },
+  {
+    "suite": "platform-ui-cleanup-browser",
+    "states": 13,
+    "textMeasurements": 2157,
+    "textFailures": [],
+    "borderMeasurements": 2761,
+    "borderFailures": []
+  },
+  {
+    "suite": "roofing-acceptance",
+    "states": 2,
+    "textMeasurements": 50,
+    "textFailures": [],
+    "borderMeasurements": 85,
+    "borderFailures": []
+  },
+  {
+    "suite": "roofing-cta-browser",
+    "states": 2,
+    "textMeasurements": 299,
+    "textFailures": [],
+    "borderMeasurements": 1337,
+    "borderFailures": []
+  },
+  {
+    "suite": "roofing-polish-part2-browser",
+    "states": 12,
+    "textMeasurements": 372,
+    "textFailures": [],
+    "borderMeasurements": 936,
+    "borderFailures": []
+  },
+  {
+    "suite": "service-motion-browser",
+    "states": 6,
+    "textMeasurements": 987,
+    "textFailures": [],
+    "borderMeasurements": 4203,
+    "borderFailures": []
+  },
+  {
+    "suite": "trade-enablement-browser",
+    "states": 13,
+    "textMeasurements": 1559,
+    "textFailures": [],
+    "borderMeasurements": 2469,
+    "borderFailures": []
+  }
+]

@@ -1,0 +1,115 @@
+[
+  {
+    "label": "game-progress",
+    "code": 0,
+    "ms": 903,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-game-progress.log"
+  },
+  {
+    "label": "game-milestones",
+    "code": 0,
+    "ms": 636,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-game-milestones.log"
+  },
+  {
+    "label": "game-desktop-api",
+    "code": 0,
+    "ms": 1071,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-game-desktop-api.log"
+  },
+  {
+    "label": "game-experience-api",
+    "code": 0,
+    "ms": 959,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-game-experience-api.log"
+  },
+  {
+    "label": "game-autofill",
+    "code": 0,
+    "ms": 951,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-game-autofill.log"
+  },
+  {
+    "label": "game-copy",
+    "code": 0,
+    "ms": 1027,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-game-copy.log"
+  },
+  {
+    "label": "game-forms",
+    "code": 0,
+    "ms": 406,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-game-forms.log"
+  },
+  {
+    "label": "catalog",
+    "code": 0,
+    "ms": 551,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-catalog.log"
+  },
+  {
+    "label": "payments",
+    "code": 0,
+    "ms": 858,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-payments.log"
+  },
+  {
+    "label": "stripe-sync",
+    "code": 0,
+    "ms": 613,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-stripe-sync.log"
+  },
+  {
+    "label": "stripe-checkout",
+    "code": 0,
+    "ms": 602,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-stripe-checkout.log"
+  },
+  {
+    "label": "stripe-no-key",
+    "code": 0,
+    "ms": 579,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-stripe-no-key.log"
+  },
+  {
+    "label": "entitlements",
+    "code": 0,
+    "ms": 767,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-entitlements.log"
+  },
+  {
+    "label": "pay4a",
+    "code": 0,
+    "ms": 918,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-pay4a.log"
+  },
+  {
+    "label": "pay4b",
+    "code": 0,
+    "ms": 1067,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-pay4b.log"
+  },
+  {
+    "label": "pay5",
+    "code": 0,
+    "ms": 1033,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-pay5.log"
+  },
+  {
+    "label": "domain-wizard",
+    "code": 0,
+    "ms": 1458,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-domain-wizard.log"
+  },
+  {
+    "label": "insertion-order",
+    "code": 0,
+    "ms": 3421,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/final-gate-insertion-order.log"
+  },
+  {
+    "label": "readiness-batch-a",
+    "code": 0,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/readiness-batch-a-preview-guard.log"
+  }
+]

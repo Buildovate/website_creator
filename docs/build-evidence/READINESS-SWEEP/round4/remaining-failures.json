@@ -1,0 +1,238 @@
+[
+  {
+    "label": "owner-download",
+    "group": "standalone",
+    "status": 0,
+    "code": 0,
+    "outcome": "PASS-WITH-WARNING",
+    "reason": "passed, then hung at exit",
+    "signal": null,
+    "ms": 38922,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/owner-download.log",
+    "pass": null,
+    "fail": 0,
+    "countKind": "whole-suite outcome",
+    "locations": [],
+    "failures": []
+  },
+  {
+    "label": "review-packet-browser",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 34622,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/review-packet-browser.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/review-packet-browser.mjs:22"
+    ],
+    "failures": [
+      "locator.waitFor: Timeout 30000ms exceeded.",
+      "  name: 'TimeoutError'"
+    ]
+  },
+  {
+    "label": "automatic-qa-contract",
+    "code": 1,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/final-review-automatic-qa-contract.log",
+    "ms": 5631,
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/automatic-qa-contract.mjs:5",
+      "tests/automatic-qa-contract.mjs:7"
+    ],
+    "failures": [
+      "AssertionError [ERR_ASSERTION]: Real packet has no failures and requires actual Borderline decisions",
+      "  code: 'ERR_ASSERTION',"
+    ],
+    "initialSweep": {
+      "label": "automatic-qa-contract",
+      "group": "standalone",
+      "status": 0,
+      "code": 0,
+      "outcome": "PASS",
+      "signal": null,
+      "ms": 12607,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/automatic-qa-contract.log",
+      "pass": null,
+      "fail": 0,
+      "countKind": "whole-suite outcome",
+      "locations": [],
+      "failures": []
+    },
+    "verification": "Existing review API regressions rerun against final source"
+  },
+  {
+    "label": "automatic-qa-frame-sample-replay",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 12255,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/automatic-qa-frame-sample-replay.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/automatic-qa-frame-sample-replay.mjs:19",
+      "tests/automatic-qa-frame-sample-replay.mjs:32"
+    ],
+    "failures": [
+      "Review capture failed sample-fictional-copper-kite-ventura AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png",
+      "AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png",
+      "  code: 'ERR_ASSERTION',"
+    ]
+  },
+  {
+    "label": "automatic-qa-rail-colors",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 34888,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/automatic-qa-rail-colors.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/automatic-qa-rail-colors.mjs:5"
+    ],
+    "failures": [
+      "locator.scrollIntoViewIfNeeded: Timeout 29960.723ms exceeded.",
+      "  name: 'TimeoutError'"
+    ]
+  },
+  {
+    "label": "automatic-qa-replay",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 106257,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/automatic-qa-replay.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/helpers/replay-alternate-assertions.mjs:38",
+      "tests/automatic-qa-replay.mjs:8"
+    ],
+    "failures": [
+      "AssertionError [ERR_ASSERTION]: Saved replay must contain 143 files",
+      "  code: 'ERR_ASSERTION',"
+    ]
+  },
+  {
+    "label": "automatic-qa-staff-browser",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 7064,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/automatic-qa-staff-browser.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/automatic-qa-staff-browser.mjs:8"
+    ],
+    "failures": [
+      "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:",
+      "  code: 'ERR_ASSERTION',"
+    ]
+  },
+  {
+    "label": "media-library-browser",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 1154378,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/media-library-browser.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/media-library-browser.mjs:183"
+    ],
+    "failures": [
+      "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:",
+      "  code: 'ERR_ASSERTION',"
+    ]
+  },
+  {
+    "label": "uniqueness-browser",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 872126,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/uniqueness-browser.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/uniqueness-browser.mjs:91",
+      "tests/uniqueness-browser.mjs:116"
+    ],
+    "failures": [
+      "locator.scrollIntoViewIfNeeded: Timeout 29951.560000000056ms exceeded.",
+      "  name: 'TimeoutError'"
+    ]
+  },
+  {
+    "label": "roofing-cities",
+    "group": "Suite-102",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 150885,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/roofing-cities.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/helpers/review-approval-fixture.mjs:27",
+      "tests/helpers/review-approval-fixture.mjs:52",
+      "tests/roofing-cities.mjs:3",
+      "tests/roofing-cities.mjs:12"
+    ],
+    "failures": [
+      "AssertionError [ERR_ASSERTION]: [{\"category\":\"layout\",\"crop\":\"qa-crops/page-019-1440-1.png\",\"id\":\"page-019-1440-overflow\",\"key\":\"overflow\",\"measured\":{\"pageOverflow\":144,\"violations\":[\"body>main:nth-child(4)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>img:nth-child(1)\",\"body>main:nth-child(4)>section:nth-child(4)>div:nth-child(2)>div:nth-child(1)>img:nth-child(1)\",\"body>main:nth-child(4)>section:nth-child(6)>figure:nth-child(2)>img:nth-child(1)\",\"body>main:nth-child(4)>section:nth-chi",
+      "  code: 'ERR_ASSERTION',"
+    ]
+  },
+  {
+    "label": "design-styles-browser",
+    "group": "standalone",
+    "status": 1,
+    "code": 1,
+    "outcome": "FAILED",
+    "signal": null,
+    "ms": 2760107,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round4/logs/design-styles-browser.log",
+    "pass": null,
+    "fail": 1,
+    "countKind": "whole-suite outcome",
+    "locations": [
+      "tests/design-styles-browser.mjs:68"
+    ],
+    "failures": [
+      "AssertionError [ERR_ASSERTION]: [{\"label\":\"CLS <= .05 roofing-complete-current-services-desktop-normal\",\"detail\":0.2044707518861454},{\"label\":\"header centers <= 1px roofing-complete-current-services-roof-installation-desktop-normal\",\"detail\":{\"spread\":649.375,\"items\":[{\"text\":\"Expertise\",\"center\":78.625,\"height\":44,\"textCenter\":78.46875,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Areas\",\"center\":147.625,\"height\":44,\"textCenter\":147.53125,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Pricing\",\"center",
+      "  code: 'ERR_ASSERTION',"
+    ]
+  }
+]

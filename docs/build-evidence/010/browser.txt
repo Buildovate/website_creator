@@ -1,0 +1,4 @@
+PASS desktop: OSM tiles loaded; 2 approved persisted projects, uploaded logo, city/search/reset, map/list/popup/comparison, story return anchor, source aggregates/attribution + mocked review labels, no-feed source links, private media denied, empty map/logo/reviews, no overflow/page errors
+PASS mobile: OSM tiles loaded; 2 approved persisted projects, uploaded logo, city/search/reset, map/list/popup/comparison, story return anchor, source aggregates/attribution + mocked review labels, no-feed source links, private media denied, empty map/logo/reviews, no overflow/page errors
+PASS map library unavailable: readable project stories remain available
+PASS no JavaScript: project story and review source links remain usable

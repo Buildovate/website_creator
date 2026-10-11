@@ -1,0 +1,36 @@
+{
+  "reviewed": "2026-09-26",
+  "limits": "General housing/geography and regional weather only; no contractor-specific local claims or statistics.",
+  "sources": [
+    {
+      "city": "Oxnard",
+      "url": "https://www.oxnard.gov/wp-content/uploads/Oxnard-2030-General-Plan-Amend-12.2022-SMc.pdf",
+      "supports": "Coast and historic residential district"
+    },
+    {
+      "city": "Ventura",
+      "url": "https://www.cityofventura.ca.gov/2039/Planning-Documents",
+      "supports": "Coastal, Midtown and hillside settings"
+    },
+    {
+      "city": "Camarillo",
+      "url": "https://camarillo2050.com/wp-content/uploads/2025/09/04_gp-2004_background-element.pdf",
+      "supports": "Old Town and varied residential context"
+    },
+    {
+      "city": "Thousand Oaks",
+      "url": "https://toaks.gov/planning-guides",
+      "supports": "Single-family housing and planning context"
+    },
+    {
+      "city": "Santa Paula",
+      "url": "https://www.spcity.org/DocumentCenter/View/1711/2040-General-Plan-Section-4---Environmental-and-Cultural-Resources-Element",
+      "supports": "Historic buildings and Santa Clara River Valley"
+    },
+    {
+      "city": "Regional weather",
+      "url": "https://www.weather.gov/media/wrh/online_publications/TMs/TM-261.pdf",
+      "supports": "Dry summers, seasonal winter rain and marine influence"
+    }
+  ]
+}

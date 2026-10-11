@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "round4Sha256": "8e8d6666c77767a07fd1b1156403ea5b11cdf04c762084264063cbdb36732ee8",
+  "round5Sha256": "081486f6c7e0a9dcfb9287de73d869f23cdf67d32b61a36648930e3ec4b32e1b",
+  "removingOnlyExactApprovedGuideRecognitionRestoresRound4Sha256": "8e8d6666c77767a07fd1b1156403ea5b11cdf04c762084264063cbdb36732ee8",
+  "floatingOverlapsSha256": "ec663767bb46d5748a8cb89d4408904cda292f6058de3e7f6b09340602315d47",
+  "thresholdPx": 2,
+  "samplingMs": 60,
+  "perStateAssertion": "assert.deepEqual(overlaps,[],f.style+' '+mode+' '+width+' clearance');",
+  "genericConsentRegexUnchanged": true,
+  "genericPrimarySelectorUnchanged": true,
+  "newRecognitionScope": "body.ebook-page AND exact /s/:slug/resources/before-you-decide-on-your-roof path; #ebook-request only"
+}

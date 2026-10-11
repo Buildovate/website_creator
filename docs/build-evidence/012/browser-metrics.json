@@ -1,0 +1,90 @@
+[
+  {
+    "device": "desktop",
+    "mode": "single",
+    "footer": {
+      "x": 0,
+      "y": 499.78125,
+      "width": 1440,
+      "height": 499.734375
+    },
+    "columns": "450.641px 321.891px 321.891px"
+  },
+  {
+    "device": "desktop",
+    "mode": "hidden",
+    "footer": {
+      "x": 0,
+      "y": 599.78125,
+      "width": 1440,
+      "height": 400.34375
+    },
+    "columns": "590.406px 590.422px"
+  },
+  {
+    "device": "desktop",
+    "mode": "required",
+    "footer": {
+      "x": 0,
+      "y": 495.78125,
+      "width": 1440,
+      "height": 504.234375
+    },
+    "columns": "590.406px 590.422px"
+  },
+  {
+    "device": "desktop",
+    "mode": "multiple",
+    "footer": {
+      "x": 0,
+      "y": 98.78125,
+      "width": 1440,
+      "height": 901.28125
+    },
+    "columns": "450.641px 321.891px 321.891px"
+  },
+  {
+    "device": "mobile",
+    "mode": "single",
+    "footer": {
+      "x": 0,
+      "y": 42.59375,
+      "width": 390,
+      "height": 758.765625
+    },
+    "columns": "161px 161px"
+  },
+  {
+    "device": "mobile",
+    "mode": "hidden",
+    "footer": {
+      "x": 0,
+      "y": 307.59375,
+      "width": 390,
+      "height": 456.5625
+    },
+    "columns": "161px 161px"
+  },
+  {
+    "device": "mobile",
+    "mode": "required",
+    "footer": {
+      "x": 0,
+      "y": 203.59375,
+      "width": 390,
+      "height": 560.453125
+    },
+    "columns": "161px 161px"
+  },
+  {
+    "device": "mobile",
+    "mode": "multiple",
+    "footer": {
+      "x": 0,
+      "y": -203.40625,
+      "width": 390,
+      "height": 1250.65625
+    },
+    "columns": "161px 161px"
+  }
+]

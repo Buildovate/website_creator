@@ -1,0 +1,5 @@
+Review approval test prerequisite: 39e73067-f66f-4a1d-bc03-a6ae439f17e8 website
+Review approval test prerequisite: 39e73067-f66f-4a1d-bc03-a6ae439f17e8 project:aeb2c072-46f3-48db-87d7-0274a355e8a6
+Review approval test prerequisite: 39e73067-f66f-4a1d-bc03-a6ae439f17e8 project:6c058282-e03f-4722-9782-575120be9d49
+PASS review lookup: profile-form compatibility, Google/Yelp business search, missing-key fallback, invalid profile/origin/auth rejection, empty matches, upstream failure, draft/publish isolation and shared hourly limit. All external responses mocked; no live connections or messages.
+

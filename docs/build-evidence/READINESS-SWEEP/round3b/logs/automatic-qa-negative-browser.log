@@ -1,0 +1,11 @@
+Review capture page fictional-negative-letterbox /fixture
+Review capture width /fixture 1440
+Review capture width /fixture 390
+Review capture width /fixture 768
+Review capture clip /assets/craft-films/hvac.mp4
+Review capture frame /assets/craft-films/hvac.mp4 0
+Review capture frame /assets/craft-films/hvac.mp4 25
+Review capture frame /assets/craft-films/hvac.mp4 50
+Review capture frame /assets/craft-films/hvac.mp4 75
+Review capture frame /assets/craft-films/hvac.mp4 100
+PASS 37 local measurements: 6 positive controls, 30 negative page states, 1 real letterboxed clip capture. Morph calibration is separate.

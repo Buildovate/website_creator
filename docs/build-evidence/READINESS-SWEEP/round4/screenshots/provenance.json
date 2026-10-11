@@ -1,0 +1,308 @@
+{
+  "at": "2026-10-10T17:28:47.342Z",
+  "fixture": "Local synthetic business/provider/payment/domain records; no real business claims or provider traffic.",
+  "actualProviderCalls": 0,
+  "interceptedProviderResponses": 1,
+  "progress": {
+    "quests": [
+      {
+        "id": "onboarding",
+        "level": 1,
+        "xpEarned": 10,
+        "xpMax": 10,
+        "done": true,
+        "steps": [
+          {
+            "id": "name",
+            "done": true,
+            "reason": ""
+          },
+          {
+            "id": "phone",
+            "done": true,
+            "reason": ""
+          },
+          {
+            "id": "trade",
+            "done": true,
+            "reason": ""
+          },
+          {
+            "id": "area",
+            "done": true,
+            "reason": ""
+          }
+        ],
+        "dataSource": "tenants.settings + platform.questionnaire.factsConfirmed",
+        "status": "Done"
+      },
+      {
+        "id": "pages",
+        "level": 1,
+        "xpEarned": 15,
+        "xpMax": 15,
+        "done": true,
+        "steps": [
+          {
+            "id": "drafts",
+            "done": true,
+            "reason": ""
+          },
+          {
+            "id": "approval",
+            "done": true,
+            "reason": ""
+          }
+        ],
+        "dataSource": "tenants.settings.websitePages + sales.data.ownerApproved/approvalNote",
+        "status": "Done"
+      },
+      {
+        "id": "reviews",
+        "level": 1,
+        "xpEarned": 15,
+        "xpMax": 15,
+        "done": true,
+        "steps": [
+          {
+            "id": "matched",
+            "done": true,
+            "reason": ""
+          },
+          {
+            "id": "confirmed",
+            "done": true,
+            "reason": ""
+          },
+          {
+            "id": "showing",
+            "done": true,
+            "reason": ""
+          }
+        ],
+        "dataSource": "workspace_records.review_response from filtered real provider API response",
+        "status": "Done"
+      },
+      {
+        "id": "estimator",
+        "level": 2,
+        "xpEarned": 0,
+        "xpMax": 20,
+        "done": false,
+        "steps": [
+          {
+            "id": "fields",
+            "done": false,
+            "reason": "Not available yet",
+            "xpMax": 5
+          },
+          {
+            "id": "price-book",
+            "done": false,
+            "reason": "Not available yet",
+            "xpMax": 10
+          },
+          {
+            "id": "consent",
+            "done": false,
+            "reason": "Not available yet",
+            "xpMax": 5
+          }
+        ],
+        "dataSource": "No estimator field/consent configuration or minimum-item price book in BASE",
+        "status": "Not available yet"
+      },
+      {
+        "id": "promotions",
+        "level": 2,
+        "xpEarned": 5,
+        "xpMax": 5,
+        "done": true,
+        "steps": [
+          {
+            "id": "offer-or-none",
+            "done": true,
+            "reason": ""
+          }
+        ],
+        "dataSource": "tenants.settings.platform.promotions.offers",
+        "status": "Done"
+      },
+      {
+        "id": "financing",
+        "level": 2,
+        "xpEarned": 10,
+        "xpMax": 10,
+        "done": true,
+        "steps": [
+          {
+            "id": "connected-or-none",
+            "done": true,
+            "reason": ""
+          }
+        ],
+        "dataSource": "tenants.settings.platform.financing + src/platform/lender-adapter.ts",
+        "status": "Done"
+      },
+      {
+        "id": "leads",
+        "level": 2,
+        "xpEarned": 10,
+        "xpMax": 10,
+        "done": true,
+        "steps": [
+          {
+            "id": "verified-alerts-or-crm",
+            "done": true,
+            "reason": ""
+          }
+        ],
+        "dataSource": "workspace_records: chat_config phone verification (src/engagement.js)",
+        "status": "Done"
+      },
+      {
+        "id": "launch",
+        "level": 3,
+        "xpEarned": 10,
+        "xpMax": 10,
+        "done": true,
+        "steps": [
+          {
+            "id": "paid-plan",
+            "done": true,
+            "reason": ""
+          },
+          {
+            "id": "live-domain",
+            "done": true,
+            "reason": ""
+          },
+          {
+            "id": "published",
+            "done": true,
+            "reason": ""
+          }
+        ],
+        "dataSource": "src/entitlements.js + src/domain/state.js + tenants published snapshot",
+        "status": "Done"
+      },
+      {
+        "id": "marketing",
+        "level": 3,
+        "xpEarned": 0,
+        "xpMax": 5,
+        "done": false,
+        "steps": [
+          {
+            "id": "connected-or-none",
+            "done": false,
+            "reason": "Not available yet. Saved social links are not connected accounts."
+          }
+        ],
+        "dataSource": "No connected social-channel, explicit-none or social-publication records in BASE",
+        "status": "Not available yet"
+      }
+    ],
+    "levels": [
+      {
+        "id": 1,
+        "name": "Get Set Up",
+        "questIds": [
+          "onboarding",
+          "pages",
+          "reviews"
+        ],
+        "xpMax": 40,
+        "done": true,
+        "xpEarned": 40
+      },
+      {
+        "id": 2,
+        "name": "Win More Jobs",
+        "questIds": [
+          "estimator",
+          "promotions",
+          "financing",
+          "leads"
+        ],
+        "xpMax": 45,
+        "done": false,
+        "xpEarned": 25
+      },
+      {
+        "id": 3,
+        "name": "Launch & Grow",
+        "questIds": [
+          "launch",
+          "marketing"
+        ],
+        "xpMax": 15,
+        "done": false,
+        "xpEarned": 10
+      }
+    ],
+    "totalXp": 75,
+    "siteStrength": 75,
+    "xpMax": 100,
+    "currentLevel": 2,
+    "nextLevelAt": 85,
+    "stamps": [
+      {
+        "label": "SET UP",
+        "earned": true
+      },
+      {
+        "label": "SELLING",
+        "earned": false
+      },
+      {
+        "label": "LIVE",
+        "earned": true
+      },
+      {
+        "label": "GROWING",
+        "earned": false
+      }
+    ],
+    "badges": [
+      {
+        "label": "Set up",
+        "earned": true
+      },
+      {
+        "label": "Reviews live",
+        "earned": true
+      },
+      {
+        "label": "Leads ready",
+        "earned": true
+      },
+      {
+        "label": "Selling",
+        "earned": false
+      },
+      {
+        "label": "Go live",
+        "earned": true
+      },
+      {
+        "label": "First post",
+        "earned": false
+      },
+      {
+        "label": "Financing",
+        "earned": true
+      },
+      {
+        "label": "100 XP",
+        "earned": false
+      }
+    ]
+  },
+  "source": "gameApi -> readProgressSources -> existing quest rules",
+  "readDidNotMutateTenant": true,
+  "files": [
+    "game-75-desktop.png",
+    "game-75-phone.png"
+  ]
+}

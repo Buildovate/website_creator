@@ -1,0 +1,42 @@
+{
+  "results": [
+    {
+      "name": "discovery search create and delete",
+      "pass": true
+    },
+    {
+      "name": "pricing inquiry persistence and contact linkage",
+      "pass": true
+    },
+    {
+      "name": "session issue uses transaction SQL",
+      "pass": true
+    },
+    {
+      "name": "legacy service-page backfill both snapshots",
+      "pass": true
+    },
+    {
+      "name": "owned blog photo validation",
+      "pass": true
+    },
+    {
+      "name": "public form consented submission and contactKey limit",
+      "pass": true
+    },
+    {
+      "name": "AI hourly limit prevents any provider request",
+      "pass": true
+    },
+    {
+      "name": "legacy-format hosting settlement updates hosting status",
+      "pass": true
+    },
+    {
+      "name": "add-on delivery transition on PostgreSQL",
+      "pass": true
+    }
+  ],
+  "providerCalls": 0,
+  "fixture": "Ephemeral PostgreSQL; explicit fictional published baseline and entitlement fixtures for SQL coverage only. No QA record or approval."
+}

@@ -1,0 +1,3 @@
+PASS legacy domain verify query with synthetic DNS fixture
+PASS chat SMS daily limit SQL prevents sending
+{"pass":2,"fail":0,"mockDnsCalls":1,"smsCalls":0,"providerCalls":0}

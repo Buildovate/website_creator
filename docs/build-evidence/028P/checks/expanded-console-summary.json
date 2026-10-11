@@ -1,0 +1,1582 @@
+[
+  {
+    "suite": "ebook-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8158/favicon.ico",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "ebook-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof#guide-pages",
+    "platform": false,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "method": "POST",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/ebook-browser.mjs:14:42"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "method": "POST",
+      "status": 503
+    }
+  },
+  {
+    "suite": "ebook-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "ebook-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "location": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "ebook-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof#guide-pages",
+    "platform": false,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "method": "POST",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/ebook-browser.mjs:14:42"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "method": "POST",
+      "status": 503
+    }
+  },
+  {
+    "suite": "ebook-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/empty-guide-022/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "ebook-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "location": {
+      "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8158/s/roof-guide-022/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "expenses-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8150/admin/expenses",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:27:49"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": 503
+    }
+  },
+  {
+    "suite": "expenses-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8150/admin/expenses",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:27:49"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": 503
+    }
+  },
+  {
+    "suite": "expenses-browser",
+    "state": "offline-phone",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8150/admin/expenses",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": "offline",
+      "state": "offline-phone",
+      "source": "at file:///C:/Users/joe/website_creator/tests/expenses-browser.mjs:32:468",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8150/api/admin/expenses?from=2026-09-01&to=2026-09-28",
+      "method": "GET",
+      "status": "offline"
+    }
+  },
+  {
+    "suite": "financing-states-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8153/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "method": "PUT",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:25:83"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "method": "PUT",
+      "status": 503
+    }
+  },
+  {
+    "suite": "financing-states-browser",
+    "state": "settings-offline-desktop",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8153/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "method": "GET",
+      "status": "offline",
+      "state": "settings-offline-desktop",
+      "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:26:19",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "method": "GET",
+      "status": "offline"
+    }
+  },
+  {
+    "suite": "financing-states-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8153/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "method": "PUT",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:25:83"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8153/api/tenants/9e9ea889-ed41-4c8e-ba1e-90db98404307",
+      "method": "PUT",
+      "status": 503
+    }
+  },
+  {
+    "suite": "financing-states-browser",
+    "state": "settings-offline-phone",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8153/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "method": "GET",
+      "status": "offline",
+      "state": "settings-offline-phone",
+      "source": "at file:///C:/Users/joe/website_creator/tests/financing-states-browser.mjs:26:19",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8153/api/session",
+      "method": "GET",
+      "status": "offline"
+    }
+  },
+  {
+    "suite": "generation-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/generation",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8159/",
+    "platform": null,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/generation",
+      "method": "POST",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:18:72"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/generation",
+      "method": "POST",
+      "status": 503
+    }
+  },
+  {
+    "suite": "generation-browser",
+    "state": "generation-viewer-desktop",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "location": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/domains",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8159/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/domains",
+      "method": "GET",
+      "status": 403,
+      "state": "generation-viewer-desktop",
+      "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:27:107",
+      "kind": "permission-state",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/domains",
+      "method": "GET",
+      "status": 403
+    }
+  },
+  {
+    "suite": "generation-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/generation",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8159/",
+    "platform": null,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/generation",
+      "method": "POST",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:18:72"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/generation",
+      "method": "POST",
+      "status": 503
+    }
+  },
+  {
+    "suite": "generation-browser",
+    "state": "generation-viewer-phone",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "location": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/domains",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8159/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/domains",
+      "method": "GET",
+      "status": 403,
+      "state": "generation-viewer-phone",
+      "source": "at file:///C:/Users/joe/website_creator/tests/generation-browser.mjs:27:107",
+      "kind": "permission-state",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8159/api/tenants/43dad750-74b7-4164-917e-c7b6bf953a6b/domains",
+      "method": "GET",
+      "status": 403
+    }
+  },
+  {
+    "suite": "hero-editor-browser",
+    "state": "hero-offline-desktop",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "method": "GET",
+      "status": "offline",
+      "state": "hero-offline-desktop",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:15:19",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "method": "GET",
+      "status": "offline"
+    }
+  },
+  {
+    "suite": "hero-editor-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/tenants/82dbbdd4-702b-4ff6-967d-2e565c3b8931",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/tenants/82dbbdd4-702b-4ff6-967d-2e565c3b8931",
+      "method": "PUT",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:16:109"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/tenants/82dbbdd4-702b-4ff6-967d-2e565c3b8931",
+      "method": "PUT",
+      "status": 503
+    }
+  },
+  {
+    "suite": "hero-editor-browser",
+    "state": "hero-viewer-desktop",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/tenants/82dbbdd4-702b-4ff6-967d-2e565c3b8931/domains",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/tenants/82dbbdd4-702b-4ff6-967d-2e565c3b8931/domains",
+      "method": "GET",
+      "status": 403,
+      "state": "hero-viewer-desktop",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:21:89",
+      "kind": "permission-state",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/tenants/82dbbdd4-702b-4ff6-967d-2e565c3b8931/domains",
+      "method": "GET",
+      "status": 403
+    }
+  },
+  {
+    "suite": "hero-editor-browser",
+    "state": "hero-offline-phone",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "method": "GET",
+      "status": "offline",
+      "state": "hero-offline-phone",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:15:19",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/session",
+      "method": "GET",
+      "status": "offline"
+    }
+  },
+  {
+    "suite": "hero-editor-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/tenants/4c5133be-2cc5-44f8-9c3e-8bff75581ddb",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/tenants/4c5133be-2cc5-44f8-9c3e-8bff75581ddb",
+      "method": "PUT",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:16:109"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/tenants/4c5133be-2cc5-44f8-9c3e-8bff75581ddb",
+      "method": "PUT",
+      "status": 503
+    }
+  },
+  {
+    "suite": "hero-editor-browser",
+    "state": "hero-viewer-phone",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "location": {
+      "url": "http://127.0.0.1:8162/api/tenants/4c5133be-2cc5-44f8-9c3e-8bff75581ddb/domains",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8162/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8162/api/tenants/4c5133be-2cc5-44f8-9c3e-8bff75581ddb/domains",
+      "method": "GET",
+      "status": 403,
+      "state": "hero-viewer-phone",
+      "source": "at file:///C:/Users/joe/website_creator/tests/hero-editor-browser.mjs:21:89",
+      "kind": "permission-state",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8162/api/tenants/4c5133be-2cc5-44f8-9c3e-8bff75581ddb/domains",
+      "method": "GET",
+      "status": 403
+    }
+  },
+  {
+    "suite": "planning-ambient-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8164/assets/films/roofing-story.mp4",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8164/s/roofing-ambient-024/financing?qa=installed",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "planning-ambient-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8164/assets/films/roofing-story.mp4",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8164/s/roofing-ambient-024/financing?qa=installed",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "planning-scroll-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8165/assets/films/roofing-story.mp4",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8165/s/roofing-scroll-025/financing?qa=installed",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "planning-scroll-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8165/assets/films/roofing-story.mp4",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8165/s/roofing-scroll-025/financing?qa=installed",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "platform-mobile",
+    "state": "legacy-editor",
+    "type": "warning",
+    "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+    "location": {
+      "url": "http://127.0.0.1:8126/s/mobile-platform-qa?preview=1",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "pre-existing-editor-frame"
+  },
+  {
+    "suite": "platform-mobile",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/photos?stage=brand&caption=",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/photos?stage=brand&caption=",
+      "method": "POST",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:91:61"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/photos?stage=brand&caption=",
+      "method": "POST",
+      "status": 503
+    }
+  },
+  {
+    "suite": "platform-mobile",
+    "state": "permission-editor",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "location": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "method": "GET",
+      "status": 403,
+      "state": "permission-editor",
+      "source": "at file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:95:23",
+      "kind": "permission-state",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "method": "GET",
+      "status": 403
+    }
+  },
+  {
+    "suite": "platform-mobile",
+    "state": "legacy-editor",
+    "type": "warning",
+    "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+    "location": {
+      "url": "http://127.0.0.1:8126/s/mobile-platform-qa?preview=1",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "pre-existing-editor-frame"
+  },
+  {
+    "suite": "platform-mobile",
+    "state": "permission-viewer",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "location": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "method": "GET",
+      "status": 403,
+      "state": "permission-viewer",
+      "source": "at file:///C:/Users/joe/website_creator/tests/platform-mobile.mjs:95:23",
+      "kind": "permission-state",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8126/api/tenants/9006ba2b-aa3e-477b-92e2-778e9d370198/domains",
+      "method": "GET",
+      "status": 403
+    }
+  },
+  {
+    "suite": "platform-mobile",
+    "state": "legacy-editor",
+    "type": "warning",
+    "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+    "location": {
+      "url": "http://127.0.0.1:8126/s/mobile-platform-qa?preview=1",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8126/",
+    "platform": true,
+    "allowed": true,
+    "exception": "pre-existing-editor-frame"
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-desktop/promotions",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-desktop/promotions",
+    "platform": false,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "method": "POST",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs:23:33"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "method": "POST",
+      "status": 503
+    }
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "promotions-offline-desktop",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-desktop/promotions",
+    "platform": false,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "method": "POST",
+      "status": "offline",
+      "state": "promotions-offline-desktop",
+      "source": "at file:///C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs:24:19",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "method": "POST",
+      "status": "offline"
+    }
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-desktop/promotions",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-desktop/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-desktop/promotions",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-phone/promotions",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "injected-route-failure",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-phone/promotions",
+    "platform": false,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "method": "POST",
+      "status": 503,
+      "state": "injected-route-failure",
+      "kind": "route-fulfill",
+      "source": "at file:///C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs:23:33"
+    },
+    "network": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "method": "POST",
+      "status": 503
+    }
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "promotions-offline-phone",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-phone/promotions",
+    "platform": false,
+    "allowed": true,
+    "exception": "deliberate-failure-fixture",
+    "fixture": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "method": "POST",
+      "status": "offline",
+      "state": "promotions-offline-phone",
+      "source": "at file:///C:/Users/joe/website_creator/tests/promotion-unlocks-browser.mjs:24:19",
+      "kind": "offline-injection",
+      "active": true
+    },
+    "network": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "method": "POST",
+      "status": "offline"
+    }
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-phone/promotions",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-phone/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-phone/promotions",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "promotion-unlocks-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8152/api/public/quiz-lost-response/promotion-unlock",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8152/s/quiz-lost-response/promotions",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "promotions-ambient-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8166/assets/films/roofing-story.mp4?qa=026",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8166/s/roofing-ambient-024/promotions?qa=installed",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "promotions-ambient-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8166/assets/films/roofing-story.mp4?qa=026",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8166/s/roofing-ambient-024/promotions?qa=installed",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "promotions-scroll-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8167/assets/films/roofing-story.mp4",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8167/s/roofing-promo-story-027/promotions?qa=installed",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "promotions-scroll-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8167/assets/films/roofing-story.mp4",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8167/s/roofing-promo-story-027/promotions?qa=installed",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "roofing-acceptance",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8181/favicon.ico",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8181/s/roofing-acceptance-028/resources/before-you-decide-on-your-roof",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "roofing-cities-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8157/assets/service-roof-repair-showpiece.png",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8157/s/roof-cities-021/areas/oxnard",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "roofing-cities-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8157/assets/service-roof-repair-showpiece.png",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8157/s/roof-cities-021/areas/oxnard",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "roofing-polish-part2-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8172/s/roofing-part2/financing",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8172/s/roofing-part2/financing",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "roofing-polish-part2-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "location": {
+      "url": "http://127.0.0.1:8172/s/roofing-part2/financing",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8172/s/roofing-part2/financing",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "roofing-story-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8156/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8156/s/roof-story-020",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "roofing-story-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8156/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8156/s/roof-story-020",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "service-motion-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8155/s/thumb-flip-3d/services",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "service-motion-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageUrl": "http://127.0.0.1:8155/s/thumb-flip-3d/services",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "service-motion-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-roof-repair-scope.webp",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8155/s/thumb-flip-3d/services",
+    "platform": false,
+    "allowed": false
+  },
+  {
+    "suite": "service-motion-browser",
+    "state": "legacy-workspace",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED",
+    "location": {
+      "url": "http://127.0.0.1:8155/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+      "line": 0,
+      "column": 0,
+      "lineNumber": 0,
+      "columnNumber": 0
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageUrl": "http://127.0.0.1:8155/s/thumb-flip-3d/services",
+    "platform": false,
+    "allowed": false
+  }
+]

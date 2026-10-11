@@ -1,0 +1,37 @@
+[
+  {
+    "server": "Restarted Vite (admin fixture)",
+    "route": "/admin/expenses",
+    "status": 200
+  },
+  {
+    "server": "Restarted Vite",
+    "route": "Historical seed",
+    "images": 318,
+    "credits": 636
+  },
+  {
+    "server": "Actual session-authenticated HTTP adapter",
+    "role": "admin",
+    "route": "/admin/expenses",
+    "status": 200
+  },
+  {
+    "server": "Actual session-authenticated HTTP adapter",
+    "role": "admin",
+    "route": "/api/admin/expenses",
+    "status": 200
+  },
+  {
+    "server": "Actual session-authenticated HTTP adapter",
+    "role": "contractor",
+    "route": "/admin/expenses",
+    "status": 403
+  },
+  {
+    "server": "Actual session-authenticated HTTP adapter",
+    "role": "contractor",
+    "route": "/api/admin/expenses",
+    "status": 403
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-10T21:08:25.632Z",
+  "rows": 239,
+  "native": 196,
+  "postgres": 43,
+  "lateNativeReviewCases": 6,
+  "probes": 8,
+  "coordinatorCorrection": {
+    "reason": "The host loader was incorrectly applied to the coordinator, remapping its read-only source suite manifest. No PostgreSQL suites had executed. Corrected coordinator omits NODE_OPTIONS; every child still loads host.mjs plus its PostgreSQL fixture loader.",
+    "code": 0,
+    "at": "2026-10-10T21:07:55.797Z"
+  },
+  "planningRestored": true,
+  "runtimeSmoke": "runtime-smoke.json"
+}

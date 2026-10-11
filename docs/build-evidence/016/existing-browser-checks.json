@@ -1,0 +1,47 @@
+[
+  {
+    "suite": "callback-browser.mjs",
+    "status": 0,
+    "ms": 5634
+  },
+  {
+    "suite": "contact-linkage-browser.mjs",
+    "status": 0,
+    "ms": 6952
+  },
+  {
+    "suite": "contacts-browser.mjs",
+    "status": 0,
+    "ms": 5826
+  },
+  {
+    "suite": "expense-polish-browser.mjs",
+    "status": 0,
+    "ms": 6481
+  },
+  {
+    "suite": "expenses-browser.mjs",
+    "status": 0,
+    "ms": 10638
+  },
+  {
+    "suite": "platform-ui-cleanup-browser.mjs",
+    "status": 0,
+    "ms": 6688
+  },
+  {
+    "suite": "promotion-unlocks-browser.mjs",
+    "status": 0,
+    "ms": 19212
+  },
+  {
+    "suite": "trade-enablement-browser.mjs",
+    "status": 0,
+    "ms": 40185
+  },
+  {
+    "suite": "trade-visual-browser.mjs",
+    "status": 0,
+    "ms": 32374
+  }
+]

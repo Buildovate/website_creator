@@ -1,0 +1,87 @@
+START pg-stripe-checkout
+START pg-stripe-no-key
+START pg-domain-wizard
+END pg-stripe-checkout 0
+START pg-corrected-payments
+END pg-stripe-no-key 0
+START pg-corrected-pay4a
+END pg-domain-wizard 0
+START pg-corrected-pay4b
+END pg-corrected-payments 0
+START pg-corrected-pay5
+END pg-corrected-pay4a 0
+START pg-corrected-entitlements
+END pg-corrected-pay4b 0
+START pg-corrected-game-progress
+END pg-corrected-pay5 0
+START pg-corrected-game-desktop-api
+END pg-corrected-game-desktop-api 0
+START pg-corrected-game-experience-api
+END pg-corrected-game-progress 0
+START pg-workflow-engagement
+END pg-corrected-game-experience-api 0
+START pg-corrected-game-autofill
+END pg-corrected-entitlements 0
+START pg-workflow-engagement-providers
+END pg-corrected-game-autofill 0
+START pg-workflow-expense-metering
+END pg-workflow-engagement 0
+START pg-workflow-expenses
+END pg-workflow-engagement-providers 0
+START pg-workflow-expense-polish
+END pg-workflow-expense-metering 0
+START pg-workflow-workspace
+END pg-workflow-expenses 0
+START pg-workflow-crm
+END pg-workflow-expense-polish 0
+START pg-workflow-crm-next
+END pg-workflow-crm-next 0
+START pg-workflow-control
+END pg-workflow-control 0
+START pg-workflow-sales-ops
+END pg-workflow-sales-ops 0
+START pg-workflow-contacts-restore
+END pg-workflow-contacts-restore 0
+START pg-workflow-contact-linkage
+END pg-workflow-contact-linkage 0
+START pg-workflow-callback-restore
+END pg-workflow-callback-restore 0
+START pg-workflow-review-lookup
+END pg-workflow-review-lookup 0
+START pg-workflow-neighborhood
+END pg-workflow-crm 0
+START pg-workflow-zoom
+END pg-workflow-workspace 0
+START pg-workflow-trust
+END pg-workflow-zoom 0
+START pg-workflow-website-pages
+END pg-workflow-neighborhood 0
+START pg-final-auth-session
+END pg-final-auth-session 0
+START pg-final-saved-designs
+END pg-final-saved-designs 0
+START pg-final-promotion-unlocks
+END pg-final-promotion-unlocks 0
+START pg-final-builder
+END pg-final-builder 0
+START pg-final-hero-editor
+END pg-final-hero-editor 0
+START pg-final-generation
+END pg-workflow-trust 0
+START pg-final-ebook
+END pg-final-ebook 0
+START pg-final-platform
+END pg-workflow-website-pages 0
+START pg-readiness-batch-a
+END pg-readiness-batch-a 0
+START pg-readiness-batch-b
+END pg-readiness-batch-b 0
+START pg-readiness-paid-publish
+END pg-final-platform 0
+START pg-readiness-chat-sql
+END pg-readiness-chat-sql 0
+START pg-readiness-review-evidence
+END pg-readiness-review-evidence 0
+END pg-readiness-paid-publish 0
+END pg-final-generation 0
+ROUND 4 POSTGRES SWEEP COMPLETE

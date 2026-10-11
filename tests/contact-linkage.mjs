@@ -1,0 +1,56 @@
+import assert from 'node:assert/strict';
+import {worker,env,admin} from './preview-fixture.mjs';
+
+const origin='https://test.local';
+async function request(path,method='GET',data,user=admin){return worker.fetch(new Request(origin+path,{method,headers:{origin,'content-type':'application/json','oai-authenticated-user-id':user.id,'oai-authenticated-user-email':user.email},body:data===undefined?undefined:JSON.stringify(data)}),env)}
+async function api(path,method='GET',data,user=admin){const response=await request(path,method,data,user);assert.equal(response.status,200,await response.clone().text());return response.json()}
+const contacts='/api/workspace/global/contacts',calendar='/api/workspace/global/calendar';
+const existing=(await api('/api/tenants')).tenants[0];
+const first=await api(contacts,'POST',{data:{company:'Linked Roofing Sample',name:'Avery Sample',phone:'8055550102',trade:'Roofing'}});
+let contact=(await api(contacts+'/'+first.id)).record;
+assert.equal((await request('/api/flow/link-website','POST',{contactId:first.id,tenantId:existing.id,version:contact.version},{id:'outsider',email:'outsider@example.test'})).status,403);
+await api('/api/flow/link-website','POST',{contactId:first.id,tenantId:existing.id,version:contact.version});
+contact=(await api(contacts+'/'+first.id)).record;assert.equal(contact.data.tenantId,existing.id);
+assert.equal((await request('/api/flow/link-website','POST',{contactId:first.id,tenantId:existing.id,version:contact.version-1})).status,409);
+const duplicate=await api(contacts,'POST',{data:{company:'Other Roofing Sample',name:'Taylor Sample',trade:'Roofing'}});
+const duplicateRecord=(await api(contacts+'/'+duplicate.id)).record;
+await api('/api/flow/link-website','POST',{contactId:duplicate.id,tenantId:existing.id,version:duplicateRecord.version});
+assert.equal((await api(contacts+'/'+duplicate.id)).record.data.tenantId,existing.id);
+const operator={id:'linkage-operator',email:'operator-015e@example.test'},stamp=new Date().toISOString();
+await env.DB.prepare('INSERT INTO admins(user_id,email,role,created_at) VALUES (?,?,?,?)').bind(operator.id,operator.email,'operator',stamp).run();
+assert.equal((await request('/api/flow/link-website','POST',{contactId:duplicate.id,tenantId:existing.id,version:duplicateRecord.version+1},operator)).status,403);
+await api(contacts+'/'+first.id,'PUT',{version:contact.version,data:{...contact.data,notes:'Link must survive this edit.'}});
+assert.equal((await api(contacts+'/'+first.id)).record.data.tenantId,existing.id);
+
+const prep=await api(contacts,'POST',{data:{company:'Fictional Ventura Roof',name:'Jamie Sample',phone:'8055550135',email:'jamie@example.test',city:'Ventura',trade:'Roofing'}});
+const start=new Date(Date.now()+14*86400000).toISOString(),end=new Date(Date.parse(start)+45*60000).toISOString();
+const appointment=await api(calendar,'POST',{data:{title:'Website walkthrough',contactId:prep.id,assignees:[admin.email],start,end,status:'Scheduled',timezone:'America/Los_Angeles',meetingType:'Phone',interests:['Website Design','Marketing'],reminderEmail:true,reminderSms:false}});
+const savedAppointment=(await api(calendar+'/'+appointment.id)).record;
+assert.deepEqual(savedAppointment.data.interests,['Website Design','Marketing']);assert.equal(savedAppointment.data.durationMinutes,45);
+assert.equal(savedAppointment.data.reminderEmail,true);assert.equal(savedAppointment.data.reminderSms,false);
+let tasks=await api('/api/flow/tasks');assert.equal(tasks.records.some(item=>item.data.contactId===prep.id&&item.data.appointmentId===appointment.id),true);
+const prepared=await api('/api/flow/design/'+prep.id,'POST',{kit:'roofing'});
+assert.equal(prepared.tenant.status,'draft');assert.equal(prepared.tenant.published,null);
+assert.equal(prepared.tenant.settings.name,'Fictional Ventura Roof');assert.equal(prepared.tenant.settings.phone,'8055550135');
+contact=(await api(contacts+'/'+prep.id)).record;assert.equal(contact.data.tenantId,prepared.tenant.id);
+assert.equal((await api('/api/flow/design/'+prep.id,'POST',{kit:'roofing'})).tenant.id,prepared.tenant.id);
+assert.equal((await request('/api/flow/stage/'+prep.id,'POST',{stage:'Built',version:contact.version},operator)).status,404);
+await api('/api/flow/stage/'+prep.id,'POST',{stage:'Built',version:contact.version});
+contact=(await api(contacts+'/'+prep.id)).record;assert.equal(contact.data.stage,'Built');
+await api('/api/flow/stage/'+prep.id,'POST',{stage:'Shown',version:contact.version});
+contact=(await api(contacts+'/'+prep.id)).record;assert.equal(contact.data.stage,'Shown');
+assert.equal((await request('/api/flow/stage/'+prep.id,'POST',{stage:'Paid',version:contact.version})).status,400);
+const operatorContact=await api(contacts,'POST',{data:{company:'Operator Sample Roofing',name:'Casey Sample',trade:'Roofing'}},operator);
+const operatorDraft=await api('/api/flow/design/'+operatorContact.id,'POST',{kit:'roofing'},operator);assert.equal(operatorDraft.tenant.status,'draft');
+const operatorRecord=(await api(contacts+'/'+operatorContact.id,'GET',undefined,operator)).record;
+await api('/api/flow/stage/'+operatorContact.id,'POST',{stage:'Built',version:operatorRecord.version},operator);
+assert.equal((await api(contacts+'/'+operatorContact.id,'GET',undefined,operator)).record.data.stage,'Built');
+const crmOnly=await api(contacts,'POST',{data:{company:'Fictional CRM Only',name:'Morgan Sample',trade:'Roofing'}});
+await api(calendar,'POST',{data:{title:'CRM conversation',contactId:crmOnly.id,assignees:[admin.email],start:new Date(Date.parse(start)+86400000).toISOString(),end:new Date(Date.parse(end)+86400000).toISOString(),status:'Scheduled',timezone:'America/Los_Angeles',meetingType:'Phone',interests:['Buildovate CRM']}});
+tasks=await api('/api/flow/tasks');assert.equal(tasks.records.some(item=>item.data.contactId===crmOnly.id),false);
+assert.equal((await request(calendar,'POST',{data:{title:'Too brief',start,end:new Date(Date.parse(start)+10*60000).toISOString(),status:'Scheduled',timezone:'America/Los_Angeles'}})).status,400);
+await api(calendar+'/'+appointment.id,'PUT',{version:savedAppointment.version,data:{...savedAppointment.data,status:'Cancelled'}});
+tasks=await api('/api/flow/tasks');assert.equal(tasks.records.some(item=>item.data.contactId===prep.id),false);
+const audit=(await env.DB.prepare("SELECT action FROM audit WHERE action IN ('customer.website.linked','website.preparation.started','contact.stage.built','contact.stage.shown','design.task.prepared')").all()).results.map(row=>row.action);
+for(const action of ['customer.website.linked','website.preparation.started','contact.stage.built','contact.stage.shown','design.task.prepared'])assert.equal(audit.includes(action),true,action);
+console.log('PASS #015E linkage: role and tenant permissions, audit trail, shared website and stale version handling, preservation, private prefilled draft, booking interests/duration/reminders, preparation task, stage shortcuts, and cancellation.');

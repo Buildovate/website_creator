@@ -1,0 +1,16 @@
+/* #028C only: generated compositions use the saved Look tokens. */
+body[data-generated-site] .reviews-section{background:var(--look-background,var(--paper,#f6f7f2));color:var(--look-text,var(--ink,#172421))}
+body[data-generated-site] .reviews-section>.kicker{color:inherit}
+body[data-generated-site]:not([data-site-style]) :is(.kit-button,.kit-mobile-dock){background:var(--generated-cta);color:var(--generated-cta-text)}
+body[data-generated-site] :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid currentColor!important;outline-offset:4px!important}
+body[data-generated-site] [data-generation-copy=services]{font-size:16px;line-height:1.6;max-width:60ch;margin-top:18px}
+body[data-generated-site] .kit-chapter-rail a{background:var(--look-surface,var(--paper,#f6f7f2));color:var(--look-text,var(--ink,#172421))}
+body[data-generated-site]:not([data-site-style]) .kit-services article{background:var(--paper);color:var(--ink)}
+body[data-generated-site]:not([data-site-style]) .kit-services article :is(h3,p,a,.service-index){color:inherit}
+html body[data-generated-site][data-site-style] .foundation-section-heading>p:last-child{color:var(--look-muted)}
+html body[data-generated-site][data-site-style] .foundation-benefits article{background:var(--look-surface);color:var(--look-text)}
+html body[data-generated-site][data-site-style] .foundation-benefits p{color:var(--look-muted)}
+html body[data-generated-site][data-site-style] .foundation-steps :is(li>span,li p){color:var(--look-muted)}
+html body[data-generated-site][data-site-style][data-site-style] .foundation-story-copy .foundation-eyebrow{color:var(--look-deep-text)!important}
+html body[data-generated-site][data-site-style] .foundation-benefit-top span{color:var(--look-muted)}
+body[data-generated-site] :is(input,select,textarea){border-color:currentColor!important}

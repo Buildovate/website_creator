@@ -1,0 +1,1992 @@
+[
+  {
+    "settings": {
+      "ebook": {
+        "enabled": false,
+        "reviewedRevision": ""
+      },
+      "trust": {
+        "version": 1,
+        "enabled": false,
+        "layout": "auto",
+        "placements": [
+          "below-hero"
+        ],
+        "showRatings": false,
+        "networks": []
+      },
+      "businessTrust": {
+        "years": null,
+        "licenseNumber": "",
+        "licenseState": "",
+        "insured": null,
+        "crewSize": null,
+        "warrantyYears": null,
+        "certifications": [],
+        "googleRating": null,
+        "googleReviewCount": null,
+        "googleUrl": "",
+        "jobsCompleted": null,
+        "confirmed": {
+          "years": false,
+          "license": false,
+          "insured": false,
+          "crewSize": false,
+          "warranty": false,
+          "certifications": false,
+          "google": false,
+          "jobsCompleted": false
+        }
+      },
+      "websitePages": {
+        "version": 1,
+        "pages": [
+          {
+            "id": "service-roof-installation",
+            "kind": "service",
+            "slug": "roof-installation",
+            "enabled": true,
+            "title": "Roof installation",
+            "serviceName": "Roof installation",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-roof-repair",
+            "kind": "service",
+            "slug": "roof-repair",
+            "enabled": true,
+            "title": "Roof repair",
+            "serviceName": "Roof repair",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-roof-replacement",
+            "kind": "service",
+            "slug": "roof-replacement",
+            "enabled": true,
+            "title": "Roof replacement",
+            "serviceName": "Roof replacement",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-asphalt-shingles",
+            "kind": "service",
+            "slug": "asphalt-shingles",
+            "enabled": true,
+            "title": "Asphalt shingles",
+            "serviceName": "Asphalt shingles",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-metal-roofing",
+            "kind": "service",
+            "slug": "metal-roofing",
+            "enabled": true,
+            "title": "Metal roofing",
+            "serviceName": "Metal roofing",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-flat-roofs",
+            "kind": "service",
+            "slug": "flat-roofs",
+            "enabled": true,
+            "title": "Flat roofs",
+            "serviceName": "Flat roofs",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-roof-maintenance",
+            "kind": "service",
+            "slug": "roof-maintenance",
+            "enabled": true,
+            "title": "Roof maintenance",
+            "serviceName": "Roof maintenance",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-gutters",
+            "kind": "service",
+            "slug": "gutters",
+            "enabled": true,
+            "title": "Gutters",
+            "serviceName": "Gutters",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          }
+        ]
+      },
+      "name": "QA Roofing",
+      "trade": "Roofing",
+      "owner": "",
+      "phone": "8055550140",
+      "email": "",
+      "address": "",
+      "hours": "",
+      "license": "",
+      "experience": "",
+      "area": "Oxnard, Ventura",
+      "hero": "Roofs built. Standards raised.",
+      "intro": "Tell us what you have in mind. Explore the services below and start a conversation about your property.",
+      "color": "#c78353",
+      "template": "cinematic",
+      "seoTitle": "",
+      "seoDescription": "",
+      "ctaLabel": "",
+      "marqueeText": "",
+      "showOwner": true,
+      "showProjects": true,
+      "showOwnerPhoto": true,
+      "showDemoProjects": true,
+      "logoId": null,
+      "ownerPhotoId": null,
+      "heroPhotoId": null,
+      "ownerPhoto": {
+        "src": "/assets/owner-roofing/owner-sample-960.webp",
+        "isSample": true
+      },
+      "savedDesignId": "",
+      "generationId": "",
+      "ownerStatement": "",
+      "journey": "standard",
+      "conversionBrief": {
+        "audience": "",
+        "problem": "",
+        "traffic": "mixed",
+        "headline": "",
+        "intro": "",
+        "difference": "",
+        "nextStep": "",
+        "confirmed": false
+      },
+      "design": {
+        "motionLayout": "A",
+        "motionStyle": "bold-industrial",
+        "motionAnatomy": "layers",
+        "serviceLayout": "grid",
+        "ownerLayout": "portrait",
+        "sectionOrder": "craft",
+        "storyIntensity": "bold",
+        "storyTreatment": "crossfade",
+        "bannerArt": "panorama",
+        "headlineMotion": "sweep",
+        "font": "display",
+        "cards": "classic",
+        "rhythm": "balanced",
+        "heroFrame": "standard",
+        "entrance": "rise",
+        "palette": "brand"
+      },
+      "scrollStory": {
+        "detailEnabled": true,
+        "detailIntro": "",
+        "heroCaptions": [
+          "Your vision.",
+          "Taking shape.",
+          "Brought to life."
+        ],
+        "detailCaptions": [
+          "Imagine it.",
+          "Plan the details.",
+          "Bring it to life."
+        ],
+        "mode": "build",
+        "enabled": true,
+        "tradePack": "",
+        "video": false,
+        "wipe": true,
+        "reviewFilmstrip": true,
+        "sampleReviews": true,
+        "posterId": "",
+        "beforeId": "",
+        "afterId": "",
+        "pairApproved": false,
+        "primaryLabel": "Request an estimate",
+        "secondaryLabel": "Explore our expertise",
+        "primaryTarget": "pricing",
+        "chapters": [
+          {
+            "headline": "",
+            "body": "",
+            "mediaId": ""
+          },
+          {
+            "headline": "",
+            "body": "",
+            "mediaId": ""
+          },
+          {
+            "headline": "",
+            "body": "",
+            "mediaId": ""
+          },
+          {
+            "headline": "",
+            "body": "",
+            "mediaId": ""
+          },
+          {
+            "headline": "",
+            "body": "",
+            "mediaId": ""
+          }
+        ],
+        "proof": [],
+        "sampleQuote": "They explained the options clearly. Every detail felt considered.",
+        "sampleName": "Alex R.",
+        "sampleRating": 5
+      },
+      "reviews": {
+        "googleUrl": "",
+        "yelpUrl": "",
+        "privacyUrl": "",
+        "termsUrl": "",
+        "googlePlaceId": "",
+        "yelpBusinessId": "",
+        "minimum": 4,
+        "confirmed": false
+      },
+      "pricing": {
+        "enabled": true,
+        "showFilm": true,
+        "headline": "A clear scope.\nA price that makes sense.",
+        "intro": "Start with what matters to you. We’ll discuss the work, explore your options, and prepare an estimate for your property.",
+        "approved": false,
+        "packages": [
+          {
+            "title": "Repair & protect",
+            "description": "Address a specific concern and understand the work it needs.",
+            "price": "",
+            "note": "Tailored to your property",
+            "featured": false,
+            "includes": [
+              "Discuss your goals",
+              "Review the proposed scope",
+              "Receive a project-specific estimate"
+            ]
+          },
+          {
+            "title": "Replace & renew",
+            "description": "Explore options for a meaningful improvement to your property.",
+            "price": "",
+            "note": "Tailored to your property",
+            "featured": true,
+            "includes": [
+              "Discuss your goals",
+              "Review the proposed scope",
+              "Receive a project-specific estimate"
+            ]
+          },
+          {
+            "title": "A complete new roof",
+            "description": "Bring a larger vision into focus with a clearly defined scope.",
+            "price": "",
+            "note": "Tailored to your property",
+            "featured": false,
+            "includes": [
+              "Discuss your goals",
+              "Review the proposed scope",
+              "Receive a project-specific estimate"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "question": "What affects the price?",
+            "answer": "The size, condition, access, materials, and agreed scope all matter. Share your priorities so the estimate can account for your property."
+          },
+          {
+            "question": "Can we explore different options?",
+            "answer": "Tell us your goals and budget. Ask which approaches fit the project and what is included in each option."
+          },
+          {
+            "question": "When do I commit?",
+            "answer": "Requesting an estimate starts a conversation. Review the scope, pricing and proposed terms before deciding to move forward."
+          }
+        ]
+      },
+      "designKit": "roofing",
+      "creativeBrief": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+      "effects": {
+        "reveal": true,
+        "parallax": true,
+        "marquee": true,
+        "servicePicker": true,
+        "process": true,
+        "stickyNav": true,
+        "cutaway": true,
+        "serviceImages": true,
+        "commercial": true,
+        "ctaBands": true,
+        "projectMap": true,
+        "readingProgress": true,
+        "spotlight": true,
+        "chapterRail": true,
+        "planning": true,
+        "titleMotion": true,
+        "scrollStory": true
+      },
+      "sections": [],
+      "claimsReviewed": false,
+      "serviceProfile": {
+        "years": "",
+        "warranty": "",
+        "rating": "",
+        "ratingSource": "",
+        "confirmed": false
+      },
+      "serviceAreas": [
+        {
+          "city": "Oxnard",
+          "radiusMiles": null
+        },
+        {
+          "city": "Ventura",
+          "radiusMiles": null
+        }
+      ],
+      "platform": {
+        "version": 1,
+        "timeZone": "America/Los_Angeles",
+        "legal": {
+          "jurisdiction": "",
+          "licenseState": "",
+          "policy": null
+        },
+        "neighborhood": {
+          "enabled": true,
+          "country": "",
+          "region": "",
+          "proofs": []
+        },
+        "questionnaire": {
+          "story": "",
+          "priorities": "",
+          "factsConfirmed": false
+        },
+        "footer": {
+          "financingDisclosure": "",
+          "visible": {
+            "name": true,
+            "address": true,
+            "phone": true,
+            "email": true,
+            "hours": true,
+            "license": true,
+            "bonded": true,
+            "insured": true
+          },
+          "bonded": false,
+          "insured": false,
+          "locations": [],
+          "socials": {
+            "facebook": {
+              "enabled": false,
+              "url": ""
+            },
+            "instagram": {
+              "enabled": false,
+              "url": ""
+            },
+            "youtube": {
+              "enabled": false,
+              "url": ""
+            },
+            "tiktok": {
+              "enabled": false,
+              "url": ""
+            },
+            "googleBusiness": {
+              "enabled": false,
+              "url": ""
+            },
+            "linkedin": {
+              "enabled": false,
+              "url": ""
+            },
+            "xTwitter": {
+              "enabled": false,
+              "url": ""
+            },
+            "nextdoor": {
+              "enabled": false,
+              "url": ""
+            }
+          }
+        },
+        "financing": {
+          "requested": false,
+          "selection": "lenders",
+          "enabled": false,
+          "lenders": [
+            {
+              "id": "sfc",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": "Service Finance Company"
+            },
+            {
+              "id": "wisetack",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": "Wisetack"
+            },
+            {
+              "id": "sunbit",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": "Sunbit"
+            },
+            {
+              "id": "hearth",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": "Hearth"
+            },
+            {
+              "id": "enhancify",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": "Enhancify"
+            },
+            {
+              "id": "other",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": ""
+            }
+          ],
+          "serviceTerms": null,
+          "programs": []
+        },
+        "promotions": {
+          "enabled": false,
+          "offers": []
+        }
+      },
+      "services": [
+        {
+          "name": "Roof installation",
+          "description": ""
+        },
+        {
+          "name": "Roof repair",
+          "description": ""
+        },
+        {
+          "name": "Roof replacement",
+          "description": ""
+        },
+        {
+          "name": "Asphalt shingles",
+          "description": ""
+        },
+        {
+          "name": "Metal roofing",
+          "description": ""
+        },
+        {
+          "name": "Flat roofs",
+          "description": ""
+        },
+        {
+          "name": "Roof maintenance",
+          "description": ""
+        },
+        {
+          "name": "Gutters",
+          "description": ""
+        }
+      ],
+      "thumb_motion_effect": "flip_3d",
+      "thumb_motion_locked": false,
+      "thumb_motion_seed": "QA Roofing",
+      "roofingCta": {
+        "slot": "after-services",
+        "locked": false,
+        "generation": "QA Roofing",
+        "burst": true,
+        "priceItemId": ""
+      },
+      "priceBook": {
+        "items": []
+      },
+      "generationManifest": {
+        "version": 1,
+        "siteId": "075122d7-1439-4469-8cb4-83b987e61adb",
+        "slug": "ambient-baseline-roofing",
+        "revision": 1,
+        "id": "gen-1db94f51-c2a7-4ee4-8be0-5c2c61d55466",
+        "createdAt": "2026-09-27T04:25:21.734Z",
+        "reason": "adopt",
+        "choices": {
+          "design": {
+            "motionLayout": "A",
+            "motionStyle": "bold-industrial",
+            "motionAnatomy": "layers",
+            "serviceLayout": "grid",
+            "ownerLayout": "portrait",
+            "sectionOrder": "craft",
+            "storyIntensity": "bold",
+            "storyTreatment": "crossfade",
+            "bannerArt": "panorama",
+            "headlineMotion": "sweep",
+            "font": "display",
+            "cards": "classic",
+            "rhythm": "balanced",
+            "heroFrame": "standard",
+            "entrance": "rise",
+            "palette": "brand"
+          },
+          "template": "cinematic",
+          "designKit": "roofing",
+          "color": "#c78353",
+          "effects": {
+            "reveal": true,
+            "parallax": true,
+            "marquee": true,
+            "servicePicker": true,
+            "process": true,
+            "stickyNav": true,
+            "cutaway": true,
+            "serviceImages": true,
+            "commercial": true,
+            "ctaBands": true,
+            "projectMap": true,
+            "readingProgress": true,
+            "spotlight": true,
+            "chapterRail": true,
+            "planning": true,
+            "titleMotion": true,
+            "scrollStory": true
+          },
+          "sections": [],
+          "treatments": {
+            "seed": "ambient-baseline-roofing",
+            "variant": 2
+          },
+          "thumbnail": {
+            "thumb_motion_effect": "flip_3d",
+            "thumb_motion_locked": false,
+            "thumb_motion_seed": "QA Roofing"
+          },
+          "scrollStory": {
+            "detailEnabled": true,
+            "detailIntro": "",
+            "heroCaptions": [
+              "Your vision.",
+              "Taking shape.",
+              "Brought to life."
+            ],
+            "detailCaptions": [
+              "Imagine it.",
+              "Plan the details.",
+              "Bring it to life."
+            ],
+            "mode": "build",
+            "enabled": true,
+            "tradePack": "",
+            "video": false,
+            "wipe": true,
+            "reviewFilmstrip": true,
+            "sampleReviews": true,
+            "posterId": "",
+            "beforeId": "",
+            "afterId": "",
+            "pairApproved": false,
+            "primaryLabel": "Request an estimate",
+            "secondaryLabel": "Explore our expertise",
+            "primaryTarget": "pricing",
+            "chapters": [
+              {
+                "headline": "",
+                "body": "",
+                "mediaId": ""
+              },
+              {
+                "headline": "",
+                "body": "",
+                "mediaId": ""
+              },
+              {
+                "headline": "",
+                "body": "",
+                "mediaId": ""
+              },
+              {
+                "headline": "",
+                "body": "",
+                "mediaId": ""
+              },
+              {
+                "headline": "",
+                "body": "",
+                "mediaId": ""
+              }
+            ],
+            "proof": [],
+            "sampleQuote": "They explained the options clearly. Every detail felt considered.",
+            "sampleName": "Alex R.",
+            "sampleRating": 5
+          },
+          "roofingCta": {
+            "slot": "after-services",
+            "locked": false,
+            "generation": "QA Roofing",
+            "burst": true,
+            "priceItemId": ""
+          },
+          "journey": "standard",
+          "imagery": {
+            "logoId": null,
+            "heroPhotoId": null,
+            "ownerPhotoId": null,
+            "ownerPhoto": {
+              "src": "/assets/owner-roofing/owner-sample-960.webp",
+              "isSample": true
+            },
+            "pages": {
+              "version": 1,
+              "items": [
+                {
+                  "id": "service-roof-installation",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "2b5dc87a"
+                },
+                {
+                  "id": "service-roof-repair",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "531c5504"
+                },
+                {
+                  "id": "service-roof-replacement",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "8ab75f14"
+                },
+                {
+                  "id": "service-asphalt-shingles",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "68c331d4"
+                },
+                {
+                  "id": "service-metal-roofing",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "ffdf765c"
+                },
+                {
+                  "id": "service-flat-roofs",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "90184040"
+                },
+                {
+                  "id": "service-roof-maintenance",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "bdb9c80e"
+                },
+                {
+                  "id": "service-gutters",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "be11f8a6"
+                }
+              ]
+            }
+          },
+          "editorial": {
+            "ebook": {
+              "enabled": false,
+              "reviewedRevision": ""
+            },
+            "about": null,
+            "creativeBrief": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA."
+          }
+        },
+        "locks": {
+          "design.motionLayout": false,
+          "design.motionStyle": false,
+          "design.motionAnatomy": false,
+          "design.serviceLayout": false,
+          "design.ownerLayout": false,
+          "design.sectionOrder": false,
+          "design.storyIntensity": false,
+          "design.storyTreatment": false,
+          "design.bannerArt": false,
+          "design.headlineMotion": false,
+          "design.font": false,
+          "design.cards": false,
+          "design.rhythm": false,
+          "design.heroFrame": false,
+          "design.entrance": false,
+          "design.palette": false,
+          "template": false,
+          "effects": false,
+          "treatments": false,
+          "thumbnail": false,
+          "imagery": true,
+          "scrollStory": true,
+          "roofingCta": false,
+          "editorial": true
+        },
+        "assets": [
+          "/assets/build-films/roofing-finished.webp",
+          "/assets/build-films/roofing-opening.webp",
+          "/assets/build-films/roofing.mp4",
+          "/assets/craft-films/roofing-finished.webp",
+          "/assets/craft-films/roofing-opening.webp",
+          "/assets/craft-films/roofing.mp4",
+          "/assets/cutaway-roofing.webp",
+          "/assets/films/roofing-poster.webp",
+          "/assets/films/roofing-story.mp4",
+          "/assets/films/roofing-story.webp",
+          "/assets/films/roofing-transformation.mp4",
+          "/assets/finished-roof.jpg",
+          "/assets/leaflet.css",
+          "/assets/leaflet.js",
+          "/assets/owner-roofing/owner-sample-960.webp",
+          "/assets/service-flat.webp",
+          "/assets/service-gutters.webp",
+          "/assets/service-installation.webp",
+          "/assets/service-journey.webp",
+          "/assets/service-maintenance.webp",
+          "/assets/service-metal.webp",
+          "/assets/service-roof-repair-showpiece.png",
+          "/assets/service-roof-replacement-showpiece.png",
+          "/assets/service-shingles.webp",
+          "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+          "/assets/service-showpiece/roofing-asphalt-shingles-process.webp",
+          "/assets/service-showpiece/roofing-asphalt-shingles-scope.webp",
+          "/assets/service-showpiece/roofing-flat-roofs-process.webp",
+          "/assets/service-showpiece/roofing-flat-roofs-scope.webp",
+          "/assets/service-showpiece/roofing-gutters-process.webp",
+          "/assets/service-showpiece/roofing-gutters-scope.webp",
+          "/assets/service-showpiece/roofing-inspections-hero.webp",
+          "/assets/service-showpiece/roofing-metal-roofing-process.webp",
+          "/assets/service-showpiece/roofing-metal-roofing-scope.webp",
+          "/assets/service-showpiece/roofing-roof-installation-process.webp",
+          "/assets/service-showpiece/roofing-roof-installation-scope.webp",
+          "/assets/service-showpiece/roofing-roof-maintenance-process.webp",
+          "/assets/service-showpiece/roofing-roof-maintenance-scope.webp",
+          "/assets/service-showpiece/roofing-roof-repair-process.webp",
+          "/assets/service-showpiece/roofing-roof-repair-scope.webp",
+          "/assets/service-showpiece/roofing-roof-replacement-process.webp",
+          "/assets/service-showpiece/roofing-roof-replacement-scope.webp",
+          "/assets/service-showpiece/roofing-storm-damage-hero.webp",
+          "/assets/trade-art/roofing-craft-banner.webp",
+          "/assets/trade-motion/roofing-house-cutout.webp",
+          "/assets/trade-motion/v3/desktop-still.webp",
+          "/assets/trade-motion/v3/desktop/",
+          "/assets/trade-motion/v3/desktop/000.webp",
+          "/assets/trade-motion/v4/mobile-still.webp",
+          "/assets/trade-motion/v4/mobile/",
+          "/assets/trade-motion/v4/mobile/000.webp"
+        ],
+        "jobs": [
+          {
+            "slot": "Hero / banners",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "Service graphics",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "Ebook composition",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "City banners",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "Story / FAQ accents",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "Financing / promotion films",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "About portrait / shorts",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          }
+        ],
+        "digest": "707c1409"
+      }
+    },
+    "preview": false,
+    "html": "<section id=\"roofing-planning\" class=\"planning-ambient\" data-planning-section aria-labelledby=\"planning-title\"><div class=\"planning-intro\"><p class=\"foundation-eyebrow\">A ROOF PLAN YOU CAN UNDERSTAND</p><h2 id=\"planning-title\">Know what’s in the roof.<br><em>Then weigh how to pay.</em></h2><p>A written roofing estimate should explain the materials, the work beneath them and what happens if damaged decking is found. Settle those questions before comparing payment options.</p></div><div class=\"planning-composition\"><figure class=\"planning-photo sm-card\" data-service-motion=\"none\" data-ambient-frame data-ambient-state=\"poster\"><span class=\"sm-visual\" data-image-state=\"loading\"><span class=\"sm-fallback\" aria-hidden=\"true\">Roofing material detail</span><span class=\"sm-rotor\"><img class=\"sm-front\" src=\"/assets/planning/roofing-financing-1280.webp\" alt=\"Illustrative roofing material detail photograph\" srcset=\"/assets/planning/roofing-financing-720.webp 720w, /assets/planning/roofing-financing-1280.webp 1280w\" sizes=\"(max-width:760px) calc(100vw - 40px), 60vw\" width=\"1280\" height=\"430\" loading=\"lazy\"></span><span class=\"sm-frame\" aria-hidden=\"true\"></span></span><figcaption><span>Take time to understand the whole cost.</span><small>Illustrative roofing imagery</small></figcaption></figure><div class=\"planning-notes core-estimator\"><p class=\"foundation-eyebrow\">BEFORE YOU COMPARE PAYMENTS</p><ol><li><span>01</span><div><h3>Start with the roof itself.</h3><p>Ask which layers will be repaired or replaced, and how flashing and ventilation fit into the scope.</p></div></li><li><span>02</span><div><h3>Leave fewer questions open.</h3><p>Discuss cleanup, the work schedule and how changes to the written estimate would be handled.</p></div></li><li><span>03</span><div><h3>Compare more than a payment.</h3><p>Read the APR, repayment term and total cost together. Take the time you need to decide.</p></div></li></ol><a class=\"foundation-button\" href=\"#contact\">Talk through my roof estimate</a></div></div></section>"
+  },
+  {
+    "settings": {
+      "ebook": {
+        "enabled": false,
+        "reviewedRevision": ""
+      },
+      "trust": {
+        "version": 1,
+        "enabled": false,
+        "layout": "auto",
+        "placements": [
+          "below-hero"
+        ],
+        "showRatings": false,
+        "networks": []
+      },
+      "businessTrust": {
+        "years": null,
+        "licenseNumber": "",
+        "licenseState": "",
+        "insured": null,
+        "crewSize": null,
+        "warrantyYears": null,
+        "certifications": [],
+        "googleRating": null,
+        "googleReviewCount": null,
+        "googleUrl": "",
+        "jobsCompleted": null,
+        "confirmed": {
+          "years": false,
+          "license": false,
+          "insured": false,
+          "crewSize": false,
+          "warranty": false,
+          "certifications": false,
+          "google": false,
+          "jobsCompleted": false
+        }
+      },
+      "websitePages": {
+        "version": 1,
+        "pages": [
+          {
+            "id": "service-roof-installation",
+            "kind": "service",
+            "slug": "roof-installation",
+            "enabled": true,
+            "title": "Roof installation",
+            "serviceName": "Roof installation",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-roof-repair",
+            "kind": "service",
+            "slug": "roof-repair",
+            "enabled": true,
+            "title": "Roof repair",
+            "serviceName": "Roof repair",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-roof-replacement",
+            "kind": "service",
+            "slug": "roof-replacement",
+            "enabled": true,
+            "title": "Roof replacement",
+            "serviceName": "Roof replacement",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-asphalt-shingles",
+            "kind": "service",
+            "slug": "asphalt-shingles",
+            "enabled": true,
+            "title": "Asphalt shingles",
+            "serviceName": "Asphalt shingles",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-metal-roofing",
+            "kind": "service",
+            "slug": "metal-roofing",
+            "enabled": true,
+            "title": "Metal roofing",
+            "serviceName": "Metal roofing",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-flat-roofs",
+            "kind": "service",
+            "slug": "flat-roofs",
+            "enabled": true,
+            "title": "Flat roofs",
+            "serviceName": "Flat roofs",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-roof-maintenance",
+            "kind": "service",
+            "slug": "roof-maintenance",
+            "enabled": true,
+            "title": "Roof maintenance",
+            "serviceName": "Roof maintenance",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          },
+          {
+            "id": "service-gutters",
+            "kind": "service",
+            "slug": "gutters",
+            "enabled": true,
+            "title": "Gutters",
+            "serviceName": "Gutters",
+            "intro": "",
+            "seoTitle": "",
+            "seoDescription": "",
+            "headline": "",
+            "scope": "",
+            "process": [],
+            "materials": [],
+            "questions": [],
+            "typicalPriceRange": null,
+            "media": {
+              "hero": null,
+              "bannerOne": null,
+              "bannerTwo": null,
+              "thumbnail": null
+            }
+          }
+        ]
+      },
+      "name": "QA Roofing",
+      "trade": "Roofing",
+      "owner": "",
+      "phone": "8055550140",
+      "email": "",
+      "address": "",
+      "hours": "",
+      "license": "",
+      "experience": "",
+      "area": "Oxnard, Ventura",
+      "hero": "Roofs built. Standards raised.",
+      "intro": "Tell us what you have in mind. Explore the services below and start a conversation about your property.",
+      "color": "#c78353",
+      "template": "cinematic",
+      "seoTitle": "",
+      "seoDescription": "",
+      "ctaLabel": "",
+      "marqueeText": "",
+      "showOwner": true,
+      "showProjects": true,
+      "showOwnerPhoto": true,
+      "showDemoProjects": true,
+      "logoId": null,
+      "ownerPhotoId": null,
+      "heroPhotoId": null,
+      "ownerPhoto": {
+        "src": "/assets/owner-roofing/owner-sample-960.webp",
+        "isSample": true
+      },
+      "savedDesignId": "",
+      "generationId": "",
+      "ownerStatement": "",
+      "journey": "standard",
+      "conversionBrief": {
+        "audience": "",
+        "problem": "",
+        "traffic": "mixed",
+        "headline": "",
+        "intro": "",
+        "difference": "",
+        "nextStep": "",
+        "confirmed": false
+      },
+      "design": {
+        "motionLayout": "A",
+        "motionStyle": "bold-industrial",
+        "motionAnatomy": "layers",
+        "serviceLayout": "grid",
+        "ownerLayout": "portrait",
+        "sectionOrder": "craft",
+        "storyIntensity": "bold",
+        "storyTreatment": "crossfade",
+        "bannerArt": "panorama",
+        "headlineMotion": "sweep",
+        "font": "display",
+        "cards": "classic",
+        "rhythm": "balanced",
+        "heroFrame": "standard",
+        "entrance": "rise",
+        "palette": "brand"
+      },
+      "scrollStory": {
+        "detailEnabled": true,
+        "detailIntro": "",
+        "heroCaptions": [
+          "Your vision.",
+          "Taking shape.",
+          "Brought to life."
+        ],
+        "detailCaptions": [
+          "Imagine it.",
+          "Plan the details.",
+          "Bring it to life."
+        ],
+        "mode": "build",
+        "enabled": true,
+        "tradePack": "",
+        "video": false,
+        "wipe": true,
+        "reviewFilmstrip": true,
+        "sampleReviews": true,
+        "posterId": "",
+        "beforeId": "",
+        "afterId": "",
+        "pairApproved": false,
+        "primaryLabel": "Request an estimate",
+        "secondaryLabel": "Explore our expertise",
+        "primaryTarget": "pricing",
+        "chapters": [
+          {
+            "headline": "",
+            "body": "",
+            "mediaId": ""
+          },
+          {
+            "headline": "",
+            "body": "",
+            "mediaId": ""
+          },
+          {
+            "headline": "",
+            "body": "",
+            "mediaId": ""
+          },
+          {
+            "headline": "",
+            "body": "",
+            "mediaId": ""
+          },
+          {
+            "headline": "",
+            "body": "",
+            "mediaId": ""
+          }
+        ],
+        "proof": [],
+        "sampleQuote": "They explained the options clearly. Every detail felt considered.",
+        "sampleName": "Alex R.",
+        "sampleRating": 5
+      },
+      "reviews": {
+        "googleUrl": "",
+        "yelpUrl": "",
+        "privacyUrl": "",
+        "termsUrl": "",
+        "googlePlaceId": "",
+        "yelpBusinessId": "",
+        "minimum": 4,
+        "confirmed": false
+      },
+      "pricing": {
+        "enabled": true,
+        "showFilm": true,
+        "headline": "A clear scope.\nA price that makes sense.",
+        "intro": "Start with what matters to you. We’ll discuss the work, explore your options, and prepare an estimate for your property.",
+        "approved": false,
+        "packages": [
+          {
+            "title": "Repair & protect",
+            "description": "Address a specific concern and understand the work it needs.",
+            "price": "",
+            "note": "Tailored to your property",
+            "featured": false,
+            "includes": [
+              "Discuss your goals",
+              "Review the proposed scope",
+              "Receive a project-specific estimate"
+            ]
+          },
+          {
+            "title": "Replace & renew",
+            "description": "Explore options for a meaningful improvement to your property.",
+            "price": "",
+            "note": "Tailored to your property",
+            "featured": true,
+            "includes": [
+              "Discuss your goals",
+              "Review the proposed scope",
+              "Receive a project-specific estimate"
+            ]
+          },
+          {
+            "title": "A complete new roof",
+            "description": "Bring a larger vision into focus with a clearly defined scope.",
+            "price": "",
+            "note": "Tailored to your property",
+            "featured": false,
+            "includes": [
+              "Discuss your goals",
+              "Review the proposed scope",
+              "Receive a project-specific estimate"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "question": "What affects the price?",
+            "answer": "The size, condition, access, materials, and agreed scope all matter. Share your priorities so the estimate can account for your property."
+          },
+          {
+            "question": "Can we explore different options?",
+            "answer": "Tell us your goals and budget. Ask which approaches fit the project and what is included in each option."
+          },
+          {
+            "question": "When do I commit?",
+            "answer": "Requesting an estimate starts a conversation. Review the scope, pricing and proposed terms before deciding to move forward."
+          }
+        ]
+      },
+      "designKit": "roofing",
+      "creativeBrief": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
+      "effects": {
+        "reveal": true,
+        "parallax": true,
+        "marquee": true,
+        "servicePicker": true,
+        "process": true,
+        "stickyNav": true,
+        "cutaway": true,
+        "serviceImages": true,
+        "commercial": true,
+        "ctaBands": true,
+        "projectMap": true,
+        "readingProgress": true,
+        "spotlight": true,
+        "chapterRail": true,
+        "planning": true,
+        "titleMotion": true,
+        "scrollStory": true
+      },
+      "sections": [],
+      "claimsReviewed": false,
+      "serviceProfile": {
+        "years": "",
+        "warranty": "",
+        "rating": "",
+        "ratingSource": "",
+        "confirmed": false
+      },
+      "serviceAreas": [
+        {
+          "city": "Oxnard",
+          "radiusMiles": null
+        },
+        {
+          "city": "Ventura",
+          "radiusMiles": null
+        }
+      ],
+      "platform": {
+        "version": 1,
+        "timeZone": "America/Los_Angeles",
+        "legal": {
+          "jurisdiction": "",
+          "licenseState": "",
+          "policy": null
+        },
+        "neighborhood": {
+          "enabled": true,
+          "country": "",
+          "region": "",
+          "proofs": []
+        },
+        "questionnaire": {
+          "story": "",
+          "priorities": "",
+          "factsConfirmed": false
+        },
+        "footer": {
+          "financingDisclosure": "",
+          "visible": {
+            "name": true,
+            "address": true,
+            "phone": true,
+            "email": true,
+            "hours": true,
+            "license": true,
+            "bonded": true,
+            "insured": true
+          },
+          "bonded": false,
+          "insured": false,
+          "locations": [],
+          "socials": {
+            "facebook": {
+              "enabled": false,
+              "url": ""
+            },
+            "instagram": {
+              "enabled": false,
+              "url": ""
+            },
+            "youtube": {
+              "enabled": false,
+              "url": ""
+            },
+            "tiktok": {
+              "enabled": false,
+              "url": ""
+            },
+            "googleBusiness": {
+              "enabled": false,
+              "url": ""
+            },
+            "linkedin": {
+              "enabled": false,
+              "url": ""
+            },
+            "xTwitter": {
+              "enabled": false,
+              "url": ""
+            },
+            "nextdoor": {
+              "enabled": false,
+              "url": ""
+            }
+          }
+        },
+        "financing": {
+          "requested": false,
+          "selection": "lenders",
+          "enabled": false,
+          "lenders": [
+            {
+              "id": "sfc",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": "Service Finance Company"
+            },
+            {
+              "id": "wisetack",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": "Wisetack"
+            },
+            {
+              "id": "sunbit",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": "Sunbit"
+            },
+            {
+              "id": "hearth",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": "Hearth"
+            },
+            {
+              "id": "enhancify",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": "Enhancify"
+            },
+            {
+              "id": "other",
+              "enabled": false,
+              "applicationUrl": "",
+              "confirmed": false,
+              "displayName": ""
+            }
+          ],
+          "serviceTerms": null,
+          "programs": []
+        },
+        "promotions": {
+          "enabled": false,
+          "offers": []
+        }
+      },
+      "services": [
+        {
+          "name": "Roof installation",
+          "description": ""
+        },
+        {
+          "name": "Roof repair",
+          "description": ""
+        },
+        {
+          "name": "Roof replacement",
+          "description": ""
+        },
+        {
+          "name": "Asphalt shingles",
+          "description": ""
+        },
+        {
+          "name": "Metal roofing",
+          "description": ""
+        },
+        {
+          "name": "Flat roofs",
+          "description": ""
+        },
+        {
+          "name": "Roof maintenance",
+          "description": ""
+        },
+        {
+          "name": "Gutters",
+          "description": ""
+        }
+      ],
+      "thumb_motion_effect": "flip_3d",
+      "thumb_motion_locked": false,
+      "thumb_motion_seed": "QA Roofing",
+      "roofingCta": {
+        "slot": "after-services",
+        "locked": false,
+        "generation": "QA Roofing",
+        "burst": true,
+        "priceItemId": ""
+      },
+      "priceBook": {
+        "items": []
+      },
+      "generationManifest": {
+        "version": 1,
+        "siteId": "075122d7-1439-4469-8cb4-83b987e61adb",
+        "slug": "ambient-baseline-roofing",
+        "revision": 1,
+        "id": "gen-1db94f51-c2a7-4ee4-8be0-5c2c61d55466",
+        "createdAt": "2026-09-27T04:25:21.734Z",
+        "reason": "adopt",
+        "choices": {
+          "design": {
+            "motionLayout": "A",
+            "motionStyle": "bold-industrial",
+            "motionAnatomy": "layers",
+            "serviceLayout": "grid",
+            "ownerLayout": "portrait",
+            "sectionOrder": "craft",
+            "storyIntensity": "bold",
+            "storyTreatment": "crossfade",
+            "bannerArt": "panorama",
+            "headlineMotion": "sweep",
+            "font": "display",
+            "cards": "classic",
+            "rhythm": "balanced",
+            "heroFrame": "standard",
+            "entrance": "rise",
+            "palette": "brand"
+          },
+          "template": "cinematic",
+          "designKit": "roofing",
+          "color": "#c78353",
+          "effects": {
+            "reveal": true,
+            "parallax": true,
+            "marquee": true,
+            "servicePicker": true,
+            "process": true,
+            "stickyNav": true,
+            "cutaway": true,
+            "serviceImages": true,
+            "commercial": true,
+            "ctaBands": true,
+            "projectMap": true,
+            "readingProgress": true,
+            "spotlight": true,
+            "chapterRail": true,
+            "planning": true,
+            "titleMotion": true,
+            "scrollStory": true
+          },
+          "sections": [],
+          "treatments": {
+            "seed": "ambient-baseline-roofing",
+            "variant": 2
+          },
+          "thumbnail": {
+            "thumb_motion_effect": "flip_3d",
+            "thumb_motion_locked": false,
+            "thumb_motion_seed": "QA Roofing"
+          },
+          "scrollStory": {
+            "detailEnabled": true,
+            "detailIntro": "",
+            "heroCaptions": [
+              "Your vision.",
+              "Taking shape.",
+              "Brought to life."
+            ],
+            "detailCaptions": [
+              "Imagine it.",
+              "Plan the details.",
+              "Bring it to life."
+            ],
+            "mode": "build",
+            "enabled": true,
+            "tradePack": "",
+            "video": false,
+            "wipe": true,
+            "reviewFilmstrip": true,
+            "sampleReviews": true,
+            "posterId": "",
+            "beforeId": "",
+            "afterId": "",
+            "pairApproved": false,
+            "primaryLabel": "Request an estimate",
+            "secondaryLabel": "Explore our expertise",
+            "primaryTarget": "pricing",
+            "chapters": [
+              {
+                "headline": "",
+                "body": "",
+                "mediaId": ""
+              },
+              {
+                "headline": "",
+                "body": "",
+                "mediaId": ""
+              },
+              {
+                "headline": "",
+                "body": "",
+                "mediaId": ""
+              },
+              {
+                "headline": "",
+                "body": "",
+                "mediaId": ""
+              },
+              {
+                "headline": "",
+                "body": "",
+                "mediaId": ""
+              }
+            ],
+            "proof": [],
+            "sampleQuote": "They explained the options clearly. Every detail felt considered.",
+            "sampleName": "Alex R.",
+            "sampleRating": 5
+          },
+          "roofingCta": {
+            "slot": "after-services",
+            "locked": false,
+            "generation": "QA Roofing",
+            "burst": true,
+            "priceItemId": ""
+          },
+          "journey": "standard",
+          "imagery": {
+            "logoId": null,
+            "heroPhotoId": null,
+            "ownerPhotoId": null,
+            "ownerPhoto": {
+              "src": "/assets/owner-roofing/owner-sample-960.webp",
+              "isSample": true
+            },
+            "pages": {
+              "version": 1,
+              "items": [
+                {
+                  "id": "service-roof-installation",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "2b5dc87a"
+                },
+                {
+                  "id": "service-roof-repair",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "531c5504"
+                },
+                {
+                  "id": "service-roof-replacement",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "8ab75f14"
+                },
+                {
+                  "id": "service-asphalt-shingles",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "68c331d4"
+                },
+                {
+                  "id": "service-metal-roofing",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "ffdf765c"
+                },
+                {
+                  "id": "service-flat-roofs",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "90184040"
+                },
+                {
+                  "id": "service-roof-maintenance",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "bdb9c80e"
+                },
+                {
+                  "id": "service-gutters",
+                  "media": {
+                    "hero": null,
+                    "bannerOne": null,
+                    "bannerTwo": null,
+                    "thumbnail": null
+                  },
+                  "titleLocked": false,
+                  "copy": "be11f8a6"
+                }
+              ]
+            }
+          },
+          "editorial": {
+            "ebook": {
+              "enabled": false,
+              "reviewedRevision": ""
+            },
+            "about": null,
+            "creativeBrief": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA."
+          }
+        },
+        "locks": {
+          "design.motionLayout": false,
+          "design.motionStyle": false,
+          "design.motionAnatomy": false,
+          "design.serviceLayout": false,
+          "design.ownerLayout": false,
+          "design.sectionOrder": false,
+          "design.storyIntensity": false,
+          "design.storyTreatment": false,
+          "design.bannerArt": false,
+          "design.headlineMotion": false,
+          "design.font": false,
+          "design.cards": false,
+          "design.rhythm": false,
+          "design.heroFrame": false,
+          "design.entrance": false,
+          "design.palette": false,
+          "template": false,
+          "effects": false,
+          "treatments": false,
+          "thumbnail": false,
+          "imagery": true,
+          "scrollStory": true,
+          "roofingCta": false,
+          "editorial": true
+        },
+        "assets": [
+          "/assets/build-films/roofing-finished.webp",
+          "/assets/build-films/roofing-opening.webp",
+          "/assets/build-films/roofing.mp4",
+          "/assets/craft-films/roofing-finished.webp",
+          "/assets/craft-films/roofing-opening.webp",
+          "/assets/craft-films/roofing.mp4",
+          "/assets/cutaway-roofing.webp",
+          "/assets/films/roofing-poster.webp",
+          "/assets/films/roofing-story.mp4",
+          "/assets/films/roofing-story.webp",
+          "/assets/films/roofing-transformation.mp4",
+          "/assets/finished-roof.jpg",
+          "/assets/leaflet.css",
+          "/assets/leaflet.js",
+          "/assets/owner-roofing/owner-sample-960.webp",
+          "/assets/service-flat.webp",
+          "/assets/service-gutters.webp",
+          "/assets/service-installation.webp",
+          "/assets/service-journey.webp",
+          "/assets/service-maintenance.webp",
+          "/assets/service-metal.webp",
+          "/assets/service-roof-repair-showpiece.png",
+          "/assets/service-roof-replacement-showpiece.png",
+          "/assets/service-shingles.webp",
+          "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+          "/assets/service-showpiece/roofing-asphalt-shingles-process.webp",
+          "/assets/service-showpiece/roofing-asphalt-shingles-scope.webp",
+          "/assets/service-showpiece/roofing-flat-roofs-process.webp",
+          "/assets/service-showpiece/roofing-flat-roofs-scope.webp",
+          "/assets/service-showpiece/roofing-gutters-process.webp",
+          "/assets/service-showpiece/roofing-gutters-scope.webp",
+          "/assets/service-showpiece/roofing-inspections-hero.webp",
+          "/assets/service-showpiece/roofing-metal-roofing-process.webp",
+          "/assets/service-showpiece/roofing-metal-roofing-scope.webp",
+          "/assets/service-showpiece/roofing-roof-installation-process.webp",
+          "/assets/service-showpiece/roofing-roof-installation-scope.webp",
+          "/assets/service-showpiece/roofing-roof-maintenance-process.webp",
+          "/assets/service-showpiece/roofing-roof-maintenance-scope.webp",
+          "/assets/service-showpiece/roofing-roof-repair-process.webp",
+          "/assets/service-showpiece/roofing-roof-repair-scope.webp",
+          "/assets/service-showpiece/roofing-roof-replacement-process.webp",
+          "/assets/service-showpiece/roofing-roof-replacement-scope.webp",
+          "/assets/service-showpiece/roofing-storm-damage-hero.webp",
+          "/assets/trade-art/roofing-craft-banner.webp",
+          "/assets/trade-motion/roofing-house-cutout.webp",
+          "/assets/trade-motion/v3/desktop-still.webp",
+          "/assets/trade-motion/v3/desktop/",
+          "/assets/trade-motion/v3/desktop/000.webp",
+          "/assets/trade-motion/v4/mobile-still.webp",
+          "/assets/trade-motion/v4/mobile/",
+          "/assets/trade-motion/v4/mobile/000.webp"
+        ],
+        "jobs": [
+          {
+            "slot": "Hero / banners",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "Service graphics",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "Ebook composition",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "City banners",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "Story / FAQ accents",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "Financing / promotion films",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          },
+          {
+            "slot": "About portrait / shorts",
+            "status": "Pending",
+            "connection": "Not connected",
+            "note": "Existing approved assets retained. No new AI work has run."
+          }
+        ],
+        "digest": "707c1409"
+      }
+    },
+    "preview": true,
+    "html": "<section id=\"roofing-planning\" class=\"planning-ambient\" data-planning-section aria-labelledby=\"planning-title\"><div class=\"planning-intro\"><p class=\"foundation-eyebrow\">A ROOF PLAN YOU CAN UNDERSTAND</p><h2 id=\"planning-title\">Know what’s in the roof.<br><em>Then weigh how to pay.</em></h2><p>A written roofing estimate should explain the materials, the work beneath them and what happens if damaged decking is found. Settle those questions before comparing payment options.</p></div><div class=\"planning-composition\"><figure class=\"planning-photo sm-card\" data-service-motion=\"none\" data-ambient-frame data-ambient-state=\"poster\"><span class=\"sm-visual\" data-image-state=\"loading\"><span class=\"sm-fallback\" aria-hidden=\"true\">Roofing material detail</span><span class=\"sm-rotor\"><img class=\"sm-front\" src=\"/assets/planning/roofing-financing-1280.webp\" alt=\"Illustrative roofing material detail photograph\" srcset=\"/assets/planning/roofing-financing-720.webp 720w, /assets/planning/roofing-financing-1280.webp 1280w\" sizes=\"(max-width:760px) calc(100vw - 40px), 60vw\" width=\"1280\" height=\"430\" loading=\"lazy\"></span><span class=\"sm-frame\" aria-hidden=\"true\"></span></span><figcaption><span>Take time to understand the whole cost.</span><small>Illustrative roofing imagery</small></figcaption></figure><div class=\"planning-notes core-estimator\"><p class=\"foundation-eyebrow\">BEFORE YOU COMPARE PAYMENTS</p><ol><li><span>01</span><div><h3>Start with the roof itself.</h3><p>Ask which layers will be repaired or replaced, and how flashing and ventilation fit into the scope.</p></div></li><li><span>02</span><div><h3>Leave fewer questions open.</h3><p>Discuss cleanup, the work schedule and how changes to the written estimate would be handled.</p></div></li><li><span>03</span><div><h3>Compare more than a payment.</h3><p>Read the APR, repayment term and total cost together. Take the time you need to decide.</p></div></li></ol><a class=\"foundation-button\" href=\"#contact\">Talk through my roof estimate</a></div></div><aside class=\"planning-media-state\"><span class=\"foundation-pill\">Sample</span><strong>Ambient clip · Pending</strong><span>Generation · Not connected</span><p>This draft uses an installed roofing photograph. The dedicated planning film has not been generated. The chapter keeps this photograph on publish; only this status panel is hidden.</p></aside></section>"
+  }
+]

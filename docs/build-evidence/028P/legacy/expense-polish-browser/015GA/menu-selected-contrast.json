@@ -1,0 +1,162 @@
+[
+  {
+    "tag": "SUMMARY",
+    "cls": "",
+    "parent": "nav-group",
+    "text": "Workspace⌄",
+    "fg": "rgb(93, 104, 115)",
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "ratio": 5.686,
+    "minimum": 4.5,
+    "font": 11.5,
+    "pass": true
+  },
+  {
+    "tag": "SPAN",
+    "cls": "nav-chevron",
+    "parent": "",
+    "text": "⌄",
+    "fg": "rgb(93, 104, 115)",
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "ratio": 5.686,
+    "minimum": 4.5,
+    "font": 16,
+    "pass": true
+  },
+  {
+    "tag": "SUMMARY",
+    "cls": "",
+    "parent": "nav-group",
+    "text": "Sales CRM⌄",
+    "fg": "rgb(93, 104, 115)",
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "ratio": 5.686,
+    "minimum": 4.5,
+    "font": 11.5,
+    "pass": true
+  },
+  {
+    "tag": "SPAN",
+    "cls": "nav-chevron",
+    "parent": "",
+    "text": "⌄",
+    "fg": "rgb(93, 104, 115)",
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "ratio": 5.686,
+    "minimum": 4.5,
+    "font": 16,
+    "pass": true
+  },
+  {
+    "tag": "SUMMARY",
+    "cls": "",
+    "parent": "nav-group",
+    "text": "Revenue⌄",
+    "fg": "rgb(16, 48, 77)",
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "ratio": 13.531,
+    "minimum": 4.5,
+    "font": 11.5,
+    "pass": true
+  },
+  {
+    "tag": "SPAN",
+    "cls": "nav-chevron",
+    "parent": "",
+    "text": "⌄",
+    "fg": "rgb(16, 48, 77)",
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "ratio": 13.531,
+    "minimum": 4.5,
+    "font": 16,
+    "pass": true
+  },
+  {
+    "tag": "SUMMARY",
+    "cls": "",
+    "parent": "nav-group",
+    "text": "Website studio⌄",
+    "fg": "rgb(93, 104, 115)",
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "ratio": 5.686,
+    "minimum": 4.5,
+    "font": 11.5,
+    "pass": true
+  },
+  {
+    "tag": "SPAN",
+    "cls": "nav-chevron",
+    "parent": "",
+    "text": "⌄",
+    "fg": "rgb(93, 104, 115)",
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "ratio": 5.686,
+    "minimum": 4.5,
+    "font": 16,
+    "pass": true
+  },
+  {
+    "tag": "SUMMARY",
+    "cls": "",
+    "parent": "nav-group",
+    "text": "Administration⌄",
+    "fg": "rgb(93, 104, 115)",
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "ratio": 5.686,
+    "minimum": 4.5,
+    "font": 11.5,
+    "pass": true
+  },
+  {
+    "tag": "SPAN",
+    "cls": "nav-chevron",
+    "parent": "",
+    "text": "⌄",
+    "fg": "rgb(93, 104, 115)",
+    "bg": [
+      255,
+      255,
+      255
+    ],
+    "ratio": 5.686,
+    "minimum": 4.5,
+    "font": 16,
+    "pass": true
+  }
+]

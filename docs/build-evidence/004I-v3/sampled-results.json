@@ -1,0 +1,114 @@
+{
+  "baseline": false,
+  "profiles": [
+    {
+      "name": "desktop-bold-industrial-A",
+      "samples": 408,
+      "sampleHz": 30.083836573981902,
+      "maxSampleGapMs": 33.69999999999982,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "desktop-bold-industrial-B",
+      "samples": 408,
+      "sampleHz": 30.083614752768725,
+      "maxSampleGapMs": 33.5,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "desktop-bold-industrial-C",
+      "samples": 408,
+      "sampleHz": 30.08339293482669,
+      "maxSampleGapMs": 33.5,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-A",
+      "samples": 408,
+      "sampleHz": 30.083614752768725,
+      "maxSampleGapMs": 33.600000000000364,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-B",
+      "samples": 408,
+      "sampleHz": 30.083836573981902,
+      "maxSampleGapMs": 33.600000000000364,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "desktop-clean-modern-C",
+      "samples": 408,
+      "sampleHz": 30.08339293482669,
+      "maxSampleGapMs": 33.80000000000018,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-A",
+      "samples": 408,
+      "sampleHz": 30.083392934826687,
+      "maxSampleGapMs": 34,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-B",
+      "samples": 408,
+      "sampleHz": 30.083392934826687,
+      "maxSampleGapMs": 33.600000000000364,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-bold-industrial-C",
+      "samples": 408,
+      "sampleHz": 30.083614752768728,
+      "maxSampleGapMs": 33.60000000000002,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-A",
+      "samples": 408,
+      "sampleHz": 30.08383657398191,
+      "maxSampleGapMs": 33.600000000000364,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-B",
+      "samples": 408,
+      "sampleHz": 30.084058398466304,
+      "maxSampleGapMs": 33.600000000000364,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    },
+    {
+      "name": "mobile-clean-modern-C",
+      "samples": 408,
+      "sampleHz": 30.083392934826687,
+      "maxSampleGapMs": 33.600000000000136,
+      "failures": [],
+      "trustChanges": 0,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

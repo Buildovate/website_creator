@@ -1,0 +1,88 @@
+{
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "frames": [
+        {
+          "label": "start",
+          "progress": 0,
+          "time": 0,
+          "duration": 8.041667,
+          "src": "http://127.0.0.1:8097/assets/trade-motion/roofing-drone-dive-16x9.mp4"
+        },
+        {
+          "label": "middle",
+          "progress": 0.46,
+          "time": 4.001761,
+          "duration": 8.041667,
+          "src": "http://127.0.0.1:8097/assets/trade-motion/roofing-drone-dive-16x9.mp4"
+        },
+        {
+          "label": "end",
+          "progress": 1,
+          "time": 8,
+          "duration": 8.041667,
+          "src": "http://127.0.0.1:8097/assets/trade-motion/roofing-drone-dive-16x9.mp4"
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "frames": [
+        {
+          "label": "start",
+          "progress": 0,
+          "time": 0,
+          "duration": 5.041667,
+          "src": "http://127.0.0.1:8097/assets/trade-motion/roofing-drone-dive-9x16.mp4"
+        },
+        {
+          "label": "middle",
+          "progress": 0.46,
+          "time": 2.498038,
+          "duration": 5.041667,
+          "src": "http://127.0.0.1:8097/assets/trade-motion/roofing-drone-dive-9x16.mp4"
+        },
+        {
+          "label": "end",
+          "progress": 1,
+          "time": 5,
+          "duration": 5.041667,
+          "src": "http://127.0.0.1:8097/assets/trade-motion/roofing-drone-dive-9x16.mp4"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "desktop and mobile real media at start/middle/end",
+    "forward/reverse seek and final frame",
+    "alpha cutout replaces polygon",
+    "registered landing mask",
+    "pause freezes frame without layout jump",
+    "live reduced motion unloads media",
+    "initial reduced motion downloads no films",
+    "mobile full-width X-ray and compact button gap",
+    "no horizontal overflow",
+    "actual WebM fallback decodes/seeks",
+    "all-source failure retains poster",
+    "no page errors"
+  ],
+  "recordings": [
+    {
+      "name": "desktop",
+      "frames": 757,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "mobile",
+      "frames": 759,
+      "width": 390,
+      "height": 844
+    }
+  ]
+}

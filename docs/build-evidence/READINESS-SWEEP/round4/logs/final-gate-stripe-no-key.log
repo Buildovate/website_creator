@@ -1,0 +1,10 @@
+✔ no-key checkout returns Payments not connected without contacting fake Stripe (3.2705ms)
+✔ no-key Buy button remains visible, explains state, and cannot fire checkout (0.875ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12.5537

@@ -1,0 +1,1033 @@
+{
+  "passed": false,
+  "reason": "Exact recognition decision required; existing visible public-document call link is excluded by the frozen primary selector.",
+  "failureCount": 3,
+  "failures": [
+    {
+      "category": "standing",
+      "crop": "qa-crops/page-011-1440-2.png",
+      "id": "page-011-1440-actions",
+      "key": "actions",
+      "measured": {
+        "failures": [
+          {
+            "count": 0,
+            "issue": "Page needs a primary action",
+            "selector": "body"
+          }
+        ],
+        "primaries": 0,
+        "sections": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/pages/sample-pages",
+      "result": "Fail",
+      "selector": "body",
+      "threshold": {
+        "heroAndFinal": 1,
+        "pageMinimum": 1,
+        "perSectionMaximum": 1
+      },
+      "title": "Section and page primary-action limits",
+      "width": 1440
+    },
+    {
+      "category": "standing",
+      "crop": "qa-crops/page-011-390-2.png",
+      "id": "page-011-390-actions",
+      "key": "actions",
+      "measured": {
+        "failures": [
+          {
+            "count": 0,
+            "issue": "Page needs a primary action",
+            "selector": "body"
+          }
+        ],
+        "primaries": 0,
+        "sections": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/pages/sample-pages",
+      "result": "Fail",
+      "selector": "body",
+      "threshold": {
+        "heroAndFinal": 1,
+        "pageMinimum": 1,
+        "perSectionMaximum": 1
+      },
+      "title": "Section and page primary-action limits",
+      "width": 390
+    },
+    {
+      "category": "standing",
+      "crop": "qa-crops/page-011-768-2.png",
+      "id": "page-011-768-actions",
+      "key": "actions",
+      "measured": {
+        "failures": [
+          {
+            "count": 0,
+            "issue": "Page needs a primary action",
+            "selector": "body"
+          }
+        ],
+        "primaries": 0,
+        "sections": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/pages/sample-pages",
+      "result": "Fail",
+      "selector": "body",
+      "threshold": {
+        "heroAndFinal": 1,
+        "pageMinimum": 1,
+        "perSectionMaximum": 1
+      },
+      "title": "Section and page primary-action limits",
+      "width": 768
+    }
+  ],
+  "existingSelector": "main.public-document > a.primary[href=\"tel:+8055550101\"]",
+  "existingText": "Call (805) 555-0101",
+  "genericDetectorChanged": false,
+  "guideChecks": [
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-overflow",
+      "key": "overflow",
+      "measured": {
+        "pageOverflow": 0,
+        "violations": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "maximumPx": 1
+      },
+      "title": "Horizontal overflow",
+      "width": 1440
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 1440
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-overlapping-text",
+      "key": "overlapping-text",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "geometry": "Painted glyph extents from DOM Range and Canvas font metrics",
+        "maximumPx": 2,
+        "minimumLineFraction": 0.3
+      },
+      "title": "Overlapping text",
+      "width": 1440
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-images",
+      "key": "images",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "broken": 0
+      },
+      "title": "Images decode to a nonzero natural size",
+      "width": 1440
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-alt",
+      "key": "alt",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "decorative": "Explicit aria-hidden/presentation or existing redundant poster/background roles",
+        "missing": 0
+      },
+      "title": "Meaningful images have alternative text",
+      "width": 1440
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-posters",
+      "key": "posters",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "missing": 0
+      },
+      "title": "Every video has a poster",
+      "width": 1440
+    },
+    {
+      "category": "placeholders",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-published-copy",
+      "key": "published-copy",
+      "measured": {
+        "found": [
+          {
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>main:nth-child(4)>header:nth-child(1)>figure:nth-child(2)>figcaption:nth-child(2)>span:nth-child(3)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>strong:nth-child(1)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(2)",
+            "text": "(805) 555-0101"
+          },
+          {
+            "selector": "body>footer:nth-child(6)>div:nth-child(2)>span:nth-child(1)",
+            "text": "© 2026 Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "sample": true
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "realPublished": 0,
+        "samplePreviewAllowed": true
+      },
+      "title": "Published copy has no placeholders or Sample panels",
+      "width": 1440
+    },
+    {
+      "category": "disclosures",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-consent",
+      "key": "consent",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "missing": 0,
+        "source": "src/hero-contact.js; src/pricing.js; existing lead transports"
+      },
+      "title": "Lead forms retain existing contact-consent requirement",
+      "width": 1440
+    },
+    {
+      "category": "disclosures",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-financing",
+      "key": "financing",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "location": "On-page disclosure or existing link to captured legal disclosure",
+        "missing": 0,
+        "source": "src/platform/constitution.ts FINANCING_DISCLOSURE; existing calculator link to /legal"
+      },
+      "title": "Financing disclosure accompanies an enabled calculator",
+      "width": 1440
+    },
+    {
+      "category": "disclosures",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-policy",
+      "key": "policy",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body>footer:nth-child(6)",
+      "threshold": {
+        "missing": 0,
+        "source": "src/platform/legal-policy.ts; src/site-polish.js"
+      },
+      "title": "Existing footer and reviewed legal-policy requirements",
+      "width": 1440
+    },
+    {
+      "category": "reviews",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-sources",
+      "key": "sources",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "source": "src/review-filter.js; src/reviews.js",
+        "unverified": 0
+      },
+      "title": "Reviews trace to sources and full-source aggregates",
+      "width": 1440
+    },
+    {
+      "category": "standing",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-honesty",
+      "key": "honesty",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "invented": 0
+      },
+      "title": "No invented offers, countdowns or urgency",
+      "width": 1440
+    },
+    {
+      "category": "standing",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-actions",
+      "key": "actions",
+      "measured": {
+        "failures": [],
+        "primaries": 2,
+        "sections": [
+          {
+            "count": 1,
+            "selector": "body"
+          },
+          {
+            "count": 1,
+            "selector": "#guide-request"
+          }
+        ]
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "heroAndFinal": 1,
+        "pageMinimum": 1,
+        "perSectionMaximum": 1
+      },
+      "title": "Section and page primary-action limits",
+      "width": 1440
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-floating",
+      "key": "floating",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "overlapPx": 2
+      },
+      "title": "Floating elements leave text, forms, primary actions and media clear",
+      "width": 1440
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-1440-1.png",
+      "id": "page-013-1440-requests",
+      "key": "requests",
+      "measured": [],
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "failedRequests": 0
+      },
+      "title": "Page resources load successfully",
+      "width": 1440
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-overflow",
+      "key": "overflow",
+      "measured": {
+        "pageOverflow": 0,
+        "violations": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "maximumPx": 1
+      },
+      "title": "Horizontal overflow",
+      "width": 390
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-390-2.png",
+      "id": "page-013-390-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [
+          {
+            "accessibleFullText": true,
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Borderline",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 390
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-overlapping-text",
+      "key": "overlapping-text",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "geometry": "Painted glyph extents from DOM Range and Canvas font metrics",
+        "maximumPx": 2,
+        "minimumLineFraction": 0.3
+      },
+      "title": "Overlapping text",
+      "width": 390
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-images",
+      "key": "images",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "broken": 0
+      },
+      "title": "Images decode to a nonzero natural size",
+      "width": 390
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-alt",
+      "key": "alt",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "decorative": "Explicit aria-hidden/presentation or existing redundant poster/background roles",
+        "missing": 0
+      },
+      "title": "Meaningful images have alternative text",
+      "width": 390
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-posters",
+      "key": "posters",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "missing": 0
+      },
+      "title": "Every video has a poster",
+      "width": 390
+    },
+    {
+      "category": "placeholders",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-published-copy",
+      "key": "published-copy",
+      "measured": {
+        "found": [
+          {
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>main:nth-child(4)>header:nth-child(1)>figure:nth-child(2)>figcaption:nth-child(2)>span:nth-child(3)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>strong:nth-child(1)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>strong:nth-child(1)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(2)",
+            "text": "(805) 555-0101"
+          },
+          {
+            "selector": "body>footer:nth-child(6)>div:nth-child(2)>span:nth-child(1)",
+            "text": "© 2026 Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "sample": true
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "realPublished": 0,
+        "samplePreviewAllowed": true
+      },
+      "title": "Published copy has no placeholders or Sample panels",
+      "width": 390
+    },
+    {
+      "category": "disclosures",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-consent",
+      "key": "consent",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "missing": 0,
+        "source": "src/hero-contact.js; src/pricing.js; existing lead transports"
+      },
+      "title": "Lead forms retain existing contact-consent requirement",
+      "width": 390
+    },
+    {
+      "category": "disclosures",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-financing",
+      "key": "financing",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "location": "On-page disclosure or existing link to captured legal disclosure",
+        "missing": 0,
+        "source": "src/platform/constitution.ts FINANCING_DISCLOSURE; existing calculator link to /legal"
+      },
+      "title": "Financing disclosure accompanies an enabled calculator",
+      "width": 390
+    },
+    {
+      "category": "disclosures",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-policy",
+      "key": "policy",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body>footer:nth-child(6)",
+      "threshold": {
+        "missing": 0,
+        "source": "src/platform/legal-policy.ts; src/site-polish.js"
+      },
+      "title": "Existing footer and reviewed legal-policy requirements",
+      "width": 390
+    },
+    {
+      "category": "reviews",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-sources",
+      "key": "sources",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "source": "src/review-filter.js; src/reviews.js",
+        "unverified": 0
+      },
+      "title": "Reviews trace to sources and full-source aggregates",
+      "width": 390
+    },
+    {
+      "category": "standing",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-honesty",
+      "key": "honesty",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "invented": 0
+      },
+      "title": "No invented offers, countdowns or urgency",
+      "width": 390
+    },
+    {
+      "category": "standing",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-actions",
+      "key": "actions",
+      "measured": {
+        "failures": [],
+        "primaries": 1,
+        "sections": [
+          {
+            "count": 1,
+            "selector": "#guide-request"
+          }
+        ]
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "heroAndFinal": 1,
+        "pageMinimum": 1,
+        "perSectionMaximum": 1
+      },
+      "title": "Section and page primary-action limits",
+      "width": 390
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-floating",
+      "key": "floating",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "overlapPx": 2
+      },
+      "title": "Floating elements leave text, forms, primary actions and media clear",
+      "width": 390
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-390-1.png",
+      "id": "page-013-390-requests",
+      "key": "requests",
+      "measured": [],
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "failedRequests": 0
+      },
+      "title": "Page resources load successfully",
+      "width": 390
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-overflow",
+      "key": "overflow",
+      "measured": {
+        "pageOverflow": 0,
+        "violations": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "maximumPx": 1
+      },
+      "title": "Horizontal overflow",
+      "width": 768
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-clipped-text",
+      "key": "clipped-text",
+      "measured": {
+        "ellipsis": [],
+        "failures": []
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "maximumPx": 2
+      },
+      "title": "Clipped text",
+      "width": 768
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-overlapping-text",
+      "key": "overlapping-text",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "geometry": "Painted glyph extents from DOM Range and Canvas font metrics",
+        "maximumPx": 2,
+        "minimumLineFraction": 0.3
+      },
+      "title": "Overlapping text",
+      "width": 768
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-images",
+      "key": "images",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "broken": 0
+      },
+      "title": "Images decode to a nonzero natural size",
+      "width": 768
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-alt",
+      "key": "alt",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "decorative": "Explicit aria-hidden/presentation or existing redundant poster/background roles",
+        "missing": 0
+      },
+      "title": "Meaningful images have alternative text",
+      "width": 768
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-posters",
+      "key": "posters",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "missing": 0
+      },
+      "title": "Every video has a poster",
+      "width": 768
+    },
+    {
+      "category": "placeholders",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-published-copy",
+      "key": "published-copy",
+      "measured": {
+        "found": [
+          {
+            "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>main:nth-child(4)>header:nth-child(1)>figure:nth-child(2)>figcaption:nth-child(2)>span:nth-child(3)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>main:nth-child(4)>header:nth-child(1)>figure:nth-child(2)>figcaption:nth-child(2)>span:nth-child(3)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>strong:nth-child(1)",
+            "text": "Sample Fictional Copper Kite Roofing"
+          },
+          {
+            "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(2)",
+            "text": "(805) 555-0101"
+          },
+          {
+            "selector": "body>footer:nth-child(6)>div:nth-child(2)>span:nth-child(1)",
+            "text": "© 2026 Sample Fictional Copper Kite Roofing"
+          }
+        ],
+        "sample": true
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+      "threshold": {
+        "realPublished": 0,
+        "samplePreviewAllowed": true
+      },
+      "title": "Published copy has no placeholders or Sample panels",
+      "width": 768
+    },
+    {
+      "category": "disclosures",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-consent",
+      "key": "consent",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "missing": 0,
+        "source": "src/hero-contact.js; src/pricing.js; existing lead transports"
+      },
+      "title": "Lead forms retain existing contact-consent requirement",
+      "width": 768
+    },
+    {
+      "category": "disclosures",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-financing",
+      "key": "financing",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "location": "On-page disclosure or existing link to captured legal disclosure",
+        "missing": 0,
+        "source": "src/platform/constitution.ts FINANCING_DISCLOSURE; existing calculator link to /legal"
+      },
+      "title": "Financing disclosure accompanies an enabled calculator",
+      "width": 768
+    },
+    {
+      "category": "disclosures",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-policy",
+      "key": "policy",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body>footer:nth-child(6)",
+      "threshold": {
+        "missing": 0,
+        "source": "src/platform/legal-policy.ts; src/site-polish.js"
+      },
+      "title": "Existing footer and reviewed legal-policy requirements",
+      "width": 768
+    },
+    {
+      "category": "reviews",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-sources",
+      "key": "sources",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "source": "src/review-filter.js; src/reviews.js",
+        "unverified": 0
+      },
+      "title": "Reviews trace to sources and full-source aggregates",
+      "width": 768
+    },
+    {
+      "category": "standing",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-honesty",
+      "key": "honesty",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "invented": 0
+      },
+      "title": "No invented offers, countdowns or urgency",
+      "width": 768
+    },
+    {
+      "category": "standing",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-actions",
+      "key": "actions",
+      "measured": {
+        "failures": [],
+        "primaries": 1,
+        "sections": [
+          {
+            "count": 1,
+            "selector": "#guide-request"
+          }
+        ]
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "heroAndFinal": 1,
+        "pageMinimum": 1,
+        "perSectionMaximum": 1
+      },
+      "title": "Section and page primary-action limits",
+      "width": 768
+    },
+    {
+      "category": "layout",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-floating",
+      "key": "floating",
+      "measured": {
+        "failures": [],
+        "violations": 0
+      },
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "overlapPx": 2
+      },
+      "title": "Floating elements leave text, forms, primary actions and media clear",
+      "width": 768
+    },
+    {
+      "category": "media",
+      "crop": "qa-crops/page-013-768-1.png",
+      "id": "page-013-768-requests",
+      "key": "requests",
+      "measured": [],
+      "page": "/s/sample-fictional-copper-kite-ventura-contract/resources/before-you-decide-on-your-roof",
+      "result": "Pass",
+      "selector": "body",
+      "threshold": {
+        "failedRequests": 0
+      },
+      "title": "Page resources load successfully",
+      "width": 768
+    }
+  ],
+  "contractLog": "checks/review-packet-contract.log",
+  "credits": 0,
+  "providerCalls": 0
+}

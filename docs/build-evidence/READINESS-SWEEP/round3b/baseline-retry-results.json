@@ -1,0 +1,52 @@
+[
+  {
+    "label": "automatic-qa-frame-sample-replay",
+    "status": 1,
+    "outcome": "FAILED",
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/baseline-retry-automatic-qa-frame-sample-replay.log"
+  },
+  {
+    "label": "automatic-qa-rail-colors",
+    "status": 1,
+    "outcome": "FAILED",
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/baseline-retry-automatic-qa-rail-colors.log"
+  },
+  {
+    "label": "automatic-qa-replay",
+    "status": 1,
+    "outcome": "FAILED",
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/baseline-retry-automatic-qa-replay.log"
+  },
+  {
+    "label": "automatic-qa-staff-browser",
+    "status": 1,
+    "outcome": "FAILED",
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/baseline-retry-automatic-qa-staff-browser.log"
+  },
+  {
+    "label": "design-styles-browser",
+    "status": 1,
+    "outcome": "FAILED",
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/baseline-retry-design-styles-browser.log"
+  },
+  {
+    "label": "website-pages",
+    "status": 1,
+    "outcome": "FAILED",
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/baseline-retry-website-pages.log"
+  },
+  {
+    "label": "media-api",
+    "status": 0,
+    "outcome": "PASS-WITH-WARNING",
+    "reason": "passed, then hung at exit",
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/baseline-retry-media-api.log"
+  },
+  {
+    "label": "uniqueness-api",
+    "status": 0,
+    "outcome": "PASS-WITH-WARNING",
+    "reason": "passed, then hung at exit",
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/baseline-retry-uniqueness-api.log"
+  }
+]

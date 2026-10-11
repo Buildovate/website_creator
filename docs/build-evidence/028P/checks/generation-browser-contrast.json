@@ -1,0 +1,1169 @@
+[
+  {
+    "file": "C:/Users/joe/website_creator/docs/build-evidence/023/screen-phone.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "text": {
+      "contrasts": [
+        {
+          "tag": "P",
+          "cls": "",
+          "parent": "panel generation-panel bv-panel",
+          "text": "Saved choices stay put until you deliberately change them. Publication is s",
+          "fg": "rgb(75, 89, 103)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 7.182,
+          "minimum": 4.5,
+          "font": 14.5,
+          "pass": true
+        },
+        {
+          "tag": "DIV",
+          "cls": "",
+          "parent": "panel generation-panel bv-panel",
+          "text": "Design locks saved. Preview the draft. Open private preview",
+          "fg": "rgb(21, 33, 43)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 16.351,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "parent": "",
+          "text": "Open private preview",
+          "fg": "rgb(30, 91, 184)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.474,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "P",
+          "cls": "muted",
+          "parent": "",
+          "text": "You have changes that aren’t live yet",
+          "fg": "rgb(75, 89, 103)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 7.182,
+          "minimum": 4.5,
+          "font": 14.5,
+          "pass": true
+        },
+        {
+          "tag": "H3",
+          "cls": "",
+          "parent": "",
+          "text": "Choices to keep when we refresh your site",
+          "fg": "rgb(21, 33, 43)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 16.351,
+          "minimum": 4.5,
+          "font": 18,
+          "pass": true
+        },
+        {
+          "tag": "P",
+          "cls": "",
+          "parent": "",
+          "text": "A checked box keeps that choice. Hero media, business facts, services and p",
+          "fg": "rgb(75, 89, 103)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 7.182,
+          "minimum": 4.5,
+          "font": 14.5,
+          "pass": true
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "parent": "generation-overview",
+          "text": "The look of your site",
+          "fg": "rgb(75, 89, 103)",
+          "bg": [
+            247,
+            245,
+            241
+          ],
+          "ratio": 6.596,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "parent": "generation-overview",
+          "text": "How pages are arranged",
+          "fg": "rgb(75, 89, 103)",
+          "bg": [
+            247,
+            245,
+            241
+          ],
+          "ratio": 6.596,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "parent": "generation-overview",
+          "text": "Motion and transitions",
+          "fg": "rgb(75, 89, 103)",
+          "bg": [
+            247,
+            245,
+            241
+          ],
+          "ratio": 6.596,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "parent": "generation-overview",
+          "text": "Your opening story",
+          "fg": "rgb(75, 89, 103)",
+          "bg": [
+            247,
+            245,
+            241
+          ],
+          "ratio": 6.596,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "parent": "generation-overview",
+          "text": "Photos and written content",
+          "fg": "rgb(75, 89, 103)",
+          "bg": [
+            247,
+            245,
+            241
+          ],
+          "ratio": 6.596,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "SUMMARY",
+          "cls": "",
+          "parent": "generation-advanced",
+          "text": "Advanced · individual choices",
+          "fg": "rgb(21, 33, 43)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 16.351,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "parent": "save-bar",
+          "text": "Locks are saved with this draft.",
+          "fg": "rgb(16, 48, 77)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.531,
+          "minimum": 4.5,
+          "font": 13,
+          "pass": true
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "bv-button",
+          "parent": "",
+          "text": "Regenerate unlocked choices",
+          "fg": "rgb(16, 48, 77)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.531,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "SUMMARY",
+          "cls": "",
+          "parent": "",
+          "text": "Current choices and asset references",
+          "fg": "rgb(21, 33, 43)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 16.351,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "SUMMARY",
+          "cls": "",
+          "parent": "",
+          "text": "Creative production · Not connected",
+          "fg": "rgb(21, 33, 43)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 16.351,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "primary bv-button bv-button-primary",
+          "parent": "platform-action-dock",
+          "text": "Save design locks",
+          "fg": "rgb(255, 255, 255)",
+          "bg": [
+            27,
+            68,
+            104
+          ],
+          "ratio": 10.129,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "primary bv-button",
+          "parent": "platform-action-dock",
+          "text": "Publish changes",
+          "fg": "rgb(16, 48, 77)",
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.531,
+          "minimum": 4.5,
+          "font": 16,
+          "pass": true
+        }
+      ],
+      "review": [],
+      "header": [],
+      "overflow": 0
+    },
+    "controls": {
+      "borders": [
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "A",
+          "side": "Top",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "A",
+          "side": "Right",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "A",
+          "side": "Bottom",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "A",
+          "side": "Left",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "A",
+          "side": "Top",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "A",
+          "side": "Right",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "A",
+          "side": "Bottom",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "A",
+          "side": "Left",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button",
+          "tag": "BUTTON",
+          "side": "Top",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button",
+          "tag": "BUTTON",
+          "side": "Right",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button",
+          "tag": "BUTTON",
+          "side": "Bottom",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button",
+          "tag": "BUTTON",
+          "side": "Left",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "BUTTON",
+          "side": "Top",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "BUTTON",
+          "side": "Right",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "BUTTON",
+          "side": "Bottom",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "secondary bv-button",
+          "tag": "BUTTON",
+          "side": "Left",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-field",
+          "tag": "SELECT",
+          "side": "Top",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-field",
+          "tag": "SELECT",
+          "side": "Right",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-field",
+          "tag": "SELECT",
+          "side": "Bottom",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-field",
+          "tag": "SELECT",
+          "side": "Left",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Top",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Right",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Bottom",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Left",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Top",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Right",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Bottom",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Left",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Top",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Right",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Bottom",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Left",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            245,
+            243,
+            238
+          ],
+          "ratio": 3.391,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Top",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.761,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Right",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.761,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Bottom",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.761,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "bv-button",
+          "tag": "BUTTON",
+          "side": "Left",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.761,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button bv-button-primary",
+          "tag": "BUTTON",
+          "side": "Top",
+          "color": "rgb(16, 48, 77)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.531,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button bv-button-primary",
+          "tag": "BUTTON",
+          "side": "Right",
+          "color": "rgb(16, 48, 77)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.531,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button bv-button-primary",
+          "tag": "BUTTON",
+          "side": "Bottom",
+          "color": "rgb(16, 48, 77)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.531,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button bv-button-primary",
+          "tag": "BUTTON",
+          "side": "Left",
+          "color": "rgb(16, 48, 77)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.531,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button",
+          "tag": "BUTTON",
+          "side": "Top",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.761,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button",
+          "tag": "BUTTON",
+          "side": "Right",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.761,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button",
+          "tag": "BUTTON",
+          "side": "Bottom",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.761,
+          "pass": true
+        },
+        {
+          "id": "",
+          "cls": "primary bv-button",
+          "tag": "BUTTON",
+          "side": "Left",
+          "color": "rgb(138, 131, 117)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 3.761,
+          "pass": true
+        }
+      ],
+      "targets": [
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "skip",
+          "text": "Skip to workspace",
+          "width": 156.25,
+          "height": 53.1875,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "brand",
+          "text": "b buildovateWEBSITES",
+          "width": 358,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "id": "",
+          "cls": "",
+          "text": "Workspace⌄",
+          "width": 173,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "cls": "bv-button",
+          "text": "Overview",
+          "width": 173,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "cls": "active bv-button",
+          "text": "Websites",
+          "width": 173,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "secondary bv-button",
+          "text": "Preview draft ↗",
+          "width": 114,
+          "height": 63.59375,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "secondary bv-button",
+          "text": "View published ↗",
+          "width": 114,
+          "height": 84.390625,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "cls": "primary bv-button",
+          "text": "Publish changes",
+          "width": 114,
+          "height": 63.59375,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "cls": "secondary bv-button",
+          "text": "Unpublish",
+          "width": 103.984375,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "SELECT",
+          "id": "",
+          "cls": "bv-field",
+          "text": "Launch PadQuestionnaireHeroEditorPagesBusinessOwner photoDes",
+          "width": 358,
+          "height": 47,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "cls": "bv-button",
+          "text": "Look of your site",
+          "width": 155.03125,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "cls": "bv-button",
+          "text": "Design locks",
+          "width": 126.40625,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "cls": "bv-button",
+          "text": "Creative direction",
+          "width": 163.640625,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "DIV",
+          "id": "generation-status",
+          "cls": "",
+          "text": "Design locks saved. Preview the draft. Open private preview",
+          "width": 324,
+          "height": 67.1875,
+          "disabled": false,
+          "tabIndex": -1
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "",
+          "text": "Open private preview",
+          "width": 145.046875,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "id": "",
+          "cls": "",
+          "text": "Advanced · individual choices",
+          "width": 324,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "cls": "bv-button",
+          "text": "Regenerate unlocked choices",
+          "width": 241.046875,
+          "height": 44,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "id": "",
+          "cls": "",
+          "text": "Current choices and asset references",
+          "width": 324,
+          "height": 47.1875,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "SUMMARY",
+          "id": "",
+          "cls": "",
+          "text": "Creative production · Not connected",
+          "width": 324,
+          "height": 47.1875,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "cls": "primary bv-button bv-button-primary",
+          "text": "Save design locks",
+          "width": 185,
+          "height": 52,
+          "disabled": false,
+          "tabIndex": 0
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "cls": "primary bv-button",
+          "text": "Publish changes",
+          "width": 169,
+          "height": 52,
+          "disabled": false,
+          "tabIndex": 0
+        }
+      ],
+      "fonts": [
+        {
+          "family": "Barlow",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Barlow",
+          "weight": "500",
+          "status": "loaded"
+        },
+        {
+          "family": "Barlow",
+          "weight": "600",
+          "status": "loaded"
+        },
+        {
+          "family": "Barlow",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "Barlow Condensed",
+          "weight": "700",
+          "status": "loaded"
+        },
+        {
+          "family": "IBM Plex Mono",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "bodyFont": "Barlow, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif"
+    }
+  }
+]

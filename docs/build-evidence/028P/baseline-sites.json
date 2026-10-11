@@ -1,0 +1,4821 @@
+{
+  "phase": "baseline",
+  "baseCommit": "49b032eefdda23a7e7a66f9031c4f3d4f26c7271",
+  "html": [
+    {
+      "kit": "roofing",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-roofing-current",
+      "status": 200,
+      "sha256": "112db057f70b26b34996516aa840d951cd2c33245e3564b7668e2014a58606a1",
+      "file": "baseline-html/roofing-current-home.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-roofing-current/legal/privacy",
+      "status": 200,
+      "sha256": "ad7892d488efe52b6fec5911de599dc6a3f8a14a68944089c465fbf0f009bc5a",
+      "file": "baseline-html/roofing-current-legal-privacy.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-roofing-current/legal/terms",
+      "status": 200,
+      "sha256": "39402b9d6a83db1996133712b66fb217f95d74846856fca70d2481c8d4ef106c",
+      "file": "baseline-html/roofing-current-legal-terms.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-roofing-bold",
+      "status": 200,
+      "sha256": "ab79410873e5303081702645e5dce936a2eefa156d4b09eb0d8ded6065fd2c45",
+      "file": "baseline-html/roofing-bold-home.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-roofing-bold/legal/privacy",
+      "status": 200,
+      "sha256": "c56750ee1722af9ef2d943c6bfab950efba6caae9829c5e5c95721a5105a769f",
+      "file": "baseline-html/roofing-bold-legal-privacy.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-roofing-bold/legal/terms",
+      "status": 200,
+      "sha256": "77cac2e5495ef05a868d9936d29a75a54b5e40800000eafdb5fab7adcbd287a0",
+      "file": "baseline-html/roofing-bold-legal-terms.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-roofing-fresh",
+      "status": 200,
+      "sha256": "1fe765d1465f598a6558615bb06a4734cafb16b047f2014286d743c7167e27b5",
+      "file": "baseline-html/roofing-fresh-home.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-roofing-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "ce4f848679451c2fc31ed975884bc32829b87259d1fa5e2698588a9d684bcb4f",
+      "file": "baseline-html/roofing-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-roofing-fresh/legal/terms",
+      "status": 200,
+      "sha256": "69382c1f1857bbd8925f8f2484811b5a6fac3b7e91f0833f7875692d0868a165",
+      "file": "baseline-html/roofing-fresh-legal-terms.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-roofing-classic",
+      "status": 200,
+      "sha256": "903c805ee87e06f4a77fa4d6426511e75617dc4fba82db15804ef39307549a29",
+      "file": "baseline-html/roofing-classic-home.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-roofing-classic/legal/privacy",
+      "status": 200,
+      "sha256": "0864d4027f0ab8d7edf80df2e227700d1988679935539a3c2cda9bcbf2ddcfc8",
+      "file": "baseline-html/roofing-classic-legal-privacy.html"
+    },
+    {
+      "kit": "roofing",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-roofing-classic/legal/terms",
+      "status": 200,
+      "sha256": "afe12e8dc8a220eafa5d136683b696b4cd12d99c3d1b1f4a25926d359fcdf691",
+      "file": "baseline-html/roofing-classic-legal-terms.html"
+    },
+    {
+      "kit": "patios",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-patios-current",
+      "status": 200,
+      "sha256": "7b9336578c8edd8aa9da4b4d64e7df1390857436d33655ccf8123fea2cdc5f34",
+      "file": "baseline-html/patios-current-home.html"
+    },
+    {
+      "kit": "patios",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-patios-current/legal/privacy",
+      "status": 200,
+      "sha256": "59e8f530cddaba84cba220a1b3d51ab7be336ab1ae46eb4a9b22b63976932f75",
+      "file": "baseline-html/patios-current-legal-privacy.html"
+    },
+    {
+      "kit": "patios",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-patios-current/legal/terms",
+      "status": 200,
+      "sha256": "5ab949098cbd16462b4301878546899e217250e3d7cab013a6874a01e1fe9687",
+      "file": "baseline-html/patios-current-legal-terms.html"
+    },
+    {
+      "kit": "patios",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-patios-bold",
+      "status": 200,
+      "sha256": "bd4a33f85f4548ec9faf0b14d849849e0e9e9edc21b018efa2c5125a94f97174",
+      "file": "baseline-html/patios-bold-home.html"
+    },
+    {
+      "kit": "patios",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-patios-bold/legal/privacy",
+      "status": 200,
+      "sha256": "0dd106ee34f7729d4e0379cd9a5779f6974210b380f008c4115a71801f107311",
+      "file": "baseline-html/patios-bold-legal-privacy.html"
+    },
+    {
+      "kit": "patios",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-patios-bold/legal/terms",
+      "status": 200,
+      "sha256": "56c1814637a1b25da55f50355900850b48b6596ad609a12d69baf626b8d09bec",
+      "file": "baseline-html/patios-bold-legal-terms.html"
+    },
+    {
+      "kit": "patios",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-patios-fresh",
+      "status": 200,
+      "sha256": "d84489cfacf95ad93079ae715ad1ff3c8860ce50a0c59b736bbbc4625d1c2ccb",
+      "file": "baseline-html/patios-fresh-home.html"
+    },
+    {
+      "kit": "patios",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-patios-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "1c2588a8ce4bc3ff2a1141a560abd563fc9a66f93c485d55a3f2f18efa0c9661",
+      "file": "baseline-html/patios-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "patios",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-patios-fresh/legal/terms",
+      "status": 200,
+      "sha256": "752661276de0bc95433f80bd866bd504349fb08121b6e4dec96f1b46b48a2598",
+      "file": "baseline-html/patios-fresh-legal-terms.html"
+    },
+    {
+      "kit": "patios",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-patios-classic",
+      "status": 200,
+      "sha256": "e17114853ec75c72a4e735e3ea200c90ae82565510a30e515961aa0d1dfcf60f",
+      "file": "baseline-html/patios-classic-home.html"
+    },
+    {
+      "kit": "patios",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-patios-classic/legal/privacy",
+      "status": 200,
+      "sha256": "2ec56c9202e4d63d25686ccc890be98f5a646ea8693c6229a0b0ee1f932f30eb",
+      "file": "baseline-html/patios-classic-legal-privacy.html"
+    },
+    {
+      "kit": "patios",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-patios-classic/legal/terms",
+      "status": 200,
+      "sha256": "004fff0abef463274c230a8c734738544fa71213ac92e377238e4db14850389f",
+      "file": "baseline-html/patios-classic-legal-terms.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-plumbing-current",
+      "status": 200,
+      "sha256": "a918e5fafc0674d1585a19f2c32d739213ef8bc302186ea3bb51b1f4d981e904",
+      "file": "baseline-html/plumbing-current-home.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-plumbing-current/legal/privacy",
+      "status": 200,
+      "sha256": "3d06b70c35f94f58566e0bade245dde9fab7a81ad545668a05e388c4d92022ae",
+      "file": "baseline-html/plumbing-current-legal-privacy.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-plumbing-current/legal/terms",
+      "status": 200,
+      "sha256": "2a10ecd5ea3c3cbf639155ea181c8e8be77cde06192a2dff5125726925e49bb6",
+      "file": "baseline-html/plumbing-current-legal-terms.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-plumbing-bold",
+      "status": 200,
+      "sha256": "f450b936278451e29b2db868807b4faa9d405f21cb35431d7f62314dba13a6d3",
+      "file": "baseline-html/plumbing-bold-home.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-plumbing-bold/legal/privacy",
+      "status": 200,
+      "sha256": "edadeef79d7ac756adb9dd580bf79de40d105a437b7870f155725df2f55f9b35",
+      "file": "baseline-html/plumbing-bold-legal-privacy.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-plumbing-bold/legal/terms",
+      "status": 200,
+      "sha256": "49e874e6f8d1ef4762c2eca445509a4640fa7b4ca253d3c621078906048a835d",
+      "file": "baseline-html/plumbing-bold-legal-terms.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-plumbing-fresh",
+      "status": 200,
+      "sha256": "1396b64b2a2f428efdd3b3fbe5641ce513cac30a0142e2c3c0bb4869b9f01b0e",
+      "file": "baseline-html/plumbing-fresh-home.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-plumbing-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "834da202c9521756e14a9f9c2ed8eee77789fdce59327bdfa9d19e7928304971",
+      "file": "baseline-html/plumbing-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-plumbing-fresh/legal/terms",
+      "status": 200,
+      "sha256": "5ea76e9c55d059339daf9c2f8ba3bc8de184813922b19aa6465192628bb04e28",
+      "file": "baseline-html/plumbing-fresh-legal-terms.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-plumbing-classic",
+      "status": 200,
+      "sha256": "59d43de38dce7953e1d3415cad2bd347ac315b19e1468c9afb5aa0c1e86f7cb9",
+      "file": "baseline-html/plumbing-classic-home.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-plumbing-classic/legal/privacy",
+      "status": 200,
+      "sha256": "716e2f2288d7857d198a9a5c054d523c86020289adcbd01e96b6fb4fda01c194",
+      "file": "baseline-html/plumbing-classic-legal-privacy.html"
+    },
+    {
+      "kit": "plumbing",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-plumbing-classic/legal/terms",
+      "status": 200,
+      "sha256": "b3150a7c8ffd82d97adc8a0ad23ea32ccd873d8f4a3fef8e63c8aef95cdb598a",
+      "file": "baseline-html/plumbing-classic-legal-terms.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-hvac-current",
+      "status": 200,
+      "sha256": "d46ba3b9ddbd40c15702a452ad96458fbeb1f807edb6ea02abbea1fe9f974b80",
+      "file": "baseline-html/hvac-current-home.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-hvac-current/legal/privacy",
+      "status": 200,
+      "sha256": "7227368bdd92494340245a9062b6aa33eb4bd1bcc134e6242275fc1658576a4a",
+      "file": "baseline-html/hvac-current-legal-privacy.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-hvac-current/legal/terms",
+      "status": 200,
+      "sha256": "c8e15c758cfb6b5d8e66ed6d0926a7118555c0937a8b36fcaa83d9898d592524",
+      "file": "baseline-html/hvac-current-legal-terms.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-hvac-bold",
+      "status": 200,
+      "sha256": "67767f9b46dc2ec70b827bc4813c962218a6c391ba6aec1d63866e952bfdf79b",
+      "file": "baseline-html/hvac-bold-home.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-hvac-bold/legal/privacy",
+      "status": 200,
+      "sha256": "7cfdac9e15467302d98cc8c6ad136132f29a25d4eef99318321935c172e73301",
+      "file": "baseline-html/hvac-bold-legal-privacy.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-hvac-bold/legal/terms",
+      "status": 200,
+      "sha256": "e7895df2723cd93f479716d3e9acf17e68fbd7bee9e6b0a06937728e12bfc1b4",
+      "file": "baseline-html/hvac-bold-legal-terms.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-hvac-fresh",
+      "status": 200,
+      "sha256": "663a4001133c8fba1b681400f18056dc8672ff0af25379dba8de5e2eab1bdf2b",
+      "file": "baseline-html/hvac-fresh-home.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-hvac-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "0eab4cd7227fc87f654ba59abd526925d3bc8ea2e5b56189c11d93549eef4e54",
+      "file": "baseline-html/hvac-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-hvac-fresh/legal/terms",
+      "status": 200,
+      "sha256": "440e218bda67f04b47e9a83cc5eceec0b26595548ece03cd668224efed675a4c",
+      "file": "baseline-html/hvac-fresh-legal-terms.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-hvac-classic",
+      "status": 200,
+      "sha256": "075807738bc47fa9a23162f0a3cedb01854c13f5a246943dd8431aeac49e0e9c",
+      "file": "baseline-html/hvac-classic-home.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-hvac-classic/legal/privacy",
+      "status": 200,
+      "sha256": "a40a3a8f55aa14abb8d628f0027887e65b467be8d8a6323861b114d0ac42a16e",
+      "file": "baseline-html/hvac-classic-legal-privacy.html"
+    },
+    {
+      "kit": "hvac",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-hvac-classic/legal/terms",
+      "status": 200,
+      "sha256": "f571afdc5f8037dc9c2129c8f180086b6f08c534abd2a5f895737c6349daba72",
+      "file": "baseline-html/hvac-classic-legal-terms.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-electrical-current",
+      "status": 200,
+      "sha256": "f9dd4ae8262312bbbe1a76a165524c07e4997788eec147818a5ba577cadab45c",
+      "file": "baseline-html/electrical-current-home.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-electrical-current/legal/privacy",
+      "status": 200,
+      "sha256": "3d59de5808e4dc23383485810a30405475206f7795bc450c65e7e0b74501c88f",
+      "file": "baseline-html/electrical-current-legal-privacy.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-electrical-current/legal/terms",
+      "status": 200,
+      "sha256": "b456716caef9d9c34cc95c4a382d80f0daeea20385cfdb3198a1627f53723c39",
+      "file": "baseline-html/electrical-current-legal-terms.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-electrical-bold",
+      "status": 200,
+      "sha256": "89598786db944c15bf39adb8a7490f2fff06a168bc29300943736a63a65e5066",
+      "file": "baseline-html/electrical-bold-home.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-electrical-bold/legal/privacy",
+      "status": 200,
+      "sha256": "5d445de77bc865e91bf2bc7b99f6362d347d9abfee7c10cc9f08b1310cc0aed1",
+      "file": "baseline-html/electrical-bold-legal-privacy.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-electrical-bold/legal/terms",
+      "status": 200,
+      "sha256": "9b193acccef61140ee537e89bec68429d294c5b541cbc3cd1a0340c12b61d670",
+      "file": "baseline-html/electrical-bold-legal-terms.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-electrical-fresh",
+      "status": 200,
+      "sha256": "aedb37abb665289fe6285e7f9048710bf5137d791f8372c0cbdf0c68ae1e6de1",
+      "file": "baseline-html/electrical-fresh-home.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-electrical-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "fa4a563af34bc0b47d2a6517971b6234624480ec27c1dcc2261e0a88ed9b0a4c",
+      "file": "baseline-html/electrical-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-electrical-fresh/legal/terms",
+      "status": 200,
+      "sha256": "9acae26b6a9feab3ac1c821f429b8f965c9278ff30672d413408e126f0ebe440",
+      "file": "baseline-html/electrical-fresh-legal-terms.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-electrical-classic",
+      "status": 200,
+      "sha256": "3b6bdfa7ee391b56fec4a1fcb9ab3d8e517fec90de1af0ccb42c715f25c0543b",
+      "file": "baseline-html/electrical-classic-home.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-electrical-classic/legal/privacy",
+      "status": 200,
+      "sha256": "5e161005d16f0240541e258cfb46eb3b7ece79a8d8930dc975d86693b7485877",
+      "file": "baseline-html/electrical-classic-legal-privacy.html"
+    },
+    {
+      "kit": "electrical",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-electrical-classic/legal/terms",
+      "status": 200,
+      "sha256": "e895a07e5465a718117053c0b81bf287b1c9cfb53ad993f29549a14f1a38aaa8",
+      "file": "baseline-html/electrical-classic-legal-terms.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-landscaping-current",
+      "status": 200,
+      "sha256": "92bac95c3c3674874f759617e23aaf07561e0b09c9ae24301c4faa5811991fbd",
+      "file": "baseline-html/landscaping-current-home.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-landscaping-current/legal/privacy",
+      "status": 200,
+      "sha256": "b08a975862a77b8f3c1e6b8b6a082bd1372a0d04ff75b59440457e19e0f83e5d",
+      "file": "baseline-html/landscaping-current-legal-privacy.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-landscaping-current/legal/terms",
+      "status": 200,
+      "sha256": "482b4f03de8534323889ecf5f095b61ec64a8c85df92781733113bb06e112fec",
+      "file": "baseline-html/landscaping-current-legal-terms.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-landscaping-bold",
+      "status": 200,
+      "sha256": "8a8ecc8884bc7d8ed4a8c313a1ae726cf922d1472a324ebf4d9dd668f1a7e775",
+      "file": "baseline-html/landscaping-bold-home.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-landscaping-bold/legal/privacy",
+      "status": 200,
+      "sha256": "8e3f6375046b2ea10a5e25b3097e1b9a7778f59b2e9fe3d2ba51cb760e7386a3",
+      "file": "baseline-html/landscaping-bold-legal-privacy.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-landscaping-bold/legal/terms",
+      "status": 200,
+      "sha256": "5930ece65e295e1660c2861090b1a84ade41bd70eda8294a79c2b966073cf7f2",
+      "file": "baseline-html/landscaping-bold-legal-terms.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-landscaping-fresh",
+      "status": 200,
+      "sha256": "f440bdf53092b5088720904505162ed13ad4714de711ff4c84494cbbc8156158",
+      "file": "baseline-html/landscaping-fresh-home.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-landscaping-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "1aa8192b4bfda24cc4b9062b9bbd27aa62047c3dc7201391e7fe2c7de1805d2f",
+      "file": "baseline-html/landscaping-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-landscaping-fresh/legal/terms",
+      "status": 200,
+      "sha256": "eb7234d0d39f77d276f0410c71d022f8c3024be44b9569cbe969e389ce60b51b",
+      "file": "baseline-html/landscaping-fresh-legal-terms.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-landscaping-classic",
+      "status": 200,
+      "sha256": "dc96442e3f231230e332657073b03195c0aa278b6d9069bbbd97d61310675145",
+      "file": "baseline-html/landscaping-classic-home.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-landscaping-classic/legal/privacy",
+      "status": 200,
+      "sha256": "f3de1b185fd4b4fa454a2a4cc92b8674c535e89115a458d902ec4f81ed08ca7d",
+      "file": "baseline-html/landscaping-classic-legal-privacy.html"
+    },
+    {
+      "kit": "landscaping",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-landscaping-classic/legal/terms",
+      "status": 200,
+      "sha256": "d0401ad48135e95b408d9af2363da4a30ec903d4ab72d8b31d1649b9a9e91cdc",
+      "file": "baseline-html/landscaping-classic-legal-terms.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-general-contractors-current",
+      "status": 200,
+      "sha256": "913feff78e351e1c2a0aff67d5cf8047f48293cf988d1efd3ebd565cdbe81e6f",
+      "file": "baseline-html/general-contractors-current-home.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-general-contractors-current/legal/privacy",
+      "status": 200,
+      "sha256": "85c43759df160c54c2aec1a476e6241d114ed9fd63e03dc2fb1f54c3d5e3a35a",
+      "file": "baseline-html/general-contractors-current-legal-privacy.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-general-contractors-current/legal/terms",
+      "status": 200,
+      "sha256": "b790a19f49b8174979fbc9bccd50d93691e70911374751f7350c2a6c0d17217e",
+      "file": "baseline-html/general-contractors-current-legal-terms.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-general-contractors-bold",
+      "status": 200,
+      "sha256": "8ba988e8994bfb79491e7cd0a4136e5587a6ee04a53d221f65afdea27c7ba976",
+      "file": "baseline-html/general-contractors-bold-home.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-general-contractors-bold/legal/privacy",
+      "status": 200,
+      "sha256": "fc7e1ee6ecafa68c6e5120efd4087548b8f0792df6afe2ff7df4906112b2e8c4",
+      "file": "baseline-html/general-contractors-bold-legal-privacy.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-general-contractors-bold/legal/terms",
+      "status": 200,
+      "sha256": "861a32aa58b6d5db02f746deb0ea69d909d0181e7b522a24daea1cfa54cf1225",
+      "file": "baseline-html/general-contractors-bold-legal-terms.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-general-contractors-fresh",
+      "status": 200,
+      "sha256": "f7a9c029a7cb41bef37377244ee3ee8dc27c05b9d01bee60d9a8d935fc24338a",
+      "file": "baseline-html/general-contractors-fresh-home.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-general-contractors-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "af32c0d5270a99d49311199d2646af41e5934930ed5c274a7933eca712f7cf30",
+      "file": "baseline-html/general-contractors-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-general-contractors-fresh/legal/terms",
+      "status": 200,
+      "sha256": "23998cabbff52d4daf1a965e933fc23e3a1e0e2985b9164f5cca28c8b8bc2903",
+      "file": "baseline-html/general-contractors-fresh-legal-terms.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-general-contractors-classic",
+      "status": 200,
+      "sha256": "9476eaff48df0f19666cf47890882ad6031e98bebee14b5a165bc7692d9abe42",
+      "file": "baseline-html/general-contractors-classic-home.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-general-contractors-classic/legal/privacy",
+      "status": 200,
+      "sha256": "cafe75f43b4e361cb73fc98598c0da8ae0dae15d9b9a3aba4174007c551ffbcb",
+      "file": "baseline-html/general-contractors-classic-legal-privacy.html"
+    },
+    {
+      "kit": "general-contractors",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-general-contractors-classic/legal/terms",
+      "status": 200,
+      "sha256": "9bb90912856cf5d18ec71206bce6a6e5899ee9db701b70422a7bd3a3d57ea097",
+      "file": "baseline-html/general-contractors-classic-legal-terms.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-flooring-current",
+      "status": 200,
+      "sha256": "f648282372c478378d682e16a03a85132cecc1ea66626841740c183ce44d2276",
+      "file": "baseline-html/flooring-current-home.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-flooring-current/legal/privacy",
+      "status": 200,
+      "sha256": "565e7cd076e82fae6bfb0393d73e8444f9fb85e5f750cb7ae7d217308fc76470",
+      "file": "baseline-html/flooring-current-legal-privacy.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-flooring-current/legal/terms",
+      "status": 200,
+      "sha256": "9366bd19dfa425248aaaf195b1eea947d388032c9188c1dfd4b0ca83dc92dd3a",
+      "file": "baseline-html/flooring-current-legal-terms.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-flooring-bold",
+      "status": 200,
+      "sha256": "36605035d64e2a685f966cef45d7045b06dbce17af7cb110ad5d182ce40096bc",
+      "file": "baseline-html/flooring-bold-home.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-flooring-bold/legal/privacy",
+      "status": 200,
+      "sha256": "3fbe32a2b56db01ed89dab4095bea239409c100807c1698aa980bd2715d3facd",
+      "file": "baseline-html/flooring-bold-legal-privacy.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-flooring-bold/legal/terms",
+      "status": 200,
+      "sha256": "f49092d9f332f452bf12c742e0cc0fd4b54f758b183ad35e15cf75e8d6e857ac",
+      "file": "baseline-html/flooring-bold-legal-terms.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-flooring-fresh",
+      "status": 200,
+      "sha256": "1306c447d1ea1f78084f7d17b1ee2242490f33ce4827a8d3e9cecbff19d68a4d",
+      "file": "baseline-html/flooring-fresh-home.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-flooring-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "fa7cf0c29b5b08330f32c70fae80a0323103e2fc94b8821bfa783b452e4f2167",
+      "file": "baseline-html/flooring-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-flooring-fresh/legal/terms",
+      "status": 200,
+      "sha256": "9124217ddd2642eb90fd37c65ebb0cc11e16866d7c91dfa72e0e429e029678ad",
+      "file": "baseline-html/flooring-fresh-legal-terms.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-flooring-classic",
+      "status": 200,
+      "sha256": "95d7466e02829a71a67f5c247884814fbd67d88b3f0d1310a477110dbe3e6a8d",
+      "file": "baseline-html/flooring-classic-home.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-flooring-classic/legal/privacy",
+      "status": 200,
+      "sha256": "44d7510678ae8c68e2e11fffad2952a9ba946d72a9fb19508208a06e609e4fbd",
+      "file": "baseline-html/flooring-classic-legal-privacy.html"
+    },
+    {
+      "kit": "flooring",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-flooring-classic/legal/terms",
+      "status": 200,
+      "sha256": "7da4f9e5ccb1c16e3b48b7d727ac86c689eff1df48fd43d264c1122360db8f9d",
+      "file": "baseline-html/flooring-classic-legal-terms.html"
+    },
+    {
+      "kit": "painting",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-painting-current",
+      "status": 200,
+      "sha256": "80f9307b152777ce7aa38d0f6a3018405cfc8b3d7816eec399715666f51a5099",
+      "file": "baseline-html/painting-current-home.html"
+    },
+    {
+      "kit": "painting",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-painting-current/legal/privacy",
+      "status": 200,
+      "sha256": "3f9101f83394b4cc5181ca30adf6f9162bc63e9b242f408b16b01b91cceb9e44",
+      "file": "baseline-html/painting-current-legal-privacy.html"
+    },
+    {
+      "kit": "painting",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-painting-current/legal/terms",
+      "status": 200,
+      "sha256": "68412326981fdcd398adebd1351fbfaab3c4518e44c99f31aa120ccd5757483d",
+      "file": "baseline-html/painting-current-legal-terms.html"
+    },
+    {
+      "kit": "painting",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-painting-bold",
+      "status": 200,
+      "sha256": "b4a3b46bbf2eae8f627018dcb0efdc31e6706fd2fc75024cb173fe610268ac33",
+      "file": "baseline-html/painting-bold-home.html"
+    },
+    {
+      "kit": "painting",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-painting-bold/legal/privacy",
+      "status": 200,
+      "sha256": "6aaaa72f56a4a129137cceef19af609fb90b60c2f3984418cb8d0b1514ebc64a",
+      "file": "baseline-html/painting-bold-legal-privacy.html"
+    },
+    {
+      "kit": "painting",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-painting-bold/legal/terms",
+      "status": 200,
+      "sha256": "f904eb05bc1824fe4f931b297df67a7ac90512954f67b4ef61b0e36c9f6a0737",
+      "file": "baseline-html/painting-bold-legal-terms.html"
+    },
+    {
+      "kit": "painting",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-painting-fresh",
+      "status": 200,
+      "sha256": "0898850480ec94b449627189d1b4af831e7bf408df79c2edf990398d6c475188",
+      "file": "baseline-html/painting-fresh-home.html"
+    },
+    {
+      "kit": "painting",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-painting-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "013b56e3b6f3ece4b80d2f667f88e23512a2ea238c073a8adef8097a896e3b13",
+      "file": "baseline-html/painting-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "painting",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-painting-fresh/legal/terms",
+      "status": 200,
+      "sha256": "ad413d8ed390718a2dc5cef0e77e45f7df77180b12441173a312a3ca4b213d31",
+      "file": "baseline-html/painting-fresh-legal-terms.html"
+    },
+    {
+      "kit": "painting",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-painting-classic",
+      "status": 200,
+      "sha256": "bc89103d996d5d68475940884fadf3bc171fa599a22d85708bd6d390fa937049",
+      "file": "baseline-html/painting-classic-home.html"
+    },
+    {
+      "kit": "painting",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-painting-classic/legal/privacy",
+      "status": 200,
+      "sha256": "8146faceee0f30cc67dd96fe89d6b1d2877f07f93fdae361e7f677cbdd3414a4",
+      "file": "baseline-html/painting-classic-legal-privacy.html"
+    },
+    {
+      "kit": "painting",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-painting-classic/legal/terms",
+      "status": 200,
+      "sha256": "711b773e08c45e29aeac0979bc610cd6981fb270e2a4bee5502b3e38f80245d8",
+      "file": "baseline-html/painting-classic-legal-terms.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-fencing-current",
+      "status": 200,
+      "sha256": "d4ded8296a719d1b87139acfd56f8587dedadcff4e85fdf0d4f1918639b7a96e",
+      "file": "baseline-html/fencing-current-home.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-fencing-current/legal/privacy",
+      "status": 200,
+      "sha256": "ccc22fb027ba8df2b108cb55dc5fd3343607bbd849274c508159685029aa8d75",
+      "file": "baseline-html/fencing-current-legal-privacy.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-fencing-current/legal/terms",
+      "status": 200,
+      "sha256": "4ebc6014b97b51ecc1576c2f04a8972669541f744d425d5b1af22b1d088b4335",
+      "file": "baseline-html/fencing-current-legal-terms.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-fencing-bold",
+      "status": 200,
+      "sha256": "6e3d88dde9c77a9b18b32e78d24043890e15f0134e99e90fde0af000f2556862",
+      "file": "baseline-html/fencing-bold-home.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-fencing-bold/legal/privacy",
+      "status": 200,
+      "sha256": "d55cd85f0ffa710f2a085ad224db1ef8babb76c28b02b0da1214e018c46e888f",
+      "file": "baseline-html/fencing-bold-legal-privacy.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-fencing-bold/legal/terms",
+      "status": 200,
+      "sha256": "930b7256299b84f17472c8d49648671c863765e81594a4482bf1231ae077e9c1",
+      "file": "baseline-html/fencing-bold-legal-terms.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-fencing-fresh",
+      "status": 200,
+      "sha256": "537ac7b1ed4e29144cd7ac5055390b08773c920aef4eaacfc056ae2820b071e3",
+      "file": "baseline-html/fencing-fresh-home.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-fencing-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "4fb91e2ed28e386f1907320a7b3e9d65ca76215c4c4540cc0789ee1444662bfd",
+      "file": "baseline-html/fencing-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-fencing-fresh/legal/terms",
+      "status": 200,
+      "sha256": "5d6603c20a08e026d0a21e321c9bdb79c6c36140060c05ace5b0354ac3d416b0",
+      "file": "baseline-html/fencing-fresh-legal-terms.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-fencing-classic",
+      "status": 200,
+      "sha256": "2ab69c07fb8dc444d8f6b99b2bf1e96423a65f6b263cd9025cac185b121c0ccf",
+      "file": "baseline-html/fencing-classic-home.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-fencing-classic/legal/privacy",
+      "status": 200,
+      "sha256": "83fd9e30e53d8cca193c3a7de9ab571bd3dfcc8dd811be6a40117c6074b63852",
+      "file": "baseline-html/fencing-classic-legal-privacy.html"
+    },
+    {
+      "kit": "fencing",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-fencing-classic/legal/terms",
+      "status": 200,
+      "sha256": "b2b605680f00741ca5192e7962f90829e89a27dec68643c2dc6e5183b1834991",
+      "file": "baseline-html/fencing-classic-legal-terms.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-garage-doors-current",
+      "status": 200,
+      "sha256": "4a9a921241d30a2a23c4c19c421da6db0d426bec0cbe209114d80998489bd79e",
+      "file": "baseline-html/garage-doors-current-home.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-garage-doors-current/legal/privacy",
+      "status": 200,
+      "sha256": "611445e700b01ba83f7e4647d58ac8d436d4babebcd46850111eaffccd041ecb",
+      "file": "baseline-html/garage-doors-current-legal-privacy.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-garage-doors-current/legal/terms",
+      "status": 200,
+      "sha256": "0eda491e5fd1732c36951671d2b6eddabff772da7f5fc99871678af758c5f188",
+      "file": "baseline-html/garage-doors-current-legal-terms.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-garage-doors-bold",
+      "status": 200,
+      "sha256": "e62bfdf8ed10258fb7d5616d19520b9fc502bc478d12d1af26122b703f4115d9",
+      "file": "baseline-html/garage-doors-bold-home.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-garage-doors-bold/legal/privacy",
+      "status": 200,
+      "sha256": "dc4772235d7fb06e952769574923ac5dc727e07f9f013ad115ab4e5f9ae31cff",
+      "file": "baseline-html/garage-doors-bold-legal-privacy.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-garage-doors-bold/legal/terms",
+      "status": 200,
+      "sha256": "e5930ea8d9b305ab0c07174a392b1a1904e17825c8cd7cd4060731a8cfa2bead",
+      "file": "baseline-html/garage-doors-bold-legal-terms.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-garage-doors-fresh",
+      "status": 200,
+      "sha256": "c05764713dd52ac9e9690d4b32210461aebcffaec70a7f62a25453702c656f88",
+      "file": "baseline-html/garage-doors-fresh-home.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-garage-doors-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "d1e40a9522987cb9a75c4050f87bfb25af79a92d37479de24fa729a1e5454f71",
+      "file": "baseline-html/garage-doors-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-garage-doors-fresh/legal/terms",
+      "status": 200,
+      "sha256": "a87e7ae95067fd6d7a1313b012643847a13ee81bffba042b6c55a52039edfd2c",
+      "file": "baseline-html/garage-doors-fresh-legal-terms.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-garage-doors-classic",
+      "status": 200,
+      "sha256": "9cb1608012c396cbaf2a2252efc519663e534d806ab58185a81fcba15d810a33",
+      "file": "baseline-html/garage-doors-classic-home.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-garage-doors-classic/legal/privacy",
+      "status": 200,
+      "sha256": "9e9970259cb7f3e34954d293c009de4a3adb9a1adaa519b7a552f55fede62fbf",
+      "file": "baseline-html/garage-doors-classic-legal-privacy.html"
+    },
+    {
+      "kit": "garage-doors",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-garage-doors-classic/legal/terms",
+      "status": 200,
+      "sha256": "918d786e536141a893b3e13ab68ed07909dbf6839a70fe63f53ad6d87f644ba8",
+      "file": "baseline-html/garage-doors-classic-legal-terms.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-pest-control-current",
+      "status": 200,
+      "sha256": "5bda95387314f5a10043d80ba07db89dacdc5d354f50f74d4d0e6ab5bce047f6",
+      "file": "baseline-html/pest-control-current-home.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-pest-control-current/legal/privacy",
+      "status": 200,
+      "sha256": "b7f78227183269ae6ecf03b7e9463e25dd877868fdfa3963dd025fda01baa078",
+      "file": "baseline-html/pest-control-current-legal-privacy.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-pest-control-current/legal/terms",
+      "status": 200,
+      "sha256": "4a4f50dc46d2de9e1da13c93348d54a38d537880aabc8ce99e52f8525b87e7b7",
+      "file": "baseline-html/pest-control-current-legal-terms.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-pest-control-bold",
+      "status": 200,
+      "sha256": "79b15514d86f24403ec4949f0319a8cadccf845d524f8cdeb5d5ca353fffadd9",
+      "file": "baseline-html/pest-control-bold-home.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-pest-control-bold/legal/privacy",
+      "status": 200,
+      "sha256": "4027e7d2a6de902aea74bc96800c89808625515ccc32e20362fddc50d01b9d2e",
+      "file": "baseline-html/pest-control-bold-legal-privacy.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-pest-control-bold/legal/terms",
+      "status": 200,
+      "sha256": "ebe18f9642f38f725f0d8f7a3c12301525fe27a637266c3a2ea25a36f50f3f9f",
+      "file": "baseline-html/pest-control-bold-legal-terms.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-pest-control-fresh",
+      "status": 200,
+      "sha256": "b3d2a34a102ef5a7c52955b6f7be96d6f6ead341e9091a0c95a974e066af8cc2",
+      "file": "baseline-html/pest-control-fresh-home.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-pest-control-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "b2913b61c7bc2f9820d8db2ddbf854a8c220cdc256d331a2fa5894763e8ec3fa",
+      "file": "baseline-html/pest-control-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-pest-control-fresh/legal/terms",
+      "status": 200,
+      "sha256": "940165e205936f6ff2b6e11d7aa798e824bbab1de6846f88b72917de3a4d0a48",
+      "file": "baseline-html/pest-control-fresh-legal-terms.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-pest-control-classic",
+      "status": 200,
+      "sha256": "8e2bec62070581554de3462f3ea05248d0b79143cd6f629164cbceda316bae75",
+      "file": "baseline-html/pest-control-classic-home.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-pest-control-classic/legal/privacy",
+      "status": 200,
+      "sha256": "22d3e64b34f37e51d0f224191ebf6c1beee0c17ad30f79f8668a374b73f26a58",
+      "file": "baseline-html/pest-control-classic-legal-privacy.html"
+    },
+    {
+      "kit": "pest-control",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-pest-control-classic/legal/terms",
+      "status": 200,
+      "sha256": "68091e598b0f23dff4d081099574a7e77f3b3246912587eec0672215bd2ad148",
+      "file": "baseline-html/pest-control-classic-legal-terms.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-windows-doors-current",
+      "status": 200,
+      "sha256": "9c5c4617c53d052ced1fb83a288676761c3ec85910c3545be6c958c4d4cd83ed",
+      "file": "baseline-html/windows-doors-current-home.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-windows-doors-current/legal/privacy",
+      "status": 200,
+      "sha256": "296f78e11d8f4e5e88d8a00b27bd53c1076b679d0936be889859080628421e7b",
+      "file": "baseline-html/windows-doors-current-legal-privacy.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-windows-doors-current/legal/terms",
+      "status": 200,
+      "sha256": "25920bd17c8acd4c7c00c9756b7a34cab273f5b4086b610d9f295ebb6e35205f",
+      "file": "baseline-html/windows-doors-current-legal-terms.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-windows-doors-bold",
+      "status": 200,
+      "sha256": "b48f7ba06e354b0ff1a7c960b06b0a08632514f3c2aeca025167ee61861f9354",
+      "file": "baseline-html/windows-doors-bold-home.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-windows-doors-bold/legal/privacy",
+      "status": 200,
+      "sha256": "45e31b42832e86a5fc4e9a5ce263e09efb20b0262c3ef7f202c58500ad204f24",
+      "file": "baseline-html/windows-doors-bold-legal-privacy.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-windows-doors-bold/legal/terms",
+      "status": 200,
+      "sha256": "0ced1fab78a72c53422dc7f01def7a2cca1d43540dc84064f65cfc19d3f4f950",
+      "file": "baseline-html/windows-doors-bold-legal-terms.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-windows-doors-fresh",
+      "status": 200,
+      "sha256": "eddca234ae643d09ad0281d7b6ecf8dbd66bb5e0b9f4fc9687beadad008fa0ca",
+      "file": "baseline-html/windows-doors-fresh-home.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-windows-doors-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "62785c2f7c7561d508befc8781c4229387520a34e4d1074306b223374e68f00d",
+      "file": "baseline-html/windows-doors-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-windows-doors-fresh/legal/terms",
+      "status": 200,
+      "sha256": "a662e702151911c38a60ec438e31ba23e7a0a4d9d9dab5efb41de6c60006f06b",
+      "file": "baseline-html/windows-doors-fresh-legal-terms.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-windows-doors-classic",
+      "status": 200,
+      "sha256": "cc1bd39a68b7b2dc9eccd474ae92a30b5fb98aa05f0766337471e993006873a9",
+      "file": "baseline-html/windows-doors-classic-home.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-windows-doors-classic/legal/privacy",
+      "status": 200,
+      "sha256": "b921035d9bbefe7f4cb06763de452da4892e43e3b62d22e0c076e0f92b7545e3",
+      "file": "baseline-html/windows-doors-classic-legal-privacy.html"
+    },
+    {
+      "kit": "windows-doors",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-windows-doors-classic/legal/terms",
+      "status": 200,
+      "sha256": "3ab7c6de9ba4eed9b6269769fb0e080d1e9e246fdca0c8882a05774e4bbe315e",
+      "file": "baseline-html/windows-doors-classic-legal-terms.html"
+    },
+    {
+      "kit": "solar",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-solar-current",
+      "status": 200,
+      "sha256": "b7ea40d673f82ff410e84f73c0be1e6cad0459f544cf8c2f22ea13ea80461185",
+      "file": "baseline-html/solar-current-home.html"
+    },
+    {
+      "kit": "solar",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-solar-current/legal/privacy",
+      "status": 200,
+      "sha256": "9a52b1fffd468fa858eccc6439c5e18b1603f85e690637005341060bb23c0783",
+      "file": "baseline-html/solar-current-legal-privacy.html"
+    },
+    {
+      "kit": "solar",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-solar-current/legal/terms",
+      "status": 200,
+      "sha256": "888e23a486c93c3374474bac66aa383b9528810ab6e398b5203de13a1042d655",
+      "file": "baseline-html/solar-current-legal-terms.html"
+    },
+    {
+      "kit": "solar",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-solar-bold",
+      "status": 200,
+      "sha256": "5d054bcc14562bfe9a1c6b382f8cb3082dfced95c783ba26088c376440b90917",
+      "file": "baseline-html/solar-bold-home.html"
+    },
+    {
+      "kit": "solar",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-solar-bold/legal/privacy",
+      "status": 200,
+      "sha256": "24677e6b402b3de9d92dcbdd14a50f810ad9c5203aa09d73cf33ffbdc965f5f9",
+      "file": "baseline-html/solar-bold-legal-privacy.html"
+    },
+    {
+      "kit": "solar",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-solar-bold/legal/terms",
+      "status": 200,
+      "sha256": "fbccb52d28df4895031037e633d9ad3f26b3d4090df4cb2e6a1cc1e9ef0404c8",
+      "file": "baseline-html/solar-bold-legal-terms.html"
+    },
+    {
+      "kit": "solar",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-solar-fresh",
+      "status": 200,
+      "sha256": "27160301d72ae6959cb829708a946fc194414ad1461e01f8565e806ccecea13b",
+      "file": "baseline-html/solar-fresh-home.html"
+    },
+    {
+      "kit": "solar",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-solar-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "af2f4c08569a57df69331cfb5dbbf21fb3986a8ceb65d65ebbe2f9f1e8b7692f",
+      "file": "baseline-html/solar-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "solar",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-solar-fresh/legal/terms",
+      "status": 200,
+      "sha256": "440c308f7c7d34a937da8e50c2ad8849e89966f2f4583edf80624dc6c82ee1c8",
+      "file": "baseline-html/solar-fresh-legal-terms.html"
+    },
+    {
+      "kit": "solar",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-solar-classic",
+      "status": 200,
+      "sha256": "ba5fc9ec25708063b24b814f53eb24a2f3725d111412ec512fc18ce156ecb6e7",
+      "file": "baseline-html/solar-classic-home.html"
+    },
+    {
+      "kit": "solar",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-solar-classic/legal/privacy",
+      "status": 200,
+      "sha256": "474803c085b5cca253a0dc901ef6d949411f20880e207ac297bcd0304a457f4d",
+      "file": "baseline-html/solar-classic-legal-privacy.html"
+    },
+    {
+      "kit": "solar",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-solar-classic/legal/terms",
+      "status": 200,
+      "sha256": "8b3b90bf3a8587ff1bb99de882dd935c3cb2a60d880a38035349d8bcef8a4393",
+      "file": "baseline-html/solar-classic-legal-terms.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-concrete-current",
+      "status": 200,
+      "sha256": "d2ffe80707cffb4d65c96eb2e6752e8e2d5393db4414fcc0558e8eedbcdd2ada",
+      "file": "baseline-html/concrete-current-home.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-concrete-current/legal/privacy",
+      "status": 200,
+      "sha256": "45cd247e12813887c1618675fb6543e0e724debbbe8d408a6a4da32d388bacc9",
+      "file": "baseline-html/concrete-current-legal-privacy.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-concrete-current/legal/terms",
+      "status": 200,
+      "sha256": "017143dc98e0685e92d87f74ea0f0e781e8c027c69b5bfc8c78f4b159a3441cc",
+      "file": "baseline-html/concrete-current-legal-terms.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-concrete-bold",
+      "status": 200,
+      "sha256": "58b7bc21b5e534317b260554a0a46b355c4c28de537b80583069bdf8f0218989",
+      "file": "baseline-html/concrete-bold-home.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-concrete-bold/legal/privacy",
+      "status": 200,
+      "sha256": "b7e3e02e48966e5513aad4cc387023b325abc0f3a9290fa44d5617b7ea41fe90",
+      "file": "baseline-html/concrete-bold-legal-privacy.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-concrete-bold/legal/terms",
+      "status": 200,
+      "sha256": "b6e3a39a99c646aeb04b3ba7cbd97fd295baeb28158f36ad3980eed1473e52e8",
+      "file": "baseline-html/concrete-bold-legal-terms.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-concrete-fresh",
+      "status": 200,
+      "sha256": "e057ab3f0cc5af13a80beddf6224d63284456eaad202c74bdc297ab486045c8f",
+      "file": "baseline-html/concrete-fresh-home.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-concrete-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "c7408edc4da7f20fece622b6cd82d4ca1447aefc4213fb2ad220cbd5b37384e2",
+      "file": "baseline-html/concrete-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-concrete-fresh/legal/terms",
+      "status": 200,
+      "sha256": "9172b323fde4819e526b7120c899684dcbe89f056727d9dd897b61c1510a5965",
+      "file": "baseline-html/concrete-fresh-legal-terms.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-concrete-classic",
+      "status": 200,
+      "sha256": "94450aa4c0a3bff41d731c7378b83d5b362bdf93aa11ef87938da737b761c7cc",
+      "file": "baseline-html/concrete-classic-home.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-concrete-classic/legal/privacy",
+      "status": 200,
+      "sha256": "094f9be1d3002d2e024064570ceb7234b43411e277d9ea434c7f2a7338cfcf79",
+      "file": "baseline-html/concrete-classic-legal-privacy.html"
+    },
+    {
+      "kit": "concrete",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-concrete-classic/legal/terms",
+      "status": 200,
+      "sha256": "b4b73fdcb057ef70404a8414767dec9e041b741b05a3e70571b07169a3e1e4ce",
+      "file": "baseline-html/concrete-classic-legal-terms.html"
+    },
+    {
+      "kit": "pools",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-pools-current",
+      "status": 200,
+      "sha256": "54b7f1f9ee1901b53bbe5b5b70687bcd7ea3a0a68b0e463ea8de84d0f5508d8d",
+      "file": "baseline-html/pools-current-home.html"
+    },
+    {
+      "kit": "pools",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-pools-current/legal/privacy",
+      "status": 200,
+      "sha256": "0b38b316cd85b71bebda146da1b2571d8dc14459e401b29e5edca8a282ba483b",
+      "file": "baseline-html/pools-current-legal-privacy.html"
+    },
+    {
+      "kit": "pools",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-pools-current/legal/terms",
+      "status": 200,
+      "sha256": "bd36d5fb9aa4980f1671eb9473ce9c33a33eb96361ae3adb8dfaa3e6e9f6de24",
+      "file": "baseline-html/pools-current-legal-terms.html"
+    },
+    {
+      "kit": "pools",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-pools-bold",
+      "status": 200,
+      "sha256": "449e427a4c3f41fffe6797cd740afca27e0d63a2bbc90b97a1a7480a2b8cb203",
+      "file": "baseline-html/pools-bold-home.html"
+    },
+    {
+      "kit": "pools",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-pools-bold/legal/privacy",
+      "status": 200,
+      "sha256": "c01a709aaba77de184a0cee7ea0b03b806a496a2257688d36a46bc1b736d6b3b",
+      "file": "baseline-html/pools-bold-legal-privacy.html"
+    },
+    {
+      "kit": "pools",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-pools-bold/legal/terms",
+      "status": 200,
+      "sha256": "d0c05deccb35a8857fc1aa2d101f1b63abf16b051b7bda9e910caae37ecd7ecf",
+      "file": "baseline-html/pools-bold-legal-terms.html"
+    },
+    {
+      "kit": "pools",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-pools-fresh",
+      "status": 200,
+      "sha256": "43f68e0ba37c825095f624b653c8701da8a10d615196a0634557514e072f5a96",
+      "file": "baseline-html/pools-fresh-home.html"
+    },
+    {
+      "kit": "pools",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-pools-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "002b93467fce91c70897a4608393b14e971db60134bff1e599e78781b3df1611",
+      "file": "baseline-html/pools-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "pools",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-pools-fresh/legal/terms",
+      "status": 200,
+      "sha256": "4be45c68cbfbf6e752c5d8eb900e4b2fd66ab40aa87beec003ff524f23004e04",
+      "file": "baseline-html/pools-fresh-legal-terms.html"
+    },
+    {
+      "kit": "pools",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-pools-classic",
+      "status": 200,
+      "sha256": "6b692f333fbf2add98ed4f08f423f09f8feae1c17c8afdb0e1897ff993138a7d",
+      "file": "baseline-html/pools-classic-home.html"
+    },
+    {
+      "kit": "pools",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-pools-classic/legal/privacy",
+      "status": 200,
+      "sha256": "05fa5513cd9362d46cb2e3f585048a35e9f0fc2c8af467320a6594baff4ccbfa",
+      "file": "baseline-html/pools-classic-legal-privacy.html"
+    },
+    {
+      "kit": "pools",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-pools-classic/legal/terms",
+      "status": 200,
+      "sha256": "b3f1a85c691e4a3488957f5a789d0fa8d5cc9f057b09506d17d85b0abb476950",
+      "file": "baseline-html/pools-classic-legal-terms.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "current",
+      "page": "home",
+      "url": "/s/platform-look-baseline-locksmith-current",
+      "status": 200,
+      "sha256": "2a2e65abf5c711e569859da9772da873fdbdd1f1b1d6c25c06104029ef8c96f6",
+      "file": "baseline-html/locksmith-current-home.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "current",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-locksmith-current/legal/privacy",
+      "status": 200,
+      "sha256": "e9a6f7225b95e5c1b7a9a7c70fc833490d495e053b3071c27e4e8e474f5fdbbb",
+      "file": "baseline-html/locksmith-current-legal-privacy.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "current",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-locksmith-current/legal/terms",
+      "status": 200,
+      "sha256": "df975145aee3a326ffa6c4a944644a574c77957150d686de777b09a5cf6839a5",
+      "file": "baseline-html/locksmith-current-legal-terms.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "bold",
+      "page": "home",
+      "url": "/s/platform-look-baseline-locksmith-bold",
+      "status": 200,
+      "sha256": "2337d126a0e19f7ca312361c717c09ffe60be0e742f75d5fb95799a3397f677f",
+      "file": "baseline-html/locksmith-bold-home.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "bold",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-locksmith-bold/legal/privacy",
+      "status": 200,
+      "sha256": "95944e1faaa39969db3a492ef758d01ceabd7369cf9b4dea761f37e49f0771ce",
+      "file": "baseline-html/locksmith-bold-legal-privacy.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "bold",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-locksmith-bold/legal/terms",
+      "status": 200,
+      "sha256": "195e22939fc19730af3857ee3e7c73615bc804e24e049ac94a3659234753ecde",
+      "file": "baseline-html/locksmith-bold-legal-terms.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "fresh",
+      "page": "home",
+      "url": "/s/platform-look-baseline-locksmith-fresh",
+      "status": 200,
+      "sha256": "1de2ec03e67b088c6010b8e4a90f21c97fad526d385cf290dd77152ef188fe1b",
+      "file": "baseline-html/locksmith-fresh-home.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "fresh",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-locksmith-fresh/legal/privacy",
+      "status": 200,
+      "sha256": "3f8925f5648fdc8444ef8052283140193b3f0cb8422ed60ec3f455e9507bbea1",
+      "file": "baseline-html/locksmith-fresh-legal-privacy.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "fresh",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-locksmith-fresh/legal/terms",
+      "status": 200,
+      "sha256": "7686d466b5b8a6ebbb7064bfa8cf27889339fa1a28d1c5c15f223f17bf622380",
+      "file": "baseline-html/locksmith-fresh-legal-terms.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "classic",
+      "page": "home",
+      "url": "/s/platform-look-baseline-locksmith-classic",
+      "status": 200,
+      "sha256": "5d80172463714703a572dd805a82d1445c3853f9aa3aa9ed6c43e1d62410e6e7",
+      "file": "baseline-html/locksmith-classic-home.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "classic",
+      "page": "legal-privacy",
+      "url": "/s/platform-look-baseline-locksmith-classic/legal/privacy",
+      "status": 200,
+      "sha256": "8a301a2900d5c1779fe73499947630e30ac2082d1c1dfb28629ab0e3e0acdf41",
+      "file": "baseline-html/locksmith-classic-legal-privacy.html"
+    },
+    {
+      "kit": "locksmith",
+      "style": "classic",
+      "page": "legal-terms",
+      "url": "/s/platform-look-baseline-locksmith-classic/legal/terms",
+      "status": 200,
+      "sha256": "2032fd084b6f0a677d31b19162eb97e96cb84e19abba9ae53827891fb6a492a1",
+      "file": "baseline-html/locksmith-classic-legal-terms.html"
+    },
+    {
+      "name": "public-workspace-document",
+      "url": "/s/platform-look-baseline-roofing-current/pages/look-baseline",
+      "status": 200,
+      "sha256": "1ffa41cae0d5cd99a2c0e8713567337c7e98a82cce1d8d2bd61038f984d673e0",
+      "file": "baseline-html/public-workspace-document.html"
+    },
+    {
+      "name": "public-workspace-form",
+      "url": "/s/platform-look-baseline-roofing-current/forms/look-form",
+      "status": 200,
+      "sha256": "e51f4e1c6308eae8f893d9a1fb14c7247a5ea5da4caf1d6800503a3d30e125ff",
+      "file": "baseline-html/public-workspace-form.html"
+    },
+    {
+      "name": "worker-error",
+      "url": "/s/platform-look-baseline-missing",
+      "status": 404,
+      "sha256": "440637a1a23f2aec9a6ecbf5c5c9b9495b7a5d13d485afc6717a402d3c257631",
+      "file": "baseline-html/worker-error.html"
+    }
+  ],
+  "stylesheets": [
+    {
+      "url": "/design-studio.css",
+      "status": 200,
+      "sha256": "70ab7a3a535599215654cdf6d252f8473cb7f3c97e0979e16f3b0ecaa5698cb5",
+      "file": "baseline-css/%2Fdesign-studio.css.css"
+    },
+    {
+      "url": "/service-motion.css",
+      "status": 200,
+      "sha256": "5ae54fb411b16ef1b0ad644c4ad6a6cf8fe98fd1dea3f2275178d9ff659e8548",
+      "file": "baseline-css/%2Fservice-motion.css.css"
+    },
+    {
+      "url": "/app.css",
+      "status": 200,
+      "sha256": "bafe8821df6b760196bf66ec5fc2131b3ea8c8c527dca694f27d8f65d005869e",
+      "file": "baseline-css/%2Fapp.css.css"
+    },
+    {
+      "url": "/site.css",
+      "status": 200,
+      "sha256": "e1eb28ac71d1212d2692521b26a5f156e89a095a8b2f44adfee5c9df6ad15369",
+      "file": "baseline-css/%2Fsite.css.css"
+    },
+    {
+      "url": "/portfolio-common.css",
+      "status": 200,
+      "sha256": "7d03a8b442fb5af8a493294d269acc78a790f405505e872efc8cc09aed624f3d",
+      "file": "baseline-css/%2Fportfolio-common.css.css"
+    },
+    {
+      "url": "/showcase.css",
+      "status": 200,
+      "sha256": "a2c0426c92e1f46356a7e8a3d4e6deeb029f7d1ce319f522c68b1021151b264a",
+      "file": "baseline-css/%2Fshowcase.css.css"
+    },
+    {
+      "url": "/owner-photo.css",
+      "status": 200,
+      "sha256": "76fa88ddd3a2504ee5d07f139f863da037d5f240b9975262d3c13316b59eb129",
+      "file": "baseline-css/%2Fowner-photo.css.css"
+    },
+    {
+      "url": "/trade-components.css",
+      "status": 200,
+      "sha256": "308f7b21b6b7a55af7f2258affebc3c39984651911efd35d5cf1fb7a00fe272d",
+      "file": "baseline-css/%2Ftrade-components.css.css"
+    },
+    {
+      "url": "/cutaway.css",
+      "status": 200,
+      "sha256": "666b3933f149822d6739c2d39f90f67ad35af584d25c2b335279b59fd401eee5",
+      "file": "baseline-css/%2Fcutaway.css.css"
+    },
+    {
+      "url": "/design-variants.css",
+      "status": 200,
+      "sha256": "ea63f5cf6e406f2bc3dfb2cf929227fbe4ec20451339ea65027a42e2f66c9f6a",
+      "file": "baseline-css/%2Fdesign-variants.css.css"
+    },
+    {
+      "url": "/assets/leaflet.css",
+      "status": 200,
+      "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6",
+      "file": "baseline-css/%2Fassets%2Fleaflet.css.css"
+    },
+    {
+      "url": "/hero-contact.css",
+      "status": 200,
+      "sha256": "4e7dbfc823fcf12ddb6f3dcdc2340f7e07f2e027396ee727f32dd21e0a232508",
+      "file": "baseline-css/%2Fhero-contact.css.css"
+    },
+    {
+      "url": "/site-polish.css?v=trade-options-v2",
+      "status": 200,
+      "sha256": "b04fc5f261fdac9fe6e3e5a4eeaf6f05748fd687472e01c524724ad26f1e86a3",
+      "file": "baseline-css/%2Fsite-polish.css%3Fv%3Dtrade-options-v2.css"
+    },
+    {
+      "url": "/reviews.css",
+      "status": 200,
+      "sha256": "ab887c5626ccfe1e65a30ffa988756dda16f3c4ef34389eda8c7cc444f62932b",
+      "file": "baseline-css/%2Freviews.css.css"
+    },
+    {
+      "url": "/scroll-story.css",
+      "status": 200,
+      "sha256": "e3693487dbd68fc9a1c23d009275a6093bf388ce62ab13a75538dbe68964c3dd",
+      "file": "baseline-css/%2Fscroll-story.css.css"
+    },
+    {
+      "url": "/hero-timelapse.css",
+      "status": 200,
+      "sha256": "919bcdd12848e56092e692731d9eed1f5efcdd9f0aa183ed60ff297c29261b71",
+      "file": "baseline-css/%2Fhero-timelapse.css.css"
+    },
+    {
+      "url": "/craft-story.css",
+      "status": 200,
+      "sha256": "4c6e43d56ecb278570fcfff2eb3cceaa7b48816ba5378000b01e7891fd4e3ff8",
+      "file": "baseline-css/%2Fcraft-story.css.css"
+    },
+    {
+      "url": "/trust.css?v=009",
+      "status": 200,
+      "sha256": "d64bca103b4a7b76ba9c0d3c5d819ba16a0605d67a36f1971dd7c4b99aaa0d67",
+      "file": "baseline-css/%2Ftrust.css%3Fv%3D009.css"
+    },
+    {
+      "url": "/trade-revisions.css?v=constitution-v1",
+      "status": 200,
+      "sha256": "190b870803f4d9bf85e42b6009c59ffc132b863283eff837efac0e177632de58",
+      "file": "baseline-css/%2Ftrade-revisions.css%3Fv%3Dconstitution-v1.css"
+    },
+    {
+      "url": "/neighborhood.css?v=experience-v3",
+      "status": 200,
+      "sha256": "2a86abe21d24eda820c788ec2726f7a18182eeee0655bd247558a16a66eaf041",
+      "file": "baseline-css/%2Fneighborhood.css%3Fv%3Dexperience-v3.css"
+    },
+    {
+      "url": "/engagement.css",
+      "status": 200,
+      "sha256": "f164633770919dba7f9d23faeb7667a4899e3aa77c76b0c3fe2a76aaa0f64df6",
+      "file": "baseline-css/%2Fengagement.css.css"
+    },
+    {
+      "url": "/flow.css",
+      "status": 200,
+      "sha256": "cd4ef90fe4725bfd0165d50a63e4f67450c384b2d624205b1938db13cbbd85d2",
+      "file": "baseline-css/%2Fflow.css.css"
+    },
+    {
+      "url": "/site-styles.css",
+      "status": 200,
+      "sha256": "166ac3bd1a60723a5abf43b215d31a872f421b807491d0f110f8fa90c90b0b92",
+      "file": "baseline-css/%2Fsite-styles.css.css"
+    }
+  ],
+  "archived": [
+    {
+      "url": "/s/ambient-baseline-roofing",
+      "status": 200,
+      "sha256": "298b9766ca18d47ce64a9d4335f3331b2a289bfef7f871d60acee1c20b124dfb",
+      "expectedSha256": "298b9766ca18d47ce64a9d4335f3331b2a289bfef7f871d60acee1c20b124dfb",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/services",
+      "status": 200,
+      "sha256": "cf3967e5aa0a907ec3b098ded250e5754f3791b95c75c63ab1d5b9930e663222",
+      "expectedSha256": "cf3967e5aa0a907ec3b098ded250e5754f3791b95c75c63ab1d5b9930e663222",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/areas",
+      "status": 200,
+      "sha256": "2e4c87131e1cd472b69bb1cc21c33acb846afa56b7b53d0f21402e6b5ed6b4ad",
+      "expectedSha256": "2e4c87131e1cd472b69bb1cc21c33acb846afa56b7b53d0f21402e6b5ed6b4ad",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/areas/oxnard",
+      "status": 200,
+      "sha256": "65f37dd51dc0684956535b2d17e446380a4b483931acf636281e97a2bbb0fce0",
+      "expectedSha256": "65f37dd51dc0684956535b2d17e446380a4b483931acf636281e97a2bbb0fce0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/areas/ventura",
+      "status": 200,
+      "sha256": "05acb1cd7213ac8a8da5f5380dcdad4bf993466274237e1bedad6698823190ed",
+      "expectedSha256": "05acb1cd7213ac8a8da5f5380dcdad4bf993466274237e1bedad6698823190ed",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/about",
+      "status": 200,
+      "sha256": "d6dd41741cce82bfd006ff6736cba6c2ec8dc39077520d86e52b17b43c336397",
+      "expectedSha256": "d6dd41741cce82bfd006ff6736cba6c2ec8dc39077520d86e52b17b43c336397",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/faq",
+      "status": 200,
+      "sha256": "cbf7aeceac9423805c35a26621bfb60942a6be4fef3becd38595b54e48d9295a",
+      "expectedSha256": "cbf7aeceac9423805c35a26621bfb60942a6be4fef3becd38595b54e48d9295a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/legal",
+      "status": 200,
+      "sha256": "cc4c7617247d871b14f3c6e693cd7319f1e691f36d03a299a0afd1079ff2aab1",
+      "expectedSha256": "cc4c7617247d871b14f3c6e693cd7319f1e691f36d03a299a0afd1079ff2aab1",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/services/roof-installation",
+      "status": 200,
+      "sha256": "25dc9c7da0113e05e37836444a01dbe71858cd820dfee2be18463ca3de2bb732",
+      "expectedSha256": "25dc9c7da0113e05e37836444a01dbe71858cd820dfee2be18463ca3de2bb732",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/services/roof-repair",
+      "status": 200,
+      "sha256": "8bfe60a783b75f36afc892e2f53d27b086d9fd91a3dacffe654cff10ace08f44",
+      "expectedSha256": "8bfe60a783b75f36afc892e2f53d27b086d9fd91a3dacffe654cff10ace08f44",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/services/roof-replacement",
+      "status": 200,
+      "sha256": "5096481d4f7fc11b0459233d678a00a2f3db60127cc8858a4285cc2891dad1e0",
+      "expectedSha256": "5096481d4f7fc11b0459233d678a00a2f3db60127cc8858a4285cc2891dad1e0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/services/asphalt-shingles",
+      "status": 200,
+      "sha256": "c3bb35a50caf742234d415118db983c15ce6b6e65ef38acd30d70f0b776c87c8",
+      "expectedSha256": "c3bb35a50caf742234d415118db983c15ce6b6e65ef38acd30d70f0b776c87c8",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/services/metal-roofing",
+      "status": 200,
+      "sha256": "59dea2be76448d03cbf8e5127830b89ba31e40dbbbd9d2d0fe5558c50e2c3cb5",
+      "expectedSha256": "59dea2be76448d03cbf8e5127830b89ba31e40dbbbd9d2d0fe5558c50e2c3cb5",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/services/flat-roofs",
+      "status": 200,
+      "sha256": "aad14ca002755cefa605c25f2a27900897bb2e34b627cb3b7a7b6c8f7520f184",
+      "expectedSha256": "aad14ca002755cefa605c25f2a27900897bb2e34b627cb3b7a7b6c8f7520f184",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/services/roof-maintenance",
+      "status": 200,
+      "sha256": "535e615b6fdf8f5b12903cdff80b27132d98f47af3e762283af2ea9eb4c18943",
+      "expectedSha256": "535e615b6fdf8f5b12903cdff80b27132d98f47af3e762283af2ea9eb4c18943",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/services/gutters",
+      "status": 200,
+      "sha256": "ea4a1e7682fd5754091968027bde3aef1914f45a0f82cd7f7c5cb692de8c4730",
+      "expectedSha256": "ea4a1e7682fd5754091968027bde3aef1914f45a0f82cd7f7c5cb692de8c4730",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/financing?preview=1",
+      "status": 200,
+      "sha256": "efe7d26a5403cb51b15562fa163d4058724d9e544e72ae8997af369d839022e3",
+      "expectedSha256": "efe7d26a5403cb51b15562fa163d4058724d9e544e72ae8997af369d839022e3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/promotions?preview=1",
+      "status": 200,
+      "sha256": "eb338f60d545eb039d0ee0c78975ed518f32ddbfa17682fa4406bf65a9f96dec",
+      "expectedSha256": "eb338f60d545eb039d0ee0c78975ed518f32ddbfa17682fa4406bf65a9f96dec",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/faq?preview=1",
+      "status": 200,
+      "sha256": "0f8c38abb6791064ad9c50f826751c6edcae264e76916de58bc8eb91f43d6f6c",
+      "expectedSha256": "0f8c38abb6791064ad9c50f826751c6edcae264e76916de58bc8eb91f43d6f6c",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/roofing/immersive",
+      "status": 200,
+      "sha256": "bfcec1411491059a34dfaaffcc0f552b8743101b97a584be80753dce32fe6761",
+      "expectedSha256": "bfcec1411491059a34dfaaffcc0f552b8743101b97a584be80753dce32fe6761",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/roofing/editorial",
+      "status": 200,
+      "sha256": "16dbc190d55c003397d3bf35525f64071021babe1224ff8db645dea1f46ec542",
+      "expectedSha256": "16dbc190d55c003397d3bf35525f64071021babe1224ff8db645dea1f46ec542",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/roofing/studio",
+      "status": 200,
+      "sha256": "1146dfd3a450710a2768c24eca6f4389c069fa20e7ab5b6afbadf5b40e2aedec",
+      "expectedSha256": "1146dfd3a450710a2768c24eca6f4389c069fa20e7ab5b6afbadf5b40e2aedec",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios",
+      "status": 200,
+      "sha256": "49feb8e824aa6d7d9284d7ddb2260dc9dc2aa6465a368db75bd9ebce6d3a2b1d",
+      "expectedSha256": "49feb8e824aa6d7d9284d7ddb2260dc9dc2aa6465a368db75bd9ebce6d3a2b1d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/services",
+      "status": 200,
+      "sha256": "615e15e8fb76cf572f40cacd7e340e0684432cb2de3e8155d116f974ff16f909",
+      "expectedSha256": "615e15e8fb76cf572f40cacd7e340e0684432cb2de3e8155d116f974ff16f909",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/areas",
+      "status": 200,
+      "sha256": "fcad42b27a2dd49775f2723f84da78f9e96dc59f6b0bc2b88e91a57d1167a596",
+      "expectedSha256": "fcad42b27a2dd49775f2723f84da78f9e96dc59f6b0bc2b88e91a57d1167a596",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/areas/oxnard",
+      "status": 200,
+      "sha256": "3ba23457e695afc7f47d77086ff8e19520363bce83725eb0b7555c2df1ac0343",
+      "expectedSha256": "3ba23457e695afc7f47d77086ff8e19520363bce83725eb0b7555c2df1ac0343",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/areas/ventura",
+      "status": 200,
+      "sha256": "942fc05f5cd8527e3b789271f80514e8251f38df4723ab429f2880eaa2850184",
+      "expectedSha256": "942fc05f5cd8527e3b789271f80514e8251f38df4723ab429f2880eaa2850184",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/about",
+      "status": 200,
+      "sha256": "9f36dbd9564292719615716fde7da7d72f5e0492923f3dc8c7c2c7bfa98f3a77",
+      "expectedSha256": "9f36dbd9564292719615716fde7da7d72f5e0492923f3dc8c7c2c7bfa98f3a77",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/faq",
+      "status": 200,
+      "sha256": "fe710c2447d9500fe09b0e9b20601f44199c4215d848d96ecf9858bf7dac9e23",
+      "expectedSha256": "fe710c2447d9500fe09b0e9b20601f44199c4215d848d96ecf9858bf7dac9e23",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/legal",
+      "status": 200,
+      "sha256": "71a9267be3c9785618a7edb52f85bdb101e4b1e745ad7034b6900700763562c1",
+      "expectedSha256": "71a9267be3c9785618a7edb52f85bdb101e4b1e745ad7034b6900700763562c1",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/promotions?preview=1",
+      "status": 200,
+      "sha256": "396edf55b1476ed8a164454b2a34724f456b90168af73d4897101be67e8a232e",
+      "expectedSha256": "396edf55b1476ed8a164454b2a34724f456b90168af73d4897101be67e8a232e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/financing?preview=1",
+      "status": 200,
+      "sha256": "a1f3faffc17e00b73ad670c40113955867a9e118a93223e82ce98722b4b01f52",
+      "expectedSha256": "a1f3faffc17e00b73ad670c40113955867a9e118a93223e82ce98722b4b01f52",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/services/patio-covers",
+      "status": 200,
+      "sha256": "c65962da89777eccc41818d1668f8a27436a7e9661c3e1220dc266a8c66d92db",
+      "expectedSha256": "c65962da89777eccc41818d1668f8a27436a7e9661c3e1220dc266a8c66d92db",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/services/motorized-pergolas",
+      "status": 200,
+      "sha256": "843389656e88fc317e28d5ea66011dc5497723d24373a312501d871148f375cd",
+      "expectedSha256": "843389656e88fc317e28d5ea66011dc5497723d24373a312501d871148f375cd",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/services/louvered-roofs",
+      "status": 200,
+      "sha256": "aa7b46f88ca841279e41a99dd5d077ccafb3a057f3ccfd2e5eb63cca8d7cf763",
+      "expectedSha256": "aa7b46f88ca841279e41a99dd5d077ccafb3a057f3ccfd2e5eb63cca8d7cf763",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/services/aluminum-patio-covers",
+      "status": 200,
+      "sha256": "787c91ab89f730a466aa38927398834b8a771fa0f65a42dc8ddbbdfba5dd7815",
+      "expectedSha256": "787c91ab89f730a466aa38927398834b8a771fa0f65a42dc8ddbbdfba5dd7815",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/services/wood-pergolas",
+      "status": 200,
+      "sha256": "e710975b8a4517d52eba50ad74f4d01e313042ca44d37742b5ce17a7b671b5e3",
+      "expectedSha256": "e710975b8a4517d52eba50ad74f4d01e313042ca44d37742b5ce17a7b671b5e3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/services/outdoor-living-spaces",
+      "status": 200,
+      "sha256": "e655b3e5804e708ba8d4df7cc6994caf38c404bb2f7acb811aaa3e905370caa8",
+      "expectedSha256": "e655b3e5804e708ba8d4df7cc6994caf38c404bb2f7acb811aaa3e905370caa8",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/services/patio-enclosures",
+      "status": 200,
+      "sha256": "5b8cfce83d718c70384fe691e6c09e92b8a1b495f8685357baa8991196f91a7c",
+      "expectedSha256": "5b8cfce83d718c70384fe691e6c09e92b8a1b495f8685357baa8991196f91a7c",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/services/patio-repair",
+      "status": 200,
+      "sha256": "7fae2a2bf2ed2fa2f19ab5862488c659bd2f21194f758e863e59930aa1399535",
+      "expectedSha256": "7fae2a2bf2ed2fa2f19ab5862488c659bd2f21194f758e863e59930aa1399535",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-patios/faq?preview=1",
+      "status": 200,
+      "sha256": "8674e3eff58368f9265a38aa96178ec2aa20ee2d313455f2a2d01795ebc7a0a3",
+      "expectedSha256": "8674e3eff58368f9265a38aa96178ec2aa20ee2d313455f2a2d01795ebc7a0a3",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/patios/immersive",
+      "status": 200,
+      "sha256": "1eb91dc30e644abe2286993f5c2e84306de1c9e74bc8f4b3e6bec656b336a9e2",
+      "expectedSha256": "1eb91dc30e644abe2286993f5c2e84306de1c9e74bc8f4b3e6bec656b336a9e2",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/patios/editorial",
+      "status": 200,
+      "sha256": "69ef34600289f8f4701dcdc43a76f91a5b1086f10374dfa4e4778d4de5b854e9",
+      "expectedSha256": "69ef34600289f8f4701dcdc43a76f91a5b1086f10374dfa4e4778d4de5b854e9",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/patios/studio",
+      "status": 200,
+      "sha256": "843a18d14d96b19a4fb1444ac2cafac7797fb2a61148b7178e4ab99eec7ad6a9",
+      "expectedSha256": "843a18d14d96b19a4fb1444ac2cafac7797fb2a61148b7178e4ab99eec7ad6a9",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing",
+      "status": 200,
+      "sha256": "698df185f593df610b6384066d6aa4261e5fd165d31754a0a9859818d3c052b1",
+      "expectedSha256": "698df185f593df610b6384066d6aa4261e5fd165d31754a0a9859818d3c052b1",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/services",
+      "status": 200,
+      "sha256": "0a99dd48b00b94a5377bab7ab909db51d939bf4b1b95d8f9ee91f83cac773b81",
+      "expectedSha256": "0a99dd48b00b94a5377bab7ab909db51d939bf4b1b95d8f9ee91f83cac773b81",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/areas",
+      "status": 200,
+      "sha256": "9f9902cd2f1faec006d66ee10aaa05a6484e3ad018fc32cdf232e2fa90d764bb",
+      "expectedSha256": "9f9902cd2f1faec006d66ee10aaa05a6484e3ad018fc32cdf232e2fa90d764bb",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/areas/oxnard",
+      "status": 200,
+      "sha256": "a761e6b366abbb5556dcf65d3c6b3b9dfdf20067f0cb5ab75fe90a3d50f94373",
+      "expectedSha256": "a761e6b366abbb5556dcf65d3c6b3b9dfdf20067f0cb5ab75fe90a3d50f94373",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/areas/ventura",
+      "status": 200,
+      "sha256": "fc66b769bba5492e9733d93585bba75040ddd22b5bb7d4e5eec13972f3c6816d",
+      "expectedSha256": "fc66b769bba5492e9733d93585bba75040ddd22b5bb7d4e5eec13972f3c6816d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/about",
+      "status": 200,
+      "sha256": "f934d98c8646a36a5154d728485dddfafe4ccf60e4ce4fb5285a89f71e66938f",
+      "expectedSha256": "f934d98c8646a36a5154d728485dddfafe4ccf60e4ce4fb5285a89f71e66938f",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/faq",
+      "status": 200,
+      "sha256": "1ede3ab995d36ece5fcee5472e2b4c590ba13696af3953ec47096cb9aaf74882",
+      "expectedSha256": "1ede3ab995d36ece5fcee5472e2b4c590ba13696af3953ec47096cb9aaf74882",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/legal",
+      "status": 200,
+      "sha256": "61f795903fdc632c67c220f01fb7551f946807f00fba8dbb2e3a70ed531c2646",
+      "expectedSha256": "61f795903fdc632c67c220f01fb7551f946807f00fba8dbb2e3a70ed531c2646",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/promotions?preview=1",
+      "status": 200,
+      "sha256": "19de88c9643fa758d34c8761cd001baeab6b4ea7a9afdd8043de5e84a6505f74",
+      "expectedSha256": "19de88c9643fa758d34c8761cd001baeab6b4ea7a9afdd8043de5e84a6505f74",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/financing?preview=1",
+      "status": 200,
+      "sha256": "4262f0e1cb54c9a2084cdc68307f7a16c966762fb1595aeb84558f9847ded97d",
+      "expectedSha256": "4262f0e1cb54c9a2084cdc68307f7a16c966762fb1595aeb84558f9847ded97d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/services/leak-detection",
+      "status": 200,
+      "sha256": "5077024b29afe894bd99eae137782529b71d9722d399c9561e94be817d94bd0b",
+      "expectedSha256": "5077024b29afe894bd99eae137782529b71d9722d399c9561e94be817d94bd0b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/services/drain-cleaning",
+      "status": 200,
+      "sha256": "78ad427ac466e161957c347e09e808cdb187c97c2a87a46a4b1288527406a401",
+      "expectedSha256": "78ad427ac466e161957c347e09e808cdb187c97c2a87a46a4b1288527406a401",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/services/water-heaters",
+      "status": 200,
+      "sha256": "224bec1abbd6e7f6fc30093b0f0c2dcabaedc29ab7989726b804ed19ae3356d9",
+      "expectedSha256": "224bec1abbd6e7f6fc30093b0f0c2dcabaedc29ab7989726b804ed19ae3356d9",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/services/sewer-lines",
+      "status": 200,
+      "sha256": "008d4b54d7b26945a100584898ba3bcdf85737dd1f5dce2859c18020f6970fbc",
+      "expectedSha256": "008d4b54d7b26945a100584898ba3bcdf85737dd1f5dce2859c18020f6970fbc",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/services/repiping",
+      "status": 200,
+      "sha256": "b26f3c9bd4d66040a3d7f9e7cc6be67af8aa87293b27d559d6c1d74b998e5dea",
+      "expectedSha256": "b26f3c9bd4d66040a3d7f9e7cc6be67af8aa87293b27d559d6c1d74b998e5dea",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/services/fixture-installation",
+      "status": 200,
+      "sha256": "2a03177a8657f9cc3c1ac286803b1b6a31effd05fab3b14e68978dac6f12b127",
+      "expectedSha256": "2a03177a8657f9cc3c1ac286803b1b6a31effd05fab3b14e68978dac6f12b127",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/services/water-filtration",
+      "status": 200,
+      "sha256": "4a0ab8553865a0ab9c1c88d61c668028d52411e91e2baad2df073af37fa8854f",
+      "expectedSha256": "4a0ab8553865a0ab9c1c88d61c668028d52411e91e2baad2df073af37fa8854f",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/services/plumbing-repair",
+      "status": 200,
+      "sha256": "fa114d5747efb4e35cb8869840c8832463afa199d98aa6fe4fecf1b81daf2b22",
+      "expectedSha256": "fa114d5747efb4e35cb8869840c8832463afa199d98aa6fe4fecf1b81daf2b22",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-plumbing/faq?preview=1",
+      "status": 200,
+      "sha256": "8afbe0aaa8081a09a03325f28bf75afb06c0ea874d16d91e33301cb3668ac41c",
+      "expectedSha256": "8afbe0aaa8081a09a03325f28bf75afb06c0ea874d16d91e33301cb3668ac41c",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/plumbing/immersive",
+      "status": 200,
+      "sha256": "07d2e08f043eb465fdb657729356c35c00e12731e26534e42552e0d786a4526e",
+      "expectedSha256": "07d2e08f043eb465fdb657729356c35c00e12731e26534e42552e0d786a4526e",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/plumbing/editorial",
+      "status": 200,
+      "sha256": "93c1f5c6b267fa5ea703ad0e5899addf27900d59318e6d2673f2b460cd231d81",
+      "expectedSha256": "93c1f5c6b267fa5ea703ad0e5899addf27900d59318e6d2673f2b460cd231d81",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/plumbing/studio",
+      "status": 200,
+      "sha256": "d92151bb5356f3922c073316f0e6b2db8896e1706f4e1008ee443e7dc1a6c37d",
+      "expectedSha256": "d92151bb5356f3922c073316f0e6b2db8896e1706f4e1008ee443e7dc1a6c37d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac",
+      "status": 200,
+      "sha256": "1643754f9f233ef6db617aadbf8f8b973e61a74e8e2dd33282aadeb31ac18479",
+      "expectedSha256": "1643754f9f233ef6db617aadbf8f8b973e61a74e8e2dd33282aadeb31ac18479",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/services",
+      "status": 200,
+      "sha256": "38a34d98fdc7db93118f82fc342817193a2d757d632a34e2bb9262ff8a178282",
+      "expectedSha256": "38a34d98fdc7db93118f82fc342817193a2d757d632a34e2bb9262ff8a178282",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/areas",
+      "status": 200,
+      "sha256": "879473bbb64480d8ed7fb38f4c4c734e3423115883423c030e6ce8befb11c6a9",
+      "expectedSha256": "879473bbb64480d8ed7fb38f4c4c734e3423115883423c030e6ce8befb11c6a9",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/areas/oxnard",
+      "status": 200,
+      "sha256": "256142d0385a129acf984bfc63bc0a13682fa9c98efa05fbe7ff737af5359bed",
+      "expectedSha256": "256142d0385a129acf984bfc63bc0a13682fa9c98efa05fbe7ff737af5359bed",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/areas/ventura",
+      "status": 200,
+      "sha256": "a7db386e2b4565246225b847aeca639015f792769fe2afdf2d6f18b5ad0e5107",
+      "expectedSha256": "a7db386e2b4565246225b847aeca639015f792769fe2afdf2d6f18b5ad0e5107",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/about",
+      "status": 200,
+      "sha256": "abdce32a53d84f9b38757bb95d111aa5a2bfda97c84d7add0094de25a7fbb4e3",
+      "expectedSha256": "abdce32a53d84f9b38757bb95d111aa5a2bfda97c84d7add0094de25a7fbb4e3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/faq",
+      "status": 200,
+      "sha256": "92382db6995ee978f35ed563d5e03b03d6dad966f656ac953dcd6816547fab32",
+      "expectedSha256": "92382db6995ee978f35ed563d5e03b03d6dad966f656ac953dcd6816547fab32",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/legal",
+      "status": 200,
+      "sha256": "c7fe42e4ba914b28d3581de202157d8b1a54735579a39bf81da358610d58c336",
+      "expectedSha256": "c7fe42e4ba914b28d3581de202157d8b1a54735579a39bf81da358610d58c336",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/promotions?preview=1",
+      "status": 200,
+      "sha256": "4d695d074bb29180a830934d52e9e507285599eb7bf32e7c881ac3aded10d91f",
+      "expectedSha256": "4d695d074bb29180a830934d52e9e507285599eb7bf32e7c881ac3aded10d91f",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/financing?preview=1",
+      "status": 200,
+      "sha256": "bb64b8c22f6f3668665a7ada80ededfd0b7dbe084d30445517e1a21da119f627",
+      "expectedSha256": "bb64b8c22f6f3668665a7ada80ededfd0b7dbe084d30445517e1a21da119f627",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/services/air-conditioning-installation",
+      "status": 200,
+      "sha256": "90d000f4a09695adc34345d934fffe0c747c1008c75c90de9f04c6fecc7947be",
+      "expectedSha256": "90d000f4a09695adc34345d934fffe0c747c1008c75c90de9f04c6fecc7947be",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/services/air-conditioning-repair",
+      "status": 200,
+      "sha256": "b67a51cf19e8c0ed64c5d303c35e85d5540b5f1106b5e102de6c8edab97d5361",
+      "expectedSha256": "b67a51cf19e8c0ed64c5d303c35e85d5540b5f1106b5e102de6c8edab97d5361",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/services/heating-installation",
+      "status": 200,
+      "sha256": "5e6d71cd9364e70a7f000e40777e9fd296e9af5e49b79034bbf49d0b6f6fa01e",
+      "expectedSha256": "5e6d71cd9364e70a7f000e40777e9fd296e9af5e49b79034bbf49d0b6f6fa01e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/services/heating-repair",
+      "status": 200,
+      "sha256": "9928b95bb1fb0f2dbdbc5e1c1966d4dbbf9688e44de892335b9b68530a219e8a",
+      "expectedSha256": "9928b95bb1fb0f2dbdbc5e1c1966d4dbbf9688e44de892335b9b68530a219e8a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/services/heat-pumps",
+      "status": 200,
+      "sha256": "199b274726d07c2fa62b7d297ed7750611d59e95620722fde59e5e8499e9b31c",
+      "expectedSha256": "199b274726d07c2fa62b7d297ed7750611d59e95620722fde59e5e8499e9b31c",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/services/ductwork",
+      "status": 200,
+      "sha256": "c81d079d2dcf57293e29a961887ca1aae2e5fe97414d689be52ce9a50cfb2ce2",
+      "expectedSha256": "c81d079d2dcf57293e29a961887ca1aae2e5fe97414d689be52ce9a50cfb2ce2",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/services/indoor-air-quality",
+      "status": 200,
+      "sha256": "c1491fcdf66fa2ea89e2dc3ba29991a34491d2628bb050511086a75bf83ed76d",
+      "expectedSha256": "c1491fcdf66fa2ea89e2dc3ba29991a34491d2628bb050511086a75bf83ed76d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/services/system-maintenance",
+      "status": 200,
+      "sha256": "52ce81597da4113615bfb4cbb133a180a4abb5ebae31530f9e601d29b83b0491",
+      "expectedSha256": "52ce81597da4113615bfb4cbb133a180a4abb5ebae31530f9e601d29b83b0491",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-hvac/faq?preview=1",
+      "status": 200,
+      "sha256": "ff592985c727f34b68df1d63e4300c44ca804a5a020e867a99945964a80a9edd",
+      "expectedSha256": "ff592985c727f34b68df1d63e4300c44ca804a5a020e867a99945964a80a9edd",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/hvac/immersive",
+      "status": 200,
+      "sha256": "09918cc6cec29bd299690ef5d1fb0b157fc44c3b159ec979cdd1b0bf084d3ffd",
+      "expectedSha256": "09918cc6cec29bd299690ef5d1fb0b157fc44c3b159ec979cdd1b0bf084d3ffd",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/hvac/editorial",
+      "status": 200,
+      "sha256": "fcac1e07e7a877d1e3d462f397415357be419f64387e5080396ca035a758c348",
+      "expectedSha256": "fcac1e07e7a877d1e3d462f397415357be419f64387e5080396ca035a758c348",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/hvac/studio",
+      "status": 200,
+      "sha256": "44d449917973e28d9e79a51c326c4aaadfdebcc5ac5269d1efcae1689ccb448b",
+      "expectedSha256": "44d449917973e28d9e79a51c326c4aaadfdebcc5ac5269d1efcae1689ccb448b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical",
+      "status": 200,
+      "sha256": "01131cc371542558704851c2a1902eb731e100171e64ffdc3b85e064915f4672",
+      "expectedSha256": "01131cc371542558704851c2a1902eb731e100171e64ffdc3b85e064915f4672",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/services",
+      "status": 200,
+      "sha256": "27c595546e0c4a4b961ddfe0a13ef057d889685332dcbf288fc4eeb4814f93da",
+      "expectedSha256": "27c595546e0c4a4b961ddfe0a13ef057d889685332dcbf288fc4eeb4814f93da",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/areas",
+      "status": 200,
+      "sha256": "f9dcb3a8018726d275fd9196c3edf4fc562107728605ce32e1e8c3e0ec2dd501",
+      "expectedSha256": "f9dcb3a8018726d275fd9196c3edf4fc562107728605ce32e1e8c3e0ec2dd501",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/areas/oxnard",
+      "status": 200,
+      "sha256": "c0f6fb65c230911171d770d9bc0a101b648ab502546d94dfd1b490b7f610e5c5",
+      "expectedSha256": "c0f6fb65c230911171d770d9bc0a101b648ab502546d94dfd1b490b7f610e5c5",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/areas/ventura",
+      "status": 200,
+      "sha256": "5f0c0dc4409302a89b95860f9e8e3301b35c1dd262ec68063997682cca693229",
+      "expectedSha256": "5f0c0dc4409302a89b95860f9e8e3301b35c1dd262ec68063997682cca693229",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/about",
+      "status": 200,
+      "sha256": "f07d9532b4e5f9890118dbf35d78223340b477bda4d3f53bd0b35cbf397406fa",
+      "expectedSha256": "f07d9532b4e5f9890118dbf35d78223340b477bda4d3f53bd0b35cbf397406fa",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/faq",
+      "status": 200,
+      "sha256": "c02b56efec5c6c2e39d911b56d8d2ca790a59155fe9d708ee943e3405a6a550e",
+      "expectedSha256": "c02b56efec5c6c2e39d911b56d8d2ca790a59155fe9d708ee943e3405a6a550e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/legal",
+      "status": 200,
+      "sha256": "55ea382d4bd0de2bdf847eb6999a4662e5ba821acf5fdfaad0285af2123d90f3",
+      "expectedSha256": "55ea382d4bd0de2bdf847eb6999a4662e5ba821acf5fdfaad0285af2123d90f3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/promotions?preview=1",
+      "status": 200,
+      "sha256": "9b3c37e4ede918222e32b064bfc2f40300622effda47268944086cf44d564d13",
+      "expectedSha256": "9b3c37e4ede918222e32b064bfc2f40300622effda47268944086cf44d564d13",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/financing?preview=1",
+      "status": 200,
+      "sha256": "9f2f8432487f342449828ffebd26858c362c5519f4028c83a32cd2b2f3485f5e",
+      "expectedSha256": "9f2f8432487f342449828ffebd26858c362c5519f4028c83a32cd2b2f3485f5e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/services/electrical-repairs",
+      "status": 200,
+      "sha256": "4b0630b818ed9bfcc0cc57c0770c1010b06b334138ab8b37ee41602a7fd9f249",
+      "expectedSha256": "4b0630b818ed9bfcc0cc57c0770c1010b06b334138ab8b37ee41602a7fd9f249",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/services/panel-upgrades",
+      "status": 200,
+      "sha256": "96f93b21307b06f04c0397003be9b1bc6400732b710e58b5ed5bec5f1005a0d0",
+      "expectedSha256": "96f93b21307b06f04c0397003be9b1bc6400732b710e58b5ed5bec5f1005a0d0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/services/ev-chargers",
+      "status": 200,
+      "sha256": "94a0b7fd0b138de81e5f8ee2550f8aacfc24bd4346a21afe77e3aa83dd29a6cd",
+      "expectedSha256": "94a0b7fd0b138de81e5f8ee2550f8aacfc24bd4346a21afe77e3aa83dd29a6cd",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/services/lighting-installation",
+      "status": 200,
+      "sha256": "bcb948a90ad3c61199507f596f6e205da38582959139de387f95f869eb5af26a",
+      "expectedSha256": "bcb948a90ad3c61199507f596f6e205da38582959139de387f95f869eb5af26a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/services/rewiring",
+      "status": 200,
+      "sha256": "874924c923583285f5b8565dc9e2ece275c2a8aa4104e9a533834b5cb596f5f2",
+      "expectedSha256": "874924c923583285f5b8565dc9e2ece275c2a8aa4104e9a533834b5cb596f5f2",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/services/outlets-and-switches",
+      "status": 200,
+      "sha256": "2028caa3c5409778a70b629d4419ea6011708c578fc76e5ffb9060b0fa2228c0",
+      "expectedSha256": "2028caa3c5409778a70b629d4419ea6011708c578fc76e5ffb9060b0fa2228c0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/services/backup-generators",
+      "status": 200,
+      "sha256": "a995faa883e9018fb9b78c75cdc1b2dd51448208000a35d395cbfa19996570d4",
+      "expectedSha256": "a995faa883e9018fb9b78c75cdc1b2dd51448208000a35d395cbfa19996570d4",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/services/electrical-inspections",
+      "status": 200,
+      "sha256": "bd0ec46ed4bb64c0226d27dd97b6bb94046e4037300359f04d47640072a002b6",
+      "expectedSha256": "bd0ec46ed4bb64c0226d27dd97b6bb94046e4037300359f04d47640072a002b6",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-electrical/faq?preview=1",
+      "status": 200,
+      "sha256": "0abaeb28a9757652bd9e6ba36c937caefac77d217034c2b1183a3042f6e02715",
+      "expectedSha256": "0abaeb28a9757652bd9e6ba36c937caefac77d217034c2b1183a3042f6e02715",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/electrical/immersive",
+      "status": 200,
+      "sha256": "a5710268506c7e0deba958d9c97780b6c786710ef1219282b6c152f8f10e46a5",
+      "expectedSha256": "a5710268506c7e0deba958d9c97780b6c786710ef1219282b6c152f8f10e46a5",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/electrical/editorial",
+      "status": 200,
+      "sha256": "4ccc030f2d1897642490cf2b5f96b266575f51bf9247ea3520e23f4ec71bba34",
+      "expectedSha256": "4ccc030f2d1897642490cf2b5f96b266575f51bf9247ea3520e23f4ec71bba34",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/electrical/studio",
+      "status": 200,
+      "sha256": "49c05b5e95a678ea54277a41244b57abd37aace9f5e3b8769024b76c37177bd6",
+      "expectedSha256": "49c05b5e95a678ea54277a41244b57abd37aace9f5e3b8769024b76c37177bd6",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping",
+      "status": 200,
+      "sha256": "6a96efbe0a0d65cdcc4289293215b332aef502a53e6643a9cf3c22ac5d1447f0",
+      "expectedSha256": "6a96efbe0a0d65cdcc4289293215b332aef502a53e6643a9cf3c22ac5d1447f0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/services",
+      "status": 200,
+      "sha256": "88643d7da39ecdfd19a85615776f58e324edccd0fe11d1b1804c92a895d567f6",
+      "expectedSha256": "88643d7da39ecdfd19a85615776f58e324edccd0fe11d1b1804c92a895d567f6",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/areas",
+      "status": 200,
+      "sha256": "2292d2854f0520ac310aaaf41afce1175d6f59ed65e62be7114d64520d1443ce",
+      "expectedSha256": "2292d2854f0520ac310aaaf41afce1175d6f59ed65e62be7114d64520d1443ce",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/areas/oxnard",
+      "status": 200,
+      "sha256": "1dc014de00428c566d12bae2bb40f7edfb2cabc582466a69d6e6439c8f0fef91",
+      "expectedSha256": "1dc014de00428c566d12bae2bb40f7edfb2cabc582466a69d6e6439c8f0fef91",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/areas/ventura",
+      "status": 200,
+      "sha256": "07af2f7d3d716d24ff042ba6a984ed447b7e3e929d3df8ab95eb9a5998ad7690",
+      "expectedSha256": "07af2f7d3d716d24ff042ba6a984ed447b7e3e929d3df8ab95eb9a5998ad7690",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/about",
+      "status": 200,
+      "sha256": "76f66c21aa7579737fcec319550160c5f75dd34d3412d0e00cf9d6359eeb508a",
+      "expectedSha256": "76f66c21aa7579737fcec319550160c5f75dd34d3412d0e00cf9d6359eeb508a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/faq",
+      "status": 200,
+      "sha256": "6f7c9b35b8b0321d5aaf91517f6cbf30dce8499fb11f10cd026db41696821df2",
+      "expectedSha256": "6f7c9b35b8b0321d5aaf91517f6cbf30dce8499fb11f10cd026db41696821df2",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/legal",
+      "status": 200,
+      "sha256": "b9ef662f92e2f322a449a0ee05b927a0d3d500f87a6fca719f4896e7865e8348",
+      "expectedSha256": "b9ef662f92e2f322a449a0ee05b927a0d3d500f87a6fca719f4896e7865e8348",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/promotions?preview=1",
+      "status": 200,
+      "sha256": "6c78e62179e8b3a4030bbba388c4a3f5fe4813c970ca51a79a41794cb60ff9cf",
+      "expectedSha256": "6c78e62179e8b3a4030bbba388c4a3f5fe4813c970ca51a79a41794cb60ff9cf",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/financing?preview=1",
+      "status": 200,
+      "sha256": "676791c9f069d05c8fe2154a85194199c942a7dc5d79eb99d3029cb7b428c912",
+      "expectedSha256": "676791c9f069d05c8fe2154a85194199c942a7dc5d79eb99d3029cb7b428c912",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/services/landscape-design",
+      "status": 200,
+      "sha256": "7b5ffd88a9bbe0417378e80f2bfa35c362d22ed9fbc022f7492962f4b562854d",
+      "expectedSha256": "7b5ffd88a9bbe0417378e80f2bfa35c362d22ed9fbc022f7492962f4b562854d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/services/landscape-installation",
+      "status": 200,
+      "sha256": "86794d215ac28ae1a48ea0197a961e20b55f292dd5390c25c790fb2f4261165c",
+      "expectedSha256": "86794d215ac28ae1a48ea0197a961e20b55f292dd5390c25c790fb2f4261165c",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/services/irrigation",
+      "status": 200,
+      "sha256": "dbe3fce735b84da2ad432f4172dc0322b40cc19bd3c2a365ded4ba87d70204a1",
+      "expectedSha256": "dbe3fce735b84da2ad432f4172dc0322b40cc19bd3c2a365ded4ba87d70204a1",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/services/lawn-care",
+      "status": 200,
+      "sha256": "16774691ae44aa2a2f8d74d5f7d3d9aeee4fefd29991eb02b7063bc0a5f6cfa2",
+      "expectedSha256": "16774691ae44aa2a2f8d74d5f7d3d9aeee4fefd29991eb02b7063bc0a5f6cfa2",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/services/artificial-turf",
+      "status": 200,
+      "sha256": "301bdc630117dc5b31ddda13bb1fadb9a58f328ae25319073b1158605a3250ec",
+      "expectedSha256": "301bdc630117dc5b31ddda13bb1fadb9a58f328ae25319073b1158605a3250ec",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/services/hardscaping",
+      "status": 200,
+      "sha256": "546e280e67e37588fd17dfb6c4c569b3adce0f953c67714d088c7884961cb67e",
+      "expectedSha256": "546e280e67e37588fd17dfb6c4c569b3adce0f953c67714d088c7884961cb67e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/services/landscape-lighting",
+      "status": 200,
+      "sha256": "1f3b2982d9cfee7201ad08deea9164ae8606278c3a53dafb00ab2aa4fde499a3",
+      "expectedSha256": "1f3b2982d9cfee7201ad08deea9164ae8606278c3a53dafb00ab2aa4fde499a3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/services/seasonal-maintenance",
+      "status": 200,
+      "sha256": "dddb5fcfe56b188db8efec46f3383287613d1f26d55479a116b919e884993c6d",
+      "expectedSha256": "dddb5fcfe56b188db8efec46f3383287613d1f26d55479a116b919e884993c6d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-landscaping/faq?preview=1",
+      "status": 200,
+      "sha256": "9a27a144875d8d798a99a6195b1ac0fc9e676f1cb62451eebe7817690700a6ce",
+      "expectedSha256": "9a27a144875d8d798a99a6195b1ac0fc9e676f1cb62451eebe7817690700a6ce",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/landscaping/immersive",
+      "status": 200,
+      "sha256": "86f573ef7e2bf1ed8ab7a9db315d2337b16f417790bca5f2688996c9fe075d0e",
+      "expectedSha256": "86f573ef7e2bf1ed8ab7a9db315d2337b16f417790bca5f2688996c9fe075d0e",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/landscaping/editorial",
+      "status": 200,
+      "sha256": "2124b024ed2476a6f99072ac00e9f59acabb871afc860049797654506c127dea",
+      "expectedSha256": "2124b024ed2476a6f99072ac00e9f59acabb871afc860049797654506c127dea",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/landscaping/studio",
+      "status": 200,
+      "sha256": "d3240ba24ae63df663f9c5dcd9f35f85f492a38977368413c536c4e7f9533703",
+      "expectedSha256": "d3240ba24ae63df663f9c5dcd9f35f85f492a38977368413c536c4e7f9533703",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors",
+      "status": 200,
+      "sha256": "b43755e82e9cca3c1219aa1d7f3a7eef2656d858b50dcca294fa342083609ef1",
+      "expectedSha256": "b43755e82e9cca3c1219aa1d7f3a7eef2656d858b50dcca294fa342083609ef1",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/services",
+      "status": 200,
+      "sha256": "a909340b93f9d1f75401ad25e49345a65e5de639c4307db59d26dc3a3a7b6e9a",
+      "expectedSha256": "a909340b93f9d1f75401ad25e49345a65e5de639c4307db59d26dc3a3a7b6e9a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/areas",
+      "status": 200,
+      "sha256": "69173fac5fed55e8e8e20a38e949d230a985dcd377e4358448d4c14b3f5d9d48",
+      "expectedSha256": "69173fac5fed55e8e8e20a38e949d230a985dcd377e4358448d4c14b3f5d9d48",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/areas/oxnard",
+      "status": 200,
+      "sha256": "1a2404db14dd2387f10f5dc4848483780097948f810504ba113ef2f207bfb9c4",
+      "expectedSha256": "1a2404db14dd2387f10f5dc4848483780097948f810504ba113ef2f207bfb9c4",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/areas/ventura",
+      "status": 200,
+      "sha256": "db9736b3e5dd7c9a3f3d71d65d4031c95caa111dd0d8fdb98cffff9c76ae814a",
+      "expectedSha256": "db9736b3e5dd7c9a3f3d71d65d4031c95caa111dd0d8fdb98cffff9c76ae814a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/about",
+      "status": 200,
+      "sha256": "8d68afefb2f6ce5d540165b47eb451b3f6c5b729b1fe8b7d4facbec7a81ac708",
+      "expectedSha256": "8d68afefb2f6ce5d540165b47eb451b3f6c5b729b1fe8b7d4facbec7a81ac708",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/faq",
+      "status": 200,
+      "sha256": "d05dc4d1f4b9603100c3e28d91a8b88dc331ff52ede3d40c0b80ff4a8bd47ffa",
+      "expectedSha256": "d05dc4d1f4b9603100c3e28d91a8b88dc331ff52ede3d40c0b80ff4a8bd47ffa",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/legal",
+      "status": 200,
+      "sha256": "0c76f423587dda2fc6e089e1df2aab6daffbb92850f11ce4cc7524714023d890",
+      "expectedSha256": "0c76f423587dda2fc6e089e1df2aab6daffbb92850f11ce4cc7524714023d890",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/promotions?preview=1",
+      "status": 200,
+      "sha256": "a057461a26bb18cb4d86763c5bf72932609fb7d799a80cbbaee7359a920b3317",
+      "expectedSha256": "a057461a26bb18cb4d86763c5bf72932609fb7d799a80cbbaee7359a920b3317",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/financing?preview=1",
+      "status": 200,
+      "sha256": "0375e4c2a9d771ef57413739da275e8af9f160e4535371d594f60eb2bc6eb613",
+      "expectedSha256": "0375e4c2a9d771ef57413739da275e8af9f160e4535371d594f60eb2bc6eb613",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/services/home-remodeling",
+      "status": 200,
+      "sha256": "91962c1a6282e8f04f1edab6985f8ec6856d9af3385171f345e84b96fcecd818",
+      "expectedSha256": "91962c1a6282e8f04f1edab6985f8ec6856d9af3385171f345e84b96fcecd818",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/services/kitchen-remodeling",
+      "status": 200,
+      "sha256": "bce3cea4d4ca70a5aaa72e668877f261c62cb499be5b8fb7e19731661216c731",
+      "expectedSha256": "bce3cea4d4ca70a5aaa72e668877f261c62cb499be5b8fb7e19731661216c731",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/services/bathroom-remodeling",
+      "status": 200,
+      "sha256": "8898dd57eb0683f88790becf8e09f9c707c1a3d47b85f0cb43d560058393f14c",
+      "expectedSha256": "8898dd57eb0683f88790becf8e09f9c707c1a3d47b85f0cb43d560058393f14c",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/services/room-additions",
+      "status": 200,
+      "sha256": "c8e1ae596a9b0ab8393cf37f17714644588235e2aa92bedfd5b5d676e5106665",
+      "expectedSha256": "c8e1ae596a9b0ab8393cf37f17714644588235e2aa92bedfd5b5d676e5106665",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/services/adus",
+      "status": 200,
+      "sha256": "c3e191b3bd32ff6b3f77859ff29c04fa903b27859e25ecf70fdf8e58ef94dc51",
+      "expectedSha256": "c3e191b3bd32ff6b3f77859ff29c04fa903b27859e25ecf70fdf8e58ef94dc51",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/services/new-construction",
+      "status": 200,
+      "sha256": "31694f036464b0e240423fdbee47cc735f5c373c4424ec3a330a57d8adde8ab7",
+      "expectedSha256": "31694f036464b0e240423fdbee47cc735f5c373c4424ec3a330a57d8adde8ab7",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/services/commercial-improvements",
+      "status": 200,
+      "sha256": "6279ec4c1895b711cc7ab236ecbe0a7dcdce5da198c11e18872ac0a62938dfbc",
+      "expectedSha256": "6279ec4c1895b711cc7ab236ecbe0a7dcdce5da198c11e18872ac0a62938dfbc",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/services/whole-home-renovation",
+      "status": 200,
+      "sha256": "f1cb99b9ef2d8af19f4e868a6431b922899dbb208fbafad5f2cde9503694886e",
+      "expectedSha256": "f1cb99b9ef2d8af19f4e868a6431b922899dbb208fbafad5f2cde9503694886e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-general-contractors/faq?preview=1",
+      "status": 200,
+      "sha256": "6394ede983dfc47b957e1910e05209207d1a703dcfb8256af5387013ccdb36cb",
+      "expectedSha256": "6394ede983dfc47b957e1910e05209207d1a703dcfb8256af5387013ccdb36cb",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/general-contractors/immersive",
+      "status": 200,
+      "sha256": "bfd2ca86a4e696cddc4ff75d4266e636462b83ea7b277de3a81a3d387c324af1",
+      "expectedSha256": "bfd2ca86a4e696cddc4ff75d4266e636462b83ea7b277de3a81a3d387c324af1",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/general-contractors/editorial",
+      "status": 200,
+      "sha256": "36c8d1d8579adc5a582d3d664618bc94f446de25568f12d6a96ff58ac1c78cbb",
+      "expectedSha256": "36c8d1d8579adc5a582d3d664618bc94f446de25568f12d6a96ff58ac1c78cbb",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/general-contractors/studio",
+      "status": 200,
+      "sha256": "9d0d5185634b6829d38e08397560df19bcd792345918cbc556eeacac16249fb8",
+      "expectedSha256": "9d0d5185634b6829d38e08397560df19bcd792345918cbc556eeacac16249fb8",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring",
+      "status": 200,
+      "sha256": "3f9a9a6e6605bbb765b0f8c23d4e7c7e1aee012e28e2c8a3d002fc69702684e9",
+      "expectedSha256": "3f9a9a6e6605bbb765b0f8c23d4e7c7e1aee012e28e2c8a3d002fc69702684e9",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/services",
+      "status": 200,
+      "sha256": "d6bb86f920e6852e709443e1c0c786759815742e0a9312beb3bb2fff78d8f53a",
+      "expectedSha256": "d6bb86f920e6852e709443e1c0c786759815742e0a9312beb3bb2fff78d8f53a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/areas",
+      "status": 200,
+      "sha256": "289599c45affa08af8840cb57b7afada32d20dd15b4d459f78c0fc5317b71ef3",
+      "expectedSha256": "289599c45affa08af8840cb57b7afada32d20dd15b4d459f78c0fc5317b71ef3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/areas/oxnard",
+      "status": 200,
+      "sha256": "7724b0fb5312dd98b9b720ac5fb89bd987db78e3569a42807c8fca40c2f48a6d",
+      "expectedSha256": "7724b0fb5312dd98b9b720ac5fb89bd987db78e3569a42807c8fca40c2f48a6d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/areas/ventura",
+      "status": 200,
+      "sha256": "25905358acb59f30006cd4a63cacd1ca2e54fc4980b732ea8894a4a76cc25916",
+      "expectedSha256": "25905358acb59f30006cd4a63cacd1ca2e54fc4980b732ea8894a4a76cc25916",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/about",
+      "status": 200,
+      "sha256": "c45f5c392e39a57f5cf99cb5701d3382dbb23db0f927e372e35317efd9d224ac",
+      "expectedSha256": "c45f5c392e39a57f5cf99cb5701d3382dbb23db0f927e372e35317efd9d224ac",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/faq",
+      "status": 200,
+      "sha256": "8409df1513c7dafcbf09b5c6ad6d8f63d141cf016a7968719b9ab9d8b79b7703",
+      "expectedSha256": "8409df1513c7dafcbf09b5c6ad6d8f63d141cf016a7968719b9ab9d8b79b7703",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/legal",
+      "status": 200,
+      "sha256": "726045e0791d630db5223464e1789d70329229bc9ab03e71c7146bc4aac51caa",
+      "expectedSha256": "726045e0791d630db5223464e1789d70329229bc9ab03e71c7146bc4aac51caa",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/promotions?preview=1",
+      "status": 200,
+      "sha256": "1b85d6c6166ae040734177317a0a67f0654413780e53095148cdc1a9218a219e",
+      "expectedSha256": "1b85d6c6166ae040734177317a0a67f0654413780e53095148cdc1a9218a219e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/financing?preview=1",
+      "status": 200,
+      "sha256": "189c28fda1bb21a066ed576a2664b5fc3362ac1db21da437db081b750860e1e3",
+      "expectedSha256": "189c28fda1bb21a066ed576a2664b5fc3362ac1db21da437db081b750860e1e3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/services/hardwood-flooring",
+      "status": 200,
+      "sha256": "10ba6a0361eb697853acf86911425a6a023f2346e16f9694f50d113e9c71bbb9",
+      "expectedSha256": "10ba6a0361eb697853acf86911425a6a023f2346e16f9694f50d113e9c71bbb9",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/services/luxury-vinyl-flooring",
+      "status": 200,
+      "sha256": "c88d17be97d06e65c950edfdc6b57128e974f44f4d338a78b994ebb31a3c0c1c",
+      "expectedSha256": "c88d17be97d06e65c950edfdc6b57128e974f44f4d338a78b994ebb31a3c0c1c",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/services/laminate-flooring",
+      "status": 200,
+      "sha256": "593ea9e163d86a9fea51e42b5c9321e5d719c9026d93512d9b4e97581f53f6bc",
+      "expectedSha256": "593ea9e163d86a9fea51e42b5c9321e5d719c9026d93512d9b4e97581f53f6bc",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/services/tile-flooring",
+      "status": 200,
+      "sha256": "945d584f1963d32d5ff3aad0a4b479bead53125db73e2dcf2521105f8a0482f7",
+      "expectedSha256": "945d584f1963d32d5ff3aad0a4b479bead53125db73e2dcf2521105f8a0482f7",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/services/floor-refinishing",
+      "status": 200,
+      "sha256": "b2d26a4cc1805c87950ea4fdcfa037847070a07c78df8de529fffebc8b4c46cb",
+      "expectedSha256": "b2d26a4cc1805c87950ea4fdcfa037847070a07c78df8de529fffebc8b4c46cb",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/services/floor-repair",
+      "status": 200,
+      "sha256": "0d5a44c8faf0cbe410d409b6e49e082908a636178ef66d66ee81c9b55ce430db",
+      "expectedSha256": "0d5a44c8faf0cbe410d409b6e49e082908a636178ef66d66ee81c9b55ce430db",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/services/subfloor-preparation",
+      "status": 200,
+      "sha256": "84bb14177ae1a368904669c5988660ce6f3b12e190ba9fad0e1ce45fad15df16",
+      "expectedSha256": "84bb14177ae1a368904669c5988660ce6f3b12e190ba9fad0e1ce45fad15df16",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/services/commercial-flooring",
+      "status": 200,
+      "sha256": "6ff533f3443c260d647d7f9a8db73a4c19a8a47b8708c85ee313755260af493b",
+      "expectedSha256": "6ff533f3443c260d647d7f9a8db73a4c19a8a47b8708c85ee313755260af493b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-flooring/faq?preview=1",
+      "status": 200,
+      "sha256": "dec27b1fda0d258aa3897cd6562560e1a3744764ac2b66bde08b1695a4eb296d",
+      "expectedSha256": "dec27b1fda0d258aa3897cd6562560e1a3744764ac2b66bde08b1695a4eb296d",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/flooring/immersive",
+      "status": 200,
+      "sha256": "43497350feb268d19e43f036f23db98ce3e0d3ed8638a519d52701b1a0d26123",
+      "expectedSha256": "43497350feb268d19e43f036f23db98ce3e0d3ed8638a519d52701b1a0d26123",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/flooring/editorial",
+      "status": 200,
+      "sha256": "f42012d10dfea923d2c84b89318792f981183f55f87f5c3dff9bbd646d8e62b1",
+      "expectedSha256": "f42012d10dfea923d2c84b89318792f981183f55f87f5c3dff9bbd646d8e62b1",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/flooring/studio",
+      "status": 200,
+      "sha256": "2b89a9cba0cfe44571e9ef7a445c3250a4edb4e603887c779acc616f9ac7e329",
+      "expectedSha256": "2b89a9cba0cfe44571e9ef7a445c3250a4edb4e603887c779acc616f9ac7e329",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting",
+      "status": 200,
+      "sha256": "f7bf822b4dc0a2a56062fa6ba71f0165eee113b6178aab0913118ba2af0dccc6",
+      "expectedSha256": "f7bf822b4dc0a2a56062fa6ba71f0165eee113b6178aab0913118ba2af0dccc6",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/services",
+      "status": 200,
+      "sha256": "59e7cf1005e53dea0140c52550d7bc44d9e8e53f090796db1184082021c10d9b",
+      "expectedSha256": "59e7cf1005e53dea0140c52550d7bc44d9e8e53f090796db1184082021c10d9b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/areas",
+      "status": 200,
+      "sha256": "6850a666de20441a10809c465307b8aaef4d7d4dad99a7ae6e1006b9fbda3f0b",
+      "expectedSha256": "6850a666de20441a10809c465307b8aaef4d7d4dad99a7ae6e1006b9fbda3f0b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/areas/oxnard",
+      "status": 200,
+      "sha256": "2cd5e7dc3181fd5ce947ffb07a1a0f4e7f77fd6bcdcab7d7c13449c60b8acaa2",
+      "expectedSha256": "2cd5e7dc3181fd5ce947ffb07a1a0f4e7f77fd6bcdcab7d7c13449c60b8acaa2",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/areas/ventura",
+      "status": 200,
+      "sha256": "327430fa538c8ca4a785a9404345bf77ce038e2d1ac09039e15d9cc47e6b7c29",
+      "expectedSha256": "327430fa538c8ca4a785a9404345bf77ce038e2d1ac09039e15d9cc47e6b7c29",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/about",
+      "status": 200,
+      "sha256": "7f09e07a70ed92564e8c165f2d2f0610f18b5398962b59f480476673a24e7d51",
+      "expectedSha256": "7f09e07a70ed92564e8c165f2d2f0610f18b5398962b59f480476673a24e7d51",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/faq",
+      "status": 200,
+      "sha256": "7709efe08322a11569f79c7eb4fb12a8eda61ae2da8c4fa6e204b74075cff77a",
+      "expectedSha256": "7709efe08322a11569f79c7eb4fb12a8eda61ae2da8c4fa6e204b74075cff77a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/legal",
+      "status": 200,
+      "sha256": "85dde65a75bcaacb708d219877fa90bcf4acdff24f6fe1ee2828c4adee83b4e3",
+      "expectedSha256": "85dde65a75bcaacb708d219877fa90bcf4acdff24f6fe1ee2828c4adee83b4e3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/promotions?preview=1",
+      "status": 200,
+      "sha256": "3291cddcedd57b3f4b8928d65927709817ec2ff9d5b19006a4e0cff7bac6e651",
+      "expectedSha256": "3291cddcedd57b3f4b8928d65927709817ec2ff9d5b19006a4e0cff7bac6e651",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/financing?preview=1",
+      "status": 200,
+      "sha256": "2d1805cb11b5648d9ba9e768f3ecae59c942dff56d1ae22af2416e871add4da5",
+      "expectedSha256": "2d1805cb11b5648d9ba9e768f3ecae59c942dff56d1ae22af2416e871add4da5",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/services/interior-painting",
+      "status": 200,
+      "sha256": "560045fb286759b1743e4ffb25354c956d8807e0a13db69649229ab641cfff89",
+      "expectedSha256": "560045fb286759b1743e4ffb25354c956d8807e0a13db69649229ab641cfff89",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/services/exterior-painting",
+      "status": 200,
+      "sha256": "151e2b220f1f80f2d00010fae0fe3af714a953a6ac38755112cb67bec23746f2",
+      "expectedSha256": "151e2b220f1f80f2d00010fae0fe3af714a953a6ac38755112cb67bec23746f2",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/services/cabinet-painting",
+      "status": 200,
+      "sha256": "f3c2f487e6957159474dfc05534b87222cfaf6a4cad59ad1b135d068f6efea3a",
+      "expectedSha256": "f3c2f487e6957159474dfc05534b87222cfaf6a4cad59ad1b135d068f6efea3a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/services/deck-and-fence-staining",
+      "status": 200,
+      "sha256": "e4088f1210088eb4696d78c35793ca055e2e7891382cfc0bfac43f6f4e987fbe",
+      "expectedSha256": "e4088f1210088eb4696d78c35793ca055e2e7891382cfc0bfac43f6f4e987fbe",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/services/surface-preparation",
+      "status": 200,
+      "sha256": "f352399482d6664d65e79e2adf9099b141dd3e8e7700fe4d881cadf744512d2d",
+      "expectedSha256": "f352399482d6664d65e79e2adf9099b141dd3e8e7700fe4d881cadf744512d2d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/services/drywall-repair",
+      "status": 200,
+      "sha256": "1c76e2dfccf88ab802350907e37e1cc318e033321d0aa1a1f61ffb2c9681c123",
+      "expectedSha256": "1c76e2dfccf88ab802350907e37e1cc318e033321d0aa1a1f61ffb2c9681c123",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/services/decorative-finishes",
+      "status": 200,
+      "sha256": "d0a5212fead702d98d1252fce511223f7d3b76c54713d8f520d471a710814627",
+      "expectedSha256": "d0a5212fead702d98d1252fce511223f7d3b76c54713d8f520d471a710814627",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/services/commercial-painting",
+      "status": 200,
+      "sha256": "9609fd8fafc6f0189fec80122cdcd97c608680f40b37921ff0dccfa3ab108e95",
+      "expectedSha256": "9609fd8fafc6f0189fec80122cdcd97c608680f40b37921ff0dccfa3ab108e95",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-painting/faq?preview=1",
+      "status": 200,
+      "sha256": "3dc4f5b4b32c5147b41f0a7d80bbb0a7f07cb03ce8a9e776d6f48dd7f2446999",
+      "expectedSha256": "3dc4f5b4b32c5147b41f0a7d80bbb0a7f07cb03ce8a9e776d6f48dd7f2446999",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/painting/immersive",
+      "status": 200,
+      "sha256": "727e36e09052d84a096cea172dcc2e3f1ee868d645aa3d848038d2e552137027",
+      "expectedSha256": "727e36e09052d84a096cea172dcc2e3f1ee868d645aa3d848038d2e552137027",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/painting/editorial",
+      "status": 200,
+      "sha256": "b31e7321cd8cacf0ddd562a1975b29c60080b2aeedc985ed490d3a31f02b09cc",
+      "expectedSha256": "b31e7321cd8cacf0ddd562a1975b29c60080b2aeedc985ed490d3a31f02b09cc",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/painting/studio",
+      "status": 200,
+      "sha256": "0b812f758efe9b7a9021e9b795620ba2202e90c0f90a889584e78956d7003e5b",
+      "expectedSha256": "0b812f758efe9b7a9021e9b795620ba2202e90c0f90a889584e78956d7003e5b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing",
+      "status": 200,
+      "sha256": "e569abfc99fbb9c45d965ae878ed64f3b10ab4865995357f9dc3627eb95e1fc8",
+      "expectedSha256": "e569abfc99fbb9c45d965ae878ed64f3b10ab4865995357f9dc3627eb95e1fc8",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/services",
+      "status": 200,
+      "sha256": "709e69cb52bfcbb1fe12dce26f90461ae0604775b4ca606f36fdb7d0bcf1b090",
+      "expectedSha256": "709e69cb52bfcbb1fe12dce26f90461ae0604775b4ca606f36fdb7d0bcf1b090",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/areas",
+      "status": 200,
+      "sha256": "af774c5243b870d45e8bffba8b419a3f67082907bbafa337c7447d73a75a9844",
+      "expectedSha256": "af774c5243b870d45e8bffba8b419a3f67082907bbafa337c7447d73a75a9844",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/areas/oxnard",
+      "status": 200,
+      "sha256": "ead4e10309c050bff813e33e3e65867ee760db45ace2b41f8adc291fe8c83c32",
+      "expectedSha256": "ead4e10309c050bff813e33e3e65867ee760db45ace2b41f8adc291fe8c83c32",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/areas/ventura",
+      "status": 200,
+      "sha256": "29030ad546cd92341af523776cd04fb0879df24a1443ff1171b174f5d8e48ae3",
+      "expectedSha256": "29030ad546cd92341af523776cd04fb0879df24a1443ff1171b174f5d8e48ae3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/about",
+      "status": 200,
+      "sha256": "d445b629e54f9f9d4cddb465502e87e42cf45d5e4578f463a92be52e7e0b0710",
+      "expectedSha256": "d445b629e54f9f9d4cddb465502e87e42cf45d5e4578f463a92be52e7e0b0710",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/faq",
+      "status": 200,
+      "sha256": "7a2f000ced23a0be6b767ae22627616ff91d85dcbe2232d2dcf8d6b0f32a1b94",
+      "expectedSha256": "7a2f000ced23a0be6b767ae22627616ff91d85dcbe2232d2dcf8d6b0f32a1b94",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/legal",
+      "status": 200,
+      "sha256": "078cc5e997dac9214e12aac1d82e30427b9fcbd5d5cbe3f82cdc3304389eb7ef",
+      "expectedSha256": "078cc5e997dac9214e12aac1d82e30427b9fcbd5d5cbe3f82cdc3304389eb7ef",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/promotions?preview=1",
+      "status": 200,
+      "sha256": "f3108a4f34070c2056e6420b0898fba3b2f7ac2dba9ca1f439a77e23a1f2d57a",
+      "expectedSha256": "f3108a4f34070c2056e6420b0898fba3b2f7ac2dba9ca1f439a77e23a1f2d57a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/financing?preview=1",
+      "status": 200,
+      "sha256": "faf5656b97c629f8268bc261a9fe51d72125ba87f1f24f21f342c9b2f3a8b90e",
+      "expectedSha256": "faf5656b97c629f8268bc261a9fe51d72125ba87f1f24f21f342c9b2f3a8b90e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/services/wood-fencing",
+      "status": 200,
+      "sha256": "68f1c441f277ee1c3599d50af09769b5af67d2d85132f49606689552b8a25cb4",
+      "expectedSha256": "68f1c441f277ee1c3599d50af09769b5af67d2d85132f49606689552b8a25cb4",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/services/vinyl-fencing",
+      "status": 200,
+      "sha256": "9c1d7a38586108746f753a5c6b2aa739d5db288c76540bdb0ab33ce3e9b2559b",
+      "expectedSha256": "9c1d7a38586108746f753a5c6b2aa739d5db288c76540bdb0ab33ce3e9b2559b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/services/metal-fencing",
+      "status": 200,
+      "sha256": "cd0f52410175ba3eb087cafab5307be93a3f761d7304bfeec4d543254a15e334",
+      "expectedSha256": "cd0f52410175ba3eb087cafab5307be93a3f761d7304bfeec4d543254a15e334",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/services/privacy-fencing",
+      "status": 200,
+      "sha256": "1e12a2633d775f5bf4b9ac990348a014f7246230b86881fe49d8bef1bbe5bc89",
+      "expectedSha256": "1e12a2633d775f5bf4b9ac990348a014f7246230b86881fe49d8bef1bbe5bc89",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/services/gates",
+      "status": 200,
+      "sha256": "fd48f433e2bf0901a4aeb0c20e7468d69bb35a0be1eb1eb326f22e98c04afc62",
+      "expectedSha256": "fd48f433e2bf0901a4aeb0c20e7468d69bb35a0be1eb1eb326f22e98c04afc62",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/services/fence-repair",
+      "status": 200,
+      "sha256": "1abea9af80fc56133931a17731348875e369c312170c9df57bd2459a48346c4b",
+      "expectedSha256": "1abea9af80fc56133931a17731348875e369c312170c9df57bd2459a48346c4b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/services/pool-fencing",
+      "status": 200,
+      "sha256": "ba896ab4f902aa8975ce6fcd356a436b1048273d7fe18391063782afd47c9fc1",
+      "expectedSha256": "ba896ab4f902aa8975ce6fcd356a436b1048273d7fe18391063782afd47c9fc1",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/services/commercial-fencing",
+      "status": 200,
+      "sha256": "a3c614de38953a33e7087476517406c8fe8f25e08fda76506336fe63a62a0a36",
+      "expectedSha256": "a3c614de38953a33e7087476517406c8fe8f25e08fda76506336fe63a62a0a36",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-fencing/faq?preview=1",
+      "status": 200,
+      "sha256": "c6e6a3f12316c48e0808bb9fe249ae39e7039d0903c7f394953dd356b8c8d35d",
+      "expectedSha256": "c6e6a3f12316c48e0808bb9fe249ae39e7039d0903c7f394953dd356b8c8d35d",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/fencing/immersive",
+      "status": 200,
+      "sha256": "7daeee3910dab9b7c80a53a0658065bc642fd2598c051f2696df0ae3326f8df4",
+      "expectedSha256": "7daeee3910dab9b7c80a53a0658065bc642fd2598c051f2696df0ae3326f8df4",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/fencing/editorial",
+      "status": 200,
+      "sha256": "b73e835fc0d8e434e86413fb75aa6ce8054dbdc87ebc81cbbe7ff74d0cd1e714",
+      "expectedSha256": "b73e835fc0d8e434e86413fb75aa6ce8054dbdc87ebc81cbbe7ff74d0cd1e714",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/fencing/studio",
+      "status": 200,
+      "sha256": "d992343dd06dc76c097682771e458bcc742e461685475c94752cf93500d834e5",
+      "expectedSha256": "d992343dd06dc76c097682771e458bcc742e461685475c94752cf93500d834e5",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors",
+      "status": 200,
+      "sha256": "011fd70b032d85a898582ba6d1d7e904043db1bb11876ae10142cd331a18c02e",
+      "expectedSha256": "011fd70b032d85a898582ba6d1d7e904043db1bb11876ae10142cd331a18c02e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/services",
+      "status": 200,
+      "sha256": "cdcad3842fb63f136ee9e3da7eb1c921fd5e2efb2a329823b5bc3a2e17415f24",
+      "expectedSha256": "cdcad3842fb63f136ee9e3da7eb1c921fd5e2efb2a329823b5bc3a2e17415f24",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/areas",
+      "status": 200,
+      "sha256": "1338c66f7989cfd70402cbbb49a106f88b020d8c5e3e94c6cb1491888bcdf42c",
+      "expectedSha256": "1338c66f7989cfd70402cbbb49a106f88b020d8c5e3e94c6cb1491888bcdf42c",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/areas/oxnard",
+      "status": 200,
+      "sha256": "cd42c82aacbef096f4d4827f0424344d9e5edaac510437fc0d441b2eef97d21c",
+      "expectedSha256": "cd42c82aacbef096f4d4827f0424344d9e5edaac510437fc0d441b2eef97d21c",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/areas/ventura",
+      "status": 200,
+      "sha256": "62d48bfceacda6e79ee963b21daacc883fbeac8d0f7de228b8ce10bcd9c4aa69",
+      "expectedSha256": "62d48bfceacda6e79ee963b21daacc883fbeac8d0f7de228b8ce10bcd9c4aa69",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/about",
+      "status": 200,
+      "sha256": "49f0b468d1111c54b6c9d35f0ea437a1a3d421052fb3afce69858d92cfd484fd",
+      "expectedSha256": "49f0b468d1111c54b6c9d35f0ea437a1a3d421052fb3afce69858d92cfd484fd",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/faq",
+      "status": 200,
+      "sha256": "9b85ef7dfadde43fbb3bbb018552463e83fe53536c946b45eec12a9315dada8b",
+      "expectedSha256": "9b85ef7dfadde43fbb3bbb018552463e83fe53536c946b45eec12a9315dada8b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/legal",
+      "status": 200,
+      "sha256": "402c214c8ac8bdbf1abcc037c178d7835803d23d35df3337b9b864212faf0749",
+      "expectedSha256": "402c214c8ac8bdbf1abcc037c178d7835803d23d35df3337b9b864212faf0749",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/promotions?preview=1",
+      "status": 200,
+      "sha256": "974c59db05c61f3fd9a914397d188113bb755b76b1fdce0f75b6c71094980d33",
+      "expectedSha256": "974c59db05c61f3fd9a914397d188113bb755b76b1fdce0f75b6c71094980d33",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/financing?preview=1",
+      "status": 200,
+      "sha256": "de8def82f73c03ad115a0eb345987002da83d9b8f63dc21a381fd560fd7caf32",
+      "expectedSha256": "de8def82f73c03ad115a0eb345987002da83d9b8f63dc21a381fd560fd7caf32",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/services/garage-door-installation",
+      "status": 200,
+      "sha256": "d6f3884e1e86d46d638035ef3fba87436427d0302f428390438110770c2d3da1",
+      "expectedSha256": "d6f3884e1e86d46d638035ef3fba87436427d0302f428390438110770c2d3da1",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/services/garage-door-repair",
+      "status": 200,
+      "sha256": "a0024d3c0aa15e02f64c2f3f0608b63ff67f504ab5436e9d30f7a78d1991b67b",
+      "expectedSha256": "a0024d3c0aa15e02f64c2f3f0608b63ff67f504ab5436e9d30f7a78d1991b67b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/services/spring-replacement",
+      "status": 200,
+      "sha256": "62c5e3c61cca147587b7509aa2f829e3901a06cfd8861a1c3de8ef834a3e23d0",
+      "expectedSha256": "62c5e3c61cca147587b7509aa2f829e3901a06cfd8861a1c3de8ef834a3e23d0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/services/opener-installation",
+      "status": 200,
+      "sha256": "04cc111a64d0044fe9f4644abac15e0ca1cc7296449bc1231bcde2705322953e",
+      "expectedSha256": "04cc111a64d0044fe9f4644abac15e0ca1cc7296449bc1231bcde2705322953e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/services/opener-repair",
+      "status": 200,
+      "sha256": "aeb7719de89df5ec162e6d59bc375fdcc6d036d67b5e364d807047fe74f18a9a",
+      "expectedSha256": "aeb7719de89df5ec162e6d59bc375fdcc6d036d67b5e364d807047fe74f18a9a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/services/panel-replacement",
+      "status": 200,
+      "sha256": "44231272853f2a9240b576a318ab6f7efad6ccb3830502eafc26dac97d73da96",
+      "expectedSha256": "44231272853f2a9240b576a318ab6f7efad6ccb3830502eafc26dac97d73da96",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/services/weather-sealing",
+      "status": 200,
+      "sha256": "99baf4a514ddc0f8f7acde2c3220b26b7657d4d5beb71b3553676cc882cbaff4",
+      "expectedSha256": "99baf4a514ddc0f8f7acde2c3220b26b7657d4d5beb71b3553676cc882cbaff4",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/services/garage-door-maintenance",
+      "status": 200,
+      "sha256": "38120084292b0f1e530aeca0feab7ae7c9257df2fcd3dff9e39b54a5d5bbdd2f",
+      "expectedSha256": "38120084292b0f1e530aeca0feab7ae7c9257df2fcd3dff9e39b54a5d5bbdd2f",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-garage-doors/faq?preview=1",
+      "status": 200,
+      "sha256": "7114350c7bb893cdc0ca030d77b3b4925efa0d56506c92b4833e7612177a2ccc",
+      "expectedSha256": "7114350c7bb893cdc0ca030d77b3b4925efa0d56506c92b4833e7612177a2ccc",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/garage-doors/immersive",
+      "status": 200,
+      "sha256": "60c5405695acb7dbf5eb54221767987d2613f613c991aa08792117de012b458a",
+      "expectedSha256": "60c5405695acb7dbf5eb54221767987d2613f613c991aa08792117de012b458a",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/garage-doors/editorial",
+      "status": 200,
+      "sha256": "3baeae7655073c7bc8198923493afa761c10074aa63853a9682c3455d86bb719",
+      "expectedSha256": "3baeae7655073c7bc8198923493afa761c10074aa63853a9682c3455d86bb719",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/garage-doors/studio",
+      "status": 200,
+      "sha256": "913cca879216a352ab6eabe3d12f9021502cbe772e7d6d5643f6c6caad4fae65",
+      "expectedSha256": "913cca879216a352ab6eabe3d12f9021502cbe772e7d6d5643f6c6caad4fae65",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control",
+      "status": 200,
+      "sha256": "66c0ba5fac07790bceebdaa9c7be3af91fd555fbb2f28a8497c81fc27932587d",
+      "expectedSha256": "66c0ba5fac07790bceebdaa9c7be3af91fd555fbb2f28a8497c81fc27932587d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/services",
+      "status": 200,
+      "sha256": "9db626cf241226148ff6e13c9d1fceab3e0073fe1817b08bf1e75d4b7a93d092",
+      "expectedSha256": "9db626cf241226148ff6e13c9d1fceab3e0073fe1817b08bf1e75d4b7a93d092",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/areas",
+      "status": 200,
+      "sha256": "a10bb51c28412c7196c0e6a265420022b4cbae8967953ae073d2507fb15f9f3b",
+      "expectedSha256": "a10bb51c28412c7196c0e6a265420022b4cbae8967953ae073d2507fb15f9f3b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/areas/oxnard",
+      "status": 200,
+      "sha256": "2b275757ff06865b0efc8408705ebd8041b355e844839b9678ad7bda88833cc5",
+      "expectedSha256": "2b275757ff06865b0efc8408705ebd8041b355e844839b9678ad7bda88833cc5",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/areas/ventura",
+      "status": 200,
+      "sha256": "3f80779e0281e89c07e8931252a933d13700d3dcbe6f13d5d3bce713b8cc2967",
+      "expectedSha256": "3f80779e0281e89c07e8931252a933d13700d3dcbe6f13d5d3bce713b8cc2967",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/about",
+      "status": 200,
+      "sha256": "0173b1df4c0fa08bd441f951be1a6ef90a060c621d2b8ecb0ca3c4838dd49a0b",
+      "expectedSha256": "0173b1df4c0fa08bd441f951be1a6ef90a060c621d2b8ecb0ca3c4838dd49a0b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/faq",
+      "status": 200,
+      "sha256": "288416027cfb8ea6136245144d2c1e5bb4f85abf1e214d3bbc3bf36c684e7d29",
+      "expectedSha256": "288416027cfb8ea6136245144d2c1e5bb4f85abf1e214d3bbc3bf36c684e7d29",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/legal",
+      "status": 200,
+      "sha256": "5306e64c817f0a3a74b606c1a140d5a6cdeae7376e7167de21d81cc590a82660",
+      "expectedSha256": "5306e64c817f0a3a74b606c1a140d5a6cdeae7376e7167de21d81cc590a82660",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/promotions?preview=1",
+      "status": 200,
+      "sha256": "a5fc761998316b811a28f83e06e3ca4f444411fd2324751a8483683e624e85af",
+      "expectedSha256": "a5fc761998316b811a28f83e06e3ca4f444411fd2324751a8483683e624e85af",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/financing?preview=1",
+      "status": 200,
+      "sha256": "03530590903f77731be93d23b30c9c342ef974c68b322ab4aad2dbb2af80890e",
+      "expectedSha256": "03530590903f77731be93d23b30c9c342ef974c68b322ab4aad2dbb2af80890e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/services/pest-inspections",
+      "status": 200,
+      "sha256": "0477e706d6895dba7b88a5f506ee761684380110af3b2bebbc20c34ba58373e6",
+      "expectedSha256": "0477e706d6895dba7b88a5f506ee761684380110af3b2bebbc20c34ba58373e6",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/services/ant-control",
+      "status": 200,
+      "sha256": "732bdc90c83ecf98163b7e480d8c7d1c813d4142fb6988845eea367ae1d368e3",
+      "expectedSha256": "732bdc90c83ecf98163b7e480d8c7d1c813d4142fb6988845eea367ae1d368e3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/services/rodent-control",
+      "status": 200,
+      "sha256": "cea82c44c727387b5e837de2f5241aec24f4157ca5d9af29c0a5daa6cb6f9069",
+      "expectedSha256": "cea82c44c727387b5e837de2f5241aec24f4157ca5d9af29c0a5daa6cb6f9069",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/services/termite-inspections",
+      "status": 200,
+      "sha256": "0c21bdfaec91a37b3da7294e88016f2e2a7b24837c906ab080928fd2623ec4a9",
+      "expectedSha256": "0c21bdfaec91a37b3da7294e88016f2e2a7b24837c906ab080928fd2623ec4a9",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/services/cockroach-control",
+      "status": 200,
+      "sha256": "db58ed68d51197019792dfbc07ccf229cb199d7033b710bf109fe3b46ea4bb75",
+      "expectedSha256": "db58ed68d51197019792dfbc07ccf229cb199d7033b710bf109fe3b46ea4bb75",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/services/spider-control",
+      "status": 200,
+      "sha256": "80373bbcdd13587fc6b0a93981373ef959879f47a2fdf58f243d387a850b9144",
+      "expectedSha256": "80373bbcdd13587fc6b0a93981373ef959879f47a2fdf58f243d387a850b9144",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/services/mosquito-control",
+      "status": 200,
+      "sha256": "07f46c8a3df4f34a4cc8eff0ea8119479c487dd1dbb171a15a6a685b4b4d47e4",
+      "expectedSha256": "07f46c8a3df4f34a4cc8eff0ea8119479c487dd1dbb171a15a6a685b4b4d47e4",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/services/preventive-maintenance",
+      "status": 200,
+      "sha256": "51a90b26c4ffdbfb119e3634a5f49c193d66fe5082dd76d9cf80f3f348250ca0",
+      "expectedSha256": "51a90b26c4ffdbfb119e3634a5f49c193d66fe5082dd76d9cf80f3f348250ca0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pest-control/faq?preview=1",
+      "status": 200,
+      "sha256": "b85dc1af029cb801657c38e57de8c0e579b39d67730665a906d58fce2fd3c462",
+      "expectedSha256": "b85dc1af029cb801657c38e57de8c0e579b39d67730665a906d58fce2fd3c462",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/pest-control/immersive",
+      "status": 200,
+      "sha256": "51f2f237bf0ce25103e018a46580e87bde9867e1aadfd995f38047eb30938664",
+      "expectedSha256": "51f2f237bf0ce25103e018a46580e87bde9867e1aadfd995f38047eb30938664",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/pest-control/editorial",
+      "status": 200,
+      "sha256": "0e56ac510c6b4716fe268218a6ced9c04320b195170924c4aec2f72ef0a1f3b2",
+      "expectedSha256": "0e56ac510c6b4716fe268218a6ced9c04320b195170924c4aec2f72ef0a1f3b2",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/pest-control/studio",
+      "status": 200,
+      "sha256": "84c672e2fbffeba4dade2f7fbf3f015ae2da5020e1df362e579534eedf52751a",
+      "expectedSha256": "84c672e2fbffeba4dade2f7fbf3f015ae2da5020e1df362e579534eedf52751a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors",
+      "status": 200,
+      "sha256": "985b0d3878fb8421e046bbaa91c6c2461ffefdbfb08fc9364ee8efd0f5371b9e",
+      "expectedSha256": "985b0d3878fb8421e046bbaa91c6c2461ffefdbfb08fc9364ee8efd0f5371b9e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/services",
+      "status": 200,
+      "sha256": "7722c667dc4a0976b457779bf9b6ec2af26b04c723d25ddeeabc810277dca1d4",
+      "expectedSha256": "7722c667dc4a0976b457779bf9b6ec2af26b04c723d25ddeeabc810277dca1d4",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/areas",
+      "status": 200,
+      "sha256": "b957c679ecffe0b284ba9b03c43223e0685386fa3f7bbc9b082124c48cbfb3bd",
+      "expectedSha256": "b957c679ecffe0b284ba9b03c43223e0685386fa3f7bbc9b082124c48cbfb3bd",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/areas/oxnard",
+      "status": 200,
+      "sha256": "55b7533c7c9033943fb28b8ddbba14a884ef47a176ccb64d01fc563feb985e17",
+      "expectedSha256": "55b7533c7c9033943fb28b8ddbba14a884ef47a176ccb64d01fc563feb985e17",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/areas/ventura",
+      "status": 200,
+      "sha256": "ae2cd6f8e5baf9587fbcfee954fa50e134b56149b90f507d49cc8bf39103de09",
+      "expectedSha256": "ae2cd6f8e5baf9587fbcfee954fa50e134b56149b90f507d49cc8bf39103de09",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/about",
+      "status": 200,
+      "sha256": "7a8f8c202b5f13e3b622a71af5c6d9f22b84efe0d74fb038a004425a6ba70c67",
+      "expectedSha256": "7a8f8c202b5f13e3b622a71af5c6d9f22b84efe0d74fb038a004425a6ba70c67",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/faq",
+      "status": 200,
+      "sha256": "0dd1f078427d66364ad1010aa282461126903dccda366379f8cd957f80779606",
+      "expectedSha256": "0dd1f078427d66364ad1010aa282461126903dccda366379f8cd957f80779606",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/legal",
+      "status": 200,
+      "sha256": "9d8374e7d634a313a3f960cb5bccc113ae887f09a185b859397f4a5863b41e63",
+      "expectedSha256": "9d8374e7d634a313a3f960cb5bccc113ae887f09a185b859397f4a5863b41e63",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/promotions?preview=1",
+      "status": 200,
+      "sha256": "0d1ee8fadc7b66a194890e3211f83ae638d0e3744d0a90c5218a27917dcfd7ec",
+      "expectedSha256": "0d1ee8fadc7b66a194890e3211f83ae638d0e3744d0a90c5218a27917dcfd7ec",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/financing?preview=1",
+      "status": 200,
+      "sha256": "4cb931cd4f76cc290164c76e5b52512b06886d26b77f9b71417687140f296984",
+      "expectedSha256": "4cb931cd4f76cc290164c76e5b52512b06886d26b77f9b71417687140f296984",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/services/window-replacement",
+      "status": 200,
+      "sha256": "60387c08e000afe63488ad6e9bb3b14e6baa43d584b02df0c37a436d4948ebcf",
+      "expectedSha256": "60387c08e000afe63488ad6e9bb3b14e6baa43d584b02df0c37a436d4948ebcf",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/services/window-installation",
+      "status": 200,
+      "sha256": "638a4c1f80b1771a7535ee09c4cee6f7f536bd44569d074f90b068a3cecf96cb",
+      "expectedSha256": "638a4c1f80b1771a7535ee09c4cee6f7f536bd44569d074f90b068a3cecf96cb",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/services/energy-efficient-windows",
+      "status": 200,
+      "sha256": "164e538007dd36219065cbfee9845ff0adea59ad260b1e83439237c598c9c9a6",
+      "expectedSha256": "164e538007dd36219065cbfee9845ff0adea59ad260b1e83439237c598c9c9a6",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/services/entry-doors",
+      "status": 200,
+      "sha256": "24701d131cf21a5926f9375b5b1261f2b801943723d8c8a879593523f8902210",
+      "expectedSha256": "24701d131cf21a5926f9375b5b1261f2b801943723d8c8a879593523f8902210",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/services/patio-doors",
+      "status": 200,
+      "sha256": "a51aa64a819bc7f8dbd6793529c990e6d1df6f8a2b0fb528f921eddfdeb2640f",
+      "expectedSha256": "a51aa64a819bc7f8dbd6793529c990e6d1df6f8a2b0fb528f921eddfdeb2640f",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/services/sliding-glass-doors",
+      "status": 200,
+      "sha256": "23382e86d3415ab2cc50812cee31b4352474edb7a9e5a347ae4e6ca0c9074da0",
+      "expectedSha256": "23382e86d3415ab2cc50812cee31b4352474edb7a9e5a347ae4e6ca0c9074da0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/services/french-doors",
+      "status": 200,
+      "sha256": "494f442a4a335f4c9cb2b3363264aba2f25a8cab87577cb846ab00f7b5cefedb",
+      "expectedSha256": "494f442a4a335f4c9cb2b3363264aba2f25a8cab87577cb846ab00f7b5cefedb",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/services/window-and-door-repair",
+      "status": 200,
+      "sha256": "f19bc74c712b9b7eea015a3face7d38f2b2fddb34e7481221357997b5400faa8",
+      "expectedSha256": "f19bc74c712b9b7eea015a3face7d38f2b2fddb34e7481221357997b5400faa8",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-windows-doors/faq?preview=1",
+      "status": 200,
+      "sha256": "c1e9c7e4c4051630613036d7465bd77a249891c58c3f1ad65ddbd83ea9f66183",
+      "expectedSha256": "c1e9c7e4c4051630613036d7465bd77a249891c58c3f1ad65ddbd83ea9f66183",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/windows-doors/immersive",
+      "status": 200,
+      "sha256": "1b47a9489265d29e8a884c130f48027a9ed0e96b76b104ed424c39f474c47ec1",
+      "expectedSha256": "1b47a9489265d29e8a884c130f48027a9ed0e96b76b104ed424c39f474c47ec1",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/windows-doors/editorial",
+      "status": 200,
+      "sha256": "02d60936cf9cc46bcd9f9602b7ad4b59f5b4db1f52c733e5f2ab0e5a0cd693f3",
+      "expectedSha256": "02d60936cf9cc46bcd9f9602b7ad4b59f5b4db1f52c733e5f2ab0e5a0cd693f3",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/windows-doors/studio",
+      "status": 200,
+      "sha256": "e3771055d051b0796a4bc765e3015614166dddab6133d56e4263bcfb1547a13b",
+      "expectedSha256": "e3771055d051b0796a4bc765e3015614166dddab6133d56e4263bcfb1547a13b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar",
+      "status": 200,
+      "sha256": "23a1c8515c3100cd0304aef87affa3e1a110368d5e22d2a3bb29698928d742f0",
+      "expectedSha256": "23a1c8515c3100cd0304aef87affa3e1a110368d5e22d2a3bb29698928d742f0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/services",
+      "status": 200,
+      "sha256": "4f37d246177d73497c04acf78853cc69e3379ccd955ad8237b82be99ba499585",
+      "expectedSha256": "4f37d246177d73497c04acf78853cc69e3379ccd955ad8237b82be99ba499585",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/areas",
+      "status": 200,
+      "sha256": "4d7ce7fcfc67cc5111ec1823340517e58f6db3ffeeb14df1084d7d3cd874330e",
+      "expectedSha256": "4d7ce7fcfc67cc5111ec1823340517e58f6db3ffeeb14df1084d7d3cd874330e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/areas/oxnard",
+      "status": 200,
+      "sha256": "066b579922eefd333cb8067d10ee5b04ce0992aaea453afee28067acdccf69c3",
+      "expectedSha256": "066b579922eefd333cb8067d10ee5b04ce0992aaea453afee28067acdccf69c3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/areas/ventura",
+      "status": 200,
+      "sha256": "3dfa3717d69dac1ab8d48270ae6d126cae4e50bd09f74bfb680c091f8f4e361e",
+      "expectedSha256": "3dfa3717d69dac1ab8d48270ae6d126cae4e50bd09f74bfb680c091f8f4e361e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/about",
+      "status": 200,
+      "sha256": "183ed04c5a0edb83fb30a85afdc105669b36d431f2aca3325283db8953c6957f",
+      "expectedSha256": "183ed04c5a0edb83fb30a85afdc105669b36d431f2aca3325283db8953c6957f",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/faq",
+      "status": 200,
+      "sha256": "960a4838ef099714673abc4957107ec0dd45c0316925621bd3a8ea4d9c81a047",
+      "expectedSha256": "960a4838ef099714673abc4957107ec0dd45c0316925621bd3a8ea4d9c81a047",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/legal",
+      "status": 200,
+      "sha256": "3c23a1596cd2f7952268cbf866596f54c3f83740f30383d322485442400d49fd",
+      "expectedSha256": "3c23a1596cd2f7952268cbf866596f54c3f83740f30383d322485442400d49fd",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/promotions?preview=1",
+      "status": 200,
+      "sha256": "f7fe6bfa7a4bd4d1f4bbbc17f938466d6502303c8f31218f3e06ca0e3cf22f96",
+      "expectedSha256": "f7fe6bfa7a4bd4d1f4bbbc17f938466d6502303c8f31218f3e06ca0e3cf22f96",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/financing?preview=1",
+      "status": 200,
+      "sha256": "310567af4d47a5cc2c5a0c7f3cd60ed333a48380ae711813f076e788ffa55009",
+      "expectedSha256": "310567af4d47a5cc2c5a0c7f3cd60ed333a48380ae711813f076e788ffa55009",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/services/solar-panel-installation",
+      "status": 200,
+      "sha256": "9aae6a5045c151af46ff020f3fc3eed794413bad1eda8fa71ed1e218f7ed2752",
+      "expectedSha256": "9aae6a5045c151af46ff020f3fc3eed794413bad1eda8fa71ed1e218f7ed2752",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/services/solar-battery-storage",
+      "status": 200,
+      "sha256": "2efcb1c3e539fae71a9f17e3d98e208864821f413386cb8012f57bf3cc63e29b",
+      "expectedSha256": "2efcb1c3e539fae71a9f17e3d98e208864821f413386cb8012f57bf3cc63e29b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/services/solar-system-design",
+      "status": 200,
+      "sha256": "fff23c7c3c22f296f78e4dc9dce46509c4508237b1b813435b1a3adbbe2699b9",
+      "expectedSha256": "fff23c7c3c22f296f78e4dc9dce46509c4508237b1b813435b1a3adbbe2699b9",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/services/solar-panel-maintenance",
+      "status": 200,
+      "sha256": "4685e1c66184d369e88e0b8cf5488905a57452f2301fbffafd2b3e5e029c3b22",
+      "expectedSha256": "4685e1c66184d369e88e0b8cf5488905a57452f2301fbffafd2b3e5e029c3b22",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/services/solar-panel-cleaning",
+      "status": 200,
+      "sha256": "9aafd38c7de45b821acd96852598c2c174ccda5b91a10a766e14700db42f646a",
+      "expectedSha256": "9aafd38c7de45b821acd96852598c2c174ccda5b91a10a766e14700db42f646a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/services/solar-inverter-replacement",
+      "status": 200,
+      "sha256": "6c150e4140fa489522f79147c88702b9a2578366bf0e4eee494a264d911fcf55",
+      "expectedSha256": "6c150e4140fa489522f79147c88702b9a2578366bf0e4eee494a264d911fcf55",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/services/solar-removal-and-reinstallation",
+      "status": 200,
+      "sha256": "48bc9b172046500fa76520bda93b74fd15b1a0ab8d7c2132740eafed4ef232a9",
+      "expectedSha256": "48bc9b172046500fa76520bda93b74fd15b1a0ab8d7c2132740eafed4ef232a9",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/services/solar-system-monitoring",
+      "status": 200,
+      "sha256": "708d7f10ac2f7cbf9cd19834764599439588b7dc9cfefd507e9eaa5a57b6a2b3",
+      "expectedSha256": "708d7f10ac2f7cbf9cd19834764599439588b7dc9cfefd507e9eaa5a57b6a2b3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-solar/faq?preview=1",
+      "status": 200,
+      "sha256": "10272eb876b9304f46566e2b6a8494e6adae303e3a52bbef8388fb2443c7c127",
+      "expectedSha256": "10272eb876b9304f46566e2b6a8494e6adae303e3a52bbef8388fb2443c7c127",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/solar/immersive",
+      "status": 200,
+      "sha256": "329aceec7f534aae8d4d22bf6eb6a5bf153419b9a17ce7a67549a4313256b602",
+      "expectedSha256": "329aceec7f534aae8d4d22bf6eb6a5bf153419b9a17ce7a67549a4313256b602",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/solar/editorial",
+      "status": 200,
+      "sha256": "5cdf866bac8d25d4f514e7d147131acc22d3e2f111b04dae24267e36fc668e79",
+      "expectedSha256": "5cdf866bac8d25d4f514e7d147131acc22d3e2f111b04dae24267e36fc668e79",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/solar/studio",
+      "status": 200,
+      "sha256": "4d1b4766f3cdd1981412dc1ff7f7d384325966756b43bc9f8b977ba2d930de72",
+      "expectedSha256": "4d1b4766f3cdd1981412dc1ff7f7d384325966756b43bc9f8b977ba2d930de72",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete",
+      "status": 200,
+      "sha256": "862517718482b2567ac4fb41d53cc5dcda814bb4a08a56e121373bf35ebcbfad",
+      "expectedSha256": "862517718482b2567ac4fb41d53cc5dcda814bb4a08a56e121373bf35ebcbfad",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/services",
+      "status": 200,
+      "sha256": "8689d9be6555d023606d49f663f2890954a9c2151fb5a8b7604e708d7fa471a0",
+      "expectedSha256": "8689d9be6555d023606d49f663f2890954a9c2151fb5a8b7604e708d7fa471a0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/areas",
+      "status": 200,
+      "sha256": "2aa3551d9b75490d292faeee8c7e723e355f16d349b8eb313a2d1b550a264f8a",
+      "expectedSha256": "2aa3551d9b75490d292faeee8c7e723e355f16d349b8eb313a2d1b550a264f8a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/areas/oxnard",
+      "status": 200,
+      "sha256": "170eaf10bb3d9ad469147de28f42b4b3fab7e5e2f330b7474c07584e395078f7",
+      "expectedSha256": "170eaf10bb3d9ad469147de28f42b4b3fab7e5e2f330b7474c07584e395078f7",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/areas/ventura",
+      "status": 200,
+      "sha256": "3bc862abb9ba6f73909ad466e1115b58b10862e5c1ef88436eec4af32da28827",
+      "expectedSha256": "3bc862abb9ba6f73909ad466e1115b58b10862e5c1ef88436eec4af32da28827",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/about",
+      "status": 200,
+      "sha256": "3cc998c9a8269f23940b3072692b0fa7c4e278a5bdf3fd991efc3768f2256f27",
+      "expectedSha256": "3cc998c9a8269f23940b3072692b0fa7c4e278a5bdf3fd991efc3768f2256f27",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/faq",
+      "status": 200,
+      "sha256": "6fd6f842781405d365886234f73410a64d404533ad992795fd9608bd2215ea27",
+      "expectedSha256": "6fd6f842781405d365886234f73410a64d404533ad992795fd9608bd2215ea27",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/legal",
+      "status": 200,
+      "sha256": "a0453747a9f1d6b68f563951b11174290de49df48840c03f2be6f03c0244f6dc",
+      "expectedSha256": "a0453747a9f1d6b68f563951b11174290de49df48840c03f2be6f03c0244f6dc",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/promotions?preview=1",
+      "status": 200,
+      "sha256": "95970f2c7bca18f28cac63abf1f1fec1a1088bee8cf73509a0a50fedc455389c",
+      "expectedSha256": "95970f2c7bca18f28cac63abf1f1fec1a1088bee8cf73509a0a50fedc455389c",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/financing?preview=1",
+      "status": 200,
+      "sha256": "bb5209cd68da33cf3b492640cad36da7aecdbb8c41f0b9ffdb7d33329d9a05b2",
+      "expectedSha256": "bb5209cd68da33cf3b492640cad36da7aecdbb8c41f0b9ffdb7d33329d9a05b2",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/services/concrete-driveways",
+      "status": 200,
+      "sha256": "1f2b2afcc7dc3ab40976fda6b8672de225f0db20fce969d16c21357d444f72f4",
+      "expectedSha256": "1f2b2afcc7dc3ab40976fda6b8672de225f0db20fce969d16c21357d444f72f4",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/services/concrete-patios",
+      "status": 200,
+      "sha256": "0373f0493d7e9dadaeca25bb247e8d63c0a703832051f76a760c6835bd99477e",
+      "expectedSha256": "0373f0493d7e9dadaeca25bb247e8d63c0a703832051f76a760c6835bd99477e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/services/stamped-concrete",
+      "status": 200,
+      "sha256": "e7403c3aa1045534b70c518ac5e454a26fcce22d7a37bf6ac9a826216dc3f1ad",
+      "expectedSha256": "e7403c3aa1045534b70c518ac5e454a26fcce22d7a37bf6ac9a826216dc3f1ad",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/services/concrete-walkways",
+      "status": 200,
+      "sha256": "992e3e1ca21dedf0671dc7bcfcddad597419bf0acf7f5dc6ad83f48f35328692",
+      "expectedSha256": "992e3e1ca21dedf0671dc7bcfcddad597419bf0acf7f5dc6ad83f48f35328692",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/services/concrete-foundations",
+      "status": 200,
+      "sha256": "a5f1b4cf6688d424af0a13f3ad522e87815248a0e4446a021b3f630a2ce507c0",
+      "expectedSha256": "a5f1b4cf6688d424af0a13f3ad522e87815248a0e4446a021b3f630a2ce507c0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/services/concrete-slabs",
+      "status": 200,
+      "sha256": "b856db711ccdbbbcc112bd06e6145808ee6175c63e8e4369edcaa4d2bc62623b",
+      "expectedSha256": "b856db711ccdbbbcc112bd06e6145808ee6175c63e8e4369edcaa4d2bc62623b",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/services/concrete-repair",
+      "status": 200,
+      "sha256": "7f723f15ec6d369e5e33016f461943a42571de55fe2724a7e174cfb228df12bf",
+      "expectedSha256": "7f723f15ec6d369e5e33016f461943a42571de55fe2724a7e174cfb228df12bf",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/services/decorative-concrete",
+      "status": 200,
+      "sha256": "990ea0bd0f8127cd4ee2c207093f4b2361e819260c32eee7f7a50ae789cd3837",
+      "expectedSha256": "990ea0bd0f8127cd4ee2c207093f4b2361e819260c32eee7f7a50ae789cd3837",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-concrete/faq?preview=1",
+      "status": 200,
+      "sha256": "a276ef48d197ece9f8f8b8c0146813b75c8ecffa63d22ac224aaefc724fa0f68",
+      "expectedSha256": "a276ef48d197ece9f8f8b8c0146813b75c8ecffa63d22ac224aaefc724fa0f68",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/concrete/immersive",
+      "status": 200,
+      "sha256": "e17c0eab1b2f68695dd52505092f8f4be3ce333b029941ff40fcb2e63cc1c37e",
+      "expectedSha256": "e17c0eab1b2f68695dd52505092f8f4be3ce333b029941ff40fcb2e63cc1c37e",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/concrete/editorial",
+      "status": 200,
+      "sha256": "3daa8175f8e7426301fd9d8b822dafb64125af828345bb2477d8cd8e030abc9d",
+      "expectedSha256": "3daa8175f8e7426301fd9d8b822dafb64125af828345bb2477d8cd8e030abc9d",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/concrete/studio",
+      "status": 200,
+      "sha256": "baa8e340a8523775123dc6d4a762ed1f642ea28c2224dd02bb11b76ee8503d00",
+      "expectedSha256": "baa8e340a8523775123dc6d4a762ed1f642ea28c2224dd02bb11b76ee8503d00",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools",
+      "status": 200,
+      "sha256": "f837ab708ea9e0911bc0af854180eff549fc639c58ba74954027d9b5119c1014",
+      "expectedSha256": "f837ab708ea9e0911bc0af854180eff549fc639c58ba74954027d9b5119c1014",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/services",
+      "status": 200,
+      "sha256": "ae4c24713cf2b17181000117059e2e9a61274ae79e5fe3a0231964fb0a1397d9",
+      "expectedSha256": "ae4c24713cf2b17181000117059e2e9a61274ae79e5fe3a0231964fb0a1397d9",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/areas",
+      "status": 200,
+      "sha256": "88ee83fb8a80efbc1f63568226e6ab4197f4452bc31a1241845a5703fbbc0e0a",
+      "expectedSha256": "88ee83fb8a80efbc1f63568226e6ab4197f4452bc31a1241845a5703fbbc0e0a",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/areas/oxnard",
+      "status": 200,
+      "sha256": "79f894d02c666199735e07631e963fa6b12ab764e52d1bd8a7cbf9ad8b2ec0a2",
+      "expectedSha256": "79f894d02c666199735e07631e963fa6b12ab764e52d1bd8a7cbf9ad8b2ec0a2",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/areas/ventura",
+      "status": 200,
+      "sha256": "20f701d0babdcf4fe3e880aba4ddbec0be237be0de8a1685abc81f244cd9eeee",
+      "expectedSha256": "20f701d0babdcf4fe3e880aba4ddbec0be237be0de8a1685abc81f244cd9eeee",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/about",
+      "status": 200,
+      "sha256": "bae102a130d4b18cce50e59f53cf431394e53adcc36f7b77fa1245b5bab18f10",
+      "expectedSha256": "bae102a130d4b18cce50e59f53cf431394e53adcc36f7b77fa1245b5bab18f10",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/faq",
+      "status": 200,
+      "sha256": "ec50f22aa5ebce506b434c4ad585940c928dafcf379e72c7afab25f92fe29c06",
+      "expectedSha256": "ec50f22aa5ebce506b434c4ad585940c928dafcf379e72c7afab25f92fe29c06",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/legal",
+      "status": 200,
+      "sha256": "3617bd6fc79eec1ca997cfaa9f9010f523a0c05692b0733ea1ddacf9f3910c25",
+      "expectedSha256": "3617bd6fc79eec1ca997cfaa9f9010f523a0c05692b0733ea1ddacf9f3910c25",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/promotions?preview=1",
+      "status": 200,
+      "sha256": "c8f8cb7659dac475e165d16f5a50a36229d6fab20d34a8b379d2969a9470e5d0",
+      "expectedSha256": "c8f8cb7659dac475e165d16f5a50a36229d6fab20d34a8b379d2969a9470e5d0",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/financing?preview=1",
+      "status": 200,
+      "sha256": "8a750dd416bba1b34bc9d08ee3f80e70f9020e263b935a6a55f486d9830b12c3",
+      "expectedSha256": "8a750dd416bba1b34bc9d08ee3f80e70f9020e263b935a6a55f486d9830b12c3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/services/pool-design",
+      "status": 200,
+      "sha256": "c1881b8996d1f03cb812444759d15ec30ea5242044ec859adbda41adaea829eb",
+      "expectedSha256": "c1881b8996d1f03cb812444759d15ec30ea5242044ec859adbda41adaea829eb",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/services/pool-construction",
+      "status": 200,
+      "sha256": "20bbcbb96fe77367d45dc2f80c02fbf7e83264f4cd636727dc5b37bd34854a46",
+      "expectedSha256": "20bbcbb96fe77367d45dc2f80c02fbf7e83264f4cd636727dc5b37bd34854a46",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/services/pool-remodeling",
+      "status": 200,
+      "sha256": "788a389e87e2e5426076306fe96ec27a1ce27a40e464ae8ec15577d0f594693f",
+      "expectedSha256": "788a389e87e2e5426076306fe96ec27a1ce27a40e464ae8ec15577d0f594693f",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/services/pool-resurfacing",
+      "status": 200,
+      "sha256": "9a4e78e188ec4562f57ef1b113d2b5faf2e61c6e938c6618af8839b5aa277e16",
+      "expectedSha256": "9a4e78e188ec4562f57ef1b113d2b5faf2e61c6e938c6618af8839b5aa277e16",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/services/pool-equipment",
+      "status": 200,
+      "sha256": "4c57cbff16f927621a30d2f0abc96d641d193ca0d5f1b9e6bc8f3592cc87385e",
+      "expectedSha256": "4c57cbff16f927621a30d2f0abc96d641d193ca0d5f1b9e6bc8f3592cc87385e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/services/pool-tile-and-coping",
+      "status": 200,
+      "sha256": "761d0d36da878c4f115ce49faf77828ac998a42393e174ed57712c7c7eeb3c8e",
+      "expectedSha256": "761d0d36da878c4f115ce49faf77828ac998a42393e174ed57712c7c7eeb3c8e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/services/pool-decking",
+      "status": 200,
+      "sha256": "b1b9f9c059cfaabff6211dd69475152545af685564cf8e1dc5723835bdd199c5",
+      "expectedSha256": "b1b9f9c059cfaabff6211dd69475152545af685564cf8e1dc5723835bdd199c5",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/services/pool-maintenance",
+      "status": 200,
+      "sha256": "d5da8fa56e7ccb9e5d77e108575c7c7aa234e16eee17c62e14b67c33c623e8fe",
+      "expectedSha256": "d5da8fa56e7ccb9e5d77e108575c7c7aa234e16eee17c62e14b67c33c623e8fe",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-pools/faq?preview=1",
+      "status": 200,
+      "sha256": "545f2d60ce65d0286d3c50f7a11102a826e7181f7f4181859ae9c0b62a6e8a37",
+      "expectedSha256": "545f2d60ce65d0286d3c50f7a11102a826e7181f7f4181859ae9c0b62a6e8a37",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/pools/immersive",
+      "status": 200,
+      "sha256": "f83486ecae00aef85b6cae1ba62c96f4d407b4c312ad5f7c618e9033ca3b3877",
+      "expectedSha256": "f83486ecae00aef85b6cae1ba62c96f4d407b4c312ad5f7c618e9033ca3b3877",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/pools/editorial",
+      "status": 200,
+      "sha256": "f8db6b92b53d0467abb5c42e03287590cdc58893887bd755634cdfbdcec49464",
+      "expectedSha256": "f8db6b92b53d0467abb5c42e03287590cdc58893887bd755634cdfbdcec49464",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/pools/studio",
+      "status": 200,
+      "sha256": "a6d447ce7f361d68be962c3b70f904d918ca58e91ca7a2a693d9edc3ebf4232d",
+      "expectedSha256": "a6d447ce7f361d68be962c3b70f904d918ca58e91ca7a2a693d9edc3ebf4232d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith",
+      "status": 200,
+      "sha256": "0b7f859aa83a89d051de1ba190af2054532742ef675023f41a18f8e6aedb8eb9",
+      "expectedSha256": "0b7f859aa83a89d051de1ba190af2054532742ef675023f41a18f8e6aedb8eb9",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/services",
+      "status": 200,
+      "sha256": "7ab25203855acb9a403877bd6cc5b0c44d5c9b5cbb091d374c85418159d17f5d",
+      "expectedSha256": "7ab25203855acb9a403877bd6cc5b0c44d5c9b5cbb091d374c85418159d17f5d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/areas",
+      "status": 200,
+      "sha256": "58e96de435c71e5e4eee0802e53417a29ec136a245adfc1fc1443a9e352ad17e",
+      "expectedSha256": "58e96de435c71e5e4eee0802e53417a29ec136a245adfc1fc1443a9e352ad17e",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/areas/oxnard",
+      "status": 200,
+      "sha256": "b09c8a3321773ce53d292c3bed38616a8b833d792ed8ea235107282a95dd1ce8",
+      "expectedSha256": "b09c8a3321773ce53d292c3bed38616a8b833d792ed8ea235107282a95dd1ce8",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/areas/ventura",
+      "status": 200,
+      "sha256": "60d1f57a7ea936794ad14e31b058b0ff48a67421457b919690ea26d16f1f6233",
+      "expectedSha256": "60d1f57a7ea936794ad14e31b058b0ff48a67421457b919690ea26d16f1f6233",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/about",
+      "status": 200,
+      "sha256": "d469275ba3991cc503bbac38ff829ee1bd485fef1c88749397eb72a4051a4abe",
+      "expectedSha256": "d469275ba3991cc503bbac38ff829ee1bd485fef1c88749397eb72a4051a4abe",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/faq",
+      "status": 200,
+      "sha256": "f6f496d94fafb59109da88dbd0ba6faa38fac86b67b127e87084a6cb88e8a0d5",
+      "expectedSha256": "f6f496d94fafb59109da88dbd0ba6faa38fac86b67b127e87084a6cb88e8a0d5",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/legal",
+      "status": 200,
+      "sha256": "940b159ec80ec0193836ba35405a818f7800c86a5cbb1e44b4fdca220fb9e4b1",
+      "expectedSha256": "940b159ec80ec0193836ba35405a818f7800c86a5cbb1e44b4fdca220fb9e4b1",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/promotions?preview=1",
+      "status": 200,
+      "sha256": "1e0ac1efaba03fbebaca68bea6c73aeeee66534d28ea45d99e48170c17d80f76",
+      "expectedSha256": "1e0ac1efaba03fbebaca68bea6c73aeeee66534d28ea45d99e48170c17d80f76",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/financing?preview=1",
+      "status": 200,
+      "sha256": "48a1061721cf9ad8c37e2ef549124532d0b3619be8f08ec615bc1e095056b5d3",
+      "expectedSha256": "48a1061721cf9ad8c37e2ef549124532d0b3619be8f08ec615bc1e095056b5d3",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/services/residential-lockout",
+      "status": 200,
+      "sha256": "938cc6a7074c5530319a952422b2ce6ec9fc900684cb5bb4237c65c2e2a454d2",
+      "expectedSha256": "938cc6a7074c5530319a952422b2ce6ec9fc900684cb5bb4237c65c2e2a454d2",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/services/rekeying",
+      "status": 200,
+      "sha256": "d81483abd7eec180ecb6ea1e81b7680e2b15e761631cdac81a6cf6712a744a56",
+      "expectedSha256": "d81483abd7eec180ecb6ea1e81b7680e2b15e761631cdac81a6cf6712a744a56",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/services/lock-installation",
+      "status": 200,
+      "sha256": "07caa762cd6b8f0021051c95e5086fa1f8b4e48d163c56aacb83ff171fc2637f",
+      "expectedSha256": "07caa762cd6b8f0021051c95e5086fa1f8b4e48d163c56aacb83ff171fc2637f",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/services/smart-locks",
+      "status": 200,
+      "sha256": "6665042355b1fecb833c7860e778694fe260a545623286d1f77e1235597ac6bd",
+      "expectedSha256": "6665042355b1fecb833c7860e778694fe260a545623286d1f77e1235597ac6bd",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/services/automotive-lockout",
+      "status": 200,
+      "sha256": "17ff1b9b48e4d15a27578ad39320eedfd8933ae73e939b5916d363f16f258db5",
+      "expectedSha256": "17ff1b9b48e4d15a27578ad39320eedfd8933ae73e939b5916d363f16f258db5",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/services/commercial-access-control",
+      "status": 200,
+      "sha256": "a99da39d8d5c0d8c140da3bb9179b0ec101492b7f893f69b7c414f9e01719006",
+      "expectedSha256": "a99da39d8d5c0d8c140da3bb9179b0ec101492b7f893f69b7c414f9e01719006",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/services/safe-servicing",
+      "status": 200,
+      "sha256": "6bc59ea02e370794c8c7ba6338f1792fd512662d8ea3e92eaf7dd1792176cb4d",
+      "expectedSha256": "6bc59ea02e370794c8c7ba6338f1792fd512662d8ea3e92eaf7dd1792176cb4d",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/services/key-duplication",
+      "status": 200,
+      "sha256": "16de4702acad6c39c0107f3a44f7c6fecda378203bbd29df3aa20192f12ef492",
+      "expectedSha256": "16de4702acad6c39c0107f3a44f7c6fecda378203bbd29df3aa20192f12ef492",
+      "identical": true
+    },
+    {
+      "url": "/s/ambient-baseline-locksmith/faq?preview=1",
+      "status": 200,
+      "sha256": "eda2bb3b485f1f6955cb997ef49d0e509aa51ee344a766e659e185ef88889593",
+      "expectedSha256": "eda2bb3b485f1f6955cb997ef49d0e509aa51ee344a766e659e185ef88889593",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/locksmith/immersive",
+      "status": 200,
+      "sha256": "67d11ead47920cf9c0a50c678b276d02e8209a44be4b0bdb5f0ce879c6b798d9",
+      "expectedSha256": "67d11ead47920cf9c0a50c678b276d02e8209a44be4b0bdb5f0ce879c6b798d9",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/locksmith/editorial",
+      "status": 200,
+      "sha256": "553e13e0b7fed41a971e7c7f97672619bce146bbedbf655435464c996064bf3e",
+      "expectedSha256": "553e13e0b7fed41a971e7c7f97672619bce146bbedbf655435464c996064bf3e",
+      "identical": true
+    },
+    {
+      "url": "/design-preview/locksmith/studio",
+      "status": 200,
+      "sha256": "ddc54841b11ae939807ac741de7ea3d5ebc90bb07c2ec664dd5b338147d1a22a",
+      "expectedSha256": "ddc54841b11ae939807ac741de7ea3d5ebc90bb07c2ec664dd5b338147d1a22a",
+      "identical": true
+    }
+  ],
+  "protectedCss": [
+    {
+      "path": "about-trust.css",
+      "sha256": "c840be42166ae5b89e2c3e8ec2dd7fdd6ea1d94b918ad13117527e69105686a8"
+    },
+    {
+      "path": "app.css",
+      "sha256": "bafe8821df6b760196bf66ec5fc2131b3ea8c8c527dca694f27d8f65d005869e"
+    },
+    {
+      "path": "assets/leaflet.css",
+      "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+    },
+    {
+      "path": "auth.css",
+      "sha256": "f31eaf305dde8a89e1c048b27af39ab7a8e7c309dbfec54a8475d87301671d43"
+    },
+    {
+      "path": "blog.css",
+      "sha256": "f66871132dc56ca31b4302d1eec69e7878095193a52c92b9cfaa1ddca546e08b"
+    },
+    {
+      "path": "cinematic-enhancements.css",
+      "sha256": "dbf87b0894ee0615163da811ceebfb0bcfe26be6304981f6d721edc1c5623b2c"
+    },
+    {
+      "path": "cinematic.css",
+      "sha256": "05ef100250a28b2b3e62b359405b606592ab11e3c95efe464148dea7fbd74bf0"
+    },
+    {
+      "path": "constitution.css",
+      "sha256": "2844699c4536367c609e9448c18009d2500c677744f7062c0629b32b7df4a3f2"
+    },
+    {
+      "path": "conversion.css",
+      "sha256": "ecf2fb3b5945139f31af0cef69dc1a8a5cc2e168c8eefe5c318fc7947dfe9041"
+    },
+    {
+      "path": "core-site-pages.css",
+      "sha256": "b1edbaee8ff213f3c202474522967fe7ae6b6a0a26e1bdb355c797261aa523f0"
+    },
+    {
+      "path": "craft-story.css",
+      "sha256": "4c6e43d56ecb278570fcfff2eb3cceaa7b48816ba5378000b01e7891fd4e3ff8"
+    },
+    {
+      "path": "cutaway.css",
+      "sha256": "666b3933f149822d6739c2d39f90f67ad35af584d25c2b335279b59fd401eee5"
+    },
+    {
+      "path": "design-studio.css",
+      "sha256": "70ab7a3a535599215654cdf6d252f8473cb7f3c97e0979e16f3b0ecaa5698cb5"
+    },
+    {
+      "path": "design-variants.css",
+      "sha256": "ea63f5cf6e406f2bc3dfb2cf929227fbe4ec20451339ea65027a42e2f66c9f6a"
+    },
+    {
+      "path": "ebook.css",
+      "sha256": "1c2c87279fbf5ff561e5352f99d9a3e53e75518fd54f751fdc4fd4fb5dc0980c"
+    },
+    {
+      "path": "engagement.css",
+      "sha256": "f164633770919dba7f9d23faeb7667a4899e3aa77c76b0c3fe2a76aaa0f64df6"
+    },
+    {
+      "path": "expenses-admin.css",
+      "sha256": "e382fd3b51d7b7be51d5e1f95942dc6699203d8d41830899c88ac1d04497af5a"
+    },
+    {
+      "path": "flow.css",
+      "sha256": "cd4ef90fe4725bfd0165d50a63e4f67450c384b2d624205b1938db13cbbd85d2"
+    },
+    {
+      "path": "hero-contact.css",
+      "sha256": "4e7dbfc823fcf12ddb6f3dcdc2340f7e07f2e027396ee727f32dd21e0a232508"
+    },
+    {
+      "path": "hero-timelapse.css",
+      "sha256": "919bcdd12848e56092e692731d9eed1f5efcdd9f0aa183ed60ff297c29261b71"
+    },
+    {
+      "path": "neighborhood.css",
+      "sha256": "2a86abe21d24eda820c788ec2726f7a18182eeee0655bd247558a16a66eaf041"
+    },
+    {
+      "path": "owner-photo.css",
+      "sha256": "76fa88ddd3a2504ee5d07f139f863da037d5f240b9975262d3c13316b59eb129"
+    },
+    {
+      "path": "planning-ambient.css",
+      "sha256": "5066d20afeae8ee84b7eb3c18f74bdd674661de2f1bcbe1c67cde5334bb1805a"
+    },
+    {
+      "path": "planning-scroll.css",
+      "sha256": "35c1a5d79e1bb576e1eb521d8a5c9d22c0e804ce7e4345f9d58df9ad1e3d3597"
+    },
+    {
+      "path": "portfolio-common.css",
+      "sha256": "7d03a8b442fb5af8a493294d269acc78a790f405505e872efc8cc09aed624f3d"
+    },
+    {
+      "path": "portfolio-theme.css",
+      "sha256": "8c49f39af21fd38f2aa34af9cc2ca0c2f7ea1fa2a2820591d47b2ceb6470398c"
+    },
+    {
+      "path": "pricing.css",
+      "sha256": "c7f1452a790d06300c320d84b99dd58ac3acd556b221ffe0e42e4b9f850596ef"
+    },
+    {
+      "path": "project-story.css",
+      "sha256": "6acee8f1f88eb2c34fd98f840398e317aea1b3af1a1395d4c3aeaae169c25cbd"
+    },
+    {
+      "path": "promotions-planning.css",
+      "sha256": "b8efd56974a298a9a46b639060d1add1fc1fa0614b44783dee2f37eca7c6acbf"
+    },
+    {
+      "path": "reviews.css",
+      "sha256": "ab887c5626ccfe1e65a30ffa988756dda16f3c4ef34389eda8c7cc444f62932b"
+    },
+    {
+      "path": "roofing-city.css",
+      "sha256": "91eeb05b46668c0a7a326908696a98dd44c5e744e4a3ceffa131b4c250216b98"
+    },
+    {
+      "path": "roofing-motion-home.css",
+      "sha256": "8af63efefd25d509abda0e36593e24785e34ef5df3a7d8b76840b88654ad5e64"
+    },
+    {
+      "path": "roofing-service.css",
+      "sha256": "d1a2cc42258889beaddc6f8f2ac329f06976b92cb5cb3b152b5a7c6f5f42974c"
+    },
+    {
+      "path": "scroll-story.css",
+      "sha256": "e3693487dbd68fc9a1c23d009275a6093bf388ce62ab13a75538dbe68964c3dd"
+    },
+    {
+      "path": "service-detail.css",
+      "sha256": "ebb8104288dfbfe3dc035ace1a16a9129ef84aa2893bde9156d5d81a10dc36e8"
+    },
+    {
+      "path": "service-motion.css",
+      "sha256": "5ae54fb411b16ef1b0ad644c4ad6a6cf8fe98fd1dea3f2275178d9ff659e8548"
+    },
+    {
+      "path": "showcase.css",
+      "sha256": "a2c0426c92e1f46356a7e8a3d4e6deeb029f7d1ce319f522c68b1021151b264a"
+    },
+    {
+      "path": "showpiece-financing.css",
+      "sha256": "fb85e4230f885759fec8dccbea5f061db11947c644cb0d2a31b23499d7107fc3"
+    },
+    {
+      "path": "site-polish.css",
+      "sha256": "b04fc5f261fdac9fe6e3e5a4eeaf6f05748fd687472e01c524724ad26f1e86a3"
+    },
+    {
+      "path": "site-styles.css",
+      "sha256": "166ac3bd1a60723a5abf43b215d31a872f421b807491d0f110f8fa90c90b0b92"
+    },
+    {
+      "path": "site.css",
+      "sha256": "e1eb28ac71d1212d2692521b26a5f156e89a095a8b2f44adfee5c9df6ad15369"
+    },
+    {
+      "path": "trade-backgrounds.css",
+      "sha256": "3f7c1bba7a16576d7f6f9ada1110eb08bfc7e20f3b4d9469e8d17c042cc30b8b"
+    },
+    {
+      "path": "trade-components.css",
+      "sha256": "308f7b21b6b7a55af7f2258affebc3c39984651911efd35d5cf1fb7a00fe272d"
+    },
+    {
+      "path": "trade-motion-v2.css",
+      "sha256": "a8c239c95774c9a4fd2f08f81480015fab9e4b13d70a45a5a41198bcf3cd1bc2"
+    },
+    {
+      "path": "trade-motion.css",
+      "sha256": "9e4335b418b33571f5792796a4760fe9c82aa0e687890e42265142983212b25d"
+    },
+    {
+      "path": "trade-page.css",
+      "sha256": "6c290ec9b1ef7cbfd03dc62ca584cf794d1104f9e42b8fba67a4a80e9690a932"
+    },
+    {
+      "path": "trade-revisions.css",
+      "sha256": "190b870803f4d9bf85e42b6009c59ffc132b863283eff837efac0e177632de58"
+    },
+    {
+      "path": "trust.css",
+      "sha256": "d64bca103b4a7b76ba9c0d3c5d819ba16a0605d67a36f1971dd7c4b99aaa0d67"
+    },
+    {
+      "path": "website-pages.css",
+      "sha256": "93610145e5d2e18724ac530dc5da7357eadeec9593b6df7668fa4c540a1df58d"
+    }
+  ]
+}

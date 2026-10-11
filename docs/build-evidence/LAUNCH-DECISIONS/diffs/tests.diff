@@ -1,0 +1,550 @@
+diff --git a/tests/catalog.mjs b/tests/catalog.mjs
+index 288faaa..ba44570 100644
+--- a/tests/catalog.mjs
++++ b/tests/catalog.mjs
+@@ -22,7 +22,7 @@ test('catalog validates and includes every Pack 3 and Pack 4 SKU exactly once',
+   assert.equal(new Set(catalog.products.map(row => row.sku)).size, catalog.products.length);
+ });
+ 
+-test('all amounts are integer cents, proposed plan prices remain unavailable, and annual equals ten months', () => {
++test('all amounts are integer cents, Joe-approved plan prices are available, and annual equals ten months', () => {
+   for (const row of catalog.products) {
+     assert.equal(row.currency, 'USD');
+     assert.ok(row.priceCents === null || Number.isSafeInteger(row.priceCents));
+@@ -35,16 +35,9 @@ test('all amounts are integer cents, proposed plan prices remain unavailable, an
+     assert.equal(purchaseEligibility(sku,true).allowed,true,sku);
+   }
+   assert.equal(getProduct('PLAN-WEBSITE-YEAR').priceCents,getProduct('PLAN-WEBSITE-MONTH').priceCents*10);
+-  for (const [plan,monthly] of [['GROWTH',27900],['ALL-IN',44900]]) {
+-    const month = getProduct(`PLAN-${plan}-MONTH`), year = getProduct(`PLAN-${plan}-YEAR`);
+-    assert.equal(month.priceCents, null);
+-    assert.equal(year.priceCents, null);
+-    assert.equal(month.proposedPriceCents, monthly);
+-    assert.equal(year.proposedPriceCents, monthly * 10);
+-    assert.equal(month.displayPrice, 'Price coming soon');
+-    assert.equal(year.displayPrice, 'Price coming soon');
+-    assert.equal(month.active,false);
+-    assert.equal(purchaseEligibility(month.sku).allowed, false);
++  for (const [plan,monthly] of [['GROWTH',15000],['ALL-IN',30000]]) {
++    const month=getProduct(`PLAN-${plan}-MONTH`),year=getProduct(`PLAN-${plan}-YEAR`);
++    assert.equal(month.priceCents,monthly);assert.equal(year.priceCents,monthly*10);assert.equal(month.active,true);assert.equal(year.active,true);assert.notEqual(month.displayPrice,'Price coming soon');assert.equal(purchaseEligibility(month.sku,true).allowed,true);
+   }
+   const invalid = clone();
+   invalid.products.find(row => row.sku === 'AI-UGC-PACK').priceCents = 197.5;
+diff --git a/tests/entitlements.mjs b/tests/entitlements.mjs
+index dd82770..13f314f 100644
+--- a/tests/entitlements.mjs
++++ b/tests/entitlements.mjs
+@@ -32,7 +32,7 @@ test('refund revokes unused grants and records an audit row',async()=>{
+ });
+ 
+ test('past due shows a banner and keeps paid-period features on',async()=>{
+-  const h=paymentHarness();
++  const h=paymentHarness();h.env.PAYMENT_CLOCK=()=>101000;
+   await h.send(h.event('evt_paid','invoice.paid',h.invoice('in_past','PLAN-WEBSITE-MONTH',5000,'2026-10-01T00:00:00.000Z',future),100));
+   const key=(await listEntitlements('tenant_123'))[0].key;
+   await h.send(h.event('evt_failed','invoice.payment_failed',{customer:'cus_test_1',metadata:{tenantId:'tenant_123'}},101));
+diff --git a/tests/expense-polish.mjs b/tests/expense-polish.mjs
+index b3ccc8c..594dc15 100644
+--- a/tests/expense-polish.mjs
++++ b/tests/expense-polish.mjs
+@@ -6,7 +6,7 @@ const base='https://test.local/api/admin/expenses';let checks=0;
+ const check=(v,m)=>{assert.ok(v,m);checks++};
+ async function api(path='',method='GET',data){const res=await worker.fetch(new Request(base+path,{method,headers:{origin:'https://test.local','content-type':'application/json','oai-authenticated-user-id':admin.id,'oai-authenticated-user-email':admin.email},body:data===undefined?undefined:JSON.stringify(data)}),env);assert.equal(res.status,200,await res.clone().text());return res.json()}
+ await api('/initialize','POST',{});let d=await api('');
+-for(const [id,price,posts]of [['website',50,0],['growth',279,12],['all-in',449,20]]){const p=d.products.find(p=>p.id===id);check(p.price===price,id+' monthly price');check(p.annualPrice===price*10,id+' annual 10 months');check(p.setupFee===0,id+' no setup fee');check(p.socialPosts===posts,id+' social pack');if(posts)check(p.costLines.some(l=>l.vendorId==='metricool'&&l.rateLineId==='social-'+posts&&l.units===1),id+' Metricool mapping');}
++for(const [id,price,posts]of [['website',50,0],['growth',150,12],['all-in',300,20]]){const p=d.products.find(p=>p.id===id);check(p.price===price,id+' monthly price');check(p.annualPrice===price*10,id+' annual 10 months');check(p.setupFee===0,id+' no setup fee');check(p.socialPosts===posts,id+' social pack');if(posts)check(p.costLines.some(l=>l.vendorId==='metricool'&&l.rateLineId==='social-'+posts&&l.units===1),id+' Metricool mapping');}
+ check(d.products.filter(p=>!['website','growth','all-in'].includes(p.id)).every(p=>p.price===null),'other prices unknown');check(d.vendors.every(v=>v.rates.every(r=>r.rate===null)),'all vendor rates unknown');const imageHistory=d.entries.filter(e=>e.model==='nano_banana_flash');check(imageHistory.length===318&&imageHistory.reduce((n,e)=>n+e.units,0)===636,'image history untouched');check(d.entries.length===324&&d.entries.reduce((n,e)=>n+e.units,0)===1372,'approved Phase 2 video costs included');
+ const p=d.products.find(p=>p.id==='growth');await api('/product/growth','PUT',{version:p.version,data:{...p,price:300}});await api('/catalog-plans','POST',{});d=await api('');check(d.products.find(p=>p.id==='growth').price===300,'admin edits survive repeated seeding');
+ const unknown=[{id:'unknown',count:2,unknown:2,knownCents:0}],zero=[{id:'zero',count:1,unknown:0,knownCents:0}];check(chartRows(unknown).length===0,'unknown not a zero plot');check(chartRows(zero).length===1,'recorded zero retained');check(!bars([],'empty').includes('data-chart='),'empty bars absent');check(!donut(unknown,x=>x).includes('<svg'),'unknown donut absent');check(!donut(zero,x=>x).includes('<svg'),'zero donut has no fabricated shares');check(donut([{id:'v',count:1,unknown:0,knownCents:250}],x=>x).includes('$2.50'),'donut uses recorded total');check(!donut([{id:'refund',count:1,unknown:0,knownCents:-100}],x=>x).includes('<svg'),'negative vendor totals use signed bars');
+diff --git a/tests/game-autofill.mjs b/tests/game-autofill.mjs
+index 8d5c744..7032120 100644
+--- a/tests/game-autofill.mjs
++++ b/tests/game-autofill.mjs
+@@ -10,21 +10,15 @@ fs.mkdirSync(out,{recursive:true});
+ await build({entryPoints:[root+'/src/blueprint/api.js'],outfile:root+'/.data/028G/game-autofill-api.js',bundle:true,format:'esm',platform:'node',loader:{'.html':'text','.pdf':'binary'},logLevel:'silent'});
+ const {gameApi}=await import(pathToFileURL(root+'/.data/028G/game-autofill-api.js').href);
+ const saved={name:'Harbor Roofing · QA fixture',owner:'QA owner',phone:'(805) 555-0123',email:'qa@example.test',address:'',hours:'By appointment',hero:'Talk through your roof repair',intro:'We explain the repair scope before work begins.',license:'DO NOT COPY',area:'Owner choice',price:99,experience:'DO NOT COPY',platform:{questionnaire:{factsConfirmed:true}}};
+-const db=isPostgresGameFixture()?gameDatabaseFixture():new DatabaseSync(':memory:');
+-if(isPostgresGameFixture()){
++const db=gameDatabaseFixture();
++{
+ 
+ seedGameTenant(db,'a',saved.name,{settings:JSON.stringify(saved),version:4});
+ seedGameTenant(db,'b','Other tenant',{settings:JSON.stringify({...saved,name:'Other tenant'}),version:2});
+ for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['a','editor','editor'],['b','other','owner']])seedGameMember(db,tenant,user,role);
+ seedGameAdmin(db,'admin');
+-}else{
+-
+-db.exec('CREATE TABLE admins(user_id TEXT,role TEXT);CREATE TABLE tenants(id TEXT,name TEXT,settings TEXT,version INT);CREATE TABLE members(tenant_id TEXT,user_id TEXT,role TEXT,active INT);');
+-db.prepare('INSERT INTO tenants VALUES(?,?,?,?)').run('a',saved.name,JSON.stringify(saved),4);
+-db.prepare('INSERT INTO tenants VALUES(?,?,?,?)').run('b','Other tenant',JSON.stringify({...saved,name:'Other tenant'}),2);
+-for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['a','editor','editor'],['b','other','owner']])db.prepare('INSERT INTO members VALUES(?,?,?,1)').run(tenant,user,role);
+-db.prepare('INSERT INTO admins VALUES(?,?)').run('admin','admin');
+ }
++
+ const env={DB:{prepare(sql){
+  let args=[];
+  return {
+diff --git a/tests/game-copy-fixture.mjs b/tests/game-copy-fixture.mjs
+index e214ad3..1372619 100644
+--- a/tests/game-copy-fixture.mjs
++++ b/tests/game-copy-fixture.mjs
+@@ -22,11 +22,11 @@ export default {
+     ],
+     [
+       "Give the first conversation a head start.",
+-      "Set up your estimate request."
++      "Save a service price range."
+     ],
+     [
+       "Choose the details you need and enter your own prices.",
+-      "Choose what homeowners need to tell you, enter your prices, and require consent."
++      "Enter a price range on at least one service page. Homeowners can then see your estimate starting point."
+     ],
+     [
+       "An offer that works for your business.",
+@@ -58,7 +58,7 @@ export default {
+     ],
+     [
+       "Keep your next step intentional.",
+-      "Choose your marketing channels."
++      "Add a way to find you."
+     ],
+     [
+       "Each quest earns XP when every step is complete.",
+diff --git a/tests/game-desktop.mjs b/tests/game-desktop.mjs
+index c827c73..b01b8c3 100644
+--- a/tests/game-desktop.mjs
++++ b/tests/game-desktop.mjs
+@@ -36,7 +36,7 @@ try{
+  await check('Back to board and reopen preserves unsaved form and real data',async()=>{await page.locator('[data-form=settings] input[name=name]').fill('Unsaved contractor choice');await page.locator('[data-game-back]').click();await page.getByText('Saved progress is up to date.',{exact:true}).waitFor();await page.locator('[data-game-open=business]').click();assert.equal(await page.locator('[data-form=settings] input[name=name]').inputValue(),'Unsaved contractor choice');assert.equal(JSON.stringify((await api('/tenants/'+tenant.id)).tenant.settings),settingsBefore);await page.locator('[data-game-back]').click();await page.getByText('Saved progress is up to date.',{exact:true}).waitFor()});
+  await check('reload returns directly to Game without preference writes',async()=>{await page.reload();await page.locator('.bv-game').waitFor({state:'visible'});assert.equal(await page.locator('[data-game-tabs],[data-game-entry]').count(),0)});
+  await check('real not-connected reason, no inferred review completion',async()=>{await page.locator('[data-game-quest=reviews]').click();assert.match(await page.locator('#bv-game-quest').innerText(),/Not connected/);assert.match(await page.locator('.bv-game-quest-foot').innerText(),/0 of 15/);await capture('g2a-desktop-not-connected')});
+- await check('locked requirements remain readable, estimator unavailable is honest',async()=>{await page.locator('[data-game-quest=estimator]').click();assert.match(await page.locator('#bv-game-quest').innerText(),/Locked/);assert.match(await page.locator('#bv-game-quest').innerText(),/Not available yet/);await capture('g2a-desktop-locked')});
++ await check('locked requirements remain readable; missing saved range earns zero XP',async()=>{await page.locator('[data-game-quest=estimator]').click();assert.match(await page.locator('#bv-game-quest').innerText(),/Locked/);assert.match(await page.locator('#bv-game-quest').innerText(),/Save a price range on at least one offered service page/);assert.match(await page.locator('.bv-game-quest-foot').innerText(),/0 of 20 XP/);await capture('g2a-desktop-locked')});
+  await check('keyboard selects quests, opens the real form and Escape returns focus',async()=>{await page.locator('[data-game-quest=onboarding]').focus();await page.keyboard.press('Enter');assert.equal(await page.locator('[data-game-quest=onboarding]').getAttribute('aria-selected'),'true');await page.keyboard.press('ArrowDown');assert.equal(await page.locator('[data-game-quest=pages]').getAttribute('aria-selected'),'true');await page.locator('[data-game-quest=onboarding]').focus();await page.keyboard.press('Space');await page.locator('[data-game-step]').first().focus();await page.keyboard.press('Enter');await page.locator('[data-form=settings] input[name=name]').waitFor({state:'visible'});await page.keyboard.press('Escape');await page.getByText('Saved progress is up to date.',{exact:true}).waitFor();assert.equal(await page.locator('[data-game-step]').first().evaluate(el=>document.activeElement===el),true)});
+  await check('progress endpoint cannot be used to award points',async()=>{const csrf=await context.request.get(base+'/auth/session').then(async r=>r.ok()?r.json():null);const response=await context.request.put(base+'/api/game/'+tenant.id,{headers:{origin:base,...(csrf?.csrfToken?{'x-csrf-token':csrf.csrfToken}:{})},data:{totalXp:100}});assert.ok([403,405].includes(response.status()));assert.equal(JSON.stringify((await api('/tenants/'+tenant.id)).tenant.settings),settingsBefore)});
+  // Display fixtures exercise future genuine source states; production readers never receive these.
+diff --git a/tests/game-fixtures.mjs b/tests/game-fixtures.mjs
+index 4e7c908..7c66e94 100644
+--- a/tests/game-fixtures.mjs
++++ b/tests/game-fixtures.mjs
+@@ -4,12 +4,12 @@ export function complete() {
+     onboarding:{state:'available',dataSource:'fixture:tenant',fields:Object.fromEntries(['name','phone','trade','area'].map(id=>[id,{value:id==='phone'?'+18055550198':id,saved:true,origin:'contractor',confirmed:true}]))},
+     pages:{state:'available',dataSource:'fixture:pages',required:['home','service','about','faq'],drafts:['home','service','about','faq'],approval:{approved:true,reference:'owner approval fixture'}},
+     reviews:{state:'available',dataSource:'fixture:review-display',provider:'google',profileId:'fixture-place',matched:true,confirmed:true,showing:true},
+-    estimator:{state:'available',dataSource:'fixture:estimator',fields:['name','mobile'],fieldsSaved:true,requiredFields:['name','mobile'],priceBook:{minimumItems:2,items:[{id:'a',enteredBy:'contractor',confirmed:true,amount:10},{id:'b',enteredBy:'contractor',confirmed:true,amount:20}]},consent:true},
++    estimator:{state:'available',dataSource:'fixture:estimator',serviceRanges:[{service:'Roof repair',min:10,max:20}],fields:['name','mobile'],fieldsSaved:true,requiredFields:['name','mobile'],priceBook:{minimumItems:2,items:[{id:'a',enteredBy:'contractor',confirmed:true,amount:10},{id:'b',enteredBy:'contractor',confirmed:true,amount:20}]},consent:true},
+     promotions:{state:'available',dataSource:'fixture:offers',offers:[{id:'offer',title:'Owner offer',reward:'Owner-defined reward'}],choice:null},
+     financing:{state:'available',dataSource:'fixture:lender',selection:'lenders',lenders:[{id:'hearth',selected:true,connection:'connected'}]},
+     leads:{state:'available',dataSource:'fixture:alerts',alerts:{enabled:true,phone:'+18055550198',phoneVerified:true},crm:{state:'not_connected'}},
+     launch:{state:'available',dataSource:'fixture:plan/domain/site',plan:{status:'active'},domain:{stage:'live'},published:true},
+-    marketing:{state:'available',dataSource:'fixture:social',choice:'channels',channels:[{id:'facebook',connection:'connected'}],posts:[{id:'post',channel:'facebook',providerId:'real-published-fixture',status:'published',publishedAt:'2026-01-01T00:00:00Z',isSample:false}]}
++    marketing:{state:'available',dataSource:'fixture:social',ready:true,choice:'channels',channels:[{id:'facebook',connection:'connected'}],posts:[{id:'post',channel:'facebook',providerId:'real-published-fixture',status:'published',publishedAt:'2026-01-01T00:00:00Z',isSample:false}]}
+   };
+ }
+ export function freeze(value) { if(value&&typeof value==='object'){Object.freeze(value);for(const child of Object.values(value))freeze(child);}return value; }
+diff --git a/tests/game-phone.mjs b/tests/game-phone.mjs
+index 6cb4613..a94b598 100644
+--- a/tests/game-phone.mjs
++++ b/tests/game-phone.mjs
+@@ -53,7 +53,7 @@ try{
+  await check('tour reaches quest and badges on phone, then finishes',async()=>{await page.getByRole('button',{name:'Next',exact:true}).tap();assert.match(await page.locator('[data-game-tour]').innerText(),/Your current quest/);await page.getByRole('button',{name:'Next',exact:true}).tap();assert.equal(await page.locator('.bv-game').getAttribute('data-game-phone-pane'),'badges');assert.equal(await page.locator('.bv-game-badges').isVisible(),true);await capture('g3-phone-tour-badges');await verifyPhone('tour-badges','.bv-game-tour');const response=page.waitForResponse(r=>r.url().endsWith('/experience')&&r.request().method()==='POST');await page.getByRole('button',{name:'Finish tour',exact:true}).tap();assert.equal((await response).status(),200);await page.locator('[data-game-phone=quests]').tap();await capture('g3-phone-fresh')});
+  await check('quest strip accepts touch swipes without scrolling the page sideways',async()=>{const strip=page.locator('.bv-game-chips'),box=await strip.boundingBox(),start=await strip.evaluate(el=>el.scrollLeft),cdp=await context.newCDPSession(page);const x=box.x+box.width-22,y=box.y+box.height/2;await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]});for(let n=1;n<=8;n++){await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x-n*22,y}]});await new Promise(r=>setTimeout(r,20));}await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await cdp.detach();assert.ok(await strip.evaluate(el=>el.scrollLeft)>start);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.locator('[data-game-chip=reviews]').tap();assert.equal(await page.locator('[data-game-chip=reviews]').getAttribute('aria-selected'),'true');assert.match(await page.locator('#bv-game-quest').innerText(),/Not connected/);await capture('g3-phone-not-connected')});
+  await check('All opens one reusable quest sheet with a keyboard focus loop',async()=>{await page.locator('[data-game-all]').tap();const sheet=page.getByRole('dialog',{name:'All quests',exact:true});await sheet.waitFor();assert.equal(await sheet.locator('[data-game-quest]').count(),9);assert.equal(await page.locator('[data-game-quest]').count(),9);await sheet.getByRole('button',{name:'Close',exact:true}).focus();await page.keyboard.press('Shift+Tab');assert.equal(await sheet.evaluate(el=>el.contains(document.activeElement)),true);await verifyPhone('all-quests','dialog.bv-game-all');await capture('g3-phone-all-quests')});
+- await check('choosing a locked quest closes All and focuses its chip',async()=>{await page.locator('dialog.bv-game-all [data-game-quest=estimator]').tap();assert.equal(await page.locator('dialog.bv-game-all').count(),0);assert.equal(await page.locator('[data-game-chip=estimator]').evaluate(el=>el===document.activeElement),true);assert.match(await page.locator('#bv-game-quest').innerText(),/Not available yet/);await verifyPhone('locked','.bv-game-header');await capture('g3-phone-locked')});
++ await check('choosing a locked quest closes All and focuses its chip',async()=>{await page.locator('dialog.bv-game-all [data-game-quest=estimator]').tap();assert.equal(await page.locator('dialog.bv-game-all').count(),0);assert.equal(await page.locator('[data-game-chip=estimator]').evaluate(el=>el===document.activeElement),true);assert.match(await page.locator('#bv-game-quest').innerText(),/Save a price range on at least one offered service page/);assert.match(await page.locator('.bv-game-quest-foot').innerText(),/0 of 20 XP/);await verifyPhone('locked','.bv-game-header');await capture('g3-phone-locked')});
+  await check('Badges and Settings retain all allowed data and sections',async()=>{await page.locator('[data-game-phone=badges]').tap();assert.equal(await page.locator('.bv-game-badge:visible').count(),8);await capture('g3-phone-badges');await verifyPhone('badges','.bv-game-header');await page.locator('[data-game-phone=settings]').tap();const settings=await page.locator('[data-game-setting]').evaluateAll(xs=>[...new Set(xs.map(x=>x.dataset.gameSetting))].sort());const actual=await page.locator('nav[aria-label="Website settings"] [data-section]').evaluateAll(xs=>xs.map(x=>x.dataset.section).sort());assert.deepEqual(settings,actual);assert.equal(settings.length,27);const originalSections=["launchpad","questionnaire","hero","editor","pages","business","ownerphoto","templates","services","projects","blog","contacts","calendar","forms","inquiries","chat","pricing","reviews","visibility","plan","readiness","followups","access","domains","backups"];assert.deepEqual(settings.filter(id=>!originalSections.includes(id)).sort(),['add-ons','billing']);assert.ok(originalSections.every(id=>settings.includes(id)));await capture('g3-phone-settings')});
+  const settingsBefore=JSON.stringify((await api('/tenants/'+tenant.id)).tenant.settings);
+  await check('Business uses its original form in a full-height phone sheet with Save reachable',async()=>{await page.locator('[data-game-setting=business]').tap();const sheet=page.locator('.bv-game-section-shell[role=dialog]');await sheet.locator('[data-form=settings] input[name=name]').waitFor();assert.equal(await sheet.getAttribute('aria-modal'),'true');assert.equal(await page.locator('.bv-game-board').evaluate(el=>el.inert),true);const bounds=await sheet.boundingBox();assert.equal(Math.round(bounds.height),844);assert.equal(Math.round(bounds.width),390);const save=page.locator('.platform-action-dock').getByRole('button',{name:'Save business settings',exact:true});await save.waitFor();const saveBox=await save.boundingBox();assert.ok(saveBox.height>=44&&saveBox.y+saveBox.height<=844);assert.equal(await sheet.locator('input[name=name]').evaluate(el=>getComputedStyle(el).fontSize),'16px');assert.equal(await sheet.evaluate(el=>el.scrollWidth<=el.clientWidth),true);await capture('g3-phone-business')});
+diff --git a/tests/game-progress.mjs b/tests/game-progress.mjs
+index 29ce160..e883279 100644
+--- a/tests/game-progress.mjs
++++ b/tests/game-progress.mjs
+@@ -15,7 +15,7 @@ test('fresh tenant: zero, honest reasons, stable output contract',()=>{
+  assert.equal(quest({},'estimator').status,'Not available yet');
+ });
+ test('complete fixture earns exactly 100; readonly and deterministic',()=>{const s=freeze(complete());assert.equal(evaluateProgress(s).totalXp,100);assert.deepEqual(evaluateProgress(s),evaluateProgress(s));});
+-test('midway awards completed quests only',()=>{const s=complete();s.estimator.consent=false;s.launch.plan.status='none';s.marketing.channels[0].connection='not_connected';assert.equal(evaluateProgress(s).totalXp,65);});
++test('midway awards completed quests only',()=>{const s=complete();s.estimator.serviceRanges=[];s.launch.plan.status='none';s.marketing.ready=false;assert.equal(evaluateProgress(s).totalXp,65);});
+ const failures=[
+  ['onboarding','name',s=>s.onboarding.fields.name.value=''],
+  ['onboarding','phone',s=>s.onboarding.fields.phone.value='123'],
+@@ -26,16 +26,16 @@ const failures=[
+  ['reviews','matched',s=>s.reviews.matched=false],
+  ['reviews','confirmed',s=>s.reviews.confirmed=false],
+  ['reviews','showing',s=>s.reviews.showing=false],
+- ['estimator','fields',s=>s.estimator.fieldsSaved=false],
+- ['estimator','price-book',s=>s.estimator.priceBook.items.pop()],
+- ['estimator','consent',s=>s.estimator.consent=false],
++ ['estimator','service-price-range',s=>s.estimator.serviceRanges=[]],
++ ['estimator','service-price-range',s=>s.estimator.serviceRanges[0].min=null],
++ ['estimator','service-price-range',s=>s.estimator.serviceRanges[0].max=-1],
+  ['promotions','offer-or-none',s=>s.promotions.offers=[]],
+  ['financing','connected-or-none',s=>s.financing.lenders[0].connection='not_connected'],
+  ['leads','verified-alerts-or-crm',s=>s.leads.alerts.phoneVerified=false],
+  ['launch','paid-plan',s=>s.launch.plan.status='past_due'],
+  ['launch','live-domain',s=>s.launch.domain.stage='verified'],
+  ['launch','published',s=>s.launch.published=false],
+- ['marketing','connected-or-none',s=>s.marketing.channels[0].connection='not_connected']
++ ['marketing','marketing-link-or-account',s=>s.marketing.ready=false]
+ ];
+ for(const [id,step,breakRule] of failures)test(`${id}/${step}: met, saved-but-not-met, disconnected`,()=>{
+  const s=complete();assert.equal(quest(s,id).steps.find(x=>x.id===step).done,true);breakRule(s);
+@@ -43,9 +43,9 @@ for(const [id,step,breakRule] of failures)test(`${id}/${step}: met, saved-but-no
+  s[id].state='not_connected';const off=quest(s,id);assert.equal(off.xpEarned,0);assert.ok(off.steps.every(x=>!x.done&&x.reason.includes('Not connected')));
+ });
+ for(const field of ['name','phone','trade','area'])test(`found unconfirmed ${field} cannot count`,()=>{const s=complete();s.onboarding.fields[field].origin='found';s.onboarding.fields[field].confirmed=false;assert.equal(quest(s,'onboarding').xpEarned,0);s.onboarding.fields[field].confirmed=true;assert.equal(quest(s,'onboarding').xpEarned,10);});
+-test('estimator parts expose 5/10/5 but partial quest earns zero',()=>{const s=complete();s.estimator.consent=false;const q=quest(s,'estimator');assert.deepEqual(q.steps.map(x=>x.xpMax),[5,10,5]);assert.equal(q.xpEarned,0);});
+-test('estimator cannot infer minimum, fields or contractor-entered rates',()=>{for(const mutate of [s=>delete s.estimator.priceBook.minimumItems,s=>s.estimator.priceBook.items[0].enteredBy='autofill',s=>s.estimator.priceBook.items[0].amount=null,s=>s.estimator.priceBook.items[1].id='a',s=>s.estimator.requiredFields=[],s=>s.estimator.fields=[]]){const s=complete();mutate(s);assert.equal(quest(s,'estimator').xpEarned,0);}});
+-test('explicit none is a choice; empty arrays are not',()=>{const s=complete();s.promotions.offers=[];s.promotions.choice='none';s.financing.lenders=[];s.financing.selection='none';s.marketing.channels=[];s.marketing.choice='none';for(const id of ['promotions','financing','marketing'])assert.equal(quest(s,id).done,true);delete s.promotions.choice;delete s.financing.selection;delete s.marketing.choice;for(const id of ['promotions','financing','marketing'])assert.equal(quest(s,id).done,false);});
++test('estimator earns its 20 XP only with a complete saved service range',()=>{const s=complete();s.estimator.serviceRanges[0].max=null;const q=quest(s,'estimator');assert.equal(q.steps.length,1);assert.equal(q.xpMax,20);assert.equal(q.xpEarned,0);});
++test('estimator rejects missing service, missing and reversed or nonfinite prices',()=>{for(const mutate of [s=>s.estimator.serviceRanges=[],s=>s.estimator.serviceRanges[0].service='',s=>s.estimator.serviceRanges[0].min=null,s=>s.estimator.serviceRanges[0].max=-1,s=>s.estimator.serviceRanges[0].min=Infinity,s=>s.estimator.serviceRanges[0].max=NaN]){const s=complete();mutate(s);assert.equal(quest(s,'estimator').xpEarned,0);}});
++test('explicit none counts only where approved; marketing needs real link/account evidence',()=>{const s=complete();s.promotions.offers=[];s.promotions.choice='none';s.financing.lenders=[];s.financing.selection='none';s.marketing.ready=false;s.marketing.choice='none';for(const id of ['promotions','financing'])assert.equal(quest(s,id).done,true);assert.equal(quest(s,'marketing').done,false);delete s.promotions.choice;delete s.financing.selection;for(const id of ['promotions','financing'])assert.equal(quest(s,id).done,false);});
+ test('verified email or CRM can satisfy leads; a typed address cannot',()=>{const s=complete();s.leads.alerts={enabled:true,email:'qa@example.test',emailVerified:true};assert.equal(quest(s,'leads').done,true);s.leads.alerts.emailVerified=false;assert.equal(quest(s,'leads').done,false);s.leads.crm={state:'connected'};assert.equal(quest(s,'leads').done,true);});
+ test('domain conjunction has no shortcut, including disconnected deps',()=>{for(const key of ['plan','domain']){const s=complete();s.launch[key]={state:'not_connected'};const q=quest(s,'launch');assert.equal(q.xpEarned,0);assert.ok(q.steps.some(x=>x.reason.includes('Not connected')));}});
+ test('all 512 quest combinations remain within 100 with exact sum',()=>{for(let mask=0;mask<512;mask++){const s=complete();Object.keys(s).forEach((id,i)=>{if(!(mask&(1<<i)))s[id]={state:'not_connected'};});const p=evaluateProgress(s);assert.equal(p.totalXp,p.quests.reduce((n,q)=>n+q.xpEarned,0));assert.ok(p.totalXp>=0&&p.totalXp<=100);}});
+@@ -82,7 +82,7 @@ function postgresDbFixture(){
+  seedGameTenant(db,'a',s.name,{settings:JSON.stringify(s),published:JSON.stringify(s),status:'published'});seedGameTenant(db,'b','Other fixture');db.prepare("INSERT INTO sales(tenant_id,data,updated_at) VALUES(?,?,'2026-01-01')").run('a',JSON.stringify({ownerApproved:true,approvalNote:'Saved owner preview approval'}));db.prepare("INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) VALUES(?,?,?,?,'2026-01-01','2026-01-01')").run('chat-a','a','chat_config',JSON.stringify({enabled:true,smsEnabled:true,phone:'+18055550198',phoneVerified:true}));db.prepare("INSERT INTO inquiries(id,tenant_id,name,phone,message,created_at) VALUES(?,?,'QA visitor','5550123','Fixture inquiry','2026-01-01')").run('lead-a','a');return {db,env:{DB:sql},s};
+ }
+ const offline=createDependencies({load:async()=>({})});
+-test('sources read tenant, sales approval, saved pages, offers, None and verified alerts; missing integrations stay honest',async()=>{const {db,env}=dbFixture();try{const s=await readProgressSources(env,'a',{deps:offline});const p=evaluateProgress(s);assert.equal(p.totalXp,50);assert.equal(quest(s,'pages').done,true);assert.equal(s.estimator.state,'not_available');assert.equal(s.reviews.state,'not_connected');assert.equal(s.marketing.state,'not_available');assert.equal(s.activity.inquiries,1);assert.equal(s.activity.newReviews,null);assert.equal(s.launch.published,true);}finally{db.close();}});
++test('sources read tenant, sales approval, saved pages, offers, None and verified alerts; missing integrations stay honest',async()=>{const {db,env}=dbFixture();try{const s=await readProgressSources(env,'a',{deps:offline});const p=evaluateProgress(s);assert.equal(p.totalXp,50);assert.equal(quest(s,'pages').done,true);assert.equal(s.estimator.state,'available');assert.equal(s.reviews.state,'not_connected');assert.equal(s.marketing.state,'available');assert.equal(s.activity.inquiries,1);assert.equal(s.activity.newReviews,null);assert.equal(s.launch.published,true);}finally{db.close();}});
+ test('sources isolate tenants, do not write, and observe the same saved values as Tabs',async()=>{const {db,env,s}=dbFixture();try{const before=db.prepare('SELECT total_changes() AS n').get().n;const a=await readProgressSources(env,'a',{deps:offline});const b=await readProgressSources(env,'b',{deps:offline});assert.equal(evaluateProgress(b).totalXp,0);assert.equal(b.activity.inquiries,0);assert.equal(db.prepare('SELECT total_changes() AS n').get().n,before);s.phone='';db.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify(s),'a');assert.equal(quest(await readProgressSources(env,'a',{deps:offline}),'onboarding').xpEarned,0);assert.equal(quest(a,'onboarding').xpEarned,10);await assert.rejects(()=>readProgressSources(env,'missing',{deps:offline}),/Website not found/);}finally{db.close();}});
+-test('sources reject fake completion flags, draft lender links and social URLs',async()=>{const {db,env,s}=dbFixture();try{s.platform.questionnaire.factsConfirmed=false;s.platform.financing={selection:'lenders',lenders:[{enabled:true,confirmed:true,applicationUrl:'https://qa.test',connection:'connected'}]};s.platform.footer={socials:{facebook:{enabled:true,url:'https://qa.test'}}};s.reviews={confirmed:true,googlePlaceId:'place',googleUrl:'https://google.com',showing:true};s.estimator={done:true};db.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify(s),'a');const p=await readProgressSources(env,'a',{deps:offline});for(const id of ['onboarding','financing','reviews','estimator','marketing'])assert.equal(quest(p,id).xpEarned,0);}finally{db.close();}});
++test('sources reject fake completion flags, draft lender links and social URLs',async()=>{const {db,env,s}=dbFixture();try{s.platform.questionnaire.factsConfirmed=false;s.platform.financing={selection:'lenders',lenders:[{enabled:true,confirmed:true,applicationUrl:'https://qa.test',connection:'connected'}]};s.platform.footer={socials:{facebook:{enabled:true,url:'https://qa.test'}}};s.reviews={confirmed:true,googlePlaceId:'place',googleUrl:'https://google.com',showing:true};s.estimator={done:true};db.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify(s),'a');const p=await readProgressSources(env,'a',{deps:offline});for(const id of ['onboarding','financing','reviews','estimator'])assert.equal(quest(p,id).xpEarned,0);assert.equal(quest(p,'marketing').xpEarned,5,'A saved review link is approved evidence; it does not complete Reviews.');}finally{db.close();}});
+ test('sources fail loudly on corrupt saved JSON rather than award progress',async()=>{const {db,env}=dbFixture();try{db.prepare('UPDATE tenants SET settings=? WHERE id=?').run('{broken','a');await assert.rejects(()=>readProgressSources(env,'a',{deps:offline}),SyntaxError);}finally{db.close();}});
+diff --git a/tests/pay4a.mjs b/tests/pay4a.mjs
+index 26f1ff5..bfcf051 100644
+--- a/tests/pay4a.mjs
++++ b/tests/pay4a.mjs
+@@ -41,7 +41,7 @@ test('monthly Billing shows rental minimum, ledger charge, ownership option, and
+   assert.equal(summary.minimumMonths,3);assert.equal(summary.minimumEndsAt,'2027-01-31T00:00:00.000Z');
+   assert.equal(summary.buyoutAmountCents,150000);
+   const html=renderBillingSummary(summary);
+-  for(const text of ['Rental website','3 months, ending Jan 31, 2027','Next charge','$50.00','$1,500.00','Growth: Price coming soon','All-in: Price coming soon','Payments not connected','Included in All-in'])assert.match(html,new RegExp(text.replace(/[$.]/g,'\\$&')));
++  for(const text of ['Rental website','3 months, ending Jan 31, 2027','Next charge','$50.00','$1,500.00','$150/month','$300/month','Payments not connected','Included in All-in'])assert.match(html,new RegExp(text.replace(/[$.]/g,'\\$&')));
+   assert.equal((html.match(/data-bv-offer=/g)||[]).length,1);
+   h.close();
+ });
+diff --git a/tests/pay4b-browser.mjs b/tests/pay4b-browser.mjs
+index fa1f643..1849bc4 100644
+--- a/tests/pay4b-browser.mjs
++++ b/tests/pay4b-browser.mjs
+@@ -25,7 +25,7 @@ async function seedRental(longStanding){
+   assert.equal((await h.send(h.event('evt_sub','checkout.session.completed',session))).status,200);
+   if(longStanding)assert.equal((await h.send(h.event('evt_first','invoice.paid',h.invoice('in_first','PLAN-WEBSITE-MONTH',5000,'2026-01-01T00:00:00.000Z','2026-02-01T00:00:00.000Z')))).status,200);
+   assert.equal((await h.send(h.event('evt_current','invoice.paid',h.invoice('in_current','PLAN-WEBSITE-MONTH',5000,'2026-10-01T00:00:00.000Z','2026-11-01T00:00:00.000Z')))).status,200);
+-  Object.assign(h.env,fakeTestEnv,{PAYMENT_BILLING_ADAPTER:makeFakeBillingAdapter({quotedAmountCents:47500})});
++  Object.assign(h.env,fakeTestEnv,{PAYMENT_BILLING_ADAPTER:makeFakeBillingAdapter({quotedAmountCents:5000})});
+   return h;
+ }
+ const harnesses={switch:await seedRental(false),early:await seedRental(false),allowed:await seedRental(true)};
+@@ -72,13 +72,13 @@ try{
+     await page.locator('#bv-billing-title').waitFor();
+     assert.equal(await page.locator('nav.tabs [data-section="billing"]').count(),1);
+     if(scenario==='switch'){
+-      await page.locator('[data-bv-switch-quote]').click();
++      await page.locator('[data-bv-switch-quote="PLAN-GROWTH-MONTH"]').click();
+       await page.locator('[data-bv-switch-confirm]').waitFor();
+-      assert.match(await page.locator('[data-bv-switch-result]').innerText(),/Amount due now: \$475\.00/);
++      assert.match(await page.locator('[data-bv-switch-result]').innerText(),/Amount due now: \$50\.00/);
+       await page.locator('[data-bv-switch-confirm]').click();
+       await page.getByText('Plan change requested. Your plan changes after confirmed payment.').waitFor();
+     }else if(scenario==='early'){
+-      assert.match(await page.locator('.bv-billing-actions').innerText(),/Monthly cancellation is unavailable until Jan 1, 2027/);
++      assert.match(await page.locator('.bv-billing-actions:not(.bv-owner-actions)').innerText(),/Monthly cancellation is unavailable until Jan 1, 2027/);
+       assert.equal(await page.locator('.bv-billing-actions button:has-text("Cancel plan")').isDisabled(),true);
+     }else{
+       await page.locator('[data-bv-cancel-review]').click();
+@@ -87,7 +87,7 @@ try{
+       await page.getByText('Cancellation scheduled for the paid period end. The site stays up until then.').waitFor();
+     }
+     assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
+-    await page.locator('.bv-billing-actions').scrollIntoViewIfNeeded();
++    await page.locator('.bv-billing-actions:not(.bv-owner-actions)').scrollIntoViewIfNeeded();
+     await page.screenshot({path:resolve(shots,`pay4b-${scenario}-${width===390?'mobile':'desktop'}.png`)});
+     await page.close();console.log(`PASS browser ${scenario}: ${width}x${height}, Billing action and no external requests`);
+   }
+diff --git a/tests/pay4b.mjs b/tests/pay4b.mjs
+index ef393a8..6525914 100644
+--- a/tests/pay4b.mjs
++++ b/tests/pay4b.mjs
+@@ -12,22 +12,11 @@ async function subscription(h,sku){
+   assert.equal((await h.send(h.event('evt_sub','checkout.session.completed',object))).status,200);
+ }
+ 
+-test('monthly renter quotes annual, confirms through fake, and changes only after signed $500 settlement',async()=>{
+-  const h=paymentHarness();await subscription(h,'PLAN-WEBSITE-MONTH');
+-  assert.equal((await h.send(h.event('evt_month','invoice.paid',h.invoice('in_month','PLAN-WEBSITE-MONTH',5000,'2026-10-01T00:00:00.000Z','2026-11-01T00:00:00.000Z')))).status,200);
+-  const fake=makeFakeBillingAdapter({quotedAmountCents:47500});h.env.PAYMENT_BILLING_ADAPTER=fake;
+-  const quote=await quotePlanSwitch(h.env,'tenant_123','PLAN-WEBSITE-YEAR',clock);
+-  assert.equal(quote.state,'quoted');assert.equal(quote.targetPriceCents,50000);assert.equal(quote.amountDueCents,47500);
+-  assert.equal(fake.quotes.get(quote.quoteId).targetSku,'PLAN-WEBSITE-YEAR');
+-  const result=await confirmPlanSwitch(h.env,'tenant_123',{targetSku:'PLAN-WEBSITE-YEAR',quoteId:quote.quoteId,idempotencyKey:'switch_click_123'},clock);
+-  assert.equal(result.state,'awaiting_settlement');assert.equal(fake.switches.length,1);
+-  assert.equal((await rentalDetails(h.env,'tenant_123',clock)).currentSku,'PLAN-WEBSITE-MONTH');
+-  assert.equal((await h.send(h.event('evt_year','invoice.paid',h.invoice('in_year','PLAN-WEBSITE-YEAR',50000,'2026-10-08T00:00:00.000Z','2027-10-08T00:00:00.000Z')))).status,200);
+-  const summary=await billingSummary(h.env,'tenant_123');
+-  assert.equal(summary.rental.currentSku,'PLAN-WEBSITE-YEAR');assert.equal(summary.renewalAmountCents,50000);
+-  assert.equal(summary.minimumEndsAt,null);
+-  await assert.rejects(quotePlanSwitch(h.env,'tenant_123','PLAN-GROWTH-MONTH',clock),/Price coming soon/);
+-  h.close();
++test('monthly renter upgrades through quote and exact signed proration; cadence change is deferred',async()=>{
++ const h=paymentHarness();try{await subscription(h,'PLAN-WEBSITE-MONTH');await h.send(h.event('evt_month','invoice.paid',h.invoice('in_month','PLAN-WEBSITE-MONTH',5000,'2026-10-01T00:00:00.000Z','2026-11-01T00:00:00.000Z')));
++ const fake=makeFakeBillingAdapter({quotedAmountCents:5000});h.env.PAYMENT_BILLING_ADAPTER=fake;const quote=await quotePlanSwitch(h.env,'tenant_123','PLAN-GROWTH-MONTH',clock);assert.equal(quote.state,'quoted');assert.equal(quote.targetPriceCents,15000);assert.equal(quote.amountDueCents,5000);const result=await confirmPlanSwitch(h.env,'tenant_123',{targetSku:quote.targetSku,quoteId:quote.quoteId,idempotencyKey:'switch_click_123'},clock);assert.equal(result.state,'awaiting_settlement');assert.equal(fake.switches.length,1);assert.equal((await rentalDetails(h.env,'tenant_123',clock)).currentSku,'PLAN-WEBSITE-MONTH');
++ const invoice=h.invoice('prorated','PLAN-GROWTH-MONTH',5000,'2026-10-08T00:00:00.000Z','2026-11-01T00:00:00.000Z');invoice.metadata.paymentChangeId=quote.quoteId;invoice.subscription='sub_fake_1';assert.equal((await h.send(h.event('evt_prorated','invoice.paid',invoice))).status,200);const summary=await billingSummary(h.env,'tenant_123');assert.equal(summary.rental.currentSku,'PLAN-GROWTH-MONTH');assert.equal(summary.renewalAmountCents,15000);await assert.rejects(()=>quotePlanSwitch(h.env,'tenant_123','PLAN-GROWTH-YEAR',clock),/billing cadence/);
++ }finally{h.close();}
+ });
+ 
+ test('monthly cancellation before three-month end is refused and shows the date',async()=>{
+diff --git a/tests/readiness-batch-b.mjs b/tests/readiness-batch-b.mjs
+index 3e1acd6..2bd6b68 100644
+--- a/tests/readiness-batch-b.mjs
++++ b/tests/readiness-batch-b.mjs
+@@ -18,6 +18,6 @@ for(const [key,kind,data]of [['chat-'+id,'chat_config',{enabled:true,smsEnabled:
+ assert.equal((await h.send(h.event('paid','invoice.paid',h.invoice('paid','PLAN-WEBSITE-MONTH',5000,stamp,'2099-01-01T00:00:00Z')))).status,200);
+ const before=snapshot(h),p=evaluateProgress(await readProgressSources(h.env,id));assert.equal(p.totalXp,60);for(const q of ['onboarding','pages','promotions','financing','leads','launch'])assert.equal(p.quests.find(x=>x.id===q).done,true,q);for(const q of ['reviews','estimator','marketing']){assert.equal(p.quests.find(x=>x.id===q).xpEarned,0);assert.ok(p.quests.find(x=>x.id===q).steps.every(x=>x.reason));}assert.deepEqual(snapshot(h),before);
+ }finally{h.close();}});
+-test('B06 saved review URLs, public estimate form and social URLs never fabricate completion',async()=>{const h=fixture();try{h.sql.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify({...DEFAULT,reviews:{confirmed:true,googlePlaceId:'qa',googleUrl:'https://maps.google.com/?cid=qa'},pricing:{approved:true},platform:{footer:{socials:{facebook:{enabled:true,url:'https://example.test'}}}}}),id);const p=evaluateProgress(await readProgressSources(h.env,id));for(const q of ['reviews','estimator','marketing'])assert.equal(p.quests.find(x=>x.id===q).xpEarned,0);}finally{h.close();}});
++test('B06 saved review URLs, public estimate form and social URLs never fabricate completion',async()=>{const h=fixture();try{h.sql.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify({...DEFAULT,reviews:{confirmed:true,googlePlaceId:'qa',googleUrl:'https://maps.google.com/?cid=qa'},pricing:{approved:true},platform:{footer:{socials:{facebook:{enabled:true,url:'https://example.test'}}}}}),id);const p=evaluateProgress(await readProgressSources(h.env,id));for(const q of ['reviews','estimator'])assert.equal(p.quests.find(x=>x.id===q).xpEarned,0);assert.equal(p.quests.find(x=>x.id==='marketing').xpEarned,5,'Approved saved review link; never invents review-display evidence.');}finally{h.close();}});
+ 
+ test('legacy form load inside Game is read-only on first tenant access',async()=>{const h=fixture();try{const before=snapshot(h),r=await worker.fetch(new Request(origin+'/api/tenants/'+id,{headers:{'oai-authenticated-user-id':'owner'}}),h.env);assert.equal(r.status,200,await r.clone().text());assert.deepEqual(snapshot(h),before);}finally{h.close();}});
+diff --git a/tests/stripe-checkout.mjs b/tests/stripe-checkout.mjs
+index 363ab6e..0baa1a4 100644
+--- a/tests/stripe-checkout.mjs
++++ b/tests/stripe-checkout.mjs
+@@ -78,7 +78,7 @@ test('same tenant reuses one customer across separate checkout clicks',async()=>
+ test('coming-soon and inactive SKUs cannot start checkout',async()=>{
+   const {stripe,service}=await setup();
+   const before=stripe.calls.read+stripe.calls.write;
+-  await assert.rejects(service.createCheckout(request('PLAN-GROWTH-MONTH','growth_click_123')),/Price coming soon/);
++  await assert.rejects(service.createCheckout(request('SOCIAL-FULL-PACK','unapproved_click_123')),/Price coming soon/);
+   await assert.rejects(service.createCheckout(request('ADS-LAUNCH','ads_click_123')),/Not available/);
+   assert.equal(stripe.calls.read+stripe.calls.write,before);
+ });
+diff --git a/tests/stripe-fake.mjs b/tests/stripe-fake.mjs
+index 4e0bff9..211cec5 100644
+--- a/tests/stripe-fake.mjs
++++ b/tests/stripe-fake.mjs
+@@ -35,14 +35,18 @@ export const fakeTestEnv = Object.freeze({
+   STRIPE_WEBHOOK_SECRET:'whsec_FAKE_FOR_OFFLINE_TESTS'
+ });
+ 
+-export function makeFakeBillingAdapter({quotedAmountCents=50000}={}){
+-  const quotes=new Map(),switches=[],cancellations=[];
++export function makeFakeBillingAdapter({quotedAmountCents=50000,quotedNetCents=quotedAmountCents}={}){
++  const quotes=new Map(),switches=[],cancellations=[],downgrades=[],ownerships=[],hostingStops=[],delinquencyCancels=[];
+   return {
+-    quotes,switches,cancellations,
++    quotes,switches,cancellations,downgrades,ownerships,hostingStops,delinquencyCancels,
++    async scheduleDowngrade(input){if(!downgrades.some(x=>x.idempotencyKey===input.idempotencyKey))downgrades.push(structuredClone(input));return {accepted:true};},
++    async startOwnerHosting(input){if(!ownerships.some(x=>x.idempotencyKey===input.idempotencyKey))ownerships.push(structuredClone(input));return {accepted:true,subscriptionId:"sub_owner_qa"};},
++    async cancelDelinquentSubscription(input){if(!delinquencyCancels.some(x=>x.idempotencyKey===input.idempotencyKey))delinquencyCancels.push(structuredClone(input));return {accepted:true};},
++    async stopHosting(input){if(!hostingStops.some(x=>x.idempotencyKey===input.idempotencyKey))hostingStops.push(structuredClone(input));return {accepted:true};},
+     async previewSwitch(input){
+       const id=`quote_fake_${quotes.size+1}`;
+       quotes.set(id,structuredClone(input));
+-      return {id,amountDueCents:quotedAmountCents,effectiveAt:'2026-10-08T00:00:00.000Z'};
++      return {id,amountDueCents:quotedAmountCents,lineNetCents:quotedNetCents,taxCents:quotedAmountCents-quotedNetCents,effectiveAt:'2026-10-08T00:00:00.000Z'};
+     },
+     async confirmSwitch(input){
+       const quote=quotes.get(input.quoteId);
+diff --git a/tests/stripe-sync.mjs b/tests/stripe-sync.mjs
+index ec35c6d..5ef5436 100644
+--- a/tests/stripe-sync.mjs
++++ b/tests/stripe-sync.mjs
+@@ -17,16 +17,16 @@ function approvedSample() {
+ test('sync creates versioned Products and Prices with exact lookup keys',async()=>{
+   const stripe=makeFakeStripe();
+   const result=await syncCatalog({stripe,secretKey:fakeTestEnv.STRIPE_SECRET_KEY,catalogData:approvedSample()});
+-  assert.equal(result.createdProducts,7);
+-  assert.equal(result.createdPrices,7);
++  assert.equal(result.createdProducts,11);
++  assert.equal(result.createdPrices,11);
+   assert.equal(result.updatedProducts,0);
+   assert.equal(result.updatedPrices,0);
+-  assert.equal(result.skipped,68);
+-  assert.deepEqual(stripe.pricesStore.map(price=>price.lookup_key),['PLAN-WEBSITE-MONTH@1','PLAN-WEBSITE-YEAR@1','SITE-OWN@1','SITE-BUYOUT@1','OWNER-HOSTING@1','DOMAIN-CONNECT-FOR-ME@1','MEDIA-PUBLISH@1']);
++  assert.equal(result.skipped,64);
++  assert.deepEqual(stripe.pricesStore.map(price=>price.lookup_key),['PLAN-WEBSITE-MONTH@1','PLAN-WEBSITE-YEAR@1','PLAN-GROWTH-MONTH@1','PLAN-GROWTH-YEAR@1','PLAN-ALL-IN-MONTH@1','PLAN-ALL-IN-YEAR@1','SITE-OWN@1','SITE-BUYOUT@1','OWNER-HOSTING@1','DOMAIN-CONNECT-FOR-ME@1','MEDIA-PUBLISH@1']);
+   assert.equal(stripe.pricesStore[0].unit_amount,5000);
+   assert.equal(stripe.pricesStore[1].unit_amount,50000);
+-  assert.equal(stripe.pricesStore[2].unit_amount,150000);
+-  assert.deepEqual(stripe.pricesStore[6].recurring,{interval:'month'});
++  assert.equal(stripe.pricesStore.find(p=>p.lookup_key==='SITE-OWN@1').unit_amount,150000);
++  assert.deepEqual(stripe.pricesStore.find(p=>p.lookup_key==='MEDIA-PUBLISH@1').recurring,{interval:'month'});
+ });
+ 
+ test('second sync is idempotent; metadata updates do not mutate immutable price amounts',async()=>{
+@@ -49,23 +49,23 @@ test('dry-run prints planned changes against a fake snapshot without invoking th
+   const result=await runSyncCli({args:['--dry-run'],env:fakeTestEnv,stripe,catalogData:approvedSample(),snapshot:stripe.snapshot(),write:value=>output.push(value)});
+   assert.equal(stripe.calls.read,0);
+   assert.equal(stripe.calls.write,0);
+-  assert.equal(result.createdProducts,7);
+-  assert.equal(result.createdPrices,7);
+-  assert.equal(result.skipped,68);
+-  assert.match(output[0],/^DRY RUN — no Stripe calls: products created 7/);
++  assert.equal(result.createdProducts,11);
++  assert.equal(result.createdPrices,11);
++  assert.equal(result.skipped,64);
++  assert.match(output[0],/^DRY RUN — no Stripe calls: products created 11/);
+   assert.equal(output[0],formatSummary(result,true));
+ });
+ 
+-test('current catalog plans five approved rows plus one domain service',async()=>{
++test('current catalog includes all six approved plan prices plus ownership, hosting and domain service',async()=>{
+   const stripe=makeFakeStripe();
+   const result=await syncCatalog({stripe,secretKey:fakeTestEnv.STRIPE_SECRET_KEY,catalogData:catalog,dryRun:true});
+-  assert.equal(result.skipped,69);
+-  assert.equal(result.createdProducts,6);
+-  assert.equal(result.createdPrices,6);
+-  assert.equal(result.skippedByReason.price_coming_soon,4);
++  assert.equal(result.skipped,65);
++  assert.equal(result.createdProducts,10);
++  assert.equal(result.createdPrices,10);
++  assert.equal(result.skippedByReason.price_coming_soon??0,0);
+   assert.equal(result.skippedByReason.inactive,65);
+   assert.equal(stripe.calls.read+stripe.calls.write,0);
+-  assert.ok(result.skippedByReason.price_coming_soon>=4);
++  assert.equal(result.skippedByReason.price_coming_soon??0,0,'Growth and All-in are approved, not coming soon');
+   assert.ok(result.skippedByReason.inactive>0);
+ });
+ 
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file b/C:/Users/joe/website_creator/tests/launch-decisions.mjs
+index e69de29..c9bd7ac 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file
++++ b/C:/Users/joe/website_creator/tests/launch-decisions.mjs
+@@ -0,0 +1,68 @@
++import test from 'node:test';import assert from 'node:assert/strict';
++import {paymentHarness} from './helpers/payments-fixture.mjs';
++import {getProduct} from '../src/platform/catalog.ts';
++import {paymentAvailability,maintainPaymentLifecycle} from '../src/payments/lifecycle.js';
++import {quotePlanSwitch,confirmPlanSwitch} from '../src/payments/plan-management.js';
++import {requestSitePurchase,stopOwnerHosting} from '../src/payments/ownership.js';
++import {billingSummary,billingApi} from '../src/payments/billing.js';
++import {readProgressSources} from '../src/blueprint/sources.js';import {evaluateProgress} from '../src/blueprint/progress.js';
++import {access,DEFAULT} from '../src/core.js';import {makeFakeBillingAdapter} from './stripe-fake.mjs';
++const id='tenant_123',epoch=Date.parse('2026-10-01T00:00:00Z'),stamp=new Date(epoch).toISOString(),day=n=>epoch+n*86400000;
++async function paid(h,sku='PLAN-WEBSITE-MONTH'){h.env.PAYMENT_CLOCK=()=>epoch;h.sql.prepare('INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)').run('member',id,'owner','qa@example.test','owner',stamp);await h.send(h.event('sub','checkout.session.completed',{mode:'subscription',subscription:'sub_qa',customer:'cus_test_1',metadata:{tenantId:id,skus:sku}},epoch/1000));assert.equal((await h.send(h.event('paid','invoice.paid',h.invoice('paid',sku,getProduct(sku).priceCents,stamp,'2026-11-01T00:00:00Z'),epoch/1000))).status,200);}
++async function failed(h){assert.equal((await h.send(h.event('failed','invoice.payment_failed',{id:'failed',customer:'cus_test_1',metadata:{tenantId:id}},epoch/1000))).status,200);}
++for(const [sku,cents]of [['PLAN-WEBSITE-MONTH',5000],['PLAN-WEBSITE-YEAR',50000],['PLAN-GROWTH-MONTH',15000],['PLAN-GROWTH-YEAR',150000],['PLAN-ALL-IN-MONTH',30000],['PLAN-ALL-IN-YEAR',300000]])test('approved price '+sku,()=>{const p=getProduct(sku);assert.equal(p.priceCents,cents);assert.equal(p.active,true);assert.notEqual(p.displayPrice,'Price coming soon');assert.ok(Object.isFrozen(p));});
++for(const [n,expected]of [[0,'live'],[7,'live'],[8,'paused'],[29,'paused'],[30,'unavailable']])test('past-due day '+n,async()=>{const h=paymentHarness();try{await paid(h);await failed(h);h.env.PAYMENT_CLOCK=()=>day(n);const a=await paymentAvailability(h.env,id);assert.equal(a.state,expected);assert.equal(a.editorLocked,n>=8);await maintainPaymentLifecycle(h.env);const s=h.sql.prepare('SELECT * FROM payment_state WHERE tenant_id=?').get(id);if(n===30){assert.equal(s.status,'canceled');assert.equal(s.domain_retained,1);assert.equal(Date.parse(s.data_hold_until),day(120));}assert.equal(h.sql.prepare('SELECT COUNT(*) AS n FROM tenants WHERE id=?').get(id).n,1);}finally{h.close();}});
++test('day-10 payment recovery restores public/editor immediately without fees',async()=>{const h=paymentHarness();try{await paid(h);await failed(h);h.env.PAYMENT_CLOCK=()=>day(10);assert.equal((await paymentAvailability(h.env,id)).state,'paused');assert.equal((await h.send(h.event('recover','invoice.paid',h.invoice('recover','PLAN-WEBSITE-MONTH',5000,stamp,'2026-11-01T00:00:00Z'),day(10)/1000))).status,200);assert.equal((await paymentAvailability(h.env,id)).state,'live');assert.equal((await paymentAvailability(h.env,id)).editorLocked,false);assert.equal(h.sql.prepare('SELECT SUM(amount_cents) AS n FROM payment_ledger').get().n,10000);}finally{h.close();}});
++test('retry failures preserve start; reminder jobs are local and unique',async()=>{const h=paymentHarness();try{await paid(h);await failed(h);h.env.PAYMENT_CLOCK=()=>day(8);await h.send(h.event('retry','invoice.payment_failed',{customer:'cus_test_1',metadata:{tenantId:id}},day(6)/1000));await maintainPaymentLifecycle(h.env);await maintainPaymentLifecycle(h.env);assert.equal(Date.parse(h.sql.prepare('SELECT past_due_since FROM payment_state WHERE tenant_id=?').get(id).past_due_since),epoch);const jobs=h.sql.prepare('SELECT * FROM payment_reminders WHERE tenant_id=?').all(id);assert.equal(jobs.length,3);assert.ok(jobs.every(x=>x.status==='queued_local'));}finally{h.close();}});
++test('server blocks editor writes at day 8 but read and payment recovery remain reachable',async()=>{const h=paymentHarness();try{await paid(h);await failed(h);h.env.PAYMENT_CLOCK=()=>day(8);const r=new Request('http://localhost/api/tenants/'+id,{headers:{'oai-authenticated-user-id':'owner'}});await access(r,h.env,id,'read',{readOnly:true});await assert.rejects(()=>access(r,h.env,id,'write'),e=>e.status===402&&/Update payment/.test(e.message));const b=await billingApi(r,h.env,new URL('http://localhost/api/payments/tenants/'+id+'/billing'));assert.equal(b.availability.state,'paused');}finally{h.close();}});
++test('upgrade quote and signed prorated net settlement keep amount guard',async()=>{const h=paymentHarness();try{await paid(h);const fake=makeFakeBillingAdapter({quotedAmountCents:5000});h.env.PAYMENT_BILLING_ADAPTER=fake;h.env.PAYMENT_CLOCK=()=>day(15);const q=await quotePlanSwitch(h.env,id,'PLAN-GROWTH-MONTH',day(15));assert.equal(q.amountDueCents,5000);const input={targetSku:q.targetSku,quoteId:q.quoteId,idempotencyKey:'upgrade_once'};const c=await confirmPlanSwitch(h.env,id,input,day(15));assert.equal(c.state,'awaiting_settlement');await confirmPlanSwitch(h.env,id,input,day(15));assert.equal(fake.switches.length,1);const invoice=h.invoice('proration','PLAN-GROWTH-MONTH',5000,new Date(day(15)).toISOString(),'2026-11-01T00:00:00Z');invoice.metadata.paymentChangeId=q.quoteId;invoice.subscription='sub_qa';assert.equal((await h.send(h.event('prorated','invoice.paid',invoice,day(15)/1000))).status,200);assert.equal(h.sql.prepare('SELECT plan FROM payment_state WHERE tenant_id=?').get(id).plan,'growth');const bad=h.invoice('bad','PLAN-GROWTH-MONTH',1,stamp,'2026-11-01T00:00:00Z');assert.equal((await h.send(h.event('bad','invoice.paid',bad))).status,400);}finally{h.close();}});
++test('downgrade waits for renewal, charges zero now and provides no credit',async()=>{const h=paymentHarness();try{await paid(h,'PLAN-ALL-IN-MONTH');const fake=makeFakeBillingAdapter();h.env.PAYMENT_BILLING_ADAPTER=fake;const q=await quotePlanSwitch(h.env,id,'PLAN-WEBSITE-MONTH',day(15));assert.equal(q.amountDueCents,0);assert.equal(q.kind,'downgrade');const c=await confirmPlanSwitch(h.env,id,{targetSku:q.targetSku,quoteId:q.quoteId,idempotencyKey:'downgrade_once'},day(15));assert.equal(c.state,'scheduled');assert.equal(fake.downgrades.length,1);assert.equal(fake.switches.length,0);assert.equal(h.sql.prepare('SELECT plan FROM payment_state WHERE tenant_id=?').get(id).plan,'all_in');assert.equal((await h.send(h.event('renewal','invoice.paid',h.invoice('renewal','PLAN-WEBSITE-MONTH',5000,'2026-11-01T00:00:00Z','2026-12-01T00:00:00Z'),Date.parse('2026-11-01')/1000))).status,200);assert.equal(h.sql.prepare('SELECT plan FROM payment_state WHERE tenant_id=?').get(id).plan,'website');assert.ok(h.sql.prepare('SELECT amount_cents FROM payment_ledger').all().every(x=>x.amount_cents>0));}finally{h.close();}});
++test('cross-cadence change has an honest deferred reason and no charge',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter();await assert.rejects(()=>quotePlanSwitch(h.env,id,'PLAN-GROWTH-YEAR',day(15)),/billing cadence/);}finally{h.close();}});
++test('buyout is always $1500 during minimum; rental ends and hosting starts next cycle',async()=>{const h=paymentHarness();try{await paid(h);const fake=makeFakeBillingAdapter();h.env.PAYMENT_BILLING_ADAPTER=fake;let checkout;h.env.PAYMENT_CHECKOUT_SERVICE={createCheckout:async input=>(checkout=input,{url:'https://checkout.stripe.com/qa'})};await requestSitePurchase(h.env,id,'buyout_once');assert.deepEqual(checkout.items,[{sku:'SITE-BUYOUT',quantity:1}]);assert.equal((await h.send(h.event('buyout','checkout.session.completed',h.session('SITE-BUYOUT',150000)))).status,200);const s=h.sql.prepare('SELECT * FROM payment_state WHERE tenant_id=?').get(id);assert.equal(s.site_owned,1);assert.equal(s.hosting_status,'scheduled');assert.equal(s.hosting_starts_at,'2026-11-01T00:00:00.000Z');assert.equal(fake.ownerships.length,1);assert.equal(fake.ownerships[0].amountCents,5000);const summary=await billingSummary(h.env,id);assert.equal(summary.hosting.amountCents,5000);assert.equal(summary.rental.kind,'owned');}finally{h.close();}});
++test('stop hosting retains ownership/export, no refund and stops at paid end',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter();await h.send(h.event('owned','checkout.session.completed',h.session('SITE-BUYOUT',150000)));const r=await stopOwnerHosting(h.env,id,'stop_hosting_once',day(10));assert.equal(r.state,'scheduled');h.env.PAYMENT_CLOCK=()=>Date.parse('2026-11-01');await maintainPaymentLifecycle(h.env);const s=h.sql.prepare('SELECT * FROM payment_state WHERE tenant_id=?').get(id);assert.equal(s.site_owned,1);assert.equal(s.hosting_status,'stopped');assert.equal((await paymentAvailability(h.env,id)).state,'unavailable');assert.equal(h.sql.prepare("SELECT status FROM payment_entitlements WHERE key='site_owned'").get().status,'active');}finally{h.close();}});
++test('ownership without connection is honest, no simulated charge',async()=>{const h=paymentHarness();try{await paid(h);assert.equal((await requestSitePurchase(h.env,id,'no_key_buyout')).state,'not_connected');assert.equal(h.sql.prepare('SELECT site_owned FROM payment_state WHERE tenant_id=?').get(id).site_owned,0);}finally{h.close();}});
++for(const [name,extra,est,mark]of [['empty',{},0,0],['range',{websitePages:{pages:[{kind:'service',serviceName:'Roof repair',typicalPriceRange:{min:100,max:200}}]}},20,0],['GBP',{platform:{footer:{socials:{googleBusiness:{url:'https://maps.google.com/?cid=qa',enabled:true}}}}},0,5],['review',{reviews:{googleUrl:'https://maps.google.com/?cid=qa'}},0,5],['social',{platform:{footer:{socials:{facebook:{url:'https://facebook.com/qa',enabled:true}}}}},0,0]])test('real quest evidence '+name,async()=>{const h=paymentHarness();try{h.sql.prepare('UPDATE tenants SET settings=? WHERE id=?').run(JSON.stringify({...DEFAULT,services:[{name:'Roof repair'}],...extra}),id);const before=h.sql.prepare('SELECT settings FROM tenants WHERE id=?').get(id).settings;const p=evaluateProgress(await readProgressSources(h.env,id));assert.equal(p.quests.find(x=>x.id==='estimator').xpEarned,est);assert.equal(p.quests.find(x=>x.id==='marketing').xpEarned,mark);assert.equal(h.sql.prepare('SELECT settings FROM tenants WHERE id=?').get(id).settings,before);}finally{h.close();}});
++test('connected social account, scoped to tenant, counts; disconnected and other tenant do not',async()=>{const h=paymentHarness();try{h.sql.prepare('INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) VALUES(?,?,?,?,?,?)').run('social',id,'social_connection',JSON.stringify({provider:'facebook',state:'connected',accountId:'qa-id'}),stamp,stamp);assert.equal(evaluateProgress(await readProgressSources(h.env,id)).quests.find(x=>x.id==='marketing').done,true);assert.equal(evaluateProgress(await readProgressSources(h.env,'tenant_456')).quests.find(x=>x.id==='marketing').done,false);h.sql.prepare('UPDATE workspace_records SET data=? WHERE id=?').run(JSON.stringify({provider:'facebook',state:'not_connected'}),'social');assert.equal(evaluateProgress(await readProgressSources(h.env,id)).quests.find(x=>x.id==='marketing').done,false);}finally{h.close();}});
++
++import {launchFixture} from './helpers/launch-decisions-fixture.mjs';
++import {createBillingAdapter} from '../src/payments/billing-adapter.js';import {fakeTestEnv} from './stripe-fake.mjs';
++import {siteDownloadState} from '../src/static-site-export.js';
++test('all nine real evidence contracts reach 100 XP without mutating saved choices',async()=>{const {h,id}=await launchFixture();try{const before=h.sql.prepare('SELECT settings,published FROM tenants WHERE id=?').get(id);const p=evaluateProgress(await readProgressSources(h.env,id));assert.equal(p.totalXp,100);assert.ok(p.quests.every(x=>x.done));assert.deepEqual(h.sql.prepare('SELECT settings,published FROM tenants WHERE id=?').get(id),before);assert.equal(p.badges.find(x=>x.label==='First post').earned,false,'A saved marketing link never invents a published post');}finally{h.close();}});
++test('proration wrong net, wrong tenant, wrong subscription and negative totals all fail closed',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter({quotedAmountCents:5000});const q=await quotePlanSwitch(h.env,id,'PLAN-GROWTH-MONTH',day(15));await confirmPlanSwitch(h.env,id,{targetSku:q.targetSku,quoteId:q.quoteId,idempotencyKey:'guard_upgrade'},day(15));for(const [n,amount,tenant,sub]of [[0,1,id,'sub_qa'],[1,5000,'tenant_456','sub_qa'],[2,5000,id,'wrong-sub'],[3,-5000,id,'sub_qa']]){const invoice=h.invoice('guard'+n,q.targetSku,amount,stamp,'2026-11-01');invoice.metadata={tenantId:tenant,paymentChangeId:q.quoteId};invoice.subscription=sub;assert.equal((await h.send(h.event('guard'+n,'invoice.paid',invoice))).status,400);}assert.equal(h.sql.prepare('SELECT plan FROM payment_state WHERE tenant_id=?').get(id).plan,'website');}finally{h.close();}});
++test('exact signed proration replay settles once, including old-plan adjustment lines',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter({quotedAmountCents:5000});const q=await quotePlanSwitch(h.env,id,'PLAN-GROWTH-MONTH',day(15));await confirmPlanSwitch(h.env,id,{targetSku:q.targetSku,quoteId:q.quoteId,idempotencyKey:'net_upgrade'},day(15));const i=h.invoice('net',q.targetSku,7500,stamp,'2026-11-01');i.lines.data.push({...i.lines.data[0],amount:-2500,price:{metadata:{sku:'PLAN-WEBSITE-MONTH'}}});i.amount_paid=5000;i.subscription='sub_qa';i.metadata.paymentChangeId=q.quoteId;const e=h.event('net','invoice.paid',i);assert.equal((await h.send(e)).status,200);assert.deepEqual(await (await h.send(e)).json(),{duplicate:true,processed:0});assert.equal(h.sql.prepare('SELECT COUNT(*) n FROM payment_ledger').get().n,2);assert.equal(h.sql.prepare("SELECT amount_cents FROM payment_ledger WHERE sku='PLAN-GROWTH-MONTH'").get().amount_cents,5000);}finally{h.close();}});
++test('payment after day 30 cannot resurrect a cancelled delinquent rental',async()=>{const h=paymentHarness();try{await paid(h);await failed(h);h.env.PAYMENT_CLOCK=()=>day(30);await maintainPaymentLifecycle(h.env);await h.send(h.event('late','invoice.paid',h.invoice('late','PLAN-WEBSITE-MONTH',5000,stamp,'2026-11-01'),day(30)/1000));assert.equal((await paymentAvailability(h.env,id)).state,'unavailable');}finally{h.close();}});
++test('stop hosting does not block the existing owner export authorization',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter();await h.send(h.event('buy','checkout.session.completed',h.session('SITE-BUYOUT',150000)));await stopOwnerHosting(h.env,id,'stop_export',day(10));h.env.PAYMENT_CLOCK=()=>Date.parse('2026-11-01');await maintainPaymentLifecycle(h.env);const req=new Request('http://localhost/api/tenants/'+id+'/download',{headers:{'oai-authenticated-user-id':'owner'}});const {tenant}=await access(req,h.env,id,'owner',{paymentRecovery:true});assert.equal((await siteDownloadState(h.env,tenant)).owned,true);assert.equal((await paymentAvailability(h.env,id)).state,'unavailable');}finally{h.close();}});
++function sdk(){const calls=[];const record=(name,result)=>async(...args)=>{calls.push({name,args});return result;};const s={id:'sub_qa',metadata:{tenantId:id},items:{data:[{id:'item',price:{id:'price_current'}}]},default_payment_method:'pm_qa'};const stripe={prices:{list:async({lookup_keys})=>{const sku=lookup_keys[0].split('@')[0],p=getProduct(sku);return {data:[{id:'price_'+sku,active:true,lookup_key:lookup_keys[0],unit_amount:p.priceCents,currency:'usd',metadata:{sku,version:String(p.version)},recurring:{interval:p.cadence}}]};}},subscriptions:{retrieve:record('retrieve',s),update:record('update',{}),cancel:record('cancel',{}),create:record('create',{id:'sub_owner'})},subscriptionSchedules:{create:record('schedule.create',{id:'schedule',current_phase:{start_date:epoch/1000}}),update:record('schedule.update',{})},invoices:{createPreview:record('preview',{amount_due:5000})}};return {adapter:createBillingAdapter({stripe,env:fakeTestEnv}),calls};}
++test('real SDK adapter upgrades with immediate invoice and stored change metadata',async()=>{const {adapter,calls}=sdk(),input={tenantId:id,subscriptionId:'sub_qa',targetSku:'PLAN-GROWTH-MONTH',paymentChangeId:'qa-change',idempotencyKey:'sdk_upgrade'};const q=await adapter.previewSwitch(input);await adapter.confirmSwitch({...input,quoteId:q.id});const p=calls.find(x=>x.name==='update').args[1];assert.equal(p.proration_behavior,'always_invoice');assert.equal(p.metadata.paymentChangeId,'qa-change');assert.equal(p.payment_behavior,'pending_if_incomplete');});
++test('real SDK adapter schedules downgrade with no proration or credit',async()=>{const {adapter,calls}=sdk();await adapter.scheduleDowngrade({tenantId:id,subscriptionId:'sub_qa',targetSku:'PLAN-WEBSITE-MONTH',periodEnd:'2026-11-01',idempotencyKey:'sdk_down'});const p=calls.find(x=>x.name==='schedule.update').args[1];assert.equal(p.proration_behavior,'none');assert.equal(p.phases[1].items[0].price,'price_PLAN-WEBSITE-MONTH');assert.equal(p.phases[0].end_date,Date.parse('2026-11-01')/1000);assert.ok(!calls.some(x=>x.name==='update'));});
++test('real SDK owner conversion cancels rental without proration and starts next-cycle hosting',async()=>{const {adapter,calls}=sdk();await adapter.startOwnerHosting({tenantId:id,subscriptionId:'sub_qa',customerId:'cus_qa',startsAt:'2099-11-01',idempotencyKey:'sdk_owner'});assert.deepEqual(calls.find(x=>x.name==='cancel').args[1],{prorate:false,invoice_now:false});const p=calls.find(x=>x.name==='create').args[0];assert.equal(p.items[0].price,'price_OWNER-HOSTING');assert.equal(p.trial_end,Date.parse('2099-11-01')/1000);assert.equal(p.default_payment_method,'pm_qa');});
++
++test('settled proration metadata cannot break the next full-price renewal',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter({quotedAmountCents:5000});const q=await quotePlanSwitch(h.env,id,'PLAN-GROWTH-MONTH',day(15));await confirmPlanSwitch(h.env,id,{targetSku:q.targetSku,quoteId:q.quoteId,idempotencyKey:'renew_upgrade'},day(15));const i=h.invoice('initial-net',q.targetSku,5000,stamp,'2026-11-01');i.subscription='sub_qa';i.metadata.paymentChangeId=q.quoteId;assert.equal((await h.send(h.event('initial-net','invoice.paid',i))).status,200);const next=h.invoice('next-full',q.targetSku,15000,'2026-11-01','2026-12-01');next.metadata.paymentChangeId=q.quoteId;next.subscription='sub_qa';assert.equal((await h.send(h.event('next-full','invoice.paid',next))).status,200);assert.equal(h.sql.prepare('SELECT renews_at FROM payment_state WHERE tenant_id=?').get(id).renews_at,'2026-12-01T00:00:00.000Z');}finally{h.close();}});
++test('day-30 data hold remains 90 days after repeated maintenance',async()=>{const h=paymentHarness();try{await paid(h);await failed(h);for(const n of [30,31,40]){h.env.PAYMENT_CLOCK=()=>day(n);await maintainPaymentLifecycle(h.env);assert.equal(Date.parse(h.sql.prepare('SELECT data_hold_until FROM payment_state WHERE tenant_id=?').get(id).data_hold_until),day(120));}assert.equal(h.sql.prepare('SELECT COUNT(*) n FROM tenants WHERE id=?').get(id).n,1);}finally{h.close();}});
++
++import worker from '../dist/server/index.js';import {createAssets,createMemoryBucket} from '../src/aws/s3.js';import {expensePlans} from '../src/expense-plans.js';
++test('admin price seeds match the approved catalog without changing recorded costs',()=>{for(const p of expensePlans){const prefix=p.id==='all-in'?'ALL-IN':p.id.toUpperCase();assert.equal(p.price*100,getProduct('PLAN-'+prefix+'-MONTH').priceCents);assert.equal(p.annualPrice*100,getProduct('PLAN-'+prefix+'-YEAR').priceCents);}});
++test('actual public Worker serves 503 during pause, restores at day 10, then serves 404 on day 30',async()=>{const {h,base}=await launchFixture();try{h.sql.prepare('UPDATE payment_state SET status_event_at=? WHERE tenant_id=?').run(epoch/1000,id);h.env.ASSETS=createAssets(process.cwd()+'/dist/client');h.env.BUCKET=createMemoryBucket();h.env.PAYMENT_CLOCK=()=>epoch;await h.send(h.event('route-failure','invoice.payment_failed',{customer:'cus_test_1',metadata:{tenantId:id}},epoch/1000));const get=()=>worker.fetch(new Request(base+'/s/pay-test'),h.env);h.env.PAYMENT_CLOCK=()=>day(8);let r=await get();assert.equal(r.status,503);assert.match(await r.text(),/temporarily unavailable/);assert.match(r.headers.get('x-robots-tag'),/noindex/);h.env.PAYMENT_CLOCK=()=>day(10);assert.equal((await h.send(h.event('route-recover','invoice.paid',h.invoice('route-recover','PLAN-WEBSITE-MONTH',5000,stamp,'2026-11-01'),day(10)/1000))).status,200);assert.equal((await get()).status,200);await h.send(h.event('route-failed-again','invoice.payment_failed',{customer:'cus_test_1',metadata:{tenantId:id}},day(11)/1000));h.env.PAYMENT_CLOCK=()=>day(41);await maintainPaymentLifecycle(h.env);r=await get();assert.equal(r.status,404);assert.ok(h.sql.prepare('SELECT published FROM tenants WHERE id=?').get(id).published);}finally{h.close();}});
++
++test('payment pause never discloses a tenant to a foreign user or bypasses viewer roles',async()=>{const h=paymentHarness();try{await paid(h);h.sql.prepare('INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)').run('viewer',id,'viewer','viewer@example.test','viewer',stamp);await failed(h);h.env.PAYMENT_CLOCK=()=>day(8);for(const [user,status]of [['foreign',404],['viewer',403]]){const req=new Request('http://localhost/api/tenants/'+id,{headers:{'oai-authenticated-user-id':user}});await assert.rejects(()=>access(req,h.env,id,'write'),e=>e.status===status);}}finally{h.close();}});
++
++test('day-30 subscription cancellation retries locally with no charge, credit or refund',async()=>{const h=paymentHarness();try{await paid(h);await failed(h);h.env.PAYMENT_CLOCK=()=>day(30);await maintainPaymentLifecycle(h.env);assert.equal(h.sql.prepare("SELECT COUNT(*) n FROM payment_audit WHERE action='subscription.delinquency_cancel_pending'").get().n,1);const fake=makeFakeBillingAdapter();h.env.PAYMENT_BILLING_ADAPTER=fake;await maintainPaymentLifecycle(h.env);await maintainPaymentLifecycle(h.env);assert.equal(fake.delinquencyCancels.length,1);assert.equal(h.sql.prepare("SELECT COUNT(*) n FROM payment_audit WHERE action='subscription.delinquency_canceled'").get().n,1);assert.equal(h.sql.prepare('SELECT SUM(amount_cents) n FROM payment_ledger').get().n,5000);}finally{h.close();}});
++test('SDK delinquency cancellation disables billing without generating a final invoice or credit',async()=>{const {adapter,calls}=sdk();await adapter.cancelDelinquentSubscription({tenantId:id,subscriptionId:'sub_qa',idempotencyKey:'delinquency_sdk'});assert.deepEqual(calls.find(x=>x.name==='cancel').args[1],{prorate:false,invoice_now:false});});
++
++for(const n of [10,30])test('owner hosting past-due recovery day '+n+' preserves ownership and respects cancellation',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter();await h.send(h.event('owner-'+n,'checkout.session.completed',h.session('SITE-BUYOUT',150000),epoch/1000));await failed(h);h.env.PAYMENT_CLOCK=()=>day(n);await maintainPaymentLifecycle(h.env);await h.send(h.event('owner-recover-'+n,'invoice.paid',h.invoice('owner-recover-'+n,'OWNER-HOSTING',5000,stamp,'2026-11-01'),day(n)/1000));assert.equal((await paymentAvailability(h.env,id)).state,n===10?'live':'unavailable');assert.equal(h.sql.prepare('SELECT site_owned FROM payment_state WHERE tenant_id=?').get(id).site_owned,1);}finally{h.close();}});
++
++test('signed prorated invoice accepts only the exact quoted line net and recorded tax',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter({quotedAmountCents:5400,quotedNetCents:5000});const q=await quotePlanSwitch(h.env,id,'PLAN-GROWTH-MONTH',day(15));await confirmPlanSwitch(h.env,id,{targetSku:q.targetSku,quoteId:q.quoteId,idempotencyKey:'tax_upgrade'},day(15));const i=h.invoice('tax',q.targetSku,5000,stamp,'2026-11-01');i.metadata.paymentChangeId=q.quoteId;i.subscription='sub_qa';i.total_taxes=[{amount:400,tax_behavior:'exclusive'}];i.amount_paid=5400;i.amount_due=5400;const bad=structuredClone(i);bad.id='bad-tax';bad.total_taxes[0].amount=401;assert.equal((await h.send(h.event('bad-tax','invoice.paid',bad))).status,400);assert.equal((await h.send(h.event('good-tax','invoice.paid',i))).status,200);assert.equal(h.sql.prepare("SELECT amount_cents FROM payment_ledger WHERE sku='PLAN-GROWTH-MONTH'").get().amount_cents,5400);}finally{h.close();}});
++test('proration quote rejects inherited credits and unrelated prior balances',async()=>{const {adapter,calls}=sdk();assert.equal((await adapter.previewSwitch({tenantId:id,subscriptionId:'sub_qa',targetSku:'PLAN-GROWTH-MONTH'})).amountDueCents,5000);const stripe={prices:{list:async()=>({data:[{id:'p',active:true,lookup_key:'PLAN-GROWTH-MONTH@1',unit_amount:15000,currency:'usd',metadata:{sku:'PLAN-GROWTH-MONTH',version:'1'},recurring:{interval:'month'}}]})},subscriptions:{retrieve:async()=>({id:'sub_qa',metadata:{tenantId:id},items:{data:[{id:'i'}]}})},invoices:{createPreview:async()=>({amount_due:4900,total:5000,subtotal:5000,total_taxes:[]})}};await assert.rejects(()=>createBillingAdapter({stripe,env:fakeTestEnv}).previewSwitch({tenantId:id,subscriptionId:'sub_qa',targetSku:'PLAN-GROWTH-MONTH'}),/credits, prior balances/);});
++
++test('concurrent confirmation cannot charge one quote through two different click keys',async()=>{const h=paymentHarness();try{await paid(h);const fake=makeFakeBillingAdapter({quotedAmountCents:5000});h.env.PAYMENT_BILLING_ADAPTER=fake;const q=await quotePlanSwitch(h.env,id,'PLAN-GROWTH-MONTH',day(15));const outcomes=await Promise.allSettled(['race_key_one','race_key_two'].map(idempotencyKey=>confirmPlanSwitch(h.env,id,{quoteId:q.quoteId,targetSku:q.targetSku,idempotencyKey},day(15))));assert.equal(outcomes.filter(x=>x.status==='fulfilled').length,1);assert.equal(outcomes.find(x=>x.status==='rejected').reason.status,409);assert.equal(fake.switches.length,1);}finally{h.close();}});
++
++test('an older paid event cannot clear a newer payment failure',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_CLOCK=()=>day(9);await h.send(h.event('newer-failure','invoice.payment_failed',{customer:'cus_test_1',metadata:{tenantId:id}},day(1)/1000));assert.equal((await paymentAvailability(h.env,id)).state,'paused');await h.send(h.event('old-paid-redelivery','invoice.paid',h.invoice('paid','PLAN-WEBSITE-MONTH',5000,stamp,'2026-11-01T00:00:00Z'),epoch/1000));assert.equal((await paymentAvailability(h.env,id)).state,'paused');}finally{h.close();}});
++test('redelivered ownership settlement does not restart stopped hosting',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter();const session=h.session('SITE-BUYOUT',150000);await h.send(h.event('buy-once','checkout.session.completed',session,epoch/1000));await stopOwnerHosting(h.env,id,'stop_redelivery',day(10));h.env.PAYMENT_CLOCK=()=>Date.parse('2026-11-01');await maintainPaymentLifecycle(h.env);assert.equal((await paymentAvailability(h.env,id)).state,'unavailable');await h.send(h.event('buy-redelivery','checkout.session.completed',session,epoch/1000));assert.equal((await paymentAvailability(h.env,id)).state,'unavailable');assert.equal(h.sql.prepare('SELECT hosting_status FROM payment_state WHERE tenant_id=?').get(id).hosting_status,'stopped');}finally{h.close();}});
++
++test('ended hosting does not promise that updating payment restarts a cancelled agreement',async()=>{const h=paymentHarness();try{await paid(h);await failed(h);h.env.PAYMENT_CLOCK=()=>day(30);await maintainPaymentLifecycle(h.env);const req=new Request('http://localhost/api/tenants/'+id,{headers:{'oai-authenticated-user-id':'owner'}});await assert.rejects(()=>access(req,h.env,id,'write'),e=>e.status===402&&/Hosting has ended/.test(e.message)&&!/unlock/.test(e.message));}finally{h.close();}});
++
++test('owner reminder describes hosting, not a rental or loss of ownership',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter();await h.send(h.event('reminder-owned','checkout.session.completed',h.session('SITE-BUYOUT',150000),epoch/1000));await failed(h);h.env.PAYMENT_CLOCK=()=>day(29);await maintainPaymentLifecycle(h.env);const row=h.sql.prepare('SELECT message,status FROM payment_reminders WHERE tenant_id=? AND day=29').get(id);assert.match(row.message,/Your hosting ends/);assert.match(row.message,/ownership and static-file download remain available/);assert.doesNotMatch(row.message,/rental ends/);assert.equal(row.status,'queued_local');}finally{h.close();}});
++
++test('expired paid cycle ends rental without guessing an immediate hosting charge',async()=>{const h=paymentHarness();try{await paid(h);const fake=makeFakeBillingAdapter();h.env.PAYMENT_BILLING_ADAPTER=fake;h.env.PAYMENT_CLOCK=()=>Date.parse('2026-11-02');const s=h.session('SITE-BUYOUT',150000);assert.equal((await h.send(h.event('expired-own','checkout.session.completed',s,Date.parse('2026-11-02')/1000))).status,200);assert.equal(fake.ownerships.length,0);assert.equal(fake.delinquencyCancels.length,1);const row=h.sql.prepare('SELECT site_owned,hosting_status,hosting_starts_at FROM payment_state WHERE tenant_id=?').get(id);assert.equal(row.site_owned,1);assert.equal(row.hosting_status,'pending_schedule');assert.equal(row.hosting_starts_at,null);await h.send(h.event('expired-own-replay','checkout.session.completed',s,Date.parse('2026-11-02')/1000));assert.equal(fake.delinquencyCancels.length,1);assert.equal((await billingSummary(h.env,id)).renewsAt,null);}finally{h.close();}});
++
++test('declined upgrade keeps the already-paid plan live, and later settlement still uses the quote guard',async()=>{const h=paymentHarness();try{await paid(h);h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter({quotedAmountCents:5000});const q=await quotePlanSwitch(h.env,id,'PLAN-GROWTH-MONTH',day(15));await confirmPlanSwitch(h.env,id,{targetSku:q.targetSku,quoteId:q.quoteId,idempotencyKey:'upgrade_declined'},day(15));const i=h.invoice('declined-upgrade',q.targetSku,5000,stamp,'2026-11-01');i.subscription='sub_qa';i.metadata.paymentChangeId=q.quoteId;i.amount_paid=0;i.lines.data.forEach(l=>l.proration=true);h.env.PAYMENT_CLOCK=()=>day(15);assert.equal((await h.send(h.event('upgrade-failure','invoice.payment_failed',i,day(15)/1000))).status,200);h.env.PAYMENT_CLOCK=()=>day(23);await maintainPaymentLifecycle(h.env);assert.equal((await paymentAvailability(h.env,id)).state,'live');const state=h.sql.prepare('SELECT plan,past_due_since FROM payment_state WHERE tenant_id=?').get(id);assert.equal(state.plan,'website');assert.equal(state.past_due_since,null);assert.equal(h.sql.prepare('SELECT COUNT(*) n FROM payment_ledger').get().n,1);i.amount_paid=5000;assert.equal((await h.send(h.event('upgrade-recovery','invoice.paid',i,day(23)/1000))).status,200);assert.equal(h.sql.prepare('SELECT plan FROM payment_state WHERE tenant_id=?').get(id).plan,'growth');}finally{h.close();}});
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file b/C:/Users/joe/website_creator/tests/helpers/launch-decisions-fixture.mjs
+index e69de29..5bad5f0 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file
++++ b/C:/Users/joe/website_creator/tests/helpers/launch-decisions-fixture.mjs
+@@ -0,0 +1,13 @@
++import assert from 'node:assert/strict';import {paymentHarness} from './payments-fixture.mjs';import {DEFAULT} from '../../src/core.js';import {reviewsApi} from '../../src/reviews.js';
++export async function launchFixture(){const h=paymentHarness(),id='tenant_123',stamp='2026-01-01T00:00:00Z',base='http://127.0.0.1:5197';
++ const s={...DEFAULT,name:'Local QA Roofing — test fixture',phone:'8055550123',trade:'Roofing',area:'Oxnard',hero:'Discuss your roofing needs',intro:'Local test records for progress verification.',services:[{name:'Roof repair'}],websitePages:{pages:[{kind:'about',title:'About',intro:'Owner-entered about draft'},{kind:'faq',title:'Questions',intro:'Owner-entered answers'},{kind:'service',serviceName:'Roof repair',title:'Repair',intro:'Owner-entered repair draft',typicalPriceRange:{min:100,max:200}}]},reviews:{confirmed:true,minimum:4,googleUrl:'https://maps.google.com/?cid=qa',googlePlaceId:'qa_provider',privacyUrl:'https://example.test/privacy',termsUrl:'https://example.test/terms'},platform:{questionnaire:{factsConfirmed:true},promotions:{offers:[{id:'offer',title:'Contractor offer',reward:'Contractor-entered service'}]},financing:{selection:'none'}}};
++ h.sql.prepare("UPDATE tenants SET name=?,settings=?,published=?,status='published' WHERE id=?").run(s.name,JSON.stringify(s),JSON.stringify(s),id);
++ h.sql.prepare('INSERT INTO members(id,tenant_id,user_id,email,role,active,created_at) VALUES(?,?,?,?,?,1,?)').run('qa-owner',id,'owner','qa@example.test','owner',stamp);
++ h.sql.prepare('INSERT INTO sales(tenant_id,data,updated_at) VALUES(?,?,?)').run(id,JSON.stringify({ownerApproved:true,approvalNote:'Local QA owner preview approval'}),stamp);
++ for(const[key,kind,data]of [['chat-'+id,'chat_config',{enabled:true,smsEnabled:true,phone:'8055550123',phoneVerified:true}],['domain-plan-'+id,'domain_plan',{tenantId:id,hostname:'roof.example.test',ownership:'verified',proof:{connected:true,checkedAt:new Date().toISOString(),www:true,bare:true,ssl:true,site:{ok:true,tenantId:id,url:'https://www.roof.example.test'}}}]])h.sql.prepare('INSERT INTO workspace_records(id,scope,kind,data,created_at,updated_at) VALUES(?,?,?,?,?,?)').run(key,id,kind,JSON.stringify(data),stamp,stamp);
++ assert.equal((await h.send(h.event('paid','invoice.paid',h.invoice('paid','PLAN-WEBSITE-MONTH',5000,stamp,'2099-01-01T00:00:00Z')))).status,200);
++ h.env.GOOGLE_PLACES_API_KEY='offline_fixture_not_a_key';const previous=globalThis.fetch;let intercepted=0;
++ globalThis.fetch=async u=>{assert.match(String(u),/^https:\/\/places.googleapis.com\/v1\/places\/qa_provider/);intercepted++;return Response.json({reviews:[{rating:5,text:{text:'LOCAL SYNTHETIC TEST RESPONSE'},authorAttribution:{displayName:'QA fixture'}}]});};
++ try{const u=new URL(base+'/api/public/pay-test/reviews');await reviewsApi(new Request(u),h.env,u)}finally{globalThis.fetch=previous}
++
++ return {h,id,s,base};}
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file b/C:/Users/joe/website_creator/tests/launch-decisions-browser.mjs
+index e69de29..ba93465 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file
++++ b/C:/Users/joe/website_creator/tests/launch-decisions-browser.mjs
+@@ -0,0 +1,40 @@
++import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';import {build} from 'esbuild';
++import {launchFixture} from './helpers/launch-decisions-fixture.mjs';import {gameApi} from '../src/blueprint/api.js';import {billingSummary} from '../src/payments/billing.js';import {makeFakeBillingAdapter} from './stripe-fake.mjs';import {pausedSiteResponse,paymentAvailability} from '../src/payments/lifecycle.js';
++const root=process.cwd(),out=root+'/docs/build-evidence/LAUNCH-DECISIONS',shots=out+'/screenshots';fs.mkdirSync(shots,{recursive:true});
++const {chromium}=createRequire(import.meta.url)('C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
++const {h,id,s,base}=await launchFixture();let browser;const results=[],contrast=[];const check=(name,fn)=>{fn();results.push(name);};
++async function readable(page,state){
++ const png=await page.screenshot(),report=await page.evaluate(async({bytes,state})=>{
++  const bitmap=await createImageBitmap(new Blob([new Uint8Array(bytes)],{type:'image/png'})),canvas=document.createElement('canvas');canvas.width=bitmap.width;canvas.height=bitmap.height;const c=canvas.getContext('2d');c.drawImage(bitmap,0,0);
++  const rgb=v=>v.match(/[\d.]+/g)?.slice(0,3).map(Number),lum=a=>a.map(x=>x/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((n,v,i)=>n+v*[.2126,.7152,.0722][i],0),ratio=(a,b)=>(Math.max(lum(a),lum(b))+.05)/(Math.min(lum(a),lum(b))+.05);
++  const text=[],issues=[],pixels=[];
++  for(const el of document.querySelectorAll('body *')){const r=el.getBoundingClientRect(),s=getComputedStyle(el);if(r.width===0||r.height===0||r.bottom<=0||r.top>=innerHeight||el.closest('svg')||!Array.from(el.childNodes).some(n=>n.nodeType===3&&n.textContent.trim()))continue;
++   for(let a=el;a;a=a.parentElement)if(Number(getComputedStyle(a).opacity)<1)issues.push('Text opacity: '+el.textContent.slice(0,40));
++   let bg=null;for(let a=el;a;a=a.parentElement){const color=getComputedStyle(a).backgroundColor;if(color!=='rgba(0, 0, 0, 0)'&&color!=='transparent'){bg=rgb(color);break;}}bg ||= [255,255,255];
++   const n=ratio(rgb(s.color),bg),large=parseFloat(s.fontSize)>=24||(parseFloat(s.fontSize)>=18.66&&Number(s.fontWeight)>=700),threshold=large?3:4.5;text.push({label:el.textContent.trim().slice(0,80),color:s.color,background:bg,ratio:n,threshold});if(n<threshold)issues.push('Contrast '+n.toFixed(2)+': '+el.textContent.slice(0,50));
++  }
++  for(const el of document.querySelectorAll('.bv-card,.bv-game-quest,.bv-game-payment-lock,#fixture')){const r=el.getBoundingClientRect();if(r.top<0||r.top+20>=innerHeight)continue;const expected=rgb(getComputedStyle(el).backgroundColor);if(!expected)continue;const candidates=[[20,8],[8,20],[25,15],[r.width/2,8]].filter(([x,y])=>el.contains(document.elementFromPoint(r.x+x,r.y+y)));if(!candidates.length){pixels.push({selector:el.className||el.id,occludedByFixture:true});continue;}const matches=candidates.map(([x,y])=>Array.from(c.getImageData(Math.floor(r.x+x),Math.floor(r.y+y),1,1).data).slice(0,3));pixels.push({selector:el.className||el.id,expected,actual:matches});if(!matches.some(a=>a.every((v,i)=>Math.abs(v-expected[i])<=2)))issues.push('Rendered backing differs: '+el.className);}
++  return {state,text,pixels,issues};
++ },{bytes:[...png],state});assert.deepEqual(report.issues,[]);assert.ok(report.text.length>0);contrast.push(report);
++}
++try{
++ const req=new Request(base+'/api/game/'+id,{headers:{'oai-authenticated-user-id':'owner'}}),game=await gameApi(req,h.env,new URL(req.url));game.sections=['business','pages','billing','reviews','questionnaire'];check('100 XP derives from real scoped records',()=>assert.equal(game.progress.totalXp,100));h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter();
++ const renter=await billingSummary(h.env,id);await h.send(h.event('qa-owned','checkout.session.completed',h.session('SITE-BUYOUT',150000)));const owner=await billingSummary(h.env,id);
++ const bundle=await build({stdin:{contents:"import {renderBillingSummary} from './src/client/workspace/billing.ts';import {mountGame} from './src/client/workspace/game/view.js';import {mountPaymentLock} from './src/client/workspace/game/payment-lock.js';window.showLock=()=>mountPaymentLock(document.querySelector('#board'),()=>window.lockBillingClicked=true);window.showBilling=d=>{document.querySelector('#board').innerHTML=renderBillingSummary(d)};window.showGame=d=>mountGame(document.querySelector('#board'),{data:d,selected:'estimator'});",resolveDir:root},bundle:true,write:false,format:'iife',platform:'browser'}),css=fs.readFileSync(root+'/dist/client/platform.css','utf8');
++ browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
++ for(const [device,width,height]of [['desktop',1440,900],['phone',390,844]]){
++  const ctx=await browser.newContext({viewport:{width,height},reducedMotion:'reduce'}),page=await ctx.newPage();const errors=[],network=[];page.on('pageerror',e=>errors.push(e.message));
++  await page.route('**/*',async r=>{const u=new URL(r.request().url());if(u.origin!==base){network.push(u.href);return r.abort();}if(u.pathname==='/')return r.fulfill({contentType:'text/html',body:'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local QA fixture — launch decisions</title><style>'+css+'body{margin:0}#fixture{position:sticky;top:0;z-index:999;background:#172d47;color:#fff;padding:8px 20px;font:14px system-ui}#board *{scroll-margin-top:56px}#board:has(.bv-billing){max-width:1120px;margin:0 auto;padding:24px}@media(max-width:720px){#board:has(.bv-billing){padding:16px}}</style></head><body class="bv-platform"><div id="fixture">Local QA test fixture · no live payments or business claims</div><div id="board"></div><script>'+bundle.outputFiles[0].text+'</script></body></html>'});if(u.pathname==='/paused')return r.fulfill({status:503,contentType:'text/html',body:await pausedSiteResponse().text()});const file=root+'/public'+u.pathname;return fs.existsSync(file)?r.fulfill({body:fs.readFileSync(file),contentType:file.endsWith('.svg')?'image/svg+xml':'application/octet-stream'}):r.fulfill({status:404,body:''});});
++  await page.goto(base);await page.evaluate(d=>window.showBilling(d),renter);await page.evaluate(()=>document.fonts.ready);
++  const own=page.locator('[data-bv-own]');assert.equal(await own.isDisabled(),false);assert.ok((await own.boundingBox()).height>=44);await own.scrollIntoViewIfNeeded();await readable(page,'billing-own-'+device);await page.screenshot({path:shots+'/billing-own-'+device+'.png'});results.push('Own action enabled and 44px '+device);
++  await page.locator('.bv-plan-price-list').scrollIntoViewIfNeeded();assert.ok((await page.locator('.bv-plan-price-list').innerText()).includes('$150/month'));assert.ok((await page.locator('.bv-plan-price-list').innerText()).includes('$300/month'));await readable(page,'pricing-'+device);await page.screenshot({path:shots+'/pricing-'+device+'.png'});results.push('Approved prices '+device);
++  await page.evaluate(d=>{window.showBilling(d);window.scrollTo(0,0)},owner);const stop=page.locator('[data-bv-stop-hosting]');assert.equal(await stop.isDisabled(),false);assert.ok((await stop.boundingBox()).height>=44);await stop.scrollIntoViewIfNeeded();await readable(page,'billing-stop-hosting-'+device);await page.screenshot({path:shots+'/billing-stop-hosting-'+device+'.png'});results.push('Stop hosting enabled and 44px '+device);
++  await page.evaluate(d=>{window.showGame(d);window.scrollTo(0,0)},game);await page.evaluate(()=>document.fonts.ready);assert.match(await page.locator('.bv-game-strength').innerText(),/100% built/);await readable(page,'game-100-'+device);await page.screenshot({path:shots+'/game-100-'+device+'.png'});results.push('Real 100 XP '+device);
++  await page.evaluate(()=>{window.showLock();window.scrollTo(0,0)});const lock=page.locator('[data-game-update-payment]');assert.ok((await lock.boundingBox()).height>=44);await readable(page,'editor-locked-'+device);await page.screenshot({path:shots+'/editor-locked-'+device+'.png'});await lock.focus();await page.keyboard.press('Enter');assert.equal(await page.evaluate(()=>window.lockBillingClicked),true);results.push('Editor lock and keyboard payment action '+device);
++  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);assert.equal(overflow,false);results.push('No horizontal scroll '+device);assert.deepEqual(errors,[]);assert.deepEqual(network,[]);await ctx.close();
++ }
++ // Public paused HTML is the real response; no fake site publication or lender data.
++ for(const [device,width,height]of [['desktop',1440,900],['phone',390,844]]){const p=await browser.newPage({viewport:{width,height}});await p.setContent(await pausedSiteResponse().text());assert.match(await p.locator('h1').innerText(),/temporarily unavailable/);assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await readable(p,'paused-site-'+device);await p.screenshot({path:shots+'/paused-site-'+device+'.png'});results.push('Readable paused page '+device);await p.close();}
++ fs.writeFileSync(out+'/contrast-pixels.json',JSON.stringify(contrast,null,2));results.push('Full-opacity AA text and rendered background pixels in all twelve captures');
++ fs.writeFileSync(out+'/browser-results.json',JSON.stringify({passed:results.length,failed:0,checks:results,providerCalls:0,syntheticFixture:true},null,2));console.log(results.length+'/'+results.length+' launch decision browser checks pass');
++}finally{await browser?.close();h.close();}

@@ -1,0 +1,14 @@
+✔ paid monthly period grants once and starts a three-calendar-month minimum (21.1904ms)
+✔ refund revokes unused grants and records an audit row (11.1902ms)
+✔ past due shows a banner and keeps paid-period features on (12.9094ms)
+✔ cancellation retains service until period end, then revokes rental grants (11.8016ms)
+✔ SITE-OWN and flat $1,500 BUYOUT grant site_owned and require $50 owner hosting (26.8114ms)
+✔ manual Paid label creates no entitlement (11.1869ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 101.5694

@@ -1,0 +1,50 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
++   bottom: 459,
++   height: 18,
+-   bottom: 475,
+-   height: 50,
+    left: 8,
+    right: 1432,
++   top: 441,
+-   top: 425,
+    width: 1424,
+    x: 8,
++   y: 441
+-   y: 425
+  }
+
+    at file:///C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3/baseline-check/snapshot/tests/automatic-qa-rail-colors.mjs:5:2750 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: {
+    x: 8,
+    y: 441,
+    width: 1424,
+    height: 18,
+    top: 441,
+    right: 1432,
+    bottom: 459,
+    left: 8
+  },
+  expected: {
+    x: 8,
+    y: 425,
+    width: 1424,
+    height: 50,
+    top: 425,
+    right: 1432,
+    bottom: 475,
+    left: 8
+  },
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

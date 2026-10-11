@@ -1,0 +1,18 @@
+{
+  "page": "/s/sample-fictional-blue-orchard-pasadena/services",
+  "capture": "screenshots/page-013-1440.png",
+  "width": 1440,
+  "savedSha256": "24ebe575cfb483fa874cc48c86989a46b150e3449ad26a7f05c012f08c03279e",
+  "alternateSha256": "e165f1ee4e6e5a2c206eac143c0f65a75b9e2bfb4b1a39d9027902dbdd4d97bb",
+  "savedBytes": 1137863,
+  "alternateBytes": 1123203,
+  "changedPixels": 165341,
+  "outsideImagePixels": 0,
+  "serviceImageRectangles": [
+    {"x": 734.953125, "y": 273.34375, "width": 593.046875, "height": 520},
+    {"x": 113, "y": 1008.3125, "width": 384.65625, "height": 256.4375},
+    {"x": 113, "y": 1660.859375, "width": 384.65625, "height": 256.4375}
+  ],
+  "readiness": {"requiredFieldsEqualToSaved": true, "fullStoredPairEqual": true},
+  "source": "checks/blue-orchard-services-diagnosis.json"
+}

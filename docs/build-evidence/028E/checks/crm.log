@@ -1,0 +1,8 @@
+Review approval test prerequisite: eea22c9c-e702-4e86-9527-95a52daddcda website
+Review approval test prerequisite: eea22c9c-e702-4e86-9527-95a52daddcda project:2aa7f39b-7c7d-4165-84be-c802aff8a918
+Review approval test prerequisite: eea22c9c-e702-4e86-9527-95a52daddcda project:6ac9869e-5bac-470f-b4c7-a6b0c4b5bca2
+Review approval test prerequisite: eea22c9c-e702-4e86-9527-95a52daddcda blog:736afa46-1018-4e21-9deb-b984f0b2d26f
+Review approval test prerequisite: 9a4435af-7d8d-422e-91df-35934969d4c0 website
+PASS CRM: email-bound staff invitations, operator isolation, revocation, contact metadata, scoped appointments, overlap checks/timezone validation, disabled playbook drafts, blog draft privacy/escaping, image isolation, explicit demo projects, private sample preview, real submit form, removed materials section.
+PASS inbound inquiries create one scoped contact per phone, and starter articles are saved as drafts.
+

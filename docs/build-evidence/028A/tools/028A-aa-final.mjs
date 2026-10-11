@@ -1,0 +1,4 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+const root='C:/Users/joe/website_creator',out=root+'/docs/build-evidence/028A',results=[];
+for(const styles of ['bold,fresh,classic','current']){const env={...process.env,STYLE_FILTER:styles};delete env.RESUME;delete env.SKIP_PICKER;if(styles==='current')env.SKIP_PICKER='1';const started=new Date().toISOString(),run=spawnSync(process.execPath,[root+'/tests/design-styles-browser.mjs'],{cwd:root,env,encoding:'utf8',maxBuffer:30e6});const name=styles.replaceAll(',','-');fs.writeFileSync(out+'/checks/aa-final-'+name+'.log',(run.stdout||'')+'\n'+(run.stderr||''));results.push({styles,started,finished:new Date().toISOString(),status:run.status});fs.writeFileSync(out+'/aa-final-run.json',JSON.stringify(results,null,2));console.log(JSON.stringify(results.at(-1)));if(run.status!==0){process.exitCode=1;break}}

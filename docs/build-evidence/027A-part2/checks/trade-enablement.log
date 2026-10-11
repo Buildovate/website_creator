@@ -1,0 +1,15 @@
+✔ all 17 trade entries have one selectable kit and eight curated services (0.9919ms)
+✔ each enabled service has unique hero, scope and process pixels (26.4814ms)
+✔ new trade briefs share no editorial strings and preserve estimator preselection (46.9091ms)
+✔ preview artwork uses the design name, while lists and dialogs retain trade context (1.3132ms)
+✔ two seed-selected background and transition treatments exist per added trade (0.4186ms)
+✔ new trade city pages use local trade context and four unique questions (2.5284ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 86.4724
+

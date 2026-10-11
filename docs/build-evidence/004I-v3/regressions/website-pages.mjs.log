@@ -1,0 +1,26 @@
+✔ typed records round-trip; IDs/slugs survive edits and reordering (2.9652ms)
+✔ malformed records, duplicate URLs, broken city links and limits are rejected (1.8306ms)
+✔ media uses bounded photo IDs and alt text, never arbitrary URLs (0.528ms)
+▶ real tenant API: draft/published isolation, ownership and permissions
+  ✔ editor saves all four page types without changing public snapshot (2.7368ms)
+  ✔ render validates page data and has no save/publish side effects (7.8569ms)
+  ✔ foreign/missing media are rejected at save/create without side effects (18.1117ms)
+  ✔ malformed contracts return HTTP 400; access/origin/concurrency stay enforced (6.8865ms)
+  ✔ old editors omit the field safely; owner publishes a frozen snapshot (12.8141ms)
+  ✔ publish rechecks ownership even if a stored draft is stale or forged (3.6413ms)
+  ✔ explicit deletion remains draft until publish; backups retain page records (12.3416ms)
+✔ real tenant API: draft/published isolation, ownership and permissions (75.9388ms)
+✔ #004 service detail: published snapshot, preview membership, media and inquiry (31.0655ms)
+✔ #004 shared browser handler preserves service context and suppresses preview sends (71.2194ms)
+✔ #005 selected service grids: eight offerings, stable links, draft isolation and safe fallbacks (58.584ms)
+✔ #006 FAQ: published snapshots, feature gating, schema, escaping and route access (32.224ms)
+✔ #007 About route: confirmed copy, publication, owned portrait/logo and safe fallback (45.7601ms)
+✔ #007A confirmed trust facts, concise story, owner hero and published project tiles (45.1954ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 370.9815

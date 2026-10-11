@@ -1,0 +1,172 @@
+[
+  {
+    "kit": "roofing",
+    "homeIdentical": true,
+    "services": [
+      "roof-installation",
+      "roof-repair",
+      "roof-replacement"
+    ],
+    "manifestAssets": 52
+  },
+  {
+    "kit": "patios",
+    "homeIdentical": true,
+    "services": [
+      "patio-covers",
+      "motorized-pergolas",
+      "louvered-roofs"
+    ],
+    "manifestAssets": 15
+  },
+  {
+    "kit": "plumbing",
+    "homeIdentical": true,
+    "services": [
+      "leak-detection",
+      "drain-cleaning",
+      "water-heaters"
+    ],
+    "manifestAssets": 15
+  },
+  {
+    "kit": "hvac",
+    "homeIdentical": true,
+    "services": [
+      "air-conditioning-installation",
+      "air-conditioning-repair",
+      "heating-installation"
+    ],
+    "manifestAssets": 15
+  },
+  {
+    "kit": "electrical",
+    "homeIdentical": true,
+    "services": [
+      "electrical-repairs",
+      "panel-upgrades",
+      "ev-chargers"
+    ],
+    "manifestAssets": 15
+  },
+  {
+    "kit": "landscaping",
+    "homeIdentical": true,
+    "services": [
+      "landscape-design",
+      "landscape-installation",
+      "irrigation"
+    ],
+    "manifestAssets": 15
+  },
+  {
+    "kit": "general-contractors",
+    "homeIdentical": true,
+    "services": [
+      "home-remodeling",
+      "kitchen-remodeling",
+      "bathroom-remodeling"
+    ],
+    "manifestAssets": 14
+  },
+  {
+    "kit": "flooring",
+    "homeIdentical": true,
+    "services": [
+      "hardwood-flooring",
+      "luxury-vinyl-flooring",
+      "laminate-flooring"
+    ],
+    "manifestAssets": 10
+  },
+  {
+    "kit": "painting",
+    "homeIdentical": true,
+    "services": [
+      "interior-painting",
+      "exterior-painting",
+      "cabinet-painting"
+    ],
+    "manifestAssets": 10
+  },
+  {
+    "kit": "fencing",
+    "homeIdentical": true,
+    "services": [
+      "wood-fencing",
+      "vinyl-fencing",
+      "metal-fencing"
+    ],
+    "manifestAssets": 10
+  },
+  {
+    "kit": "garage-doors",
+    "homeIdentical": true,
+    "services": [
+      "garage-door-installation",
+      "garage-door-repair",
+      "spring-replacement"
+    ],
+    "manifestAssets": 10
+  },
+  {
+    "kit": "pest-control",
+    "homeIdentical": true,
+    "services": [
+      "pest-inspections",
+      "ant-control",
+      "rodent-control"
+    ],
+    "manifestAssets": 10
+  },
+  {
+    "kit": "windows-doors",
+    "homeIdentical": true,
+    "services": [
+      "window-replacement",
+      "window-installation",
+      "energy-efficient-windows"
+    ],
+    "manifestAssets": 10
+  },
+  {
+    "kit": "solar",
+    "homeIdentical": true,
+    "services": [
+      "solar-panel-installation",
+      "solar-battery-storage",
+      "solar-system-design"
+    ],
+    "manifestAssets": 10
+  },
+  {
+    "kit": "concrete",
+    "homeIdentical": true,
+    "services": [
+      "concrete-driveways",
+      "concrete-patios",
+      "stamped-concrete"
+    ],
+    "manifestAssets": 12
+  },
+  {
+    "kit": "pools",
+    "homeIdentical": true,
+    "services": [
+      "pool-design",
+      "pool-construction",
+      "pool-remodeling"
+    ],
+    "manifestAssets": 12
+  },
+  {
+    "kit": "locksmith",
+    "homeIdentical": true,
+    "services": [
+      "residential-lockout",
+      "rekeying",
+      "lock-installation"
+    ],
+    "manifestAssets": 12
+  }
+]

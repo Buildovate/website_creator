@@ -1,0 +1,49 @@
+{
+  "acceptedBase": "fdcd459",
+  "baselineReproduction": false,
+  "sample": "sample-fictional-copper-kite-ventura",
+  "versionHash": "b0215f8b0aab3b4c60aa3e72eb1d5b1636a0129aceda1748b4baa4d3decf1b22",
+  "realProviderCalls": 0,
+  "results": [
+    {
+      "check": "Meaningful hero media alternative text",
+      "selector": ".sv-hero-media .ml-poster",
+      "src": "/assets/service-showpiece/roofing-roof-repair-process.webp",
+      "alt": "Roof repair detail",
+      "parent": "<div class=\"ml-media\" data-media-slot=\"hero\" data-media-kind=\"still\" style=\"--ml-tint:#95613d;--ml-tint-opacity:.12\"><img class=\"ml-poster\" src=\"/assets/service-showpiece/roofing-roof-repair-process.webp\" alt=\"Roof repair detail\" width=\"1280\" height=\"800\" fetchpriority=\"high\" loading=\"eager\"><span class=\"ml-tint\" aria-hidden=\"true\"></span></div>",
+      "visible": true,
+      "naturalWidth": 1536,
+      "naturalHeight": 1030
+    },
+    {
+      "check": "Floating actions covering service image",
+      "scrollY": 2109,
+      "media": {
+        "selector": "#services img.service-art",
+        "src": "/assets/service-installation.webp",
+        "alt": "roof installation",
+        "box": {
+          "x": 20,
+          "y": 601.484375,
+          "width": 350,
+          "height": 218.75,
+          "top": 601.484375,
+          "right": 370,
+          "bottom": 820.234375,
+          "left": 20
+        }
+      },
+      "overlaps": []
+    }
+  ],
+  "baselineProof": [
+    {
+      "file": "src/media-library.js",
+      "unchangedSinceAcceptedBase": true
+    },
+    {
+      "file": "public/homeowner-polish.js",
+      "unchangedSinceAcceptedBase": false
+    }
+  ]
+}

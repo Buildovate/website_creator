@@ -1,0 +1,176 @@
+Review capture page pay-test /s/pay-test
+Review capture width /s/pay-test 1440
+Review capture width /s/pay-test 390
+Review capture width /s/pay-test 768
+Review capture page pay-test /s/pay-test/about
+Review capture width /s/pay-test/about 1440
+Review capture width /s/pay-test/about 390
+Review capture width /s/pay-test/about 768
+Review capture page pay-test /s/pay-test/areas
+Review capture width /s/pay-test/areas 1440
+Review capture width /s/pay-test/areas 390
+Review capture width /s/pay-test/areas 768
+Review capture page pay-test /s/pay-test/areas/ventura
+Review capture width /s/pay-test/areas/ventura 1440
+Review capture width /s/pay-test/areas/ventura 390
+Review capture width /s/pay-test/areas/ventura 768
+Review capture page pay-test /s/pay-test/blog
+Review capture width /s/pay-test/blog 1440
+Review capture width /s/pay-test/blog 390
+Review capture width /s/pay-test/blog 768
+Review capture page pay-test /s/pay-test/contact
+Review capture width /s/pay-test/contact 1440
+Review capture width /s/pay-test/contact 390
+Review capture width /s/pay-test/contact 768
+Review capture page pay-test /s/pay-test/faq
+Review capture width /s/pay-test/faq 1440
+Review capture width /s/pay-test/faq 390
+Review capture width /s/pay-test/faq 768
+Review capture page pay-test /s/pay-test/legal
+Review capture width /s/pay-test/legal 1440
+Review capture width /s/pay-test/legal 390
+Review capture width /s/pay-test/legal 768
+Review capture page pay-test /s/pay-test/legal/privacy
+Review capture width /s/pay-test/legal/privacy 1440
+Review capture width /s/pay-test/legal/privacy 390
+Review capture width /s/pay-test/legal/privacy 768
+Review capture page pay-test /s/pay-test/legal/terms
+Review capture width /s/pay-test/legal/terms 1440
+Review capture width /s/pay-test/legal/terms 390
+Review capture width /s/pay-test/legal/terms 768
+Review capture page pay-test /s/pay-test/pricing
+Review capture width /s/pay-test/pricing 1440
+Review capture width /s/pay-test/pricing 390
+Review capture width /s/pay-test/pricing 768
+Review capture page pay-test /s/pay-test/reviews
+Review capture width /s/pay-test/reviews 1440
+Review capture width /s/pay-test/reviews 390
+Review capture width /s/pay-test/reviews 768
+Review capture page pay-test /s/pay-test/services
+Review capture width /s/pay-test/services 1440
+Review capture width /s/pay-test/services 390
+Review capture width /s/pay-test/services 768
+Review capture page pay-test /s/pay-test/services/roof-installation
+Review capture width /s/pay-test/services/roof-installation 1440
+Review capture width /s/pay-test/services/roof-installation 390
+Review capture width /s/pay-test/services/roof-installation 768
+Review capture page pay-test /s/pay-test/services/roof-repair
+Review capture width /s/pay-test/services/roof-repair 1440
+Review capture width /s/pay-test/services/roof-repair 390
+Review capture width /s/pay-test/services/roof-repair 768
+Review capture page pay-test /s/pay-test/thank-you
+Review capture width /s/pay-test/thank-you 1440
+Review capture width /s/pay-test/thank-you 390
+Review capture width /s/pay-test/thank-you 768
+Review capture clip /assets/films/roofing-transformation.mp4
+Review capture frame /assets/films/roofing-transformation.mp4 0
+Review capture frame /assets/films/roofing-transformation.mp4 25
+Review capture frame /assets/films/roofing-transformation.mp4 50
+Review capture frame /assets/films/roofing-transformation.mp4 75
+Review capture frame /assets/films/roofing-transformation.mp4 100
+Review capture clip /assets/craft-films/roofing.mp4
+Review capture frame /assets/craft-films/roofing.mp4 0
+Review capture frame /assets/craft-films/roofing.mp4 25
+Review capture frame /assets/craft-films/roofing.mp4 50
+Review capture frame /assets/craft-films/roofing.mp4 75
+Review capture frame /assets/craft-films/roofing.mp4 100
+Review capture clip /assets/films/roofing-story.mp4
+Review capture frame /assets/films/roofing-story.mp4 0
+Review capture frame /assets/films/roofing-story.mp4 25
+Review capture frame /assets/films/roofing-story.mp4 50
+Review capture frame /assets/films/roofing-story.mp4 75
+Review capture frame /assets/films/roofing-story.mp4 100
+REAL browser QA prerequisite: tenant_123 website {"clear":false,"blocking":0,"pending":1,"passed":725,"reason":"A staff reviewer must decide every Borderline item, with a reason."}
+✔ B15 paid rental → real owner save → staff browser review → publish → live → expiry/cancel → public 404 (109269.8941ms)
+Review capture page pay-test /s/pay-test
+Review capture width /s/pay-test 1440
+Review capture width /s/pay-test 390
+Review capture width /s/pay-test 768
+Review capture page pay-test /s/pay-test/about
+Review capture width /s/pay-test/about 1440
+Review capture width /s/pay-test/about 390
+Review capture width /s/pay-test/about 768
+Review capture page pay-test /s/pay-test/areas
+Review capture width /s/pay-test/areas 1440
+Review capture width /s/pay-test/areas 390
+Review capture width /s/pay-test/areas 768
+Review capture page pay-test /s/pay-test/areas/ventura
+Review capture width /s/pay-test/areas/ventura 1440
+Review capture width /s/pay-test/areas/ventura 390
+Review capture width /s/pay-test/areas/ventura 768
+Review capture page pay-test /s/pay-test/blog
+Review capture width /s/pay-test/blog 1440
+Review capture width /s/pay-test/blog 390
+Review capture width /s/pay-test/blog 768
+Review capture page pay-test /s/pay-test/contact
+Review capture width /s/pay-test/contact 1440
+Review capture width /s/pay-test/contact 390
+Review capture width /s/pay-test/contact 768
+Review capture page pay-test /s/pay-test/faq
+Review capture width /s/pay-test/faq 1440
+Review capture width /s/pay-test/faq 390
+Review capture width /s/pay-test/faq 768
+Review capture page pay-test /s/pay-test/legal
+Review capture width /s/pay-test/legal 1440
+Review capture width /s/pay-test/legal 390
+Review capture width /s/pay-test/legal 768
+Review capture page pay-test /s/pay-test/legal/privacy
+Review capture width /s/pay-test/legal/privacy 1440
+Review capture width /s/pay-test/legal/privacy 390
+Review capture width /s/pay-test/legal/privacy 768
+Review capture page pay-test /s/pay-test/legal/terms
+Review capture width /s/pay-test/legal/terms 1440
+Review capture width /s/pay-test/legal/terms 390
+Review capture width /s/pay-test/legal/terms 768
+Review capture page pay-test /s/pay-test/pricing
+Review capture width /s/pay-test/pricing 1440
+Review capture width /s/pay-test/pricing 390
+Review capture width /s/pay-test/pricing 768
+Review capture page pay-test /s/pay-test/reviews
+Review capture width /s/pay-test/reviews 1440
+Review capture width /s/pay-test/reviews 390
+Review capture width /s/pay-test/reviews 768
+Review capture page pay-test /s/pay-test/services
+Review capture width /s/pay-test/services 1440
+Review capture width /s/pay-test/services 390
+Review capture width /s/pay-test/services 768
+Review capture page pay-test /s/pay-test/services/roof-installation
+Review capture width /s/pay-test/services/roof-installation 1440
+Review capture width /s/pay-test/services/roof-installation 390
+Review capture width /s/pay-test/services/roof-installation 768
+Review capture page pay-test /s/pay-test/services/roof-repair
+Review capture width /s/pay-test/services/roof-repair 1440
+Review capture width /s/pay-test/services/roof-repair 390
+Review capture width /s/pay-test/services/roof-repair 768
+Review capture page pay-test /s/pay-test/thank-you
+Review capture width /s/pay-test/thank-you 1440
+Review capture width /s/pay-test/thank-you 390
+Review capture width /s/pay-test/thank-you 768
+Review capture clip /assets/films/roofing-transformation.mp4
+Review capture frame /assets/films/roofing-transformation.mp4 0
+Review capture frame /assets/films/roofing-transformation.mp4 25
+Review capture frame /assets/films/roofing-transformation.mp4 50
+Review capture frame /assets/films/roofing-transformation.mp4 75
+Review capture frame /assets/films/roofing-transformation.mp4 100
+Review capture clip /assets/craft-films/roofing.mp4
+Review capture frame /assets/craft-films/roofing.mp4 0
+Review capture frame /assets/craft-films/roofing.mp4 25
+Review capture frame /assets/craft-films/roofing.mp4 50
+Review capture frame /assets/craft-films/roofing.mp4 75
+Review capture frame /assets/craft-films/roofing.mp4 100
+Review capture clip /assets/films/roofing-story.mp4
+Review capture frame /assets/films/roofing-story.mp4 0
+Review capture frame /assets/films/roofing-story.mp4 25
+Review capture frame /assets/films/roofing-story.mp4 50
+Review capture frame /assets/films/roofing-story.mp4 75
+Review capture frame /assets/films/roofing-story.mp4 100
+REAL browser QA prerequisite: tenant_123 website {"clear":false,"blocking":0,"pending":1,"passed":725,"reason":"A staff reviewer must decide every Borderline item, with a reason."}
+✔ B15 paid owner → real reviewed publication → ZIP available → refund → ZIP denied (106043.9077ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 215357.6084

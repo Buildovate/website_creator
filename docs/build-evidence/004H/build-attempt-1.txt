@@ -1,0 +1,48 @@
+PASS template asset integrity: 276 referenced files, 14 trade kits.
+X [ERROR] Could not resolve "images/layers.png"
+
+    public/assets/leaflet.css:359:19:
+      359 │   background-image: url(images/layers.png);
+          ╵                     ~~~~~~~~~~~~~~~~~~~~~~
+
+  You can mark the path "images/layers.png" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+X [ERROR] Could not resolve "images/layers-2x.png"
+
+    public/assets/leaflet.css:364:19:
+      364 │   background-image: url(images/layers-2x.png);
+          ╵                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  You can mark the path "images/layers-2x.png" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+X [ERROR] Could not resolve "images/marker-icon.png"
+
+    public/assets/leaflet.css:407:19:
+      407 │   background-image: url(images/marker-icon.png);
+          ╵                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  You can mark the path "images/marker-icon.png" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:1467
+  let error = new Error(text);
+              ^
+
+Error: Build failed with 3 errors:
+public/assets/leaflet.css:359:19: ERROR: Could not resolve "images/layers.png"
+public/assets/leaflet.css:364:19: ERROR: Could not resolve "images/layers-2x.png"
+public/assets/leaflet.css:407:19: ERROR: Could not resolve "images/marker-icon.png"
+    at failureErrorWithLog (C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:926:25
+    at C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:878:52
+    at buildResponseToResult (C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:924:7)
+    at C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:951:16
+    at responseCallbacks.<computed> (C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\joe\website_creator\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12) {
+  errors: [Getter/Setter],
+  warnings: [Getter/Setter]
+}
+
+Node.js v24.19.0

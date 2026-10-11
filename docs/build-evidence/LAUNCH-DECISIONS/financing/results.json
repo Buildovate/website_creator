@@ -1,0 +1,247 @@
+{
+  "speedRule": "Related suites + core gate only; no Suite-102 or standalone/PostgreSQL sweep",
+  "rows": [
+    {
+      "label": "ownership-financing",
+      "code": 0,
+      "pass": 28,
+      "fail": 0,
+      "log": "logs/ownership-financing.log"
+    },
+    {
+      "label": "build",
+      "code": 0,
+      "signal": null,
+      "pass": 0,
+      "fail": 0,
+      "ms": 5403,
+      "log": "logs/build.log"
+    },
+    {
+      "label": "isolated-worker-build",
+      "code": 0,
+      "signal": null,
+      "pass": 0,
+      "fail": 0,
+      "ms": 1008,
+      "log": "logs/isolated-worker-build.log"
+    },
+    {
+      "label": "typecheck",
+      "code": 0,
+      "signal": null,
+      "pass": 0,
+      "fail": 0,
+      "ms": 875,
+      "log": "logs/typecheck.log"
+    },
+    {
+      "label": "game-milestones",
+      "code": 0,
+      "signal": null,
+      "pass": 16,
+      "fail": 0,
+      "ms": 657,
+      "log": "logs/game-milestones.log"
+    },
+    {
+      "label": "game-progress",
+      "code": 0,
+      "signal": null,
+      "pass": 40,
+      "fail": 0,
+      "ms": 912,
+      "log": "logs/game-progress.log"
+    },
+    {
+      "label": "game-desktop-api",
+      "code": 0,
+      "signal": null,
+      "pass": 16,
+      "fail": 0,
+      "ms": 1211,
+      "log": "logs/game-desktop-api.log"
+    },
+    {
+      "label": "game-copy",
+      "code": 0,
+      "signal": null,
+      "pass": 7,
+      "fail": 0,
+      "ms": 1177,
+      "log": "logs/game-copy.log"
+    },
+    {
+      "label": "game-autofill",
+      "code": 0,
+      "signal": null,
+      "pass": 21,
+      "fail": 0,
+      "ms": 1321,
+      "log": "logs/game-autofill.log"
+    },
+    {
+      "label": "game-experience-api",
+      "code": 0,
+      "signal": null,
+      "pass": 18,
+      "fail": 0,
+      "ms": 1397,
+      "log": "logs/game-experience-api.log"
+    },
+    {
+      "label": "game-forms",
+      "code": 0,
+      "signal": null,
+      "pass": 4,
+      "fail": 0,
+      "ms": 598,
+      "log": "logs/game-forms.log"
+    },
+    {
+      "label": "stripe-sync",
+      "code": 0,
+      "signal": null,
+      "pass": 6,
+      "fail": 0,
+      "ms": 726,
+      "log": "logs/stripe-sync.log"
+    },
+    {
+      "label": "payments",
+      "code": 0,
+      "signal": null,
+      "pass": 5,
+      "fail": 0,
+      "ms": 913,
+      "log": "logs/payments.log"
+    },
+    {
+      "label": "stripe-no-key",
+      "code": 0,
+      "signal": null,
+      "pass": 2,
+      "fail": 0,
+      "ms": 751,
+      "log": "logs/stripe-no-key.log"
+    },
+    {
+      "label": "stripe-checkout",
+      "code": 0,
+      "signal": null,
+      "pass": 9,
+      "fail": 0,
+      "ms": 787,
+      "log": "logs/stripe-checkout.log"
+    },
+    {
+      "label": "entitlements",
+      "code": 0,
+      "signal": null,
+      "pass": 6,
+      "fail": 0,
+      "ms": 1072,
+      "log": "logs/entitlements.log"
+    },
+    {
+      "label": "pay4b",
+      "code": 0,
+      "signal": null,
+      "pass": 5,
+      "fail": 0,
+      "ms": 810,
+      "log": "logs/pay4b.log"
+    },
+    {
+      "label": "pay4a",
+      "code": 0,
+      "signal": null,
+      "pass": 6,
+      "fail": 0,
+      "ms": 845,
+      "log": "logs/pay4a.log"
+    },
+    {
+      "label": "pay5",
+      "code": 0,
+      "signal": null,
+      "pass": 5,
+      "fail": 0,
+      "ms": 855,
+      "log": "logs/pay5.log"
+    },
+    {
+      "label": "catalog",
+      "code": 0,
+      "signal": null,
+      "pass": 11,
+      "fail": 0,
+      "ms": 589,
+      "log": "logs/catalog.log"
+    },
+    {
+      "label": "domain-wizard",
+      "code": 0,
+      "signal": null,
+      "pass": 77,
+      "fail": 0,
+      "ms": 1470,
+      "log": "logs/domain-wizard.log"
+    },
+    {
+      "label": "insertion-order",
+      "code": 0,
+      "signal": null,
+      "pass": 16,
+      "fail": 0,
+      "ms": 3155,
+      "log": "logs/insertion-order.log"
+    },
+    {
+      "label": "launch-decisions",
+      "code": 0,
+      "signal": null,
+      "pass": 52,
+      "fail": 0,
+      "ms": 2515,
+      "log": "logs/launch-decisions.log"
+    },
+    {
+      "label": "pg-ownership-financing",
+      "code": 0,
+      "signal": null,
+      "pass": 28,
+      "fail": 0,
+      "ms": 44295,
+      "log": "logs/pg-ownership-financing.log"
+    },
+    {
+      "label": "pg-launch-decisions",
+      "code": 0,
+      "signal": null,
+      "pass": 52,
+      "fail": 0,
+      "ms": 134116,
+      "log": "logs/pg-launch-decisions-completed.log",
+      "initialAttempt": {
+        "label": "pg-launch-decisions",
+        "code": null,
+        "signal": "SIGTERM",
+        "pass": 0,
+        "fail": 0,
+        "ms": 120129,
+        "log": "logs/pg-launch-decisions-initial-timeout.log"
+      },
+      "reason": "Initial 120s runner limit interrupted passing tests; fresh real PostgreSQL migrations take about 3.8s per fixture. Same unmodified suite rerun with 300s limit."
+    },
+    {
+      "label": "ownership-financing-browser",
+      "code": 0,
+      "signal": null,
+      "pass": 16,
+      "fail": 0,
+      "ms": 3804,
+      "log": "logs/ownership-financing-browser.log"
+    }
+  ]
+}

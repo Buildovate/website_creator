@@ -1,0 +1,32 @@
+[
+  {
+    "label": "editor",
+    "command": "node C:/Users/joe/website_creator-028P-baseline-49b032e/editor-console.mjs",
+    "exitCode": 0
+  },
+  {
+    "label": "platform-mobile",
+    "command": "node C:/Users/joe/website_creator-028P-baseline-49b032e/tests/platform-mobile.mjs",
+    "exitCode": 0
+  },
+  {
+    "label": "expenses-browser",
+    "command": "node C:/Users/joe/website_creator-028P-baseline-49b032e/tests/expenses-browser.mjs",
+    "exitCode": 0
+  },
+  {
+    "label": "financing-states-browser",
+    "command": "node C:/Users/joe/website_creator-028P-baseline-49b032e/tests/financing-states-browser.mjs",
+    "exitCode": 0
+  },
+  {
+    "label": "generation-browser",
+    "command": "node C:/Users/joe/website_creator-028P-baseline-49b032e/tests/generation-browser.mjs",
+    "exitCode": 0
+  },
+  {
+    "label": "hero-editor-browser",
+    "command": "node C:/Users/joe/website_creator-028P-baseline-49b032e/tests/hero-editor-browser.mjs",
+    "exitCode": 0
+  }
+]

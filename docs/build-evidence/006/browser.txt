@@ -1,0 +1,9 @@
+PASS desktop 1440x1000: 16 answers, matching schema, keyboard disclosures, navigation from both homepages, service/contact links, mobile menu, reduced motion, no overflow or page errors
+locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('.cx-menu summary')
+
+    at C:\Users\joe\website_creator\scripts\capture-roofing-faq.cjs:26:89 {
+  log: [ "  - waiting for locator('.cx-menu summary')" ],
+  name: 'TimeoutError'
+}

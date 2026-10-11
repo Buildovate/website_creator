@@ -6,15 +6,37 @@
   "scripts": {
     "build": "node build.mjs",
     "db:generate": "drizzle-kit generate",
-    "dev": "vite"
+    "dev": "vite",
+    "aws:migrate": "node src/aws/migrate.js",
+    "aws:start": "node src/aws/server.js",
+    "test:aws": "node tests/aws-adapter.mjs",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down",
+    "docker:dev": "docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
+    "typecheck:auth": "tsc -p tsconfig.auth.json",
+    "test:auth": "node tests/auth-session.mjs",
+    "typecheck:client": "tsc -p tsconfig.auth.json",
+    "test:client": "node tests/client-modules.mjs",
+    "test:constitution": "node tests/constitution.mjs",
+    "geoip:update": "node scripts/update-geoip.mjs",
+    "test:experience": "node tests/neighborhood.mjs && node tests/media-ranges.mjs && node tests/planning-motion.mjs",
+    "test:conversion": "node tests/conversion-references.mjs"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@types/node": "^22.20.4",
     "drizzle-kit": "0.31.4",
     "drizzle-orm": "0.44.5",
     "esbuild": "0.25.9",
-    "vite": "^7.1.3"
+    "typescript": "^7.0.2",
+    "vite": "^7.1.3",
+    "postcss": "8.5.28"
   },
   "dependencies": {
-    "read-excel-file": "^9.3.10"
+    "@aws-sdk/client-s3": "^3.1138.0",
+    "mmdb-lib": "3.0.3",
+    "pg": "^8.23.0",
+    "read-excel-file": "^9.3.10",
+    "stripe": "23.0.0"
   }
 }

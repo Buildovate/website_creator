@@ -1,0 +1,26 @@
+{
+  "command": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5173",
+  "fixture": "Disposable QA only; no live provider or deployment",
+  "results": [
+    {
+      "url": "http://127.0.0.1:5173/s/roof-018-empty",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roof-018-empty?preview=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roof-018-price-book",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/s/roof-018-price-book?preview=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/",
+      "status": 200
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+[
+  {
+    "state": "fresh",
+    "problems": [],
+    "textCount": 137,
+    "samples": [
+      {
+        "selector": ".bv-game-house",
+        "actual": [
+          11,
+          34,
+          64
+        ],
+        "expected": [
+          11,
+          34,
+          64
+        ]
+      },
+      {
+        "selector": ".bv-game-quest",
+        "actual": [
+          255,
+          255,
+          255
+        ],
+        "expected": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "selector": ".bv-game-power",
+        "actual": [
+          251,
+          240,
+          225
+        ],
+        "expected": [
+          251,
+          240,
+          225
+        ]
+      }
+    ],
+    "borders": [
+      {
+        "label": "Refresh progress",
+        "height": 44
+      },
+      {
+        "label": "Start →",
+        "height": 44
+      },
+      {
+        "label": "Start →",
+        "height": 44
+      },
+      {
+        "label": "Start →",
+        "height": 44
+      },
+      {
+        "label": "Start →",
+        "height": 44
+      },
+      {
+        "label": "Business details",
+        "height": 44
+      },
+      {
+        "label": "Business questionnaire",
+        "height": 44
+      },
+      {
+        "label": "Owner photo",
+        "height": 44
+      },
+      {
+        "label": "Team access",
+        "height": 44
+      },
+      {
+        "label": "Coming next",
+        "height": 44
+      }
+    ]
+  },
+  {
+    "state": "midway",
+    "problems": [],
+    "textCount": 130,
+    "samples": [
+      {
+        "selector": ".bv-game-house",
+        "actual": [
+          11,
+          34,
+          64
+        ],
+        "expected": [
+          11,
+          34,
+          64
+        ]
+      },
+      {
+        "selector": ".bv-game-quest",
+        "actual": [
+          255,
+          255,
+          255
+        ],
+        "expected": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "selector": ".bv-game-power",
+        "actual": [
+          251,
+          240,
+          225
+        ],
+        "expected": [
+          251,
+          240,
+          225
+        ]
+      }
+    ],
+    "borders": [
+      {
+        "label": "Refresh progress",
+        "height": 44
+      },
+      {
+        "label": "Start →",
+        "height": 44
+      },
+      {
+        "label": "Start →",
+        "height": 44
+      },
+      {
+        "label": "Start →",
+        "height": 44
+      },
+      {
+        "label": "Pricing and estimate requests",
+        "height": 44
+      },
+      {
+        "label": "Forms and submissions",
+        "height": 44
+      },
+      {
+        "label": "Coming next",
+        "height": 44
+      }
+    ]
+  },
+  {
+    "state": "locked",
+    "problems": [],
+    "textCount": 131,
+    "samples": [
+      {
+        "selector": ".bv-game-house",
+        "actual": [
+          11,
+          34,
+          64
+        ],
+        "expected": [
+          11,
+          34,
+          64
+        ]
+      },
+      {
+        "selector": ".bv-game-quest",
+        "actual": [
+          255,
+          255,
+          255
+        ],
+        "expected": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "selector": ".bv-game-power",
+        "actual": [
+          251,
+          240,
+          225
+        ],
+        "expected": [
+          251,
+          240,
+          225
+        ]
+      }
+    ],
+    "borders": [
+      {
+        "label": "Refresh progress",
+        "height": 44
+      },
+      {
+        "label": "View →",
+        "height": 44
+      },
+      {
+        "label": "View →",
+        "height": 44
+      },
+      {
+        "label": "View →",
+        "height": 44
+      },
+      {
+        "label": "Pricing and estimate requests",
+        "height": 44
+      },
+      {
+        "label": "Forms and submissions",
+        "height": 44
+      },
+      {
+        "label": "Coming next",
+        "height": 44
+      }
+    ]
+  },
+  {
+    "state": "done",
+    "problems": [],
+    "textCount": 120,
+    "samples": [
+      {
+        "selector": ".bv-game-house",
+        "actual": [
+          11,
+          34,
+          64
+        ],
+        "expected": [
+          11,
+          34,
+          64
+        ]
+      },
+      {
+        "selector": ".bv-game-quest",
+        "actual": [
+          255,
+          255,
+          255
+        ],
+        "expected": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "selector": ".bv-game-power",
+        "actual": [
+          251,
+          240,
+          225
+        ],
+        "expected": [
+          251,
+          240,
+          225
+        ]
+      }
+    ],
+    "borders": [
+      {
+        "label": "Refresh progress",
+        "height": 44
+      },
+      {
+        "label": "Open →",
+        "height": 44
+      },
+      {
+        "label": "Blog",
+        "height": 44
+      },
+      {
+        "label": "Search visibility",
+        "height": 44
+      },
+      {
+        "label": "Coming next",
+        "height": 44
+      }
+    ]
+  }
+]

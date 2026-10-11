@@ -1,0 +1,2097 @@
+[
+  {
+    "file": "logs/auth-session.log",
+    "bytes": 6895,
+    "sha256": "1ef4da54764892b3a7028ef59cfc7762134e50d9e724858487c2ddc93aab51a7",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-blog-phone-links.log",
+    "bytes": 102,
+    "sha256": "550cbbfa482b1fa9c2ed93f9e270a22b7a90771207af54bade78a63854cf02e3",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-brand-recognition.log",
+    "bytes": 197,
+    "sha256": "91a79e892fdd5c218353bfdd534c2dc5b64c023dfdc90d08d050ff4cdadcccc7",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-camarillo-consent.log",
+    "bytes": 100,
+    "sha256": "a05b493567616ceab797f664d657bf0794e7defca0aa89e584ba1f32238d2a9e",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-capture-diagnostics.log",
+    "bytes": 97,
+    "sha256": "240a17af91dc7202b796454f5723845e42c571e85cf2839e2060168841197668",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-capture-readiness.log",
+    "bytes": 97,
+    "sha256": "344818db56a2a8a3c076c7bdf275d49cdbc12f969ba917aeaf00d8aed6a32059",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-contract.log",
+    "bytes": 99,
+    "sha256": "ac0b9cf4bb226114f5d600a29d30f185008bc5a427568922dda67d5893edacdb",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-craft-recognition.log",
+    "bytes": 92,
+    "sha256": "384d793a283dc9cad12a74bfefe1e2b389f816a2b12719f96b112aa1c6904ca3",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-finance-cards.log",
+    "bytes": 59,
+    "sha256": "44c1125ed7364518cb05bd49d2a5f4cb6095b3e340b6c7d28757a5137899387e",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-frame-initialization.log",
+    "bytes": 704,
+    "sha256": "9b2ab463607e0c35f2c76a843d0c8e7e036bc2042016f5909d043788870c0755",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-frame-sample-replay.log",
+    "bytes": 1467,
+    "sha256": "967b213dc7012a906eff25930a529d84593a99c0a8ea06306d82254faf198f68",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-frame-source-lock.log",
+    "bytes": 174,
+    "sha256": "c357c3241cd9e2f3cf81cd2a7eb53c347ba40e0836c3102dd6a8d0dc1291f7fa",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-guide-browser.log",
+    "bytes": 134,
+    "sha256": "7836203d24a9227b13e075f8344e79e313fe5ecb3fd653aa66c0b8fd4fe52ebc",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-legacy-recognition.log",
+    "bytes": 94,
+    "sha256": "847df649f095bc2e90acde07f68a5f9b18aff75beb6448d560f28202dead66ca",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-legal-policy-recognition.log",
+    "bytes": 56,
+    "sha256": "1a87ed5501b70b12cfa110c55b8850dc5f2ae362ae1e0edbdafe15f2daaa1b4b",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-negative-browser.log",
+    "bytes": 613,
+    "sha256": "bd332e64699060ca415954f6d9b168b2ba33f72a760a2d2afaa42e88c706785d",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-normalizer.log",
+    "bytes": 44,
+    "sha256": "645c16f27d92f4146f539544ffdc6b3cba18f2269c4c71566d48b4c91a7d872b",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-packets.log",
+    "bytes": 31306,
+    "sha256": "bca90c16a9032acb4cd604628bc866b7d3b839bec61de3a0ba5738d4f2de81d5",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-page-action-colors.log",
+    "bytes": 69,
+    "sha256": "abe150d20976d7562746db8132c430297dd4cac84624b5d08a4e48bb26acc4ac",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-polish-browser.log",
+    "bytes": 93,
+    "sha256": "8f938c0af948e82d3eb6c9b07aaa0fe86cd47e0e71c26ed1bf31ff1388eed84c",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-project-media.log",
+    "bytes": 1236,
+    "sha256": "b27713510bb572b7504006bba26b65fc5370f482455f06c961d35ff2dc05312e",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-project-recognition.log",
+    "bytes": 232,
+    "sha256": "5dae48e86f2495fa96b34c37d69093357947fa7d7a706efc467e3ad200d51bca",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-rail-colors.log",
+    "bytes": 778,
+    "sha256": "23dc1ffff6f8f53ff640c1246e4cb05bd83fd0cd35044b48a73ee42e2cf3108f",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-recognition-lock.log",
+    "bytes": 151,
+    "sha256": "b3850244f28b13750da1e78a38f514244fc22322b411217e6490413570475925",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-replay-diagnostics.log",
+    "bytes": 95,
+    "sha256": "ebbe9aaa4579bc8fd05461a51157c3bf3c5c28cea95b8cc7a01d5a1a3e483498",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-replay.log",
+    "bytes": 6950,
+    "sha256": "776d4e312d886935d98b8ac0e2ab88358e375687ddb40b0923de1d246a2a0968",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-staff-browser.log",
+    "bytes": 38,
+    "sha256": "bda8792bca4d18510dcfd5d3d91ccb958aa24d304b083b90b9ddec6b3e523273",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-status-recognition.log",
+    "bytes": 98,
+    "sha256": "7c00fd086d955caf559f56712f98f4b30f1644a1659ce4009683ade16ea4559a",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-thousand-oaks-consent.log",
+    "bytes": 104,
+    "sha256": "7edbaabc29fb865b5cc71c4b2de6db49e39d4fed2ceac82c94e794d955c61588",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-unused-preload.log",
+    "bytes": 1057,
+    "sha256": "4e682174384673b325274e1babd343d36a066e8dd26c0e6d94a0d3baf1234276",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-workspace-form-recognition.log",
+    "bytes": 127,
+    "sha256": "f8e4469bb5677bca149d55541e5d485cb7ba96cfff83ef33301d05388a2f373a",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-workspace-phone-links.log",
+    "bytes": 114,
+    "sha256": "6c29e4eef68d2ab056a9103cfb1c2cfb1ea9a6b3966fb718986e93914a43b294",
+    "committed": true
+  },
+  {
+    "file": "logs/automatic-qa-workspace-recognition.log",
+    "bytes": 101,
+    "sha256": "cec87700ddd216b5f42d34e638938c2d266e829117f0b65acd0aee0b4a9a97bf",
+    "committed": true
+  },
+  {
+    "file": "logs/aws-adapter.log",
+    "bytes": 252,
+    "sha256": "e2abd94ce4527494098f34aa497b2e8a4a01c68e3f3d495a8f02e39c43ff0695",
+    "committed": true
+  },
+  {
+    "file": "logs/baseline-retry-automatic-qa-frame-sample-replay.log",
+    "bytes": 2181,
+    "sha256": "baf52460f098ff9bbdc0554f4e2faee22d7996fb2b5a39fddd0a493a8eaf788e",
+    "committed": true
+  },
+  {
+    "file": "logs/baseline-retry-automatic-qa-rail-colors.log",
+    "bytes": 940,
+    "sha256": "1a42ae7aaf4bb1d75c8b85b597420b384e1cf47ac1512e931c43073007bfe2c4",
+    "committed": true
+  },
+  {
+    "file": "logs/baseline-retry-automatic-qa-replay.log",
+    "bytes": 2180,
+    "sha256": "c8c523d1d27ba4ca6469de9d933bea92cdf1ecae082f5f6907312499f0a1cae0",
+    "committed": true
+  },
+  {
+    "file": "logs/baseline-retry-automatic-qa-staff-browser.log",
+    "bytes": 2181,
+    "sha256": "3a35f53341090a5d196f06ed25d0ddc5846b21f5de2ea6d84a84360e099d2455",
+    "committed": true
+  },
+  {
+    "file": "logs/baseline-retry-design-styles-browser.log",
+    "bytes": 655,
+    "sha256": "6506f38d789b1d327a84e7de4eefe4c65884be652c78c818229f38e81f7cdbc3",
+    "committed": true
+  },
+  {
+    "file": "logs/baseline-retry-media-api.log",
+    "bytes": 71,
+    "sha256": "0080f622fc24935f73a8b3f62cd30aeb3fd74628375febc4683bce8c1f3925cc",
+    "committed": true
+  },
+  {
+    "file": "logs/baseline-retry-uniqueness-api.log",
+    "bytes": 93,
+    "sha256": "f21ad6722ad62b55f80b9eead4750c27cfd92f0dfb761eb0647f8a7550faa097",
+    "committed": true
+  },
+  {
+    "file": "logs/baseline-retry-website-pages.log",
+    "bytes": 1353112,
+    "sha256": "350ca3d7f285f0b342194671b9e20e17fe4ce7c05176bb5363842733b6825d09",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-aws-adapter.log",
+    "bytes": 252,
+    "sha256": "e2abd94ce4527494098f34aa497b2e8a4a01c68e3f3d495a8f02e39c43ff0695",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-catalog.log",
+    "bytes": 1093,
+    "sha256": "5b5357c12d01ac4384cab0e30e9c32ead633a1b3033178ecf530f5197fb9c4f7",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-domain-wizard.log",
+    "bytes": 238,
+    "sha256": "5421b2875a22016d8bdeebd0a90f22e96d443c86ef747143446858888e1b15bc",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-entitlements.log",
+    "bytes": 588,
+    "sha256": "120fecba5db981400c934f9128625704c2bcb5b137ce181ca64ac9f34a4388c8",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-full-build.log",
+    "bytes": 68,
+    "sha256": "567d2172e40473ea975dc283ddd4652c5e9c242729f033df8046ebecc1fbc903",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-game-autofill.log",
+    "bytes": 1234,
+    "sha256": "054f0035e5b95126b337f9aa82d6209ad9c95158e8da819e757b68762b51da02",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-game-copy.log",
+    "bytes": 535,
+    "sha256": "1b92b4af95857d7753269c76e5e7169125da3b372ff4ddb6a82f5119c30b2f8c",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-game-desktop-api.log",
+    "bytes": 633,
+    "sha256": "ee341fe93052360a58c6ec4e6b8107b7997bb1ed6453f52d855fc1e5f1a97898",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-game-experience-api.log",
+    "bytes": 844,
+    "sha256": "fe99ab3a6e737ef3c5b583c0fa50c31ec157cdcb8293a5caae2f881631a92928",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-game-forms.log",
+    "bytes": 321,
+    "sha256": "9ab0e6d3eae0cf44a5f6357b383f1fb8890ffa61821e588969d58dc2ee8915bf",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-game-milestones.log",
+    "bytes": 1116,
+    "sha256": "5be1ca5c6abfdcc61136a0aa1d2fb41bdced89181760006358629e7c443cff67",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-game-progress.log",
+    "bytes": 3108,
+    "sha256": "a835844e79c5b672118bfc0cdd14cbffcfbd63c3bba1c8dedc2664bfd583f956",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-insertion-order.log",
+    "bytes": 189,
+    "sha256": "5639a5f0c80ada5116b2eb27a1fe1fb8056886950482c51ae55b1b9af1f082cc",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-isolated-worker-build.log",
+    "bytes": 93,
+    "sha256": "12c5f4bebc04d428c6c3c47f205aabc88bab08fcf34dff7b1be02cab5a3d16b0",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pay4a-isolated-build.log",
+    "bytes": 74,
+    "sha256": "e0220e0f3bb6519f94cbd1c21cb4953165a1f8a971211236dd9cc56fdcca3c4c",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pay4a.log",
+    "bytes": 621,
+    "sha256": "ed2ca91205ceaefa2f15c561ef53dc730c7c94d90e109a16ffa68486d2394d98",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pay4b.log",
+    "bytes": 556,
+    "sha256": "c366271ebead52b89dc6b53a008330bb7f9424782d078247a57f5b3a44423729",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pay5.log",
+    "bytes": 618,
+    "sha256": "2d7e8a3a2c2a077d42d36f7bc8cb7ce7b2e97b1e7389c0456eb3b62dff3eb766",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-payments.log",
+    "bytes": 498,
+    "sha256": "b263630cfeb8748023fb6c5783270bc70c506dbf7fd104e87fd54404b425d6e6",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pg-domain-wizard.log",
+    "bytes": 238,
+    "sha256": "5421b2875a22016d8bdeebd0a90f22e96d443c86ef747143446858888e1b15bc",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pg-game-autofill.log",
+    "bytes": 1234,
+    "sha256": "054f0035e5b95126b337f9aa82d6209ad9c95158e8da819e757b68762b51da02",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pg-game-desktop-api.log",
+    "bytes": 633,
+    "sha256": "ee341fe93052360a58c6ec4e6b8107b7997bb1ed6453f52d855fc1e5f1a97898",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pg-game-experience-api.log",
+    "bytes": 844,
+    "sha256": "fe99ab3a6e737ef3c5b583c0fa50c31ec157cdcb8293a5caae2f881631a92928",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pg-game-progress.log",
+    "bytes": 3123,
+    "sha256": "3139802586155cbee5550068b7c563e147c0913afc8bd0da304b89d227fda9a2",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pg-payments.log",
+    "bytes": 511,
+    "sha256": "d0be9f75afb2caa8f696dcf2a3d3dd2ae0098066e6a1e4144b2b4053f18ccafe",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-pg-readiness-batch-a.log",
+    "bytes": 1691,
+    "sha256": "5be511f7fdc787739f6e3d4fdb95be45fb3342d56e33da0a4543d26adadd6bb9",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-readiness-batch-a.log",
+    "bytes": 1660,
+    "sha256": "d7296ee5bae9503a7eeb49bb8aa9bf019408d6611ba4bbdf731847931eaba2b7",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-sms-diagnostic.log",
+    "bytes": 174,
+    "sha256": "24cd37c57d0df072cbd5409bba11a94513d3446ec3039cb651b235cb1c5934a3",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-stripe-checkout.log",
+    "bytes": 854,
+    "sha256": "8e8b0828d73692f9f5dab29e648522bbb3a0d176632dce31c4a7ee1213f14e98",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-stripe-no-key.log",
+    "bytes": 295,
+    "sha256": "240d276742d91fdf471a6e764962723dd8f9e6fa893141bb361fbe5c34706646",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-stripe-sync.log",
+    "bytes": 636,
+    "sha256": "9ec862b39a1208d2f3d765e341befe0332b0bffed0c0d903608ea5b1958ad1b9",
+    "committed": true
+  },
+  {
+    "file": "logs/batch-core-typecheck.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "committed": true
+  },
+  {
+    "file": "logs/build.log",
+    "bytes": 68,
+    "sha256": "567d2172e40473ea975dc283ddd4652c5e9c242729f033df8046ebecc1fbc903",
+    "committed": true
+  },
+  {
+    "file": "logs/builder.log",
+    "bytes": 391,
+    "sha256": "b784d6441dbf2114ee70771d45bd1b70ecfb424efbff6b3624a2311ea6e6b37c",
+    "committed": true
+  },
+  {
+    "file": "logs/callback-browser.log",
+    "bytes": 129,
+    "sha256": "ee5d7a58b24756c8fad7574b407edec09a9625af8f9279c6d6c6690e8eaede35",
+    "committed": true
+  },
+  {
+    "file": "logs/callback-restore.log",
+    "bytes": 296,
+    "sha256": "9cfbc6d07aeaaeb332b9024836bca44c215ad6c44b2b4bf3bb153eecb13c7337",
+    "committed": true
+  },
+  {
+    "file": "logs/catalog.log",
+    "bytes": 1091,
+    "sha256": "62cc3f3929114c099a9fba2e6044a49f7f8264a8dd42f426ce4c4698b4f1f611",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-aws-adapter.log",
+    "bytes": 252,
+    "sha256": "e2abd94ce4527494098f34aa497b2e8a4a01c68e3f3d495a8f02e39c43ff0695",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-catalog.log",
+    "bytes": 1093,
+    "sha256": "fc22b2408a211a06c8a2d88de5e26bc23d95f7d412434d20eda9e4fa3ab207d1",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-domain-wizard.log",
+    "bytes": 238,
+    "sha256": "5421b2875a22016d8bdeebd0a90f22e96d443c86ef747143446858888e1b15bc",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-entitlements.log",
+    "bytes": 589,
+    "sha256": "d3407292c96f07c7227b3b1256342a3091535b5407b85ea0607816962f0e525b",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-full-build.log",
+    "bytes": 68,
+    "sha256": "567d2172e40473ea975dc283ddd4652c5e9c242729f033df8046ebecc1fbc903",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-game-autofill.log",
+    "bytes": 1234,
+    "sha256": "054f0035e5b95126b337f9aa82d6209ad9c95158e8da819e757b68762b51da02",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-game-copy.log",
+    "bytes": 535,
+    "sha256": "1b92b4af95857d7753269c76e5e7169125da3b372ff4ddb6a82f5119c30b2f8c",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-game-desktop-api.log",
+    "bytes": 633,
+    "sha256": "ee341fe93052360a58c6ec4e6b8107b7997bb1ed6453f52d855fc1e5f1a97898",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-game-experience-api.log",
+    "bytes": 844,
+    "sha256": "fe99ab3a6e737ef3c5b583c0fa50c31ec157cdcb8293a5caae2f881631a92928",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-game-forms.log",
+    "bytes": 321,
+    "sha256": "9ab0e6d3eae0cf44a5f6357b383f1fb8890ffa61821e588969d58dc2ee8915bf",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-game-milestones.log",
+    "bytes": 1117,
+    "sha256": "5fb0b588da81049c6037ce130db36c5830627411929cf4f0398965ba728b920d",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-game-progress.log",
+    "bytes": 3110,
+    "sha256": "90ad004bc58821bd7d105351307d6becde11c2a5c2050faac504aeb50b948d29",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-insertion-order.log",
+    "bytes": 189,
+    "sha256": "5639a5f0c80ada5116b2eb27a1fe1fb8056886950482c51ae55b1b9af1f082cc",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-isolated-worker-build.log",
+    "bytes": 93,
+    "sha256": "12c5f4bebc04d428c6c3c47f205aabc88bab08fcf34dff7b1be02cab5a3d16b0",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-pay4a-isolated-build.log",
+    "bytes": 74,
+    "sha256": "e0220e0f3bb6519f94cbd1c21cb4953165a1f8a971211236dd9cc56fdcca3c4c",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-pay4a.log",
+    "bytes": 619,
+    "sha256": "2cbd3635f8c755386d2b1430e4d84c211775dd718ef65950b1c3bcda1a3aa440",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-pay4b.log",
+    "bytes": 556,
+    "sha256": "98794b551ab58e1e687886d86ae87b4119e76073ac836a99d21cb08b183737aa",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-pay5.log",
+    "bytes": 618,
+    "sha256": "566ffea04fd91f67be330a5eb33168aa1762b1c2b733568bd694ad1b2c7260fb",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-payments.log",
+    "bytes": 498,
+    "sha256": "08b70f98860491aefa3462b8bdddf34770b357ea7ce09dbde3879c33667272e2",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-pg-domain-wizard.log",
+    "bytes": 238,
+    "sha256": "5421b2875a22016d8bdeebd0a90f22e96d443c86ef747143446858888e1b15bc",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-pg-game-autofill.log",
+    "bytes": 1234,
+    "sha256": "054f0035e5b95126b337f9aa82d6209ad9c95158e8da819e757b68762b51da02",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-pg-game-desktop-api.log",
+    "bytes": 6499,
+    "sha256": "067216f6d70a84b0ebd969acc74b5dcd14189461cd5f79a19ba47ada3a2b59dc",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-pg-game-experience-api.log",
+    "bytes": 6130,
+    "sha256": "4eb73f81b322f0a29c83dc8a2f4d79a00428cbafe551d4abcbe7611d96a0dedb",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-pg-game-progress.log",
+    "bytes": 3123,
+    "sha256": "c958cc724e6d845523dd9fe743a0ac4852b11748a330d6c5e39e982451178bc9",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-pg-payments.log",
+    "bytes": 511,
+    "sha256": "9d4d6f88d13f15f118f87763b324f61c122b4b677ed5c203c8bae3b50ec2dda2",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-sms-diagnostic.log",
+    "bytes": 174,
+    "sha256": "24cd37c57d0df072cbd5409bba11a94513d3446ec3039cb651b235cb1c5934a3",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-stripe-checkout.log",
+    "bytes": 855,
+    "sha256": "e2472e243af856c4c13bd8fee7837002ce0be44cc929fd6e62c6bc55a01198f7",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-stripe-no-key.log",
+    "bytes": 295,
+    "sha256": "33938f6cf3be922808e8e3099bb29815260892c41e20dca134bb01ca38517c0a",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-stripe-sync.log",
+    "bytes": 635,
+    "sha256": "609818849af8f4ceac3ff259fe812cefc1298275d03b6fb0da8c241d00444030",
+    "committed": true
+  },
+  {
+    "file": "logs/checkpoint-typecheck.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "committed": true
+  },
+  {
+    "file": "logs/cinematic-films.log",
+    "bytes": 368,
+    "sha256": "5d0c338cfd8c98be0c21ed0aa48019a02d59253fb11043b53fa6f81a4566b354",
+    "committed": true
+  },
+  {
+    "file": "logs/client-modules.log",
+    "bytes": 229,
+    "sha256": "75a1c61fc6d62a9186ec220ac8a3f7dc92233a999281926fc22e1b933d5e5db6",
+    "committed": true
+  },
+  {
+    "file": "logs/clips-phase2-browser.log",
+    "bytes": 6835,
+    "sha256": "ff9d81042633b74dac25cfb59fe93331aada769022f372844a3c21907fa650b2",
+    "committed": true
+  },
+  {
+    "file": "logs/clips-phase2.log",
+    "bytes": 13761,
+    "sha256": "fb95d188cf9d19bd3ee70b62cd9524a29c7f9a573fd6d76d0915d513040b2288",
+    "committed": true
+  },
+  {
+    "file": "logs/constitution.log",
+    "bytes": 87127,
+    "sha256": "30cfce61f76737adce2c5c9a7ea8d026072d95189e129bca26c7f3f46270352b",
+    "committed": true
+  },
+  {
+    "file": "logs/contact-linkage-browser.log",
+    "bytes": 159,
+    "sha256": "6a62e3e477269732a497c7ae3a08f44d0692b82bd33030b284a4a9aa76c4f833",
+    "committed": true
+  },
+  {
+    "file": "logs/contact-linkage.log",
+    "bytes": 398,
+    "sha256": "6292275c6d44a4e397046815268a9afe6a94b35549b63c7653d453245a97d372",
+    "committed": true
+  },
+  {
+    "file": "logs/contacts-browser.log",
+    "bytes": 168,
+    "sha256": "cebd169a2508ebef026dcbcddeed27aa96b69b1030cde572e3fde10b4b96e609",
+    "committed": true
+  },
+  {
+    "file": "logs/contacts-restore.log",
+    "bytes": 316,
+    "sha256": "ed3011af854bbea62604a68c070c5cb8923dead7d69be2241c3e041acfe4a40b",
+    "committed": true
+  },
+  {
+    "file": "logs/control.log",
+    "bytes": 454,
+    "sha256": "122f82514a4c3d32c6939d5fcdb68972bd5cb078d1b85e2ffd3d9717d0fcb19c",
+    "committed": true
+  },
+  {
+    "file": "logs/conversion-references.log",
+    "bytes": 18308,
+    "sha256": "b232c245178b027865f8e57a088dae3c576a12278b0d9f64ae7a6658ec1ffd1c",
+    "committed": true
+  },
+  {
+    "file": "logs/coordinator-hang-guard.log",
+    "bytes": 102,
+    "sha256": "26b295a191aef5e7ee5916bb599c96fbed41337b4e921510baef825666821ab3",
+    "committed": true
+  },
+  {
+    "file": "logs/core-site-pages.log",
+    "bytes": 375,
+    "sha256": "3bd6770a1783f6545d184e632f399643f74542454423eb9b753f83b5088908dc",
+    "committed": true
+  },
+  {
+    "file": "logs/corrected-pg-backup-probe.mjs.log",
+    "bytes": 238,
+    "sha256": "5b15c40ae45cbbd6549c4b354d04d50ba1336bf9ba3912c1ba02c62d4642e3d5",
+    "committed": true
+  },
+  {
+    "file": "logs/corrected-pg-cancel-site-probe.mjs.log",
+    "bytes": 378,
+    "sha256": "6f24d0363af1cc68e566b300f0e83cf8fad06f665d7fd0c628698795fcb12fb1",
+    "committed": true
+  },
+  {
+    "file": "logs/corrected-pg-owner-settlement-probe.mjs.log",
+    "bytes": 304,
+    "sha256": "370d984d13c59db86c9c3c016e877e22a85df7b94e6ce8718c18f16109d27504",
+    "committed": true
+  },
+  {
+    "file": "logs/corrected-pg-remaining-local-probe.mjs.log",
+    "bytes": 630,
+    "sha256": "4c5481a87b514132488b7ba867bab11ae11db1d6937d94296f031cb292cc3ee0",
+    "committed": true
+  },
+  {
+    "file": "logs/corrected-pg-route-probe.mjs.log",
+    "bytes": 608,
+    "sha256": "507f4e2ac9bb8f67c954694632df9cbb842e8ea9dc50de07c0e08a0f19d93b2f",
+    "committed": true
+  },
+  {
+    "file": "logs/corrected-pg-settlement-replay-probe.mjs.log",
+    "bytes": 277,
+    "sha256": "b63abadc825e51ee8b03ae87d5295c8b0c3eca55ca04696330ffd87b41b3a947",
+    "committed": true
+  },
+  {
+    "file": "logs/crm-next.log",
+    "bytes": 483,
+    "sha256": "397ac49e573ca0ffd03e91ad5e4afb23ee8edebc012004b4ecf86503382368fc",
+    "committed": true
+  },
+  {
+    "file": "logs/crm.log",
+    "bytes": 15663,
+    "sha256": "d846a19325828c4dd0c2903d83a601321d1d046000a6893ee69f6c81774e9139",
+    "committed": true
+  },
+  {
+    "file": "logs/design-kits.log",
+    "bytes": 371,
+    "sha256": "507b0347c8f008ab9f243ab0aa2b09e43609aafb5959b4d28bd110dd3d3c9990",
+    "committed": true
+  },
+  {
+    "file": "logs/design-styles-browser.log",
+    "bytes": 88430,
+    "sha256": "1fe1dda50c6aec89fb500ec8dbbf9a8315e7977785862e4febc9e44b40444616",
+    "committed": true
+  },
+  {
+    "file": "logs/design-styles.log",
+    "bytes": 8761,
+    "sha256": "e54977ea459368b75b34be420b1c898865f979c94a3c769972d4fcecc1c0b3af",
+    "committed": true
+  },
+  {
+    "file": "logs/domain-wizard-browser.log",
+    "bytes": 83,
+    "sha256": "0f685862f2398101054f4849a03c0b1e083fb0e09964e34993448754d4ac0ea7",
+    "committed": true
+  },
+  {
+    "file": "logs/domain-wizard.log",
+    "bytes": 238,
+    "sha256": "5421b2875a22016d8bdeebd0a90f22e96d443c86ef747143446858888e1b15bc",
+    "committed": true
+  },
+  {
+    "file": "logs/ebook-browser.log",
+    "bytes": 9814,
+    "sha256": "ce1f897a14cae8c02a17be60b1b3c4a60a89cef04df1f192438adceb8d3c6849",
+    "committed": true
+  },
+  {
+    "file": "logs/ebook.log",
+    "bytes": 18778,
+    "sha256": "1c82358f956c10d72db8ab853da964d477efbe3a1b7f90b8b013f335cbd93d49",
+    "committed": true
+  },
+  {
+    "file": "logs/engagement-providers.log",
+    "bytes": 432,
+    "sha256": "fde722ff2ca30173b2f3fecb4fc51ba4894d1817b777a1e0fca22ad42294edd6",
+    "committed": true
+  },
+  {
+    "file": "logs/engagement.log",
+    "bytes": 432,
+    "sha256": "cd0fb4611740f20e66f882b81a3c69e26fa131abb4e0d22bc6e96cf0dc2c649b",
+    "committed": true
+  },
+  {
+    "file": "logs/entitlements.log",
+    "bytes": 588,
+    "sha256": "38ed10bce477501c736e3723aef5ededed41c75e686c7d6abe6f1750253cd8bf",
+    "committed": true
+  },
+  {
+    "file": "logs/expense-metering.log",
+    "bytes": 232,
+    "sha256": "c14e5d4f5bcc47181440f2db6dc4bd835d1b8dc8fbafe8e2df620a4a0326366b",
+    "committed": true
+  },
+  {
+    "file": "logs/expense-polish-browser.log",
+    "bytes": 7130,
+    "sha256": "a0805ca37402fd21dd68bfb36622815ad4b66e2bac9ae166830edabc2924a9f4",
+    "committed": true
+  },
+  {
+    "file": "logs/expense-polish.log",
+    "bytes": 193,
+    "sha256": "da66dd82b3d1a5570f2c10633cb14ce71e1dad5de36463a14b543d30508483f9",
+    "committed": true
+  },
+  {
+    "file": "logs/expenses-browser.log",
+    "bytes": 7129,
+    "sha256": "60635824abdb27a03b2809bb07a21c4e85d793ed223e5a885e5a9fe35b663e5e",
+    "committed": true
+  },
+  {
+    "file": "logs/expenses.log",
+    "bytes": 318,
+    "sha256": "47d3961ba2e99f74707a5049b11d810490a68c7404eafb6fa39831c7e0a931a9",
+    "committed": true
+  },
+  {
+    "file": "logs/final-build-gate-isolated-worker-build.log",
+    "bytes": 93,
+    "sha256": "12c5f4bebc04d428c6c3c47f205aabc88bab08fcf34dff7b1be02cab5a3d16b0",
+    "committed": true
+  },
+  {
+    "file": "logs/final-build-gate-typecheck.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-catalog.log",
+    "bytes": 1091,
+    "sha256": "f493ca86b82de34e17d893a1d66bd4ff163043e35c8e57e23987b48858fdf0b6",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-domain-wizard.log",
+    "bytes": 238,
+    "sha256": "5421b2875a22016d8bdeebd0a90f22e96d443c86ef747143446858888e1b15bc",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-entitlements.log",
+    "bytes": 588,
+    "sha256": "7585210f09cb91a5b71561ad812ec924b3fe605934071ff50be794ce9cdeee11",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-game-autofill.log",
+    "bytes": 1234,
+    "sha256": "054f0035e5b95126b337f9aa82d6209ad9c95158e8da819e757b68762b51da02",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-game-copy.log",
+    "bytes": 535,
+    "sha256": "1b92b4af95857d7753269c76e5e7169125da3b372ff4ddb6a82f5119c30b2f8c",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-game-desktop-api.log",
+    "bytes": 633,
+    "sha256": "ee341fe93052360a58c6ec4e6b8107b7997bb1ed6453f52d855fc1e5f1a97898",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-game-experience-api.log",
+    "bytes": 844,
+    "sha256": "fe99ab3a6e737ef3c5b583c0fa50c31ec157cdcb8293a5caae2f881631a92928",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-game-forms.log",
+    "bytes": 321,
+    "sha256": "9ab0e6d3eae0cf44a5f6357b383f1fb8890ffa61821e588969d58dc2ee8915bf",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-game-milestones.log",
+    "bytes": 1116,
+    "sha256": "74ace864a7b592505d866c9ad522fa3180f6b6b62ea7b287d4c7e153bac1a8cc",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-game-progress.log",
+    "bytes": 3107,
+    "sha256": "ae304e9ddddfdad75f708df4f21c79a092e23d0f246bdd95e2cef8881be44fbd",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-insertion-order.log",
+    "bytes": 189,
+    "sha256": "5639a5f0c80ada5116b2eb27a1fe1fb8056886950482c51ae55b1b9af1f082cc",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-pay4a.log",
+    "bytes": 623,
+    "sha256": "7696f1e3866b722b23baee8a7e1e294f6c99fe5c6a4ad51da339050a4ce49608",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-pay4b.log",
+    "bytes": 557,
+    "sha256": "c0838f068b783c0c9a18eb4416d4f349cd0c9aa7be52ce4def6ea3831554d8cb",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-pay5.log",
+    "bytes": 620,
+    "sha256": "4bb89408304a7ab5480c1c96def5f9807f89b349cb2916de0afea997f68772ad",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-payments.log",
+    "bytes": 498,
+    "sha256": "e1a47dd239a693e48f36458939b66c35e2d1202a2b12b6cf7b560c6c92793bf7",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-readiness-batch-a.log",
+    "bytes": 1660,
+    "sha256": "a76b7bd9af7efa60a9a9d2783c8125a11d88225911bd535523b140f7bcfbed1e",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-stripe-checkout.log",
+    "bytes": 856,
+    "sha256": "7810d10003edd7813f0fcdf0ea9ac6862814ead0caf0f9ee3b8a4c12479976e0",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-stripe-no-key.log",
+    "bytes": 296,
+    "sha256": "80b12c5739d341d4172ce39e75c1a929b2787abdc5d6b6488bea563c66cc5c6b",
+    "committed": true
+  },
+  {
+    "file": "logs/final-gate-stripe-sync.log",
+    "bytes": 636,
+    "sha256": "3e8a4aa4fefec2d79e7455f8f2d41ba6b69489e3da8a1f59767dad5962fa6fec",
+    "committed": true
+  },
+  {
+    "file": "logs/final-pg-backup-probe.mjs.log",
+    "bytes": 1304,
+    "sha256": "62d2580d648fafffdfcc8e917c922182d829e91db1206f3aa7d12f9ba6fccb4f",
+    "committed": true
+  },
+  {
+    "file": "logs/final-pg-cancel-site-probe.mjs.log",
+    "bytes": 1304,
+    "sha256": "62d2580d648fafffdfcc8e917c922182d829e91db1206f3aa7d12f9ba6fccb4f",
+    "committed": true
+  },
+  {
+    "file": "logs/final-pg-engagement-route-probe.mjs.log",
+    "bytes": 443,
+    "sha256": "aae45a3fabc57dc2cfd94b44dce9078a39653fe6acfaa34e0fa00fb6e295b2fd",
+    "committed": true
+  },
+  {
+    "file": "logs/final-pg-owner-settlement-probe.mjs.log",
+    "bytes": 1304,
+    "sha256": "62d2580d648fafffdfcc8e917c922182d829e91db1206f3aa7d12f9ba6fccb4f",
+    "committed": true
+  },
+  {
+    "file": "logs/final-pg-remaining-boundaries-probe.mjs.log",
+    "bytes": 174,
+    "sha256": "24cd37c57d0df072cbd5409bba11a94513d3446ec3039cb651b235cb1c5934a3",
+    "committed": true
+  },
+  {
+    "file": "logs/final-pg-remaining-local-probe.mjs.log",
+    "bytes": 1304,
+    "sha256": "62d2580d648fafffdfcc8e917c922182d829e91db1206f3aa7d12f9ba6fccb4f",
+    "committed": true
+  },
+  {
+    "file": "logs/final-pg-route-probe.mjs.log",
+    "bytes": 1304,
+    "sha256": "62d2580d648fafffdfcc8e917c922182d829e91db1206f3aa7d12f9ba6fccb4f",
+    "committed": true
+  },
+  {
+    "file": "logs/final-pg-settlement-replay-probe.mjs.log",
+    "bytes": 1304,
+    "sha256": "62d2580d648fafffdfcc8e917c922182d829e91db1206f3aa7d12f9ba6fccb4f",
+    "committed": true
+  },
+  {
+    "file": "logs/final-runtime-smoke.mjs.log",
+    "bytes": 729,
+    "sha256": "f3473581c0f997d076bd8bc458653001514f2d2e9846fe348934a14632a1f27a",
+    "committed": true
+  },
+  {
+    "file": "logs/financing-comparison.log",
+    "bytes": 9281,
+    "sha256": "3a4fc5738e1dcf73bf4483c7dcac16b37338598c5e1b0178577b7fb208ceb550",
+    "committed": true
+  },
+  {
+    "file": "logs/financing-states-browser.log",
+    "bytes": 10614,
+    "sha256": "88748e93696c838435780c907efe86d3f81b45e58dd39f759e1d2126af3e858d",
+    "committed": true
+  },
+  {
+    "file": "logs/financing-states.log",
+    "bytes": 45868,
+    "sha256": "39a870f48dd11dcf2758c7437f3c5e24824a131a165881203e39f35fb4bcbac8",
+    "committed": true
+  },
+  {
+    "file": "logs/footer-policy.log",
+    "bytes": 20329,
+    "sha256": "87ab1d42b0793a58056b918f9a70b20de133764589b25828a1f0677e8c8b8e01",
+    "committed": true
+  },
+  {
+    "file": "logs/full-build.log",
+    "bytes": 68,
+    "sha256": "567d2172e40473ea975dc283ddd4652c5e9c242729f033df8046ebecc1fbc903",
+    "committed": true
+  },
+  {
+    "file": "logs/game-autofill-browser.log",
+    "bytes": 824,
+    "sha256": "47ff15a862bcf720a040ff0aa8be510eb5ac0990c2f77e7a41a1f24f75ca1b4c",
+    "committed": true
+  },
+  {
+    "file": "logs/game-autofill.log",
+    "bytes": 1234,
+    "sha256": "054f0035e5b95126b337f9aa82d6209ad9c95158e8da819e757b68762b51da02",
+    "committed": true
+  },
+  {
+    "file": "logs/game-copy-browser.log",
+    "bytes": 543,
+    "sha256": "bb8c57aad1618590e6cac0fe6f7a52c42fd07e5d5f8b99e8cc6de75d26b7dc9a",
+    "committed": true
+  },
+  {
+    "file": "logs/game-copy.log",
+    "bytes": 535,
+    "sha256": "1b92b4af95857d7753269c76e5e7169125da3b372ff4ddb6a82f5119c30b2f8c",
+    "committed": true
+  },
+  {
+    "file": "logs/game-desktop-api.log",
+    "bytes": 633,
+    "sha256": "ee341fe93052360a58c6ec4e6b8107b7997bb1ed6453f52d855fc1e5f1a97898",
+    "committed": true
+  },
+  {
+    "file": "logs/game-desktop.log",
+    "bytes": 1395,
+    "sha256": "6c1a9ff95cb8a7eb45d0a00c4fa01e313d0225bdaedadd5d982ef6102bcb8c0e",
+    "committed": true
+  },
+  {
+    "file": "logs/game-experience-api.log",
+    "bytes": 844,
+    "sha256": "fe99ab3a6e737ef3c5b583c0fa50c31ec157cdcb8293a5caae2f881631a92928",
+    "committed": true
+  },
+  {
+    "file": "logs/game-experience-browser.log",
+    "bytes": 901,
+    "sha256": "a75db6ae2be4f003f45d03513d4ec761c6a78ece9f367b6f9ff5efd86e913dc9",
+    "committed": true
+  },
+  {
+    "file": "logs/game-forms-browser.log",
+    "bytes": 642,
+    "sha256": "847371de770b6890fc2f084479d58709b8d09f488287e99bf0e3bcca4a80e395",
+    "committed": true
+  },
+  {
+    "file": "logs/game-forms.log",
+    "bytes": 321,
+    "sha256": "9ab0e6d3eae0cf44a5f6357b383f1fb8890ffa61821e588969d58dc2ee8915bf",
+    "committed": true
+  },
+  {
+    "file": "logs/game-milestones.log",
+    "bytes": 1117,
+    "sha256": "06eee748df77ba13799d606403ec6650114ddcf014438205b6e49efaa89d229c",
+    "committed": true
+  },
+  {
+    "file": "logs/game-phone-midway.log",
+    "bytes": 143,
+    "sha256": "dedd2338ba374afacd31e95912670a1f9e3686ea0b7761e06057a9f2f36477ac",
+    "committed": true
+  },
+  {
+    "file": "logs/game-phone.log",
+    "bytes": 1201,
+    "sha256": "f45e511ec335c770b1ca9a0585ff0e14768633181bb6645a090a3ace0fc17b8f",
+    "committed": true
+  },
+  {
+    "file": "logs/game-progress.log",
+    "bytes": 3110,
+    "sha256": "ba6e96397e700a9ad6f15ce603ad579f77f79b03917388b3a83b343e5c138104",
+    "committed": true
+  },
+  {
+    "file": "logs/generation-browser.log",
+    "bytes": 5037,
+    "sha256": "947ca262ef316f3d1fcd8e5cccc051d0d6da7c29d90b927ca31a96a21e72073e",
+    "committed": true
+  },
+  {
+    "file": "logs/generation.log",
+    "bytes": 89912,
+    "sha256": "6787daa5481e47afd47c8b18a2c94245387cd451cca23e50f9322aa026afa292",
+    "committed": true
+  },
+  {
+    "file": "logs/header-logo.log",
+    "bytes": 53,
+    "sha256": "f692b44e04b6314020d6b98098b87ebfc64d7b9fb8912bf801f6ac85f31ff36a",
+    "committed": true
+  },
+  {
+    "file": "logs/header-nav-fit.log",
+    "bytes": 289,
+    "sha256": "f5ec34484ff10ae2070634dfabbf7d815d5b12a25841e6c33ef7b5be8a6ec6aa",
+    "committed": true
+  },
+  {
+    "file": "logs/hero-editor-browser.log",
+    "bytes": 18143,
+    "sha256": "06afe2448f9635d64a2b4356a7c6c869713180804e9d56657eeae25046145ea3",
+    "committed": true
+  },
+  {
+    "file": "logs/hero-editor.log",
+    "bytes": 24774,
+    "sha256": "208a4229443e48b986f12c33867fc0153b43fa997fa348808d5a65b48e7aed60",
+    "committed": true
+  },
+  {
+    "file": "logs/insertion-order.log",
+    "bytes": 189,
+    "sha256": "5639a5f0c80ada5116b2eb27a1fe1fb8056886950482c51ae55b1b9af1f082cc",
+    "committed": true
+  },
+  {
+    "file": "logs/isolated-worker-build.log",
+    "bytes": 93,
+    "sha256": "12c5f4bebc04d428c6c3c47f205aabc88bab08fcf34dff7b1be02cab5a3d16b0",
+    "committed": true
+  },
+  {
+    "file": "logs/leaflet-assets.log",
+    "bytes": 621,
+    "sha256": "79029174026f0342afe3e104f07cb07dbd5e4f727e7974dc9e44703664dcaea6",
+    "committed": true
+  },
+  {
+    "file": "logs/legacy-scroll-video.log",
+    "bytes": 110,
+    "sha256": "aea199c34756fa4a2b9f639a26b6f4bc0fc18e4682cdb27cf262a77f417ecbf7",
+    "committed": true
+  },
+  {
+    "file": "logs/legal-policy.log",
+    "bytes": 10098,
+    "sha256": "d56ed88e3b4768e681c5b7d471c6abad1a610673e50d987efa54c00e03c1c339",
+    "committed": true
+  },
+  {
+    "file": "logs/media-api.log",
+    "bytes": 72,
+    "sha256": "bfc9c43e39e1593040c659983f871542c4ec4f44d5ede52605cfbfb7a5f1fc6c",
+    "committed": true
+  },
+  {
+    "file": "logs/media-inventory.log",
+    "bytes": 33,
+    "sha256": "0118e1fb57e1003b2f85b64c54440003a5344fab37fed47a96f63254f29f4169",
+    "committed": true
+  },
+  {
+    "file": "logs/media-library-browser.log",
+    "bytes": 31775,
+    "sha256": "c5e1a66f5b11fd2ee97682ee54927f6d281326d0f59644b04053c70a4d8f8514",
+    "committed": true
+  },
+  {
+    "file": "logs/media-library.log",
+    "bytes": 51,
+    "sha256": "c409543f7afd4bb5d1fb26be35095d1354be3a70e6150564355505c0d4d6bd88",
+    "committed": true
+  },
+  {
+    "file": "logs/media-ranges.log",
+    "bytes": 91,
+    "sha256": "f2983531efa03ebba6ae795a2828fdd8a35bfd32d7f67204d9db2bdec2bfead0",
+    "committed": true
+  },
+  {
+    "file": "logs/motion-v2.log",
+    "bytes": 613,
+    "sha256": "4550327f76aaf7afbf3e95e82d812d15a1314eaffd025d6f0965674ebd74c477",
+    "committed": true
+  },
+  {
+    "file": "logs/neighborhood.log",
+    "bytes": 9797,
+    "sha256": "db5849a2d6edb980c84ca1e0c51c232fb4e5aae08df3f3471b6580dcbbc25ff0",
+    "committed": true
+  },
+  {
+    "file": "logs/owner-download-final.log",
+    "bytes": 2410,
+    "sha256": "3ac4c4b2ad87c493631171be955da32ad801249e36c4e6808774229321161a92",
+    "committed": true
+  },
+  {
+    "file": "logs/owner-download.log",
+    "bytes": 124730454,
+    "sha256": "f242cb460436e3c4cd8e6bdb22625857d323644852b0ed1e9f818c4fa54a29f0",
+    "committed": false,
+    "excerpt": "logs/owner-download.log.excerpt.txt"
+  },
+  {
+    "file": "logs/owner-photo.log",
+    "bytes": 593,
+    "sha256": "c68706671503b5b375fb635134aae1449ba2de5f4bd559b3a160c279cd12d129",
+    "committed": true
+  },
+  {
+    "file": "logs/pay4a-browser.log",
+    "bytes": 314,
+    "sha256": "7adc13ba90f8d38957eb9d8c52ec3ac8b70d54d643d2ab52fa0f3c2b16a5cf64",
+    "committed": true
+  },
+  {
+    "file": "logs/pay4a-isolated-build.log",
+    "bytes": 74,
+    "sha256": "e0220e0f3bb6519f94cbd1c21cb4953165a1f8a971211236dd9cc56fdcca3c4c",
+    "committed": true
+  },
+  {
+    "file": "logs/pay4a.log",
+    "bytes": 622,
+    "sha256": "cd08d7ee4da9722d14ce6217ec70386eeb9eab00f90758fae48ee9c358171e81",
+    "committed": true
+  },
+  {
+    "file": "logs/pay4b-browser.log",
+    "bytes": 423,
+    "sha256": "ad4ed7bb96d41fa6ea07145ea56ff99e1c09d840001d0aca925aca2c06ae542a",
+    "committed": true
+  },
+  {
+    "file": "logs/pay4b.log",
+    "bytes": 556,
+    "sha256": "d8bce04d32cbb39a3880c3952b198cef7d3e41c4b9d73bb9f576cf7f3974104c",
+    "committed": true
+  },
+  {
+    "file": "logs/pay5-browser.log",
+    "bytes": 347,
+    "sha256": "cec514cc9c0117a56f7760b279be0b4c2c106a0b97ea5a5989c556063453b314",
+    "committed": true
+  },
+  {
+    "file": "logs/pay5.log",
+    "bytes": 618,
+    "sha256": "0f19e3f66261c5d153e48a7360d17097d6d606de0aad0cc58c1eb84092ca9d56",
+    "committed": true
+  },
+  {
+    "file": "logs/payments.log",
+    "bytes": 498,
+    "sha256": "18aa0f4e045d31cf18133df2e3a83fb5c4873e8a1f7a464e1bb58b90d02096f8",
+    "committed": true
+  },
+  {
+    "file": "logs/pending-fixture-build.log",
+    "bytes": 68,
+    "sha256": "567d2172e40473ea975dc283ddd4652c5e9c242729f033df8046ebecc1fbc903",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-corrected-entitlements.log",
+    "bytes": 601,
+    "sha256": "1a3e12e480ecde22955df172d9cc4ffa4ded3009dd80b03a651ba6a788c2874f",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-corrected-game-autofill.log",
+    "bytes": 1234,
+    "sha256": "054f0035e5b95126b337f9aa82d6209ad9c95158e8da819e757b68762b51da02",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-corrected-game-desktop-api.log",
+    "bytes": 633,
+    "sha256": "ee341fe93052360a58c6ec4e6b8107b7997bb1ed6453f52d855fc1e5f1a97898",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-corrected-game-experience-api.log",
+    "bytes": 844,
+    "sha256": "fe99ab3a6e737ef3c5b583c0fa50c31ec157cdcb8293a5caae2f881631a92928",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-corrected-game-progress.log",
+    "bytes": 3127,
+    "sha256": "6557a6a60e7f84a719997454298ca305c6f4f571e0b7a139dd1261c704e9b43b",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-corrected-pay4a.log",
+    "bytes": 634,
+    "sha256": "234837f07c9f6a4e745297041fff070df1b4190d822da5b03264060ec5a4f340",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-corrected-pay4b.log",
+    "bytes": 569,
+    "sha256": "f0a3ce76fa0fe55787fe73df47971c17ef0b6481a966da5e93c91b724ed73308",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-corrected-pay5.log",
+    "bytes": 631,
+    "sha256": "2fbbf0f228c45cdc20a334193f2cc5521c16e82b2d3f307d37378e9632eac20b",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-corrected-payments.log",
+    "bytes": 509,
+    "sha256": "192f08295b222f3733d65aa330dc61ddced9ae140bfec0f75ecae71fc9fa1bd1",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-domain-wizard.log",
+    "bytes": 238,
+    "sha256": "5421b2875a22016d8bdeebd0a90f22e96d443c86ef747143446858888e1b15bc",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-final-auth-session.log",
+    "bytes": 6895,
+    "sha256": "80e33ba460bdfe5dd1c3c71e5bd74f2bfface0236db3ed4caed876f39163a09a",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-final-builder.log",
+    "bytes": 391,
+    "sha256": "b784d6441dbf2114ee70771d45bd1b70ecfb424efbff6b3624a2311ea6e6b37c",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-final-ebook.log",
+    "bytes": 18778,
+    "sha256": "be5095dadd8cb405a5965be6f38f325aa105695d30d6dfffdebfebe78f46f9fe",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-final-generation.log",
+    "bytes": 89912,
+    "sha256": "b41ecf131a7b51abef602431a1cca4717022222a65883c852875eb781c039a5d",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-final-hero-editor.log",
+    "bytes": 24774,
+    "sha256": "5e7b7c53b8e7485078256db24d3a1f427956f6926ec6d9aac876d2398270067e",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-final-platform.log",
+    "bytes": 30138,
+    "sha256": "e4cc374b8a37d866e138babbde9911702b7713b2f2ac6fc75aaa37566db2aae8",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-final-promotion-unlocks.log",
+    "bytes": 18579,
+    "sha256": "3654bf2fec81a02f40b495167bad165eec81affc1ab93101b301c475c12af2d0",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-final-saved-designs.log",
+    "bytes": 367,
+    "sha256": "8bdf3da72f2158df5a9e9846c0b32cce3dfa4561c0afd82bede9222858862ad8",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-readiness-batch-a-boundary.log",
+    "bytes": 1689,
+    "sha256": "2f03e0714cadf45c601913c2bcb87a3faf5ae6950a4bb0cdc5c56f2f4a18e546",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-readiness-batch-a-final-rental.log",
+    "bytes": 1694,
+    "sha256": "cedc9542e749e9040ee8f76f35d5dac86f95b9f85b942d6d9e4ce7ce4050b84a",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-readiness-batch-a-preview-guard.log",
+    "bytes": 1691,
+    "sha256": "ada9272e3839da7ea22556f80580b9c56d2584528ca5e0fd13e8d356e00e6d37",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-readiness-batch-a.log",
+    "bytes": 1693,
+    "sha256": "1a7c32db2c109463f8f65b60d1e035f0faec8315b26dffa90a2a195e10ca6415",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-stripe-checkout.log",
+    "bytes": 855,
+    "sha256": "24003d00c452417f46c5c504b49dd709793dbdd25db4c4616696ce4091c1bc8d",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-stripe-no-key.log",
+    "bytes": 296,
+    "sha256": "ceb3c068d13176bce4537c301b20f369c1e314b6174cc2fefea2bfffc8cc93df",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-callback-restore.log",
+    "bytes": 296,
+    "sha256": "9cfbc6d07aeaaeb332b9024836bca44c215ad6c44b2b4bf3bb153eecb13c7337",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-contact-linkage.log",
+    "bytes": 398,
+    "sha256": "6292275c6d44a4e397046815268a9afe6a94b35549b63c7653d453245a97d372",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-contacts-restore.log",
+    "bytes": 316,
+    "sha256": "ed3011af854bbea62604a68c070c5cb8923dead7d69be2241c3e041acfe4a40b",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-control.log",
+    "bytes": 454,
+    "sha256": "122f82514a4c3d32c6939d5fcdb68972bd5cb078d1b85e2ffd3d9717d0fcb19c",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-crm-next.log",
+    "bytes": 483,
+    "sha256": "397ac49e573ca0ffd03e91ad5e4afb23ee8edebc012004b4ecf86503382368fc",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-crm.log",
+    "bytes": 15663,
+    "sha256": "ffd7c5e4c39d40b41a80fee3f11d33d202e343ff62dc490d11e9d3de67902b69",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-engagement-providers.log",
+    "bytes": 432,
+    "sha256": "fde722ff2ca30173b2f3fecb4fc51ba4894d1817b777a1e0fca22ad42294edd6",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-engagement.log",
+    "bytes": 432,
+    "sha256": "cd0fb4611740f20e66f882b81a3c69e26fa131abb4e0d22bc6e96cf0dc2c649b",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-expense-metering.log",
+    "bytes": 232,
+    "sha256": "c14e5d4f5bcc47181440f2db6dc4bd835d1b8dc8fbafe8e2df620a4a0326366b",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-expense-polish.log",
+    "bytes": 193,
+    "sha256": "da66dd82b3d1a5570f2c10633cb14ce71e1dad5de36463a14b543d30508483f9",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-expenses.log",
+    "bytes": 318,
+    "sha256": "47d3961ba2e99f74707a5049b11d810490a68c7404eafb6fa39831c7e0a931a9",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-neighborhood.log",
+    "bytes": 9797,
+    "sha256": "215eba380aa6b73ec1feb5f6b69b12d841e3345cd082ad1a45df1883f19d95c1",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-review-lookup.log",
+    "bytes": 447,
+    "sha256": "e69846876078b37d2308aedd424ce4b3ff4862b4d253a5560e380b431398189a",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-sales-ops.log",
+    "bytes": 8192,
+    "sha256": "5ca5de9ad921383e5bb5a1113d0f557b4bd7fbadd93599186331d33a6742899f",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-trust.log",
+    "bytes": 43459,
+    "sha256": "3f9316e166ac777ef8ace14e6e15644c87012eebf2aea19346d4b7a2388bc870",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-website-pages.log",
+    "bytes": 104949,
+    "sha256": "f6bf45b55c3c1b109ded2b50938e73a55c141735eb601f37651040cef2f32778",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-workspace.log",
+    "bytes": 16374,
+    "sha256": "31549290dc282d8b81b393bb3adb60f0d0d5ea07f93ff606cd2108fe387ae764",
+    "committed": true
+  },
+  {
+    "file": "logs/pg-workflow-zoom.log",
+    "bytes": 367,
+    "sha256": "9d999c74055ca2bc92ca2fe5285564f326e9604db6701c7007c60e0fa6d571d1",
+    "committed": true
+  },
+  {
+    "file": "logs/planning-ambient-browser.log",
+    "bytes": 5715,
+    "sha256": "60c6835444ee8d3c4fd9989614d8537b275af4f5cd3a07d216fb87382dbd950e",
+    "committed": true
+  },
+  {
+    "file": "logs/planning-ambient.log",
+    "bytes": 5180,
+    "sha256": "8a2e6e35c89b294b434e812111f5fb383d8fdc6a1b89388183603730222583fd",
+    "committed": true
+  },
+  {
+    "file": "logs/planning-motion.log",
+    "bytes": 106,
+    "sha256": "922c0b02505720e546f81ad819421dffdb550440d5e74dea9fe4adecbd6f17be",
+    "committed": true
+  },
+  {
+    "file": "logs/planning-scroll-browser.log",
+    "bytes": 5640,
+    "sha256": "1f462a5a9eff19fb585f630609823eb3a44bd262ded0486d749a2379b078d768",
+    "committed": true
+  },
+  {
+    "file": "logs/planning-scroll.log",
+    "bytes": 5104,
+    "sha256": "47e317a08de49a78cfd734ec8378dbc405fc8cde2fb2a8f8d6f9f1a841520da8",
+    "committed": true
+  },
+  {
+    "file": "logs/platform-console.log",
+    "bytes": 39,
+    "sha256": "76b55db80df6eccd4ca445e1cfd7814fb019f466a0fc9a4279494fca72f2dcb4",
+    "committed": true
+  },
+  {
+    "file": "logs/platform-look.log",
+    "bytes": 551,
+    "sha256": "47aa1a66bfe346a9dc8b94111ed72206a2a5f6b20d2bd4e962f1be422dee3c4f",
+    "committed": true
+  },
+  {
+    "file": "logs/platform-mobile.log",
+    "bytes": 28225,
+    "sha256": "ae5b72f1d57defe2ad13e763bdc252ad4731d7b1a8a94d045d5bcd50ce97e9c9",
+    "committed": true
+  },
+  {
+    "file": "logs/platform-ui-cleanup-browser.log",
+    "bytes": 47,
+    "sha256": "6434b118082eb8a8f9950e06cc9cfcb713d9c0e99fde1c58b619ebc71124b8a4",
+    "committed": true
+  },
+  {
+    "file": "logs/platform.log",
+    "bytes": 30138,
+    "sha256": "df8113590925093ef5cad9811d4aaaff6c67c9b990e37c42540df1e1faa951e8",
+    "committed": true
+  },
+  {
+    "file": "logs/premium-service.log",
+    "bytes": 37349,
+    "sha256": "eda54c8fbb7b5d8750b07d410992e718782a3464688c31c0c45e9f2354316f92",
+    "committed": true
+  },
+  {
+    "file": "logs/presentation.log",
+    "bytes": 449,
+    "sha256": "1e2779b85d7ca28dab199b4a641b1bc6e0fdb77b45ac925573faa305042e5019",
+    "committed": true
+  },
+  {
+    "file": "logs/project-experience.log",
+    "bytes": 7859,
+    "sha256": "d3d19cd97b19fff648c6996da6482a2b1fdedda8bf152af7a2d8cb86c603b272",
+    "committed": true
+  },
+  {
+    "file": "logs/promotion-unlocks-browser.log",
+    "bytes": 22632,
+    "sha256": "5cc317d727bc332ec7bd693c14d2c7fdd85ae6d25fa84b214087d60cf89fefcb",
+    "committed": true
+  },
+  {
+    "file": "logs/promotion-unlocks.log",
+    "bytes": 18579,
+    "sha256": "f5460f2086417d50dc9dd6d568e3be36c0dbd1a56fe5b14d7e470afc16b7cd61",
+    "committed": true
+  },
+  {
+    "file": "logs/promotions-ambient-browser.log",
+    "bytes": 10689,
+    "sha256": "b3010e7ab5c0be2140d1b498fe9e55661e1211394bb1efb9a4c88d0e5885f04f",
+    "committed": true
+  },
+  {
+    "file": "logs/promotions-ambient.log",
+    "bytes": 9705,
+    "sha256": "afd52c7201f2f05d577a51ca9e0707482055cbdec48424a5ade12cc9eb70f213",
+    "committed": true
+  },
+  {
+    "file": "logs/promotions-scroll-browser.log",
+    "bytes": 11138,
+    "sha256": "122969656c7826f084c6103e53b11f0d3a5c4869d9680751e5128b48ec5d0e4c",
+    "committed": true
+  },
+  {
+    "file": "logs/promotions-scroll.log",
+    "bytes": 9704,
+    "sha256": "0cddd64257e8d162995ab35b2cf11c7a641c39ff0624f04baae1a79ec30cc04b",
+    "committed": true
+  },
+  {
+    "file": "logs/proration-baseline-native.log",
+    "bytes": 620,
+    "sha256": "83515665471b3f4b91d327df507900a3c2a0887fe467d4124c0b2295976462a1",
+    "committed": true
+  },
+  {
+    "file": "logs/proration-current-native.log",
+    "bytes": 607,
+    "sha256": "9ee5d1a1448e28fdd80593d4b375e83d09f2bcde31ff1e4132fc6ab5264615d8",
+    "committed": true
+  },
+  {
+    "file": "logs/proration-current-pg.log",
+    "bytes": 609,
+    "sha256": "c713211322e4365ccdcd10b34f1e0bf20b64db192b5817019e6bb622e9d32953",
+    "committed": true
+  },
+  {
+    "file": "logs/readiness-batch-a-boundary.log",
+    "bytes": 1663,
+    "sha256": "81600b0fc25f9426360ffa0d79028cb35b2162b0d570678814f88fd651c53941",
+    "committed": true
+  },
+  {
+    "file": "logs/readiness-batch-a-final-rental.log",
+    "bytes": 1663,
+    "sha256": "7ba12218c77d333bace56bed74e015a42304bcbc827f48da14b08989afa31d49",
+    "committed": true
+  },
+  {
+    "file": "logs/readiness-batch-a-preview-guard.log",
+    "bytes": 1661,
+    "sha256": "07c8fbbba35b4d3b009a2b2ba36cbfa74f5cb0d4c63d7594959bfa5b14bc561b",
+    "committed": true
+  },
+  {
+    "file": "logs/readiness-batch-a.log",
+    "bytes": 1665,
+    "sha256": "54c73a9401eb2bf7b912d4af6d1bdc002fa5588bd2d13a9f1b4809605d4a0b99",
+    "committed": true
+  },
+  {
+    "file": "logs/reference-proof.log",
+    "bytes": 11285,
+    "sha256": "c26734f68660029b7a66743c0c4de2ec2ac8390e8251368b31d06d248ec215f4",
+    "committed": true
+  },
+  {
+    "file": "logs/replay-alternate-registry.log",
+    "bytes": 148,
+    "sha256": "1ae57f8f438e92fdde6b90a0868090508ef1f8440e5d3d71730879f70ec5cee4",
+    "committed": true
+  },
+  {
+    "file": "logs/review-lookup.log",
+    "bytes": 447,
+    "sha256": "e69846876078b37d2308aedd424ce4b3ff4862b4d253a5560e380b431398189a",
+    "committed": true
+  },
+  {
+    "file": "logs/review-packet-browser.log",
+    "bytes": 924,
+    "sha256": "c4049cc4b11de2fca0574c46e00854a2140b8a8228abdbea4943757a056a84f5",
+    "committed": true
+  },
+  {
+    "file": "logs/review-packet-contract.log",
+    "bytes": 54830,
+    "sha256": "849e06a4e2e8e5597e0609adf4d14e0a6f6eff9c8c80d50bcf83bd7c921006d8",
+    "committed": true
+  },
+  {
+    "file": "logs/review-packets.log",
+    "bytes": 36720,
+    "sha256": "83cb59c10849f18860779096231257cdeba2f620094f24cff50bd72d8dfa7869",
+    "committed": true
+  },
+  {
+    "file": "logs/review-polish.log",
+    "bytes": 59,
+    "sha256": "53b43b6e3aed2c21f4e17dc791c23d7b7e5fae312a7de957d52a89b0416d29e7",
+    "committed": true
+  },
+  {
+    "file": "logs/review-rating-filter.log",
+    "bytes": 288,
+    "sha256": "89c92246c0f4e76ee995a6ebc461a030fa2314280e8014b08973ccccc92657e6",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-acceptance.log",
+    "bytes": 9486,
+    "sha256": "e8c0ea671bb641703a2570b824a079be7c129f10bf81deb9bfaeba5ea5b9136f",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-cities-browser.log",
+    "bytes": 6601,
+    "sha256": "207caa8627d3d29dfdb32c17db4a5f9a7fd1ad949bca04dd21e5d6a4120b45e3",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-cities.log",
+    "bytes": 11123,
+    "sha256": "6a07dea307b5b89d188d7431209cffae40ec60184e412136b9e5b96521953c39",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-cta-browser.log",
+    "bytes": 8542,
+    "sha256": "57ddbb1f4ae4dfaabf9024435a7bb4d542f3fa013424c4518f10774bb06d7be4",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-cta.log",
+    "bytes": 7206,
+    "sha256": "31029c9ff5ed597aa190092d9daae01b2783250cf5721fcb2886d4bb4ca849f4",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-polish-part1-browser.log",
+    "bytes": 6774,
+    "sha256": "5e1f165756deff45abacfd737a721fa145664c87c900dcc351d531f4edef6a1d",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-polish-part1.log",
+    "bytes": 5010,
+    "sha256": "19e9f0ba5ed5180349d608772262a61621f334a143c48aa9e77b61589e1a66e8",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-polish-part2-browser.log",
+    "bytes": 54398,
+    "sha256": "0b0383c15dba56ebd81f5775c5e9e17db01d30e66ed12511c2ba3b9577b05ef6",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-polish-part2.log",
+    "bytes": 258,
+    "sha256": "69caf5e14d4243e7381be2c56711a6064cbe55bc978a1b8cb94a24c9ebfa56a0",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-story-browser.log",
+    "bytes": 8620,
+    "sha256": "42bec8752e481296a5ed505e646fb5496471d4f32b9cab315e7529becb565f08",
+    "committed": true
+  },
+  {
+    "file": "logs/roofing-story.log",
+    "bytes": 7334,
+    "sha256": "6ef06a0d1f320edfc94e3abba05b379a7dbc2a01b3edba9791838bca96dc9bb9",
+    "committed": true
+  },
+  {
+    "file": "logs/sales-ops.log",
+    "bytes": 8192,
+    "sha256": "d78fffe11f2af4fb87861d89c2bb404e8d0811a786cfbb6eb29ae818ad249ecd",
+    "committed": true
+  },
+  {
+    "file": "logs/saved-designs.log",
+    "bytes": 367,
+    "sha256": "8bdf3da72f2158df5a9e9846c0b32cce3dfa4561c0afd82bede9222858862ad8",
+    "committed": true
+  },
+  {
+    "file": "logs/scroll-media.log",
+    "bytes": 75,
+    "sha256": "478fd0cea2a47482c9446bb31aec6d320551768dc18c2c1dade098e4e4c49860",
+    "committed": true
+  },
+  {
+    "file": "logs/scroll-story.log",
+    "bytes": 5266,
+    "sha256": "c706d23017d99b02be5a2034d6e28f0e2b4e14451eb2931b8c35a3c303cb1fed",
+    "committed": true
+  },
+  {
+    "file": "logs/scroll-video-controller.log",
+    "bytes": 811,
+    "sha256": "d1452a5eb424e59bab967bd922a5791dd1434c612efb6addbe6271689e8b77da",
+    "committed": true
+  },
+  {
+    "file": "logs/section-content-parity.log",
+    "bytes": 101,
+    "sha256": "612bf2119c71732b48b233fde74827d086b078d59a3baf6acfb4d692629a6a05",
+    "committed": true
+  },
+  {
+    "file": "logs/section-variants-browser.log",
+    "bytes": 169323,
+    "sha256": "af5da718425f2c26afd32e0a1409b6219d512ba3b259ffedbaf72ab580283ae5",
+    "committed": true
+  },
+  {
+    "file": "logs/section-variants-fallbacks.log",
+    "bytes": 1951,
+    "sha256": "1abb9a84f7e151d165e298da2fa9edf6ae828f6fae56bdd02b3504bf14a95cc1",
+    "committed": true
+  },
+  {
+    "file": "logs/section-variants.log",
+    "bytes": 143,
+    "sha256": "c32e004f750fee5c07e891c1748d75cbbb5dd95b2faf07e6b2a913bf24469c64",
+    "committed": true
+  },
+  {
+    "file": "logs/service-content.log",
+    "bytes": 398,
+    "sha256": "6b835aba3f36541276d5de78857b5a1ecbd30fa523e1f5a8e81fa8b352e535c4",
+    "committed": true
+  },
+  {
+    "file": "logs/service-motion-browser.log",
+    "bytes": 20992,
+    "sha256": "273777750ed6277fe8597e595aea6b3073ecdd269efdd3cf1dd99dce3c130767",
+    "committed": true
+  },
+  {
+    "file": "logs/service-motion.log",
+    "bytes": 9953,
+    "sha256": "cdfb1501277228b9cc4f9188e6aae95c341a77c305cbf05b1c1e8522651ef84a",
+    "committed": true
+  },
+  {
+    "file": "logs/service-pages-all-trades.log",
+    "bytes": 32891,
+    "sha256": "18a52bbef56204374cecab77363f573da0c4429999b903e3644d6a693c307d14",
+    "committed": true
+  },
+  {
+    "file": "logs/service-playbook.log",
+    "bytes": 16915,
+    "sha256": "d8548c51941399d27bc99b107be46d01e28ae1c343fa632953814d6acf5691ab",
+    "committed": true
+  },
+  {
+    "file": "logs/showpiece-media.log",
+    "bytes": 410,
+    "sha256": "8f2084ab80ac3a45474264be9735be924178cdd2a575761d50f39aa5dce7b783",
+    "committed": true
+  },
+  {
+    "file": "logs/showpiece-v4.log",
+    "bytes": 731,
+    "sha256": "89055ae8a09847543a52c2cb011d7edae970134bc193916c3d189ff3432f5eb7",
+    "committed": true
+  },
+  {
+    "file": "logs/stripe-checkout.log",
+    "bytes": 855,
+    "sha256": "144499d5273b39692267dc8dce8c1d6779ebf84cf460efbb25254ea5ff10b234",
+    "committed": true
+  },
+  {
+    "file": "logs/stripe-no-key.log",
+    "bytes": 295,
+    "sha256": "97c99adbe7dff8ad184456c5d42f7f1c90b9641f377a11518324bd52996e2e7d",
+    "committed": true
+  },
+  {
+    "file": "logs/stripe-sync.log",
+    "bytes": 635,
+    "sha256": "9d76437064bc263cf2e8b32c1eb1f4b4b0e4113836fa40e9921559c5c05605b5",
+    "committed": true
+  },
+  {
+    "file": "logs/template-assets.log",
+    "bytes": 68,
+    "sha256": "567d2172e40473ea975dc283ddd4652c5e9c242729f033df8046ebecc1fbc903",
+    "committed": true
+  },
+  {
+    "file": "logs/template-name.log",
+    "bytes": 43,
+    "sha256": "8c52b7269b505c0e49a34d0bad0490b8c28b6ad8b5845b2b13b52ab6cef392c9",
+    "committed": true
+  },
+  {
+    "file": "logs/trade-enablement-browser.log",
+    "bytes": 56,
+    "sha256": "3b1b144d731ce758e211878dd86f4f040d0b1cf14c8d1957814614ebaccfb208",
+    "committed": true
+  },
+  {
+    "file": "logs/trade-enablement.log",
+    "bytes": 650,
+    "sha256": "d7b2923c76f387c653efc7d8fac3cf4e52c52179bf9cde64079b7c1ff2578267",
+    "committed": true
+  },
+  {
+    "file": "logs/trade-revisions.log",
+    "bytes": 323,
+    "sha256": "ebb25593b02cc8759c2f4c7dc1d5b381484a2cb24d1c038bb1d0fcb1b6f41b41",
+    "committed": true
+  },
+  {
+    "file": "logs/trade-upgrade.log",
+    "bytes": 346,
+    "sha256": "529a78b346be538c2f449b8c93f52ab98de1f2b4f18b532d53d7bbcba4d75ee6",
+    "committed": true
+  },
+  {
+    "file": "logs/trade-visual-browser.log",
+    "bytes": 44,
+    "sha256": "96a8aa46afdfc1f5c8a7c04970398849c8b4086f41128ba75f3bd03473bdfaff",
+    "committed": true
+  },
+  {
+    "file": "logs/trade-visual-correctness.log",
+    "bytes": 789,
+    "sha256": "5da1bf706061e4d1665d066ca1ade885c369f2700ea06ac7a50c00e635b8e2ce",
+    "committed": true
+  },
+  {
+    "file": "logs/trades-financing.log",
+    "bytes": 29114,
+    "sha256": "5027f7171edff187b8ab7725d482de46fc7adb491cb5bc8e0c2e15fa5e711480",
+    "committed": true
+  },
+  {
+    "file": "logs/trust.log",
+    "bytes": 43457,
+    "sha256": "9c4bf7eca41b307c71755755800ae69a39842f5a9c4b8eba4b9707ec464c0c70",
+    "committed": true
+  },
+  {
+    "file": "logs/typecheck.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "committed": true
+  },
+  {
+    "file": "logs/uniqueness-api.log",
+    "bytes": 94,
+    "sha256": "64e190437f95a698ccc28e57b66c257a7d211e4034e6fbcb6b72d7d9d4ab21bf",
+    "committed": true
+  },
+  {
+    "file": "logs/uniqueness-browser.log",
+    "bytes": 31271,
+    "sha256": "839203f72b6fb0cb8031547fae4e5de0a941138e010bffce844e72c658657b41",
+    "committed": true
+  },
+  {
+    "file": "logs/uniqueness-content-parity.log",
+    "bytes": 101,
+    "sha256": "612bf2119c71732b48b233fde74827d086b078d59a3baf6acfb4d692629a6a05",
+    "committed": true
+  },
+  {
+    "file": "logs/uniqueness.log",
+    "bytes": 102,
+    "sha256": "8cbf962edb199ff061842c6d5177e82855eeaba62d1c148cc9188859b821f2bc",
+    "committed": true
+  },
+  {
+    "file": "logs/website-pages.log",
+    "bytes": 106809,
+    "sha256": "2c998218ebc8f61bbf020b611e8adfe214eda38ebb5e497413fb351319a4166a",
+    "committed": true
+  },
+  {
+    "file": "logs/workspace-owner.log",
+    "bytes": 118,
+    "sha256": "84968741ac5ab3013bb15b84ef47f708c54fcb919230f63f4597ff79819fd03d",
+    "committed": true
+  },
+  {
+    "file": "logs/workspace.log",
+    "bytes": 16374,
+    "sha256": "00f19b2abfb345b37cca23906743bd522a6da984e7904a853717b3cd6b1ebe50",
+    "committed": true
+  },
+  {
+    "file": "logs/zoom.log",
+    "bytes": 367,
+    "sha256": "9d999c74055ca2bc92ca2fe5285564f326e9604db6701c7007c60e0fa6d571d1",
+    "committed": true
+  }
+]

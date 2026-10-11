@@ -1,0 +1,260 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: launch-decisions.css: color literal color:var(--bv-ink,#172d47)
+    at <input css YEU146>:1:80
+    at file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/platform-look.mjs:3:190
+    at C:\Users\joe\website_creator\node_modules\postcss\lib\container.js:408:18
+    at Root.walk (C:\Users\joe\website_creator\node_modules\postcss\lib\container.js:352:18)
+    at Root.walkDecls (C:\Users\joe\website_creator\node_modules\postcss\lib\container.js:406:19)
+    at file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/platform-look.mjs:3:169
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple',
+  postcssNode: <ref *2> Declaration {
+    raws: { before: '', between: ':' },
+    type: 'decl',
+    parent: <ref *1> Rule {
+      raws: { before: '', between: '', semicolon: false, after: '' },
+      type: 'rule',
+      nodes: [
+        Declaration {
+          raws: { before: '', between: ':' },
+          type: 'decl',
+          parent: [Circular *1],
+          source: { input: [Input], start: [Object], end: [Object] },
+          prop: 'background',
+          value: 'var(--bv-card)',
+          Symbol(isClean): false,
+          Symbol(my): true
+        },
+        [Circular *2],
+        Declaration {
+          raws: { before: '', between: ':' },
+          type: 'decl',
+          parent: [Circular *1],
+          source: { input: [Input], start: [Object], end: [Object] },
+          prop: 'border',
+          value: '1px solid var(--bv-border,#b4c0cc)',
+          Symbol(isClean): false,
+          Symbol(my): true
+        },
+        Declaration {
+          raws: { before: '', between: ':' },
+          type: 'decl',
+          parent: [Circular *1],
+          source: { input: [Input], start: [Object], end: [Object] },
+          prop: 'padding',
+          value: '24px',
+          Symbol(isClean): false,
+          Symbol(my): true
+        },
+        Declaration {
+          raws: { before: '', between: ':' },
+          type: 'decl',
+          parent: [Circular *1],
+          source: { input: [Input], start: [Object], end: [Object] },
+          prop: 'border-radius',
+          value: '16px',
+          Symbol(isClean): false,
+          Symbol(my): true
+        },
+        Declaration {
+          raws: { before: '', between: ':' },
+          type: 'decl',
+          parent: [Circular *1],
+          source: { input: [Input], start: [Object], end: [Object] },
+          prop: 'margin',
+          value: '20px 0',
+          Symbol(isClean): false,
+          Symbol(my): true
+        }
+      ],
+      parent: <ref *3> Root {
+        raws: { semicolon: false, after: '\n' },
+        type: 'root',
+        nodes: [
+          [Circular *1],
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            parent: [Circular *3],
+            source: [Object],
+            selector: '.bv-game-payment-lock h2,.bv-game-payment-lock p',
+            Symbol(isClean): false,
+            Symbol(my): true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            parent: [Circular *3],
+            source: [Object],
+            selector: '.bv-game-payment-lock button,.bv-billing button',
+            Symbol(isClean): false,
+            Symbol(my): true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            parent: [Circular *3],
+            source: [Object],
+            selector: '.bv-plan-price-list',
+            Symbol(isClean): false,
+            Symbol(my): true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            parent: [Circular *3],
+            source: [Object],
+            selector: '.bv-plan-price-list article',
+            Symbol(isClean): false,
+            Symbol(my): true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            parent: [Circular *3],
+            source: [Object],
+            selector: '.bv-plan-price-list h4',
+            Symbol(isClean): false,
+            Symbol(my): true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            parent: [Circular *3],
+            source: [Object],
+            selector: '.bv-billing-actions [data-bv-switch-quote]',
+            Symbol(isClean): false,
+            Symbol(my): true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            parent: [Circular *3],
+            source: [Object],
+            selector: '.bv-owner-actions',
+            Symbol(isClean): false,
+            Symbol(my): true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            parent: [Circular *3],
+            source: [Object],
+            selector: '.bv-billing-action-result:empty',
+            Symbol(isClean): false,
+            Symbol(my): true
+          },
+          AtRule {
+            raws: [Object],
+            type: 'atrule',
+            name: 'media',
+            parent: [Circular *3],
+            source: [Object],
+            params: '(max-width:720px)',
+            nodes: [Array],
+            Symbol(isClean): false,
+            Symbol(my): true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            parent: [Circular *3],
+            source: [Object],
+            selector: '.bv-billing button:disabled',
+            Symbol(isClean): false,
+            Symbol(my): true
+          },
+          Rule {
+            raws: [Object],
+            type: 'rule',
+            nodes: [Array],
+            parent: [Circular *3],
+            source: [Object],
+            selector: '.bv-game-payment-lock button',
+            Symbol(isClean): false,
+            Symbol(my): true
+          }
+        ],
+        source: {
+          input: Input {
+            css: '.bv-billing .bv-payment-banner,.bv-game-payment-lock{background:var(--bv-card);color:var(--bv-ink,#172d47);border:1px solid var(--bv-border,#b4c0cc);padding:24px;border-radius:16px;margin:20px 0}.bv-game-payment-lock h2,.bv-game-payment-lock p{color:var(--bv-ink,#172d47);opacity:1}.bv-game-payment-lock button,.bv-billing button{min-height:44px}.bv-plan-price-list{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}.bv-plan-price-list article{padding:20px;border:1px solid var(--bv-border,#b4c0cc);border-radius:12px}.bv-plan-price-list h4{font-size:20px;margin:0 0 12px}.bv-billing-actions [data-bv-switch-quote]{display:block;margin:12px 0}.bv-owner-actions{margin:16px 0}.bv-billing-action-result:empty{display:none}@media(max-width:720px){.bv-plan-price-list{grid-template-columns:1fr}.bv-game-payment-lock{padding:20px;margin:12px}.bv-billing button{width:100%;white-space:normal}.bv-billing{min-width:0;overflow-wrap:anywhere}}\n' +
+              '\n' +
+              '.bv-billing button:disabled{opacity:1;background:var(--bv-surface-2);color:var(--bv-ink);border-color:var(--bv-line-strong)}.bv-game-payment-lock button{background:var(--bv-navy);color:var(--bv-card);border:1px solid var(--bv-navy);padding:12px 20px;border-radius:8px}\n',
+            hasBOM: false,
+            document: '.bv-billing .bv-payment-banner,.bv-game-payment-lock{background:var(--bv-card);color:var(--bv-ink,#172d47);border:1px solid var(--bv-border,#b4c0cc);padding:24px;border-radius:16px;margin:20px 0}.bv-game-payment-lock h2,.bv-game-payment-lock p{color:var(--bv-ink,#172d47);opacity:1}.bv-game-payment-lock button,.bv-billing button{min-height:44px}.bv-plan-price-list{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}.bv-plan-price-list article{padding:20px;border:1px solid var(--bv-border,#b4c0cc);border-radius:12px}.bv-plan-price-list h4{font-size:20px;margin:0 0 12px}.bv-billing-actions [data-bv-switch-quote]{display:block;margin:12px 0}.bv-owner-actions{margin:16px 0}.bv-billing-action-result:empty{display:none}@media(max-width:720px){.bv-plan-price-list{grid-template-columns:1fr}.bv-game-payment-lock{padding:20px;margin:12px}.bv-billing button{width:100%;white-space:normal}.bv-billing{min-width:0;overflow-wrap:anywhere}}\n' +
+              '\n' +
+              '.bv-billing button:disabled{opacity:1;background:var(--bv-surface-2);color:var(--bv-ink);border-color:var(--bv-line-strong)}.bv-game-payment-lock button{background:var(--bv-navy);color:var(--bv-card);border:1px solid var(--bv-navy);padding:12px 20px;border-radius:8px}\n',
+            id: '<input css YEU146>',
+            Symbol(lineToIndexCache): [Array]
+          },
+          start: { column: 1, line: 1, offset: 0 },
+          end: { column: 1, line: 4, offset: 1223 }
+        },
+        lastEach: 1,
+        indexes: { '1': 0 },
+        Symbol(isClean): false,
+        Symbol(my): true
+      },
+      source: {
+        input: Input {
+          css: '.bv-billing .bv-payment-banner,.bv-game-payment-lock{background:var(--bv-card);color:var(--bv-ink,#172d47);border:1px solid var(--bv-border,#b4c0cc);padding:24px;border-radius:16px;margin:20px 0}.bv-game-payment-lock h2,.bv-game-payment-lock p{color:var(--bv-ink,#172d47);opacity:1}.bv-game-payment-lock button,.bv-billing button{min-height:44px}.bv-plan-price-list{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}.bv-plan-price-list article{padding:20px;border:1px solid var(--bv-border,#b4c0cc);border-radius:12px}.bv-plan-price-list h4{font-size:20px;margin:0 0 12px}.bv-billing-actions [data-bv-switch-quote]{display:block;margin:12px 0}.bv-owner-actions{margin:16px 0}.bv-billing-action-result:empty{display:none}@media(max-width:720px){.bv-plan-price-list{grid-template-columns:1fr}.bv-game-payment-lock{padding:20px;margin:12px}.bv-billing button{width:100%;white-space:normal}.bv-billing{min-width:0;overflow-wrap:anywhere}}\n' +
+            '\n' +
+            '.bv-billing button:disabled{opacity:1;background:var(--bv-surface-2);color:var(--bv-ink);border-color:var(--bv-line-strong)}.bv-game-payment-lock button{background:var(--bv-navy);color:var(--bv-card);border:1px solid var(--bv-navy);padding:12px 20px;border-radius:8px}\n',
+          hasBOM: false,
+          document: '.bv-billing .bv-payment-banner,.bv-game-payment-lock{background:var(--bv-card);color:var(--bv-ink,#172d47);border:1px solid var(--bv-border,#b4c0cc);padding:24px;border-radius:16px;margin:20px 0}.bv-game-payment-lock h2,.bv-game-payment-lock p{color:var(--bv-ink,#172d47);opacity:1}.bv-game-payment-lock button,.bv-billing button{min-height:44px}.bv-plan-price-list{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}.bv-plan-price-list article{padding:20px;border:1px solid var(--bv-border,#b4c0cc);border-radius:12px}.bv-plan-price-list h4{font-size:20px;margin:0 0 12px}.bv-billing-actions [data-bv-switch-quote]{display:block;margin:12px 0}.bv-owner-actions{margin:16px 0}.bv-billing-action-result:empty{display:none}@media(max-width:720px){.bv-plan-price-list{grid-template-columns:1fr}.bv-game-payment-lock{padding:20px;margin:12px}.bv-billing button{width:100%;white-space:normal}.bv-billing{min-width:0;overflow-wrap:anywhere}}\n' +
+            '\n' +
+            '.bv-billing button:disabled{opacity:1;background:var(--bv-surface-2);color:var(--bv-ink);border-color:var(--bv-line-strong)}.bv-game-payment-lock button{background:var(--bv-navy);color:var(--bv-card);border:1px solid var(--bv-navy);padding:12px 20px;border-radius:8px}\n',
+          id: '<input css YEU146>',
+          Symbol(lineToIndexCache): [ 0, 953, 954, 1223 ]
+        },
+        start: { column: 1, line: 1, offset: 0 },
+        end: { column: 195, line: 1, offset: 195 }
+      },
+      selector: '.bv-billing .bv-payment-banner,.bv-game-payment-lock',
+      lastEach: 1,
+      indexes: { '1': 1 },
+      Symbol(isClean): false,
+      Symbol(my): true
+    },
+    source: {
+      input: Input {
+        css: '.bv-billing .bv-payment-banner,.bv-game-payment-lock{background:var(--bv-card);color:var(--bv-ink,#172d47);border:1px solid var(--bv-border,#b4c0cc);padding:24px;border-radius:16px;margin:20px 0}.bv-game-payment-lock h2,.bv-game-payment-lock p{color:var(--bv-ink,#172d47);opacity:1}.bv-game-payment-lock button,.bv-billing button{min-height:44px}.bv-plan-price-list{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}.bv-plan-price-list article{padding:20px;border:1px solid var(--bv-border,#b4c0cc);border-radius:12px}.bv-plan-price-list h4{font-size:20px;margin:0 0 12px}.bv-billing-actions [data-bv-switch-quote]{display:block;margin:12px 0}.bv-owner-actions{margin:16px 0}.bv-billing-action-result:empty{display:none}@media(max-width:720px){.bv-plan-price-list{grid-template-columns:1fr}.bv-game-payment-lock{padding:20px;margin:12px}.bv-billing button{width:100%;white-space:normal}.bv-billing{min-width:0;overflow-wrap:anywhere}}\n' +
+          '\n' +
+          '.bv-billing button:disabled{opacity:1;background:var(--bv-surface-2);color:var(--bv-ink);border-color:var(--bv-line-strong)}.bv-game-payment-lock button{background:var(--bv-navy);color:var(--bv-card);border:1px solid var(--bv-navy);padding:12px 20px;border-radius:8px}\n',
+        hasBOM: false,
+        document: '.bv-billing .bv-payment-banner,.bv-game-payment-lock{background:var(--bv-card);color:var(--bv-ink,#172d47);border:1px solid var(--bv-border,#b4c0cc);padding:24px;border-radius:16px;margin:20px 0}.bv-game-payment-lock h2,.bv-game-payment-lock p{color:var(--bv-ink,#172d47);opacity:1}.bv-game-payment-lock button,.bv-billing button{min-height:44px}.bv-plan-price-list{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}.bv-plan-price-list article{padding:20px;border:1px solid var(--bv-border,#b4c0cc);border-radius:12px}.bv-plan-price-list h4{font-size:20px;margin:0 0 12px}.bv-billing-actions [data-bv-switch-quote]{display:block;margin:12px 0}.bv-owner-actions{margin:16px 0}.bv-billing-action-result:empty{display:none}@media(max-width:720px){.bv-plan-price-list{grid-template-columns:1fr}.bv-game-payment-lock{padding:20px;margin:12px}.bv-billing button{width:100%;white-space:normal}.bv-billing{min-width:0;overflow-wrap:anywhere}}\n' +
+          '\n' +
+          '.bv-billing button:disabled{opacity:1;background:var(--bv-surface-2);color:var(--bv-ink);border-color:var(--bv-line-strong)}.bv-game-payment-lock button{background:var(--bv-navy);color:var(--bv-card);border:1px solid var(--bv-navy);padding:12px 20px;border-radius:8px}\n',
+        id: '<input css YEU146>',
+        Symbol(lineToIndexCache): [ 0, 953, 954, 1223 ]
+      },
+      start: { column: 80, line: 1, offset: 79 },
+      end: { column: 107, line: 1, offset: 107 }
+    },
+    prop: 'color',
+    value: 'var(--bv-ink,#172d47)',
+    Symbol(isClean): false,
+    Symbol(my): true
+  }
+}
+
+Node.js v24.19.0

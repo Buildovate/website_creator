@@ -1,0 +1,14 @@
+{
+  "path": "docs/build-evidence/028F/tools/saved-replay-final-validation.mjs",
+  "sha256": "be0d71129035dc653d4aee61afb03b2663e9fec9fb3534dc1243dfb88cc4701b",
+  "gitObject": "9cde0f16f721863bcb2f83ac0b180d046e2d292d",
+  "approvedOrder": [
+    {"line": 10, "step": "604 saved-version PNG comparisons"},
+    {"line": 11, "step": "231 full-page PNG and 165 frame proof with approved source-lock chain"},
+    {"line": 12, "step": "three main replays, then clearance, legacy, platform, and staff tests"},
+    {"lines": [13, 14], "step": "additional and review tests"},
+    {"line": 15, "step": "102-command suite"},
+    {"line": 16, "step": "sites-unchanged, preservation, and broad-quality gates"}
+  ],
+  "stopOnProofFailure": "run() asserts exit status 0 at line 8; lines 10 and 11 are sequential awaits before the later test calls"
+}

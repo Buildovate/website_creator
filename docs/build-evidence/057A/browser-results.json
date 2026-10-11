@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "checks": 23,
+  "screens": [
+    "alias-1440.png",
+    "alias-390.png",
+    "flatten-1440.png",
+    "flatten-390.png",
+    "forward-1440.png",
+    "forward-390.png"
+  ],
+  "errors": [],
+  "external": [],
+  "providerCalls": 0
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "label": "full-build",
+    "code": 0,
+    "ms": 2610,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-full-build.log"
+  },
+  {
+    "label": "isolated-worker-build",
+    "code": 0,
+    "ms": 632,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-isolated-worker-build.log"
+  },
+  {
+    "label": "pay4a-isolated-build",
+    "code": 0,
+    "ms": 543,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pay4a-isolated-build.log"
+  },
+  {
+    "label": "typecheck",
+    "code": 0,
+    "ms": 717,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-typecheck.log"
+  },
+  {
+    "label": "game-progress",
+    "code": 0,
+    "ms": 512,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-game-progress.log"
+  },
+  {
+    "label": "game-milestones",
+    "code": 0,
+    "ms": 397,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-game-milestones.log"
+  },
+  {
+    "label": "game-desktop-api",
+    "code": 0,
+    "ms": 745,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-game-desktop-api.log"
+  },
+  {
+    "label": "game-experience-api",
+    "code": 0,
+    "ms": 762,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-game-experience-api.log"
+  },
+  {
+    "label": "game-autofill",
+    "code": 0,
+    "ms": 703,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-game-autofill.log"
+  },
+  {
+    "label": "game-copy",
+    "code": 0,
+    "ms": 707,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-game-copy.log"
+  },
+  {
+    "label": "game-forms",
+    "code": 0,
+    "ms": 384,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-game-forms.log"
+  },
+  {
+    "label": "catalog",
+    "code": 0,
+    "ms": 455,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-catalog.log"
+  },
+  {
+    "label": "payments",
+    "code": 0,
+    "ms": 518,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-payments.log"
+  },
+  {
+    "label": "stripe-sync",
+    "code": 0,
+    "ms": 474,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-stripe-sync.log"
+  },
+  {
+    "label": "stripe-checkout",
+    "code": 0,
+    "ms": 448,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-stripe-checkout.log"
+  },
+  {
+    "label": "stripe-no-key",
+    "code": 0,
+    "ms": 473,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-stripe-no-key.log"
+  },
+  {
+    "label": "entitlements",
+    "code": 0,
+    "ms": 630,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-entitlements.log"
+  },
+  {
+    "label": "pay4a",
+    "code": 0,
+    "ms": 704,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pay4a.log"
+  },
+  {
+    "label": "pay4b",
+    "code": 0,
+    "ms": 656,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pay4b.log"
+  },
+  {
+    "label": "pay5",
+    "code": 0,
+    "ms": 613,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pay5.log"
+  },
+  {
+    "label": "domain-wizard",
+    "code": 0,
+    "ms": 915,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-domain-wizard.log"
+  },
+  {
+    "label": "aws-adapter",
+    "code": 0,
+    "ms": 5191,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-aws-adapter.log"
+  },
+  {
+    "label": "insertion-order",
+    "code": 0,
+    "ms": 2153,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-insertion-order.log"
+  },
+  {
+    "label": "readiness-batch-a",
+    "code": 0,
+    "ms": 1421,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-readiness-batch-a.log"
+  },
+  {
+    "label": "pg-game-progress",
+    "code": 0,
+    "ms": 14883,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pg-game-progress.log"
+  },
+  {
+    "label": "pg-game-desktop-api",
+    "code": 0,
+    "ms": 3173,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pg-game-desktop-api.log"
+  },
+  {
+    "label": "pg-game-experience-api",
+    "code": 0,
+    "ms": 3141,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pg-game-experience-api.log"
+  },
+  {
+    "label": "pg-game-autofill",
+    "code": 0,
+    "ms": 2906,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pg-game-autofill.log"
+  },
+  {
+    "label": "pg-payments",
+    "code": 0,
+    "ms": 14976,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pg-payments.log"
+  },
+  {
+    "label": "pg-domain-wizard",
+    "code": 0,
+    "ms": 6260,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pg-domain-wizard.log"
+  },
+  {
+    "label": "pg-readiness-batch-a",
+    "code": 0,
+    "ms": 40506,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-pg-readiness-batch-a.log"
+  },
+  {
+    "label": "sms-diagnostic",
+    "code": 0,
+    "ms": 2672,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b/logs/batch-core-sms-diagnostic.log"
+  }
+]

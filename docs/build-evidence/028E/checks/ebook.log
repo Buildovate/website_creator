@@ -1,0 +1,17 @@
+Review approval test prerequisite: 3a07f600-d6f3-4314-ad8d-2f3c5d4fd8b6 website
+Review approval test prerequisite: 3a07f600-d6f3-4314-ad8d-2f3c5d4fd8b6 project:e2b550c7-54ea-4a79-a811-32093c451763
+Review approval test prerequisite: 3a07f600-d6f3-4314-ad8d-2f3c5d4fd8b6 project:c04f66e3-71c2-47ee-a957-e2bf0ca264d6
+Review approval test prerequisite: c206cae2-fd43-44ec-90b5-f8ede89135af website
+Review approval test prerequisite: 7887dde4-4c8f-4b08-a4af-670fc4838bee website
+Review approval test prerequisite: 5e3f6f33-b854-4845-9b31-77e9567aee6e website
+Review approval test prerequisite: c206cae2-fd43-44ec-90b5-f8ede89135af website
+PASS #022 62 checks
+
+Request failed /api/public/ebook-b/ebook Error: QA failed database
+    at Object.prepare (file:///C:/Users/joe/website_creator/tests/ebook.mjs:18:98)
+    at ebookRoute (file:///C:/Users/joe/website_creator/dist/server/index.js:54169:14)
+    at async Object.fetch (file:///C:/Users/joe/website_creator/dist/server/index.js:57061:19)
+    at async Object.fetch (file:///C:/Users/joe/website_creator/dist/server/index.js:57170:20)
+    at async Object.fetch (file:///C:/Users/joe/website_creator/dist/server/index.js:57190:20)
+    at async worker.fetch (file:///C:/Users/joe/website_creator/tests/helpers/review-approval-fixture.mjs:12:17)
+    at async file:///C:/Users/joe/website_creator/tests/ebook.mjs:18:162

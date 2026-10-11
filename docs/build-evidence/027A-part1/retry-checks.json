@@ -1,0 +1,27 @@
+[
+  {
+    "label": "planning-ambient",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1235,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Part 1 current source and installed catalog"
+  },
+  {
+    "label": "planning-scroll",
+    "kind": "regression",
+    "status": 0,
+    "ms": 1300,
+    "beforeMigrationStatus": 0,
+    "verificationNote": "Rechecked after the new slot inherited the existing saved Promotions background treatment.",
+    "fixture": "Part 1 current source and installed catalog"
+  },
+  {
+    "label": "planning-scroll-browser",
+    "kind": "browser",
+    "status": 0,
+    "ms": 34810,
+    "fixture": "Part 1 current source and installed catalog"
+  }
+]

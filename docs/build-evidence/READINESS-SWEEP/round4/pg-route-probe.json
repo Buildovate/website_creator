@@ -1,0 +1,58 @@
+{
+  "results": [
+    {
+      "name": "health POST and GET",
+      "pass": true
+    },
+    {
+      "name": "generation history read",
+      "pass": true
+    },
+    {
+      "name": "invite accept and replay denial",
+      "pass": true
+    },
+    {
+      "name": "access list and member revoke",
+      "pass": true
+    },
+    {
+      "name": "unused invite revoke",
+      "pass": true
+    },
+    {
+      "name": "staff invite accept list and revoke",
+      "pass": true
+    },
+    {
+      "name": "unused staff invite revoke",
+      "pass": true
+    },
+    {
+      "name": "domain registration and list without DNS call",
+      "pass": true
+    },
+    {
+      "name": "contact duplicate updates activity",
+      "pass": true
+    },
+    {
+      "name": "session issue rotate revoke",
+      "pass": true
+    },
+    {
+      "name": "invalid project coordinates are rejected before any project write",
+      "pass": true
+    },
+    {
+      "name": "project/photo draft backup restore",
+      "pass": true
+    },
+    {
+      "name": "site unpublish",
+      "pass": true
+    }
+  ],
+  "providerCalls": 0,
+  "fixture": "ephemeral PostgreSQL adapter; original built Worker"
+}

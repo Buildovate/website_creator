@@ -1,0 +1,104 @@
+[
+  {
+    "kit": "roofing",
+    "bytes": 21160,
+    "sha256": "7cccfd3881c488aeb5f8b2068a505e588d866c9dcef6c7ed0229f264eed77947",
+    "identical": true
+  },
+  {
+    "kit": "patios",
+    "bytes": 21070,
+    "sha256": "e4b718c58510eeca4f145a6dd7eed4acdf9e6be65d0df9bae55bdd616ca809e7",
+    "identical": true
+  },
+  {
+    "kit": "plumbing",
+    "bytes": 21144,
+    "sha256": "732048ad5073c848f55ebfdc4cc35b41a0817baf74acd06463f9d6bfda6e8a88",
+    "identical": true
+  },
+  {
+    "kit": "hvac",
+    "bytes": 21153,
+    "sha256": "45d8ad4ae3f9112759b7779f013ae136e7c83fa69e5f6210d27d428788d13625",
+    "identical": true
+  },
+  {
+    "kit": "electrical",
+    "bytes": 21361,
+    "sha256": "18d2f8353518bf1e8121d6a947173fc04f22026d7479da7998859cad84ccd610",
+    "identical": true
+  },
+  {
+    "kit": "landscaping",
+    "bytes": 21500,
+    "sha256": "fd2c45b4bb1e6b9962ee86acdf52cad52de4e579689f4863e4b6b25fa8fb4d57",
+    "identical": true
+  },
+  {
+    "kit": "general-contractors",
+    "bytes": 22252,
+    "sha256": "e7b7e2dda52ef694a87050ab45df4f4863d8d7755656436b2d2239c2645d3336",
+    "identical": true
+  },
+  {
+    "kit": "flooring",
+    "bytes": 18437,
+    "sha256": "f19460525908fb81b0f0c254ae4d2a3e67080e17940d044b2df046b77667144e",
+    "identical": true
+  },
+  {
+    "kit": "painting",
+    "bytes": 18280,
+    "sha256": "32ea14ee6f6749b47c90725194642b1765765cb02e4d2934f3527a22503039aa",
+    "identical": true
+  },
+  {
+    "kit": "fencing",
+    "bytes": 18036,
+    "sha256": "605ba77d49a8f94905669f9a60655b868e14b62ad233133b9aa57945f7cd5248",
+    "identical": true
+  },
+  {
+    "kit": "garage-doors",
+    "bytes": 18742,
+    "sha256": "4f8789ac05899f55b3e2b29b9a4fdfa1e11c502b2f12ec1e469d8201d2535dbf",
+    "identical": true
+  },
+  {
+    "kit": "pest-control",
+    "bytes": 18497,
+    "sha256": "b5fdbe2d883992c7c40f95928c9b79e81daed8c5da455ccd36fbb5144b824aa1",
+    "identical": true
+  },
+  {
+    "kit": "windows-doors",
+    "bytes": 18133,
+    "sha256": "a0044f786bc7f138488254d3a3485029a9ae89cd2e18c95e0e03fb0f667b1481",
+    "identical": true
+  },
+  {
+    "kit": "solar",
+    "bytes": 17621,
+    "sha256": "71a65ea0a9701cf808a511cfc0f7c64d2c58ecf76d34f22b3ca67f1f90d28805",
+    "identical": true
+  },
+  {
+    "kit": "concrete",
+    "bytes": 17781,
+    "sha256": "c7d637edfef2722bb69bf819ada27c52d5a005de68aabcf63e889a6ed219b8e8",
+    "identical": true
+  },
+  {
+    "kit": "pools",
+    "bytes": 17467,
+    "sha256": "4a26e3f49171c63dccca936dd4b38f3729af2e7ccd29a80a94e1df5e49220d63",
+    "identical": true
+  },
+  {
+    "kit": "locksmith",
+    "bytes": 18049,
+    "sha256": "84379f88edda9e6fc7f649fbb878e316bc0ab991ae37d4fe90bcc062d09b421a",
+    "identical": true
+  }
+]

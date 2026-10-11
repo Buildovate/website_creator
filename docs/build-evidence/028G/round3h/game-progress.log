@@ -1,0 +1,48 @@
+✔ fresh tenant: zero, honest reasons, stable output contract (3.5297ms)
+✔ complete fixture earns exactly 100; readonly and deterministic (2.0171ms)
+✔ midway awards completed quests only (0.3288ms)
+✔ onboarding/name: met, saved-but-not-met, disconnected (0.5666ms)
+✔ onboarding/phone: met, saved-but-not-met, disconnected (0.4242ms)
+✔ onboarding/trade: met, saved-but-not-met, disconnected (0.3266ms)
+✔ onboarding/area: met, saved-but-not-met, disconnected (0.2612ms)
+✔ pages/drafts: met, saved-but-not-met, disconnected (0.4126ms)
+✔ pages/approval: met, saved-but-not-met, disconnected (0.5773ms)
+✔ reviews/matched: met, saved-but-not-met, disconnected (0.3662ms)
+✔ reviews/confirmed: met, saved-but-not-met, disconnected (0.4629ms)
+✔ reviews/showing: met, saved-but-not-met, disconnected (0.2503ms)
+✔ estimator/fields: met, saved-but-not-met, disconnected (0.2995ms)
+✔ estimator/price-book: met, saved-but-not-met, disconnected (0.2011ms)
+✔ estimator/consent: met, saved-but-not-met, disconnected (0.2595ms)
+✔ promotions/offer-or-none: met, saved-but-not-met, disconnected (0.3836ms)
+✔ financing/connected-or-none: met, saved-but-not-met, disconnected (0.2197ms)
+✔ leads/verified-alerts-or-crm: met, saved-but-not-met, disconnected (0.1936ms)
+✔ launch/paid-plan: met, saved-but-not-met, disconnected (0.3187ms)
+✔ launch/live-domain: met, saved-but-not-met, disconnected (0.3966ms)
+✔ launch/published: met, saved-but-not-met, disconnected (0.2999ms)
+✔ marketing/connected-or-none: met, saved-but-not-met, disconnected (0.332ms)
+✔ found unconfirmed name cannot count (0.2816ms)
+✔ found unconfirmed phone cannot count (0.1895ms)
+✔ found unconfirmed trade cannot count (0.1689ms)
+✔ found unconfirmed area cannot count (0.1873ms)
+✔ estimator parts expose 5/10/5 but partial quest earns zero (0.2979ms)
+✔ estimator cannot infer minimum, fields or contractor-entered rates (0.6035ms)
+✔ explicit none is a choice; empty arrays are not (0.3316ms)
+✔ verified email or CRM can satisfy leads; a typed address cannot (0.3722ms)
+✔ domain conjunction has no shortcut, including disconnected deps (0.9707ms)
+✔ all 512 quest combinations remain within 100 with exact sum (8.9012ms)
+✔ unknown source state and unsupported review provider fail closed (0.5302ms)
+✔ deps: absent actual owner modules return not_connected (4.7365ms)
+✔ deps: owner module contracts are used and arguments retain scope (0.4868ms)
+✔ deps: missing exports and invalid contracts fail closed; internal errors are not hidden (0.5555ms)
+✔ sources read tenant, sales approval, saved pages, offers, None and verified alerts; missing integrations stay honest (1.5449ms)
+✔ sources isolate tenants, do not write, and observe the same saved values as Tabs (1.5363ms)
+✔ sources reject fake completion flags, draft lender links and social URLs (1.0543ms)
+✔ sources fail loudly on corrupt saved JSON rather than award progress (0.6572ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 198.1954

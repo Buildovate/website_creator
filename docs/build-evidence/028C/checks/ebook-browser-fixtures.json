@@ -1,0 +1,18 @@
+[
+  {
+    "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+    "method": "POST",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/ebook-browser.mjs:14:42"
+  },
+  {
+    "url": "http://127.0.0.1:8158/api/public/roof-guide-022/ebook",
+    "method": "POST",
+    "status": 503,
+    "state": "injected-route-failure",
+    "kind": "route-fulfill",
+    "source": "at file:///C:/Users/joe/website_creator/tests/ebook-browser.mjs:14:42"
+  }
+]

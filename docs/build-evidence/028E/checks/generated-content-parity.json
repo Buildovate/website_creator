@@ -1,0 +1,24 @@
+{
+  "baseCommit": "4880c3b",
+  "cases": 408,
+  "comparisons": 2448,
+  "failures": [],
+  "boundaries": [
+    {
+      "removed": "text",
+      "rejected": true
+    },
+    {
+      "removed": "links",
+      "rejected": true
+    },
+    {
+      "removed": "phones",
+      "rejected": true
+    },
+    {
+      "removed": "mediaPresent",
+      "rejected": true
+    }
+  ]
+}

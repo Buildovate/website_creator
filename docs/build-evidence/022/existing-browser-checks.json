@@ -1,0 +1,79 @@
+[
+  {
+    "suite": "callback-browser.mjs",
+    "status": 0,
+    "ms": 5953
+  },
+  {
+    "suite": "contact-linkage-browser.mjs",
+    "status": 0,
+    "ms": 7229
+  },
+  {
+    "suite": "contacts-browser.mjs",
+    "status": 0,
+    "ms": 5723
+  },
+  {
+    "suite": "ebook-browser.mjs",
+    "status": 0,
+    "ms": 13653,
+    "initialStatus": 1,
+    "retryLog": "ebook-browser-retry.log"
+  },
+  {
+    "suite": "expense-polish-browser.mjs",
+    "status": 0,
+    "ms": 6551
+  },
+  {
+    "suite": "expenses-browser.mjs",
+    "status": 0,
+    "ms": 10180
+  },
+  {
+    "suite": "financing-states-browser.mjs",
+    "status": 0,
+    "ms": 19272
+  },
+  {
+    "suite": "platform-ui-cleanup-browser.mjs",
+    "status": 0,
+    "ms": 7027
+  },
+  {
+    "suite": "promotion-unlocks-browser.mjs",
+    "status": 0,
+    "ms": 18189
+  },
+  {
+    "suite": "roofing-cities-browser.mjs",
+    "status": 0,
+    "ms": 21870
+  },
+  {
+    "suite": "roofing-cta-browser.mjs",
+    "status": 0,
+    "ms": 25561
+  },
+  {
+    "suite": "roofing-story-browser.mjs",
+    "status": 0,
+    "ms": 13680
+  },
+  {
+    "suite": "service-motion-browser.mjs",
+    "status": 0,
+    "ms": 20152
+  },
+  {
+    "suite": "trade-enablement-browser.mjs",
+    "status": 0,
+    "ms": 42617
+  },
+  {
+    "suite": "trade-visual-browser.mjs",
+    "status": 0,
+    "ms": 35203
+  }
+]

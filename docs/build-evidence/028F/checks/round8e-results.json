@@ -1,0 +1,69 @@
+{
+  "round": "8e",
+  "state": "Stopped after failures; no retry or commit",
+  "markerAudit": {
+    "path": "checks/stale-coordinator-marker.json",
+    "line": 32,
+    "pid": 54228,
+    "verified": true,
+    "helper": "tools/round8e-marker-note.ps1",
+    "failFast": "$ErrorActionPreference = 'Stop'"
+  },
+  "coordinator": {
+    "log": "checks/round8e-coordinator.log",
+    "completedGroups": 19,
+    "pass": 19,
+    "passWithWarning": 0,
+    "failedCompletedGroups": 0,
+    "stoppedGroup": "suite-102",
+    "stoppedGroupResult": "FAILED: three child checks failed; coordinator tree stopped on observation",
+    "mainMarkerRemaining": false,
+    "laterPreservationAndQualityGates": "Not run"
+  },
+  "suite102": {
+    "log": "checks/final-suite-102.log",
+    "completed": 81,
+    "pass": 78,
+    "passWithWarning": 0,
+    "fail": 3,
+    "notCompleted": 21,
+    "failuresInRecordedOrder": [
+      {
+        "check": "node tests/planning-ambient-browser.mjs",
+        "log": "checks/planning-ambient-browser.log",
+        "firstErrorLine": 25,
+        "firstError": "AssertionError [ERR_ASSERTION]: realReviewPrerequisite expected 0 blocking findings; actual 45. Published-copy QA found (805) 555-0140 on /s/roofing-ambient-024 with sample=false.",
+        "stack": "tests/helpers/review-approval-fixture.mjs:27:9; tests/planning-ambient-browser.mjs:6:513"
+      },
+      {
+        "check": "node tests/website-pages.mjs",
+        "log": "checks/website-pages.log",
+        "firstFailingTestLine": 234,
+        "firstErrorLine": 331,
+        "firstError": "AssertionError [ERR_ASSERTION]: #006 FAQ published snapshot prerequisite has 9 blocking findings on /s/faq-ticket-six/faq: horizontal overflow (96px at 1440, 1146px at 390, 768px at 768), missing meaningful-image alt, and no primary action.",
+        "testTotals": {"tests": 30, "pass": 25, "fail": 5},
+        "otherReportedFailures": ["#007 About", "#007A confirmed trust facts", "#014 inquiry context", "contact capture outbox-kind assertion"]
+      },
+      {
+        "check": "node tests/hero-editor-browser.mjs",
+        "log": "checks/hero-editor-browser.log",
+        "firstErrorLine": 40,
+        "firstError": "AssertionError [ERR_ASSERTION]: UI publish updates public hero desktop",
+        "stack": "tests/hero-editor-browser.mjs:19:147",
+        "actual": false,
+        "expected": true
+      }
+    ]
+  },
+  "additionalSuite": {
+    "pass": 12,
+    "passWithWarning": 2,
+    "fail": 0,
+    "warnings": ["media-api: passed, then hung at exit", "uniqueness-api: passed, then hung at exit"]
+  },
+  "completedProofs": {"savedPngs": 604, "fullPagePngs": 231, "frames": 165, "mainReplays": [143, 143, 143]},
+  "samples": {"pass": 3425, "borderline": 70, "fail": 0, "qaGateClear": false},
+  "commit": null,
+  "providerCalls": 0,
+  "credits": 0
+}

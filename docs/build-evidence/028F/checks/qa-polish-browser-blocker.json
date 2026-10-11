@@ -1,0 +1,134 @@
+{
+  "passed": false,
+  "style": "current",
+  "width": 1280,
+  "mode": "no-js",
+  "originalSamplingMs": 60,
+  "overlaps": [
+    {
+      "floating": "nav.kit-chapter-rail",
+      "target": "img.detail-finished",
+      "scrollY": 7454,
+      "intersection": [
+        40.25,
+        39.17
+      ],
+      "box": {
+        "x": 91,
+        "y": 448.21875,
+        "width": 1098,
+        "height": 616.75
+      }
+    },
+    {
+      "floating": "nav.kit-chapter-rail",
+      "target": "img.",
+      "scrollY": 8325,
+      "intersection": [
+        41.25,
+        127.39
+      ],
+      "box": {
+        "x": 90,
+        "y": 309.96875,
+        "width": 1100,
+        "height": 366.65625
+      }
+    }
+  ],
+  "settledDiagnostics": [
+    {
+      "y": 7454,
+      "image": "after/clearance-blocker-current-no-js-1280-0.png",
+      "overlaps": [
+        {
+          "floating": "nav.kit-chapter-rail",
+          "target": "img.detail-finished",
+          "scrollY": 7454,
+          "intersection": [
+            40.25,
+            39.17
+          ],
+          "box": {
+            "x": 91,
+            "y": 448.21875,
+            "width": 1098,
+            "height": 616.75
+          }
+        }
+      ],
+      "chat": {
+        "visible": true,
+        "box": {
+          "x": 16,
+          "y": 3193.671875,
+          "width": 1248,
+          "height": 59,
+          "top": 3193.671875,
+          "right": 1264,
+          "bottom": 3252.671875,
+          "left": 16
+        },
+        "opened": "false"
+      }
+    },
+    {
+      "y": 8325,
+      "image": "after/clearance-blocker-current-no-js-1280-1.png",
+      "overlaps": [
+        {
+          "floating": "nav.kit-chapter-rail",
+          "target": "img.",
+          "scrollY": 8325,
+          "intersection": [
+            41.25,
+            127.39
+          ],
+          "box": {
+            "x": 90,
+            "y": 309.96875,
+            "width": 1100,
+            "height": 366.65625
+          }
+        }
+      ],
+      "chat": {
+        "visible": true,
+        "box": {
+          "x": 16,
+          "y": 2322.671875,
+          "width": 1248,
+          "height": 59,
+          "top": 2322.671875,
+          "right": 1264,
+          "bottom": 2381.671875,
+          "left": 16
+        },
+        "opened": "false"
+      }
+    }
+  ],
+  "priorPassedStates": [
+    {
+      "style": "current",
+      "width": 1440,
+      "mode": "no-js",
+      "geometry": {
+        "width": 750.734375,
+        "height": 422.28125,
+        "ratio": 1.7778065566491528,
+        "videoFit": "cover",
+        "posterFit": "cover",
+        "posterVisible": true,
+        "railGap": 36.75,
+        "overflow": 0,
+        "cls": 0,
+        "videoSource": null,
+        "nativeControls": false
+      },
+      "scrollPositions": 15,
+      "overlaps": [],
+      "focus": []
+    }
+  ]
+}

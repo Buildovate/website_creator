@@ -1,0 +1,2 @@
+QA fallback: preview-fixture bootstrap only; missing-QA website/project publication blocked, then baseline seeded strictly as test data; no approval or QA report.
+PASS mocked providers: SMS verification, alert addressing, signed inbound replies, webhook replay deduplication, changed-phone re-verification, Google match/filter/aggregate integrity, Yelp excerpts and private draft access. No real messages or provider requests sent.

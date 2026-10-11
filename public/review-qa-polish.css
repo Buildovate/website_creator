@@ -1,0 +1,81 @@
+/* #028F Part 1: reserve the installed film shape and the desktop chapter gutter. */
+.cinematic-commercial.kit-commercial .film-theater{aspect-ratio:16/9!important;height:auto!important;min-height:0!important;flex:none;align-self:center;width:100%}
+.cinematic-commercial.kit-commercial>figure{align-self:center!important;display:block!important}
+.cinematic-commercial.kit-commercial .film-theater :is(video,.commercial-poster,.trade-feature-still){position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover!important;object-position:center}
+@media(min-width:1001px){body:has(.kit-chapter-rail) .cinematic-commercial.kit-commercial{padding-right:168px!important}}
+:is(.story-secondary,.sv-actions a,.kit-text-link)>span[aria-hidden=true]{margin-inline-start:.3em}
+
+.homeowner-motion-ready :is(.kit-mobile-dock,.visitor-chat,.sd-phone-bar,.shared-site-header)[data-media-hidden=true]{visibility:hidden!important;pointer-events:none!important}
+
+@media(max-width:720px){body:not(.homeowner-motion-ready) .sd-phone-bar{position:static;inset:auto}}
+
+body:not(.homeowner-motion-ready) .shared-site-header{position:static}
+.qa-page-action{margin-block:24px}.qa-primary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;max-width:100%;background:var(--look-cta,#172421);color:var(--look-cta-text,#ffffff);border:1px solid currentColor;font-weight:700;text-decoration:none;border-radius:var(--look-radius,4px)}.qa-primary:focus-visible{outline:3px solid currentColor;outline-offset:4px}
+
+/* Keep focused chapter links visible; hidden links are excluded from Tab. */
+.homeowner-motion-ready :is(nav.kit-chapter-rail,nav.story-nav,div.mobile-dock)[data-media-hidden=true]:not(:focus-within){visibility:hidden!important;pointer-events:none!important}
+
+/* #028F round 3: preserve all legacy material text and thumbnails. */
+@media(max-width:760px){.transformation#work .section-head h2{font-size:clamp(2.5rem,10vw,3.6rem)}}
+/* Static, normal-flow fallback at every width; JS-on geometry is unchanged. */
+body:not(.homeowner-motion-ready) .visitor-chat{position:relative;margin:16px;right:auto;bottom:auto;z-index:auto}
+body:not(.homeowner-motion-ready) :is(.kit-mobile-dock,.sd-phone-bar,div.mobile-dock){position:static;inset:auto}
+
+@media(max-width:760px){.transformation#work .comparison-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;scroll-snap-type:none}.transformation#work .comparison-options button{min-width:0;width:100%}.transformation#work .comparison-options button>span{overflow-wrap:anywhere}}
+
+/* #028F round 4: approved phone gallery wrap; retain every image and caption. */
+@media(max-width:760px){#gallery .gallery-feed{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));overflow:visible;scroll-snap-type:none}#gallery .gallery-feed figure{min-width:0}#gallery .gallery-feed img{height:auto;object-fit:contain}}
+/* Navigation is a normal-flow link group only without JavaScript. */
+html:not(.site-nav-js) body:not(.homeowner-motion-ready) :is(nav.kit-chapter-rail,nav.story-nav){position:static!important;inset:auto!important;transform:none!important;display:flex!important;flex-wrap:wrap;justify-content:center;gap:10px;padding:16px;opacity:1;max-width:100%;width:auto}
+
+/* #028F round 5: retain the full guide title and business label without clipping. */
+.ebook-page .eg-cover{display:grid;aspect-ratio:auto;min-width:0}
+.ebook-page .eg-cover::before{content:"";grid-area:1/1;padding-block-start:133.333333%}
+.ebook-page .eg-cover>img{position:absolute;inset:0}
+.ebook-page .eg-cover>figcaption{position:relative;inset:auto;grid-area:1/1;align-self:end;margin-block-start:180px;min-width:0;overflow-wrap:anywhere}
+
+/* #028F round 6: same visibility-only clearance for legacy call/header. */
+.homeowner-motion-ready :is(a.mobile-call,div.cx-mobile-action,header.cx-header)[data-media-hidden=true]:not(:focus-within){visibility:hidden!important;pointer-events:none!important}
+body:not(.homeowner-motion-ready) :is(a.mobile-call,div.cx-mobile-action,header.cx-header){position:static;inset:auto}
+
+/* #028F: form submits stay primary; preserve all peer actions and their targets. */
+.foundation-contact:has(>form button.foundation-button:not([type=button]))>div>a.foundation-button[href^="tel:"],#calculator>form[data-financing-calculator]:has(>button.finance-recalculate:not([type=button]))>details.finance-options>summary.foundation-button{background:transparent!important;color:inherit!important;border-color:currentColor!important;box-shadow:none!important;text-decoration:underline;text-underline-offset:.2em}
+#calculator>form[data-financing-calculator]:has(>button.finance-recalculate:not([type=button])) button[data-finance-compare]{background:transparent;color:inherit;border:1px solid currentColor;border-radius:10px;padding:12px;min-height:44px;font:600 13px/1.5 FoundationDM,Arial,sans-serif;cursor:pointer;width:100%;text-decoration:underline;text-underline-offset:.2em}
+
+/* #028F: keep all financing cards in view; a fitting desktop row retains its geometry. */
+.service-detail .tp-plan-comparison{container-type:inline-size;container-name:qa-finance-cards}
+.service-detail .tp-plan-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));grid-auto-flow:row;grid-auto-columns:auto;overflow:visible;scroll-snap-type:none;margin-inline:0}
+.service-detail .tp-plan-cards>.tp-plan-card{width:auto;scroll-snap-align:none}
+@media(max-width:720px){.service-detail .tp-plan-cards{grid-template-columns:minmax(0,1fr)}.service-detail .tp-plan-comparison:has(>.tp-plan-cards>.tp-plan-card:nth-child(2))>.tp-plan-kicker>span{visibility:hidden}}
+@container qa-finance-cards (width < 518px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(2)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(3)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 786px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(3)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(4)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 1054px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(4)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(5)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 1322px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(5)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(6)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 1590px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(6)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(7)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 1858px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(7)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(8)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 2126px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(8)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(9)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 2394px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(9)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(10)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 2662px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(10)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(11)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 2930px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(11)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(12)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 3198px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(12)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(13)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 3466px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(13)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(14)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 3734px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(14)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(15)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 4002px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(15)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(16)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 4270px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(16)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(17)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 4538px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(17)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(18)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 4806px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(18)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(19)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 5074px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(19)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(20)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 5342px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(20)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(21)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 5610px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(21)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(22)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 5878px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(22)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(23)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 6146px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(23)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(24)))>span{visibility:hidden}}
+@container qa-finance-cards (width < 6414px){.tp-plan-kicker:has(+.tp-plan-cards>.tp-plan-card:nth-child(24)):not(:has(+.tp-plan-cards>.tp-plan-card:nth-child(25)))>span{visibility:hidden}}
+
+/* Keep the approved page action's existing CTA token pair together under each Look. */
+html body .qa-page-action > a.qa-primary,html body[data-site-style][data-site-style] .qa-page-action > a.qa-primary{background:var(--look-cta,#172421)!important;color:var(--look-cta-text,#ffffff)!important}
+
+/* The approved normal-flow no-JS rail needs the Look's paired surface/text colors. */
+html:not(.site-nav-js) body:not(.homeowner-motion-ready) nav.kit-chapter-rail a{background:var(--look-surface,#172421);color:var(--look-text,#ffffff)!important}
+
+/* Approved legacy duplicate-primary treatment: form submit remains primary. */
+body.theme-craft main > section.public-contact#contact > div > a.public-button[href^="tel:"]{background:transparent;color:inherit;box-shadow:inset 0 0 0 1px currentColor}

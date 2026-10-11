@@ -1,0 +1,76 @@
+{
+  "ticket": "028G",
+  "subticket": "G-3",
+  "round": "caption resume",
+  "status": "stopped_visual_readability_failure",
+  "head": "2d6bae7454d12ac03600e12aaac7cefe1d0cb718",
+  "branch": "launch/028G-game",
+  "port": 5183,
+  "caption": {
+    "beforeContrast": 2.8040332067935174,
+    "afterContrast": 14.469554792114943,
+    "foreground": "--bv-bp-ink",
+    "background": "--bv-bp-deep",
+    "opacity": 1
+  },
+  "isolatedBuild": {
+    "passed": true,
+    "runs": 1
+  },
+  "phone": {
+    "passed": true,
+    "count": 17,
+    "runsThisResume": 1,
+    "readabilityStates": 13,
+    "textInstances": 723,
+    "evidence": "round5/game-phone.json"
+  },
+  "progress": {
+    "passed": 40
+  },
+  "milestones": {
+    "passed": 16
+  },
+  "headerLogo": {
+    "passed": true,
+    "headers": 340,
+    "edgeCases": 6
+  },
+  "headerNavFit": {
+    "passed": true,
+    "checks": 16422,
+    "states": 1632,
+    "widths": 8
+  },
+  "visualReview": {
+    "passed": false,
+    "reason": "Selected quest label not fully visible in the initial midway strip.",
+    "screenshot": "screenshots/g3-phone-midway.png"
+  },
+  "remainingGuards": "Not run after visual review failure.",
+  "protectedDiff": "empty",
+  "legacyComponentsTokensDiff": "empty",
+  "sharedEditsThisResume": 0,
+  "committed": false,
+  "credits": 0,
+  "providerCalls": 0,
+  "next": "Resume G-3 only. G-4 not started.",
+  "screenshots": [
+    "g3-phone-tour-progress.png",
+    "g3-phone-tour-badges.png",
+    "g3-phone-fresh.png",
+    "g3-phone-not-connected.png",
+    "g3-phone-all-quests.png",
+    "g3-phone-locked.png",
+    "g3-phone-badges.png",
+    "g3-phone-settings.png",
+    "g3-phone-business.png",
+    "g3-phone-preview-unpublished.png",
+    "g3-phone-preview-published.png",
+    "g3-phone-midway.png",
+    "g3-phone-celebration.png",
+    "g3-phone-after-celebration.png",
+    "g3-phone-done.png",
+    "g3-phone-reduced-motion.png"
+  ]
+}

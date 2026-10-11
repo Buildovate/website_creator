@@ -1,0 +1,31 @@
+{
+  "files": 11355,
+  "images": 11241,
+  "clips": 114,
+  "installed": 804,
+  "installedKnownGeneratedStills": 320,
+  "roles": {
+    "evidence": 10406,
+    "reference": 144,
+    "installed": 804,
+    "repository media": 1
+  },
+  "statuses": {
+    "pending": 11352,
+    "rejected": 3
+  },
+  "excludedTrees": [
+    ".cache",
+    ".data",
+    ".git",
+    ".next",
+    ".preserve",
+    "dist",
+    "node_modules"
+  ],
+  "exclusionReason": "Dependencies, Git objects, build copies and runtime/backups are not source-media libraries. .preserve is untouched. This ticket's new evidence is excluded from its own input inventory.",
+  "hashScope": "Every installed file and local master.mp4; evidence/reference images are path/size inventory only.",
+  "providerCalls": 0,
+  "creditsUsed": 0,
+  "recordedPhase2DeliveryFiles": 20
+}

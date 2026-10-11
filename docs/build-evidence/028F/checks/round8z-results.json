@@ -1,0 +1,165 @@
+{
+  "round": "8z",
+  "state": "Stopped at Step 1: unchanged standalone headline-live assertion failed; no retry or edits",
+  "build": {
+    "command": "node C:/Users/joe/website_creator/build.mjs",
+    "code": 0,
+    "distExists": true,
+    "sourceChanges": [],
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8z-build.log"
+  },
+  "standalone": {
+    "command": "node tests/roofing-polish-part2-browser.mjs",
+    "status": 1,
+    "outcome": "FAILED",
+    "code": 1,
+    "signal": null,
+    "ms": 439792,
+    "log": "C:/Users/joe/website_creator/docs/build-evidence/028F/checks/round8z-diagnose-roofing-polish-part2-browser.log",
+    "checksBeforeFailure": 68,
+    "screenshots": 29,
+    "browserErrors": [],
+    "firstErrorLines": [
+      "AssertionError [ERR_ASSERTION]: headline live after publish desktop",
+      "    at check (file:///C:/Users/joe/website_creator/tests/roofing-polish-part2-browser.mjs:4:84)",
+      "    at file:///C:/Users/joe/website_creator/tests/roofing-polish-part2-browser.mjs:42:1080 {",
+      "  generatedMessage: false,",
+      "  code: 'ERR_ASSERTION',",
+      "  actual: false,",
+      "  expected: true,",
+      "  operator: '==',",
+      "  diff: 'simple'",
+      "}",
+      "",
+      "Node.js v24.19.0"
+    ]
+  },
+  "publishObservations": {
+    "recordedAt": "2026-10-07T14:22:31.819Z",
+    "timing": "During standalone teardown after browser-results recorded 68 checks; no extra publish request made",
+    "observationError": "fetch failed",
+    "publishApiResponse": {
+      "status": null,
+      "reason": "Test did not capture the browser publish response; no publish request was replayed."
+    },
+    "heroEditor": {
+      "state": "success after saving draft, before publish",
+      "statusText": "Hero draft saved. Review the full preview, then publish when it is ready.",
+      "headline": "Roof concerns? Let’s make a clear plan.",
+      "evidence": "checks/round8z-hero-editor-saved-draft-desktop.png"
+    },
+    "liveH1AtAssertion": {
+      "containsRoofConcerns": false,
+      "fullText": null,
+      "reason": "The unchanged assertion records a Boolean, not the full h1. Before-publish screenshot retained; no after-publish screenshot was reached."
+    }
+  },
+  "testLineDiff": "None; Step 2 not authorized after standalone failure",
+  "sourceChanges": [],
+  "locks": [
+    {
+      "path": "src/aws/review-capture.js",
+      "sha256": "4772dfc632918671bdcb078b5abdb4825323f416b70cf44db60ec075511e6f38",
+      "after": "4772dfc632918671bdcb078b5abdb4825323f416b70cf44db60ec075511e6f38",
+      "unchanged": true
+    },
+    {
+      "path": "public/planning-films.json",
+      "sha256": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+      "unchanged": true
+    },
+    {
+      "path": "tests/roofing-polish-part1.mjs",
+      "sha256": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "after": "9907b06e67eb93dd3d4ba4928b4abf165cb2f5cbbdb2314c26010d60d7cb119f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/parallel-suite.mjs",
+      "sha256": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "after": "13c0e65e3345fc966389cc690c58e4c6c08555b1dbb2c2ffb13ce46df54f300a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/build-evidence/028F/tools/child-hang-guard.mjs",
+      "sha256": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "after": "3e4b876bdeddb002c5b79fbf1178a9e50194f9b8f3a7e3e8f63fc5d160b95cc0",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/review-capture-readiness.js",
+      "sha256": "66ab75100a164e7b3e00f730233a2e1a42a3fbb87cc831e173a11c12ef5c7812",
+      "after": "66ab75100a164e7b3e00f730233a2e1a42a3fbb87cc831e173a11c12ef5c7812",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/qa-browser.js",
+      "sha256": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "unchanged": true
+    },
+    {
+      "path": "src/aws/qa-capture.js",
+      "sha256": "ef819d7a48fa13ae7d701794b1968ede289adf91b39dd60a30956a69f8715e13",
+      "after": "ef819d7a48fa13ae7d701794b1968ede289adf91b39dd60a30956a69f8715e13",
+      "unchanged": true
+    },
+    {
+      "path": "tests/part2-html-normalize.mjs",
+      "sha256": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "after": "f8508e77b7ffdb46ec6629f864c411f3827c980a3eafa03b161d0b983e7c1766",
+      "unchanged": true
+    },
+    {
+      "path": "tests/review-part1-html-normalize.mjs",
+      "sha256": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "after": "afe709f748541e109eba81226f8f025d81bc5623e921fdeb764f1a82d6f6b2a7",
+      "unchanged": true
+    },
+    {
+      "path": "BUILD-BACKLOG.md",
+      "sha256": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+      "after": "fa9aa8b6fcac705214c17c6d875b30af7324544bcc68699779cd2160b8679876",
+      "unchanged": true
+    },
+    {
+      "path": "BUILD-STATUS.md",
+      "sha256": "6f1b9bcc2d8f53bb1e18dfb1c8575d56cd8b098010ff9384bccc2244c6591cc8",
+      "after": "6f1b9bcc2d8f53bb1e18dfb1c8575d56cd8b098010ff9384bccc2244c6591cc8",
+      "unchanged": true
+    }
+  ],
+  "suite": {
+    "state": "Not run",
+    "pass": 0,
+    "passWithWarning": 0,
+    "failed": 0,
+    "incomplete": 102
+  },
+  "planningFilms": {
+    "before": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+    "after": "b7382554172676d6fcd79b5f7559b36a15c2eb5edc2516808876b8c2509b4145",
+    "matches": true
+  },
+  "samples": {
+    "state": "Not run",
+    "originalPreservation": {
+      "checkedFiles": 29039,
+      "changed": [],
+      "byteIdentical": true
+    }
+  },
+  "original70Borderlines": {
+    "open": 70,
+    "accepted": 0,
+    "waived": 0,
+    "reclassified": 0
+  },
+  "qaGateClear": false,
+  "commit": null,
+  "staged": false,
+  "credits": 0,
+  "providerCalls": 0,
+  "baselineUpdates": 0
+}

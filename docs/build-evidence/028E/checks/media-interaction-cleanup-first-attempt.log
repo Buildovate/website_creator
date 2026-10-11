@@ -1,0 +1,16 @@
+{"states":0,"screenshots":0,"failures":0,"pageErrors":0,"mockedProviderCalls":0,"actualProviderCalls":0}
+
+node:fs:2001
+  binding.unlink(getValidatedPath(path));
+          ^
+
+Error: ENOENT: no such file or directory, unlink 'C:\Users\joe\website_creator\docs\build-evidence\028D\checks\uniqueness-browser-active.json'
+    at Object.unlinkSync (node:fs:2001:11)
+    at file:///C:/Users/joe/website_creator/tests/media-library-browser.mjs:184:84 {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: 'C:\\Users\\joe\\website_creator\\docs\\build-evidence\\028D\\checks\\uniqueness-browser-active.json'
+}
+
+Node.js v24.19.0

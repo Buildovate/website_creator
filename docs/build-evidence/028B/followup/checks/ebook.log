@@ -1,0 +1,8 @@
+PASS #022 62 checks
+
+Request failed /api/public/ebook-b/ebook Error: QA failed database
+    at Object.prepare (file:///C:/Users/joe/website_creator/tests/ebook.mjs:18:98)
+    at ebookRoute (file:///C:/Users/joe/website_creator/dist/server/index.js:21640:14)
+    at async Object.fetch (file:///C:/Users/joe/website_creator/dist/server/index.js:24645:19)
+    at async Object.fetch (file:///C:/Users/joe/website_creator/dist/server/index.js:24754:20)
+    at async file:///C:/Users/joe/website_creator/tests/ebook.mjs:18:162

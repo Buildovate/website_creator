@@ -1,0 +1,1142 @@
+{
+  "providerCalls": 0,
+  "realBrowser": true,
+  "fixturePublicationAttempted": false,
+  "passed": true,
+  "results": [
+    {
+      "fixture": "positive-control",
+      "width": 390,
+      "result": "Pass",
+      "checks": 13
+    },
+    {
+      "fixture": "legacy-consent-and-action-positive",
+      "width": 390,
+      "result": "Pass",
+      "checks": [
+        "consent",
+        "actions"
+      ]
+    },
+    {
+      "fixture": "overlapping-text",
+      "width": 390,
+      "result": "Fail",
+      "check": {
+        "category": "layout",
+        "key": "overlapping-text",
+        "title": "Overlapping text",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "first": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+              "second": "#overlap-copy",
+              "intersectionPx": [
+                224.55,
+                22
+              ]
+            }
+          ]
+        },
+        "threshold": {
+          "maximumPx": 2,
+          "minimumLineFraction": 0.3,
+          "geometry": "Painted glyph extents from DOM Range and Canvas font metrics"
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 342,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/overlapping-text-390.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "overflow",
+      "width": 390,
+      "result": "Fail",
+      "check": {
+        "category": "layout",
+        "key": "overflow",
+        "title": "Horizontal overflow",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "pageOverflow": 1434,
+          "violations": [
+            "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)"
+          ]
+        },
+        "threshold": {
+          "maximumPx": 1
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 1800,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/overflow-390.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "covered-primary",
+      "width": 390,
+      "result": "Fail",
+      "check": {
+        "category": "layout",
+        "key": "floating",
+        "result": "Fail",
+        "measured": [
+          {
+            "floating": "div.",
+            "target": "a.",
+            "scrollY": 0,
+            "intersection": [
+              153.84,
+              48
+            ],
+            "box": {
+              "x": 24,
+              "y": 143.5,
+              "width": 153.84375,
+              "height": 48
+            }
+          }
+        ],
+        "threshold": {
+          "overlapPx": 2
+        }
+      },
+      "image": "negative-fixtures/covered-primary-390.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "broken-image",
+      "width": 390,
+      "result": "Fail",
+      "check": {
+        "category": "media",
+        "key": "images",
+        "title": "Images decode to a nonzero natural size",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>img:nth-child(4)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(1)>img:nth-child(4)",
+              "url": "http://negative-fixtures.local/deliberate-missing-image.webp"
+            }
+          ]
+        },
+        "threshold": {
+          "broken": 0
+        },
+        "box": {
+          "x": 177.84375,
+          "y": 155.5,
+          "width": 156.828125,
+          "height": 24
+        }
+      },
+      "image": "negative-fixtures/broken-image-390.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "missing-financing-disclosure",
+      "width": 390,
+      "result": "Fail",
+      "check": {
+        "category": "disclosures",
+        "key": "financing",
+        "title": "Financing disclosure accompanies an enabled calculator",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(2)>div:nth-child(1)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(2)>div:nth-child(1)",
+              "issue": "Existing financing disclosure missing"
+            }
+          ]
+        },
+        "threshold": {
+          "missing": 0,
+          "source": "src/platform/constitution.ts FINANCING_DISCLOSURE; existing calculator link to /legal",
+          "location": "On-page disclosure or existing link to captured legal disclosure"
+        },
+        "box": {
+          "x": 24,
+          "y": 406.5,
+          "width": 342,
+          "height": 0
+        }
+      },
+      "image": "negative-fixtures/missing-financing-disclosure-390.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "missing-tcpa-consent",
+      "width": 390,
+      "result": "Fail",
+      "check": {
+        "category": "disclosures",
+        "key": "consent",
+        "title": "Lead forms retain existing contact-consent requirement",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(3)>form:nth-child(1)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(3)>form:nth-child(1)",
+              "issue": "Missing required, initially unticked contact-permission checkbox and wording"
+            }
+          ]
+        },
+        "threshold": {
+          "missing": 0,
+          "source": "src/hero-contact.js; src/pricing.js; existing lead transports"
+        },
+        "box": {
+          "x": 24,
+          "y": 618.5,
+          "width": 342,
+          "height": 80
+        }
+      },
+      "image": "negative-fixtures/missing-tcpa-consent-390.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "placeholder-text",
+      "width": 390,
+      "result": "Fail",
+      "check": {
+        "category": "placeholders",
+        "key": "published-copy",
+        "title": "Published copy has no placeholders or Sample panels",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "sample": false,
+          "found": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+              "text": "TODO {{businessName}}"
+            }
+          ]
+        },
+        "threshold": {
+          "realPublished": 0,
+          "samplePreviewAllowed": true
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 342,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/placeholder-text-390.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "unverified-review",
+      "width": 390,
+      "result": "Fail",
+      "check": {
+        "category": "reviews",
+        "key": "sources",
+        "title": "Reviews trace to sources and full-source aggregates",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(4)>article:nth-child(1)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(4)>article:nth-child(1)",
+              "issue": "Review has no matching source record"
+            }
+          ]
+        },
+        "threshold": {
+          "unverified": 0,
+          "source": "src/review-filter.js; src/reviews.js"
+        },
+        "box": {
+          "x": 24,
+          "y": 798.5,
+          "width": 342,
+          "height": 64
+        }
+      },
+      "image": "negative-fixtures/unverified-review-390.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "invented-urgency",
+      "width": 390,
+      "result": "Fail",
+      "check": {
+        "category": "standing",
+        "key": "honesty",
+        "title": "No invented offers, countdowns or urgency",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "violations": 2,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+              "text": "Hurry! Only 2 slots available"
+            },
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+              "text": "Hurry! Only 2 slots available"
+            }
+          ]
+        },
+        "threshold": {
+          "invented": 0
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 342,
+          "height": 84
+        }
+      },
+      "image": "negative-fixtures/invented-urgency-390.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "two-primary-actions",
+      "width": 390,
+      "result": "Fail",
+      "check": {
+        "category": "standing",
+        "key": "actions",
+        "title": "Section and page primary-action limits",
+        "result": "Fail",
+        "selector": "#home",
+        "measured": {
+          "primaries": 3,
+          "sections": [
+            {
+              "selector": "#home",
+              "count": 2
+            },
+            {
+              "selector": "#contact",
+              "count": 1
+            }
+          ],
+          "failures": [
+            {
+              "selector": "#home",
+              "count": 2,
+              "primaries": [
+                "body>main:nth-child(1)>section:nth-child(1)>a:nth-child(3)",
+                "body>main:nth-child(1)>section:nth-child(1)>a:nth-child(5)"
+              ]
+            }
+          ]
+        },
+        "threshold": {
+          "perSectionMaximum": 1,
+          "heroAndFinal": 1,
+          "pageMinimum": 1
+        },
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 430.5
+        }
+      },
+      "image": "negative-fixtures/two-primary-actions-390.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "positive-control",
+      "width": 768,
+      "result": "Pass",
+      "checks": 13
+    },
+    {
+      "fixture": "legacy-consent-and-action-positive",
+      "width": 768,
+      "result": "Pass",
+      "checks": [
+        "consent",
+        "actions"
+      ]
+    },
+    {
+      "fixture": "overlapping-text",
+      "width": 768,
+      "result": "Fail",
+      "check": {
+        "category": "layout",
+        "key": "overlapping-text",
+        "title": "Overlapping text",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "first": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+              "second": "#overlap-copy",
+              "intersectionPx": [
+                224.55,
+                22
+              ]
+            }
+          ]
+        },
+        "threshold": {
+          "maximumPx": 2,
+          "minimumLineFraction": 0.3,
+          "geometry": "Painted glyph extents from DOM Range and Canvas font metrics"
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 652,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/overlapping-text-768.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "overflow",
+      "width": 768,
+      "result": "Fail",
+      "check": {
+        "category": "layout",
+        "key": "overflow",
+        "title": "Horizontal overflow",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "pageOverflow": 1056,
+          "violations": [
+            "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)"
+          ]
+        },
+        "threshold": {
+          "maximumPx": 1
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 1800,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/overflow-768.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "covered-primary",
+      "width": 768,
+      "result": "Fail",
+      "check": {
+        "category": "layout",
+        "key": "floating",
+        "result": "Fail",
+        "measured": [
+          {
+            "floating": "div.",
+            "target": "a.",
+            "scrollY": 0,
+            "intersection": [
+              153.84,
+              48
+            ],
+            "box": {
+              "x": 24,
+              "y": 274.5,
+              "width": 153.84375,
+              "height": 48
+            }
+          }
+        ],
+        "threshold": {
+          "overlapPx": 2
+        }
+      },
+      "image": "negative-fixtures/covered-primary-768.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "broken-image",
+      "width": 768,
+      "result": "Fail",
+      "check": {
+        "category": "media",
+        "key": "images",
+        "title": "Images decode to a nonzero natural size",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>img:nth-child(4)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(1)>img:nth-child(4)",
+              "url": "http://negative-fixtures.local/deliberate-missing-image.webp"
+            }
+          ]
+        },
+        "threshold": {
+          "broken": 0
+        },
+        "box": {
+          "x": 177.84375,
+          "y": 155.5,
+          "width": 156.828125,
+          "height": 24
+        }
+      },
+      "image": "negative-fixtures/broken-image-768.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "missing-financing-disclosure",
+      "width": 768,
+      "result": "Fail",
+      "check": {
+        "category": "disclosures",
+        "key": "financing",
+        "title": "Financing disclosure accompanies an enabled calculator",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(2)>div:nth-child(1)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(2)>div:nth-child(1)",
+              "issue": "Existing financing disclosure missing"
+            }
+          ]
+        },
+        "threshold": {
+          "missing": 0,
+          "source": "src/platform/constitution.ts FINANCING_DISCLOSURE; existing calculator link to /legal",
+          "location": "On-page disclosure or existing link to captured legal disclosure"
+        },
+        "box": {
+          "x": 24,
+          "y": 370.5,
+          "width": 652,
+          "height": 0
+        }
+      },
+      "image": "negative-fixtures/missing-financing-disclosure-768.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "missing-tcpa-consent",
+      "width": 768,
+      "result": "Fail",
+      "check": {
+        "category": "disclosures",
+        "key": "consent",
+        "title": "Lead forms retain existing contact-consent requirement",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(3)>form:nth-child(1)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(3)>form:nth-child(1)",
+              "issue": "Missing required, initially unticked contact-permission checkbox and wording"
+            }
+          ]
+        },
+        "threshold": {
+          "missing": 0,
+          "source": "src/hero-contact.js; src/pricing.js; existing lead transports"
+        },
+        "box": {
+          "x": 24,
+          "y": 534.5,
+          "width": 652,
+          "height": 80
+        }
+      },
+      "image": "negative-fixtures/missing-tcpa-consent-768.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "placeholder-text",
+      "width": 768,
+      "result": "Fail",
+      "check": {
+        "category": "placeholders",
+        "key": "published-copy",
+        "title": "Published copy has no placeholders or Sample panels",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "sample": false,
+          "found": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+              "text": "TODO {{businessName}}"
+            }
+          ]
+        },
+        "threshold": {
+          "realPublished": 0,
+          "samplePreviewAllowed": true
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 652,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/placeholder-text-768.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "unverified-review",
+      "width": 768,
+      "result": "Fail",
+      "check": {
+        "category": "reviews",
+        "key": "sources",
+        "title": "Reviews trace to sources and full-source aggregates",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(4)>article:nth-child(1)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(4)>article:nth-child(1)",
+              "issue": "Review has no matching source record"
+            }
+          ]
+        },
+        "threshold": {
+          "unverified": 0,
+          "source": "src/review-filter.js; src/reviews.js"
+        },
+        "box": {
+          "x": 24,
+          "y": 714.5,
+          "width": 652,
+          "height": 64
+        }
+      },
+      "image": "negative-fixtures/unverified-review-768.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "invented-urgency",
+      "width": 768,
+      "result": "Fail",
+      "check": {
+        "category": "standing",
+        "key": "honesty",
+        "title": "No invented offers, countdowns or urgency",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+              "text": "Hurry! Only 2 slots available"
+            }
+          ]
+        },
+        "threshold": {
+          "invented": 0
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 652,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/invented-urgency-768.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "two-primary-actions",
+      "width": 768,
+      "result": "Fail",
+      "check": {
+        "category": "standing",
+        "key": "actions",
+        "title": "Section and page primary-action limits",
+        "result": "Fail",
+        "selector": "#home",
+        "measured": {
+          "primaries": 3,
+          "sections": [
+            {
+              "selector": "#home",
+              "count": 2
+            },
+            {
+              "selector": "#contact",
+              "count": 1
+            }
+          ],
+          "failures": [
+            {
+              "selector": "#home",
+              "count": 2,
+              "primaries": [
+                "body>main:nth-child(1)>section:nth-child(1)>a:nth-child(3)",
+                "body>main:nth-child(1)>section:nth-child(1)>a:nth-child(5)"
+              ]
+            }
+          ]
+        },
+        "threshold": {
+          "perSectionMaximum": 1,
+          "heroAndFinal": 1,
+          "pageMinimum": 1
+        },
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 700,
+          "height": 346.5
+        }
+      },
+      "image": "negative-fixtures/two-primary-actions-768.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "positive-control",
+      "width": 1440,
+      "result": "Pass",
+      "checks": 13
+    },
+    {
+      "fixture": "legacy-consent-and-action-positive",
+      "width": 1440,
+      "result": "Pass",
+      "checks": [
+        "consent",
+        "actions"
+      ]
+    },
+    {
+      "fixture": "overlapping-text",
+      "width": 1440,
+      "result": "Fail",
+      "check": {
+        "category": "layout",
+        "key": "overlapping-text",
+        "title": "Overlapping text",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "first": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+              "second": "#overlap-copy",
+              "intersectionPx": [
+                224.55,
+                22
+              ]
+            }
+          ]
+        },
+        "threshold": {
+          "maximumPx": 2,
+          "minimumLineFraction": 0.3,
+          "geometry": "Painted glyph extents from DOM Range and Canvas font metrics"
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 652,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/overlapping-text-1440.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "overflow",
+      "width": 1440,
+      "result": "Fail",
+      "check": {
+        "category": "layout",
+        "key": "overflow",
+        "title": "Horizontal overflow",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "pageOverflow": 384,
+          "violations": [
+            "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)"
+          ]
+        },
+        "threshold": {
+          "maximumPx": 1
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 1800,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/overflow-1440.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "covered-primary",
+      "width": 1440,
+      "result": "Fail",
+      "check": {
+        "category": "layout",
+        "key": "floating",
+        "result": "Fail",
+        "measured": [
+          {
+            "floating": "div.",
+            "target": "a.",
+            "scrollY": 0,
+            "intersection": [
+              153.84,
+              48
+            ],
+            "box": {
+              "x": 24,
+              "y": 274.5,
+              "width": 153.84375,
+              "height": 48
+            }
+          }
+        ],
+        "threshold": {
+          "overlapPx": 2
+        }
+      },
+      "image": "negative-fixtures/covered-primary-1440.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "broken-image",
+      "width": 1440,
+      "result": "Fail",
+      "check": {
+        "category": "media",
+        "key": "images",
+        "title": "Images decode to a nonzero natural size",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>img:nth-child(4)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(1)>img:nth-child(4)",
+              "url": "http://negative-fixtures.local/deliberate-missing-image.webp"
+            }
+          ]
+        },
+        "threshold": {
+          "broken": 0
+        },
+        "box": {
+          "x": 177.84375,
+          "y": 155.5,
+          "width": 156.828125,
+          "height": 24
+        }
+      },
+      "image": "negative-fixtures/broken-image-1440.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "missing-financing-disclosure",
+      "width": 1440,
+      "result": "Fail",
+      "check": {
+        "category": "disclosures",
+        "key": "financing",
+        "title": "Financing disclosure accompanies an enabled calculator",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(2)>div:nth-child(1)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(2)>div:nth-child(1)",
+              "issue": "Existing financing disclosure missing"
+            }
+          ]
+        },
+        "threshold": {
+          "missing": 0,
+          "source": "src/platform/constitution.ts FINANCING_DISCLOSURE; existing calculator link to /legal",
+          "location": "On-page disclosure or existing link to captured legal disclosure"
+        },
+        "box": {
+          "x": 24,
+          "y": 370.5,
+          "width": 652,
+          "height": 0
+        }
+      },
+      "image": "negative-fixtures/missing-financing-disclosure-1440.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "missing-tcpa-consent",
+      "width": 1440,
+      "result": "Fail",
+      "check": {
+        "category": "disclosures",
+        "key": "consent",
+        "title": "Lead forms retain existing contact-consent requirement",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(3)>form:nth-child(1)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(3)>form:nth-child(1)",
+              "issue": "Missing required, initially unticked contact-permission checkbox and wording"
+            }
+          ]
+        },
+        "threshold": {
+          "missing": 0,
+          "source": "src/hero-contact.js; src/pricing.js; existing lead transports"
+        },
+        "box": {
+          "x": 24,
+          "y": 534.5,
+          "width": 652,
+          "height": 80
+        }
+      },
+      "image": "negative-fixtures/missing-tcpa-consent-1440.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "placeholder-text",
+      "width": 1440,
+      "result": "Fail",
+      "check": {
+        "category": "placeholders",
+        "key": "published-copy",
+        "title": "Published copy has no placeholders or Sample panels",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "sample": false,
+          "found": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+              "text": "TODO {{businessName}}"
+            }
+          ]
+        },
+        "threshold": {
+          "realPublished": 0,
+          "samplePreviewAllowed": true
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 652,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/placeholder-text-1440.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "unverified-review",
+      "width": 1440,
+      "result": "Fail",
+      "check": {
+        "category": "reviews",
+        "key": "sources",
+        "title": "Reviews trace to sources and full-source aggregates",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(4)>article:nth-child(1)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(4)>article:nth-child(1)",
+              "issue": "Review has no matching source record"
+            }
+          ]
+        },
+        "threshold": {
+          "unverified": 0,
+          "source": "src/review-filter.js; src/reviews.js"
+        },
+        "box": {
+          "x": 24,
+          "y": 714.5,
+          "width": 652,
+          "height": 64
+        }
+      },
+      "image": "negative-fixtures/unverified-review-1440.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "invented-urgency",
+      "width": 1440,
+      "result": "Fail",
+      "check": {
+        "category": "standing",
+        "key": "honesty",
+        "title": "No invented offers, countdowns or urgency",
+        "result": "Fail",
+        "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+        "measured": {
+          "violations": 1,
+          "failures": [
+            {
+              "selector": "body>main:nth-child(1)>section:nth-child(1)>h1:nth-child(2)",
+              "text": "Hurry! Only 2 slots available"
+            }
+          ]
+        },
+        "threshold": {
+          "invented": 0
+        },
+        "box": {
+          "x": 24,
+          "y": 82.75,
+          "width": 652,
+          "height": 42
+        }
+      },
+      "image": "negative-fixtures/invented-urgency-1440.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "two-primary-actions",
+      "width": 1440,
+      "result": "Fail",
+      "check": {
+        "category": "standing",
+        "key": "actions",
+        "title": "Section and page primary-action limits",
+        "result": "Fail",
+        "selector": "#home",
+        "measured": {
+          "primaries": 3,
+          "sections": [
+            {
+              "selector": "#home",
+              "count": 2
+            },
+            {
+              "selector": "#contact",
+              "count": 1
+            }
+          ],
+          "failures": [
+            {
+              "selector": "#home",
+              "count": 2,
+              "primaries": [
+                "body>main:nth-child(1)>section:nth-child(1)>a:nth-child(3)",
+                "body>main:nth-child(1)>section:nth-child(1)>a:nth-child(5)"
+              ]
+            }
+          ]
+        },
+        "threshold": {
+          "perSectionMaximum": 1,
+          "heroAndFinal": 1,
+          "pageMinimum": 1
+        },
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 700,
+          "height": 346.5
+        }
+      },
+      "image": "negative-fixtures/two-primary-actions-1440.png",
+      "publicOutput": false
+    },
+    {
+      "fixture": "letterboxed-video",
+      "result": "Fail",
+      "check": {
+        "id": "clip-media-0",
+        "category": "media",
+        "key": "clip-load",
+        "title": "Video decodes, has a poster and fills its frame",
+        "result": "Fail",
+        "page": "/fixture",
+        "width": 960,
+        "selector": "body>main:nth-child(1)>section:nth-child(4)>video:nth-child(1)",
+        "frame": "/assets/craft-films/hvac.mp4",
+        "measured": {
+          "duration": 12.041667,
+          "decodeError": null,
+          "boxes": [
+            {
+              "page": "/fixture",
+              "width": 390,
+              "frameWidth": 300,
+              "frameHeight": 300,
+              "objectFit": "contain",
+              "letterboxFraction": 0.4375
+            },
+            {
+              "page": "/fixture",
+              "width": 768,
+              "frameWidth": 300,
+              "frameHeight": 300,
+              "objectFit": "contain",
+              "letterboxFraction": 0.4375
+            },
+            {
+              "page": "/fixture",
+              "width": 1440,
+              "frameWidth": 300,
+              "frameHeight": 300,
+              "objectFit": "contain",
+              "letterboxFraction": 0.4375
+            }
+          ]
+        },
+        "threshold": {
+          "letterboxFraction": 0.02,
+          "decodeErrors": 0,
+          "posterRequired": true
+        },
+        "crop": "frames/b1b11d11d77a1662-0.png"
+      },
+      "publicOutput": false,
+      "realCapture": true
+    }
+  ]
+}

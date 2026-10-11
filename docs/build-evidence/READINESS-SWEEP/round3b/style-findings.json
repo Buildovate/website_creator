@@ -1,0 +1,530 @@
+{
+  "source": "tests/design-styles-browser.mjs:68",
+  "findings": [
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-roof-installation-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-roof-installation-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-roof-repair-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-roof-repair-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-roof-replacement-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-roof-replacement-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-asphalt-shingles-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-asphalt-shingles-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-metal-roofing-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-metal-roofing-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-flat-roofs-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-flat-roofs-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-roof-maintenance-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-roof-maintenance-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-gutters-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-gutters-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-roof-installation-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-roof-installation-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-roof-repair-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-roof-repair-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-roof-replacement-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-roof-replacement-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-asphalt-shingles-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-asphalt-shingles-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-metal-roofing-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-metal-roofing-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-flat-roofs-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-flat-roofs-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-roof-maintenance-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-roof-maintenance-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-gutters-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-gutters-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-roof-installation-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-roof-installation-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-roof-repair-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-roof-repair-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-roof-replacement-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-roof-replacement-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-asphalt-shingles-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-asphalt-shingles-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-metal-roofing-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-metal-roofing-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-flat-roofs-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-flat-roofs-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-roof-maintenance-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-roof-maintenance-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-gutters-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-gutters-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-roof-installation-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-roof-installation-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-roof-repair-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-roof-repair-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-roof-replacement-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-roof-replacement-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-asphalt-shingles-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-asphalt-shingles-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-metal-roofing-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-metal-roofing-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-flat-roofs-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-flat-roofs-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-roof-maintenance-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-roof-maintenance-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-gutters-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-gutters-desktop-normal",
+      "pass": false
+    },
+    {
+      "label": "WCAG text contrast roofing-bold-home-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-roof-installation-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-roof-installation-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-roof-repair-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-roof-repair-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-roof-replacement-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-roof-replacement-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-asphalt-shingles-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-asphalt-shingles-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-metal-roofing-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-metal-roofing-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-flat-roofs-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-flat-roofs-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-roof-maintenance-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-roof-maintenance-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-current-services-gutters-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-current-services-gutters-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-roof-installation-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-roof-installation-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-roof-repair-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-roof-repair-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-roof-replacement-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-roof-replacement-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-asphalt-shingles-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-asphalt-shingles-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-metal-roofing-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-metal-roofing-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-flat-roofs-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-flat-roofs-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-roof-maintenance-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-roof-maintenance-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-bold-services-gutters-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-bold-services-gutters-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-roof-installation-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-roof-installation-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-roof-repair-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-roof-repair-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-roof-replacement-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-roof-replacement-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-asphalt-shingles-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-asphalt-shingles-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-metal-roofing-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-metal-roofing-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-flat-roofs-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-flat-roofs-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-roof-maintenance-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-roof-maintenance-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-fresh-services-gutters-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-fresh-services-gutters-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-roof-installation-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-roof-installation-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-roof-repair-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-roof-repair-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-roof-replacement-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-roof-replacement-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-asphalt-shingles-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-asphalt-shingles-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-metal-roofing-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-metal-roofing-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-flat-roofs-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-flat-roofs-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-roof-maintenance-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-roof-maintenance-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header centers <= 1px roofing-complete-classic-services-gutters-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "header text centers <= 1px roofing-complete-classic-services-gutters-desktop-reduced",
+      "pass": false
+    },
+    {
+      "label": "WCAG text contrast roofing-bold-home-desktop-nojs",
+      "pass": false
+    },
+    {
+      "label": "WCAG text contrast roofing-bold-home-phone-nojs",
+      "pass": false
+    }
+  ],
+  "allChecks": 9538
+}

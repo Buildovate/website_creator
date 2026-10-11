@@ -1,0 +1,22 @@
+PASS confirmed contractor values are copied verbatim with source labels
+PASS unconfirmed saved or generated defaults never become suggestions
+PASS only real Business and Questionnaire fields are mapped
+PASS prices, licenses, experience, financing, area and owner photos are excluded
+PASS questionnaire headline and introduction reuse the saved wording without generation
+PASS missing and invalid source values stay blank
+PASS nonexistent form controls are never created
+PASS empty unedited fields are proposals only
+PASS typed values and intentionally cleared fields are always kept
+PASS numeric-looking typed answers are not treated as empty
+PASS Undo restores the exact prior value without changing its input
+PASS Undo keeps edits made after autofill
+PASS all outside adapters honestly remain Not connected
+PASS owner gets only their real saved source and optimistic version
+PASS admin and existing editor roles reuse existing write access
+PASS viewer cannot invoke autofill
+PASS anonymous access is denied
+PASS tenant isolation rejects both foreign directions
+PASS autofill has no write method or second save path
+PASS unknown form type is rejected
+PASS repeated proposals never write or confirm stored business facts
+21/21 passed

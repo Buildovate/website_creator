@@ -1,0 +1,37 @@
+{
+  "action": "Add exact public workspace-form Send inquiry primary recognition",
+  "executed": false,
+  "reason": "The exact form recognition is conditionally authorized, but this command adds no required negative fixtures for missing/hidden/disabled/duplicate/wrong-page cases, so the stated standing approval conditions are not met.",
+  "retryAttempted": true,
+  "sourceSha256Unchanged": "315a269464213bf0faf73c8d360c012467544dc154f6e5500d3ae50e24e93fe7",
+  "contractBlocking": 3,
+  "page": "/s/sample-fictional-copper-kite-ventura-contract/forms/review-forms",
+  "widths": [
+    390,
+    768,
+    1440
+  ],
+  "standaloneDiagnosticWidths": [
+    390,
+    768,
+    1280,
+    1440
+  ],
+  "measurement": "0 recognized primaries; the existing visible Send inquiry button is present",
+  "requiredNextBundle": [
+    "Exact form-page selector only",
+    "Positive and missing, hidden, disabled, zero-size, offscreen, duplicate, wrong-page negative fixtures",
+    "Round-4 detector SHA-256 lock proof"
+  ],
+  "status": "Complete approved retry executed successfully; final gates continue",
+  "retryExplicitlyApproved": true,
+  "resolved": true,
+  "retryBundle": "Exact entry + positive/negative fixtures + frozen lock proof + README row",
+  "retryResult": {
+    "formPositive": 4,
+    "formNegative": 64,
+    "callPositive": 4,
+    "callNegative": 60,
+    "allPassed": true
+  }
+}

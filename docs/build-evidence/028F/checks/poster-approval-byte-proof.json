@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "approval": "Joe approved poster-only changes, 2026-09-29 PT",
+  "proofs": [
+    {
+      "url": "/s/ambient-baseline-roofing/financing?preview=1",
+      "reason": "Add installed poster attributes only; proposal in memory, not applied",
+      "oldApprovedSha256": "efe7d26a5403cb51b15562fa163d4058724d9e544e72ae8997af369d839022e3",
+      "proposedNormalizedSha256": "58ab10dc27a708d528c9aae3c53bc2a07a039446e7ec3718e19ad1cf3b422e17",
+      "currentRawSha256": "322640e76c0663b025beee903a514e681a7102b654c59c19a899cefc55669556",
+      "proposedRawSha256": "b57cc8b0115795794a28dff8d8a1062ac2f86e6d3d574fc93f7809d76444937d",
+      "passed": true,
+      "removedAttributes": [
+        "/assets/planning/027A-part1/financing-poster-1280.webp"
+      ],
+      "bytesBefore": 17614,
+      "bytesAfter": 17678,
+      "onlyAddedPosterAttributes": true
+    },
+    {
+      "url": "/s/ambient-baseline-roofing/promotions?preview=1",
+      "reason": "Add installed poster attributes only; proposal in memory, not applied",
+      "oldApprovedSha256": "eb338f60d545eb039d0ee0c78975ed518f32ddbfa17682fa4406bf65a9f96dec",
+      "proposedNormalizedSha256": "56d6d5a3ecc82fc1415506c1c31275833c037132e74e762a1dbd67f6eecc1dc4",
+      "currentRawSha256": "d598f78402353c46280eab3070de2b1f4f08e9e2a60a5a00b681727db9595c73",
+      "proposedRawSha256": "0224c0ff59a67303518d770528c7bd795104307f64dbf4ddb6f8f9f3fc507718",
+      "passed": true,
+      "removedAttributes": [
+        "/assets/planning/roofing-promotions-ambient-1280.webp",
+        "/assets/planning/roofing-promotions-scroll-1280.webp"
+      ],
+      "bytesBefore": 16466,
+      "bytesAfter": 16591,
+      "onlyAddedPosterAttributes": true
+    }
+  ],
+  "providerCalls": 0
+}

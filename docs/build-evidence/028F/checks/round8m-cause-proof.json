@@ -1,0 +1,13 @@
+{
+  "status": 200,
+  "virtualOverrides": [
+    "Revert only Roofing preview name in current worker to Your Roofing Company",
+    "Use byte-exact round8k site-polish.js snapshot for preview navigation"
+  ],
+  "sourceFilesModified": false,
+  "builtArtifactsModified": false,
+  "restoredResponseMatchesBaseline": false,
+  "expectedNormalizedSha256": "734a356fe549eda598adad07cc56c3f98cad8c15a4fe720e8260eb505de525a9",
+  "restoredNormalizedSha256": "2585905a9dd0d4075c345703f7a8a00f6115ce782f4178e62f004384dbc1bab4",
+  "cause": "After 8k, preview-route work changed the Roofing sample name and sample-site navigation; the rebuilt worker used those changes in 8l. The approved one-file source-lock lookup did not cause this response change."
+}

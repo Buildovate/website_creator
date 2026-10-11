@@ -1,0 +1,5 @@
+Review approval test prerequisite: f47d5e57-84f3-4cb9-a6f0-e32fb0342c7d website
+Review approval test prerequisite: f47d5e57-84f3-4cb9-a6f0-e32fb0342c7d project:dbc2a941-7234-488a-a551-5477f562352b
+Review approval test prerequisite: f47d5e57-84f3-4cb9-a6f0-e32fb0342c7d project:aff3fa93-f09d-4d72-9908-3b4577685625
+PASS CRM refresh: cross-kind normalized dedup, batch duplicate skipping, versioned call logs, assignment validation, stage/program history, field configuration, calendar overlap/custom answers, signed document hash and immutable approval, tenant isolation, deletion, idempotent demo seeding and authenticated last-seen.
+

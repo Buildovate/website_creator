@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "completed": 1,
+  "checks": [
+    "real contractor workspace defaults to Game and real saved tenant name"
+  ],
+  "screenshots": [
+    "g2a-desktop-fresh.png"
+  ],
+  "error": "locator.click: Error: strict mode violation: locator('[data-section=business]') resolved to 2 elements:\n    1) <button type=\"button\" class=\"bv-button\" data-action=\"section\" data-section=\"business\">Business</button> aka getByLabel('Website settings').getByText('Business')\n    2) <button type=\"button\" data-action=\"section\" data-section=\"business\" class=\"secondary bv-button\">Review</button> aka getByText('Review').nth(3)\n\nCall log:\n\u001b[2m  - waiting for locator('[data-section=business]')\u001b[22m\n\n    at C:\\Users\\joe\\wc-game\\tests\\game-desktop.mjs:31:168\n    at async check (C:\\Users\\joe\\wc-game\\tests\\game-desktop.mjs:20:33)\n    at async file:///C:/Users/joe/wc-game/tests/game-desktop.mjs:31:2"
+}

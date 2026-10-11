@@ -1,0 +1,8 @@
+Review approval test prerequisite: b3356820-ce4a-44b9-b7b7-f467e076a9bc website
+Review approval test prerequisite: b3356820-ce4a-44b9-b7b7-f467e076a9bc project:fa271a8f-47dd-44b2-81c6-d62a3d0609f4
+Review approval test prerequisite: b3356820-ce4a-44b9-b7b7-f467e076a9bc project:f736b5bf-e67a-438c-aefe-a1f4689004e2
+Review approval test prerequisite: b3356820-ce4a-44b9-b7b7-f467e076a9bc pages:709a8ceb-8960-4897-9918-82be161ebe13
+Review approval test prerequisite: b3356820-ce4a-44b9-b7b7-f467e076a9bc forms:fa1978c2-3a84-4bc4-a46d-63fc5f9b8283
+PASS workspace: role isolation, audited admin access, draft/public separation, page escaping/uniqueness, form consent/submissions, server plan enforcement, AI setup gate, lead import dedup, proposal approvals/locking, payment URL validation, device preview auth, workspace backups, 8-card roof grid.
+PASS owner upload selection/private media and workspace page restoration with submissions retained.
+

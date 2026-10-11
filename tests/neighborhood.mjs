@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {Reader} from 'mmdb-lib';
+import {createGeoLookup,visitorAddress,trustedProxyList,cityLookup} from '../src/aws/geoip.js';
+import {normalizePlatform} from '../src/platform/constitution.ts';
+import {neighborhoodMessage} from '../src/platform/neighborhood.ts';
+import {worker,env,admin} from './preview-fixture.mjs';
+const req=(socket,forwarded)=>({socket:{remoteAddress:socket},headers:{'x-forwarded-for':forwarded}});
+assert.equal(visitorAddress(req('8.8.8.8','1.1.1.1')),'8.8.8.8','untrusted peers cannot spoof city');
+const trusted=trustedProxyList('127.0.0.1/32,10.42.1.0/24');
+assert.equal(visitorAddress(req('127.0.0.1','1.1.1.1, 8.8.8.8, 10.42.1.5'),trusted),'8.8.8.8');
+assert.equal(visitorAddress(req('::ffff:127.0.0.1','8.8.8.8:45231'),trusted),'8.8.8.8');
+assert.equal(visitorAddress(req('127.0.0.1','[2001:4860:4860::8888]:443'),trusted),'2001:4860:4860::8888');
+assert.equal(visitorAddress(req('127.0.0.1','unknown'),trusted),null);
+for(const config of ['0.0.0.0/0','example.com','10.0.0.0/33','::/0'])assert.throws(()=>trustedProxyList(config));
+const fake={get(){return {city:{names:{en:'North Hollywood'}},country:{iso_code:'US'},subdivisions:[{names:{en:'California'}}]};}};
+for(const ip of ['127.0.0.1','10.0.0.1','::1','fc00::1','192.0.2.1',null])assert.equal(cityLookup(fake,ip),null);
+assert.deepEqual(cityLookup(fake,'8.8.8.8'),{city:'North Hollywood',region:'California',country:'US',source:'dbip'});
+const missing=await createGeoLookup({GEOIP_DB_PATH:'tests/no-such-database.mmdb'});assert.equal(missing(req('8.8.8.8')),null);
+const database=await readFile('aws/geoip/dbip-city-lite.mmdb').catch(()=>null);
+if(database){const result=cityLookup(new Reader(database),'8.8.8.8');assert.ok(result?.city&&result.country);assert.deepEqual(Object.keys(result).sort(),['city','country','region','source']);console.log('PASS installed DB-IP database performs a real local city lookup');}
+assert.throws(()=>normalizePlatform({neighborhood:{proofs:[{city:'North Hollywood',confirmed:true,url:'https://example.test/reviews'}]}}),/country and region/);
+assert.throws(()=>normalizePlatform({neighborhood:{proofs:[{city:'A',url:'javascript:alert(1)'}]}}),/HTTPS/);
+const data={location:{city:'North Hollywood',country:'US',region:'California',source:'dbip'},country:'US',region:'California',cities:['North Hollywood'],proofs:[{city:'North Hollywood',url:'https://example.test/reviews'}]};
+assert.match(neighborhoodMessage(data,'North Hollywood').heading,/Love Us/);
+assert.doesNotMatch(neighborhoodMessage({...data,region:'New York'},'North Hollywood').heading,/Love Us/);
+assert.doesNotMatch(neighborhoodMessage({...data,country:'CA'},'North Hollywood').heading,/Love Us/);
+assert.doesNotMatch(neighborhoodMessage({...data,proofs:[]},'North Hollywood',true).heading,/Love Us/);
+assert.match(neighborhoodMessage({...data,location:null},'North Hollywood',true).heading,/Love Us/);
+const origin='https://test.local';
+async function request(path,method='GET',value,user=admin,extra={}){return worker.fetch(new Request(origin+path,{method,headers:{origin,'Content-Type':'application/json','x-forwarded-for':'8.8.8.8',...(user?{'oai-authenticated-user-id':user.id,'oai-authenticated-user-email':user.email}:{})},body:value===undefined?undefined:JSON.stringify(value)}),{...env,...extra});}
+async function api(path,method='GET',value){const response=await request('/api'+path,method,value);assert.equal(response.status,200,await response.clone().text());return response.json();}
+let tenant=(await api('/tenants','POST',{slug:'neighborhood-qa',settings:{name:'Sample Fictional Neighborhood QA',trade:'Roofing',phone:'8055550123',area:'North Hollywood',hero:'Plan your roofing project',services:[{name:'Roof repair',description:'Discuss the project.'}],serviceAreas:[{city:'North Hollywood'}],platform:{neighborhood:{country:'US',region:'California',proofs:[{city:'North Hollywood',url:'https://example.test/verified-reviews',confirmed:true},{city:'Outside area',url:'https://example.test/other',confirmed:true},{city:'Draft proof',url:'https://example.test/draft',confirmed:false}]},footer:{socials:{facebook:{url:'https://facebook.com/example',enabled:true}}}}}})).tenant;
+const endpoint='/api/public/'+tenant.slug+'/location';
+assert.equal((await request(endpoint,'GET',undefined,null)).status,404);
+assert.equal((await request(endpoint+'?preview=1','GET',undefined,null)).status,401);
+assert.equal((await request(endpoint+'?preview=1','GET',undefined,{id:'outsider',email:'outsider@example.test'})).status,404);
+await api('/tenants/'+tenant.id+'/publish','POST',{approved:true,version:tenant.version});tenant=(await api('/tenants/'+tenant.id)).tenant;
+const response=await request(endpoint,'GET',undefined,null);assert.match(response.headers.get('cache-control'),/no-store/);const body=await response.json();assert.equal(body.location,null,'client headers never become trusted visitor metadata');assert.equal(body.proofs.length,1);assert.equal(body.proofs[0].city,'North Hollywood');
+const located=await request(endpoint,'GET',undefined,null,{VISITOR_LOCATION:data.location});assert.deepEqual((await located.json()).location,data.location);
+assert.equal((await request(endpoint,'POST',{},null)).status,405);
+const homepage=await (await request('/s/'+tenant.slug,'GET',undefined,null)).text();assert.match(homepage,/data-neighborhood/);assert.match(homepage,/aria-label="Facebook profile \(opens a new tab\)"[^>]*><svg/);assert.doesNotMatch(homepage,/Neighbors in North Hollywood Love Us/);
+tenant=(await api('/tenants/'+tenant.id,'PUT',{version:tenant.version,settings:{...tenant.settings,platform:{...tenant.settings.platform,neighborhood:{enabled:false}}}})).tenant;
+assert.equal((await request(endpoint+'?preview=1')).status,404);assert.equal((await request(endpoint,'GET',undefined,null)).status,200,'draft does not alter published banner');
+await api('/tenants/'+tenant.id+'/publish','POST',{approved:true,version:tenant.version});assert.equal((await request(endpoint,'GET',undefined,null)).status,404);
+console.log('PASS trusted proxy boundaries, private IP fallback, geographic review evidence, social SVGs, publication isolation and anonymous location route');

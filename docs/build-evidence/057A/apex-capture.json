@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "checks": 6,
+  "ip": "192.0.2.10",
+  "source": "environment only",
+  "captures": [
+    "screenshots/apex-set-1440.png",
+    "screenshots/apex-set-390.png"
+  ],
+  "providerCalls": 0
+}

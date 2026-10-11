@@ -1,0 +1,17 @@
+✔ each film reaches its actual last frame and returns to its first frame (3.8269ms)
+✔ fast scrolling out of view during a seek still completes the latest target (0.6756ms)
+✔ metadata arriving after the user leaves the scene uses the ending target (0.6054ms)
+✔ detail scene plays the entire film while the finished scene is still visible (0.5828ms)
+✔ pause freezes the scroll target; resume and chapter jumps finish pending seeks (0.7104ms)
+✔ reduced motion and media errors retain a static finished scene (1.1444ms)
+✔ sticky desktop and mobile headers leave both video endings visible (3.012ms)
+✔ a deferred source error before loading does not disable a below-fold film (0.6176ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16.8302
+

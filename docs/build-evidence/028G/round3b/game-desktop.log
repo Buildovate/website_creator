@@ -1,0 +1,19 @@
+PASS real contractor workspace defaults to Game and real saved tenant name
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.click: Error: strict mode violation: locator('[data-section=business]') resolved to 2 elements:
+    1) <button type="button" class="bv-button" data-action="section" data-section="business">Business</button> aka getByLabel('Website settings').getByText('Business')
+    2) <button type="button" data-action="section" data-section="business" class="secondary bv-button">Review</button> aka getByText('Review').nth(3)
+
+Call log:
+  - waiting for locator('[data-section=business]')
+
+    at C:\Users\joe\wc-game\tests\game-desktop.mjs:31:168
+    at async check (C:\Users\joe\wc-game\tests\game-desktop.mjs:20:33)
+    at async file:///C:/Users/joe/wc-game/tests/game-desktop.mjs:31:2 {
+  log: [ "  - waiting for locator('[data-section=business]')" ]
+}
+
+Node.js v24.19.0

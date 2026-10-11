@@ -1,0 +1,29 @@
+/* Opt-in only: sites without a saved media record load none of these rules. */
+body[data-library-media] .ml-media{position:relative;isolation:isolate;overflow:hidden;min-width:0;aspect-ratio:16/10;background:#18232b}
+body[data-library-media] .ml-poster{display:block;width:100%;height:100%;object-fit:cover;margin:0}
+body[data-library-media] .ml-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+body[data-library-media] .ml-video[data-playing]{opacity:1}
+body[data-library-media] .ml-tint{position:absolute;inset:0;background:var(--ml-tint,transparent);opacity:var(--ml-tint-opacity,0);pointer-events:none}
+body[data-library-media] .sv-hero-media>.ml-media,body[data-library-media] .kit-hero-image>.ml-media,body[data-library-media] .story-visuals>.ml-media{width:100%;height:100%;aspect-ratio:auto}
+body[data-library-media] .ml-section-still{margin:0 0 1.5rem;width:100%;max-width:100%;min-width:0;grid-column:1/-1}
+body[data-library-media] .ml-section-still .ml-media{aspect-ratio:4/1;max-height:220px}
+body[data-library-media] .ml-motion{position:absolute;z-index:3;bottom:16px;left:16px;min-height:44px;padding:8px 16px;color:#fff;background:#18232b;border:2px solid #fff;border-radius:4px;font:inherit;cursor:pointer}
+body[data-library-media] .ml-motion:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px #18232b}
+@media(max-width:768px){body[data-library-media] .ml-section-still .ml-media{aspect-ratio:2/1;max-height:200px}}
+@media(prefers-reduced-motion:reduce){body[data-library-media] .ml-video,body[data-library-media] .ml-motion{display:none!important}body[data-library-media] .ml-media *{animation:none!important;transition:none!important}}
+
+body[data-library-media] .sv-hero-media{min-width:0;width:100%}
+body[data-library-media] .sv-hero-b .ml-media{height:auto;aspect-ratio:4/5}
+body[data-library-media] .sv-hero-c .ml-media{height:auto;aspect-ratio:16/6}
+
+/* Opaque text planes keep palette-tinted photographs out of contrast calculations. */
+body[data-library-media] .scroll-story :is(.story-content,.story-topline,.story-bottom,.story-accessible){background:var(--look-deep,#101513)}
+body[data-library-media] .kit-hero-copy{background:var(--look-deep,#101513)}
+body[data-library-media] .ml-motion-inline{position:relative;inset:auto;pointer-events:auto}
+body[data-library-media]:not([data-site-style]) .story-primary{background:var(--generated-cta,#18232b)!important;color:var(--generated-cta-text,#fff)!important}
+
+body[data-library-media] .kit-hero-copy .kit-eyebrow span{color:inherit}
+body[data-library-media] .ml-motion-float{left:auto;right:16px;bottom:auto;top:16px}
+
+@media(prefers-reduced-motion:no-preference){body[data-library-media] .scroll-story .story-stage{top:var(--ml-header-height,84px)}}
+body[data-library-media] .ml-motion-inline{position:relative!important;inset:auto!important;width:auto!important;height:auto!important;padding:8px 16px!important;color:#fff!important;background:#18232b!important;font:inherit!important;border:2px solid #fff!important;border-radius:4px!important}body[data-library-media] .ml-motion-inline:after{content:none}

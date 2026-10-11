@@ -10,7 +10,7 @@
     "patio repair": "/assets/specialties/patios-patio-repair.webp"
   },
   "Plumbing": {
-    "leak detection": "/assets/specialties/plumbing-leak-detection.webp",
+    "leak detection": "/assets/service-plumbing-leak-showpiece.png",
     "drain cleaning": "/assets/specialties/plumbing-drain-cleaning.webp",
     "water heaters": "/assets/specialties/plumbing-water-heaters.webp",
     "sewer lines": "/assets/specialties/plumbing-sewer-lines.webp",
@@ -20,7 +20,7 @@
     "plumbing repair": "/assets/specialties/plumbing-plumbing-repair.webp"
   },
   "HVAC": {
-    "air conditioning installation": "/assets/specialties/hvac-air-conditioning-installation.webp",
+    "air conditioning installation": "/assets/service-hvac-install-showpiece.png",
     "air conditioning repair": "/assets/specialties/hvac-air-conditioning-repair.webp",
     "heating installation": "/assets/specialties/hvac-heating-installation.webp",
     "heating repair": "/assets/specialties/hvac-heating-repair.webp",
@@ -61,12 +61,116 @@
   },
   "Roofing": {
     "roof installation": "/assets/service-installation.webp",
-    "roof repair": "/assets/service-repair.webp",
-    "roof replacement": "/assets/service-installation.webp",
+    "roof repair": "/assets/service-roof-repair-showpiece.png",
+    "roof replacement": "/assets/service-roof-replacement-showpiece.png",
     "asphalt shingles": "/assets/service-shingles.webp",
     "metal roofing": "/assets/service-metal.webp",
     "flat roofs": "/assets/service-flat.webp",
     "roof maintenance": "/assets/service-maintenance.webp",
-    "gutters": "/assets/service-gutters.webp"
+    "gutters": "/assets/service-gutters.webp",
+    "storm damage": "/assets/service-showpiece/roofing-storm-damage-hero.webp",
+    "inspections": "/assets/service-showpiece/roofing-inspections-hero.webp",
+    "asphalt shingle install / repair": "/assets/service-showpiece/roofing-asphalt-shingle-install-repair-hero.webp",
+    "roof sealing": "/assets/service-showpiece/roofing-roof-sealing-hero.webp"
+  },
+  "Flooring": {
+    "hardwood flooring": "/assets/specialties/flooring-hardwood-flooring.webp",
+    "luxury vinyl flooring": "/assets/specialties/flooring-luxury-vinyl-flooring.webp",
+    "laminate flooring": "/assets/specialties/flooring-laminate-flooring.webp",
+    "tile flooring": "/assets/specialties/flooring-tile-flooring.webp",
+    "floor refinishing": "/assets/specialties/flooring-floor-refinishing.webp",
+    "floor repair": "/assets/specialties/flooring-floor-repair.webp",
+    "subfloor preparation": "/assets/specialties/flooring-subfloor-preparation.webp",
+    "commercial flooring": "/assets/specialties/flooring-commercial-flooring.webp"
+  },
+  "Painting": {
+    "interior painting": "/assets/specialties/painting-interior-painting.webp",
+    "exterior painting": "/assets/specialties/painting-exterior-painting.webp",
+    "cabinet painting": "/assets/specialties/painting-cabinet-painting.webp",
+    "deck and fence staining": "/assets/specialties/painting-deck-and-fence-staining.webp",
+    "surface preparation": "/assets/specialties/painting-surface-preparation.webp",
+    "drywall repair": "/assets/specialties/painting-drywall-repair.webp",
+    "decorative finishes": "/assets/specialties/painting-decorative-finishes.webp",
+    "commercial painting": "/assets/specialties/painting-commercial-painting.webp"
+  },
+  "Fencing": {
+    "wood fencing": "/assets/specialties/fencing-wood-fencing.webp",
+    "vinyl fencing": "/assets/specialties/fencing-vinyl-fencing.webp",
+    "metal fencing": "/assets/specialties/fencing-metal-fencing.webp",
+    "privacy fencing": "/assets/specialties/fencing-privacy-fencing.webp",
+    "gates": "/assets/specialties/fencing-gates.webp",
+    "fence repair": "/assets/specialties/fencing-fence-repair.webp",
+    "pool fencing": "/assets/specialties/fencing-pool-fencing.webp",
+    "commercial fencing": "/assets/specialties/fencing-commercial-fencing.webp"
+  },
+  "Garage Doors": {
+    "garage door installation": "/assets/specialties/garage-doors-garage-door-installation.webp",
+    "garage door repair": "/assets/specialties/garage-doors-garage-door-repair.webp",
+    "spring replacement": "/assets/specialties/garage-doors-spring-replacement.webp",
+    "opener installation": "/assets/specialties/garage-doors-opener-installation.webp",
+    "opener repair": "/assets/specialties/garage-doors-opener-repair.webp",
+    "panel replacement": "/assets/specialties/garage-doors-panel-replacement.webp",
+    "weather sealing": "/assets/specialties/garage-doors-weather-sealing.webp",
+    "garage door maintenance": "/assets/specialties/garage-doors-garage-door-maintenance.webp"
+  },
+  "Pest Control": {
+    "pest inspections": "/assets/specialties/pest-control-pest-inspections.webp",
+    "ant control": "/assets/specialties/pest-control-ant-control.webp",
+    "rodent control": "/assets/specialties/pest-control-rodent-control.webp",
+    "termite inspections": "/assets/specialties/pest-control-termite-inspections.webp",
+    "cockroach control": "/assets/specialties/pest-control-cockroach-control.webp",
+    "spider control": "/assets/specialties/pest-control-spider-control.webp",
+    "mosquito control": "/assets/specialties/pest-control-mosquito-control.webp",
+    "preventive maintenance": "/assets/specialties/pest-control-preventive-maintenance.webp"
+  },
+  "Windows/Doors": {
+    "window replacement": "/assets/specialties/windows-doors-window-replacement.svg",
+    "window installation": "/assets/specialties/windows-doors-window-installation.svg",
+    "energy-efficient windows": "/assets/specialties/windows-doors-energy-efficient-windows.svg",
+    "entry doors": "/assets/specialties/windows-doors-entry-doors.svg",
+    "patio doors": "/assets/specialties/windows-doors-patio-doors.svg",
+    "sliding glass doors": "/assets/specialties/windows-doors-sliding-glass-doors.svg",
+    "french doors": "/assets/specialties/windows-doors-french-doors.svg",
+    "window and door repair": "/assets/specialties/windows-doors-window-and-door-repair.svg"
+  },
+  "Solar": {
+    "solar panel installation": "/assets/specialties/solar-solar-panel-installation.svg",
+    "solar battery storage": "/assets/specialties/solar-solar-battery-storage.svg",
+    "solar system design": "/assets/specialties/solar-solar-system-design.svg",
+    "solar panel maintenance": "/assets/specialties/solar-solar-panel-maintenance.svg",
+    "solar panel cleaning": "/assets/specialties/solar-solar-panel-cleaning.svg",
+    "solar inverter replacement": "/assets/specialties/solar-solar-inverter-replacement.svg",
+    "solar removal and reinstallation": "/assets/specialties/solar-solar-removal-and-reinstallation.svg",
+    "solar system monitoring": "/assets/specialties/solar-solar-system-monitoring.svg"
+  },
+  "Concrete": {
+    "concrete patios": "/assets/service-showpiece/concrete-concrete-patios-hero.webp",
+    "concrete driveways": "/assets/service-showpiece/concrete-concrete-driveways-hero.webp",
+    "concrete foundations": "/assets/service-showpiece/concrete-concrete-foundations-hero.webp",
+    "stamped concrete": "/assets/service-showpiece/concrete-stamped-concrete-hero.webp",
+    "concrete walkways": "/assets/service-showpiece/concrete-concrete-walkways-hero.webp",
+    "concrete slabs": "/assets/service-showpiece/concrete-concrete-slabs-hero.webp",
+    "decorative concrete": "/assets/service-showpiece/concrete-decorative-concrete-hero.webp",
+    "concrete repair": "/assets/service-showpiece/concrete-concrete-repair-hero.webp"
+  },
+  "Pools": {
+    "pool tile and coping": "/assets/service-showpiece/pools-pool-tile-and-coping-hero.webp",
+    "pool construction": "/assets/service-showpiece/pools-pool-construction-hero.webp",
+    "pool remodeling": "/assets/service-showpiece/pools-pool-remodeling-hero.webp",
+    "pool design": "/assets/service-showpiece/pools-pool-design-hero.webp",
+    "pool equipment": "/assets/service-showpiece/pools-pool-equipment-hero.webp",
+    "pool resurfacing": "/assets/service-showpiece/pools-pool-resurfacing-hero.webp",
+    "pool maintenance": "/assets/service-showpiece/pools-pool-maintenance-hero.webp",
+    "pool decking": "/assets/service-showpiece/pools-pool-decking-hero.webp"
+  },
+  "Locksmith": {
+    "residential lockout": "/assets/trade-enablement/locksmith-residential-lockout-hero.webp",
+    "lock installation": "/assets/trade-enablement/locksmith-lock-installation-hero.webp",
+    "rekeying": "/assets/trade-enablement/locksmith-rekeying-hero.webp",
+    "automotive lockout": "/assets/trade-enablement/locksmith-automotive-lockout-hero.webp",
+    "smart locks": "/assets/trade-enablement/locksmith-smart-locks-hero.webp",
+    "safe servicing": "/assets/trade-enablement/locksmith-safe-servicing-hero.webp",
+    "commercial access control": "/assets/trade-enablement/locksmith-commercial-access-control-hero.webp",
+    "key duplication": "/assets/trade-enablement/locksmith-key-duplication-hero.webp"
   }
 }

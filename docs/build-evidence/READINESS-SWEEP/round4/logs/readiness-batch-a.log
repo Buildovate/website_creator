@@ -1,0 +1,27 @@
+✔ B04 compiled Game reads this request payment DB, not an unbundled dynamic file (62.4847ms)
+✔ B04 adapters isolate two payment databases (43.196ms)
+✔ B05 Game and domain wizard use the same fresh tenant-bound live proof (22.641ms)
+✔ B05 stale or foreign proof never awards live status (0.4098ms)
+✔ B07/B08/B11 runtime settings survive loadEnv, without defaults or secrets (0.5372ms)
+✔ B11 checkout remains disconnected with no keys and tax remains explicit (1.2218ms)
+✔ B09 live check adapter uses injected DNS and HTTPS and verifies tenant identity (3.4582ms)
+✔ B09 private addresses block HTTP and wrong tenant never proves live (1.7879ms)
+✔ B10 no key means honest Not connected and no portal call (15.4848ms)
+✔ B10 owner portal uses saved customer and canonical return; viewer denied (50.7991ms)
+✔ B10 portal refuses a provider response outside Stripe (22.1373ms)
+✔ B10 live keys are refused before SDK construction (0.5546ms)
+✔ B23 settled ownership enables download and refund overrides old ownership (24.9591ms)
+✔ B23 another tenant and a renter do not inherit ownership (26.8554ms)
+✔ B24 expired canceled rental is hidden while data and 90-day hold remain (56.9176ms)
+✔ B24 paid term and undecided past-due policy retain public availability (22.4926ms)
+✔ B25 exact replay repairs interrupted grant without a second ledger or callback (19.43ms)
+✔ B25 different payload with same event ID is rejected (24.285ms)
+✔ B27 installed SDK invoice shape settles only explicit single-SKU metadata (21.9956ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 434.9192

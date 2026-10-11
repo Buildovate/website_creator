@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "name": "chat configuration create and read",
+      "pass": true
+    },
+    {
+      "name": "chat ordinary message uses PostgreSQL",
+      "pass": true
+    },
+    {
+      "name": "chat team handoff uses PostgreSQL",
+      "pass": true
+    },
+    {
+      "name": "admin chat thread list",
+      "pass": true
+    },
+    {
+      "name": "admin chat detail uses PostgreSQL",
+      "pass": true
+    },
+    {
+      "name": "admin chat takeover",
+      "pass": true
+    },
+    {
+      "name": "admin chat reply local-only",
+      "pass": true
+    },
+    {
+      "name": "confirm phone consumes synthetic verification record",
+      "pass": true
+    },
+    {
+      "name": "inbound synthetic SMS is local-only and idempotent",
+      "pass": true
+    },
+    {
+      "name": "admin chat close",
+      "pass": true
+    },
+    {
+      "name": "root sitemap published-slug query",
+      "pass": true
+    }
+  ],
+  "providerCalls": 0,
+  "fixture": "Fictional local PostgreSQL data; no sends, no provider API"
+}

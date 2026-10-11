@@ -1,0 +1,18 @@
+{
+  "screens": 202,
+  "phone": 101,
+  "desktop": 101,
+  "layoutFailures": [],
+  "errors": [],
+  "workflows": {
+    "businessSave": true,
+    "questionnaireSaveReopen": true,
+    "publishedIsolation": true,
+    "privatePreview": true,
+    "explicitLocalPublish": true,
+    "fileSelectionPreviewUploadRetry": true,
+    "cameraCancelHandler": true,
+    "realCamera": "PENDING iPhone/Safari",
+    "editorViewerRoleChecks": true
+  }
+}

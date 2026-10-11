@@ -1,0 +1,206 @@
+[
+  {
+    "kit": "roofing",
+    "homeIdentical": true,
+    "services": [
+      "roof-installation",
+      "roof-repair",
+      "roof-replacement"
+    ],
+    "manifestAssets": 28,
+    "sha256": "cbffc2c0e824ce50db9941821ebe1d4c94db6827d53edce1f6a8341c9ab70646",
+    "bytes": 21392
+  },
+  {
+    "kit": "patios",
+    "homeIdentical": true,
+    "services": [
+      "patio-covers",
+      "motorized-pergolas",
+      "louvered-roofs"
+    ],
+    "manifestAssets": 15,
+    "sha256": "81425f60e950ff254072990680f023380a1eeac994216d8dd6cfb4666149336b",
+    "bytes": 21262
+  },
+  {
+    "kit": "plumbing",
+    "homeIdentical": true,
+    "services": [
+      "leak-detection",
+      "drain-cleaning",
+      "water-heaters"
+    ],
+    "manifestAssets": 15,
+    "sha256": "07e8d92497e2726815f287a048e0435ea9a82ba1c78daca98d6d9121a4a40327",
+    "bytes": 21336
+  },
+  {
+    "kit": "hvac",
+    "homeIdentical": true,
+    "services": [
+      "air-conditioning-installation",
+      "air-conditioning-repair",
+      "heating-installation"
+    ],
+    "manifestAssets": 15,
+    "sha256": "b93338f2981f8cbba522d32b9348ebcd6dccb1b497c926709ecbfea0a134dab7",
+    "bytes": 21345
+  },
+  {
+    "kit": "electrical",
+    "homeIdentical": true,
+    "services": [
+      "electrical-repairs",
+      "panel-upgrades",
+      "ev-chargers"
+    ],
+    "manifestAssets": 15,
+    "sha256": "8240a9f55cd5438f0dbe6abd22cc530ff885b7681ab75c494918ff501a3c0cb2",
+    "bytes": 21553
+  },
+  {
+    "kit": "landscaping",
+    "homeIdentical": true,
+    "services": [
+      "landscape-design",
+      "landscape-installation",
+      "irrigation"
+    ],
+    "manifestAssets": 15,
+    "sha256": "c1ccf1c579f65d0906e384ed6d4ab6dd289e49c2509b7f6175f41c8b0efd3bf9",
+    "bytes": 21692
+  },
+  {
+    "kit": "general-contractors",
+    "homeIdentical": true,
+    "services": [
+      "home-remodeling",
+      "kitchen-remodeling",
+      "bathroom-remodeling"
+    ],
+    "manifestAssets": 14,
+    "sha256": "163754ac43a9845a7c619306e483809241705548b8c1a0e4b20905e25bd64744",
+    "bytes": 22444
+  },
+  {
+    "kit": "flooring",
+    "homeIdentical": true,
+    "services": [
+      "hardwood-flooring",
+      "luxury-vinyl-flooring",
+      "laminate-flooring"
+    ],
+    "manifestAssets": 10,
+    "sha256": "7615c04b0a7facdafebd54ac063b7a0ff207bf83798dd5040e036930604c8195",
+    "bytes": 18629
+  },
+  {
+    "kit": "painting",
+    "homeIdentical": true,
+    "services": [
+      "interior-painting",
+      "exterior-painting",
+      "cabinet-painting"
+    ],
+    "manifestAssets": 10,
+    "sha256": "79c5ce7435944a72970f46863ada41d5704ce47378df2c4cef0601a6a9096cd7",
+    "bytes": 18472
+  },
+  {
+    "kit": "fencing",
+    "homeIdentical": true,
+    "services": [
+      "wood-fencing",
+      "vinyl-fencing",
+      "metal-fencing"
+    ],
+    "manifestAssets": 10,
+    "sha256": "5b8093b66b735997569e79efe91ad5b3162fad272ff61c634809d32527f5f3ba",
+    "bytes": 18228
+  },
+  {
+    "kit": "garage-doors",
+    "homeIdentical": true,
+    "services": [
+      "garage-door-installation",
+      "garage-door-repair",
+      "spring-replacement"
+    ],
+    "manifestAssets": 10,
+    "sha256": "284901c6196edc9854b2bff2577c2bd88e4cf36997f528cc4b3e5b9b7a0038df",
+    "bytes": 18934
+  },
+  {
+    "kit": "pest-control",
+    "homeIdentical": true,
+    "services": [
+      "pest-inspections",
+      "ant-control",
+      "rodent-control"
+    ],
+    "manifestAssets": 10,
+    "sha256": "81cd4f4de202b2b049b4fd8d4f4f6a68e7d7bac4c2a0d478d25a65837d546a77",
+    "bytes": 18689
+  },
+  {
+    "kit": "windows-doors",
+    "homeIdentical": true,
+    "services": [
+      "window-replacement",
+      "window-installation",
+      "energy-efficient-windows"
+    ],
+    "manifestAssets": 10,
+    "sha256": "32c3be54ce649fa68b6b54989d285f65c2ce2012a69772c50c1e0d20d7d1426e",
+    "bytes": 18325
+  },
+  {
+    "kit": "solar",
+    "homeIdentical": true,
+    "services": [
+      "solar-panel-installation",
+      "solar-battery-storage",
+      "solar-system-design"
+    ],
+    "manifestAssets": 10,
+    "sha256": "6e8c92510b2a329cbe1dee0dd40a65b35c223e61900a2bfb05851b4d2727d1dd",
+    "bytes": 17813
+  },
+  {
+    "kit": "concrete",
+    "homeIdentical": true,
+    "services": [
+      "concrete-driveways",
+      "concrete-patios",
+      "stamped-concrete"
+    ],
+    "manifestAssets": 12,
+    "sha256": "27f73509a743d95db11e52afa5afafa4de46e270b5f4400cd2940527f83699b1",
+    "bytes": 17973
+  },
+  {
+    "kit": "pools",
+    "homeIdentical": true,
+    "services": [
+      "pool-design",
+      "pool-construction",
+      "pool-remodeling"
+    ],
+    "manifestAssets": 12,
+    "sha256": "e0dce7a236f70e3ac57a70005f715919f01baa2cc4c388230f5644437da84b38",
+    "bytes": 17659
+  },
+  {
+    "kit": "locksmith",
+    "homeIdentical": true,
+    "services": [
+      "residential-lockout",
+      "rekeying",
+      "lock-installation"
+    ],
+    "manifestAssets": 12,
+    "sha256": "531feb2a61ce5cfcd4be231ce461fcad3227bde4f195269a5bb00b084edf7a5b",
+    "bytes": 18241
+  }
+]

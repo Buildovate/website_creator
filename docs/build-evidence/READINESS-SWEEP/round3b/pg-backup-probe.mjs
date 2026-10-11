@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createRuntime} from './snapshot/src/aws/server.js';
+import {createPgliteExecutor} from './snapshot/src/aws/pglite.js';
+import worker from './probe-worker.mjs';
+import {roofingFixture} from './snapshot/tests/fixtures/roofing-journey.mjs';
+import {SessionStore} from './snapshot/src/auth/session-store.ts';
+import {captureContact} from './snapshot/src/crm.js';
+const out='C:/Users/joe/website_creator/docs/build-evidence/READINESS-SWEEP/round3b',root=out+'/snapshot',base='http://127.0.0.1:5222';
+const executor=await createPgliteExecutor(''),runtime=await createRuntime({executor,env:{APP_ENV:'local',AUTH_MODE:'dev-header',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',MIGRATE_ON_BOOT:'1',WORKSPACE_OWNER_EMAIL:'readiness-admin@example.test',ASSETS_ROOT:root+'/dist/client'}});
+const admin={id:'readiness-admin',email:'readiness-admin@example.test'},owner={id:'readiness-owner',email:'owner@example.test'},staff={id:'readiness-staff',email:'staff@example.test'},results=[];
+async function req(path,method='GET',data,user=admin){const raw=data instanceof Uint8Array;const r=await worker.fetch(new Request(base+path,{method,headers:{origin:base,'content-type':raw?'image/jpeg':'application/json','oai-authenticated-user-id':user.id,'oai-authenticated-user-email':user.email},body:data===undefined?undefined:raw?data:JSON.stringify(data)}),runtime.env);const txt=await r.text();let body;try{body=JSON.parse(txt)}catch{body=txt.slice(0,500)}return {status:r.status,body}}
+async function ok(path,method='GET',data,user=admin){const r=await req(path,method,data,user);assert.equal(r.status,200,JSON.stringify(r.body));return r.body}
+async function check(name,fn){try{await fn();results.push({name,pass:true})}catch(e){results.push({name,pass:false,error:e.message,stack:e.stack})}fs.writeFileSync(out+'/pg-backup-probe.json',JSON.stringify({results,providerCalls:0,fixture:'ephemeral PostgreSQL adapter; original built Worker'},null,2));console.log((results.at(-1).pass?'PASS ':'FAIL ')+name)}
+try{
+await ok('/api/setup','POST',{});const f=structuredClone(roofingFixture);f.slug='readiness-db-paths';f.settings.name='Readiness QA Fixture';const {tenant}=await ok('/api/tenants','POST',f);const id=tenant.id;
+await check('project/photo draft backup restore',async()=>{const project=await ok('/api/tenants/'+id+'/projects','POST',{title:'Fixture roof review',completedAt:'2025-01-01',city:'Oxnard',lat:34.1975,lng:-119.1771,service:'Roof repair',problem:'Fixture roofing problem for database coverage.',work:'Fixture scope for database coverage only.',outcome:'Fixture result; not public proof.',approved:false});const bytes=new Uint8Array(fs.readFileSync(root+'/public/assets/roofing.jpg'));const photo=await ok('/api/tenants/'+id+'/photos?projectId='+project.id+'&stage=before','POST',bytes);assert.ok(photo.id);const backup=await ok('/api/tenants/'+id+'/backups','POST',{});await ok('/api/tenants/'+id+'/backups');await ok('/api/tenants/'+id+'/backups/'+backup.id+'/download');const current=(await ok('/api/tenants/'+id)).tenant;await ok('/api/tenants/'+id+'/backups/'+backup.id+'/restore','POST',{confirm:true,version:current.version});await ok('/api/tenants/'+id+'/projects/'+project.id+'/unpublish','POST',{})});
+}catch(e){results.push({name:'probe setup',pass:false,error:e.message,stack:e.stack})}finally{await runtime.close();fs.writeFileSync(out+'/pg-backup-probe.json',JSON.stringify({results,providerCalls:0,fixture:'ephemeral PostgreSQL adapter; original built Worker'},null,2));console.log(JSON.stringify({pass:results.filter(x=>x.pass).length,fail:results.filter(x=>!x.pass).length}))}

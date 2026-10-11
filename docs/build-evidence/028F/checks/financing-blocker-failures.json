@@ -1,0 +1,1960 @@
+[
+  {
+    "command": "financing-comparison",
+    "failures": [
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-014-1440-2.png",
+        "id": "page-014-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/asphalt-shingle-install-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-014-390-1.png",
+        "id": "page-014-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/asphalt-shingle-install-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-014-390-2.png",
+        "id": "page-014-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/asphalt-shingle-install-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-014-768-1.png",
+        "id": "page-014-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/asphalt-shingle-install-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-014-768-2.png",
+        "id": "page-014-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/asphalt-shingle-install-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-015-1440-2.png",
+        "id": "page-015-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/flat-roofs",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-015-390-1.png",
+        "id": "page-015-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/flat-roofs",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-015-390-2.png",
+        "id": "page-015-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/flat-roofs",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-015-768-1.png",
+        "id": "page-015-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/flat-roofs",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-015-768-2.png",
+        "id": "page-015-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/flat-roofs",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-016-1440-2.png",
+        "id": "page-016-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/gutters",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-016-390-1.png",
+        "id": "page-016-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/gutters",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-016-390-2.png",
+        "id": "page-016-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/gutters",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-016-768-1.png",
+        "id": "page-016-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/gutters",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-016-768-2.png",
+        "id": "page-016-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/gutters",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-017-1440-2.png",
+        "id": "page-017-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/inspections",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-017-390-1.png",
+        "id": "page-017-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/inspections",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-017-390-2.png",
+        "id": "page-017-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/inspections",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-017-768-1.png",
+        "id": "page-017-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/inspections",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-017-768-2.png",
+        "id": "page-017-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/inspections",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-018-1440-2.png",
+        "id": "page-018-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/metal-roofing",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-018-390-1.png",
+        "id": "page-018-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/metal-roofing",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-018-390-2.png",
+        "id": "page-018-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/metal-roofing",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-018-768-1.png",
+        "id": "page-018-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/metal-roofing",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-018-768-2.png",
+        "id": "page-018-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/metal-roofing",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-019-1440-2.png",
+        "id": "page-019-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-installation",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-019-390-1.png",
+        "id": "page-019-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-installation",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-019-390-2.png",
+        "id": "page-019-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-installation",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-019-768-1.png",
+        "id": "page-019-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-installation",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-019-768-2.png",
+        "id": "page-019-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-installation",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-020-1440-2.png",
+        "id": "page-020-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-maintenance",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-020-390-1.png",
+        "id": "page-020-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-maintenance",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-020-390-2.png",
+        "id": "page-020-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-maintenance",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-020-768-1.png",
+        "id": "page-020-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-maintenance",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-020-768-2.png",
+        "id": "page-020-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-maintenance",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-021-1440-2.png",
+        "id": "page-021-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-021-390-1.png",
+        "id": "page-021-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-021-390-2.png",
+        "id": "page-021-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-021-768-1.png",
+        "id": "page-021-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-021-768-2.png",
+        "id": "page-021-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-022-1440-2.png",
+        "id": "page-022-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-replacement",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-022-390-1.png",
+        "id": "page-022-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-replacement",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-022-390-2.png",
+        "id": "page-022-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-replacement",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-022-768-1.png",
+        "id": "page-022-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-replacement",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-022-768-2.png",
+        "id": "page-022-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-replacement",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-023-1440-2.png",
+        "id": "page-023-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-sealing",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-023-390-1.png",
+        "id": "page-023-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-sealing",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-023-390-2.png",
+        "id": "page-023-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-sealing",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-023-768-1.png",
+        "id": "page-023-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-sealing",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-023-768-2.png",
+        "id": "page-023-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/roof-sealing",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-024-1440-2.png",
+        "id": "page-024-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/storm-damage",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-024-390-1.png",
+        "id": "page-024-390-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>strong:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(5)>span:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(6)>span:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)>p:nth-child(7)>strong:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/storm-damage",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(2)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-024-390-2.png",
+        "id": "page-024-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/storm-damage",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-024-768-1.png",
+        "id": "page-024-768-overflow",
+        "key": "overflow",
+        "measured": {
+          "pageOverflow": 0,
+          "violations": [
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>div:nth-child(1)>p:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>h3:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(3)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(5)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(6)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)>p:nth-child(7)>small:nth-child(2)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)",
+            "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(4)>div:nth-child(1)>p:nth-child(1)"
+          ]
+        },
+        "page": "/s/finance-comparison/services/storm-damage",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>div:nth-child(3)>article:nth-child(3)",
+        "threshold": {
+          "maximumPx": 1
+        },
+        "title": "Horizontal overflow",
+        "width": 768
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-024-768-2.png",
+        "id": "page-024-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-comparison/services/storm-damage",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      }
+    ]
+  },
+  {
+    "command": "financing-states",
+    "failures": [
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-014-1440-2.png",
+        "id": "page-014-1440-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-states-1/services/roof-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 1440
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-014-390-2.png",
+        "id": "page-014-390-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [
+            {
+              "accessibleFullText": true,
+              "selector": "body>header:nth-child(3)>a:nth-child(1)>span:nth-child(2)",
+              "text": "Sample Fictional QA TEST FIXTURE financing"
+            }
+          ],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-states-1/services/roof-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 390
+      },
+      {
+        "category": "layout",
+        "crop": "qa-crops/page-014-768-2.png",
+        "id": "page-014-768-clipped-text",
+        "key": "clipped-text",
+        "measured": {
+          "ellipsis": [],
+          "failures": [
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            },
+            {
+              "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+              "text": "Enter a valid cost."
+            }
+          ]
+        },
+        "page": "/s/finance-states-1/services/roof-repair",
+        "result": "Fail",
+        "selector": "body>main:nth-child(4)>section:nth-child(7)>div:nth-child(1)>div:nth-child(3)>p:nth-child(6)",
+        "threshold": {
+          "maximumPx": 2
+        },
+        "title": "Clipped text",
+        "width": 768
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "mockPath": "C:/Users/joe/website_creator/docs/build-evidence/057A/tools/no-provider-fetch.mjs",
+  "mockSha256": "5f98f8038365370cb6ed3147a2f590f10e67d23dd1beca4fa4146502be601125",
+  "coveredExternalProbe": {
+    "test": "tests/aws-adapter.mjs",
+    "line": 407,
+    "url": "https://api.openai.com/v1/models",
+    "response": "Local 401; original external fetch is never invoked"
+  },
+  "otherProviderTestPaths": [
+    {
+      "test": "tests/aws-adapter.mjs",
+      "lines": [
+        256,
+        284
+      ],
+      "method": "Injected ALB/Cognito fetch mocks; S3 client uses fake send implementation"
+    },
+    {
+      "test": "tests/engagement.mjs",
+      "line": 25,
+      "method": "Test replaces global fetch with a local OpenAI Responses fixture"
+    },
+    {
+      "test": "tests/expense-metering.mjs",
+      "line": 5,
+      "method": "Test supplies its own mock provider response; no real requests"
+    }
+  ],
+  "externalFetchPolicy": "Unchanged #057A preload rejects every other non-loopback fetch before network dispatch.",
+  "providerCalls": 0,
+  "credits": 0
+}

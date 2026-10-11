@@ -1,0 +1,14 @@
+✔ sync creates versioned Products and Prices with exact lookup keys (5.0334ms)
+✔ second sync is idempotent; metadata updates do not mutate immutable price amounts (2.8648ms)
+✔ dry-run prints planned changes against a fake snapshot without invoking the client (1.4821ms)
+✔ current catalog includes all six approved plan prices plus ownership, hosting and domain service (0.4022ms)
+✔ sync refuses missing, live, and malformed keys before any client call (2.6446ms)
+✔ sync CLI also refuses live publishable keys without calling the fake (0.8306ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 22.9534

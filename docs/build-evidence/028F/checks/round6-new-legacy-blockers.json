@@ -1,0 +1,2644 @@
+{
+  "dateUTC": "2026-09-29T22:31:20.643620+00:00",
+  "providerCalls": 0,
+  "credits": 0,
+  "findings": [
+    {
+      "test": "constitution",
+      "failures": 46,
+      "counts": {
+        "published-copy": 42,
+        "actions": 3,
+        "floating": 1
+      },
+      "checks": [
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-001-1440-2.png",
+          "id": "page-001-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(5)>div:nth-child(3)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(2)>div:nth-child(1)>aside:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(8)>div:nth-child(1)>a:nth-child(3)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(5)>div:nth-child(3)>a:nth-child(2)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "standing",
+          "crop": "qa-crops/page-001-1440-3.png",
+          "id": "page-001-1440-actions",
+          "key": "actions",
+          "measured": {
+            "failures": [
+              {
+                "count": 0,
+                "issue": "Hero/final action missing",
+                "selector": "#contact"
+              }
+            ],
+            "primaries": 3,
+            "sections": [
+              {
+                "count": 1,
+                "selector": "body"
+              },
+              {
+                "count": 1,
+                "selector": "#home"
+              },
+              {
+                "count": 1,
+                "selector": "#trade-film"
+              }
+            ]
+          },
+          "page": "/s/constitution-qa",
+          "result": "Fail",
+          "selector": "#contact",
+          "threshold": {
+            "heroAndFinal": 1,
+            "pageMinimum": 1,
+            "perSectionMaximum": 1
+          },
+          "title": "Section and page primary-action limits",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-001-390-2.png",
+          "id": "page-001-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>a:nth-child(7)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(2)>div:nth-child(1)>aside:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(8)>div:nth-child(1)>a:nth-child(3)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa",
+          "result": "Fail",
+          "selector": "body>a:nth-child(7)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "standing",
+          "crop": "qa-crops/page-001-390-3.png",
+          "id": "page-001-390-actions",
+          "key": "actions",
+          "measured": {
+            "failures": [
+              {
+                "count": 0,
+                "issue": "Hero/final action missing",
+                "selector": "#contact"
+              }
+            ],
+            "primaries": 2,
+            "sections": [
+              {
+                "count": 1,
+                "selector": "#home"
+              },
+              {
+                "count": 1,
+                "selector": "#trade-film"
+              }
+            ]
+          },
+          "page": "/s/constitution-qa",
+          "result": "Fail",
+          "selector": "#contact",
+          "threshold": {
+            "heroAndFinal": 1,
+            "pageMinimum": 1,
+            "perSectionMaximum": 1
+          },
+          "title": "Section and page primary-action limits",
+          "width": 390
+        },
+        {
+          "category": "layout",
+          "crop": "qa-crops/page-001-390-floating.png",
+          "evidenceScroll": 687,
+          "id": "page-001-390-floating",
+          "key": "floating",
+          "measured": {
+            "failures": [
+              {
+                "box": {
+                  "height": 63.59375,
+                  "width": 301,
+                  "x": 44.5,
+                  "y": 741
+                },
+                "floating": "a.mobile-call",
+                "intersection": [
+                  301,
+                  18.98
+                ],
+                "scrollY": 687,
+                "target": "textarea."
+              },
+              {
+                "box": {
+                  "height": 18,
+                  "width": 18,
+                  "x": 44.5,
+                  "y": 814.59375
+                },
+                "floating": "a.mobile-call",
+                "intersection": [
+                  18,
+                  18
+                ],
+                "scrollY": 687,
+                "target": "input."
+              },
+              {
+                "box": {
+                  "height": 195.4375,
+                  "width": 349,
+                  "x": 20.5,
+                  "y": 827.828125
+                },
+                "floating": "a.mobile-call",
+                "intersection": [
+                  349,
+                  16.17
+                ],
+                "scrollY": 1632,
+                "target": "img.detail-finished"
+              }
+            ],
+            "violations": 3
+          },
+          "page": "/s/constitution-qa",
+          "result": "Fail",
+          "selector": "textarea.",
+          "threshold": {
+            "overlapPx": 2
+          },
+          "title": "Floating elements leave text, forms, primary actions and media clear",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-001-768-2.png",
+          "id": "page-001-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(5)>div:nth-child(3)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(2)>div:nth-child(1)>aside:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(8)>div:nth-child(1)>a:nth-child(3)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(5)>div:nth-child(3)>a:nth-child(2)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "standing",
+          "crop": "qa-crops/page-001-768-3.png",
+          "id": "page-001-768-actions",
+          "key": "actions",
+          "measured": {
+            "failures": [
+              {
+                "count": 0,
+                "issue": "Hero/final action missing",
+                "selector": "#contact"
+              }
+            ],
+            "primaries": 2,
+            "sections": [
+              {
+                "count": 1,
+                "selector": "#home"
+              },
+              {
+                "count": 1,
+                "selector": "#trade-film"
+              }
+            ]
+          },
+          "page": "/s/constitution-qa",
+          "result": "Fail",
+          "selector": "#contact",
+          "threshold": {
+            "heroAndFinal": 1,
+            "pageMinimum": 1,
+            "perSectionMaximum": 1
+          },
+          "title": "Section and page primary-action limits",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-002-1440-2.png",
+          "id": "page-002-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/about",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-002-390-2.png",
+          "id": "page-002-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/about",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-002-768-2.png",
+          "id": "page-002-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/about",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-003-1440-2.png",
+          "id": "page-003-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/areas",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-003-390-2.png",
+          "id": "page-003-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/areas",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-003-768-2.png",
+          "id": "page-003-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/areas",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-004-1440-2.png",
+          "id": "page-004-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(8)>div:nth-child(1)>a:nth-child(4)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/areas/ventura",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(8)>div:nth-child(1)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-004-390-2.png",
+          "id": "page-004-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(8)>div:nth-child(1)>a:nth-child(4)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/areas/ventura",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(8)>div:nth-child(1)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-004-768-2.png",
+          "id": "page-004-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(8)>div:nth-child(1)>a:nth-child(4)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/areas/ventura",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(8)>div:nth-child(1)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-005-1440-2.png",
+          "id": "page-005-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/blog",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-005-390-2.png",
+          "id": "page-005-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/blog",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-005-768-2.png",
+          "id": "page-005-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/blog",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-006-1440-2.png",
+          "id": "page-006-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/contact",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-006-390-2.png",
+          "id": "page-006-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/contact",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-006-768-2.png",
+          "id": "page-006-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/contact",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-007-1440-2.png",
+          "id": "page-007-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/faq",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-007-390-2.png",
+          "id": "page-007-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/faq",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-007-768-2.png",
+          "id": "page-007-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/faq",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-008-1440-2.png",
+          "id": "page-008-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/legal",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-008-390-2.png",
+          "id": "page-008-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/legal",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-008-768-2.png",
+          "id": "page-008-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/legal",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-009-1440-2.png",
+          "id": "page-009-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(15)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/legal/privacy",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(15)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-009-390-2.png",
+          "id": "page-009-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(15)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/legal/privacy",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(15)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-009-768-2.png",
+          "id": "page-009-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(15)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/legal/privacy",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(15)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-010-1440-2.png",
+          "id": "page-010-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(13)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/legal/terms",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(13)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-010-390-2.png",
+          "id": "page-010-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(13)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/legal/terms",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(13)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-010-768-2.png",
+          "id": "page-010-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(13)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/legal/terms",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(13)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-011-1440-2.png",
+          "id": "page-011-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/pricing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-011-390-2.png",
+          "id": "page-011-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/pricing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-011-768-2.png",
+          "id": "page-011-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/pricing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-012-1440-2.png",
+          "id": "page-012-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/services",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-012-390-2.png",
+          "id": "page-012-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/services",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-012-768-2.png",
+          "id": "page-012-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/services",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-013-1440-2.png",
+          "id": "page-013-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/services/roof-repair",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-013-390-2.png",
+          "id": "page-013-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/services/roof-repair",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-013-768-2.png",
+          "id": "page-013-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/services/roof-repair",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-014-1440-2.png",
+          "id": "page-014-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/thank-you",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-014-390-2.png",
+          "id": "page-014-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/thank-you",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-014-768-2.png",
+          "id": "page-014-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/constitution-qa/thank-you",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        }
+      ]
+    },
+    {
+      "test": "conversion-references",
+      "failures": 51,
+      "counts": {
+        "posters": 3,
+        "published-copy": 42,
+        "policy": 3,
+        "floating": 2,
+        "clip-load": 1
+      },
+      "checks": [
+        {
+          "category": "media",
+          "crop": "qa-crops/page-001-1440-1.png",
+          "id": "page-001-1440-posters",
+          "key": "posters",
+          "measured": {
+            "failures": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(1)>video:nth-child(2)"
+              }
+            ],
+            "violations": 1
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(1)>video:nth-child(2)",
+          "threshold": {
+            "missing": 0
+          },
+          "title": "Every video has a poster",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-001-1440-2.png",
+          "id": "page-001-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>div:nth-child(1)>a:nth-child(5)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(12)>div:nth-child(1)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>div:nth-child(1)>a:nth-child(5)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "disclosures",
+          "crop": "qa-crops/page-001-1440-1.png",
+          "id": "page-001-1440-policy",
+          "key": "policy",
+          "measured": {
+            "failures": [
+              {
+                "issue": "Footer privacy policy link missing"
+              },
+              {
+                "issue": "Footer terms policy link missing"
+              }
+            ],
+            "violations": 2
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(12)>div:nth-child(1)>aside:nth-child(8)>section:nth-child(2)>footer:nth-child(7)",
+          "threshold": {
+            "missing": 0,
+            "source": "src/platform/legal-policy.ts; src/site-polish.js"
+          },
+          "title": "Existing footer and reviewed legal-policy requirements",
+          "width": 1440
+        },
+        {
+          "category": "layout",
+          "crop": "qa-crops/page-001-1440-floating.png",
+          "evidenceScroll": 6054,
+          "id": "page-001-1440-floating",
+          "key": "floating",
+          "measured": {
+            "failures": [
+              {
+                "box": {
+                  "height": 480,
+                  "width": 556.0625,
+                  "x": 65.796875,
+                  "y": 0
+                },
+                "floating": "header.cx-header",
+                "intersection": [
+                  556.06,
+                  8.63
+                ],
+                "scrollY": 6054,
+                "target": "img."
+              }
+            ],
+            "violations": 1
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "img.",
+          "threshold": {
+            "overlapPx": 2
+          },
+          "title": "Floating elements leave text, forms, primary actions and media clear",
+          "width": 1440
+        },
+        {
+          "category": "media",
+          "crop": "qa-crops/page-001-390-1.png",
+          "id": "page-001-390-posters",
+          "key": "posters",
+          "measured": {
+            "failures": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(1)>video:nth-child(2)"
+              }
+            ],
+            "violations": 1
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(1)>video:nth-child(2)",
+          "threshold": {
+            "missing": 0
+          },
+          "title": "Every video has a poster",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-001-390-2.png",
+          "id": "page-001-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>div:nth-child(1)>a:nth-child(5)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(12)>div:nth-child(1)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>div:nth-child(1)>a:nth-child(5)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "disclosures",
+          "crop": "qa-crops/page-001-390-1.png",
+          "id": "page-001-390-policy",
+          "key": "policy",
+          "measured": {
+            "failures": [
+              {
+                "issue": "Footer privacy policy link missing"
+              },
+              {
+                "issue": "Footer terms policy link missing"
+              }
+            ],
+            "violations": 2
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(12)>div:nth-child(1)>aside:nth-child(8)>section:nth-child(2)>footer:nth-child(7)",
+          "threshold": {
+            "missing": 0,
+            "source": "src/platform/legal-policy.ts; src/site-polish.js"
+          },
+          "title": "Existing footer and reviewed legal-policy requirements",
+          "width": 390
+        },
+        {
+          "category": "media",
+          "crop": "qa-crops/page-001-768-1.png",
+          "id": "page-001-768-posters",
+          "key": "posters",
+          "measured": {
+            "failures": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(1)>video:nth-child(2)"
+              }
+            ],
+            "violations": 1
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(1)>video:nth-child(2)",
+          "threshold": {
+            "missing": 0
+          },
+          "title": "Every video has a poster",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-001-768-2.png",
+          "id": "page-001-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>div:nth-child(1)>a:nth-child(5)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(12)>div:nth-child(1)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>div:nth-child(1)>a:nth-child(5)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "disclosures",
+          "crop": "qa-crops/page-001-768-1.png",
+          "id": "page-001-768-policy",
+          "key": "policy",
+          "measured": {
+            "failures": [
+              {
+                "issue": "Footer privacy policy link missing"
+              },
+              {
+                "issue": "Footer terms policy link missing"
+              }
+            ],
+            "violations": 2
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(12)>div:nth-child(1)>aside:nth-child(8)>section:nth-child(2)>footer:nth-child(7)",
+          "threshold": {
+            "missing": 0,
+            "source": "src/platform/legal-policy.ts; src/site-polish.js"
+          },
+          "title": "Existing footer and reviewed legal-policy requirements",
+          "width": 768
+        },
+        {
+          "category": "layout",
+          "crop": "qa-crops/page-001-768-floating.png",
+          "evidenceScroll": 5591,
+          "id": "page-001-768-floating",
+          "key": "floating",
+          "measured": {
+            "failures": [
+              {
+                "box": {
+                  "height": 480,
+                  "width": 296.171875,
+                  "x": 35.546875,
+                  "y": 111
+                },
+                "floating": "header.cx-header",
+                "intersection": [
+                  296.17,
+                  37
+                ],
+                "scrollY": 5591,
+                "target": "img."
+              },
+              {
+                "box": {
+                  "height": 480,
+                  "width": 296.171875,
+                  "x": 35.546875,
+                  "y": 0
+                },
+                "floating": "header.cx-header",
+                "intersection": [
+                  296.17,
+                  9
+                ],
+                "scrollY": 6173,
+                "target": "img."
+              }
+            ],
+            "violations": 2
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "img.",
+          "threshold": {
+            "overlapPx": 2
+          },
+          "title": "Floating elements leave text, forms, primary actions and media clear",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-002-1440-2.png",
+          "id": "page-002-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/about",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-002-390-2.png",
+          "id": "page-002-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/about",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-002-768-2.png",
+          "id": "page-002-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/about",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-003-1440-2.png",
+          "id": "page-003-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/areas",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-003-390-2.png",
+          "id": "page-003-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/areas",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-003-768-2.png",
+          "id": "page-003-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/areas",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-004-1440-2.png",
+          "id": "page-004-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/areas/test-city",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-004-390-2.png",
+          "id": "page-004-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/areas/test-city",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-004-768-2.png",
+          "id": "page-004-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/areas/test-city",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-005-1440-2.png",
+          "id": "page-005-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/blog",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-005-390-2.png",
+          "id": "page-005-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/blog",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-005-768-2.png",
+          "id": "page-005-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/blog",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-006-1440-2.png",
+          "id": "page-006-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/contact",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-006-390-2.png",
+          "id": "page-006-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/contact",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-006-768-2.png",
+          "id": "page-006-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/contact",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>div:nth-child(1)>a:nth-child(2)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-007-1440-2.png",
+          "id": "page-007-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/faq",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-007-390-2.png",
+          "id": "page-007-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/faq",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-007-768-2.png",
+          "id": "page-007-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/faq",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-008-1440-2.png",
+          "id": "page-008-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/legal",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-008-390-2.png",
+          "id": "page-008-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/legal",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-008-768-2.png",
+          "id": "page-008-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/legal",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-009-1440-2.png",
+          "id": "page-009-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(15)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/legal/privacy",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(15)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-009-390-2.png",
+          "id": "page-009-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(15)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/legal/privacy",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(15)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-009-768-2.png",
+          "id": "page-009-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(15)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/legal/privacy",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(15)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-010-1440-2.png",
+          "id": "page-010-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(13)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/legal/terms",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(13)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-010-390-2.png",
+          "id": "page-010-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(13)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/legal/terms",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(13)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-010-768-2.png",
+          "id": "page-010-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(1)>p:nth-child(13)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/legal/terms",
+          "result": "Fail",
+          "selector": "body>main:nth-child(1)>p:nth-child(13)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-011-1440-2.png",
+          "id": "page-011-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/pricing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-011-390-2.png",
+          "id": "page-011-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/pricing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-011-768-2.png",
+          "id": "page-011-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/pricing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>div:nth-child(2)>section:nth-child(2)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-012-1440-2.png",
+          "id": "page-012-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/services",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-012-390-2.png",
+          "id": "page-012-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/services",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-012-768-2.png",
+          "id": "page-012-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/services",
+          "result": "Fail",
+          "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-013-1440-2.png",
+          "id": "page-013-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/services/roof-repair",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-013-390-2.png",
+          "id": "page-013-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/services/roof-repair",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-013-768-2.png",
+          "id": "page-013-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/services/roof-repair",
+          "result": "Fail",
+          "selector": "body>main:nth-child(4)>section:nth-child(9)>div:nth-child(1)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-014-1440-2.png",
+          "id": "page-014-1440-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/thank-you",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 1440
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-014-390-2.png",
+          "id": "page-014-390-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/thank-you",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 390
+        },
+        {
+          "category": "placeholders",
+          "crop": "qa-crops/page-014-768-2.png",
+          "id": "page-014-768-published-copy",
+          "key": "published-copy",
+          "measured": {
+            "found": [
+              {
+                "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+                "text": "Call (805) 555-0123"
+              },
+              {
+                "selector": "body>footer:nth-child(6)>div:nth-child(1)>div:nth-child(1)>a:nth-child(3)",
+                "text": "(805) 555-0123"
+              }
+            ],
+            "sample": false
+          },
+          "page": "/s/conversion-roofing/thank-you",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(3)>a:nth-child(4)",
+          "threshold": {
+            "realPublished": 0,
+            "samplePreviewAllowed": true
+          },
+          "title": "Published copy has no placeholders or Sample panels",
+          "width": 768
+        },
+        {
+          "category": "media",
+          "crop": "frames/1a43c781232f927c-0.png",
+          "frame": "/assets/build-films/roofing.mp4",
+          "id": "clip-media-0",
+          "key": "clip-load",
+          "measured": {
+            "boxes": [
+              {
+                "frameHeight": 0,
+                "frameWidth": 0,
+                "letterboxFraction": 0,
+                "objectFit": "cover",
+                "page": "/s/conversion-roofing",
+                "width": 390
+              },
+              {
+                "frameHeight": 0,
+                "frameWidth": 0,
+                "letterboxFraction": 0,
+                "objectFit": "cover",
+                "page": "/s/conversion-roofing",
+                "width": 768
+              },
+              {
+                "frameHeight": 0,
+                "frameWidth": 0,
+                "letterboxFraction": 0,
+                "objectFit": "cover",
+                "page": "/s/conversion-roofing",
+                "width": 1440
+              }
+            ],
+            "decodeError": null,
+            "duration": 12.041667
+          },
+          "page": "/s/conversion-roofing",
+          "result": "Fail",
+          "selector": "body>main:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(1)>video:nth-child(2)",
+          "threshold": {
+            "decodeErrors": 0,
+            "letterboxFraction": 0.02,
+            "posterRequired": true
+          },
+          "title": "Video decodes, has a poster and fills its frame",
+          "width": 960
+        }
+      ]
+    }
+  ]
+}
