@@ -12,7 +12,7 @@ ENV PORT=8080
 COPY --chown=node:node package.json package-lock.json ./
 RUN npm ci --omit=dev
 COPY --chown=node:node --from=build /app/dist ./dist
-COPY --chown=node:node --from=build /app/src/aws ./src/aws
+COPY --chown=node:node --from=build /app/src ./src
 COPY --chown=node:node --from=build /app/drizzle ./drizzle
 COPY --chown=node:node --from=build /app/aws ./aws
 EXPOSE 8080
