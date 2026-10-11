@@ -1,0 +1,36 @@
+✔ only the single one-time ownership purchase uses card/Klarna/Affirm configuration (4.3822ms)
+✔ PLAN-WEBSITE-MONTH stays card-only (1.3572ms)
+✔ PLAN-WEBSITE-YEAR stays card-only (1.0902ms)
+✔ PLAN-GROWTH-MONTH stays card-only (0.9284ms)
+✔ PLAN-ALL-IN-MONTH stays card-only (0.9515ms)
+✔ OWNER-HOSTING stays card-only (0.9483ms)
+✔ AI-UGC-PACK stays card-only (0.9681ms)
+✔ MEDIA-PUBLISH stays card-only (1.0066ms)
+✔ SITE-OWN stays card-only (1.1151ms)
+✔ mixed ownership/add-on cart cannot acquire financing methods (1.5285ms)
+✔ missing payment configuration is Not connected without any provider call (1.836ms)
+✔ configuration rejects extra method (2.0778ms)
+✔ configuration rejects live configuration (0.7302ms)
+✔ configuration rejects unavailable Affirm (0.6023ms)
+✔ configuration rejects same configuration (0.6284ms)
+✔ repeat checkout click reuses one fake session and one server price (0.7407ms)
+✔ klarna pending completion does not change ownership, rental or hosting (22.5673ms)
+✔ klarna verified async success grants ownership exactly once after pending (18.9003ms)
+✔ klarna declined async payment leaves rental and ownership unchanged (14.6466ms)
+✔ affirm pending completion does not change ownership, rental or hosting (13.6488ms)
+✔ affirm verified async success grants ownership exactly once after pending (14.6884ms)
+✔ affirm declined async payment leaves rental and ownership unchanged (13.7361ms)
+✔ unpaid async success cannot bypass the paid status guard (13.2478ms)
+✔ invalid signature cannot grant financing ownership (12.142ms)
+✔ financing still rejects a payment amount different from $1500 (13.8018ms)
+✔ Billing uses approval-qualified copy and local official marks, without invented terms (33.2976ms)
+✔ runtime forwards both Dashboard configuration IDs unchanged (0.3581ms)
+✔ next-cycle owner hosting subscription accepts card only, never the financed buyout method (1.4489ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 205.5336

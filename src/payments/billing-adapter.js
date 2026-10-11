@@ -20,7 +20,7 @@ export function createBillingAdapter({stripe,env}){
    const p=await price('OWNER-HOSTING');let method;
    if(input.subscriptionId){const s=await subscription(input);method=typeof s.default_payment_method==='string'?s.default_payment_method:s.default_payment_method?.id;await stripe.subscriptions.cancel(s.id,{prorate:false,invoice_now:false},{idempotencyKey:input.idempotencyKey+':end-rental'});}
    const start=Math.floor(Date.parse(input.startsAt)/1000),future=start>Math.floor(Date.now()/1000);
-   const s=await stripe.subscriptions.create({customer:input.customerId,items:[{price:p.id}],...(method?{default_payment_method:method}:{}),...(future?{trial_end:start}:{}),proration_behavior:'none',metadata:{tenantId:input.tenantId,skus:'OWNER-HOSTING',catalogVersion:String(getProduct('OWNER-HOSTING').version)}},{idempotencyKey:input.idempotencyKey+':hosting'});
+   const s=await stripe.subscriptions.create({customer:input.customerId,items:[{price:p.id}],payment_settings:{payment_method_types:['card']},...(method?{default_payment_method:method}:{}),...(future?{trial_end:start}:{}),proration_behavior:'none',metadata:{tenantId:input.tenantId,skus:'OWNER-HOSTING',catalogVersion:String(getProduct('OWNER-HOSTING').version)}},{idempotencyKey:input.idempotencyKey+':hosting'});
    return {accepted:true,subscriptionId:s.id};
   },
   async cancelDelinquentSubscription(input){await subscription(input);await stripe.subscriptions.cancel(input.subscriptionId,{prorate:false,invoice_now:false},{idempotencyKey:input.idempotencyKey});return {accepted:true};},

@@ -1,0 +1,312 @@
+diff --git a/docs/modules/workspace.md b/docs/modules/workspace.md
+index 94ea34a..6699a57 100644
+--- a/docs/modules/workspace.md
++++ b/docs/modules/workspace.md
+@@ -151,3 +151,8 @@ Design-lock status uses ordinary draft/live wording, and its heading reads “Ch
+ ## Launch decisions — 2026-10-10
+ 
+ Game's Estimator quest reads a saved, offered service's price range; Marketing reads a saved GBP/review link or a tenant-scoped connected social account. No completion or XP rows are fabricated. Billing uses /api/payments/tenants/:id/billing with owner/admin POST actions own and stop-hosting, plus the existing switch/cancel/portal paths. Same-cadence upgrades settle a guarded prorated difference; downgrades start next renewal. Ownership costs $1,500 with no paid-rent credit. Connected owner hosting is $50/month at the confirmed next paid cycle. If no future paid cycle exists, scheduling stays Pending instead of charging immediately. Live Stripe keys remain rejected; see docs/build-evidence/LAUNCH-DECISIONS/README.md.
++
++
++### Ownership pay-over-time checkout — local test mode
++
++Ownership checkout uses a separate Stripe payment-method configuration containing only card, Klarna and Affirm. Other Checkout purchases use a validated card-only configuration; owner-hosting subscriptions are explicitly card-only. Runtime configuration names are STRIPE_CARD_PAYMENT_METHOD_CONFIGURATION and STRIPE_OWNERSHIP_PAYMENT_METHOD_CONFIGURATION (Dashboard pmc_ IDs, not secrets). Missing configuration reports Not connected; an inactive/live or unexpected-method configuration is rejected. Joe must enable Klarna and Affirm in Stripe Dashboard Settings > Payment methods before go-live. Billing displays official Stripe-sourced marks with approval-qualified text, without a financing amount or APR. Signed paid checkout.session.completed or checkout.session.async_payment_succeeded events settle ownership; pending/failed sessions do not. No provider calls were made. Evidence: ../build-evidence/LAUNCH-DECISIONS/financing/README.md.
+diff --git a/src/aws/env.js b/src/aws/env.js
+index c4da499..1e28f92 100644
+--- a/src/aws/env.js
++++ b/src/aws/env.js
+@@ -19,7 +19,7 @@ export const EB_ENVS = {
+ const PASSTHROUGH = [
+   'CF_MT_DISTRIBUTION_ID','CF_CONNECTION_GROUP_ID','CF_ROUTING_ENDPOINT','CUSTOM_DOMAIN_CNAME_TARGET','DOMAINS_ROLE_ARN','CF_TENANT_TAG_ENV','PLATFORM_HOSTS','CLOUDFRONT_ALIAS_ZONE_ID','CUSTOM_DOMAIN_APEX_IPS',
+   'EXPENSE_VAULT_KEY',
+-  'STRIPE_SECRET_KEY','STRIPE_PUBLISHABLE_KEY','STRIPE_WEBHOOK_SECRET','STRIPE_TAX_CONFIGURED',
++  'STRIPE_SECRET_KEY','STRIPE_PUBLISHABLE_KEY','STRIPE_WEBHOOK_SECRET','STRIPE_TAX_CONFIGURED','STRIPE_CARD_PAYMENT_METHOD_CONFIGURATION','STRIPE_OWNERSHIP_PAYMENT_METHOD_CONFIGURATION',
+   'REVIEW_BROWSER_MODULE','REVIEW_BROWSER_EXECUTABLE','DOMAIN_CHECKS_ENABLED',
+   'OPENAI_API_KEY',
+   'OPENAI_MODEL',
+diff --git a/src/client/styles/platform/launch-decisions.css b/src/client/styles/platform/launch-decisions.css
+index f66f339..5f78304 100644
+--- a/src/client/styles/platform/launch-decisions.css
++++ b/src/client/styles/platform/launch-decisions.css
+@@ -1,3 +1,5 @@
+ body.bv-platform .bv-billing .bv-payment-banner,body.bv-platform .bv-game-payment-lock{background:var(--bv-card);color:var(--bv-ink);border:1px solid var(--bv-line-2);padding:24px;border-radius:16px;margin:20px 0}body.bv-platform .bv-game-payment-lock h2,body.bv-platform .bv-game-payment-lock p{color:var(--bv-ink);opacity:1}body.bv-platform .bv-game-payment-lock button,body.bv-platform .bv-billing button{min-height:44px}body.bv-platform .bv-plan-price-list{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}body.bv-platform .bv-plan-price-list article{padding:20px;border:1px solid var(--bv-line-2);border-radius:12px}body.bv-platform .bv-plan-price-list h4{font-size:20px;margin:0 0 12px}body.bv-platform .bv-billing-actions [data-bv-switch-quote]{display:block;margin:12px 0}body.bv-platform .bv-owner-actions{margin:16px 0}body.bv-platform .bv-billing-action-result:empty{display:none}@media(max-width:720px){body.bv-platform .bv-plan-price-list{grid-template-columns:1fr}body.bv-platform .bv-game-payment-lock{padding:20px;margin:12px}body.bv-platform .bv-billing button{width:100%;white-space:normal}body.bv-platform .bv-billing{min-width:0;overflow-wrap:anywhere}}
+ 
+ body.bv-platform .bv-billing button:disabled{opacity:1;background:var(--bv-surface-2);color:var(--bv-ink);border-color:var(--bv-line-strong)}body.bv-platform .bv-game-payment-lock button{background:var(--bv-navy);color:var(--bv-card);border:1px solid var(--bv-navy);padding:12px 20px;border-radius:8px}
++
++body.bv-platform .bv-ownership-financing{color:var(--bv-ink);background:var(--bv-card);margin:16px 0;opacity:1}body.bv-platform .bv-ownership-financing p{color:var(--bv-ink);opacity:1;margin:0 0 12px}body.bv-platform .bv-ownership-marks{display:flex;flex-wrap:wrap;gap:12px;align-items:center}body.bv-platform .bv-ownership-marks img{display:block;max-width:100%;width:150px;height:30px}
+diff --git a/src/client/workspace/billing.ts b/src/client/workspace/billing.ts
+index 98328a2..1d8e679 100644
+--- a/src/client/workspace/billing.ts
++++ b/src/client/workspace/billing.ts
+@@ -34,7 +34,7 @@ export function renderBillingSummary(data:BillingSummary):string{
+   const owned=data.plan==='Owner';
+   const monthly=data.minimumEndsAt!==null&&!owned;
+   const minimum=monthly?`<div><dt>Rental minimum</dt><dd>${data.minimumMonths} months, ending ${date(data.minimumEndsAt)}</dd></div>`:'';
+-  const ownership=owned?'':`<article class="bv-card"><h3>Own your website</h3><p>One-time ownership buyout: <strong>${money(data.buyoutAmountCents)}</strong>. This is a flat price, with no credit for rental months paid.</p><div class="bv-billing-actions bv-owner-actions"><button type="button" data-bv-own ${data.actionsAvailable?'':'disabled'}>Own your site, $1,500</button><p>$50 per month owner hosting starts on your next cycle. No credit for rental months paid.</p><div data-bv-owner-result role="status"></div></div></article>`;
++  const ownership=owned?'':`<article class="bv-card"><h3>Own your website</h3><p>One-time ownership buyout: <strong>${money(data.buyoutAmountCents)}</strong>. This is a flat price, with no credit for rental months paid.</p><div class="bv-ownership-financing"><p>Or pay over time with Klarna or Affirm, subject to approval.</p><div class="bv-ownership-marks" aria-label="Pay-over-time payment methods"><img src="/payment-marks/klarna.svg" alt="Klarna" width="150" height="30"><img src="/payment-marks/affirm.svg" alt="Affirm" width="150" height="30"></div></div><div class="bv-billing-actions bv-owner-actions"><button type="button" data-bv-own ${data.actionsAvailable?'':'disabled'}>Own your site, $1,500</button><p>$50 per month owner hosting starts on your next cycle. No credit for rental months paid.</p><div data-bv-owner-result role="status"></div></div></article>`;
+   const locked=Object.entries(data.access).find(([,entry])=>!entry.allowed&&['growth','all_in'].includes(entry.plan));
+   const offer=locked?renderLockedUpsellCard({tenantId:'billing',feature:locked[0],plan:locked[1].plan,currentPlan:data.plan}):'';
+   return `<section class="bv-billing" data-bv-billing-tenant="${escapeHtml(data.tenantId)}" aria-labelledby="bv-billing-title"><p class="eyebrow">YOUR ACCOUNT</p><h2 id="bv-billing-title">Billing</h2>${renderPaymentStatus(data.status)}${data.availability?.editorLocked?'<p class="bv-payment-banner" role="status">Your public site is '+(data.availability.state==='paused'?'temporarily unavailable':'unavailable')+(data.availability.state==='paused'?'. Update payment to unlock your editor.':'. Hosting has ended. Review your account below; an owned website keeps its static-file download.')+'</p>':''}${data.connectionState==='not_connected'?'<p class="bv-callout bv-callout-warning" role="status">Payments not connected. You can review your plan here; no charge can start.</p>':''}<div class="bv-billing-grid"><article class="bv-card"><h3>Current plan</h3><p class="bv-billing-value">${escapeHtml(plan)}</p><p>${owned?'Owned website':'Rental website'}</p><dl><div><dt>Status</dt><dd>${escapeHtml(data.status.replace('_',' '))}</dd></div><div><dt>Next charge</dt><dd>${date(data.renewsAt)} · ${renewal}</dd></div>${minimum}</dl>${data.hosting?`<p>Owner hosting: ${money(data.hosting.amountCents)} per month · ${escapeHtml(data.hosting.status.replace('_',' '))}${data.hosting.startsAt?' · starts '+date(data.hosting.startsAt):''}</p><div class="bv-billing-actions bv-owner-actions"><button type="button" data-bv-stop-hosting ${data.actionsAvailable?'':'disabled'}>Stop hosting</button><p>Hosting ends at the paid period end. Keep your static-file download; no refunds or credits.</p><div data-bv-owner-result role="status"></div></div>`:''}</article><article class="bv-card"><h3>Payment method</h3><p>${escapeHtml(data.paymentMethod)}</p><p>Card updates and invoices use the secure Stripe Customer Portal when it is connected.</p>${data.portalState!=='ready'?'<button type="button" disabled aria-describedby="bv-portal-state">Update payment</button><p id="bv-portal-state">Payments not connected</p>':'<button type="button" data-bv-portal>Manage payment method</button><p id="bv-portal-state" role="status"></p>'}</article></div>${renderRentalControls(data)}${ownership}<section class="bv-card"><h3>Other plans</h3><div class="bv-plan-price-list"><article><h4>Website</h4><p>$50/month</p><p>$500/year</p></article><article><h4>Growth</h4><p>$150/month</p><p>$1,500/year</p></article><article><h4>All-in</h4><p>$300/month</p><p>$3,000/year</p></article></div><p>Annual prepay covers twelve months for the price of ten. No setup fee.</p></section>${offer}<section class="bv-card"><h3>Receipts</h3><p>Only payments confirmed by the payment provider appear here.</p><ul class="bv-billing-receipts">${receipts}</ul></section></section>`;
+diff --git a/src/payments/billing-adapter.js b/src/payments/billing-adapter.js
+index 9ef4b5e..9f8ed77 100644
+--- a/src/payments/billing-adapter.js
++++ b/src/payments/billing-adapter.js
+@@ -20,7 +20,7 @@ export function createBillingAdapter({stripe,env}){
+    const p=await price('OWNER-HOSTING');let method;
+    if(input.subscriptionId){const s=await subscription(input);method=typeof s.default_payment_method==='string'?s.default_payment_method:s.default_payment_method?.id;await stripe.subscriptions.cancel(s.id,{prorate:false,invoice_now:false},{idempotencyKey:input.idempotencyKey+':end-rental'});}
+    const start=Math.floor(Date.parse(input.startsAt)/1000),future=start>Math.floor(Date.now()/1000);
+-   const s=await stripe.subscriptions.create({customer:input.customerId,items:[{price:p.id}],...(method?{default_payment_method:method}:{}),...(future?{trial_end:start}:{}),proration_behavior:'none',metadata:{tenantId:input.tenantId,skus:'OWNER-HOSTING',catalogVersion:String(getProduct('OWNER-HOSTING').version)}},{idempotencyKey:input.idempotencyKey+':hosting'});
++   const s=await stripe.subscriptions.create({customer:input.customerId,items:[{price:p.id}],payment_settings:{payment_method_types:['card']},...(method?{default_payment_method:method}:{}),...(future?{trial_end:start}:{}),proration_behavior:'none',metadata:{tenantId:input.tenantId,skus:'OWNER-HOSTING',catalogVersion:String(getProduct('OWNER-HOSTING').version)}},{idempotencyKey:input.idempotencyKey+':hosting'});
+    return {accepted:true,subscriptionId:s.id};
+   },
+   async cancelDelinquentSubscription(input){await subscription(input);await stripe.subscriptions.cancel(input.subscriptionId,{prorate:false,invoice_now:false},{idempotencyKey:input.idempotencyKey});return {accepted:true};},
+diff --git a/src/payments/billing.js b/src/payments/billing.js
+index f857c88..92764a3 100644
+--- a/src/payments/billing.js
++++ b/src/payments/billing.js
+@@ -20,7 +20,7 @@ async function authorizedTenant(req,env,tenantId,change=false){
+ export async function billingSummary(env,tenantId){
+   const state=await first(env,'SELECT * FROM payment_state WHERE tenant_id=?',tenantId);
+   const ledger=await rows(env,'SELECT id,sku,amount_cents,period_start,period_end,reference,status,created_at FROM payment_ledger WHERE tenant_id=? ORDER BY period_start DESC,created_at DESC,id DESC LIMIT 100',tenantId);
+-  const events=await rows(env,"SELECT type,payload FROM payment_events WHERE processed=1 AND type IN ('invoice.paid','checkout.session.completed') ORDER BY created_at DESC LIMIT 500");
++  const events=await rows(env,"SELECT type,payload FROM payment_events WHERE processed=1 AND type IN ('invoice.paid','checkout.session.completed','checkout.session.async_payment_succeeded') ORDER BY created_at DESC LIMIT 500");
+   const links=new Map();
+   for(const item of events){
+     const object=JSON.parse(item.payload).data?.object??{};
+diff --git a/src/payments/checkout.ts b/src/payments/checkout.ts
+index 8922cf3..343f964 100644
+--- a/src/payments/checkout.ts
++++ b/src/payments/checkout.ts
+@@ -11,6 +11,7 @@ export type CheckoutRequest = {
+ export type StripeEnvironment = Record<string, string | undefined>;
+ 
+ type StripeClient = {
++  paymentMethodConfigurations: { retrieve: (id:string) => Promise<Record<string, any>> };
+   customers: {
+     search: (input: object) => Promise<{data: Array<{id:string}>}>;
+     create: (input: object, options: object) => Promise<{id:string}>;
+@@ -98,7 +99,14 @@ export function createCheckoutService({ stripe, env = {}, catalogData = catalog,
+     const modes = new Set(rows.map(modeFor));
+     if (modes.size !== 1) throw new Error('Payment and subscription items require separate checkouts.');
+     const mode = [...modes][0];
+-    const signature = JSON.stringify({items:request.items,returnPath:request.returnPath,metadata:request.metadata ?? {},mode});
++    // Separate Dashboard configurations prevent financing from leaking into recurring/add-on checkouts.
++    const ownership = rows.length === 1 && rows[0].sku === 'SITE-BUYOUT' && mode === 'payment';
++    const configuration = ownership ? env.STRIPE_OWNERSHIP_PAYMENT_METHOD_CONFIGURATION : env.STRIPE_CARD_PAYMENT_METHOD_CONFIGURATION;
++    if (!configuration || !/^pmc_[A-Za-z0-9_]+$/.test(configuration) || !stripe!.paymentMethodConfigurations?.retrieve)
++      return {state:'not_connected',message:'Payments not connected: payment methods need setup.'};
++    if (ownership && configuration === env.STRIPE_CARD_PAYMENT_METHOD_CONFIGURATION)
++      throw new Error('Ownership and card-only payment configurations must be separate.');
++    const signature = JSON.stringify({items:request.items,returnPath:request.returnPath,metadata:request.metadata ?? {},mode,configuration});
+     const key = `${request.tenantId}:${request.idempotencyKey}`;
+     const previous = sessionFlights.get(key);
+     if (previous) {
+@@ -106,6 +114,11 @@ export function createCheckoutService({ stripe, env = {}, catalogData = catalog,
+       return previous.result;
+     }
+     const result = (async () => {
++      const config = await stripe!.paymentMethodConfigurations.retrieve(configuration);
++      const allowed = ownership ? ['card','klarna','affirm'] : ['card'];
++      const enabled = Object.entries(config).filter(([,value]) => value && typeof value === 'object' && value.display_preference?.value === 'on').map(([key]) => key);
++      if (config.id !== configuration || config.active !== true || config.livemode !== false || allowed.some(key => !enabled.includes(key) || config[key]?.available !== true) || enabled.some(key => !allowed.includes(key)))
++        throw new Error('Payment methods need setup: use card only, or card, Klarna and Affirm for ownership.');
+       const lineItems = await Promise.all(rows.map(async (row,index) => {
+         const found = await stripe!.prices.list({ lookup_keys: [`${row.sku}@${row.version}`], limit: 1 });
+         const price = found.data[0];
+@@ -116,7 +129,7 @@ export function createCheckoutService({ stripe, env = {}, catalogData = catalog,
+       const path = request.returnPath;
+       const metadata = { ...request.metadata, tenantId: request.tenantId, catalogVersion: String(catalogData.catalogVersion), skus: rows.map(row => row.sku).join(',') };
+       const payload: Record<string,unknown> = {
+-        mode, customer, line_items: lineItems, metadata,
++        mode, customer, line_items: lineItems, metadata, payment_method_configuration: configuration,
+         success_url: `${origin.origin}${path}${path.includes('?') ? '&' : '?'}checkout=success&session_id={CHECKOUT_SESSION_ID}`,
+         cancel_url: `${origin.origin}${path}${path.includes('?') ? '&' : '?'}checkout=cancel`
+       };
+diff --git a/src/payments/webhook.js b/src/payments/webhook.js
+index 816b4fe..62e6e06 100644
+--- a/src/payments/webhook.js
++++ b/src/payments/webhook.js
+@@ -5,7 +5,7 @@ import {markPastDue,paymentClock} from './lifecycle.js';
+ import {finishOwnership} from './ownership.js';
+ import {dispatchSettled} from './checkout.ts';
+ 
+-const accepted=new Set(['checkout.session.completed','invoice.paid','invoice.payment_failed','customer.subscription.created','customer.subscription.updated','customer.subscription.deleted','charge.refunded','charge.dispute.created']);
++const accepted=new Set(['checkout.session.completed','checkout.session.async_payment_succeeded','checkout.session.async_payment_failed','invoice.paid','invoice.payment_failed','customer.subscription.created','customer.subscription.updated','customer.subscription.deleted','charge.refunded','charge.dispute.created']);
+ const iso=value=>typeof value==='number'?new Date(value*1000).toISOString():value;
+ const now=()=>new Date().toISOString();
+ const query=(env,sql,...args)=>env.DB.prepare(sql).bind(...args);
+@@ -109,18 +109,20 @@ async function processEvent(env,event){
+     const reference=object.payment_intent??object.id??object.charge;
+     return reference?revoke(env,reference,event.type):false;
+   }
++  // A failed financing attempt must never change ownership, rental access or hosting.
++  if(event.type==='checkout.session.async_payment_failed')return true;
+   const tenantId=await tenantFor(env,object);
+   if(!tenantId)return false;
+   const customer=typeof object.customer==='string'?object.customer:object.customer?.id;
+   await stateFor(env,tenantId,customer);
+   const created=event.created??Math.floor(Date.now()/1000);
+-  if(event.type==='checkout.session.completed'){
++  if(event.type==='checkout.session.completed'||event.type==='checkout.session.async_payment_succeeded'){
+     const skus=String(object.metadata?.skus??'').split(',').filter(Boolean);
+     if(!skus.length)throw new Error('Checkout has no server catalog SKUs.');
+     if(object.mode==='payment'){
+       if(object.payment_status!=='paid')return true;
+       if(skus.length!==1)throw new Error('One-time settlement must identify one SKU.');
+-      await settle(env,{tenantId,sku:skus[0],amount:object.amount_total,reference:object.payment_intent??object.id,eventId:event.id,eventCreated:created});
++      await settle(env,{tenantId,sku:skus[0],amount:object.amount_total,periodStart:object.created??created,reference:object.payment_intent??object.id,eventId:event.id,eventCreated:created});
+     }else if(object.mode==='subscription'){
+       if(object.subscription)await run(env,'UPDATE payment_state SET subscription_id=? WHERE tenant_id=?',object.subscription,tenantId);
+     }else throw new Error('Unknown checkout mode.');
+diff --git a/tests/stripe-fake.mjs b/tests/stripe-fake.mjs
+index 211cec5..6818777 100644
+--- a/tests/stripe-fake.mjs
++++ b/tests/stripe-fake.mjs
+@@ -7,6 +7,7 @@ export function makeFakeStripe() {
+   const idempotentSessions = new Map();
+   const stripe = {
+     calls, productsStore, pricesStore, customersStore, sessionsStore,
++    paymentMethodConfigurations: {async retrieve(id){calls.read++;const allowed=id==='pmc_ownership_fixture'?['card','klarna','affirm']:['card'];return {id,active:true,livemode:false,...Object.fromEntries(allowed.map(key=>[key,{available:true,display_preference:{value:'on'}}]))};}},
+     snapshot: () => ({ products:structuredClone(productsStore), prices:structuredClone(pricesStore) }),
+     products: {
+       async list({ starting_after } = {}) { calls.read++; const start = starting_after ? productsStore.findIndex(item => item.id === starting_after)+1 : 0; return {data:structuredClone(productsStore.slice(start)),has_more:false}; },
+@@ -32,7 +33,9 @@ export function makeFakeStripe() {
+ export const fakeTestEnv = Object.freeze({
+   STRIPE_SECRET_KEY:'sk_test_FAKE_FOR_OFFLINE_TESTS',
+   STRIPE_PUBLISHABLE_KEY:'pk_test_FAKE_FOR_OFFLINE_TESTS',
+-  STRIPE_WEBHOOK_SECRET:'whsec_FAKE_FOR_OFFLINE_TESTS'
++  STRIPE_WEBHOOK_SECRET:'whsec_FAKE_FOR_OFFLINE_TESTS',
++  STRIPE_CARD_PAYMENT_METHOD_CONFIGURATION:'pmc_card_fixture',
++  STRIPE_OWNERSHIP_PAYMENT_METHOD_CONFIGURATION:'pmc_ownership_fixture'
+ });
+ 
+ export function makeFakeBillingAdapter({quotedAmountCents=50000,quotedNetCents=quotedAmountCents}={}){
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/financing/empty b/C:/Users/joe/website_creator/public/payment-marks/klarna.svg
+index e69de29..b146388 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/financing/empty
++++ b/C:/Users/joe/website_creator/public/payment-marks/klarna.svg
+@@ -0,0 +1,6 @@
++<svg xmlns="http://www.w3.org/2000/svg" width="150" height="30" fill="none" viewBox="0 0 150 30" class="PaymentMethodLogo ">
++  <g transform="translate(42, 6.5) scale(1.01515)">
++    <path fill="var(--paymentMethodLogoColor, #0B051D)" d="M59.2918 13.7269C57.7721 13.7269 56.5877 12.4703 56.5877 10.9444C56.5877 9.41839 57.7721 8.16174 59.2918 8.16174C60.8114 8.16174 61.9959 9.41839 61.9959 10.9444C61.9959 12.4703 60.8114 13.7269 59.2918 13.7269ZM58.5317 16.6666C59.828 16.6666 61.4819 16.1729 62.3985 14.2431L62.4876 14.288C62.0855 15.3426 62.0855 15.971 62.0855 16.1281V16.3749H65.3481V5.51375H62.0855V5.76063C62.0855 5.91771 62.0855 6.54603 62.4876 7.6007L62.3985 7.6456C61.4819 5.71573 59.828 5.22204 58.5317 5.22204C55.4255 5.22204 53.2354 7.6905 53.2354 10.9444C53.2354 14.1982 55.4255 16.6666 58.5317 16.6666ZM47.5586 5.22204C46.0835 5.22204 44.9214 5.73818 43.9828 7.6456L43.8934 7.6007C44.2957 6.54603 44.2957 5.91771 44.2957 5.76063V5.51375H41.0327V16.3749H44.385V10.6526C44.385 9.14912 45.2567 8.20658 46.6646 8.20658C48.0726 8.20658 48.7654 9.01443 48.7654 10.6301V16.3749H52.1178V9.46329C52.1178 6.99483 50.1955 5.22204 47.5586 5.22204ZM36.183 7.6456L36.0936 7.6007C36.4958 6.54603 36.4958 5.91771 36.4958 5.76063V5.51375H33.2329V16.3749H36.5853L36.6076 11.1463C36.6076 9.62037 37.4121 8.70027 38.7308 8.70027C39.0883 8.70027 39.3789 8.74517 39.7141 8.83496V5.51375C38.2391 5.19959 36.9205 5.76063 36.183 7.6456ZM25.5225 13.7269C24.0028 13.7269 22.8183 12.4703 22.8183 10.9444C22.8183 9.41839 24.0028 8.16174 25.5225 8.16174C27.0423 8.16174 28.2267 9.41839 28.2267 10.9444C28.2267 12.4703 27.0423 13.7269 25.5225 13.7269ZM24.7627 16.6666C26.0589 16.6666 27.7127 16.1729 28.629 14.2431L28.7184 14.288C28.3161 15.3426 28.3161 15.971 28.3161 16.1281V16.3749H31.5791V5.51375H28.3161V5.76063C28.3161 5.91771 28.3161 6.54603 28.7184 7.6007L28.629 7.6456C27.7127 5.71573 26.0589 5.22204 24.7627 5.22204C21.6561 5.22204 19.466 7.6905 19.466 10.9444C19.466 14.1982 21.6561 16.6666 24.7627 16.6666ZM14.795 16.3749H18.1474V0.666626H14.795V16.3749ZM12.3366 0.666626H8.91721C8.91721 3.4717 7.19636 5.98499 4.58153 7.78023L3.55346 8.49835V0.666626H0V16.3749H3.55346V8.58809L9.43124 16.3749H13.767L8.11266 8.9247C10.6828 7.06217 12.359 4.16731 12.3366 0.666626Z"/>
++  </g>
++  <title>Klarna</title>
++</svg>
+\ No newline at end of file
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/financing/empty b/C:/Users/joe/website_creator/public/payment-marks/affirm.svg
+index e69de29..d2d194e 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/financing/empty
++++ b/C:/Users/joe/website_creator/public/payment-marks/affirm.svg
+@@ -0,0 +1,13 @@
++<svg xmlns="http://www.w3.org/2000/svg" width="150" height="30" fill="none" viewBox="0 0 150 30" class="PaymentMethodLogo ">
++  <g clip-path="url(#clip0_111_10369-payment-method-logo-Affirm)">
++    <path fill="var(--paymentMethodLogoColor, #101820)" d="M74.117 13.81H71.29v9.898h2.827v-9.899z"/>
++    <path fill="var(--paymentMethodLogoColor, #101820)" fill-rule="evenodd" d="M96.509 13.518c-1.498 0-2.618.884-3.2 1.738-.54-1.102-1.684-1.738-3.06-1.738-1.496 0-2.533.831-3.012 1.788V13.81h-2.731v9.903h2.835v-5.099c0-1.825.959-2.707 1.853-2.707.81 0 1.553.523 1.553 1.875v5.931h2.83v-5.099c0-1.851.934-2.707 1.87-2.707.75 0 1.544.544 1.544 1.855v5.951h2.83v-6.846c0-2.225-1.498-3.348-3.307-3.348M76.493 13.809v9.903h2.833V18.94c0-2.267 1.372-2.933 2.328-2.933a2.17 2.17 0 011.211.358l.518-2.618a3.204 3.204 0 00-1.263-.229c-1.455 0-2.37.645-2.974 1.955V13.81h-2.653zM48.944 21.933c-.744 0-1.123-.366-1.123-.969 0-1.122 1.252-1.5 3.535-1.743 0 1.496-1.012 2.712-2.42 2.712h.008zm.982-8.414c-1.632 0-3.509.768-4.528 1.58l.931 1.965c.817-.748 2.138-1.388 3.33-1.388 1.132 0 1.758.379 1.758 1.142 0 .513-.414.772-1.198.875-2.927.379-5.222 1.187-5.222 3.443 0 1.788 1.273 2.87 3.262 2.87 1.42 0 2.683-.789 3.284-1.825v1.544h2.647v-6.469c0-2.666-1.851-3.743-4.262-3.743l-.002.006zM69.6 13.809h-2.565v-1.006c0-1.311.748-1.685 1.392-1.685.44.006.873.114 1.263.316l.873-1.997s-.885-.578-2.495-.578c-1.81 0-3.868 1.02-3.868 4.221v.729h-4.288v-1.006c0-1.311.747-1.685 1.392-1.685.441 0 .875.109 1.264.316l.873-1.997c-.521-.305-1.359-.578-2.494-.578-1.81 0-3.869 1.02-3.869 4.221v.729H55.44v2.184h1.644v7.719h2.83v-7.72h4.293v7.72h2.829v-7.72h2.566V13.81z" clip-rule="evenodd"/>
++    <path fill="var(--paymentMethodLogoColor, #4A4AF4)" fill-rule="evenodd" d="M71.394 12.126h2.77c1.615-5.079 7.096-9.543 13.613-9.543 7.927 0 14.778 6.035 14.778 15.43a19.319 19.319 0 01-.786 5.7h2.688l.026-.093c.453-1.832.677-3.712.666-5.599 0-10.477-7.635-18.018-17.366-18.018-7.643 0-14.456 5.305-16.387 12.126l-.002-.003z" clip-rule="evenodd"/>
++  </g>
++  <defs>
++    <clipPath id="clip0_111_10369-payment-method-logo-Affirm">
++      <path fill="var(--paymentMethodLogoColor, #fff)" d="M0 0h60.147v24H0z" transform="translate(45)"/>
++    </clipPath>
++  </defs>
++  <title>Affirm</title>
++</svg>
+\ No newline at end of file
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/financing/empty b/C:/Users/joe/website_creator/public/payment-marks/SOURCES.json
+index e69de29..73169a2 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/financing/empty
++++ b/C:/Users/joe/website_creator/public/payment-marks/SOURCES.json
+@@ -0,0 +1,18 @@
++{
++  "source": "https://stripe.com/payments/payment-methods",
++  "retrievedAt": "2026-10-11T02:42:26.950Z",
++  "assets": [
++    {
++      "file": "klarna.svg",
++      "sha256": "d1f6ad78f3045900d37ebf86eba507326371184fe9a249a62c98d995cc4a94aa",
++      "sourceElement": "PaymentMethodCard[data-id=\"Klarna\"] svg",
++      "changes": "None: original SVG copied from Stripe’s public payment-method page."
++    },
++    {
++      "file": "affirm.svg",
++      "sha256": "de5ead63c136a52d06325bc6181c8b46b0cbd483e2836f9c99a8a77216266215",
++      "sourceElement": "PaymentMethodCard[data-id=\"Affirm\"] svg",
++      "changes": "None: original SVG copied from Stripe’s public payment-method page."
++    }
++  ]
++}
+\ No newline at end of file
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/financing/empty b/C:/Users/joe/website_creator/tests/ownership-financing.mjs
+index e69de29..8ca9c4a 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/financing/empty
++++ b/C:/Users/joe/website_creator/tests/ownership-financing.mjs
+@@ -0,0 +1,25 @@
++import assert from 'node:assert/strict';import {test} from 'node:test';
++import {catalog} from '../src/platform/catalog.ts';import {createCheckoutService} from '../src/payments/checkout.ts';import {syncCatalog} from '../scripts/stripe-sync.mjs';
++import {makeFakeStripe,fakeTestEnv,makeFakeBillingAdapter} from './stripe-fake.mjs';import {paymentHarness} from './helpers/payments-fixture.mjs';import {billingSummary} from '../src/payments/billing.js';import {renderBillingSummary} from '../src/client/workspace/billing.ts';import {createBillingAdapter} from '../src/payments/billing-adapter.js';import {loadEnv} from '../src/aws/env.js';
++async function setup(env=fakeTestEnv){const stripe=makeFakeStripe(),data=structuredClone(catalog);for(const sku of ['SITE-OWN','AI-UGC-PACK','MEDIA-PUBLISH']){const row=data.products.find(p=>p.sku===sku);row.active=true;if(row.priceCents===null)row.priceCents=row.proposedPriceCents;}await syncCatalog({stripe,secretKey:fakeTestEnv.STRIPE_SECRET_KEY,catalogData:data});return {stripe,service:createCheckoutService({stripe,env,catalogData:data,baseUrl:'http://localhost:5181',taxConfigured:true})};}
++const request=(sku,key='financing_123')=>({tenantId:'tenant_123',items:[{sku,quantity:1}],returnPath:'/',idempotencyKey:key});
++test('only the single one-time ownership purchase uses card/Klarna/Affirm configuration',async()=>{const {stripe,service}=await setup();await service.createCheckout(request('SITE-BUYOUT'));const p=stripe.sessionsStore[0].payload;assert.equal(p.mode,'payment');assert.equal(p.payment_method_configuration,'pmc_ownership_fixture');assert.equal(p.metadata.skus,'SITE-BUYOUT');assert.equal(stripe.pricesStore.find(x=>x.id===p.line_items[0].price).unit_amount,150000);assert.equal(p.payment_method_types,undefined);});
++for(const sku of ['PLAN-WEBSITE-MONTH','PLAN-WEBSITE-YEAR','PLAN-GROWTH-MONTH','PLAN-ALL-IN-MONTH','OWNER-HOSTING','AI-UGC-PACK','MEDIA-PUBLISH','SITE-OWN'])test(sku+' stays card-only',async()=>{const {stripe,service}=await setup();await service.createCheckout(request(sku));assert.equal(stripe.sessionsStore[0].payload.payment_method_configuration,'pmc_card_fixture');});
++test('mixed ownership/add-on cart cannot acquire financing methods',async()=>{const {stripe,service}=await setup();await service.createCheckout({...request('SITE-BUYOUT'),items:[{sku:'SITE-BUYOUT',quantity:1},{sku:'AI-UGC-PACK',quantity:1}]});assert.equal(stripe.sessionsStore[0].payload.payment_method_configuration,'pmc_card_fixture');});
++test('missing payment configuration is Not connected without any provider call',async()=>{const {stripe,service}=await setup({...fakeTestEnv,STRIPE_OWNERSHIP_PAYMENT_METHOD_CONFIGURATION:undefined});const before={...stripe.calls};assert.match((await service.createCheckout(request('SITE-BUYOUT'))).message,/Payments not connected/);assert.deepEqual(stripe.calls,before);});
++for(const defect of ['extra method','live configuration','unavailable Affirm','same configuration'])test('configuration rejects '+defect,async()=>{const env={...fakeTestEnv,...(defect==='same configuration'?{STRIPE_OWNERSHIP_PAYMENT_METHOD_CONFIGURATION:'pmc_card_fixture'}:{})};const {stripe,service}=await setup(env);const get=stripe.paymentMethodConfigurations.retrieve;stripe.paymentMethodConfigurations.retrieve=async id=>{const c=await get(id);if(defect==='extra method')c.link={available:true,display_preference:{value:'on'}};if(defect==='live configuration')c.livemode=true;if(defect==='unavailable Affirm')c.affirm.available=false;return c;};await assert.rejects(service.createCheckout(request('SITE-BUYOUT')),/Payment methods|must be separate/);assert.equal(stripe.sessionsStore.length,0);});
++test('repeat checkout click reuses one fake session and one server price',async()=>{const {stripe,service}=await setup();const a=await service.createCheckout(request('SITE-BUYOUT')),b=await service.createCheckout(request('SITE-BUYOUT'));assert.deepEqual(a,b);assert.equal(stripe.calls.sessionCreates,1);});
++const created=Date.parse('2026-10-10T12:00:00Z')/1000;
++async function rental(h){h.env.PAYMENT_CLOCK=()=>created*1000;h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter();assert.equal((await h.send(h.event('rental','invoice.paid',h.invoice('rental','PLAN-WEBSITE-MONTH',5000,'2026-10-01','2099-11-01'),created))).status,200);h.sql.prepare('UPDATE payment_state SET subscription_id=? WHERE tenant_id=?').run('sub_rental','tenant_123');}
++const state=h=>h.sql.prepare('SELECT site_owned,status,hosting_status,subscription_id FROM payment_state WHERE tenant_id=?').get('tenant_123');
++for(const method of ['klarna','affirm']){
++ test(method+' pending completion does not change ownership, rental or hosting',async()=>{const h=paymentHarness();try{await rental(h);const before={...state(h)},s={...h.session('SITE-BUYOUT',150000),created,payment_status:'unpaid',payment_method_types:[method]};assert.equal((await h.send(h.event(method+'-pending','checkout.session.completed',s,created))).status,200);assert.deepEqual({...state(h)},before);assert.equal(h.sql.prepare("SELECT COUNT(*) n FROM payment_ledger WHERE sku='SITE-BUYOUT'").get().n,0);assert.equal(h.env.PAYMENT_BILLING_ADAPTER.ownerships.length,0);}finally{h.close();}});
++ test(method+' verified async success grants ownership exactly once after pending',async()=>{const h=paymentHarness();try{await rental(h);const s={...h.session('SITE-BUYOUT',150000),created,payment_method_types:[method]};await h.send(h.event(method+'-pending','checkout.session.completed',{...s,payment_status:'unpaid'},created));const event=h.event(method+'-success','checkout.session.async_payment_succeeded',s,created+60);assert.equal((await h.send(event)).status,200);assert.equal(state(h).site_owned,1);assert.equal(state(h).hosting_status,'scheduled');assert.equal(h.env.PAYMENT_BILLING_ADAPTER.ownerships.length,1);await h.send(event);await h.send(h.event(method+'-paid-completed','checkout.session.completed',s,created+120));assert.equal(h.sql.prepare("SELECT COUNT(*) n FROM payment_ledger WHERE sku='SITE-BUYOUT'").get().n,1);assert.equal(h.env.PAYMENT_BILLING_ADAPTER.ownerships.length,1);assert.equal((await billingSummary(h.env,'tenant_123')).receipts.filter(x=>x.sku==='SITE-BUYOUT').length,1);}finally{h.close();}});
++ test(method+' declined async payment leaves rental and ownership unchanged',async()=>{const h=paymentHarness();try{await rental(h);const before={...state(h)},s={...h.session('SITE-BUYOUT',150000),created,payment_status:'unpaid',payment_method_types:[method]};await h.send(h.event(method+'-pending','checkout.session.completed',s,created));assert.equal((await h.send(h.event(method+'-declined','checkout.session.async_payment_failed',s,created+60))).status,200);assert.deepEqual({...state(h)},before);assert.equal(h.sql.prepare("SELECT COUNT(*) n FROM payment_entitlements WHERE key='site_owned'").get().n,0);assert.equal(h.env.PAYMENT_BILLING_ADAPTER.ownerships.length,0);}finally{h.close();}});
++}
++test('unpaid async success cannot bypass the paid status guard',async()=>{const h=paymentHarness();try{await rental(h);const before={...state(h)};await h.send(h.event('unpaid-success','checkout.session.async_payment_succeeded',{...h.session('SITE-BUYOUT',150000),created,payment_status:'unpaid'},created));assert.deepEqual({...state(h)},before);}finally{h.close();}});
++test('invalid signature cannot grant financing ownership',async()=>{const h=paymentHarness();try{await rental(h);assert.equal((await h.send(h.event('bad-signature','checkout.session.async_payment_succeeded',h.session('SITE-BUYOUT',150000)),{signature:false})).status,400);assert.equal(state(h).site_owned,0);}finally{h.close();}});
++test('financing still rejects a payment amount different from $1500',async()=>{const h=paymentHarness();try{await rental(h);assert.equal((await h.send(h.event('bad-amount','checkout.session.async_payment_succeeded',h.session('SITE-BUYOUT',149900),created))).status,400);assert.equal(state(h).site_owned,0);}finally{h.close();}});
++test('Billing uses approval-qualified copy and local official marks, without invented terms',async()=>{const h=paymentHarness();try{await rental(h);const html=renderBillingSummary(await billingSummary(h.env,'tenant_123'));assert.match(html,/Or pay over time with Klarna or Affirm, subject to approval\./);assert.match(html,/src="\/payment-marks\/klarna.svg"/);assert.match(html,/src="\/payment-marks\/affirm.svg"/);assert.doesNotMatch(html,/APR|interest.free|\$\d+[.,]?\d* per (?:week|installment)/i);}finally{h.close();}});
++test('runtime forwards both Dashboard configuration IDs unchanged',()=>{const value=loadEnv({...fakeTestEnv});assert.equal(value.STRIPE_CARD_PAYMENT_METHOD_CONFIGURATION,'pmc_card_fixture');assert.equal(value.STRIPE_OWNERSHIP_PAYMENT_METHOD_CONFIGURATION,'pmc_ownership_fixture');});
++test('next-cycle owner hosting subscription accepts card only, never the financed buyout method',async()=>{const {stripe}=await setup();let payload;stripe.subscriptions={retrieve:async()=>({id:'sub_rental',metadata:{tenantId:'tenant_123'},items:{data:[{id:'item',price:{id:'price_rental'}}]},default_payment_method:'pm_card_fixture'}),cancel:async()=>({}),create:async p=>(payload=p,{id:'sub_owner'})};const adapter=createBillingAdapter({stripe,env:fakeTestEnv});await adapter.startOwnerHosting({tenantId:'tenant_123',subscriptionId:'sub_rental',customerId:'cus_fixture',startsAt:'2099-11-01',idempotencyKey:'hosting_financing'});assert.deepEqual(payload.payment_settings,{payment_method_types:['card']});assert.equal(payload.default_payment_method,'pm_card_fixture');});
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/financing/empty b/C:/Users/joe/website_creator/tests/ownership-financing-browser.mjs
+index e69de29..6a73a5d 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/financing/empty
++++ b/C:/Users/joe/website_creator/tests/ownership-financing-browser.mjs
+@@ -0,0 +1,39 @@
++import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';import {build} from 'esbuild';
++import {paymentHarness} from './helpers/payments-fixture.mjs';import {billingSummary} from '../src/payments/billing.js';import {makeFakeBillingAdapter} from './stripe-fake.mjs';
++const root=process.cwd(),out=root+'/docs/build-evidence/LAUNCH-DECISIONS/financing',shots=out+'/screenshots';fs.mkdirSync(shots,{recursive:true});
++const {chromium}=createRequire(import.meta.url)('C:/Users/joe/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
++const h=paymentHarness();let browser;const contrast=[],checks=[],base='http://127.0.0.1:5197';
++async function readable(page,state){
++ const png=await page.screenshot(),report=await page.evaluate(async({bytes,state})=>{
++  const bitmap=await createImageBitmap(new Blob([new Uint8Array(bytes)],{type:'image/png'})),canvas=document.createElement('canvas');canvas.width=bitmap.width;canvas.height=bitmap.height;const c=canvas.getContext('2d');c.drawImage(bitmap,0,0);
++  const rgb=v=>v.match(/[\d.]+/g)?.slice(0,3).map(Number),lum=a=>a.map(x=>x/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((n,v,i)=>n+v*[.2126,.7152,.0722][i],0),ratio=(a,b)=>(Math.max(lum(a),lum(b))+.05)/(Math.min(lum(a),lum(b))+.05);
++  const text=[],issues=[],pixels=[];
++  for(const el of document.querySelectorAll('body *')){const r=el.getBoundingClientRect(),s=getComputedStyle(el);if(r.width===0||r.height===0||r.bottom<=0||r.top>=innerHeight||el.closest('svg')||!Array.from(el.childNodes).some(n=>n.nodeType===3&&n.textContent.trim()))continue;
++   for(let a=el;a;a=a.parentElement)if(Number(getComputedStyle(a).opacity)<1)issues.push('Text opacity: '+el.textContent.slice(0,40));
++   let bg=null;for(let a=el;a;a=a.parentElement){const color=getComputedStyle(a).backgroundColor;if(color!=='rgba(0, 0, 0, 0)'&&color!=='transparent'){bg=rgb(color);break;}}bg ||= [255,255,255];
++   const n=ratio(rgb(s.color),bg),large=parseFloat(s.fontSize)>=24||(parseFloat(s.fontSize)>=18.66&&Number(s.fontWeight)>=700),threshold=large?3:4.5;text.push({label:el.textContent.trim().slice(0,80),color:s.color,background:bg,ratio:n,threshold});if(n<threshold)issues.push('Contrast '+n.toFixed(2)+': '+el.textContent.slice(0,50));
++  }
++  for(const el of document.querySelectorAll('.bv-card,.bv-game-quest,.bv-game-payment-lock,#fixture')){const r=el.getBoundingClientRect();if(r.top<0||r.top+20>=innerHeight)continue;const expected=rgb(getComputedStyle(el).backgroundColor);if(!expected)continue;const candidates=[[20,8],[8,20],[25,15],[r.width/2,8]].filter(([x,y])=>el.contains(document.elementFromPoint(r.x+x,r.y+y)));if(!candidates.length){pixels.push({selector:el.className||el.id,occludedByFixture:true});continue;}const matches=candidates.map(([x,y])=>Array.from(c.getImageData(Math.floor(r.x+x),Math.floor(r.y+y),1,1).data).slice(0,3));pixels.push({selector:el.className||el.id,expected,actual:matches});if(!matches.some(a=>a.every((v,i)=>Math.abs(v-expected[i])<=2)))issues.push('Rendered backing differs: '+el.className);}
++  return {state,text,pixels,issues};
++ },{bytes:[...png],state});assert.deepEqual(report.issues,[]);assert.ok(report.text.length>0);contrast.push(report);
++}
++try{
++ h.env.PAYMENT_BILLING_ADAPTER=makeFakeBillingAdapter();await h.send(h.event('qa-paid','invoice.paid',h.invoice('qa-paid','PLAN-WEBSITE-MONTH',5000,'2026-10-01','2099-11-01')));const data=await billingSummary(h.env,'tenant_123');
++ const bundle=await build({stdin:{contents:"import {renderBillingSummary} from './src/client/workspace/billing.ts';window.showBilling=d=>{document.querySelector('#board').innerHTML=renderBillingSummary(d)};",resolveDir:root},bundle:true,write:false,format:'iife',platform:'browser'}),css=fs.readFileSync(root+'/dist/client/platform.css','utf8');
++ browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
++ for(const [device,width,height]of [['desktop',1440,900],['phone',390,844]]){
++  const context=await browser.newContext({viewport:{width,height},reducedMotion:'reduce'}),page=await context.newPage(),errors=[],network=[];page.on('pageerror',e=>errors.push(e.message));
++  await page.route('**/*',async route=>{const u=new URL(route.request().url());if(u.origin!==base){network.push(u.href);return route.abort();}if(u.pathname==='/')return route.fulfill({contentType:'text/html',body:'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ownership financing — local QA fixture</title><style>'+css+'body{margin:0}#fixture{position:sticky;top:0;z-index:999;background:#172d47;color:#fff;padding:8px 20px;font:14px system-ui}#board{max-width:1120px;margin:0 auto;padding:24px}#board *{scroll-margin-top:56px}@media(max-width:720px){#board{padding:16px}}</style></head><body class="bv-platform"><div id="fixture">Local QA fixture · no live checkout</div><main id="board"></main><script>'+bundle.outputFiles[0].text+'</script></body></html>'});const file=root+'/public'+u.pathname;return fs.existsSync(file)?route.fulfill({body:fs.readFileSync(file),contentType:file.endsWith('.svg')?'image/svg+xml':'application/octet-stream'}):route.fulfill({status:404,body:''});});
++  await page.goto(base);await page.evaluate(d=>window.showBilling(d),data);await page.evaluate(()=>document.fonts.ready);
++  const own=page.locator('[data-bv-own]'),card=page.locator('article').filter({has:own});await card.scrollIntoViewIfNeeded();
++  assert.equal(await own.isDisabled(),false);assert.ok((await own.boundingBox()).height>=44);checks.push('44px enabled ownership action '+device);
++  assert.equal(await card.locator('.bv-ownership-financing p').innerText(),'Or pay over time with Klarna or Affirm, subject to approval.');checks.push('Approval-qualified copy below price '+device);
++  assert.equal(await page.locator('.bv-ownership-financing').count(),1);assert.equal(await page.locator('.bv-ownership-marks img').count(),2);for(const img of await page.locator('.bv-ownership-marks img').all())assert.equal(await img.evaluate(e=>e.complete&&e.naturalWidth>0),true);checks.push('Both official local marks decoded '+device);
++  assert.doesNotMatch(await card.innerText(),/APR|interest.free|monthly installment|\$\d+\.\d+ per month/i);checks.push('No unbacked financing amount or APR '+device);
++  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);checks.push('No horizontal overflow '+device);
++  await readable(page,'ownership-financing-'+device);checks.push('Full-opacity AA text on rendered background '+device);
++  await page.screenshot({path:shots+'/own-website-'+device+'.png'});await own.focus();assert.equal(await own.evaluate(e=>e===document.activeElement),true);checks.push('Keyboard action reachable '+device);
++  assert.deepEqual(errors,[]);assert.deepEqual(network,[]);checks.push('No browser errors or provider requests '+device);await context.close();
++ }
++ fs.writeFileSync(out+'/browser-results.json',JSON.stringify({passed:checks.length,failed:0,checks,providerCalls:0},null,2));fs.writeFileSync(out+'/contrast-pixels.json',JSON.stringify(contrast,null,2));console.log(checks.length+'/'+checks.length+' ownership financing browser checks pass');
++}finally{await browser?.close();h.close();}

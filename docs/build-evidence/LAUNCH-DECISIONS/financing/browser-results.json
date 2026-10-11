@@ -1,0 +1,23 @@
+{
+  "passed": 16,
+  "failed": 0,
+  "checks": [
+    "44px enabled ownership action desktop",
+    "Approval-qualified copy below price desktop",
+    "Both official local marks decoded desktop",
+    "No unbacked financing amount or APR desktop",
+    "No horizontal overflow desktop",
+    "Full-opacity AA text on rendered background desktop",
+    "Keyboard action reachable desktop",
+    "No browser errors or provider requests desktop",
+    "44px enabled ownership action phone",
+    "Approval-qualified copy below price phone",
+    "Both official local marks decoded phone",
+    "No unbacked financing amount or APR phone",
+    "No horizontal overflow phone",
+    "Full-opacity AA text on rendered background phone",
+    "Keyboard action reachable phone",
+    "No browser errors or provider requests phone"
+  ],
+  "providerCalls": 0
+}

@@ -1,0 +1,1 @@
+import {registerHooks} from 'node:module';registerHooks({resolve(s,c,next){if(s==='node:sqlite')return {url:new URL('./pg-sqlite-facade.mjs',import.meta.url).href,shortCircuit:true};return next(s,c)}});

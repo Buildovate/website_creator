@@ -5,7 +5,7 @@ import {markPastDue,paymentClock} from './lifecycle.js';
 import {finishOwnership} from './ownership.js';
 import {dispatchSettled} from './checkout.ts';
 
-const accepted=new Set(['checkout.session.completed','invoice.paid','invoice.payment_failed','customer.subscription.created','customer.subscription.updated','customer.subscription.deleted','charge.refunded','charge.dispute.created']);
+const accepted=new Set(['checkout.session.completed','checkout.session.async_payment_succeeded','checkout.session.async_payment_failed','invoice.paid','invoice.payment_failed','customer.subscription.created','customer.subscription.updated','customer.subscription.deleted','charge.refunded','charge.dispute.created']);
 const iso=value=>typeof value==='number'?new Date(value*1000).toISOString():value;
 const now=()=>new Date().toISOString();
 const query=(env,sql,...args)=>env.DB.prepare(sql).bind(...args);
@@ -109,18 +109,20 @@ async function processEvent(env,event){
     const reference=object.payment_intent??object.id??object.charge;
     return reference?revoke(env,reference,event.type):false;
   }
+  // A failed financing attempt must never change ownership, rental access or hosting.
+  if(event.type==='checkout.session.async_payment_failed')return true;
   const tenantId=await tenantFor(env,object);
   if(!tenantId)return false;
   const customer=typeof object.customer==='string'?object.customer:object.customer?.id;
   await stateFor(env,tenantId,customer);
   const created=event.created??Math.floor(Date.now()/1000);
-  if(event.type==='checkout.session.completed'){
+  if(event.type==='checkout.session.completed'||event.type==='checkout.session.async_payment_succeeded'){
     const skus=String(object.metadata?.skus??'').split(',').filter(Boolean);
     if(!skus.length)throw new Error('Checkout has no server catalog SKUs.');
     if(object.mode==='payment'){
       if(object.payment_status!=='paid')return true;
       if(skus.length!==1)throw new Error('One-time settlement must identify one SKU.');
-      await settle(env,{tenantId,sku:skus[0],amount:object.amount_total,reference:object.payment_intent??object.id,eventId:event.id,eventCreated:created});
+      await settle(env,{tenantId,sku:skus[0],amount:object.amount_total,periodStart:object.created??created,reference:object.payment_intent??object.id,eventId:event.id,eventCreated:created});
     }else if(object.mode==='subscription'){
       if(object.subscription)await run(env,'UPDATE payment_state SET subscription_id=? WHERE tenant_id=?',object.subscription,tenantId);
     }else throw new Error('Unknown checkout mode.');

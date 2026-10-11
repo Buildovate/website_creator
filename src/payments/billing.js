@@ -20,7 +20,7 @@ async function authorizedTenant(req,env,tenantId,change=false){
 export async function billingSummary(env,tenantId){
   const state=await first(env,'SELECT * FROM payment_state WHERE tenant_id=?',tenantId);
   const ledger=await rows(env,'SELECT id,sku,amount_cents,period_start,period_end,reference,status,created_at FROM payment_ledger WHERE tenant_id=? ORDER BY period_start DESC,created_at DESC,id DESC LIMIT 100',tenantId);
-  const events=await rows(env,"SELECT type,payload FROM payment_events WHERE processed=1 AND type IN ('invoice.paid','checkout.session.completed') ORDER BY created_at DESC LIMIT 500");
+  const events=await rows(env,"SELECT type,payload FROM payment_events WHERE processed=1 AND type IN ('invoice.paid','checkout.session.completed','checkout.session.async_payment_succeeded') ORDER BY created_at DESC LIMIT 500");
   const links=new Map();
   for(const item of events){
     const object=JSON.parse(item.payload).data?.object??{};

@@ -7,6 +7,7 @@ export function makeFakeStripe() {
   const idempotentSessions = new Map();
   const stripe = {
     calls, productsStore, pricesStore, customersStore, sessionsStore,
+    paymentMethodConfigurations: {async retrieve(id){calls.read++;const allowed=id==='pmc_ownership_fixture'?['card','klarna','affirm']:['card'];return {id,active:true,livemode:false,...Object.fromEntries(allowed.map(key=>[key,{available:true,display_preference:{value:'on'}}]))};}},
     snapshot: () => ({ products:structuredClone(productsStore), prices:structuredClone(pricesStore) }),
     products: {
       async list({ starting_after } = {}) { calls.read++; const start = starting_after ? productsStore.findIndex(item => item.id === starting_after)+1 : 0; return {data:structuredClone(productsStore.slice(start)),has_more:false}; },
@@ -32,7 +33,9 @@ export function makeFakeStripe() {
 export const fakeTestEnv = Object.freeze({
   STRIPE_SECRET_KEY:'sk_test_FAKE_FOR_OFFLINE_TESTS',
   STRIPE_PUBLISHABLE_KEY:'pk_test_FAKE_FOR_OFFLINE_TESTS',
-  STRIPE_WEBHOOK_SECRET:'whsec_FAKE_FOR_OFFLINE_TESTS'
+  STRIPE_WEBHOOK_SECRET:'whsec_FAKE_FOR_OFFLINE_TESTS',
+  STRIPE_CARD_PAYMENT_METHOD_CONFIGURATION:'pmc_card_fixture',
+  STRIPE_OWNERSHIP_PAYMENT_METHOD_CONFIGURATION:'pmc_ownership_fixture'
 });
 
 export function makeFakeBillingAdapter({quotedAmountCents=50000,quotedNetCents=quotedAmountCents}={}){

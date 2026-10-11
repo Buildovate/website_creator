@@ -1,0 +1,6 @@
+snapshot/
+tmp/
+before.json
+pg-fixture-trace-*.jsonl
+pg-trace-*.jsonl
+commit.json

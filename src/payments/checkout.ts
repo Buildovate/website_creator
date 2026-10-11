@@ -11,6 +11,7 @@ export type CheckoutRequest = {
 export type StripeEnvironment = Record<string, string | undefined>;
 
 type StripeClient = {
+  paymentMethodConfigurations: { retrieve: (id:string) => Promise<Record<string, any>> };
   customers: {
     search: (input: object) => Promise<{data: Array<{id:string}>}>;
     create: (input: object, options: object) => Promise<{id:string}>;
@@ -98,7 +99,14 @@ export function createCheckoutService({ stripe, env = {}, catalogData = catalog,
     const modes = new Set(rows.map(modeFor));
     if (modes.size !== 1) throw new Error('Payment and subscription items require separate checkouts.');
     const mode = [...modes][0];
-    const signature = JSON.stringify({items:request.items,returnPath:request.returnPath,metadata:request.metadata ?? {},mode});
+    // Separate Dashboard configurations prevent financing from leaking into recurring/add-on checkouts.
+    const ownership = rows.length === 1 && rows[0].sku === 'SITE-BUYOUT' && mode === 'payment';
+    const configuration = ownership ? env.STRIPE_OWNERSHIP_PAYMENT_METHOD_CONFIGURATION : env.STRIPE_CARD_PAYMENT_METHOD_CONFIGURATION;
+    if (!configuration || !/^pmc_[A-Za-z0-9_]+$/.test(configuration) || !stripe!.paymentMethodConfigurations?.retrieve)
+      return {state:'not_connected',message:'Payments not connected: payment methods need setup.'};
+    if (ownership && configuration === env.STRIPE_CARD_PAYMENT_METHOD_CONFIGURATION)
+      throw new Error('Ownership and card-only payment configurations must be separate.');
+    const signature = JSON.stringify({items:request.items,returnPath:request.returnPath,metadata:request.metadata ?? {},mode,configuration});
     const key = `${request.tenantId}:${request.idempotencyKey}`;
     const previous = sessionFlights.get(key);
     if (previous) {
@@ -106,6 +114,11 @@ export function createCheckoutService({ stripe, env = {}, catalogData = catalog,
       return previous.result;
     }
     const result = (async () => {
+      const config = await stripe!.paymentMethodConfigurations.retrieve(configuration);
+      const allowed = ownership ? ['card','klarna','affirm'] : ['card'];
+      const enabled = Object.entries(config).filter(([,value]) => value && typeof value === 'object' && value.display_preference?.value === 'on').map(([key]) => key);
+      if (config.id !== configuration || config.active !== true || config.livemode !== false || allowed.some(key => !enabled.includes(key) || config[key]?.available !== true) || enabled.some(key => !allowed.includes(key)))
+        throw new Error('Payment methods need setup: use card only, or card, Klarna and Affirm for ownership.');
       const lineItems = await Promise.all(rows.map(async (row,index) => {
         const found = await stripe!.prices.list({ lookup_keys: [`${row.sku}@${row.version}`], limit: 1 });
         const price = found.data[0];
@@ -116,7 +129,7 @@ export function createCheckoutService({ stripe, env = {}, catalogData = catalog,
       const path = request.returnPath;
       const metadata = { ...request.metadata, tenantId: request.tenantId, catalogVersion: String(catalogData.catalogVersion), skus: rows.map(row => row.sku).join(',') };
       const payload: Record<string,unknown> = {
-        mode, customer, line_items: lineItems, metadata,
+        mode, customer, line_items: lineItems, metadata, payment_method_configuration: configuration,
         success_url: `${origin.origin}${path}${path.includes('?') ? '&' : '?'}checkout=success&session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${origin.origin}${path}${path.includes('?') ? '&' : '?'}checkout=cancel`
       };

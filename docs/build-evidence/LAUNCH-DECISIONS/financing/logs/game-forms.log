@@ -1,0 +1,5 @@
+PASS Publish step opens an existing form with the real Publish action
+PASS domain and paid-plan destinations stay with their existing owners
+PASS every quest step resolves to an existing permitted form without creating a section
+PASS no permitted sections gives no target; existing anchored forms are retained
+4/4 passed
