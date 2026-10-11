@@ -10,21 +10,15 @@ fs.mkdirSync(out,{recursive:true});
 await build({entryPoints:[root+'/src/blueprint/api.js'],outfile:root+'/.data/028G/game-autofill-api.js',bundle:true,format:'esm',platform:'node',loader:{'.html':'text','.pdf':'binary'},logLevel:'silent'});
 const {gameApi}=await import(pathToFileURL(root+'/.data/028G/game-autofill-api.js').href);
 const saved={name:'Harbor Roofing · QA fixture',owner:'QA owner',phone:'(805) 555-0123',email:'qa@example.test',address:'',hours:'By appointment',hero:'Talk through your roof repair',intro:'We explain the repair scope before work begins.',license:'DO NOT COPY',area:'Owner choice',price:99,experience:'DO NOT COPY',platform:{questionnaire:{factsConfirmed:true}}};
-const db=isPostgresGameFixture()?gameDatabaseFixture():new DatabaseSync(':memory:');
-if(isPostgresGameFixture()){
+const db=gameDatabaseFixture();
+{
 
 seedGameTenant(db,'a',saved.name,{settings:JSON.stringify(saved),version:4});
 seedGameTenant(db,'b','Other tenant',{settings:JSON.stringify({...saved,name:'Other tenant'}),version:2});
 for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['a','editor','editor'],['b','other','owner']])seedGameMember(db,tenant,user,role);
 seedGameAdmin(db,'admin');
-}else{
-
-db.exec('CREATE TABLE admins(user_id TEXT,role TEXT);CREATE TABLE tenants(id TEXT,name TEXT,settings TEXT,version INT);CREATE TABLE members(tenant_id TEXT,user_id TEXT,role TEXT,active INT);');
-db.prepare('INSERT INTO tenants VALUES(?,?,?,?)').run('a',saved.name,JSON.stringify(saved),4);
-db.prepare('INSERT INTO tenants VALUES(?,?,?,?)').run('b','Other tenant',JSON.stringify({...saved,name:'Other tenant'}),2);
-for(const [tenant,user,role] of [['a','owner','owner'],['a','viewer','viewer'],['a','editor','editor'],['b','other','owner']])db.prepare('INSERT INTO members VALUES(?,?,?,1)').run(tenant,user,role);
-db.prepare('INSERT INTO admins VALUES(?,?)').run('admin','admin');
 }
+
 const env={DB:{prepare(sql){
  let args=[];
  return {

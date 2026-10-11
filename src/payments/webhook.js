@@ -1,6 +1,8 @@
 import {createHmac,timingSafeEqual,randomUUID} from 'node:crypto';
 import {getProduct,getPlanEntitlements,monthlyMinimumEnd} from '../platform/catalog.ts';
 import {configureEntitlements} from '../entitlements.js';
+import {markPastDue,paymentClock} from './lifecycle.js';
+import {finishOwnership} from './ownership.js';
 import {dispatchSettled} from './checkout.ts';
 
 const accepted=new Set(['checkout.session.completed','invoice.paid','invoice.payment_failed','customer.subscription.created','customer.subscription.updated','customer.subscription.deleted','charge.refunded','charge.dispute.created']);
@@ -48,8 +50,9 @@ function priced(sku,amount){
   return row;
 }
 async function audit(env,tenantId,action,detail){await run(env,'INSERT INTO payment_audit(id,tenant_id,action,detail,created_at) VALUES(?,?,?,?,?)',randomUUID(),tenantId,action,detail,now());}
-async function settle(env,{tenantId,sku,amount,periodStart,periodEnd,reference,eventId,eventCreated}){
-  const row=priced(sku,amount);
+async function settle(env,{tenantId,sku,amount,periodStart,periodEnd,reference,eventId,eventCreated,approvedChange=null}){
+  const row=approvedChange?getProduct(sku):priced(sku,amount);
+  if(approvedChange&&(approvedChange.tenant_id!==tenantId||approvedChange.target_sku!==sku||approvedChange.amount_cents!==amount||!['requesting','requested','settled'].includes(approvedChange.status)))throw Error('Proration amount does not match approved server quote.');
   const start=iso(periodStart??eventCreated),end=iso(periodEnd??'9999-12-31T23:59:59.999Z');
   const id=`${reference}:${sku}:${start}`;
   const inserted=await run(env,"INSERT OR IGNORE INTO payment_ledger(id,tenant_id,sku,amount_cents,period_start,period_end,reference,status,created_at) VALUES(?,?,?,?,?,?,?,'paid',?)",id,tenantId,sku,amount,start,end,reference,now());
@@ -59,18 +62,23 @@ async function settle(env,{tenantId,sku,amount,periodStart,periodEnd,reference,e
   for(const item of keys){if(await first(env,'SELECT id FROM payment_entitlements WHERE ledger_id=? AND tenant_id=? AND key=?',id,tenantId,item.key))continue;repaired=true;await run(env,"INSERT INTO payment_entitlements(id,ledger_id,tenant_id,key,quantity,used,period_end,source,status) VALUES(?,?,?,?,?,0,?,?,'active')",id+':'+item.key,id,tenantId,item.key,item.quantity,end,sku);}
   if(row.planId){
     const previous=await stateFor(env,tenantId);
-    if(!previous.site_owned){
+    if(!previous.site_owned&&eventCreated>=previous.status_event_at&&!(previous.past_due_since&&paymentClock(env)>=Date.parse(previous.past_due_since)+30*86400000)){
       const started=previous.started_at??start;
       const minimum=row.cadence==='month'?monthlyMinimumEnd(started):null;
-      await run(env,"UPDATE payment_state SET plan=?,status='active',renews_at=?,started_at=?,minimum_ends_at=?,site_available=1 WHERE tenant_id=?",row.planId,end,started,minimum,tenantId);
+      await run(env,"UPDATE payment_state SET plan=?,status='active',renews_at=?,started_at=?,minimum_ends_at=?,site_available=1,past_due_since=NULL,data_hold_until=NULL WHERE tenant_id=?",row.planId,end,started,minimum,tenantId);
     }
   }
   if(sku==='SITE-OWN'||sku==='SITE-BUYOUT'){
+    const ownedState=await stateFor(env,tenantId);
+    if(!ownedState.site_owned){
     await run(env,"UPDATE payment_entitlements SET status='revoked' WHERE tenant_id=? AND source LIKE 'PLAN-%' AND status='active'",tenantId);
-    await run(env,"UPDATE payment_state SET plan=NULL,status='active',site_owned=1,hosting_sku='OWNER-HOSTING',hosting_amount_cents=5000,hosting_status='pending_checkout',site_available=1 WHERE tenant_id=?",tenantId);
+    await run(env,"UPDATE payment_state SET plan=NULL,status='active',site_owned=1,hosting_sku='OWNER-HOSTING',hosting_amount_cents=5000,hosting_status='pending_checkout',site_available=1,past_due_since=NULL WHERE tenant_id=?",tenantId);
+    }
+    await finishOwnership(env,tenantId,id);
     await audit(env,tenantId,'site.owned',`${sku}:${id}; OWNER-HOSTING $50/month pending checkout`);
   }
-  if(sku==='OWNER-HOSTING')await run(env,"UPDATE payment_state SET hosting_status='active',renews_at=? WHERE tenant_id=?",end,tenantId);
+  if(sku==='OWNER-HOSTING'){const previous=await stateFor(env,tenantId);if(eventCreated>=previous.status_event_at&&!(previous.past_due_since&&paymentClock(env)>=Date.parse(previous.past_due_since)+30*86400000))await run(env,"UPDATE payment_state SET hosting_status='active',renews_at=?,past_due_since=NULL,site_available=1 WHERE tenant_id=?",end,tenantId);}
+  if(approvedChange)await run(env,"UPDATE payment_plan_changes SET status='settled' WHERE id=?",approvedChange.id);
   if(inserted.meta.changes||repaired)await dispatchSettled({tenantId,sku,ledgerId:id,amountCents:amount,periodStart:start,periodEnd:end});
   return true;
 }
@@ -121,31 +129,53 @@ async function processEvent(env,event){
   if(event.type==='invoice.paid'){
     const lines=object.lines?.data??[];
     if(!lines.length)throw new Error('Paid invoice has no lines.');
+    const changeId=object.metadata?.paymentChangeId??object.parent?.subscription_details?.metadata?.paymentChangeId;
+    const savedChange=changeId?await first(env,'SELECT * FROM payment_plan_changes WHERE id=? AND tenant_id=?',changeId,tenantId):null;
+    // Subscription metadata survives renewal. A settled quote must not price a later full-price invoice.
+    const fullRenewal=savedChange?.status==='settled'&&lines.every(l=>!l.proration&&!l.parent?.subscription_item_details?.proration&&getProduct(invoiceSku(l,object))?.priceCents===l.amount);
+    if(changeId&&!fullRenewal){
+      const change=savedChange;
+      const subscription=object.subscription??object.parent?.subscription_details?.subscription;
+      const net=lines.reduce((n,l)=>n+l.amount,0),tax=(object.total_taxes||[]).filter(x=>x.tax_behavior==='exclusive').reduce((n,x)=>n+x.amount,0),gross=net+tax;
+      if(!change||change.kind!=='upgrade'||!['requesting','requested','settled'].includes(change.status)||change.subscription_id!==subscription||!Number.isSafeInteger(net)||net<0||net!==change.line_net_cents||tax!==change.tax_cents||gross!==change.amount_cents||(object.amount_paid!==undefined&&object.amount_paid!==gross)||(object.amount_due!==undefined&&object.amount_due!==gross))throw Error('Proration amount does not match approved server quote.');
+      if(lines.some(l=>!Number.isSafeInteger(l.amount)||![change.current_sku,change.target_sku].includes(invoiceSku(l,object))))throw Error('Unexpected proration line.');
+      await settle(env,{tenantId,sku:change.target_sku,amount:gross,periodStart:change.effective_at,periodEnd:change.period_end,reference:object.payment_intent??object.id,eventId:event.id,eventCreated:created,approvedChange:change});
+      const current=await first(env,'SELECT status_event_at,past_due_since FROM payment_state WHERE tenant_id=?',tenantId);
+      if(created>=current.status_event_at&&!(current.past_due_since&&paymentClock(env)>=Date.parse(current.past_due_since)+30*86400000))await run(env,"UPDATE payment_state SET status='active',status_event_at=? WHERE tenant_id=?",created,tenantId);return true;
+    }
     for(const line of lines){const sku=invoiceSku(line,object);if(!sku)throw new Error('Paid invoice line has no SKU.');priced(sku,line.amount);}
     for(const line of lines){
       const sku=invoiceSku(line,object);
       if(!sku)throw new Error('Paid invoice line has no SKU.');
       await settle(env,{tenantId,sku,amount:line.amount,periodStart:line.period?.start??created,periodEnd:line.period?.end,reference:object.payment_intent??object.charge??object.id,eventId:event.id,eventCreated:created});
     }
-    const current=await first(env,'SELECT status_event_at FROM payment_state WHERE tenant_id=?',tenantId);
-    if(created>=current.status_event_at)await run(env,"UPDATE payment_state SET status='active',status_event_at=? WHERE tenant_id=?",created,tenantId);
+    const current=await first(env,'SELECT status_event_at,past_due_since FROM payment_state WHERE tenant_id=?',tenantId);
+    if(created>=current.status_event_at&&!(current.past_due_since&&paymentClock(env)>=Date.parse(current.past_due_since)+30*86400000))await run(env,"UPDATE payment_state SET status='active',status_event_at=?,past_due_since=NULL WHERE tenant_id=?",created,tenantId);
     return true;
   }
   const state=await first(env,'SELECT * FROM payment_state WHERE tenant_id=?',tenantId);
   if(event.type==='invoice.payment_failed'){
-    if(created>=state.status_event_at){await run(env,"UPDATE payment_state SET status='past_due',status_event_at=? WHERE tenant_id=?",created,tenantId);await audit(env,tenantId,'payment.past_due','Features remain available pending Q4.');}
+    const changeId=object.metadata?.paymentChangeId??object.parent?.subscription_details?.metadata?.paymentChangeId??object.subscription_details?.metadata?.paymentChangeId;
+    const subscription=object.subscription??object.parent?.subscription_details?.subscription??object.subscription_details?.subscription;
+    const change=changeId?await first(env,'SELECT * FROM payment_plan_changes WHERE id=? AND tenant_id=?',changeId,tenantId):null;
+    const lines=object.lines?.data||[],prorated=lines.length>0&&lines.every(l=>l.proration===true||l.parent?.subscription_item_details?.proration===true);
+    if(change?.kind==='upgrade'&&['requesting','requested'].includes(change.status)&&change.subscription_id===subscription&&prorated&&lines.reduce((n,l)=>n+l.amount,0)===change.line_net_cents&&state.status==='active'&&Date.parse(change.period_end)>paymentClock(env)){
+      await audit(env,tenantId,'plan.change_payment_failed','Upgrade not paid; the already-paid current plan remains active.');return true;
+    }
+    if(created>=state.status_event_at){await markPastDue(env,tenantId,created);await audit(env,tenantId,'payment.past_due','Seven-day grace; pause day 8; rental cancellation day 30. Reminders queued locally.');}
     return true;
   }
   if(event.type.startsWith('customer.subscription.')){
+    if(state.site_owned){if(event.type==='customer.subscription.deleted'&&object.id===state.hosting_subscription_id){const end=iso(object.current_period_end??created);await run(env,"UPDATE payment_state SET hosting_stop_at=?,hosting_status='ending' WHERE tenant_id=?",end,tenantId);}else if(object.id===state.hosting_subscription_id&&object.status==='past_due')await markPastDue(env,tenantId,created);return true;}
     if(object.id)await run(env,'UPDATE payment_state SET subscription_id=? WHERE tenant_id=?',object.id,tenantId);
     if(created<state.status_event_at)return true;
     if(event.type==='customer.subscription.deleted'){
-      const end=iso(object.current_period_end??created),expired=end<=now();
+      const end=iso(object.current_period_end??created),expired=Date.parse(end)<=paymentClock(env);
       await run(env,"UPDATE payment_state SET status='canceled',status_event_at=?,renews_at=?,site_available=?,data_hold_until=? WHERE tenant_id=?",created,end,expired?0:1,expired?new Date(Date.parse(end)+90*86400000).toISOString():null,tenantId);
       if(expired){await run(env,"UPDATE payment_entitlements SET status='revoked' WHERE tenant_id=? AND source LIKE 'PLAN-%' AND status='active'",tenantId);await audit(env,tenantId,'subscription.canceled','Unused rental entitlements revoked; domain retained; data held 90 days.');}
       else await audit(env,tenantId,'subscription.cancel_scheduled',`Rental remains until ${end}; domain retained.`);
     }else if(object.status==='past_due'){
-      await run(env,"UPDATE payment_state SET status='past_due',status_event_at=? WHERE tenant_id=?",created,tenantId);
+      await markPastDue(env,tenantId,created);
     }
     return true;
   }

@@ -1,0 +1,137 @@
+{
+  "reason": "Final source core verification; first sweep outcomes remain preserved",
+  "rows": [
+    {
+      "label": "game-progress",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-game-progress.log",
+      "ms": 1016
+    },
+    {
+      "label": "game-milestones",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-game-milestones.log",
+      "ms": 991
+    },
+    {
+      "label": "game-desktop-api",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-game-desktop-api.log",
+      "ms": 1431
+    },
+    {
+      "label": "game-experience-api",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-game-experience-api.log",
+      "ms": 1241
+    },
+    {
+      "label": "game-autofill",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-game-autofill.log",
+      "ms": 1283
+    },
+    {
+      "label": "game-copy",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-game-copy.log",
+      "ms": 1265
+    },
+    {
+      "label": "game-forms",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-game-forms.log",
+      "ms": 952
+    },
+    {
+      "label": "payments",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-payments.log",
+      "ms": 1023
+    },
+    {
+      "label": "stripe-sync",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-stripe-sync.log",
+      "ms": 833
+    },
+    {
+      "label": "stripe-checkout",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-stripe-checkout.log",
+      "ms": 832
+    },
+    {
+      "label": "stripe-no-key",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-stripe-no-key.log",
+      "ms": 791
+    },
+    {
+      "label": "entitlements",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-entitlements.log",
+      "ms": 1164
+    },
+    {
+      "label": "pay4a",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-pay4a.log",
+      "ms": 1233
+    },
+    {
+      "label": "pay4b",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-pay4b.log",
+      "ms": 1223
+    },
+    {
+      "label": "pay5",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-pay5.log",
+      "ms": 1235
+    },
+    {
+      "label": "catalog",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-catalog.log",
+      "ms": 869
+    },
+    {
+      "label": "domain-wizard",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-domain-wizard.log",
+      "ms": 1517
+    },
+    {
+      "label": "insertion-order",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-insertion-order.log",
+      "ms": 3836
+    },
+    {
+      "label": "launch-decisions",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-launch-decisions.log",
+      "ms": 2021
+    },
+    {
+      "label": "platform-look",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-platform-look.log",
+      "ms": 812
+    },
+    {
+      "label": "readiness-batch-a",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-readiness-batch-a.log",
+      "ms": 3356
+    },
+    {
+      "label": "readiness-batch-b",
+      "code": 0,
+      "log": "C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/logs/gate-readiness-batch-b.log",
+      "ms": 1215
+    }
+  ]
+}

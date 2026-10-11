@@ -1,0 +1,178 @@
+diff --git a/src/blueprint/api.js b/src/blueprint/api.js
+index bd04ef6..78789c9 100644
+--- a/src/blueprint/api.js
++++ b/src/blueprint/api.js
+@@ -2,6 +2,7 @@ import {autofillApi} from './autofill/api.js';
+ import {experienceApi} from './experience.js';
+ import {access,must} from '../core.js';
+ import {readProgressSources} from './sources.js';
++import {paymentAvailability} from '../payments/lifecycle.js';
+ import {evaluateProgress} from './progress.js';
+ 
+ // Game is the only presentation. Old personal view records are left untouched.
+@@ -15,5 +16,5 @@ export async function gameApi(req,env,url){
+  must(match,'Game workspace not found.',404);
+  must(req.method==='GET','Game is the only view. This endpoint is read-only.',405);
+  const {tenant,role}=await access(req,env,decodeURIComponent(match[1]),'read',{readOnly:true});
+- return {tenant:{id:tenant.id,name:tenant.name},role,view:'game',progress:evaluateProgress(await readProgressSources(env,tenant.id))};
++ return {tenant:{id:tenant.id,name:tenant.name},role,view:'game',availability:await paymentAvailability(env,tenant.id),progress:evaluateProgress(await readProgressSources(env,tenant.id))};
+ }
+diff --git a/src/client/workspace/game/index.js b/src/client/workspace/game/index.js
+index 19557ff..fc5159e 100644
+--- a/src/client/workspace/game/index.js
++++ b/src/client/workspace/game/index.js
+@@ -1,3 +1,4 @@
++import {mountPaymentLock} from './payment-lock.js';
+ import {mountAutofill} from './autofill.js';
+ import {createGameExperience} from './experience.js';
+ import {api} from '../../shared/workspace-api.js';
+@@ -32,15 +33,16 @@ export function installGameNavigation(){
+   p.append(h,note,retry);board.replaceChildren(p);
+  }
+  async function load(id){if(!id)return;const token=++sequence;activeId=id;show(true);if(data)notice('Refreshing saved progress…');else recovery(true);
+-  try{const next=await api('/game/'+encodeURIComponent(id));if(token!==sequence)return;data=next;let experienceError=false;try{const result=await api('/game/'+encodeURIComponent(id)+'/experience','POST',{action:'observe'});if(token!==sequence)return;experience?.accept(result);}catch{experienceError=true;}draw();notice(experienceError?'Your progress is loaded, but we could not save your tour and milestone updates. Try Refresh progress when your connection is ready.':(data.role==='viewer'?'Read-only website access. ':'')+'Saved progress is up to date.');}
++  try{const next=await api('/game/'+encodeURIComponent(id));if(token!==sequence)return;data=next;let experienceError=false;try{const result=await api('/game/'+encodeURIComponent(id)+'/experience','POST',{action:'observe'});if(token!==sequence)return;experience?.accept(result);}catch{experienceError=true;}draw();if(data.availability?.editorLocked&&!section.hidden&&!['billing','add-ons'].includes(opened))openSection(opened,null,trigger);notice(experienceError?'Your progress is loaded, but we could not save your tour and milestone updates. Try Refresh progress when your connection is ready.':(data.role==='viewer'?'Read-only website access. ':'')+'Saved progress is up to date.');}
+   catch(error){if(token!==sequence)return;if(data){draw();notice(navigator.onLine?'Progress could not refresh. Your last loaded board is still available. Use Refresh progress to try again.':'You’re offline. Your last loaded board and open section are still here.');}else recovery(false,error);}
+  }
+  function back(){frame(false);window.scrollTo(0,boardScroll);draw();const focus=trigger?.dataset.gameStep?board.querySelector('[data-game-step="'+CSS.escape(trigger.dataset.gameStep)+'"]'):trigger?.dataset.gameSetting?board.querySelector('[data-game-setting="'+CSS.escape(opened||'')+'"][data-game-setting-quest="'+CSS.escape(trigger.dataset.gameSettingQuest)+'"]'):board.querySelector('[data-game-open="'+CSS.escape(opened||'')+'"]');focus?.focus({preventScroll:true});load(activeId);}
+  section.querySelector('[data-game-back]').onclick=back;
+  function openSection(id,anchor,source){
++  if(data?.availability?.editorLocked&&!['billing','add-ons'].includes(id)){frame(false);content.inert=true;mountPaymentLock(board,()=>openSection('billing',null,source),data.availability);return;}
+   const button=content.querySelector('nav[aria-label="Website settings"] [data-section="'+CSS.escape(id||'')+'"]');
+   if(!button){notice('This section is not available for your account.');return;}
+-  trigger=source;requestPublish=source?.dataset.gameStep==='published';boardScroll=window.scrollY;section.querySelector('[data-game-section-title]').textContent=sectionLabels[id]||button.textContent;
++  content.inert=false;trigger=source;requestPublish=source?.dataset.gameStep==='published';boardScroll=window.scrollY;section.querySelector('[data-game-section-title]').textContent=sectionLabels[id]||button.textContent;
+   const target=section.querySelector('[data-game-content]');if(status)target.append(status);target.append(content);frame(true);section.scrollTop=0;window.scrollTo(0,0);
+   if(opened===id){section.querySelector('[data-game-section-title]').focus();if(anchor)content.querySelector('#'+anchor)?.scrollIntoView();focusPublish();return;}
+   opened=id;requestAnchor=anchor;section.querySelector('[data-game-section-status]').textContent='Opening '+(sectionLabels[id]||id)+'…';
+diff --git a/src/core.js b/src/core.js
+index 79c9668..ebceb3c 100644
+--- a/src/core.js
++++ b/src/core.js
+@@ -38,7 +38,7 @@ export async function body(req){try{return JSON.parse(new TextDecoder().decode(a
+ export const person=req=>{const id=req.headers.get('oai-authenticated-user-id'),email=req.headers.get('oai-authenticated-user-email');return id?{id,email:(email||'').toLowerCase()}:null};
+ export const workspaceOwnerEmail=env=>(env.WORKSPACE_OWNER_EMAIL||'yoelengel18@gmail.com').trim().toLowerCase();
+ export async function identity(req,env){const p=person(req);must(p,'Sign in to continue.',401);const row=await one(env,'SELECT role FROM admins WHERE user_id=?',p.id);return {...p,owner:p.email===workspaceOwnerEmail(env),admin:row?.role==='admin',staff:!!row,platformRole:row?.role||null}}
+-export async function access(req,env,tenantId,permission='read',{readOnly=false}={}){const user=await identity(req,env),tenant=await (readOnly?readOne:one)(env,'SELECT * FROM tenants WHERE id=?',tenantId);must(tenant,'Website not found.',404);let role='admin';if(!user.admin){const m=await one(env,'SELECT role FROM members WHERE tenant_id=? AND user_id=? AND active=1',tenantId,user.id);must(m,'Website not found.',404);role=m.role}if(permission==='write')must(['admin','owner','editor'].includes(role),'Your role has read-only access.',403);if(permission==='owner')must(['admin','owner'].includes(role),'Owner access required.',403);if(permission==='admin')must(user.admin,'Buildovate administrator access required.',403);return {user,tenant,role}}
++export async function access(req,env,tenantId,permission='read',{readOnly=false,paymentRecovery=false}={}){const user=await identity(req,env);let tenant=await readOne(env,'SELECT * FROM tenants WHERE id=?',tenantId);must(tenant,'Website not found.',404);let role='admin';if(!user.admin){const m=await one(env,'SELECT role FROM members WHERE tenant_id=? AND user_id=? AND active=1',tenantId,user.id);must(m,'Website not found.',404);role=m.role}if(permission==='write')must(['admin','owner','editor'].includes(role),'Your role has read-only access.',403);if(permission==='owner')must(['admin','owner'].includes(role),'Owner access required.',403);if(permission==='admin')must(user.admin,'Buildovate administrator access required.',403);if(!paymentRecovery&&['write','owner'].includes(permission)){const {paymentAvailability}=await import('./payments/lifecycle.js');const availability=await paymentAvailability(env,tenantId);must(!availability.editorLocked,availability.state==='paused'?'Update payment to unlock your editor.':'Hosting has ended. Open Billing to review your account.',402);}if(!readOnly)tenant=await one(env,'SELECT * FROM tenants WHERE id=?',tenantId);return {user,tenant,role}}
+ export const log=(env,user,tenant,action,detail='')=>run(env,'INSERT INTO audit (id,tenant_id,actor,action,detail,created_at) VALUES (?,?,?,?,?,?)',uid(),tenant,user.email||user.id,action,text(detail,500),now());
+ export const TRADES=Object.keys(tradeLibrary);
+ export const ROOFING_OWNER_SAMPLE={src:'/assets/owner-roofing/owner-sample-960.webp',isSample:true};
+diff --git a/src/payments/site-availability.js b/src/payments/site-availability.js
+index 3a6bc31..cf45b2f 100644
+--- a/src/payments/site-availability.js
++++ b/src/payments/site-availability.js
+@@ -1,5 +1,2 @@
+-// Payment state controls canceled rentals, never pending past-due policy or legacy sites.
+-export async function paymentSiteAvailable(env,tenantId){
+- const row=await env.DB.prepare('SELECT status,site_available,site_owned FROM payment_state WHERE tenant_id=?').bind(tenantId).first();
+- return !row||row.site_owned===1||row.status!=='canceled'||row.site_available!==0;
+-}
++import {paymentAvailability} from './lifecycle.js';
++export async function paymentSiteAvailable(env,tenantId){return (await paymentAvailability(env,tenantId)).state==='live';}
+diff --git a/src/worker.js b/src/worker.js
+index eaafd84..358e3d4 100644
+--- a/src/worker.js
++++ b/src/worker.js
+@@ -1,4 +1,4 @@
+-import {paymentSiteAvailable} from './payments/site-availability.js';
++import {paymentAvailability,maintainPaymentLifecycle,pausedSiteResponse} from './payments/lifecycle.js';
+ import {configureStaticSiteFetch} from './static-site-export.js';
+ import {domainGuidePage,maintainDomainPlans} from './domain/plan.js';
+ import {reviewPacketView} from './review-packet-view.js';
+@@ -55,13 +55,16 @@ const html=(markup,status=200)=>{
+  if(data.includes('shared-site-header'))data=data.replace('</head>','<link rel="stylesheet" href="/trade-revisions.css?v=constitution-v1"><link rel="stylesheet" href="/design-studio.css"><script defer src="/design-personality.js"></script><script defer src="/trade-revisions.js"></script><script defer src="/review-marquee.js"></script><link rel="stylesheet" href="/neighborhood.css?v=experience-v3"><script defer src="/neighborhood.js?v=experience-v3"></script></head>');
+  return new Response(data,{status,headers});
+ };
+-const baseWorker={async scheduled(_event,env){if(!_event.domainOnly)await postRecurringExpenses(env);await maintainDomainPlans(env)},async fetch(req,env){const url=new URL(req.url);try{
++const baseWorker={async scheduled(_event,env){if(!_event.domainOnly){await postRecurringExpenses(env);await maintainPaymentLifecycle(env);}await maintainDomainPlans(env)},async fetch(req,env){const url=new URL(req.url);try{
+  const publicSite=url.pathname.match(/^\/(?:s|api\/public)\/([^/]+)(?:\/|$)/);
+  if(publicSite){
+   const tenant=await env.DB.prepare('SELECT id FROM tenants WHERE slug=?').bind(publicSite[1]).first();
+-  if(tenant&&!await paymentSiteAvailable(env,tenant.id)){
+-   if(url.searchParams.get('preview')==='1')await access(req,env,tenant.id);
+-   else must(false,'Website not available.',404);
++  if(tenant){const availability=await paymentAvailability(env,tenant.id);
++   if(availability.state!=='live'&&env.STATIC_EXPORT_TENANT!==tenant.id){
++    if(url.searchParams.get('preview')==='1')await access(req,env,tenant.id);
++    else if(availability.state==='paused')return url.pathname.startsWith('/api/')?json({error:'Website temporarily unavailable.'},503):pausedSiteResponse();
++    else must(false,'Website not available.',404);
++   }
+   }
+  }
+ 
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file b/C:/Users/joe/website_creator/drizzle/0011_launch_decisions.sql
+index e69de29..3d3591b 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file
++++ b/C:/Users/joe/website_creator/drizzle/0011_launch_decisions.sql
+@@ -0,0 +1,12 @@
++ALTER TABLE payment_state ADD COLUMN past_due_since TEXT;
++--> statement-breakpoint
++ALTER TABLE payment_state ADD COLUMN hosting_starts_at TEXT;
++--> statement-breakpoint
++ALTER TABLE payment_state ADD COLUMN hosting_subscription_id TEXT;
++--> statement-breakpoint
++ALTER TABLE payment_state ADD COLUMN hosting_stop_at TEXT;
++--> statement-breakpoint
++CREATE TABLE payment_reminders (id TEXT PRIMARY KEY,tenant_id TEXT NOT NULL REFERENCES tenants(id),past_due_since TEXT NOT NULL,day INTEGER NOT NULL,status TEXT NOT NULL DEFAULT 'queued_local',recipient TEXT,subject TEXT NOT NULL,message TEXT NOT NULL,created_at TEXT NOT NULL);
++--> statement-breakpoint
++CREATE TABLE payment_plan_changes (id TEXT PRIMARY KEY,tenant_id TEXT NOT NULL REFERENCES tenants(id),subscription_id TEXT NOT NULL,current_sku TEXT NOT NULL,target_sku TEXT NOT NULL,amount_cents INTEGER NOT NULL,line_net_cents INTEGER NOT NULL,tax_cents INTEGER NOT NULL,kind TEXT NOT NULL,period_end TEXT NOT NULL,effective_at TEXT NOT NULL,expires_at TEXT NOT NULL,status TEXT NOT NULL,idempotency_key TEXT,created_at TEXT NOT NULL);
++--> statement-breakpoint
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file b/C:/Users/joe/website_creator/src/payments/lifecycle.js
+index e69de29..cd53a9a 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file
++++ b/C:/Users/joe/website_creator/src/payments/lifecycle.js
+@@ -0,0 +1,42 @@
++const day=86400000;
++export const paymentClock=env=>typeof env.PAYMENT_CLOCK==='function'?env.PAYMENT_CLOCK():Date.now();
++const first=(env,sql,...a)=>env.DB.prepare(sql).bind(...a).first();
++const run=(env,sql,...a)=>env.DB.prepare(sql).bind(...a).run();
++// Read-only, including the first access. The scheduled maintenance is the write path.
++export async function paymentAvailability(env,tenantId,clock=paymentClock(env)){
++ const s=await first(env,'SELECT * FROM payment_state WHERE tenant_id=?',tenantId);
++ if(!s)return {state:'live',editorLocked:false,pastDueDay:null};
++ const elapsed=s.past_due_since?Math.max(0,Math.floor((clock-Date.parse(s.past_due_since))/day)):null;
++ if(s.status==='past_due'&&elapsed!==null)return {state:elapsed>=30?'unavailable':elapsed>=8?'paused':'live',editorLocked:elapsed>=8,pastDueDay:elapsed};
++ if(s.site_owned){const stopped=s.site_available===0||s.hosting_status==='stopped'||(s.hosting_stop_at&&clock>=Date.parse(s.hosting_stop_at));return {state:stopped?'unavailable':'live',editorLocked:!!stopped,pastDueDay:null};}
++ const ended=(s.status==='canceled'&&s.site_available===0)||(s.status==='canceled'&&s.renews_at&&clock>=Date.parse(s.renews_at));
++ return {state:ended?'unavailable':'live',editorLocked:!!ended,pastDueDay:null};
++}
++export async function markPastDue(env,tenantId,created){
++ const s=await first(env,'SELECT * FROM payment_state WHERE tenant_id=?',tenantId);if(created<s.status_event_at)return;
++ const since=s.past_due_since||new Date(created*1000).toISOString();
++ await run(env,"UPDATE payment_state SET status='past_due',status_event_at=?,past_due_since=? WHERE tenant_id=?",created,since,tenantId);
++ await maintainPaymentLifecycle(env,tenantId);
++}
++export async function maintainPaymentLifecycle(env,tenantId=null,clock=paymentClock(env)){
++ const q=env.DB.prepare('SELECT * FROM payment_state'+(tenantId?' WHERE tenant_id=?':''));
++ const states=(await (tenantId?q.bind(tenantId):q).all()).results;
++ for(const s of states){
++  if(['past_due','canceled'].includes(s.status)&&s.past_due_since){const elapsed=Math.floor((clock-Date.parse(s.past_due_since))/day);
++   const tenant=await first(env,'SELECT settings FROM tenants WHERE id=?',s.tenant_id),owner=await first(env,"SELECT email FROM members WHERE tenant_id=? AND role='owner' AND active=1 ORDER BY created_at,id LIMIT 1",s.tenant_id),email=owner?.email||JSON.parse(tenant?.settings||'{}').email||null;
++   for(const n of [0,7,8,29])if(elapsed>=n)await run(env,"INSERT OR IGNORE INTO payment_reminders(id,tenant_id,past_due_since,day,status,recipient,subject,message,created_at) VALUES(?,?,?,?,'queued_local',?,?,?,?)",s.tenant_id+':'+s.past_due_since+':'+n,s.tenant_id,s.past_due_since,n,email,'Update your website payment',n<8?'Your payment needs attention. Update payment in Billing. Your site stays live during the seven-day grace period.':n<29?'Your website is temporarily unavailable. Update payment in Billing to restore it before day 30.':s.site_owned?'Your hosting ends on day 30 unless payment recovers. Your ownership and static-file download remain available.':'Your rental ends on day 30 unless payment recovers. Your domain stays yours; site data is held for 90 days.',new Date(clock).toISOString());
++   if(elapsed>=30){const cutoff=Date.parse(s.past_due_since)+30*day;await run(env,"UPDATE payment_state SET status='canceled',site_available=0,domain_retained=1,data_hold_until=? WHERE tenant_id=?",new Date(cutoff+90*day).toISOString(),s.tenant_id);await run(env,"UPDATE payment_entitlements SET status='revoked' WHERE tenant_id=? AND source LIKE 'PLAN-%'",s.tenant_id);if(s.site_owned)await run(env,"UPDATE payment_state SET hosting_status='stopped' WHERE tenant_id=?",s.tenant_id);}
++
++   if(elapsed>=30){
++    // A local cancellation is immediate. Retrying the provider cancellation never charges, refunds or deletes data.
++    const key='delinquent:'+s.tenant_id+':'+s.past_due_since,done=await first(env,'SELECT id FROM payment_audit WHERE id=?',key+':done');
++    if(!done){let confirmed=false;try{const {getBillingAdapter}=await import('./billing-adapter.js'),adapter=await getBillingAdapter(env),subscriptionId=s.site_owned?s.hosting_subscription_id:s.subscription_id;if(adapter?.cancelDelinquentSubscription&&subscriptionId)confirmed=(await adapter.cancelDelinquentSubscription({tenantId:s.tenant_id,subscriptionId,idempotencyKey:key})).accepted===true;}catch{/* Remains queued locally; the next scheduled pass reuses the same key. */}
++     await run(env,'INSERT OR IGNORE INTO payment_audit(id,tenant_id,action,detail,created_at) VALUES(?,?,?,?,?)',key+(confirmed?':done':':pending'),s.tenant_id,confirmed?'subscription.delinquency_canceled':'subscription.delinquency_cancel_pending',confirmed?'Cancelled without proration or invoice; no refund.':'Not connected or adapter unavailable; cancellation queued locally.',new Date(clock).toISOString());
++    }
++   }
++  }
++  if(s.site_owned&&s.hosting_stop_at&&clock>=Date.parse(s.hosting_stop_at))await run(env,"UPDATE payment_state SET hosting_status='stopped',site_available=0 WHERE tenant_id=?",s.tenant_id);
++  if(!s.site_owned&&!s.past_due_since&&s.status==='canceled'&&s.renews_at&&clock>=Date.parse(s.renews_at)){await run(env,'UPDATE payment_state SET site_available=0,data_hold_until=? WHERE tenant_id=?',new Date(Date.parse(s.renews_at)+90*day).toISOString(),s.tenant_id);await run(env,"UPDATE payment_entitlements SET status='revoked' WHERE tenant_id=? AND source LIKE 'PLAN-%'",s.tenant_id);}
++ }
++}
++export function pausedSiteResponse(){return new Response('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Temporarily unavailable</title><style>body{margin:0;background:#f4f7fb;color:#172d47;font:18px/1.6 system-ui}main{max-width:38rem;margin:12vh auto;padding:32px}h1{font-size:clamp(28px,5vw,42px);line-height:1.2}p{max-width:32rem}</style></head><body><main><h1>This website is temporarily unavailable</h1><p>Please check back later.</p></main></body></html>',{status:503,headers:{'content-type':'text/html;charset=utf-8','cache-control':'no-store','x-robots-tag':'noindex','retry-after':'86400'}});}
+diff --git a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file b/C:/Users/joe/website_creator/src/client/workspace/game/payment-lock.js
+index e69de29..763d1cc 100644
+--- a/C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/empty-file
++++ b/C:/Users/joe/website_creator/src/client/workspace/game/payment-lock.js
+@@ -0,0 +1,6 @@
++export function mountPaymentLock(host,onBilling,availability={state:'paused'}){
++ const panel=document.createElement('section');panel.className='bv-game-payment-lock';panel.setAttribute('aria-labelledby','bv-game-payment-title');
++ const paused=availability.state==='paused';
++ panel.innerHTML=paused?'<h2 id="bv-game-payment-title">Update payment to unlock your editor</h2><p>Your saved work is still here. Open Billing to update your payment method.</p><button type="button" data-game-update-payment>Update payment</button>':'<h2 id="bv-game-payment-title">Hosting has ended</h2><p>Open Billing to review your account. Owned websites keep their static-file download.</p><button type="button" data-game-update-payment>Open Billing</button>';
++ host.replaceChildren(panel);panel.querySelector('button').onclick=onBilling;return panel;
++}

@@ -1,0 +1,19 @@
+PASS fresh GET is read-only and unpublished is honest
+PASS tour is claimed once and recorded per account
+PASS skip persists without reopening tour
+PASS repeat skip is idempotent
+PASS viewer gets a separate personal tour, not business write permission
+PASS finished tour survives later reads and observations
+PASS anonymous denied
+PASS cross-tenant read denied
+PASS cross-tenant personal write denied
+PASS foreign origin write denied
+PASS clients cannot submit completion or XP
+PASS unknown actions rejected
+PASS published preview requires status AND snapshot AND safe slug
+PASS fresh observations never celebrate
+PASS a completed level celebrates exactly once without changing progress
+PASS later levels and regress/recomplete do not repeat old celebrations
+PASS state transition is pure
+PASS corrupt stored receipts fail honestly
+18/18 passed

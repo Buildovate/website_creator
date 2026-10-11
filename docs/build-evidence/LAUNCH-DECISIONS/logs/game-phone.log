@@ -1,0 +1,68 @@
+PASS phone tour and board are readable immediately, with one Game view
+PASS tour reaches quest and badges on phone, then finishes
+PASS quest strip accepts touch swipes without scrolling the page sideways
+PASS All opens one reusable quest sheet with a keyboard focus loop
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Not available yet/. Input:
+
+'0/1\n' +
+  '\n' +
+  'CURRENT QUEST · +20 XP\n' +
+  '\n' +
+  'Save a service price range.\n' +
+  '\n' +
+  'Enter a price range on at least one service page. Homeowners can then see your estimate starting point.\n' +
+  '\n' +
+  'Locked · Finish Get Set Up first. You can read what is needed below.\n' +
+  '\n' +
+  '1\n' +
+  'Save a service price range\n' +
+  '\n' +
+  'Save a price range on at least one offered service page.\n' +
+  '\n' +
+  'View\n' +
+  '→\n' +
+  'Settings for this quest\n' +
+  'Website pages\n' +
+  'Pricing and estimate requests\n' +
+  'Forms and submissions\n' +
+  '\n' +
+  '0 of 20 XP earned. All steps must be complete for this quest to count.'
+
+    at file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/game-phone.mjs:56:339
+    at async check (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/game-phone.mjs:21:31)
+    at async file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/game-phone.mjs:56:2 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '0/1\n' +
+    '\n' +
+    'CURRENT QUEST · +20 XP\n' +
+    '\n' +
+    'Save a service price range.\n' +
+    '\n' +
+    'Enter a price range on at least one service page. Homeowners can then see your estimate starting point.\n' +
+    '\n' +
+    'Locked · Finish Get Set Up first. You can read what is needed below.\n' +
+    '\n' +
+    '1\n' +
+    'Save a service price range\n' +
+    '\n' +
+    'Save a price range on at least one offered service page.\n' +
+    '\n' +
+    'View\n' +
+    '→\n' +
+    'Settings for this quest\n' +
+    'Website pages\n' +
+    'Pricing and estimate requests\n' +
+    'Forms and submissions\n' +
+    '\n' +
+    '0 of 20 XP earned. All steps must be complete for this quest to count.',
+  expected: /Not available yet/,
+  operator: 'match',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

@@ -25,7 +25,7 @@ async function seedRental(longStanding){
   assert.equal((await h.send(h.event('evt_sub','checkout.session.completed',session))).status,200);
   if(longStanding)assert.equal((await h.send(h.event('evt_first','invoice.paid',h.invoice('in_first','PLAN-WEBSITE-MONTH',5000,'2026-01-01T00:00:00.000Z','2026-02-01T00:00:00.000Z')))).status,200);
   assert.equal((await h.send(h.event('evt_current','invoice.paid',h.invoice('in_current','PLAN-WEBSITE-MONTH',5000,'2026-10-01T00:00:00.000Z','2026-11-01T00:00:00.000Z')))).status,200);
-  Object.assign(h.env,fakeTestEnv,{PAYMENT_BILLING_ADAPTER:makeFakeBillingAdapter({quotedAmountCents:47500})});
+  Object.assign(h.env,fakeTestEnv,{PAYMENT_BILLING_ADAPTER:makeFakeBillingAdapter({quotedAmountCents:5000})});
   return h;
 }
 const harnesses={switch:await seedRental(false),early:await seedRental(false),allowed:await seedRental(true)};
@@ -72,13 +72,13 @@ try{
     await page.locator('#bv-billing-title').waitFor();
     assert.equal(await page.locator('nav.tabs [data-section="billing"]').count(),1);
     if(scenario==='switch'){
-      await page.locator('[data-bv-switch-quote]').click();
+      await page.locator('[data-bv-switch-quote="PLAN-GROWTH-MONTH"]').click();
       await page.locator('[data-bv-switch-confirm]').waitFor();
-      assert.match(await page.locator('[data-bv-switch-result]').innerText(),/Amount due now: \$475\.00/);
+      assert.match(await page.locator('[data-bv-switch-result]').innerText(),/Amount due now: \$50\.00/);
       await page.locator('[data-bv-switch-confirm]').click();
       await page.getByText('Plan change requested. Your plan changes after confirmed payment.').waitFor();
     }else if(scenario==='early'){
-      assert.match(await page.locator('.bv-billing-actions').innerText(),/Monthly cancellation is unavailable until Jan 1, 2027/);
+      assert.match(await page.locator('.bv-billing-actions:not(.bv-owner-actions)').innerText(),/Monthly cancellation is unavailable until Jan 1, 2027/);
       assert.equal(await page.locator('.bv-billing-actions button:has-text("Cancel plan")').isDisabled(),true);
     }else{
       await page.locator('[data-bv-cancel-review]').click();
@@ -87,7 +87,7 @@ try{
       await page.getByText('Cancellation scheduled for the paid period end. The site stays up until then.').waitFor();
     }
     assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
-    await page.locator('.bv-billing-actions').scrollIntoViewIfNeeded();
+    await page.locator('.bv-billing-actions:not(.bv-owner-actions)').scrollIntoViewIfNeeded();
     await page.screenshot({path:resolve(shots,`pay4b-${scenario}-${width===390?'mobile':'desktop'}.png`)});
     await page.close();console.log(`PASS browser ${scenario}: ${width}x${height}, Billing action and no external requests`);
   }

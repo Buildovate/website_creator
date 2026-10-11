@@ -12,22 +12,11 @@ async function subscription(h,sku){
   assert.equal((await h.send(h.event('evt_sub','checkout.session.completed',object))).status,200);
 }
 
-test('monthly renter quotes annual, confirms through fake, and changes only after signed $500 settlement',async()=>{
-  const h=paymentHarness();await subscription(h,'PLAN-WEBSITE-MONTH');
-  assert.equal((await h.send(h.event('evt_month','invoice.paid',h.invoice('in_month','PLAN-WEBSITE-MONTH',5000,'2026-10-01T00:00:00.000Z','2026-11-01T00:00:00.000Z')))).status,200);
-  const fake=makeFakeBillingAdapter({quotedAmountCents:47500});h.env.PAYMENT_BILLING_ADAPTER=fake;
-  const quote=await quotePlanSwitch(h.env,'tenant_123','PLAN-WEBSITE-YEAR',clock);
-  assert.equal(quote.state,'quoted');assert.equal(quote.targetPriceCents,50000);assert.equal(quote.amountDueCents,47500);
-  assert.equal(fake.quotes.get(quote.quoteId).targetSku,'PLAN-WEBSITE-YEAR');
-  const result=await confirmPlanSwitch(h.env,'tenant_123',{targetSku:'PLAN-WEBSITE-YEAR',quoteId:quote.quoteId,idempotencyKey:'switch_click_123'},clock);
-  assert.equal(result.state,'awaiting_settlement');assert.equal(fake.switches.length,1);
-  assert.equal((await rentalDetails(h.env,'tenant_123',clock)).currentSku,'PLAN-WEBSITE-MONTH');
-  assert.equal((await h.send(h.event('evt_year','invoice.paid',h.invoice('in_year','PLAN-WEBSITE-YEAR',50000,'2026-10-08T00:00:00.000Z','2027-10-08T00:00:00.000Z')))).status,200);
-  const summary=await billingSummary(h.env,'tenant_123');
-  assert.equal(summary.rental.currentSku,'PLAN-WEBSITE-YEAR');assert.equal(summary.renewalAmountCents,50000);
-  assert.equal(summary.minimumEndsAt,null);
-  await assert.rejects(quotePlanSwitch(h.env,'tenant_123','PLAN-GROWTH-MONTH',clock),/Price coming soon/);
-  h.close();
+test('monthly renter upgrades through quote and exact signed proration; cadence change is deferred',async()=>{
+ const h=paymentHarness();try{await subscription(h,'PLAN-WEBSITE-MONTH');await h.send(h.event('evt_month','invoice.paid',h.invoice('in_month','PLAN-WEBSITE-MONTH',5000,'2026-10-01T00:00:00.000Z','2026-11-01T00:00:00.000Z')));
+ const fake=makeFakeBillingAdapter({quotedAmountCents:5000});h.env.PAYMENT_BILLING_ADAPTER=fake;const quote=await quotePlanSwitch(h.env,'tenant_123','PLAN-GROWTH-MONTH',clock);assert.equal(quote.state,'quoted');assert.equal(quote.targetPriceCents,15000);assert.equal(quote.amountDueCents,5000);const result=await confirmPlanSwitch(h.env,'tenant_123',{targetSku:quote.targetSku,quoteId:quote.quoteId,idempotencyKey:'switch_click_123'},clock);assert.equal(result.state,'awaiting_settlement');assert.equal(fake.switches.length,1);assert.equal((await rentalDetails(h.env,'tenant_123',clock)).currentSku,'PLAN-WEBSITE-MONTH');
+ const invoice=h.invoice('prorated','PLAN-GROWTH-MONTH',5000,'2026-10-08T00:00:00.000Z','2026-11-01T00:00:00.000Z');invoice.metadata.paymentChangeId=quote.quoteId;invoice.subscription='sub_fake_1';assert.equal((await h.send(h.event('evt_prorated','invoice.paid',invoice))).status,200);const summary=await billingSummary(h.env,'tenant_123');assert.equal(summary.rental.currentSku,'PLAN-GROWTH-MONTH');assert.equal(summary.renewalAmountCents,15000);await assert.rejects(()=>quotePlanSwitch(h.env,'tenant_123','PLAN-GROWTH-YEAR',clock),/billing cadence/);
+ }finally{h.close();}
 });
 
 test('monthly cancellation before three-month end is refused and shows the date',async()=>{

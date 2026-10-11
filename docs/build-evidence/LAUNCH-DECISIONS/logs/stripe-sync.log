@@ -1,0 +1,33 @@
+✔ sync creates versioned Products and Prices with exact lookup keys (4.4307ms)
+✔ second sync is idempotent; metadata updates do not mutate immutable price amounts (3.0621ms)
+✔ dry-run prints planned changes against a fake snapshot without invoking the client (1.3961ms)
+✖ current catalog plans five approved rows plus one domain service (6.1785ms)
+✔ sync refuses missing, live, and malformed keys before any client call (2.5795ms)
+✔ sync CLI also refuses live publishable keys without calling the fake (0.9167ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.7348
+
+✖ failing tests:
+
+test at tests\stripe-sync.mjs:59:1
+✖ current catalog plans five approved rows plus one domain service (6.1785ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(result.skippedByReason.price_coming_soon>=4)
+  
+      at TestContext.<anonymous> (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/stripe-sync.mjs:68:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

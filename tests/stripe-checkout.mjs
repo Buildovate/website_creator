@@ -78,7 +78,7 @@ test('same tenant reuses one customer across separate checkout clicks',async()=>
 test('coming-soon and inactive SKUs cannot start checkout',async()=>{
   const {stripe,service}=await setup();
   const before=stripe.calls.read+stripe.calls.write;
-  await assert.rejects(service.createCheckout(request('PLAN-GROWTH-MONTH','growth_click_123')),/Price coming soon/);
+  await assert.rejects(service.createCheckout(request('SOCIAL-FULL-PACK','unapproved_click_123')),/Price coming soon/);
   await assert.rejects(service.createCheckout(request('ADS-LAUNCH','ads_click_123')),/Not available/);
   assert.equal(stripe.calls.read+stripe.calls.write,before);
 });

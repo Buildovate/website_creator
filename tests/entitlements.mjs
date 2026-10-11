@@ -32,7 +32,7 @@ test('refund revokes unused grants and records an audit row',async()=>{
 });
 
 test('past due shows a banner and keeps paid-period features on',async()=>{
-  const h=paymentHarness();
+  const h=paymentHarness();h.env.PAYMENT_CLOCK=()=>101000;
   await h.send(h.event('evt_paid','invoice.paid',h.invoice('in_past','PLAN-WEBSITE-MONTH',5000,'2026-10-01T00:00:00.000Z',future),100));
   const key=(await listEntitlements('tenant_123'))[0].key;
   await h.send(h.event('evt_failed','invoice.payment_failed',{customer:'cus_test_1',metadata:{tenantId:'tenant_123'}},101));

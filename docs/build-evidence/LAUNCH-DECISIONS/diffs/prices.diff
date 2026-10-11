@@ -1,0 +1,119 @@
+diff --git a/config/pricing.v1.json b/config/pricing.v1.json
+index 68c67f4..9e4b304 100644
+--- a/config/pricing.v1.json
++++ b/config/pricing.v1.json
+@@ -209,9 +209,8 @@
+       "description": "Growth monthly website rental",
+       "category": "Website Plans",
+       "planId": "growth",
+-      "priceCents": null,
++      "priceCents": 15000,
+       "proposedPriceCents": 27900,
+-      "displayPrice": "Price coming soon",
+       "currency": "USD",
+       "cadence": "month",
+       "entitlementKeys": [
+@@ -220,9 +219,11 @@
+           "quantity": 1
+         }
+       ],
+-      "active": false,
++      "active": true,
+       "taxFlag": "requires_configuration",
+-      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
++      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1",
++      "approvedBy": "Joe",
++      "approvedAt": "2026-10-10"
+     },
+     {
+       "sku": "PLAN-GROWTH-YEAR",
+@@ -231,9 +232,8 @@
+       "description": "Growth annual prepaid website rental",
+       "category": "Website Plans",
+       "planId": "growth",
+-      "priceCents": null,
++      "priceCents": 150000,
+       "proposedPriceCents": 279000,
+-      "displayPrice": "Price coming soon",
+       "currency": "USD",
+       "cadence": "year",
+       "entitlementKeys": [
+@@ -242,9 +242,11 @@
+           "quantity": 1
+         }
+       ],
+-      "active": false,
++      "active": true,
+       "taxFlag": "requires_configuration",
+-      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
++      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1",
++      "approvedBy": "Joe",
++      "approvedAt": "2026-10-10"
+     },
+     {
+       "sku": "PLAN-ALL-IN-MONTH",
+@@ -253,9 +255,8 @@
+       "description": "All-in monthly website rental",
+       "category": "Website Plans",
+       "planId": "all_in",
+-      "priceCents": null,
++      "priceCents": 30000,
+       "proposedPriceCents": 44900,
+-      "displayPrice": "Price coming soon",
+       "currency": "USD",
+       "cadence": "month",
+       "entitlementKeys": [
+@@ -264,9 +265,11 @@
+           "quantity": 1
+         }
+       ],
+-      "active": false,
++      "active": true,
+       "taxFlag": "requires_configuration",
+-      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
++      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1",
++      "approvedBy": "Joe",
++      "approvedAt": "2026-10-10"
+     },
+     {
+       "sku": "PLAN-ALL-IN-YEAR",
+@@ -275,9 +278,8 @@
+       "description": "All-in annual prepaid website rental",
+       "category": "Website Plans",
+       "planId": "all_in",
+-      "priceCents": null,
++      "priceCents": 300000,
+       "proposedPriceCents": 449000,
+-      "displayPrice": "Price coming soon",
+       "currency": "USD",
+       "cadence": "year",
+       "entitlementKeys": [
+@@ -286,9 +288,11 @@
+           "quantity": 1
+         }
+       ],
+-      "active": false,
++      "active": true,
+       "taxFlag": "requires_configuration",
+-      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
++      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1",
++      "approvedBy": "Joe",
++      "approvedAt": "2026-10-10"
+     },
+     {
+       "sku": "SITE-OWN",
+diff --git a/src/expense-plans.js b/src/expense-plans.js
+index 8137824..b0aae29 100644
+--- a/src/expense-plans.js
++++ b/src/expense-plans.js
+@@ -1,7 +1,7 @@
+-// Approved internal catalog prices, #015GA. These are not receipts or charges.
++// Joe-approved launch prices, 2026-10-10. Seeds only; admin edits and recorded revenue stay intact.
+ export const expensePlans = [
+   {id:'website', name:'Website', price:50, annualPrice:500, setupFee:0, billingPeriod:'monthly', socialPosts:0},
+-  {id:'growth', name:'Growth', price:279, annualPrice:2790, setupFee:0, billingPeriod:'monthly', socialPosts:12},
+-  {id:'all-in', name:'All-in', price:449, annualPrice:4490, setupFee:0, billingPeriod:'monthly', socialPosts:20}
++  {id:'growth', name:'Growth', price:150, annualPrice:1500, setupFee:0, billingPeriod:'monthly', socialPosts:12},
++  {id:'all-in', name:'All-in', price:300, annualPrice:3000, setupFee:0, billingPeriod:'monthly', socialPosts:20}
+ ];
+ export const socialCostLines = [12,20].map(posts=>({id:'social-'+posts,name:posts+'-post monthly social pack',unit:'monthly pack',rate:null,effective:'2020-01-01'}));

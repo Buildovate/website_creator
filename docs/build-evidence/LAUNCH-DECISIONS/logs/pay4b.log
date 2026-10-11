@@ -1,0 +1,13 @@
+✔ monthly renter upgrades through quote and exact signed proration; cadence change is deferred (34.1189ms)
+✔ monthly cancellation before three-month end is refused and shows the date (52.6058ms)
+✔ monthly cancellation after minimum schedules period-end stop, with no export (22.6485ms)
+✔ annual cancellation keeps prepaid site until term end with no refund (25.2284ms)
+✔ owned site has no rental cancellation action (20.7222ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 161.9866

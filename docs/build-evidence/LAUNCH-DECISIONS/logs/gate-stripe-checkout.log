@@ -1,0 +1,17 @@
+✔ monthly and annual plans use subscription mode and only synced server prices (5.2705ms)
+✔ one-time ownership and add-ons use payment mode; recurring items use subscription mode (3.5815ms)
+✔ browser amount fields are rejected before any Stripe operation (2.2679ms)
+✔ double-click with the same idempotency key yields one session and one customer (1.703ms)
+✔ same tenant reuses one customer across separate checkout clicks (1.6668ms)
+✔ coming-soon and inactive SKUs cannot start checkout (1.3999ms)
+✔ SITE-BUYOUT remains a flat $1,500 for any months-paid metadata (1.9501ms)
+✔ checkout refuses unsynced or mismatched Stripe prices (1.7451ms)
+✔ live key prefixes and unconfigured tax block checkout before charging (1.5609ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 35.1038

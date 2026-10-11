@@ -1,4 +1,4 @@
-import {paymentSiteAvailable} from './payments/site-availability.js';
+import {paymentAvailability,maintainPaymentLifecycle,pausedSiteResponse} from './payments/lifecycle.js';
 import {configureStaticSiteFetch} from './static-site-export.js';
 import {domainGuidePage,maintainDomainPlans} from './domain/plan.js';
 import {reviewPacketView} from './review-packet-view.js';
@@ -55,13 +55,16 @@ const html=(markup,status=200)=>{
  if(data.includes('shared-site-header'))data=data.replace('</head>','<link rel="stylesheet" href="/trade-revisions.css?v=constitution-v1"><link rel="stylesheet" href="/design-studio.css"><script defer src="/design-personality.js"></script><script defer src="/trade-revisions.js"></script><script defer src="/review-marquee.js"></script><link rel="stylesheet" href="/neighborhood.css?v=experience-v3"><script defer src="/neighborhood.js?v=experience-v3"></script></head>');
  return new Response(data,{status,headers});
 };
-const baseWorker={async scheduled(_event,env){if(!_event.domainOnly)await postRecurringExpenses(env);await maintainDomainPlans(env)},async fetch(req,env){const url=new URL(req.url);try{
+const baseWorker={async scheduled(_event,env){if(!_event.domainOnly){await postRecurringExpenses(env);await maintainPaymentLifecycle(env);}await maintainDomainPlans(env)},async fetch(req,env){const url=new URL(req.url);try{
  const publicSite=url.pathname.match(/^\/(?:s|api\/public)\/([^/]+)(?:\/|$)/);
  if(publicSite){
   const tenant=await env.DB.prepare('SELECT id FROM tenants WHERE slug=?').bind(publicSite[1]).first();
-  if(tenant&&!await paymentSiteAvailable(env,tenant.id)){
-   if(url.searchParams.get('preview')==='1')await access(req,env,tenant.id);
-   else must(false,'Website not available.',404);
+  if(tenant){const availability=await paymentAvailability(env,tenant.id);
+   if(availability.state!=='live'&&env.STATIC_EXPORT_TENANT!==tenant.id){
+    if(url.searchParams.get('preview')==='1')await access(req,env,tenant.id);
+    else if(availability.state==='paused')return url.pathname.startsWith('/api/')?json({error:'Website temporarily unavailable.'},503):pausedSiteResponse();
+    else must(false,'Website not available.',404);
+   }
   }
  }
 

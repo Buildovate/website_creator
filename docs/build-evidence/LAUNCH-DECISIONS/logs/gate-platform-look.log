@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "selectors": 679,
+  "fontFaces": 7,
+  "checks": [
+    "add-ons.css: no color literals; scoped components",
+    "billing.css: no color literals; scoped components",
+    "components.css: no color literals; scoped components",
+    "domain.css: no color literals; scoped components",
+    "fonts.css: no color literals; scoped components",
+    "game.css: no color literals; scoped components",
+    "index.css: no color literals; scoped components",
+    "launch-decisions.css: no color literals; scoped components",
+    "legacy.css: no color literals; scoped components"
+  ],
+  "newDependencies": 0
+}

@@ -1,4 +1,6 @@
 import {getBillingAdapter,billingConnectionConfigured} from './billing-adapter.js';
+import {paymentAvailability,paymentClock} from './lifecycle.js';
+import {requestSitePurchase,stopOwnerHosting} from './ownership.js';
 import {identity,must,body} from '../core.js';
 import {catalog,getProduct} from '../platform/catalog.ts';
 import {WORKSPACE_FEATURES,paidFeatureEnabled} from './gating.js';
@@ -33,10 +35,10 @@ export async function billingSummary(env,tenantId){
   const rental=await rentalDetails(env,tenantId);
   const access={};
   for(const [feature,rule] of Object.entries(WORKSPACE_FEATURES))access[feature]={allowed:await paidFeatureEnabled(env,tenantId,feature),plan:rule.plan};
-  return {tenantId,plan:state?.site_owned?'Owner':state?.plan??null,status:state?.status??'none',renewsAt:state?.renews_at??null,renewalAmountCents,minimumMonths:catalog.rentalPolicy.monthlyMinimumMonths,minimumEndsAt:state?.minimum_ends_at??null,buyoutAmountCents:getProduct('SITE-BUYOUT').priceCents,hosting:state?.site_owned?{sku:'OWNER-HOSTING',amountCents:5000,status:state.hosting_status??'pending_checkout'}:null,paymentMethod:connected?'Manage in Stripe Portal':'Payments not connected',portalState:(connected||env.PAYMENT_BILLING_ADAPTER?.portal)&&state?.customer_id?'ready':'not_connected',receipts,access,connectionState:connected?'test_configured':'not_connected',actionsAvailable:!!env.PAYMENT_BILLING_ADAPTER||connected,rental};
+  return {availability:await paymentAvailability(env,tenantId),tenantId,plan:state?.site_owned?'Owner':state?.plan??null,status:state?.status??'none',renewsAt:state?.site_owned&&!state.hosting_subscription_id?null:state?.renews_at??null,renewalAmountCents,minimumMonths:catalog.rentalPolicy.monthlyMinimumMonths,minimumEndsAt:state?.minimum_ends_at??null,buyoutAmountCents:getProduct('SITE-BUYOUT').priceCents,hosting:state?.site_owned?{sku:'OWNER-HOSTING',amountCents:5000,status:state.hosting_status??'pending_checkout',startsAt:state.hosting_starts_at,stopAt:state.hosting_stop_at}:null,paymentMethod:connected?'Manage in Stripe Portal':'Payments not connected',portalState:(connected||env.PAYMENT_BILLING_ADAPTER?.portal)&&state?.customer_id?'ready':'not_connected',receipts,access,connectionState:connected?'test_configured':'not_connected',actionsAvailable:!!env.PAYMENT_BILLING_ADAPTER||connected,rental};
 }
 export async function billingApi(req,env,url){
-  const match=url.pathname.match(/^\/api\/payments\/tenants\/([A-Za-z0-9_-]+)\/billing(?:\/(switch-quote|switch|cancel|portal))?$/);
+  const match=url.pathname.match(/^\/api\/payments\/tenants\/([A-Za-z0-9_-]+)\/billing(?:\/(switch-quote|switch|cancel|portal|own|stop-hosting))?$/);
   must(match,'Not found.',404);
   const action=match[2];
   must(action?req.method==='POST':req.method==='GET','Method not supported.',405);
@@ -49,6 +51,8 @@ export async function billingApi(req,env,url){
     const result=await adapter.portal({customerId:state.customer_id,returnUrl:url.origin+'/'});
     const target=stripeUrl(result?.url);must(target,'Payment portal unavailable.',503);return {state:'ready',url:target};
   }
+  if(action==='own')return requestSitePurchase(env,match[1],input.idempotencyKey);
+  if(action==='stop-hosting')return stopOwnerHosting(env,match[1],input.idempotencyKey);
   if(action==='switch-quote')return quotePlanSwitch(env,match[1],input.targetSku);
   if(action==='switch')return confirmPlanSwitch(env,match[1],input);
   return requestRentalCancellation(env,match[1],input.idempotencyKey);

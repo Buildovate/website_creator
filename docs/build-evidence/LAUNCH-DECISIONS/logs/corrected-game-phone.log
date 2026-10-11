@@ -1,0 +1,18 @@
+PASS phone tour and board are readable immediately, with one Game view
+PASS tour reaches quest and badges on phone, then finishes
+PASS quest strip accepts touch swipes without scrolling the page sideways
+PASS All opens one reusable quest sheet with a keyboard focus loop
+PASS choosing a locked quest closes All and focuses its chip
+PASS Badges and Settings retain all allowed data and sections
+PASS Business uses its original form in a full-height phone sheet with Save reachable
+PASS phone form traps focus, preserves unsaved input, and returns to Settings
+PASS phone preview is honest before publication and returns focus
+PASS published site fits the phone preview sheet
+PASS midway phone board shows real rule totals and a usable current quest
+PASS level confirmation does not block navigation and expires without shifting the board
+PASS finished state keeps earned badges and all quests available
+PASS reduced motion is static with fully opaque tour and confirmation
+PASS 360px and 430px retain readable text and no horizontal page scroll
+PASS returning to desktop restores its single rail without phone navigation
+PASS no external requests or uncaught browser errors
+17/17 passed; 16 screenshots

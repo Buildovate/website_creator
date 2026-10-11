@@ -24,11 +24,7 @@ const definitions=[
   step('confirmed',s.confirmed===true,'Confirm that the review profile belongs to this business.'),
   step('showing',s.showing===true,'Not connected. Real reviews must be showing before this is complete.')
  ]},
- {id:'estimator',level:2,xpMax:20,rules:s=>{
-  const book=s.priceBook||{},items=list(book.items),minimum=book.minimumItems;
-  const priceBookReady=Number.isInteger(minimum)&&minimum>0&&items.length>=minimum&&new Set(items.map(x=>x.id)).size===items.length&&items.every(x=>text(x.id)&&x.enteredBy==='contractor'&&x.confirmed===true&&typeof x.amount==='number'&&Number.isFinite(x.amount)&&x.amount>=0);
-  return [step('fields',s.fieldsSaved===true&&list(s.requiredFields).length>0&&s.requiredFields.every(f=>list(s.fields).includes(f)),'Choose and save the required homeowner fields.',{xpMax:5}),step('price-book',priceBookReady,'Enter and confirm the required price-book items yourself.',{xpMax:10}),step('consent',s.consent===true,'Turn on the homeowner consent checkbox.',{xpMax:5})];
- }},
+ {id:'estimator',level:2,xpMax:20,rules:s=>[step('service-price-range',list(s.serviceRanges).some(x=>text(x.service)&&Number.isFinite(x.min)&&Number.isFinite(x.max)&&x.min>=0&&x.max>=x.min),'Save a price range on at least one offered service page.')]},
  {id:'promotions',level:2,xpMax:5,rules:s=>[step('offer-or-none',s.choice==='none'||list(s.offers).some(o=>text(o.id)&&text(o.title)&&text(o.reward)),'Save an offer or choose “No offer right now.”')]},
  {id:'financing',level:2,xpMax:10,rules:s=>[step('connected-or-none',s.selection==='none'||(s.selection==='lenders'&&list(s.lenders).some(l=>l.selected===true&&text(l.id)&&l.connection==='connected')),'Not connected. Connect a selected lender or explicitly choose None; a saved application link is not a connection.')]},
  {id:'leads',level:2,xpMax:10,rules:s=>{
@@ -40,7 +36,7 @@ const definitions=[
   step('live-domain',s.domain?.stage==='live',s.domain?.state==='not_connected'?'Not connected. Domain and SSL verification are not available yet.':'Finish connecting the domain; ownership verification alone does not mean the site is live.'),
   step('published',s.published===true,'Publish the website when it is ready.')
  ]},
- {id:'marketing',level:3,xpMax:5,rules:s=>[step('connected-or-none',s.choice==='none'||(s.choice==='channels'&&list(s.channels).length>0&&s.channels.every(c=>text(c.id)&&c.connection==='connected')),'Not connected. Connect every chosen marketing channel or explicitly choose none.')]}
+ {id:'marketing',level:3,xpMax:5,rules:s=>[step('marketing-link-or-account',s.ready===true,'Save your Google Business Profile or review link, or connect a social account.')]}
 ];
 const levelDefinitions=[{id:1,name:'Get Set Up',questIds:['onboarding','pages','reviews'],xpMax:40},{id:2,name:'Win More Jobs',questIds:['estimator','promotions','financing','leads'],xpMax:45},{id:3,name:'Launch & Grow',questIds:['launch','marketing'],xpMax:15}];
 export function evaluateProgress(sources={}){

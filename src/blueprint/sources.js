@@ -31,16 +31,21 @@ export async function readProgressSources(env,tenantId,{deps=createDependencies(
  if(!(s.services||[]).length)required.push('service:choose-a-service');
  const approval=sales?parse(sales.data):{},alerts=chat?parse(chat.data):{},fin=platform.financing||{};
  const review=s.reviews||{};
+ const serviceRanges=authored.filter(p=>p.kind==='service'&&(s.services||[]).some(x=>x.name===p.serviceName)&&p.typicalPriceRange&&Number.isFinite(p.typicalPriceRange.min)&&Number.isFinite(p.typicalPriceRange.max)&&p.typicalPriceRange.min>=0&&p.typicalPriceRange.max>=p.typicalPriceRange.min).map(p=>({service:p.serviceName,min:p.typicalPriceRange.min,max:p.typicalPriceRange.max}));
+ const connections=(await env.DB.prepare("SELECT data FROM workspace_records WHERE scope=? AND kind='social_connection' ORDER BY id").bind(tenantId).all()).results.map(x=>parse(x.data)).filter(x=>x.state==='connected'&&text(x.provider)&&text(x.accountId));
+ const link=v=>{try{return text(v)&&new URL(v).protocol==='https:'}catch{return false}};
+ const gbp=platform.footer?.socials?.googleBusiness;
+ const marketingReady=(gbp?.enabled===true&&link(gbp.url))||link(review.googleUrl)||link(review.yelpUrl)||connections.length>0;
  return {
   onboarding:available('tenants.settings + platform.questionnaire.factsConfirmed',{fields}),
   pages:available('tenants.settings.websitePages + sales.data.ownerApproved/approvalNote',{required,drafts,approval:{approved:approval.ownerApproved===true,reference:approval.approvalNote||''}}),
   reviews:await readReviewResponse(env,tenantId,s),
-  estimator:unavailable('No estimator field/consent configuration or minimum-item price book in BASE','Not available yet'),
+  estimator:available('tenants.settings.websitePages service typicalPriceRange',{serviceRanges}),
   promotions:available('tenants.settings.platform.promotions.offers',{offers:platform.promotions?.offers||[],choice:null}),
   financing:available('tenants.settings.platform.financing + src/platform/lender-adapter.ts',{selection:fin.selection||null,lenders:(fin.lenders||[]).map(l=>({id:l.id,selected:l.enabled===true,connection:'not_connected'}))}),
   leads:available('workspace_records: chat_config phone verification (src/engagement.js)',{alerts:{enabled:alerts.enabled===true&&alerts.smsEnabled===true,phone:alerts.phone||'',phoneVerified:alerts.phoneVerified===true},crm:{state:'not_connected'}}),
   launch:available('src/entitlements.js + src/domain/state.js + tenants published snapshot',{plan,domain,published:tenant.status==='published'&&!!tenant.published}),
-  marketing:unavailable('No connected social-channel, explicit-none or social-publication records in BASE','Not available yet. Saved social links are not connected accounts.'),
+  marketing:available('tenants.settings.platform.footer GBP / reviews links + tenant social_connection records',{ready:marketingReady,posts:[]}),
   activity:{inquiries:Number(inquiries?.n||0),newReviews:null,reason:'New review events are not recorded; a public rating count is not a new-review count.'}
  };
 }

@@ -1,3 +1,4 @@
+import {mountPaymentLock} from './payment-lock.js';
 import {mountAutofill} from './autofill.js';
 import {createGameExperience} from './experience.js';
 import {api} from '../../shared/workspace-api.js';
@@ -32,15 +33,16 @@ export function installGameNavigation(){
   p.append(h,note,retry);board.replaceChildren(p);
  }
  async function load(id){if(!id)return;const token=++sequence;activeId=id;show(true);if(data)notice('Refreshing saved progress…');else recovery(true);
-  try{const next=await api('/game/'+encodeURIComponent(id));if(token!==sequence)return;data=next;let experienceError=false;try{const result=await api('/game/'+encodeURIComponent(id)+'/experience','POST',{action:'observe'});if(token!==sequence)return;experience?.accept(result);}catch{experienceError=true;}draw();notice(experienceError?'Your progress is loaded, but we could not save your tour and milestone updates. Try Refresh progress when your connection is ready.':(data.role==='viewer'?'Read-only website access. ':'')+'Saved progress is up to date.');}
+  try{const next=await api('/game/'+encodeURIComponent(id));if(token!==sequence)return;data=next;let experienceError=false;try{const result=await api('/game/'+encodeURIComponent(id)+'/experience','POST',{action:'observe'});if(token!==sequence)return;experience?.accept(result);}catch{experienceError=true;}draw();if(data.availability?.editorLocked&&!section.hidden&&!['billing','add-ons'].includes(opened))openSection(opened,null,trigger);notice(experienceError?'Your progress is loaded, but we could not save your tour and milestone updates. Try Refresh progress when your connection is ready.':(data.role==='viewer'?'Read-only website access. ':'')+'Saved progress is up to date.');}
   catch(error){if(token!==sequence)return;if(data){draw();notice(navigator.onLine?'Progress could not refresh. Your last loaded board is still available. Use Refresh progress to try again.':'You’re offline. Your last loaded board and open section are still here.');}else recovery(false,error);}
  }
  function back(){frame(false);window.scrollTo(0,boardScroll);draw();const focus=trigger?.dataset.gameStep?board.querySelector('[data-game-step="'+CSS.escape(trigger.dataset.gameStep)+'"]'):trigger?.dataset.gameSetting?board.querySelector('[data-game-setting="'+CSS.escape(opened||'')+'"][data-game-setting-quest="'+CSS.escape(trigger.dataset.gameSettingQuest)+'"]'):board.querySelector('[data-game-open="'+CSS.escape(opened||'')+'"]');focus?.focus({preventScroll:true});load(activeId);}
  section.querySelector('[data-game-back]').onclick=back;
  function openSection(id,anchor,source){
+  if(data?.availability?.editorLocked&&!['billing','add-ons'].includes(id)){frame(false);content.inert=true;mountPaymentLock(board,()=>openSection('billing',null,source),data.availability);return;}
   const button=content.querySelector('nav[aria-label="Website settings"] [data-section="'+CSS.escape(id||'')+'"]');
   if(!button){notice('This section is not available for your account.');return;}
-  trigger=source;requestPublish=source?.dataset.gameStep==='published';boardScroll=window.scrollY;section.querySelector('[data-game-section-title]').textContent=sectionLabels[id]||button.textContent;
+  content.inert=false;trigger=source;requestPublish=source?.dataset.gameStep==='published';boardScroll=window.scrollY;section.querySelector('[data-game-section-title]').textContent=sectionLabels[id]||button.textContent;
   const target=section.querySelector('[data-game-content]');if(status)target.append(status);target.append(content);frame(true);section.scrollTop=0;window.scrollTo(0,0);
   if(opened===id){section.querySelector('[data-game-section-title]').focus();if(anchor)content.querySelector('#'+anchor)?.scrollIntoView();focusPublish();return;}
   opened=id;requestAnchor=anchor;section.querySelector('[data-game-section-status]').textContent='Opening '+(sectionLabels[id]||id)+'…';

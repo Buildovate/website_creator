@@ -41,7 +41,7 @@ test('monthly Billing shows rental minimum, ledger charge, ownership option, and
   assert.equal(summary.minimumMonths,3);assert.equal(summary.minimumEndsAt,'2027-01-31T00:00:00.000Z');
   assert.equal(summary.buyoutAmountCents,150000);
   const html=renderBillingSummary(summary);
-  for(const text of ['Rental website','3 months, ending Jan 31, 2027','Next charge','$50.00','$1,500.00','Growth: Price coming soon','All-in: Price coming soon','Payments not connected','Included in All-in'])assert.match(html,new RegExp(text.replace(/[$.]/g,'\\$&')));
+  for(const text of ['Rental website','3 months, ending Jan 31, 2027','Next charge','$50.00','$1,500.00','$150/month','$300/month','Payments not connected','Included in All-in'])assert.match(html,new RegExp(text.replace(/[$.]/g,'\\$&')));
   assert.equal((html.match(/data-bv-offer=/g)||[]).length,1);
   h.close();
 });

@@ -1,0 +1,182 @@
+[
+  {
+    "name": "automatic-qa-frame-sample-replay",
+    "classification": "UNVERIFIED — exact baseline prerequisite blocked",
+    "id": "QA protected",
+    "owner": "QA gate",
+    "location": "tests/automatic-qa-frame-sample-replay.mjs:19; tests/automatic-qa-frame-sample-replay.mjs:32",
+    "cause": "Review capture failed sample-fictional-copper-kite-ventura AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png · AssertionError [ERR_ASSERTION]: Stop: exact saved-version screenshot differs: sample-fictional-copper-kite-ventura screenshots/page-001-1440.png ·   code: 'ERR_ASSERTION',",
+    "result": "OPEN"
+  },
+  {
+    "name": "automatic-qa-rail-colors",
+    "classification": "UNVERIFIED — exact baseline prerequisite blocked",
+    "id": "QA protected",
+    "owner": "QA gate",
+    "location": "tests/automatic-qa-rail-colors.mjs:5",
+    "cause": "locator.scrollIntoViewIfNeeded: Timeout 29964.781ms exceeded. ·   name: 'TimeoutError'",
+    "result": "OPEN"
+  },
+  {
+    "name": "automatic-qa-replay",
+    "classification": "UNVERIFIED — exact baseline prerequisite blocked",
+    "id": "QA protected",
+    "owner": "QA gate",
+    "location": "tests/helpers/replay-alternate-assertions.mjs:38; tests/automatic-qa-replay.mjs:8",
+    "cause": "AssertionError [ERR_ASSERTION]: Saved replay must contain 143 files ·   code: 'ERR_ASSERTION',",
+    "result": "OPEN"
+  },
+  {
+    "name": "automatic-qa-staff-browser",
+    "result": "OPEN",
+    "classification": "UNVERIFIED — exact baseline classification retained pending evidence",
+    "id": "Test/product coverage",
+    "owner": "test/product — see failure",
+    "location": "tests/automatic-qa-staff-browser.mjs:8",
+    "cause": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal: ·   code: 'ERR_ASSERTION',"
+  },
+  {
+    "name": "design-styles-browser",
+    "classification": "UNVERIFIED — exact baseline prerequisite blocked",
+    "id": "QA protected",
+    "owner": "QA gate",
+    "location": "tests/design-styles-browser.mjs:68",
+    "cause": "AssertionError [ERR_ASSERTION]: [{\"label\":\"header centers <= 1px roofing-complete-current-services-roof-installation-desktop-normal\",\"detail\":{\"spread\":649.375,\"items\":[{\"text\":\"Expertise\",\"center\":78.625,\"height\":44,\"textCenter\":78.46875,\"fontFamily\":\"Arial, sans-serif\"},{\"text\":\"Areas\",\"center\":147.625,\"height\":44,\"textCenter\":147.53125,\"fontFami ·   code: 'ERR_ASSERTION',",
+    "result": "OPEN"
+  },
+  {
+    "name": "owner-download",
+    "result": "OPEN",
+    "classification": "UNVERIFIED — exact baseline classification retained pending evidence",
+    "id": "Test/product coverage",
+    "owner": "test/product — see failure",
+    "location": "round4/logs/owner-download.log",
+    "cause": "All printed owner/renter/download/layout assertions pass, then the process hangs at exit. This is an unresolved teardown warning, not a clean suite exit."
+  },
+  {
+    "name": "review-packet-browser",
+    "classification": "UNVERIFIED — exact baseline assertion not established",
+    "id": "B15 / fixture prerequisites",
+    "owner": "test — product cause not yet established",
+    "location": "tests/review-packet-browser.mjs:22",
+    "cause": "locator.waitFor: Timeout 30000ms exceeded. ·   name: 'TimeoutError'",
+    "result": "OPEN"
+  },
+  {
+    "name": "automatic-qa-brand-recognition exit hang",
+    "classification": "PRE-EXISTING",
+    "id": "B22",
+    "owner": "test",
+    "location": "tests/automatic-qa-brand-recognition.mjs:1",
+    "cause": "Assertions pass, but the existing hang guard terminates the process at exit. This is a warning, not a clean teardown pass. [log](round3b/logs/automatic-qa-brand-recognition.log).",
+    "result": "RESOLVED in Round 4"
+  },
+  {
+    "name": "automatic-qa-contract",
+    "result": "PASS Round 5; earlier finding retained",
+    "classification": "UNVERIFIED — exact baseline classification retained pending evidence",
+    "id": "Test/product coverage",
+    "owner": "test/product — see failure",
+    "location": "tests/automatic-qa-contract.mjs:5; tests/automatic-qa-contract.mjs:7",
+    "cause": "Final-source rerun fails before live-review checks: the sweep-regenerated packet-list first entry is now clear, but the fixture requires a pending-Borderline packet. Initial sweep pass and final failure are both retained. No QA input or assertion changed; baseline classification is unverified."
+  },
+  {
+    "name": "First-access manifest / Game read-only contract",
+    "classification": "INTRODUCED Game route; existing core migration side effect",
+    "id": "B16",
+    "owner": "product",
+    "location": "src/core.js:30; tests/game-desktop-api.mjs:12; tests/game-experience-api.mjs:14",
+    "cause": "Resolved by validation-only readOne and readOnly Game/root-tenant authorization. Reads and personal tour records do not adopt or repair site manifests; explicit site writes retain ensure/migration. Ten new checks pass natively and on PostgreSQL.",
+    "result": "RESOLVED in Round 4"
+  },
+  {
+    "name": "media-api exit hang",
+    "classification": "PRE-EXISTING",
+    "id": "B22",
+    "owner": "test",
+    "location": "tests/media-api.mjs:1",
+    "cause": "Assertions pass, but the existing hang guard terminates the process at exit. This is a warning, not a clean teardown pass. [log](round3b/logs/media-api.log).",
+    "result": "RESOLVED in Round 4"
+  },
+  {
+    "name": "media-library-browser",
+    "result": "PASS Round 5; earlier finding retained",
+    "classification": "UNVERIFIED — exact baseline classification retained pending evidence",
+    "id": "Test/product coverage",
+    "owner": "test/product — see failure",
+    "location": "tests/media-library-browser.mjs:183",
+    "cause": "Six image-load checks fail in generated-locksmith-fresh-390-home (safe servicing, key duplication, rekeying, service journey, kit banner, lockout process). Installed files exist; decode/visibility timing cause and exact baseline classification remain unverified."
+  },
+  {
+    "name": "project/photo draft backup restore",
+    "classification": "PRE-EXISTING",
+    "id": "B16",
+    "owner": "test",
+    "location": "round3b/pg-route-probe.mjs:13; round3b/pg-route-probe.mjs:27",
+    "cause": "Invalid approximate coordinates correctly return 400; the old probe expects 200. Reproduced on unchanged 972a218. [probe](round3b/pg-route-probe.json).",
+    "result": "RESOLVED in Round 4"
+  },
+  {
+    "name": "Prorated invoice credit settlement",
+    "classification": "PRE-EXISTING",
+    "id": "B10 / B27 — DEFERRED pricing/accounting boundary",
+    "owner": "product",
+    "location": "src/payments/webhook.js:46; src/payments/webhook.js:124; src/payments/billing-adapter.js:11",
+    "cause": "Immediate positive-net same-cadence tier upgrades, next-renewal downgrades and no refunds/credits are implemented. Amount guard stays. Monthly/annual cadence changes remain DEFERRED pending effective-date policy.",
+    "result": "REPLACED by approved policy"
+  },
+  {
+    "name": "Real 100-XP state",
+    "result": "RESOLVED — approved real record contracts",
+    "classification": "Owning product contracts not built",
+    "id": "B06",
+    "owner": "product",
+    "location": "src/blueprint/sources.js:29",
+    "cause": "Estimator derives from a saved offered-service range; Marketing derives from GBP/review links or a connected social account. Native and PostgreSQL 100-XP tests pass; no completion rows."
+  },
+  {
+    "name": "review-packet-contract",
+    "classification": "UNVERIFIED — exact baseline assertion not established",
+    "id": "B15 / fixture prerequisites",
+    "owner": "test — product cause not yet established",
+    "location": "tests/review-packet-contract.mjs:47",
+    "cause": "The regenerated review receipt differs from the saved replay/expected packet contract before the remaining paid publication/race paths. [log](round3b/logs/review-packet-contract.log).",
+    "result": "PASS Round 5; earlier finding retained"
+  },
+  {
+    "name": "roofing-cities",
+    "result": "PASS Round 5; earlier finding retained",
+    "classification": "UNVERIFIED — exact baseline classification retained pending evidence",
+    "id": "Test/product coverage",
+    "owner": "test/product — see failure",
+    "location": "tests/helpers/review-approval-fixture.mjs:27; tests/helpers/review-approval-fixture.mjs:52; tests/roofing-cities.mjs:3; tests/roofing-cities.mjs:12",
+    "cause": "AssertionError [ERR_ASSERTION]: [{\"category\":\"layout\",\"crop\":\"qa-crops/page-019-1440-1.png\",\"id\":\"page-019-1440-overflow\",\"key\":\"overflow\",\"measured\":{\"pageOverflow\":144,\"violations\":[\"body>main:nth-child(4)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>img:nth-child(1)\",\"body>main:nth-child(4)>section:nth-child(4)>div:nth-child(2)>div:nth-child(1)>img:nth-child(1)\",\"body>main:nth-child(4)>section:nth-child(6)>figure:nth-child(2)>img:nth-child(1)\",\"body>main:nth-child(4)>section:nth-chi ·   code: 'ERR_ASSERTION',"
+  },
+  {
+    "name": "uniqueness-api exit hang",
+    "classification": "PRE-EXISTING",
+    "id": "B22",
+    "owner": "test",
+    "location": "tests/uniqueness-api.mjs:1",
+    "cause": "Assertions pass, but the existing hang guard terminates the process at exit. This is a warning, not a clean teardown pass. [log](round3b/logs/uniqueness-api.log).",
+    "result": "RESOLVED in Round 4"
+  },
+  {
+    "name": "uniqueness-browser",
+    "result": "PASS Round 5; earlier finding retained",
+    "classification": "UNVERIFIED — exact baseline classification retained pending evidence",
+    "id": "Test/product coverage",
+    "owner": "test/product — see failure",
+    "location": "tests/uniqueness-browser.mjs:91; tests/uniqueness-browser.mjs:116",
+    "cause": "The #customer-reviews section stays hidden and scrollIntoViewIfNeeded times out at line 91. No visibility assertion, template or fixture was weakened. Exact baseline classification remains unverified."
+  },
+  {
+    "name": "website-pages",
+    "classification": "UNVERIFIED — exact baseline prerequisite blocked",
+    "id": "QA protected",
+    "owner": "QA gate",
+    "location": "tests/helpers/review-approval-fixture.mjs:27; tests/helpers/review-approval-fixture.mjs:52; tests/website-pages.mjs:91; tests/website-pages.mjs:473; tests/website-pages.mjs:439",
+    "cause": "The project-detail strong text overlaps the fixed aside button at desktop by 98.66 × 11.14 px. The real review prerequisite refuses publication. Exact baseline comparison stops earlier; its classification remains unverified. [log](round3b/logs/website-pages.log).",
+    "result": "PASS Round 5; earlier finding retained"
+  }
+]

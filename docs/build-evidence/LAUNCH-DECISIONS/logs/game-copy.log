@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: src/client/workspace/game/view.js: approved wording retained: Set up your estimate request.
+
+1 !== 2
+
+    at file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/game-copy.mjs:18:11
+    at check (file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/game-copy.mjs:9:25)
+    at file:///C:/Users/joe/website_creator/docs/build-evidence/LAUNCH-DECISIONS/snapshot/tests/game-copy.mjs:11:52
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 2,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

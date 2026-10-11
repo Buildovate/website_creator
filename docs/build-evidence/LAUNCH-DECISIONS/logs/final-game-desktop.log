@@ -1,0 +1,22 @@
+PASS real contractor workspace defaults to Game and real saved tenant name
+PASS Game is the only view; every permitted section is mapped
+PASS Start opens the original Business form inside Game
+PASS Back to board and reopen preserves unsaved form and real data
+PASS reload returns directly to Game without preference writes
+PASS real not-connected reason, no inferred review completion
+PASS locked requirements remain readable; missing saved range earns zero XP
+PASS keyboard selects quests, opens the real form and Escape returns focus
+PASS progress endpoint cannot be used to award points
+PASS midway fixture: 40 XP, level 2, SET UP stamp and real rule badges
+PASS complete fixture: static four earned stamps and eight badges
+PASS no prototype company, fake activity, streak or demo controls
+PASS rendered pixels: text uses opaque AA backgrounds; full opacity and fixed controls
+PASS reduced motion: same visible finished state, no running animations
+PASS stable layout at rest and no animated text opacity
+PASS 390px reflow remains readable with no horizontal page scroll
+PASS read-only account is clearly labeled
+PASS loading and initial error offer visible recovery without a hidden switch
+PASS recovery action opens board after the connection returns
+PASS offline refresh keeps the board and saved data intact
+PASS no uncaught browser errors or external requests
+21/21 passed; 13 screenshots

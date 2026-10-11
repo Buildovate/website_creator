@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "frames": 165,
+  "pageCaptures": 231,
+  "differences": [],
+  "locks": [
+    {
+      "path": "tests/helpers/platform-console.mjs",
+      "before": "7dbecda09944a746994aecaa09ce7029a23a1b4b05ca8a73a0966a19de5b86dc",
+      "after": "7dbecda09944a746994aecaa09ce7029a23a1b4b05ca8a73a0966a19de5b86dc",
+      "approvedChangeStatus": "baseline exact",
+      "pass": true
+    },
+    {
+      "path": "src/aws/qa-browser.js",
+      "before": "1cc4fd6c8ccbbe812af901650dd15a695ed02019b92e2c46153880bb14287bf9",
+      "after": "cc1029c2c26d6622c66ac3e10aad9bae435631c2b108b399f279a637d886ff24",
+      "approvedChangeStatus": "approved later recognition entries",
+      "pass": true
+    }
+  ]
+}

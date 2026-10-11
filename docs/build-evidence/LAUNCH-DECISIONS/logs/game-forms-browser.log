@@ -1,0 +1,9 @@
+PASS Business Start opens the original shared form and real Save path
+PASS Questionnaire Save uses the same draft API and refreshes real progress while open
+PASS Publish step focuses the original action and preserves the real review gate
+PASS phone edits save through the original action and reopen with the saved value
+PASS offline save retains typed answers and cannot change the draft
+PASS stale version is rejected by the real server without replacing entered answers
+PASS viewer cannot save or publish through the real API or Game form
+PASS no provider requests, uncaught errors, new view or publication bypass
+8/8 passed; 7 screenshots

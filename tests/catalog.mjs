@@ -22,7 +22,7 @@ test('catalog validates and includes every Pack 3 and Pack 4 SKU exactly once', 
   assert.equal(new Set(catalog.products.map(row => row.sku)).size, catalog.products.length);
 });
 
-test('all amounts are integer cents, proposed plan prices remain unavailable, and annual equals ten months', () => {
+test('all amounts are integer cents, Joe-approved plan prices are available, and annual equals ten months', () => {
   for (const row of catalog.products) {
     assert.equal(row.currency, 'USD');
     assert.ok(row.priceCents === null || Number.isSafeInteger(row.priceCents));
@@ -35,16 +35,9 @@ test('all amounts are integer cents, proposed plan prices remain unavailable, an
     assert.equal(purchaseEligibility(sku,true).allowed,true,sku);
   }
   assert.equal(getProduct('PLAN-WEBSITE-YEAR').priceCents,getProduct('PLAN-WEBSITE-MONTH').priceCents*10);
-  for (const [plan,monthly] of [['GROWTH',27900],['ALL-IN',44900]]) {
-    const month = getProduct(`PLAN-${plan}-MONTH`), year = getProduct(`PLAN-${plan}-YEAR`);
-    assert.equal(month.priceCents, null);
-    assert.equal(year.priceCents, null);
-    assert.equal(month.proposedPriceCents, monthly);
-    assert.equal(year.proposedPriceCents, monthly * 10);
-    assert.equal(month.displayPrice, 'Price coming soon');
-    assert.equal(year.displayPrice, 'Price coming soon');
-    assert.equal(month.active,false);
-    assert.equal(purchaseEligibility(month.sku).allowed, false);
+  for (const [plan,monthly] of [['GROWTH',15000],['ALL-IN',30000]]) {
+    const month=getProduct(`PLAN-${plan}-MONTH`),year=getProduct(`PLAN-${plan}-YEAR`);
+    assert.equal(month.priceCents,monthly);assert.equal(year.priceCents,monthly*10);assert.equal(month.active,true);assert.equal(year.active,true);assert.notEqual(month.displayPrice,'Price coming soon');assert.equal(purchaseEligibility(month.sku,true).allowed,true);
   }
   const invalid = clone();
   invalid.products.find(row => row.sku === 'AI-UGC-PACK').priceCents = 197.5;

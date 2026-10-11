@@ -35,14 +35,18 @@ export const fakeTestEnv = Object.freeze({
   STRIPE_WEBHOOK_SECRET:'whsec_FAKE_FOR_OFFLINE_TESTS'
 });
 
-export function makeFakeBillingAdapter({quotedAmountCents=50000}={}){
-  const quotes=new Map(),switches=[],cancellations=[];
+export function makeFakeBillingAdapter({quotedAmountCents=50000,quotedNetCents=quotedAmountCents}={}){
+  const quotes=new Map(),switches=[],cancellations=[],downgrades=[],ownerships=[],hostingStops=[],delinquencyCancels=[];
   return {
-    quotes,switches,cancellations,
+    quotes,switches,cancellations,downgrades,ownerships,hostingStops,delinquencyCancels,
+    async scheduleDowngrade(input){if(!downgrades.some(x=>x.idempotencyKey===input.idempotencyKey))downgrades.push(structuredClone(input));return {accepted:true};},
+    async startOwnerHosting(input){if(!ownerships.some(x=>x.idempotencyKey===input.idempotencyKey))ownerships.push(structuredClone(input));return {accepted:true,subscriptionId:"sub_owner_qa"};},
+    async cancelDelinquentSubscription(input){if(!delinquencyCancels.some(x=>x.idempotencyKey===input.idempotencyKey))delinquencyCancels.push(structuredClone(input));return {accepted:true};},
+    async stopHosting(input){if(!hostingStops.some(x=>x.idempotencyKey===input.idempotencyKey))hostingStops.push(structuredClone(input));return {accepted:true};},
     async previewSwitch(input){
       const id=`quote_fake_${quotes.size+1}`;
       quotes.set(id,structuredClone(input));
-      return {id,amountDueCents:quotedAmountCents,effectiveAt:'2026-10-08T00:00:00.000Z'};
+      return {id,amountDueCents:quotedAmountCents,lineNetCents:quotedNetCents,taxCents:quotedAmountCents-quotedNetCents,effectiveAt:'2026-10-08T00:00:00.000Z'};
     },
     async confirmSwitch(input){
       const quote=quotes.get(input.quoteId);

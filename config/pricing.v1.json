@@ -209,9 +209,8 @@
       "description": "Growth monthly website rental",
       "category": "Website Plans",
       "planId": "growth",
-      "priceCents": null,
+      "priceCents": 15000,
       "proposedPriceCents": 27900,
-      "displayPrice": "Price coming soon",
       "currency": "USD",
       "cadence": "month",
       "entitlementKeys": [
@@ -220,9 +219,11 @@
           "quantity": 1
         }
       ],
-      "active": false,
+      "active": true,
       "taxFlag": "requires_configuration",
-      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
+      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1",
+      "approvedBy": "Joe",
+      "approvedAt": "2026-10-10"
     },
     {
       "sku": "PLAN-GROWTH-YEAR",
@@ -231,9 +232,8 @@
       "description": "Growth annual prepaid website rental",
       "category": "Website Plans",
       "planId": "growth",
-      "priceCents": null,
+      "priceCents": 150000,
       "proposedPriceCents": 279000,
-      "displayPrice": "Price coming soon",
       "currency": "USD",
       "cadence": "year",
       "entitlementKeys": [
@@ -242,9 +242,11 @@
           "quantity": 1
         }
       ],
-      "active": false,
+      "active": true,
       "taxFlag": "requires_configuration",
-      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
+      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1",
+      "approvedBy": "Joe",
+      "approvedAt": "2026-10-10"
     },
     {
       "sku": "PLAN-ALL-IN-MONTH",
@@ -253,9 +255,8 @@
       "description": "All-in monthly website rental",
       "category": "Website Plans",
       "planId": "all_in",
-      "priceCents": null,
+      "priceCents": 30000,
       "proposedPriceCents": 44900,
-      "displayPrice": "Price coming soon",
       "currency": "USD",
       "cadence": "month",
       "entitlementKeys": [
@@ -264,9 +265,11 @@
           "quantity": 1
         }
       ],
-      "active": false,
+      "active": true,
       "taxFlag": "requires_configuration",
-      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
+      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1",
+      "approvedBy": "Joe",
+      "approvedAt": "2026-10-10"
     },
     {
       "sku": "PLAN-ALL-IN-YEAR",
@@ -275,9 +278,8 @@
       "description": "All-in annual prepaid website rental",
       "category": "Website Plans",
       "planId": "all_in",
-      "priceCents": null,
+      "priceCents": 300000,
       "proposedPriceCents": 449000,
-      "displayPrice": "Price coming soon",
       "currency": "USD",
       "cadence": "year",
       "entitlementKeys": [
@@ -286,9 +288,11 @@
           "quantity": 1
         }
       ],
-      "active": false,
+      "active": true,
       "taxFlag": "requires_configuration",
-      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1"
+      "source": "ALL-IN-SALES-PAGE.md / LAUNCH-PAY.md Q1",
+      "approvedBy": "Joe",
+      "approvedAt": "2026-10-10"
     },
     {
       "sku": "SITE-OWN",

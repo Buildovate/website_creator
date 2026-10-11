@@ -1,0 +1,19 @@
+✔ catalog validates and includes every Pack 3 and Pack 4 SKU exactly once (1.6678ms)
+✔ all amounts are integer cents, Joe-approved plan prices are available, and annual equals ten months (0.8932ms)
+✔ locked ownership prices and rental rules override older proposals (0.6974ms)
+✔ monthly minimum uses calendar month boundaries, including short February (0.3766ms)
+✔ buyout remains exactly $1,500 at any month paid (0.1445ms)
+✔ rental cancellation removes site, keeps domain, has no export, and holds data 90 days (0.2068ms)
+✔ Pack 4 scope and approved domain-only add-on activation gate are retained (0.4149ms)
+✔ plan inclusions are resolved once, with Growth 12 posts and All-in 20 (0.2891ms)
+✔ catalog rows and published-price snapshots cannot be mutated (0.2524ms)
+✔ every Pack source dollar amount is preserved, with ownership bundle and CRM proposal gated (5.2579ms)
+✔ unpriced active rows and mismatched annual rows fail catalog validation (3.5542ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19.3362

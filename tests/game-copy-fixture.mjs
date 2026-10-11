@@ -22,11 +22,11 @@ export default {
     ],
     [
       "Give the first conversation a head start.",
-      "Set up your estimate request."
+      "Save a service price range."
     ],
     [
       "Choose the details you need and enter your own prices.",
-      "Choose what homeowners need to tell you, enter your prices, and require consent."
+      "Enter a price range on at least one service page. Homeowners can then see your estimate starting point."
     ],
     [
       "An offer that works for your business.",
@@ -58,7 +58,7 @@ export default {
     ],
     [
       "Keep your next step intentional.",
-      "Choose your marketing channels."
+      "Add a way to find you."
     ],
     [
       "Each quest earns XP when every step is complete.",
