@@ -1,0 +1,2 @@
+// Fictional local QA values only. Never copy these claims into a customer site.
+export const trustFixture={years:18,licenseNumber:'123456',licenseState:'CA',insured:true,crewSize:8,warrantyYears:10,certifications:['Sample manufacturer credential'],googleRating:4.9,googleReviewCount:212,googleUrl:'https://www.google.com/maps?cid=123',jobsCompleted:1250,confirmed:{years:true,license:true,insured:true,crewSize:true,warranty:true,certifications:true,google:true,jobsCompleted:true}};

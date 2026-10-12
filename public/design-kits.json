@@ -7,13 +7,13 @@
     "color": "#c78353",
     "tone": "carbon",
     "layout": "immersive",
-    "image": "/assets/finished-roof.jpg",
+    "image": "/assets/finished-roof.webp",
     "direction": "Bold rooflines, copper accents, architectural typography and project evidence.",
     "prompt": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Bold rooflines, copper accents, architectural typography and project evidence. Hero headline direction: Roofs built. Standards raised. Build three deliberate acts: immediate visual impact; services and real project proof; a simple inquiry. Use a cinematic hero, an organized service grid, owner credentials only when supplied, and the existing project map/story system. On mobile use one strong image, condensed headings, comfortable tap targets and a persistent inquiry CTA.",
     "recipes": {
       "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
       "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
-      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "marquee": "Layer roofing image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
       "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
       "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
       "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
@@ -34,7 +34,7 @@
     "recipes": {
       "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
       "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
-      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "marquee": "Layer patios image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
       "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
       "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
       "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
@@ -55,7 +55,7 @@
     "recipes": {
       "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
       "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
-      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "marquee": "Layer plumbing image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
       "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
       "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
       "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
@@ -76,7 +76,7 @@
     "recipes": {
       "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
       "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
-      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "marquee": "Layer hvac image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
       "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
       "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
       "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
@@ -97,7 +97,7 @@
     "recipes": {
       "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
       "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
-      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "marquee": "Layer electrical image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
       "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
       "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
       "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
@@ -118,7 +118,7 @@
     "recipes": {
       "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
       "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
-      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "marquee": "Layer landscaping image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
       "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
       "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
       "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
@@ -139,11 +139,246 @@
     "recipes": {
       "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
       "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
-      "marquee": "Use a slow location ribbon populated only with the supplied service area. Include a pause control and a static reduced-motion version.",
+      "marquee": "Layer general contractors image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
       "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
       "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
       "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
     },
     "videoPoster": "/assets/films/general-contractors-poster.webp"
+  },
+  "flooring": {
+    "id": "flooring",
+    "trade": "Flooring",
+    "name": "GRAIN & GROUND",
+    "headline": "A beautiful foundation.\nFor everyday living.",
+    "color": "#be9162",
+    "tone": "clay",
+    "layout": "editorial",
+    "image": "/assets/kit-flooring.webp",
+    "direction": "Architectural interiors, warm timber grain, rhythmic plank reveals and carefully framed details.",
+    "prompt": "Extend the current contractor website with Architectural interiors, warm timber grain, rhythmic plank reveals and carefully framed details. Preserve business facts, forms, project stories and mobile accessibility. Use only clearly labeled sample testimonials in draft previews; real approved reviews at launch. A beautiful foundation. For everyday living.",
+    "recipes": {
+      "reveal": "Introduce flooring-inspired directional wipes across section headings using a cropped trade image, then settle into sharp readable text. Do not animate every word indefinitely.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Layer flooring image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "painting": {
+    "id": "painting",
+    "trade": "Painting",
+    "name": "TRUE COAT",
+    "headline": "Color changes\neverything.",
+    "color": "#b5a4e6",
+    "tone": "graphite",
+    "layout": "immersive",
+    "image": "/assets/kit-painting.webp",
+    "direction": "Gallery-like compositions, rich color fields, brush-direction reveals and crisp architectural edges.",
+    "prompt": "Extend the current contractor website with Gallery-like compositions, rich color fields, brush-direction reveals and crisp architectural edges. Preserve business facts, forms, project stories and mobile accessibility. Use only clearly labeled sample testimonials in draft previews; real approved reviews at launch. Color changes everything.",
+    "recipes": {
+      "reveal": "Introduce painting-inspired directional wipes across section headings using a cropped trade image, then settle into sharp readable text. Do not animate every word indefinitely.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Layer painting image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "fencing": {
+    "id": "fencing",
+    "trade": "Fencing",
+    "name": "BOUNDARY",
+    "headline": "Define your space.\nBeautifully.",
+    "color": "#bba16f",
+    "tone": "forest",
+    "layout": "studio",
+    "image": "/assets/kit-fencing.webp",
+    "direction": "Cedar textures, strong vertical rhythm, crisp shadow lines and tranquil outdoor rooms.",
+    "prompt": "Extend the current contractor website with Cedar textures, strong vertical rhythm, crisp shadow lines and tranquil outdoor rooms. Preserve business facts, forms, project stories and mobile accessibility. Use only clearly labeled sample testimonials in draft previews; real approved reviews at launch. Define your space. Beautifully.",
+    "recipes": {
+      "reveal": "Introduce fencing-inspired directional wipes across section headings using a cropped trade image, then settle into sharp readable text. Do not animate every word indefinitely.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Layer fencing image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "garage-doors": {
+    "id": "garage-doors",
+    "trade": "Garage Doors",
+    "name": "THRESHOLD",
+    "headline": "A better welcome.\nEvery day.",
+    "color": "#97b9ca",
+    "tone": "carbon",
+    "layout": "immersive",
+    "image": "/assets/kit-garage-doors.webp",
+    "direction": "Modern facades, horizontal panel rhythms, restrained metallic detail and smooth reveal transitions.",
+    "prompt": "Extend the current contractor website with Modern facades, horizontal panel rhythms, restrained metallic detail and smooth reveal transitions. Preserve business facts, forms, project stories and mobile accessibility. Use only clearly labeled sample testimonials in draft previews; real approved reviews at launch. A better welcome. Every day.",
+    "recipes": {
+      "reveal": "Introduce garage doors-inspired directional wipes across section headings using a cropped trade image, then settle into sharp readable text. Do not animate every word indefinitely.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Layer garage doors image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "pest-control": {
+    "id": "pest-control",
+    "trade": "Pest Control",
+    "name": "HOMEKEEP",
+    "headline": "Your home.\nYour peace of mind.",
+    "color": "#a5c19a",
+    "tone": "forest",
+    "layout": "editorial",
+    "image": "/assets/kit-pest-control.webp",
+    "direction": "Calm residential photography, magnified details, measured inspection reveals and clear next steps.",
+    "prompt": "Extend the current contractor website with Calm residential photography, magnified details, measured inspection reveals and clear next steps. Preserve business facts, forms, project stories and mobile accessibility. Use only clearly labeled sample testimonials in draft previews; real approved reviews at launch. Your home. Your peace of mind.",
+    "recipes": {
+      "reveal": "Introduce pest control-inspired directional wipes across section headings using a cropped trade image, then settle into sharp readable text. Do not animate every word indefinitely.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Layer pest control image detail behind the scrolling banner. Vary the art direction between material close-up, architectural frame, blueprint tint and luminous edge. Preserve readable text, a pause button and reduced-motion support. Regeneration changes the crop and treatment while keeping the business text editable.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "windows-doors": {
+    "id": "windows-doors",
+    "trade": "Windows/Doors",
+    "name": "DAYLIGHT",
+    "headline": "A clearer view.\nA better welcome.",
+    "intro": "Compare window and door styles, plan the fit, and bring your next improvement into focus.",
+    "color": "#d8ad77",
+    "tone": "clay",
+    "layout": "editorial",
+    "image": "/assets/kit-windows-doors.webp",
+    "videoPoster": "/assets/kit-windows-doors.webp",
+    "art": {
+      "banner": "/assets/kit-windows-doors.webp",
+      "detail": "/assets/kit-windows-doors.webp"
+    },
+    "mediaStatus": "concept-stills; trade films pending",
+    "direction": "Warm architectural light, precise frame details, sandstone and bronze accents; a considered replacement journey with a clear scope and installation conversation.",
+    "prompt": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Warm architectural light, precise frame details, sandstone and bronze accents; a considered replacement journey with a clear scope and installation conversation. Headline direction: A clearer view. A better welcome. Preserve selected services and verified business facts. Concept imagery is not a completed project. Do not invent savings, rebates, loan terms, energy output or performance guarantees.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use architectural windows/doors details behind the banner, preserve readable business text and reduced-motion support.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "solar": {
+    "id": "solar",
+    "trade": "Solar",
+    "name": "SUNWARD",
+    "headline": "Your roof.\nA brighter possibility.",
+    "intro": "Start with your roof, energy use and priorities. Explore a solar plan shaped around your home.",
+    "color": "#e9bc59",
+    "tone": "graphite",
+    "layout": "immersive",
+    "image": "/assets/kit-solar.webp",
+    "videoPoster": "/assets/kit-solar.webp",
+    "art": {
+      "banner": "/assets/kit-solar.webp",
+      "detail": "/assets/kit-solar.webp"
+    },
+    "mediaStatus": "concept-stills; trade films pending",
+    "direction": "Warm sunlight against graphite panels, precise energy-system diagrams and spacious architectural compositions. Explain roof suitability, system scope and ownership choices without invented savings or incentive promises.",
+    "prompt": "Build a finished, responsive local-contractor website, not a generic SaaS landing page. Use only supplied business facts. Never invent reviews, ratings, project counts, warranties, team members or completed jobs. Label illustrative assets. Use semantic headings, keyboard-accessible interactions, readable contrast, visible focus and reduced-motion support. Keep images optimized, reserve their dimensions, and avoid scroll hijacking or heavy WebGL. Connect inquiry forms to the real scoped backend. Preserve draft privacy and project attribution. Design direction: Warm sunlight against graphite panels, precise energy-system diagrams and spacious architectural compositions. Explain roof suitability, system scope and ownership choices without invented savings or incentive promises. Headline direction: Your roof. A brighter possibility. Preserve selected services and verified business facts. Concept imagery is not a completed project. Do not invent savings, rebates, loan terms, energy output or performance guarantees.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use architectural solar details behind the banner, preserve readable business text and reduced-motion support.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "concrete": {
+    "id": "concrete",
+    "trade": "Concrete",
+    "name": "GROUNDWORK",
+    "headline": "A sound base.\nA considered finish.",
+    "intro": "Plan the grade, joints and finish for concrete that fits how you use the space.",
+    "color": "#bf9974",
+    "tone": "clay",
+    "layout": "studio",
+    "image": "/assets/trade-enablement/concrete-kit-hero.webp",
+    "videoPoster": "/assets/trade-enablement/concrete-kit-hero.webp",
+    "art": {
+      "banner": "/assets/trade-enablement/concrete-kit-banner.webp",
+      "detail": "/assets/trade-enablement/concrete-kit-detail.webp"
+    },
+    "mediaStatus": "representative generated stills; no trade film",
+    "direction": "Form lines, aggregate texture and warm stone; show preparation, drainage and finish choices.",
+    "prompt": "Build an accessible contractor site using only confirmed business facts and the selected services. Form lines, aggregate texture and warm stone; show preparation, drainage and finish choices. Representative imagery is not a completed customer project. Use Sample tags in private noindex previews and omit empty published sections. Never invent reviews, ratings, urgency, prices or financing terms. Preserve selected services, owned branding and accessible static fallbacks.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use restrained concrete material details with readable text and a static reduced-motion state.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "pools": {
+    "id": "pools",
+    "trade": "Pools",
+    "name": "STILLWATER",
+    "headline": "Room to swim.\nSpace to unwind.",
+    "intro": "Plan the water, the poolside and the equipment around your yard and your routine.",
+    "color": "#71b8bb",
+    "tone": "clay",
+    "layout": "editorial",
+    "image": "/assets/trade-enablement/pools-kit-hero.webp",
+    "videoPoster": "/assets/trade-enablement/pools-kit-hero.webp",
+    "art": {
+      "banner": "/assets/trade-enablement/pools-kit-banner.webp",
+      "detail": "/assets/trade-enablement/pools-kit-detail.webp"
+    },
+    "mediaStatus": "representative generated stills; no trade film",
+    "direction": "Waterline tile, soft reflections and pale stone; focus on shell, circulation and comfortable poolside access.",
+    "prompt": "Build an accessible contractor site using only confirmed business facts and the selected services. Waterline tile, soft reflections and pale stone; focus on shell, circulation and comfortable poolside access. Representative imagery is not a completed customer project. Use Sample tags in private noindex previews and omit empty published sections. Never invent reviews, ratings, urgency, prices or financing terms. Preserve selected services, owned branding and accessible static fallbacks.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use restrained pools material details with readable text and a static reduced-motion state.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
+  },
+  "locksmith": {
+    "id": "locksmith",
+    "trade": "Locksmith",
+    "name": "KEYLINE",
+    "headline": "The right access.\nA better fit.",
+    "intro": "Tell us about the door, key or entry system. We will check compatibility and discuss the work before starting.",
+    "color": "#b39a69",
+    "tone": "clay",
+    "layout": "studio",
+    "image": "/assets/trade-enablement/locksmith-kit-hero.webp",
+    "videoPoster": "/assets/trade-enablement/locksmith-kit-hero.webp",
+    "art": {
+      "banner": "/assets/trade-enablement/locksmith-kit-banner.webp",
+      "detail": "/assets/trade-enablement/locksmith-kit-detail.webp"
+    },
+    "mediaStatus": "representative generated stills; no trade film",
+    "direction": "Brushed brass, precise key-cut edges and pin-tumbler lines; clear access choices with no invented urgency or arrival times.",
+    "prompt": "Build an accessible contractor site using only confirmed business facts and the selected services. Brushed brass, precise key-cut edges and pin-tumbler lines; clear access choices with no invented urgency or arrival times. Representative imagery is not a completed customer project. Use Sample tags in private noindex previews and omit empty published sections. Never invent reviews, ratings, urgency, prices or financing terms. Preserve selected services, owned branding and accessible static fallbacks.",
+    "recipes": {
+      "reveal": "Stagger section introductions with subtle opacity and vertical movement. Reveal content once; show everything immediately when reduced motion is preferred.",
+      "parallax": "Add a shallow cinematic image drift to the hero on desktop. Keep text stable and disable movement on reduced-motion and small screens.",
+      "marquee": "Use restrained locksmith material details with readable text and a static reduced-motion state.",
+      "servicePicker": "Let visitors select their service or concern and carry that choice into the inquiry form. Announce the selected guidance accessibly.",
+      "process": "Create a numbered visual process with selectable steps and an explanation of the active stage. Keep all information accessible without animation.",
+      "stickyNav": "Provide sticky chapter navigation with a clearly highlighted active section and a mobile estimate dock. Do not cover focused controls."
+    }
   }
 }

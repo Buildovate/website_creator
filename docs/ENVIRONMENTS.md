@@ -28,7 +28,7 @@ ChatGPT Sites remains the running fallback until a preview deploy is verified an
 
 ## Auth
 
-Sites injects `oai-authenticated-user-id` and `oai-authenticated-user-email`. The AWS process strips those headers from clients and sets them only after its own check. Preview and production use `AUTH_MODE=alb-oidc` (load balancer JWT) or `AUTH_MODE=cognito` (Cognito ID token). `AUTH_MODE=dev-header` is local only. Details are in `docs/AWS_MIGRATION.md`.
+Sites injects `oai-authenticated-user-id` and `oai-authenticated-user-email`. The AWS process strips those headers from clients and sets them only after its own check. Preview and production are reported to remain `AUTH_MODE=disabled`; the templates describe future `alb-oidc` or `cognito` configuration. `AUTH_MODE=dev-header` is local only. Details are in `docs/AWS_MIGRATION.md`.
 
 Platform roles still live in the `admins` and `members` tables. The identity provider only establishes the user id and email. The first administrator is still the existing owner bootstrap (`yoelengel18@gmail.com` via `/api/setup`).
 
@@ -48,7 +48,7 @@ Every promotion should include:
 
 Two local paths. Both use `APP_ENV=local` and `AUTH_MODE=dev-header`. Neither one is preview or production, and neither one changes Elastic Beanstalk, RDS, or Route 53.
 
-Send `x-buildovate-user-id` and `x-buildovate-user-email` on API requests. `AUTH_MODE=dev-header` is refused when `NODE_ENV=production` unless `AUTH_ALLOW_DEV_HEADERS=1` is set on purpose. Do not set that flag on a shared environment.
+Open http://localhost:8080/login and choose a stable local identity. The server issues an HttpOnly session cookie; private mutations require CSRF and matching Origin. Incoming development identity headers are ignored. See `docs/modules/auth.md`.
 
 ### Quick path (no Docker)
 

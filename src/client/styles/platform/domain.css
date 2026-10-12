@@ -1,0 +1,21 @@
+body.bv-platform .bv-domain{max-width:var(--bv-w-wide);margin:0 auto;padding:var(--bv-space-7);color:var(--bv-ink);font-family:var(--bv-sans)}
+body.bv-platform .bv-domain>h2{font:700 var(--bv-fs-h1)/1.1 var(--bv-cond);color:var(--bv-navy);margin:0 0 var(--bv-space-4)}
+body.bv-platform .bv-domain-lead{font-size:var(--bv-fs-lead)}
+body.bv-platform .bv-domain .bv-card{margin-bottom:var(--bv-space-7)}
+body.bv-platform .bv-domain-rail{display:flex;gap:var(--bv-space-7);padding:var(--bv-space-6);list-style-position:inside;border-bottom:1px solid var(--bv-line);font-weight:600;color:var(--bv-navy)}
+body.bv-platform .bv-domain form{display:grid;grid-template-columns:1fr 1fr;gap:var(--bv-space-6)}
+body.bv-platform .bv-domain form button,body.bv-platform .bv-domain form p{grid-column:1/-1;justify-self:start}
+body.bv-platform .bv-domain label{display:grid;gap:var(--bv-space-2)}
+body.bv-platform .bv-domain .check{display:flex;align-items:center;min-height:44px;margin-bottom:var(--bv-space-6)}
+body.bv-platform .bv-domain-records{display:grid;grid-template-columns:1fr 1fr;gap:var(--bv-space-7)}
+body.bv-platform .bv-domain-records article{min-width:0;padding:var(--bv-space-6);background:var(--bv-surface-2);border-radius:var(--bv-r-md)}
+body.bv-platform .bv-domain dl{margin:0;display:grid;grid-template-columns:80px minmax(0,1fr);gap:var(--bv-space-4);align-items:start}
+body.bv-platform .bv-domain dd{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--bv-space-2);min-width:0}
+body.bv-platform .bv-domain code{overflow-wrap:anywhere;font:500 var(--bv-fs-small)/1.5 var(--bv-mono);color:var(--bv-ink)}
+body.bv-platform .bv-domain li{margin-bottom:var(--bv-space-4)}
+body.bv-platform .bv-domain-status{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:var(--bv-space-4)}
+body.bv-platform .bv-domain-status li{display:flex;align-items:center;justify-content:space-between;gap:var(--bv-space-4);padding:var(--bv-space-4);border-bottom:1px solid var(--bv-line)}
+body.bv-platform .bv-domain [data-domain-message]:empty{display:none}
+body.bv-platform .bv-domain :is(a,button,input,select):focus-visible{outline:3px solid var(--bv-blue);outline-offset:3px}
+@media(max-width:720px){body.bv-platform .bv-domain{padding:var(--bv-space-3) 0}body.bv-platform .bv-domain :is(form,.bv-domain-records,.bv-domain-status){grid-template-columns:1fr}body.bv-platform .bv-domain-rail{gap:var(--bv-space-3);font-size:var(--bv-fs-small);padding:var(--bv-space-4) 0}body.bv-platform .bv-domain .bv-card{padding:var(--bv-space-6)}body.bv-platform .bv-domain>button{width:100%}}
+@media(prefers-reduced-motion:reduce){body.bv-platform .bv-domain *{transition:none;animation:none}}

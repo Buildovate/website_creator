@@ -1,65 +1,61 @@
 # Module: auth
 
-## Purpose
-Proves a user id and email, then lets the Worker decide platform and website roles. The identity provider does not grant those roles.
+Custom hosts are classified by the actual HTTP Host before platform authentication and use only public tenant routes. Forwarded-host headers do not select tenants, and platform authentication retains canonical `APP_ORIGIN`. See [CUSTOM-DOMAINS.md](../release/CUSTOM-DOMAINS.md) for the Host/origin TLS requirements.
 
-## Server
-- **Routes**: none of its own. `src/aws/server.js` runs `applyAuth` on every request except `GET /healthz`. The Worker then reads `oai-authenticated-user-id` and `oai-authenticated-user-email` via `person()` / `identity()` in `src/core.js`.
-- **Tables**: `admins` (platform: `user_id`, `email`, `role` default `admin`) and `members` (per tenant: `role`, `active`). Role checks live with `sites` and `workspace`, not here.
-- **Code**: `src/aws/auth.js`, `src/aws/env.js` (`assertRuntimeConfig`), `src/core.js` (`person`, `identity`, `access`).
-- **Auth**: this module is the gate.
+## Runtime and trust boundary
 
-### Modes (`AUTH_MODE`)
+The AWS/Node runtime uses `src/auth/*.ts` (built to `dist/auth`) for HTTP sessions and `src/aws/auth.js` for verified provider identities. The Worker still uses `person()`, `identity()` and `access()`. Incoming identity, ALB and bearer headers are stripped before the adapter writes trusted Worker headers. The original Sites runtime keeps its hosting identity behavior.
 
-Accepted values: `alb-oidc`, `cognito`, `dev-header`, `disabled` (`src/aws/env.js`). Anything else throws `AUTH_CONFIG` and the AWS handler returns 500.
+Private workspace HTML redirects to `/login`; private APIs return 401. Published sites, published media, public inquiry/review/chat routes and signed SMS callbacks retain their existing authorization rules. Draft previews and private media still require site access.
 
-| Mode | Behavior |
-|---|---|
-| `disabled` | `resolveUser` returns null. No user is attached. Public pages still render. `identity()` returns 401. |
-| `dev-header` | Accepts `x-buildovate-user-id` and `x-buildovate-user-email`. Refused when `NODE_ENV=production` unless `AUTH_ALLOW_DEV_HEADERS=1`. Local only. Do not set that flag on a shared environment. |
-| `alb-oidc` | Verifies ALB `x-amzn-oidc-data` (`ES256`, `kid`, `exp` with 60s skew). Public key from `https://public-keys.auth.elb.{region}.amazonaws.com/{kid}`. Optional `AUTH_OIDC_ISSUER` must match `iss`. Maps `sub` and `email`. |
-| `cognito` | Verifies a Cognito **ID token** (`Authorization: Bearer`, `token_use` `id`, `RS256`) against the pool JWKS. Requires `COGNITO_USER_POOL_ID`. `COGNITO_CLIENT_ID` checks `aud` when set. Issuer is `https://cognito-idp.{region}.amazonaws.com/{pool id}`. Access tokens are rejected. |
+## Local sign-in
 
-If `AUTH_MODE` is unset, `authMode()` returns `alb-oidc` when `NODE_ENV=production`, otherwise `dev-header`.
+With `APP_ENV=local` and `AUTH_MODE=dev-header`, open `/login` and enter an email and stable user ID. This is explicitly an unverified development identity, not a production login. Client identity headers no longer authenticate HTTP requests. The local-session endpoint is unavailable in shared modes.
 
-On AWS, incoming `oai-authenticated-user-*` headers are deleted and set again only after a mode succeeds. Sending the Sites headers yourself does nothing. `alb-oidc` also drops `x-amzn-oidc-data`, `x-amzn-oidc-identity`, and `x-amzn-oidc-accesstoken`. `cognito` drops `authorization` before the Worker runs.
+`POST /auth/local-session` requires JSON, an exact matching Origin and a loopback URL. It has bounded input and per-address rate limits. It rotates an opaque random session token. Only its SHA-256 hash is stored in the new `auth_sessions` table (append-only migration 0005). Cookies are HttpOnly, SameSite=Lax, Path=/ and Secure on HTTPS. Sessions expire after `AUTH_SESSION_TTL_SECONDS` (default 3600, range 60–86400) and survive process restarts when the database persists.
 
-HTML from the Worker still says "Sign in with ChatGPT". `rewriteSitesChrome` in `src/aws/server.js` rewrites that to "Sign in required" on the AWS response path only, points the sign-in link at `/`, and points sign-out at `AUTH_LOGOUT_URL` when that value is an http(s) URL. Otherwise the page says sign-out is handled by the identity provider. The Worker source is unchanged, so the Site keeps its original links.
+Direct local Node runs bind 127.0.0.1. Compose binds the process to 0.0.0.0 inside the container and publishes all service ports on host loopback. Do not expose development sign-in through a tunnel or reverse proxy.
 
-### Current preview and production setting
+## Session API and browser
 
-Live preview and production still set `AUTH_MODE=disabled`. Cognito and the ALB OIDC authenticate action are not wired. That is the current state, not a planned mode.
+`GET /api/session` returns user, initialized, active memberships, authMode, loginUrl, logoutUrl, providerLogoutUrl, expiresAt and csrfToken. Roles remain in existing admin/member tables and are checked on each operation, not cached in the cookie. Private mutations require the cookie, exact Origin and X-CSRF-Token. `POST /auth/logout` requires the same checks and revokes the session.
 
-`aws/env/preview.env.example` and `aws/env/production.env.example` still show `AUTH_MODE=alb-oidc` (with `cognito` commented). Those files are templates. They are not the live environment properties. Do not flip a shared environment to `alb-oidc` or `cognito` from the examples unless someone asks. `COGNITO_USER_POOL_ID` and `COGNITO_CLIENT_ID` are blank in the examples. Pool ids are unknown in this repo.
+The TypeScript browser bridge supplies CSRF and preserves forms when a session expires. Reauthentication opens another tab; failed changes are never automatically replayed. A change of user requires reopening the workspace. Invitation fragments stay in the browser, with a same-origin return path saved in sessionStorage. External return URLs are rejected.
 
-Local templates set `AUTH_MODE=dev-header` (`aws/env/local.env.example`, `aws/env/docker.env.example`). `setup.md` is done when `/healthz` reports `authMode: "dev-header"`.
+## Shared provider verification
 
-### Roles (after a user is attached)
+Set a canonical HTTPS `APP_ORIGIN` for the intended environment. Forwarded Host/Proto headers are ignored; there is no configurable proxy trust chain. This deliberately replaces the proposed forwarded-header mechanism with a single configured origin.
 
-- Platform: a row in `admins`. `identity()` sets `admin` when `role==='admin'`, and `staff` when any admin row exists. Staff invite roles in `src/crm.js` are `admin` and `operator`. Operators are staff and are not `admin`.
-- First administrator: `POST /api/setup` only for `yoelengel18@gmail.com`, and only while no other admin row exists (`src/api.js`).
-- Website: `members.role` is `owner`, `editor`, or `viewer`. `access()` treats a platform `admin` as role `admin` for that tenant without a membership row. `write` allows admin/owner/editor. `owner` allows admin/owner. `admin` requires platform admin.
+- ALB: ES256 signature plus exact signed-header signer ARN, issuer, client and expiry checks. `AUTH_ALB_SIGNER`, `AUTH_OIDC_ISSUER` and `AUTH_OIDC_CLIENT_ID` are mandatory. The provider must supply sub, email and email_verified. Instances must accept traffic only from the intended load balancer.
+- Cognito: RS256 ID token, exact pool issuer, client audience, token_use=id, expiry and verified email. Pool and client IDs are mandatory. Key lookup is bounded, cached and refreshed for rotation. No hosted-login callback flow is invented.
+- Both modes require fresh verified provider identity on every request. The local application cookie only binds CSRF and cannot replace the provider token.
+- Disabled: no authenticated user, including when a local session cookie is supplied.
 
-Sites still injects `oai-authenticated-user-id` and `oai-authenticated-user-email` when the Worker runs on ChatGPT Sites. That path does not use `src/aws/auth.js`.
+For ALB login, GET /auth/start must have an ALB authenticate-cognito rule with OnUnauthenticatedRequest=authenticate. The application accepts this route only after verified provider identity, then redirects to a validated same-origin return path. /login shows the provider sign-in link, and old /signin-with-chatgpt bookmarks redirect there safely. Other routes need identity forwarding with OnUnauthenticatedRequest=allow so public pages stay public and private APIs retain JSON 401 behavior.
 
-## Browser
-- **Pages**: workspace shell at `/`, `/join`, `/team-join` (`src/views.js`). Sign-in copy depends on Sites vs the AWS rewrite above.
-- **Scripts / data**: `public/app.js` loads the session.
-- **Calls**: `GET /api/session` (anonymous user is null; also records last-seen when a person is present).
+Shared sign-out revokes the application session, expires the configured AUTH_ALB_COOKIE_NAME (default AWSELBAuthSessionCookie) and all four possible shards, then follows AUTH_LOGOUT_URL. The signed-out /login page must remain accessible without requiring authentication. The provider logout endpoint must be configured; browser logout through the actual ALB still requires staging verification.
 
-## Business rules
-- Email is stored lowercased and must match the invitation email.
-- Invitation tokens are hashed. Tenant invites last seven days (`src/api.js`). Platform staff invites also last seven days (`src/crm.js`).
-- Private Sites sharing is an outer gate. An application invite does not add someone to the hosting access policy (`README.md`, `OPERATIONS.md`).
-- Vite and `tests/preview-fixture.mjs` are local test only. Do not deploy the Vite adapter as production auth (`README.md`).
+Preview/staging is https://preview.website.buildovate.com; production is https://website.buildovate.com. AWS inspection confirmed AUTH_MODE=disabled and no ALB authentication actions. A new invitation-only staging Cognito pool was subsequently created with owner approval; it is not yet connected to the live application. See docs/STAGING_LOGIN_SETUP.md. Environment examples are prospective configuration, not proof that SSO exists. Local auth is forbidden on shared environments even with AUTH_ALLOW_DEV_HEADERS.
 
-## Gotchas
-- `AUTH_MODE=disabled` is easy to confuse with "unset". Unset + `NODE_ENV=production` falls back to `alb-oidc`, which will not attach a user without a real ALB JWT. The live setting is the explicit value `disabled`.
-- A client that can reach an instance directly can forge `x-amzn-oidc-data` if `alb-oidc` is enabled. `docs/AWS_MIGRATION.md` says instances should accept HTTP only from the load balancer. That network rule is not in this repo.
-- Unknown: the live Cognito user pool, ALB listener, and logout URL. Not in git.
+## Roles and initialization
 
-## Related modules
-`sites` (memberships and setup), `workspace` (staff vs contractor access), `infra` (where `AUTH_MODE` is set).
+Platform admins/operators and website owners/editors/viewers keep existing permissions. The first administrator still requires explicit `POST /api/setup` using the existing bootstrap owner email, while no other administrator exists. Login does not bootstrap or grant permissions. Invitations must match the signed-in email.
 
-## Sources
-`src/aws/auth.js`, `src/aws/env.js`, `src/aws/server.js`, `src/core.js`, `src/api.js`, `src/crm.js`, `aws/env/preview.env.example`, `aws/env/production.env.example`, `aws/env/local.env.example`, `aws/env/docker.env.example`, `docs/AWS_MIGRATION.md`, `docs/ENVIRONMENTS.md`, `setup.md`, `OPERATIONS.md`.
+## Verification
+
+Run `npm run build`, `npm run typecheck:auth`, `npm run test:aws` and `npm run test:auth`. Auth tests use disposable databases and exercise migrations, sessions, expiry, logout, CSRF, spoofing, roles, tenant isolation, public/private routes and provider signatures/rotation.
+
+The existing domain/render suites additionally require the original public/assets bundle, including roofing.jpg. Those files are absent from Git and unavailable on this machine. No substitute assets or removed assertions conceal that limitation.
+
+## HTTP response protections
+
+The AWS handler supplies nosniff and strict-origin-when-cross-origin Referrer-Policy on responses. Workspace/login/private-preview HTML receives no-store, noindex, SAMEORIGIN and a limited CSP: base-uri self, object-src none, frame-ancestors self. Same-origin editor frames, existing inline scripts, styles and media remain compatible. This is a baseline policy, not a complete script-source CSP.
+
+HSTS (max-age=31536000, without includeSubDomains or preload) is emitted only for a configured HTTPS origin in a shared environment, never locally. Public pages do not receive workspace framing/CSP restrictions. Protected API responses remain JSON; workspace HTML errors have an app recovery page.
+
+Initial-load failures offer Try again and clear the busy state. Failed save requests retain the existing form. Sign-out uses an accessible in-page confirmation with cancel, then the CSRF-protected POST logout route. Public visitor forms and signed webhooks keep their separate existing checks; workspace CSRF is not used to bypass them.
+
+
+## #022 visitor ebook requests
+
+POST /api/public/:slug/ebook is registered with the existing public-route policy. The handler enforces exact same-origin requests, bounded bodies, honeypot, unticked explicit consent, browser-scoped receipts and persisted quotas. Private preview capture/download still calls tenant access; public download requires its consent receipt and the same HttpOnly browser cookie. No platform mutation becomes anonymous. Native no-JavaScript form POST uses the existing strict-origin-when-cross-origin response policy.

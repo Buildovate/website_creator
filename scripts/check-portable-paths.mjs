@@ -1,0 +1,3 @@
+import fs from 'node:fs';import path from 'node:path';
+const pattern=new RegExp('C:'+'[/\\\\]+'+'Users'+'[/\\\\]+'+'joe','ig');const hits=[];
+function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const f=path.join(dir,e.name);if(e.isDirectory())walk(f);else if(/\.(?:mjs|js|cjs|ts|py|md|json|yml|yaml)$/.test(f)){const count=(fs.readFileSync(f,'utf8').match(pattern)||[]).length;if(count)hits.push({file:f,count});}}}for(const dir of ['tests','scripts'])walk(dir);if(hits.length)throw Error('Nonportable paths: '+JSON.stringify(hits));console.log('PASS portable paths: 0 user-specific absolute paths');

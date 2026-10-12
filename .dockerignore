@@ -1,4 +1,5 @@
 node_modules
+.data
 .git
 .env
 aws/env/docker.env
@@ -6,3 +7,5 @@ dist
 tests
 .github
 *.md
+# Local QA captures, snapshots and push evidence are not runtime inputs.
+docs/build-evidence

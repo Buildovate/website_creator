@@ -1,12 +1,18 @@
+import {createLiveDomainAdapters} from './custom-domains.js';
+import {customDomainsLive,recheckInterval} from '../domain/adapters.js';
+import {isPlatformHost,normalizeHost,domainNotFound} from '../domain/routing.js';
+import {createGeoLookup} from './geoip.js';
 import { createServer } from 'node:http';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { Readable } from 'node:stream';
-import { applyAuth, authConfig, OPENAI_API_ORIGIN } from './auth.js';
+import { applyAuth, resolveUser, authConfig, OPENAI_API_ORIGIN } from './auth.js';
+import { createAuthHttp, AuthError, responseHeaders, workspacePage, workspaceErrorPage } from '../../dist/auth/index.js';
 import { assertRuntimeConfig, loadEnv } from './env.js';
 import { createD1Adapter } from './d1.js';
 import { applyMigrations } from './migrate.js';
+import { backfillServicePageSettings } from '../service-backfill.js';
 import { createAssets, createMemoryBucket, createS3Bucket, createS3Client } from './s3.js';
 
 const HOP = new Set(['connection', 'keep-alive', 'transfer-encoding', 'upgrade', 'host', 'expect', 'content-length']);
@@ -21,10 +27,18 @@ function nodeHeaders(req) {
   return headers;
 }
 
-export function requestUrl(req) {
-  const proto = String(req.headers['x-forwarded-proto'] || 'http').split(',')[0].trim();
-  const host = String(req.headers['x-forwarded-host'] || req.headers.host || 'localhost').split(',')[0].trim();
-  return `${proto}://${host}${req.url}`;
+export function requestUrl(req, env = {}) {
+  const rawPath = req.url || '/';
+  if (!rawPath.startsWith('/') || rawPath.startsWith('//') || /[\r\n\\]/.test(rawPath)) throw new AuthError('Invalid request URL.');
+  let origin;
+  if (env.APP_ORIGIN) origin = new URL(env.APP_ORIGIN).origin;
+  else {
+    const host = String(req.headers.host || 'localhost');
+    if (!/^(localhost|127\.0\.0\.1|\[::1\])(?::\d{1,5})?$/.test(host)) throw new AuthError('Unrecognized local host.', 400);
+    origin = 'http://' + host;
+  }
+  // Explicit canonical origin: forwarding headers never select it.
+  return origin + rawPath;
 }
 
 async function databaseOk(db) {
@@ -35,10 +49,24 @@ async function databaseOk(db) {
 }
 
 export function createHandler({ worker, env, db, auth }) {
+  const authHttp = createAuthHttp(db, auth, resolveUser);
   return async function handle(req, res) {
-    const url = new URL(requestUrl(req));
+    let url;
+    for(const [key,value] of Object.entries(responseHeaders())) res.setHeader(key,value);
     try {
+      url = new URL(requestUrl(req, env));
+      for(const [key,value] of Object.entries(responseHeaders(url,env.APP_ENV))) res.setHeader(key,value);
+      if (!isPlatformHost(env,req.headers.host || url.host)) {
+        const host=normalizeHost(req.headers.host || url.host);
+        if(!host) {await writeResponse(res,domainNotFound(),auth);return;}
+        const customUrl=new URL(url.pathname+url.search,(env.APP_ENV==='local'?'http://':'https://')+host);
+        const method=req.method||'GET',hasBody=method!=='GET'&&method!=='HEAD';
+        const incoming=new Request(customUrl,{method,headers:nodeHeaders(req),body:hasBody?Readable.toWeb(req):undefined,...(hasBody?{duplex:'half'}:{})});
+        // No platform cookie/session/provider authentication is evaluated for a custom host.
+        await writeResponse(res,await worker.fetch(incoming,{...env,AUTH_RUNTIME:'aws'}),auth);return;
+      }
       if (url.pathname === '/healthz') {
+        if (req.method !== 'GET') { sendJson(res,405,{error:'Method not supported.'}); return; }
         const body = {
           ok: false,
           service: 'website-creator',
@@ -61,20 +89,41 @@ export function createHandler({ worker, env, db, auth }) {
         return;
       }
       const headers = nodeHeaders(req);
-      const authed = await applyAuth(new Request(url, { headers }), auth);
       const method = req.method || 'GET';
       const hasBody = method !== 'GET' && method !== 'HEAD';
-      const request = new Request(url, {
-        method,
-        headers: authed.headers,
+      const incoming = new Request(url, {
+        method, headers,
         body: hasBody ? Readable.toWeb(req) : undefined,
         ...(hasBody ? { duplex: 'half' } : {}),
       });
-      const response = await worker.fetch(request, env);
+      const context = await authHttp.context(incoming);
+      req.user = context.user;
+      const authResponse = await authHttp.route(incoming, context, req.socket.remoteAddress || 'unknown');
+      if (authResponse) { await writeResponse(res, authResponse, auth); return; }
+      const authed = await applyAuth(incoming, auth, context.user);
+      const location = /^\/api\/public\/[^/]+\/location$/.test(url.pathname) ? env.GEOIP_LOOKUP?.(req) : null;
+      let response = await worker.fetch(authed, { ...env, AUTH_RUNTIME:'aws', VISITOR_LOCATION:location });
+      if (url.pathname === '/api/session' && response.ok) {
+        const body = await response.json();
+        response = new Response(JSON.stringify({
+          ...body, authMode:auth.mode, loginUrl:'/login', logoutUrl:'/auth/logout',
+          providerLogoutUrl:auth.logoutUrl || '', expiresAt:context.session?.expires_at || null,
+          csrfToken:context.session?.csrf_token || null,
+        }), {status:200,headers:{'content-type':'application/json','cache-control':'no-store',
+          ...(context.cookie ? {'set-cookie':context.cookie} : {})}});
+      }
+      if (response.status === 401 && !url.pathname.startsWith('/api/') && (response.headers.get('content-type')||'').includes('text/html')) {
+        response = new Response(null,{status:303,headers:{location:'/login?returnTo='+encodeURIComponent(url.pathname+url.search),'cache-control':'no-store'}});
+      }
+      if (response.status >= 400 && workspacePage(url)) response = new Response(workspaceErrorPage(response.status),{status:response.status,headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store'}});
       await writeResponse(res, response, auth);
     } catch (error) {
-      console.error('Request failed', url.pathname, error);
-      if (!res.headersSent) sendJson(res, error.code === 'AUTH_CONFIG' ? 500 : 503, { error: 'Service temporarily unavailable.' });
+      if (!(error instanceof AuthError)) console.error('Request failed', url?.pathname || '/', error.code || error.name);
+      if (!res.headersSent) {
+        const status=error instanceof AuthError ? error.status : error.code === 'AUTH_CONFIG' ? 500 : 503;
+        if(url && workspacePage(url)) await writeResponse(res,new Response(workspaceErrorPage(status),{status,headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store'}}),auth);
+        else sendJson(res,status,{error:error instanceof AuthError ? error.message : 'Service temporarily unavailable.'});
+      }
       else res.end();
     }
   };
@@ -109,7 +158,7 @@ function escapeHtml(value) {
 // authenticate this process. Rewrite it only on the AWS response path.
 export function rewriteSitesChrome(html, auth) {
   let out = html.replaceAll('Sign in with ChatGPT', 'Sign in required');
-  out = out.replaceAll(/href="\/signin-with-chatgpt\?[^"]*"/g, 'href="/"');
+  out = out.replaceAll(/href="\/signin-with-chatgpt\?[^"]*"/g, 'href="/login"');
   const signOut = auth?.logoutUrl
     ? `<a href="${escapeHtml(auth.logoutUrl)}">Sign out</a>`
     : '<span>Sign-out is handled by the identity provider</span>';
@@ -148,17 +197,32 @@ export async function createRuntime(options = {}) {
   const executor = options.executor || await createExecutor(env);
   if (env.MIGRATE_ON_BOOT === '1' && !options.skipMigrate) await applyMigrations((sql, params) => executor.query(sql, params));
   const db = options.db || createD1Adapter(executor);
+  await backfillServicePageSettings(db);
   const bucket = options.bucket || await createBucket(env);
   const assetsRoot = env.ASSETS_ROOT || (existsSync('dist/client') ? 'dist/client' : 'public');
-  const runtimeEnv = { ...env, DB: db, BUCKET: bucket, ASSETS: createAssets(path.resolve(assetsRoot)) };
+  const runtimeEnv = { ...env, GEOIP_LOOKUP:await createGeoLookup(env), DB: db, BUCKET: bucket, ASSETS: createAssets(path.resolve(assetsRoot)) };
+  if(options.domainChecks)runtimeEnv.DOMAIN_CHECKS=options.domainChecks;
+  if(options.domainProvisioner)runtimeEnv.DOMAIN_PROVISIONER=options.domainProvisioner;
+  if(customDomainsLive(runtimeEnv)) {
+    const adapters=createLiveDomainAdapters(runtimeEnv,options.domainAdapterOptions);
+    runtimeEnv.DOMAIN_CHECKS=options.domainChecks||adapters.checks;
+    runtimeEnv.DOMAIN_PROVISIONER=options.domainProvisioner||adapters.provisioner;
+  }
   const worker = options.worker || await loadWorker();
+  const reviewJobs=new Map();let reviewCaptureTail=Promise.resolve();
+  runtimeEnv.REVIEW_QUEUE=(key,task)=>{if(reviewJobs.has(key))return reviewJobs.get(key);const job=Promise.resolve().then(task).catch(error=>console.error('Review capture failed',error.message)).finally(()=>reviewJobs.delete(key));reviewJobs.set(key,job);return job};
+  if(options.reviewCapture)runtimeEnv.REVIEW_CAPTURE=options.reviewCapture;
+  else if(runtimeEnv.REVIEW_BROWSER_MODULE){const {createReviewCapture}=await import('./review-capture.js');runtimeEnv.REVIEW_CAPTURE=createReviewCapture({browserModule:runtimeEnv.REVIEW_BROWSER_MODULE,executablePath:runtimeEnv.REVIEW_BROWSER_EXECUTABLE})}
+  if(runtimeEnv.REVIEW_CAPTURE){const capture=runtimeEnv.REVIEW_CAPTURE;runtimeEnv.REVIEW_CAPTURE=args=>{const next=reviewCaptureTail.then(()=>capture(args));reviewCaptureTail=next.catch(()=>{});return next}}
   const auth = options.auth || authConfig(runtimeEnv);
   return {
     env: runtimeEnv,
     executor,
     auth,
     handler: createHandler({ worker, env: runtimeEnv, db, auth }),
-    async close() { await executor.close?.(); },
+    async maintainDomains(){await worker.scheduled?.({domainOnly:true},runtimeEnv);},
+    async maintain(){await worker.scheduled?.({},runtimeEnv);},
+    async close() { while(reviewJobs.size)await Promise.allSettled([...reviewJobs.values()]);await executor.close?.(); },
   };
 }
 
@@ -187,7 +251,7 @@ export async function listen(runtime, port = Number(runtime.env.PORT || 8080)) {
   const server = createServer(runtime.handler);
   await new Promise((resolve, reject) => {
     server.once('error', reject);
-    server.listen(port, '0.0.0.0', resolve);
+    server.listen(port, runtime.env.LISTEN_HOST || (runtime.env.APP_ENV === 'local' ? '127.0.0.1' : '0.0.0.0'), resolve);
   });
   return server;
 }
@@ -195,9 +259,16 @@ export async function listen(runtime, port = Number(runtime.env.PORT || 8080)) {
 async function main() {
   const runtime = await createRuntime();
   const server = await listen(runtime);
+  const maintenance=()=>runtime.maintain().catch(()=>console.error('Expense recurring maintenance failed; it will retry.'));
+  await maintenance();
+  const expenseTimer=setInterval(maintenance,60*60*1000);expenseTimer.unref();
+  // Domain checks have a separate cadence; expense billing keeps its hourly timer.
+  const domainTimer=setInterval(()=>runtime.maintainDomains().catch(()=>console.error('Domain check unavailable; next scheduled check will retry.')),recheckInterval(runtime.env));domainTimer.unref();
   const address = server.address();
   console.log(`website-creator listening on ${address.port} env=${runtime.env.APP_ENV} auth=${runtime.auth.mode} region=${runtime.env.AWS_REGION} bucket=${runtime.env.BUCKET.bucket || runtime.env.BUCKET.driver} openai=${OPENAI_API_ORIGIN}`);
   const shutdown = () => {
+    clearInterval(expenseTimer);
+    clearInterval(domainTimer);
     server.close();
     runtime.close().catch(() => {});
   };

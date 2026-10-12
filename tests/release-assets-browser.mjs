@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';import path from 'node:path';
+import {chromium} from 'playwright';
+import {createRuntime,listen} from '../src/aws/server.js';
+import {DEFAULT} from '../src/core.js';import {kitDefaults} from '../src/design-kits.js';
+let checks=0;const check=(value,name)=>{assert.ok(value,name);checks++;};
+const out=process.env.RELEASE_EVIDENCE||'docs/build-evidence/CLEAN-RELEASE';fs.mkdirSync(out,{recursive:true});
+const manifest=JSON.parse(fs.readFileSync('docs/release/ASSET-ENCODING.json','utf8'));
+const runtime=await createRuntime({env:{APP_ENV:'local',NODE_ENV:'development',AUTH_MODE:'dev-header',APP_ORIGIN:'http://127.0.0.1:8145',DATABASE_DRIVER:'pglite',PGLITE_DATA_DIR:'',BUCKET_DRIVER:'memory',MIGRATE_ON_BOOT:'1',CUSTOM_DOMAINS_LIVE:'0'}});
+let server,browser;const errors=[],failed=[];
+try{
+ for(const kit of ['roofing','hvac','solar','general-contractors']){const s={...DEFAULT,...kitDefaults(kit,{name:'Sample Fictional Release '+kit,phone:'8055550198',area:'Ventura'})};await runtime.env.DB.prepare("INSERT INTO tenants(id,slug,name,settings,published,status,created_at,updated_at) VALUES(?,?,?,?,?,'published','2026-01-01','2026-01-01')").bind('release-'+kit,'release-'+kit,s.name,JSON.stringify(s),JSON.stringify(s)).run();}
+ server=await listen(runtime,8145);browser=await chromium.launch({headless:true,...(process.env.REVIEW_BROWSER_EXECUTABLE?{executablePath:process.env.REVIEW_BROWSER_EXECUTABLE}:{})});const context=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce'});await context.route('**/*',r=>r.request().url().startsWith('http://127.0.0.1:8145')?r.continue():r.abort());
+ const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&r.url().includes('/assets/'))failed.push(r.url());});
+ await page.goto('http://127.0.0.1:8145/s/release-roofing',{waitUntil:'networkidle'});
+ const images=[...new Set(Object.values(manifest.mapping))];const decoded=await page.evaluate(async paths=>{const result=[];for(let i=0;i<paths.length;i+=12)await Promise.all(paths.slice(i,i+12).map(async file=>{const image=new Image();image.src='/assets/'+file;try{await image.decode();result.push({file,ok:image.naturalWidth>0});}catch{result.push({file,ok:false});}}));return result;},images);for(const item of decoded)check(item.ok,'decode '+item.file);
+ for(const width of [1440,390])for(const kit of ['roofing','hvac','solar','general-contractors']){await page.setViewportSize({width,height:width===390?844:1000});await page.goto('http://127.0.0.1:8145/s/release-'+kit,{waitUntil:'networkidle'});await page.evaluate(()=>{scrollTo(0,document.body.scrollHeight);});await page.waitForTimeout(250);check(await page.locator('img').evaluateAll(nodes=>nodes.filter(n=>n.getBoundingClientRect().width>0&&n.currentSrc).every(n=>n.complete&&n.naturalWidth>0)),kit+' displayed images '+width);check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),kit+' responsive layout '+width);if(kit==='roofing'){await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:path.join(out,'release-roofing-'+width+'.png'),fullPage:false});}}
+ check(failed.length===0,'no missing asset requests '+failed.join(', '));check(errors.length===0,'browser errors '+errors.join(', '));
+ fs.writeFileSync(path.join(out,'asset-browser.json'),JSON.stringify({checks,decoded:decoded.length,failed,errors,result:'PASS'},null,2));console.log('PASS release asset browser: '+checks+' checks; all converted images decoded and four trade pages at desktop/phone');
+}finally{await browser?.close();if(server)await new Promise(resolve=>server.close(resolve));await runtime.close();}

@@ -3,6 +3,8 @@
 ## Purpose
 Stores contractor JPEG uploads and backup copies. Public kit images and films under `public/assets/` are static files, not objects in this bucket. See `design.md` for those.
 
+Roofing's owner-section fallback is a local, responsive WebP sample under `public/assets/owner-roofing/`. `src/core.js` marks it `ownerPhoto.isSample: true` until an owner image is selected through the existing upload flow. `src/design-personality.js` renders the sample label only in that state; `src/builder.js` flags the missing real portrait in readiness. Provenance and replacement notes are in [`MEDIA-CREDITS.md`](../product/MEDIA-CREDITS.md).
+
 ## Server
 - **Routes**:
   - `POST /api/tenants/:id/photos` — `write`. Query: `projectId`, `stage`, `caption`. Body is the JPEG bytes (not JSON).
@@ -38,12 +40,12 @@ Upload key shape: `photos/{tenantId}/{id}.jpg`. Backup media: `backups/{tenantId
 
 ## Browser
 - **Pages**: images in `/s/:slug` and the editor use `/media/:id`. MinIO console on the local stack is `http://localhost:9001` (`docs/ENVIRONMENTS.md`).
-- **Scripts / data**: upload UI in `public/app.js`. No separate media app.
+- **Scripts / data**: upload UI in `src/client/workspace/legacy-workspace.js`. No separate media app.
 - **Calls**: `POST /api/tenants/:id/photos`, `GET /media/:id`.
 
 ## Business rules
 - Draft and private project photos are not public. Cross-tenant cover and photo-order changes are rejected (`README.md` verification notes).
-- `OPERATIONS.md` says photos are resized to 1600px. The server checks JPEG structure and the 2MB cap. A resize step, if any, is in the browser uploader — confirm in `public/app.js` before claiming the server resizes.
+- `OPERATIONS.md` says photos are resized to 1600px. The server checks JPEG structure and the 2MB cap. A resize step, if any, is in the browser uploader — confirm in `src/client/workspace/legacy-workspace.js` before claiming the server resizes.
 - Backups are in-platform copies. The JSON download does not embed media (`OPERATIONS.md`). There is no scheduled backup job in this repo.
 - Staff profile photos are served only to signed-in staff (`CRM-RELEASE.md`).
 
@@ -58,3 +60,18 @@ Upload key shape: `photos/{tenantId}/{id}.jpg`. Backup media: `backups/{tenantId
 
 ## Sources
 `src/aws/s3.js`, `src/aws/env.js`, `src/core.js`, `src/api.js`, `src/operations.js`, `src/worker.js`, `src/control.js`, `db/schema.ts`, `docker-compose.yml`, `docs/AWS_MIGRATION.md`, `docs/ENVIRONMENTS.md`, `OPERATIONS.md`, `README.md`, `CRM-RELEASE.md`.
+
+
+## Pack 3 creative and distribution specification — local documentation, 2026-09-23
+
+[Pack 3 U–AA](../product/PACK3_UPSELLS_MEDIA_CRM_SPEC.md) proposes promo-art jobs, video ingest and consent, owner-approved social publishing, content calendars and permission-aware CRM photo import. This is future behavior, not an extension of the current JPEG endpoint. [Trade briefs](../product/PACK3_CREATIVE_BRIEFS.md) contain 36 image directions and 24 clearly labeled AI service-explainer scripts; AI presenters never substitute for genuine customer proof. [Calendars](../product/PACK3_CONTENT_CALENDARS.md) and [private education videos](../product/PACK3_SALES_CRM_VIDEO_BRIEFS.md) are production briefs only. No assets were generated, accounts connected, posts sent or website/CRM code changed.
+
+
+## About portrait publication — ticket #007
+
+The /media/:photoId handler additionally permits the photo explicitly referenced by an enabled published Roofing About record with portraitMode=uploaded_photo (publicAboutPhoto in src/website-pages.js). It checks against the snapshot of the photo's own tenant; rendering also checks ownership. Disabled/unpublished/hidden/AI-mode and draft-only references grant no public access. About hero/banner/thumbnail slots grant no access. A portrait may be an owned project photo, but does not publish its parent project or sibling photos. Existing independent logo/project/media grants remain unchanged. [Executed coverage](../build-evidence/007/README.md).
+
+
+## Platform camera selection — #015A
+
+The workspace mobile helper adds a separate image input with capture=environment beside existing image upload fields. Take a photo transfers the selected FileList to the original input and dispatches its change event; the gallery picker remains available. Object-URL thumbnails are revoked when replaced or removed. Cancellation preserves the previous selection and offers retry/gallery guidance. The existing client decoder/resizer and authenticated JPEG API remain authoritative; this does not add HEIC server support, publish an image automatically, or change media access rules. Browser file injection verifies the upload path only; real iPhone/Safari capture acceptance is recorded separately in [#015A evidence](../build-evidence/015A/README.md).

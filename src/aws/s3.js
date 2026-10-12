@@ -153,14 +153,21 @@ export function createAssets(root) {
         const info = await stat(file);
         if (!info.isFile()) return new Response('Not found', { status: 404 });
         const type = TYPES[path.extname(file).toLowerCase()] || 'application/octet-stream';
-        const data = await readFile(file);
-        return new Response(data, {
-          headers: {
-            'content-type': type,
-            'cache-control': 'public, max-age=300',
-            'x-content-type-options': 'nosniff',
-          },
-        });
+        const headers = {'content-type':type,'cache-control':'public, max-age=300','x-content-type-options':'nosniff','accept-ranges':'bytes','content-length':String(info.size)};
+        // Scroll-controlled MP4s need byte-range responses to seek reliably.
+        if(request.method==='HEAD')return new Response(null,{headers});
+        const range=request.headers.get('range');
+        if(request.method==='GET'&&range&&/^bytes=/.test(range)&&!range.includes(',')){
+          const match=range.match(/^bytes=(\d*)-(\d*)$/);
+          let start=0,end=info.size-1;
+          if(!match||(!match[1]&&!match[2]))return new Response(null,{status:416,headers:{'content-range':'bytes */'+info.size}});
+          if(!match[1])start=Math.max(0,info.size-Number(match[2]));
+          else {start=Number(match[1]);if(match[2])end=Math.min(end,Number(match[2]));}
+          if(!Number.isSafeInteger(start)||!Number.isSafeInteger(end)||start<0||start>=info.size||end<start)return new Response(null,{status:416,headers:{'content-range':'bytes */'+info.size}});
+          const data=await readFile(file);
+          return new Response(data.subarray(start,end+1),{status:206,headers:{...headers,'content-length':String(end-start+1),'content-range':`bytes ${start}-${end}/${info.size}`}});
+        }
+        return new Response(await readFile(file),{headers});
       } catch {
         return new Response('Not found', { status: 404 });
       }

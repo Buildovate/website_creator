@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import {worker,env,admin} from './preview-fixture.mjs';
+const origin='https://test.local';
+async function req(path,method='GET',data,user=admin){return worker.fetch(new Request(origin+path,{method,headers:{origin,'content-type':'application/json','oai-authenticated-user-id':user.id,'oai-authenticated-user-email':user.email},body:data===undefined?undefined:JSON.stringify(data)}),env)}
+async function api(path,method='GET',data,user=admin){const r=await req(path,method,data,user);assert.equal(r.status,200,await r.clone().text());return r.json()}
+const root='/api/workspace/global/contacts',bulk='/api/crm/global/bulk';
+const first=await api(root,'POST',{data:{company:'Fictional Roof Co',name:'Avery Example',email:'avery@roof.test',phone:'8055550108',notes:'Initial note'}});
+const second=await api(root,'POST',{data:{company:'Fictional Gutters',name:'Sam Example',email:'sam@gutters.test',phone:'8055550109'}});
+let one=(await api(root+'/'+first.id)).record,two=(await api(root+'/'+second.id)).record;
+let out=await api(root+'/'+first.id+'/notes','PUT',{version:one.version,notes:'Call back after roof inspection'});assert.equal(out.version,one.version+1);
+assert.equal((await req(root+'/'+first.id+'/notes','PUT',{version:one.version,notes:'Stale overwrite'})).status,409);
+one=(await api(root+'/'+first.id)).record;assert.equal(one.data.notes,'Call back after roof inspection');assert.equal(one.data.company,'Fictional Roof Co');
+assert.equal((await req(bulk,'POST',{operation:'stage',records:[{id:one.id,version:one.version},{id:two.id,version:0}],stage:'Paid'})).status,409);
+assert.equal((await api(root+'/'+one.id)).record.data.stage,'New');
+out=await api(bulk,'POST',{operation:'assign',records:[{id:one.id,version:one.version},{id:two.id,version:two.version}],assignees:[admin.email]});assert.deepEqual(out,{changed:2,skipped:0});
+one=(await api(root+'/'+first.id)).record;two=(await api(root+'/'+second.id)).record;assert.deepEqual(one.data.assignees,[admin.email]);
+out=await api(bulk,'POST',{operation:'stage',records:[{id:one.id,version:one.version},{id:two.id,version:two.version}],stage:'Paid'});assert.deepEqual(out,{changed:2,skipped:0});
+one=(await api(root+'/'+first.id)).record;two=(await api(root+'/'+second.id)).record;assert.equal(one.data.stage,'Paid');assert.ok(one.data.wonAt);assert.equal(one.data.stageHistory.at(-1).to,'Paid');
+assert.equal((await req(bulk,'POST',{operation:'stage',records:[{id:one.id,version:one.version}],stage:'Wrong'})).status,400);
+assert.equal((await req(bulk,'POST',{operation:'delete',records:[{id:one.id,version:one.version}]},{id:'outsider',email:'outsider@test.local'})).status,403);
+const appointment=await api('/api/workspace/global/calendar','POST',{data:{title:'Roof visit',contactId:first.id,assignees:[admin.email],start:'2026-11-02T18:00:00Z',end:'2026-11-02T19:00:00Z',status:'Scheduled',timezone:'America/Los_Angeles'}});
+const document=await api('/api/workspace/global/payments','POST',{data:{type:'Quote',title:'Roof proposal',customer:'Fictional Roof Co',contactId:first.id,amount:1000,description:'Test fixture',terms:'Reviewed terms'}});
+const stamp=new Date().toISOString();await env.DB.prepare("INSERT INTO workspace_records(id,scope,kind,data,version,created_at,updated_at) VALUES(?,'global','outbox',?,1,?,?)").bind('reminder-015c-test',JSON.stringify({status:'On hold',contactId:first.id}),stamp,stamp).run();
+out=await api(bulk,'POST',{operation:'delete',records:[{id:one.id,version:one.version}]});assert.deepEqual(out,{changed:1,skipped:0});
+assert.equal((await req(root+'/'+first.id)).status,404);assert.equal((await api('/api/workspace/global/calendar/'+appointment.id)).record.data.contactId,first.id);assert.equal((await api('/api/workspace/global/payments/'+document.id)).record.data.contactId,first.id);
+const reminder=await env.DB.prepare("SELECT data FROM workspace_records WHERE id='reminder-015c-test'").first();assert.equal(JSON.parse(reminder.data).status,'Cancelled');
+const tenant=(await api('/api/tenants')).tenants[0],other=(await api('/api/tenants','POST',{preset:'robles',slug:'isolated-contacts-015c'})).tenant;
+const owner={id:'contact-owner-015c',email:'owner-015c@example.test'},outsider={id:'other-owner-015c',email:'other-015c@example.test'};
+for(const [site,person] of [[tenant,owner],[other,outsider]])await env.DB.prepare('INSERT INTO members (id,tenant_id,user_id,email,role,active,created_at) VALUES (?,?,?,?,?,1,?)').bind(crypto.randomUUID(),site.id,person.id,person.email,'owner',stamp).run();
+const local='/api/workspace/'+tenant.id+'/contacts',localBulk='/api/crm/'+tenant.id+'/bulk';const localCreated=await api(local,'POST',{data:{company:'Tenant Only',name:'Casey',email:'casey@tenant.test'}},owner);
+const localRecord=(await api(local+'/'+localCreated.id,'GET',undefined,owner)).record;
+assert.equal((await req(local+'/'+localCreated.id+'/notes','PUT',{version:localRecord.version,notes:'Wrong tenant'},outsider)).status,404);
+assert.equal((await req(localBulk,'POST',{operation:'delete',records:[{id:localRecord.id,version:localRecord.version}]},outsider)).status,404);
+assert.equal((await req(bulk,'POST',{operation:'delete',records:[{id:localRecord.id,version:localRecord.version}]})).status,409);
+assert.equal((await api(local+'/'+localCreated.id,'GET',undefined,owner)).record.data.company,'Tenant Only');
+console.log('PASS #015C contacts: scoped bulk assign/stage/delete, stale versions, notes, linked record retention, reminder cancellation and cross-tenant boundaries.');

@@ -1,0 +1,33 @@
+import {build} from 'esbuild';
+import {readFile} from 'node:fs/promises';
+
+// Keep compatibility filenames used by Worker-rendered HTML.
+export const clientEntries={
+  'app':'src/client/workspace/index.ts',
+  'platform-look':'src/client/workspace/platform-look.ts',
+  'site':'src/client/site/index.ts',
+  'service-motion':'src/client/site/service-motion.ts',
+  'conversion':'src/client/site/conversion.ts',
+  'finance-comparison':'src/client/site/finance-comparison.ts',
+  'constitution':'src/client/site/constitution.ts',
+  'neighborhood':'src/client/site/neighborhood.ts',
+  ...Object.fromEntries(['cinematic','cinematic-controls','showcase','cutaway','trade-components'].map(name=>[name,'src/client/site/'+name+'.js'])),
+};
+export async function buildClient() {
+  // These existing feature scripts still rely on the legacy workspace closure.
+  // Retire the injection only when those features gain explicit interfaces.
+  const enhancements=(await Promise.all(['crm-enhancements','control-ui','engagement-ui'].map(name=>readFile('public/'+name+'.js','utf8')))).join('\n');
+  await build({
+    entryPoints:clientEntries,outdir:'dist/client',bundle:true,format:'iife',platform:'browser',target:'es2022',
+    plugins:[{name:'legacy-workspace-features',setup(build){
+      build.onLoad({filter:/legacy-workspace\.js$/},async args=>{
+        const source=await readFile(args.path,'utf8');
+        if(source.split('/* CRM_ENHANCEMENTS */').length!==2) throw new Error('Expected exactly one legacy feature boundary');
+        return {contents:source.replace('/* CRM_ENHANCEMENTS */',()=>enhancements),loader:'js'};
+      });
+    }}],
+  });
+  await build({entryPoints:['src/client/styles/roofing-motion-home.css'],outfile:'dist/client/roofing-motion-home.css',bundle:true,minify:true,external:['/assets/*'],target:'es2022'});
+  await build({entryPoints:['src/client/styles/platform/index.css'],outfile:'dist/client/platform.css',bundle:true,external:['/assets/*'],target:'es2022'});
+  await build({entryPoints:['src/client/styles/app.css'],outfile:'dist/client/app.css',bundle:true,external:['/assets/*'],target:'es2022'});
+}

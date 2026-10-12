@@ -110,6 +110,26 @@
       "title": "Interactive system tour",
       "prompt": "Use a high-quality 3D cutaway base image with precisely positioned SVG highlights, dashed locator guides and a user-controlled scan tour. Numbered controls expose component descriptions. Stop when offscreen and respect reduced motion.",
       "query": "?#inside"
+    },
+    {
+      "title": "Trade panorama ribbon",
+      "prompt": "Layer the trade\u2019s own architectural imagery behind the moving trade-name banner. Keep contrast strong, give motion a pause control, and preserve a static reduced-motion view.",
+      "query": "?bannerArt=panorama&headlineMotion=sweep"
+    },
+    {
+      "title": "Blueprint ribbon + traced titles",
+      "prompt": "Add a measured blueprint grid and desaturated trade image to the existing ribbon; introduce a one-pass title reveal on scroll. Preserve content and contact actions.",
+      "query": "?bannerArt=blueprint&headlineMotion=trace"
+    },
+    {
+      "title": "Material close-up + stacked words",
+      "prompt": "Intensify the trade ribbon with a macro crop of the selected trade image. Give section headings a short vertical settle animation without changing the page structure.",
+      "query": "?bannerArt=material&headlineMotion=stack"
+    },
+    {
+      "title": "Prismatic trade artwork",
+      "prompt": "Layer brand-color gradients over trade imagery in the scrolling ribbon. Add a controlled title reveal and keep the mobile text fully readable.",
+      "query": "?bannerArt=prism&headlineMotion=sweep"
     }
   ],
   "sources": [

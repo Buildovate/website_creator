@@ -1,0 +1,71 @@
+{
+  "Roofing": {
+    "eyebrows": {
+      "Services": "Repair or replace",
+      "Planning & price": "Cost and timing",
+      "Roof care": "Keep your roof healthy",
+      "Financing": "Choose how to pay",
+      "Promotions": "Understand your offer"
+    },
+    "title": "Good questions deserve clear answers.",
+    "intro": "Understand your roof, compare your next steps and bring your questions to the conversation.",
+    "questions": [
+      {
+        "id": "repair",
+        "category": "Services",
+        "question": "How do I know whether to repair or replace my roof?",
+        "answer": "Repair often makes sense when damage is limited to one area and the roof is under about 15 years old. Replacement is worth discussing when leaks appear in several places, shingles curl across the roof or repairs keep returning. Roof age, decking and the covering all matter. Describe what you’re seeing and we’ll help you compare the next steps.",
+        "requires": "none"
+      },
+      {
+        "id": "signs",
+        "category": "Services",
+        "question": "What warning signs should I look for?",
+        "answer": "Look for water stains on ceilings, shingles that have lifted or gone missing, cracked tiles and debris collecting where roof sections meet. Granules gathering in gutters can also signal wear. Check from the ground and photograph indoor stains; leave climbing to a roofer. Tell us where the problem appears and whether it changes after rain.",
+        "requires": "none"
+      },
+      {
+        "id": "timing",
+        "category": "Planning & price",
+        "question": "How long does roofing work usually take?",
+        "answer": "Most straightforward repairs take about a day; a full replacement often takes two to four days. Roof size, steep slopes, layers to remove and damaged decking can extend the work, and wet or windy weather can interrupt it. Delivery, permits and scheduling happen before installation. Share your roof type and priorities so we can talk through a practical timeline.",
+        "requires": "none"
+      },
+      {
+        "id": "price",
+        "category": "Planning & price",
+        "question": "What drives the cost of a roofing project?",
+        "answer": "Roof size and pitch affect the amount of material and the time needed to work safely. The roof covering, layers to remove, flashing, ventilation, decking damage and permit requirements also shape the estimate. Access around the house can add handling time. Ask for these items in writing so you can compare the same scope across estimates.",
+        "requires": "none"
+      },
+      {
+        "id": "prepare",
+        "category": "Planning & price",
+        "question": "How should I prepare for roof work?",
+        "answer": "Clear the driveway for deliveries and debris removal, move patio furniture away from the roof edge and keep children and pets clear of the work area. Roofing can be noisy, and vibration may disturb items on shelves or walls. Discuss parking, access, cleanup and your daily routine with the crew before the start date is agreed.",
+        "requires": "none"
+      },
+      {
+        "id": "care",
+        "category": "Roof care",
+        "question": "How can I keep small roof issues from becoming bigger ones?",
+        "answer": "Keep gutters and downspouts clear, watch for branches rubbing the roof and check from the ground after strong wind or heavy rain. Inside, note new ceiling stains or damp areas in the attic. Avoid walking on tiles or lifting shingles yourself. Share photographs of changes so a roofer can identify whether maintenance or a closer inspection is appropriate.",
+        "requires": "none"
+      },
+      {
+        "id": "finance",
+        "category": "Financing",
+        "question": "What should I compare when considering financing?",
+        "answer": "Start with a written roof estimate and choose the work before comparing ways to pay. Read the APR, fees, repayment term and total payments together; a lower monthly payment can cost more over the full term. Leave room for other household expenses. Bring your questions about the listed options, and confirm the provider’s terms before making a decision.",
+        "requires": "financing"
+      },
+      {
+        "id": "offer",
+        "category": "Promotions",
+        "question": "How should I use an offer when planning roof work?",
+        "answer": "Read which roofing work an offer covers, its dates and any steps needed to use it. Ask the contractor to show the offer alongside the scope and price in your written estimate. Keep necessary repairs and your material choices at the center of the discussion. Bring the offer you’re considering so the team can explain how it applies.",
+        "requires": "promotions"
+      }
+    ]
+  }
+}

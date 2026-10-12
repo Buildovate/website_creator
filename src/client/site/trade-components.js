@@ -1,0 +1,3 @@
+import {mountAmbientVideo} from './ambient-video.js';
+(()=>{const bar=document.querySelector('.kit-reading-progress span');if(bar){let queued=false;const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?Math.min(100,scrollY/max*100):0)+'%';queued=false};addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update)}},{passive:true});addEventListener('resize',update);update()}document.querySelectorAll('.kit-chapter-rail a').forEach(a=>{if(!document.querySelector(a.hash))a.remove()})})();
+document.querySelectorAll('.cinematic-commercial video').forEach(video=>mountAmbientVideo(video,{lazy:true}));

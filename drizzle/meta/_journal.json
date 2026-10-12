@@ -36,6 +36,48 @@
       "when": 1789603105303,
       "tag": "0004_public_ink",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1790201941442,
+      "tag": "0005_auth_sessions",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1790461537438,
+      "tag": "0006_promotion_completions",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1790474819746,
+      "tag": "0007_ebook_receipts",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1790477760811,
+      "tag": "0008_generation_manifests",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1791472700303,
+      "tag": "0009_black_wolfpack",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1791600751090,
+      "tag": "0010_insertion_order",
+      "breakpoints": true
     }
   ]
 }

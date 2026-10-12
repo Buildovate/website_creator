@@ -1,0 +1,14 @@
+import {releaseRepoRoot} from "../scripts/runtime-paths.mjs";
+import {paymentHarness} from './helpers/payments-fixture.mjs';
+import {seedWorkspaceEntitlements} from './helpers/workspace-payment-fixture.mjs';
+import assert from 'node:assert/strict';import fs from 'node:fs';import {adoptGeneration} from '../src/generation.js';import {publicWorkspace} from '../src/workspace.js';
+const root=releaseRepoRoot,settingsBase=JSON.parse(JSON.parse(fs.readFileSync(root+'/docs/build-evidence/clips-phase2/outside-scope-baseline.json'))[0].row.settings),results=[];
+const cases=[['ten-digits','8055550101','tel:+18055550101','(805) 555-0101'],['punctuation','(805) 555-0101','tel:+18055550101','(805) 555-0101'],['plus-one','+1 (805) 555-0101','tel:+18055550101','(805) 555-0101'],['eleven-digits','18055550101','tel:+18055550101','(805) 555-0101'],['existing-international','+44 20 7946 0958','tel:+442079460958','+44 20 7946 0958']];
+for(const [id,phone,href,display] of cases){const input={...settingsBase,name:'Sample Fictional Phone Fixture',phone};delete input.generationManifest;const settings=adoptGeneration(input,'phone-fixture','sample-phone-fixture'),tenant={id:'phone-fixture',slug:'sample-phone-fixture',name:settings.name,status:'published',settings:JSON.stringify(settings),published:JSON.stringify(settings)},data={title:'Sample phone page',slug:'sample-page',body:'A fictional local unit fixture.'},record={id:'page',data:JSON.stringify(data),published:JSON.stringify(data)};
+ const h=paymentHarness(),env=h.env;
+ await env.DB.prepare('INSERT INTO tenants(id,slug,name,status,settings,published,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?)').bind(tenant.id,tenant.slug,tenant.name,tenant.status,tenant.settings,tenant.published,'2026-10-01','2026-10-01').run();
+ await seedWorkspaceEntitlements(env.DB,tenant.id);
+ await env.DB.prepare("INSERT INTO workspace_records(id,scope,kind,data,published,created_at,updated_at) VALUES(?,?,'pages',?,?,?,?)").bind(record.id,tenant.id,record.data,record.published,'2026-10-01','2026-10-01').run();
+ try{
+ const url=new URL('https://phone-fixture.local/s/'+tenant.slug+'/pages/sample-page');const html=await publicWorkspace(new Request(url),env,url);const link=html.match(/<a class="primary" href="([^"]+)">([^<]+)<\/a>/);assert.ok(link);assert.equal(link[1],href);assert.equal(link[2],'Call '+display);results.push({generator:'publicWorkspace',case:id,href:link[1],text:link[2]});}finally{h.close()}}
+fs.writeFileSync(root+'/docs/build-evidence/028F/checks/workspace-phone-links.json',JSON.stringify({passed:true,cases:results.length,providerCalls:0,results},null,2));console.log('PASS 5 workspace-generator unit cases: four US formats and existing international code; visible labels unchanged.');

@@ -1,0 +1,48 @@
+/* Contractor platform only; public website styling is unchanged. */
+.mobile-screen-picker{display:none}
+button,a[href],summary,[role=button]{min-height:44px;min-width:44px}
+a[href]{display:inline-flex;align-items:center}label:has(input[type=checkbox]),label:has(input[type=radio]){min-height:44px;min-width:44px;align-items:center}
+input,select,textarea{font-size:16px!important}
+.platform-action-dock{display:none}.phone-photo-tools{margin:12px 0}.phone-photo-tools>button{padding:10px 16px}.phone-photo-preview{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}.phone-photo-preview img{width:100px;height:100px;object-fit:contain;border:1px solid #cbd6e7;border-radius:8px}.phone-photo-preview p{flex-basis:100%;font-size:14px}
+@media(max-width:700px){
+ body{font-size:16px}.app-layout,.workspace,#content,form,fieldset,.panel{min-width:0;max-width:100%}
+ main{padding-bottom:160px}.panel,.questionnaire .panel{padding:18px}
+ #navigation{display:flex;flex-wrap:wrap;overflow:visible}#navigation .nav-group{flex:1;min-width:0}#navigation .nav-group button{min-height:44px;font-size:14px}#navigation summary{min-height:44px;display:flex;align-items:center;font-size:12px}.sidebar{max-height:none}
+ .topbar{height:auto;min-height:60px;gap:12px;padding-block:12px}.topbar>*{min-width:0;overflow-wrap:anywhere}.brand{min-height:44px}
+ .mobile-screen-picker{display:flex;margin:20px 0}#content>nav.tabs{display:none}
+ .form-grid,.brand-photos,.owner-upload,.q-toggles,.q-social-grid,.customize-panel form,.detail-stats,.performance-grid{grid-template-columns:minmax(0,1fr)!important}
+ .section-heading,.contact-topline{flex-wrap:wrap}.section-heading>*{min-width:0}.heading-actions{gap:8px}.heading-actions a,.heading-actions button{white-space:normal;min-height:44px}
+ .record,.row-actions,.calendar-controls,.lead-stage-track{flex-wrap:wrap;min-width:0;overflow:visible}.smartlists{display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;max-width:100%;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scroll-snap-type:x proximity}.smartlists button{flex:0 0 auto;scroll-snap-align:start}.record>*{max-width:100%;overflow-wrap:anywhere}
+ .contact-workspace .contacts-toolbar,.contacts-toolbar{display:grid;grid-template-columns:minmax(0,1fr)!important}.contacts-toolbar>*{grid-column:1!important;min-width:0}
+ .calendar-grid.calendar-month,.calendar-grid.calendar-week,.calendar-grid.calendar-day{grid-template-columns:minmax(0,1fr)!important;min-width:0!important;overflow:visible}.calendar-day.blank{display:none}.calendar-day[role=button]{min-height:70px}
+ .crm-pipeline,.pipeline-board{grid-template-columns:minmax(0,1fr);overflow:visible}.crm-pipeline .pipeline-column{min-width:0}
+ .table-wrap{overflow:visible}table,tbody,tr,td{display:block;width:100%;min-width:0!important;max-width:100%!important}table{table-layout:fixed}thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}tbody tr{padding:12px 0;border-bottom:2px solid #dce4ef}td{padding:10px 16px;overflow-wrap:anywhere}td:before{content:attr(data-mobile-label);display:block;font-size:13px;font-weight:700;color:#526782;margin-bottom:6px}
+ .metrics{grid-template-columns:minmax(0,1fr)}.section-control{flex-wrap:wrap}.section-control>div{margin-left:auto}.section-control button{min-width:44px;min-height:44px}
+ .preview-canvas{overflow:visible;min-height:0}.component-panel{max-height:none}.editor-toolbar{position:static}
+ #dialog{max-height:calc(100dvh - 24px);padding-inline:18px;padding-bottom:140px;width:calc(100vw - 24px)}#dialog:has(#prepare-design){padding-bottom:18px}#dialog form{min-width:0}.form-actions{flex-wrap:wrap}
+ .platform-action-dock{position:fixed;left:0;right:0;bottom:var(--platform-keyboard,0px);z-index:90;display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px calc(12px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #cbd6e7;box-shadow:0 -4px 18px #12243c18}.platform-action-dock button{flex:1;white-space:normal}.platform-action-dock p{flex:1 0 100%;margin:0;font-size:14px;max-height:4.5em;overflow:auto}
+ .save-bar,.questionnaire .save-bar{position:static}.platform-action-dock[hidden]{display:none}
+ .panel p,.notice,label,.muted{font-size:14px}.q-intro nav{gap:8px}.q-intro nav a{min-height:44px}
+}
+
+/* Some feature styles load after the shell. Keep shared touch dimensions authoritative. */
+#content button,#dialog button,#content summary,#dialog summary{min-height:44px!important;min-width:44px!important}
+#content input:not([type=checkbox]):not([type=radio]),#content select,#dialog input:not([type=checkbox]):not([type=radio]),#dialog select{min-height:44px!important}
+@media(max-width:700px){.calendar-day>b{font-size:14px}.contact-topline>div{display:flex;flex-wrap:wrap;gap:8px}.platform-action-dock .primary{font-size:14px}.mobile-screen-picker select{width:100%}}
+
+.column-editor-row{grid-template-columns:44px minmax(0,1fr) 44px 44px}.column-editor-row input[type=checkbox]{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;max-width:44px!important;max-height:44px!important}
+
+#navigation .nav-group button{min-height:44px!important}#content input,#content select,#content textarea,#dialog input,#dialog select,#dialog textarea{font-size:16px!important}
+@media(min-width:701px) and (max-width:1600px){.contact-workspace .table-wrap{overflow:visible}.contact-workspace table,.contact-workspace tbody,.contact-workspace tr,.contact-workspace td{display:block;width:100%;min-width:0!important;max-width:100%!important}.contact-workspace tbody{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.contact-workspace thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.contact-workspace td{padding:10px 16px;overflow-wrap:anywhere}.contact-workspace td:before{content:attr(data-mobile-label);display:block;font-size:13px;font-weight:700;color:#526782}.contact-workspace tr{border:1px solid #dce4ef}}
+
+.preview-viewport{position:relative;width:100%;height:760px;overflow:hidden}.preview-viewport #editor-frame{position:absolute;left:0;top:0;max-width:none;transform-origin:top left;margin:0}
+
+#content a[href],#dialog a[href]{display:inline-flex;align-items:center;min-width:44px;min-height:44px}
+@media(min-width:701px){.crm-pipeline{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));overflow:visible}.crm-pipeline .pipeline-column{min-width:0}}
+
+@media(max-width:700px){#navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}#navigation .nav-group{width:100%}#navigation .nav-group button{width:100%;text-align:left;white-space:normal;overflow-wrap:anywhere}#navigation svg{flex-shrink:0}#navigation summary{gap:6px}}
+
+/* Keep upload actions recognizable and leave the submit in the phone dock. */
+#dialog input[type=file]::file-selector-button,#content input[type=file]::file-selector-button{font:inherit;font-weight:650;color:#285abe;background:#edf3ff;border:1px solid #cbd8ef;border-radius:8px;padding:10px 14px;margin-right:12px;cursor:pointer}
+#dialog input[type=file]:focus-visible,#content input[type=file]:focus-visible,.smartlists:focus-visible{outline:3px solid #638ee2;outline-offset:3px}
+@media(max-width:700px){#dialog .photo-upload-submit{display:none}.phone-photo-tools>button{border:1px solid #cbd8ef;border-radius:8px;background:#edf3ff;color:#285abe;font-weight:650}.smartlists{min-height:48px}}

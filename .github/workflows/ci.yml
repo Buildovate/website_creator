@@ -2,20 +2,25 @@ name: Buildovate website creator CI
 
 on:
   push:
-    branches: [develop, staging, main]
+    branches: [develop, staging, main, release/preview]
   pull_request:
     branches: [staging, main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+    env:
+      CUSTOM_DOMAINS_LIVE: '0'
+      AWS_ADAPTER_EXTERNAL_EGRESS: '0'
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
       - run: npm ci
-      - run: npm run build
-      - run: npm run test:aws
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/release-gate.mjs

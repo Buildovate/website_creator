@@ -4,15 +4,28 @@ Knowledge for this repo is split into four layers so each fact has one home: roo
 
 The existing platform now renders Robles Roofing with the original cinematic site design. Open `/s/robles-roofing` on the deployed platform. The original separate Robles preview is not modified.
 
+## Architecture
+
+The primary runtime is the Node ESM server in `src/aws/server.js`. It verifies identity, applies session/CSRF policy, then invokes the Worker-shaped application in `dist/server/index.js`. Postgres and S3-compatible storage use the existing adapters and domain model. Local Docker Compose runs Postgres, MinIO and the app on port 8080.
+
+The browser client lives in `src/client`; esbuild emits the existing URLs such as `/app.js`, `/app.css` and `/site.js`. Public JSON/media and unmoved assets remain in `public`. Existing role tables, tenant isolation and draft/publication rules remain the source of truth.
+
+- [Foundation and migration plan](docs/FOUNDATION_PLAN.md)
+- [Client structure and remaining legacy boundaries](docs/CLIENT_ARCHITECTURE.md)
+- [Authentication, sessions and environment requirements](docs/modules/auth.md)
+- [Knowledge architecture and module map](docs/KNOWLEDGE_ARCHITECTURE.md)
+
 ## Running the source
 
-Node 22.13+ is needed for the local SQLite test adapter. Run `npm ci`, `npm run build`, then `npm run dev -- --host 0.0.0.0 --port 4173`. `node tests/platform.mjs` runs server tests; `node tests/presentation.mjs` checks rendered template integration.
+Use Node.js 22.13+ and the Docker Compose instructions in [setup.md](setup.md). From the repository root, run `docker compose up --build -d`, then open http://localhost:8080/login. Copy `aws/env/docker.env.example` to the gitignored `aws/env/docker.env` only if missing. Leave OPENAI_API_KEY blank unless AI features are needed; enter it only in that local file.
 
-The AWS runtime has two local paths, both described in `docs/ENVIRONMENTS.md`. The quick path is in-process (`DATABASE_DRIVER=pglite`, `BUCKET_DRIVER=memory`, `npm run aws:start`). The Docker path (`npm run docker:up`) runs Postgres 16, MinIO, and the app on port 8080. Put `OPENAI_API_KEY` in gitignored `aws/env/docker.env`, not in the example file. For a client machine, have Codex read `setup.md` and accept the install prompts.
+Local sign-in selects a development identity and issues an expiring HttpOnly cookie. It does not grant administrator rights. Stop with `docker compose down` to preserve database/object volumes. The fallback in-process PGlite/memory-bucket path is documented in [ENVIRONMENTS](docs/ENVIRONMENTS.md).
 
-Production uses the Cloudflare Worker in `dist/server/index.js`, D1 binding `DB`, R2 binding `BUCKET`, and the schema migrations in `drizzle`. Sites owns the deployment bindings. Keep `.openai/hosting.json` attached to this existing Site; do not reuse its project ID for a new installation.
+For code verification, run `npm ci`, `npm run build`, `npm run typecheck:client`, `npm run test:client`, `npm run test:auth` and `npm run test:aws`. Existing domain suites additionally require the original `public/assets` bundle, which is currently absent from Git and this machine.
 
-The Vite server and `tests/preview-fixture.mjs` are LOCAL TEST ONLY: disposable in-memory records, sample photos, and an injected test identity. They are not imported by the production Worker. Never deploy the Vite test adapter as a production authentication solution. Production identity continues to use the trusted Sites identity headers.
+Vite and `tests/preview-fixture.mjs` are local QA only: they inject a test identity and need that original asset bundle. Do not deploy Vite as authentication. The original Sites deployment manifest and Worker bindings remain for compatibility; they are separate from the AWS runtime. Do not reuse the existing Sites project ID for a new installation.
+
+Shared staging is preview.website.buildovate.com; production is website.buildovate.com. Their reported live auth setting remains disabled. The code supports verified ALB/Cognito modes, but those flows require real provider configuration and separate deployment authorization. Local changes do not establish live authentication.
 
 ## What changed
 
@@ -98,7 +111,7 @@ Provider dependencies deliberately remain inactive:
   Automated registrar authorization requires a supported domain-connection provider,
   validated routing targets, domain-to-tenant host resolution, and SSL lifecycle handling.
   No registrar passwords are accepted, and DNS traffic is not redirected by this release.
-- AI: configure server-side OPENAI_API_KEY using Sites secrets; OPENAI_MODEL is optional
+- AI: configure server-side OPENAI_API_KEY in the environment; locally use only gitignored aws/env/docker.env. OPENAI_MODEL is optional
   (default gpt-4.1-mini). Responses web_search generates research drafts only for copy
   fields. Business identifiers/credentials and project inspection facts require human
   input. Research is rate-limited, source-linked, and remains subject to review. API
@@ -134,7 +147,7 @@ photo selection, and workspace restoration checks. Fixtures are test-only.
   support administrator and sales-operator roles. Operators may access global contacts
   and calendars, but not global financial records or unassigned contractor workspaces.
   Revoking platform access preserves separately granted contractor memberships.
-- Private Sites sharing remains an outer access gate. Team and contractor invitations
+- For the original Sites hosting path, private Sites sharing remains an outer access gate. Team and contractor invitations
   do not automatically add recipients to the hosting access policy. Returning contractors
   with one assigned website open directly on their Launch Pad after ChatGPT sign-in.
 - The journal at /s/:slug/blog has categories, search, article covers, excerpts, reading

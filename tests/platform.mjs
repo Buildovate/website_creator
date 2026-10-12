@@ -1,16 +1,42 @@
+import {releaseRepoRoot} from "../scripts/runtime-paths.mjs";
 import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync,readdirSync} from 'node:fs';
 import worker from '../dist/server/index.js';
+import {ROBLES} from '../src/core.js';
+import {createAssets} from '../src/aws/s3.js';
+import {createReviewCapture} from '../src/aws/review-capture.js';
+
 const sql=new DatabaseSync(':memory:');sql.exec('PRAGMA foreign_keys=ON');for(const file of readdirSync('./drizzle').filter(f=>f.endsWith('.sql')).sort())sql.exec(readFileSync('./drizzle/'+file,'utf8'));
 const DB={prepare(query){let args=[];const statement={bind(...values){args=values;return statement},async first(){return sql.prepare(query).get(...args)||null},async all(){return {results:sql.prepare(query).all(...args)}},async run(){return {meta:{changes:Number(sql.prepare(query).run(...args).changes)}}}};return statement},async batch(statements){sql.exec('BEGIN');try{const result=[];for(const statement of statements)result.push(await statement.run());sql.exec('COMMIT');return result}catch(error){sql.exec('ROLLBACK');throw error}}};
 const objects=new Map();let putHook=null;
 const BUCKET={async put(key,value){const raw=value instanceof Uint8Array?value:new Uint8Array(await new Response(value).arrayBuffer());objects.set(key,raw);if(putHook)putHook(key)},async get(key){if(!objects.has(key))return null;const raw=objects.get(key);return {body:raw,text:async()=>new TextDecoder().decode(raw)}},async head(key){return objects.has(key)?{size:objects.get(key).length}:null},async delete(key){objects.delete(key)}};
-const env={DB,BUCKET},admin={id:'admin',email:'yoelengel18@gmail.com'},alice={id:'alice',email:'alice@example.test'},bob={id:'bob',email:'bob@example.test'},viewer={id:'viewer',email:'viewer@example.test'};
+const env={DB,BUCKET,ASSETS:createAssets(releaseRepoRoot+"/dist/client"),REVIEW_CAPTURE:createReviewCapture({browserModule:'playwright',executablePath:process.env.REVIEW_BROWSER_EXECUTABLE})},admin={id:'admin',email:'yoelengel18@gmail.com'},alice={id:'alice',email:'alice@example.test'},bob={id:'bob',email:'bob@example.test'},viewer={id:'viewer',email:'viewer@example.test'};
 async function request(path,method='GET',value,user=admin,origin='https://test.local'){return worker.fetch(new Request('https://test.local'+path,{method,headers:{origin,'Content-Type':value instanceof Uint8Array?'image/jpeg':'application/json',...(user?{'oai-authenticated-user-id':user.id,'oai-authenticated-user-email':user.email}:{})},body:value instanceof Uint8Array?value:value?JSON.stringify(value):undefined}),env)}
 async function api(path,method='GET',value,user=admin){const r=await request('/api'+path,method,value,user);const d=await r.json();assert.ok(r.ok,`${method} ${path}: ${JSON.stringify(d)}`);return d}
+// Complete the ordinary staff review API flow before any fixture publication.
+// Browser evidence is real; contacts and decisions belong only to this ephemeral sample.
+async function completeStaffReview(id,target='website'){
+ const base='/tenants/'+id+'/review-packet',query='?target='+encodeURIComponent(target);
+ let review=await api(base+query);
+ await api(base+query,'POST',{versionHash:review.versionHash});
+ const deadline=Date.now()+1200000;
+ do{
+  review=await api(base+query);
+  assert.notEqual(review.packet?.status,'Capture failed',review.packet?.captureMessage);
+  if(review.packet?.status==='Complete')break;
+  assert.ok(Date.now()<deadline,'Staff review capture must finish');
+  await new Promise(resolve=>setTimeout(resolve,250));
+ }while(true);
+ assert.equal(review.qa.summary.blocking,0,JSON.stringify(review.qa.report?.checks.filter(c=>c.result==='Fail')));
+ for(const item of review.qa.report.checks.filter(c=>c.result==='Borderline')){
+  await api(base+'/qa-decision'+query,'POST',{versionHash:review.versionHash,manifestHash:review.manifestHash,reportHash:review.qa.report.reportHash,checkId:item.id,decision:'Accept',reason:'Staff review of clearly fictional #057A-T local test data only; never approval of a contractor or saved Sample packet.'});
+ }
+ await api(base+'/decision'+query,'POST',{versionHash:review.versionHash,decision:'approve',checkedItems:review.packet.checklist.map(item=>item.id)});
+ console.log('PASS staff review prerequisite',target,JSON.stringify({pages:review.packet.pages.length,clips:review.packet.clips.length,checklist:review.packet.checklist.length,blocking:review.qa.summary.blocking}));
+}
 assert.equal((await request('/api/setup','POST',{},alice)).status,403);await api('/setup','POST',{});assert.equal((await request('/api/tenants','POST',{},admin,'https://evil.test')).status,403);
-let a=(await api('/tenants','POST',{preset:'robles',slug:'roof-a'})).tenant;
+let a=(await api('/tenants','POST',{slug:'roof-a',settings:{...ROBLES,name:'Sample Fictional Test Roofing Co',owner:'Test Owner',phone:'(805) 555-0100',email:'roofing@example.com',address:'',license:'',experience:''}})).tenant;
 let b=(await api('/tenants','POST',{slug:'roof-b',settings:{name:'Test business B',trade:'Patios'}})).tenant;
 assert.equal((await request('/api/tenants','GET',null,null)).status,401);
 for(const [user,tenant,role]of [[alice,a,'owner'],[bob,b,'editor'],[viewer,a,'viewer']]){const invite=await api('/tenants/'+tenant.id+'/invites','POST',{email:user.email,role});const token=invite.url.split('#')[1];assert.equal((await request('/api/accept','POST',{token},{id:'wrong',email:'wrong@example.test'})).status,403);await api('/accept','POST',{token},user);assert.equal((await request('/api/accept','POST',{token},user)).status,410)}
@@ -21,7 +47,7 @@ assert.equal((await request('/api/tenants/'+b.id+'/publish','POST',{approved:tru
 assert.equal((await request('/api/audit','GET',null,alice)).status,403);
 const project={title:'Verified repair <script>alert(1)</script>',city:'Oxnard',service:'Roof repair',material:'Asphalt shingle',concern:'Leak',property:'Residential',completedAt:'2025-01-01',lat:34.1975,lng:-119.1771,problem:'A documented roofing problem before the repair.',work:'Documented work completed on the roofing system.',outcome:'A verified result following completion of the work.',approved:true};
 const pid=(await api('/tenants/'+a.id+'/projects','POST',project,alice)).id;
-const jpeg=new Uint8Array(readFileSync('./public/assets/roofing.jpg'));
+const jpeg=new Uint8Array(readFileSync('./public/assets/roofing.webp'));
 assert.equal((await request('/api/tenants/'+b.id+'/photos?projectId='+pid+'&stage=before','POST',jpeg,bob)).status,404);
 const before=(await api('/tenants/'+a.id+'/photos?projectId='+pid+'&stage=before','POST',jpeg,alice)).id;
 const after=(await api('/tenants/'+a.id+'/photos?projectId='+pid+'&stage=after','POST',jpeg,alice)).id;
@@ -31,7 +57,9 @@ const alien=(await api('/tenants/'+b.id+'/photos?stage=brand','POST',jpeg,bob)).
 assert.equal((await request('/api/tenants/'+a.id+'/projects/'+pid,'PUT',{version:1,data:{...project,coverId:alien}},alice)).status,400);
 assert.equal((await request('/api/tenants/'+a.id+'/projects/'+pid,'PUT',{version:1,data:{...project,photoOrder:[alien]}},alice)).status,400);
 await api('/tenants/'+a.id+'/projects/'+pid,'PUT',{version:1,data:{...project,beforeId:before,afterId:after}},alice);
+await completeStaffReview(a.id,'project:'+pid);
 await api('/tenants/'+a.id+'/projects/'+pid+'/publish','POST',{version:2},alice);
+await completeStaffReview(a.id);
 await api('/tenants/'+a.id+'/publish','POST',{version:a.version,approved:true},alice);
 assert.equal((await request('/media/'+before,'GET',null,null)).status,200);
 const html=await (await request('/s/roof-a/projects/'+pid,'GET',null,null)).text();assert.ok(html.includes('&lt;script&gt;'));assert.ok(!html.includes('<script>alert(1)</script>'));

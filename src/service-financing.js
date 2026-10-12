@@ -1,0 +1,30 @@
+import {e} from './core.js';
+import {comparePlans,money} from './platform/financing-plans.ts';
+export function financeSection(fin,sample,page){
+ if(!fin?.programs.length)return '';
+ const range=page?.typicalPriceRange||(sample?{min:3000,max:9000}:null);
+ const amount=range?Math.round((range.min+range.max)/2):fin.amount||null;
+ const downPercent=fin.downPayment&&amount===fin.amount&&[10,20].includes(100*fin.downPayment/amount)?100*fin.downPayment/amount:0;
+ const plans=amount?comparePlans(fin.programs,amount,downPercent):[];
+ const selected=plans.find(p=>p.badges.includes('Lowest monthly'))||plans[0];
+ const config={programs:fin.programs,amount,downPercent};
+ return `<section class="tp-section tp-finance" id="financing"><div class="tp-shell">
+ ${sample?'<span class="tp-sample-badge">Sample — replaced with your info</span>':''}
+ <div class="tp-section-heading"><div><p class="tp-eyebrow">A REPAIR PLAN. A PAYMENT PLAN.</p><h2>Your roof. Your budget.<br>Your way forward.</h2></div><p>Find the balance that fits: a smaller monthly payment or less interest over time.</p></div>
+ <ol class="tp-finance-steps">${[['01','Tell us about your repair','<path d="M4 4h16v12H9l-5 4zM8 8h8m-8 4h5"/>'],['02','Compare payments & total cost','<rect x="3" y="6" width="18" height="15" rx="2"/><path d="M3 6V3h15v3m3 7h-6v4h6"/>'],['03','Confirm approval before work','<path d="m12 2 8 3v6c0 5-8 11-8 11S4 16 4 11V5zM8 12l3 3 5-6"/>']].map(([n,title,path])=>`<li><svg class="tp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">${path}</svg><span>${n}</span><h3>${title}</h3></li>`).join('')}</ol>
+ <div class="tp-plan-comparison" data-service-finance data-finance-config="${e(JSON.stringify(config))}">
+ <div class="tp-budget"><div class="tp-cost-control"><div class="tp-budget-heading"><label for="project-cost">Your project budget</label><div class="tp-cost-input"><span aria-hidden="true">$</span><input id="project-cost" data-project-cost type="number" min="1" max="1000000" step="0.01" value="${amount||''}" placeholder="Enter cost" inputmode="decimal"></div></div><input data-cost-slider type="range" aria-label="Project cost" min="${range?.min||1}" max="${range?.max||1000000}" step="1" value="${amount||range?.min||1}"><p class="tp-range-caption">${range?`${sample?'SAMPLE typical range':'Typical range for this service'} · ${money(range.min)}–${money(range.max)}`:'Enter your expected project cost to compare payments.'}</p></div>
+ <fieldset class="tp-down-control"><legend>Down payment <span data-down-amount>${money(selected?.downPayment||0)}</span></legend><div>${[0,10,20].map(p=>`<label><input type="radio" name="planDownPercent" value="${p}" ${p===downPercent?'checked':''}><span>${p?p+'%':'None'}</span></label>`).join('')}</div><p class="tp-range-caption">Less to finance. Less interest to pay.</p></fieldset></div>
+ <p class="tp-plan-kicker">${sample?'SAMPLE TERMS · ':''}${fin.programs.length} ${fin.programs.length===1?'PROGRAM':'PROGRAMS'} TO COMPARE <span>Swipe or scroll to explore →</span></p>
+ <div class="tp-plan-cards" role="region" aria-label="Financing programs" tabindex="0">${fin.programs.map((p,i)=>{const plan=plans[i];return `<article class="tp-plan-card ${p.id===selected?.id?'is-selected':''}" data-plan-id="${e(p.id)}">
+ <div class="tp-plan-top"><p>${sample?'SAMPLE PROGRAM · ':''}${String(i+1).padStart(2,'0')}</p><span data-selected-label ${p.id!==selected?.id?'hidden':''}>Selected</span></div><h3>${e(p.name)}</h3><p class="tp-plan-provider">${e(p.lender)}</p>
+ <div class="tp-plan-badges" data-plan-badges>${plan?.badges.map(b=>`<span>${b}</span>`).join('')||''}</div>
+ <p class="tp-plan-payment"><strong data-plan-monthly data-large-payment="${plan&&money(plan.monthly).length>9}">${plan?money(plan.monthly):'—'}</strong><span>/mo</span></p><p class="tp-plan-terms">${p.apr}% APR <span> / </span> ${p.months} months<br><span data-plan-down>${plan?money(plan.downPayment):'$0.00'}</span> down payment</p>
+ ${p.deferredInterest?'<p class="tp-deferred">Deferred interest · Read the financing details on the Legal page.</p>':''}
+ <p class="tp-plan-total">Total cost <strong data-plan-total>${plan?money(plan.totalCost):'—'}</strong><small>Includes down payment + loan payments</small></p><a class="tp-plan-choose" href="#contact" data-choose-plan data-finance-interest ${!plan?'aria-disabled="true"':''}>Choose this plan <span aria-hidden="true">↗</span></a></article>`}).join('')}</div>
+ <div class="tp-plan-breakdown"><div><p class="tp-eyebrow">WHERE YOUR PAYMENTS GO</p><h3 data-breakdown-name>${e(selected?.name||'Enter a project cost')}</h3></div><div class="tp-principal-chart"><div class="tp-principal-track" role="img" data-principal-chart aria-label="${selected?`Principal ${money(selected.principal)}, interest ${money(selected.interest)}`:'Payment breakdown appears after entering a cost'}"><span data-principal-bar style="width:${selected?selected.principal/selected.total*100:100}%"></span></div><div class="tp-principal-legend"><span><i></i>Principal <strong data-principal>${selected?money(selected.principal):'—'}</strong></span><span><i></i>Interest <strong data-interest>${selected?money(selected.interest):'—'}</strong></span></div></div></div>
+ <p data-finance-error role="status"></p><p class="tp-sr-only" data-finance-status role="status" aria-live="polite"></p>
+ <div class="tp-plan-disclosure"><strong>${sample?'SAMPLE · ':''}Payment estimates, clearly explained.</strong><p>Calculated from ${sample?'Sample':'contractor-supplied'} APR and term. Choosing a plan adds your preference to the project inquiry.</p></div>
+ <noscript><p>Enable JavaScript to adjust these payments and select a plan, or ask about financing in the repair inquiry below.</p></noscript>
+ </div></div></section>`;
+}

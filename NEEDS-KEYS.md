@@ -1,0 +1,145 @@
+# NEEDS KEYS / EXTERNAL ACCESS
+
+Audit: 2026-09-24. This is a dependency register, **not a request to paste secrets**. No private `.env`, credentials, tokens or provider account contents were read for this audit. “Not verified” is not proof an account does not exist. The financing adapters are Not connected; confirmed merchant links are separate from API access. No lender connection or credentials were accessed for #017.
+
+Keep real secrets in the approved local ignored environment file (`aws/env/docker.env`), process environment or approved server secret storage. Existing cloud storage uses IAM roles. Never put secrets in these Markdown files, examples, screenshots, commits or chat. New configuration variable names are intentionally TBD until the provider contract is implemented; do not make up keys/endpoints.
+
+Email policy: **SendGrid only with per-contractor subusers (K17)**. No SES, no cold email, and no delivery inferred from `RESEND_API_KEY`. Consent and suppression are required before every send. Missing K02 must not block Roofing #028: #024–#027 use tested, labeled film stubs while real films remain an external gate.
+
+Every external-dependent ticket must expose an honest missing-access state. Planning a stub does not mean it already exists in the app. A local fixture or installed Codex plugin does not connect contractor accounts. Enabling live output requires actual tested access, required consent and the user’s appropriate approval for delivery/spend.
+
+| ID | Account / API / external dependency | Sections | Observed state | What is needed | Required missing-access behavior | Backlog tickets |
+|---|---|---|---|---|---|---|
+| K01 | OpenAI API project | I, J, Q, U, V, X, Y, AD, AE, AF | App generation access not verified; prior setup preference was blank. Chat-generated images are not application API access. | Approved project/billing and server-side API access; existing name OPENAI_API_KEY. Verify actual model capability in that ticket. | Not connected; keep manual assets and queue blocked. Never generate pretend output. | #059, #060, #068, #069, #112, #114, #122, #129, #130, #131, #132, #133, #134, #135, #136, #137, #138, #139, #148, #151 |
+| K02 | Higgsfield Ultra / supported generation workflow | D, K, R, V, Z, AA, AB | Plugin is installed; Ultra entitlement, credits and app API availability are unsure. | User-authorized Ultra account/workflow; provider integration method must be established, not invented. Manual export/import is distinct from automated generation. | Manual production required / media pending. Never mark an unrendered clip complete. | #024, #025, #026, #027, #066, #067, #073, #074, #075, #076, #077, #078, #079, #080, #081, #082, #083, #084, #085, #086, #087, #088, #089, #090, #091, #092, #093, #114, #122, #159 |
+| K03 | Google Maps Platform / Places | P | Adapter exists; live key/project/quota access not checked. | Enabled approved project/key, confirmed business Place ID, attribution and policy links. Existing GOOGLE_PLACES_API_KEY. | Confirmed profile link with Live reviews not connected; no fake rating/excerpt. | #009, #047 |
+| K04 | Yelp API | P | Adapter exists; live account/plan permissions not checked; lookup regression is ticket #001. | Approved Yelp account/key, business ID and permission for requested excerpt capability. Existing YELP_API_KEY. | Source link only, no invented excerpt or recalculated aggregate rating. | #009, #047 |
+| K05 | Service Finance merchant + integration access | B, C | Not connected — explicitly confirmed by Joe. | Approved merchant relationship, business-issued application destination and provider-approved developer/sandbox access if available. Credential field names not yet defined. | Not connected; a confirmed application link is explicitly link-only, not matched offers. | #017, #094, #095, #100 |
+| K06 | Wisetack merchant + integration access | B, C | Not connected — explicitly confirmed by Joe. | Approved merchant relationship and supported developer/sandbox flow. No assumption about a shared prequalification API or credit-check type. | Not connected or confirmed link-only; no fictional approval/terms. | #017, #096, #097, #100 |
+| K07 | Sunbit merchant + integration access | B, C | Not connected — explicitly confirmed by Joe. | Approved merchant relationship and supported developer/sandbox flow; verify permitted verticals/experience with provider before wiring. | Not connected or confirmed link-only; no fabricated offer response. | #017, #098, #099, #100 |
+| K08 | Existing AWS storage / secret-management access | J, U, V, W, X, AF | AWS adapter exists; live role permissions were not inspected in this audit. Local memory/MinIO needs no new cloud key. | Approved per-environment IAM role for existing media storage and chosen secret service; no new AWS resource names assumed. Cloud mode uses roles, not static keys in chat. | Local isolated storage; deployed upload/secret jobs stay blocked if access is unverified. | #060, #062, #067, #102, #105, #158 |
+| K09 | Stripe TEST payment sandbox / billing account | W, V, Y, AB, AF | Stripe selected by Joe (2026-10-06); account choice and Stripe Tax decision are pending. No keys or live checkout are connected. | Owner chooses the existing or a new Buildovate Stripe account and the Tax setting; later supplies TEST secret, publishable and webhook signing keys as server secrets after webhook work is ready. | Payments not connected; no checkout, entitlements, renewals or charges inferred. | #054, #055, #056, #104 |
+| K10 | Meta app + Facebook Page account | X, Y | Not verified. Footer Facebook links provide no publishing authorization. | Approved developer app, business-owned Page, permitted scoped authorization and test destination. Verify current app-review requirements during its ticket. | Not connected; export-only approved media, never Published. | #106, #107, #115 |
+| K11 | Meta app + eligible Instagram account | X, Y | Not verified. | Approved app/account relationship and permissions for the specific media publishing capability; verify eligibility rather than assume. | Not connected / manual export; no delivery receipt fabricated. | #108, #109, #115 |
+| K12 | Google Business Profile | X, Y | Not verified; Places API access is not GBP posting permission. | Approved account/API project and scoped access to the contractor’s location for the permitted operation. | Not connected / export; no unauthorized profile changes. | #110, #111, #115 |
+| K13 | YouTube account / approved API access | X | Not verified; optional channel automation pending capability review. | Authorized channel/app access for one requested upload type; verify current quotas and approvals. | Manual export / capability unverified until tested. | #116, #117 |
+| K14 | TikTok account / approved API access | X | Not verified; optional channel automation pending capability review. | Authorized account/app for supported posting mode; verify current access restrictions. | Manual export / capability unverified. | #116, #118 |
+| K15 | LinkedIn organization/account / approved API access | X | Not verified; optional channel automation pending capability review. | Owner-approved organization/account publishing capability and exact scopes; not inferred from a profile URL. | Manual export / capability unverified. | #116, #119 |
+| K16 | Nextdoor business / supported partner publishing access | X | Unsure whether an automated publishing API is available to this account/product. | Provider-confirmed authorized capability; do not invent a public posting API. | Manual export. Leave automated capability unimplemented if provider does not support it. | #116, #120 |
+| K17 | SendGrid account and sending capacity | I, AF | Required by blueprint; no sender, subuser/IP entitlement or delivery worker verified. | Approved SendGrid account with a distinct subuser per contractor, sender authentication and signed event verification; verified consent and suppression before every send. No SES or cold email. Credential names not implemented yet. RESEND_API_KEY is legacy scaffolding, not evidence SendGrid works. | Delivery not connected; draft/queued-blocked only, never Sent. | #022, #124, #125, #140, #141, #142, #143, #144 |
+| K18 | Sending-domain DNS control | AF | Registrar/DNS provider and authorized zones not confirmed. | Domain owner authorization, scoped DNS provider access for zero-touch mode, or owner-applied records; verified reply-to mailbox. No broad DNS change authorization is implied. | Needs domain verification; show exact reviewed setup instructions, block real sending. | #022, #125, #126, #140, #142, #144 |
+| K19 | Google Analytics 4 reporting property / project | AD | No verified property reporting access; measurement ID alone is insufficient. | Chosen property and approved reporting principal/OAuth access, measurement configuration, consent decisions. New credential names TBD after approved flow. | Analytics not connected / no data. Never show sample metrics as live. | #145, #146, #147, #148 |
+| K20 | Meta advertising account | AE | Not connected or validated by this audit. Separate from Page publishing access. | Authorized app/ad account and owner-approved billing/budget; supported test or paused-campaign flow. | Draft only / account not connected; no silent spend. | #149, #153, #155 |
+| K21 | Google Ads account / developer access | AE | Not connected or validated by this audit. | Approved customer/account access and required developer/OAuth approvals, plus supported non-spending test mode; check actual permissions during ticket. | Draft only / account not connected; do not infer budget or spend permission. | #150, #154, #155 |
+| K22 | Trust/social brand assets and profile evidence | E, P | Rights/affiliations are not established for every network. This is an evidence dependency, not normally an API key. | Contractor-confirmed profiles and permitted logo assets/membership evidence for each displayed network. | Text/source-link fallback; never imply certification or membership without proof. | #009, #013, #047 |
+| K23 | Reviewed business/jurisdiction legal policy | E, S | Unsure; generic text has not been confirmed suitable for every contractor. Not an API key. | Owner-supplied verified license/state/insurance facts and reviewed advertising/privacy/provider policy. Do not invent license-board API credentials. Review #004U questions below and approve #004V `/legal` page text for all trades before either goes live. | Needs review; withhold optional unverified claims and block required missing disclosures as designed. | #011, #004U, #004V |
+| K24 | Separate Buildovate Contractor CRM sandbox/API | AA | No remote connector verified; this repository’s local contacts are separate. | Documented sandbox API, tenant mapping, approved auth/webhook capability and explicit scope for remote test records. No permission to modify the CRM codebase implied. | CRM not connected; local inquiry remains stored, remote job blocked. | #156, #157, #158 |
+| K25 | Weather data source | AC | Provider not selected; whether a key is needed is unsure. | Select/verify an authorized source during its ticket, including location coverage, freshness and permitted use; account/key only if that source requires it. | Neutral banner / weather unavailable; no fabricated alerts. | #160, #161 |
+| K26 | Human Spanish content review | AC | Not established for the new complete page family. Not an API key. | Approved translated business/offer/legal content; bilingual review before public release. | Translation pending; retain accurate default-language content rather than fake completeness. | #165 |
+
+## Existing optional integrations (not blockers for the next ticket #002)
+
+- **Twilio:** chat/SMS adapter exists; follow-up campaign sending is not active. Existing names: `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM_NUMBER`. Live access/registration and recipient authorization are unsure. If a later ticket adds SMS delivery, add a numbered dependency/ticket before enabling it; email consent never covers SMS automatically.
+- **Zoom:** existing global-sales-calendar adapter uses `ZOOM_ACCOUNT_ID`, `ZOOM_CLIENT_ID`, `ZOOM_CLIENT_SECRET`, `ZOOM_HOST_USER_ID`. Live access is not checked. Video education playback and rep-goals tickets do not require creating Zoom meetings.
+- **Resend:** `RESEND_API_KEY` is legacy setup scaffolding, not delivery. Contractor email uses SendGrid per-contractor subusers only; neither Resend nor SES is a fallback.
+- **Authentication/hosting:** existing local dev-header and deployed Cognito/AWS architecture are not being replaced. No new OAuth/Cognito account or hosting purchase is required by this audit. Future live provider callbacks may require authorized HTTPS configuration; implementation tickets must use documented environment routes/resources.
+- **Maps/geography:** current Project Map uses local project records and existing map assets; IP personalization uses the configured local GeoIP database. Neither requires a new geolocation API for ticket #002. Tile/data attribution and permitted usage still need review if the source changes; do not silently select a new paid map vendor.
+- **Trust networks without a feed:** Angi, Houzz, BBB, NATE, license boards and similar selections need verified profile/membership evidence and permitted marks (K22/K23). They do not automatically require or possess a usable public API. Never scrape or invent one to imply a connection.
+- **Local media tooling:** a PDF renderer, QR encoder or video transcoder may require ordinary local software dependencies, not an account/API key. Implement only in its ticket, using approved packages and no secret-bearing shell commands.
+- **#004L Roofing owner portrait:** The local template image is AI generated sample media (`ownerPhoto.isSample: true`), not a photograph of the named owner. A customer-supplied portrait and usage permission are needed before owner-photo approval. No external key is needed; the existing Owner photo upload flow replaces the sample. See [media credits](docs/product/MEDIA-CREDITS.md).
+
+## Readiness gate
+
+For each live provider ticket, record only non-secret evidence: authorized environment/account alias, verified capability, scopes needed, test date/result, and owner approval reference. Missing access → labeled stub + live ticket remains open. Provider rejection/unsupported API → explicit unsupported/manual mode, never a fake Connected label. **#001 completed without external keys. No external key is required to begin #002.**
+
+## #009 delivered fallback — 2026-09-24
+
+K03/K04 live capability remains unverified. The new trust strip uses approved profile links and optional owner-confirmed evidence; it makes no feed requests and never claims Connected. Existing review adapters remain separate. K22 permitted marks are missing; readable text names are implemented and tested. No new key required for this fallback; #047 and live validation remain open.
+
+## #011 implementation update
+
+K23 remains missing. The local framework supports administrator-supplied, reviewed jurisdiction/trade policies and required license facts; no real policy has been supplied or activated. Missing-policy businesses show Needs review and withhold optional structured positive insurance/bonding claims. Fictional QA policies prove behavior only. See [#011 evidence](docs/build-evidence/011/README.md).
+
+## K23 attorney questions for #004U
+
+- If a contractor opts in and signs off, can Buildovate generate and publish AI images presented as that contractor's completed projects without Buildovate itself being liable under FTC rules, California Business and Professions Code § 17500, and CSLB advertising rules?
+- Does a signed acknowledgement plus indemnity adequately protect Buildovate, or only shift costs after the fact?
+- Can AI items show a city or project type, or must they stay location-free?
+- Is an unlabeled “Styles we build” gallery acceptable for AI media outside Our Work?
+- Approve the `/legal` page text in #004V for all trades, including Images, License, Promotions and Financing, Reviews, Privacy, and Text and Call Consent.
+- For #029V, what exact financing APR and term wording must appear beside each monthly payment and in slider/quote states?
+- For #041D Locksmith, what California locksmith license number/type must appear in site copy and advertising, including emergency ads and mobile views?
+- For #029V/#029C, what reviewed language is required for address-specific rebates and tax credits, and for storm insurance-claim help without implying eligibility, coverage or an outcome?
+- For #029V, what TCPA-compliant language and recording are required for the estimator's initially unticked call/text consent checkbox, including a lead that declines marketing consent?
+- For #030M, what contractor consent and public disclosure, if any, are required for AI-written social posts, including posts edited or auto-approved by category?
+- For #030M, what homeowner/customer permissions and source attribution are required before using completed-project photos or real reviews in social posts on each network?
+- For #030M, what financing advertising disclosures must appear within each network's post, creative, link preview and destination when a monthly payment is shown?
+- For #031A, what wording and substantiation are required for the computed $956-versus-$449 savings claim and the contractor-input job calculator's revenue-only illustration disclaimer?
+- For #031A, what citation, freshness, scope and comparison wording is acceptable when naming competitor prices, billing terms or setup fees?
+- For #031A, what cancellation, domain/content ownership, connected social-account/post access and data export terms must the pricing FAQ and `/legal` state?
+
+
+## #015G — Expense imports and cost research (Not connected)
+
+No vendor billing account, paid API, bank account or inbound email was contacted or configured for this ticket. Manual ledger, receipt upload, CSV review/matching and recurring bills work locally.
+
+| Connection / input | Needed before live enablement | Current behavior |
+|---|---|---|
+| AWS Cost Explorer (K08) | Approved billing read access; platform workload tags/services; reviewed response mapping and pagination | Not connected; no shared-workload costs imported |
+| OpenAI Usage and Costs (K01) | Organization admin billing key, project attribution and reviewed billing adapter | Not connected; existing connected generation calls can self-meter actual model/effort/tokens |
+| Twilio Usage Records | Approved account/subaccount billing read access, site mapping and verified categories | Not connected |
+| Higgsfield (K02) | Approved application generation integration and actual dollar rate per credit / plan allowance | Not connected; 318 documented historical images / 636 credits imported on initialization, dollar Rate needed |
+| Google Places (K03) | Approved existing application key and effective request rates | Existing connected requests can self-meter; no key supplied or used here; billing import Not connected |
+| SendGrid / Codex / Higgsfield / Metricool plans | Actual invoice amounts, billing dates and classification | Admin-configured recurring bills only; seeded rates remain Rate needed |
+| Receipt inbox (K17/K18) | Approved dedicated inbound address, verified inbound transport and invoice parser | Not connected; no invented address; original PDF/image upload and pending receipt CSV work |
+| Plaid bank/card feed | Approved business account consent, verified tokens/webhooks, transaction IDs, refund and decline semantics | Not connected; bank CSV can be reviewed, matched or linked without double-counting |
+| Expense encryption | Server-only EXPENSE_VAULT_KEY: base64 of 32 random bytes, maintained in the approved secret store | No key configured. Credential POST refuses storage until configured; AES-GCM encrypted records never return plaintext |
+| Dollar rates / allowances | Champ's UNIT-COSTS.md or actual supplier invoices; effective dates | Rate needed / allowance Not supplied; no guessed plan allowance or credit price |
+| Estimator / SMS / visualizer allowances and gate conversion | Connected metering for the corresponding future product, entitlement and conversion events | Not connected; no overage charge or fabricated conversion data |
+
+Live provider transports, webhook validation and source-specific attribution must be reviewed before enabling automatic import. The Sync control currently reports Not connected and performs no network operation. Do not paste keys into chat.
+
+
+## #017 — financing adapter access gates
+
+Service Finance (K05), Wisetack (K06), Sunbit (K07), Hearth and Enhancify all remain **Not connected**. Each contractor selects its lenders (or Other/None). A confirmed business-issued application link and contractor-supplied current APR/term are link-only setup, not a live API connection, approval, pre-qualification or retrieved offer.
+
+| Adapter | Missing dependency | Current fallback |
+|---|---|---|
+| Hearth | Approved merchant relationship and provider-documented integration/sandbox authorization; credential names and API availability TBD | Not connected; confirmed link + supplied terms only |
+| Enhancify | Approved merchant relationship and provider-documented integration/sandbox authorization; credential names and API availability TBD | Not connected; confirmed link + supplied terms only |
+| Other | Contractor names the provider, supplies a confirmed application link and terms; any future API requires separate documented access | Not connected; no generic API or guessed credentials |
+
+No key fields, credential storage, external verification, vendor calls or automatic underwriting were added. Public financing with no supported supplied terms is hidden; Sample payments remain private noindex previews. Existing future live-integration tickets remain open; #017 does not complete them.
+
+
+## #022 local ebook delivery gate
+
+The local Roofing guide uses installed imagery, bundled PDFs, existing tenant access and the local inquiry database. No external delivery, storage, CRM or generation adapter is invoked. Every receipt remains **Delivery not connected**, with no email-sent event.
+
+- **K17 / K18:** Before a future live email ticket, establish the contractor's SendGrid subuser, authenticated sending domain, verified sender/reply-to, approved ebook message template, consent purpose and version, suppression checks, event verification and any double-opt-in setting. Credential variable names remain unimplemented; do not populate guessed keys. Never infer delivery from a stored request or PDF download.
+- **K24:** Remote CRM remains Not connected; this ticket uses only the existing local inquiry inbox and local contact records. Future remote delivery requires an approved tenant mapping and sandbox contract.
+- **K08 / K01 / K02:** Remote file hosting and generated per-customer guide artwork are Not connected for this stub. Its PDFs are bundled private server assets; no cloud storage, AI or Higgsfield call is made. Future generation needs separate authorization.
+- SMS and marketing are not requested: phone is optional and neither permission is inferred from guide consent. No SMS credential setup is part of #022.
+
+Live delivery remains queued under #124/#125 and #140–#144. No provider is connected by #022.
+
+
+## #024 — Dedicated Roofing Financing ambient film (K02)
+
+Phase 1 is complete locally using installed still imagery; the live film remains Pending / Not connected. No provider calls, credit checks or generation ran. One silent 8-second 1080p Cinema Studio Video 3.0 clip is planned; the local brief contains no credit tariff, so a numeric provider quote and explicit Phase 2 approval are still needed. No credential has been read or stored. See [#024 evidence and exact prompt](docs/build-evidence/024/README.md). The finished planning chapter publishes with its poster. Only pending-film status panels and Sample badges are private-preview-only (#024 Part A).
+
+
+## #025 — Dedicated Roofing Financing scroll film (K02)
+
+Phase 1 is complete locally using installed still imagery and the existing scroll player. The live versioned slot remains Pending / Not connected; its finished poster story is public, while its status panel is private-preview-only. One silent 12-second 1080p Seedance 2.5 clip / one generation is proposed. Credits: **quote needed**. No provider/credit check, generation, credential access or vendor call ran. Combine with the existing #024 ambient clip estimate before seeking explicit Phase 2 approval. [Evidence and exact prompt](docs/build-evidence/025/README.md).
+
+
+## #026 — Roofing Promotions ambient film (K02)
+
+Phase 1 is complete in tested stub mode. The finished installed-photo chapter publishes; only private media status remains Pending / Not connected. One 8-second silent 1080p Cinema Studio Video 3.0 (cinematic_studio_3_0) clip / one generation is proposed; credits **quote needed**. No provider, credit, credential or generation call ran. Combine with #024–#027 before seeking production approval. [Exact prompt and evidence](docs/build-evidence/026/README.md).
+
+
+## #027 — Roofing Promotions scroll film (K02)
+
+Phase 1 is complete in tested stub mode. The finished installed-photo chapter publishes; only private media status remains Pending / Not connected. One 12-second silent 1080p Seedance 2.5 (seedance_2_5) clip / one generation is proposed; credits **quote needed**. No provider, credit, credential or generation call ran. Combine with #024–#027 before seeking production approval. [Exact prompt and evidence](docs/build-evidence/027/README.md).

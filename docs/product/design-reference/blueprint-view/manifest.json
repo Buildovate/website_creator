@@ -1,0 +1,49 @@
+{
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "prototype-v3.html",
+      "sha256": "0572f86e67b5cae65f35532fefa9bdfe65f738e8c19dea35ad4541d70abedb3a"
+    },
+    {
+      "path": "screenshots/desktop-after-save.png",
+      "sha256": "0aa37ab8a9e61d67241c1bebed35842475862513fc590e96f0b13bc49a45c1ef"
+    },
+    {
+      "path": "screenshots/desktop-financing-form.png",
+      "sha256": "9d80009aecb9ce57bf85dd702e5b05eea6274d5a79c5ceaaf4d6aeaf39a71b6a"
+    },
+    {
+      "path": "screenshots/desktop-focus-editor.png",
+      "sha256": "b8cc20156147889cbdb7984f066bffb8a894d4d74152e9650809e398db27e0c1"
+    },
+    {
+      "path": "screenshots/desktop-game-complete.png",
+      "sha256": "40c19efaebc9bfa196d78026d240459c77938f42d027b3961d71870ac390753e"
+    },
+    {
+      "path": "screenshots/desktop-game-midway.png",
+      "sha256": "3ee2e7639fdd4546459069c34ce4d3c2ad8397aada1d7120ed64b077def1bfc4"
+    },
+    {
+      "path": "screenshots/desktop-game-start.png",
+      "sha256": "d4cdaa35cf02811c49b3132df6a17fcbb8445134f44d290eee3aab94a17fa055"
+    },
+    {
+      "path": "screenshots/desktop-stamp.png",
+      "sha256": "1d47bbd025374e5c4b59328ecc5ebc107268210a2999c939c402b498af4e33fa"
+    },
+    {
+      "path": "screenshots/phone-game-midway.png",
+      "sha256": "37657c434a681e9f2527b6aa219e0927b5aa2d9a685407e994ad1815ff76b3e9"
+    },
+    {
+      "path": "screenshots/phone-plan.png",
+      "sha256": "8b0a772d4d9a1fa3eeefa9900b83ca1755e4b1e4cb61c1e8d8666d713221ee56"
+    },
+    {
+      "path": "screenshots/phone-promotions-sheet.png",
+      "sha256": "cc1ead8c6f1c5eee5a1d6af3e127cd26b3cdfa85035da011f1e5f04a9953451d"
+    }
+  ]
+}

@@ -26,7 +26,7 @@ DNS for `preview.website.buildovate.com` and `website.buildovate.com` is manual 
 
 `src/aws/server.js` is a Node HTTP server. It turns each incoming request into a Fetch `Request`, calls the built Worker `dist/server/index.js` (`fetch(request, env)`), and writes the `Response` back. Outbound `fetch` is Node's global fetch, so calls to `https://api.openai.com` leave the instance over normal HTTPS. No Sites proxy is in that path. The instance security group must allow outbound TCP 443.
 
-`/healthz` runs `SELECT 1` and returns 200 only when Postgres answers. It does not write a row and it does not call OpenAI. Elastic Beanstalk should use that path (`.ebextensions/healthcheck.config` sets `HealthCheckPath` to `/healthz`). `/` stays a public HTML shell and is not a database check. The existing authenticated `POST /api/health` still probes database and object storage together.
+`/healthz` runs `SELECT 1` and returns 200 only when Postgres answers. It does not write a row and it does not call OpenAI. Elastic Beanstalk should use that path (`.ebextensions/healthcheck.config` sets `HealthCheckPath` to `/healthz`). `/` redirects unauthenticated workspace visitors to login and is not a database check. The existing authenticated `POST /api/health` still probes database and object storage together.
 
 Scripts:
 
@@ -91,36 +91,9 @@ Production uses the same actions on `arn:aws:s3:::buildovate-website-creator-pro
 
 ## Auth
 
-The Worker still calls `person()` / `identity()` in `src/core.js`, which read `oai-authenticated-user-id` and `oai-authenticated-user-email`. On AWS those headers are deleted from the incoming request and set again only when the adapter accepts an identity. Sending the Sites headers yourself does nothing. The ChatGPT “Sign in with ChatGPT” link and the sidebar sign-out control are rewritten on this server only. The link text becomes “Sign in required”. Sign-out points at `AUTH_LOGOUT_URL` when that is an http(s) URL (use the Cognito or ALB logout URL); otherwise the page says sign-out is handled by the identity provider. The Worker source is unchanged, so the Site keeps its original links.
+See [the auth module](modules/auth.md) for the current session, CSRF and provider contract. Local users sign in at `/login`; incoming development identity headers are ignored by the HTTP runtime. Shared environments require a canonical HTTPS `APP_ORIGIN` plus verified ALB or Cognito identity on every request. ALB signer, issuer and client checks are mandatory. Provider logout and hosted login must be configured separately before shared access is enabled.
 
-The identity provider does not grant platform roles. After sign-in, `/api/setup` and the existing invite tables decide who is an administrator, owner, editor, or viewer. The IdP must supply a stable `sub` and an `email` claim. Email is stored lowercased and must match invitation email, the same rule as Sites.
-
-### `alb-oidc` (preview and production default)
-
-Put the environment behind an Application Load Balancer with an HTTPS listener and an OIDC authenticate action (Cognito or another OIDC provider). The load balancer verifies the user and sets `x-amzn-oidc-data`. Elastic Beanstalk's proxy forwards that header. The adapter:
-
-1. Requires `alg` `ES256`, a `kid`, and an unexpired `exp` (60 second skew).
-2. Fetches the matching public key from `https://public-keys.auth.elb.us-west-1.amazonaws.com/{kid}` and verifies the signature.
-3. If `AUTH_OIDC_ISSUER` is set, requires the token `iss` to match it.
-4. Maps `sub` and `email` onto the Worker headers, then drops the load-balancer token headers.
-
-Security group: the instances accept HTTP only from the load balancer. A client that can reach an instance directly can forge `x-amzn-oidc-data`. Do not open the instance port to the internet.
-
-Configure the IdP to include the email scope. The load balancer must send `X-Forwarded-Proto: https` so form origin checks (`Origin` versus the request URL) succeed.
-
-### `cognito` (when the app verifies tokens itself)
-
-Set `AUTH_MODE=cognito`, `COGNITO_USER_POOL_ID`, `COGNITO_REGION` (`us-west-1`), and `COGNITO_CLIENT_ID`. Clients send `Authorization: Bearer` with a Cognito **ID token** (`token_use` `id`, `aud` equal to the client id). The adapter verifies `RS256` against the pool JWKS and checks the issuer `https://cognito-idp.us-west-1.amazonaws.com/{pool id}`. Access tokens are rejected because they do not carry the email this app uses for invitations. The bearer header is removed before the Worker runs.
-
-This mode is the right one if there is no ALB authenticate action in front of the process. It is not wired to a hosted login UI in this repository; point users at the Cognito hosted UI or your own login page and send the ID token to the app.
-
-### `dev-header` (local only)
-
-`x-buildovate-user-id` and `x-buildovate-user-email` are accepted when `NODE_ENV` is not `production`. Preview and production refuse this mode unless `AUTH_ALLOW_DEV_HEADERS=1` is set on purpose. Do not set that flag on a shared environment. `aws/env/local.env.example` shows the quick in-process combination (`DATABASE_DRIVER=pglite`, `BUCKET_DRIVER=memory`). `aws/env/docker.env.example` shows the Compose combination (`APP_ENV=local`, `AUTH_MODE=dev-header`, Postgres, MinIO). Copy it to gitignored `aws/env/docker.env` before adding `OPENAI_API_KEY`.
-
-### `disabled`
-
-No user is attached. Public pages still render. Anything that calls `identity()` returns 401.
+The reported live preview and production mode remains `disabled`; the examples are future configuration. This local implementation does not activate shared authentication or deploy infrastructure.
 
 ## Deploy (us-west-1)
 
@@ -157,6 +130,6 @@ Not covered here, and still required before calling an environment live:
 
 - Elastic Beanstalk, RDS, Cognito, and IAM are not created by the tests or by this repo
 - no traffic has been sent to the real S3 buckets
-- the existing `tests/platform.mjs` suite still targets SQLite, and this checkout has no `public/assets/roofing.jpg`, so that file exits before its assertions. `npm run test:aws` is the AWS check
+- the existing `tests/platform.mjs` suite still targets SQLite, and this checkout has no `public/assets/roofing.webp`, so that file exits before its assertions. `npm run test:aws` is the AWS check
 - no browser pass of an Elastic Beanstalk URL, because that environment is not up. The local HTTP server was exercised for `/`, `/healthz`, session, setup, tenant create, storage health, and `/app.css`
 - DNS, certificates for the public names, and retirement of the Site are not done

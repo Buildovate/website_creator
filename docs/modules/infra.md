@@ -1,5 +1,7 @@
 # Module: infra
 
+Custom-domain domain operations use assumed-role SDK clients in us-east-1, independently of the app's us-west-1 resources. Configuration, IAM and preview enablement: [CUSTOM-DOMAINS.md](../release/CUSTOM-DOMAINS.md). The default-off `CUSTOM_DOMAINS_LIVE` flag replaces the old domain-check enable switch; no domain SDK client is constructed while it is off.
+
 ## Purpose
 Where this website app runs: local Compose, the AWS adapter, and the documented preview and production hosts. Not the Contractor CRM.
 
@@ -52,7 +54,7 @@ Passthrough provider names loaded by `src/aws/env.js` when set: `OPENAI_API_KEY`
 
 ### CI
 
-`.github/workflows/ci.yml` runs on push to `develop`, `staging`, and `main`, and on pull requests into `staging` and `main`. It does not run on pull requests whose base is `develop`. Steps: `npm ci`, `npm run build`, `npm run test:aws`, Node 22.
+`.github/workflows/ci.yml` runs on push to `develop`, `staging`, `main`, and `release/preview`, and on pull requests into `staging` and `main`. It installs Node 24, dependencies and Playwright Chromium, then runs `scripts/release-gate.mjs`: build, typecheck, both Worker targets, payments, Game, catalog, domain/custom-domain, insertion ordering, readiness A/B, launch decisions and changed-asset browser checks. Provider egress is blocked, custom domains stay default-off, and Suite-102 is excluded.
 
 ## Browser
 - **Pages**: none. `/healthz` is JSON.
@@ -75,3 +77,19 @@ Passthrough provider names loaded by `src/aws/env.js` when set: `OPENAI_API_KEY`
 
 ## Sources
 `docs/ENVIRONMENTS.md`, `docs/AWS_MIGRATION.md`, `setup.md`, `src/aws/env.js`, `src/aws/server.js`, `src/aws/migrate.js`, `docker-compose.yml`, `docker-compose.dev.yml`, `Dockerfile`, `Dockerfile.dev`, `Procfile`, `.ebextensions/healthcheck.config`, `aws/env/*.example`, `.github/workflows/ci.yml`, `.openai/hosting.json`, `package.json`.
+
+
+## Website experience redesign — local, 2026-09-24
+
+AWS city personalization uses `src/aws/geoip.js`, `mmdb-lib` and a local DB-IP City Lite database. New configuration: `GEOIP_DB_PATH` (optional path) and `GEOIP_TRUSTED_PROXIES` (explicit IP/CIDR allowlist, empty by default). `npm run geoip:update -- YYYY-MM` installs the gitignored MMDB under `aws/geoip`; clean image builds must include the data. No external visitor-IP lookup is performed. `src/aws/s3.js` now supports HEAD and single byte ranges for reliable video scrubbing. This work is not deployed. See [experience implementation and validation](../product/EXPERIENCE_REDESIGN.md).
+
+
+## #015G recurring expenses and credential storage
+
+The normal Node entrypoint invokes Worker scheduled() on boot and hourly for due recurring expense bills. Deterministic bill/date IDs make catch-up idempotent; no vendor request is made. Dashboard access also catches up configured bills, and an admin can Post due bills. Vite remains a local admin fixture, not an authentication test server. Role/CSRF/receipt tests use the actual AWS HTTP adapter with isolated sessions.
+
+EXPENSE_VAULT_KEY is a new optional passthrough, base64 for exactly 32 random bytes. It is never given a default or committed value. The admin credential endpoint encrypts with AES-GCM and vendor ID as authenticated context. Live credential consumption, rotation and provider transport remain gated in NEEDS-KEYS.md. No infrastructure or live configuration was changed.
+
+## Optional local review capture — #028E
+
+The Node host accepts `REVIEW_BROWSER_MODULE` (an already installed Playwright module name or absolute local module path) and optional `REVIEW_BROWSER_EXECUTABLE` (local Chromium/Chrome executable). `createRuntime({reviewCapture})` also accepts a capture adapter, used by local verification. No browser, dependency or provider is downloaded at request time. An unconfigured host creates Pending capture metadata and blocks publication with an honest Not connected message. Configure the host's existing local browser runtime before enabling publication; this ticket installs no shared-environment configuration and performs no deployment. Capture jobs are serialized within the host and drained on clean shutdown. Artifacts use the existing private object bucket, not a public static directory.
