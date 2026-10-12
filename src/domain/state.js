@@ -4,7 +4,7 @@ export function domainStatus(plan,proof={},time=Date.now()){
  const site=proof.site||{};
  const loading=fresh&&site.ok===true&&site.tenantId===plan.tenantId&&site.url==='https://www.'+plan.hostname;
  const checks={www:fresh&&proof.www===true,bare:fresh&&proof.bare===true,ssl:fresh&&proof.ssl===true,site:loading};
- const live=plan.ownership==='verified'&&checks.www&&checks.bare&&checks.ssl&&checks.site;
+ const live=!plan.disconnectedAt&&!['disconnecting','deleted'].includes(plan.lifecycle)&&plan.ownership==='verified'&&checks.www&&checks.bare&&checks.ssl&&checks.site&&proof.cloudfront!==false;
  return {stage:live?'live':proof.error?'failed':plan.ownership==='verified'?(plan.switchApprovedAt?'connecting':'verified'):plan.addedAt?'verifying':'chosen',checks,live,fresh,connected:proof.connected===true,message:proof.error||'',checkedAt:proof.checkedAt||null};
 }
 export function needsDomainHelp(plan,status,time=Date.now()){

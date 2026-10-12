@@ -1,3 +1,5 @@
+import {routeCustomDomain} from './domain/routing.js';
+export {clearDomainLookup} from './domain/routing.js';
 import {paymentAvailability,maintainPaymentLifecycle,pausedSiteResponse} from './payments/lifecycle.js';
 import {configureStaticSiteFetch} from './static-site-export.js';
 import {domainGuidePage,maintainDomainPlans} from './domain/plan.js';
@@ -96,6 +98,8 @@ const styledWorker={...baseWorker,async fetch(req,env){const response=await base
 configureReviewRenderer((req,env)=>styledWorker.fetch(req,env));
 configureStaticSiteFetch((req,env)=>styledWorker.fetch(req,env));
 export default {...styledWorker,async fetch(req,env){
+ const custom=await routeCustomDomain(req,env,(publicRequest,publicEnv)=>styledWorker.fetch(publicRequest,publicEnv));
+ if(custom!==null)return custom;
  const response=await styledWorker.fetch(req,env);
  if(response.ok){const site=new URL(req.url).pathname.match(/^\/s\/([^/]+)(?:\/|$)/);if(site){const t=await env.DB.prepare('SELECT id FROM tenants WHERE slug=?').bind(site[1]).first();if(t)response.headers.set('x-buildovate-tenant',t.id);}}
  if(!env.REVIEW_ISOLATED&&response.ok&&['POST','PUT'].includes(req.method)){

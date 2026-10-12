@@ -15,7 +15,7 @@ import {createBillingAdapter,getBillingAdapter} from '../src/payments/billing-ad
 import {createCheckoutService} from '../src/payments/checkout.ts';
 import {onSettled} from '../src/payments/checkout.ts';
 import {renderBillingSummary} from '../src/client/workspace/billing.ts';
-const root='C:/Users/joe/website_creator',file=root+'/.data/readiness-batch-a-worker.mjs';
+const root=new URL('../',import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1'),file=root+'/.data/readiness-batch-a-worker.mjs';
 await build({entryPoints:[root+'/src/worker.js'],outfile:file,bundle:true,format:'esm',platform:'neutral',conditions:['workerd','worker'],mainFields:['module','main'],loader:{'.html':'text','.pdf':'binary'},external:['node:*','cloudflare:workers'],logLevel:'silent'});
 const worker=(await import('data:text/javascript;base64,'+fs.readFileSync(file).toString('base64'))).default;
 const stamp='2026-01-01T00:00:00.000Z',base='http://127.0.0.1:5183';

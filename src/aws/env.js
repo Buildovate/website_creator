@@ -17,7 +17,7 @@ export const EB_ENVS = {
 };
 
 const PASSTHROUGH = [
-  'CF_MT_DISTRIBUTION_ID','CF_CONNECTION_GROUP_ID','CF_ROUTING_ENDPOINT','CUSTOM_DOMAIN_CNAME_TARGET','DOMAINS_ROLE_ARN','CF_TENANT_TAG_ENV','PLATFORM_HOSTS','CLOUDFRONT_ALIAS_ZONE_ID','CUSTOM_DOMAIN_APEX_IPS',
+  'CF_MT_DISTRIBUTION_ID','CF_CONNECTION_GROUP_ID','CF_ROUTING_ENDPOINT','CUSTOM_DOMAIN_CNAME_TARGET','DOMAINS_ROLE_ARN','CF_TENANT_TAG_ENV','PLATFORM_HOSTS','CLOUDFRONT_ALIAS_ZONE_ID','CUSTOM_DOMAIN_APEX_IPS','DOMAIN_RECHECK_INTERVAL_MS',
   'EXPENSE_VAULT_KEY',
   'STRIPE_SECRET_KEY','STRIPE_PUBLISHABLE_KEY','STRIPE_WEBHOOK_SECRET','STRIPE_TAX_CONFIGURED','STRIPE_CARD_PAYMENT_METHOD_CONFIGURATION','STRIPE_OWNERSHIP_PAYMENT_METHOD_CONFIGURATION',
   'REVIEW_BROWSER_MODULE','REVIEW_BROWSER_EXECUTABLE','DOMAIN_CHECKS_ENABLED',
@@ -39,6 +39,7 @@ const PASSTHROUGH = [
 export function loadEnv(source = process.env) {
   const env = {
     APP_ENV: source.APP_ENV || 'local',
+    CUSTOM_DOMAINS_LIVE: source.CUSTOM_DOMAINS_LIVE || '0',
     WORKSPACE_OWNER_EMAIL: source.WORKSPACE_OWNER_EMAIL || '',
     NODE_ENV: source.NODE_ENV || 'development',
     AWS_REGION: source.AWS_REGION || REGION,
@@ -79,6 +80,13 @@ export function loadEnv(source = process.env) {
 
 export function assertRuntimeConfig(env) {
   const errors = [];
+  if(!['0','1',undefined].includes(env.CUSTOM_DOMAINS_LIVE))errors.push('CUSTOM_DOMAINS_LIVE must be 0 or 1');
+  if(env.DOMAIN_RECHECK_INTERVAL_MS!==undefined&&(!Number.isInteger(Number(env.DOMAIN_RECHECK_INTERVAL_MS))||Number(env.DOMAIN_RECHECK_INTERVAL_MS)<1000||Number(env.DOMAIN_RECHECK_INTERVAL_MS)>3600000))errors.push('DOMAIN_RECHECK_INTERVAL_MS must be 1000–3600000');
+  if(env.CUSTOM_DOMAINS_LIVE==='1') {
+    for(const key of ['CF_MT_DISTRIBUTION_ID','CF_CONNECTION_GROUP_ID','CUSTOM_DOMAIN_CNAME_TARGET','DOMAINS_ROLE_ARN','CF_TENANT_TAG_ENV','PLATFORM_HOSTS'])if(!env[key])errors.push(key+' is required for live custom domains');
+    if(env.CUSTOM_DOMAIN_CNAME_TARGET&&!/^(?:[a-z0-9-]+\.)+[a-z]{2,63}$/i.test(env.CUSTOM_DOMAIN_CNAME_TARGET))errors.push('CUSTOM_DOMAIN_CNAME_TARGET must be a DNS hostname');
+    if(env.APP_ORIGIN&&env.PLATFORM_HOSTS){try{if(!String(env.PLATFORM_HOSTS).split(',').map(x=>x.trim().toLowerCase().replace(/:\d+$/,'')).includes(new URL(env.APP_ORIGIN).hostname))errors.push('PLATFORM_HOSTS must include APP_ORIGIN host');}catch{/* The APP_ORIGIN validator below reports malformed origins. */}}
+  }
   if (!['local', 'preview', 'production'].includes(env.APP_ENV)) errors.push(`APP_ENV must be local, preview, or production (received ${env.APP_ENV})`);
   if (env.APP_ENV === 'preview' || env.APP_ENV === 'production') {
     if (env.BUCKET_DRIVER === 'memory') errors.push('BUCKET_DRIVER=memory is only for APP_ENV=local');

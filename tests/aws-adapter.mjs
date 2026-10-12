@@ -405,12 +405,14 @@ try {
   await new Promise(resolve => down.close(resolve));
 }
 
+if(process.env.AWS_ADAPTER_EXTERNAL_EGRESS==='1') {
 const egress = await fetch(`${OPENAI_API_ORIGIN}/v1/models`, {
   headers: { authorization: 'Bearer test-not-a-secret' },
   signal: AbortSignal.timeout(15000),
 });
 assert.equal(egress.status, 401);
 await egress.body?.cancel();
+} else console.log('SKIP external OpenAI egress probe: explicitly opt in outside offline gates.');
 
 await executor.close();
-console.log('PASS: SQL translation, Postgres migrations, D1 adapter, S3 shim, MinIO client config, ALB/Cognito/dev auth, /healthz, static assets, OpenAI egress.');
+console.log('PASS: SQL translation, Postgres migrations, D1 adapter, S3 shim, MinIO client config, ALB/Cognito/dev auth, /healthz, static assets; external egress opt-in only.');

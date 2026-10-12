@@ -1,5 +1,7 @@
 # Module: auth
 
+Custom hosts are classified by the actual HTTP Host before platform authentication and use only public tenant routes. Forwarded-host headers do not select tenants, and platform authentication retains canonical `APP_ORIGIN`. See [CUSTOM-DOMAINS.md](../release/CUSTOM-DOMAINS.md) for the Host/origin TLS requirements.
+
 ## Runtime and trust boundary
 
 The AWS/Node runtime uses `src/auth/*.ts` (built to `dist/auth`) for HTTP sessions and `src/aws/auth.js` for verified provider identities. The Worker still uses `person()`, `identity()` and `access()`. Incoming identity, ALB and bearer headers are stripped before the adapter writes trusted Worker headers. The original Sites runtime keeps its hosting identity behavior.

@@ -1,4 +1,4 @@
-export const DOMAIN_ENV_KEYS=['CF_MT_DISTRIBUTION_ID','CF_CONNECTION_GROUP_ID','CF_ROUTING_ENDPOINT','CUSTOM_DOMAIN_CNAME_TARGET','DOMAINS_ROLE_ARN','CF_TENANT_TAG_ENV','PLATFORM_HOSTS','CLOUDFRONT_ALIAS_ZONE_ID','CUSTOM_DOMAIN_APEX_IPS'];
+export const DOMAIN_ENV_KEYS=['CF_MT_DISTRIBUTION_ID','CF_CONNECTION_GROUP_ID','CF_ROUTING_ENDPOINT','CUSTOM_DOMAIN_CNAME_TARGET','DOMAINS_ROLE_ARN','CF_TENANT_TAG_ENV','PLATFORM_HOSTS','CLOUDFRONT_ALIAS_ZONE_ID','CUSTOM_DOMAIN_APEX_IPS','CUSTOM_DOMAINS_LIVE','DOMAIN_RECHECK_INTERVAL_MS'];
 export const DOMAIN_REGION='us-east-1';
 export const PROVIDERS=['Detect automatically','Route 53','Cloudflare','Other flattening DNS','GoDaddy','Namecheap','Squarespace','Wix','IONOS','Other'];
 export function cleanDomain(value){
@@ -30,5 +30,7 @@ export function domainGuide(plan,env={}){
  }
  const ips=String(env.CUSTOM_DOMAIN_APEX_IPS||'').split(',').map(x=>x.trim()).filter(x=>/^(?:\d{1,3}\.){3}\d{1,3}$/.test(x)&&x.split('.').every(n=>Number(n)<=255));
  if(ips.length){records.push(...ips.map(value=>({type:'A',name:'@',value,purpose:'Configured bare-domain alternative'})));steps.push('Only if your hosting administrator directs you to use this alternative, replace bare-domain A records with the configured values listed here.');}
+ records.push(...(plan.provisioning?.validationRecords||[]));
+ if(method==='alias'&&env.CF_ROUTING_ENDPOINT)records.push(...[plan.hostname,'www.'+plan.hostname].map(host=>({type:'TXT',name:'_cf-challenge.'+host,value:env.CF_ROUTING_ENDPOINT,purpose:'Confirm CloudFront alias ownership'})));
  return {target,aliasZone,provider,method,records,steps,configured:!!target&&(method!=='alias'||!!aliasZone)};
 }

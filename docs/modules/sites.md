@@ -1,5 +1,7 @@
 # Module: sites
 
+Custom-host serving and the flagged CloudFront/ACM backend are documented in [CUSTOM-DOMAINS.md](../release/CUSTOM-DOMAINS.md). `src/domain/routing.js` restricts non-platform hosts to verified active published tenants and the existing rental rules. `src/domain/plan.js` owns provisioning checkpoints, leases, checks and deferred cleanup; Node AWS adapters live in `src/aws/custom-domains.js`. `CUSTOM_DOMAINS_LIVE` defaults off.
+
 ## Purpose
 A tenant is one contractor website: draft settings, a published snapshot, memberships, and the public `/s/:slug` page. Provisioning does not create a separate hosting account per contractor (`OPERATIONS.md`).
 

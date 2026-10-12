@@ -1,4 +1,6 @@
-import {createDomainChecks} from '../domain/checks.js';
+import {createLiveDomainAdapters} from './custom-domains.js';
+import {customDomainsLive,recheckInterval} from '../domain/adapters.js';
+import {isPlatformHost,normalizeHost,domainNotFound} from '../domain/routing.js';
 import {createGeoLookup} from './geoip.js';
 import { createServer } from 'node:http';
 import { existsSync } from 'node:fs';
@@ -54,6 +56,15 @@ export function createHandler({ worker, env, db, auth }) {
     try {
       url = new URL(requestUrl(req, env));
       for(const [key,value] of Object.entries(responseHeaders(url,env.APP_ENV))) res.setHeader(key,value);
+      if (!isPlatformHost(env,req.headers.host || url.host)) {
+        const host=normalizeHost(req.headers.host || url.host);
+        if(!host) {await writeResponse(res,domainNotFound(),auth);return;}
+        const customUrl=new URL(url.pathname+url.search,(env.APP_ENV==='local'?'http://':'https://')+host);
+        const method=req.method||'GET',hasBody=method!=='GET'&&method!=='HEAD';
+        const incoming=new Request(customUrl,{method,headers:nodeHeaders(req),body:hasBody?Readable.toWeb(req):undefined,...(hasBody?{duplex:'half'}:{})});
+        // No platform cookie/session/provider authentication is evaluated for a custom host.
+        await writeResponse(res,await worker.fetch(incoming,{...env,AUTH_RUNTIME:'aws'}),auth);return;
+      }
       if (url.pathname === '/healthz') {
         if (req.method !== 'GET') { sendJson(res,405,{error:'Method not supported.'}); return; }
         const body = {
@@ -191,7 +202,12 @@ export async function createRuntime(options = {}) {
   const assetsRoot = env.ASSETS_ROOT || (existsSync('dist/client') ? 'dist/client' : 'public');
   const runtimeEnv = { ...env, GEOIP_LOOKUP:await createGeoLookup(env), DB: db, BUCKET: bucket, ASSETS: createAssets(path.resolve(assetsRoot)) };
   if(options.domainChecks)runtimeEnv.DOMAIN_CHECKS=options.domainChecks;
-  else if(runtimeEnv.DOMAIN_CHECKS_ENABLED==='1')runtimeEnv.DOMAIN_CHECKS=createDomainChecks();
+  if(options.domainProvisioner)runtimeEnv.DOMAIN_PROVISIONER=options.domainProvisioner;
+  if(customDomainsLive(runtimeEnv)) {
+    const adapters=createLiveDomainAdapters(runtimeEnv,options.domainAdapterOptions);
+    runtimeEnv.DOMAIN_CHECKS=options.domainChecks||adapters.checks;
+    runtimeEnv.DOMAIN_PROVISIONER=options.domainProvisioner||adapters.provisioner;
+  }
   const worker = options.worker || await loadWorker();
   const reviewJobs=new Map();let reviewCaptureTail=Promise.resolve();
   runtimeEnv.REVIEW_QUEUE=(key,task)=>{if(reviewJobs.has(key))return reviewJobs.get(key);const job=Promise.resolve().then(task).catch(error=>console.error('Review capture failed',error.message)).finally(()=>reviewJobs.delete(key));reviewJobs.set(key,job);return job};
@@ -247,7 +263,7 @@ async function main() {
   await maintenance();
   const expenseTimer=setInterval(maintenance,60*60*1000);expenseTimer.unref();
   // Domain checks have a separate cadence; expense billing keeps its hourly timer.
-  const domainTimer=setInterval(()=>runtime.maintainDomains().catch(()=>console.error('Domain check unavailable; next scheduled check will retry.')),180000);domainTimer.unref();
+  const domainTimer=setInterval(()=>runtime.maintainDomains().catch(()=>console.error('Domain check unavailable; next scheduled check will retry.')),recheckInterval(runtime.env));domainTimer.unref();
   const address = server.address();
   console.log(`website-creator listening on ${address.port} env=${runtime.env.APP_ENV} auth=${runtime.auth.mode} region=${runtime.env.AWS_REGION} bucket=${runtime.env.BUCKET.bucket || runtime.env.BUCKET.driver} openai=${OPENAI_API_ORIGIN}`);
   const shutdown = () => {

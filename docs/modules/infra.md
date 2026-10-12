@@ -1,5 +1,7 @@
 # Module: infra
 
+Custom-domain domain operations use assumed-role SDK clients in us-east-1, independently of the app's us-west-1 resources. Configuration, IAM and preview enablement: [CUSTOM-DOMAINS.md](../release/CUSTOM-DOMAINS.md). The default-off `CUSTOM_DOMAINS_LIVE` flag replaces the old domain-check enable switch; no domain SDK client is constructed while it is off.
+
 ## Purpose
 Where this website app runs: local Compose, the AWS adapter, and the documented preview and production hosts. Not the Contractor CRM.
 

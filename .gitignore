@@ -6,3 +6,5 @@ node_modules/
 aws/env/docker.env
 .data/
 dist/
+docs/build-evidence/
+.worktrees/
