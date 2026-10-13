@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { createServer } from 'node:http';
+import { createServer, request as httpRequest } from 'node:http';
 import { generateKeyPairSync, sign } from 'node:crypto';
 import { DeleteObjectCommand, GetObjectCommand, HeadObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3';
 import { translateSql } from '../src/aws/sql.js';
@@ -403,6 +403,32 @@ try {
   assert.equal(apiFailure.status,503);assert.equal((await apiFailure.json()).error,'Service temporarily unavailable.');
 } finally {
   await new Promise(resolve => down.close(resolve));
+}
+
+const albCheck = createServer(createHandler({
+  worker: { async fetch() { return new Response('Unknown host', { status: 404 }); } },
+  env: { APP_ENV: 'preview', APP_ORIGIN: 'https://preview.example.com', PLATFORM_HOSTS: 'preview.example.com', AWS_REGION: 'us-west-1' },
+  db: { prepare() { return { async first() { return { ok: 1 }; } }; } },
+  auth: { mode: 'dev-header', appEnv: 'preview', nodeEnv: 'production' },
+}));
+await new Promise(resolve => albCheck.listen(0, '127.0.0.1', resolve));
+try {
+  const url = `http://127.0.0.1:${albCheck.address().port}`;
+  const checkStatus = (path, headers) => new Promise((resolve, reject) => {
+    const req = httpRequest(url+path, { headers }, res => {
+      res.resume();
+      res.on('end', () => resolve(res.statusCode));
+    });
+    req.on('error', reject);
+    req.end();
+  });
+  const healthHeaders = { host: '10.0.12.34:8080', 'user-agent': 'ELB-HealthChecker/2.0' };
+  assert.equal(await checkStatus('/healthz', healthHeaders), 200);
+  assert.equal(await checkStatus('/healthz', { ...healthHeaders, host: 'customer.example' }), 404);
+  assert.equal(await checkStatus('/healthz', { ...healthHeaders, 'user-agent': 'Browser' }), 404);
+  assert.equal(await checkStatus('/api/session', healthHeaders), 404);
+} finally {
+  await new Promise(resolve => albCheck.close(resolve));
 }
 
 if(process.env.AWS_ADAPTER_EXTERNAL_EGRESS==='1') {

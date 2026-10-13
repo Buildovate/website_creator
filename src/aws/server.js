@@ -7,6 +7,7 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { Readable } from 'node:stream';
+import { isIP } from 'node:net';
 import { applyAuth, resolveUser, authConfig, OPENAI_API_ORIGIN } from './auth.js';
 import { createAuthHttp, AuthError, responseHeaders, workspacePage, workspaceErrorPage } from '../../dist/auth/index.js';
 import { assertRuntimeConfig, loadEnv } from './env.js';
@@ -25,6 +26,16 @@ function nodeHeaders(req) {
     else headers.set(key, value);
   }
   return headers;
+}
+
+function isLoadBalancerHealthCheck(req, pathname) {
+  if (pathname !== '/healthz' || req.method !== 'GET' || req.headers['user-agent'] !== 'ELB-HealthChecker/2.0') return false;
+  const host = normalizeHost(req.headers.host);
+  if (!host || isIP(host) !== 4) return false;
+  const octets = host.split('.').map(Number);
+  return octets[0] === 10 ||
+    (octets[0] === 172 && octets[1] >= 16 && octets[1] <= 31) ||
+    (octets[0] === 192 && octets[1] === 168);
 }
 
 export function requestUrl(req, env = {}) {
@@ -56,7 +67,7 @@ export function createHandler({ worker, env, db, auth }) {
     try {
       url = new URL(requestUrl(req, env));
       for(const [key,value] of Object.entries(responseHeaders(url,env.APP_ENV))) res.setHeader(key,value);
-      if (!isPlatformHost(env,req.headers.host || url.host)) {
+      if (!isPlatformHost(env,req.headers.host || url.host) && !isLoadBalancerHealthCheck(req, url.pathname)) {
         const host=normalizeHost(req.headers.host || url.host);
         if(!host) {await writeResponse(res,domainNotFound(),auth);return;}
         const customUrl=new URL(url.pathname+url.search,(env.APP_ENV==='local'?'http://':'https://')+host);
