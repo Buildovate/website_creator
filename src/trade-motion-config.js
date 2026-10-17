@@ -1,8 +1,10 @@
+import nativeSequences from '../public/assets/trade-motion/v3/manifest.json' with {type:'json'};
+import portraitSequence from '../public/assets/trade-motion/v4/manifest.json' with {type:'json'};
 // Reviewed creative configuration. Future trade pages opt in explicitly.
 export const tradeMotion = {
  roofing: {
   label:'Roof', poster:'/assets/trade-motion/v3/desktop-still.webp', mobilePoster:'/assets/trade-motion/v4/mobile-still.webp', opening:'/assets/trade-motion/v3/desktop/000.webp', mobileOpening:'/assets/trade-motion/v4/mobile/000.webp', photo:true,
-  media:{sequences:{desktop:{base:'/assets/trade-motion/v3/desktop/',count:60,width:1440,height:810},mobile:{base:'/assets/trade-motion/v4/mobile/',count:40,width:720,height:1280}},foreground:'/assets/trade-motion/roofing-house-cutout.webp'},
+  media:{nativeVideo:true,nativeTimes:Object.fromEntries(nativeSequences.map(s=>[s.mode,s.files.map(f=>f.time)])),nativeCrops:portraitSequence.frames.map(f=>f.crop),sequences:{desktop:{base:'/assets/trade-motion/v3/desktop/',count:60,width:1920,height:1080},mobile:{base:'/assets/trade-motion/v4/mobile/',count:40,width:1080,height:1920}},foreground:'/assets/trade-motion/roofing-house-cutout.webp'},
   // Normalized scroll time and shared camera transform. Anchors live in scene space.
   camera:[{t:0,x:0,y:380,scale:.62},{t:.22,x:-25,y:240,scale:.8},{t:.5,x:-60,y:80,scale:1},{t:.76,x:-110,y:-55,scale:1.28},{t:1,x:0,y:0,scale:1}],
   mobileChapters:['Above the neighborhood','Toward the roof','At the roofline','Your home in view','A closer look at home'],

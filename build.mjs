@@ -6,7 +6,7 @@ import {build} from 'esbuild';
 import {mkdir,cp,rm,readFile,writeFile} from 'node:fs/promises';
 await rm('dist',{recursive:true,force:true});
 await mkdir('dist/server',{recursive:true});await mkdir('dist/client',{recursive:true});
-await cp('public','dist/client',{recursive:true});
+await cp('public','dist/client',{recursive:true,filter:file=>!(process.env.TEMPLATE_MEDIA_EXTERNAL==='1'&&/\.(?:webp|avif|png|jpe?g|gif|mp4|webm|mov)$/i.test(file))});
 await build({entryPoints:['src/auth/index.ts'],outfile:'dist/auth/index.js',bundle:true,packages:'external',format:'esm',platform:'node',target:'node22'});
 await build({entryPoints:['src/client/auth/bridge.ts'],outfile:'dist/client/auth-bridge.js',bundle:true,format:'iife',globalName:'BuildovateAuth',platform:'browser',target:'es2022'});
 await build({entryPoints:['src/client/auth/login.ts'],outfile:'dist/client/auth-login.js',bundle:true,format:'iife',platform:'browser',target:'es2022'});

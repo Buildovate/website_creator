@@ -1,0 +1,332 @@
+{
+  "originalInventory": 820,
+  "missingOriginals": [],
+  "logicalMedia": 787,
+  "videos": 67,
+  "stills": 720,
+  "sourceLimitedVideos": [
+    {
+      "path": "/assets/build-films/electrical.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/fencing.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/flooring.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/garage-doors.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/general-contractors.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/hvac.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/landscaping.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/painting.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/patios.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/pest-control.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/plumbing.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/build-films/roofing.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/electrical.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/fencing.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/flooring.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/garage-doors.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/general-contractors.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/hvac.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/landscaping.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/painting.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/patios.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/pest-control.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/plumbing.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/craft-films/roofing.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/domain-guides/cloudflare-txt-guide.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/domain-guides/godaddy-txt-guide.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/domain-guides/namecheap-txt-guide.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/domain-guides/squarespace-txt-guide.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/domain-guides/wix-txt-guide.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/electrical-story.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/electrical-transformation.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/general-contractors-story.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/general-contractors-transformation.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/hvac-story.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/hvac-transformation.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/landscaping-story.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/landscaping-transformation.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/patios-story.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/patios-transformation.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/plumbing-story.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/plumbing-transformation.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/roofing-story.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/films/roofing-transformation.mp4",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "path": "/assets/hero.mp4",
+      "width": 1440,
+      "height": 810
+    },
+    {
+      "path": "/assets/purchase-journey.mp4",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "lighthouse": {
+    "before": {
+      "score": 72,
+      "lcp": 6180.9933,
+      "fcp": 3031.246800000001,
+      "tbt": 0,
+      "cls": 0.01613599689482762,
+      "speedIndex": 3031.246800000001
+    },
+    "after": {
+      "score": 73,
+      "lcp": 5953.650649999999,
+      "fcp": 3028.4283731009127,
+      "tbt": 0,
+      "cls": 0.01613599689482762,
+      "speedIndex": 3028.4283731009127
+    },
+    "afterDelivery": "preview CloudFront",
+    "runs": [
+      {
+        "run": 1,
+        "score": 71,
+        "lcp": 5958.166435284398,
+        "fcp": 3028.4283731009127,
+        "tbt": 152,
+        "cls": 0.01613599689482762,
+        "speedIndex": 3028.4283731009127,
+        "formFactor": "mobile",
+        "throttling": "simulate"
+      },
+      {
+        "run": 2,
+        "score": 73,
+        "lcp": 5953.650649999999,
+        "fcp": 3024.5576999999994,
+        "tbt": 0,
+        "cls": 0.01613599689482762,
+        "speedIndex": 3024.5576999999994,
+        "formFactor": "mobile",
+        "throttling": "simulate"
+      },
+      {
+        "run": 3,
+        "score": 73,
+        "lcp": 5860.68485,
+        "fcp": 3038.3013,
+        "tbt": 0,
+        "cls": 0.01613599689482762,
+        "speedIndex": 3038.3013,
+        "formFactor": "mobile",
+        "throttling": "simulate"
+      }
+    ],
+    "cdnNetwork": [
+      {
+        "run": 1,
+        "requests": 3,
+        "transferBytes": 6403707,
+        "statusCodes": [
+          200,
+          206
+        ]
+      },
+      {
+        "run": 2,
+        "requests": 3,
+        "transferBytes": 6407086,
+        "statusCodes": [
+          200,
+          206
+        ]
+      },
+      {
+        "run": 3,
+        "requests": 3,
+        "transferBytes": 6403629,
+        "statusCodes": [
+          200,
+          206
+        ]
+      }
+    ]
+  },
+  "comparisons": [
+    "comparison-roofing-1440-1x.png",
+    "comparison-roofing-1440-1x-crop.png",
+    "comparison-roofing-1440-2x.png",
+    "comparison-roofing-1440-2x-crop.png",
+    "comparison-roofing-390-3x.png",
+    "comparison-roofing-390-3x-crop.png"
+  ],
+  "sameScrollAndFrame": true,
+  "applicationDeployed": false,
+  "qaGateClear": false,
+  "borderlines": {
+    "rejected": 70,
+    "open": 70
+  }
+}

@@ -10,17 +10,18 @@
  const c=JSON.parse(root.querySelector('[data-motion-config]').textContent),stage=root.querySelector('.tm-stage'),media=root.querySelector('.tm-media');
  const reduce=matchMedia('(prefers-reduced-motion: reduce)'),mobile=matchMedia('(max-width: 700px)');
  const clamp=n=>Math.max(0,Math.min(1,n)),toggle=root.querySelector('[data-motion-toggle]');
- let paused=false,frame=0,inView=true,progress=0,loaded=false,generation=0;
+ let paused=false,frame=0,inView=false,progress=0,loaded=false,generation=0;
  let canvas=null,ctx=null,config=null,abort=null,blobs=[],bitmaps=new Map(),decoding=false,shownIndex=-1,lastDraw=0,landingOpacity=0,readyThrough=-1,targetIndex=0;
+ const native=root.querySelector('[data-native-decoder]');let nativeHealthy=false,nativeStarted=false,resizeDirty=false;
  const frameURL=i=>i===config.count-1?(mobile.matches?c.mobilePoster:c.poster):config.base+String(i).padStart(3,'0')+'.webp';
- function clearMedia(){generation++;abort?.abort();bitmaps.forEach(b=>b.close());bitmaps.clear();blobs=[];media.replaceChildren();canvas=null;loaded=false;decoding=false;shownIndex=-1;readyThrough=-1;targetIndex=0;lastDraw=0;ctx=null;root.classList.remove('tm-has-media');}
+ function clearMedia(){generation++;if(native){native.onloadeddata=null;native.onerror=null;native.querySelectorAll('source').forEach(s=>s.removeAttribute('src'));native.load()}nativeStarted=false;nativeHealthy=false;abort?.abort();bitmaps.forEach(b=>b.close());bitmaps.clear();blobs=[];media.replaceChildren();canvas=null;loaded=false;decoding=false;shownIndex=-1;readyThrough=-1;targetIndex=0;lastDraw=0;ctx=null;root._warmNative=null;root.classList.remove('tm-has-media');}
  async function paint(index){
-  if(decoding||!blobs[index]||!ctx)return;
+  if(decoding||(!blobs[index]&&!nativeHealthy)||!ctx)return;
   const token=generation;decoding=true;
-  try{let bitmap=bitmaps.get(index);if(!bitmap){bitmap=await createImageBitmap(blobs[index]);if(token!==generation){bitmap.close();return;}bitmaps.set(index,bitmap);}
+  try{if(nativeHealthy&&index<config.count-2){if(native.readyState<2)return;const time=c.media.nativeTimes[mobile.matches?'mobile':'desktop'][index];if(Math.abs(native.currentTime-time)>.002)await new Promise((resolve,reject)=>{const done=()=>{cleanup();resolve()},fail=()=>{cleanup();reject(Error('Native decode unavailable'))},cleanup=()=>{native.removeEventListener('seeked',done);native.removeEventListener('error',fail);abort.signal.removeEventListener('abort',fail)};native.addEventListener('seeked',done,{once:true});native.addEventListener('error',fail,{once:true});abort.signal.addEventListener('abort',fail,{once:true});native.currentTime=time});if(token!==generation)return;const crop=mobile.matches?c.media.nativeCrops[index]:null,ratio=native.videoWidth/720;const source=crop?{x:crop.left*ratio,y:crop.top*ratio,w:crop.width*ratio,h:crop.height*ratio}:{x:0,y:0,w:native.videoWidth,h:native.videoHeight};const scale=Math.max(canvas.width/source.w,canvas.height/source.h),w=source.w*scale,h=source.h*scale;ctx.drawImage(native,source.x,source.y,source.w,source.h,(canvas.width-w)/2,(canvas.height-h)/2,w,h);lastDraw=performance.now();shownIndex=index;loaded=true;resizeDirty=false;root.dataset.frame=String(index);root.classList.add('tm-has-media');return;}let bitmap=bitmaps.get(index);if(!bitmap){bitmap=await createImageBitmap(blobs[index]);if(token!==generation){bitmap.close();return;}bitmaps.set(index,bitmap);}
    // A decode completing after direction reversal must not take one stale step.
-   if(shownIndex>=0&&Math.sign(index-shownIndex)!==Math.sign(targetIndex-shownIndex))return;
-   ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);lastDraw=performance.now();shownIndex=index;loaded=true;root.dataset.frame=String(index);root.classList.add('tm-has-media');
+   if(shownIndex>=0&&index!==shownIndex&&Math.sign(index-shownIndex)!==Math.sign(targetIndex-shownIndex))return;
+   const scale=Math.max(canvas.width/bitmap.width,canvas.height/bitmap.height),w=bitmap.width*scale,h=bitmap.height*scale;ctx.drawImage(bitmap,(canvas.width-w)/2,(canvas.height-h)/2,w,h);resizeDirty=false;lastDraw=performance.now();shownIndex=index;loaded=true;root.dataset.frame=String(index);root.classList.add('tm-has-media');
    // Keep compressed frames; cap decoded memory to eight frames on either device.
    while(bitmaps.size>8){const key=[...bitmaps.keys()].find(k=>k!==index);bitmaps.get(key).close();bitmaps.delete(key);}
   }catch{blobs[index]=null;}finally{if(token===generation){decoding=false;schedule();}}
@@ -29,16 +30,19 @@
   const diagram=document.querySelector('.tm-diagram svg');if(diagram)diagram.setAttribute('viewBox',mobile.matches?'230 210 675 510':'0 0 1100 760');
   if(reduce.matches){schedule();return;}
   config=c.media.sequences?.[mobile.matches?'mobile':'desktop'];if(!config){schedule();return;}
-  canvas=document.createElement('canvas');canvas.width=config.width;canvas.height=config.height;canvas.setAttribute('aria-hidden','true');ctx=canvas.getContext('2d',{alpha:false});media.append(canvas);
+  canvas=document.createElement('canvas');const box=stage.getBoundingClientRect(),dpr=devicePixelRatio||1;canvas.width=Math.round(box.width*dpr);canvas.height=Math.round(box.height*dpr);canvas.setAttribute('aria-hidden','true');ctx=canvas.getContext('2d',{alpha:false});media.append(canvas);
   abort=new AbortController();const signal=abort.signal,token=generation;
-  const order=Array.from({length:config.count},(_,i)=>i);
+  nativeHealthy=!!native&&!!c.media.nativeVideo;root.dataset.mediaDelivery=nativeHealthy?'native-video':'frames';
+  const order=Array.from({length:config.count},(_,i)=>i).filter(i=>!nativeHealthy||i>=config.count-2);
+  function startNative(){if(!nativeHealthy||nativeStarted||!inView)return;nativeStarted=true;native.onloadeddata=()=>{if(token!==generation)return;readyThrough=config.count-1;schedule()};native.onerror=()=>{if(token!==generation)return;nativeHealthy=false;root.dataset.mediaDelivery='frames';readyThrough=-1;while(blobs[readyThrough+1])readyThrough++;order.push(...Array.from({length:config.count-2},(_,i)=>i));worker();worker()};native.querySelectorAll('source[data-src]').forEach(s=>s.src=s.dataset.src);native.load()}
+  root._warmNative=startNative;
   async function worker(){while(order.length&&token===generation){
    if(document.hidden||!inView){await new Promise(r=>setTimeout(r,250));continue;}
    const index=order.shift();try{const r=await fetch(frameURL(index),{signal,priority:'low'});if(!r.ok)throw Error('Frame unavailable');const blob=await r.blob();if(token!==generation)return;blobs[index]=blob;while(blobs[readyThrough+1])readyThrough++;root.dataset.readyThrough=String(readyThrough);root.dataset.framesLoaded=String(blobs.filter(Boolean).length);schedule();}catch(e){if(e.name==='AbortError')return;root.dataset.frameError='true';}
    await new Promise(r=>setTimeout(r,35));
   }}
   // Let the server-rendered still paint before starting progressive requests.
-  requestAnimationFrame(()=>requestAnimationFrame(()=>{if(token===generation){worker();worker();}}));schedule();
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{if(token===generation){startNative();worker();worker();}}));schedule();
  }
  function updateLanding(amount){
   root.style.setProperty('--landing-opacity',amount);root.classList.toggle('tm-landed',amount>.999);
@@ -51,6 +55,7 @@
  function draw(now){frame=0;
   const rect=root.getBoundingClientRect(),h=stage.clientHeight,header=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--tp-header-height'))||0;
   if(reduce.matches)progress=1;else if(!paused)progress=clamp((header-rect.top)/Math.max(1,root.offsetHeight-h));
+  root._warmNative?.();if(resizeDirty&&shownIndex>=0)paint(shownIndex);
   const active=!paused&&inView&&!document.hidden&&!reduce.matches;
   if(config&&active){
    targetIndex=Math.min(Math.round(progress*(config.count-1)),readyThrough);
@@ -85,5 +90,6 @@
  // Only existing source-backed reviews or explicitly labeled sales samples are moved.
  function reviewMotion(){document.querySelectorAll('.tp-reviews .tp-sample-reviews,.tp-reviews .review-grid:not(.source-review-grid)').forEach(track=>{if(track.dataset.motionReady||track.children.length<2)return;track.dataset.motionReady='true';const wrap=document.createElement('div');wrap.className='tm-review-window';track.before(wrap);wrap.append(track);track.classList.add('tm-review-track');const originals=[...track.children];originals.forEach(card=>{const copy=card.cloneNode(true);copy.classList.add('tm-review-copy');copy.setAttribute('aria-hidden','true');copy.inert=true;copy.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));wrap.firstChild.append(copy)});const button=document.createElement('button');button.type='button';button.className='tm-review-toggle';button.textContent='Pause reviews';button.setAttribute('aria-pressed','false');wrap.before(button);button.addEventListener('click',()=>{const stopped=wrap.classList.toggle('tm-review-paused');button.textContent=stopped?'Resume reviews':'Pause reviews';button.setAttribute('aria-pressed',String(stopped))});new IntersectionObserver(([entry])=>{track.style.animationPlayState=entry.isIntersecting?'':'paused'}).observe(wrap);});}
  reviewMotion();const reviewTarget=document.querySelector('[data-review-results]');if(reviewTarget)new MutationObserver(reviewMotion).observe(reviewTarget,{childList:true});
+ new ResizeObserver(()=>{if(!canvas||!ctx)return;const box=stage.getBoundingClientRect(),dpr=devicePixelRatio||1,w=Math.round(box.width*dpr),h=Math.round(box.height*dpr);if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;resizeDirty=true;schedule()}}).observe(stage);
  setup();
 })();

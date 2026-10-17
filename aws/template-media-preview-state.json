@@ -1,0 +1,19 @@
+{
+  "environment": "preview",
+  "account": "846588355042",
+  "bucket": "buildovate-website-creator-preview",
+  "region": "us-west-1",
+  "origin": "https://d3faov654g66qi.cloudfront.net",
+  "distributionId": "E22LU0VBAFNGDJ",
+  "originAccessControlId": "E22JMGJ3RGBD9M",
+  "cachePolicyId": "bde55d88-6a96-421d-80b4-9df10da02451",
+  "responseHeadersPolicyId": "b9571982-2bb2-4b7b-bc74-4dbfa47913a2",
+  "prefix": "assets/template-media/",
+  "blockPublicAccess": {
+    "BlockPublicAcls": true,
+    "IgnorePublicAcls": true,
+    "BlockPublicPolicy": true,
+    "RestrictPublicBuckets": true
+  },
+  "applicationDeployed": false
+}

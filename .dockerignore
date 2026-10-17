@@ -9,3 +9,14 @@ tests
 *.md
 # Local QA captures, snapshots and push evidence are not runtime inputs.
 docs/build-evidence
+
+# Original media is hydrated for QA and served by the template CDN, never Docker.
+public/**/*.webp
+public/**/*.avif
+public/**/*.png
+public/**/*.jpg
+public/**/*.jpeg
+public/**/*.gif
+public/**/*.mp4
+public/**/*.webm
+public/**/*.mov

@@ -1,5 +1,7 @@
 # Module: design
 
+Template media quality is a floor, never a speed tradeoff: native originals, CRF <=20 / scrub GOP <=6, WebP >=80, source-backed hero variants and portrait sources where available. Shared delivery changes URL/loading only and preserves copy, layout, prices and saved approved asset choices. See [MEDIA-RESTORE](../media/MEDIA-RESTORE.md).
+
 ## Purpose
 Chooses how a contractor site looks: trade kits, layout compositions, cinematic films, and saved design recipes. It does not invent business facts.
 

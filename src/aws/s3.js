@@ -1,3 +1,7 @@
+import {createHash} from 'node:crypto';
+import {mediaByPath,mediaByHash,hashedMediaPath,mediaOrigin} from '../template-media-delivery.js';
+import {createReadStream} from 'node:fs';
+import {Readable} from 'node:stream';
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 
@@ -11,6 +15,7 @@ const TYPES = {
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
   '.webp': 'image/webp',
+  '.avif': 'image/avif',
   '.gif': 'image/gif',
   '.mp4': 'video/mp4',
   '.webm': 'video/webm',
@@ -140,20 +145,31 @@ export async function createS3Client(env) {
   return new S3Client(s3ClientConfig(env));
 }
 
-export function createAssets(root) {
+export function createAssets(root,{templateMediaOrigin='',fallbackRoot=''}={}) {
+  const cdn=mediaOrigin(templateMediaOrigin);
   const base = path.resolve(root);
   return {
     async fetch(request) {
       const url = new URL(request.url);
       let pathname = decodeURIComponent(url.pathname);
+      const entry=mediaByPath.get(pathname)||mediaByHash.get(pathname),hashed=mediaByHash.has(pathname);
+      if(entry&&cdn&&url.hostname==='review.local'){
+        const result=await fetch(cdn+hashedMediaPath(entry),{method:request.method==='HEAD'?'HEAD':'GET',redirect:'error'});
+        if(!result.ok)return new Response(null,{status:result.status});
+        if(request.method==='HEAD')return new Response(null,{headers:result.headers});
+        const bytes=Buffer.from(await result.arrayBuffer());if(createHash('sha256').update(bytes).digest('hex')!==entry.sha256)throw Error('Template media integrity failure.');
+        return new Response(bytes,{headers:{'content-type':result.headers.get('content-type')||'application/octet-stream','cache-control':'private, no-store'}});
+      }
+      if(entry&&cdn){return new Response(null,{status:308,headers:{location:cdn+hashedMediaPath(entry),'cache-control':hashed?'public, max-age=31536000, immutable':'public, max-age=300','cross-origin-resource-policy':'cross-origin'}})}
+      if(hashed)pathname=entry.path;
       if (pathname.endsWith('/')) pathname += 'index.html';
-      const file = path.resolve(base, `.${pathname}`);
+      let file = path.resolve(base, `.${pathname}`);
       if (file !== base && !file.startsWith(base + path.sep)) return new Response('Not found', { status: 404 });
       try {
-        const info = await stat(file);
+        let info;try{info=await stat(file)}catch(error){if(!entry||!fallbackRoot)throw error;file=path.resolve(fallbackRoot,`.${entry.path}`);info=await stat(file)}
         if (!info.isFile()) return new Response('Not found', { status: 404 });
         const type = TYPES[path.extname(file).toLowerCase()] || 'application/octet-stream';
-        const headers = {'content-type':type,'cache-control':'public, max-age=300','x-content-type-options':'nosniff','accept-ranges':'bytes','content-length':String(info.size)};
+        const headers = {'content-type':type,'cache-control':hashed?'public, max-age=31536000, immutable':'public, max-age=300','x-content-type-options':'nosniff','accept-ranges':'bytes','content-length':String(info.size)};
         // Scroll-controlled MP4s need byte-range responses to seek reliably.
         if(request.method==='HEAD')return new Response(null,{headers});
         const range=request.headers.get('range');
@@ -164,10 +180,9 @@ export function createAssets(root) {
           if(!match[1])start=Math.max(0,info.size-Number(match[2]));
           else {start=Number(match[1]);if(match[2])end=Math.min(end,Number(match[2]));}
           if(!Number.isSafeInteger(start)||!Number.isSafeInteger(end)||start<0||start>=info.size||end<start)return new Response(null,{status:416,headers:{'content-range':'bytes */'+info.size}});
-          const data=await readFile(file);
-          return new Response(data.subarray(start,end+1),{status:206,headers:{...headers,'content-length':String(end-start+1),'content-range':`bytes ${start}-${end}/${info.size}`}});
+          return new Response(Readable.toWeb(createReadStream(file,{start,end})),{status:206,headers:{...headers,'content-length':String(end-start+1),'content-range':`bytes ${start}-${end}/${info.size}`}});
         }
-        return new Response(await readFile(file),{headers});
+        return new Response(Readable.toWeb(createReadStream(file)),{headers});
       } catch {
         return new Response('Not found', { status: 404 });
       }

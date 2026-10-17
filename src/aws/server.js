@@ -193,7 +193,7 @@ async function writeResponse(res, response, auth) {
     return;
   }
   await new Promise((resolve, reject) => {
-    Readable.fromWeb(response.body).pipe(res).on('finish', resolve).on('error', reject);
+    const body=Readable.fromWeb(response.body);res.once('close',()=>{body.destroy();resolve()});body.on('error',reject);body.pipe(res).on('finish', resolve).on('error', reject);
   });
 }
 
@@ -211,7 +211,7 @@ export async function createRuntime(options = {}) {
   await backfillServicePageSettings(db);
   const bucket = options.bucket || await createBucket(env);
   const assetsRoot = env.ASSETS_ROOT || (existsSync('dist/client') ? 'dist/client' : 'public');
-  const runtimeEnv = { ...env, GEOIP_LOOKUP:await createGeoLookup(env), DB: db, BUCKET: bucket, ASSETS: createAssets(path.resolve(assetsRoot)) };
+  const runtimeEnv = { ...env, GEOIP_LOOKUP:await createGeoLookup(env), DB: db, BUCKET: bucket, ASSETS: createAssets(path.resolve(assetsRoot),{templateMediaOrigin:env.TEMPLATE_MEDIA_ORIGIN,fallbackRoot:env.APP_ENV==='local'?path.resolve('public'):''}) };
   if(options.domainChecks)runtimeEnv.DOMAIN_CHECKS=options.domainChecks;
   if(options.domainProvisioner)runtimeEnv.DOMAIN_PROVISIONER=options.domainProvisioner;
   if(customDomainsLive(runtimeEnv)) {

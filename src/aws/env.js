@@ -71,6 +71,7 @@ export function loadEnv(source = process.env) {
     BUCKET_DRIVER: source.BUCKET_DRIVER || '',
     MIGRATE_ON_BOOT: source.MIGRATE_ON_BOOT || '',
     ASSETS_ROOT: source.ASSETS_ROOT || '',
+    TEMPLATE_MEDIA_ORIGIN: source.TEMPLATE_MEDIA_ORIGIN || '',
     GEOIP_DB_PATH: source.GEOIP_DB_PATH || '',
     GEOIP_TRUSTED_PROXIES: source.GEOIP_TRUSTED_PROXIES || '',
   };

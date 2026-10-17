@@ -67,6 +67,8 @@ services:
       - aws/env/docker.env.example
       - path: aws/env/docker.env
         required: false
+    volumes:
+      - ./public/assets:/app/public/assets:ro
     ports:
       - "127.0.0.1:8080:8080"
     depends_on:

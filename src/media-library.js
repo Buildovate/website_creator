@@ -30,13 +30,14 @@ export function selectMedia(s,siteId,{existing=[],mediaOverrides,actor=null,cata
 }
 // Revalidation fails closed. A pending/revoked clip can only show its still-approved
 // saved poster. No catalog update silently substitutes another asset on replay.
+const sameEncoding=(asset,pick)=>!!asset&&!!pick&&(asset.sha256===pick.sha256&&asset.url===pick.url||(asset.encodingRevisions||[]).some(x=>x.sha256===pick.sha256&&x.url===pick.url));
 export function resolveMedia(pick,photos=[],c=catalog){
  if(pick?.ownedPhotoId&&photos.some(x=>x.id===pick.ownedPhotoId))return {url:'/media/'+pick.ownedPhotoId,kind:'still',owned:true,treatment:{type:'none'}};
  if(pick?.kind==='owned')return photos.some(x=>x.id===pick.photoId)?{url:'/media/'+pick.photoId,kind:'still',owned:true,treatment:{type:'none'}}:null;
  if(pick?.kind!=='library')return null;
  const a=approvedAsset(pick.assetId,c),p=approvedAsset(pick.poster?.assetId,c);
- const poster=p?.kind==='still'&&p.sha256===pick.poster.sha256&&p.url===pick.poster.url?p.url:null;
- if(a&&a.sha256===pick.sha256&&a.url===pick.url&&(a.kind!=='clip'||poster))return {url:a.url,kind:a.kind,poster:poster||a.url,treatment:a.mayBeRecolored?pick.treatment:{type:'none'}};
+ const poster=p?.kind==='still'&&sameEncoding(p,pick.poster)?p.url:null;
+ if(a&&sameEncoding(a,pick)&&(a.kind!=='clip'||poster))return {url:a.url,kind:a.kind,poster:poster||a.url,treatment:a.mayBeRecolored?pick.treatment:{type:'none'}};
  return poster?{url:poster,poster,kind:'still',treatment:{type:'none'},fallback:'clip pending or unavailable'}:null;
 }
 
