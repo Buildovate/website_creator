@@ -1,5 +1,9 @@
 # BUILD BACKLOG
 
+## PREVIEW-REAL-PAGES — current explicit ticket
+
+Implementation complete on `fix/preview-real-pages`; preview/core verification passed, broader legacy publication acceptance blocked by the pre-existing media prerequisites recorded in [KNOWN-FAILURES](docs/release/KNOWN-FAILURES.md). Shared live renderers replace sub-page stubs across all 17 kits, with retained composer navigation/queries and no media, encoding, live copy or price changes. [Renderer inventory and local proof](docs/release/PREVIEW-REAL-PAGES.md). Commit/push/PR into staging are explicitly authorized for this ticket; stop at the PR, without merge/deployment. Next dependency is PR #9's media restoration and a rerun of the blocked legacy suites, not a new design ticket. The 70 Borderlines remain REJECTED/OPEN and `qaGateClear=false`.
+
 Completed: **#001–#015, #010A, #007A, #004B–#004F, #004F-v2, #004L, #004L-v2, #004W and #004W-v2** (whole-section integration gaps remain in BUILD-STATUS; #011 real K23 content remains Needs review). **#004G-v3: Done, supplied portrait and desktop frame sequences verified.** #027A additions are queued only and #027A remains Not started. #004H-finish, #004I, #004I-v2, #004I-v3 and #004I-v4 are Done with passing performance, accessibility and regression gates. Next queued: **#015F — Contractor forms**; #016 was explicitly selected and completed locally. Both #016 and #017 are Done locally; #018 and #019 are also Done locally and the next numbered ticket is #023A. #015G was explicitly selected and completed locally with disconnected live-import gates. #015E, #015D, #015C, #015B and #015-v2 are Done. #015A automated acceptance is complete; Joe’s real-iPhone camera check remains pending. No ticket is currently marked In progress; #015F remains Not started; #016 is Done locally; #015G is complete locally with live-import gates below. Existing ticket numbers are unchanged.
 
 ## Session contract

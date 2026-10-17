@@ -130,7 +130,7 @@ function content(s,kind,city,slug,preview,projects){
  }
 }
 function licenseText(s){const state=normalizePlatform(s.platform).legal.licenseState;return s.license?`${state?state+' ':''}License ${s.license}.`:'Contractor license details will be supplied by the business.'}
-function layout(s,slug,kind,city,preview,origin,projects){
+export function renderCoreSitePage(s,slug,kind,city,preview,origin,projects=[]){
  const data=content(s,kind,city,slug,preview,projects),base='/s/'+slug,path=base+'/'+kind+(city?'/'+serviceSlug(city):''),canonical=origin+path,place=primaryCity(s),title=data.seoTitle||`${kind==='areas'&&city?city+' '+s.trade:kind[0].toUpperCase()+kind.slice(1)}${place&&!city?' in '+place:''} | ${s.name}`,description=data.description||`${data.lead} Learn more from ${s.name}.`,crumbs=[{name:'Home',item:origin+base},{name:kind[0].toUpperCase()+kind.slice(1),item:origin+base+'/'+kind}];
  if(city)crumbs.push({name:city,item:canonical});
  const schema=preview?[]:[{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:crumbs.map((x,i)=>({'@type':'ListItem',position:i+1,name:x.name,item:x.item}))},{'@context':'https://schema.org','@type':'LocalBusiness','@id':origin+base+'#business',name:s.name,url:origin+base,telephone:s.phone||undefined,address:s.address||undefined,areaServed:city||place||undefined}];
@@ -154,5 +154,5 @@ export async function coreSitePage(req,env,url){
  must(!citySlug||city,'Page not found.',404);
  if(kind==='reviews'&&!preview)must(s.reviews?.confirmed&&(s.reviews.googleUrl||s.reviews.yelpUrl),'Reviews not available.',404);
  const projects=demoProjects(tenant,await all(env,'SELECT id,published FROM projects WHERE tenant_id=? AND published IS NOT NULL',tenant.id),preview);
- return layout(s,slug,kind,city,preview,url.origin,projects);
+ return renderCoreSitePage(s,slug,kind,city,preview,url.origin,projects);
 }
