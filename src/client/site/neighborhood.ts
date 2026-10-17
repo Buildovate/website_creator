@@ -10,5 +10,7 @@ document.querySelectorAll<HTMLElement>('[data-neighborhood]').forEach(banner=>{
  };
  form.addEventListener('submit',event=>{event.preventDefault();const city=input.value.trim().slice(0,100);if(!city)return;chosen=true;render(city,true);banner.querySelector('details')!.open=false;});
  banner.querySelector('[data-city-clear]')!.addEventListener('click',()=>{chosen=true;input.value='';heading.textContent='Good work starts close to home.';description.textContent='Tell us where you’re planning your project. Let’s explore what’s possible in your neighborhood.';note.textContent='City cleared. No city choice is saved after you leave this page.';reviews.hidden=true;reviews.removeAttribute('href');});
+ // Library samples have no tenant endpoint; manual city selection still works.
+ if(banner.closest('[data-design-preview]'))return;
  fetch('/api/public/'+encodeURIComponent(banner.dataset.slug!)+'/location'+(banner.dataset.preview==='true'?'?preview=1':''),{credentials:'same-origin',signal:AbortSignal.timeout(5000)}).then(async response=>{if(!response.ok)throw Error();data=await response.json();if(chosen){if(input.value)render(input.value,true);return;}if(data?.location?.city)render(data.location.city);else note.textContent='Your city could not be determined automatically. Choose your project city.';}).catch(()=>{if(!chosen)note.textContent='Choose your project city to personalize this section.';});
 });

@@ -1,63 +1,119 @@
-import {e} from './core.js';
-import {websiteHeader,websiteFooter} from './site-polish.js';
+import {e,DEFAULT,identity,access,must} from './core.js';
+import {kits,kitDefaults,effectKeys} from './design-kits.js';
+import {cleanDesign} from './design-variant.js';
+import {cleanJourney} from './platform/conversion.ts';
+import {publicLegalSettings} from './platform/legal-policy.ts';
+import {websiteHeader,websiteFooter,renderLegalPage} from './site-polish.js';
+import {renderCoreSitePage} from './core-site-pages.js';
+import {renderServicePage,renderFAQPage,renderAboutPage} from './website-pages.js';
+import {renderConstitutionPage} from './constitution-pages.js';
 import {visibleServicePages,serviceSlug} from './service-registry.js';
-import {serviceCardBlurb} from './service-content.js';
-import art from '../public/service-art.json' with {type:'json'};
-import media from '../public/service-media.json' with {type:'json'};
+import {roofingCityEditorial} from './city-editorial.js';
+import {showcasePage} from './showcase.js';
+import {pricingPage} from './pricing.js';
+import {renderBlogPage} from './blog.js';
+import {applySiteStyle} from './site-style-render.js';
+import {STYLE_IDS} from './design-styles.js';
+import specialties from '../public/trade-library.json' with {type:'json'};
+import faqContent from '../public/faq-content.json' with {type:'json'};
 
-const badge='<span class="core-sample">Sample</span>';
-const cities=['North Ridge','Oak Valley','Westbrook'];
-const questions=trade=>[
- ['How do I start a '+trade.toLowerCase()+' project?','Share the property location, what you want to change, photos if available, and the timing you have in mind. A contractor can then discuss the scope with you.'],
- ['What should I compare in an estimate?','Ask what work, materials, preparation, cleanup, timing and warranty terms are included. Confirm the written scope before work begins.'],
- ['Can I ask about payment options?','Yes. Compare a written project price with any available financing terms, including APR, fees, total payments and eligibility.']
+const layouts={immersive:'cinematic',editorial:'editorial',studio:'blueprint'};
+const coreKinds=new Set(['services','areas','about','reviews','faq','contact','legal']);
+const sampleCities=Object.keys(roofingCityEditorial);
+const previewSlug='design-library-sample';
+const previewPosts=trade=>[
+ {slug:'start-with-a-clear-brief',title:'Your '+trade.toLowerCase()+' project starts with a clear brief',category:'Planning',excerpt:'A few useful details make the first conversation easier.',body:'Start with what you want to change, the location of the work, and the priorities that matter most to you. Take a few clear photos and note any questions you want the contractor to answer.\n\nAsk about the proposed scope, access to the property, material options and how the next steps will be confirmed. Your contractor can explain which choices fit the specific project.'},
+ {slug:'compare-the-scope',title:'Look beyond the headline price',category:'Project guides',excerpt:'Use the scope of work to understand what is included.',body:'When reviewing an estimate, look for a clear description of the work, the materials and the responsibilities of each party. Ask about preparation, finishing details and cleanup.\n\nIf something is unclear, discuss it before work begins. A shared understanding of the scope helps you compare options and make a considered decision.'}
 ];
 
-export function designPreviewPage(s,{base,path}){
- const root=base.split('?')[0],query=base.includes('?')?'?'+base.split('?')[1]:'',link=part=>root+part+query;
- const pages=visibleServicePages(s),first=pages[0],image=name=>art[s.trade]?.[name.toLowerCase()]||'',service=pages.find(p=>p.slug===path.split('/')[2]);
- let title='',eyebrow='',lead='',body='';
- const card=(heading,copy,href='',src='')=>`<article class="core-card">${src?`<img src="${e(src)}" alt="Illustrative ${e(heading.toLowerCase())} imagery" loading="lazy">`:''}${badge}<h3>${e(heading)}</h3><p>${e(copy)}</p>${href?`<a href="${e(href)}">Explore ${e(heading)} →</a>`:''}</article>`;
- const grid=items=>`<div class="core-grid">${items.join('')}</div>`;
- if(path==='/services'){
-  title='Explore our services.';eyebrow='EXPERTISE';lead=`A complete sample service catalog for a ${s.trade.toLowerCase()} website.`;
-  body=grid(pages.map(p=>card(p.serviceName,serviceCardBlurb(s.trade,p.serviceName,''),link('/services/'+p.slug),image(p.serviceName))));
- }else if(service&&path==='/services/'+service.slug){
-  title=service.serviceName+'.';eyebrow='SERVICE DETAIL';lead=`A sample detail page showing how ${service.serviceName.toLowerCase()} can be presented.`;
-  body=`<section class="core-split"><div class="core-photo">${image(service.serviceName)?`<img src="${e(image(service.serviceName))}" alt="Illustrative ${e(service.serviceName.toLowerCase())} work">`:''}${badge}</div><div><h2>Plan the scope together.</h2><p>${e(serviceCardBlurb(s.trade,service.serviceName,''))}</p><p>Real service details, materials, process and project photos can be added when the business confirms them.</p><a class="core-button" href="${e(link('/contact'))}">Discuss this service →</a></div></section><section class="core-section"><h2>Questions to cover.</h2><div class="core-faq">${questions(s.trade).map(([q,a])=>`<details><summary>${e(q)}</summary><p>${e(a)}</p></details>`).join('')}</div></section>`;
- }else if(path==='/areas'){
-  title='Where we work.';eyebrow='SERVICE AREAS';lead='Illustrative area layout. Replace these sample places with confirmed service cities before publishing.';
-  body=grid(cities.map(city=>card(city,`A sample city page for ${s.trade.toLowerCase()} services and local project planning.`,link('/areas/'+serviceSlug(city)))));
- }else if(path.startsWith('/areas/')&&cities.some(city=>serviceSlug(city)===path.slice(7))){
-  const city=cities.find(item=>serviceSlug(item)===path.slice(7));title=`${s.trade} in ${city}.`;eyebrow='SAMPLE CITY PAGE';lead=`An illustrative local page for ${city}. This is not a confirmed service area.`;
-  body=`<section class="core-split"><div><h2>Plan for your property.</h2><p>Tell the team about the building, access, existing condition and project goals. Confirm availability in your actual city before arranging work.</p><a class="core-button" href="${e(link('/contact'))}">Ask about your location →</a></div><div class="core-panel">${badge}<h3>Explore the work.</h3>${pages.slice(0,5).map(p=>`<a href="${e(link('/services/'+p.slug))}">${e(p.serviceName)} →</a>`).join('')}</div></section>`;
- }else if(path==='/about'){
-  title='Meet the business.';eyebrow='ABOUT';lead='A place for the real team, their story and confirmed credentials.';
-  body=`<section class="core-split"><div class="core-photo">${s.trade==='Roofing'?'<img src="/assets/owner-roofing/owner-sample-960.webp" alt="Sample portrait showing owner photo placement">':first&&image(first.serviceName)?`<img src="${e(image(first.serviceName))}" alt="Illustrative ${e(s.trade.toLowerCase())} imagery">`:''}${badge}</div><div><h2>People behind the work.</h2><p>This sample shows where the owner portrait, team story, licenses and verified experience will appear after the business supplies them. No person or credential is claimed here.</p><a class="core-button" href="${e(link('/contact'))}">Start a conversation →</a></div></section>`;
- }else if(path==='/reviews'){
-  title='Hear from homeowners.';eyebrow='REVIEWS';lead='A sample review layout awaiting a connected, confirmed source.';
-  body=grid([card('Customer feedback','The real review source, date, rating and homeowner words will appear here when connected. No customer quote or score is being represented.'),card('Source and context','Reviews can link to their original Google or Yelp source. Only connected, eligible reviews appear on a published site.')]);
- }else if(path==='/faq'){
-  title='Questions, answered.';eyebrow='FAQ';lead=`Common planning questions for a ${s.trade.toLowerCase()} project.`;
-  body=`<section class="core-section"><div class="core-faq">${questions(s.trade).map(([q,a])=>`<details><summary>${e(q)}</summary><p>${e(a)}</p></details>`).join('')}</div></section>`;
- }else if(path==='/contact'){
-  title='Tell us about your project.';eyebrow='CONTACT';lead='This sample form demonstrates the contact page. It cannot send a request.';
-  body=`<section class="core-split"><div><h2>Start with the basics.</h2><p>Describe the work, your location and what matters most. Confirmed business contact details will appear here when supplied.</p></div><form data-preview="true"><label>Your name<input name="name" autocomplete="name"></label><label>Phone number<input name="phone" type="tel" autocomplete="tel"></label><label>Service<select name="service"><option>Choose a service</option>${pages.map(p=>`<option>${e(p.serviceName)}</option>`).join('')}</select></label><label>Project details<textarea name="message" rows="4"></textarea></label><button class="core-button" type="button" disabled>Preview — submission disabled</button></form></section>`;
- }else if(path==='/financing'){
-  title='Plan the payment.';eyebrow='FINANCING';lead='See where confirmed payment programs and lender details would appear.';
-  body=grid([card('Compare the full cost','Sample layout for a written project price, APR, term, fees, monthly payment and total repayment. No lender offer is available in this sample.'),card('Choose after reviewing terms','A live lender application link appears only when a business connects and confirms a program.')]);
- }else if(path==='/promotions'){
-  title='Offers with clear terms.';eyebrow='PROMOTIONS';lead='A sample layout for dated, eligible offers.';
-  body=grid([card('Seasonal offer placement','This is a layout example only. There is no active discount, code, eligibility promise or redemption action.'),card('Read the details','A real published offer would show its service, dates, limitations and redemption terms.')]);
- }else if(path==='/projects'){
-  title='Our work, up close.';eyebrow='PROJECTS';lead='Illustrative project cards show how real work will be presented.';
-  body=grid(pages.slice(0,3).map((p,i)=>card(`${p.serviceName} story ${i+1}`,'Sample project layout. Add the actual scope, location, photos and outcome before publication.',link('/before-after'),image(p.serviceName))));
- }else if(path==='/before-after'){
-  title='See the transformation.';eyebrow='BEFORE & AFTER';lead='A sample comparison layout awaiting photographs from completed work.';
-  body=`<section class="core-split">${['Before','After'].map((label,i)=>`<div class="core-panel">${media[s.trade]?.[first?.serviceName.toLowerCase()]?.[i?'process':'scope']?`<img src="${e(media[s.trade][first.serviceName.toLowerCase()][i?'process':'scope'])}" alt="Illustrative ${e(s.trade.toLowerCase())} work detail" loading="lazy" style="width:100%;height:280px;object-fit:cover">`:''}${badge}<h2>${label}</h2><p>Sample image placement only. These images do not document one completed job or a real transformation.</p></div>`).join('')}</section><a class="core-button" href="${e(link('/projects'))}">Explore project layouts →</a>`;
- }else if(path==='/legal'){
-  title='Website information.';eyebrow='LEGAL';lead='Sample legal page links for review before publication.';
-  body=grid([card('Privacy policy','Review how inquiry data and connected services are handled.',link('/legal/privacy')),card('Website terms','Review the terms governing project information and estimates.',link('/legal/terms'))]);
+// Isolated library data: never saved to a tenant or copied into a published snapshot.
+export function designPreviewSettings(kitId,layout,params=new URLSearchParams()){
+ const kit=kits[kitId];must(kit,'Design not found.',404);
+ let journey;try{journey=cleanJourney(params.get('journey'),kit.trade)}catch(error){must(false,error.message)}
+ const name=kitId==='roofing'?'Ridgeline Roofing':kit.name.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase())+' '+kit.trade;
+ const values={name,journey,template:layouts[layout],siteStyle:STYLE_IDS.includes(params.get('siteStyle'))?params.get('siteStyle'):'current',color:/^#[a-f0-9]{6}$/i.test(params.get('color')||'')?params.get('color'):kit.color,
+  design:cleanDesign(Object.fromEntries(params)),effects:Object.fromEntries(effectKeys.map(key=>[key,params.get(key)!=='false'])),
+  services:specialties[kit.trade].map(name=>({name,description:''})),serviceAreas:sampleCities.map(city=>({city,radiusMiles:0})),area:sampleCities.join(', '),
+  generationId:'design-preview-'+kitId+'-'+layout,websitePages:{version:1,pages:kitId==='roofing'?[
+   {id:'library-about',kind:'about',enabled:true,title:'Meet the team behind your roof.',portraitMode:'hidden'},
+   {id:'library-faq',kind:'faq',enabled:true,...faqContent.Roofing}
+  ]:[]}};
+ return publicLegalSettings({...DEFAULT,...kitDefaults(kitId,values)});
+}
+
+// Adapt only preview chrome, links and composition. Bodies come from live renderers.
+export function previewChrome(markup,s,{base,path='',layout='immersive'}){
+ const root=base.split('?')[0],query=base.includes('?')?base.slice(base.indexOf('?')+1):'',source='/s/'+previewSlug;
+ if(markup.includes('class="project-story"'))markup=markup.replace(/<footer class="studio-footer"[\s\S]*?<\/footer>/,websiteFooter(s,root,true).replace('<script defer src="/site-navigation.js"></script>',''));
+ const link=href=>{
+  const decoded=href.replaceAll('&amp;','&');
+  if(/^\/legal\/(privacy|terms)$/.test(decoded))return e(root+decoded+(query?'?'+query:''));
+  const prefix=[source,root].find(prefix=>decoded.startsWith(prefix)&&['','/','?','#'].includes(decoded.slice(prefix.length,prefix.length+1)));
+  if(!prefix)return href;
+  const u=new URL(decoded,'https://preview.invalid'),params=new URLSearchParams(query);
+  for(const [key,value] of u.searchParams)if(key!=='preview')params.set(key,value);
+  return e(root+u.pathname.slice(prefix.length)+(params.size?'?'+params.toString():'')+u.hash);
+ };
+ let html=markup.replace(/<script src="\/site-navigation-init.js"><\/script>/g,'')
+  .replace(/<header class="[^"]*(?:shared-site-header|tp-header)[^"]*">[\s\S]*?<\/header>/,websiteHeader(s,{base,preview:true,sample:true,project:true,currentPage:path.slice(1),layout}))
+  .replace(/<div class="(?:core-preview-banner|foundation-preview|tp-preview|kit-preview|preview-banner|pricing-preview|blog-preview)"[^>]*>[\s\S]*?<\/div>/g,'')
+  .replace(/<p class="sd-preview">[\s\S]*?<\/p>/g,'')
+  .replace(/<span\b[^>]*>\s*Sample\s*<\/span>/gi,'')
+  .replace(/\b(href|action)="([^"]+)"/g,(_,attr,href)=>attr+'="'+link(href)+'"')
+  .replace(/<link rel="canonical"[^>]*>/g,'')
+  .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g,'');
+ const d=s.design,classes=`layout-${layout} font-${d.font} cards-${d.cards} rhythm-${d.rhythm} hero-frame-${d.heroFrame} entrance-${d.entrance} palette-${d.palette}`;
+ html=html.replace(/<body([^>]*)>/,(_,attrs)=>{
+  attrs=attrs.replace(/\sdata-design-preview(?:="[^"]*")?/g,'');
+  if(!/\bdata-trade=/.test(attrs))attrs+=' data-trade="'+e(s.trade)+'"';
+  attrs=/\bclass="/.test(attrs)?attrs.replace('class="','class="preview-real-page '+classes+' '):attrs+' class="preview-real-page '+classes+'"';
+  return '<body data-design-preview'+attrs+'><div class="preview-contractor-note" data-preview-chrome>DESIGN KIT PREVIEW · Sample contractor · '+e(s.name)+' · Forms disabled</div>';
+ });
+ html=html.replace('</head>','<link rel="stylesheet" href="/design-preview-pages.css"></head>');
+ if(!html.includes('rel="icon"'))html=html.replace('</head>','<link rel="icon" href="/favicon.svg"></head>');
+ if(!html.includes('src="/site-navigation.js"'))html=html.replace('</body>','<script defer src="/site-navigation.js"></script></body>');
+ return applySiteStyle(html,s,{base:root});
+}
+
+export function designPreviewPage(s,{base,path,layout='immersive',origin=''}){
+ const options={slug:previewSlug,preview:true,origin};
+ const [kind,detail]=path.slice(1).split('/');let markup;
+ if(kind==='services'&&detail){
+  const page=visibleServicePages(s).find(page=>page.slug===detail);if(!page)return null;
+  markup=renderServicePage(s,page,options);
+ }else if(kind==='legal'&&['privacy','terms'].includes(detail)){
+  markup=renderLegalPage(s,{base:'/s/'+previewSlug,preview:true,kind:detail});
+ }else if(['financing','promotions'].includes(kind)){
+  markup=renderConstitutionPage(s,{...options,kind});
+ }else if(s.trade==='Roofing'&&['about','faq'].includes(kind)){
+  const page=s.websitePages.pages.find(page=>page.kind===kind);
+  markup=(kind==='about'?renderAboutPage:renderFAQPage)(s,page,options);
+ }else if(coreKinds.has(kind)){
+  const city=detail?s.serviceAreas.find(area=>serviceSlug(area.city)===detail)?.city:null;
+  if(detail&&(kind!=='areas'||!city))return null;
+  markup=renderCoreSitePage(s,previewSlug,kind,city,true,origin);
+ }else if(kind==='pricing'){
+  markup=pricingPage(s,{base:base.split('?')[0],preview:true,sample:true,chatEnabled:false});
+ }else if(kind==='blog'){
+  markup=renderBlogPage(s,base.split('?')[0],previewPosts(s.trade),{preview:true,sample:true});
  }else return null;
- return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>${e(title)} | ${e(s.name)}</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/site-polish.css"><link rel="stylesheet" href="/core-site-pages.css"><link rel="stylesheet" href="/design-preview-pages.css"></head><body class="core-page" data-design-preview data-trade="${e(s.trade)}" style="--accent:${e(s.color)}"><div class="core-preview-banner">Design kit preview · ${e(s.name)} · Sample content · Forms disabled</div>${websiteHeader(s,{base,preview:true,sample:true,project:true,currentPage:path.slice(1)})}<main><nav class="core-breadcrumbs" aria-label="Breadcrumb"><a href="${e(base)}">Home</a><span>${e(eyebrow)}</span></nav><header class="core-hero"><p class="core-kicker">${e(eyebrow)}</p><h1>${e(title)}</h1><p>${e(lead)}</p></header>${body}</main>${websiteFooter({...s,showProjects:true},base,true)}</body></html>`;
+ return previewChrome(markup,s,{base,path,layout});
+}
+
+export async function designPreviewRoute(req,env,url){
+ const match=url.pathname.match(/^\/design-preview\/([a-z-]+)\/(immersive|editorial|studio)(\/(?:pricing|blog|legal(?:\/(?:privacy|terms))?|services(?:\/[a-z0-9-]+)?|areas(?:\/[a-z0-9-]+)?|about|reviews|faq|contact|financing|promotions|projects|before-after))?\/?$/);
+ if(!match)return null;
+ must(req.method==='GET','Method not allowed.',405);
+ const user=await identity(req,env);
+ if(!user.staff){must(url.searchParams.get('tenant'),'Choose an authorized website.',403);await access(req,env,url.searchParams.get('tenant'))}
+ const [,kitId,layout,path='']=match,s=designPreviewSettings(kitId,layout,url.searchParams);
+ const params=new URLSearchParams(url.searchParams);params.delete('project');
+ const root='/design-preview/'+kitId+'/'+layout,base=root+(params.size?'?'+params.toString():'');
+ // Existing homepage/Project Story surfaces; no standalone live design is invented.
+ if(path==='/projects'||path==='/before-after'){
+  if(path==='/before-after')params.set('project','example-0');
+  return new Response(null,{status:302,headers:{location:root+(params.size?'?'+params.toString():'')+(path==='/projects'?'#projects':''),'cache-control':'private, no-store','x-robots-tag':'noindex, nofollow'}});
+ }
+ if(!path)return previewChrome(showcasePage(s,{sample:true,preview:true,sampleProject:url.searchParams.get('project')||'',samplePath:root}),s,{base,layout});
+ const page=designPreviewPage(s,{base,path,layout,origin:url.origin});must(page,'Preview page not found.',404);return page;
 }

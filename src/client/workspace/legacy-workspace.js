@@ -1,4 +1,5 @@
 import {mountDomainWizard} from './domain-wizard.js';
+import {designPreviewUrl} from './design-preview-url.js';
 import {heroEditorPanel,mountHeroEditor} from './hero-editor.js';
 import {generationPanel,mountGeneration} from './generation.js';
 import {mountExpenses} from './expenses.js';
@@ -168,7 +169,7 @@ function promptRecipes(id,preset=null){
  const snapshot=c=>({designKit:id,template:c.layout==='editorial'?'editorial':c.layout==='studio'?'blueprint':'cinematic',color:preset?.snapshot?.color||original?.color||k.color,design:c.design,effects:c.effects});
  const signature=c=>JSON.stringify(snapshot(c));
  if(savedId)savedSignature=signature(selection());
- const preview=()=>{const c=selection();$('#dialog iframe').src='/design-preview/'+id+'/'+c.layout+'?'+new URLSearchParams({...c.design,...c.effects,color:snapshot(c).color,...(editing?{tenant:current.tenant.id}:{})});return c};
+ const preview=()=>{const c=selection(),frame=$('#dialog iframe');let currentUrl=frame.src;try{currentUrl=frame.contentWindow.location.href}catch{}frame.src=designPreviewUrl({kit:id,layout:c.layout,params:{...c.design,...c.effects,color:snapshot(c).color,...(editing?{tenant:current.tenant.id}:{})},currentUrl,origin:location.origin});return c};
  const restore=c=>{for(const [key,value]of Object.entries({layout:c.layout,...c.design}))$('[data-design-choice='+key+']').value=value;for(const x of document.querySelectorAll('[data-compose-effect]'))x.checked=c.effects[x.dataset.composeEffect]!==false;preview()};
  preview();$('#preview-combination').onclick=preview;
  const presets={architectural:{layout:'editorial',font:'modern',cards:'soft',rhythm:'airy',heroFrame:'arch',entrance:'soft',palette:'brand'},bold:{layout:'immersive',font:'display',cards:'framed',rhythm:'balanced',heroFrame:'standard',entrance:'mask',palette:'copper'},editorial:{layout:'editorial',font:'editorial',cards:'classic',rhythm:'airy',heroFrame:'offset',entrance:'rise',palette:'brand'},technical:{layout:'studio',font:'modern',cards:'framed',rhythm:'compact',heroFrame:'standard',entrance:'rise',palette:'ocean'}};
