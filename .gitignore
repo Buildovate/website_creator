@@ -8,3 +8,14 @@ aws/env/docker.env
 dist/
 docs/build-evidence/
 .worktrees/
+
+# Raster/video media lives in the immutable template CDN; hydrate locally for QA.
+/public/assets/**/*.webp
+/public/assets/**/*.avif
+/public/assets/**/*.png
+/public/assets/**/*.jpg
+/public/assets/**/*.jpeg
+/public/assets/**/*.gif
+/public/assets/**/*.mp4
+/public/assets/**/*.webm
+/public/assets/**/*.mov

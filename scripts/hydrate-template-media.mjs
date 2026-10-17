@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {pool} from './media-tools.mjs';
+const deployed=fs.existsSync('aws/template-media-preview-state.json')?JSON.parse(fs.readFileSync('aws/template-media-preview-state.json')):null;
+const origin=process.env.TEMPLATE_MEDIA_ORIGIN||deployed?.origin;if(!origin)throw Error('Template media is external. Set TEMPLATE_MEDIA_ORIGIN to the provisioned preview CloudFront origin; see docs/media/MEDIA-RESTORE.md.');
+const u=new URL(origin);if(u.protocol!=='https:'||u.pathname!=='/'||u.username||u.password)throw Error('Use a public HTTPS CDN origin, never staging application files.');
+const manifest=JSON.parse(fs.readFileSync('public/media-quality.json'));let done=0;
+await pool(manifest.assets,4,async a=>{const file='public'+a.path;if(fs.existsSync(file)&&createHash('sha256').update(fs.readFileSync(file)).digest('hex')===a.sha256)return;const object='/assets/template-media/'+a.sha256+path.extname(a.path),r=await fetch(new URL(object,u),{redirect:'error'});if(!r.ok)throw Error('Media unavailable: '+object+' HTTP '+r.status);const b=Buffer.from(await r.arrayBuffer());if(createHash('sha256').update(b).digest('hex')!==a.sha256)throw Error('Media integrity failure: '+a.path);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,b);done++});
+console.log('Hydrated '+done+' verified media files; existing verified files retained.');

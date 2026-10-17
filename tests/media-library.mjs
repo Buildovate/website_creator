@@ -4,6 +4,7 @@ import {mediaCatalog,mediaPool,approvedAsset,selectMedia,resolveMedia,MEDIA_SLOT
 import {regenerate,saveGeneration} from '../src/generation.js';import {replayUniqueChoices} from '../src/uniqueness.js';import {showcasePage} from '../src/showcase.js';
 import {renderLibraryMedia} from '../src/media-library-render.js';import {originalRows,variantSettings,styles} from './fixtures/section-variants.mjs';
 const root=releaseRepoRoot,out=root+'/docs/build-evidence/028D';let checks=0;
+fs.mkdirSync(out+'/checks',{recursive:true});
 const ok=(value,label)=>{checks++;assert.ok(value,label)},eq=(a,b,label)=>{checks++;assert.deepEqual(a,b,label)},throws=(f,re,label)=>{checks++;assert.throws(f,re,label)};
 const cases=[];
 for(const {row} of originalRows)for(const style of styles){

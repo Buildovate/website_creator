@@ -1,5 +1,11 @@
 # Module: media
 
+## Template media quality and delivery
+
+Joe's rule: media quality is never traded for speed. Native originals, CRF <=20 (scrub GOP <=6), and still quality >=80 are enforced by `tests/release-asset-metadata.mjs`, with exact-byte provenance in `public/media-quality.json`. Do not add byte budgets that force lower quality. Use poster-first rendering, deferred sources, near-view warm-up and immutable caching. Full-bleed library assets have the `hero` role. Native portrait drone sources and a devicePixelRatio canvas retain phone detail.
+
+Template raster/video binaries live outside Git's current tree and Docker. Run `node scripts/hydrate-template-media.mjs` for local QA. Preview delivery uses the dedicated CloudFront origin in `aws/template-media-preview-state.json`; upload/restore commands, source limits, proof and history-migration constraints are in [MEDIA-RESTORE](../media/MEDIA-RESTORE.md). This CDN grant does not expose contractor uploads or backups. Media approval status and source rights remain independent of encoding revisions.
+
 ## Purpose
 Stores contractor JPEG uploads and backup copies. Public kit images and films under `public/assets/` are static files, not objects in this bucket. See `design.md` for those.
 

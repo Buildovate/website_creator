@@ -16,11 +16,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
+          filter: blob:none
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: node scripts/hydrate-template-media.mjs
+        env:
+          TEMPLATE_MEDIA_ORIGIN: ${{ vars.TEMPLATE_MEDIA_ORIGIN_PREVIEW }}
       - run: node scripts/release-gate.mjs
+      - run: node tests/media-restore.mjs
+      - run: node tests/media-restore-browser.mjs

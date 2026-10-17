@@ -1,5 +1,7 @@
 # Module: infra
 
+Template media uses a separate preview-only CloudFront distribution (`E22LU0VBAFNGDJ`) over the private preview bucket's `assets/template-media/` prefix. SHA-256 keys have immutable headers and byte-range delivery. Docker excludes raster/video media; configure `TEMPLATE_MEDIA_ORIGIN` when a later app deployment is authorized. The public preview origin is recorded in `aws/template-media-preview-state.json` and the preview env example. Local Compose mounts hydrated media read-only. See [MEDIA-RESTORE](../media/MEDIA-RESTORE.md) for setup, integrity checks and the coordinated Git-history migration still required. No application deployment is part of this ticket.
+
 Custom-domain domain operations use assumed-role SDK clients in us-east-1, independently of the app's us-west-1 resources. Configuration, IAM and preview enablement: [CUSTOM-DOMAINS.md](../release/CUSTOM-DOMAINS.md). The default-off `CUSTOM_DOMAINS_LIVE` flag replaces the old domain-check enable switch; no domain SDK client is constructed while it is off.
 
 ## Purpose
