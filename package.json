@@ -20,7 +20,8 @@
     "test:constitution": "node tests/constitution.mjs",
     "geoip:update": "node scripts/update-geoip.mjs",
     "test:experience": "node tests/neighborhood.mjs && node tests/media-ranges.mjs && node tests/planning-motion.mjs",
-    "test:conversion": "node tests/conversion-references.mjs"
+    "test:conversion": "node tests/conversion-references.mjs",
+    "hf:example": "node scripts/higgsfield-example.ts"
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.8",
@@ -41,6 +42,7 @@
     "@aws-sdk/client-route-53": "^3.1149.0",
     "@aws-sdk/client-s3": "^3.1138.0",
     "@aws-sdk/client-sts": "^3.1149.0",
+    "@higgsfield/client": "^0.2.6",
     "mmdb-lib": "3.0.3",
     "pg": "^8.23.0",
     "read-excel-file": "^9.3.10",

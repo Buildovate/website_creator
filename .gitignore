@@ -8,3 +8,5 @@ aws/env/docker.env
 dist/
 docs/build-evidence/
 .worktrees/
+.env.local
+docs/hf-test/
